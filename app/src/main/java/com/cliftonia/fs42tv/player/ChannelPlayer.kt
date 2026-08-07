@@ -1,10 +1,11 @@
 package com.cliftonia.fs42tv.player
 
-import android.content.Context
 import android.os.SystemClock
 import android.util.Log
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
+import androidx.media3.common.util.UnstableApi
+import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.hls.HlsMediaSource
@@ -26,14 +27,22 @@ import com.cliftonia.fs42tv.resolver.Unplayable
  * every channel then started its clip from 00:00. Media3 makes the start position part of
  * the load, so that class of bug cannot happen here.
  */
-class ChannelPlayer(context: Context) {
+@UnstableApi
+class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory) {
 
-    // Cross-protocol redirects would let an https media URL be silently downgraded to plain
-    // http mid-stream; on untrusted Wi-Fi that is an open door for URL injection, so this
-    // stays false even though it means a stream that genuinely needs such a redirect fails
-    // loudly instead.
-    private val factory = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
-    val exo: ExoPlayer = ExoPlayer.Builder(context).build()
+    companion object {
+        /**
+         * Cross-protocol redirects would let an https media URL be silently downgraded to plain
+         * http mid-stream; on untrusted Wi-Fi that is an open door for URL injection, so this
+         * stays false even though it means a stream that genuinely needs such a redirect fails
+         * loudly instead.
+         *
+         * Shared with the preloader rather than built twice: a preloaded source fetched through
+         * a different data source than the played one is bytes buffered and thrown away.
+         */
+        fun dataSourceFactory(): DataSource.Factory =
+            DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
+    }
 
     /** Set when a tune starts, cleared when its first frame lands. Main thread only. */
     private var requestedAtMillis = 0L

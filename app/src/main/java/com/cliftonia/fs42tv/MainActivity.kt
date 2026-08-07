@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv
 
+import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.SystemClock
@@ -15,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
+import com.cliftonia.fs42tv.player.ChannelPreloader
+import com.cliftonia.fs42tv.player.DeviceBudget
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
@@ -44,6 +47,7 @@ private const val NO_REMEMBERED_CHANNEL = -1
 class MainActivity : ComponentActivity() {
 
     private var player: ChannelPlayer? = null
+    private var preloader: ChannelPreloader? = null
 
     @Volatile private var navigator: DialNavigator? = null
     @Volatile private var destroyed: Boolean = false
@@ -141,7 +145,19 @@ class MainActivity : ComponentActivity() {
         }
         setContentView(root)
 
-        val player = ChannelPlayer(this).also { this.player = it }
+        // The preloader is built first because it owns the ExoPlayer: a preloaded source is only
+        // reusable by a player that shares the manager's track selector, load control and
+        // bandwidth meter, so the player has to come out of the manager's own builder rather
+        // than be constructed alongside it.
+        val factory = ChannelPlayer.dataSourceFactory()
+        val memoryInfo = ActivityManager.MemoryInfo().also {
+            (getSystemService(ACTIVITY_SERVICE) as ActivityManager).getMemoryInfo(it)
+        }
+        val budget = DeviceBudget.forDevice(memoryInfo.totalMem)
+        Log.i("fs42", "device has ${memoryInfo.totalMem / (1024 * 1024)} MB; preload budget $budget")
+        val preloader = ChannelPreloader(this, factory, budget).also { this.preloader = it }
+
+        val player = ChannelPlayer(preloader.exo, factory).also { this.player = it }
         view.player = player.exo
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
@@ -274,6 +290,45 @@ class MainActivity : ComponentActivity() {
      * abandons without touching the player, prefs, or [onAir]. That is what lets a burst of
      * presses skip every intermediate channel instead of running each one to completion.
      */
+    /**
+     * Hand the preloader the neighbours of whatever just came on air.
+     *
+     * Runs on the executor, inside the tune that triggered it, so the navigator is not read
+     * from a second thread. Each neighbour is resolved exactly as a real tune would resolve it,
+     * through [resolvedCache] first, so the fan-out does not multiply server round trips.
+     *
+     * Every step is best-effort. A neighbour that cannot be resolved is simply not preloaded;
+     * nothing here may disturb the channel actually playing.
+     */
+    private fun preloadNeighbours(current: Channel) {
+        val nav = navigator ?: return
+        val preloader = this.preloader ?: return
+        if (destroyed) return
+
+        val channels = nav.channels
+        val currentIndex = channels.indexOfFirst { it.number == current.number }
+        if (currentIndex < 0) return
+
+        preloader.apply(channels.size, currentIndex) { index ->
+            val channel = channels.getOrNull(index) ?: return@apply null
+            val now = System.currentTimeMillis() / 1000
+            val tuned = Tuner.tune(channel, urls, now) ?: return@apply null
+
+            var playable: Playable = tuned.playable
+            if (playable is NeedsResolving) {
+                val videoId = playable.videoId
+                playable = resolvedCache.get(videoId, now)
+                    ?: resolver.resolveDetailed(videoId, now)?.also {
+                        resolvedCache.put(videoId, it.playable, it.expiresAtSeconds)
+                    }?.playable
+                    ?: return@apply null
+            }
+
+            val source = player?.sourceFor(playable) ?: return@apply null
+            source to (tuned.offsetSeconds * 1000).toLong()
+        }
+    }
+
     private fun tuneTo(channel: Channel, requestGeneration: Int, requestedAtMillis: Long) {
         if (requestGeneration != generation.get()) {
             Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before tuning; abandoning")
@@ -337,6 +392,7 @@ class MainActivity : ComponentActivity() {
         if (playedSuccessfully && !destroyed) {
             onAir = tuned
             prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
+            preloadNeighbours(channel)
         }
 
         // NeedsResolving here means the server round trip above also failed: play nothing and
@@ -370,6 +426,11 @@ class MainActivity : ComponentActivity() {
         super.onDestroy()
         destroyed = true
         executor.shutdownNow()
+        // Preloader first: it holds sources feeding the player the release below tears down,
+        // and a preload landing against a released player is a crash rather than a wasted
+        // fetch. Both are null'd so a tune that outlived the activity finds nothing to touch.
+        preloader?.release()
+        preloader = null
         player?.release()
         player = null
     }
