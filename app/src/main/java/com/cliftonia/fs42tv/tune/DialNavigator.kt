@@ -11,17 +11,23 @@ import com.cliftonia.fs42tv.sync.Channel
  *
  * Pure: persistence belongs to the caller.
  */
-class DialNavigator(private val channels: List<Channel>, startNumber: Int? = null) {
+class DialNavigator(channels: List<Channel>, startNumber: Int? = null) {
+
+    /** Read-only view of the dial for the phase 2b channel-list overlay. */
+    val channels: List<Channel> = channels.toList()
 
     init {
-        require(channels.isNotEmpty()) { "a dial with no channels cannot be navigated" }
+        require(this.channels.isNotEmpty()) { "a dial with no channels cannot be navigated" }
     }
 
-    private var index: Int = channels.indexOfFirst { it.number == startNumber }
+    // Mutated on the executor thread today; @Volatile so the overlay can read it safely from
+    // the UI thread once it exists.
+    @Volatile private var index: Int = this.channels.indexOfFirst { it.number == startNumber }
         .let { if (it >= 0) it else 0 }
 
     val current: Channel get() = channels[index]
     val currentNumber: Int get() = current.number
+    val currentIndex: Int get() = index
 
     fun up(): Channel {
         index = (index + 1) % channels.size

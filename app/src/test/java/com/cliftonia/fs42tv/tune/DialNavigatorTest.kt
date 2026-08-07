@@ -87,4 +87,34 @@ class DialNavigatorTest {
         assertEquals(7, nav.up().number)
         assertEquals(7, nav.down().number)
     }
+
+    @Test
+    fun `channels exposes exactly the list passed in`() {
+        val list = dial(2, 9, 63)
+        assertEquals("the overlay renders this list directly; it must be the caller's list, " +
+            "not some other one", list, DialNavigator(list).channels)
+    }
+
+    @Test
+    fun `currentIndex tracks up and down`() {
+        val nav = DialNavigator(dial(2, 9, 63))
+        assertEquals(0, nav.currentIndex)
+        nav.up()
+        assertEquals(1, nav.currentIndex)
+        nav.up()
+        assertEquals(2, nav.currentIndex)
+        nav.down()
+        assertEquals(1, nav.currentIndex)
+    }
+
+    @Test
+    fun `currentIndex wraps with up and down`() {
+        val nav = DialNavigator(dial(2, 9, 63), startNumber = 63)
+        assertEquals(2, nav.currentIndex)
+        nav.up()
+        assertEquals("wrapping past the end must reset the index, not just the channel",
+            0, nav.currentIndex)
+        nav.down()
+        assertEquals(2, nav.currentIndex)
+    }
 }

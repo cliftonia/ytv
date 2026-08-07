@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.resolver
 
 import com.cliftonia.fs42tv.sync.Tier
+import java.net.URLEncoder
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
@@ -20,13 +21,15 @@ class ServerResolver(
 ) {
     private val json = Json { ignoreUnknownKeys = true }
 
-    fun resolve(videoId: String, preferUhd: Boolean = false): Progressive? {
-        val body = runCatching { fetch("$baseUrl/resolve?v=$videoId") }.getOrNull() ?: return null
+    fun resolve(videoId: String, nowSeconds: Long, preferUhd: Boolean = false): Progressive? {
+        val encodedId = URLEncoder.encode(videoId, "UTF-8")
+        val body = runCatching { fetch("$baseUrl/resolve?v=$encodedId") }.getOrNull() ?: return null
         val root = runCatching { json.parseToJsonElement(body).jsonObject }.getOrNull() ?: return null
 
         val order = if (preferUhd) listOf("uhd", "hd") else listOf("hd")
         for (name in order) {
             val tier = tierAt(root, name) ?: continue
+            if (!tier.isFresh(nowSeconds)) continue
             return Progressive(tier.video, tier.audio)
         }
         return null

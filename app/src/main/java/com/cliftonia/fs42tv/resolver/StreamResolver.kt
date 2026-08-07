@@ -27,9 +27,6 @@ data class Unplayable(val reason: String) : Playable
  */
 object StreamResolver {
 
-    /** Treat a tier as dead slightly before its stated expiry, since signing is not exact. */
-    private const val SAFETY_MARGIN_SECONDS = 300L
-
     fun resolve(
         stream: Stream,
         cache: UrlCache?,
@@ -42,7 +39,7 @@ object StreamResolver {
         val order = if (preferUhd) listOf("uhd", "hd") else listOf("hd")
         for (name in order) {
             val tier = tiers[name] ?: continue
-            if (tier.expires - SAFETY_MARGIN_SECONDS <= nowSeconds) continue
+            if (!tier.isFresh(nowSeconds)) continue
             return Progressive(tier.video, tier.audio)
         }
         return NeedsResolving(id)
