@@ -19,6 +19,7 @@ import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
+import com.cliftonia.fs42tv.resolver.ResolvedCache
 import com.cliftonia.fs42tv.resolver.ServerResolver
 import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.sync.Channel
@@ -84,6 +85,12 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var prefs: SharedPreferences
     private lateinit var resolver: ServerResolver
+
+    // urls.json covers about 46% of the dial's clips, so most tunes fall through to the server.
+    // Without this, every later pass over the same channel pays that round trip again. Lives
+    // for the session only: these URLs are signed and expire in hours, so persisting them would
+    // mean starting up holding URLs that may already be dead.
+    private val resolvedCache = ResolvedCache()
 
     // Single-threaded so a rapid burst of channel presses queues in order rather than racing
     // each other over the shared navigator and player.
@@ -282,15 +289,24 @@ class MainActivity : ComponentActivity() {
 
         var playable: Playable = tuned.playable
         if (playable is NeedsResolving) {
-            val resolved = resolver.resolve(playable.videoId, now)
-            if (resolved != null) {
-                playable = resolved
+            val videoId = playable.videoId
+            val remembered = resolvedCache.get(videoId, now)
+            if (remembered != null) {
+                Log.d("fs42", "resolve hit from cache for $videoId")
+                playable = remembered
             } else {
-                Log.w(
-                    "fs42",
-                    "channel ${channel.number} ${channel.name}: server could not resolve " +
-                        "${playable.videoId}; leaving current picture up",
-                )
+                Log.d("fs42", "resolve miss; asking the server for $videoId")
+                val resolved = resolver.resolveDetailed(videoId, now)
+                if (resolved != null) {
+                    resolvedCache.put(videoId, resolved.playable, resolved.expiresAtSeconds)
+                    playable = resolved.playable
+                } else {
+                    Log.w(
+                        "fs42",
+                        "channel ${channel.number} ${channel.name}: server could not resolve " +
+                            "$videoId; leaving current picture up",
+                    )
+                }
             }
         }
 
