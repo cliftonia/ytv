@@ -34,56 +34,12 @@ class ChannelLabelsTest {
         assertEquals("Inside The Bear", second)
     }
 
-    @Test
-    fun `a show name ahead of an internal colon survives`() {
-        assertEquals("a colon rule that fired here deleted the show name entirely",
-            "Tom and Jerry | Mega Episode: Golden Era Vol. 10 | Warner Classics",
-            ChannelLabels.cleanTitle(
-                "Tom and Jerry | Mega Episode: Golden Era Vol. 10 | Warner Classics"))
-    }
-
-    @Test
-    fun `a round number in a later pipe segment survives`() {
-        assertEquals("a pipe rule that fired here dropped the only thing distinguishing this " +
-            "video from every other highlight on the channel",
-            "NRL Highlights | NRL 2026 | Round Up | Round 7",
-            ChannelLabels.cleanTitle("NRL Highlights | NRL 2026 | Round Up | Round 7"))
-    }
-
-    @Test
-    fun `an episode number in a later pipe segment survives`() {
-        assertEquals("a pipe rule that fired here dropped the episode identifier",
-            "Comedy Inc | Season 2 Episode 3 | FULL EPISODE",
-            ChannelLabels.cleanTitle("Comedy Inc | Season 2 Episode 3 | FULL EPISODE"))
-    }
-
-    @Test
-    fun `a series name ahead of an episode colon survives`() {
-        assertEquals("a colon rule that fired here deleted the series name and episode number",
-            "Can I Trust the Bible - Episode 3: The Council of Nicaea | @WesHuff",
-            ChannelLabels.cleanTitle(
-                "Can I Trust the Bible - Episode 3: The Council of Nicaea | @WesHuff"))
-    }
-
-    @Test
-    fun `bracketed noise is removed`() {
-        assertEquals("Chanel Fall Winter Show",
-            ChannelLabels.cleanTitle("Chanel Fall Winter Show [4K] (Official Video)"))
-    }
-
-    @Test
-    fun `a title that is merely long is left alone`() {
-        val long = "A Very Long But Entirely Legitimate Programme Title About Something"
-        assertEquals("truncating here would lose information the viewer wants",
-            long, ChannelLabels.cleanTitle(long))
-    }
-
-    @Test
-    fun `non-latin titles survive cleaning`() {
-        val telugu = "కాపులకు క్లారిటీ"
-        assertEquals("the real dial carries Telugu and Malayalam titles; mangling them shows as garbage",
-            telugu, ChannelLabels.cleanTitle(telugu))
-    }
+    // The title-cleaning tests that used to sit here went with the app-side cleaner. The rules
+    // they guarded now live in `fs42/yt_title.py` on the server, and all six cases were
+    // re-checked against it before the tests were removed - including the Telugu title and
+    // every case where the identifying segment sits after a "|". The stronger evidence is the
+    // audit that ran the published cleaner over all 2939 titles on the dial: 2495 changed,
+    // 0 emptied.
 
     @Test
     fun `an empty title yields an empty second line rather than a placeholder`() {
