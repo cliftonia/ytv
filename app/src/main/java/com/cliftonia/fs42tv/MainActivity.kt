@@ -1,10 +1,14 @@
 package com.cliftonia.fs42tv
 
-import android.app.Activity
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import androidx.activity.ComponentActivity
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.platform.ComposeView
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
 import com.cliftonia.fs42tv.resolver.Hls
@@ -19,6 +23,8 @@ import com.cliftonia.fs42tv.sync.UrlCache
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
+import com.cliftonia.fs42tv.ui.ChannelIndicator
+import com.cliftonia.fs42tv.ui.ChannelLabels
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -29,7 +35,7 @@ private const val PREFS_NAME = "fs42"
 private const val CHANNEL_KEY = "channel"
 private const val NO_REMEMBERED_CHANNEL = -1
 
-class MainActivity : Activity() {
+class MainActivity : ComponentActivity() {
 
     private var player: ChannelPlayer? = null
 
@@ -44,6 +50,11 @@ class MainActivity : Activity() {
      * phase 2b corner indicator and banner; `@Volatile` is enough because `Tuned` is immutable.
      */
     @Volatile private var onAir: Tuned? = null
+
+    // Compose state backing the corner indicator. Read only from the UI thread by the
+    // ChannelIndicator composable; written only from the runOnUiThread block below, alongside
+    // onAir, so it never appears out of step with the picture actually on screen.
+    private val indicatorText = mutableStateOf("")
 
     private lateinit var prefs: SharedPreferences
     private lateinit var resolver: ServerResolver
@@ -64,7 +75,22 @@ class MainActivity : Activity() {
         resolver = ServerResolver(fetch = { url -> URL(url).readText() }, baseUrl = SERVER)
 
         val view = PlayerView(this).apply { useController = false }
-        setContentView(view)
+        val composeView = ComposeView(this).apply {
+            // The picker in task 4 needs focus; the indicator does not, and must not steal it
+            // from the D-pad channel-surfing handled in onKeyDown.
+            isFocusable = false
+            descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+            setContent { ChannelIndicator(indicatorText.value) }
+        }
+        fun matchParent() = FrameLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT,
+        )
+        val root = FrameLayout(this).apply {
+            addView(view, matchParent())
+            addView(composeView, matchParent())
+        }
+        setContentView(root)
 
         val player = ChannelPlayer(this).also { this.player = it }
         view.player = player.exo
@@ -181,7 +207,13 @@ class MainActivity : Activity() {
         // most likely a resolver network call that outlived the activity.
         if (playable !is NeedsResolving && !destroyed) {
             runOnUiThread {
-                if (!destroyed) player?.play(playable, tuned.offsetSeconds)
+                if (!destroyed) {
+                    player?.play(playable, tuned.offsetSeconds)
+                    // Reads the current onAir, not this tune's outcome directly: a failed tune
+                    // leaves onAir - and therefore the indicator - on whatever last actually
+                    // played, exactly as the picture itself does.
+                    indicatorText.value = onAir?.let { ChannelLabels.indicator(it.channel.number) } ?: ""
+                }
             }
         }
     }
