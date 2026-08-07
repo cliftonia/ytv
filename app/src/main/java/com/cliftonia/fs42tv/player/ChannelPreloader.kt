@@ -115,6 +115,7 @@ class ChannelPreloader(
     fun apply(
         dialSize: Int,
         currentIndex: Int,
+        rebuild: Boolean = false,
         sourceAt: (Int) -> Pair<MediaSource, Long>?,
     ) {
         val plan = PreloadPlan.forPosition(dialSize, currentIndex, budget)
@@ -123,8 +124,13 @@ class ChannelPreloader(
             // Drop anything the new plan does not want before adding, so the manager never
             // briefly holds budget + previous-budget sources at once. On the 1.5 GB device that
             // transient is the difference between fitting and not.
+            //
+            // [rebuild] additionally drops what the plan DOES still want, so the periodic
+            // refresh re-adds it at a recomputed clock offset. Without that this method would
+            // skip every index it already holds and the refresh would be a no-op that looks
+            // like it is working - the failure mode being guarded against is silent.
             for ((index, source) in added) {
-                if (index !in plan) {
+                if (rebuild || index !in plan) {
                     manager.remove(source)
                     added.remove(index)
                     ranks.remove(index)
