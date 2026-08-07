@@ -17,10 +17,12 @@ import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.DialRepository
 import com.cliftonia.fs42tv.sync.UrlCache
 import com.cliftonia.fs42tv.tune.DialNavigator
+import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import java.util.concurrent.atomic.AtomicInteger
 
 private const val SERVER = "http://192.168.4.203:4243"
 private const val PREFS_NAME = "fs42"
@@ -35,12 +37,26 @@ class MainActivity : Activity() {
     @Volatile private var destroyed: Boolean = false
     private var urls: UrlCache? = null
 
+    /**
+     * What is actually on air right now, as opposed to where the navigator points. A failed
+     * tune leaves the previous picture up with the navigator already moved on, so this is set
+     * only on a genuine success. Written on the executor thread, read from the UI thread by the
+     * phase 2b corner indicator and banner; `@Volatile` is enough because `Tuned` is immutable.
+     */
+    @Volatile private var onAir: Tuned? = null
+
     private lateinit var prefs: SharedPreferences
     private lateinit var resolver: ServerResolver
 
     // Single-threaded so a rapid burst of channel presses queues in order rather than racing
     // each other over the shared navigator and player.
     private val executor: ExecutorService = Executors.newSingleThreadExecutor()
+
+    // Bumped on every keypress. A tune captures the current value when queued and abandons
+    // itself if the value has since moved on - that is how a burst of presses on the dial
+    // collapses to only the last one actually reaching the player, instead of running every
+    // intermediate channel to completion.
+    private val generation = AtomicInteger(0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,7 +88,7 @@ class MainActivity : Activity() {
 
             val nav = DialNavigator(channels, remembered.takeIf { it > 0 })
             navigator = nav
-            tuneTo(nav.current)
+            tuneTo(nav.current, generation.get())
         }
     }
 
@@ -80,11 +96,13 @@ class MainActivity : Activity() {
         val nav = navigator ?: return super.onKeyDown(keyCode, event)
         return when (keyCode) {
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
-                executor.execute { tuneTo(nav.up()) }
+                val gen = generation.incrementAndGet()
+                executor.execute { tuneTo(nav.up(), gen) }
                 true
             }
             KeyEvent.KEYCODE_DPAD_DOWN, KeyEvent.KEYCODE_CHANNEL_DOWN -> {
-                executor.execute { tuneTo(nav.down()) }
+                val gen = generation.incrementAndGet()
+                executor.execute { tuneTo(nav.down(), gen) }
                 true
             }
             else -> super.onKeyDown(keyCode, event)
@@ -95,8 +113,18 @@ class MainActivity : Activity() {
      * Runs on the background executor: resolves what a channel is showing right now and starts
      * it on the UI thread. A cache miss is resolved from the server before giving up; when even
      * that fails, the current picture is left up rather than blanking the screen.
+     *
+     * [requestGeneration] is checked at the start and again right before the result would reach
+     * the player: if a later keypress has since bumped [generation], this tune is superseded and
+     * abandons without touching the player, prefs, or [onAir]. That is what lets a burst of
+     * presses skip every intermediate channel instead of running each one to completion.
      */
-    private fun tuneTo(channel: Channel) {
+    private fun tuneTo(channel: Channel, requestGeneration: Int) {
+        if (requestGeneration != generation.get()) {
+            Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before tuning; abandoning")
+            return
+        }
+
         val now = System.currentTimeMillis() / 1000
         val tuned = Tuner.tune(channel, urls, now)
         if (tuned == null) {
@@ -106,7 +134,7 @@ class MainActivity : Activity() {
 
         var playable: Playable = tuned.playable
         if (playable is NeedsResolving) {
-            val resolved = resolver.resolve(playable.videoId)
+            val resolved = resolver.resolve(playable.videoId, now)
             if (resolved != null) {
                 playable = resolved
             } else {
@@ -125,15 +153,25 @@ class MainActivity : Activity() {
         )
 
         // Only a Playable that genuinely reaches the player is a successful tune. A cache miss
-        // the server also could not resolve, and anything Unplayable, must leave the remembered
-        // channel as whatever last actually played - otherwise a dead channel becomes the one
-        // the app resumes on next launch, with no picture and no obvious reason why.
+        // the server also could not resolve, and anything Unplayable, must leave onAir and the
+        // remembered channel as whatever last actually played - otherwise a dead channel becomes
+        // what the app reports as on air, and what it resumes on next launch, with no picture
+        // and no obvious reason why.
         val playedSuccessfully = when (playable) {
             is Progressive, is Hls -> true
             is NeedsResolving, is Unplayable -> false
         }
 
+        if (requestGeneration != generation.get()) {
+            Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before posting; abandoning")
+            return
+        }
+
+        // onAir is a field, not a log line, because the navigator's position is not the same
+        // thing as what is on screen: SharedPreferences is a consumer of this state, not its
+        // owner.
         if (playedSuccessfully && !destroyed) {
+            onAir = tuned
             prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
         }
 
