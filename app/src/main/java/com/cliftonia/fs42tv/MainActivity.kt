@@ -28,6 +28,7 @@ import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import com.cliftonia.fs42tv.ui.ChannelOsd
+import com.cliftonia.fs42tv.ui.ChannelPicker
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -68,6 +69,18 @@ class MainActivity : ComponentActivity() {
     // even though nothing on screen changed. This counter only advances alongside onAir itself.
     private val bannerGeneration = mutableStateOf(0)
 
+    // Backs the channel picker. pickerRows/pickerStartIndex are captured once, at the moment
+    // the picker opens, rather than derived live from navigator/onAir - the whole point of the
+    // picker is that surfing is frozen while it's up, so nothing should move these under it.
+    private val pickerVisible = mutableStateOf(false)
+    private val pickerRows = mutableStateOf<List<String>>(emptyList())
+    private val pickerStartIndex = mutableStateOf(0)
+
+    // Local var rather than only a local val in onCreate: opening the picker needs to flip this
+    // view's descendantFocusability and pull focus onto it, which onKeyDown must be able to
+    // reach after onCreate has returned.
+    private lateinit var composeView: ComposeView
+
     private lateinit var prefs: SharedPreferences
     private lateinit var resolver: ServerResolver
 
@@ -87,9 +100,9 @@ class MainActivity : ComponentActivity() {
         resolver = ServerResolver(fetch = { url -> URL(url).readText() }, baseUrl = SERVER)
 
         val view = PlayerView(this).apply { useController = false }
-        val composeView = ComposeView(this).apply {
-            // The picker in task 4 needs focus; the OSD does not, and must not steal it
-            // from the D-pad channel-surfing handled in onKeyDown.
+        composeView = ComposeView(this).apply {
+            // The picker needs focus when open; the OSD does not, and must not steal it from
+            // the D-pad channel-surfing handled in onKeyDown while the picker is closed.
             isFocusable = false
             descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
             setContent {
@@ -99,6 +112,14 @@ class MainActivity : ComponentActivity() {
                         titleLine = bannerTitleLine.value,
                         generation = bannerGeneration.value,
                     )
+                    if (pickerVisible.value) {
+                        ChannelPicker(
+                            rows = pickerRows.value,
+                            startIndex = pickerStartIndex.value,
+                            onPick = ::onPickChannel,
+                            onDismiss = ::closePicker,
+                        )
+                    }
                 }
             }
         }
@@ -140,6 +161,16 @@ class MainActivity : ComponentActivity() {
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         val nav = navigator ?: return super.onKeyDown(keyCode, event)
+
+        // Belt and braces alongside the focus handoff in openPicker(): once the picker is up,
+        // the focused row already consumes D-pad up/down/centre before the activity would ever
+        // see them, but this guard is what actually guarantees the channel-change keys are
+        // inert here rather than relying on focus routing alone. KEYCODE_BACK is deliberately
+        // not handled here at all - the picker owns its own dismissal via BackHandler.
+        if (pickerVisible.value) {
+            return super.onKeyDown(keyCode, event)
+        }
+
         return when (keyCode) {
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
                 val gen = generation.incrementAndGet()
@@ -151,8 +182,53 @@ class MainActivity : ComponentActivity() {
                 executor.execute { tuneTo(nav.down(), gen) }
                 true
             }
+            KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_GUIDE -> {
+                openPicker(nav)
+                true
+            }
             else -> super.onKeyDown(keyCode, event)
         }
+    }
+
+    /**
+     * Opens the picker seeded on the channel actually on air - [onAir], not [DialNavigator.currentIndex]:
+     * a tune that failed leaves the navigator pointed somewhere the picture never actually
+     * reached, and the picker must open on what the viewer is looking at, not where the dial
+     * silently moved to.
+     */
+    private fun openPicker(nav: DialNavigator) {
+        val onAirNumber = onAir?.channel?.number ?: nav.currentNumber
+        val startIndex = nav.channels.indexOfFirst { it.number == onAirNumber }
+            .let { if (it >= 0) it else nav.currentIndex }
+
+        pickerRows.value = nav.channels.map { ChannelLabels.listRow(it) }
+        pickerStartIndex.value = startIndex
+        pickerVisible.value = true
+
+        composeView.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
+        composeView.requestFocus()
+    }
+
+    private fun closePicker() {
+        pickerVisible.value = false
+        composeView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+    }
+
+    /**
+     * OK on a row: resolves the row index back to a channel, moves the navigator to it exactly
+     * like surfing does, tunes it on the executor, and closes. This is the one path that
+     * actually changes the channel from the picker - reusing [tuneTo] rather than a second one,
+     * per the same generation bookkeeping surfing uses.
+     */
+    private fun onPickChannel(index: Int) {
+        val nav = navigator
+        val channel = nav?.channels?.getOrNull(index)
+        if (nav != null && channel != null) {
+            nav.jumpTo(channel.number)
+            val gen = generation.incrementAndGet()
+            executor.execute { tuneTo(channel, gen) }
+        }
+        closePicker()
     }
 
     /**

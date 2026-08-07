@@ -1,15 +1,23 @@
 package com.cliftonia.fs42tv.ui
 
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalDensity
@@ -20,6 +28,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.tv.material3.ClickableSurfaceDefaults
+import androidx.tv.material3.MaterialTheme
+import androidx.tv.material3.Surface
 import kotlinx.coroutines.delay
 
 /**
@@ -130,6 +141,115 @@ fun ChannelOsd(
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.widthIn(max = titleMaxWidth),
                 )
+            }
+        }
+    }
+}
+
+/**
+ * A near-opaque backdrop behind the list, not the transparent-over-video look the banner uses.
+ * The banner is a couple of short lines over a single frame; a scrolling list of ~111 rows read
+ * against moving footage underneath would be a wall of flicker, so the picker gets its own
+ * background rather than relying on [OsdText]'s outline alone.
+ */
+private val PickerBackground = Color(0xE6000000)
+
+/** A dark tint of [OsdGreen] rather than a neutral grey, so the focus highlight reads as part of the same product as the outline text sitting on it. */
+private val PickerRowFocusedBackground = Color(0xFF1A3B1A)
+
+/**
+ * Row height in the fs42-bench reference was tuned for a static demo list with nothing else on
+ * screen. Here the row is read at a glance while surfing, not studied, so it sits below the
+ * 27.5.sp heading line (that is a single line meant to dominate) and above the 11.sp title line
+ * (secondary text, read at leisure once you already know the channel) - big enough to read from
+ * a couch, small enough that ~8 rows are visible at once on a 1080p canvas without the list
+ * feeling like a single long scroll to find anything.
+ */
+private val PickerRowFontSize = 20.sp
+
+/** Rows scrolled above the on-air row when the picker opens, so it lands with context rather than pinned to the very top edge. */
+private const val ON_AIR_LEAD_ROWS = 3
+
+@Composable
+private fun PickerRow(
+    text: String,
+    focusRequester: FocusRequester?,
+    onClick: () -> Unit,
+) {
+    val rowModifier = if (focusRequester != null) {
+        Modifier.fillMaxWidth().focusRequester(focusRequester)
+    } else {
+        Modifier.fillMaxWidth()
+    }
+    Surface(
+        onClick = onClick,
+        modifier = rowModifier,
+        colors = ClickableSurfaceDefaults.colors(
+            containerColor = Color.Transparent,
+            focusedContainerColor = PickerRowFocusedBackground,
+        ),
+        // tv-material3's own default grows the focused row to 1.1x. A row that already spans
+        // fillMaxWidth has nowhere for that growth to go but past both edges of the screen, so
+        // the focused row's own leading text clips off the left edge - the same rendering
+        // hazard the OSD banner ran into, caught the same way, from a screenshot rather than by
+        // trusting the parameter. Scale is switched off; the container-colour change on focus
+        // carries the highlight instead.
+        scale = ClickableSurfaceDefaults.scale(focusedScale = 1f),
+    ) {
+        OsdText(
+            text = text,
+            fontSize = PickerRowFontSize,
+            modifier = Modifier.padding(horizontal = 24.dp, vertical = 10.dp),
+        )
+    }
+}
+
+/**
+ * The direct-entry mechanism: a scrollable list rather than a numeric keypad, because a keypad
+ * is a layout for ten discrete keys and a D-pad has none.
+ *
+ * Opens seeded [ON_AIR_LEAD_ROWS] rows above [startIndex] so the channel actually on air lands
+ * with context rather than pinned to the top edge, and requests focus on that row so up/down
+ * moves the highlight through the list rather than doing anything to the channel underneath -
+ * the caller is responsible for making the channel-change keys inert while this is on screen,
+ * since a focused [Surface] row already consumes D-pad up/down/centre before the activity ever
+ * sees them.
+ *
+ * [onDismiss] is wired to [BackHandler] here rather than a branch in the activity's `onKeyDown`,
+ * so dismissal is this composable's concern rather than a second key-handling path to keep in
+ * sync with this one.
+ */
+@Composable
+fun ChannelPicker(
+    rows: List<String>,
+    startIndex: Int,
+    onPick: (Int) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    BackHandler(onBack = onDismiss)
+
+    val lastIndex = (rows.size - 1).coerceAtLeast(0)
+    val onAirIndex = startIndex.coerceIn(0, lastIndex)
+    val seedIndex = (onAirIndex - ON_AIR_LEAD_ROWS).coerceIn(0, lastIndex)
+    val listState = rememberLazyListState(initialFirstVisibleItemIndex = seedIndex)
+    val focusRequester = remember { FocusRequester() }
+
+    LaunchedEffect(Unit) {
+        if (rows.isNotEmpty()) {
+            focusRequester.requestFocus()
+        }
+    }
+
+    MaterialTheme {
+        Box(modifier = Modifier.fillMaxSize().background(PickerBackground)) {
+            LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
+                itemsIndexed(rows) { index, row ->
+                    PickerRow(
+                        text = row,
+                        focusRequester = if (index == onAirIndex) focusRequester else null,
+                        onClick = { onPick(index) },
+                    )
+                }
             }
         }
     }
