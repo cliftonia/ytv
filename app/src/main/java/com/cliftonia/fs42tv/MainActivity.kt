@@ -197,6 +197,14 @@ class MainActivity : ComponentActivity() {
      * silently moved to.
      */
     private fun openPicker(nav: DialNavigator) {
+        // Opening the picker is a supersede point. onKeyDown queues `tuneTo(nav.up(), gen)` and
+        // evaluates nav.up() when the EXECUTOR reaches it, not at keypress time - so a press
+        // landing a moment before this one still has a tune in flight. Without this bump that
+        // tune passes its own generation check, moves the navigator out from under the rows
+        // captured below, and starts playing with its banner drawn behind the open list. That
+        // was reproduced on device before this line existed, not theorised.
+        generation.incrementAndGet()
+
         val onAirNumber = onAir?.channel?.number ?: nav.currentNumber
         val startIndex = nav.channels.indexOfFirst { it.number == onAirNumber }
             .let { if (it >= 0) it else nav.currentIndex }
@@ -209,6 +217,13 @@ class MainActivity : ComponentActivity() {
         composeView.requestFocus()
     }
 
+    /**
+     * Deliberately does NOT bump [generation], unlike [openPicker]. Closing happens either from
+     * BACK - when nothing is queued, because onKeyDown refuses every channel key while the picker
+     * is up - or from [onPickChannel], which runs immediately AFTER queueing the tune the viewer
+     * just asked for. A bump here would supersede that tune and selecting a channel would quietly
+     * do nothing.
+     */
     private fun closePicker() {
         pickerVisible.value = false
         composeView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
@@ -224,9 +239,15 @@ class MainActivity : ComponentActivity() {
         val nav = navigator
         val channel = nav?.channels?.getOrNull(index)
         if (nav != null && channel != null) {
-            nav.jumpTo(channel.number)
             val gen = generation.incrementAndGet()
-            executor.execute { tuneTo(channel, gen) }
+            // jumpTo runs on the executor, not here. DialNavigator documents its index as
+            // "mutated on the executor thread today", and up()/down() have always honoured that;
+            // calling it inline would make this the one UI-thread writer and quietly retire an
+            // invariant the next change in this area would otherwise inherit for free.
+            executor.execute {
+                nav.jumpTo(channel.number)
+                tuneTo(channel, gen)
+            }
         }
         closePicker()
     }

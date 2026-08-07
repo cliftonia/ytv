@@ -55,4 +55,15 @@ class ChannelLabelsTest {
         assertTrue("the picker is how you find a channel, so both fields must be present",
             row.contains("04") && row.contains("Architecture & Interiors"))
     }
+
+    @Test
+    fun `list rows align the name column across two and three digit channels`() {
+        fun nameStart(number: Int) =
+            ChannelLabels.listRow(
+                Channel(number = number, name = "Anything", kind = "youtube",
+                    rotation = "clock", streams = emptyList())).indexOf("Anything")
+        assertEquals("the dial runs past 100, and a name column that steps right at channel " +
+            "100 is what the eye catches when scanning 111 rows",
+            nameStart(4), nameStart(106))
+    }
 }
