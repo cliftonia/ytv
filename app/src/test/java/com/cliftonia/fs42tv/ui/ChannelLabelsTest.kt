@@ -22,18 +22,6 @@ class ChannelLabelsTest {
             }
 
     @Test
-    fun `indicator pads a single digit to two`() {
-        assertEquals("a jittering-width indicator draws the eye on every channel change",
-            "CH 04", ChannelLabels.indicator(4))
-    }
-
-    @Test
-    fun `indicator does not truncate three digits`() {
-        assertEquals("the dial runs past 100, and a truncated number is a wrong number",
-            "CH 103", ChannelLabels.indicator(103))
-    }
-
-    @Test
     fun `banner leads with the channel number and name`() {
         val (first, _) = ChannelLabels.bannerLines(tunedWith("Some Programme"))
         assertTrue("the banner must answer 'what am I watching' before anything else",

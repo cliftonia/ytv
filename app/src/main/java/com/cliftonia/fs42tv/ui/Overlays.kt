@@ -81,63 +81,48 @@ private fun OsdText(
 }
 
 /**
- * The single OSD block - the persistent corner indicator and the tune banner merged into one
- * anchored widget, matching how the box itself works rather than the two-widget split earlier
- * rounds used.
+ * The single OSD block, shown on each tune and then gone.
  *
- * The box draws exactly one OSD per tune (`field_player.py:158-185`): a single ASS overlay,
+ * This mirrors the box exactly (`field_player.py:158-185`): one ASS overlay,
  * `{\an7\pos(60,50)...}<channel line>\N{\fs22}<title line>`, which vanishes entirely after
- * `BANNER_SECONDS = 8.0` (`field_player.py:106`). This app additionally keeps a persistent
- * corner indicator on top of that pattern (the ytch.tv habit) - so rather than a second widget
- * at a second position, the banner here is the *expanded* form of the indicator, at the box's
- * own anchor:
+ * `BANNER_SECONDS = 8.0` (`field_player.py:106`). [channelLine] (e.g. "28  PANEL SHOWS") sits at
+ * 27.5.sp with [titleLine] beneath it at 11.sp, and after [holdMillis] the picture is clean.
  *
- * - **Expanded**, for [holdMillis] after a successful tune: the heading shows [channelLine]
- *   (e.g. "28  PANEL SHOWS") at 27.5.sp, with [titleLine] below it at 11.sp.
- * - **Collapsed**, the rest of the time: the heading shows [indicatorText] (e.g. "CH 28") at the
- *   same 27.5.sp, with no title line.
+ * An earlier revision also kept a persistent "CH 28" in this corner once the banner had gone - the
+ * ytch.tv habit. It was dropped after seeing it on screen: because the heading's text changes when
+ * the title drops away, the leftover reads as a second widget arriving rather than as the same one
+ * shrinking. Nothing lingering beats a lingering thing that looks like residue.
  *
- * The heading occupies the same position and size in both states - only its text, and whether
- * the title line exists beneath it, change - because both live inside one `Column` anchored once
- * at [Alignment.TopStart] with a fixed 30.dp/25.dp inset; the heading is always that Column's
- * first child, so nothing about its own modifier depends on the title's presence. Collapsing
- * therefore reads as the title dropping away and the heading's text changing, never as the block
- * jumping, resizing, or re-anchoring.
- *
- * Auto-hides (collapses) via a `LaunchedEffect` keyed on [generation], so a new tune cancels the
- * previous timer rather than letting an earlier one collapse a later, still-fresh banner.
+ * Hides via a `LaunchedEffect` keyed on [generation], so a new tune cancels the previous timer
+ * rather than letting an earlier one hide a later, still-fresh banner.
  */
 @Composable
 fun ChannelOsd(
-    indicatorText: String,
     channelLine: String,
     titleLine: String,
     generation: Int,
     holdMillis: Long = 8000,
 ) {
-    var expanded by remember { mutableStateOf(false) }
+    var visible by remember { mutableStateOf(false) }
     LaunchedEffect(generation) {
         if (channelLine.isEmpty()) return@LaunchedEffect
-        expanded = true
+        visible = true
         delay(holdMillis)
-        expanded = false
+        visible = false
     }
 
-    val heading = if (expanded) channelLine else indicatorText
-    if (heading.isEmpty()) return
+    if (!visible || channelLine.isEmpty()) return
 
     BoxWithConstraints(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.TopStart) {
         // The title is bounded against this composable's own measured width, not a fixed dp
         // figure: a hardcoded guess only holds at the density it was picked for. Real TVs
         // overscan, so the title is kept clear of the rightmost 5%, on top of the 30.dp left
-        // inset already spent getting to the text. This bound matters more now than when the
-        // banner lived at the bottom: the title now sits beside the heading rather than below
-        // it, where an overrun is more visible.
+        // inset already spent getting to the text.
         val titleMaxWidth = maxWidth * 0.95f - 30.dp
 
         Column(modifier = Modifier.padding(start = 30.dp, top = 25.dp)) {
-            OsdText(text = heading, fontSize = 27.5.sp)
-            if (expanded && titleLine.isNotEmpty()) {
+            OsdText(text = channelLine, fontSize = 27.5.sp)
+            if (titleLine.isNotEmpty()) {
                 OsdText(
                     text = titleLine,
                     fontSize = 11.sp,

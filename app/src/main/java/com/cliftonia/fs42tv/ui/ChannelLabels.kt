@@ -12,8 +12,6 @@ import com.cliftonia.fs42tv.tune.Tuned
 object ChannelLabels {
 
     /** Zero-padded so the indicator does not change width as you surf. */
-    fun indicator(number: Int): String = "CH %02d".format(number)
-
     fun bannerLines(tuned: Tuned): Pair<String, String> =
         "%02d  %s".format(tuned.channel.number, tuned.channel.name.uppercase()) to
             cleanTitle(tuned.stream.title)
