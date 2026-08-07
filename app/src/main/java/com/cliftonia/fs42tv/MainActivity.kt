@@ -7,7 +7,10 @@ import android.view.KeyEvent
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.activity.ComponentActivity
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
@@ -23,6 +26,7 @@ import com.cliftonia.fs42tv.sync.UrlCache
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
+import com.cliftonia.fs42tv.ui.ChannelBanner
 import com.cliftonia.fs42tv.ui.ChannelIndicator
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import java.net.URL
@@ -56,6 +60,20 @@ class MainActivity : ComponentActivity() {
     // onAir, so it never appears out of step with the picture actually on screen.
     private val indicatorText = mutableStateOf("")
 
+    // Compose state backing the tune banner. Written only from the runOnUiThread block below,
+    // and only on a genuine success - unlike indicatorText, a failed re-tune must not touch
+    // these, since bumping bannerGeneration would replay the LaunchedEffect in ChannelBanner
+    // and pop a banner back up for a channel that never changed.
+    private val bannerChannelLine = mutableStateOf("")
+    private val bannerTitleLine = mutableStateOf("")
+
+    // Separate from `generation` below on purpose: that counter is bumped once per keypress, to
+    // coalesce a burst of presses, and can advance even when a tune ultimately fails - it does
+    // not increment exactly once per successful tune. Using it as the banner's LaunchedEffect
+    // key would replay the auto-hide timer (and thus re-show the banner) on a failed re-tune
+    // even though nothing on screen changed. This counter only advances alongside onAir itself.
+    private val bannerGeneration = mutableStateOf(0)
+
     private lateinit var prefs: SharedPreferences
     private lateinit var resolver: ServerResolver
 
@@ -80,7 +98,16 @@ class MainActivity : ComponentActivity() {
             // from the D-pad channel-surfing handled in onKeyDown.
             isFocusable = false
             descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
-            setContent { ChannelIndicator(indicatorText.value) }
+            setContent {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    ChannelIndicator(indicatorText.value)
+                    ChannelBanner(
+                        channelLine = bannerChannelLine.value,
+                        titleLine = bannerTitleLine.value,
+                        generation = bannerGeneration.value,
+                    )
+                }
+            }
         }
         fun matchParent() = FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -213,6 +240,19 @@ class MainActivity : ComponentActivity() {
                     // leaves onAir - and therefore the indicator - on whatever last actually
                     // played, exactly as the picture itself does.
                     indicatorText.value = onAir?.let { ChannelLabels.indicator(it.channel.number) } ?: ""
+
+                    // Only a genuine success touches the banner. A failed re-tune already left
+                    // onAir untouched above; bumping bannerGeneration here regardless would
+                    // replay ChannelBanner's LaunchedEffect and re-show the banner for a channel
+                    // that never actually changed.
+                    if (playedSuccessfully) {
+                        onAir?.let { nowOnAir ->
+                            val (channelLine, titleLine) = ChannelLabels.bannerLines(nowOnAir)
+                            bannerChannelLine.value = channelLine
+                            bannerTitleLine.value = titleLine
+                        }
+                        bannerGeneration.value += 1
+                    }
                 }
             }
         }
