@@ -26,9 +26,8 @@ import com.cliftonia.fs42tv.sync.UrlCache
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
-import com.cliftonia.fs42tv.ui.ChannelBanner
-import com.cliftonia.fs42tv.ui.ChannelIndicator
 import com.cliftonia.fs42tv.ui.ChannelLabels
+import com.cliftonia.fs42tv.ui.ChannelOsd
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -100,8 +99,8 @@ class MainActivity : ComponentActivity() {
             descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
             setContent {
                 Box(modifier = Modifier.fillMaxSize()) {
-                    ChannelIndicator(indicatorText.value)
-                    ChannelBanner(
+                    ChannelOsd(
+                        indicatorText = indicatorText.value,
                         channelLine = bannerChannelLine.value,
                         titleLine = bannerTitleLine.value,
                         generation = bannerGeneration.value,

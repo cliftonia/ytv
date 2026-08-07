@@ -1,6 +1,5 @@
 package com.cliftonia.fs42tv.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -24,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 
 /**
- * The fill colour the FieldStation42 box's own OSD draws in - see `field_player.py:164-167`,
+ * The fill colour the FieldStation42 box's own OSD draws in - see `field_player.py:158-185`,
  * which renders the whole OSD as a single ASS overlay: `{\an7\pos(60,50)\bord3\3c&H001100&
  * \c&H33FF33&\fs55}<channel line>\N{\fs22}<title line>`. ASS colour literals are BGR: `&H33FF33&`
  * is palindromic so it reads the same either way, but the outline below is not - do not "fix" it
@@ -42,8 +41,11 @@ private val OsdOutlineWidth = 1.5.dp
  * One line of OSD text, drawn twice - a stroked back copy then a filled front copy - because
  * Compose's `Text` has no outline property of its own. The outline is functional, not
  * decorative: without it `#33FF33` disappears over a snow scene or a bright studio background,
- * exactly the footage this app plays. Factored out once and shared by the indicator and both
- * banner lines rather than repeating the two-layer trick three times.
+ * exactly the footage this app plays. There is no backing rectangle behind either copy - the box's
+ * own OSD has none, and the outline alone is what keeps the text legible over bright footage.
+ *
+ * `fontWeight` defaults to [FontWeight.Normal]: the box's ASS string carries no `\b1` and mpv's
+ * `--osd-bold` defaults to `no`, so the real OSD it is matching is regular weight, not bold.
  *
  * `BasicText` rather than `androidx.tv.material3.Text`: the latter's `maxLines`/`overflow`
  * wiring wasn't reaching the box that draws it (a long title used to run to the physical screen
@@ -56,7 +58,7 @@ private fun OsdText(
     text: String,
     fontSize: TextUnit,
     modifier: Modifier = Modifier,
-    fontWeight: FontWeight = FontWeight.Bold,
+    fontWeight: FontWeight = FontWeight.Normal,
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Clip,
 ) {
@@ -79,78 +81,66 @@ private fun OsdText(
 }
 
 /**
- * The persistent corner channel indicator.
+ * The single OSD block - the persistent corner indicator and the tune banner merged into one
+ * anchored widget, matching how the box itself works rather than the two-widget split earlier
+ * rounds used.
  *
- * Shows what is ON AIR, which is not the same as where the dial navigator points - they differ
- * whenever a tune fails and the previous picture stays up.
+ * The box draws exactly one OSD per tune (`field_player.py:158-185`): a single ASS overlay,
+ * `{\an7\pos(60,50)...}<channel line>\N{\fs22}<title line>`, which vanishes entirely after
+ * `BANNER_SECONDS = 8.0` (`field_player.py:106`). This app additionally keeps a persistent
+ * corner indicator on top of that pattern (the ytch.tv habit) - so rather than a second widget
+ * at a second position, the banner here is the *expanded* form of the indicator, at the box's
+ * own anchor:
  *
- * Position and size match the box's OSD exactly: `\pos(60,50)` at its native 1920x1080 canvas is
- * 30.dp/25.dp here, `\fs55` is 27.5.sp. These are proven on the real TV, so the on-screen-safe
- * area is already accounted for - no separate overscan margin needed here.
+ * - **Expanded**, for [holdMillis] after a successful tune: the heading shows [channelLine]
+ *   (e.g. "28  PANEL SHOWS") at 27.5.sp, with [titleLine] below it at 11.sp.
+ * - **Collapsed**, the rest of the time: the heading shows [indicatorText] (e.g. "CH 28") at the
+ *   same 27.5.sp, with no title line.
+ *
+ * The heading occupies the same position and size in both states - only its text, and whether
+ * the title line exists beneath it, change - because both live inside one `Column` anchored once
+ * at [Alignment.TopStart] with a fixed 30.dp/25.dp inset; the heading is always that Column's
+ * first child, so nothing about its own modifier depends on the title's presence. Collapsing
+ * therefore reads as the title dropping away and the heading's text changing, never as the block
+ * jumping, resizing, or re-anchoring.
+ *
+ * Auto-hides (collapses) via a `LaunchedEffect` keyed on [generation], so a new tune cancels the
+ * previous timer rather than letting an earlier one collapse a later, still-fresh banner.
  */
 @Composable
-fun ChannelIndicator(text: String, modifier: Modifier = Modifier) {
-    if (text.isEmpty()) return
-    Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.TopStart) {
-        OsdText(
-            text = text,
-            fontSize = 27.5.sp,
-            modifier = Modifier.padding(start = 30.dp, top = 25.dp),
-        )
-    }
-}
-
-/**
- * The tune banner: channel line above, programme title below.
- *
- * Auto-hides via a LaunchedEffect keyed on [generation], so a new tune cancels the previous
- * timer rather than letting an earlier one hide a later banner. That bug needed explicit
- * callback removal under Views; here the key does it.
- *
- * Sized to match the box's OSD: `\fs55`/`\fs22` are 27.5.sp/11.sp here. Unlike the indicator this
- * stays at bottom-left rather than the box's own top-left position - the corner indicator already
- * lives there (the ytch.tv pattern this app deliberately layers on top of what the box does), so
- * the two would collide if the banner used the box's position too. It shares the indicator's
- * 30.dp left inset so the two align on a common left margin. [holdMillis] defaults to the box's
- * own `BANNER_SECONDS = 8.0` from `field_player.py:106`.
- */
-@Composable
-fun ChannelBanner(
+fun ChannelOsd(
+    indicatorText: String,
     channelLine: String,
     titleLine: String,
     generation: Int,
     holdMillis: Long = 8000,
 ) {
-    var visible by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(false) }
     LaunchedEffect(generation) {
         if (channelLine.isEmpty()) return@LaunchedEffect
-        visible = true
+        expanded = true
         delay(holdMillis)
-        visible = false
+        expanded = false
     }
-    if (!visible) return
 
-    BoxWithConstraints(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.BottomStart) {
+    val heading = if (expanded) channelLine else indicatorText
+    if (heading.isEmpty()) return
+
+    BoxWithConstraints(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.TopStart) {
         // The title is bounded against this composable's own measured width, not a fixed dp
-        // figure: a hardcoded guess only holds at the density it was picked for. `maxWidth` here
-        // is BoxWithConstraints' real measured width for this screen, already density-correct.
-        // Real TVs overscan - the outer edge of the panel may not be visible at all - so the
-        // title is kept clear of the rightmost 5%, on top of the 30.dp + 20.dp already spent on
-        // the box's left inset and its own padding.
-        val titleMaxWidth = maxWidth * 0.95f - 30.dp - 20.dp
+        // figure: a hardcoded guess only holds at the density it was picked for. Real TVs
+        // overscan, so the title is kept clear of the rightmost 5%, on top of the 30.dp left
+        // inset already spent getting to the text. This bound matters more now than when the
+        // banner lived at the bottom: the title now sits beside the heading rather than below
+        // it, where an overrun is more visible.
+        val titleMaxWidth = maxWidth * 0.95f - 30.dp
 
-        Column(
-            modifier = Modifier
-                .padding(start = 30.dp, bottom = 56.dp)
-                .background(Color(0xB0000000))
-                .padding(20.dp),
-        ) {
-            OsdText(text = channelLine, fontSize = 27.5.sp)
-            if (titleLine.isNotEmpty()) {
+        Column(modifier = Modifier.padding(start = 30.dp, top = 25.dp)) {
+            OsdText(text = heading, fontSize = 27.5.sp)
+            if (expanded && titleLine.isNotEmpty()) {
                 OsdText(
                     text = titleLine,
                     fontSize = 11.sp,
-                    fontWeight = FontWeight.Normal,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.widthIn(max = titleMaxWidth),
