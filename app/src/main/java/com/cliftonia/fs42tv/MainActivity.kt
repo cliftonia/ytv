@@ -7,9 +7,12 @@ import android.util.Log
 import android.view.KeyEvent
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
+import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
+import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.ServerResolver
+import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.DialRepository
 import com.cliftonia.fs42tv.sync.UrlCache
@@ -29,6 +32,7 @@ class MainActivity : Activity() {
     private var player: ChannelPlayer? = null
 
     @Volatile private var navigator: DialNavigator? = null
+    @Volatile private var destroyed: Boolean = false
     private var urls: UrlCache? = null
 
     private lateinit var prefs: SharedPreferences
@@ -120,18 +124,35 @@ class MainActivity : Activity() {
                 "${tuned.offsetSeconds}s -> ${playable::class.simpleName}",
         )
 
-        prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
+        // Only a Playable that genuinely reaches the player is a successful tune. A cache miss
+        // the server also could not resolve, and anything Unplayable, must leave the remembered
+        // channel as whatever last actually played - otherwise a dead channel becomes the one
+        // the app resumes on next launch, with no picture and no obvious reason why.
+        val playedSuccessfully = when (playable) {
+            is Progressive, is Hls -> true
+            is NeedsResolving, is Unplayable -> false
+        }
+
+        if (playedSuccessfully && !destroyed) {
+            prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
+        }
 
         // NeedsResolving here means the server round trip above also failed: play nothing and
-        // leave whatever was already on screen rather than blanking it.
-        if (playable !is NeedsResolving) {
-            runOnUiThread { player?.play(playable, tuned.offsetSeconds) }
+        // leave whatever was already on screen rather than blanking it. The destroyed check
+        // guards against a tune completing after onDestroy has already released the player -
+        // most likely a resolver network call that outlived the activity.
+        if (playable !is NeedsResolving && !destroyed) {
+            runOnUiThread {
+                if (!destroyed) player?.play(playable, tuned.offsetSeconds)
+            }
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        destroyed = true
         executor.shutdownNow()
         player?.release()
+        player = null
     }
 }
