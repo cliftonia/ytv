@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
-import com.cliftonia.fs42tv.resolver.Hls
-import com.cliftonia.fs42tv.resolver.StreamResolver
-import com.cliftonia.fs42tv.schedule.ClockRotation
-import com.cliftonia.fs42tv.schedule.PlayPoint
 import com.cliftonia.fs42tv.sync.DialRepository
+import com.cliftonia.fs42tv.tune.Tuner
 import java.net.URL
 import kotlin.concurrent.thread
 
@@ -40,28 +37,13 @@ class MainActivity : Activity() {
             if (channel == null) { Log.e("fs42", "channel $CHANNEL_NUMBER not on the dial"); return@thread }
 
             val now = System.currentTimeMillis() / 1000
-            // `duration` on a live stream is a fixed 600s placeholder, not a real clip length -
-            // live channels do not rotate on the clock, so only compute a clock position for
-            // channels that actually do; otherwise play the single stream from its start.
-            val point = if (channel.rotation == "clock") {
-                ClockRotation.playPointFor(channel.streams.map { it.duration }, now)
-            } else {
-                PlayPoint(0, 0.0)
-            }
-            if (point == null) { Log.e("fs42", "${channel.name} has nothing on air"); return@thread }
+            val tuned = Tuner.tune(channel, urls, now)
+            if (tuned == null) { Log.e("fs42", "${channel.name} has nothing on air"); return@thread }
 
-            val stream = channel.streams[point.index]
-            // Trust the discriminator the server publishes rather than inferring live-vs-
-            // youtube from whether stream.id happens to be null; StreamResolver's own id
-            // check remains a correct fallback but must not be the only signal.
-            val playable = if (channel.kind == "live") {
-                Hls(stream.url)
-            } else {
-                StreamResolver.resolve(stream, urls, preferUhd = false, nowSeconds = now)
-            }
-            Log.i("fs42", "${channel.name}: clip ${point.index} at ${point.offsetSeconds}s -> $playable")
+            Log.i("fs42", "${tuned.channel.name}: clip ${tuned.streamIndex} at " +
+                "${tuned.offsetSeconds}s -> ${tuned.playable}")
 
-            runOnUiThread { player.play(playable, point.offsetSeconds) }
+            runOnUiThread { player.play(tuned.playable, tuned.offsetSeconds) }
         }
     }
 
