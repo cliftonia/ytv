@@ -1,9 +1,9 @@
 package com.cliftonia.fs42tv.tune
 
 import com.cliftonia.fs42tv.resolver.Hls
-import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.StreamResolver
+import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.Stream
@@ -53,9 +53,13 @@ object Tuner {
         // StreamResolver has its own null-id fallback to Hls, meant for genuinely live streams;
         // delegating to it for a non-live stream with a missing id would let that fallback
         // override the discriminator above, so that malformed case is short-circuited here.
+        // It is reported as Unplayable rather than NeedsResolving: there is no id to send the
+        // server, and its resolve endpoint rejects anything that isn't an 11-character id, so
+        // asking it would be a network round trip that exists only to fail.
         val playable: Playable = when {
             channel.kind == "live" -> Hls(stream.url)
-            stream.id == null -> NeedsResolving("")
+            stream.id == null ->
+                Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
             else -> StreamResolver.resolve(stream, cache, preferUhd, nowSeconds)
         }
 

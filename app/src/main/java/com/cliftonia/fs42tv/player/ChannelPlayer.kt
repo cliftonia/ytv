@@ -13,6 +13,7 @@ import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
+import com.cliftonia.fs42tv.resolver.Unplayable
 
 /**
  * Turns a Playable into something ExoPlayer can start, at a given offset.
@@ -54,6 +55,13 @@ class ChannelPlayer(context: Context) {
                 // later-phase work; for now, make the miss legible instead of a silent
                 // black screen behind a healthy-looking log line.
                 Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
+                return
+            }
+
+            is Unplayable -> {
+                // No server round trip would help this one - make that legible too, rather
+                // than a silent black screen behind a healthy-looking log line.
+                Log.w("fs42", "cannot play: ${playable.reason}")
                 return
             }
         }
