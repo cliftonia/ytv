@@ -73,9 +73,12 @@ class DialNavigatorTest {
     @Test
     fun `jumpTo an unknown number changes nothing`() {
         val nav = DialNavigator(dial(2, 9, 63))
+        nav.up()
+        nav.up()
+        assertEquals(63, nav.currentNumber)
         assertNull(nav.jumpTo(404))
-        assertEquals("a failed jump must leave the viewer where they were, not reset the dial",
-            2, nav.currentNumber)
+        assertEquals("a failed jump must leave the viewer where they were, not reset to the start",
+            63, nav.currentNumber)
     }
 
     @Test
