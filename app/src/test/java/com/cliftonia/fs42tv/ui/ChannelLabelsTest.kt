@@ -47,15 +47,34 @@ class ChannelLabelsTest {
     }
 
     @Test
-    fun `a channel-name prefix is stripped from the title`() {
-        assertEquals("the banner already shows the channel; repeating it wastes the line",
-            "Inside The Bear", ChannelLabels.cleanTitle("Architectural Digest: Inside The Bear"))
+    fun `a show name ahead of an internal colon survives`() {
+        assertEquals("a colon rule that fired here deleted the show name entirely",
+            "Tom and Jerry | Mega Episode: Golden Era Vol. 10 | Warner Classics",
+            ChannelLabels.cleanTitle(
+                "Tom and Jerry | Mega Episode: Golden Era Vol. 10 | Warner Classics"))
     }
 
     @Test
-    fun `trailing boilerplate after a pipe is dropped`() {
-        assertEquals("Inside The Bear",
-            ChannelLabels.cleanTitle("Inside The Bear | Open Door | Architectural Digest"))
+    fun `a round number in a later pipe segment survives`() {
+        assertEquals("a pipe rule that fired here dropped the only thing distinguishing this " +
+            "video from every other highlight on the channel",
+            "NRL Highlights | NRL 2026 | Round Up | Round 7",
+            ChannelLabels.cleanTitle("NRL Highlights | NRL 2026 | Round Up | Round 7"))
+    }
+
+    @Test
+    fun `an episode number in a later pipe segment survives`() {
+        assertEquals("a pipe rule that fired here dropped the episode identifier",
+            "Comedy Inc | Season 2 Episode 3 | FULL EPISODE",
+            ChannelLabels.cleanTitle("Comedy Inc | Season 2 Episode 3 | FULL EPISODE"))
+    }
+
+    @Test
+    fun `a series name ahead of an episode colon survives`() {
+        assertEquals("a colon rule that fired here deleted the series name and episode number",
+            "Can I Trust the Bible - Episode 3: The Council of Nicaea | @WesHuff",
+            ChannelLabels.cleanTitle(
+                "Can I Trust the Bible - Episode 3: The Council of Nicaea | @WesHuff"))
     }
 
     @Test

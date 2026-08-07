@@ -22,22 +22,25 @@ object ChannelLabels {
         "CHANNEL %02d   %s".format(channel.number, channel.name)
 
     /**
-     * Strip the boilerplate YouTube titles carry, conservatively.
+     * Strip bracketed noise - "[4K]", "(Official Video)" and friends - from a raw YouTube
+     * title, conservatively.
      *
-     * A long title is fine - the goal is removing the uploader's furniture, not summarising.
-     * Anything that would empty the title is skipped, because showing the raw title beats
-     * showing nothing.
+     * This used to also strip a leading "Uploader: " prefix and cut everything after the
+     * first "|", on the assumption that the identifying part of a title is always
+     * front-loaded. Verification against real published titles showed that assumption is
+     * false often enough to be dangerous: round numbers, episode numbers and even the show
+     * name itself regularly land in a later "|" segment, and the colon rule fired on
+     * internal title punctuation ("Episode 3:") as readily as on an actual uploader prefix.
+     * Both rules were silently deleting the one piece of information that told two videos
+     * on the same channel apart - e.g. "Tom and Jerry | Mega Episode: Golden Era Vol. 10 |
+     * Warner Classics" lost "Tom and Jerry" entirely. The banner's title line wraps to two
+     * lines and ellipsizes, so a title that is merely long is harmless; a title with its
+     * meaning removed is not. Do not reintroduce a rule that assumes the identity is in a
+     * fixed position without re-verifying against real published titles first.
      */
     fun cleanTitle(raw: String): String {
         var text = raw.trim()
         if (text.isEmpty()) return ""
-
-        // "Uploader: Real Title" - drop the prefix, but only when something survives.
-        val colon = text.indexOf(": ")
-        if (colon in 1..40 && text.length > colon + 2) text = text.substring(colon + 2).trim()
-
-        // "Real Title | Series | Uploader" - the first segment is the programme.
-        text = text.substringBefore('|').trim().ifEmpty { text }
 
         // "[4K]", "(Official Video)" and friends.
         text = text.replace(Regex("""\s*[\[(][^\])]*[\])]"""), "").trim()
