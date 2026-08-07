@@ -21,7 +21,23 @@ class ServerResolver(
 ) {
     private val json = Json { ignoreUnknownKeys = true }
 
-    fun resolve(videoId: String, nowSeconds: Long, preferUhd: Boolean = false): Progressive? {
+    /**
+     * A resolved clip together with the moment its signed URLs die.
+     *
+     * The expiry is what lets a caller cache the result without guessing a lifetime. It is
+     * carried here rather than folded into [Progressive] because [Progressive] is a `Playable`
+     * that flows all the way to the player, and the player has no business knowing about it.
+     */
+    data class Resolved(val playable: Progressive, val expiresAtSeconds: Long)
+
+    fun resolve(videoId: String, nowSeconds: Long, preferUhd: Boolean = false): Progressive? =
+        resolveDetailed(videoId, nowSeconds, preferUhd)?.playable
+
+    fun resolveDetailed(
+        videoId: String,
+        nowSeconds: Long,
+        preferUhd: Boolean = false,
+    ): Resolved? {
         val encodedId = URLEncoder.encode(videoId, "UTF-8")
         val body = runCatching { fetch("$baseUrl/resolve?v=$encodedId") }.getOrNull() ?: return null
         val root = runCatching { json.parseToJsonElement(body).jsonObject }.getOrNull() ?: return null
@@ -30,7 +46,7 @@ class ServerResolver(
         for (name in order) {
             val tier = tierAt(root, name) ?: continue
             if (!tier.isFresh(nowSeconds)) continue
-            return Progressive(tier.video, tier.audio)
+            return Resolved(Progressive(tier.video, tier.audio), tier.expires)
         }
         return null
     }
