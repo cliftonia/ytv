@@ -54,15 +54,10 @@ class MainActivity : ComponentActivity() {
      */
     @Volatile private var onAir: Tuned? = null
 
-    // Compose state backing the corner indicator. Read only from the UI thread by the
-    // ChannelIndicator composable; written only from the runOnUiThread block below, alongside
-    // onAir, so it never appears out of step with the picture actually on screen.
-    private val indicatorText = mutableStateOf("")
-
     // Compose state backing the tune banner. Written only from the runOnUiThread block below,
-    // and only on a genuine success - unlike indicatorText, a failed re-tune must not touch
-    // these, since bumping bannerGeneration would replay the LaunchedEffect in ChannelBanner
-    // and pop a banner back up for a channel that never changed.
+    // and only on a genuine success: a failed re-tune must not touch these, since bumping
+    // bannerGeneration would replay the LaunchedEffect in ChannelOsd and pop a banner back up
+    // for a channel that never changed.
     private val bannerChannelLine = mutableStateOf("")
     private val bannerTitleLine = mutableStateOf("")
 
@@ -93,14 +88,13 @@ class MainActivity : ComponentActivity() {
 
         val view = PlayerView(this).apply { useController = false }
         val composeView = ComposeView(this).apply {
-            // The picker in task 4 needs focus; the indicator does not, and must not steal it
+            // The picker in task 4 needs focus; the OSD does not, and must not steal it
             // from the D-pad channel-surfing handled in onKeyDown.
             isFocusable = false
             descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
             setContent {
                 Box(modifier = Modifier.fillMaxSize()) {
                     ChannelOsd(
-                        indicatorText = indicatorText.value,
                         channelLine = bannerChannelLine.value,
                         titleLine = bannerTitleLine.value,
                         generation = bannerGeneration.value,
@@ -235,15 +229,12 @@ class MainActivity : ComponentActivity() {
             runOnUiThread {
                 if (!destroyed) {
                     player?.play(playable, tuned.offsetSeconds)
-                    // Reads the current onAir, not this tune's outcome directly: a failed tune
-                    // leaves onAir - and therefore the indicator - on whatever last actually
-                    // played, exactly as the picture itself does.
-                    indicatorText.value = onAir?.let { ChannelLabels.indicator(it.channel.number) } ?: ""
 
-                    // Only a genuine success touches the banner. A failed re-tune already left
-                    // onAir untouched above; bumping bannerGeneration here regardless would
-                    // replay ChannelBanner's LaunchedEffect and re-show the banner for a channel
-                    // that never actually changed.
+                    // Only a genuine success touches the banner, and it reads the current onAir
+                    // rather than this tune's outcome directly - a failed tune leaves onAir on
+                    // whatever last actually played, exactly as the picture itself does. Bumping
+                    // bannerGeneration regardless would replay ChannelOsd's LaunchedEffect and
+                    // re-show the banner for a channel that never actually changed.
                     if (playedSuccessfully) {
                         onAir?.let { nowOnAir ->
                             val (channelLine, titleLine) = ChannelLabels.bannerLines(nowOnAir)
