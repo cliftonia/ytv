@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
+import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.schedule.ClockRotation
+import com.cliftonia.fs42tv.schedule.PlayPoint
 import com.cliftonia.fs42tv.sync.DialRepository
 import java.net.URL
 import kotlin.concurrent.thread
@@ -31,17 +33,32 @@ class MainActivity : Activity() {
                 fetch = { url -> URL(url).readText() },
                 cacheDir = cacheDir,
             )
-            val dial = runCatching { repo.sync(SERVER) }.getOrNull() ?: repo.cachedDial()
-            val urls = repo.cachedUrls()
+            val synced = runCatching { repo.sync(SERVER) }.getOrNull()
+            val dial = synced?.dial ?: repo.cachedDial()
+            val urls = synced?.urls ?: repo.cachedUrls()
             val channel = dial?.channels?.firstOrNull { it.number == CHANNEL_NUMBER }
             if (channel == null) { Log.e("fs42", "channel $CHANNEL_NUMBER not on the dial"); return@thread }
 
             val now = System.currentTimeMillis() / 1000
-            val point = ClockRotation.playPointFor(channel.streams.map { it.duration }, now)
+            // `duration` on a live stream is a fixed 600s placeholder, not a real clip length -
+            // live channels do not rotate on the clock, so only compute a clock position for
+            // channels that actually do; otherwise play the single stream from its start.
+            val point = if (channel.rotation == "clock") {
+                ClockRotation.playPointFor(channel.streams.map { it.duration }, now)
+            } else {
+                PlayPoint(0, 0.0)
+            }
             if (point == null) { Log.e("fs42", "${channel.name} has nothing on air"); return@thread }
 
             val stream = channel.streams[point.index]
-            val playable = StreamResolver.resolve(stream, urls, preferUhd = false, nowSeconds = now)
+            // Trust the discriminator the server publishes rather than inferring live-vs-
+            // youtube from whether stream.id happens to be null; StreamResolver's own id
+            // check remains a correct fallback but must not be the only signal.
+            val playable = if (channel.kind == "live") {
+                Hls(stream.url)
+            } else {
+                StreamResolver.resolve(stream, urls, preferUhd = false, nowSeconds = now)
+            }
             Log.i("fs42", "${channel.name}: clip ${point.index} at ${point.offsetSeconds}s -> $playable")
 
             runOnUiThread { player.play(playable, point.offsetSeconds) }

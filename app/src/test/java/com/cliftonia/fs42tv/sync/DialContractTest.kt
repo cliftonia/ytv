@@ -77,8 +77,10 @@ class DialContractTest {
                              else fixture("urls-sample.json") },
             cacheDir = dir,
         )
-        val dial = repo.sync("http://example")
-        assertTrue(dial.channels.isNotEmpty())
+        val result = repo.sync("http://example")
+        assertTrue(result.dial.channels.isNotEmpty())
+        assertTrue("sync must hand back the parsed url cache too, not just the dial",
+            result.urls.urls.isNotEmpty())
         assertNotNull("without a cached copy the app is dead the moment the server is unreachable",
             repo.cachedDial())
     }
