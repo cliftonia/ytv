@@ -216,15 +216,34 @@ instrument first.
 **In, for v1:** channel surfing with the banner, clock rotation, last-channel
 recall, live HLS channels, the guide, and some form of direct channel entry.
 
-**Direct entry** works two ways, because the remotes differ. The app accepts
-hardware number keys (`KEYCODE_0`-`KEYCODE_9`) where a remote sends them — some
-TCL remotes have a number pad, and this is exactly how the box's Flirc setup
-works today. Where the remote has no digits, as on the Chromecast, an on-screen
-numeric overlay driven by the D-pad provides the same function. Both feed the
-same "tune to channel N" path; only the input differs.
+**Jumping to a channel is a LIST, not a number pad.** Revised 7 Aug 2026 after
+looking at how ytch.tv solves the same problem.
 
-This matters because on a 113-channel dial, surfing alone can mean up to 56
-presses to cross the dial.
+The original plan here was an on-screen numeric overlay driven by the D-pad. That
+was wrong. A numeric keypad is designed for a device with ten discrete keys; on a
+D-pad it costs several journeys per digit, and Google TV remotes have no digits at
+all. ytch.tv instead opens a **scrollable channel list** — `CHANNEL 04
+ARCHITECTURE & INTERIORS`, one row per channel, the current one highlighted — and
+that is exactly the right shape for a directional pad: up and down move, OK
+selects, BACK dismisses.
+
+So: one **channel list overlay**, opened by OK or the guide key, listing number and
+name, scrolled with up/down, committed with OK. The list IS the direct-entry
+mechanism; there is no separate numeric path to build or maintain.
+
+Hardware number keys (`KEYCODE_0`-`KEYCODE_9`) are still accepted where a remote
+sends them — some TCL remotes have a pad, and it is how the box's Flirc setup works
+today — but they are a bonus input into the same "tune to channel N" path, not a
+mechanism anything depends on.
+
+This matters because on a 111-channel dial, surfing alone can mean up to 55 presses
+to cross the dial.
+
+Two smaller things worth taking from the same source: the channel indicator is a
+persistent corner overlay (`CH 04`) rather than only a transient banner, which suits
+a simulator where knowing the channel matters more than knowing the programme; and
+the on-screen elements it exposes as toggles — channel name, captions, video title —
+are a reasonable v2 settings surface rather than decisions to hard-code now.
 
 **Out of scope for v1:** 4K renditions, on-device content curation, WeatherStar,
 Radio42 local media, the web remote.
