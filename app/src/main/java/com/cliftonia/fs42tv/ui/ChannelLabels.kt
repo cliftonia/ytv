@@ -14,6 +14,12 @@ object ChannelLabels {
     /**
      * Zero-padded so the heading does not change width as you surf.
      *
+     * One space between number and name, not the two the box uses (`field_player.py:153`).
+     * This is a deliberate divergence: at 27.5.sp monospace those two spaces read as a gulf
+     * rather than a separator, which the box's smaller effective rendering never showed. The
+     * picker keeps a wider gap because its number sits in a fixed-width field so the name
+     * column stays straight past channel 100 - see [listRow].
+     *
      * The title is used as published, not cleaned here. The server runs every title through
      * `fs42/yt_title.py` - the same cleaner the box's own OSD uses - so marketing tails, ALL
      * CAPS, emoji and hashtags are already gone by the time the app sees them. Cleaning again
@@ -30,7 +36,7 @@ object ChannelLabels {
      * which is why it survives contact with real titles where the positional rules did not.
      */
     fun bannerLines(tuned: Tuned): Pair<String, String> =
-        "%02d  %s".format(tuned.channel.number, tuned.channel.name.uppercase()) to
+        "%02d %s".format(tuned.channel.number, tuned.channel.name.uppercase()) to
             tuned.stream.title.trim()
 
     /**
