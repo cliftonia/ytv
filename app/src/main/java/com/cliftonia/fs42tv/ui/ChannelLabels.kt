@@ -33,6 +33,16 @@ object ChannelLabels {
         "%02d  %s".format(tuned.channel.number, tuned.channel.name.uppercase()) to
             tuned.stream.title.trim()
 
+    /**
+     * The gap was three spaces, which at monospace 20.sp opened a visible gulf down a column of
+     * 111 rows. It is now the same two the box puts between number and name
+     * (`field_player.py:153`), so the picker and the OSD read as one product.
+     *
+     * The number is zero-padded for the retro look but the FIELD is left-aligned to a fixed
+     * width, because the dial runs past 100: with a plain "%02d  " the names after a
+     * three-digit channel would sit one character right of the names after a two-digit one, and
+     * a ragged column is exactly what the eye catches when scanning a long list.
+     */
     fun listRow(channel: Channel): String =
-        "CHANNEL %02d   %s".format(channel.number, channel.name)
+        "CHANNEL %-4s%s".format("%02d".format(channel.number), channel.name)
 }
