@@ -162,6 +162,8 @@ class MainActivity : ComponentActivity() {
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
 
+        refreshHandler.postDelayed(refreshRunnable, preloadRefreshMillis)
+
         val initialRequestedAt = SystemClock.elapsedRealtime()
         executor.execute {
             val repo = DialRepository(
@@ -300,7 +302,35 @@ class MainActivity : ComponentActivity() {
      * Every step is best-effort. A neighbour that cannot be resolved is simply not preloaded;
      * nothing here may disturb the channel actually playing.
      */
-    private fun preloadNeighbours(current: Channel) {
+    /**
+     * Re-apply the preload plan periodically, recomputing each neighbour's clock offset.
+     *
+     * A preloaded buffer only helps at the position it is actually started from, and every
+     * channel here runs on a wall clock: buffer channel 64 at 1200 s, tune three minutes later,
+     * and the clock wants 1380 s. The bytes are wrong, but DNS, TLS and the connection stay
+     * warm - so unrefreshed preloading does not fail visibly, it quietly decays into connection
+     * warming. That is exactly how a team measuring once at the start concludes preloading
+     * "doesn't seem to help".
+     *
+     * A minute is comfortably shorter than the preload window is wrong by: at 60 s of drift
+     * against a 2 s buffer the bytes have long since stopped matching, so refreshing sooner
+     * would only spend bandwidth the previous task proved is the scarce resource here.
+     */
+    private val preloadRefreshMillis = 60_000L
+
+    private val refreshRunnable = object : Runnable {
+        override fun run() {
+            if (destroyed) return
+            onAir?.channel?.let { channel ->
+                executor.execute { if (!destroyed) preloadNeighbours(channel, rebuild = true) }
+            }
+            refreshHandler.postDelayed(this, preloadRefreshMillis)
+        }
+    }
+
+    private val refreshHandler by lazy { android.os.Handler(mainLooper) }
+
+    private fun preloadNeighbours(current: Channel, rebuild: Boolean = false) {
         val nav = navigator ?: return
         val preloader = this.preloader ?: return
         if (destroyed) return
@@ -309,7 +339,7 @@ class MainActivity : ComponentActivity() {
         val currentIndex = channels.indexOfFirst { it.number == current.number }
         if (currentIndex < 0) return
 
-        preloader.apply(channels.size, currentIndex) { index ->
+        preloader.apply(channels.size, currentIndex, rebuild) { index ->
             val channel = channels.getOrNull(index) ?: return@apply null
             val now = System.currentTimeMillis() / 1000
             val tuned = Tuner.tune(channel, urls, now) ?: return@apply null
@@ -425,6 +455,7 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         destroyed = true
+        refreshHandler.removeCallbacks(refreshRunnable)
         executor.shutdownNow()
         // Preloader first: it holds sources feeding the player the release below tears down,
         // and a preload landing against a released player is a crash rather than a wasted
