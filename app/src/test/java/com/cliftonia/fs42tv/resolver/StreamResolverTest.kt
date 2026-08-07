@@ -62,6 +62,24 @@ class StreamResolverTest {
     }
 
     @Test
+    fun `a tier inside the safety margin is treated as dead`() {
+        val nearExpiry = Tier(video = "https://v/near", audio = "https://a/near", expires = 400)
+        val result = StreamResolver.resolve(yt, cacheOf("hd" to nearExpiry),
+            preferUhd = false, nowSeconds = 200)
+        assertEquals("a URL expiring mid-programme leaves the viewer watching a dead channel, so we retire it early",
+            NeedsResolving("abc12345678"), result)
+    }
+
+    @Test
+    fun `a tier outside the safety margin is used`() {
+        val goodLife = Tier(video = "https://v/good", audio = "https://a/good", expires = 700)
+        val result = StreamResolver.resolve(yt, cacheOf("hd" to goodLife),
+            preferUhd = false, nowSeconds = 200)
+        assertEquals("a URL with sufficient life beyond the margin plays without interruption",
+            Progressive("https://v/good", "https://a/good"), result)
+    }
+
+    @Test
     fun `a missing cache entry needs resolving`() {
         val result = StreamResolver.resolve(yt, UrlCache(), preferUhd = false, nowSeconds = 0)
         assertEquals(NeedsResolving("abc12345678"), result)
