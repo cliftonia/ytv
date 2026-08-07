@@ -94,4 +94,30 @@ class DialContractTest {
         assertTrue("a bad response must never destroy the last good cache",
             bad.cachedDial()!!.channels.isNotEmpty())
     }
+
+    @Test
+    fun `a good dial paired with a malformed url cache is not cached over a good one`() {
+        val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
+        val goodFetch: (String) -> String = { url ->
+            if (url.endsWith("channels.json")) fixture("channels-sample.json") else fixture("urls-sample.json")
+        }
+        val good = DialRepository(goodFetch, dir)
+        good.sync("http://example")
+        val goodChannelNumbers = good.cachedDial()!!.channels.map { it.number }
+        assertTrue("the cache must have something to protect before the failure case is exercised",
+            goodChannelNumbers.isNotEmpty())
+
+        // A different, but individually valid, channels.json - distinguishable from the
+        // one cached above so an early write can be told apart from no write at all.
+        val newButUnrelatedChannels = """{"generated":2,"channels":[{"number":999,"name":"Impostor",
+            "kind":"live","rotation":null,"streams":[]}]}"""
+        val halfBad = DialRepository(
+            fetch = { url -> if (url.endsWith("channels.json")) newButUnrelatedChannels
+                             else "{ this is not json" },
+            cacheDir = dir,
+        )
+        runCatching { halfBad.sync("http://example") }
+        assertEquals("a half-failed sync must not destroy the fallback that exists for when the server is unreachable",
+            goodChannelNumbers, halfBad.cachedDial()!!.channels.map { it.number })
+    }
 }
