@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.player
 
 import android.content.Context
+import android.util.Log
 import androidx.media3.common.MediaItem
 import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
@@ -9,6 +10,7 @@ import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.exoplayer.source.MergingMediaSource
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
 import com.cliftonia.fs42tv.resolver.Hls
+import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 
@@ -23,11 +25,15 @@ import com.cliftonia.fs42tv.resolver.Progressive
  */
 class ChannelPlayer(context: Context) {
 
-    private val factory = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(true)
+    // Cross-protocol redirects would let an https media URL be silently downgraded to plain
+    // http mid-stream; on untrusted Wi-Fi that is an open door for URL injection, so this
+    // stays false even though it means a stream that genuinely needs such a redirect fails
+    // loudly instead.
+    private val factory = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
     val exo: ExoPlayer = ExoPlayer.Builder(context).build()
 
     fun play(playable: Playable, startAtSeconds: Double) {
-        val source = when (playable) {
+        val source: MediaSource = when (playable) {
             is Hls -> HlsMediaSource.Factory(factory)
                 .createMediaSource(MediaItem.fromUri(playable.url))
 
@@ -43,9 +49,15 @@ class ChannelPlayer(context: Context) {
                 )
             }
 
-            else -> return
+            is NeedsResolving -> {
+                // Nothing usable is cached for this id. Asking the server to resolve it is
+                // later-phase work; for now, make the miss legible instead of a silent
+                // black screen behind a healthy-looking log line.
+                Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
+                return
+            }
         }
-        exo.setMediaSource(source as MediaSource, (startAtSeconds * 1000).toLong())
+        exo.setMediaSource(source, (startAtSeconds * 1000).toLong())
         exo.prepare()
         exo.playWhenReady = true
     }
