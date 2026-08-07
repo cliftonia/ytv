@@ -16,6 +16,9 @@ data class Hls(val url: String) : Playable
 /** Nothing usable is cached; the caller must ask the server to resolve this id. */
 data class NeedsResolving(val videoId: String) : Playable
 
+/** The stream cannot be played and no server round trip would help. */
+data class Unplayable(val reason: String) : Playable
+
 /**
  * Decides what to play from what has already been resolved.
  *

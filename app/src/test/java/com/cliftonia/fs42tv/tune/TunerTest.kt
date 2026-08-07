@@ -3,13 +3,14 @@ package com.cliftonia.fs42tv.tune
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Progressive
+import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.sync.Tier
 import com.cliftonia.fs42tv.sync.UrlCache
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNull
-import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
@@ -58,13 +59,22 @@ class TunerTest {
     @Test
     fun `kind decides live, not a null stream id`() {
         // A youtube channel whose id is missing must NOT be treated as live: handing a watch
-        // page to an HLS parser produces a confusing failure far from the cause.
+        // page to an HLS parser produces a confusing failure far from the cause. Nor is there
+        // an id to send the server, so it is Unplayable rather than NeedsResolving.
         val oddball = Channel(number = 5, name = "Odd", kind = "youtube", rotation = "clock",
             streams = listOf(Stream(id = null, url = "https://youtube.com/watch?v=x",
                 duration = 100, title = "t")))
         val tuned = Tuner.tune(oddball, null, nowSeconds = 10)
-        assertTrue("the server publishes a discriminator; guessing from a null id contradicts it",
-            tuned!!.playable !is Hls)
+        assertEquals("the server publishes a discriminator; guessing from a null id contradicts " +
+            "it, and there is no id here to ask the server to resolve",
+            Unplayable("Odd: a youtube stream has no video id to resolve"), tuned!!.playable)
+    }
+
+    @Test
+    fun `an unplayable clip is not treated as a resolvable cache miss`() {
+        // Collapsing these back into one case would send the server an id it has already
+        // rejected: NeedsResolving triggers a resolve call, Unplayable must not.
+        assertNotEquals(Unplayable("no id"), NeedsResolving(""))
     }
 
     @Test
