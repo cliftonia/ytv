@@ -1,8 +1,10 @@
 package com.cliftonia.fs42tv.player
 
 import android.content.Context
+import android.os.SystemClock
 import android.util.Log
 import androidx.media3.common.MediaItem
+import androidx.media3.common.Player
 import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.hls.HlsMediaSource
@@ -33,38 +35,67 @@ class ChannelPlayer(context: Context) {
     private val factory = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
     val exo: ExoPlayer = ExoPlayer.Builder(context).build()
 
-    fun play(playable: Playable, startAtSeconds: Double) {
-        val source: MediaSource = when (playable) {
-            is Hls -> HlsMediaSource.Factory(factory)
-                .createMediaSource(MediaItem.fromUri(playable.url))
+    /** Set when a tune starts, cleared when its first frame lands. Main thread only. */
+    private var requestedAtMillis = 0L
 
-            is Progressive -> {
-                val video = ProgressiveMediaSource.Factory(factory)
-                    .createMediaSource(MediaItem.fromUri(playable.videoUrl))
-                // YouTube serves video and audio separately above 360p, so they are merged
-                // rather than played one after the other.
-                if (playable.audioUrl == null) video else MergingMediaSource(
-                    video,
-                    ProgressiveMediaSource.Factory(factory)
-                        .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
-                )
+    init {
+        exo.addListener(object : Player.Listener {
+            override fun onRenderedFirstFrame() {
+                val requested = requestedAtMillis
+                if (requested > 0L) {
+                    // Measured from the KEYPRESS, not from setMediaSource. The resolve step
+                    // ahead of this is only ~70ms on a cache hit, but it is part of what the
+                    // viewer waits through, and a ruler that starts after the expensive part
+                    // would flatter every change made in this phase.
+                    Log.i("fs42", "first frame ${SystemClock.elapsedRealtime() - requested} ms")
+                    requestedAtMillis = 0L
+                }
             }
+        })
+    }
 
-            is NeedsResolving -> {
-                // Nothing usable is cached for this id. Asking the server to resolve it is
-                // later-phase work; for now, make the miss legible instead of a silent
-                // black screen behind a healthy-looking log line.
-                Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
-                return
-            }
+    /**
+     * The MediaSource for a playable, or null when there is nothing to play.
+     *
+     * Split out of [play] because the preload manager needs sources built exactly the way the
+     * player builds them - a preloaded source that differs from the played one buffers bytes
+     * that are then thrown away.
+     */
+    fun sourceFor(playable: Playable): MediaSource? = when (playable) {
+        is Hls -> HlsMediaSource.Factory(factory)
+            .createMediaSource(MediaItem.fromUri(playable.url))
 
-            is Unplayable -> {
-                // No server round trip would help this one - make that legible too, rather
-                // than a silent black screen behind a healthy-looking log line.
-                Log.w("fs42", "cannot play: ${playable.reason}")
-                return
-            }
+        is Progressive -> {
+            val video = ProgressiveMediaSource.Factory(factory)
+                .createMediaSource(MediaItem.fromUri(playable.videoUrl))
+            // YouTube serves video and audio separately above 360p, so they are merged
+            // rather than played one after the other.
+            if (playable.audioUrl == null) video else MergingMediaSource(
+                video,
+                ProgressiveMediaSource.Factory(factory)
+                    .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
+            )
         }
+
+        is NeedsResolving -> {
+            // Nothing usable is cached for this id. Asking the server to resolve it is
+            // later-phase work; for now, make the miss legible instead of a silent
+            // black screen behind a healthy-looking log line.
+            Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
+            null
+        }
+
+        is Unplayable -> {
+            // No server round trip would help this one - make that legible too, rather
+            // than a silent black screen behind a healthy-looking log line.
+            Log.w("fs42", "cannot play: ${playable.reason}")
+            null
+        }
+    }
+
+    fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
+        val source = sourceFor(playable) ?: return
+        this.requestedAtMillis = requestedAtMillis
         exo.setMediaSource(source, (startAtSeconds * 1000).toLong())
         exo.prepare()
         exo.playWhenReady = true

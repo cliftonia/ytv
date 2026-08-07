@@ -2,6 +2,7 @@ package com.cliftonia.fs42tv
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.SystemClock
 import android.util.Log
 import android.view.KeyEvent
 import android.view.ViewGroup
@@ -138,6 +139,7 @@ class MainActivity : ComponentActivity() {
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
 
+        val initialRequestedAt = SystemClock.elapsedRealtime()
         executor.execute {
             val repo = DialRepository(
                 fetch = { url -> URL(url).readText() },
@@ -155,7 +157,7 @@ class MainActivity : ComponentActivity() {
 
             val nav = DialNavigator(channels, remembered.takeIf { it > 0 })
             navigator = nav
-            tuneTo(nav.current, generation.get())
+            tuneTo(nav.current, generation.get(), initialRequestedAt)
         }
     }
 
@@ -174,12 +176,14 @@ class MainActivity : ComponentActivity() {
         return when (keyCode) {
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
                 val gen = generation.incrementAndGet()
-                executor.execute { tuneTo(nav.up(), gen) }
+                val requestedAt = SystemClock.elapsedRealtime()
+                executor.execute { tuneTo(nav.up(), gen, requestedAt) }
                 true
             }
             KeyEvent.KEYCODE_DPAD_DOWN, KeyEvent.KEYCODE_CHANNEL_DOWN -> {
                 val gen = generation.incrementAndGet()
-                executor.execute { tuneTo(nav.down(), gen) }
+                val requestedAt = SystemClock.elapsedRealtime()
+                executor.execute { tuneTo(nav.down(), gen, requestedAt) }
                 true
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_GUIDE -> {
@@ -240,13 +244,14 @@ class MainActivity : ComponentActivity() {
         val channel = nav?.channels?.getOrNull(index)
         if (nav != null && channel != null) {
             val gen = generation.incrementAndGet()
+            val requestedAt = SystemClock.elapsedRealtime()
             // jumpTo runs on the executor, not here. DialNavigator documents its index as
             // "mutated on the executor thread today", and up()/down() have always honoured that;
             // calling it inline would make this the one UI-thread writer and quietly retire an
             // invariant the next change in this area would otherwise inherit for free.
             executor.execute {
                 nav.jumpTo(channel.number)
-                tuneTo(channel, gen)
+                tuneTo(channel, gen, requestedAt)
             }
         }
         closePicker()
@@ -262,7 +267,7 @@ class MainActivity : ComponentActivity() {
      * abandons without touching the player, prefs, or [onAir]. That is what lets a burst of
      * presses skip every intermediate channel instead of running each one to completion.
      */
-    private fun tuneTo(channel: Channel, requestGeneration: Int) {
+    private fun tuneTo(channel: Channel, requestGeneration: Int, requestedAtMillis: Long) {
         if (requestGeneration != generation.get()) {
             Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before tuning; abandoning")
             return
@@ -325,7 +330,7 @@ class MainActivity : ComponentActivity() {
         if (playable !is NeedsResolving && !destroyed) {
             runOnUiThread {
                 if (!destroyed) {
-                    player?.play(playable, tuned.offsetSeconds)
+                    player?.play(playable, tuned.offsetSeconds, requestedAtMillis)
 
                     // Only a genuine success touches the banner, and it reads the current onAir
                     // rather than this tune's outcome directly - a failed tune leaves onAir on
