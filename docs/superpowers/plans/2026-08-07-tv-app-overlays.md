@@ -23,13 +23,27 @@ over the existing `PlayerView`. No new dependencies.
 - **`schedule`, `sync` parsing, `resolver`, `tune` and the new `ui` package must stay free of
   Android imports.** That boundary is verified by grep at every review. The Views live in
   `MainActivity` and any view classes, NOT in `ui`.
-- **DELIBERATE DEVIATION FROM THE SPEC:** the spec's module table says "Compose for TV". This
-  plan uses classic Views instead. Reason: the overlays are a label, a two-line banner and a
-  list; Compose would add a substantial runtime to an app whose binding constraint is a 1.5 GB
-  Chromecast, where memory already caps the preload budget. Everything built so far is plain
-  Views, so this is also the consistent choice. Do not add Compose.
-- **NO NEW DEPENDENCIES.** Use the framework `ListView`; do not add RecyclerView, Leanback or
-  Compose artifacts.
+- **Compose for TV, as the spec says.** An earlier draft of this plan deviated to classic
+  Views on the grounds that Compose would cost too much memory on a 1.5 GB Chromecast. That
+  claim was checked and did not hold, so the deviation is withdrawn.
+  **Measured** (`~/Repos/fs42-bench/RESULTS.md`, two release APKs, 111 identical rows, 3 runs):
+
+      APK         844 KB  vs  1.53 MB
+      TOTAL PSS   21.7 MB vs  32.1 MB   (+10 MB, about 2% of a 1.5 GB device)
+      jank        0.54%   vs  0.54%     (tied)
+      95th frame  17 ms   vs  18 ms
+      cold start  126 ms  vs  169 ms
+
+  Compose is consistently heavier and consistently immaterial at this scale.
+  Caveat recorded honestly: the emulator refused a 1536 MB setting and force-bumped to 2048 MB,
+  so memory PRESSURE was never simulated — only consumption measured.
+- **The toolchain is already proven.** The benchmark built a working Compose-for-TV release
+  APK. Reference source: `~/Repos/fs42-bench/composeapp/`. Copy its configuration rather than
+  rediscovering it.
+- Use a plain Compose Foundation `LazyColumn`, **not** `androidx.tv:tv-foundation` — that
+  artifact stopped at 1.0.0 because `TvLazyColumn` was absorbed into Foundation once it gained
+  TV focus handling. `androidx.tv:tv-material:1.1.0` supplies `Surface`, `Text` and
+  `ClickableSurfaceDefaults` for focus colours.
 - Test convention: assertion messages state the **consequence** of failure.
 - **Test discrimination is mandatory.** Four "test cannot fail" defects have been found on this
   project, all from fixtures positioned at a default state where correct and buggy behaviour
@@ -282,72 +296,143 @@ MSG
 
 ---
 
-### Task 2: The corner indicator
+
+### Task 2: Move to Compose, and prove it with the corner indicator
 
 **Files:**
+- Modify: `build.gradle.kts` (root), `app/build.gradle.kts`, `gradle/wrapper/gradle-wrapper.properties`
 - Modify: `app/src/main/java/com/cliftonia/fs42tv/MainActivity.kt`
-- Create: `app/src/main/res/layout/activity_main.xml`
+- Create: `app/src/main/java/com/cliftonia/fs42tv/ui/Overlays.kt`
 
 **Interfaces:**
 - Consumes: `ChannelLabels.indicator` (Task 1), `onAir` (existing)
-- Produces: an on-screen channel indicator
+- Produces: `@Composable fun ChannelIndicator(text: String)` in `ui/Overlays.kt`
 
-No unit tests — this is view wiring. The logic it displays is already covered by Task 1.
+This task exists to absorb the toolchain risk before anything is built on top — the same
+reason phase 1's first task was a scaffold that only proved the build worked. Moving from
+Kotlin 1.9.24 / AGP 8.5.2 / compileSdk 34 to the versions Compose needs is a real upgrade that
+can break the existing 72 tests. Find that out here, not in Task 4.
 
-The content view becomes a `FrameLayout` holding the `PlayerView` plus overlay views, rather
-than the `PlayerView` alone. This layout is the scaffold Tasks 3 and 4 build on.
+**`ui/Overlays.kt` will contain `@Composable` functions and therefore Compose imports.** That
+is the one place the Android-free rule does not apply — `ChannelLabels.kt` stays pure and keeps
+all the formatting logic; `Overlays.kt` only draws. Reviews should expect exactly this split.
 
-The indicator shows what is **on air**, not where the navigator points — those differ when a
-tune fails. Read `onAir`, not `navigator.currentNumber`.
+- [ ] **Step 1: Upgrade the toolchain**
 
-- [ ] **Step 1: Create the layout**
+Copy the working configuration from `~/Repos/fs42-bench/`. Root `build.gradle.kts`:
 
-`app/src/main/res/layout/activity_main.xml`:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000000">
-
-    <androidx.media3.ui.PlayerView
-        android:id="@+id/player"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <TextView
-        android:id="@+id/indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="36dp"
-        android:fontFamily="monospace"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:textColor="#33FF33"
-        android:shadowColor="#001100"
-        android:shadowRadius="6"
-        android:text="" />
-
-</FrameLayout>
+```kotlin
+plugins {
+    id("com.android.application") version "8.13.2" apply false
+    id("org.jetbrains.kotlin.android") version "2.4.10" apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.4.10" apply false
+}
 ```
 
-`#33FF33` is the green the existing FieldStation42 box draws its OSD in — the app should look
-like the same product.
+In `app/build.gradle.kts`: add `id("org.jetbrains.kotlin.plugin.compose")` to the plugins
+block, raise `compileSdk` and `targetSdk` to 35, add `buildFeatures { compose = true }`, and
+replace the `kotlinOptions` block with:
 
-- [ ] **Step 2: Wire it in MainActivity**
+```kotlin
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+```
 
-Replace the `setContentView(PlayerView(this)...)` lines with `setContentView(R.layout.activity_main)`,
-then obtain the `PlayerView` and the indicator `TextView` via `findViewById`. Keep
-`useController = false` on the player.
+Add to `dependencies`, keeping everything already there:
 
-Add a private method that updates the indicator from `onAir` on the UI thread, and call it at
-the same point the tune already sets `onAir` — inside the existing `runOnUiThread` block, so no
-new threading appears. When `onAir` is null, the indicator stays empty.
+```kotlin
+    implementation(platform("androidx.compose:compose-bom:2026.06.01"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.runtime:runtime")
+    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.tv:tv-material:1.1.0")
+```
 
-- [ ] **Step 3: Build, install and look at it**
+AGP 8.13.2 needs a newer Gradle than 8.7. Update `distributionUrl` in
+`gradle/wrapper/gradle-wrapper.properties` to `gradle-8.13-bin.zip` and let the wrapper fetch
+it. If AGP demands a different minimum, use what it asks for and say so in your report.
+
+- [ ] **Step 2: Confirm the existing suite still passes BEFORE writing any Compose**
+
+Run: `cd ~/Repos/fieldstation42-tv && ./gradlew :app:testDebugUnitTest`
+Expected: **72 tests, all passing.**
+
+This is the single most important checkpoint in the task. A Kotlin 1.9 to 2.4 jump can change
+warnings into errors and alter serialization plugin behaviour. If anything fails here, STOP and
+report it — a broken suite after a toolchain bump is a finding, not something to work around.
+
+- [ ] **Step 3: Write the indicator composable**
+
+`app/src/main/java/com/cliftonia/fs42tv/ui/Overlays.kt`:
+
+```kotlin
+package com.cliftonia.fs42tv.ui
+
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.tv.material3.Text
+
+/** The green the existing FieldStation42 box draws its OSD in, so this reads as one product. */
+val OsdGreen = Color(0xFF33FF33)
+
+/**
+ * The persistent corner channel indicator.
+ *
+ * Shows what is ON AIR, which is not the same as where the dial navigator points - they differ
+ * whenever a tune fails and the previous picture stays up.
+ */
+@Composable
+fun ChannelIndicator(text: String, modifier: Modifier = Modifier) {
+    if (text.isEmpty()) return
+    Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.TopStart) {
+        Text(
+            text = text,
+            color = OsdGreen,
+            fontFamily = FontFamily.Monospace,
+            fontWeight = FontWeight.Bold,
+            fontSize = 34.sp,
+            modifier = Modifier.padding(start = 48.dp, top = 36.dp),
+        )
+    }
+}
+```
+
+- [ ] **Step 4: Host Compose over the player**
+
+`MainActivity` currently calls `setContentView(PlayerView(this)...)`. Replace that with a
+`FrameLayout` holding the `PlayerView` and, above it, a `ComposeView`. Keep
+`useController = false`.
+
+Hold the on-air indicator text in a Compose state so the overlay recomposes when it changes:
+
+```kotlin
+    private val indicatorText = mutableStateOf("")
+```
+
+Set `composeView.setContent { ChannelIndicator(indicatorText.value) }` once in `onCreate`, and
+update `indicatorText.value` from `ChannelLabels.indicator(...)` at the same point the tune
+already sets `onAir` — inside the existing `runOnUiThread` block, so no new threading appears.
+When `onAir` is null the text stays empty.
+
+`ComposeView` must not steal focus from the D-pad handling: set
+`composeView.isFocusable = false` and `composeView.descendantFocusability =
+ViewGroup.FOCUS_BLOCK_DESCENDANTS` for now. Task 4 changes this deliberately when the picker
+needs focus.
+
+- [ ] **Step 5: Build, install and look at it**
 
 ```bash
 cd ~/Repos/fieldstation42-tv
@@ -360,27 +445,30 @@ adb exec-out screencap -p > /tmp/fs42tv-indicator.png
 adb shell input keyevent KEYCODE_DPAD_UP
 sleep 15
 adb exec-out screencap -p > /tmp/fs42tv-indicator-2.png
+adb logcat -d -s fs42:I | tail -3
 ```
 
-**Look at both screenshots.** Expected: green `CH nn` at top-left over the video, and a
-DIFFERENT number in the second after the channel change. Report both numbers you can read in
-the images and confirm they match the log. If the indicator is absent, clipped, or unreadable
-against bright video, say so — legibility is the point of the task.
+**Look at both screenshots.** Expected: green `CH nn` top-left over the video, a DIFFERENT
+number in the second, and surfing still working. Report both numbers you can read and confirm
+they match the log. If surfing broke, the `ComposeView` is taking focus — say so.
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
 cd ~/Repos/fieldstation42-tv
 git add -A
 git commit -F- <<'MSG'
-feat: show which channel is on air
+feat: move to Compose for TV and show the channel on air
 
-- Create `activity_main.xml` a frame holding the player with room for overlays
-- Update `MainActivity.kt` render the channel indicator from onAir
+- Update `build.gradle.kts` Kotlin 2.4.10, AGP 8.13.2 and the Compose compiler plugin
+- Update `app/build.gradle.kts` enable Compose, add the BOM and tv-material
+- Create `Overlays.kt` the corner channel indicator
+- Update `MainActivity.kt` host Compose over the player and drive the indicator from onAir
 
-The indicator reads onAir rather than the navigator's position, because the two differ when
-a tune fails and the previous picture is still up. Green matches the OSD the existing box
-draws, so the app reads as the same product.
+The toolkit choice was settled by measurement rather than argument: Compose costs about 10MB
+more resident memory than Views for this screen, roughly 2% of the smallest target device,
+with identical jank. The indicator reads onAir rather than the navigator's position, because
+the two differ when a tune fails and the previous picture is still up.
 MSG
 ```
 
@@ -389,71 +477,89 @@ MSG
 ### Task 3: The channel banner
 
 **Files:**
-- Modify: `app/src/main/res/layout/activity_main.xml`
+- Modify: `app/src/main/java/com/cliftonia/fs42tv/ui/Overlays.kt`
 - Modify: `app/src/main/java/com/cliftonia/fs42tv/MainActivity.kt`
 
 **Interfaces:**
-- Consumes: `ChannelLabels.bannerLines` (Task 1), `onAir`
-- Produces: a banner shown briefly on every tune
+- Consumes: `ChannelLabels.bannerLines` (Task 1)
+- Produces: `@Composable fun ChannelBanner(channelLine: String, titleLine: String, visible: Boolean)`
 
-No unit tests — view wiring, with the formatting already covered.
+The banner appears on each successful tune and hides after a few seconds. Surfing quickly must
+not leave a stale banner — and in Compose the natural way to get that right is a `LaunchedEffect`
+keyed on the tune, which cancels its predecessor automatically rather than needing manual
+callback removal.
 
-The banner appears on each successful tune and hides itself after a few seconds. Surfing
-quickly must not leave a stale banner or stack timers.
+- [ ] **Step 1: Add the banner composable**
 
-- [ ] **Step 1: Add the banner to the layout**
+Append to `Overlays.kt`:
 
-Add, inside the same `FrameLayout`, after the indicator:
+```kotlin
+/**
+ * The tune banner: channel line above, programme title below.
+ *
+ * Auto-hides via a LaunchedEffect keyed on [generation], so a new tune cancels the previous
+ * timer rather than letting an earlier one hide a later banner. That bug needed explicit
+ * callback removal under Views; here the key does it.
+ */
+@Composable
+fun ChannelBanner(
+    channelLine: String,
+    titleLine: String,
+    generation: Int,
+    holdMillis: Long = 5000,
+) {
+    var visible by remember { mutableStateOf(false) }
+    LaunchedEffect(generation) {
+        if (channelLine.isEmpty()) return@LaunchedEffect
+        visible = true
+        delay(holdMillis)
+        visible = false
+    }
+    if (!visible) return
 
-```xml
-    <LinearLayout
-        android:id="@+id/banner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="56dp"
-        android:orientation="vertical"
-        android:background="#B0000000"
-        android:padding="20dp"
-        android:visibility="gone">
-
-        <TextView
-            android:id="@+id/bannerChannel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#33FF33"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/bannerTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="900dp"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:fontFamily="monospace"
-            android:textSize="18sp"
-            android:textColor="#CCFFCC"
-            android:text="" />
-    </LinearLayout>
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.BottomStart) {
+        Column(
+            modifier = Modifier
+                .padding(start = 48.dp, bottom = 56.dp)
+                .background(Color(0xB0000000))
+                .padding(20.dp),
+        ) {
+            Text(
+                text = channelLine,
+                color = OsdGreen,
+                fontFamily = FontFamily.Monospace,
+                fontWeight = FontWeight.Bold,
+                fontSize = 30.sp,
+            )
+            if (titleLine.isNotEmpty()) {
+                Text(
+                    text = titleLine,
+                    color = Color(0xFFCCFFCC),
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 18.sp,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = 900.dp),
+                )
+            }
+        }
+    }
+}
 ```
+
+Add the imports this needs: `androidx.compose.foundation.background`,
+`androidx.compose.foundation.layout.Column`, `androidx.compose.foundation.layout.widthIn`,
+`androidx.compose.runtime.*`, `androidx.compose.ui.text.style.TextOverflow`,
+`kotlinx.coroutines.delay`.
 
 - [ ] **Step 2: Wire it**
 
-In `MainActivity`, alongside the indicator update, add a method that fills both banner text
-views from `ChannelLabels.bannerLines(tuned)`, makes the banner visible, and hides it after
-`BANNER_MILLIS = 5000`.
+In `MainActivity`, add state for the two banner lines and an `Int` generation that increments
+on every successful tune. Render `ChannelIndicator` and `ChannelBanner` together inside the
+existing `setContent` block, stacked in a `Box`.
 
-Use a single `Handler(Looper.getMainLooper())` held as a field, and **remove any pending hide
-callback before posting a new one** — otherwise surfing quickly leaves an earlier timer to hide
-a banner that a later tune has just shown. Hide the banner immediately in `onDestroy` by
-removing callbacks, so nothing fires against a destroyed activity.
-
-When the second line is empty, hide that TextView rather than leaving an empty gap.
+Set all three — indicator text, banner lines, generation — in the same `runOnUiThread` block
+that already sets `onAir`, so the overlay always agrees with what is playing.
 
 - [ ] **Step 3: Build, install and verify — including the stale-timer case**
 
@@ -464,15 +570,9 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 adb shell am force-stop com.cliftonia.fs42tv
 adb shell am start -n com.cliftonia.fs42tv/.MainActivity
 sleep 20
-adb exec-out screencap -p > /tmp/fs42tv-banner-1.png    # banner should be visible
+adb exec-out screencap -p > /tmp/fs42tv-banner-1.png    # banner visible
 sleep 8
-adb exec-out screencap -p > /tmp/fs42tv-banner-2.png    # banner should be GONE
-```
-
-Then the timer case — two presses about three seconds apart, so the first banner's hide timer
-is still pending when the second appears:
-
-```bash
+adb exec-out screencap -p > /tmp/fs42tv-banner-2.png    # banner GONE
 adb shell input keyevent KEYCODE_DPAD_UP
 sleep 3
 adb shell input keyevent KEYCODE_DPAD_UP
@@ -481,7 +581,7 @@ adb exec-out screencap -p > /tmp/fs42tv-banner-3.png    # second banner STILL vi
 ```
 
 **Look at all three.** The third is the one that matters: if the banner has vanished, the first
-tune's timer hid the second tune's banner and the callback removal is missing.
+tune's timer hid the second tune's banner and the `LaunchedEffect` key is wrong.
 
 - [ ] **Step 4: Commit**
 
@@ -491,12 +591,12 @@ git add -A
 git commit -F- <<'MSG'
 feat: show a banner on every tune
 
-- Update `activity_main.xml` add a two-line banner over the picture
-- Update `MainActivity.kt` fill the banner from onAir and auto-hide it
+- Update `Overlays.kt` add the two-line tune banner
+- Update `MainActivity.kt` drive the banner from the same state that sets onAir
 
-Pending hide callbacks are removed before a new one is posted, so surfing quickly cannot
-leave an earlier timer to hide a later tune's banner. An empty title hides its line rather
-than leaving a gap.
+The auto-hide is a LaunchedEffect keyed on the tune, so a new tune cancels the previous
+timer automatically - the stale-banner bug that would need explicit callback removal under
+Views cannot arise. An empty title omits its line rather than leaving a gap.
 MSG
 ```
 
@@ -505,82 +605,50 @@ MSG
 ### Task 4: The channel picker
 
 **Files:**
-- Modify: `app/src/main/res/layout/activity_main.xml`
-- Create: `app/src/main/res/layout/row_channel.xml`
+- Modify: `app/src/main/java/com/cliftonia/fs42tv/ui/Overlays.kt`
 - Modify: `app/src/main/java/com/cliftonia/fs42tv/MainActivity.kt`
 
 **Interfaces:**
 - Consumes: `ChannelLabels.listRow` (Task 1), `DialNavigator.channels` / `currentIndex` /
   `jumpTo` (existing)
-- Produces: a scrollable channel list you can pick from
+- Produces: `@Composable fun ChannelPicker(rows: List<String>, startIndex: Int, onPick: (Int) -> Unit, onDismiss: () -> Unit)`
 
-No unit tests — view wiring over already-tested logic.
+This is the direct-entry mechanism. The spec was revised to a list because a numeric keypad is
+a layout for ten discrete keys and a D-pad has none.
 
-This is the direct-entry mechanism. The spec was revised to a list precisely because a numeric
-keypad is a layout for ten discrete keys and a D-pad has none.
+Reference implementation for the list and focus colours: `~/Repos/fs42-bench/composeapp/`.
+It uses a plain `LazyColumn` with `androidx.tv.material3.Surface` rows and
+`ClickableSurfaceDefaults` for the focused background — copy that shape.
 
 Behaviour:
-- `KEYCODE_DPAD_CENTER`/`KEYCODE_ENTER` or `KEYCODE_GUIDE` opens the list
-- The list opens **scrolled to and highlighting the channel currently on air**
-- Up/down move within the list; they must NOT change channel while it is open
-- OK selects: `navigator.jumpTo(number)` then tune, and the list closes
+- `KEYCODE_DPAD_CENTER`/`KEYCODE_ENTER` or `KEYCODE_GUIDE` opens it
+- Opens scrolled to and focused on the channel currently **on air**
+- Up/down move within the list and must NOT change channel while it is open
+- OK selects: `navigator.jumpTo(number)` then tune, and it closes
 - `KEYCODE_BACK` closes without changing channel
 
-- [ ] **Step 1: Add the list to the layout**
+- [ ] **Step 1: Add the picker composable**
 
-Add last inside the `FrameLayout` so it draws on top:
+Follow the benchmark's shape. Use `rememberLazyListState()` seeded so the on-air row is
+visible, a `FocusRequester` on the initially focused row, and `items(rows)` over the strings.
+Give each row an `androidx.tv.material3.Surface` with
+`ClickableSurfaceDefaults.colors(focusedContainerColor = ...)` so the focused row is obvious,
+and `onClick` reporting the index via `onPick`.
 
-```xml
-    <ListView
-        android:id="@+id/picker"
-        android:layout_width="720dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:background="#E6000000"
-        android:paddingTop="48dp"
-        android:paddingBottom="48dp"
-        android:divider="@null"
-        android:visibility="gone" />
-```
-
-`row_channel.xml`:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingStart="32dp"
-    android:paddingEnd="32dp"
-    android:paddingTop="14dp"
-    android:paddingBottom="14dp"
-    android:fontFamily="monospace"
-    android:textSize="22sp"
-    android:textColor="#DDDDDD" />
-```
+Handle BACK inside the composable with `androidx.activity.compose.BackHandler` so dismissal is
+Compose's concern rather than another branch in `onKeyDown`.
 
 - [ ] **Step 2: Wire it**
 
-In `MainActivity`:
-- Build an `ArrayAdapter<String>` over `navigator.channels.map { ChannelLabels.listRow(it) }`
-  using `R.layout.row_channel`. Build it once, after the dial has synced.
-- `showPicker()` — set visibility visible, `requestFocus()`, and
-  `setSelection(indexOfOnAirChannel)` so it opens on the channel actually playing. Fall back to
-  `navigator.currentIndex` when `onAir` is null.
-- `hidePicker()` — visibility gone, return focus to the root view.
-- In `onKeyDown`, when the picker is visible: let the `ListView` handle up/down itself by
-  returning `super.onKeyDown`, handle BACK by hiding, and handle OK by reading the selected
-  position, resolving the channel, calling `navigator.jumpTo(channel.number)`, tuning it, and
-  hiding.
-- When the picker is NOT visible, the existing up/down surfing behaviour is unchanged.
+In `MainActivity`, hold `pickerVisible` state. When it becomes true, the `ComposeView` must
+take focus — flip `descendantFocusability` back to `FOCUS_AFTER_DESCENDANTS` and call
+`requestFocus()`; restore the blocking value when it closes. **The channel-change keys must be
+inert while the picker is open**, otherwise pressing down to scroll would also tune.
 
-**The channel-change keys must be inert while the picker is open** — otherwise pressing down to
-scroll would also tune, which is both wrong and expensive.
+`onPick` maps the row index to `navigator.channels[index]`, calls
+`navigator.jumpTo(channel.number)`, tunes it, and closes the picker.
 
-Keep the highlight of the on-air channel legible: setting the selection is enough for the
-ListView's own focus highlight on TV. Do not build a custom selection drawable.
-
-- [ ] **Step 3: Build, install and verify every interaction**
+- [ ] **Step 3: Verify every interaction**
 
 ```bash
 cd ~/Repos/fieldstation42-tv
@@ -591,40 +659,56 @@ adb shell am start -n com.cliftonia.fs42tv/.MainActivity
 sleep 20
 adb logcat -c
 
-adb shell input keyevent KEYCODE_DPAD_CENTER   # open
+adb shell input keyevent KEYCODE_DPAD_CENTER
 sleep 2
 adb exec-out screencap -p > /tmp/fs42tv-picker-open.png
 
-adb shell input keyevent KEYCODE_DPAD_DOWN     # scroll, must NOT tune
+adb shell input keyevent KEYCODE_DPAD_DOWN
 adb shell input keyevent KEYCODE_DPAD_DOWN
 adb shell input keyevent KEYCODE_DPAD_DOWN
 sleep 2
 adb exec-out screencap -p > /tmp/fs42tv-picker-scrolled.png
-adb logcat -d -s fs42:I | tail -5                # expect NO new tune lines
+adb logcat -d -s fs42:I | tail -5          # expect NO new tune lines
 
-adb shell input keyevent KEYCODE_DPAD_CENTER   # select
+adb shell input keyevent KEYCODE_DPAD_CENTER
 sleep 15
 adb exec-out screencap -p > /tmp/fs42tv-picker-selected.png
-adb logcat -d -s fs42:I | tail -3                # expect ONE tune, to the selected channel
-```
+adb logcat -d -s fs42:I | tail -3          # expect ONE tune, to the selected channel
 
-Then BACK:
-
-```bash
 adb shell input keyevent KEYCODE_DPAD_CENTER
 sleep 2
 adb shell input keyevent KEYCODE_BACK
 sleep 2
 adb exec-out screencap -p > /tmp/fs42tv-picker-dismissed.png
-adb logcat -d -s fs42:I | tail -3                # expect NO tune from the dismissal
+adb logcat -d -s fs42:I | tail -3          # expect NO tune from the dismissal
 ```
 
-**Look at every screenshot** and report what each shows. The two that matter most: the
-scrolled one must show the highlight moved with NO tune in the log, and the dismissed one must
-show video with no channel change. Report the channel it opened on and confirm it matches what
-was on air.
+**Look at every screenshot.** The two that matter most: the scrolled one must show the focus
+highlight moved with NO tune in the log, and the dismissed one must show video with no channel
+change. Report the channel it opened on and confirm it matches what was on air.
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 4: Measure the real memory cost**
+
+The benchmark measured a standalone picker. This measures the actual app with video decoding
+alongside it — the number that matters.
+
+```bash
+adb shell am force-stop com.cliftonia.fs42tv
+adb shell am start -n com.cliftonia.fs42tv/.MainActivity
+sleep 25
+adb shell dumpsys meminfo com.cliftonia.fs42tv | grep -E "TOTAL PSS|Java Heap|Native Heap|Graphics"
+adb shell input keyevent KEYCODE_DPAD_CENTER
+sleep 3
+for i in $(seq 1 40); do adb shell input keyevent KEYCODE_DPAD_DOWN; done
+sleep 3
+adb shell dumpsys meminfo com.cliftonia.fs42tv | grep -E "TOTAL PSS|Java Heap|Native Heap|Graphics"
+```
+
+Record both readings. The Chromecast with Google TV HD has 1.5 GB total; report what fraction
+this uses. If TOTAL PSS exceeds roughly 250 MB, say so prominently — that would be a genuine
+concern rather than the immaterial cost the benchmark predicted.
+
+- [ ] **Step 5: Commit**
 
 ```bash
 cd ~/Repos/fieldstation42-tv
@@ -632,14 +716,13 @@ git add -A
 git commit -F- <<'MSG'
 feat: pick a channel from a list
 
-- Create `row_channel.xml` a monospace row for the picker
-- Update `activity_main.xml` add the channel list over the picture
-- Update `MainActivity.kt` open, scroll, select and dismiss the picker
+- Update `Overlays.kt` add the channel picker over the picture
+- Update `MainActivity.kt` open, focus, select and dismiss the picker
 
 A numeric keypad is a layout for ten discrete keys and a directional pad has none, so the
-list is the direct-entry mechanism rather than a second path beside one. It opens on the
-channel actually on air, and the channel-change keys are inert while it is open so scrolling
-cannot tune.
+list is the direct-entry mechanism rather than a second path beside one. It opens focused on
+the channel actually on air, and the channel-change keys are inert while it is open so
+scrolling cannot tune.
 MSG
 ```
 
@@ -648,21 +731,18 @@ MSG
 ## Self-Review
 
 **Spec coverage.** The revised spec calls for a scrollable channel list opened by OK or the
-guide key, a persistent corner indicator, and a banner. Task 1 formats all three, Task 2 is the
-indicator, Task 3 the banner, Task 4 the picker.
+guide key, a persistent corner indicator, and a banner. Task 1 formats all three, Task 2
+migrates the toolchain and adds the indicator, Task 3 the banner, Task 4 the picker.
 
-**Deliberately not in this plan.** No preload manager, no reverse slot, no `sourceFor` split, no
-cache write-back — those form the next plan, and the preload budget measured there is what sizes
-the server-side widening after it. No settings toggles: ytch exposes channel-name/captions/title
-as options, which is a reasonable v2 surface but not needed to make the dial usable.
+**Deliberately not in this plan.** No preload manager, no reverse slot, no `sourceFor` split,
+no cache write-back — those form the next plan, and the preload budget measured there sizes the
+server-side widening after it. No settings toggles.
 
-**Type consistency.** `ChannelLabels` takes `Tuned` and `Channel` and returns `String` /
-`Pair<String, String>` — no new types. The layout ids (`player`, `indicator`, `banner`,
-`bannerChannel`, `bannerTitle`, `picker`) are introduced in Tasks 2–4 and referenced only in
-`MainActivity`.
+**Where the Android-free rule bends, deliberately.** `ui/ChannelLabels.kt` stays pure and holds
+every formatting decision. `ui/Overlays.kt` contains `@Composable` functions and therefore
+Compose imports — it only draws. Reviewers should expect that split rather than flag it.
 
-**Known soft spots.** Two. First, `cleanTitle` is a heuristic over real-world YouTube titles;
-Task 1 Step 5 runs it against live data precisely because tests written from imagination would
-not catch it damaging real input. Second, Tasks 2–4 are verified visually, as the previous
-phases' UI work was — that is deliberate, since the formatting carries the tests and what
-remains genuinely needs eyes on a screen.
+**Known soft spots.** Two. Task 2's toolchain jump from Kotlin 1.9.24 to 2.4.10 is the riskiest
+step in the plan, which is why Step 2 verifies the existing 72 tests BEFORE any Compose is
+written. And Tasks 2–4 are verified visually, as previous UI phases were — the formatting
+carries the tests, and what remains genuinely needs eyes on a screen.
