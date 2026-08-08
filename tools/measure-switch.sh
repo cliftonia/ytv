@@ -9,6 +9,12 @@
 #   -n  number of channel presses (default 18)
 #   -d  up | down | alternating (default up)
 #   -l  a label printed with the result, so runs can be told apart afterwards
+#   -b  preload budget override (slots). Omit to use whatever the device's RAM implies.
+#   -w  preload window override in ms. Omit to use the built-in default.
+#   -t  pin the app's clock to this epoch-seconds value. Without it, every run watches whatever
+#       the wall clock puts on air, so two runs minutes apart compare different clips at
+#       different bitrates - the single largest source of variance in this project's
+#       measurements, and the cause of three separate false results.
 #
 # Reports the median, the spread, AND the render rate. The render rate matters as much as the
 # median: a change that makes tunes fail more often can LOWER the median, because the slow cases
@@ -25,13 +31,17 @@ SERIAL=""
 PRESSES=18
 DIRECTION="up"
 LABEL=""
+EXTRAS=""
 
-while getopts "s:n:d:l:" opt; do
+while getopts "s:n:d:l:b:w:t:" opt; do
   case "$opt" in
     s) SERIAL="-s $OPTARG" ;;
     n) PRESSES="$OPTARG" ;;
     d) DIRECTION="$OPTARG" ;;
     l) LABEL="$OPTARG" ;;
+    b) EXTRAS="$EXTRAS --ei fs42.budget $OPTARG" ;;
+    w) EXTRAS="$EXTRAS --el fs42.preload_ms $OPTARG" ;;
+    t) EXTRAS="$EXTRAS --el fs42.now $OPTARG" ;;
     *) sed -n '2,20p' "$0"; exit 1 ;;
   esac
 done
@@ -52,10 +62,22 @@ $ADB shell am force-stop "$PKG"
 # Cleared so the run always starts from the same end of the dial and syncs a fresh channels.json;
 # resuming on whatever was last watched would sample a different set of channels each time.
 $ADB shell pm clear "$PKG" > /dev/null
-$ADB shell am start -n "$PKG/.MainActivity" > /dev/null
+# shellcheck disable=SC2086
+$ADB shell am start -n "$PKG/.MainActivity" $EXTRAS > /dev/null
 echo "   waiting for the first tune to settle..."
 sleep 24
 $ADB logcat -c
+
+# Stream the log for the whole run rather than dumping it at the end. A real television has a
+# 256 KiB ring buffer that its own system apps are already filling, so on an 18-press run our
+# lines are evicted long before the run finishes: the dump comes back with two samples and a
+# "beginning of main" marker where the rest used to be. That reads as "the presses did not land"
+# when in fact only the evidence was lost - the emulator never showed this because nothing else
+# on it logs.
+STREAM=$(mktemp)
+$ADB logcat -s fs42:D > "$STREAM" &
+TAIL_PID=$!
+trap 'kill "$TAIL_PID" 2>/dev/null || true; rm -f "$STREAM"' EXIT
 
 for ((i = 0; i < PRESSES; i++)); do
   $ADB shell input keyevent "${KEYS[$((i % ${#KEYS[@]}))]}"
@@ -64,11 +86,15 @@ for ((i = 0; i < PRESSES; i++)); do
   sleep 8
 done
 
+# Let the last tune render before the stream is cut, or the final sample is lost to exactly the
+# impatience this script exists to measure.
+sleep 5
+kill "$TAIL_PID" 2>/dev/null || true
+
 # The report script goes in a file rather than a heredoc: piping the log in on stdin AND
 # supplying the program on stdin cannot both work, and the failure mode is the log being
 # executed as Python.
 REPORT=$(mktemp)
-trap 'rm -f "$REPORT"' EXIT
 cat > "$REPORT" <<'PY'
 import re, sys
 presses, label = int(sys.argv[1]), sys.argv[2]
@@ -86,4 +112,5 @@ print(f"  render rate {len(frames)}/{presses} = {100 * len(frames) // presses}%"
 print(f"  samples: {frames}")
 PY
 
-$ADB logcat -d -s fs42:D | python3 "$REPORT" "$PRESSES" "${LABEL:-measurement}"
+python3 "$REPORT" "$PRESSES" "${LABEL:-measurement}" < "$STREAM"
+rm -f "$REPORT"

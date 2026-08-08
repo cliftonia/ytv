@@ -39,26 +39,9 @@ class ChannelPreloader(
     context: Context,
     dataSourceFactory: DataSource.Factory,
     private val budget: Int,
+    private val preloadWindowMillis: Long = DEFAULT_PRELOAD_WINDOW_MILLIS,
 ) {
 
-    /**
-     * How much of each neighbour to buffer. Arrived at by measurement, not by preference, and
-     * the sequence is worth keeping because the obvious settings were the bad ones:
-     *
-     * | configuration                | forward | reverse |
-     * |------------------------------|---------|---------|
-     * | no preloading (the baseline) | 4342 ms | 4317 ms |
-     * | two neighbours, 5 s window   | 6982 ms | -       |
-     * | one neighbour, 5 s window    | 3753 ms | 5789 ms |
-     * | two neighbours, 2 s window   | 3892 ms | 4402 ms |
-     *
-     * The second row is the lesson: buffering generously made switching 61% WORSE and dropped
-     * the share of presses that rendered at all from 11-in-12 to 7-in-12. The third row bought
-     * forward speed by starving the reverse slot - the same trade the box's forward-only shadow
-     * pool made, and the one the reverse slot exists to refuse. The last row is the settled
-     * configuration: forward improves about 10%, reverse holds level.
-     */
-    private val preloadWindowMillis = 2_000L
 
     /** Index -> where in the plan it sits, 0 being the best. Absent means "do not preload". */
     private val ranks = ConcurrentHashMap<Int, Int>()
@@ -153,6 +136,30 @@ class ChannelPreloader(
         }.onFailure {
             Log.w("fs42", "preload pass failed; playback is unaffected", it)
         }
+    }
+
+    companion object {
+        /**
+         * How much of each neighbour to buffer, by default.
+         *
+         * Chosen on the EMULATOR, where it was the least-bad of four options, and it should be
+         * treated as provisional until re-measured on hardware. The emulator's constrained
+         * bandwidth made preloading compete with playback, so every setting there was tuned to
+         * take as little throughput as possible:
+         *
+         * | configuration                | forward | reverse |
+         * |------------------------------|---------|---------|
+         * | no preloading                | 4342 ms | 4317 ms |
+         * | two neighbours, 5 s window   | 6982 ms | -       |
+         * | one neighbour, 5 s window    | 3753 ms | 5789 ms |
+         * | two neighbours, 2 s window   | 3892 ms | 4402 ms |
+         *
+         * On the real television the picture inverts: with preloading OFF the median was 2472 ms
+         * and only 5 presses in 18 rendered at all, against 1779 ms and 13 in 18 with it ON.
+         * There is headroom on real hardware that the emulator never had, so a wider window is
+         * likely to be better here rather than worse.
+         */
+        const val DEFAULT_PRELOAD_WINDOW_MILLIS = 2_000L
     }
 
     fun release() {
