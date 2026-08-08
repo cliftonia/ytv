@@ -106,6 +106,25 @@ class MainActivity : ComponentActivity() {
     // intermediate channel to completion.
     private val generation = AtomicInteger(0)
 
+    /**
+     * Wall-clock seconds, or a frozen instant when one was supplied at launch.
+     *
+     * Every channel on this dial derives its clip and offset from the current time, so two runs
+     * a few minutes apart are watching entirely different content - different bitrates, different
+     * file sizes, different CDN hosts. That is a far larger source of variance than any setting
+     * worth tuning, and it produced three separate false results before it was identified: the
+     * same configuration measured 3892ms then 9971ms on the emulator, and 1779ms then 4483ms on
+     * the television.
+     *
+     * Freezing the clock pins clip selection and offset, so a sweep compares configurations
+     * against identical content instead of against whatever happened to be on air. Only ever set
+     * for measurement; a launch without the extra behaves exactly as the remote does.
+     */
+    @Volatile private var fixedNowSeconds: Long = -1L
+
+    private fun nowSeconds(): Long =
+        if (fixedNowSeconds > 0) fixedNowSeconds else System.currentTimeMillis() / 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
@@ -153,9 +172,28 @@ class MainActivity : ComponentActivity() {
         val memoryInfo = ActivityManager.MemoryInfo().also {
             (getSystemService(ACTIVITY_SERVICE) as ActivityManager).getMemoryInfo(it)
         }
-        val budget = DeviceBudget.forDevice(memoryInfo.totalMem)
-        Log.i("fs42", "device has ${memoryInfo.totalMem / (1024 * 1024)} MB; preload budget $budget")
-        val preloader = ChannelPreloader(this, factory, budget).also { this.preloader = it }
+        // Both tunables can be overridden at launch, so a sweep across configurations does not
+        // need a rebuild and reinstall per data point:
+        //
+        //   adb shell am start -n com.cliftonia.fs42tv/.MainActivity --ei fs42.budget 4 \
+        //       --el fs42.preload_ms 5000
+        //
+        // Each measurement run costs several minutes of wall clock, and the settings being swept
+        // were originally chosen on an emulator whose bandwidth made every one of them wrong.
+        // A negative value means "use the real one", so a launch with no extras behaves exactly
+        // as a launch from the remote does.
+        val budgetOverride = intent.getIntExtra("fs42.budget", -1)
+        val budget = if (budgetOverride >= 0) budgetOverride else DeviceBudget.forDevice(memoryInfo.totalMem)
+        fixedNowSeconds = intent.getLongExtra("fs42.now", -1L)
+        if (fixedNowSeconds > 0) {
+            Log.i("fs42", "clock pinned to $fixedNowSeconds for measurement")
+        }
+        val windowOverride = intent.getLongExtra("fs42.preload_ms", -1L)
+        val preloadWindow =
+            if (windowOverride >= 0) windowOverride else ChannelPreloader.DEFAULT_PRELOAD_WINDOW_MILLIS
+        Log.i("fs42", "device has ${memoryInfo.totalMem / (1024 * 1024)} MB; preload budget $budget window ${preloadWindow}ms")
+        val preloader = ChannelPreloader(this, factory, budget, preloadWindow)
+            .also { this.preloader = it }
 
         val player = ChannelPlayer(preloader.exo, factory).also { this.player = it }
         view.player = player.exo
@@ -341,7 +379,7 @@ class MainActivity : ComponentActivity() {
 
         preloader.apply(channels.size, currentIndex, rebuild) { index ->
             val channel = channels.getOrNull(index) ?: return@apply null
-            val now = System.currentTimeMillis() / 1000
+            val now = nowSeconds()
             val tuned = Tuner.tune(channel, urls, now) ?: return@apply null
 
             var playable: Playable = tuned.playable
@@ -365,7 +403,7 @@ class MainActivity : ComponentActivity() {
             return
         }
 
-        val now = System.currentTimeMillis() / 1000
+        val now = nowSeconds()
         val tuned = Tuner.tune(channel, urls, now)
         if (tuned == null) {
             Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
