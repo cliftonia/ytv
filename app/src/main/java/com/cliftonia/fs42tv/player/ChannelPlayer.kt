@@ -50,7 +50,9 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
             // fastest this project has recorded. It also produced 8-12s ones in the same run, so
             // something in it is wrong and it is not fit to ship. Wiring it up is a line; making
             // it reliable is the work. See ChunkedDataSource for the measurements.
-            DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
+            ChunkedDataSource.factory(
+                DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
+            )
     }
 
     /** Set when a tune starts, cleared when its first frame lands. Main thread only. */
@@ -168,6 +170,26 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
                 }
                 hasPicture = true
                 onFirstFrame?.invoke()
+            }
+        })
+
+        // Dropped frames live on AnalyticsListener, not Player.Listener.
+        //
+        // "The picture feels janky" has been guessed at repeatedly in this project - blamed on
+        // preloading, on a second codec, on 4K decode, on the panel's single 60Hz mode - and
+        // never once measured. ExoPlayer counts them; nothing here had asked.
+        //
+        // The RATE is what matters, not the total: a handful over a minute is normal, dozens in
+        // a second is not.
+        exo.addAnalyticsListener(object : androidx.media3.exoplayer.analytics.AnalyticsListener {
+            override fun onDroppedVideoFrames(
+                eventTime: androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime,
+                droppedFrames: Int,
+                elapsedMs: Long,
+            ) {
+                val perSecond = if (elapsedMs > 0) droppedFrames * 1000.0 / elapsedMs else 0.0
+                Log.w("fs42", "dropped $droppedFrames frames in ${elapsedMs}ms " +
+                    "(${"%.1f".format(perSecond)}/s) at ${exo.currentPosition / 1000}s")
             }
         })
     }
