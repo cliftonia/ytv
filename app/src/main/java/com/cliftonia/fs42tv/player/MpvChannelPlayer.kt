@@ -34,6 +34,16 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
 
 
     private val mpv = MpvView(context)
+
+    /**
+     * Fetches googlevideo in bounded windows on mpv's behalf.
+     *
+     * mpv asks ffmpeg for a whole file and googlevideo answers an open-ended request at roughly
+     * the video's own bitrate - 3.61 Mbps measured, against 2.2 Mbps of content. That margin is
+     * why mpv took 7-10s to a picture where Media3 took 1.5s. Media3 is fast because
+     * ChunkedDataSource makes every read bounded; this gives mpv the same thing from outside.
+     */
+    private val proxy = ChunkedProxy()
     private val main = Handler(Looper.getMainLooper())
 
     override val view: View = mpv
@@ -106,11 +116,19 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     override fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
         val url = when (playable) {
             is Progressive ->
-                if (playable.audioUrl == null) playable.videoUrl
+                if (playable.audioUrl == null) proxy.proxied(playable.videoUrl)
                 // YouTube serves video and audio apart above 360p. mpv's EDL plays them as one
-                // stream, which is how the box has always played these same URLs.
-                else MpvView.edl(playable.videoUrl, playable.audioUrl)
+                // stream, which is how the box has always played these same URLs. BOTH go through
+                // the proxy - the audio track is small but it is fetched over the same throttled
+                // connection, and a starved audio track stalls the video just as surely.
+                else MpvView.edl(
+                    proxy.proxied(playable.videoUrl),
+                    proxy.proxied(playable.audioUrl),
+                )
 
+            // Live HLS is left alone: it is already a series of bounded segment requests, which
+            // is why it was never throttled and never slow. Proxying it would add a hop for
+            // nothing.
             is Hls -> playable.url
 
             is NeedsResolving -> {
@@ -155,6 +173,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     }
 
     override fun release() {
+        proxy.release()
         main.removeCallbacksAndMessages(null)
         mpv.events = null
         mpv.destroy()
