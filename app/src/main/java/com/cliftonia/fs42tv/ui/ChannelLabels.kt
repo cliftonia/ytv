@@ -40,15 +40,39 @@ object ChannelLabels {
             tuned.stream.title.trim()
 
     /**
-     * The gap was three spaces, which at monospace 20.sp opened a visible gulf down a column of
-     * 111 rows. It is now the same two the box puts between number and name
-     * (`field_player.py:153`), so the picker and the OSD read as one product.
+     * A picker row: channel number, channel name, and what is on it right now.
      *
-     * The number is zero-padded for the retro look but the FIELD is left-aligned to a fixed
-     * width, because the dial runs past 100: with a plain "%02d  " the names after a
-     * three-digit channel would sit one character right of the names after a two-digit one, and
-     * a ragged column is exactly what the eye catches when scanning a long list.
+     * Returned as two parts rather than one string, because the picker draws them at two
+     * luminance levels: channel identity at full brightness, what is on at about half. That is
+     * a deliberate choice of contrast over size - people skim a guide rather than read it, and
+     * varying the type size would vary the row height and break the vertical rhythm that makes
+     * skimming possible. Same size, two brightnesses: the bright names form a scannable column
+     * and the titles recede until the eye stops on one.
+     *
+     * An earlier version padded the name into a fixed column so titles lined up, which left a
+     * ragged gap after every short channel name and read worse than the alignment was worth.
+     *
+     * The NUMBER still sits in a fixed-width field, because the dial runs past 100 and without
+     * it every name after a three-digit channel steps one character right.
+     *
+     * [nowPlaying] is optional because a live channel has no clip list to read a title from, and
+     * because a channel whose streams are all zero-duration has no "now" at all. Either way the
+     * row degrades to number and name rather than showing an empty separator.
      */
-    fun listRow(channel: Channel): String =
-        "CHANNEL %-4s%s".format("%02d".format(channel.number), channel.name)
+    fun listRow(channel: Channel, nowPlaying: String? = null): Pair<String, String> {
+        val head = "CHANNEL %-4s%s".format("%02d".format(channel.number), channel.name)
+        val title = nowPlaying?.trim().orEmpty()
+        if (title.isEmpty()) return head to ""
+
+        val room = ROW_WIDTH - head.length
+        if (room < MIN_TITLE) return head to ""
+        val shown = if (title.length <= room) title else title.take(room - 1).trimEnd() + "\u2026"
+        return head to shown
+    }
+
+    /** Total row width the picker can show at its font size before the text runs off the panel. */
+    private const val ROW_WIDTH = 78
+
+    /** Below this a title is more stub than information, so the row drops it entirely. */
+    private const val MIN_TITLE = 8
 }
