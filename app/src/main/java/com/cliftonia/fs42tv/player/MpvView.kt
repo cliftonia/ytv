@@ -117,7 +117,15 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         MPVLib.setOptionString("hwdec", "mediacodec")
 
         // --- audio --------------------------------------------------------------------------
-        MPVLib.setOptionString("ao", "audiotrack,opensles")
+        // opensles FIRST, audiotrack only as a fallback.
+        //
+        // mpv-android lists audiotrack first, and on this device it aborts the whole process when
+        // one clip ends and the next loads:
+        //   FORTIFY: pthread_mutex_lock called on a destroyed mutex
+        //   Fatal signal 6 (SIGABRT) in tid ... (ao/audiotrack)
+        // - the audio output racing its own teardown. A dial rolls a clip over on every channel
+        // every few minutes, so that is not an edge case here, it is the normal path.
+        MPVLib.setOptionString("ao", "opensles,audiotrack")
 
         // --- https --------------------------------------------------------------------------
         // Every URL on this dial is https, and Android has no /etc/ssl/certs for mpv to find.
