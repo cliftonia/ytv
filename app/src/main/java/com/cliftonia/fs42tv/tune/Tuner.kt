@@ -31,6 +31,12 @@ object Tuner {
         cache: UrlCache?,
         nowSeconds: Long,
         ladder: List<String> = listOf("hd", "sd"),
+        /**
+         * Tiers the CDN has already refused this session, as `<id>/<tier>` - see
+         * [StreamResolver.refusedKey]. Passed through so a 403 on hd falls to the sd already
+         * published beside it, instead of a `/resolve` round trip that runs yt-dlp for seconds.
+         */
+        refused: Set<String> = emptySet(),
     ): Tuned? {
         val streams = channel.streams
         if (streams.isEmpty()) return null
@@ -60,7 +66,7 @@ object Tuner {
             channel.kind == "live" -> Hls(stream.url)
             stream.id == null ->
                 Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
-            else -> StreamResolver.resolve(stream, cache, ladder, nowSeconds)
+            else -> StreamResolver.resolve(stream, cache, ladder, nowSeconds, refused)
         }
 
         return Tuned(channel, index, stream, playable, offset)
