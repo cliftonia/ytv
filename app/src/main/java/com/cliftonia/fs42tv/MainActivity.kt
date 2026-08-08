@@ -290,7 +290,8 @@ class MainActivity : ComponentActivity() {
         )
         fun newEngine(): ChannelPlayback = when (engine) {
             PlayerEngine.MPV -> MpvChannelPlayer(this)
-            PlayerEngine.MEDIA3 -> ChannelPlayer(this, ChannelPlayer.dataSourceFactory())
+            PlayerEngine.MEDIA3 -> ChannelPlayer(
+                this, ChannelPlayer.dataSourceFactory(), canSwitchDisplayMode = modeCount > 1)
         }
 
         var player: ChannelPlayback = newEngine()

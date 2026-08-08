@@ -33,6 +33,15 @@ import com.cliftonia.fs42tv.resolver.Unplayable
 class ChannelPlayer(
     context: android.content.Context,
     private val factory: DataSource.Factory,
+    /**
+     * Whether this display can switch to a mode matching the content's frame rate.
+     *
+     * Measured on both real devices and the difference is total: the TCL panel offers ONE mode -
+     * 3840x2160 at 60.000004Hz, no alternatives - while the Chromecast offers twenty, including
+     * native 23.976, 24, 25, 29.97, 30 and 50. Where the output can follow the content, 23.976fps
+     * film plays at 23.976Hz: one frame per refresh and no pulldown at all.
+     */
+    private val canSwitchDisplayMode: Boolean = false,
 ) : ChannelPlayback {
 
     /**
@@ -61,25 +70,24 @@ class ChannelPlayer(
 
     val exo: ExoPlayer = ExoPlayer.Builder(context)
         .setLoadControl(loadControl)
-        // OFF, and this is load-bearing rather than an optimisation.
+        // Ask the platform to follow the content's frame rate ONLY where it can act on the
+        // answer - see canSwitchDisplayMode.
         //
-        // Left on, ExoPlayer calls Surface.setFrameRate() with the content rate, and the platform
-        // honours it as a frame-rate OVERRIDE. Read straight off the video layer with
+        // On a single-mode panel it cannot, and the call actively harms: the platform honours it
+        // as a frame-rate OVERRIDE. Read straight off the video layer with
         // `dumpsys SurfaceFlinger --latency` while the picture was visibly juddering:
         //
         //   desired present:  50.0  33.3  50.0  33.3   <- ExoPlayer asking for correct 3:2
         //   actual  present:  41.7  41.7  41.7  41.7   <- compositor forcing a flat 24Hz
         //
-        // 41.7ms is 2.5 vsyncs. This panel reports exactly one mode - 3840x2160 at 60.000004Hz
-        // with no alternates - so 60/24 = 2.5 cannot divide evenly and there is no mode to
-        // switch to. Every frame then lands between vsyncs and is held for two refreshes or
-        // three in a drifting pattern, which is the judder. With this off, ExoPlayer's own 3:2
-        // request reaches the panel on its vsync grid instead.
-        //
-        // Beware measuring this: uniform 41.7ms spacing is PERFECTLY constant, so any metric
-        // scoring deviation-from-constant-rate reports it as flawless. One here did exactly
-        // that and passed 12 of 12 runs the viewer could see juddering.
-        .setVideoChangeFrameRateStrategy(C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_OFF)
+        // 41.7ms is 2.5 vsyncs, which a 60Hz panel cannot present, so every frame lands between
+        // vsyncs. Beware measuring this: uniform 41.7ms is PERFECTLY constant, so any metric
+        // scoring deviation-from-constant-rate calls it flawless - one here passed 12 of 12 runs
+        // the viewer could plainly see juddering.
+        .setVideoChangeFrameRateStrategy(
+            if (canSwitchDisplayMode) C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_ONLY_IF_SEAMLESS
+            else C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_OFF
+        )
         .build()
 
 
