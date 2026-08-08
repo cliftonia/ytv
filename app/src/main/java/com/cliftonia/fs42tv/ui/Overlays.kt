@@ -104,6 +104,24 @@ private fun OsdText(
 }
 
 /**
+ * Black over the picture from the moment a channel is chosen until the new one appears.
+ *
+ * Without it the banner announces the channel you asked for while the previous channel is still
+ * playing underneath - the overlay tells the truth about where you are going and the picture
+ * lies about where you are, for the second or two the tune takes. Selecting from the guide made
+ * that obvious: the row you picked, its title, and someone else's programme behind it.
+ *
+ * Televisions have always blanked through a channel change for exactly this reason. The black is
+ * not a loading state to be apologised for; it is the honest answer to "what is on this channel"
+ * while that is still being worked out.
+ */
+@Composable
+fun TuningBlank(visible: Boolean) {
+    if (!visible) return
+    Box(modifier = Modifier.fillMaxSize().background(Color.Black))
+}
+
+/**
  * The single OSD block, shown on each tune and then gone.
  *
  * This mirrors the box exactly (`field_player.py:158-185`): one ASS overlay,

@@ -38,6 +38,7 @@ import com.cliftonia.fs42tv.ui.ChannelOsd
 import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
 import com.cliftonia.fs42tv.ui.StandBy
+import com.cliftonia.fs42tv.ui.TuningBlank
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -101,6 +102,24 @@ class MainActivity : ComponentActivity() {
     // Backs the stand-by card. A black screen is indistinguishable from a dead app or a
     // dead TV; the card says the app knows and is retrying.
     private val standByReason = mutableStateOf("")
+
+    // True from choosing a channel until its first frame arrives, so the previous channel is not
+    // left playing under a banner announcing a different one.
+    private val tuning = mutableStateOf(false)
+
+    /**
+     * Set the channel's volume from the two things that can silence it, rather than from
+     * whichever happened last.
+     *
+     * Both the guide music and a channel change want the programme audio down, and they overlap:
+     * selecting from the picker closes it - restoring volume - immediately AFTER the tune has
+     * muted, so a last-writer-wins approach let the previous channel's audio out for exactly the
+     * split second the new one took to arrive. Deriving the value from both conditions makes the
+     * order they fire in irrelevant.
+     */
+    private fun updateProgrammeVolume() {
+        player?.exo?.volume = if (tuning.value || pickerVisible.value) 0f else 1f
+    }
 
     private val pickerVisible = mutableStateOf(false)
     private val pickerRows = mutableStateOf<List<Pair<String, String>>>(emptyList())
@@ -179,7 +198,15 @@ class MainActivity : ComponentActivity() {
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         resolver = ServerResolver(fetch = { url -> URL(url).readText() }, baseUrl = SERVER)
 
-        val view = PlayerView(this).apply { useController = false }
+        val view = PlayerView(this).apply {
+            useController = false
+            // The shutter is PlayerView's own black cover over the video surface, and it exists
+            // for exactly this: hiding the last frame of whatever was playing when the player is
+            // reset. Explicit rather than relying on the default, because a channel change
+            // depends on it and defaults are the first thing a library changes.
+            setKeepContentOnPlayerReset(false)
+            setShutterBackgroundColor(android.graphics.Color.BLACK)
+        }
         composeView = ComposeView(this).apply {
             // The picker needs focus when open; the OSD does not, and must not steal it from
             // the D-pad channel-surfing handled in onKeyDown while the picker is closed.
@@ -187,6 +214,8 @@ class MainActivity : ComponentActivity() {
             descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
             setContent {
                 Box(modifier = Modifier.fillMaxSize()) {
+                    // Beneath the OSD, so the banner stays readable through the change.
+                    TuningBlank(tuning.value)
                     ChannelOsd(
                         channelLine = bannerChannelLine.value,
                         titleLine = bannerTitleLine.value,
@@ -296,7 +325,11 @@ class MainActivity : ComponentActivity() {
         }
         // The card comes down when a picture actually appears, not when a tune is merely
         // dispatched - a tune that fails again would otherwise clear it and leave black.
-        player.onFirstFrame = { standByReason.value = "" }
+        player.onFirstFrame = {
+            standByReason.value = ""
+            tuning.value = false
+            updateProgrammeVolume()
+        }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
         // no end of media, just a stopped picture. The box calls the same condition a fault
@@ -404,6 +437,19 @@ class MainActivity : ComponentActivity() {
         //
         // It costs one walk of one channel's clip list, no network, and it is the same
         // arithmetic the guide uses. What is on a channel is knowable without tuning to it.
+        // Stop the old channel at the SOURCE rather than covering it. A Compose overlay needs a
+        // recomposition and a frame to appear, and the previous channel keeps rendering
+        // underneath in the meantime - which showed up as an intermittent flash of the old
+        // picture right after choosing a new one. stop() ends that render immediately, and
+        // PlayerView's own shutter takes the surface black in the same frame.
+        //
+        // Safe to do here: surfTo only runs on a deliberate channel change, and the tune that
+        // follows calls setMediaSource and prepare regardless of what state the player was left
+        // in. The blank overlay stays as well, to cover the gap between the shutter and the
+        // first frame of the new channel.
+        player?.exo?.stop()
+        tuning.value = true
+        updateProgrammeVolume()
         val (line, title) = ChannelLabels.bannerLinesFor(target, nowSeconds())
         bannerChannelLine.value = line
         bannerTitleLine.value = title
@@ -486,7 +532,7 @@ class MainActivity : ComponentActivity() {
      */
     private fun startPickerMusic(nav: DialNavigator) {
         val channel = PickerMusic.choose(nav.channels) ?: return
-        player?.exo?.volume = 0f
+        updateProgrammeVolume()
         executor.execute {
             if (destroyed) return@execute
             val now = nowSeconds()
@@ -528,7 +574,7 @@ class MainActivity : ComponentActivity() {
         // milliseconds of music, against a picture that stays smooth.
         musicPlayer?.release()
         musicPlayer = null
-        player?.exo?.volume = 1f
+        updateProgrammeVolume()
     }
 
     /**
@@ -539,8 +585,8 @@ class MainActivity : ComponentActivity() {
      * do nothing.
      */
     private fun closePicker() {
-        stopPickerMusic()
         pickerVisible.value = false
+        stopPickerMusic()
         composeView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
     }
 
