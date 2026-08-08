@@ -5,6 +5,7 @@ import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.tune.Tuned
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -49,11 +50,11 @@ class ChannelLabelsTest {
 
     @Test
     fun `a list row shows number and name`() {
-        val row = ChannelLabels.listRow(
+        val (head, _) = ChannelLabels.listRow(
             Channel(number = 4, name = "Architecture & Interiors", kind = "youtube",
                 rotation = "clock", streams = emptyList()))
         assertTrue("the picker is how you find a channel, so both fields must be present",
-            row.contains("04") && row.contains("Architecture & Interiors"))
+            head.contains("04") && head.contains("Architecture & Interiors"))
     }
 
     @Test
@@ -61,9 +62,40 @@ class ChannelLabelsTest {
         fun nameStart(number: Int) =
             ChannelLabels.listRow(
                 Channel(number = number, name = "Anything", kind = "youtube",
-                    rotation = "clock", streams = emptyList())).indexOf("Anything")
+                    rotation = "clock", streams = emptyList())).first.indexOf("Anything")
         assertEquals("the dial runs past 100, and a name column that steps right at channel " +
             "100 is what the eye catches when scanning 111 rows",
             nameStart(4), nameStart(106))
+    }
+
+    @Test
+    fun `what is playing comes back separately so it can be drawn dimmer`() {
+        val (head, title) = ChannelLabels.listRow(
+            Channel(number = 5, name = "Wrestling", kind = "youtube", rotation = "clock",
+                streams = emptyList()),
+            nowPlaying = "Royal Rumble 1990")
+        assertEquals("Royal Rumble 1990", title)
+        assertFalse("glued into one string the picker could not draw them at two brightnesses",
+            head.contains("Royal Rumble"))
+    }
+
+    @Test
+    fun `a row with no title yields an empty second part`() {
+        val (head, title) = ChannelLabels.listRow(
+            Channel(number = 5, name = "ABC News", kind = "live", rotation = null,
+                streams = emptyList()))
+        assertEquals("", title)
+        assertEquals("CHANNEL 05  ABC News", head)
+    }
+
+    @Test
+    fun `a long title is truncated rather than running off the panel`() {
+        val long = "A Very Long Programme Title That Would Otherwise Run Past The Right Edge Of The Screen"
+        val (head, title) = ChannelLabels.listRow(
+            Channel(number = 5, name = "Docos", kind = "youtube", rotation = "clock",
+                streams = emptyList()), nowPlaying = long)
+        assertTrue("an overrun row is the bug this width exists to prevent",
+            head.length + title.length <= 78)
+        assertTrue("truncation must be visible, not silent", title.endsWith("\u2026"))
     }
 }

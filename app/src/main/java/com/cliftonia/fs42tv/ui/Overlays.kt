@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
@@ -74,6 +75,7 @@ private fun OsdText(
     fontSize: TextUnit,
     modifier: Modifier = Modifier,
     fontWeight: FontWeight = FontWeight.Normal,
+    color: Color = OsdGreen,
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Clip,
 ) {
@@ -88,7 +90,7 @@ private fun OsdText(
         )
         BasicText(
             text = text,
-            style = base.copy(color = OsdGreen),
+            style = base.copy(color = color),
             maxLines = maxLines,
             overflow = overflow,
         )
@@ -162,6 +164,19 @@ private val PickerBackground = Color(0xE6000000)
 private val PickerRowFocusedBackground = Color(0xFF1A3B1A)
 
 /**
+ * What-is-on text, at about half the luminance of the channel name beside it.
+ *
+ * Contrast rather than size carries the hierarchy here. A guide is skimmed, not read, and the
+ * bright channel names have to form a clean vertical column for the eye to run down; changing
+ * the type size would change the row height and break exactly that. Dimming instead lets the
+ * titles sit in the same rhythm and recede until the eye stops on one.
+ *
+ * Not pure white or full green either - maximum luminance is tiring in a dark room, which is
+ * where a television lives.
+ */
+private val PickerSubtitle = Color(0xFF1E9E1E)
+
+/**
  * Row height in the fs42-bench reference was tuned for a static demo list with nothing else on
  * screen. Here the row is read at a glance while surfing, not studied, so it sits below the
  * 27.5.sp heading line (that is a single line meant to dominate) and above the 11.sp title line
@@ -177,6 +192,7 @@ private const val ON_AIR_LEAD_ROWS = 3
 @Composable
 private fun PickerRow(
     text: String,
+    subtitle: String,
     focusRequester: FocusRequester?,
     onClick: () -> Unit,
 ) {
@@ -200,11 +216,21 @@ private fun PickerRow(
         // carries the highlight instead.
         scale = ClickableSurfaceDefaults.scale(focusedScale = 1f),
     ) {
-        OsdText(
-            text = text,
-            fontSize = PickerRowFontSize,
+        Row(
             modifier = Modifier.padding(horizontal = 24.dp, vertical = 10.dp),
-        )
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            OsdText(text = text, fontSize = PickerRowFontSize)
+            if (subtitle.isNotEmpty()) {
+                OsdText(
+                    text = "  $subtitle",
+                    fontSize = PickerRowFontSize,
+                    color = PickerSubtitle,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
+        }
     }
 }
 
@@ -225,7 +251,7 @@ private fun PickerRow(
  */
 @Composable
 fun ChannelPicker(
-    rows: List<String>,
+    rows: List<Pair<String, String>>,
     startIndex: Int,
     onPick: (Int) -> Unit,
     onDismiss: () -> Unit,
@@ -249,7 +275,8 @@ fun ChannelPicker(
             LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
                 itemsIndexed(rows) { index, row ->
                     PickerRow(
-                        text = row,
+                        text = row.first,
+                        subtitle = row.second,
                         focusRequester = if (index == onAirIndex) focusRequester else null,
                         onClick = { onPick(index) },
                     )

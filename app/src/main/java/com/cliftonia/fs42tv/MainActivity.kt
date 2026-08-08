@@ -18,6 +18,7 @@ import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
 import com.cliftonia.fs42tv.player.ChannelPreloader
 import com.cliftonia.fs42tv.player.DeviceBudget
+import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
@@ -33,6 +34,7 @@ import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import com.cliftonia.fs42tv.ui.ChannelOsd
+import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
 import com.cliftonia.fs42tv.ui.StandBy
 import java.net.URL
@@ -52,6 +54,19 @@ class MainActivity : ComponentActivity() {
 
     private var player: ChannelPlayer? = null
     private var preloader: ChannelPreloader? = null
+
+    /**
+     * Audio-only player for the music under the channel picker.
+     *
+     * A separate ExoPlayer rather than the main one, because the channel being watched must keep
+     * playing underneath the list - the picker is translucent over it. Audio only, so the cost is
+     * one stream of about 128kbps rather than a second video decode; video preloading was
+     * abandoned over exactly that bandwidth budget, and this stays well inside it.
+     *
+     * Created on first use and released with the activity. Everything about it is best-effort:
+     * guide music is atmosphere, and atmosphere is never worth an error.
+     */
+    private var musicPlayer: androidx.media3.exoplayer.ExoPlayer? = null
 
     @Volatile private var navigator: DialNavigator? = null
     @Volatile private var destroyed: Boolean = false
@@ -87,7 +102,7 @@ class MainActivity : ComponentActivity() {
     private val standByReason = mutableStateOf("")
 
     private val pickerVisible = mutableStateOf(false)
-    private val pickerRows = mutableStateOf<List<String>>(emptyList())
+    private val pickerRows = mutableStateOf<List<Pair<String, String>>>(emptyList())
     private val pickerStartIndex = mutableStateOf(0)
 
     // Local var rather than only a local val in onCreate: opening the picker needs to flip this
@@ -378,12 +393,76 @@ class MainActivity : ComponentActivity() {
         val startIndex = nav.channels.indexOfFirst { it.number == onAirNumber }
             .let { if (it >= 0) it else nav.currentIndex }
 
-        pickerRows.value = nav.channels.map { ChannelLabels.listRow(it) }
+        // What is on each channel right now, from the clock rotation alone - no network, no
+        // resolving. The titles are already in channels.json; only the arithmetic saying WHICH
+        // one is current is needed, which is the same walk the tuner does.
+        val now = nowSeconds()
+        pickerRows.value = nav.channels.map { channel ->
+            val title = ClockRotation
+                .playPointFor(channel.streams.map { it.duration }, now)
+                ?.let { channel.streams.getOrNull(it.index)?.title }
+            ChannelLabels.listRow(channel, title)
+        }
         pickerStartIndex.value = startIndex
         pickerVisible.value = true
 
         composeView.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
         composeView.requestFocus()
+        startPickerMusic(nav)
+    }
+
+    /**
+     * Play the guide music and duck the channel underneath.
+     *
+     * Ducked rather than left alone: two audio sources at once is noise, and a guide channel
+     * always replaced the programme audio rather than competing with it. The picture keeps
+     * playing, so closing the picker restores sound to a channel that never stopped.
+     */
+    private fun startPickerMusic(nav: DialNavigator) {
+        val channel = PickerMusic.choose(nav.channels) ?: return
+        player?.exo?.volume = 0f
+        executor.execute {
+            if (destroyed) return@execute
+            val now = nowSeconds()
+            val tuned = Tuner.tune(channel, urls, now) ?: return@execute
+            var playable: Playable = tuned.playable
+            if (playable is NeedsResolving) {
+                playable = resolvedCache.get(playable.videoId, now)
+                    ?: resolver.resolveDetailed(playable.videoId, now)?.also {
+                        resolvedCache.put(playable.videoId, it.playable, it.expiresAtSeconds)
+                    }?.playable ?: return@execute
+            }
+            // Only the audio track is wanted, so the audio URL is handed over as the source and
+            // the video URL is dropped entirely - no second decode, no second video fetch.
+            val audioOnly = when (playable) {
+                is Progressive -> playable.audioUrl?.let { Progressive(it, null) }
+                is Hls -> playable
+                else -> null
+            } ?: return@execute
+            val source = player?.sourceFor(audioOnly) ?: return@execute
+
+            runOnUiThread {
+                if (destroyed || !pickerVisible.value) return@runOnUiThread
+                val music = musicPlayer ?: androidx.media3.exoplayer.ExoPlayer.Builder(this)
+                    .build().also { musicPlayer = it }
+                Log.i("fs42", "guide music: ${channel.name}")
+                music.setMediaSource(source, (tuned.offsetSeconds * 1000).toLong())
+                music.prepare()
+                music.playWhenReady = true
+            }
+        }
+    }
+
+    private fun stopPickerMusic() {
+        // RELEASE, not stop(). stop() halts playback but keeps the instance, and with it a
+        // hardware MediaCodec - a limited resource on this television, held idle alongside the
+        // video decoder for as long as the app runs. Frame drops appeared across every channel
+        // as soon as this player was introduced, which is what an extra codec instance looks
+        // like from the outside. Recreating it on the next open costs a few hundred
+        // milliseconds of music, against a picture that stays smooth.
+        musicPlayer?.release()
+        musicPlayer = null
+        player?.exo?.volume = 1f
     }
 
     /**
@@ -394,6 +473,7 @@ class MainActivity : ComponentActivity() {
      * do nothing.
      */
     private fun closePicker() {
+        stopPickerMusic()
         pickerVisible.value = false
         composeView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
     }
@@ -626,6 +706,8 @@ class MainActivity : ComponentActivity() {
         // Preloader first: it holds sources feeding the player the release below tears down,
         // and a preload landing against a released player is a crash rather than a wasted
         // fetch. Both are null'd so a tune that outlived the activity finds nothing to touch.
+        musicPlayer?.release()
+        musicPlayer = null
         preloader?.release()
         preloader = null
         player?.release()
