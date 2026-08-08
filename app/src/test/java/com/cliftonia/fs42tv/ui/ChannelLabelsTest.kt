@@ -54,7 +54,7 @@ class ChannelLabelsTest {
             Channel(number = 4, name = "Architecture & Interiors", kind = "youtube",
                 rotation = "clock", streams = emptyList()))
         assertTrue("the picker is how you find a channel, so both fields must be present",
-            head.contains("04") && head.contains("Architecture & Interiors"))
+            head.contains("04") && head.contains("ARCHITECTURE & INTERIORS"))
     }
 
     @Test
@@ -85,17 +85,17 @@ class ChannelLabelsTest {
             Channel(number = 5, name = "ABC News", kind = "live", rotation = null,
                 streams = emptyList()))
         assertEquals("", title)
-        assertEquals("CHANNEL 05  ABC News", head)
+        assertEquals("CH 05  ABC NEWS", head)
     }
 
     @Test
-    fun `a long title is truncated rather than running off the panel`() {
+    fun `a long title is passed through whole for the layout to ellipsise`() {
         val long = "A Very Long Programme Title That Would Otherwise Run Past The Right Edge Of The Screen"
-        val (head, title) = ChannelLabels.listRow(
+        val (_, title) = ChannelLabels.listRow(
             Channel(number = 5, name = "Docos", kind = "youtube", rotation = "clock",
                 streams = emptyList()), nowPlaying = long)
-        assertTrue("an overrun row is the bug this width exists to prevent",
-            head.length + title.length <= 78)
-        assertTrue("truncation must be visible, not silent", title.endsWith("\u2026"))
+        assertEquals("truncating here means guessing glyph widths at two font sizes, which cut " +
+            "titles short with most of the row still empty - the layout knows the real width",
+            long, title)
     }
 }

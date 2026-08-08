@@ -42,8 +42,15 @@ object ChannelLabels {
     /**
      * A picker row: channel number, channel name, and what is on it right now.
      *
-     * Returned as two parts rather than one string, because the picker draws them at two
-     * luminance levels: channel identity at full brightness, what is on at about half. That is
+     * Returned as two parts rather than one string, because the picker draws them very
+     * differently: the channel in full-size capitals, what is on after a colon at about half the
+     * size, in italics and dimmed.
+     *
+     * NOTHING is truncated here. An earlier version budgeted characters, which meant guessing
+     * monospace glyph widths at two different font sizes and then converting between them - it
+     * cut titles short with most of the row still empty. The picker gives the title whatever
+     * width is left and lets Compose ellipsise at the real edge, which is the only thing that
+     * actually knows how wide the text is. That is
      * a deliberate choice of contrast over size - people skim a guide rather than read it, and
      * varying the type size would vary the row height and break the vertical rhythm that makes
      * skimming possible. Same size, two brightnesses: the bright names form a scannable column
@@ -60,19 +67,8 @@ object ChannelLabels {
      * row degrades to number and name rather than showing an empty separator.
      */
     fun listRow(channel: Channel, nowPlaying: String? = null): Pair<String, String> {
-        val head = "CHANNEL %-4s%s".format("%02d".format(channel.number), channel.name)
+        val head = "CH %-4s%s".format("%02d".format(channel.number), channel.name.uppercase())
         val title = nowPlaying?.trim().orEmpty()
-        if (title.isEmpty()) return head to ""
-
-        val room = ROW_WIDTH - head.length
-        if (room < MIN_TITLE) return head to ""
-        val shown = if (title.length <= room) title else title.take(room - 1).trimEnd() + "\u2026"
-        return head to shown
+        return if (title.isEmpty()) head to "" else "$head:" to title
     }
-
-    /** Total row width the picker can show at its font size before the text runs off the panel. */
-    private const val ROW_WIDTH = 78
-
-    /** Below this a title is more stub than information, so the row drops it entirely. */
-    private const val MIN_TITLE = 8
 }
