@@ -62,8 +62,21 @@ $ADB shell am force-stop "$PKG"
 # Cleared so the run always starts from the same end of the dial and syncs a fresh channels.json;
 # resuming on whatever was last watched would sample a different set of channels each time.
 $ADB shell pm clear "$PKG" > /dev/null
+# Launched the way the remote does it, via the LEANBACK_LAUNCHER category.
+#
+# `am start -n pkg/.MainActivity` starts the activity but does NOT reliably bring it to the
+# front on Google TV: the launcher can stay on top while the app runs behind it. A measurement
+# taken then is of a screen nobody is looking at, and the log fills with tunes that never
+# reached a display.
+#
+# monkey fires the launcher intent itself, which carries the foreground semantics. Extras still
+# go through am start, so the two are combined: start with extras, then bring forward.
 # shellcheck disable=SC2086
-$ADB shell am start -n "$PKG/.MainActivity" $EXTRAS > /dev/null
+if [ -n "$EXTRAS" ]; then
+  $ADB shell am start -n "$PKG/.MainActivity" $EXTRAS > /dev/null
+else
+  $ADB shell "monkey -p $PKG -c android.intent.category.LEANBACK_LAUNCHER 1" > /dev/null 2>&1
+fi
 echo "   waiting for the first tune to settle..."
 sleep 24
 $ADB logcat -c
