@@ -50,6 +50,17 @@ private const val NO_REMEMBERED_CHANNEL = -1
 /** Long enough not to flash on the brief stalls that clear themselves. */
 private const val STALL_CARD_MILLIS = 2_500L
 
+/**
+ * How long a playback error is given to fix itself before the stand-by card appears.
+ *
+ * A 403 on a signed URL recovers by dropping the dead id, asking the server for a fresh one and
+ * tuning again. Measured end to end that is about 1.5s - a clean tune reaches first frame in
+ * 910-2870ms, and the extra server resolve is the slow part. 4s covers the slow end with room,
+ * while still being short enough that a channel which is genuinely dead says so rather than
+ * sitting blank.
+ */
+private const val RECOVERY_GRACE_MILLIS = 4_000L
+
 class MainActivity : ComponentActivity() {
 
     // @Volatile: assigned on the UI thread in onCreate, read from the executor when tuning.
@@ -163,6 +174,16 @@ class MainActivity : ComponentActivity() {
     private val stallHandler by lazy { android.os.Handler(mainLooper) }
 
     /**
+     * Delays the stand-by card after a playback error, so a fault the app repairs by itself is
+     * never announced.
+     *
+     * Deliberately NOT the stall handler. Both post one delayed reveal and both clear their queue
+     * before posting, so sharing one would let a stall cancel a pending error card and leave a
+     * genuinely dead channel showing nothing but a blank screen forever.
+     */
+    private val recoveryHandler by lazy { android.os.Handler(mainLooper) }
+
+    /**
      * Wall-clock seconds, or a frozen instant when one was supplied at launch.
      *
      * Every channel on this dial derives its clip and offset from the current time, so two runs
@@ -264,7 +285,6 @@ class MainActivity : ComponentActivity() {
         }
         player.onClipEnded = { retuneCurrent("clip ended") }
         player.onPlaybackError = { code ->
-            standByReason.value = code
             // A rejected URL is the one error worth reacting to specifically: re-tuning without
             // forgetting it would resolve to the same dead link and fail the same way.
             if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND")) {
@@ -274,11 +294,28 @@ class MainActivity : ComponentActivity() {
                     resolvedCache.forget(it)
                 }
             }
+
+            // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused with
+            // 403 while still inside its stated expiry, and the recovery below - drop the dead
+            // id, ask the server for a fresh one, tune again - puts a picture back in about a
+            // second. Announcing that as a fault showed the viewer an error code for something
+            // the app had already fixed, which reads as far more broken than the brief blank a
+            // channel change produces anyway.
+            //
+            // The card is only delayed, never skipped: if the retune has not produced a picture
+            // by the time the grace period is up, this is a real fault and says so. Blanking
+            // meanwhile is what a channel change already does, so the transition looks the same
+            // as any other.
+            tuning.value = true
+            updateProgrammeVolume()
+            recoveryHandler.removeCallbacksAndMessages(null)
+            recoveryHandler.postDelayed({ standByReason.value = code }, RECOVERY_GRACE_MILLIS)
             retuneCurrent("playback error $code")
         }
         // The card comes down when a picture actually appears, not when a tune is merely
         // dispatched - a tune that fails again would otherwise clear it and leave black.
         player.onFirstFrame = {
+            recoveryHandler.removeCallbacksAndMessages(null)
             standByReason.value = ""
             tuning.value = false
             updateProgrammeVolume()
@@ -399,6 +436,10 @@ class MainActivity : ComponentActivity() {
         // in. The blank overlay stays as well, to cover the gap between the shutter and the
         // first frame of the new channel.
         player?.exo?.stop()
+        // A deliberate channel change supersedes any error still waiting to be
+        // announced: the card would name a channel the viewer has already left.
+        recoveryHandler.removeCallbacksAndMessages(null)
+        standByReason.value = ""
         tuning.value = true
         updateProgrammeVolume()
         val (line, title) = ChannelLabels.bannerLinesFor(target, nowSeconds())
@@ -693,6 +734,7 @@ class MainActivity : ComponentActivity() {
         super.onDestroy()
         destroyed = true
         stallHandler.removeCallbacksAndMessages(null)
+        recoveryHandler.removeCallbacksAndMessages(null)
         executor.shutdownNow()
         // Both are null'd as well as released, so a tune that outlived the activity finds
         // nothing to touch rather than a released player.
