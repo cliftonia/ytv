@@ -54,8 +54,10 @@ private const val STALL_CARD_MILLIS = 2_500L
 
 class MainActivity : ComponentActivity() {
 
-    private var player: ChannelPlayer? = null
-    private var preloader: ChannelPreloader? = null
+    // @Volatile because both are assigned on the UI thread in onCreate and read from the
+    // executor in the tune and preload paths.
+    @Volatile private var player: ChannelPlayer? = null
+    @Volatile private var preloader: ChannelPreloader? = null
 
     /**
      * Audio-only player for the music under the channel picker.
@@ -776,7 +778,7 @@ class MainActivity : ComponentActivity() {
         // onAir is a field, not a log line, because the navigator's position is not the same
         // thing as what is on screen: SharedPreferences is a consumer of this state, not its
         // owner.
-        if (playedSuccessfully && !destroyed) {
+        if (playedSuccessfully && !destroyed && requestGeneration == generation.get()) {
             onAir = tuned
             prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
             preloadNeighbours(channel)
@@ -788,6 +790,15 @@ class MainActivity : ComponentActivity() {
         // most likely a resolver network call that outlived the activity.
         if (playable !is NeedsResolving && !destroyed) {
             runOnUiThread {
+                // The generation is re-checked HERE, not only on the executor. runOnUiThread
+                // queues behind whatever the main thread is already doing, so a tune that was
+                // current when it posted can run after a newer keypress has already moved the
+                // dial - snapping the picture and banner back to a channel the viewer surfed
+                // past, and leaving it there if the newer tune then fails to resolve.
+                if (requestGeneration != generation.get()) {
+                    Log.d("fs42", "channel ${channel.number}: superseded before painting; abandoning")
+                    return@runOnUiThread
+                }
                 if (!destroyed) {
                     player?.play(playable, tuned.offsetSeconds, requestedAtMillis)
 

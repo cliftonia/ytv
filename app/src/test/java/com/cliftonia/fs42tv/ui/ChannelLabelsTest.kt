@@ -25,8 +25,11 @@ class ChannelLabelsTest {
     @Test
     fun `banner leads with the channel number and name`() {
         val (first, _) = ChannelLabels.bannerLines(tunedWith("Some Programme"))
-        assertTrue("the banner must answer 'what am I watching' before anything else",
-            first.contains("4") && first.contains("Architecture", ignoreCase = true))
+        // An exact value, not two contains() checks. Those were blind to order and to padding:
+        // swapping the format to put the name before the number left the whole class green.
+        assertEquals("the banner must answer 'what am I watching' before anything else, and the " +
+            "number is zero-padded so the heading does not change width as you surf",
+            "04 ARCHITECTURE", first)
     }
 
     @Test
