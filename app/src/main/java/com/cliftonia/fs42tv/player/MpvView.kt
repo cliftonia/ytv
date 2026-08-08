@@ -126,6 +126,20 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // - the audio output racing its own teardown. A dial rolls a clip over on every channel
         // every few minutes, so that is not an edge case here, it is the normal path.
         MPVLib.setOptionString("ao", "opensles,audiotrack")
+        // Hold the audio device open between clips, streaming silence when nothing is playing.
+        //
+        // Without it mpv closes the output on every loadfile and opens it again for the next
+        // one, and the hardware makes that audible: a speaker click on every single channel
+        // change. This dial changes channel constantly, so an artefact that a normal player
+        // produces once per file happens here every few seconds.
+        //
+        // The option exists for precisely this - it was added for AV receivers that click or
+        // mute while re-syncing - and the cost is a device kept open, which this app wants
+        // anyway since it is never idle for long.
+        MPVLib.setOptionString("audio-stream-silence", "yes")
+        // A short grace period before the device is considered ready, so the first moments of a
+        // clip are not swallowed while the output is still coming up.
+        MPVLib.setOptionString("audio-wait-open", "0.2")
 
         // --- https --------------------------------------------------------------------------
         // Every URL on this dial is https, and Android has no /etc/ssl/certs for mpv to find.
