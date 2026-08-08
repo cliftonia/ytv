@@ -277,6 +277,14 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
         val source = sourceFor(playable) ?: return
         hasPicture = false
         this.requestedAtMillis = requestedAtMillis
+        // The split between deciding what to play and being able to show it. "first frame" alone
+        // is one number covering three very different costs - working out the clip from the
+        // clock, resolving its URL (cache hit or a server round trip), and then connecting and
+        // filling the buffer - and the same number came out as 844ms and 8939ms on consecutive
+        // tunes. Logging the hand-off makes the first two separable from the third; the third
+        // then falls out of the fs42chunk open timings, which already carry timestamps.
+        Log.i("fs42", "handing to player after ${SystemClock.elapsedRealtime() - requestedAtMillis}" +
+            "ms: ${playable.javaClass.simpleName} at ${startAtSeconds.toInt()}s")
         exo.setMediaSource(source, (startAtSeconds * 1000).toLong())
         exo.prepare()
         exo.playWhenReady = true
