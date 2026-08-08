@@ -2,11 +2,15 @@ package com.cliftonia.fs42tv.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.focusable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,7 +27,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.input.key.onKeyEvent
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.TransformOrigin
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
@@ -79,27 +87,46 @@ private fun OsdText(
     color: Color = OsdGreen,
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Clip,
+    /**
+     * Whether to draw the outline pass.
+     *
+     * The outline exists to keep text legible over moving footage, and costs a SECOND full text
+     * layout and draw of the same string. Where there is already a background behind the text -
+     * the picker's near-opaque backdrop - it buys nothing and doubles the work for every row
+     * that scrolls into view, on a 32-bit SoC, twice per row because each row has two of these.
+     */
+    outline: Boolean = true,
 ) {
     val outlineWidthPx = with(LocalDensity.current) { OsdOutlineWidth.toPx() }
-    val base = TextStyle(
-        fontFamily = FontFamily.Monospace,
-        fontWeight = fontWeight,
-        fontStyle = fontStyle,
-        fontSize = fontSize,
-    )
+    // Remembered rather than rebuilt: these are allocated on every recomposition otherwise, and
+    // a scrolling list recomposes constantly.
+    val fill = remember(fontWeight, fontStyle, fontSize, color) {
+        TextStyle(
+            fontFamily = FontFamily.Monospace,
+            fontWeight = fontWeight,
+            fontStyle = fontStyle,
+            fontSize = fontSize,
+            color = color,
+        )
+    }
+    val stroke = remember(fontWeight, fontStyle, fontSize, outlineWidthPx) {
+        TextStyle(
+            fontFamily = FontFamily.Monospace,
+            fontWeight = fontWeight,
+            fontStyle = fontStyle,
+            fontSize = fontSize,
+            color = OsdOutline,
+            drawStyle = Stroke(width = outlineWidthPx),
+        )
+    }
+    if (!outline) {
+        BasicText(text = text, modifier = modifier, style = fill,
+            maxLines = maxLines, overflow = overflow)
+        return
+    }
     Box(modifier = modifier) {
-        BasicText(
-            text = text,
-            style = base.copy(color = OsdOutline, drawStyle = Stroke(width = outlineWidthPx)),
-            maxLines = maxLines,
-            overflow = overflow,
-        )
-        BasicText(
-            text = text,
-            style = base.copy(color = color),
-            maxLines = maxLines,
-            overflow = overflow,
-        )
+        BasicText(text = text, style = stroke, maxLines = maxLines, overflow = overflow)
+        BasicText(text = text, style = fill, maxLines = maxLines, overflow = overflow)
     }
 }
 
@@ -187,6 +214,15 @@ private val PickerBackground = Color(0xE6000000)
 /** A dark tint of [OsdGreen] rather than a neutral grey, so the focus highlight reads as part of the same product as the outline text sitting on it. */
 private val PickerRowFocusedBackground = Color(0xFF1A3B1A)
 
+/** How much dimmer each row gets per step away from the highlight. */
+private const val FALLOFF_PER_ROW = 0.16f
+
+/** Rows never fade out entirely - a guide you cannot read the edges of is a worse guide. */
+private const val MIN_ROW_ALPHA = 0.25f
+
+/** How much smaller each row gets per step away, capped so distant rows do not vanish. */
+private const val SHRINK_PER_ROW = 0.03f
+
 /**
  * What-is-on text, at about half the luminance of the channel name beside it.
  *
@@ -227,42 +263,45 @@ private const val ON_AIR_LEAD_ROWS = 3
 private fun PickerRow(
     text: String,
     subtitle: String,
-    focusRequester: FocusRequester?,
-    onClick: () -> Unit,
+    selected: Boolean,
+    /** Rows away from the highlight; 0 is the centre. Drives the wheel's fade and shrink. */
+    distance: Int,
 ) {
-    val rowModifier = if (focusRequester != null) {
-        Modifier.fillMaxWidth().focusRequester(focusRequester)
-    } else {
-        Modifier.fillMaxWidth()
-    }
-    Surface(
-        onClick = onClick,
-        modifier = rowModifier,
-        colors = ClickableSurfaceDefaults.colors(
-            containerColor = Color.Transparent,
-            focusedContainerColor = PickerRowFocusedBackground,
-        ),
-        // tv-material3's own default grows the focused row to 1.1x. A row that already spans
-        // fillMaxWidth has nowhere for that growth to go but past both edges of the screen, so
-        // the focused row's own leading text clips off the left edge - the same rendering
-        // hazard the OSD banner ran into, caught the same way, from a screenshot rather than by
-        // trusting the parameter. Scale is switched off; the container-colour change on focus
-        // carries the highlight instead.
-        scale = ClickableSurfaceDefaults.scale(focusedScale = 1f),
+    // No focus, no clickable, no interaction source. The list owns selection and key handling,
+    // so a row is only ever drawn - which is the point: 113 rows each carrying their own focus
+    // machinery is what made this list heavy, and driving a scroll from focus changes deadlocked
+    // it outright (scrolling moves focus, which scrolled again - an ANR, not a crash).
+    // A wheel's look, done the cheap way: driven by the SELECTED index rather than by scroll
+    // position. Reading the scroll offset every frame would recompose every visible row on every
+    // frame, which is exactly the cost this picker was just rebuilt to remove - and the scroll is
+    // instant anyway, so there is no intermediate position to track.
+    //
+    // animateFloatAsState gives the movement its smoothness; only the dozen or so rows the list
+    // has actually composed are ever animating.
+    val target = (1f - distance * FALLOFF_PER_ROW).coerceIn(MIN_ROW_ALPHA, 1f)
+    val fade by animateFloatAsState(targetValue = target, label = "pickerRowFade")
+    val shrink by animateFloatAsState(
+        targetValue = 1f - distance * SHRINK_PER_ROW.coerceAtMost(0.06f),
+        label = "pickerRowScale",
+    )
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .graphicsLayer {
+                alpha = fade
+                scaleX = shrink
+                scaleY = shrink
+                // Shrink toward the left edge so the channel numbers stay in one column and the
+                // eye can still run down them - scaling about the centre would make them wander.
+                transformOrigin = TransformOrigin(0f, 0.5f)
+            }
+            .background(if (selected) PickerRowFocusedBackground else Color.Transparent)
+            .padding(horizontal = 24.dp, vertical = 10.dp),
     ) {
-        Row(
-            // fillMaxWidth is load-bearing, not decoration. `weight` distributes the space
-            // REMAINING in the row, and a row that sizes itself to its content has none to
-            // distribute - so the title was squeezed to almost nothing and ellipsised while
-            // most of the screen sat empty beside it. The Surface spans the width; without
-            // this the Row inside it does not.
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
+        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             // The heading takes exactly what it needs; the title takes the rest and ellipsises
-            // at the real edge. Budgeting characters here instead meant estimating glyph widths
-            // at two font sizes, which cut titles short with half the row still empty.
-            OsdText(text = text, fontSize = PickerRowFontSize)
+            // at the real edge.
+            OsdText(text = text, fontSize = PickerRowFontSize, outline = false)
             if (subtitle.isNotEmpty()) {
                 OsdText(
                     modifier = Modifier.weight(1f, fill = false),
@@ -272,6 +311,7 @@ private fun PickerRow(
                     color = PickerSubtitle,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
+                    outline = false,
                 )
             }
         }
@@ -307,22 +347,68 @@ fun ChannelPicker(
     val seedIndex = (onAirIndex - ON_AIR_LEAD_ROWS).coerceIn(0, lastIndex)
     val listState = rememberLazyListState(initialFirstVisibleItemIndex = seedIndex)
     val focusRequester = remember { FocusRequester() }
+    var selected by remember { mutableStateOf(onAirIndex) }
 
-    LaunchedEffect(Unit) {
-        if (rows.isNotEmpty()) {
-            focusRequester.requestFocus()
-        }
+    LaunchedEffect(Unit) { focusRequester.requestFocus() }
+
+    // The highlight stays put and the LIST moves under it.
+    //
+    // Driven by `selected`, which only key presses change - never by focus. Scrolling moves
+    // focus, so scrolling in response to focus is a loop that hangs the main thread; that is
+    // exactly what an earlier attempt did, and it ANR'd. scrollToItem rather than
+    // animateScrollToItem: with the highlight pinned there is nothing to animate, and it is the
+    // queued, interrupted bring-into-view animations that made this feel heavy.
+    LaunchedEffect(selected) {
+        // Keep the highlight in the MIDDLE of the screen, and let it travel only at the two ends.
+        //
+        // Half the visible rows, measured rather than assumed - row height depends on the font
+        // size and the panel, and a guessed constant put the highlight near the top instead.
+        // scrollToItem cannot scroll past the last row, so at the bottom of the dial the list
+        // stops and the highlight walks down to meet it; the same happens in reverse at the top.
+        // That is the behaviour worth having: padding the list by half a screen would centre the
+        // ends too, at the cost of a guide showing half a screen of nothing.
+        val half = (listState.layoutInfo.visibleItemsInfo.size / 2).coerceAtLeast(ON_AIR_LEAD_ROWS)
+        listState.scrollToItem((selected - half).coerceIn(0, lastIndex))
     }
 
     MaterialTheme {
-        Box(modifier = Modifier.fillMaxSize().background(PickerBackground)) {
+        BoxWithConstraints(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(PickerBackground)
+                // ONE focus target for the whole guide, rather than one per row. It consumes
+                // D-pad up/down/centre before the activity's onKeyDown sees them, which is what
+                // keeps the channel underneath from changing while this is open.
+                .focusRequester(focusRequester)
+                .focusable()
+                .onKeyEvent { event ->
+                    if (event.nativeKeyEvent.action != android.view.KeyEvent.ACTION_DOWN) {
+                        return@onKeyEvent false
+                    }
+                    when (event.nativeKeyEvent.keyCode) {
+                        android.view.KeyEvent.KEYCODE_DPAD_DOWN -> {
+                            selected = (selected + 1).coerceAtMost(lastIndex); true
+                        }
+                        android.view.KeyEvent.KEYCODE_DPAD_UP -> {
+                            selected = (selected - 1).coerceAtLeast(0); true
+                        }
+                        android.view.KeyEvent.KEYCODE_DPAD_CENTER,
+                        android.view.KeyEvent.KEYCODE_ENTER -> { onPick(selected); true }
+                        else -> false
+                    }
+                },
+        ) {
             LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
-                itemsIndexed(rows) { index, row ->
+                itemsIndexed(
+                    rows,
+                    key = { index, _ -> index },
+                    contentType = { _, _ -> "channel" },
+                ) { index, row ->
                     PickerRow(
                         text = row.first,
                         subtitle = row.second,
-                        focusRequester = if (index == onAirIndex) focusRequester else null,
-                        onClick = { onPick(index) },
+                        selected = index == selected,
+                        distance = kotlin.math.abs(index - selected),
                     )
                 }
             }
