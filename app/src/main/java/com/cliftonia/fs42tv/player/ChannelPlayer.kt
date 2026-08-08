@@ -146,18 +146,6 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
              * Without this line, "the picture is janky sometimes" is unattributable. With it,
              * the answer is in the log next to the channel that caused it.
              */
-            override fun onVideoSizeChanged(size: androidx.media3.common.VideoSize) {
-                val fps = exo.videoFormat?.frameRate ?: -1f
-                val cadence = when {
-                    fps <= 0f -> "unknown"
-                    kotlin.math.abs(fps - 60f) < 1f || kotlin.math.abs(fps - 30f) < 1f -> "clean on 60Hz"
-                    kotlin.math.abs(fps - 25f) < 1f -> "25fps PAL - uneven cadence on a 60Hz panel"
-                    kotlin.math.abs(fps - 24f) < 1.5f -> "24fps film - 3:2 pulldown on a 60Hz panel"
-                    else -> "non-standard"
-                }
-                Log.i("fs42", "video ${size.width}x${size.height} @ ${fps}fps - $cadence")
-            }
-
             override fun onRenderedFirstFrame() {
                 val requested = requestedAtMillis
                 if (requested > 0L) {
@@ -169,6 +157,28 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
                     requestedAtMillis = 0L
                 }
                 hasPicture = true
+                // Frame rate read HERE, not at onVideoSizeChanged: the format is not populated
+                // that early and reported -1.0fps every time, which made the one diagnostic that
+                // matters useless.
+                //
+                // This panel reports a single display mode, 60Hz, so there is nothing to switch
+                // it to. 30 and 60fps map onto that cleanly. 25fps PAL - which a dial full of
+                // British and Australian programmes carries a lot of - needs an uneven
+                // 2:2:2:2:3 cadence, and 23.976fps film needs 3:2. Both look like stutter and
+                // NEITHER drops a frame, which is exactly what the dropped-frame counter showed:
+                // zero, while the picture visibly juddered.
+                val fps = exo.videoFormat?.frameRate ?: -1f
+                val cadence = when {
+                    fps <= 0f -> "unknown"
+                    kotlin.math.abs(fps - 60f) < 1f -> "60fps - clean on a 60Hz panel"
+                    kotlin.math.abs(fps - 30f) < 1f -> "30fps - clean 2:2 on a 60Hz panel"
+                    kotlin.math.abs(fps - 50f) < 1f -> "50fps PAL - UNEVEN on a 60Hz panel"
+                    kotlin.math.abs(fps - 25f) < 1f -> "25fps PAL - UNEVEN on a 60Hz panel"
+                    kotlin.math.abs(fps - 24f) < 1.5f -> "24fps film - 3:2 pulldown on a 60Hz panel"
+                    else -> "non-standard"
+                }
+                Log.i("fs42", "playing ${exo.videoFormat?.width}x${exo.videoFormat?.height} " +
+                    "@ ${fps}fps - $cadence")
                 onFirstFrame?.invoke()
             }
         })
