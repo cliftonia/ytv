@@ -7,6 +7,7 @@ import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DefaultHttpDataSource
+import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.hls.HlsMediaSource
 import androidx.media3.exoplayer.source.MediaSource
@@ -28,7 +29,36 @@ import com.cliftonia.fs42tv.resolver.Unplayable
  * the load, so that class of bug cannot happen here.
  */
 @UnstableApi
-class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory) {
+class ChannelPlayer(context: android.content.Context, private val factory: DataSource.Factory) {
+
+    /**
+     * Buffer targets modelled on the box's mpv configuration, which plays this exact content over
+     * this exact network without stalling.
+     *
+     * mpv reads lazily - `cache-secs=3`, `demuxer-readahead-secs=0` - pulling at roughly playback
+     * rate. Media3 defaults to racing 50 seconds ahead as fast as the connection allows, which
+     * against a throttled connection is a consumer permanently demanding more than it can be
+     * given. `bufferForPlayback` stays at the Media3 default: shaving it was tried and produced
+     * worse results.
+     *
+     * These values live HERE, with the player they configure. They previously lived in
+     * ChannelPreloader, which also built the player - so a class named "Preloader" owned playback
+     * itself, and switching preloading off left it silently load-bearing.
+     */
+    private val loadControl = DefaultLoadControl.Builder()
+        .setBufferDurationsMsForStreaming(
+            /* minBufferMs = */ 20_000,
+            /* maxBufferMs = */ 20_000,
+            /* bufferForPlaybackMs = */ DefaultLoadControl.DEFAULT_BUFFER_FOR_PLAYBACK_MS,
+            /* bufferForPlaybackAfterRebufferMs = */
+            DefaultLoadControl.DEFAULT_BUFFER_FOR_PLAYBACK_AFTER_REBUFFER_MS,
+        )
+        .build()
+
+    val exo: ExoPlayer = ExoPlayer.Builder(context)
+        .setLoadControl(loadControl)
+        .build()
+
 
     companion object {
         /**

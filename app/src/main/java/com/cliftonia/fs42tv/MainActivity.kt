@@ -16,8 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.media3.ui.PlayerView
 import com.cliftonia.fs42tv.player.ChannelPlayer
-import com.cliftonia.fs42tv.player.ChannelPreloader
-import com.cliftonia.fs42tv.player.DeviceBudget
 import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
@@ -54,10 +52,8 @@ private const val STALL_CARD_MILLIS = 2_500L
 
 class MainActivity : ComponentActivity() {
 
-    // @Volatile because both are assigned on the UI thread in onCreate and read from the
-    // executor in the tune and preload paths.
+    // @Volatile: assigned on the UI thread in onCreate, read from the executor when tuning.
     @Volatile private var player: ChannelPlayer? = null
-    @Volatile private var preloader: ChannelPreloader? = null
 
     /**
      * Audio-only player for the music under the channel picker.
@@ -163,6 +159,9 @@ class MainActivity : ComponentActivity() {
     // intermediate channel to completion.
     private val generation = AtomicInteger(0)
 
+    /** Drives the stand-by card when playback stalls mid-clip. */
+    private val stallHandler by lazy { android.os.Handler(mainLooper) }
+
     /**
      * Wall-clock seconds, or a frozen instant when one was supplied at launch.
      *
@@ -245,56 +244,8 @@ class MainActivity : ComponentActivity() {
         }
         setContentView(root)
 
-        // The preloader is built first because it owns the ExoPlayer: a preloaded source is only
-        // reusable by a player that shares the manager's track selector, load control and
-        // bandwidth meter, so the player has to come out of the manager's own builder rather
-        // than be constructed alongside it.
         val factory = ChannelPlayer.dataSourceFactory()
-        val memoryInfo = ActivityManager.MemoryInfo().also {
-            (getSystemService(ACTIVITY_SERVICE) as ActivityManager).getMemoryInfo(it)
-        }
-        // Both tunables can be overridden at launch, so a sweep across configurations does not
-        // need a rebuild and reinstall per data point:
-        //
-        //   adb shell am start -n com.cliftonia.fs42tv/.MainActivity --ei fs42.budget 4 \
-        //       --el fs42.preload_ms 5000
-        //
-        // Each measurement run costs several minutes of wall clock, and the settings being swept
-        // were originally chosen on an emulator whose bandwidth made every one of them wrong.
-        // A negative value means "use the real one", so a launch with no extras behaves exactly
-        // as a launch from the remote does.
-        // Display.getMode() reports the PHYSICAL mode - 2160 on the TCL - where DisplayMetrics
-        // reports the 1080p UI layer. Reading the wrong one caps every 4K television at hd,
-        // which is what the old hard-wired preferUhd = false effectively did.
-        //
-        // The 1080p UI layer does not cap video: the UI and the video surface are composited
-        // separately, and a SurfaceView renders at panel resolution regardless.
-        //
-        // 4K is ON. It costs more to start than 1080p - a 4K clip is roughly four times the
-        // bytes - but ChunkedDataSource took the same clip from 16.3s to 5.1s by asking for
-        // bounded byte ranges, which is what made it affordable. `--ei fs42.uhd 0` drops back
-        // to hd without a rebuild if a particular evening wants speed over pixels.
-        val panelHeight = display?.mode?.physicalHeight ?: 0
-        val wantUhd = intent.getIntExtra("fs42.uhd", 1) == 1
-        ladder = TierLadder.forDisplay(panelHeight)
-            .let { if (wantUhd) it else it.filterNot { tier -> tier == "uhd" } }
-            .ifEmpty { listOf("hd", "sd") }
-        Log.i("fs42", "panel is ${panelHeight}p; asking for tiers $ladder (uhd=$wantUhd)")
-
-        val budgetOverride = intent.getIntExtra("fs42.budget", -1)
-        val budget = if (budgetOverride >= 0) budgetOverride else DeviceBudget.forDevice(memoryInfo.totalMem)
-        fixedNowSeconds = intent.getLongExtra("fs42.now", -1L)
-        if (fixedNowSeconds > 0) {
-            Log.i("fs42", "clock pinned to $fixedNowSeconds for measurement")
-        }
-        val windowOverride = intent.getLongExtra("fs42.preload_ms", -1L)
-        val preloadWindow =
-            if (windowOverride >= 0) windowOverride else ChannelPreloader.DEFAULT_PRELOAD_WINDOW_MILLIS
-        Log.i("fs42", "device has ${memoryInfo.totalMem / (1024 * 1024)} MB; preload budget $budget window ${preloadWindow}ms")
-        val preloader = ChannelPreloader(this, factory, budget, preloadWindow)
-            .also { this.preloader = it }
-
-        val player = ChannelPlayer(preloader.exo, factory).also { this.player = it }
+        val player = ChannelPlayer(this, factory).also { this.player = it }
 
         // Both of these leave a black screen if nothing handles them, and neither reports itself:
         // a finished clip simply stops, and a rejected URL stops too. Re-tuning the channel is
@@ -361,8 +312,6 @@ class MainActivity : ComponentActivity() {
         view.player = player.exo
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
-
-        refreshHandler.postDelayed(refreshRunnable, preloadRefreshMillis)
 
         val initialRequestedAt = SystemClock.elapsedRealtime()
         executor.execute {
@@ -630,85 +579,6 @@ class MainActivity : ComponentActivity() {
      * abandons without touching the player, prefs, or [onAir]. That is what lets a burst of
      * presses skip every intermediate channel instead of running each one to completion.
      */
-    /**
-     * Hand the preloader the neighbours of whatever just came on air.
-     *
-     * Runs on the executor, inside the tune that triggered it, so the navigator is not read
-     * from a second thread. Each neighbour is resolved exactly as a real tune would resolve it,
-     * through [resolvedCache] first, so the fan-out does not multiply server round trips.
-     *
-     * Every step is best-effort. A neighbour that cannot be resolved is simply not preloaded;
-     * nothing here may disturb the channel actually playing.
-     */
-    /**
-     * Re-apply the preload plan periodically, recomputing each neighbour's clock offset.
-     *
-     * A preloaded buffer only helps at the position it is actually started from, and every
-     * channel here runs on a wall clock: buffer channel 64 at 1200 s, tune three minutes later,
-     * and the clock wants 1380 s. The bytes are wrong, but DNS, TLS and the connection stay
-     * warm - so unrefreshed preloading does not fail visibly, it quietly decays into connection
-     * warming. That is exactly how a team measuring once at the start concludes preloading
-     * "doesn't seem to help".
-     *
-     * A minute is comfortably shorter than the preload window is wrong by: at 60 s of drift
-     * against a 2 s buffer the bytes have long since stopped matching, so refreshing sooner
-     * would only spend bandwidth the previous task proved is the scarce resource here.
-     */
-    private val preloadRefreshMillis = 60_000L
-
-    private val refreshRunnable = object : Runnable {
-        override fun run() {
-            if (destroyed) return
-            onAir?.channel?.let { channel ->
-                executor.execute { if (!destroyed) preloadNeighbours(channel, rebuild = true) }
-            }
-            refreshHandler.postDelayed(this, preloadRefreshMillis)
-        }
-    }
-
-    private val refreshHandler by lazy { android.os.Handler(mainLooper) }
-
-    /** Separate from the refresh handler so a stall timer cannot cancel a refresh. */
-    private val stallHandler by lazy { android.os.Handler(mainLooper) }
-
-    private fun preloadNeighbours(current: Channel, rebuild: Boolean = false) {
-        val nav = navigator ?: return
-        val preloader = this.preloader ?: return
-        if (destroyed) return
-
-        val channels = nav.channels
-        val currentIndex = channels.indexOfFirst { it.number == current.number }
-        if (currentIndex < 0) return
-
-        preloader.apply(
-            channels.size,
-            currentIndex,
-            rebuild,
-            wantedStartMillis = { index ->
-                channels.getOrNull(index)
-                    ?.let { Tuner.tune(it, urls, nowSeconds(), ladder) }
-                    ?.let { (it.offsetSeconds * 1000).toLong() }
-            },
-        ) { index ->
-            val channel = channels.getOrNull(index) ?: return@apply null
-            val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now, ladder) ?: return@apply null
-
-            var playable: Playable = tuned.playable
-            if (playable is NeedsResolving) {
-                val videoId = playable.videoId
-                playable = resolvedCache.get(videoId, now)
-                    ?: resolver.resolveDetailed(videoId, now, ladder)?.also {
-                        resolvedCache.put(videoId, it.playable, it.expiresAtSeconds)
-                    }?.playable
-                    ?: return@apply null
-            }
-
-            val source = player?.sourceFor(playable) ?: return@apply null
-            source to (tuned.offsetSeconds * 1000).toLong()
-        }
-    }
-
     private fun tuneTo(channel: Channel, requestGeneration: Int, requestedAtMillis: Long) {
         if (requestGeneration != generation.get()) {
             Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before tuning; abandoning")
@@ -781,7 +651,6 @@ class MainActivity : ComponentActivity() {
         if (playedSuccessfully && !destroyed && requestGeneration == generation.get()) {
             onAir = tuned
             prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
-            preloadNeighbours(channel)
         }
 
         // NeedsResolving here means the server round trip above also failed: play nothing and
@@ -823,16 +692,12 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         destroyed = true
-        refreshHandler.removeCallbacks(refreshRunnable)
         stallHandler.removeCallbacksAndMessages(null)
         executor.shutdownNow()
-        // Preloader first: it holds sources feeding the player the release below tears down,
-        // and a preload landing against a released player is a crash rather than a wasted
-        // fetch. Both are null'd so a tune that outlived the activity finds nothing to touch.
+        // Both are null'd as well as released, so a tune that outlived the activity finds
+        // nothing to touch rather than a released player.
         musicPlayer?.release()
         musicPlayer = null
-        preloader?.release()
-        preloader = null
         player?.release()
         player = null
     }
