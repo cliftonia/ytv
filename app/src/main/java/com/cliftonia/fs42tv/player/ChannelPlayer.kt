@@ -30,7 +30,10 @@ import com.cliftonia.fs42tv.resolver.Unplayable
  * the load, so that class of bug cannot happen here.
  */
 @UnstableApi
-class ChannelPlayer(context: android.content.Context, private val factory: DataSource.Factory) {
+class ChannelPlayer(
+    context: android.content.Context,
+    private val factory: DataSource.Factory,
+) : ChannelPlayback {
 
     /**
      * Buffer targets modelled on the box's mpv configuration, which plays this exact content over
@@ -81,6 +84,55 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
 
 
     companion object {
+            fun sourceFor(factory: DataSource.Factory, playable: Playable): MediaSource? = when (playable) {
+            is Hls -> HlsMediaSource.Factory(factory)
+                .createMediaSource(MediaItem.fromUri(playable.url))
+
+            is Progressive -> {
+                val video = ProgressiveMediaSource.Factory(factory)
+                    .createMediaSource(MediaItem.fromUri(playable.videoUrl))
+                // YouTube serves video and audio separately above 360p, so they are merged
+                // rather than played one after the other.
+                //
+                // Both flags are ON deliberately. The plain constructor leaves adjustPeriodTimeOffsets
+                // false, which merges two independently-timed files without aligning their period
+                // start times - and these ARE two independent files, muxed by nobody, each with its
+                // own offsets. Media3's own guidance is that in almost all cases both should be true
+                // so every source starts and ends together.
+                //
+                // Left false, video is rendered against an audio clock that sits at a different
+                // origin, so frame release times are continuously nudged to chase it. Measured, that
+                // showed up as a frame-hold sequence of 32222233332323... - the picture running fast
+                // then slow several times a second - against a clean 232323... when it went right,
+                // with the SAME file, the same frame rate, no dropped frames and identical hold
+                // counts. The offsets depend on where in each file the clock-derived seek lands,
+                // which is why the same clip was smooth on one tune and juddery on the next.
+                if (playable.audioUrl == null) video else MergingMediaSource(
+                    /* adjustPeriodTimeOffsets = */ true,
+                    /* clipDurations = */ true,
+                    video,
+                    ProgressiveMediaSource.Factory(factory)
+                        .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
+                )
+            }
+
+            is NeedsResolving -> {
+                // Nothing usable is cached for this id. Asking the server to resolve it is
+                // later-phase work; for now, make the miss legible instead of a silent
+                // black screen behind a healthy-looking log line.
+                Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
+                null
+            }
+
+            is Unplayable -> {
+                // No server round trip would help this one - make that legible too, rather
+                // than a silent black screen behind a healthy-looking log line.
+                Log.w("fs42", "cannot play: ${playable.reason}")
+                null
+            }
+        }
+
+
         /**
          * Cross-protocol redirects would let an https media URL be silently downgraded to plain
          * http mid-stream; on untrusted Wi-Fi that is an open door for URL injection, so this
@@ -127,7 +179,7 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
      * black screen. It looks like a broken channel rather than a finished clip, and the only way
      * out is to change channel and come back.
      */
-    var onClipEnded: (() -> Unit)? = null
+    override var onClipEnded: (() -> Unit)? = null
 
     /**
      * Called when playback fails outright, so the channel can be re-tuned rather than left dark.
@@ -138,10 +190,10 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
      * anything again. Surfing quickly makes this far more likely, since every abandoned tune is
      * another chance to have picked up a URL that had gone bad.
      */
-    var onPlaybackError: ((String) -> Unit)? = null
+    override var onPlaybackError: ((String) -> Unit)? = null
 
     /** Fired when a picture actually appears, so a stand-by card can be taken down. */
-    var onFirstFrame: (() -> Unit)? = null
+    override var onFirstFrame: (() -> Unit)? = null
 
     /**
      * Fired with true when playback stalls to buffer and false when it recovers.
@@ -150,7 +202,7 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
      * large progressive MP4 - so playback is streaming from deep inside a file rather than from
      * its start. A stall there is common and completely silent.
      */
-    var onBuffering: ((Boolean) -> Unit)? = null
+    override var onBuffering: ((Boolean) -> Unit)? = null
 
     init {
         exo.addListener(object : Player.Listener {
@@ -261,56 +313,30 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
      * player builds them - a preloaded source that differs from the played one buffers bytes
      * that are then thrown away.
      */
-    fun sourceFor(playable: Playable): MediaSource? = when (playable) {
-        is Hls -> HlsMediaSource.Factory(factory)
-            .createMediaSource(MediaItem.fromUri(playable.url))
-
-        is Progressive -> {
-            val video = ProgressiveMediaSource.Factory(factory)
-                .createMediaSource(MediaItem.fromUri(playable.videoUrl))
-            // YouTube serves video and audio separately above 360p, so they are merged
-            // rather than played one after the other.
-            //
-            // Both flags are ON deliberately. The plain constructor leaves adjustPeriodTimeOffsets
-            // false, which merges two independently-timed files without aligning their period
-            // start times - and these ARE two independent files, muxed by nobody, each with its
-            // own offsets. Media3's own guidance is that in almost all cases both should be true
-            // so every source starts and ends together.
-            //
-            // Left false, video is rendered against an audio clock that sits at a different
-            // origin, so frame release times are continuously nudged to chase it. Measured, that
-            // showed up as a frame-hold sequence of 32222233332323... - the picture running fast
-            // then slow several times a second - against a clean 232323... when it went right,
-            // with the SAME file, the same frame rate, no dropped frames and identical hold
-            // counts. The offsets depend on where in each file the clock-derived seek lands,
-            // which is why the same clip was smooth on one tune and juddery on the next.
-            if (playable.audioUrl == null) video else MergingMediaSource(
-                /* adjustPeriodTimeOffsets = */ true,
-                /* clipDurations = */ true,
-                video,
-                ProgressiveMediaSource.Factory(factory)
-                    .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
-            )
-        }
-
-        is NeedsResolving -> {
-            // Nothing usable is cached for this id. Asking the server to resolve it is
-            // later-phase work; for now, make the miss legible instead of a silent
-            // black screen behind a healthy-looking log line.
-            Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
-            null
-        }
-
-        is Unplayable -> {
-            // No server round trip would help this one - make that legible too, rather
-            // than a silent black screen behind a healthy-looking log line.
-            Log.w("fs42", "cannot play: ${playable.reason}")
-            null
-        }
+    /**
+     * The view showing the picture.
+     *
+     * Built here rather than in the activity so the engine owns its own surface: the mpv
+     * implementation needs a completely different one, and the switch between them has to be a
+     * single line rather than a second set of layout code.
+     */
+    override val view: android.view.View = androidx.media3.ui.PlayerView(context).apply {
+        useController = false
+        // The shutter is PlayerView's own black cover over the video surface, and it exists for
+        // exactly this: hiding the last frame of whatever was playing when the player is reset.
+        // Explicit rather than relying on the default, because a channel change depends on it
+        // and defaults are the first thing a library changes.
+        setKeepContentOnPlayerReset(false)
+        setShutterBackgroundColor(android.graphics.Color.BLACK)
+        player = exo
     }
 
-    fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
-        val source = sourceFor(playable) ?: return
+    override fun stop() = exo.stop()
+
+    override fun setVolume(volume: Float) { exo.volume = volume }
+
+    override fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
+        val source = sourceFor(factory, playable) ?: return
         hasPicture = false
         this.requestedAtMillis = requestedAtMillis
         // Reset the renderer's frame timing before loading anything else.
@@ -341,5 +367,5 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
         exo.playWhenReady = true
     }
 
-    fun release() = exo.release()
+    override fun release() = exo.release()
 }
