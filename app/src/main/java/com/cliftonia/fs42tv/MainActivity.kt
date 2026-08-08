@@ -25,6 +25,7 @@ import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.ResolvedCache
 import com.cliftonia.fs42tv.resolver.ServerResolver
+import com.cliftonia.fs42tv.resolver.TierLadder
 import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.DialRepository
@@ -155,6 +156,19 @@ class MainActivity : ComponentActivity() {
      * against identical content instead of against whatever happened to be on air. Only ever set
      * for measurement; a launch without the extra behaves exactly as the remote does.
      */
+    /**
+     * Which quality tiers to ask for, from what this panel can actually show.
+     *
+     * Read from `Display.getMode()`, which reports the PHYSICAL mode - 3840x2160 on the TCL -
+     * unlike `DisplayMetrics`, which on Android TV reports the UI layer and is 1920x1080 on the
+     * same set. Reading the wrong one caps every 4K television at hd, which is precisely what
+     * the old hard-wired `preferUhd = false` did.
+     *
+     * The UI layer being 1080p does not cap video: the app's UI and the video surface are
+     * composited separately, and a SurfaceView renders at panel resolution regardless.
+     */
+    @Volatile private var ladder: List<String> = listOf("hd", "sd")
+
     @Volatile private var fixedNowSeconds: Long = -1L
 
     private fun nowSeconds(): Long =
@@ -218,6 +232,10 @@ class MainActivity : ComponentActivity() {
         // were originally chosen on an emulator whose bandwidth made every one of them wrong.
         // A negative value means "use the real one", so a launch with no extras behaves exactly
         // as a launch from the remote does.
+        val panelHeight = display?.mode?.physicalHeight ?: 0
+        ladder = TierLadder.forDisplay(panelHeight)
+        Log.i("fs42", "panel is ${panelHeight}p; asking for tiers $ladder")
+
         val budgetOverride = intent.getIntExtra("fs42.budget", -1)
         val budget = if (budgetOverride >= 0) budgetOverride else DeviceBudget.forDevice(memoryInfo.totalMem)
         fixedNowSeconds = intent.getLongExtra("fs42.now", -1L)
@@ -424,11 +442,11 @@ class MainActivity : ComponentActivity() {
         executor.execute {
             if (destroyed) return@execute
             val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now) ?: return@execute
+            val tuned = Tuner.tune(channel, urls, now, ladder) ?: return@execute
             var playable: Playable = tuned.playable
             if (playable is NeedsResolving) {
                 playable = resolvedCache.get(playable.videoId, now)
-                    ?: resolver.resolveDetailed(playable.videoId, now)?.also {
+                    ?: resolver.resolveDetailed(playable.videoId, now, ladder)?.also {
                         resolvedCache.put(playable.videoId, it.playable, it.expiresAtSeconds)
                     }?.playable ?: return@execute
             }
@@ -572,19 +590,19 @@ class MainActivity : ComponentActivity() {
             rebuild,
             wantedStartMillis = { index ->
                 channels.getOrNull(index)
-                    ?.let { Tuner.tune(it, urls, nowSeconds()) }
+                    ?.let { Tuner.tune(it, urls, nowSeconds(), ladder) }
                     ?.let { (it.offsetSeconds * 1000).toLong() }
             },
         ) { index ->
             val channel = channels.getOrNull(index) ?: return@apply null
             val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now) ?: return@apply null
+            val tuned = Tuner.tune(channel, urls, now, ladder) ?: return@apply null
 
             var playable: Playable = tuned.playable
             if (playable is NeedsResolving) {
                 val videoId = playable.videoId
                 playable = resolvedCache.get(videoId, now)
-                    ?: resolver.resolveDetailed(videoId, now)?.also {
+                    ?: resolver.resolveDetailed(videoId, now, ladder)?.also {
                         resolvedCache.put(videoId, it.playable, it.expiresAtSeconds)
                     }?.playable
                     ?: return@apply null
@@ -602,7 +620,7 @@ class MainActivity : ComponentActivity() {
         }
 
         val now = nowSeconds()
-        val tuned = Tuner.tune(channel, urls, now)
+        val tuned = Tuner.tune(channel, urls, now, ladder)
         if (tuned == null) {
             Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
             return
@@ -625,7 +643,7 @@ class MainActivity : ComponentActivity() {
                 playable = remembered
             } else {
                 Log.d("fs42", "resolve miss; asking the server for $videoId")
-                val resolved = resolver.resolveDetailed(videoId, now)
+                val resolved = resolver.resolveDetailed(videoId, now, ladder)
                 if (resolved != null) {
                     resolvedCache.put(videoId, resolved.playable, resolved.expiresAtSeconds)
                     deadIds.remove(videoId)
