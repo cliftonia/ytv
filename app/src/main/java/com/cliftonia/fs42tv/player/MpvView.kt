@@ -103,14 +103,18 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         }
 
         // --- video output, from mpv-android's reference implementation -----------------------
-        MPVLib.setOptionString("vo", "gpu")
-        MPVLib.setOptionString("gpu-context", "android")
-        MPVLib.setOptionString("opengl-es", "yes")
-        MPVLib.setOptionString("profile", "fast")
-        // Copy-back rather than direct: `mediacodec` hands the decoder the window itself, which
-        // fights a Compose overlay drawn above the video. `mediacodec-copy` keeps mpv in charge
-        // of the surface, at the cost of a copy per frame.
-        MPVLib.setOptionString("hwdec", "mediacodec-copy")
+        // No GL at all. mediacodec_embed hands decoded frames straight to the SurfaceView and
+        // mpv never opens a GL context, which is the point: both `gpu` and `gpu-next` crashed
+        // this television outright - SIGSEGV in /vendor/lib/egl/libGLES_mali.mt5879.so, on the
+        // app's OWN RenderThread rather than any mpv thread. mpv's EGL use and the Compose
+        // overlay drawing above the video could not share this Mali driver.
+        //
+        // The judder fix survives the change: video-sync=display-resample governs WHEN a frame
+        // is released, not who draws it, so mpv still paces to the display's real refresh.
+        // What is given up is everything mpv would do to the pixels - scaling, interpolation,
+        // colour management - none of which this dial asks for.
+        MPVLib.setOptionString("vo", "mediacodec_embed")
+        MPVLib.setOptionString("hwdec", "mediacodec")
 
         // --- audio --------------------------------------------------------------------------
         MPVLib.setOptionString("ao", "audiotrack,opensles")
