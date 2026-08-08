@@ -98,4 +98,29 @@ class ChannelLabelsTest {
             "titles short with most of the row still empty - the layout knows the real width",
             long, title)
     }
+
+    @Test
+    fun `banner lines can be worked out without tuning`() {
+        val channel = Channel(number = 5, name = "Wrestling", kind = "youtube", rotation = "clock",
+            streams = listOf(
+                Stream(id = "a", url = "u1", duration = 100, title = "First Programme"),
+                Stream(id = "b", url = "u2", duration = 100, title = "Second Programme"),
+            ))
+        // 150s into a 200s cycle is halfway through the SECOND clip.
+        val (line, title) = ChannelLabels.bannerLinesFor(channel, nowSeconds = 150)
+        assertEquals("05 WRESTLING", line)
+        assertEquals("waiting for the tune meant a bare channel name whenever the tune was " +
+            "superseded, which is every press but the last when surfing quickly",
+            "Second Programme", title)
+    }
+
+    @Test
+    fun `a channel with no clips yields no title rather than a wrong one`() {
+        val live = Channel(number = 103, name = "ABC News", kind = "live", rotation = null,
+            streams = listOf(Stream(id = null, url = "u", duration = 0, title = "placeholder")))
+        val (line, title) = ChannelLabels.bannerLinesFor(live, nowSeconds = 50)
+        assertEquals("103 ABC NEWS", line)
+        assertEquals("a live channel has no clip cycle to read a position from, and inventing " +
+            "one would put a stale title under a live picture", "", title)
+    }
 }

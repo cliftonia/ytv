@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv.ui
 
+import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.Tuned
 
@@ -66,6 +67,24 @@ object ChannelLabels {
      * because a channel whose streams are all zero-duration has no "now" at all. Either way the
      * row degrades to number and name rather than showing an empty separator.
      */
+    /**
+     * The banner lines for a channel, worked out from the clock alone.
+     *
+     * The tuning path has [bannerLines], which reads an actual [Tuned]. This one needs no tune
+     * at all: the clip list and the wall clock are enough to say what is on, which is what lets
+     * the banner carry a programme title the instant a button is pressed rather than after the
+     * network has answered.
+     */
+    fun bannerLinesFor(channel: Channel, nowSeconds: Long): Pair<String, String> {
+        val line = "%02d %s".format(channel.number, channel.name.uppercase())
+        val title = ClockRotation
+            .playPointFor(channel.streams.map { it.duration }, nowSeconds)
+            ?.let { channel.streams.getOrNull(it.index)?.title }
+            .orEmpty()
+            .trim()
+        return line to title
+    }
+
     fun listRow(channel: Channel, nowPlaying: String? = null): Pair<String, String> {
         val head = "CH %-4s%s".format("%02d".format(channel.number), channel.name.uppercase())
         val title = nowPlaying?.trim().orEmpty()

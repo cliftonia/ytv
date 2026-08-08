@@ -397,8 +397,16 @@ class MainActivity : ComponentActivity() {
      * press, and the programme name arrives with the picture.
      */
     private fun surfTo(target: Channel) {
-        bannerChannelLine.value = "%02d %s".format(target.number, target.name.uppercase())
-        bannerTitleLine.value = ""
+        // The title comes from the clock rotation right here, not from the tune that follows.
+        // Waiting for the tune meant the banner showed a bare channel name whenever the tune was
+        // superseded - which is every press but the last when surfing quickly - and whenever a
+        // channel was chosen from the picker, where the title was already known and thrown away.
+        //
+        // It costs one walk of one channel's clip list, no network, and it is the same
+        // arithmetic the guide uses. What is on a channel is knowable without tuning to it.
+        val (line, title) = ChannelLabels.bannerLinesFor(target, nowSeconds())
+        bannerChannelLine.value = line
+        bannerTitleLine.value = title
         bannerGeneration.value += 1
 
         val gen = generation.incrementAndGet()
@@ -425,22 +433,48 @@ class MainActivity : ComponentActivity() {
         val startIndex = nav.channels.indexOfFirst { it.number == onAirNumber }
             .let { if (it >= 0) it else nav.currentIndex }
 
-        // What is on each channel right now, from the clock rotation alone - no network, no
-        // resolving. The titles are already in channels.json; only the arithmetic saying WHICH
-        // one is current is needed, which is the same walk the tuner does.
-        val now = nowSeconds()
-        pickerRows.value = nav.channels.map { channel ->
-            val title = ClockRotation
-                .playPointFor(channel.streams.map { it.duration }, now)
-                ?.let { channel.streams.getOrNull(it.index)?.title }
-            ChannelLabels.listRow(channel, title)
-        }
+        // The list goes up with channel names ONLY, immediately. Working out what is on each
+        // of 111 channels means walking every channel's clip list, and doing that before the
+        // first frame of the picker is drawn puts a visible pause between pressing the button
+        // and seeing anything - the one moment where a guide has to feel instant.
+        //
+        // The titles arrive a beat later and the rows fill in underneath, which is what a
+        // skeleton is for: structure now, detail when it exists.
+        pickerRows.value = nav.channels.map { ChannelLabels.listRow(it) }
         pickerStartIndex.value = startIndex
         pickerVisible.value = true
 
         composeView.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
         composeView.requestFocus()
+        fillPickerTitles(nav)
         startPickerMusic(nav)
+    }
+
+    /**
+     * Work out what is on each channel and fill the rows in behind the already-visible list.
+     *
+     * Off the UI thread, and discarded if the picker has closed by the time it finishes - a
+     * viewer who opened and dismissed the guide in under a second should not have rows quietly
+     * rewritten underneath the channel they went back to watching.
+     */
+    private fun fillPickerTitles(nav: DialNavigator) {
+        val channels = nav.channels
+        executor.execute {
+            val started = SystemClock.elapsedRealtime()
+            val now = nowSeconds()
+            val rows = channels.map { channel ->
+                val title = ClockRotation
+                    .playPointFor(channel.streams.map { it.duration }, now)
+                    ?.let { channel.streams.getOrNull(it.index)?.title }
+                ChannelLabels.listRow(channel, title)
+            }
+            val took = SystemClock.elapsedRealtime() - started
+            runOnUiThread {
+                if (destroyed || !pickerVisible.value) return@runOnUiThread
+                Log.d("fs42", "guide titles for ${rows.size} channels in ${took}ms")
+                pickerRows.value = rows
+            }
+        }
     }
 
     /**
