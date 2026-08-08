@@ -15,6 +15,9 @@ import kotlinx.serialization.json.jsonObject
  * Every failure returns null rather than throwing: the caller's correct response to "cannot
  * resolve" is to skip the clip, and an exception here would take the player down instead.
  */
+/** The ladder for a panel whose height is unknown - conservative, never 4K. */
+private val DEFAULT_LADDER = listOf("hd", "sd")
+
 class ServerResolver(
     private val fetch: (String) -> String,
     private val baseUrl: String,
@@ -30,20 +33,22 @@ class ServerResolver(
      */
     data class Resolved(val playable: Progressive, val expiresAtSeconds: Long)
 
-    fun resolve(videoId: String, nowSeconds: Long, preferUhd: Boolean = false): Progressive? =
-        resolveDetailed(videoId, nowSeconds, preferUhd)?.playable
+    fun resolve(
+        videoId: String,
+        nowSeconds: Long,
+        ladder: List<String> = DEFAULT_LADDER,
+    ): Progressive? = resolveDetailed(videoId, nowSeconds, ladder)?.playable
 
     fun resolveDetailed(
         videoId: String,
         nowSeconds: Long,
-        preferUhd: Boolean = false,
+        ladder: List<String> = DEFAULT_LADDER,
     ): Resolved? {
         val encodedId = URLEncoder.encode(videoId, "UTF-8")
         val body = runCatching { fetch("$baseUrl/resolve?v=$encodedId") }.getOrNull() ?: return null
         val root = runCatching { json.parseToJsonElement(body).jsonObject }.getOrNull() ?: return null
 
-        val order = if (preferUhd) listOf("uhd", "hd") else listOf("hd")
-        for (name in order) {
+        for (name in ladder) {
             val tier = tierAt(root, name) ?: continue
             if (!tier.isFresh(nowSeconds)) continue
             return Resolved(Progressive(tier.video, tier.audio), tier.expires)

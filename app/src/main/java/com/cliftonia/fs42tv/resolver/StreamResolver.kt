@@ -30,14 +30,13 @@ object StreamResolver {
     fun resolve(
         stream: Stream,
         cache: UrlCache?,
-        preferUhd: Boolean,
+        ladder: List<String>,
         nowSeconds: Long,
     ): Playable {
         val id = stream.id ?: return Hls(stream.url)
         val tiers = cache?.urls?.get(id) ?: return NeedsResolving(id)
 
-        val order = if (preferUhd) listOf("uhd", "hd") else listOf("hd")
-        for (name in order) {
+        for (name in ladder) {
             val tier = tiers[name] ?: continue
             if (!tier.isFresh(nowSeconds)) continue
             return Progressive(tier.video, tier.audio)
