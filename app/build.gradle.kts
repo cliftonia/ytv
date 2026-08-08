@@ -20,6 +20,11 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "0.1"
+
+        // The TCL reports abilist "armeabi-v7a,armeabi" - it is a 32-bit userspace despite the
+        // 4K panel. mpv ships three ABIs at ~30MB each; carrying the two this device can never
+        // load would triple the apk for nothing.
+        ndk { abiFilters += listOf("armeabi-v7a") }
     }
 
     compileOptions {
@@ -60,6 +65,11 @@ dependencies {
     // beside media3 is gone rather than left to drift a minor behind this one.
     implementation("androidx.activity:activity-compose:1.13.0")
     implementation("androidx.tv:tv-material:1.1.0")
+
+    // libmpv, as an experiment against ExoPlayer's frame pacing. mpv is a genuinely different
+    // timing architecture, and the judder on this panel has survived every ExoPlayer-side change.
+    // 30MB of native code for one ABI, so the abiFilter below matters.
+    implementation("io.github.wohal:mpv-android-lib:0.2.4")
 
     testImplementation("junit:junit:4.13.2")
 }

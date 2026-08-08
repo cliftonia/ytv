@@ -21,5 +21,14 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+    
+        <!-- Experiment harness only: plays one clip through libmpv so its frame pacing can be
+             compared against Media3 on the same content and panel. Exported so it can be driven
+             from adb; this app is sideloaded and never published. -->
+        <activity
+            android:name=".MpvTestActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+
+</application>
 </manifest>
