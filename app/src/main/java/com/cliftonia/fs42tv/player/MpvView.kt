@@ -129,6 +129,17 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // --- startup, lifted from the box's [googlevideo] profile ---------------------------
         // These are plain mp4 whose shape is already known, so deep probing is a second of black
         // screen bought for nothing.
+        // Land on the keyframe rather than decoding forward to the exact frame.
+        //
+        // Every tune joins a clip at a clock-derived offset, routinely tens of minutes in. With
+        // mpv's default precise seeking it reaches that frame by decoding and discarding every
+        // frame from the preceding keyframe - measured at 3.77s between opening the decoder and
+        // showing a picture, against 0.38s for the proxy to deliver the bytes.
+        //
+        // Being a second or two off the exact wall-clock position cannot be perceived here: the
+        // illusion is that the channel was already running when you arrived.
+        MPVLib.setOptionString("hr-seek", "no")
+
         MPVLib.setOptionString("demuxer-lavf-analyzeduration", "0.1")
         MPVLib.setOptionString("demuxer-lavf-probesize", "524288")
         MPVLib.setOptionString("cache-pause-initial", "no")

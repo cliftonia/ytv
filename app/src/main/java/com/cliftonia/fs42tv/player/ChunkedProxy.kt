@@ -93,11 +93,20 @@ class ChunkedProxy(private val window: Long = RangeWindows.DEFAULT_WINDOW) {
         }
         val head = requestLine.startsWith("HEAD")
 
-        val total = lengthOf(target) ?: run {
+        // The first window doubles as the length probe. Every request here comes back with
+        // `Content-Range: bytes a-b/total`, so asking separately was a whole extra connection -
+        // TLS handshake included - before a single byte of video could move.
+        val first = open(target, 0, 0) ?: run {
             client.getOutputStream().write("HTTP/1.1 502 Bad Gateway\r\n\r\n".toByteArray())
             return
         }
-        val asked = RangeWindows.parse(rangeHeader, total) ?: (0 until total).let { 0..(total - 1) }
+        val total = first.getHeaderField("Content-Range")?.substringAfter('/')?.trim()?.toLongOrNull()
+        runCatching { first.inputStream.close() }
+        if (total == null) {
+            client.getOutputStream().write("HTTP/1.1 502 Bad Gateway\r\n\r\n".toByteArray())
+            return
+        }
+        val asked = RangeWindows.parse(rangeHeader, total) ?: 0..(total - 1)
         val out = client.getOutputStream()
 
         // Answer 206 whenever a Range was asked for, even when it covers the whole resource:
@@ -125,45 +134,36 @@ class ChunkedProxy(private val window: Long = RangeWindows.DEFAULT_WINDOW) {
 
     /** Copy one bounded window upstream-to-client. False when the client or the CDN gave up. */
     private fun pump(target: String, range: LongRange, out: OutputStream): Boolean {
-        val conn = (URL(target).openConnection() as HttpURLConnection).apply {
-            setRequestProperty("Range", "bytes=${range.first}-${range.last}")
-            connectTimeout = 15_000
-            readTimeout = 15_000
-        }
+        val conn = open(target, range.first, range.last) ?: return false
         return try {
-            if (conn.responseCode !in 200..299) {
-                Log.w("fs42", "proxy upstream ${conn.responseCode} for bytes=${range.first}-${range.last}")
-                return false
-            }
             conn.inputStream.use { it.copyTo(out, DEFAULT_BUFFER_SIZE) }
             true
         } catch (e: Exception) {
             false
-        } finally {
-            conn.disconnect()
         }
+        // NOT disconnect(). That closes the socket and forces the next window to pay a fresh TCP
+        // handshake and TLS negotiation to the same host - measured at hundreds of milliseconds
+        // against roughly twenty for a reused one, on every 8MB. Fully reading the body, which
+        // `use` does, returns the connection to HttpURLConnection's pool instead.
     }
 
-    /**
-     * Total size of the resource, from a one-byte bounded probe.
-     *
-     * Deliberately not a HEAD: googlevideo answers HEAD inconsistently, while a `bytes=0-0`
-     * request is the same shape as every other request this proxy makes and comes back with
-     * `Content-Range: bytes 0-0/<total>`.
-     */
-    private fun lengthOf(target: String): Long? {
+    /** One bounded request, or null if the CDN refused it. */
+    private fun open(target: String, from: Long, to: Long): HttpURLConnection? = try {
         val conn = (URL(target).openConnection() as HttpURLConnection).apply {
-            setRequestProperty("Range", "bytes=0-0")
+            setRequestProperty("Range", "bytes=$from-$to")
+            // Explicit, because the whole design depends on it and a default is not a promise.
+            setRequestProperty("Connection", "keep-alive")
             connectTimeout = 15_000
             readTimeout = 15_000
         }
-        return try {
-            conn.getHeaderField("Content-Range")?.substringAfter('/')?.trim()?.toLongOrNull()
-        } catch (e: Exception) {
-            null
-        } finally {
-            runCatching { conn.inputStream.close() }
+        if (conn.responseCode !in 200..299) {
+            Log.w("fs42", "proxy upstream ${conn.responseCode} for bytes=$from-$to")
             conn.disconnect()
+            null
+        } else {
+            conn
         }
+    } catch (e: Exception) {
+        null
     }
 }
