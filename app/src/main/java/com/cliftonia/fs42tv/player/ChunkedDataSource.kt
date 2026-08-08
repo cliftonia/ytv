@@ -6,6 +6,8 @@ import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DataSpec
 import androidx.media3.datasource.TransferListener
 import android.net.Uri
+import android.os.SystemClock
+import android.util.Log
 
 /**
  * Reads a stream as a series of BOUNDED byte ranges rather than one open-ended request.
@@ -89,11 +91,22 @@ class ChunkedDataSource(
     private fun openChunk() {
         val base = spec ?: return
         val want = if (remaining == C.LENGTH_UNSET.toLong()) chunkSize else minOf(chunkSize, remaining)
+        // Timed per chunk, because the failure this needs to explain is bimodal: the same code
+        // produced 1238ms channel changes and 11873ms ones in one run. Either some chunks open
+        // slowly, or far more of them are being opened than expected - and only one of those is
+        // fixable by changing the chunk size.
+        val started = SystemClock.elapsedRealtime()
         val resolved = upstream.open(
             base.buildUpon().setPosition(position).setLength(want).build()
         )
         chunkRemaining = if (resolved == C.LENGTH_UNSET.toLong()) want else resolved
+        opens += 1
+        Log.d("fs42chunk", "open #$opens at $position want=$want got=$resolved " +
+            "in ${SystemClock.elapsedRealtime() - started}ms")
     }
+
+    /** How many bounded windows this source has opened, for the log above. */
+    private var opens = 0
 
     override fun read(buffer: ByteArray, offset: Int, length: Int): Int {
         if (remaining == 0L) return C.RESULT_END_OF_INPUT
