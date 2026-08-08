@@ -2,6 +2,7 @@ package com.cliftonia.fs42tv.player
 
 import android.os.SystemClock
 import android.util.Log
+import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
@@ -57,6 +58,20 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
 
     val exo: ExoPlayer = ExoPlayer.Builder(context)
         .setLoadControl(loadControl)
+        // This panel has exactly ONE mode: `dumpsys display` reports 3840x2160 at 60.000004Hz
+        // with an empty alternativeRefreshRates. There is nothing to switch to, so the default
+        // strategy's Surface.setFrameRate() call on every format change cannot buy a better
+        // cadence here - it can only feed the platform's frame-rate arbitration, which the same
+        // dump shows is active (frameRateOverride is set on this display).
+        //
+        // It is disabled because playback of ONE clip was measured in two distinct states,
+        // decided at tune time: the frame-hold sequence came out either a flawless alternating
+        // 232323... or a broken 32222233332323... with 35% of frames repeating the previous
+        // hold. Same file, same decoder, same frame rate, no dropped frames - and identical
+        // hold COUNTS, which is why every count-based metric read both as fine. Removing a
+        // per-tune variable that has no upside on a single-mode display is the cheapest way to
+        // narrow that down; if the two states survive this, the cause is downstream of here.
+        .setVideoChangeFrameRateStrategy(C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_OFF)
         .build()
 
 
