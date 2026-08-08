@@ -34,6 +34,7 @@ import com.cliftonia.fs42tv.tune.Tuner
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import com.cliftonia.fs42tv.ui.ChannelOsd
 import com.cliftonia.fs42tv.ui.ChannelPicker
+import com.cliftonia.fs42tv.ui.StandBy
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -43,6 +44,9 @@ private const val SERVER = "http://192.168.4.203:4243"
 private const val PREFS_NAME = "fs42"
 private const val CHANNEL_KEY = "channel"
 private const val NO_REMEMBERED_CHANNEL = -1
+
+/** Long enough not to flash on the brief stalls that clear themselves. */
+private const val STALL_CARD_MILLIS = 2_500L
 
 class MainActivity : ComponentActivity() {
 
@@ -78,6 +82,10 @@ class MainActivity : ComponentActivity() {
     // Backs the channel picker. pickerRows/pickerStartIndex are captured once, at the moment
     // the picker opens, rather than derived live from navigator/onAir - the whole point of the
     // picker is that surfing is frozen while it's up, so nothing should move these under it.
+    // Backs the stand-by card. A black screen is indistinguishable from a dead app or a
+    // dead TV; the card says the app knows and is retrying.
+    private val standByReason = mutableStateOf("")
+
     private val pickerVisible = mutableStateOf(false)
     private val pickerRows = mutableStateOf<List<String>>(emptyList())
     private val pickerStartIndex = mutableStateOf(0)
@@ -95,6 +103,18 @@ class MainActivity : ComponentActivity() {
     // for the session only: these URLs are signed and expire in hours, so persisting them would
     // mean starting up holding URLs that may already be dead.
     private val resolvedCache = ResolvedCache()
+
+    /**
+     * Video ids whose cached URL was rejected by the CDN, so the next tune asks the server for a
+     * fresh one instead of handing back the same dead link.
+     *
+     * A signed googlevideo URL can be refused with 403 well inside its stated expiry, so the
+     * timestamp alone cannot decide whether it is usable - the box learned the same thing and
+     * keeps a `drop()` for exactly this. Without it a re-tune resolves to the identical dead URL
+     * and fails identically, which is what put a stand-by card up on every attempt to select a
+     * distant channel from the picker.
+     */
+    private val deadIds = java.util.Collections.synchronizedSet(mutableSetOf<String>())
 
     // Single-threaded so a rapid burst of channel presses queues in order rather than racing
     // each other over the shared navigator and player.
@@ -143,6 +163,7 @@ class MainActivity : ComponentActivity() {
                         titleLine = bannerTitleLine.value,
                         generation = bannerGeneration.value,
                     )
+                    StandBy(standByReason.value.isNotEmpty(), standByReason.value)
                     if (pickerVisible.value) {
                         ChannelPicker(
                             rows = pickerRows.value,
@@ -196,6 +217,65 @@ class MainActivity : ComponentActivity() {
             .also { this.preloader = it }
 
         val player = ChannelPlayer(preloader.exo, factory).also { this.player = it }
+
+        // Both of these leave a black screen if nothing handles them, and neither reports itself:
+        // a finished clip simply stops, and a rejected URL stops too. Re-tuning the channel is
+        // the right answer to both - the clock rotation will pick whatever should be on now,
+        // which after a finished clip is the next one along.
+        //
+        // Guarded by a fresh generation so a recovery cannot fight a channel change the viewer
+        // has already made, and skipped entirely once the activity is gone.
+        fun retuneCurrent(reason: String) {
+            if (destroyed) return
+            val channel = onAir?.channel ?: return
+            Log.i("fs42", "re-tuning ${channel.number} ${channel.name} after $reason")
+            val gen = generation.incrementAndGet()
+            val at = SystemClock.elapsedRealtime()
+            executor.execute { tuneTo(channel, gen, at) }
+        }
+        player.onClipEnded = { retuneCurrent("clip ended") }
+        player.onPlaybackError = { code ->
+            standByReason.value = code
+            // A rejected URL is the one error worth reacting to specifically: re-tuning without
+            // forgetting it would resolve to the same dead link and fail the same way.
+            if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND")) {
+                onAir?.stream?.id?.let {
+                    Log.w("fs42", "dropping dead url for $it")
+                    deadIds.add(it)
+                    resolvedCache.forget(it)
+                }
+            }
+            retuneCurrent("playback error $code")
+        }
+        // The card comes down when a picture actually appears, not when a tune is merely
+        // dispatched - a tune that fails again would otherwise clear it and leave black.
+        player.onFirstFrame = { standByReason.value = "" }
+
+        // A stall is the third way this player goes quiet, and the only silent one - no error,
+        // no end of media, just a stopped picture. The box calls the same condition a fault
+        // after two seconds and puts a stand-by card up (field_player.py:575).
+        //
+        // The card is ALL that happens. Re-tuning on a stall was tried and made things far
+        // worse: it discards whatever has buffered and restarts the deep seek, so on a
+        // connection that cannot sustain the bitrate it produced a permanent cycle of six
+        // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
+        // resumes by itself; interrupting that is the one thing that stops it recovering.
+        player.onBuffering = { buffering ->
+            stallHandler.removeCallbacksAndMessages(null)
+            if (buffering) {
+                stallHandler.postDelayed({
+                    if (!destroyed) standByReason.value = "BUFFERING"
+                }, STALL_CARD_MILLIS)
+                // NO automatic re-tune on a stall. It was tried and it made things materially
+                // worse: a re-tune discards whatever has buffered and restarts the deep seek, so
+                // on a connection that cannot sustain the bitrate it produced a permanent cycle -
+                // six seconds of playback, twelve seconds of nothing, repeat. ExoPlayer keeps
+                // filling the buffer during a stall and resumes on its own; interrupting that is
+                // the one thing guaranteed to stop it recovering.
+            } else {
+                standByReason.value = ""
+            }
+        }
         view.player = player.exo
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
@@ -238,15 +318,11 @@ class MainActivity : ComponentActivity() {
 
         return when (keyCode) {
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
-                val gen = generation.incrementAndGet()
-                val requestedAt = SystemClock.elapsedRealtime()
-                executor.execute { tuneTo(nav.up(), gen, requestedAt) }
+                surfTo(nav.up())
                 true
             }
             KeyEvent.KEYCODE_DPAD_DOWN, KeyEvent.KEYCODE_CHANNEL_DOWN -> {
-                val gen = generation.incrementAndGet()
-                val requestedAt = SystemClock.elapsedRealtime()
-                executor.execute { tuneTo(nav.down(), gen, requestedAt) }
+                surfTo(nav.down())
                 true
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_GUIDE -> {
@@ -255,6 +331,32 @@ class MainActivity : ComponentActivity() {
             }
             else -> super.onKeyDown(keyCode, event)
         }
+    }
+
+    /**
+     * Move the dial now, show it now, and let the picture catch up.
+     *
+     * The navigator used to be advanced INSIDE the executor lambda, which meant a second press
+     * could not move the dial until the first tune's network round trip had finished - about two
+     * seconds during which the remote appeared dead and nothing on screen acknowledged the
+     * press. Surfing quickly was impossible even though every press was being registered.
+     *
+     * Advancing here makes the UI thread the navigator's single writer instead of the executor,
+     * which is the same invariant moved rather than broken: `up()`/`down()`/`jumpTo` are now only
+     * ever called from key handling, and the executor only reads.
+     *
+     * The banner goes up immediately with no title, because the title is not known until the
+     * clip is resolved. That is how a television behaves - the number changes the instant you
+     * press, and the programme name arrives with the picture.
+     */
+    private fun surfTo(target: Channel) {
+        bannerChannelLine.value = "%02d %s".format(target.number, target.name.uppercase())
+        bannerTitleLine.value = ""
+        bannerGeneration.value += 1
+
+        val gen = generation.incrementAndGet()
+        val requestedAt = SystemClock.elapsedRealtime()
+        executor.execute { tuneTo(target, gen, requestedAt) }
     }
 
     /**
@@ -306,15 +408,19 @@ class MainActivity : ComponentActivity() {
         val nav = navigator
         val channel = nav?.channels?.getOrNull(index)
         if (nav != null && channel != null) {
-            val gen = generation.incrementAndGet()
-            val requestedAt = SystemClock.elapsedRealtime()
-            // jumpTo runs on the executor, not here. DialNavigator documents its index as
-            // "mutated on the executor thread today", and up()/down() have always honoured that;
-            // calling it inline would make this the one UI-thread writer and quietly retire an
-            // invariant the next change in this area would otherwise inherit for free.
-            executor.execute {
-                nav.jumpTo(channel.number)
-                tuneTo(channel, gen, requestedAt)
+            // jumpTo on this thread, like up() and down(): key handling is the navigator's single
+            // writer, and the executor only reads it.
+            nav.jumpTo(channel.number)
+
+            // Selecting the channel already on air must NOT re-tune. A re-tune tears the player
+            // down and restarts the same clip at a freshly computed offset a few seconds later,
+            // so the picture visibly jumps for no reason - the viewer asked for the channel they
+            // are already watching, and the correct answer is "you have it". The banner is still
+            // re-shown, because pressing OK on a channel is a request to be told what it is.
+            if (onAir?.channel?.number == channel.number) {
+                bannerGeneration.value += 1
+            } else {
+                surfTo(channel)
             }
         }
         closePicker()
@@ -368,6 +474,9 @@ class MainActivity : ComponentActivity() {
 
     private val refreshHandler by lazy { android.os.Handler(mainLooper) }
 
+    /** Separate from the refresh handler so a stall timer cannot cancel a refresh. */
+    private val stallHandler by lazy { android.os.Handler(mainLooper) }
+
     private fun preloadNeighbours(current: Channel, rebuild: Boolean = false) {
         val nav = navigator ?: return
         val preloader = this.preloader ?: return
@@ -377,7 +486,16 @@ class MainActivity : ComponentActivity() {
         val currentIndex = channels.indexOfFirst { it.number == current.number }
         if (currentIndex < 0) return
 
-        preloader.apply(channels.size, currentIndex, rebuild) { index ->
+        preloader.apply(
+            channels.size,
+            currentIndex,
+            rebuild,
+            wantedStartMillis = { index ->
+                channels.getOrNull(index)
+                    ?.let { Tuner.tune(it, urls, nowSeconds()) }
+                    ?.let { (it.offsetSeconds * 1000).toLong() }
+            },
+        ) { index ->
             val channel = channels.getOrNull(index) ?: return@apply null
             val now = nowSeconds()
             val tuned = Tuner.tune(channel, urls, now) ?: return@apply null
@@ -411,6 +529,14 @@ class MainActivity : ComponentActivity() {
         }
 
         var playable: Playable = tuned.playable
+
+        // A cached URL that the CDN already refused is worse than no cached URL at all: it will
+        // be refused again. Treat it as a miss so the server is asked for a fresh one.
+        val tunedId = tuned.stream.id
+        if (tunedId != null && tunedId in deadIds && playable is Progressive) {
+            playable = NeedsResolving(tunedId)
+        }
+
         if (playable is NeedsResolving) {
             val videoId = playable.videoId
             val remembered = resolvedCache.get(videoId, now)
@@ -422,6 +548,7 @@ class MainActivity : ComponentActivity() {
                 val resolved = resolver.resolveDetailed(videoId, now)
                 if (resolved != null) {
                     resolvedCache.put(videoId, resolved.playable, resolved.expiresAtSeconds)
+                    deadIds.remove(videoId)
                     playable = resolved.playable
                 } else {
                     Log.w(
@@ -494,6 +621,7 @@ class MainActivity : ComponentActivity() {
         super.onDestroy()
         destroyed = true
         refreshHandler.removeCallbacks(refreshRunnable)
+        stallHandler.removeCallbacksAndMessages(null)
         executor.shutdownNow()
         // Preloader first: it holds sources feeding the player the release below tears down,
         // and a preload landing against a released player is a crash rather than a wasted

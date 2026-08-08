@@ -37,6 +37,11 @@ class ResolvedCache {
         entries[videoId] = Entry(playable, expiresAtSeconds)
     }
 
+    /** Forget an entry whose URL the CDN refused, so the next resolve fetches a fresh one. */
+    fun forget(videoId: String) {
+        entries.remove(videoId)
+    }
+
     /** For logging and tests; not a correctness signal. */
     val size: Int get() = entries.size
 }
