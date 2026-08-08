@@ -265,7 +265,23 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
                 .createMediaSource(MediaItem.fromUri(playable.videoUrl))
             // YouTube serves video and audio separately above 360p, so they are merged
             // rather than played one after the other.
+            //
+            // Both flags are ON deliberately. The plain constructor leaves adjustPeriodTimeOffsets
+            // false, which merges two independently-timed files without aligning their period
+            // start times - and these ARE two independent files, muxed by nobody, each with its
+            // own offsets. Media3's own guidance is that in almost all cases both should be true
+            // so every source starts and ends together.
+            //
+            // Left false, video is rendered against an audio clock that sits at a different
+            // origin, so frame release times are continuously nudged to chase it. Measured, that
+            // showed up as a frame-hold sequence of 32222233332323... - the picture running fast
+            // then slow several times a second - against a clean 232323... when it went right,
+            // with the SAME file, the same frame rate, no dropped frames and identical hold
+            // counts. The offsets depend on where in each file the clock-derived seek lands,
+            // which is why the same clip was smooth on one tune and juddery on the next.
             if (playable.audioUrl == null) video else MergingMediaSource(
+                /* adjustPeriodTimeOffsets = */ true,
+                /* clipDurations = */ true,
                 video,
                 ProgressiveMediaSource.Factory(factory)
                     .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
