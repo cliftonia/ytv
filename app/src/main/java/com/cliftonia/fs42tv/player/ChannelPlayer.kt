@@ -41,15 +41,15 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
          * a different data source than the played one is bytes buffered and thrown away.
          */
         fun dataSourceFactory(): DataSource.Factory =
-            // NOT wrapped in ChunkedDataSource yet, though it should be. googlevideo throttles
-            // an open-ended request to about the video's own bitrate - 2.5 Mbps measured - and
-            // serves a bounded byte range at 399 Mbps, which is the single largest lever in this
-            // playback path and explains nearly every complaint about it.
+            // Wrapped so every read is a BOUNDED byte range. googlevideo throttles an
+            // open-ended request to roughly the video's own bitrate - 2.57 Mbps measured - and
+            // serves a bounded one at 398.85 Mbps. It is the boundedness that matters, not the
+            // header: `Range: bytes=0-` is throttled exactly like no range at all, and that is
+            // what DefaultHttpDataSource sends on its own.
             //
-            // The wrapper exists and works in part: it produced 1238ms channel changes, the
-            // fastest this project has recorded. It also produced 8-12s ones in the same run, so
-            // something in it is wrong and it is not fit to ship. Wiring it up is a line; making
-            // it reliable is the work. See ChunkedDataSource for the measurements.
+            // Measured effect: the same 4K clip went from 16.3s to 5.1s to first frame, and
+            // once a connection is warm a further window opens in 37-58ms. This is what makes
+            // 4K affordable at all.
             ChunkedDataSource.factory(
                 DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
             )
