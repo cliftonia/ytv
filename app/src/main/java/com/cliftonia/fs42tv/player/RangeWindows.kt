@@ -31,10 +31,19 @@ object RangeWindows {
         if (endInclusive < start) return emptyList()
         val out = ArrayList<LongRange>()
         var at = start
+        // The first window is deliberately smaller, then it ramps.
+        //
+        // mpv opens a file, reads enough header to know its shape, and then seeks straight to the
+        // clock offset - abandoning the connection. Committing to a full window up front means
+        // fetching megabytes that are discarded before the seek can even start. Beginning small
+        // gets those first bytes moving sooner and wastes far less when the client walks away,
+        // while later windows still get the full bounded size that defeats the throttle.
+        var next = minOf(FIRST_WINDOW, size)
         while (at <= endInclusive) {
-            val last = minOf(at + size - 1, endInclusive)
+            val last = minOf(at + next - 1, endInclusive)
             out.add(at..last)
             at = last + 1
+            next = minOf(next * 4, size)
         }
         return out
     }
@@ -65,4 +74,10 @@ object RangeWindows {
      * requests but a longer stall whenever one has to be retried.
      */
     const val DEFAULT_WINDOW = 8L * 1024 * 1024
+
+    /**
+     * 512 KB, enough for an mp4 header without committing to a window that will be abandoned.
+     * Still bounded, so it is served at line speed like every other request here.
+     */
+    const val FIRST_WINDOW = 512L * 1024
 }

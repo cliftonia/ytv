@@ -19,7 +19,6 @@ class RangeWindowsTest {
     @Test
     fun `windows cover the span exactly, with no gap and no overlap`() {
         val windows = RangeWindows.of(0, 20 * mb - 1, 8 * mb)
-        assertEquals(3, windows.size)
         assertEquals(0L, windows.first().first)
         assertEquals(20 * mb - 1, windows.last().last)
         for (i in 0 until windows.size - 1) {
@@ -48,8 +47,18 @@ class RangeWindowsTest {
     @Test
     fun `a span that divides exactly does not produce a trailing empty window`() {
         val windows = RangeWindows.of(0, 16 * mb - 1, 8 * mb)
-        assertEquals(2, windows.size)
         assertEquals(16 * mb - 1, windows.last().last)
+        assertEquals("no zero-length window at the end", true, windows.all { it.last >= it.first })
+    }
+
+    @Test
+    fun `the first window is small so an abandoned open wastes little`() {
+        // mpv opens, reads the header and seeks away. Fetching a full window before it can do
+        // that is megabytes thrown away on every single tune.
+        val windows = RangeWindows.of(0, 100 * mb, 8 * mb)
+        assertEquals(RangeWindows.FIRST_WINDOW, windows.first().last - windows.first().first + 1)
+        assertEquals("later windows must reach the full bounded size that defeats the throttle",
+            8 * mb, windows.last { it.last - it.first + 1 == 8 * mb }.let { 8 * mb })
     }
 
     @Test
