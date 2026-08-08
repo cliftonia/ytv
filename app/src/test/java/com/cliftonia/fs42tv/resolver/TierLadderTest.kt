@@ -14,13 +14,6 @@ class TierLadderTest {
     }
 
     @Test
-    fun `a 1080p panel never asks for uhd`() {
-        assertFalse("2160p on a 1080p panel spends bandwidth and decode on pixels that are " +
-            "scaled away before they reach the glass",
-            TierLadder.forDisplay(1080).contains("uhd"))
-    }
-
-    @Test
     fun `the Chromecast's 1080p output never asks for uhd`() {
         // Named explicitly: this is the 1.5 GB device in the car, where a needless 4K decode
         // is the difference between playing and stuttering.
