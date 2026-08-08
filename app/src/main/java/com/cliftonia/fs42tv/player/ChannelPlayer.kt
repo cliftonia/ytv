@@ -2,6 +2,7 @@ package com.cliftonia.fs42tv.player
 
 import android.os.SystemClock
 import android.util.Log
+import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
@@ -57,6 +58,25 @@ class ChannelPlayer(context: android.content.Context, private val factory: DataS
 
     val exo: ExoPlayer = ExoPlayer.Builder(context)
         .setLoadControl(loadControl)
+        // OFF, and this is load-bearing rather than an optimisation.
+        //
+        // Left on, ExoPlayer calls Surface.setFrameRate() with the content rate, and the platform
+        // honours it as a frame-rate OVERRIDE. Read straight off the video layer with
+        // `dumpsys SurfaceFlinger --latency` while the picture was visibly juddering:
+        //
+        //   desired present:  50.0  33.3  50.0  33.3   <- ExoPlayer asking for correct 3:2
+        //   actual  present:  41.7  41.7  41.7  41.7   <- compositor forcing a flat 24Hz
+        //
+        // 41.7ms is 2.5 vsyncs. This panel reports exactly one mode - 3840x2160 at 60.000004Hz
+        // with no alternates - so 60/24 = 2.5 cannot divide evenly and there is no mode to
+        // switch to. Every frame then lands between vsyncs and is held for two refreshes or
+        // three in a drifting pattern, which is the judder. With this off, ExoPlayer's own 3:2
+        // request reaches the panel on its vsync grid instead.
+        //
+        // Beware measuring this: uniform 41.7ms spacing is PERFECTLY constant, so any metric
+        // scoring deviation-from-constant-rate reports it as flawless. One here did exactly
+        // that and passed 12 of 12 runs the viewer could see juddering.
+        .setVideoChangeFrameRateStrategy(C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_OFF)
         .build()
 
 
