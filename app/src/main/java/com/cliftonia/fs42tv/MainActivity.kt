@@ -25,6 +25,7 @@ import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.ResolvedCache
 import com.cliftonia.fs42tv.resolver.ServerResolver
+import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.TierLadder
 import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.sync.Channel
@@ -169,6 +170,16 @@ class MainActivity : ComponentActivity() {
      * and fails identically, which is what put a stand-by card up on every attempt to select a
      * distant channel from the picker.
      */
+    /**
+     * Tiers the CDN refused this session, as `<id>/<tier>`.
+     *
+     * Separate from [deadIds], which condemns a whole clip and so forces a `/resolve` - and that
+     * runs yt-dlp, measured at 7.7 and 12.2 seconds, well past the 4s after which the viewer is
+     * shown a stand-by card. Nearly every clip is published with both an hd and an sd tier in a
+     * file the app already holds, so a refused hd falls to sd with no round trip at all.
+     */
+    private val refusedTiers = java.util.Collections.synchronizedSet(mutableSetOf<String>())
+
     private val deadIds = java.util.Collections.synchronizedSet(mutableSetOf<String>())
 
     // Single-threaded so a rapid burst of channel presses queues in order rather than racing
@@ -339,10 +350,27 @@ class MainActivity : ComponentActivity() {
                 // costs one server resolve.
                 if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
                     code.startsWith("MPV_")) {
-                    onAir?.stream?.id?.let {
-                        Log.w("fs42", "dropping dead url for $it")
-                        deadIds.add(it)
-                        resolvedCache.forget(it)
+                    onAir?.stream?.id?.let { id ->
+                        // Refuse the TIER, not the clip. Condemning the whole id forces a
+                        // /resolve, which runs yt-dlp - measured at 7.7 and 12.2 seconds, well
+                        // past the 4s after which the viewer is shown a stand-by card. Nearly
+                        // every clip is published with both an hd and an sd tier in a file the
+                        // app already holds, so the next rung costs no round trip at all.
+                        //
+                        // The failing tier is whichever rung the resolver would have taken - the
+                        // first fresh one not already refused - so it can be recomputed here
+                        // rather than threaded back out of the player.
+                        val tier = ladder.firstOrNull {
+                            StreamResolver.refusedKey(id, it) !in refusedTiers
+                        }
+                        if (tier != null) {
+                            Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
+                            refusedTiers.add(StreamResolver.refusedKey(id, tier))
+                        } else {
+                            Log.w("fs42", "all tiers refused for $id; asking the server")
+                            deadIds.add(id)
+                            resolvedCache.forget(id)
+                        }
                     }
                 }
 
@@ -595,7 +623,7 @@ class MainActivity : ComponentActivity() {
         executor.execute {
             if (destroyed) return@execute
             val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now, ladder) ?: return@execute
+            val tuned = Tuner.tune(channel, urls, now, ladder, refusedTiers.toSet()) ?: return@execute
             var playable: Playable = tuned.playable
             if (playable is NeedsResolving) {
                 playable = resolvedCache.get(playable.videoId, now)
@@ -699,7 +727,7 @@ class MainActivity : ComponentActivity() {
         }
 
         val now = nowSeconds()
-        val tuned = Tuner.tune(channel, urls, now, ladder)
+        val tuned = Tuner.tune(channel, urls, now, ladder, refusedTiers.toSet())
         if (tuned == null) {
             Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
             return
