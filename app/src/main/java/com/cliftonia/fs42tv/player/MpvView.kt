@@ -2,69 +2,230 @@ package com.cliftonia.fs42tv.player
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 // `is` is a Kotlin keyword, so mpv's package has to be quoted to be importable.
 import `is`.xyz.mpv.BaseMPVView
 import `is`.xyz.mpv.MPVLib
+import `is`.xyz.mpv.MPVNode
 
 /**
  * libmpv on a SurfaceView, configured for this dial.
  *
- * Here as an experiment, not a replacement. The judder on this television has survived every
- * ExoPlayer-side change tried: the content's frame rate, the panel, the audio clock, the merged
- * video+audio sources, a fresh player per tune, the frame-rate override and the deep seek were
- * each measured and each ruled out. mpv is worth trying because its frame timing is a different
- * architecture rather than a different tuning of the same one.
+ * Here because Media3's frame pacing judders on this television and mpv's does not, measured on
+ * the same clips at the same wall-clock offsets after eight Media3-side theories were each ruled
+ * out. The option that matters is `video-sync=display-resample`.
  *
- * The options below come from two places: the box's own `~/.config/mpv/mpv.conf`, which plays
- * these exact googlevideo URLs, and `video-sync`, which is the one thing mpv can do that Media3
- * cannot.
+ * The settings below come from three places, kept distinguishable on purpose: mpv-android's own
+ * MPVView (the reference implementation), the box's `~/.config/mpv/mpv.conf` which plays these
+ * exact googlevideo URLs, and this panel's measured refresh rate.
  */
 class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(context, attrs) {
 
+    /** What the dial needs to hear about. Set before use; cleared on destroy. */
+    interface Events {
+        fun onFileLoaded()
+
+        /**
+         * mpv terminated and cannot play anything again.
+         *
+         * Not theoretical: when an EDL's video URL is refused with 403 both segments fail, mpv
+         * logs `No video or audio streams selected` as FATAL and shuts the core down - `idle=yes`
+         * does not cover a fatal. One dead URL would otherwise black out the dial permanently.
+         */
+        fun onShutdown()
+        fun onFirstFrame()
+        fun onEndFile(reason: String)
+        fun onBuffering(buffering: Boolean)
+    }
+
+    var events: Events? = null
+
+    /** True between a load and its first presented frame, so mid-clip restarts are not reported. */
+    private var awaitingFirstFrame = false
+
+    private val observer = object : MPVLib.EventObserver {
+        override fun event(eventId: Int, node: MPVNode) {
+            when (eventId) {
+                MPVLib.MpvEvent.MPV_EVENT_FILE_LOADED -> events?.onFileLoaded()
+
+                // PLAYBACK_RESTART fires once decoding has produced output and playback is
+                // actually running - after a load and after any seek. Guarded so only the first
+                // per clip counts as "the picture appeared".
+                MPVLib.MpvEvent.MPV_EVENT_PLAYBACK_RESTART ->
+                    if (awaitingFirstFrame) {
+                        awaitingFirstFrame = false
+                        events?.onFirstFrame()
+                    }
+
+                // mpv reports the end of a file for a clip finishing AND for a load failing, and
+                // the dial's response differs completely: one moves to whatever is on next, the
+                // other must drop a dead URL first or it resolves straight back to it. When the
+                // reason cannot be read, "eof" is the safer default - re-tuning is harmless,
+                // while wrongly declaring an error discards a URL that was never dead.
+                MPVLib.MpvEvent.MPV_EVENT_SHUTDOWN -> events?.onShutdown()
+
+                MPVLib.MpvEvent.MPV_EVENT_END_FILE -> {
+                    val reason = runCatching { node.toJson() }.getOrDefault("")
+                    events?.onEndFile(if (reason.contains("error")) "error" else "eof")
+                }
+            }
+        }
+
+        override fun eventProperty(property: String) = Unit
+        override fun eventProperty(property: String, value: Long) = Unit
+        override fun eventProperty(property: String, value: String) = Unit
+        override fun eventProperty(property: String, value: Double) = Unit
+        override fun eventProperty(property: String, value: MPVNode) = Unit
+
+        override fun eventProperty(property: String, value: Boolean) {
+            // paused-for-cache is mpv's stall: playback stopped because the cache ran dry. It is
+            // the direct equivalent of Media3's STATE_BUFFERING, and the only one worth surfacing.
+            if (property == "paused-for-cache") events?.onBuffering(value)
+        }
+    }
+
     override fun initOptions() {
-        // Lock video to the display's real refresh rather than to a media clock, resampling audio
-        // to keep sync. This is the whole reason for trying mpv: ExoPlayer schedules frames
-        // against a media clock and lets the compositor land them where they fall, which on a
-        // 60Hz-only panel showing 24 and 25fps content is exactly where the judder lives.
+        // --- the reason mpv is here ---------------------------------------------------------
+        // Lock video to the display's real refresh and resample audio to follow, rather than
+        // scheduling frames against a media clock and letting the compositor place them.
         MPVLib.setOptionString("video-sync", "display-resample")
+        // A separate feature that blends frames. display-resample does not need it and on a
+        // 32-bit SoC it is expensive - off unless it is ever measured to help.
         MPVLib.setOptionString("interpolation", "no")
 
+        // display-resample is only as good as mpv's idea of the refresh rate, and mpv's own
+        // detection is unreliable on Android - the reference implementation overrides it for
+        // exactly this reason. This panel reports 60.000004Hz, not 60; that difference is the
+        // difference between resampling to the right rate and slowly drifting against it.
+        displayRefreshHz()?.let {
+            MPVLib.setOptionString("display-fps-override", it.toString())
+            Log.i("fs42", "mpv display-fps-override=$it")
+        }
+
+        // --- video output, from mpv-android's reference implementation -----------------------
         MPVLib.setOptionString("vo", "gpu")
         MPVLib.setOptionString("gpu-context", "android")
-        // Copy back rather than pure passthrough: the surface is shared with a Compose overlay,
-        // and mediacodec (direct) hands the decoder the window, which fights that.
-        MPVLib.setOptionString("hwdec", "mediacodec-copy")
+        MPVLib.setOptionString("opengl-es", "yes")
         MPVLib.setOptionString("profile", "fast")
+        // Copy-back rather than direct: `mediacodec` hands the decoder the window itself, which
+        // fights a Compose overlay drawn above the video. `mediacodec-copy` keeps mpv in charge
+        // of the surface, at the cost of a copy per frame.
+        MPVLib.setOptionString("hwdec", "mediacodec-copy")
 
-        // Startup, lifted from the box's [googlevideo] profile. These files are plain mp4 whose
-        // shape is already known, so deep probing is a second of black screen bought for nothing.
+        // --- audio --------------------------------------------------------------------------
+        MPVLib.setOptionString("ao", "audiotrack,opensles")
+
+        // --- https --------------------------------------------------------------------------
+        // Every URL on this dial is https, and Android has no /etc/ssl/certs for mpv to find.
+        // Without a bundle it can only connect by not verifying, which is not a trade worth
+        // making on a device fetching signed URLs over someone else's network.
+        MPVLib.setOptionString("tls-verify", "yes")
+        MPVLib.setOptionString("tls-ca-file", caBundlePath())
+
+        // --- startup, lifted from the box's [googlevideo] profile ---------------------------
+        // These are plain mp4 whose shape is already known, so deep probing is a second of black
+        // screen bought for nothing.
         MPVLib.setOptionString("demuxer-lavf-analyzeduration", "0.1")
         MPVLib.setOptionString("demuxer-lavf-probesize", "524288")
         MPVLib.setOptionString("cache-pause-initial", "no")
         MPVLib.setOptionString("cache-secs", "3")
         MPVLib.setOptionString("demuxer-readahead-secs", "0")
-        MPVLib.setOptionString("stream-lavf-o", "reconnect=1,reconnect_streamed=1,reconnect_delay_max=2")
+        MPVLib.setOptionString("demuxer-max-bytes", "33554432")
+        MPVLib.setOptionString("demuxer-max-back-bytes", "8388608")
+        // reconnect: a dropped CDN connection recovers silently rather than ending the clip.
+        // multiple_requests: keeps ffmpeg issuing further RANGE requests on one connection.
+        // googlevideo throttles an unbounded request to roughly the video's own bitrate and
+        // serves bounded ones at line speed - the discovery ChunkedDataSource exists for, and
+        // the reason mpv's first frame is slower than Media3's until this is right.
+        MPVLib.setOptionString(
+            "stream-lavf-o",
+            "reconnect=1,reconnect_streamed=1,reconnect_delay_max=2,multiple_requests=1",
+        )
 
-        // Nothing on this dial is interactive, and none of it has subtitles worth drawing.
+        // --- nothing on this dial is interactive --------------------------------------------
         MPVLib.setOptionString("sub-auto", "no")
         MPVLib.setOptionString("osc", "no")
         MPVLib.setOptionString("input-default-bindings", "no")
+        MPVLib.setOptionString("input-vo-keyboard", "no")
+        // Stay alive with nothing loaded: the dial tunes into this instance repeatedly, and an
+        // mpv that shuts down when its file ends would take the app with it.
+        MPVLib.setOptionString("idle", "yes")
     }
 
-    override fun postInitOptions() = Unit
+    override fun postInitOptions() {
+        // Re-assert idle AFTER init, as a property this time.
+        //
+        // Set only as a pre-init option it was accepted - mpv logged `event: idle` on startup -
+        // and then mpv still emitted `event: shutdown` the moment a file failed to open, which
+        // kills the instance for good: every later tune loads into a dead player and the screen
+        // stays black with nothing in the log. A dial tunes into one instance hundreds of times,
+        // so surviving a failed load is not optional here.
+        MPVLib.setPropertyString("idle", "yes")
+        // Do not tear down the video output between files either. Without this each tune
+        // reinitialises the whole gpu context, which on this SoC is visible as a longer black
+        // gap than the channel change itself needs.
+        MPVLib.setPropertyString("keep-open", "no")
+        MPVLib.setPropertyString("vid", "auto")
+        // Read back rather than assumed: mpv logged `event: idle` at startup and then still shut
+        // itself down the moment a file failed to open, so whether this option is actually held
+        // is the difference between a dial that survives a 403 and one that dies on the first.
+        Log.i("fs42", "mpv idle=${MPVLib.getPropertyString("idle")} " +
+            "keep-open=${MPVLib.getPropertyString("keep-open")}")
+    }
 
-    override fun observeProperties() = Unit
+    override fun observeProperties() {
+        MPVLib.addObserver(observer)
+        // Only what the dial acts on. The reference implementation observes nineteen properties
+        // because it draws a full player UI; each one is a JNI callback on every change, and this
+        // app draws its banner from its own clock arithmetic instead.
+        MPVLib.observeProperty("paused-for-cache", MPVLib.MpvFormat.MPV_FORMAT_FLAG)
+    }
+
+    /**
+     * Path to a CA bundle on disk, extracting it from assets the first time.
+     *
+     * mpv's TLS is mbedtls reading a PEM file from a path; it cannot use Android's system trust
+     * store, and an asset is not a path. Without this every https URL fails to open with
+     * `mbedtls_x509_crt_parse_file ... -15872` and the channel goes straight to a re-tune.
+     * mpv-android ships the same bundle for the same reason.
+     *
+     * Copied every run rather than only when absent: it is 182KB against an app that downloads
+     * megabytes of video per minute, and a half-written file from a killed first launch would
+     * otherwise poison TLS until someone cleared the app's data.
+     */
+    private fun caBundlePath(): String {
+        val out = java.io.File(context.filesDir, "cacert.pem")
+        runCatching {
+            context.assets.open("cacert.pem").use { input ->
+                out.outputStream().use { input.copyTo(it) }
+            }
+        }.onFailure { Log.e("fs42", "could not extract cacert.pem: $it") }
+        return out.path
+    }
+
+    /** The panel's real refresh rate, or null when it cannot be read. */
+    private fun displayRefreshHz(): Float? {
+        val d = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            display
+        } else {
+            @Suppress("DEPRECATION")
+            (context.getSystemService(Context.WINDOW_SERVICE) as? android.view.WindowManager)
+                ?.defaultDisplay
+        }
+        return d?.mode?.refreshRate
+    }
 
     /**
      * Start [url] at [startSeconds], the way a channel is joined mid-programme.
      *
-     * `start=` is part of the load rather than a seek afterwards, for the same reason Media3's
-     * start position is: a seek issued before playback has begun is silently dropped, and every
-     * channel then opens at 00:00.
+     * `start=` is part of the load rather than a seek afterwards: a seek issued before playback
+     * has begun is silently dropped, and every channel then opens at 00:00. The Media3 path
+     * passes its start position into setMediaSource for the same reason.
      */
     fun playAt(url: String, startSeconds: Double) {
-        // Newer mpv takes an insertion INDEX before the per-file options; without it the
-        // options string is parsed as that index and the whole command is rejected.
+        awaitingFirstFrame = true
+        // Newer mpv takes an insertion INDEX before the per-file options; without it the options
+        // string is parsed as that index and the command is rejected outright.
         MPVLib.command("loadfile", url, "replace", "0", "start=${startSeconds.toInt()}")
     }
 
@@ -72,9 +233,9 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         /**
          * mpv's EDL syntax for playing separate video and audio files as one stream.
          *
-         * YouTube serves them apart above 360p. The box already does exactly this - see
-         * `edl_url()` in fs42/yt_cache.py - and the byte-length prefixes are what make it safe
-         * to embed URLs full of `&`, `;` and `=` without escaping.
+         * YouTube serves them apart above 360p. The box already does exactly this - `edl_url()`
+         * in fs42/yt_cache.py - and the byte-length prefixes are what make it safe to embed URLs
+         * full of `&`, `;` and `=` without escaping any of it.
          */
         fun edl(videoUrl: String, audioUrl: String): String {
             val v = videoUrl.toByteArray(Charsets.UTF_8).size

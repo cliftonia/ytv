@@ -14,8 +14,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
-import androidx.media3.ui.PlayerView
+import com.cliftonia.fs42tv.player.ChannelPlayback
 import com.cliftonia.fs42tv.player.ChannelPlayer
+import com.cliftonia.fs42tv.player.MpvChannelPlayer
+import com.cliftonia.fs42tv.player.PlayerEngine
 import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
@@ -45,6 +47,15 @@ import java.util.concurrent.atomic.AtomicInteger
 private const val SERVER = "http://192.168.4.203:4243"
 private const val PREFS_NAME = "fs42"
 private const val CHANNEL_KEY = "channel"
+
+/**
+ * Remembers the chosen video engine so an override survives a relaunch.
+ *
+ * Persisted rather than decided fresh each start because the point of the flag is to put Media3
+ * back in a hurry when mpv misbehaves - and a setting that evaporates on the next launch is no
+ * use at all in that moment.
+ */
+private const val ENGINE_KEY = "engine"
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -64,7 +75,7 @@ private const val RECOVERY_GRACE_MILLIS = 4_000L
 class MainActivity : ComponentActivity() {
 
     // @Volatile: assigned on the UI thread in onCreate, read from the executor when tuning.
-    @Volatile private var player: ChannelPlayer? = null
+    @Volatile private var player: ChannelPlayback? = null
 
     /**
      * Audio-only player for the music under the channel picker.
@@ -127,7 +138,7 @@ class MainActivity : ComponentActivity() {
      * order they fire in irrelevant.
      */
     private fun updateProgrammeVolume() {
-        player?.exo?.volume = if (tuning.value || pickerVisible.value) 0f else 1f
+        player?.setVolume(if (tuning.value || pickerVisible.value) 0f else 1f)
     }
 
     private val pickerVisible = mutableStateOf(false)
@@ -184,6 +195,15 @@ class MainActivity : ComponentActivity() {
     private val recoveryHandler by lazy { android.os.Handler(mainLooper) }
 
     /**
+     * Builds a fresh engine and swaps it into the layout, releasing the old one.
+     *
+     * Only mpv needs this, and only for one reason: a dead URL makes an EDL yield no streams at
+     * all, which mpv treats as FATAL and shuts its core down - `idle=yes` does not cover a fatal.
+     * Without a rebuild, one 403 blacks out the dial until the app is restarted by hand.
+     */
+    @Volatile private var rebuildEngine: (() -> Unit)? = null
+
+    /**
      * Wall-clock seconds, or a frozen instant when one was supplied at launch.
      *
      * Every channel on this dial derives its clip and offset from the current time, so two runs
@@ -220,15 +240,24 @@ class MainActivity : ComponentActivity() {
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         resolver = ServerResolver(fetch = { url -> URL(url).readText() }, baseUrl = SERVER)
 
-        val view = PlayerView(this).apply {
-            useController = false
-            // The shutter is PlayerView's own black cover over the video surface, and it exists
-            // for exactly this: hiding the last frame of whatever was playing when the player is
-            // reset. Explicit rather than relying on the default, because a channel change
-            // depends on it and defaults are the first thing a library changes.
-            setKeepContentOnPlayerReset(false)
-            setShutterBackgroundColor(android.graphics.Color.BLACK)
-        }
+        // Which engine plays the dial, and why it is not simply "the newer one".
+        //
+        // Media3 judders on this television - roughly two tunes in five come back with the
+        // picture running fast then slow - and mpv does not, measured on the same clips at the
+        // same offsets. androidx/media issue 2941 documents the same fault on BUILT-IN Android
+        // TVs and explicitly NOT on Chromecast or Fire TV, which matches: a stick can change its
+        // HDMI output mode, a panel with one mode cannot. So the choice is made from the number
+        // of display modes rather than from a device name, and Media3 stays the default wherever
+        // it works - it is a fifth of the install size and starts faster.
+        //
+        // Override with:  adb shell am start -n com.cliftonia.fs42tv/.MainActivity --es engine mpv
+        val modeCount = (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
+            display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
+        val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
+            ?: PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
+            ?: PlayerEngine.default(modeCount)
+        prefs.edit().putString(ENGINE_KEY, engine.name.lowercase()).apply()
+        Log.i("fs42", "player engine $engine ($modeCount display mode(s))")
         composeView = ComposeView(this).apply {
             // The picker needs focus when open; the OSD does not, and must not steal it from
             // the D-pad channel-surfing handled in onKeyDown while the picker is closed.
@@ -259,14 +288,20 @@ class MainActivity : ComponentActivity() {
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT,
         )
+        fun newEngine(): ChannelPlayback = when (engine) {
+            PlayerEngine.MPV -> MpvChannelPlayer(this)
+            PlayerEngine.MEDIA3 -> ChannelPlayer(this, ChannelPlayer.dataSourceFactory())
+        }
+
+        var player: ChannelPlayback = newEngine()
+        this.player = player
+
         val root = FrameLayout(this).apply {
-            addView(view, matchParent())
+            addView(player.view, matchParent())
             addView(composeView, matchParent())
         }
         setContentView(root)
 
-        val factory = ChannelPlayer.dataSourceFactory()
-        val player = ChannelPlayer(this, factory).also { this.player = it }
 
         // Both of these leave a black screen if nothing handles them, and neither reports itself:
         // a finished clip simply stops, and a rejected URL stops too. Re-tuning the channel is
@@ -283,70 +318,101 @@ class MainActivity : ComponentActivity() {
             val at = SystemClock.elapsedRealtime()
             executor.execute { tuneTo(channel, gen, at) }
         }
-        player.onClipEnded = { retuneCurrent("clip ended") }
-        player.onPlaybackError = { code ->
-            // A rejected URL is the one error worth reacting to specifically: re-tuning without
-            // forgetting it would resolve to the same dead link and fail the same way.
-            if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND")) {
-                onAir?.stream?.id?.let {
-                    Log.w("fs42", "dropping dead url for $it")
-                    deadIds.add(it)
-                    resolvedCache.forget(it)
+        // Extracted so a rebuilt engine can be given the same callbacks. mpv shuts its
+        // core down on a fatal, and a replacement with nothing listening reports no first
+        // frame - the stand-by card would then never come down again.
+        fun wire(player: ChannelPlayback) {
+            player.onClipEnded = { retuneCurrent("clip ended") }
+            player.onPlaybackError = { code ->
+                if (code == MpvChannelPlayer.ENGINE_DIED) {
+                    // The engine, not the clip. Rebuild first, then let the normal recovery below
+                    // re-tune into the new instance.
+                    rebuildEngine?.invoke()
+                }
+                // A rejected URL is the one error worth reacting to specifically: re-tuning without
+                // forgetting it would resolve to the same dead link and fail the same way.
+                // Engine-agnostic on purpose. Media3 names the fault precisely; mpv reports only
+                // that the file ended in error, and its commonest cause by far is exactly this - a
+                // signed URL the CDN refused. Matching only Media3's spellings meant an mpv 403
+                // re-tuned to the very same dead URL, forever. Being wrong in the other direction
+                // costs one server resolve.
+                if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
+                    code.startsWith("MPV_")) {
+                    onAir?.stream?.id?.let {
+                        Log.w("fs42", "dropping dead url for $it")
+                        deadIds.add(it)
+                        resolvedCache.forget(it)
+                    }
+                }
+
+                // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused with
+                // 403 while still inside its stated expiry, and the recovery below - drop the dead
+                // id, ask the server for a fresh one, tune again - puts a picture back in about a
+                // second. Announcing that as a fault showed the viewer an error code for something
+                // the app had already fixed, which reads as far more broken than the brief blank a
+                // channel change produces anyway.
+                //
+                // The card is only delayed, never skipped: if the retune has not produced a picture
+                // by the time the grace period is up, this is a real fault and says so. Blanking
+                // meanwhile is what a channel change already does, so the transition looks the same
+                // as any other.
+                tuning.value = true
+                updateProgrammeVolume()
+                recoveryHandler.removeCallbacksAndMessages(null)
+                recoveryHandler.postDelayed({ standByReason.value = code }, RECOVERY_GRACE_MILLIS)
+                retuneCurrent("playback error $code")
+            }
+            // The card comes down when a picture actually appears, not when a tune is merely
+            // dispatched - a tune that fails again would otherwise clear it and leave black.
+            player.onFirstFrame = {
+                recoveryHandler.removeCallbacksAndMessages(null)
+                standByReason.value = ""
+                tuning.value = false
+                updateProgrammeVolume()
+            }
+
+            // A stall is the third way this player goes quiet, and the only silent one - no error,
+            // no end of media, just a stopped picture. The box calls the same condition a fault
+            // after two seconds and puts a stand-by card up (field_player.py:575).
+            //
+            // The card is ALL that happens. Re-tuning on a stall was tried and made things far
+            // worse: it discards whatever has buffered and restarts the deep seek, so on a
+            // connection that cannot sustain the bitrate it produced a permanent cycle of six
+            // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
+            // resumes by itself; interrupting that is the one thing that stops it recovering.
+            player.onBuffering = { buffering ->
+                stallHandler.removeCallbacksAndMessages(null)
+                if (buffering) {
+                    stallHandler.postDelayed({
+                        if (!destroyed) standByReason.value = "BUFFERING"
+                    }, STALL_CARD_MILLIS)
+                    // NO automatic re-tune on a stall. It was tried and it made things materially
+                    // worse: a re-tune discards whatever has buffered and restarts the deep seek, so
+                    // on a connection that cannot sustain the bitrate it produced a permanent cycle -
+                    // six seconds of playback, twelve seconds of nothing, repeat. ExoPlayer keeps
+                    // filling the buffer during a stall and resumes on its own; interrupting that is
+                    // the one thing guaranteed to stop it recovering.
+                } else {
+                    standByReason.value = ""
                 }
             }
+        }
+        wire(player)
 
-            // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused with
-            // 403 while still inside its stated expiry, and the recovery below - drop the dead
-            // id, ask the server for a fresh one, tune again - puts a picture back in about a
-            // second. Announcing that as a fault showed the viewer an error code for something
-            // the app had already fixed, which reads as far more broken than the brief blank a
-            // channel change produces anyway.
-            //
-            // The card is only delayed, never skipped: if the retune has not produced a picture
-            // by the time the grace period is up, this is a real fault and says so. Blanking
-            // meanwhile is what a channel change already does, so the transition looks the same
-            // as any other.
-            tuning.value = true
-            updateProgrammeVolume()
-            recoveryHandler.removeCallbacksAndMessages(null)
-            recoveryHandler.postDelayed({ standByReason.value = code }, RECOVERY_GRACE_MILLIS)
-            retuneCurrent("playback error $code")
+        // Below the callback wiring so a rebuilt engine gets the same callbacks the first one
+        // had - a fresh player with nothing listening reports no first frame, so the stand-by
+        // card would never come down again.
+        rebuildEngine = {
+            val dead = this.player
+            val fresh = newEngine()
+            wire(fresh)
+            this.player = fresh
+            player = fresh
+            root.removeView(dead?.view)
+            root.addView(fresh.view, 0, matchParent())
+            dead?.release()
+            Log.i("fs42", "engine rebuilt after shutdown")
         }
-        // The card comes down when a picture actually appears, not when a tune is merely
-        // dispatched - a tune that fails again would otherwise clear it and leave black.
-        player.onFirstFrame = {
-            recoveryHandler.removeCallbacksAndMessages(null)
-            standByReason.value = ""
-            tuning.value = false
-            updateProgrammeVolume()
-        }
-
-        // A stall is the third way this player goes quiet, and the only silent one - no error,
-        // no end of media, just a stopped picture. The box calls the same condition a fault
-        // after two seconds and puts a stand-by card up (field_player.py:575).
-        //
-        // The card is ALL that happens. Re-tuning on a stall was tried and made things far
-        // worse: it discards whatever has buffered and restarts the deep seek, so on a
-        // connection that cannot sustain the bitrate it produced a permanent cycle of six
-        // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
-        // resumes by itself; interrupting that is the one thing that stops it recovering.
-        player.onBuffering = { buffering ->
-            stallHandler.removeCallbacksAndMessages(null)
-            if (buffering) {
-                stallHandler.postDelayed({
-                    if (!destroyed) standByReason.value = "BUFFERING"
-                }, STALL_CARD_MILLIS)
-                // NO automatic re-tune on a stall. It was tried and it made things materially
-                // worse: a re-tune discards whatever has buffered and restarts the deep seek, so
-                // on a connection that cannot sustain the bitrate it produced a permanent cycle -
-                // six seconds of playback, twelve seconds of nothing, repeat. ExoPlayer keeps
-                // filling the buffer during a stall and resumes on its own; interrupting that is
-                // the one thing guaranteed to stop it recovering.
-            } else {
-                standByReason.value = ""
-            }
-        }
-        view.player = player.exo
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
 
@@ -435,7 +501,7 @@ class MainActivity : ComponentActivity() {
         // follows calls setMediaSource and prepare regardless of what state the player was left
         // in. The blank overlay stays as well, to cover the gap between the shutter and the
         // first frame of the new channel.
-        player?.exo?.stop()
+        player?.stop()
         // A deliberate channel change supersedes any error still waiting to be
         // announced: the card would name a channel the viewer has already left.
         recoveryHandler.removeCallbacksAndMessages(null)
@@ -543,7 +609,12 @@ class MainActivity : ComponentActivity() {
                 is Hls -> playable
                 else -> null
             } ?: return@execute
-            val source = player?.sourceFor(audioOnly) ?: return@execute
+            // Always Media3, whatever plays the video. The guide music is an audio-only
+            // stream under a translucent list; it has none of the frame-pacing problem that put
+            // mpv on the video path, and giving it a second engine would mean a second set of
+            // native libraries loaded to play 128kbps of bossa nova.
+            val source = ChannelPlayer.sourceFor(
+                ChannelPlayer.dataSourceFactory(), audioOnly) ?: return@execute
 
             runOnUiThread {
                 if (destroyed || !pickerVisible.value) return@runOnUiThread
