@@ -2,7 +2,7 @@ package com.cliftonia.fs42tv.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
-import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
 import androidx.compose.ui.res.painterResource
@@ -30,8 +30,6 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.TransformOrigin
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
@@ -214,14 +212,6 @@ private val PickerBackground = Color(0xE6000000)
 /** A dark tint of [OsdGreen] rather than a neutral grey, so the focus highlight reads as part of the same product as the outline text sitting on it. */
 private val PickerRowFocusedBackground = Color(0xFF1A3B1A)
 
-/** How much dimmer each row gets per step away from the highlight. */
-private const val FALLOFF_PER_ROW = 0.16f
-
-/** Rows never fade out entirely - a guide you cannot read the edges of is a worse guide. */
-private const val MIN_ROW_ALPHA = 0.25f
-
-/** How much smaller each row gets per step away, capped so distant rows do not vanish. */
-private const val SHRINK_PER_ROW = 0.03f
 
 /**
  * What-is-on text, at about half the luminance of the channel name beside it.
@@ -260,41 +250,14 @@ private val PickerRowFontSize = 20.sp
 private const val ON_AIR_LEAD_ROWS = 3
 
 @Composable
-private fun PickerRow(
-    text: String,
-    subtitle: String,
-    selected: Boolean,
-    /** Rows away from the highlight; 0 is the centre. Drives the wheel's fade and shrink. */
-    distance: Int,
-) {
+private fun PickerRow(text: String, subtitle: String, selected: Boolean) {
     // No focus, no clickable, no interaction source. The list owns selection and key handling,
     // so a row is only ever drawn - which is the point: 113 rows each carrying their own focus
     // machinery is what made this list heavy, and driving a scroll from focus changes deadlocked
     // it outright (scrolling moves focus, which scrolled again - an ANR, not a crash).
-    // A wheel's look, done the cheap way: driven by the SELECTED index rather than by scroll
-    // position. Reading the scroll offset every frame would recompose every visible row on every
-    // frame, which is exactly the cost this picker was just rebuilt to remove - and the scroll is
-    // instant anyway, so there is no intermediate position to track.
-    //
-    // animateFloatAsState gives the movement its smoothness; only the dozen or so rows the list
-    // has actually composed are ever animating.
-    val target = (1f - distance * FALLOFF_PER_ROW).coerceIn(MIN_ROW_ALPHA, 1f)
-    val fade by animateFloatAsState(targetValue = target, label = "pickerRowFade")
-    val shrink by animateFloatAsState(
-        targetValue = 1f - distance * SHRINK_PER_ROW.coerceAtMost(0.06f),
-        label = "pickerRowScale",
-    )
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .graphicsLayer {
-                alpha = fade
-                scaleX = shrink
-                scaleY = shrink
-                // Shrink toward the left edge so the channel numbers stay in one column and the
-                // eye can still run down them - scaling about the centre would make them wander.
-                transformOrigin = TransformOrigin(0f, 0.5f)
-            }
             .background(if (selected) PickerRowFocusedBackground else Color.Transparent)
             .padding(horizontal = 24.dp, vertical = 10.dp),
     ) {
@@ -359,16 +322,28 @@ fun ChannelPicker(
     // animateScrollToItem: with the highlight pinned there is nothing to animate, and it is the
     // queued, interrupted bring-into-view animations that made this feel heavy.
     LaunchedEffect(selected) {
-        // Keep the highlight in the MIDDLE of the screen, and let it travel only at the two ends.
+        // Put the SELECTED row exactly on the viewport's centre line, by measuring where it
+        // actually is rather than estimating from a row count.
         //
-        // Half the visible rows, measured rather than assumed - row height depends on the font
-        // size and the panel, and a guessed constant put the highlight near the top instead.
-        // scrollToItem cannot scroll past the last row, so at the bottom of the dial the list
-        // stops and the highlight walks down to meet it; the same happens in reverse at the top.
-        // That is the behaviour worth having: padding the list by half a screen would centre the
-        // ends too, at the cost of a guide showing half a screen of nothing.
-        val half = (listState.layoutInfo.visibleItemsInfo.size / 2).coerceAtLeast(ON_AIR_LEAD_ROWS)
-        listState.scrollToItem((selected - half).coerceIn(0, lastIndex))
+        // "Half the visible rows" was the estimate, and it left the highlight wandering: rows
+        // are not all the same height once a title wraps, and partially visible rows count too.
+        // Measuring removes the guess.
+        //
+        // scrollBy clamps at both ends of the list, which is exactly the behaviour wanted: in
+        // the middle of the dial the channels move and the highlight stays put; at channel 2 and
+        // channel 114 the list has nowhere left to go, so the highlight travels to meet the end
+        // instead of the guide showing empty space.
+        val info = listState.layoutInfo
+        val row = info.visibleItemsInfo.firstOrNull { it.index == selected }
+        if (row == null) {
+            // Not composed yet - a first open, or a jump. Get it on screen, and the next pass
+            // centres it precisely.
+            listState.scrollToItem(selected)
+        } else {
+            val viewportCentre = (info.viewportStartOffset + info.viewportEndOffset) / 2f
+            val rowCentre = row.offset + row.size / 2f
+            listState.scrollBy(rowCentre - viewportCentre)
+        }
     }
 
     MaterialTheme {
@@ -404,12 +379,7 @@ fun ChannelPicker(
                     key = { index, _ -> index },
                     contentType = { _, _ -> "channel" },
                 ) { index, row ->
-                    PickerRow(
-                        text = row.first,
-                        subtitle = row.second,
-                        selected = index == selected,
-                        distance = kotlin.math.abs(index - selected),
-                    )
+                    PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
                 }
             }
         }
