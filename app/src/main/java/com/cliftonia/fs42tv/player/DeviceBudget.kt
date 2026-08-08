@@ -1,13 +1,27 @@
 package com.cliftonia.fs42tv.player
 
 /**
- * How many channels to hold preloaded, from how much RAM the device has.
+ * How many channels to hold preloaded.
  *
- * The two targets are a TCL television with room to spare and a Chromecast with Google TV HD
- * with 1.5 GB total, where the decoder, the app and the system already share a small pool.
- * Preloading buffers rather than decoders is cheap next to the box's mpv shadow pool - 300-500
- * MB per instance there - but it is not free, and the small device is the one that sets this
- * number.
+ * **Currently zero: preloading is off.** It measured as a clear win and was observed to be a
+ * clear loss, and both are true of different things.
+ *
+ * On the TCL it improved channel changes substantially - 72% of presses put a picture up within
+ * eight seconds against 27% with it off, median 1,779 ms against 2,472 ms. But watching one
+ * channel for a minute showed the picture stopping and starting repeatedly, because
+ * `DefaultPreloadManager` fetches in parallel with playback rather than yielding to it: every
+ * time it topped up a neighbour's buffer it took bandwidth from the stream on screen.
+ *
+ * The measurement rig could not see that. Every figure in this project is time-to-first-frame;
+ * nothing measures whether the picture then keeps playing. A faster switch into a stuttering
+ * channel is not a better television, and the fault was found by watching rather than measuring.
+ *
+ * The machinery is kept rather than deleted because the fix is known and reuses it. Media3's
+ * playlist preloading (`ExoPlayer.setPreloadConfiguration`) "is only started when no media is
+ * being loaded that is required for the ongoing playback" - it defers to playback by design,
+ * which is exactly the property missing here. [PreloadPlan] and its reverse-slot ordering carry
+ * straight over. Until then this returns zero, and `--ei fs42.budget N` re-enables it for
+ * experiments.
  *
  * Kept free of Android imports so it tests on the JVM; the caller reads the real figure from
  * `ActivityManager.MemoryInfo.totalMem` and passes it in.
@@ -16,18 +30,21 @@ object DeviceBudget {
 
     private const val GB = 1_024L * 1_024L * 1_024L
 
+    /** Preloading is disabled; see the class note. Override with `--ei fs42.budget N`. */
+    @Suppress("UNUSED_PARAMETER")
+    fun forDevice(totalRamBytes: Long): Int = 0
+
     /**
-     * Thresholds are on TOTAL device RAM, not free RAM, which swings with whatever else is up.
+     * What the budget would be if preloading were enabled, kept for when it is.
      *
-     * **The floor is 2, not 1, and that is the important part of this function.** A budget of 1
-     * can only hold the channel ahead, which is precisely the forward-only priming that made
-     * every reversal on the box a cold open - 5,359 ms against 350 ms once a reverse slot
-     * existed. Reserving a slot for the channel behind is worth most exactly where memory is
-     * tightest, so the small device is the last place to economise by dropping it. Two buffered
-     * windows is a small price for not reproducing the worst bug this project has already fixed
-     * once.
+     * Both real targets sit below 3 GB - the TCL reports 2.34 GB and the Chromecast has 1.5 - so
+     * the four-slot branch was never reachable in production. The floor is two rather than one
+     * because a single slot can only hold the channel ahead, which is the forward-only priming
+     * that made every reversal on the box a cold open: 5,359 ms against 350 ms once a reverse
+     * slot existed. Thresholds are on TOTAL RAM, not free RAM, which swings with whatever else
+     * happens to be running.
      */
-    fun forDevice(totalRamBytes: Long): Int = when {
+    fun budgetForRam(totalRamBytes: Long): Int = when {
         totalRamBytes >= 3 * GB -> 4
         else -> 2
     }

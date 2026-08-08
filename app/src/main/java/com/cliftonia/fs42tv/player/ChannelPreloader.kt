@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSource
+import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.exoplayer.source.preload.DefaultPreloadManager
@@ -79,8 +80,35 @@ class ChannelPreloader(
             }
         }
 
+    /**
+     * Buffer targets modelled on the box's mpv configuration, which plays this exact content
+     * over this exact network without stalling.
+     *
+     * mpv's googlevideo profile reads lazily - `cache-secs=3`, `demuxer-readahead-secs=0` - so it
+     * pulls at roughly playback rate. Media3 defaults to `minBufferMs = 50000`: it races fifty
+     * seconds ahead as fast as the connection allows. Against googlevideo, which throttles a
+     * single connection to about the video's own bitrate, that is a consumer permanently
+     * demanding more than it can be given, and the observed result was five to seven seconds of
+     * playback followed by a stall, repeatedly.
+     *
+     * 20s is still far more headroom than mpv keeps, while no longer treating the connection as
+     * something to be raced. `bufferForPlayback` stays at the Media3 default: an earlier attempt
+     * to shave it produced worse results, and the theory that a thinner start buffer helps was
+     * not supported.
+     */
+    private val loadControl = DefaultLoadControl.Builder()
+        .setBufferDurationsMsForStreaming(
+            /* minBufferMs = */ 20_000,
+            /* maxBufferMs = */ 20_000,
+            /* bufferForPlaybackMs = */ DefaultLoadControl.DEFAULT_BUFFER_FOR_PLAYBACK_MS,
+            /* bufferForPlaybackAfterRebufferMs = */
+            DefaultLoadControl.DEFAULT_BUFFER_FOR_PLAYBACK_AFTER_REBUFFER_MS,
+        )
+        .build()
+
     private val builder = DefaultPreloadManager.Builder(context, statusControl)
         .setDataSourceFactory(dataSourceFactory)
+        .setLoadControl(loadControl)
 
     private val manager: DefaultPreloadManager = builder.build()
 
@@ -99,6 +127,7 @@ class ChannelPreloader(
         dialSize: Int,
         currentIndex: Int,
         rebuild: Boolean = false,
+        wantedStartMillis: (Int) -> Long? = { null },
         sourceAt: (Int) -> Pair<MediaSource, Long>?,
     ) {
         val plan = PreloadPlan.forPosition(dialSize, currentIndex, budget)
@@ -113,7 +142,18 @@ class ChannelPreloader(
             // skip every index it already holds and the refresh would be a no-op that looks
             // like it is working - the failure mode being guarded against is silent.
             for ((index, source) in added) {
-                if (rebuild || index !in plan) {
+                // A rebuild only discards neighbours whose preloaded position has actually gone
+                // stale. Dropping and refetching all of them on a timer - which is what this did
+                // first - produces a bandwidth spike every refresh interval that competes with
+                // the stream being watched, and shows up as playback stopping and starting about
+                // once a minute. Refetching a buffer that is still nearly right is strictly worse
+                // than leaving it alone.
+                val drifted = rebuild && run {
+                    val want = wantedStartMillis(index)
+                    val have = startPositions[index]
+                    want == null || have == null || kotlin.math.abs(want - have) > DRIFT_TOLERANCE_MILLIS
+                }
+                if (drifted || index !in plan) {
                     manager.remove(source)
                     added.remove(index)
                     ranks.remove(index)
@@ -160,6 +200,16 @@ class ChannelPreloader(
          * likely to be better here rather than worse.
          */
         const val DEFAULT_PRELOAD_WINDOW_MILLIS = 2_000L
+
+        /**
+         * How far a preloaded position may drift before it is worth refetching.
+         *
+         * Generous on purpose. The buffered window is only a couple of seconds, so a buffer
+         * that is 10s stale is genuinely useless - but refetching costs bandwidth taken
+         * directly from the picture on screen, so the bar for spending it has to be a real
+         * miss rather than a small one.
+         */
+        const val DRIFT_TOLERANCE_MILLIS = 10_000L
     }
 
     fun release() {
