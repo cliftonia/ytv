@@ -75,12 +75,18 @@ private fun OsdText(
     fontSize: TextUnit,
     modifier: Modifier = Modifier,
     fontWeight: FontWeight = FontWeight.Normal,
+    fontStyle: androidx.compose.ui.text.font.FontStyle? = null,
     color: Color = OsdGreen,
     maxLines: Int = 1,
     overflow: TextOverflow = TextOverflow.Clip,
 ) {
     val outlineWidthPx = with(LocalDensity.current) { OsdOutlineWidth.toPx() }
-    val base = TextStyle(fontFamily = FontFamily.Monospace, fontWeight = fontWeight, fontSize = fontSize)
+    val base = TextStyle(
+        fontFamily = FontFamily.Monospace,
+        fontWeight = fontWeight,
+        fontStyle = fontStyle,
+        fontSize = fontSize,
+    )
     Box(modifier = modifier) {
         BasicText(
             text = text,
@@ -177,6 +183,16 @@ private val PickerRowFocusedBackground = Color(0xFF1A3B1A)
 private val PickerSubtitle = Color(0xFF1E9E1E)
 
 /**
+ * About half the heading size, which is the point - but NOT literally half.
+ *
+ * Half of 20.sp is 10.sp, which is 20px on this panel, and TV guidance puts the legibility
+ * floor at 24px for anything meant to be read from a sofa. 13.sp is 26px: clearly subordinate
+ * to the channel name, still above the floor. Going lower makes the guide decorative rather
+ * than useful, which defeats showing what is on at all.
+ */
+private val PickerSubtitleFontSize = 13.sp
+
+/**
  * Row height in the fs42-bench reference was tuned for a static demo list with nothing else on
  * screen. Here the row is read at a glance while surfing, not studied, so it sits below the
  * 27.5.sp heading line (that is a single line meant to dominate) and above the 11.sp title line
@@ -217,14 +233,24 @@ private fun PickerRow(
         scale = ClickableSurfaceDefaults.scale(focusedScale = 1f),
     ) {
         Row(
-            modifier = Modifier.padding(horizontal = 24.dp, vertical = 10.dp),
+            // fillMaxWidth is load-bearing, not decoration. `weight` distributes the space
+            // REMAINING in the row, and a row that sizes itself to its content has none to
+            // distribute - so the title was squeezed to almost nothing and ellipsised while
+            // most of the screen sat empty beside it. The Surface spans the width; without
+            // this the Row inside it does not.
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
+            // The heading takes exactly what it needs; the title takes the rest and ellipsises
+            // at the real edge. Budgeting characters here instead meant estimating glyph widths
+            // at two font sizes, which cut titles short with half the row still empty.
             OsdText(text = text, fontSize = PickerRowFontSize)
             if (subtitle.isNotEmpty()) {
                 OsdText(
-                    text = "  $subtitle",
-                    fontSize = PickerRowFontSize,
+                    modifier = Modifier.weight(1f, fill = false),
+                    text = " $subtitle",
+                    fontSize = PickerSubtitleFontSize,
+                    fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
                     color = PickerSubtitle,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
