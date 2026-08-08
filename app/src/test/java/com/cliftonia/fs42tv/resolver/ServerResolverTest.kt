@@ -30,21 +30,21 @@ class ServerResolverTest {
     @Test
     fun `a 4K device prefers uhd when the server offers it`() {
         assertEquals(Progressive("https://v/uhd", "https://a/uhd"),
-            resolver(bothTiers).resolve("abc12345678", nowSeconds = 0, preferUhd = true))
+            resolver(bothTiers).resolve("abc12345678", nowSeconds = 0, ladder = listOf("uhd", "hd", "sd")))
     }
 
     @Test
     fun `a 1080p device takes hd even when uhd is offered`() {
         assertEquals("sending 4K to a 1080p device wastes bandwidth it may be paying for",
             Progressive("https://v/hd", "https://a/hd"),
-            resolver(bothTiers).resolve("abc12345678", nowSeconds = 0, preferUhd = false))
+            resolver(bothTiers).resolve("abc12345678", nowSeconds = 0, ladder = listOf("hd", "sd")))
     }
 
     @Test
     fun `a 4K device falls back to hd when the server has no uhd`() {
         assertEquals("not every video offers 4K; refusing to play would be worse than 1080p",
             Progressive("https://v/hd", "https://a/hd"),
-            resolver(hdOnly).resolve("abc12345678", nowSeconds = 0, preferUhd = true))
+            resolver(hdOnly).resolve("abc12345678", nowSeconds = 0, ladder = listOf("uhd", "hd", "sd")))
     }
 
     @Test
