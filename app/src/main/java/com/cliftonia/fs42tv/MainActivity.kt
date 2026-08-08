@@ -232,20 +232,19 @@ class MainActivity : ComponentActivity() {
         // were originally chosen on an emulator whose bandwidth made every one of them wrong.
         // A negative value means "use the real one", so a launch with no extras behaves exactly
         // as a launch from the remote does.
-        // The panel is read honestly - Display.getMode() reports the PHYSICAL mode, 2160 on
-        // the TCL, where DisplayMetrics reports the 1080p UI layer - and then deliberately
-        // capped.
+        // Display.getMode() reports the PHYSICAL mode - 2160 on the TCL - where DisplayMetrics
+        // reports the 1080p UI layer. Reading the wrong one caps every 4K television at hd,
+        // which is what the old hard-wired preferUhd = false effectively did.
         //
-        // 4K works: the app served 3840x2160 and the television hardware-decodes VP9 to
-        // 4096x2304. It is not yet AFFORDABLE. A 4K clip is roughly four times the bytes, and
-        // googlevideo throttles an unbounded request to about 2.5 Mbps - so 4K arrives in 5-16s
-        // against 1.3-2s for 1080p, and drops frames intermittently once it does.
+        // The 1080p UI layer does not cap video: the UI and the video surface are composited
+        // separately, and a SurfaceView renders at panel resolution regardless.
         //
-        // The fix is ChunkedDataSource, which already took the same 4K clip from 16.3s to 5.1s
-        // and is not finished. Until it is, hd is what actually plays well. `--ei fs42.uhd 1`
-        // turns 4K back on for testing without a rebuild.
+        // 4K is ON. It costs more to start than 1080p - a 4K clip is roughly four times the
+        // bytes - but ChunkedDataSource took the same clip from 16.3s to 5.1s by asking for
+        // bounded byte ranges, which is what made it affordable. `--ei fs42.uhd 0` drops back
+        // to hd without a rebuild if a particular evening wants speed over pixels.
         val panelHeight = display?.mode?.physicalHeight ?: 0
-        val wantUhd = intent.getIntExtra("fs42.uhd", 0) == 1
+        val wantUhd = intent.getIntExtra("fs42.uhd", 1) == 1
         ladder = TierLadder.forDisplay(panelHeight)
             .let { if (wantUhd) it else it.filterNot { tier -> tier == "uhd" } }
             .ifEmpty { listOf("hd", "sd") }
