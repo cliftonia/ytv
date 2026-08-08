@@ -47,8 +47,82 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
     /** Set when a tune starts, cleared when its first frame lands. Main thread only. */
     private var requestedAtMillis = 0L
 
+    /**
+     * Whether this tune has ever put a picture up.
+     *
+     * Every tune BEGINS in STATE_BUFFERING - that is just loading, and reporting it as a fault
+     * puts a stand-by card over the normal two seconds between pressing a button and seeing a
+     * channel. Only a stall AFTER a picture has appeared is a stall; before that it is progress.
+     * The box draws the same line, treating the condition as a fault only once it is stuck.
+     */
+    private var hasPicture = false
+
+    /**
+     * Called when the current clip runs out, so the channel can move to whatever the clock says
+     * is on next.
+     *
+     * Without this a channel plays exactly one clip and then shows nothing at all - ExoPlayer
+     * reaches STATE_ENDED and simply stops, with no error and nothing in the log to explain the
+     * black screen. It looks like a broken channel rather than a finished clip, and the only way
+     * out is to change channel and come back.
+     */
+    var onClipEnded: (() -> Unit)? = null
+
+    /**
+     * Called when playback fails outright, so the channel can be re-tuned rather than left dark.
+     *
+     * A signed googlevideo URL can be rejected with 403 well inside its stated expiry, and any
+     * network blip during the load surfaces here too. ExoPlayer's response is to stop and stay
+     * stopped: the screen goes black and nothing recovers it, because the app never asks for
+     * anything again. Surfing quickly makes this far more likely, since every abandoned tune is
+     * another chance to have picked up a URL that had gone bad.
+     */
+    var onPlaybackError: ((String) -> Unit)? = null
+
+    /** Fired when a picture actually appears, so a stand-by card can be taken down. */
+    var onFirstFrame: (() -> Unit)? = null
+
+    /**
+     * Fired with true when playback stalls to buffer and false when it recovers.
+     *
+     * Every clip on this dial is entered at a wall-clock offset - often tens of minutes into a
+     * large progressive MP4 - so playback is streaming from deep inside a file rather than from
+     * its start. A stall there is common and completely silent.
+     */
+    var onBuffering: ((Boolean) -> Unit)? = null
+
     init {
         exo.addListener(object : Player.Listener {
+            override fun onPlaybackStateChanged(state: Int) {
+                when (state) {
+                    Player.STATE_ENDED -> {
+                        Log.i("fs42", "clip ended; asking for the next one")
+                        onClipEnded?.invoke()
+                    }
+                    // Buffering is the third way this player goes quiet, and the only one that
+                    // reports nothing at all: no error, no end of media, just a stopped picture.
+                    // The box treats the same condition as a fault after two seconds and puts a
+                    // stand-by card up (field_player.py:575); without logging it here, a stall is
+                    // indistinguishable from a crash from the outside.
+                    Player.STATE_BUFFERING -> {
+                        // Logged either way - a slow initial load is worth seeing in the log even
+                        // when it is not worth putting on the screen.
+                        Log.i("fs42", "buffering at ${exo.currentPosition / 1000}s" +
+                            if (hasPicture) " (mid-playback stall)" else " (initial load)")
+                        if (hasPicture) onBuffering?.invoke(true)
+                    }
+                    Player.STATE_READY -> onBuffering?.invoke(false)
+                    else -> Unit
+                }
+            }
+
+            override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
+                // Logged at warning with the error name, because "black screen" on its own is
+                // indistinguishable from a dozen other faults - this is the line that says which.
+                Log.w("fs42", "playback failed: ${error.errorCodeName}", error)
+                onPlaybackError?.invoke(error.errorCodeName)
+            }
+
             override fun onRenderedFirstFrame() {
                 val requested = requestedAtMillis
                 if (requested > 0L) {
@@ -59,6 +133,8 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
                     Log.i("fs42", "first frame ${SystemClock.elapsedRealtime() - requested} ms")
                     requestedAtMillis = 0L
                 }
+                hasPicture = true
+                onFirstFrame?.invoke()
             }
         })
     }
@@ -104,6 +180,7 @@ class ChannelPlayer(val exo: ExoPlayer, private val factory: DataSource.Factory)
 
     fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
         val source = sourceFor(playable) ?: return
+        hasPicture = false
         this.requestedAtMillis = requestedAtMillis
         exo.setMediaSource(source, (startAtSeconds * 1000).toLong())
         exo.prepare()

@@ -20,7 +20,7 @@ class DialNavigator(channels: List<Channel>, startNumber: Int? = null) {
         require(this.channels.isNotEmpty()) { "a dial with no channels cannot be navigated" }
     }
 
-    // Mutated on the executor thread today; @Volatile so the overlay can read it safely from
+    // Mutated on the UI thread (key handling is the single writer); @Volatile so the overlay can read it safely from
     // the UI thread once it exists.
     @Volatile private var index: Int = this.channels.indexOfFirst { it.number == startNumber }
         .let { if (it >= 0) it else 0 }
