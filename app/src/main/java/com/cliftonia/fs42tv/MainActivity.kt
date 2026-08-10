@@ -40,6 +40,8 @@ import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
 import com.cliftonia.fs42tv.ui.StandBy
 import com.cliftonia.fs42tv.ui.TuningBlank
+import com.cliftonia.fs42tv.ui.UpdatePrompt
+import com.cliftonia.fs42tv.update.Updater
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -127,6 +129,9 @@ class MainActivity : ComponentActivity() {
     // True from choosing a channel until its first frame arrives, so the previous channel is not
     // left playing under a banner announcing a different one.
     private val tuning = mutableStateOf(false)
+
+    /** True once a newer build has been downloaded and is sitting ready to install. */
+    private val updateReady = mutableStateOf(false)
 
     /**
      * Set the channel's volume from the two things that can silence it, rather than from
@@ -278,6 +283,7 @@ class MainActivity : ComponentActivity() {
                 Box(modifier = Modifier.fillMaxSize()) {
                     // Beneath the OSD, so the banner stays readable through the change.
                     TuningBlank(tuning.value)
+                    UpdatePrompt(updateReady.value)
                     ChannelOsd(
                         channelLine = bannerChannelLine.value,
                         titleLine = bannerTitleLine.value,
@@ -443,6 +449,19 @@ class MainActivity : ComponentActivity() {
             Log.i("fs42", "engine rebuilt after shutdown")
         }
 
+        // Ask the publisher whether there is a newer build, and fetch it if so.
+        //
+        // On its own executor rather than the tuning one: that executor is what makes a channel
+        // change feel instant, and a 66MB download queued in front of a tune would undo the whole
+        // point of it. Nothing is shown until the file is on disk, so an unreachable publisher -
+        // the normal state of the set in the car - is completely silent.
+        Thread {
+            val updater = Updater(this, SERVER)
+            if (updater.downloadIfNewer(BuildConfig.VERSION_CODE)) {
+                runOnUiThread { if (!destroyed) updateReady.value = true }
+            }
+        }.apply { isDaemon = true }.start()
+
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
 
         val initialRequestedAt = SystemClock.elapsedRealtime()
@@ -489,7 +508,20 @@ class MainActivity : ComponentActivity() {
                 true
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_GUIDE -> {
-                openPicker(nav)
+                // OK does double duty, but only while the update prompt is on screen - and the
+                // prompt says so, so it is not a surprise. The alternative was a second key, and
+                // this remote is a cheap universal one where INFO and MENU may not exist at all;
+                // a long press would have meant taking over key tracking from the guide.
+                //
+                // Cleared before installing either way: whether the viewer accepts Android's
+                // dialog or dismisses it, the prompt has done its job and must not sit there
+                // hijacking the guide button afterwards.
+                if (updateReady.value) {
+                    updateReady.value = false
+                    Updater(this, SERVER).install()
+                } else {
+                    openPicker(nav)
+                }
                 true
             }
             else -> super.onKeyDown(keyCode, event)
