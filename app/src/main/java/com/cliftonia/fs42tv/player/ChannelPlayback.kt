@@ -47,6 +47,15 @@ interface ChannelPlayback {
     /** Stop rendering immediately, so the previous channel is not left under a new banner. */
     fun stop()
 
+    /**
+     * Hold playback while the app is not the thing on screen, and pick it up again after.
+     *
+     * Not the same as [stop], which is for a channel change: this has to be reversible without
+     * re-resolving a URL or re-seeking, because it happens every time someone glances at the
+     * home screen. Without it the audio carries on playing over whatever they went to look at.
+     */
+    fun setPaused(paused: Boolean)
+
     /** 0f while tuning or while the guide music plays, 1f otherwise. */
     fun setVolume(volume: Float)
 

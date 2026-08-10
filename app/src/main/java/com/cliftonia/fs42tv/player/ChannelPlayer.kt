@@ -341,6 +341,8 @@ class ChannelPlayer(
 
     override fun stop() = exo.stop()
 
+    override fun setPaused(paused: Boolean) { exo.playWhenReady = !paused }
+
     override fun setVolume(volume: Float) { exo.volume = volume }
 
     override fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
