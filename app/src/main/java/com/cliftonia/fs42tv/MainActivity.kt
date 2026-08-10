@@ -449,18 +449,7 @@ class MainActivity : ComponentActivity() {
             Log.i("fs42", "engine rebuilt after shutdown")
         }
 
-        // Ask the publisher whether there is a newer build, and fetch it if so.
-        //
-        // On its own executor rather than the tuning one: that executor is what makes a channel
-        // change feel instant, and a 66MB download queued in front of a tune would undo the whole
-        // point of it. Nothing is shown until the file is on disk, so an unreachable publisher -
-        // the normal state of the set in the car - is completely silent.
-        Thread {
-            val updater = Updater(this, SERVER)
-            if (updater.downloadIfNewer(BuildConfig.VERSION_CODE)) {
-                runOnUiThread { if (!destroyed) updateReady.value = true }
-            }
-        }.apply { isDaemon = true }.start()
+        checkForUpdate()
 
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
 
@@ -860,6 +849,44 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    /** Guards against a second check while one is already running. */
+    private val updateCheckRunning = java.util.concurrent.atomic.AtomicBoolean(false)
+
+    /**
+     * Ask the publisher whether there is a newer build, and fetch it if so.
+     *
+     * On its own thread, never the tuning executor: that executor is what makes a channel change
+     * feel instant, and a 66MB download queued in front of a tune would undo the whole point of
+     * it. Nothing is shown until the file is on disk, so an unreachable publisher - the normal
+     * state of the set in the car - is completely silent.
+     */
+    private fun checkForUpdate() {
+        if (updateReady.value) return
+        if (!updateCheckRunning.compareAndSet(false, true)) return
+        Thread {
+            try {
+                if (Updater(this, SERVER).downloadIfNewer(BuildConfig.VERSION_CODE)) {
+                    runOnUiThread { if (!destroyed) updateReady.value = true }
+                }
+            } finally {
+                updateCheckRunning.set(false)
+            }
+        }.apply { isDaemon = true }.start()
+    }
+
+    /**
+     * Check again whenever the viewer comes back to the app.
+     *
+     * Launch alone was not enough: a television that stays on one channel for days never
+     * relaunches, so a change published in the meantime would never be seen. Coming back from
+     * the home screen is the natural moment to notice - and it costs one small request, since
+     * the manifest is two fields and the apk is only fetched when it is genuinely newer.
+     */
+    override fun onResume() {
+        super.onResume()
+        checkForUpdate()
     }
 
     override fun onDestroy() {
