@@ -253,6 +253,14 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Stop the television deciding nobody is there.
+        //
+        // A remote that has not been touched for half an hour looks exactly like an idle device
+        // to Android, and it turns the screen off mid-programme. This is the flag video apps use
+        // to say otherwise, and it applies only while this activity is in front - it cannot keep
+        // the set awake once someone leaves.
+        window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         resolver = ServerResolver(fetch = { url -> URL(url).readText() }, baseUrl = SERVER)
 
@@ -886,7 +894,28 @@ class MainActivity : ComponentActivity() {
      */
     override fun onResume() {
         super.onResume()
+        // Pick up where the viewer left it. Volume is re-derived rather than assumed, since the
+        // guide may have been open when they left.
+        player?.setPaused(false)
+        updateProgrammeVolume()
         checkForUpdate()
+    }
+
+    /**
+     * Stop playing once the app is no longer what is on screen.
+     *
+     * onStop rather than onPause: on Android TV a system dialog - the very install prompt this
+     * app can raise - pauses the activity without hiding it, and silencing the channel behind a
+     * dialog the viewer is about to dismiss would be its own annoyance. onStop means genuinely
+     * gone: the home screen, another app, the television switched off.
+     *
+     * Paused rather than stopped, so coming back does not re-resolve a URL and seek again.
+     */
+    override fun onStop() {
+        super.onStop()
+        player?.setPaused(true)
+        // The guide music is a second player and would otherwise keep playing on its own.
+        musicPlayer?.playWhenReady = false
     }
 
     override fun onDestroy() {

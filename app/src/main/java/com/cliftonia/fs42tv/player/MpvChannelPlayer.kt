@@ -168,6 +168,12 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         setVolume(0f)
     }
 
+    override fun setPaused(paused: Boolean) {
+        // mpv's own pause property rather than stopping: the demuxer cache and the decoded
+        // frames survive, so coming back is instant instead of paying the seek again.
+        MPVLib.setPropertyBoolean("pause", paused)
+    }
+
     override fun setVolume(volume: Float) {
         MPVLib.setPropertyInt("volume", (volume * 100).toInt())
     }
