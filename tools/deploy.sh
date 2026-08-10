@@ -33,8 +33,11 @@ for arg in "$@"; do
   esac
 done
 
+# yyDDDHHmm: ascending, and small enough for the Int that Android requires. See build.gradle.kts.
+export YTV_VERSION="$(date '+%y%j%H%M')"
+
 if [ "$BUILD" = 1 ]; then
-  echo "==> building"
+  echo "==> building version $YTV_VERSION"
   # Deleted first because "BUILD SUCCESSFUL" is not evidence a change reached the apk: gradle
   # will happily consider an unchanged task up to date and leave yesterday's file in place,
   # which has cost this project a whole debugging session more than once.
@@ -78,7 +81,7 @@ for serial in $DEVICES; do
 done
 
 echo "==> publishing the apk for devices that were not awake"
-VERSION=$(date '+%Y%m%d%H%M')
+VERSION="$YTV_VERSION"
 if scp -q "$APK" "$PUBLISHER:$PUBLISH_DIR/ytv.apk" 2>/dev/null; then
   ssh "$PUBLISHER" "printf '{\"version\": %s, \"apk\": \"/ytv.apk\"}\n' '$VERSION' > $PUBLISH_DIR/app.json"
   echo "    published as version $VERSION"

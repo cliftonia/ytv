@@ -423,3 +423,19 @@ fun StandBy(visible: Boolean, reason: String) {
         }
     }
 }
+
+/**
+ * A quiet line offering the build that has already been downloaded.
+ *
+ * Bottom-left, in the same green as everything else, and deliberately not a dialog: an update is
+ * never urgent on a television, and a modal that steals focus from a channel someone is watching
+ * would be a worse interruption than the update is worth. It waits until asked.
+ */
+@Composable
+fun UpdatePrompt(visible: Boolean) {
+    if (!visible) return
+    Box(modifier = Modifier.fillMaxSize().padding(start = 48.dp, bottom = 48.dp),
+        contentAlignment = Alignment.BottomStart) {
+        OsdText(text = "UPDATE READY - PRESS OK", fontSize = 20.sp)
+    }
+}

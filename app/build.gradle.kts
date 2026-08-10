@@ -18,8 +18,14 @@ android {
         // at runtime, which is exactly the kind of observable change this task exists not to
         // make. It is a separate decision, on its own evidence.
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1"
+        // Stamped by tools/deploy.sh as yyDDDHHmm - two-digit year, day of year, hour, minute.
+        //
+        // It has to be an ascending Int for Android to consider one build newer than another, and
+        // yyyyMMddHHmm overflows Int. This form stays under the limit until 2100 and is still
+        // legible at a glance. Falls back to 1 for a plain `./gradlew assembleDebug`, which is
+        // then older than anything published - so a hand-built apk never claims to be an update.
+        versionCode = System.getenv("YTV_VERSION")?.toIntOrNull() ?: 1
+        versionName = System.getenv("YTV_VERSION") ?: "dev"
 
         // The TCL reports abilist "armeabi-v7a,armeabi" - it is a 32-bit userspace despite the
         // 4K panel. mpv ships three ABIs at ~30MB each; carrying the two this device can never
@@ -34,6 +40,8 @@ android {
 
     buildFeatures {
         compose = true
+        // The update check compares its own versionCode against the published one.
+        buildConfig = true
     }
 
     testOptions {

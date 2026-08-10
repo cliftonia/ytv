@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+      Needed to hand a downloaded build to Android's installer. It does NOT allow a silent
+      install: the system dialog still appears and the viewer still confirms it, which is the
+      point - a background download that could install itself is exactly what that dialog exists
+      to prevent. The device also has to have "install unknown apps" granted to this app once.
+    -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-feature android:name="android.software.leanback" android:required="true" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
@@ -29,6 +36,19 @@
             android:name=".MpvTestActivity"
             android:exported="true"
             android:launchMode="singleTask" />
+
+
+        <!-- Hands the downloaded apk to the installer as a content:// URI. A file:// one has
+             thrown FileUriExposedException since Android 7, and the installer is another app. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.updates"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/update_paths" />
+        </provider>
 
 </application>
 </manifest>

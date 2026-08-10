@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The one directory the installer is allowed to read from.
+
+  Scoped to a single sub-path of the cache rather than the whole of it: a FileProvider grants
+  read access to whatever it is pointed at, and this one exists solely to hand over a downloaded
+  apk. There is no reason for it to expose anything else the app has cached.
+-->
+<paths>
+    <cache-path name="updates" path="." />
+</paths>
