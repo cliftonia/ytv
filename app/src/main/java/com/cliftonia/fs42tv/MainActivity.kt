@@ -156,6 +156,11 @@ class MainActivity : ComponentActivity() {
      */
     @Volatile private var justEndedIndex: Int = -1
 
+    // How the last tune spent its time. Written on the executor, read when the first frame lands.
+    @Volatile private var lastResolveMillis: Long = 0
+    @Volatile private var lastResolveWasCached: Boolean = false
+    @Volatile private var lastTuneRequestedAt: Long = 0
+
     // Compose state backing the tune banner. Written only from the runOnUiThread block below,
     // and only on a genuine success: a failed re-tune must not touch these, since bumping
     // bannerGeneration would replay the LaunchedEffect in ChannelOsd and pop a banner back up
@@ -483,7 +488,7 @@ class MainActivity : ComponentActivity() {
                 retuneCurrent("clip ended")
             }
             player.onPlaybackError = { code ->
-                if (code == MpvChannelPlayer.ENGINE_DIED && !destroyed) {
+                if (code.startsWith(MpvChannelPlayer.ENGINE_DIED) && !destroyed) {
                     // The engine, not the clip. Rebuild first, then let the normal recovery below
                     // re-tune into the new instance.
                     rebuildEngine?.invoke()
@@ -548,6 +553,16 @@ class MainActivity : ComponentActivity() {
             // The card comes down when a picture actually appears, not when a tune is merely
             // dispatched - a tune that fails again would otherwise clear it and leave black.
             player.onFirstFrame = {
+                // Split the wait into the two halves that have different fixes: resolving the
+                // url, which the neighbour prefetch removes, and everything the player does
+                // afterwards, which it cannot touch.
+                if (lastTuneRequestedAt > 0) {
+                    PlaybackDiagnostics.recordTune(
+                        resolveMillis = lastResolveMillis,
+                        firstFrameMillis = SystemClock.elapsedRealtime() - lastTuneRequestedAt,
+                        fromCache = lastResolveWasCached,
+                    )
+                }
                 recoveryHandler.removeCallbacksAndMessages(null)
                 standByReason.value = ""
                 tuning.value = false
@@ -940,6 +955,7 @@ class MainActivity : ComponentActivity() {
         }
 
         val now = nowSeconds()
+        lastTuneRequestedAt = requestedAtMillis
         var tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot())
 
         // If the rotation hands back the clip that just finished, take the next one instead.
@@ -972,13 +988,18 @@ class MainActivity : ComponentActivity() {
 
         if (playable is NeedsResolving) {
             val videoId = playable.videoId
+            val resolveStarted = SystemClock.elapsedRealtime()
             val remembered = resolvedCache.get(videoId, now)
             if (remembered != null) {
                 Log.d("fs42", "resolve hit from cache for $videoId")
                 playable = remembered
+                lastResolveMillis = SystemClock.elapsedRealtime() - resolveStarted
+                lastResolveWasCached = true
             } else {
-                Log.d("fs42", "resolve miss; asking the server for $videoId")
+                Log.d("fs42", "resolve miss; extracting $videoId")
+                lastResolveWasCached = false
                 val resolved = resolver.resolveDetailed(videoId, now, ladder, refusedSnapshot())
+                lastResolveMillis = SystemClock.elapsedRealtime() - resolveStarted
                 if (resolved != null) {
                     resolvedCache.put(videoId, resolved.playable, resolved.expiresAtSeconds)
                     deadIds.remove(videoId)
@@ -1167,6 +1188,8 @@ class MainActivity : ComponentActivity() {
                 },
             ),
             SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
+            SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
+            SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
             SettingRow(
                 label = "CHECK FOR UPDATE",
                 value = updateStatus.value.ifEmpty { "CHECK NOW" },
