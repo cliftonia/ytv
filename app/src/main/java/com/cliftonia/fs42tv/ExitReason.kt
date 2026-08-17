@@ -31,7 +31,7 @@ object ExitReason {
             manager.getHistoricalProcessExitReasons(context.packageName, 0, 1).firstOrNull()
         }.getOrNull() ?: return null
 
-        if (!isAbnormal(info.reason)) return null
+        if (!isAbnormal(info.reason, info.status)) return null
         val detail = info.description?.take(48).orEmpty()
         return buildString {
             append(name(info.reason))
@@ -46,7 +46,7 @@ object ExitReason {
      * A normal exit, a user-requested stop, or Android reclaiming a backgrounded app are all
      * ordinary and constant on a television - reporting them would bury the one that matters.
      */
-    internal fun isAbnormal(reason: Int): Boolean = when (reason) {
+    internal fun isAbnormal(reason: Int, status: Int = 0): Boolean = when (reason) {
         ApplicationExitInfo.REASON_CRASH,
         ApplicationExitInfo.REASON_CRASH_NATIVE,
         ApplicationExitInfo.REASON_ANR,
@@ -54,6 +54,12 @@ object ExitReason {
         ApplicationExitInfo.REASON_SIGNALED,
         ApplicationExitInfo.REASON_EXCESSIVE_RESOURCE_USAGE,
         -> true
+        // A process that called exit() itself. Ordinary at status 0 - that is a clean shutdown -
+        // but a NON-ZERO status is native code giving up, and this file was blind to precisely
+        // the fault it was written to catch: libmpv's `die()` logs and calls exit(1), which
+        // Android files here rather than under any crash reason. No signal, no tombstone, no
+        // Java exception, and until this line no report either.
+        ApplicationExitInfo.REASON_EXIT_SELF -> status != 0
         else -> false
     }
 
@@ -67,6 +73,8 @@ object ExitReason {
         ApplicationExitInfo.REASON_LOW_MEMORY -> "KILLED - LOW MEMORY"
         ApplicationExitInfo.REASON_SIGNALED -> "KILLED BY SIGNAL"
         ApplicationExitInfo.REASON_EXCESSIVE_RESOURCE_USAGE -> "KILLED - USED TOO MUCH"
+        // Reached only with a non-zero status; see isAbnormal. Native code called exit().
+        ApplicationExitInfo.REASON_EXIT_SELF -> "NATIVE GAVE UP (exit)"
         else -> "EXIT $reason"
     }
 }

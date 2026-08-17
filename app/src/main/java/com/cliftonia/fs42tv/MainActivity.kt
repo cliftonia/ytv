@@ -99,6 +99,16 @@ private const val STALL_CARD_MILLIS = 2_500L
  */
 private const val RECOVERY_GRACE_MILLIS = 4_000L
 
+/**
+ * How many dead clips to step over before giving up on a channel.
+ *
+ * Each attempt costs a full extraction - a couple of seconds - so this is a trade between
+ * recovering from the ordinary case and leaving someone watching black while the app grinds.
+ * Three covers a run of removed videos; a channel with four consecutive dead clips has a real
+ * problem and should say so rather than hide it.
+ */
+private const val SKIP_DEAD_CLIPS = 3
+
 class MainActivity : ComponentActivity() {
 
     // @Volatile: assigned on the UI thread in onCreate, read from the executor when tuning.
@@ -542,14 +552,33 @@ class MainActivity : ComponentActivity() {
         // had - a fresh player with nothing listening reports no first frame, so the stand-by
         // card would never come down again.
         rebuildEngine = {
+            // THE OLD ENGINE IS TORN DOWN COMPLETELY BEFORE THE NEW ONE IS BUILT. Order is not a
+            // style choice here, it is the whole correctness of this block.
+            //
+            // libmpv's Java binding is a process-global singleton holding ONE mpv handle. Its
+            // native `create` is `if (handle != NULL) die("mpv is already initialized")`, and
+            // `die` is a log line followed by exit(1) - a clean process exit, so there is no
+            // signal, no tombstone and no Java exception. It looks exactly like the app quietly
+            // vanishing, which is what was being chased.
+            //
+            // Building the replacement first therefore killed the process on the FIRST rebuild
+            // the app ever attempted; and had it survived, releasing the old engine afterwards
+            // would have destroyed the global handle the new one was already using, so the next
+            // `setVolume` or `loadfile` would exit(1) on `die("mpv is not created")` instead.
+            //
+            // Removing the dead view before releasing it was the third face of the same bug: it
+            // is `removeView` that dispatches surfaceDestroyed, and that handler sets `vo=null`
+            // and detaches the surface on the GLOBAL handle - which would by then have belonged
+            // to the new engine. Release first, and the surface teardown lands on its own core.
             val dead = this.player
+            dead?.release()
+            root.removeView(dead?.view)
+
             val fresh = newEngine()
             wire(fresh)
             this.player = fresh
             player = fresh
-            root.removeView(dead?.view)
             root.addView(fresh.view, 0, matchParent())
-            dead?.release()
             Log.i("fs42", "engine rebuilt after shutdown")
         }
 
@@ -892,11 +921,23 @@ class MainActivity : ComponentActivity() {
                     deadIds.remove(videoId)
                     playable = resolved.playable
                 } else {
-                    Log.w(
-                        "fs42",
-                        "channel ${channel.number} ${channel.name}: server could not resolve " +
-                            "$videoId; leaving current picture up",
-                    )
+                    // Try the NEXT clips in the rotation rather than giving up on the channel.
+                    //
+                    // "Leaving the current picture up" was never what happened. Arriving here
+                    // from a channel change, the previous picture has already been torn down and
+                    // the black tuning card raised - and that card is only ever cleared by a
+                    // first frame, which is now never coming. So the channel sat black and silent
+                    // with no error and no retry until the clock rolled past the clip, which on a
+                    // documentary channel is ninety minutes. It read as a dead remote.
+                    //
+                    // Dead clips are ordinary: the lineup is built nightly and videos are removed,
+                    // made private or geo-blocked between then and airtime, and a finished
+                    // livestream offers no progressive rendition at all. A television skips to
+                    // what it CAN show.
+                    Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
+                        "$videoId; trying the next clips")
+                    playable = resolveNextPlayable(channel, tuned.streamIndex, now)
+                        ?: playable
                 }
             }
         }
@@ -1109,6 +1150,44 @@ class MainActivity : ComponentActivity() {
      * [onStatus] reports progress in words for the settings row, so a thirty-second download on a
      * slow connection looks like progress rather than a dead button.
      */
+    /**
+     * Walk forward through a channel's clips until one resolves.
+     *
+     * Bounded, and deliberately not the whole list: each attempt is a full extraction of several
+     * seconds, so trying a hundred would leave the viewer staring at black for minutes while the
+     * app worked - far worse than admitting defeat and putting a card up. A handful covers the
+     * ordinary case, which is one or two dead clips in a row, and a channel where even that many
+     * consecutive clips are dead has a real problem worth showing.
+     *
+     * Starts at the clip AFTER the one the clock chose, so the rotation is respected as closely
+     * as it can be. The offset is deliberately dropped - a substitute clip starts at its
+     * beginning, because there is nothing meaningful to seek to in a programme that was never
+     * scheduled to be on now.
+     */
+    private fun resolveNextPlayable(channel: Channel, failedIndex: Int, now: Long): Playable? {
+        for (step in 1..SKIP_DEAD_CLIPS) {
+            if (destroyed) return null
+            val next = channel.streams.getOrNull((failedIndex + step) % channel.streams.size)
+                ?: return null
+            val id = next.id ?: continue
+            if (id in deadIds) continue
+            resolvedCache.get(id, now)?.let {
+                Log.i("fs42", "skipped to clip ${failedIndex + step} (cached)")
+                return it
+            }
+            val resolved = resolver.resolveDetailed(id, now, ladder)
+            if (resolved != null) {
+                resolvedCache.put(id, resolved.playable, resolved.expiresAtSeconds)
+                Log.i("fs42", "skipped to clip ${failedIndex + step} after $step dead clip(s)")
+                return resolved.playable
+            }
+            // Remember it so the next tune of this channel does not pay for it again.
+            deadIds.add(id)
+        }
+        Log.w("fs42", "channel ${channel.number}: $SKIP_DEAD_CLIPS consecutive clips unplayable")
+        return null
+    }
+
     private fun checkForUpdate(
         installWhenReady: Boolean = false,
         onStatus: (String) -> Unit = {},
