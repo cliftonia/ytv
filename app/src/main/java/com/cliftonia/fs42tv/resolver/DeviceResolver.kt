@@ -57,8 +57,9 @@ class DeviceResolver(
             val videoUrl = video.content ?: continue
             val audioUrl = audio.content ?: continue
             val expires = expiryOf(videoUrl, audioUrl, nowSeconds)
-            Log.i("fs42", "resolved $videoId at $name (${video.resolution}), expires in " +
-                "${expires - nowSeconds}s")
+            PlaybackDiagnostics.record(name, video.resolution, video.codec)
+            Log.i("fs42", "resolved $videoId at $name (${video.resolution} ${video.codec}), " +
+                "expires in ${expires - nowSeconds}s")
             return ClipResolver.Resolved(Progressive(videoUrl, audioUrl), expires)
         }
         Log.w("fs42", "no tier of $ladder available for $videoId")

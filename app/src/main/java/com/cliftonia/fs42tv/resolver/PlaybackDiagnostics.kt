@@ -1,0 +1,24 @@
+package com.cliftonia.fs42tv.resolver
+
+/**
+ * What the resolver last handed the player, in words, for the settings screen.
+ *
+ * Exists because "the picture is not right" and "the picture is wrong in this specific way" are
+ * hours apart in diagnosis, and nothing on screen said which rendition was playing. A whole
+ * afternoon went into deciding whether a television was being given 4K VP9 - a question the
+ * resolver knew the answer to the entire time and had no way to say.
+ *
+ * A single mutable field rather than a log: only the current answer matters, it is written once
+ * per tune and read only when somebody opens settings.
+ */
+object PlaybackDiagnostics {
+
+    @Volatile
+    var lastStream: String = "NOTHING YET"
+        private set
+
+    fun record(tier: String, resolution: String?, codec: String?) {
+        lastStream = "%s %s %s".format(
+            tier.uppercase(), resolution ?: "?", DecoderSupport.family(codec))
+    }
+}
