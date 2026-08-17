@@ -37,6 +37,7 @@ import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import com.cliftonia.fs42tv.ui.ChannelOsd
+import com.cliftonia.fs42tv.ui.GuideRows
 import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
 import com.cliftonia.fs42tv.ui.StandBy
@@ -649,13 +650,10 @@ class MainActivity : ComponentActivity() {
         val channels = nav.channels
         executor.execute {
             val started = SystemClock.elapsedRealtime()
-            val now = nowSeconds()
-            val rows = channels.map { channel ->
-                val title = ClockRotation
-                    .playPointFor(channel.streams.map { it.duration }, now)
-                    ?.let { channel.streams.getOrNull(it.index)?.title }
-                ChannelLabels.listRow(channel, title)
-            }
+            // One instant for the whole dial - see GuideRows, which owns this now so it can be
+            // tested. Walking 100 channels while reading the clock per channel would let the list
+            // straddle a programme boundary and show two different moments at once.
+            val rows = GuideRows.forChannels(channels, nowSeconds())
             val took = SystemClock.elapsedRealtime() - started
             runOnUiThread {
                 if (destroyed || !pickerVisible.value) return@runOnUiThread

@@ -209,6 +209,19 @@ EXTRA_QUERIES = {
     ],
 }
 
+# Channels whose clips are episodes of something, and should therefore play in order.
+#
+# `sequence.py` sorts these after every refresh. The app needs no part in it: ClockRotation
+# already walks the clip list in order, so ordering the list is the whole feature.
+#
+# It only pays off in proportion to how much of the channel came from a SEASON playlist. Search
+# returns episode one of fifty shows - measured on the real dial, only 10 of 100 anime clips sat
+# in a run longer than one - so a channel listed here without season playlists above will sort
+# correctly and change almost nothing.
+SEQUENCED = (
+    "sitcoms", "anime", "anime_classic", "panel_shows", "game_shows", "aussie_tv", "cartoons",
+)
+
 # Channels that were folded into another, and where they went. Their confs are deleted; the
 # survivor's query above was widened to cover the ground both used to.
 #
