@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "10 Bold Adelaide",
+        "network_type": "streaming",
+        "channel_number": 107,
+        "network_long_name": "10 Bold Adelaide",
+        "streams": [
+            {
+                "url": "https://dce3793146fef017.mediapackage.us-west-2.amazonaws.com/out/v1/55cdf73af7894775ba6de8f57482b66a/CMAF_HLS/index.m3u8",
+                "duration": 600,
+                "title": "10 Bold Adelaide (1080p)"
+            }
+        ]
+    }
+}

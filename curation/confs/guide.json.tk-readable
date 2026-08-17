@@ -1,0 +1,32 @@
+{
+    "station_conf": {
+        "network_name": "Guide",
+        "network_type": "guide",
+        "channel_number": 0,
+        "network_long_name": "Program Guide",
+        "content_dir": "catalog/loop",
+        "messages": [
+            "FieldStation42\n92 Channels & Nothing On",
+            "ytch dial: 1-40\nAussie tier: 101-148",
+            "FS42\nYou're Watching It!",
+            "FieldStation42\nRetro cable goodness.",
+            "FS42\nStay Tuned!"
+        ],
+        "images": [
+            "runtime/logo_images/gold42.png",
+            "runtime/logo_images/groove42.png",
+            "runtime/logo_images/city42.png",
+            "runtime/logo_images/timeless42.png",
+            "runtime/logo_images/mountains42.png"
+        ],
+        "play_sound": false,
+        "fullscreen": true,
+        "width": 1280,
+        "height": 720,
+        "scroll_speed": 1.0,
+        "message_font_size": 52,
+        "network_font_size": 24,
+        "schedule_font_size": 22,
+        "footer_height": 90
+    }
+}

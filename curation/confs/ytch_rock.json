@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Rock",
+        "network_type": "streaming",
+        "channel_number": 95,
+        "network_long_name": "Rock",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=09839DpTctU",
+                "duration": 405,
+                "title": "Eagles - Hotel California (Live 1977) (Official Video) [HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=353lHGbvu8o",
+                "duration": 4000,
+                "title": "The Lumineers - Full Performance (Live on KEXP)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_HZM0QiuUS8",
+                "duration": 343,
+                "title": "Goo Goo Dolls - Iris (Live in Buffalo, NY, 7/4/2004) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NWU33fvPxd0",
+                "duration": 321,
+                "title": "Foo Fighters - Everlong (Live At Wembley Stadium, 2008)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=adBymGBKs-0",
+                "duration": 3869,
+                "title": "YACHT ROCK Vol 4 Covers by The Hindley Street Country Club"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QVlfINuDdKE",
+                "duration": 331,
+                "title": "The Killers - Mr Brightside | Glastonbury 2019"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G19UqSnNuO8",
+                "duration": 374,
+                "title": "Disturbed - Down with the Sickness [Live at Rock Am Ring 2008] - HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iE_CGC8LGUQ",
+                "duration": 463,
+                "title": "Bitter Sweet Symphony - The Verve / Rockin'1000 That's Live Official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AdwUzBa95oQ",
+                "duration": 435,
+                "title": "The Verve - Bittersweet Symphony (Glastonbury 2008)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HyWajWueH2w",
+                "duration": 329,
+                "title": "Europe 'The Final Countdown' - From 'Live At Sweden Rock - 30 Annivers"
+            }
+        ],
+        "search_query": "rock band live concert performance"
+    }
+}

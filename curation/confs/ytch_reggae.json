@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Reggae",
+        "network_type": "streaming",
+        "channel_number": 100,
+        "network_long_name": "Reggae",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=4OSWsbfFLn0",
+                "duration": 366,
+                "title": "Tarrus Riley - She's Royal | LIVE at City Splash 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fDMi_5uw3wI",
+                "duration": 3466,
+                "title": "THE WAILERS LIVE AT REGGAE LAKE FESTIVAL AMSTERDAM 2024"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Igl2aaa-09g",
+                "duration": 3897,
+                "title": "Alpha Blondy – Full Show live, Summerjam Festival l 2017 | Rockpalast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LgVIiSGkWf4",
+                "duration": 3613,
+                "title": "LUCIANO THE MESSENJAH Live At Reggae Lake Festival Amsterdam The Ultim"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fb4jrRLTeCE",
+                "duration": 3573,
+                "title": "Third World – Live at Reggae Lake Festival 2025 (Full Concert 4K)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l8At4mUTskU",
+                "duration": 4435,
+                "title": "THE WAILERS – Natural Mystic 30th Anniversary live @ Rototom Sunsplash"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ellk1LoGBq0",
+                "duration": 3950,
+                "title": "Experience The Magic Of Steel Pulse Live At Reggae Lake Festival 2023"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lA8xbJq3L3I",
+                "duration": 4831,
+                "title": "Christopher Martin & Romain Virgo Live  @ Reggae Geel Festival Belgium"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-Y98uCHayPs",
+                "duration": 4267,
+                "title": "Chronixx – Full Show live, Summerjam Festival | 2008 | Rockpalast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G9z5ehmouq0",
+                "duration": 1759,
+                "title": "Big Mountain - Full Set(Live Music) | Sugarshack Sessions"
+            }
+        ],
+        "search_query": "reggae music live performance"
+    }
+}

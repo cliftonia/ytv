@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Cartoons",
+        "network_type": "streaming",
+        "channel_number": 32,
+        "network_long_name": "Cartoons",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Fg_KxhW8-PY",
+                "duration": 3622,
+                "title": "Looney Tunes | 1 Hour of Classic Cartoon Icons | Warner Classics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ksswcJwry9I",
+                "duration": 3607,
+                "title": "Classic Looney Tunes Cartoons: Best Full Episodes Collection!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2T1gBvjWVnE",
+                "duration": 5184,
+                "title": "Looney Tunes 1941-1955 | Classic Compilation  1 | Bugs Bunny | Daffy D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pEl3-0GHyoQ",
+                "duration": 3169,
+                "title": "Tom and Jerry | Mega Compilation | Vol. 12 | Warner Classics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=04mwCybNHHo",
+                "duration": 3600,
+                "title": "Classic Merrie Melodies Cartoons: Best Full Episodes Collection!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WDmNwyVNqHE",
+                "duration": 4655,
+                "title": "Top 10 Best Classic Looney Tunes Cartoon Compilation [HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c8Z-Yi-Jqy8",
+                "duration": 3889,
+                "title": "Looney Tunes | Classic Foghorn Leghorn Mega Compilation | Vol. 2 | War"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w7sICPn17uE",
+                "duration": 3299,
+                "title": "Looney Tunes | Bugs, Daffy, Porky, & Wile Cartoon Icons Compilation |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YgDH-GhhqWU",
+                "duration": 3650,
+                "title": "Tom and Jerry | Mega Episode: Golden Era Vol. 10 | Warner Classics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JE4xmxXAfyY",
+                "duration": 4016,
+                "title": "Looney Tunes | Classic Bugs Bunny and Yosemite Sam Mega Compilation |"
+            }
+        ],
+        "search_query": "classic cartoons compilation"
+    }
+}

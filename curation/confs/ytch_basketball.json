@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Basketball",
+        "network_type": "streaming",
+        "channel_number": 10,
+        "network_long_name": "Basketball",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=G6go_js-qoU",
+                "duration": 733,
+                "title": "WARRIORS at LAKERS | FULL GAME HIGHLIGHTS | April 3, 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aw5gfbtOuGM",
+                "duration": 806,
+                "title": "Most Unexpected NBA Highlights of 2026 👀"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GNKa_mn4f-8",
+                "duration": 1800,
+                "title": "30 Minutes of NBA \"OMG\" 😱 Moments in 2026 Season"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aA3omqeKy4c",
+                "duration": 2100,
+                "title": "The BEST NBA Plays of the 2025 Season ! 🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LpddDbfwNcA",
+                "duration": 1533,
+                "title": "Best Moments of the 2026 NBA Summer League!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3blxXarDJ5k",
+                "duration": 907,
+                "title": "WARRIORS at TIMBERWOLVES | FULL GAME HIGHLIGHTS | January 25, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Q-qkpuqY-4",
+                "duration": 573,
+                "title": "TEAM DURANT vs TEAM LEBRON | FULL GAME HIGHLIGHTS | 2022 NBA ALL-STAR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xjPi6IcSH_Q",
+                "duration": 772,
+                "title": "The BEST Plays of the 2019 NBA Finals | Presented by YouTubeTV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=inGCNS6USy4",
+                "duration": 606,
+                "title": "Team Spoon vs. Team Coop | FULL ALL-STAR GAME HIGHLIGHTS | July 25, 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uKcXuVjvpIY",
+                "duration": 898,
+                "title": "WARRIORS vs GRIZZLIES | LAS VEGAS SUMMER LEAGUE CHAMPIONSHIP | FULL GA"
+            }
+        ],
+        "search_query": "nba basketball game highlights"
+    }
+}

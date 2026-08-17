@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Samurai Films",
+        "network_type": "streaming",
+        "channel_number": 25,
+        "network_long_name": "Samurai Films",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=l99GQpfzIU8",
+                "duration": 5500,
+                "title": "The Drifting Life of Himeshiro (Himeshiro Nagaretabi) | 1982 • Jidaige"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zRd2ooNcARc",
+                "duration": 5491,
+                "title": "Shadow Hunters (Kage Gari) | 1983 • Jidaigeki Special • Subtitles"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A66irkIGD3g",
+                "duration": 7157,
+                "title": "Nohime: The Samurai Bride (Full Movie) | ENG SUB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2LHZ2L4FyE4",
+                "duration": 6980,
+                "title": "BAIAN The Assassin, M.D. 2 (Censored) | 2023 • Jidaigeki • Subtitles"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nrMcGJ0ZZL8",
+                "duration": 6787,
+                "title": "The Yagyu Conspiracy (Full Movie) | English Sub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pkeyt9bN8VM",
+                "duration": 6420,
+                "title": "Nohime 2: The Samurai Bride (Full Movie) | ENG SUB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=56KbHhhJ7cw",
+                "duration": 5758,
+                "title": "Sanjuro (1962) | Toshiro Mifune |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HJuvO9Zm2HY",
+                "duration": 6012,
+                "title": "A STRAY CROW SAMURAI (Hagure Garasu) | 2025 • Jidaigeki • Subtitles"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I3YF3-7tV7k",
+                "duration": 5273,
+                "title": "Rashomon (1950) Full Movie | Akira Kurosawa | English Subtitles"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PHYCniC8_Ek",
+                "duration": 5441,
+                "title": "The Yagyu Code 2: Fifty Blades | 1990 • Jidaigeki Special • Subtitles"
+            }
+        ],
+        "search_query": "samurai film full movie english subtitles"
+    }
+}

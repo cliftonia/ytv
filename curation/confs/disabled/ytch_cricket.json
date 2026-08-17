@@ -1,0 +1,86 @@
+{
+    "station_conf": {
+        "network_name": "Cricket",
+        "network_type": "streaming",
+        "channel_number": 10,
+        "network_long_name": "Cricket",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=o2SRnQ5GpMQ",
+                "duration": 1106,
+                "title": "Full Match Highlights | Pakistan Women U19 vs South Africa Women U19 |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u6MPGXvNBNs",
+                "duration": 1478,
+                "title": "Pakistan Vs West Indies 1st Test Match Day 2 Full Highlights 2026 | Pa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T5kf_x6G8W8",
+                "duration": 1108,
+                "title": "Pakistan Vs West Indies 1st Test Match Day 2 Highlights 2026 | Pak Vs"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uGbFhUzTaMM",
+                "duration": 962,
+                "title": "Australia v England, 1st T20I | England fight back in Perth cracker! |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zryGpo3FQZY",
+                "duration": 2165,
+                "title": "Super Fours, Match 6 | India vs Sri Lanka | DP World Asia Cup 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o4qnuo2Z8dQ",
+                "duration": 1246,
+                "title": "Highest Chase In T20 History | HIGHLIGHTS | Trans-Tasman Tri Series |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mIiZTW0Ue5c",
+                "duration": 1573,
+                "title": "South Africa vs India 5th ODI Match 2018 | Full Match highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JJqhHwtA-J4",
+                "duration": 907,
+                "title": "Duckett & Rohit Hit Tons In Thriller | Highlights - England v India |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HUTXmC6hiz8",
+                "duration": 1768,
+                "title": "Pakistan Vs West Indies 1st Test Match Full Highlights 2026 Day 2 | PA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mulxlNJ2XkA",
+                "duration": 2024,
+                "title": "India vs Zimbabwe 3rd T20 Full Match Highlights 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WQdqgrWvy6g",
+                "duration": 707,
+                "title": "Super11 Asia Cup 2023 | Super 4 | Pakistan vs India | Full Match Highl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rpPCjyVfQOo",
+                "duration": 509,
+                "title": "India hold their nerve to win ODI epic in Canberra | Dettol ODI Series"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gL_LIAm22Mc",
+                "duration": 913,
+                "title": "Brilliant Bumrah Takes 6-19 | Highlights - England v India | 1st Men's"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LPM15KGrHbs",
+                "duration": 898,
+                "title": "Salt Smashes 70 off 44 | Highlights - England v India | 3rd Vitality I"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2jGsHvuFKdA",
+                "duration": 906,
+                "title": "Trent Rockets vs London Spirit | FULL Match Highlights | 8th Match - T"
+            }
+        ]
+    }
+}

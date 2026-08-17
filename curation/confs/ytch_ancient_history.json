@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Ancient History",
+        "network_type": "streaming",
+        "channel_number": 59,
+        "network_long_name": "Ancient History",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=zxKPjD8urG4",
+                "duration": 2843,
+                "title": "The Rise of the Roman Empire (Full Episode) | Drain the Oceans"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BaCaFpAtm48",
+                "duration": 1012,
+                "title": "Why Was Egypt Crucial for the Roman Empire?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wmCi2ESO3Ac",
+                "duration": 5066,
+                "title": "New History Documentary: How Rome Changed Ancient Egypt Forever"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=teSs_AJ6P88",
+                "duration": 3539,
+                "title": "Who Were The Citizens Of Ancient Rome? With Mary Beard"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D6k9U8lm684",
+                "duration": 3546,
+                "title": "The Downfall Of Ancient Egypt & The Forgotten Nubian Kings"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8AgeNvHZ_ks",
+                "duration": 2665,
+                "title": "Egypt's Ancient Empire | Egypt From Above (Full Episode) The Nile Rive"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0ABzmOpS1iI",
+                "duration": 2658,
+                "title": "Exodus Mysteries (Full Episode) | Lost Treasures of the Bible | Nation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1r5Z7Xzkr9E",
+                "duration": 3527,
+                "title": "A Day In The Life Of A Normal Person In Ancient Egypt | Life And Death"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8XpnseaS3TI",
+                "duration": 3532,
+                "title": "Why Did Ancient Egypt Eventually Fall?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R2DuveRGqxs",
+                "duration": 3111,
+                "title": "What Was Ancient Carthage Like At Its Peak? | Metropolis"
+            }
+        ],
+        "search_query": "ancient history documentary rome egypt"
+    }
+}

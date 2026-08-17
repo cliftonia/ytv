@@ -1,0 +1,40 @@
+{
+ "station_conf": {
+  "network_name": "World News",
+  "network_type": "streaming",
+  "channel_number": 132,
+  "network_long_name": "International News",
+  "streams": [
+   {
+    "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
+    "duration": 600,
+    "title": "France 24 English"
+   },
+   {
+    "url": "https://jmp2.uk/plu-61de96114757070008d33cae.m3u8",
+    "duration": 600,
+    "title": "Euronews English"
+   },
+   {
+    "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8",
+    "duration": 600,
+    "title": "NHK World-Japan"
+   },
+   {
+    "url": "https://live1.mediadesk.al/cnatvlive.m3u8",
+    "duration": 600,
+    "title": "CNA"
+   },
+   {
+    "url": "https://d1si3n1st4nkgb.cloudfront.net/10502/88896001/hls/master.m3u8?ads.xumo_channelId=88896001",
+    "duration": 600,
+    "title": "NBC News NOW"
+   },
+   {
+    "url": "https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8",
+    "duration": 600,
+    "title": "CBS News 24/7"
+   }
+  ]
+ }
+}

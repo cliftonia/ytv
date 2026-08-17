@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Modern History",
+        "network_type": "streaming",
+        "channel_number": 60,
+        "network_long_name": "Modern History",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=fqQVyVDX7iQ",
+                "duration": 3300,
+                "title": "Tokyo Phoenix, the Rise of Modern Japan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8pvCWK7sDfc",
+                "duration": 2070,
+                "title": "Lines in the Sand: The Middle East and the Great War | Historical Docu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2nB_PFyLgTw",
+                "duration": 3417,
+                "title": "Andrew Marr: The Making of Modern Britain (1 of 6) History Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OBwQWIu_kMU",
+                "duration": 1817,
+                "title": "The Entire History of Germany"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n9MNGdqsHKE",
+                "duration": 3577,
+                "title": "How Japan Became a Great Power in Only 40 Years (1865 - 1905) // Japan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-d0EC538kjI",
+                "duration": 1539,
+                "title": "The Rise of the Moguls: The Men Who Built Hollywood | Historical Docum"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a9QtIfPIQl4",
+                "duration": 667,
+                "title": "Overview of Chinese history 1911 - 1949 | The 20th century | World his"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qXab9BRP8vw",
+                "duration": 1201,
+                "title": "Why is Yemen the Way it is? - XX Century History DOCUMENTARY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UUCEeC4f6ts",
+                "duration": 731,
+                "title": "Communists, Nationalists, and China's Revolutions: Crash Course World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=alhpB0NMFKk",
+                "duration": 3331,
+                "title": "The Entire History of Europe"
+            }
+        ],
+        "search_query": "modern history documentary 20th century"
+    }
+}

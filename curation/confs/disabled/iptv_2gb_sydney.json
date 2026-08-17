@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "2GB Sydney",
+        "network_type": "streaming",
+        "channel_number": 101,
+        "network_long_name": "2GB Sydney",
+        "streams": [
+            {
+                "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8",
+                "duration": 600,
+                "title": "2GB Sydney (1080p)"
+            }
+        ]
+    }
+}

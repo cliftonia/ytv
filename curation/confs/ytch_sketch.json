@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Sketch Comedy",
+        "network_type": "streaming",
+        "channel_number": 28,
+        "network_long_name": "Sketch Comedy",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=c42Bl9vdjno",
+                "duration": 1879,
+                "title": "skitHOUSE - Sketch Comedy - 2004 Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AEg-qUdi_Rk",
+                "duration": 1317,
+                "title": "Dave Goes On Shark Tank | Dr. Ken | FULL EPISODE | S2E7 | Daily Laugh"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=baDJ-ZIvYy0",
+                "duration": 528,
+                "title": "Anjelah Johnson - Nail Salon Uncut (Stand Up Comedy)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WyX4uqcBrto",
+                "duration": 1267,
+                "title": "Church Basketball Player from Tennessee - Nate Bargatze: Comedy Centra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BLLfkV6ZJVU",
+                "duration": 371,
+                "title": "Atsuko Okatsuka Stand-Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YD0xjyqiKIE",
+                "duration": 1320,
+                "title": "Comedy Inc | Season 2 Episode 5 | FULL EPISODE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
+                "duration": 2885,
+                "title": "Shane Gillis Live In Austin | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Lg7SztUnSro",
+                "duration": 1357,
+                "title": "Somebody's Sleepin' in My Bed | The Steve Harvey Show | FULL EPISODE |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7HVtrV9wCHI",
+                "duration": 1762,
+                "title": "QI FULL EPISODE! 'Deprivation' Episode 11, Series D Roger McGough, Vic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vrIw2i4WtA4",
+                "duration": 1258,
+                "title": "An Escalator Can Never Break - Mitch Hedberg: Comedy Central Presents"
+            }
+        ],
+        "search_query": "sketch comedy show full episode"
+    }
+}

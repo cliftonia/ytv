@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Food",
+        "network_type": "streaming",
+        "channel_number": 72,
+        "network_long_name": "Food",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=x76t-l69_6E",
+                "duration": 846,
+                "title": "Korean Street Food After Dark!! The Freaks Come Out At Night!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=767xPIjTm2A",
+                "duration": 1140,
+                "title": "Vietnam $100 Street Food Challenge!! Best Street Food in Saigon!!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w5e0FHkmpAk",
+                "duration": 2072,
+                "title": "Unbelievable Cake and Dessert Creations! Street Pastries That Will Blo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qNwMZ8Sdon8",
+                "duration": 1686,
+                "title": "Ultimate Istanbul Food Tour: Best Turkish Street Food | Epic Food Jour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bpd6uGHpoYY",
+                "duration": 1989,
+                "title": "Thai Street Food Tour!! 🇹🇭 BEST FOOD at Chatuchak Weekend Market, Bang"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=76HlN_qb70M",
+                "duration": 1754,
+                "title": "24 Hour Pakistani Street Food Tour | Epic Food Journeys with Mark Wien"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ERbkWtY2S9Y",
+                "duration": 2358,
+                "title": "AMSTERDAM STREET FOOD TOUR - The Best Dutch Food In Amsterdam!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ilB3saBAE7Q",
+                "duration": 2086,
+                "title": "🇹🇷 Turkish Street Food Tour Istanbul Turkey"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xqlvvR2CDO0",
+                "duration": 2199,
+                "title": "Amsterdam Street Food Tour 2025 | Street Food Compilation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RZa999GiFSo",
+                "duration": 1506,
+                "title": "$100 Chinatown Street Food in New York!!"
+            }
+        ],
+        "search_query": "street food tour"
+    }
+}

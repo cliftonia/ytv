@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Golf",
+        "network_type": "streaming",
+        "channel_number": 12,
+        "network_long_name": "Golf",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=9yufX8SLUuM",
+                "duration": 688,
+                "title": "PGA TOUR Highlights | Final Round | 3M Open | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5toUb4ap4mg",
+                "duration": 687,
+                "title": "Day 4 Highlights | 2026 ISPS HANDA Senior Open"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KW8mdNvgE38",
+                "duration": 1032,
+                "title": "FULL HIGHLIGHTS | LIV Golf United Kingdom presented by JCB Round 4 | 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uhGtykPvUjs",
+                "duration": 1220,
+                "title": "Condensed Final Round presented by SHI | 2026 ISPS HANDA Women's Scott"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tVCgTr3JkgY",
+                "duration": 1132,
+                "title": "FULL HIGHLIGHTS | LIV Golf United Kingdom presented by JCB Round 3 | 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tcx9wrqNzD0",
+                "duration": 757,
+                "title": "PGA TOUR Highlights | Round 3 | 3M Open | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WVNXgM2xw9o",
+                "duration": 462,
+                "title": "Day 3 Highlights | 2026 ISPS HANDA Senior Open"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iQjjAJ0G-Zw",
+                "duration": 1275,
+                "title": "PGA TOUR Highlights | ISCO Championship | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aj9oQSR-Xmg",
+                "duration": 1329,
+                "title": "Best 100 Golf Shots Of The Year | Part 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X2z9CtuoUmg",
+                "duration": 620,
+                "title": "Final Round Highlights presented by SERVPRO | 2026 ISPS HANDA Women's"
+            }
+        ],
+        "search_query": "golf tournament highlights"
+    }
+}

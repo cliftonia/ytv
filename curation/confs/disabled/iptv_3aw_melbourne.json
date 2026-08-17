@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "3AW Melbourne",
+        "network_type": "streaming",
+        "channel_number": 102,
+        "network_long_name": "3AW Melbourne",
+        "streams": [
+            {
+                "url": "https://3awlive.akamaized.net/hls/live/2032295/3AW/index.m3u8",
+                "duration": 600,
+                "title": "3AW Melbourne (1080p)"
+            }
+        ]
+    }
+}

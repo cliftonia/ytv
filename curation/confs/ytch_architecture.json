@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Architecture & Interiors",
+        "network_type": "streaming",
+        "channel_number": 84,
+        "network_long_name": "Architecture & Interiors",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=7O3Unkchpuc",
+                "duration": 765,
+                "title": "Architect Steven Harris’ 5 Non-Negotiables When Designing His Own Home"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j1SgIoROS7s",
+                "duration": 377,
+                "title": "Architect Designs a Home 20 Years in the Making (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dE0uB8BpHuQ",
+                "duration": 406,
+                "title": "Architect Designs Byron Bay’s Most Expensive Home (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z5-lIA7BuwQ",
+                "duration": 531,
+                "title": "Architect Designs a Breathtaking Home Connected to Nature (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OgribLSWhNE",
+                "duration": 838,
+                "title": "Inside a Woodland Home Built Over Water to Become One With Nature | Ar"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3sXz96MdKzk",
+                "duration": 446,
+                "title": "An Architects Own Home Designed as a Tree House That Disappears Into t"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=incmD0ZiRWE",
+                "duration": 441,
+                "title": "This Home Is a Love Letter to Nature (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J4_rLK7F4fw",
+                "duration": 468,
+                "title": "The Award-Winning Home of an Architect That Unites Architecture, Art,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GJ0Hn4ywOlY",
+                "duration": 335,
+                "title": "This Home’s Design Will Change How You Think About Architecture (House"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q8dcnh-4I6g",
+                "duration": 861,
+                "title": "Inside Fallingwater: Frank Lloyd Wright's Architectural Genius in Penn"
+            }
+        ],
+        "search_query": "architecture home tour design"
+    }
+}

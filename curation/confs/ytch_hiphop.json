@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Hip Hop",
+        "network_type": "streaming",
+        "channel_number": 101,
+        "network_long_name": "Hip Hop",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=DG6ormqnVHQ",
+                "duration": 827,
+                "title": "Underground Cypher on triple j Hip Hop Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TBc0uOrEYNQ",
+                "duration": 292,
+                "title": "BET & Walmart Present The 2022 Soul Cypher | Soul Train Awards '22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P1D2imDPGss",
+                "duration": 218,
+                "title": "LAX to JFK | OSHUN & Camille Safiya (prod. G_Force) | Teambackpack Cyp"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SKsW0QK68OM",
+                "duration": 226,
+                "title": "Brandy, Erykah Badu, Teyana Taylor & H.E.R. Represent In Their 2020 Cy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2MnNZMGSmyQ",
+                "duration": 351,
+                "title": "CYPHER Hip Hop Awards '11 [HQ] - Busta Rhymes, Reek da Villian, 2 Chai"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uVkxv6ZA7q8",
+                "duration": 182,
+                "title": "Les Twins judge showcase | Cypher Town Hip-Hop festival 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JWL_hD26tUA",
+                "duration": 261,
+                "title": "Desiigner, Lil Dicky & Anderson .Paak 2016 XXL Freshman Cypher"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f032Q6cMqco",
+                "duration": 273,
+                "title": "DaBaby, Megan Thee Stallion, YK Osiris and Lil Mosey's 2019 XXL Freshm"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L_r3Kgm5LXE",
+                "duration": 1391,
+                "title": "We Turned EVERY Block in NYC into a Hip-Hop CYPHER"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bfwh_taxvVA",
+                "duration": 235,
+                "title": "NLE Choppa, Rod Wave, Lil Tjay and Chika's 2020 XXL Freshman Cypher"
+            }
+        ],
+        "search_query": "hip hop live performance cypher"
+    }
+}

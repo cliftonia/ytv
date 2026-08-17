@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Pets & Animals",
+        "network_type": "streaming",
+        "channel_number": 53,
+        "network_long_name": "Pets & Animals",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=NfkKZG4Yhg0",
+                "duration": 180,
+                "title": "Dog-Person Guy Begs His Wife To Adopt Shelter Cat  | The Dodo Foster D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8EchNEDO8MY",
+                "duration": 1183,
+                "title": "Rescue Dog That’s Perfect For Cat Owners, Advice From Dr Lisa!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z-VJXzde4Os",
+                "duration": 189,
+                "title": "Rescue Dog Stayed in Her Crate For Five Days Until She Realized She Wa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GONrDehZvaU",
+                "duration": 300,
+                "title": "One Groom Changed This Cat's Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=41kfMg4uQoM",
+                "duration": 365,
+                "title": "Golden Retriever Meets a Terrified Rescue Puppy for the First Time"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PnF4grC3wQk",
+                "duration": 201,
+                "title": "Mom Secretly Adopts A Shelter Dog Her Daughters Fell In Love With | Th"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tKb4vUPpQzo",
+                "duration": 182,
+                "title": "Stray Kitten Picks A Dog As Her Mom | The Dodo Cat Crazy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=60nTBduQMLs",
+                "duration": 3448,
+                "title": "Bondi Vet's Most Adorable Adoption Success Stories"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_I2zDmcjj1w",
+                "duration": 215,
+                "title": "Good Samaritans To The Rescue! | The Pet Collective"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JGEEIDNNvpc",
+                "duration": 280,
+                "title": "Let’s Rescue These Pizza Cats And Build Them A Catio! | Dodo Kids | Re"
+            }
+        ],
+        "search_query": "dogs cats pets animal rescue"
+    }
+}

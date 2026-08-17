@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Model Railways",
+        "network_type": "streaming",
+        "channel_number": 88,
+        "network_long_name": "Model Railways",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=DQcJYCY-w4I",
+                "duration": 939,
+                "title": "Massive Model Train Layout Tour - Spectacular HO Railroad Scenes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OA_wgMsRHRY",
+                "duration": 1452,
+                "title": "The Complete Layout Tour - Part 1 - Yorkshire Dales Model Railway"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLEoxPNmEis",
+                "duration": 3707,
+                "title": "Layout Tour 2023"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZRA-E0KflNY",
+                "duration": 3432,
+                "title": "Layout Tour: Shorty Parker's HO Scale Layout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JQ99K3F_P68",
+                "duration": 558,
+                "title": "WCML Model Railway: Davidson Parkway: Layout Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NMI9o-ydtdw",
+                "duration": 2595,
+                "title": "Dean Park Model Railway - EPIC Full Layout Tour 2024"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZK4h_uUf5XE",
+                "duration": 1238,
+                "title": "Layout Tour - Modern NS Asheville District in HO Scale 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=slAJMGGaFJY",
+                "duration": 445,
+                "title": "Complete Model Railroad Layout Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7mlLrGkdsBY",
+                "duration": 2526,
+                "title": "Epic New Dean Park Layout Tour 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wt8kh2K8LOg",
+                "duration": 453,
+                "title": "Chandwell: A tour of my N gauge model railway layout"
+            }
+        ],
+        "search_query": "model railway layout tour"
+    }
+}

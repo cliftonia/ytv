@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Tennis",
+        "network_type": "streaming",
+        "channel_number": 11,
+        "network_long_name": "Tennis",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrHYxIiFW0",
+                "duration": 310,
+                "title": "Daria Snigur vs. Lilli Tagger | 2026 Prague Final | WTA Match Highligh"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=55ZYCQJjMOE",
+                "duration": 486,
+                "title": "Alexander Bublik Takes On Quentin Halys For The Title! 🏆 | Kitzbuhel 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CGRzfUccmNE",
+                "duration": 918,
+                "title": "The Best Game Ever? Andy Murray v Roger Federer (2015, Semi-Final)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8YM2skd-szw",
+                "duration": 439,
+                "title": "Alex Michelsen vs Dhakshineswar Suresh Highlights | Bloomfield Hills 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OXaEUUUJJ7s",
+                "duration": 606,
+                "title": "25 INCREDIBLE Tennis Shots That The Opponent Had To Applaud 🤯👏"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I3LhcXsK9MA",
+                "duration": 308,
+                "title": "Lumsden/Dart vs. Samson/Havlickova | 2026 Prague Doubles Final | WTA M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-hAaAu731lA",
+                "duration": 2316,
+                "title": "*THAT* Nick Kyrgios vs Roger Federer Match 🥵 | Miami 2017 Condensed Ma"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Nk_whncZ20",
+                "duration": 1496,
+                "title": "Novak Djokovic v Rafael Nadal Extended Highlights | Australian Open 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MwCvl67Ab2U",
+                "duration": 410,
+                "title": "Alex Michelsen vs Jacob Fearnley Highlights | Bloomfield Hills 2026 Fi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t88oAZbdtX8",
+                "duration": 834,
+                "title": "An UNFORGETTABLE Final! | Jannik Sinner v Alexander Zverev | Extended"
+            }
+        ],
+        "search_query": "tennis match highlights"
+    }
+}

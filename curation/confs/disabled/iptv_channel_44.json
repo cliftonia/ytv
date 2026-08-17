@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Channel 44",
+        "network_type": "streaming",
+        "channel_number": 129,
+        "network_long_name": "Channel 44",
+        "streams": [
+            {
+                "url": "https://d1k6kax80wecy5.cloudfront.net/WFqZJc/index.m3u8",
+                "duration": 600,
+                "title": "Channel 44 (480p)"
+            }
+        ]
+    }
+}

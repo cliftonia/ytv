@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Autos & Vehicles",
+        "network_type": "streaming",
+        "channel_number": 90,
+        "network_long_name": "Autos & Vehicles",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=hfz2mWmqiV0",
+                "duration": 883,
+                "title": "That Was Unexpected...2026 Toyota RAV4 AWD Torture Test + Off-Road Rev"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rm66LDHfyJ8",
+                "duration": 397,
+                "title": "How to test drive a car like a pro | Top 10s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8VN8K4wOcjQ",
+                "duration": 493,
+                "title": "DO NOT Do This When You Test Drive a Car | Former Dealer Explains"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z07PTQn360o",
+                "duration": 693,
+                "title": "BMW i5 M60 One-Year Road Test: Is This Electric Sport Car Worth the Mo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OMolvhJky5U",
+                "duration": 1009,
+                "title": "Can the 2026 Toyota RAV4 Woodland conquer our Off-Road Course?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O0yHGkezt7c",
+                "duration": 1339,
+                "title": "2021 Toyota Fortuner on/off-road review: A HiLux SUV with 7 seats"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F7McyAsgsiU",
+                "duration": 715,
+                "title": "This Car Keeps BREAKING | Cars We Own: One-Year Road Test Update"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fCrPArURAbk",
+                "duration": 1833,
+                "title": "Should You Buy a 2026 Toyota RAV4 Plug In Hybrid? A Detailed Technical"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FblJGCdMlds",
+                "duration": 1122,
+                "title": "Toyota Supra 2020 in-depth review - tested on road, sideways on track"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AoZQaSBD2h0",
+                "duration": 1974,
+                "title": "I Drove With 12 Dash Cameras at the Same Time... Here's What I Learned"
+            }
+        ],
+        "search_query": "car review road test"
+    }
+}

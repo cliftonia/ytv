@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Audio Bible",
+        "network_type": "streaming",
+        "channel_number": 125,
+        "network_long_name": "Audio Bible",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=az3iXhXglfY",
+                "duration": 6787,
+                "title": "43 | The Book JOHN (KJV) | Read By Alexander Scourby | AUDIO and TEXT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W2yzu2V0UwU",
+                "duration": 4190,
+                "title": "The Complete Holy Bible - NIVUK Audio Bible - 45 Romans"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o91Jp1JENtw",
+                "duration": 3625,
+                "title": "45 | The Book ROMANS (KJV) | Read By Alexander Scourby | AUDIO and TEX"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zBPSUjphjSY",
+                "duration": 5778,
+                "title": "Holy Bible Audio: PROVERBS  1 to 31 - With Text (Contemporary English)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bAubwVHmBms",
+                "duration": 5464,
+                "title": "The Complete Holy Bible - NIVUK Audio Bible - 41 Mark"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WC_VHfHo70I",
+                "duration": 6514,
+                "title": "The Book of Proverbs KJV | Audio Bible (FULL) by Max #McLean #KJV #aud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=acPQ3R51eOc",
+                "duration": 3909,
+                "title": "The Book of i Corinthians #KJV | Audio Bible (FULL) by Max #McLean #au"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uongSnAD35E",
+                "duration": 2855,
+                "title": "Hebrews — Run the Race of Faith (Full Dramatized Reading, ECV)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yU-wivUqlOA",
+                "duration": 4760,
+                "title": "The Book of Revelations KJV | Audio Bible (FULL) by Max #McLean #KJV #"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QF0_YCmsHko",
+                "duration": 4457,
+                "title": "The Book of Ezekiel KJV | Audio Bible (FULL) by Max #McLean #KJV #audi"
+            }
+        ],
+        "search_query": "audio bible full book reading"
+    }
+}

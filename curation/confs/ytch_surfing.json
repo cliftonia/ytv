@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Surfing",
+        "network_type": "streaming",
+        "channel_number": 14,
+        "network_long_name": "Surfing",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=x0A9rd-hVvo",
+                "duration": 805,
+                "title": "The 20 BEST Waves of Paris 2024! | Men's Surfing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RcWdHaF6oiI",
+                "duration": 1823,
+                "title": "THE BEST 25 Waves of the 2025 Championship Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KWMerpf5c6Q",
+                "duration": 456,
+                "title": "Surfing's Incredible 10 Point Rides"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=35CSnPlFdIs",
+                "duration": 565,
+                "title": "Kelly Slater vs. John John Florence - Billabong Pro Tahiti 2016 Final"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gWZ8PwO0CkQ",
+                "duration": 846,
+                "title": "BIG WAVE SURFING COMPILATION 2024 * TOUR OF DUTY *"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fWucvDd3_Vg",
+                "duration": 2026,
+                "title": "All the Best Big Waves Rides (and Wipeouts) of 2023/24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q5qKcWXSQOs",
+                "duration": 1161,
+                "title": "The Best 23 Waves Of The '23 WSL Championship Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xHrTXz2ld6E",
+                "duration": 678,
+                "title": "ALL THE 10s from WSL so far in 2024"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C9I6VU8QFHU",
+                "duration": 2640,
+                "title": "Inside Pro Surfing: VIVO Rio Pro Presented by Corona Cero 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Lwdbce6a4E",
+                "duration": 1968,
+                "title": "John John Florence VS Kelly Slater!!! Semifinal 2020 PIPE MASTERS FULL"
+            }
+        ],
+        "search_query": "surfing competition highlights"
+    }
+}

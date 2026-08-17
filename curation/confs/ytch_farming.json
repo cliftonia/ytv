@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Farming & Rural",
+        "network_type": "streaming",
+        "channel_number": 75,
+        "network_long_name": "Farming & Rural",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=l9_JXlBBvCY",
+                "duration": 3062,
+                "title": "Agricultural Landmarks: Technologies to Feed the World | FD Engineerin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N-BpKLHSYE4",
+                "duration": 3039,
+                "title": "Modern Agriculture Machines on Another Level – Farmers Reap Millions T"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AhpQFBEDvzY",
+                "duration": 4104,
+                "title": "Climate Extremes:  Agriculture (Full Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ofSV0l0qsxI",
+                "duration": 3025,
+                "title": "Farming, Redefined. A FoodUnfolded Film about Regenerative Agriculture"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V6m-XlPnqxI",
+                "duration": 1394,
+                "title": "Changing Paradigms | Regenerative Agriculture: a Solution to our Globa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NpLztJsk4Pg",
+                "duration": 4071,
+                "title": "Israel's Agriculture Changing Our World | AGRITECH Highlights | Insigh"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1mfdTaLWb7Y",
+                "duration": 2771,
+                "title": "How Australian Farmers Make Billions from Agriculture – Modern Farming"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4R7mX6pChSA",
+                "duration": 923,
+                "title": "How Regenerative Agriculture Brings Life Back to the Land | Gabe Brown"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JuLhVuRO2Ck",
+                "duration": 3202,
+                "title": "Farmed to Death: Inside America’s Global Agricultural Empire | DISPATC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ct3CL22RpTg",
+                "duration": 1052,
+                "title": "Regenerative Agriculture on a Small Scale | What it Looks Like"
+            }
+        ],
+        "search_query": "farming documentary agriculture"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Hope Channel Australia",
+        "network_type": "streaming",
+        "channel_number": 135,
+        "network_long_name": "Hope Channel Australia",
+        "streams": [
+            {
+                "url": "https://videodelivery.net/9fb3596948ddf463fde0ec4b85625b24/manifest/video.m3u8",
+                "duration": 600,
+                "title": "Hope Channel Australia (1080p)"
+            }
+        ]
+    }
+}

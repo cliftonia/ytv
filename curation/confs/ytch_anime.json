@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Anime",
+        "network_type": "streaming",
+        "channel_number": 33,
+        "network_long_name": "Anime",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=N1QR-_lNGok",
+                "duration": 1247,
+                "title": "Kotoura-san || Episode 01 || English sub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pv4j77uL_JA",
+                "duration": 1432,
+                "title": "My Stepmother and Stepsisters Aren't Wicked EP 1 | MULTI-SUB [#ItsAnim"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0JVKMVlFOXo",
+                "duration": 1436,
+                "title": "BLACK TORCH Episode 1 SUB/DUB | The Future Is in Our Hands"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TLyUUgBKnr8",
+                "duration": 1431,
+                "title": "May I Ask For One Final Thing? Episode 1 SUB/DUB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FVDITyS-HNo",
+                "duration": 1431,
+                "title": "Yakuza Fiancé Episode 1 | Ain't no place for losers here"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7sGafWP97lU",
+                "duration": 1431,
+                "title": "Go For It, Nakamura-kun!! Episode 1 SUB/DUB | Go For It, Nakamura-kun!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gNRyV1BvodQ",
+                "duration": 1478,
+                "title": "「K」Project - Episode 1 [English Subbed]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HjzHXnxqMs0",
+                "duration": 1257,
+                "title": "[Anime] Rokuhoudou Yotsuiro Biyori Episode 1 [English Sub]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hU7rzDKlH2w",
+                "duration": 1432,
+                "title": "KILL BLUE EP1 • Let's Go to School | 6 Audio | MULTI-SUB [#ItsAnime]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y4oaXLnsUbE",
+                "duration": 1446,
+                "title": "MARRIAGETOXIN Episode 1 SUB/DUB | The Poison Master's Search for a Bri"
+            }
+        ],
+        "search_query": "anime episode 1 english sub"
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Anime Movies",
+        "network_type": "streaming",
+        "channel_number": 35,
+        "network_long_name": "Anime Movies",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=_XlTffQPI6w",
+                "duration": 3501,
+                "title": "Look Back (2024) Anime Full Movie English Dubbed"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ygb-gb29f0U",
+                "duration": 7783,
+                "title": "A Silent Voice | English Dubbed | Full Movie | Koe no Katachi | 聲の形"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=maIy6cf-Kg0",
+                "duration": 5739,
+                "title": "Highlander The Search for Vengeance | Anime Movie English Sub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7Jf0NLXaxa8",
+                "duration": 5914,
+                "title": "To me, the one who loved you(2022) anime movie in English subtitles #a"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GHiosL7ZLz8",
+                "duration": 3726,
+                "title": "Orange | The Movie | 1080p | English Subtitles | Anime Movie |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iu0xeEVX5r4",
+                "duration": 6274,
+                "title": "Miyori no Mori (Miyori's Forest) Full Anime Movie English Sub | Magica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HeU2N4eRSEA",
+                "duration": 5579,
+                "title": "Yu Yu Hakusho MOVIE- Poltergeist Report (English Dubbed) HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l40MpJYkxRs",
+                "duration": 5521,
+                "title": "Armitage III: Poly-Matrix (1996) - Full Anime Movie | English Dubbed"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HVjQp54UboA",
+                "duration": 5171,
+                "title": "Full Movie| FAIRY TAIL THE MOVIE: Phoenix Priestess (English Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FIeJzDoBGoo",
+                "duration": 6101,
+                "title": "The Boy And the Heron Full Movie Studio Ghibli"
+            }
+        ],
+        "search_query": "anime full movie english sub"
+    }
+}

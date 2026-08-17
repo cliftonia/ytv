@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Aviation",
+        "network_type": "streaming",
+        "channel_number": 46,
+        "network_long_name": "Aviation",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=UEyBPVAmz4c",
+                "duration": 2701,
+                "title": "The Runway That Destroyed TAM Flight 3054"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GG6hR3W4eAk",
+                "duration": 2644,
+                "title": "Air Crash Investigation - Double Trouble (S22E04) - [FULL EPISODE]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=boS2gF7E0Fs",
+                "duration": 2646,
+                "title": "Air Crash Investigation - The Lost Plane (S17E10) - [FULL EPISODE]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JZZLwWosYK8",
+                "duration": 2640,
+                "title": "Stormy Cockpit | Kenya Airways Flight 507 | Air Crash Investigation |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AW1JcGr3LBE",
+                "duration": 2644,
+                "title": "Air Crash Investigation S21E03 Tragic Takeoff [English] (1080p)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H_IVbdQU-Lg",
+                "duration": 2700,
+                "title": "TAM Flight 3054 The Crash at Congonhas Airport | Mayday: Air Disaster"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QE5pFj48eKA",
+                "duration": 2700,
+                "title": "Why Flight 708 Fell from the Sky | Mayday: Air Disaster"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QbW7d9sUffA",
+                "duration": 2535,
+                "title": "Air Crash Investigation - Delivery to Disaster (S23E09) - [FULL EPISOD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bRegw1wyNX4",
+                "duration": 2647,
+                "title": "Air Crash Investigation - Control Catastrophe (S23E05) - [FULL EPISODE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fxnDk43x0Oo",
+                "duration": 2701,
+                "title": "An Invisible Force That Nearly Killed 152 People | Mayday: Air Disaste"
+            }
+        ],
+        "search_query": "air crash investigation aviation documentary"
+    }
+}

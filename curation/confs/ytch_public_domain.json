@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Public Domain Movies",
+        "network_type": "streaming",
+        "channel_number": 23,
+        "network_long_name": "Public Domain Movies",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=r_fGFu3TPlw",
+                "duration": 3063,
+                "title": "Maniac (1934) Full Movie | Classic Horror Cult Film | Vintage Public D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HpDVpxL7PnA",
+                "duration": 5607,
+                "title": "The Cocoanuts (1929) | Full Movie | Marx Brothers’ First Comedy Classi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TTEzyKwxC_0",
+                "duration": 4498,
+                "title": "The Cameraman (1928) - Public Domain Movie | Free Classic Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IT8yb51WVfo",
+                "duration": 4660,
+                "title": "⭐ The Clairvoyant (1935) Full Movie | Claude Rains | Mystery Thriller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XYhB5VHcxYg",
+                "duration": 4766,
+                "title": "Dangerous Partners (1945) – Full Movie | Classic Mystery Film Noir | P"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jKVuh2PrtOs",
+                "duration": 4094,
+                "title": "⭐ Escape! (1930) Full Movie | Gerald du Maurier | Crime Drama | Public"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mW17EkgebP8",
+                "duration": 6997,
+                "title": "Caravan 1946 Public Domain Don Carlos Gypsy Thieves Stewart Granger Cl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bkG20Kw0pB4",
+                "duration": 3819,
+                "title": "Cat-Women of the Moon (1953) | Full Movie | Classic Public Domain SciF"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gNnGV91j4uo",
+                "duration": 4204,
+                "title": "1954 Action Classic – The Fast and the Furious | Full Movie (Public Do"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hk0ikm-eoH4",
+                "duration": 4178,
+                "title": "\"Manhattan Love Song\" 1934 American Classic Full Movie Film Public Dom"
+            }
+        ],
+        "search_query": "public domain full movie classic"
+    }
+}

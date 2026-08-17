@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "Sky News Extra 3",
+  "network_type": "streaming",
+  "channel_number": 14,
+  "network_long_name": "Sky News Extra 3",
+  "streams": [
+   {
+    "url": "https://skynewsau-live.akamaized.net/hls/live/2002691/skynewsau-extra3/master.m3u8",
+    "duration": 600,
+    "title": "Sky News Extra 3 (1080p)"
+   }
+  ]
+ }
+}

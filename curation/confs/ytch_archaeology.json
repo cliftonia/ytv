@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Archaeology",
+        "network_type": "streaming",
+        "channel_number": 63,
+        "network_long_name": "Archaeology",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=dKjI-dPCEio",
+                "duration": 1259,
+                "title": "This Statue Excavation on Easter Island Could Finally Solve Why the Ra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WAh-K07ocLU",
+                "duration": 3509,
+                "title": "Finding Britain's Biggest Roman Treasure Hoard In A Potato Field"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f2O3QGk-oDc",
+                "duration": 2864,
+                "title": "Britain's Pompeii: The Medieval Town Perfectly Preserved Under Tons Of"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-8-qeXpOjSg",
+                "duration": 3518,
+                "title": "Stonehenge: The New Discovery Shocking Archaeologists"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q74_zaboIJY",
+                "duration": 3571,
+                "title": "2,000-Year-Old Treasure Hoard Is Largest Roman Haul Ever | Digging For"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z_oYkCgxzkQ",
+                "duration": 3574,
+                "title": "Archaeologists Uncover The Sunken Secrets Of The Rooswijk Shipwreck |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eOfX5pUGwh0",
+                "duration": 3081,
+                "title": "The Enigma of the Celtic Tomb"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_YT_CYR6vGs",
+                "duration": 3083,
+                "title": "Tutankhamun: The Greatest Archaeological Discovery of All Time"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YtYTup8IEas",
+                "duration": 3131,
+                "title": "The Last Neanderthals: Ancient DNA Solves A 49,000-Year-Old Mystery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gyQqodlfLiA",
+                "duration": 3235,
+                "title": "Stone Age Temple Mystery | Full Documentary | NOVA | PBS"
+            }
+        ],
+        "search_query": "archaeology excavation discovery documentary"
+    }
+}

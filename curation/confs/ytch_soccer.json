@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Soccer",
+        "network_type": "streaming",
+        "channel_number": 6,
+        "network_long_name": "Soccer",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=ShZsvRBpycg",
+                "duration": 1416,
+                "title": "Rosenborg v Man Utd | Extended Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6TWjoBC5agE",
+                "duration": 1424,
+                "title": "Man Utd v Wrexham | Extended Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YQQ4FIH_vAw",
+                "duration": 632,
+                "title": "CF Montréal vs. Inter Miami CF | Full Match Highlights | Penalty Game-"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LxnilbLr2nQ",
+                "duration": 1114,
+                "title": "NOBODY STOPPED CR7! GOAT PUT ON A SHOW WITH 2 GOALS IN EPIC MATCH AGAI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vJt25NRDJDw",
+                "duration": 657,
+                "title": "Inter Miami CF vs. Chicago Fire FC | Full Match Highlights | Luis Suár"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6kqaYeY4Sew",
+                "duration": 613,
+                "title": "PSG vs. Inter Miami | FIFA Club World Cup Extended Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=idxjc-4TIA8",
+                "duration": 1329,
+                "title": "Kerry v Mayo All-Ireland Football Final | GAA Highlights | RTÉ Sport"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YhkMptzH9wc",
+                "duration": 632,
+                "title": "LAFC vs. Sporting Kansas City | Full Match Highlights | Son & Bouanga"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-pNsbYuB2c",
+                "duration": 388,
+                "title": "Stevenage 0-5 West Ham | Pre-Season Friendly Extended Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aE4BdIP6bvc",
+                "duration": 864,
+                "title": "Brazil 1-7 Germany | Extended Highlights | 2014 FIFA World Cup"
+            }
+        ],
+        "search_query": "football match extended highlights"
+    }
+}

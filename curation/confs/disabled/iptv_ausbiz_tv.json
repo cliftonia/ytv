@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "ausbiz TV",
+  "network_type": "streaming",
+  "channel_number": 16,
+  "network_long_name": "ausbiz TV",
+  "streams": [
+   {
+    "url": "https://d9quh89lh7dtw.cloudfront.net/public-output/index.m3u8",
+    "duration": 600,
+    "title": "ausbiz TV (720p) [Not 24/7]"
+   }
+  ]
+ }
+}

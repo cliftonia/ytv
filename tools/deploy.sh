@@ -5,22 +5,28 @@
 # attached to, so there is nothing per-device to build - only the tedium of running the same four
 # commands twice and forgetting which device already has which build. That is what this is for.
 #
-# The apk is also copied to the publisher, so a device can fetch it later without this Mac being
-# involved at all - see the update check in the app.
+# Builds a SIGNED RELEASE apk, not a debug one, and that is not a detail. Android refuses to
+# install an update signed by a different key than the installed app, so a build from this Mac and
+# a build from the release workflow have to come from the same keystore or the two paths diverge
+# permanently: whichever got there first would be the only one that could ever update the device
+# again. The keystore lives in ~/.ytv and is deliberately not in this repository, which is public.
 #
-#   tools/deploy.sh              build, install everywhere, publish the apk
+# For devices that are switched off, or in the car and away from the house network, the update
+# arrives instead through the release workflow - the app checks GitHub releases on launch. This
+# script is the fast path for when you are standing in front of the television.
+#
+#   tools/deploy.sh              build, install everywhere
 #   tools/deploy.sh --no-build   install the apk that is already built
 #   tools/deploy.sh --no-launch  install without restarting the app
 set -uo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-APK="$REPO/app/build/outputs/apk/debug/app-debug.apk"
+APK="$REPO/app/build/outputs/apk/release/app-release.apk"
 PKG="com.cliftonia.fs42tv"
-PUBLISHER="hermanb@192.168.4.203"
-PUBLISH_DIR="~/FieldStation42/runtime/publish"
+KEYSTORE_DIR="$HOME/.ytv"
 
 # Devices that are not always awake. A television that is off is not an error - it will pick the
-# update up from the publisher next time it starts.
+# update up from GitHub next time it starts.
 KNOWN_TCP=("192.168.4.174:5555")
 
 BUILD=1
@@ -37,14 +43,24 @@ done
 export YTV_VERSION="$(date '+%y%j%H%M')"
 
 if [ "$BUILD" = 1 ]; then
+  if [ ! -f "$KEYSTORE_DIR/ytv-release.jks" ]; then
+    echo "no keystore at $KEYSTORE_DIR/ytv-release.jks" >&2
+    echo "an unsigned build cannot be installed, and one signed with a different key cannot" >&2
+    echo "update the televisions - so this stops rather than producing either." >&2
+    exit 1
+  fi
+  export YTV_KEYSTORE="$KEYSTORE_DIR/ytv-release.jks"
+  export YTV_KEYSTORE_PASSWORD="$(cat "$KEYSTORE_DIR/keystore-password.txt")"
+  export YTV_KEY_ALIAS="ytv"
+
   echo "==> building version $YTV_VERSION"
   # Deleted first because "BUILD SUCCESSFUL" is not evidence a change reached the apk: gradle
   # will happily consider an unchanged task up to date and leave yesterday's file in place,
   # which has cost this project a whole debugging session more than once.
   rm -f "$APK"
-  ( cd "$REPO" && ./gradlew :app:testDebugUnitTest :app:assembleDebug ) || {
+  ( cd "$REPO" && ./gradlew :app:testDebugUnitTest :app:assembleRelease ) || {
     echo "build FAILED - nothing installed" >&2; exit 1; }
-  [ -f "$APK" ] || { echo "no apk at $APK" >&2; exit 1; }
+  [ -f "$APK" ] || { echo "no apk at $APK - did signing fall through to unsigned?" >&2; exit 1; }
 fi
 
 echo "==> apk: $(du -h "$APK" | cut -f1), built $(date -r "$APK" '+%H:%M')"
@@ -61,7 +77,7 @@ DEVICES=""
 while read -r serial state _; do
   [ "$state" = "device" ] && DEVICES="$DEVICES $serial"
 done < <(adb devices)
-[ -n "$DEVICES" ] || echo "no devices reachable - apk still published below" >&2
+[ -n "$DEVICES" ] || echo "no devices reachable" >&2
 
 for serial in $DEVICES; do
   name=$(adb -s "$serial" shell getprop ro.product.model 2>/dev/null | tr -d '\r')
@@ -79,12 +95,3 @@ for serial in $DEVICES; do
     printf '    relaunched\n'
   fi
 done
-
-echo "==> publishing the apk for devices that were not awake"
-VERSION="$YTV_VERSION"
-if scp -q "$APK" "$PUBLISHER:$PUBLISH_DIR/ytv.apk" 2>/dev/null; then
-  ssh "$PUBLISHER" "printf '{\"version\": %s, \"apk\": \"/ytv.apk\"}\n' '$VERSION' > $PUBLISH_DIR/app.json"
-  echo "    published as version $VERSION"
-else
-  echo "    could not reach the publisher - skipped" >&2
-fi

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Runway",
+        "network_type": "streaming",
+        "channel_number": 79,
+        "network_long_name": "Runway",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=99KQJzj7Dkg",
+                "duration": 686,
+                "title": "ZIMMERMANN Spring 2026 Ready-to-Wear, Kindred Spirit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZukboSBHZJk",
+                "duration": 1678,
+                "title": "Sherri Hill | Spring/Summer 2026 | New York Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BFNNHSTE_Io",
+                "duration": 753,
+                "title": "Versace | Spring/Summer 2025 | Milan Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d-88CqYMwF4",
+                "duration": 1098,
+                "title": "ROBERT WUN FW25 Couture - \"Becoming\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rMJx_NfqK18",
+                "duration": 695,
+                "title": "AMIRI AUTUMN-WINTER 2026 RUNWAY SHOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w4_nffz2RUE",
+                "duration": 793,
+                "title": "Dsquared2 | Fall/Winter 2026/27 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kCKqS97hV98",
+                "duration": 995,
+                "title": "CHANEL Fall Winter 2026 Show — CHANEL Shows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dTc5z-TH7as",
+                "duration": 810,
+                "title": "Denver Fashion Week Fall 2025 | Full Runway Show + Dance Performance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DlKsYHC8QAw",
+                "duration": 817,
+                "title": "Chanel | Fall/Winter 2025/26 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nCWB8f7vGW4",
+                "duration": 990,
+                "title": "Dolce & Gabbana | Fall/Winter 2026/27 | Milan Fashion Week - 4K"
+            }
+        ],
+        "search_query": "fashion week runway show"
+    }
+}

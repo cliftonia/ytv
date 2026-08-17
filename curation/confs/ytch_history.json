@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "History",
+        "network_type": "streaming",
+        "channel_number": 58,
+        "network_long_name": "History",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=a965A86aAJ8",
+                "duration": 4382,
+                "title": "Homer's Odyssey - The Real History & Archaeology Behind The Myth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GbZ3eYt4liU",
+                "duration": 5305,
+                "title": "The Real Trojan War - Archaeology & History Behind Homer's Iliad Revea"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MtVP6dyrGss",
+                "duration": 3015,
+                "title": "Thirty Years of War in God’s Name I SLICE HISTORY | FULL DOCUMENTARY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RCI28U2TvVs",
+                "duration": 3091,
+                "title": "Ancient Athens: The Rise Of The Most Influential Society In History |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ya1UHZsGAc8",
+                "duration": 4683,
+                "title": "A Complete History of England with Dan Snow | Full History Hit Series"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sonqx2Dim-0",
+                "duration": 4175,
+                "title": "The House of Habsburg - The Inbred Family Empire Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1BrhZBMOS8U",
+                "duration": 3393,
+                "title": "Jericho - The First City on Earth? // Ancient History Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y03r7ls8BwM",
+                "duration": 3660,
+                "title": "Dan Snow's In Search of the Great Viking Army | Best History Documenta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
+                "duration": 3191,
+                "title": "The Real History of Africa They Never Taught You | Full Documentary |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
+                "duration": 4085,
+                "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the"
+            }
+        ],
+        "search_query": "history documentary"
+    }
+}

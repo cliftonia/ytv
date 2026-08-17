@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Aussie TV",
+        "network_type": "streaming",
+        "channel_number": 18,
+        "network_long_name": "Aussie TV",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=iyRtKVCqtqk",
+                "duration": 1318,
+                "title": "Australia's Funniest Home Video Show [Full Episode] (1997)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GoBpSvm75rk",
+                "duration": 2653,
+                "title": "Fast Forward - Series 3 - Episode 13 (1991)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D-bVPT_sdr0",
+                "duration": 2877,
+                "title": "PREMIERE: Antiques Roadshow In Australia's Norman Lindsay House 🇦🇺 | F"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kGAAzXQubBs",
+                "duration": 2642,
+                "title": "FULL EPISODE | The Tense Moment A $500,000 Gold Blower Fails! | Aussie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GyQujKP8_LM",
+                "duration": 1555,
+                "title": "Mother and Son   Season 2 Episode 7   The Morning After"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HrPbo0qxeUA",
+                "duration": 3131,
+                "title": "When emergency care meets humanity ❤️ | S3 Ep3 | Ambulance Australia |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FzIrh1EVhxo",
+                "duration": 2555,
+                "title": "[Full Episode] It's a Knockout (Australia) - 1987"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xD8NENlILig",
+                "duration": 2390,
+                "title": "Australia's Funniest Home Videos | FULL EPISODE | 24 September 2011"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R9Bb4nI53Fw",
+                "duration": 4448,
+                "title": "Kath & Kim Season 1 Episodes 1-3 | Full Episodes | Classic Australian"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rEb3wC-1t1k",
+                "duration": 3919,
+                "title": "The Most Aussie Episodes Ever - Bondi Rescue Full Episode Marathon"
+            }
+        ],
+        "search_query": "australian tv show full episode"
+    }
+}

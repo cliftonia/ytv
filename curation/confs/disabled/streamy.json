@@ -1,0 +1,20 @@
+{
+ "station_conf": {
+  "network_name": "StreamTV",
+  "network_type": "streaming",
+  "channel_number": 93,
+  "network_long_name": "Royal Streaming Network",
+  "streams": [
+   {
+    "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "duration": 600,
+    "title": "Red Bull TV"
+   },
+   {
+    "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+    "duration": 600,
+    "title": "DW News"
+   }
+  ]
+ }
+}

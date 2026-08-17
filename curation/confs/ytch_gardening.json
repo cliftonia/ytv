@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Gardening",
+        "network_type": "streaming",
+        "channel_number": 74,
+        "network_long_name": "Gardening",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=LAU6qu_dKBk",
+                "duration": 583,
+                "title": "Vegetable Gardening for Beginners"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NlS_dTDsHHQ",
+                "duration": 1080,
+                "title": "New Vegetable Garden: How To Get Started"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KxzXSQI-O28",
+                "duration": 315,
+                "title": "How to maximise your vegetable gardens produce year-round 🍅🍆🥒🥕 | Garde"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b3E38LJeDZ8",
+                "duration": 866,
+                "title": "5 TIPS For BEGINNER Food Gardeners to Grow Veggies at Home"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9R-utqpmwmE",
+                "duration": 306,
+                "title": "Planning a Vegetable Garden for Beginners: The 5 Golden Rules 🏆"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=shIfzNOcNvs",
+                "duration": 676,
+                "title": "How To Turn Your Lawn Into A Vegetable Garden"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pLQuIuokP6Q",
+                "duration": 811,
+                "title": "9 Beginner Gardening Mistakes to Avoid 😱 ❌"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aXpsStCy7dk",
+                "duration": 819,
+                "title": "What Vegetable Crops I'm Growing and Sowing NOW in WINTER Garden"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BO8yuSTc3fo",
+                "duration": 660,
+                "title": "Gardening for Beginners Series:  Gardening Basics for Beginners"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1y_9ofkSNoY",
+                "duration": 1428,
+                "title": "Absolute Beginner's Guide to Starting a Vegetable Garden || Black Gumb"
+            }
+        ],
+        "search_query": "gardening vegetable garden tutorial"
+    }
+}

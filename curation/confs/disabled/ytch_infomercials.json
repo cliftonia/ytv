@@ -1,0 +1,86 @@
+{
+ "station_conf": {
+  "network_name": "Classic Infomercials",
+  "network_type": "streaming",
+  "channel_number": 48,
+  "network_long_name": "Classic Infomercials",
+  "stream_rotation": "clock",
+  "streams": [
+   {
+    "url": "https://www.youtube.com/watch?v=m8lXfLobKy4",
+    "duration": 3312,
+    "title": "As Seen On TV Infomercials Compilation"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vywqnuVXZkU",
+    "duration": 2104,
+    "title": "Infomercial Compilation: Volume 1"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ib3csdQVpS8",
+    "duration": 3115,
+    "title": "Over 50 minutes of 1998 TV Commercials - 90s Commercial Compilation #4"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=YIUcP_paBNY",
+    "duration": 3598,
+    "title": "An Hour Collection of 1990's Toy and Game TV Commercials"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=qM4zMofsI7w",
+    "duration": 161,
+    "title": "Infomercial Montage [First World Problems]"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=fnc5Wsb8FHU",
+    "duration": 3550,
+    "title": "An Hour of Classic 1990's Snack, Cookie, and Candy Commercials"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=wSnZi0YTmuo",
+    "duration": 121,
+    "title": "Cool Rock commercial full length (two-minute) version"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=TLV0qj067rc",
+    "duration": 2810,
+    "title": "The Greatest Collection of Kids TV Commercials Ever From the Year 1995"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=UspnuAphzN8",
+    "duration": 2034,
+    "title": "Half-Hour of 1996 TV Commercials - 90s Commercial Compilation #11"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ll8Bho3c_pw",
+    "duration": 1479,
+    "title": "1995 TV Commercials - 90s Commercial Compilation #15"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=L9BUC2QbYYU",
+    "duration": 1214,
+    "title": "Late 1990s - Early 2000s Nostalgic Commercials"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=_Q0eZypyUTY",
+    "duration": 613,
+    "title": "90's COMMERCIALS CRINGE COMPILATION"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7CXT_vISgFc",
+    "duration": 815,
+    "title": "RAD 90s Toy Commercials!! (Vol. 1)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=mxgxuM4ny0U",
+    "duration": 847,
+    "title": "Classic Nostalgic 1990s-2000s Commercials"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=O4aYo73KOiE",
+    "duration": 1703,
+    "title": "Commercial Break: 90s Australian Nostalgia!"
+   }
+  ]
+ }
+}

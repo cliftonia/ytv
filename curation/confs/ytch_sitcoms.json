@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Classic Sitcoms",
+        "network_type": "streaming",
+        "channel_number": 30,
+        "network_long_name": "Classic Sitcoms",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=H_OWHaQ1wqQ",
+                "duration": 2689,
+                "title": "Arkwright's Suburban Grocery Shop | Open All Hours | BBC Comedy Greats"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2-VQ2uyiYLo",
+                "duration": 1676,
+                "title": "Cheers | Cold Opens: Season 1 | Paramount+"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zpnWCKLA4_U",
+                "duration": 1479,
+                "title": "The Golden Girls Full Episode in HD: \"That Was No Lady\" - Golden Girls"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H_rlThh2ze8",
+                "duration": 1327,
+                "title": "The Drew Carey Show Full Episode | Pilot | S1 E1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EDmxo8AzuhY",
+                "duration": 1493,
+                "title": "Soap | S1E1 FULL EPISODE | Classic TV Rewind"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mrZqYaOCJMs",
+                "duration": 3044,
+                "title": "All the In-Laws | Everybody Loves Raymond"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z1PcxSSH4VM",
+                "duration": 2670,
+                "title": "I Love Lucy | 45 Minutes of Classic Comedy | Paramount+"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lJFkZGZvVJY",
+                "duration": 3148,
+                "title": "Supercut: Charlie and Jake Get Into Trouble | Two and a Half Men"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hnnz4bqTwX4",
+                "duration": 1526,
+                "title": "The Facts Of Life | Legacy | S2EP11 | FULL EPISODE | Classic Tv Rewind"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLMAnAgQB3g",
+                "duration": 1493,
+                "title": "What's Happening!! | The Runaway | Season 1 Episode 1 Pilot Episode |"
+            }
+        ],
+        "search_query": "classic sitcom full episode"
+    }
+}

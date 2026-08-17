@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "9Gem",
+        "network_type": "streaming",
+        "channel_number": 104,
+        "network_long_name": "9Gem",
+        "streams": [
+            {
+                "url": "https://9now-livestreams.akamaized.net/hls/live/2008311/gem-syd/master.m3u8",
+                "duration": 600,
+                "title": "9Gem (720p) [Geo-blocked]"
+            }
+        ]
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Christian Docos",
+        "network_type": "streaming",
+        "channel_number": 122,
+        "network_long_name": "Christian Docos",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=OMBQwGzn_TE",
+                "duration": 1800,
+                "title": "Why This Atheist Scientist Became a Believing Christian"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vXJIbvsb00s",
+                "duration": 2229,
+                "title": "Christian Apologists and Early Heresies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dLrvJeSugkM",
+                "duration": 5175,
+                "title": "No.1 Christianity Expert: If You DON'T Believe In a God You NEED to He"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TUfAe669pgQ",
+                "duration": 4559,
+                "title": "Astrophysicist Reveals NEW Evidence for God and the Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-PaogH-qN9I",
+                "duration": 3487,
+                "title": "The Scientific Evidence for God: A NEW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H2sWzApuuvc",
+                "duration": 4061,
+                "title": "Genesis Impact (Full Movie)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QhVPBNBAGY0",
+                "duration": 1148,
+                "title": "Can I Trust the Bible - Episode 1: The Right Books | @WesHuff"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lpsKNd8tqHI",
+                "duration": 1997,
+                "title": "Can I Trust the Bible - Episode 3: The Council of Nicaea | @WesHuff"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nnjJbn32fZs",
+                "duration": 1502,
+                "title": "Justin Martyr: The Philosopher Who Died for Christ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kWSG5okmUr8",
+                "duration": 2194,
+                "title": "A Historian Explains the Evidence for the Resurrection of Jesus (Dr. G"
+            }
+        ],
+        "search_query": "christian documentary apologetics"
+    }
+}

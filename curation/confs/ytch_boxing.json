@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Boxing",
+        "network_type": "streaming",
+        "channel_number": 4,
+        "network_long_name": "Boxing",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=uxnsqJsM5gA",
+                "duration": 450,
+                "title": "Errol Spence Jr. vs Tim Tszyu - FULL FIGHT HIGHLIGHTS 😱🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WeInriC_9DU",
+                "duration": 535,
+                "title": "DEMOLITION 😮‍💨 Callum Peters v Ivan Actis | Full Fight Highlights | Fo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vaD59Iln1wA",
+                "duration": 475,
+                "title": "Anthony Joshua vs Kristian Prenga - FULL FIGHT HIGHLIGHTS 😱🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HZNBWbZNqC8",
+                "duration": 784,
+                "title": "MASTERCLASS 🔥 Tim Tszyu v Errol Spence Jr. | Full Fight Highlights | F"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLBYQObznSI",
+                "duration": 546,
+                "title": "DOMINATION 💪 Ahmad Reda v Paul Fleming | Full Fight Highlights | Fox S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jSJ4imx9ZGU",
+                "duration": 506,
+                "title": "Demetrius Andrade vs. Douglas Ataide | Official Fight Highlights | Big"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HNPSxkPZuAg",
+                "duration": 495,
+                "title": "FULL CARD HIGHLIGHTS | Anthony Joshua vs. Kristian Prenga"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zat0x5rN6ak",
+                "duration": 506,
+                "title": "TYSON FURY vs MARIUSZ WACH - FIGHT HIGHLIGHTS | PATAYYA THAILAND"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a7vNg6HUi2c",
+                "duration": 342,
+                "title": "TYSON FURY VS MARIUSZ WACH | FIGHT HIGHLIGHTS FROM THAILAND"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F_Tti8VbRnQ",
+                "duration": 2211,
+                "title": "NON-STOP ACTION! Ryan Garner (UK) vs Michael Magnesi (Italy) | Full Fi"
+            }
+        ],
+        "search_query": "boxing full fight highlights"
+    }
+}

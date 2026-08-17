@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "Sky News Extra 2",
+  "network_type": "streaming",
+  "channel_number": 13,
+  "network_long_name": "Sky News Extra 2",
+  "streams": [
+   {
+    "url": "https://skynewsau-live.akamaized.net/hls/live/2002690/skynewsau-extra2/master.m3u8",
+    "duration": 600,
+    "title": "Sky News Extra 2 (540p) [Not 24/7]"
+   }
+  ]
+ }
+}

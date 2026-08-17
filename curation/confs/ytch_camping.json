@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Camping & Outdoors",
+        "network_type": "streaming",
+        "channel_number": 82,
+        "network_long_name": "Camping & Outdoors",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=iys_pmJSp9M",
+                "duration": 1546,
+                "title": "3 Days in Arctic Survival Shelter - Solo Bushcraft Camping & Blacksmit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fl6pjyjLtXI",
+                "duration": 2039,
+                "title": "Summer Solo Tent Camp--Going With The Flow"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BWD4b-EN2Ug",
+                "duration": 1581,
+                "title": "Solo Overnight Building a Wattle Fence Shelter and Cooking a Double Ch"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0N4cnK8c9wU",
+                "duration": 2067,
+                "title": "3 Days Solo Camping & Fishing in the Australian Mountains"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_O8DLXed2ng",
+                "duration": 1565,
+                "title": "Simple Solo Overnight Camp-"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r65e5pRE48E",
+                "duration": 2170,
+                "title": "Solo Van Life Camping on a Mountain Top ⛰️ | ASMR Nature Sounds, Ocean"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5kABE2oeKJg",
+                "duration": 1698,
+                "title": "Extreme Rain Camping: Setting Up a Tent in Torrential Rain‼️"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0zURXPya6Uo",
+                "duration": 1699,
+                "title": "SOLO Motorcycle Camping | Peaceful Night in the Wild | BMW R1250 GSA |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wcDFgir_jgY",
+                "duration": 1279,
+                "title": "Dugout Shelter Under 10ft (3m) of Snow - Solo Camping in Survival Shel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VZUZ-ngwlFA",
+                "duration": 1312,
+                "title": "Solo Camping Gone Wrong | I had to Abandon Camp at Midnight"
+            }
+        ],
+        "search_query": "solo camping overnight adventure"
+    }
+}

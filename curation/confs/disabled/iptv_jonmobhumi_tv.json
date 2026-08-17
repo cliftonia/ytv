@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "JonmoBhumi TV",
+  "network_type": "streaming",
+  "channel_number": 92,
+  "network_long_name": "JonmoBhumi TV",
+  "streams": [
+   {
+    "url": "https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8",
+    "duration": 600,
+    "title": "JonmoBhumi TV (720p)"
+   }
+  ]
+ }
+}

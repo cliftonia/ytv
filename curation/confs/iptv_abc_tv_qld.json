@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "ABC TV QLD",
+  "network_type": "streaming",
+  "channel_number": 126,
+  "network_long_name": "ABC TV QLD",
+  "streams": [
+   {
+    "url": "https://c.mjh.nz/abc-qld.m3u8",
+    "duration": 600,
+    "title": "ABC TV QLD (720p)"
+   }
+  ]
+ }
+}

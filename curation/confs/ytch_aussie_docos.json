@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Aussie Docos",
+        "network_type": "streaming",
+        "channel_number": 17,
+        "network_long_name": "Aussie Docos",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=xx3kjaERt1M",
+                "duration": 2216,
+                "title": "Secrets of the Outback | Australia's Harshest Wilderness | Full Docume"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YFBGsEPjOgs",
+                "duration": 4456,
+                "title": "OUTBACK: The Most Dangerous Desert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sEX1qie7DDQ",
+                "duration": 2618,
+                "title": "Malcolm Douglas - Australia - Survival In The Outback (Part 1)  1991"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_GDa5Kw_SRc",
+                "duration": 3008,
+                "title": "Outback Terrors: Where Only the Deadliest Survive | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dTJqD-jRcxs",
+                "duration": 967,
+                "title": "10 Australian Towns Where Locals Warn You: \"Don't Even Stop for Gas\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-dOIYhTIYbI",
+                "duration": 3130,
+                "title": "Hidden Riches of the Australian Outback: From Cattle Stations to Opal"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ircmbPxfaK0",
+                "duration": 1723,
+                "title": "The maverick outback grazier using donkeys to regenerate his land | Au"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-mcRD4h8foc",
+                "duration": 3127,
+                "title": "Australia’s Desert Crisis: Fire, Floods, and Feral Invasions | FULL DO"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U0UcJsALEzE",
+                "duration": 3004,
+                "title": "Outback Terrors | Australia’s Deadly Monsters 2/3 | Go Wild"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oDrPkYeL724",
+                "duration": 3124,
+                "title": "Life in the Australian Outback - Survival, Secrets and Stunning Storie"
+            }
+        ],
+        "search_query": "australian documentary outback"
+    }
+}

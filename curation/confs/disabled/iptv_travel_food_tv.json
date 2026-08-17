@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Travel & Food TV",
+        "network_type": "streaming",
+        "channel_number": 145,
+        "network_long_name": "Travel & Food TV",
+        "streams": [
+            {
+                "url": "https://nrpus.bozztv.com/36bay2/gusa-moviemagictv/index.m3u8",
+                "duration": 600,
+                "title": "Travel & Food TV (720p)"
+            }
+        ]
+    }
+}

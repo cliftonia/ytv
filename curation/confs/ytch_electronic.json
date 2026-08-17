@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Electronic",
+        "network_type": "streaming",
+        "channel_number": 102,
+        "network_long_name": "Electronic",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=eBeeWwsCVls",
+                "duration": 4960,
+                "title": "Hardwell - Live at Parookaville 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cVFzblT5VPE",
+                "duration": 5921,
+                "title": "Einmusik b2b Jonas Saalbach live at Preikestolen in Norway for Cercle"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rfxQxkUFhvE",
+                "duration": 5232,
+                "title": "Elderbrook (DJ Set) at Seismic Dance Event 8.0 | Full Set (Tsunami Sta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UU95qr0mt0c",
+                "duration": 7041,
+                "title": "Fatboy Slim at Seismic Dance Event 5.0 | Full Set"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qr3Abo1Wdqk",
+                "duration": 5416,
+                "title": "Lilly Palmer at Seismic Dance Event 8.0 | Full Set (Tsunami Stage)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7R5HeDbmY9c",
+                "duration": 3459,
+                "title": "SWITCH DISCO - LIVE DJ SET FROM IBIZA ROCKS 2024 (IBIZA DANCE ANTHEMS)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ymXDgmDu-jY",
+                "duration": 3673,
+                "title": "Masha Vincent - Live DJ Mix 2025 - 88Terrace - Indie Dance, Electronic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h96MGcsi7GQ",
+                "duration": 6360,
+                "title": "Lee Burridge at Savaya Bali in Indonesia for Cercle"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ObiAocVMTyo",
+                "duration": 5325,
+                "title": "Odd Mob at Seismic Dance Event 8.0 | Full Set (Volcano Stage)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J5oZ80Daduc",
+                "duration": 6300,
+                "title": "Hania Rani live at Invalides in Paris, France for Cercle"
+            }
+        ],
+        "search_query": "electronic dance music live set"
+    }
+}

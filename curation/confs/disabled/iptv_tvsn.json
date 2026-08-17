@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "TVSN",
+  "network_type": "streaming",
+  "channel_number": 90,
+  "network_long_name": "TVSN",
+  "streams": [
+   {
+    "url": "https://tvsnhlslivetest.akamaized.net/hls/live/2034711/TVSN-MSL4/master.m3u8",
+    "duration": 600,
+    "title": "TVSN (1080p)"
+   }
+  ]
+ }
+}

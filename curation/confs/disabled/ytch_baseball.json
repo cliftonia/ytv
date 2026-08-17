@@ -1,0 +1,86 @@
+{
+    "station_conf": {
+        "network_name": "Baseball",
+        "network_type": "streaming",
+        "channel_number": 11,
+        "network_long_name": "Baseball",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=wUYoK4cfWxc",
+                "duration": 784,
+                "title": "DODGERS vs. METS: Official Full Game Highlights (July 26) | 2026 MLB S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JyVgXQjdCqY",
+                "duration": 659,
+                "title": "BLUE JAYS vs. RED SOX: Official Full Game Highlights (July 26) | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bj7SN0YgpUQ",
+                "duration": 655,
+                "title": "CUBS vs. PIRATES: Official Full Game Highlights (July 26) | 2026 MLB S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=whXRyXO0TkA",
+                "duration": 846,
+                "title": "ROYALS vs. TIGERS: Official Full Game Highlights (July 26) | 2026 MLB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I2jt0taxD-E",
+                "duration": 693,
+                "title": "REDS vs. CARDINALS: Official Full Game Highlights (July 26) | 2026 MLB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AvG5zagmNoo",
+                "duration": 817,
+                "title": "BRAVES vs. ORIOLES: Official Full Game Highlights (July 26) | 2026 MLB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SJFbOx776a4",
+                "duration": 745,
+                "title": "ROCKIES vs. BREWERS: Official Full Game Highlights (July 26) | 2026 ML"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_v7m5So1r-o",
+                "duration": 748,
+                "title": "DODGERS vs. METS: Official Full Game Highlights (July 25) | 2026 MLB S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=egwMr_EpPv0",
+                "duration": 638,
+                "title": "GUARDIANS vs. RAYS: Official Full Game Highlights (July 26) | 2026 MLB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4TzQQUlYq9U",
+                "duration": 600,
+                "title": "Los Angeles Dodgers vs New York Mets - FULL GAME HIGHLIGHTS \ud83d\udd25 July 26,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZyIbFZVAizI",
+                "duration": 793,
+                "title": "ATHLETICS vs. TWINS: Official Full Game Highlights (July 26) | 2026 ML"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MF9x_f77mW0",
+                "duration": 706,
+                "title": "YANKEES vs. PHILLIES: Official Full Game Highlights (July 25) | 2026 M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXJxX3u8XUY",
+                "duration": 778,
+                "title": "BLUE JAYS vs. RED SOX: Official Full Game Highlights (July 25) | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JGoB9HM-_00",
+                "duration": 748,
+                "title": "Dodgers vs. Mets Game Highlights (7/25/26) | MLB Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uuaXWuFDppk",
+                "duration": 691,
+                "title": "REDS vs. CARDINALS: Official Full Game Highlights (July 25) | 2026 MLB"
+            }
+        ]
+    }
+}

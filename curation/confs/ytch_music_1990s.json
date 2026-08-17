@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1990s Music",
+        "network_type": "streaming",
+        "channel_number": 115,
+        "network_long_name": "1990s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=3LUQhPU0wqk",
+                "duration": 1664,
+                "title": "90’s Greatest Hits Music Playlist - Blur, The La's, The Verve, New Rad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rog8ou-ZepE",
+                "duration": 238,
+                "title": "Vanilla Ice - Ice Ice Baby (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FTzN6bwPNJw",
+                "duration": 3662,
+                "title": "📼 90's MEGA VIDEO MIX # 1 🚀 Dance Hits of the 90s 🚀 Party Classics Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7W3DoubNtE4",
+                "duration": 3664,
+                "title": "Dance Hits 1990: Ft. Madonna, Deee-Lite, Kylie Minogue, Roxette, MC Ha"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iqIq4B1rgl4",
+                "duration": 219,
+                "title": "Peter Andre - Mysterious Girl (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uIbXvaE39wM",
+                "duration": 221,
+                "title": "Wilson Phillips - Hold On (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C-u5WLJ9Yk4",
+                "duration": 237,
+                "title": "Britney Spears - ...Baby One More Time (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NHozn0YXAeE",
+                "duration": 232,
+                "title": "Hanson - MMMBop (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O5290Sf8zhA",
+                "duration": 2446,
+                "title": "Best Rock Songs - Video Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jne9t8sHpUc",
+                "duration": 247,
+                "title": "Alanis Morissette - Ironic (Official 4K Music Video)"
+            }
+        ],
+        "search_query": "1990s music video hits"
+    }
+}

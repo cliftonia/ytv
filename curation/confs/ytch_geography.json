@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Geography & Maps",
+        "network_type": "streaming",
+        "channel_number": 57,
+        "network_long_name": "Geography & Maps",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=1uWI0h2QYh4",
+                "duration": 549,
+                "title": "Basic Geography For Adults"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9LUimbXkFCM",
+                "duration": 795,
+                "title": "The Geography of California Explained"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zZJFozFsnIU",
+                "duration": 1097,
+                "title": "A Geopolitical Tour of the World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y8m95sCDEf0",
+                "duration": 3253,
+                "title": "How Africa’s Geography Traps it in Endless Poverty"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KcxQeq4QHqM",
+                "duration": 1985,
+                "title": "Why US Geography Is So Unique"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fl1VT_thaOw",
+                "duration": 5026,
+                "title": "The History Of The First World Map | Face Of The World | Timeline"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BubAF7KSs64",
+                "duration": 2407,
+                "title": "How Geography Made The US Ridiculously OP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hCc0OsyMbQk",
+                "duration": 619,
+                "title": "English counties explained"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S_k-mxF6xhQ",
+                "duration": 878,
+                "title": "The Insane Geography of Russia: 11 Time Zones, 77% Empty"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pg0Z3LappEM",
+                "duration": 928,
+                "title": "The Geography of the Ice Age"
+            }
+        ],
+        "search_query": "geography explained maps documentary"
+    }
+}

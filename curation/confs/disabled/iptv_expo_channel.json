@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "Expo Channel",
+  "network_type": "streaming",
+  "channel_number": 91,
+  "network_long_name": "Expo Channel",
+  "streams": [
+   {
+    "url": "https://tvsnhlslivetest.akamaized.net/hls/live/2034711/EXPO-MSL4/master.m3u8",
+    "duration": 600,
+    "title": "Expo Channel (360p)"
+   }
+  ]
+ }
+}

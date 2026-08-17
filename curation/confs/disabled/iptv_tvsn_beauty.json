@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "TVSN Beauty",
+        "network_type": "streaming",
+        "channel_number": 147,
+        "network_long_name": "TVSN Beauty",
+        "streams": [
+            {
+                "url": "https://live-tvsn.simplestreamcdn.com/live12/tvsnbeauty/bitrate1.isml/.m3u8",
+                "duration": 600,
+                "title": "TVSN Beauty (1080p)"
+            }
+        ]
+    }
+}

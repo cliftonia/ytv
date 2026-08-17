@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Philosophy",
+        "network_type": "streaming",
+        "channel_number": 66,
+        "network_long_name": "Philosophy",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=wwT4N_v0-WQ",
+                "duration": 1767,
+                "title": "What is Philosophy? - First Lecture of the Semester"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
+                "duration": 1953,
+                "title": "Philosophy for Beginners"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gh-6HyTRNNY",
+                "duration": 2498,
+                "title": "2. The nature of persons: dualism vs. physicalism"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d-vcItYxM9U",
+                "duration": 2630,
+                "title": "Kant's Moral Philosophy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_bUlaQ5-FqU",
+                "duration": 1359,
+                "title": "Introduction to Philosophy (PHI 101:  Lecture 1)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C48hI9Qb2q4",
+                "duration": 2238,
+                "title": "Alan Watts - Myth of Myself Full Lecture Part 1 - Alan Watts Organizat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xhm55mIdSuk",
+                "duration": 2226,
+                "title": "1.  Introduction: What is Political Philosophy?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MaobMHescwg",
+                "duration": 2693,
+                "title": "Heidegger: Being and Time"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_xbZzxet9Cs",
+                "duration": 2591,
+                "title": "Hegel's Philosophy of History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wlEMkAkGS1I",
+                "duration": 2570,
+                "title": "Immanuel Kant's Philosophy - Bryan Magee & Geoffrey Warnock (1987)"
+            }
+        ],
+        "search_query": "philosophy explained lecture"
+    }
+}

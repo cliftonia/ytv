@@ -1,0 +1,86 @@
+{
+    "station_conf": {
+        "network_name": "Chess",
+        "network_type": "streaming",
+        "channel_number": 19,
+        "network_long_name": "Chess",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Ze7bJuFYWUg",
+                "duration": 602,
+                "title": "Magnus Carlsen\u2019s Strategic Mastery Over a 3000 Rated GM in Blitz"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LzmSy2N5GaQ",
+                "duration": 2173,
+                "title": "5 Chess Games YOU  MUST KNOW!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_zyN_MzC9Fw",
+                "duration": 313,
+                "title": "Magnus Teaches You How to Think Like a Grandmaster"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WZpCtnbMVyA",
+                "duration": 2315,
+                "title": "How Magnus Carlsen CRUSHES Chess Masters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MRoTJntvv_8",
+                "duration": 990,
+                "title": "Best Chess Game Of The 20th Century"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uqzxnz6d7JM",
+                "duration": 522,
+                "title": "Most Beautiful Chess Game Ever Played - \"The Evergreen Game\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0zJd6chacL4",
+                "duration": 619,
+                "title": "Mikhail Tal Sacrifices Two Rooks to Checkmate Anatoly Karpov - Blitz C"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FpYf1Wrzi2M",
+                "duration": 1599,
+                "title": "Kasparov's Greatest Chess Game!!! | GM Naro Analyzes Famous Games"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UhFm2zi_CNQ",
+                "duration": 731,
+                "title": "Game Analysis by Grandmaster Gukesh D: 2022 Chess Olympiad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O3tYz5gfx0A",
+                "duration": 1582,
+                "title": "Inside a Grandmaster\u2019s Thought Process (Blitz, Rapid, Classical)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L2cbT3elGl8",
+                "duration": 470,
+                "title": "When arch rivals meet- Magnus Carlsen vs Hikaru Nakamura"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QOQuKUDnnUI",
+                "duration": 1682,
+                "title": "This Game Proved Magnus Carlsen Is NOT Human"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UrCdsR5RNlo",
+                "duration": 523,
+                "title": "How Petrosian Silenced Tal's Attack | A Strategic Masterpiece of Posit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wLG6n3tJNpc",
+                "duration": 605,
+                "title": "Game Analysis by Grandmaster Nodirbek Abdusattorov: Aimchess Meltwater"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZF4T833lln4",
+                "duration": 345,
+                "title": "Magnus shows how to calculate squares in chess!"
+            }
+        ]
+    }
+}

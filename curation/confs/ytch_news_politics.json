@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "News & Politics",
+        "network_type": "streaming",
+        "channel_number": 2,
+        "network_long_name": "News & Politics",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=X196BQPpA_o",
+                "duration": 2563,
+                "title": "Election promise broken in 2026 Federal Budget | 9 News Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6F0g4N415uw",
+                "duration": 525,
+                "title": "Media Institution: Crash Course Government and Politics #44"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IILCtRP9UkI",
+                "duration": 592,
+                "title": "Why Gen Z Protests Have Erupted in India"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S1ew-bRTRNE",
+                "duration": 1686,
+                "title": "Suresh Kochattil Analysis : Trump New Tariff Policy Explained | Iran W"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-YN5T05DvGs",
+                "duration": 381,
+                "title": "Expert panel's first Federal Budget takeaways | BUDGET 2026 | 9 News A"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Mu-Kw9RF34",
+                "duration": 1858,
+                "title": "Hormuz Crisis Explained | Iran, Houthis & World Trade | Giridhar Mamid"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pq6vcJWsRZA",
+                "duration": 882,
+                "title": "How the NEET Protest Changed Indian Politics Forever? Explained By Ank"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mZufUkQDFvM",
+                "duration": 651,
+                "title": "India’s ‘cockroach’ protests explained and what happens next | BBC New"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UgBx3l8QqG4",
+                "duration": 578,
+                "title": "Pakistan’s politics - explained | Start Here"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8RkwIlr912A",
+                "duration": 309,
+                "title": "How does the EU work (and why is it so complex)? | DW News"
+            }
+        ],
+        "search_query": "news analysis politics explained"
+    }
+}

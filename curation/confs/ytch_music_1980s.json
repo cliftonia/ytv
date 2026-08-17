@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1980s Music",
+        "network_type": "streaming",
+        "channel_number": 114,
+        "network_long_name": "1980s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=XcqYfXfawYE",
+                "duration": 3965,
+                "title": "One-Hit Wonders of The 80s V.2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B4NmxPOtdgs",
+                "duration": 3548,
+                "title": "THE BEST OF 80s VOL. 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=djV11Xbc914",
+                "duration": 244,
+                "title": "a-ha - Take On Me (Official Video) [4K]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6Q3mHyzn78",
+                "duration": 266,
+                "title": "Tiffany - I Think We're Alone Now (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l9ml3nyww80",
+                "duration": 213,
+                "title": "Bananarama - Cruel Summer (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O5290Sf8zhA",
+                "duration": 2446,
+                "title": "Best Rock Songs - Video Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XcATvu5f9vE",
+                "duration": 234,
+                "title": "Robert Palmer - Addicted To Love (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WGU_4-5RaxU",
+                "duration": 223,
+                "title": "Blondie - Heart Of Glass"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JmcA9LIIXWw",
+                "duration": 239,
+                "title": "Culture Club - Karma Chameleon (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TsuVAQkfCes",
+                "duration": 3847,
+                "title": "Disco Music 70s - Video Mix"
+            }
+        ],
+        "search_query": "1980s music video hits"
+    }
+}

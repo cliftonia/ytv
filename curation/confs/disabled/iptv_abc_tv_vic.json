@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV VIC",
+        "network_type": "streaming",
+        "channel_number": 119,
+        "network_long_name": "ABC TV VIC",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-vic.m3u8",
+                "duration": 600,
+                "title": "ABC TV VIC (720p)"
+            }
+        ]
+    }
+}

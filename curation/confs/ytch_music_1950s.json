@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1950s Music",
+        "network_type": "streaming",
+        "channel_number": 111,
+        "network_long_name": "1950s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=yt0_tx8Sqf4",
+                "duration": 1660,
+                "title": "Best of 50s & 60s Vol.4 *Oldies but Goldies* *Rock & Roll Greatest Hit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y_ZYnNmoAsY",
+                "duration": 3981,
+                "title": "Ultimate Juke-Box Hits of the 50S & 60S Medley 1: The Loco-Motion / Su"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pf7VD9fYmGc",
+                "duration": 5134,
+                "title": "Rock and Roll 60s Music 🎸 | Best Dance Songs of the 1960s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kmTyHvI2UOc",
+                "duration": 3225,
+                "title": "The Best of Rock and Roll 50s 60s to Dance Non-Stop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EOcQ4Qr7Dk0",
+                "duration": 2422,
+                "title": "50s Music Mix 🎸 Best Rockabilly & Oldies Hits | Vintage Rock n Roll Pl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tMsYgTXBZRc",
+                "duration": 3662,
+                "title": "1950s rock & roll instrumental music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0IM6Qc-x3jE",
+                "duration": 4663,
+                "title": "The best Doo-Wop style songs from the 50s and 60s."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I0Z_DyEu1pc",
+                "duration": 1794,
+                "title": "Best of 50s & 60s Vol.3 *Oldies but Goldies* *Rock & Roll Greatest Hit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=98affPT8mww",
+                "duration": 1250,
+                "title": "1950s ROCK & ROLL | Original Compilation 🔥 High Energy Rockabilly Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E-O0T5NWnP4",
+                "duration": 1252,
+                "title": "1950s Rock & Roll Vol. 2 🔥 High Energy Rockabilly Mix | DJ.MAM"
+            }
+        ],
+        "search_query": "1950s rock and roll hits compilation"
+    }
+}

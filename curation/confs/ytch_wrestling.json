@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Wrestling",
+        "network_type": "streaming",
+        "channel_number": 5,
+        "network_long_name": "Wrestling",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=TjsPQARt2ik",
+                "duration": 1176,
+                "title": "FULL MATCH: Ric Flair vs. Kerry Von Erich | NWA World Title Match: WCC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i6cKfBEQQPc",
+                "duration": 4148,
+                "title": "FULL MATCH: 1993 Royal Rumble Match: Royal Rumble 1993"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-XPi2RKYPX0",
+                "duration": 4152,
+                "title": "FULL MATCH - 1992 Royal Rumble Match: Royal Rumble 1992"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5LSJXYgBSfs",
+                "duration": 4121,
+                "title": "FULL MATCH: 1989 Royal Rumble Match: Royal Rumble 1989"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CkbHEF9EGIg",
+                "duration": 2434,
+                "title": "FULL MATCH: Team WWE vs. Team Alliance: Invasion 2001"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eSeaa7Rc0LM",
+                "duration": 2150,
+                "title": "FULL MATCH: 1988 Royal Rumble Match: Royal Rumble 1988"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kp4e5QmMVuo",
+                "duration": 3779,
+                "title": "FULL MATCH: 1990 Royal Rumble Match: Royal Rumble 1990"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rwkdJJ5MNAA",
+                "duration": 3871,
+                "title": "FULL MATCH — 1994 Royal Rumble Match: Royal Rumble 1994"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vNPLhM227yc",
+                "duration": 1568,
+                "title": "FULL MATCH: Eddie Guerrero vs. Kurt Angle — WWE Title Match: WrestleMa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1UNIDnYr4hs",
+                "duration": 1408,
+                "title": "FULL MATCH: Bret Hart vs. Razor Ramon – WWE Title Match: Royal Rumble"
+            }
+        ],
+        "search_query": "classic wrestling full match"
+    }
+}

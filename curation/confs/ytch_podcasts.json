@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Podcasts & Interviews",
+        "network_type": "streaming",
+        "channel_number": 71,
+        "network_long_name": "Podcasts & Interviews",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=O7xcD_5a2kU",
+                "duration": 3808,
+                "title": "Molly Shannon (Full Episode) | Conan O'Brien Needs A Friend"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8R3uCWzdOI8",
+                "duration": 3319,
+                "title": "CANCELLED! The Tommy Robinson and Karl Stefanovic Podcast They Don't W"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g2cQ2kD6lzs",
+                "duration": 2585,
+                "title": "KOBE BRYANT'S LAST GREAT INTERVIEW On How To FIND PURPOSE In LIFE | Ko"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=04ajJZ9gNzs",
+                "duration": 3749,
+                "title": "The Lil Wayne Episode | Friends Keep Secrets"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IU_cwY-P-g8",
+                "duration": 2564,
+                "title": "Super Soul Sunday S3E4 'Oprah and Michael Singer: The Untethered Soul'"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=___b_FVXtQo",
+                "duration": 4580,
+                "title": "Oprah Winfrey on Knowing Your Worth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gl51eRbmC-0",
+                "duration": 4818,
+                "title": "Kenan Thompson | The Blocks Podcast w/ Neal Brennan | FULL EPISODE 19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r2YdF58trQs",
+                "duration": 3490,
+                "title": "Mike Shinoda Interview (Full Episode) | The Tim Ferriss Show (Podcast)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pYGspxTSiNg",
+                "duration": 3368,
+                "title": "Why 'Theo of Golden' Has Touched Millions of Readers with Allen Levi a"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w9RUqC7xyzg",
+                "duration": 4991,
+                "title": "Jay Leno | The Blocks Podcast w/ Neal Brennan | FULL EPISODE 26"
+            }
+        ],
+        "search_query": "podcast interview full episode"
+    }
+}

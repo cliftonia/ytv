@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Video Essay",
+        "network_type": "streaming",
+        "channel_number": 70,
+        "network_long_name": "Video Essay",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=4Sla1k3Rwu4",
+                "duration": 1109,
+                "title": "The College System Is About To Collapse"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=glegjpHk9Do",
+                "duration": 2723,
+                "title": "The tradwives found their new recruits... teenagers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qjna7PROMZ8",
+                "duration": 3482,
+                "title": "Cultural Nihilism and the Rise of The Grifter"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6p4phB2Rybs",
+                "duration": 1919,
+                "title": "What’s Wrong With Eating Humans?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=403eGkWv4MA",
+                "duration": 1207,
+                "title": "Iilluminaughtii and the perils of lazy video essays"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8n5aYwe8Fok",
+                "duration": 1375,
+                "title": "SpongeBob's Cultural Impact Explained"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ow5w631HpG8",
+                "duration": 1875,
+                "title": "Self Mythology, Critical Thinking and the Intimacy of Self Acceptance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cfleDmpLIws",
+                "duration": 1318,
+                "title": "Nolan's Odyssey Is Way Darker Than You Think"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nC1vdV1SGyc",
+                "duration": 1501,
+                "title": "Obsession & The Modern Male Adolescent (Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6YiBI17oICI",
+                "duration": 1011,
+                "title": "Why No One Makes \"Original\" Videos Anymore"
+            }
+        ],
+        "search_query": "video essay"
+    }
+}

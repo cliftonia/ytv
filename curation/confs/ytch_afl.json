@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "AFL",
+        "network_type": "streaming",
+        "channel_number": 9,
+        "network_long_name": "AFL",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=XOmN9nnbSc4",
+                "duration": 494,
+                "title": "Hawthorn v Essendon Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MOKYJBt71Jo",
+                "duration": 495,
+                "title": "Carlton v Gold Coast Suns Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BI4uZ6kBBdY",
+                "duration": 495,
+                "title": "Fremantle v West Coast Eagles Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FNZ8VfUtXvM",
+                "duration": 494,
+                "title": "Melbourne v Geelong Cats Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jcFqiPv7fhk",
+                "duration": 494,
+                "title": "Western Bulldogs v Richmond Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f6CMkTId1co",
+                "duration": 495,
+                "title": "GWS Giants v Sydney Swans Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fucskX00PZ4",
+                "duration": 496,
+                "title": "Adelaide Crows v Collingwood Highlights | Round 20, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pzCHUrgMaG0",
+                "duration": 497,
+                "title": "West Coast Eagles v Brisbane Lions Highlights | Round 19, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QbEKx48Q9Ik",
+                "duration": 495,
+                "title": "Fremantle v Sydney Swans Highlights | Round 18, 2026 | AFL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vYLdpKO20qk",
+                "duration": 510,
+                "title": "Geelong Cats v Brisbane Lions Highlights | 2025 Toyota AFL Grand Final"
+            }
+        ],
+        "search_query": "afl full match highlights"
+    }
+}

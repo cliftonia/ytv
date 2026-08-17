@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV SA",
+        "network_type": "streaming",
+        "channel_number": 117,
+        "network_long_name": "ABC TV SA",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-sa.m3u8",
+                "duration": 600,
+                "title": "ABC TV SA (720p)"
+            }
+        ]
+    }
+}

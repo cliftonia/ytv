@@ -1,0 +1,51 @@
+{
+ "station_conf": {
+  "network_name": "Game Shows",
+  "network_type": "streaming",
+  "channel_number": 23,
+  "network_long_name": "Game Shows",
+  "stream_rotation": "clock",
+  "streams": [
+   {
+    "url": "https://www.youtube.com/watch?v=rRQsKf7cZeU",
+    "duration": 1348,
+    "title": "The Newlywed Game (1985) | FULL EPISODE | E123 | Game Show Rewind"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=4GlcUUfA06Y",
+    "duration": 1445,
+    "title": "A*mazing - 1995 Episode (ATN-7 Sydney, 25/12/1998)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=24Zu7bFUm2Q",
+    "duration": 1236,
+    "title": "Chain Reaction | FULL EPISODE | Game Show Network"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=XEZCY95JliY",
+    "duration": 1324,
+    "title": "Double Dare OFFICIAL Classic Full Episode | Double Dare | Nick"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=zgPqOItiG0Q",
+    "duration": 1231,
+    "title": "People Puzzler | FULL EPISODE | Game Show Network"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=FzIrh1EVhxo",
+    "duration": 2555,
+    "title": "[Full Episode] It's a Knockout (Australia) - 1987"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=0osX6akFfbo",
+    "duration": 2609,
+    "title": "Armchair Detectives (Game Show): Episode 2 - Murder Mystery | Full Epi"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=9s5ET0J9O6Y",
+    "duration": 1896,
+    "title": "Perfect Match (29 May 1985, full episode including ads) - 1985 Austral"
+   }
+  ]
+ }
+}

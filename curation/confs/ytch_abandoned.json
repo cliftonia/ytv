@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Abandoned Places",
+        "network_type": "streaming",
+        "channel_number": 64,
+        "network_long_name": "Abandoned Places",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=8uTnhqpGaTI",
+                "duration": 2420,
+                "title": "5 Urban Explorers Who Had Terrifying Encounters in Abandoned Places"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qEk8njr6KPY",
+                "duration": 4933,
+                "title": "15 Times Urban Explorers Had Terrifying Encounters in Abandoned Places"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ySkYsk4rd3A",
+                "duration": 2331,
+                "title": "ABANDONED MANSION Of A Family That Left Everything Behind! Frozen In T"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zuQUORuaMng",
+                "duration": 5210,
+                "title": "100 Times Urban Explorers Made DISTURBING Abandoned Building Encounter"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1UlDBLZEUK0",
+                "duration": 2066,
+                "title": "5 Disturbing Encounters Urban Explorers Never Expected"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pyQGYe3ie1k",
+                "duration": 3771,
+                "title": "When Urban Exploration Livestreams Go HORRIBLY Wrong"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dzQE86uZWzE",
+                "duration": 3168,
+                "title": "Investigating the Mall No One Has Entered in 13 Years…"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KkHX2gkWr9w",
+                "duration": 1219,
+                "title": "6 Most Disturbing Urban Exploration Moments Caught on Camera"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AEj5glvrasY",
+                "duration": 1258,
+                "title": "5 Most Terrifying Encounters in Abandoned Places"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vFDhMNXDtYk",
+                "duration": 1564,
+                "title": "7 Most Disturbing Abandoned Building Encounters Caught On Camera"
+            }
+        ],
+        "search_query": "abandoned places urban exploration"
+    }
+}

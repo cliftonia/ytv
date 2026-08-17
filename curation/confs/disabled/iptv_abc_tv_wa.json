@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV WA",
+        "network_type": "streaming",
+        "channel_number": 120,
+        "network_long_name": "ABC TV WA",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-wa.m3u8",
+                "duration": 600,
+                "title": "ABC TV WA (720p)"
+            }
+        ]
+    }
+}

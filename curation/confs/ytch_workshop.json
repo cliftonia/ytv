@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Workshop",
+        "network_type": "streaming",
+        "channel_number": 92,
+        "network_long_name": "Workshop",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=OBDIwuiEL1U",
+                "duration": 880,
+                "title": "10 Must-Build Shop Projects (Compilation)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N3RpYMHgQqE",
+                "duration": 1367,
+                "title": "Small Woodworking Projects that Get Noticed & Sell | One Day Builds |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qdzx4Gqb_0A",
+                "duration": 1873,
+                "title": "This Storage Cabinet Changed My Workshop | Woodworking Projects"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_NjDxBsMk5M",
+                "duration": 1894,
+                "title": "DIY Woodworking: 7 Unique Projects You Haven't Seen Before"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uVm5uM2avOQ",
+                "duration": 1411,
+                "title": "Minimal Materials Maximum Profit : DIY Woodworking Projects that sell"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M74-mOoSFDA",
+                "duration": 1063,
+                "title": "10 Easy Woodworking Projects (Compilation)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VdSz0GREt3o",
+                "duration": 2007,
+                "title": "#219 Workshop Doors, Birch Scaffolding & Roof Timbers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gvxrNIHEStM",
+                "duration": 1735,
+                "title": "Great Projects Best Woodworking Plans For Beginners // Smart Space Sav"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xau74kckNMs",
+                "duration": 1162,
+                "title": "Extremely Ingenious Skills Woodworking Worker || Making Cross Joints B"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tb2wQ8Ek294",
+                "duration": 886,
+                "title": "3 Woodworking shop projects (Must have)"
+            }
+        ],
+        "search_query": "woodworking workshop project build"
+    }
+}
