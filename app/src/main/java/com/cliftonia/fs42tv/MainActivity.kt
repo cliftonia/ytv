@@ -40,6 +40,8 @@ import com.cliftonia.fs42tv.ui.ChannelOsd
 import com.cliftonia.fs42tv.ui.GuideRows
 import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
+import com.cliftonia.fs42tv.ui.SettingRow
+import com.cliftonia.fs42tv.ui.SettingsScreen
 import com.cliftonia.fs42tv.ui.StandBy
 import com.cliftonia.fs42tv.ui.TuningBlank
 import com.cliftonia.fs42tv.ui.UpdatePrompt
@@ -152,6 +154,16 @@ class MainActivity : ComponentActivity() {
     // picker is that surfing is frozen while it's up, so nothing should move these under it.
     // Backs the stand-by card. A black screen is indistinguishable from a dead app or a
     // dead TV; the card says the app knows and is retrying.
+    private val settingsVisible = mutableStateOf(false)
+    private val settingsRows = mutableStateOf<List<SettingRow>>(emptyList())
+
+    /**
+     * How many modes the panel reports, kept because the settings screen shows it and the engine
+     * default is derived from it. One mode means a television that cannot change its refresh rate,
+     * which is the whole reason two engines exist.
+     */
+    private var displayModeCount: Int = 0
+
     private val standByReason = mutableStateOf("")
 
     // True from choosing a channel until its first frame arrives, so the previous channel is not
@@ -305,6 +317,7 @@ class MainActivity : ComponentActivity() {
         // Override with:  adb shell am start -n com.cliftonia.fs42tv/.MainActivity --es engine mpv
         val modeCount = (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
             display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
+        displayModeCount = modeCount
         val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
             ?: PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
             ?: PlayerEngine.default(modeCount)
@@ -326,6 +339,9 @@ class MainActivity : ComponentActivity() {
                         generation = bannerGeneration.value,
                     )
                     StandBy(standByReason.value.isNotEmpty(), standByReason.value)
+                    if (settingsVisible.value) {
+                        SettingsScreen(rows = settingsRows.value, onDismiss = ::closeSettings)
+                    }
                     if (pickerVisible.value) {
                         ChannelPicker(
                             rows = pickerRows.value,
@@ -518,11 +534,19 @@ class MainActivity : ComponentActivity() {
         // see them, but this guard is what actually guarantees the channel-change keys are
         // inert here rather than relying on focus routing alone. KEYCODE_BACK is deliberately
         // not handled here at all - the picker owns its own dismissal via BackHandler.
-        if (pickerVisible.value) {
+        if (pickerVisible.value || settingsVisible.value) {
             return super.onKeyDown(keyCode, event)
         }
 
         return when (keyCode) {
+            // Left, because it is the only D-pad direction the dial does not already use and it
+            // cannot be pressed by accident while surfing, which is up and down. It exists mainly
+            // for the engine switch: that is the escape hatch for the judder, and until this it
+            // needed `adb shell am start --es engine mpv` from a laptop.
+            KeyEvent.KEYCODE_DPAD_LEFT -> {
+                openSettings()
+                true
+            }
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
                 surfTo(nav.up())
                 true
@@ -894,6 +918,88 @@ class MainActivity : ComponentActivity() {
      * it. Nothing is shown until the file is on disk, so an unreachable publisher - the normal
      * state of the set in the car - is completely silent.
      */
+    /**
+     * Open the settings list, freezing the dial underneath the way the picker does.
+     *
+     * The generation bump is the same guard [openPicker] needs and for the same reason: a channel
+     * change pressed a moment earlier still has a tune in flight, and letting it land would change
+     * the channel under an open overlay.
+     */
+    private fun openSettings() {
+        generation.incrementAndGet()
+        settingsRows.value = buildSettingsRows()
+        settingsVisible.value = true
+        composeView.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
+        composeView.requestFocus()
+    }
+
+    private fun closeSettings() {
+        settingsVisible.value = false
+        composeView.descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+        composeView.clearFocus()
+    }
+
+    /**
+     * The settings list, rebuilt each time it opens.
+     *
+     * Rebuilt rather than held, because every row is a reading of something that changes -
+     * which engine is running, how old the lineup is, whether an update is waiting. A list built
+     * once at startup would be quietly wrong by the time anyone looked at it, and a settings
+     * screen that lies is worse than none.
+     */
+    private fun buildSettingsRows(): List<SettingRow> {
+        val engine = PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
+            ?: PlayerEngine.default(displayModeCount)
+        val channels = navigator?.channels.orEmpty()
+        val clips = channels.sumOf { it.streams.size }
+        return listOf(
+            SettingRow(
+                label = "VIDEO ENGINE",
+                value = engine.name,
+                // Takes effect on the next launch rather than swapping the player under a running
+                // channel. Rebuilding the engine live is possible - the recovery path does it -
+                // but doing it from a settings screen would mean re-resolving and re-seeking the
+                // current clip, and the one moment this setting is reached for is when playback
+                // is already misbehaving.
+                action = {
+                    val next = if (engine == PlayerEngine.MPV) PlayerEngine.MEDIA3
+                               else PlayerEngine.MPV
+                    prefs.edit().putString(ENGINE_KEY, next.name.lowercase()).apply()
+                    settingsRows.value = buildSettingsRows()
+                    Log.i("fs42", "engine set to $next; takes effect on next launch")
+                },
+            ),
+            SettingRow(
+                label = "CHECK FOR UPDATE",
+                value = if (updateReady.value) "READY - PRESS OK ON THE DIAL" else "CHECK NOW",
+                action = { checkForUpdate() },
+            ),
+            SettingRow("VERSION", BuildConfig.VERSION_CODE.toString()),
+            SettingRow("DISPLAY MODES", displayModeCount.toString()),
+            SettingRow("CHANNELS", "${channels.size} / $clips CLIPS"),
+            SettingRow("LINEUP", lineupAge()),
+        )
+    }
+
+    /**
+     * How stale the lineup is, in words.
+     *
+     * The single most useful reading on this screen. When the dial misbehaves the first question
+     * is whether the content is old or the extractor has broken, and those have opposite fixes -
+     * a lineup fetched today with nothing playing means the extractor; a lineup from three weeks
+     * ago means the nightly workflow has been failing and nobody noticed.
+     */
+    private fun lineupAge(): String {
+        val file = java.io.File(cacheDir, "channels.json")
+        if (!file.exists()) return "NOT FETCHED"
+        val days = (System.currentTimeMillis() - file.lastModified()) / 86_400_000L
+        return when {
+            days <= 0L -> "FETCHED TODAY"
+            days == 1L -> "1 DAY OLD"
+            else -> "$days DAYS OLD"
+        }
+    }
+
     private fun checkForUpdate() {
         if (updateReady.value) return
         if (!updateCheckRunning.compareAndSet(false, true)) return
