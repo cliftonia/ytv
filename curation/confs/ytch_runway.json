@@ -2,14 +2,49 @@
     "station_conf": {
         "network_name": "Runway",
         "network_type": "streaming",
-        "channel_number": 79,
+        "channel_number": 44,
         "network_long_name": "Runway",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=99KQJzj7Dkg",
-                "duration": 686,
-                "title": "ZIMMERMANN Spring 2026 Ready-to-Wear, Kindred Spirit"
+                "url": "https://www.youtube.com/watch?v=Ank_WWE2HYI",
+                "duration": 984,
+                "title": "FENDI Fall/Winter 2026 Fashion Show (FW26) | Milan | Original Music by Jennifer Rouse"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V1vKd_5DXWM",
+                "duration": 585,
+                "title": "AKRIS 2026 Fall Fashion Show - Paris Fashion Week - Original Music By Jennifer Rouse"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SHSR0PJj0Xs",
+                "duration": 919,
+                "title": "Chanel | Haute Couture Fall Winter 2026/2027 | Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HAaJ9muLCqI",
+                "duration": 1097,
+                "title": "Dior | Fall/Winter 2026/27 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7Ux4GeY5MXQ",
+                "duration": 995,
+                "title": "Chanel | Fall/Winter 2026/27 | Paris Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZtEvr1UHlNQ",
+                "duration": 915,
+                "title": "Ralph Lauren | Fall/Winter 2026/27 | NewYork"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JmvS9tj1lBM",
+                "duration": 755,
+                "title": "Fall Winter 2026-2027 Haute Couture Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eI4zWeqTmIk",
+                "duration": 765,
+                "title": "Max Mara | Fall/Winter 2026/27 | Milan Fashion Week - 4K"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZukboSBHZJk",
@@ -17,19 +52,24 @@
                 "title": "Sherri Hill | Spring/Summer 2026 | New York Fashion Week"
             },
             {
-                "url": "https://www.youtube.com/watch?v=BFNNHSTE_Io",
-                "duration": 753,
-                "title": "Versace | Spring/Summer 2025 | Milan Fashion Week - 4K"
+                "url": "https://www.youtube.com/watch?v=OFnnlZPPoSk",
+                "duration": 1392,
+                "title": "Gucci | Fall/Winter 2026/27 | Milan Fashion Week"
             },
             {
-                "url": "https://www.youtube.com/watch?v=d-88CqYMwF4",
-                "duration": 1098,
-                "title": "ROBERT WUN FW25 Couture - \"Becoming\""
+                "url": "https://www.youtube.com/watch?v=RFCe_-EAzjM",
+                "duration": 731,
+                "title": "Giorgio Armani | Fall/Winter 2026/27 | Milan Fashion Week"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rMJx_NfqK18",
-                "duration": 695,
-                "title": "AMIRI AUTUMN-WINTER 2026 RUNWAY SHOW"
+                "url": "https://www.youtube.com/watch?v=Nn4Qq2xLc_c",
+                "duration": 913,
+                "title": "Ralph Lauren | Fall Winter 2026/27 | New York Fashion Week  4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A3rtjr7sXDA",
+                "duration": 1075,
+                "title": "Saint Laurent | Fall/Winter 2026/27 | Paris Fashion Week"
             },
             {
                 "url": "https://www.youtube.com/watch?v=w4_nffz2RUE",
@@ -37,26 +77,436 @@
                 "title": "Dsquared2 | Fall/Winter 2026/27 | Milan Fashion Week"
             },
             {
+                "url": "https://www.youtube.com/watch?v=udK7VY13kqU",
+                "duration": 497,
+                "title": "Rami Al Ali | Haute Couture Fall Winter 2026/2027 | Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OFb4IFpZdx0",
+                "duration": 469,
+                "title": "Prada Spring/Summer 2026 Womenswear Fashion Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BmX4N575SBw",
+                "duration": 697,
+                "title": "Miu Miu Fall/Winter 2026 Fashion Show | Mindful Intimacy by Miuccia Prada"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qOccW7LmMac",
+                "duration": 1292,
+                "title": "Chanel | Fall/Winter 2026/27 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gwdp5H27L4c",
+                "duration": 3191,
+                "title": "Dolce & Gabbana | Alta Moda Fashion Show 2026 | Taormina"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=kCKqS97hV98",
                 "duration": 995,
                 "title": "CHANEL Fall Winter 2026 Show — CHANEL Shows"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dTc5z-TH7as",
-                "duration": 810,
-                "title": "Denver Fashion Week Fall 2025 | Full Runway Show + Dance Performance"
+                "url": "https://www.youtube.com/watch?v=ZMoA9VslOF0",
+                "duration": 1017,
+                "title": "Tom Ford | Fall/Winter 2026/27 | Paris Fashion Week"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DlKsYHC8QAw",
+                "url": "https://www.youtube.com/watch?v=K7VU3m78J3Y",
+                "duration": 963,
+                "title": "Louis Vuitton | Fall/Winter 2026/27 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_auhIEp90AQ",
+                "duration": 1009,
+                "title": "Dolce & Gabbana | Fall/Winter 2026/27 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M5QhKDc5V4Y",
+                "duration": 912,
+                "title": "CHANEL Spring Summer 2026 Haute Couture — CHANEL Shows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eVR7IAj7bik",
+                "duration": 764,
+                "title": "Prada | Fall/Winter 2026/27 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j0P_v5UqQQE",
+                "duration": 897,
+                "title": "ZIMMERMANN 2026 Fall Fashion Show - Paris Fashion Week - Original Music By Jennifer Rouse"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BtMrcaY5ZLE",
+                "duration": 1174,
+                "title": "TONY WARD | COUTURE FALL WINTER 2026/27 | FULL RUNWAY SHOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f4kQHDOKcBI",
+                "duration": 925,
+                "title": "Manish Malhotra | Dubai Fashion Week 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KjtF4_5l1qw",
+                "duration": 3305,
+                "title": "BENCH Fashion Week Spring/Summer 2026 | FULL SHOW | Day 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BptONdkqDfo",
+                "duration": 893,
+                "title": "Michael Kors | Fall/Winter 2026/27 | New York Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Egm7PIVem_E",
+                "duration": 919,
+                "title": "Fairy tales meet CHANEL Haute Couture — CHANEL Shows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=riSrN8uuQ9o",
+                "duration": 974,
+                "title": "Hermès women's fall-winter 2026 show, the second chapter"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0LVnwP4Vy2s",
+                "duration": 650,
+                "title": "McQueen | Fall Winter 2026/2027 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bX8UfV0MqTw",
+                "duration": 580,
+                "title": "Prada Fall/Winter 2026 Womenswear Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pzVXojPY6yw",
+                "duration": 1061,
+                "title": "Jean Paul Gaultier | Haute Couture Fall Winter 2026/2027 | Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iGg3ooLc2J8",
+                "duration": 1252,
+                "title": "CHANEL Cruise 2026/27 Show — CHANEL Shows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xGVJ4RH0_Fs",
+                "duration": 897,
+                "title": "Balenciaga | Spring/Summer 2026 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K2rZWgVPZZw",
+                "duration": 1303,
+                "title": "The Italian Riviera Runway Show | Made in Italy at Miami Swim Week 2026 🇮🇹🌴| FashionStockT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JzDjo85PLsU",
+                "duration": 1171,
+                "title": "Joli Poli Bridal Spring 2026 | Barcelona Bridal Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g__Q2DY9-Js",
+                "duration": 1220,
+                "title": "ELIE SAAB Haute Couture Fall Winter 2026-2027"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AJUWhzC5NyI",
+                "duration": 290,
+                "title": "Brooke Barry | Debut Runway Show 2026 (Full Show)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=afbCCkgVGHY",
+                "duration": 993,
+                "title": "CHANEL Métiers d’art 2026 Show in New York — CHANEL Shows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w4Sba7qUgiY",
+                "duration": 866,
+                "title": "Chloé Fall Winter 2026/27 Fashion Show ModelID | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N07NLhRUG_I",
+                "duration": 1079,
+                "title": "Copenhagen fashion week vlog !!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hFyEh2sQ7R0",
+                "duration": 336,
+                "title": "The Making of Men's Fall-Winter 2026 I LOUIS VUITTON"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MzGQYBaRdHg",
+                "duration": 1173,
+                "title": "Elie Saab Haute Couture | Spring/Summer 2026 | Haute Couture Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kjJroh77uwQ",
+                "duration": 833,
+                "title": "ULLA JOHNSON 2026 Autumn/Winter Fashion Show - New York, NY - Original Music By Jennifer R"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M359I4gJ9Os",
+                "duration": 1036,
+                "title": "Giorgio Armani - 2026 Fall/Winter Menswear Fashion Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EFRKMLQRWkw",
+                "duration": 767,
+                "title": "Ralph Lauren | Spring/Summer 2026 | New York Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eE5zwEXeLV4",
+                "duration": 661,
+                "title": "Schiaparelli | Fall/Winter 2026/27 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N175V2OK3K0",
+                "duration": 844,
+                "title": "Bottega Veneta Summer 2026 Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S7FguLAyuHc",
+                "duration": 694,
+                "title": "Tod’s | Fall/Winter 2026/27 | Milan Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HfJgt9oEXms",
+                "duration": 923,
+                "title": "Hermès women's spring-summer 2026 show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VFPVn66GB0U",
+                "duration": 825,
+                "title": "ZUHAIR MURAD Spring-Summer 2026 Couture Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OL16IpONFnc",
+                "duration": 530,
+                "title": "DRIES VAN NOTEN - WOMEN AUTUMN WINTER 2026-2027"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OoSgVqC5XYA",
+                "duration": 1019,
+                "title": "Givenchy | Fall Winter 2026/2027 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j4XNvjDHMIQ",
+                "duration": 903,
+                "title": "Hermès men's winter 2026 show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=twBdY15GZ5k",
+                "duration": 1471,
+                "title": "DIOR Fall/Winter 2026 Haute Couture Show | Paris, France | Original Music by Jennifer Rous"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xtgj348XKuo",
+                "duration": 970,
+                "title": "Stella McCartney | Fall Winter 2026/2027 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PathOlFX1Eo",
+                "duration": 592,
+                "title": "Erdem | Fall/Winter 2026/27 | London Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IdwfSfn2MSY",
+                "duration": 912,
+                "title": "The Fall 2026 Ralph Lauren Collection Runway Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I21YvTZiHBg",
+                "duration": 829,
+                "title": "Moschino Spring Summer 2026 Full Runway Show | Milan Fashion Week SS26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jOD5jircMko",
                 "duration": 817,
-                "title": "Chanel | Fall/Winter 2025/26 | Paris Fashion Week"
+                "title": "Bottega Veneta Winter 2026 Show"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nCWB8f7vGW4",
-                "duration": 990,
-                "title": "Dolce & Gabbana | Fall/Winter 2026/27 | Milan Fashion Week - 4K"
+                "url": "https://www.youtube.com/watch?v=926YOh5PupM",
+                "duration": 699,
+                "title": "Tory Burch | Fall/Winter 2026/27 | New York Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7rPiZhqS6Dk",
+                "duration": 1309,
+                "title": "Esé Azénabor Fall/Winter 2026 Runway Show | New York Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rMJx_NfqK18",
+                "duration": 695,
+                "title": "AMIRI AUTUMN-WINTER 2026 RUNWAY SHOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6rNP8B-hdJU",
+                "duration": 1015,
+                "title": "ZUHAIR MURAD Fall-Winter 2025/26 Couture Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lArRnoMhX9I",
+                "duration": 957,
+                "title": "Men's Spring-Summer 2026 Show I LOUIS VUITTON"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6eCl9q2x77U",
+                "duration": 802,
+                "title": "Tamara Ralph Haute Couture | Spring/Summer 2026 | Haute Couture Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CGxRaX3mIuc",
+                "duration": 1006,
+                "title": "Fendi Fall Winter 2026/27 Fashion Show Model ID | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BFNNHSTE_Io",
+                "duration": 753,
+                "title": "Versace | Spring/Summer 2025 | Milan Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-RZqnPw2Gk4",
+                "duration": 469,
+                "title": "Burberry Winter 2026​"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xuLeI_mf4cQ",
+                "duration": 1542,
+                "title": "Spring 26 Runway Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OGoL1E-z-1A",
+                "duration": 1089,
+                "title": "MET GALA 2026 Red Carpet Style - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D5MnsiGM0Os",
+                "duration": 786,
+                "title": "Dolce & Gabbana Menswear | Spring/Summer 2027 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lTyjzLc-gxg",
+                "duration": 656,
+                "title": "Miu Miu | Spring/Summer 2026 Fashion Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O5B0Qvikv-M",
+                "duration": 1229,
+                "title": "Balenciaga | Fall/Winter 2026/27 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8dvwe3nqrho",
+                "duration": 551,
+                "title": "VILENA SWIM Runway Show | Miami Swim Week 2026 | Brazilian Handmade Bikinis 🇧🇷✨"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=88CQ_UZzBhk",
+                "duration": 1122,
+                "title": "Elie Saab Haute Couture | Fall/Winter 2026/27 | Haute Couture Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f2h465HeHsA",
+                "duration": 710,
+                "title": "ACNE STUDIOS 2026 Fall/Winter Fashion Show - Paris Fashion Week - Original Music By Jennif"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X79Nd7Oyivs",
+                "duration": 863,
+                "title": "Max Mara | Spring Summer 2026 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u1y4YjHbcrQ",
+                "duration": 576,
+                "title": "Celine 4K ANW1543 006 Paying DuesANW4705 061 Call Me When Youre Free 2 ANW4615 008 Kittyka"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=khnHe4AmVqs",
+                "duration": 1074,
+                "title": "Balenciaga Haute Couture | Fall/Winter 2026/27 | Haute Couture Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0PiiFX4hZyE",
+                "duration": 2027,
+                "title": "Dolce & Gabbana | Alta Sartoria Fashion Show 2026 | Taormina"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tOi6Wz9Kucw",
+                "duration": 967,
+                "title": "Gucci Primavera Fashion Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZaJlfN2TzZw",
+                "duration": 1055,
+                "title": "Maison Margiela Fall Winter 2026 Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sNA5CO7Mw40",
+                "duration": 753,
+                "title": "Celine | Spring Summer 2026 | Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5OPTLCvAuOA",
+                "duration": 634,
+                "title": "Max Alexander Fall-Winter 2026-2027 | Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kngeyXs3VbQ",
+                "duration": 984,
+                "title": "BTS Jimin Arrival + Red Carpet At Dior Fashion Show FULL FANCAM | jimin in Paris Fashion W"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nx0BE0VGBmI",
+                "duration": 1445,
+                "title": "The Atelier By Prof. Jimmy Choo Bridal Spring 2026 | Barcelona Bridal Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ixCUD5Z-lBs",
+                "duration": 977,
+                "title": "Dolce & Gabbana | Spring Summer 2026 | Milan Fashion Week Men’s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hk_eJ48ydm8",
+                "duration": 885,
+                "title": "Boss | Fall Winter 2026/2027 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T2AeTHq2xsg",
+                "duration": 937,
+                "title": "Dolce & Gabbana Menswear | Fall/Winter 2026/27 | Milan Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JBS2QiwEcrA",
+                "duration": 666,
+                "title": "SAINT LAURENT - MEN'S SUMMER 27 SHOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PmKCkr7aIqI",
+                "duration": 613,
+                "title": "CELINE Men's Printemps/Été 2027 show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8rn9Ng2DaVU",
+                "duration": 541,
+                "title": "Iris van Herpen | Haute Couture Fall Winter 2025/2026 | Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LJW8utbSbIU",
+                "duration": 808,
+                "title": "RALPH LAUREN | Fall 2026 Ralph Lauren Purple Label and Polo Ralph Lauren Presentation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xyJK0a69yv8",
+                "duration": 903,
+                "title": "Michael Kors | Spring/Summer 2026 | New York Fashion Week - 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M2OUa1lgPpk",
+                "duration": 853,
+                "title": "Chloe | Fall Winter 2026/2027 | Paris Fashion Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fLHn5-wNKWg",
+                "duration": 950,
+                "title": "Zuhair Murad Haute Couture | Fall/Winter 2026/27 | Haute Couture Week"
             }
         ],
-        "search_query": "fashion week runway show"
+        "search_query": "runway show full fashion week"
     }
 }

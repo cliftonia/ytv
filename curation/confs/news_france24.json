@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "France 24",
+        "network_long_name": "France 24",
+        "network_type": "streaming",
+        "channel_number": 108,
+        "streams": [
+            {
+                "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
+                "duration": 600,
+                "title": "France 24 English"
+            }
+        ]
+    }
+}

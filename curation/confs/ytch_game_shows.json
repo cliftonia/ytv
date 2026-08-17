@@ -1,0 +1,512 @@
+{
+    "station_conf": {
+        "network_name": "Game Shows",
+        "network_type": "streaming",
+        "channel_number": 27,
+        "network_long_name": "Game Shows",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=hUyJ8cktgak",
+                "duration": 3988,
+                "title": "[NEW] The Price Is Right 2026 | The Price Is Right Full Season Full Episode | TPIR US | Ga"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=akh5nRjzeag",
+                "duration": 1283,
+                "title": "The First EVER $1,000,000 Winner! 🎉 | Wheel of Fortune Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hYBhpsZKkFc",
+                "duration": 1261,
+                "title": "Not hard to be an idiot! | Idiotest | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V7_CDcPiTP8",
+                "duration": 2720,
+                "title": "Family Feud Full Episode | Episode 15 Season 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tXMXNTc4OdU",
+                "duration": 1201,
+                "title": "Let's Get It On! FAMILY FEUD With Steve Harvey FULL EPISODE!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JVMqRkhxql8",
+                "duration": 2619,
+                "title": "Bridge of Lies - Series 4: Episode 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1_5D157gjWE",
+                "duration": 3890,
+                "title": "Family Stars Season - 2 | 9th August 2026 | Sudigali Sudheer | Full Episode | ETV Telugu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x1Csr2ezs5M",
+                "duration": 2642,
+                "title": "Mock the Week Series 22 Episode 1 | Mock the Week Full Episodes 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5mj1NXPI_Vo",
+                "duration": 1191,
+                "title": "A number most men exaggerate?? | Family Feud (Full Episode)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aZFZr9bgf_c",
+                "duration": 5226,
+                "title": "[NEW TODAY] Wheel of Fortune 2026 | Wheel of Fortune Full Season Full Episode | WOF US | G"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UIB5mjBh3nk",
+                "duration": 2312,
+                "title": "The Moment of Truth - S01E04｜Full Episode HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OmJeEC43sHc",
+                "duration": 1276,
+                "title": "America Says | FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CAmLvH8Yts8",
+                "duration": 2678,
+                "title": "FAMILY FEUD With Steve Harvey FULL EPISODE  | Season 1 Episode 11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NJPX2rim1u0",
+                "duration": 3182,
+                "title": "Michael Blackson, Shenseea & Lecrae Didn't Come to Play on Wild 'N Out | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t7KedM2NLto",
+                "duration": 1500,
+                "title": "Harvey Boys vs. Girls (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ueUDLFqfRms",
+                "duration": 2901,
+                "title": "The 1% Club - Series 5 Episode 2 | The 1% Club uk Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-o3SVKu2GYA",
+                "duration": 3312,
+                "title": "Not quite right 😅🤔 | Total Wipeout Official | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jqx6a3eIn6M",
+                "duration": 1611,
+                "title": "Inside the NBA vs. MLB All-Stars (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JsYYtPCAcVk",
+                "duration": 5267,
+                "title": "TAMASHA SEASON 5 | EPISODE 8 | Elimination Special  | 15 AUG 2026 | REALITY SHOW | ARY DIG"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o6gD9_akew0",
+                "duration": 2226,
+                "title": "The Kardashians vs. The West Family (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mfQ6LgcoC3E",
+                "duration": 2419,
+                "title": "Black-ish vs. The Goldbergs (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9ZO0NdJtIuk",
+                "duration": 3963,
+                "title": "New Season | KBC S18 | Ep. 3 | Full Episode | इस Player को क्यों मारा सबने ताना ?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e75sF9H5Jco",
+                "duration": 2538,
+                "title": "The New Press Your Luck 2019: Season 1 Episode 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wz81ybJ2L2E",
+                "duration": 1549,
+                "title": "Snoop Dogg vs. Sugar Ray Leonard (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A4HABENqwX0",
+                "duration": 1340,
+                "title": "Steph Curry vs. Chris Paul (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pTvvw4zRI5s",
+                "duration": 2478,
+                "title": "RuPaul’s Drag Race vs. The Bold Type (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qWeO2mq1Suk",
+                "duration": 2524,
+                "title": "Special Miss USA Episode 🇺🇸 | Deal or No Deal US | Season 1 Episode 24 | Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XEZCY95JliY",
+                "duration": 1324,
+                "title": "Double Dare OFFICIAL Classic Full Episode | Double Dare | Nick"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0hlbm1DlVJc",
+                "duration": 1187,
+                "title": "DC Young Fly on Family Feud! (Full Episode)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N04p3y1lhoI",
+                "duration": 2080,
+                "title": "Pepito Manaloto: Full Episode 218"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ikReKia5eC4",
+                "duration": 3139,
+                "title": "UNCUT Jackass episode BREAKS Steve Harvey!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5WC5pFMVKq4",
+                "duration": 2108,
+                "title": "Pakistan Idol Episode 36 | Gala Round | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7UJH7e4STiw",
+                "duration": 2591,
+                "title": "The Moment of Truth - S01E21｜Full Episode HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mwue7kigPXw",
+                "duration": 3770,
+                "title": "New Season | KBC S18 | Ep. 2 | Full Episode | Patni की तारीफ करने से खुद को नहीं रोक पाए य"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kTiMOXKAo74",
+                "duration": 1411,
+                "title": "Taskforce Firewall: The syndicate is coming for Gilbert! (Full Episode 58) August 12, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NLUlbTmVkpY",
+                "duration": 3575,
+                "title": "New Season | KBC S17 | Ep. 75 | Full Episode | KBC के मंच पर पहुंची दिग्गजों की टोली"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6lIjTkXZi9c",
+                "duration": 803,
+                "title": "New Season | Kaun Banega Crorepati S18 | Bollywood Celebs ने लिया Super Sandook का Challen"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2SxpN5yHv1E",
+                "duration": 2679,
+                "title": "Family Feud Full Episode With Steve Harvey! Season 1 Episode 18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k1l_zQ0PQx0",
+                "duration": 2327,
+                "title": "Jo Koy derails Family Feud! (Uncut Episode)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BPjWSMy0S2k",
+                "duration": 4731,
+                "title": "TAMASHA SEASON 5 | EPISODE 6 | 13 AUG 2026 | REALITY SHOW | ARY DIGITAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mhp-8Ec4zlQ",
+                "duration": 1156,
+                "title": "Gaten Matarazzo vs. Maddie Ziegler (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KzYwbnsJtKY",
+                "duration": 1692,
+                "title": "Family Feud: PBA AT UAAP ATHLETES, NA-TEST ANG BILIS SA HULAAN (August 11, 2026) (Full Epi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Dgw8b8-RVjY",
+                "duration": 493,
+                "title": "Dadagiri Unlimited Season 11 | EP - 9 | Webisode 2 | Aug 2 2026 | Zee Bangla"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pRZ8mzPYqTk",
+                "duration": 1210,
+                "title": "Get A Clue | FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IKpvyd2MBHY",
+                "duration": 1486,
+                "title": "Terry Bradshaw vs. Adam Rippon (Full Episode) | Celebrity Family Feud"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3tfbjJKsqC4",
+                "duration": 1276,
+                "title": "Tug Of Words | FREE FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-nX-PO0kqrc",
+                "duration": 621,
+                "title": "New Season | Kaun Banega Crorepati S18 | KBC 18’s Star-Packed Grand Opening! | Binge Bites"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5Mh9DQAjlMo",
+                "duration": 1311,
+                "title": "Master Minds | FREE FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sYxwoRWssYI",
+                "duration": 4234,
+                "title": "New Season | KBC S17 | Ep. 81 | Full Episode | इस खिलाड़ी ने कौन सा Shlok पढ़ा?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=68AW12_Psj0",
+                "duration": 1398,
+                "title": "Stuck with No Rules | S1 E12 | Full Episode | Stuck in the Middle | @disneychannelanimatio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sVHwavuJ_o0",
+                "duration": 1351,
+                "title": "Got Game? | S1 E25 | Full Episode | Phineas and Ferb | @disneychannel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wa4yw2bUk6w",
+                "duration": 1367,
+                "title": "Naanga Ready Neenga Readya Season 3 - Full Episode - 11 | Part - 1 | Game Show | Sun TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J5fg30CT_Nk",
+                "duration": 1350,
+                "title": "Kaisi Teri Dillagi | Full Episode 34 | 13 Aug 2026 | New Show | Dangal TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-jeG3vZkqXA",
+                "duration": 1446,
+                "title": "Chhanagiri | ছানাগিরি | Full Ep 1 | Game Show | 9 Aug 2026 | Sun Bangla"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z41glJr-7_s",
+                "duration": 2862,
+                "title": "The 1% Club S05E13 FULL EPISODE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HZB9aPb1cl8",
+                "duration": 1350,
+                "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 302 | 13 Aug 2026 | Full HD #Newepisode | D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QpYHnyO4-_U",
+                "duration": 747,
+                "title": "Arthur FULL EPISODE | Through the Looking Glasses 🤓 | PBS KIDS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=we6ux2_eRSY",
+                "duration": 3720,
+                "title": "Family Stars Season - 2 | 2nd August 2026 | Sudigali Sudheer | Full Episode | ETV Telugu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XqMmGKFocDs",
+                "duration": 2751,
+                "title": "Holiday Full Episode 🎄 | Stuck in the Middle | S3 E1 | @disneychannelanimation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DEjQK3vU0Hw",
+                "duration": 1293,
+                "title": "Gravity Falls Full Episode | Irrational Treasure | S1 E8 | @disneychannel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9umoY6r8cuk",
+                "duration": 2590,
+                "title": "The Moment of Truth - S01E25｜Full Episode HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jxG0B430WLw",
+                "duration": 3270,
+                "title": "New Season | KBC S18 | Ep. 1 | Full Episode | Sunny के 'Dhai Kilo Ke Haath' से Big B हुए स"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Xg8Qcr3Fq4",
+                "duration": 358,
+                "title": "Arif Lohar & Lohar Boys Perform “Jugni” | Zong 5G Show Stopper | Pakistan Idol"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ibUq3p_GpI",
+                "duration": 687,
+                "title": "Clarence | FULL EPISODE | The Big Game | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cSOLSOPKTTQ",
+                "duration": 3928,
+                "title": "New Season | KBC S17 | Ep. 78 | Full Episode | ज्ञान का परीक्षण"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9KxxI9niey8",
+                "duration": 1743,
+                "title": "K.C. Undercover First Episode | S1 E1 | Full Episode | @disneychannelanimation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v2-Fv4WXFo0",
+                "duration": 413,
+                "title": "Lamput Presents | Lamput Meeting Tuzki!! Full Episode! | The Cartoon Network Show Ep. 50"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EoH9p3-uwvs",
+                "duration": 1677,
+                "title": "Family Feud: SHOWTIME BABY DOLLS, NAPA-OOOH LALA SA SURVEY BOARD! (Aug 10, 2026) (Full Ep"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ov4hnz8Yy8k",
+                "duration": 1351,
+                "title": "Get That Bigfoot Outa My Face! | S1 E6 | Full Episode | Phineas and Ferb | @disneychannel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uV8mFtxQWis",
+                "duration": 972,
+                "title": "Everybody Sing Season 4 (4/4) | August 9, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A7FFCnmiZdI",
+                "duration": 793,
+                "title": "Arthur FULL EPISODE | Brain Gets Hooked 🧠🪝 | PBS KIDS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bYh0s3vW2MQ",
+                "duration": 2757,
+                "title": "The 1% Club S05E12 FULL EPISODE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lXW1g38ylOw",
+                "duration": 1351,
+                "title": "Lights, Candace, Action! | S1 E5 | Full Episode | Phineas and Ferb | @disneychannel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dH8v3uYnCdE",
+                "duration": 2801,
+                "title": "Hunted New 2026 - Series 08 Episode 05 - Hunted Full Episodes 2026 NEW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ab73EYy7QPk",
+                "duration": 1450,
+                "title": "Washington Week with The Atlantic full episode, August 7, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FaJOz4tb3W4",
+                "duration": 5049,
+                "title": "Exploiting Game | CID Movies | 7 August 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-4qn96BF188",
+                "duration": 1685,
+                "title": "Family Feud: DUSTBIA, MAKAYANAN KAYA ANG TALINO NI POKWANG? (August 7, 2026) (Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dPtu_-cwsqQ",
+                "duration": 4013,
+                "title": "New Season | KBC S17 | Ep. 84 | Full Episode | क्यों हुए ये खिलाड़ी Emotional?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i1Dee6_yCVU",
+                "duration": 1645,
+                "title": "Episode: 35 | The Pandavas Tough Test | Hastinapur Ke Veer | Full Episode | 11 Jul 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JoUA38b_5t8",
+                "duration": 1010,
+                "title": "Double Timing Two Men To Be The Father? (Full Episode) | Paternity Court"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=StE-NhWd_ps",
+                "duration": 3635,
+                "title": "Ben and Holly’s Little Kingdom Full Episode 🌟Mr. Elf Takes a Holiday | 4K | Cartoons for K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jZuxfPOaHGA",
+                "duration": 1350,
+                "title": "FULL EPISODE: The Really Loud House \"The Macho Man with the Plan\" | Nickelodeon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3wDw0h1CVow",
+                "duration": 416,
+                "title": "Sridevi Drama Company Latest Promo | 16th August 2026 | Pradeep, Hyper Aadi | ETV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iaBKI32NzrM",
+                "duration": 1315,
+                "title": "Tyler Perry's Young Dylan: SERIES PREMIERE New Nickelodeon Show Full Episode!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uCSOjGOQOAc",
+                "duration": 2497,
+                "title": "Shattered | Full Episode | Sonic Prime | Netflix Family"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JeF_nSp0LS0",
+                "duration": 2159,
+                "title": "শোয়ের সাফল্যে কেন অবাক সুদীপ্তা? Lakh Takar Lokkhi Labh|Game Show |9 Aug |Full Ep pt 1 |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kZ-IOh9-f90",
+                "duration": 1351,
+                "title": "Dude, We're Getting the Band Back Together 🎸 | Full Episode | Phineas and Ferb |@disneycha"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K08fQfgdrMI",
+                "duration": 1675,
+                "title": "Family Feud: GOLDEN CAÑEDO AT CORT TALAMPAS, SUMABAK SA HULAAN (August 13, 2026) (Full Epi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EqsUHjZKztU",
+                "duration": 1452,
+                "title": "Mickey's Sporty Day ⚽️  | S1 E20 | Full Episode | Mickey Mouse: Mixed-Up Adventures | @dis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ek7mAhtAT1Q",
+                "duration": 2662,
+                "title": "Cash | Sreemukhi, Nooka Raju, Immanuel, Punch Prasad | 9th April 2022 | Full Episode | ETV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ENmowRd_z8Q",
+                "duration": 1211,
+                "title": "People Puzzler | Free Full Episode | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2zI7HVMoYm8",
+                "duration": 2994,
+                "title": "Series 4, Episode 2 - Full Episode | The Crystal Maze"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BJzMhLhc070",
+                "duration": 1501,
+                "title": "Vampirina First Full Episode | Going Batty 🦇 / Scare B&B 👻  | S1 E1 | @disneyjr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HB0mmblXIrg",
+                "duration": 703,
+                "title": "Casagrandes FULL Episode - Day of the Dead 💀 Nickelodeon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3BmxbmedMMc",
+                "duration": 1322,
+                "title": "Twas the Night Before Spongemas FULL EPISODE | SpongeBob Christmas Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GZcmKNDgf8I",
+                "duration": 1441,
+                "title": "Mickey Mouse Clubhouse Full Episode | Mickey's Color Adventure 🎨🌈 | S1 E22 | @disneyjr   ​"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yhswAYgk_LE",
+                "duration": 1352,
+                "title": "Return of the Roar Part 2 🦁 | S1 E2 | Full Episode | The Lion Guard | @disneyjr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UUZAC13t_HU",
+                "duration": 2633,
+                "title": "Fear Thy Neighbor: Lies, Lawns & Murder (S1, E1) | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3d5JtSHC3vw",
+                "duration": 1305,
+                "title": "The New Guppy! Full Episode w/ Zooli | Bubble Guppies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NcVKpkMUDvM",
+                "duration": 3093,
+                "title": "New Season | KBC S17 | Ep. 80 | Full Episode | Big B के Level तक कैसे आएं Kiku Sharda?"
+            }
+        ],
+        "search_query": "game show full episode"
+    }
+}

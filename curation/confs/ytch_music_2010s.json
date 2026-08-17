@@ -1,0 +1,512 @@
+{
+    "station_conf": {
+        "network_name": "2010s Music",
+        "network_long_name": "2010s Music",
+        "network_type": "streaming",
+        "channel_number": 74,
+        "stream_rotation": "clock",
+        "search_query": "2010s music video",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=O-zpOMYRi0w",
+                "duration": 201,
+                "title": "Iggy Azalea - Fancy ft. Charli XCX"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MkElfR_NPBI",
+                "duration": 226,
+                "title": "Little Mix - Black Magic (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=psuRGfAaju4",
+                "duration": 233,
+                "title": "Owl City - Fireflies (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jGflUbPQfW8",
+                "duration": 190,
+                "title": "OMI - Cheerleader (Felix Jaehn Remix) (Official Video) [Ultra Records]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4JipHEz53sU",
+                "duration": 219,
+                "title": "Nicki Minaj - Super Bass (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fLexgOxsZu0",
+                "duration": 200,
+                "title": "Bruno Mars - The Lazy Song (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KQ6zr6kCPj8",
+                "duration": 376,
+                "title": "LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kTHNpusq654",
+                "duration": 284,
+                "title": "Katy Perry - Hot N Cold (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SR6iYWJxHqs",
+                "duration": 221,
+                "title": "Bruno Mars - Grenade (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QcIy9NiNbmo",
+                "duration": 245,
+                "title": "Taylor Swift - Bad Blood ft. Kendrick Lamar"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kn6-c223DUU",
+                "duration": 192,
+                "title": "B.o.B - Airplanes (feat. Hayley Williams of Paramore) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VbfpW0pbvaU",
+                "duration": 240,
+                "title": "Shawn Mendes - Stitches (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F57P9C4SAW4",
+                "duration": 234,
+                "title": "Katy Perry - California Gurls (Official Music Video) ft. Snoop Dogg"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uuwfgXD8qV8",
+                "duration": 252,
+                "title": "Katy Perry - Part Of Me (Official)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0KSOMA3QBU0",
+                "duration": 225,
+                "title": "Katy Perry - Dark Horse ft. Juicy J"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6g6g2mvItp4",
+                "duration": 214,
+                "title": "Maroon 5 - Misery (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=98WtmW-lfeE",
+                "duration": 230,
+                "title": "Katy Perry - Teenage Dream (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X9_n8jakvWU",
+                "duration": 234,
+                "title": "Enrique Iglesias - I Like It (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vGPG91x5eMY",
+                "duration": 247,
+                "title": "Charice - Pyramid [featuring Iyaz] (Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fRh_vgS2dFE",
+                "duration": 206,
+                "title": "Justin Bieber - Sorry (PURPOSE : The Movement)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2ggzxInyzVE",
+                "duration": 203,
+                "title": "The Wanted - Glad You Came"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VuNIsY6JdUw",
+                "duration": 229,
+                "title": "Taylor Swift - You Belong With Me"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U0CGsw6h60k",
+                "duration": 265,
+                "title": "Rihanna - What's My Name? ft. Drake"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L8eRzOYhLuw",
+                "duration": 248,
+                "title": "Ariana Grande - Break Free (Official Video) ft. Zedd"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gl1aHhXnN1k",
+                "duration": 331,
+                "title": "Ariana Grande - thank u, next (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XPBwXKgDTdE",
+                "duration": 236,
+                "title": "Taylor Swift - Mine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ahha3Cqe_fk",
+                "duration": 290,
+                "title": "Katy Perry - The One That Got Away (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ypPSrRYOAj4",
+                "duration": 212,
+                "title": "JoJo Siwa - BOOMERANG (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Lt2wjJlP2N4",
+                "duration": 241,
+                "title": "T-Pain - Bartender (Official HD Video) ft. Akon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OrTyD7rjBpw",
+                "duration": 236,
+                "title": "The Black Eyed Peas - Just Can't Get Enough (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I7HahVwYpwo",
+                "duration": 290,
+                "title": "The Black Eyed Peas - Meet Me Halfway (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iP6XpLQM2Cs",
+                "duration": 216,
+                "title": "Ke$ha - TiK ToK (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sjSG6z_13-Q",
+                "duration": 230,
+                "title": "Miley Cyrus - Can't Be Tamed"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=140ImixpY7M",
+                "duration": 205,
+                "title": "Solo [Official Music Video] - Iyaz"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hT_nvWreIhg",
+                "duration": 284,
+                "title": "OneRepublic - Counting Stars"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PIh2xe4jnpk",
+                "duration": 226,
+                "title": "MAGIC! - Rude (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6-v1b9waHWY",
+                "duration": 209,
+                "title": "Charli XCX & Troye Sivan - 1999 [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VUjdiDeJ0xg",
+                "duration": 250,
+                "title": "Taio Cruz - Dynamite (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2lTB1pIg1y0",
+                "duration": 242,
+                "title": "Drake - Over"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M11SvDtPBhA",
+                "duration": 208,
+                "title": "Miley Cyrus - Party In The U.S.A. (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ho32Oh6b4jc",
+                "duration": 229,
+                "title": "One Direction - Perfect (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2k-BxdNKtzE",
+                "duration": 192,
+                "title": "Big Time Rush - City Is Ours (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_kqQDCxRCzM",
+                "duration": 245,
+                "title": "One Direction - You & I"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iWOyfLBYtuU",
+                "duration": 220,
+                "title": "Florence + The Machine - Dog Days Are Over (2010 Version) (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a35rNEBNiO4",
+                "duration": 407,
+                "title": "Rick Ross - Aston Martin Music ft. Drake, Chrisette Michele"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nGawAhRjtoA",
+                "duration": 176,
+                "title": "\"Fright Song\" Official Music Video | Monster High"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0",
+                "duration": 211,
+                "title": "Shakira - Waka Waka (This Time for Africa) (The Official 2010 FIFA World Cup™ Song)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mXvmSaE0JXA",
+                "duration": 213,
+                "title": "Ke$ha - We R Who We R (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rYEDA3JcQqw",
+                "duration": 234,
+                "title": "Adele - Rolling in the Deep (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UAWcs5H-qgQ",
+                "duration": 290,
+                "title": "Ed Sheeran - The A Team [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m6urbZyHgO4",
+                "duration": 286,
+                "title": "Usher - There Goes My Baby (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pa14VNsdSYM",
+                "duration": 252,
+                "title": "Rihanna - Only Girl (In The World)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2ZCUtnuAXg8",
+                "duration": 205,
+                "title": "Nicki Minaj - Massive Attack ft. Sean Garrett"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HtXOVKNazYU",
+                "duration": 254,
+                "title": "Keri Hilson - Pretty Girl Rock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4GuqB1BQVr4",
+                "duration": 211,
+                "title": "Justin Bieber - Boyfriend"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPDcwjJ8pLg",
+                "duration": 194,
+                "title": "The All-American Rejects - Dirty Little Secret (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=50-_oTkmF5I",
+                "duration": 220,
+                "title": "Becky G - Shower (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5iDPw_qjhtM",
+                "duration": 247,
+                "title": "Sugarland - Stuck Like Glue"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qrO4YZeyl0I",
+                "duration": 309,
+                "title": "Lady Gaga - Bad Romance (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FC3y9llDXuM",
+                "duration": 247,
+                "title": "Wheatus - Teenage Dirtbag"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XjVNlG5cZyQ",
+                "duration": 203,
+                "title": "P!nk - Raise Your Glass (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SgM3r8xKfGE",
+                "duration": 246,
+                "title": "Flo Rida - Club Can't Handle Me (feat David Guetta) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w1oM3kQpXRo",
+                "duration": 252,
+                "title": "Taylor Swift - Everything Has Changed ft. Ed Sheeran"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jYa1eI1hpDE",
+                "duration": 244,
+                "title": "Taylor Swift - Mean"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AgFeZr5ptV8",
+                "duration": 243,
+                "title": "Taylor Swift - 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pOf3kYtwASo",
+                "duration": 199,
+                "title": "Jessie J - Do It Like A Dude (Explicit) (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UePtoxDhJSw",
+                "duration": 232,
+                "title": "Wiz Khalifa - Black And Yellow [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7qzhngp7jh8",
+                "duration": 247,
+                "title": "Brad Paisley - Remind Me (Official Video) ft. Carrie Underwood"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QGJuMBdaqIw",
+                "duration": 234,
+                "title": "Katy Perry - Firework (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UpsKGvPjAgw",
+                "duration": 319,
+                "title": "One Direction - Steal My Girl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xyv4Bjja8yc",
+                "duration": 349,
+                "title": "Drake - Find Your Love (Extended Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Z5-P9v3F8w",
+                "duration": 230,
+                "title": "Justin Bieber - Never Say Never ft. Jaden"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ip2mwfG83KE",
+                "duration": 217,
+                "title": "Guy Sebastian - Who's That Girl (Official Video) ft. Eve"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LjhCEhWiKXk",
+                "duration": 237,
+                "title": "Bruno Mars - Just The Way You Are (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LZ34LlaIk88",
+                "duration": 244,
+                "title": "Taylor Swift - Ours"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dTblx3FmUVY",
+                "duration": 319,
+                "title": "One Direction - Steal My Girl (Official 4K Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UfcvO2t8Ntg",
+                "duration": 206,
+                "title": "Selena Gomez & The Scene - Round & Round"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IcrbM1l_BoI",
+                "duration": 273,
+                "title": "Avicii - Wake Me Up (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t5Sd5c4o9UM",
+                "duration": 302,
+                "title": "Katy Perry - E.T. ft. Kanye West (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KRaWnd3LJfs",
+                "duration": 280,
+                "title": "Maroon 5 - Payphone ft. Wiz Khalifa (Explicit) (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nN6VR92V70M",
+                "duration": 267,
+                "title": "Taylor Swift - The Story Of Us"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SOI4OF7iIr4",
+                "duration": 219,
+                "title": "Justin Bieber - Somebody To Love Remix ft. USHER"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SDTZ7iX4vTQ",
+                "duration": 256,
+                "title": "Foster The People - Pumped Up Kicks (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6tpl9LtkRRw",
+                "duration": 273,
+                "title": "Ne-Yo - One In A Million [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8aRor905cCw",
+                "duration": 214,
+                "title": "Travie McCoy: Billionaire ft. Bruno Mars [OFFICIAL VIDEO]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e82VE8UtW8A",
+                "duration": 225,
+                "title": "Rihanna - Rude Boy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gM7Hlg75Mlo",
+                "duration": 209,
+                "title": "Neon Trees - Animal (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pIz2K3ArrWk",
+                "duration": 232,
+                "title": "Owl City - Vanilla Twilight (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HpixdTlYlKU",
+                "duration": 196,
+                "title": "Mike Posner - Please Don't Go (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ICaTsTkBPV8",
+                "duration": 235,
+                "title": "Kid Cudi - Erase Me ft. Kanye West"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6J1-eYBbspA",
+                "duration": 212,
+                "title": "David Archuleta - Crush (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fWNaR-rxAic",
+                "duration": 200,
+                "title": "Carly Rae Jepsen - Call Me Maybe"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LOZuxwVk7TU",
+                "duration": 212,
+                "title": "Britney Spears - Toxic (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MrTz5xjmso4",
+                "duration": 262,
+                "title": "Sean Kingston - Beautiful Girls (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5NPBIwQyPWE",
+                "duration": 254,
+                "title": "Avril Lavigne - Complicated (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1mzpuUzLKx4",
+                "duration": 265,
+                "title": "Blake Shelton - Footloose (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qrOeGCJdZe4",
+                "duration": 266,
+                "title": "OneRepublic - All The Right Moves (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RkZkekS8NQU",
+                "duration": 231,
+                "title": "ERA : Ameno 2010 – Remix (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=189bIyi-4CM",
+                "duration": 219,
+                "title": "Sia - Unstoppable | An Unstoppable (2010) Music Video (8th Anniversary Special!)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ABhDiXbUaBE",
+                "duration": 206,
+                "title": "Charli XCX - Break The Rules [Official Video]"
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "DW English",
+        "network_long_name": "DW English",
+        "network_type": "streaming",
+        "channel_number": 109,
+        "streams": [
+            {
+                "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+                "duration": 600,
+                "title": "DW English"
+            }
+        ]
+    }
+}

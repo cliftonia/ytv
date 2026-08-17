@@ -2,39 +2,319 @@
     "station_conf": {
         "network_name": "Basketball",
         "network_type": "streaming",
-        "channel_number": 10,
+        "channel_number": 6,
         "network_long_name": "Basketball",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=G6go_js-qoU",
-                "duration": 733,
-                "title": "WARRIORS at LAKERS | FULL GAME HIGHLIGHTS | April 3, 2025"
+                "url": "https://www.youtube.com/watch?v=xawLn2IJ3mE",
+                "duration": 844,
+                "title": "Miami 305 vs Dallas Power - FULL GAME HIGHLIGHTS 🔥 BIG3 Playoffs 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aw5gfbtOuGM",
-                "duration": 806,
-                "title": "Most Unexpected NBA Highlights of 2026 👀"
+                "url": "https://www.youtube.com/watch?v=S_n4z5XT6Gk",
+                "duration": 720,
+                "title": "3RD PLACE GAME: Lithuania 🇱🇹 vs Spain 🇪🇸 | Extended Highlights | FIBA U16 EuroBasket 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GNKa_mn4f-8",
-                "duration": 1800,
-                "title": "30 Minutes of NBA \"OMG\" 😱 Moments in 2026 Season"
+                "url": "https://www.youtube.com/watch?v=NefIbQNbwGs",
+                "duration": 916,
+                "title": "2026 BIG3 Celebrity Game - FULL HIGHLIGHTS 🔥"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aA3omqeKy4c",
-                "duration": 2100,
-                "title": "The BEST NBA Plays of the 2025 Season ! 🔥"
+                "url": "https://www.youtube.com/watch?v=2tA2x6QP_qI",
+                "duration": 607,
+                "title": "Minnesota Lynx vs. Las Vegas Aces | FULL GAME HIGHLIGHTS | August 15, 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=LpddDbfwNcA",
-                "duration": 1533,
-                "title": "Best Moments of the 2026 NBA Summer League!"
+                "url": "https://www.youtube.com/watch?v=XnVqBr_Wlvo",
+                "duration": 791,
+                "title": "DMV Trilogy vs Miami 305 - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3blxXarDJ5k",
-                "duration": 907,
-                "title": "WARRIORS at TIMBERWOLVES | FULL GAME HIGHLIGHTS | January 25, 2026"
+                "url": "https://www.youtube.com/watch?v=ifnSQIK2WdM",
+                "duration": 1092,
+                "title": "Boston Ball Hogs vs Chicago Triplets - FULL GAME HIGHLIGHTS 🔥 BIG3 Playoffs 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VKfGTR5NOfU",
+                "duration": 679,
+                "title": "Indiana Fever vs. Atlanta Dream | FULL GAME HIGHLIGHTS | August 16, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B4oDWC6eN6A",
+                "duration": 662,
+                "title": "FULL HIGHLIGHTS! VIVA All Star Games 2026 Basketball Match - Team VIVA One vs. Team VIVA R"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HNTHme4M4LM",
+                "duration": 608,
+                "title": "Highlights | Chinese Taipei Blue vs Philippines | 45th William Jones Cup 2026 Men’s Basket"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-9PueqgL1YI",
+                "duration": 545,
+                "title": "Dallas Power vs Chicago Triplets - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H4ohSboK0Xs",
+                "duration": 1180,
+                "title": "LA Riot vs Miami 305 - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lRq9E2YtucU",
+                "duration": 953,
+                "title": "UST vs FIGHTING EAGLES NAGOYA | FULL GAME HIGHLIGHTS | 2026 NSAC WORLD INVITATIONAL FINAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K0CL29vLgKU",
+                "duration": 604,
+                "title": "Los Angeles Sparks vs. Washington Mystics | FULL GAME HIGHLIGHTS | August 15, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Eod-c4mrpI",
+                "duration": 903,
+                "title": "Indianapolis Colts vs. New England Patriots | 2026 Preseason Week 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SYk1FrZv7Kk",
+                "duration": 646,
+                "title": "New York Liberty vs. Indiana Fever | FULL GAME HIGHLIGHTS | August 11, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fR8cNzX-vmY",
+                "duration": 720,
+                "title": "Semi-Finals: Spain 🇪🇸 vs Latvia 🇱🇻 | Extended Highlights | FIBA U16 EuroBasket 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D56FcaLgzro",
+                "duration": 613,
+                "title": "Portland Fire vs. Seattle Storm | FULL GAME HIGHLIGHTS | August 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=olrQAwIhnNo",
+                "duration": 495,
+                "title": "Highlights | Jamaica Kingsmen vs Barbados Tridents | CPL 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F97NJJ_8vuc",
+                "duration": 551,
+                "title": "Highlights | Korea vs Chinese Taipei Blue  | 45th William Jones Cup 2026 Men’s Basketball"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2TxbVRrvlRY",
+                "duration": 609,
+                "title": "Portland Fire vs. Phoenix Mercury | FULL GAME HIGHLIGHTS | August 16, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FLCF3tshbcg",
+                "duration": 604,
+                "title": "Atlanta Dream vs. Connecticut Sun | FULL GAME HIGHLIGHTS | August 13, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BTOyX5XQH24",
+                "duration": 657,
+                "title": "Highlights | Philippines vs Japan | 45th William Jones Cup 2026 Men’s Basketball Tournamen"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dgEHEktQc5g",
+                "duration": 986,
+                "title": "LA Riot vs DMV Trilogy - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CjkIV7cN0Kc",
+                "duration": 575,
+                "title": "DMV Trilogy vs Dallas Power - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=quEeauFpV7E",
+                "duration": 4029,
+                "title": "FULL BASKETBALL VIDEO | Viva All Star Games 2026 Full Coverage"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9MNRN4lpPA4",
+                "duration": 604,
+                "title": "Washington Mystics vs. Las Vegas Aces | FULL GAME HIGHLIGHTS | August 13, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rZoaihNW-Ts",
+                "duration": 716,
+                "title": "Semi-Finals: Lithuania 🇱🇹 vs France 🇫🇷 | Extended Highlights | FIBA U16 EuroBasket 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y80ZxfNFHLU",
+                "duration": 808,
+                "title": "Miami 305 vs Boston Ball Hogs - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mxv5h-RZWVs",
+                "duration": 750,
+                "title": "Warriors vs Cavaliers: Game 7 NBA Finals - 06.19.16 Full Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vp0HiUKkiJw",
+                "duration": 715,
+                "title": "Mali 🇲🇱 v Nigeria 🇳🇬 | Extended Highlights | FIBA U18 Women's AfroBasket 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0U7p0neyjrY",
+                "duration": 897,
+                "title": "MERALCO vs BRGY. GINEBRA | FULL GAME HIGHLIGHTS | PBA SEASON 50 GOVERNORS' CUP | AUG 14, 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tBLSRewzsR8",
+                "duration": 635,
+                "title": "Dallas Wings vs. Indiana Fever | FULL GAME HIGHLIGHTS | August 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7xrc3ssAE1Y",
+                "duration": 427,
+                "title": "Arkansas Basketball vs. Toros del Valle Highlights | 2026 Baha Mar Hoops Summer League"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Q5wmpq_La8",
+                "duration": 637,
+                "title": "Indiana Fever vs. Chicago Sky | FULL GAME HIGHLIGHTS | August 8, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-RXUFKxkTTM",
+                "duration": 306,
+                "title": "Indiana Men's Basketball | Full Game Highlights | FISU America Games vs. Peru | 7/21/26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Klb0mia5oK8",
+                "duration": 675,
+                "title": "SAN BEDA vs FE NAGOYA | FULL GAME HIGHLIGHTS | 2026 NSAC WORLD INVITATIONAL | AUG 15, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PAfIPFRNJeM",
+                "duration": 605,
+                "title": "Highlights | Korea vs Philippines | 45th William Jones Cup 2026 Men’s Basketball Tournamen"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EvSsJsnfjRs",
+                "duration": 647,
+                "title": "Chicago Sky vs. Golden State Valkyries | FULL GAME HIGHLIGHTS | August 12, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Z6AiUJNumg",
+                "duration": 687,
+                "title": "Highlights | Malaysia vs Jordan | 45th William Jones Cup 2026 Men’s Basketball Tournament"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GvT30Rq8nEQ",
+                "duration": 656,
+                "title": "Chicago Sky vs. Seattle Storm | FULL GAME HIGHLIGHTS | August 10, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E3rWH9qapzk",
+                "duration": 728,
+                "title": "SAN BEDA vs JRU | FULL GAME HIGHLIGHTS | 2026 NSAC WORLD INVITATIONAL BATTLE FOR THIRD | A"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kxXzGdJruzE",
+                "duration": 593,
+                "title": "Toronto Tempo vs. Dallas Wings | FULL GAME HIGHLIGHTS | August 12, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G4rqjc0GkGg",
+                "duration": 2775,
+                "title": "DAVRAA vs. NCR | Semi Final | Palarong Pambansa Secondary Boy's Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DjJHhNnO6T4",
+                "duration": 1403,
+                "title": "SMOOTHEST PLAYS IN HS BASKETBALL HISTORY!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1Kl-KC320mY",
+                "duration": 1917,
+                "title": "AMP STREET BASKETBALL DRAFT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0DHSO1C4_iM",
+                "duration": 1425,
+                "title": "MAGNOLIA vs MERALCO | EXTENDED HIGHLIGHTS | PBA SEASON 50 GOVERNORS' CUP | AUG 7, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eQjDtlLVqQI",
+                "duration": 958,
+                "title": "Extended Highlights | Jamaica Kingsmen vs Barbados Tridents | CPL 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=knGdi3w1SrU",
+                "duration": 362,
+                "title": "Arkansas Razorbacks Basketball vs. Bahamas Men's National Team | Full Game Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bPVdmw4Dk98",
+                "duration": 858,
+                "title": "#1 UConn vs Villanova Highlights | Women's Basketball Championship | College Basketball 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J2xyoBnl6BU",
+                "duration": 5023,
+                "title": "DREAMCON BASKETBALL GAME 2026 [OFFICIAL STREAM]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FbtN6DBw5Y0",
+                "duration": 499,
+                "title": "The Reds STORM INTO THE FINAL | Olympiacos - Fenerbahçe | SEMIFINALS | F4 Basketball HIGHL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gJQjQxAbuF4",
+                "duration": 1290,
+                "title": "#1 Michigan vs Tennessee FULL GAME Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tJCgjjc5JIQ",
+                "duration": 889,
+                "title": "#1 UConn vs Georgetown Highlights | Women's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3ifySNyv_0c",
+                "duration": 793,
+                "title": "UST vs TENRI | FULL GAME HIGHLIGHTS | 2026 NSAC WORLD INVITATIONAL | AUG 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ol_wvIhHs9g",
+                "duration": 577,
+                "title": "LA Riot vs Dallas Power - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bWudp57ya2M",
+                "duration": 859,
+                "title": "LSU vs Kentucky Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nwu1tHlRvKw",
+                "duration": 551,
+                "title": "Morocco 🇲🇦 v Senegal 🇸🇳 | Extended Highlights | FIBA U18 Women's AfroBasket 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gnFlZP26sRA",
+                "duration": 720,
+                "title": "Tunisia 🇹🇳 v Egypt 🇪🇬 | Extended Highlights | FIBA U18 AfroBasket 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wyPmDJ6pKpU",
+                "duration": 717,
+                "title": "Mali 🇲🇱 v Cameroon 🇨🇲 | Extended Highlights | FIBA U18 AfroBasket 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iDCegwpnlbM",
+                "duration": 2053,
+                "title": "2016 NBA Finals Mini-Movie (Full) Cavs Defeat Warriors 4-3"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FUUTWa-r1j4",
+                "duration": 505,
+                "title": "Spanish GIANTS CHASE the FINAL | Valencia - Real Madrid | SEMIFINALS | F4 Basketball HIGHL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R26C6CVi7Q0",
+                "duration": 1077,
+                "title": "Kentucky vs Texas A&M Highlights | Men's Basketball | College Basketball 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2Q-qkpuqY-4",
@@ -42,21 +322,191 @@
                 "title": "TEAM DURANT vs TEAM LEBRON | FULL GAME HIGHLIGHTS | 2022 NBA ALL-STAR"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xjPi6IcSH_Q",
-                "duration": 772,
-                "title": "The BEST Plays of the 2019 NBA Finals | Presented by YouTubeTV"
+                "url": "https://www.youtube.com/watch?v=vVHaQkanudc",
+                "duration": 657,
+                "title": "Highlights | Jordan vs USA | 45th William Jones Cup 2026 Men’s Basketball Tournament"
             },
             {
-                "url": "https://www.youtube.com/watch?v=inGCNS6USy4",
-                "duration": 606,
-                "title": "Team Spoon vs. Team Coop | FULL ALL-STAR GAME HIGHLIGHTS | July 25, 20"
+                "url": "https://www.youtube.com/watch?v=QKcXvgqjrVg",
+                "duration": 742,
+                "title": "#1 Duke vs UConn Highlights | Men's Basketball | College Basketball 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uKcXuVjvpIY",
-                "duration": 898,
-                "title": "WARRIORS vs GRIZZLIES | LAS VEGAS SUMMER LEAGUE CHAMPIONSHIP | FULL GA"
+                "url": "https://www.youtube.com/watch?v=dW0Ea-62xEM",
+                "duration": 853,
+                "title": "Dallas Power vs Detroit Amps - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-Q-RlMl3KWs",
+                "duration": 3068,
+                "title": "DAVRAA vs. CALABARZON | Gold Medal Match | Palarong Pambansa Secondary Boy's Basketball 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-VEoOl8wphY",
+                "duration": 910,
+                "title": "WARRIORS at GRIZZLIES | FULL GAME HIGHLIGHTS | February 25, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=49ehJaScF0U",
+                "duration": 926,
+                "title": "Auburn vs Nevada Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UnZ_WX6oBxs",
+                "duration": 642,
+                "title": "Las Vegas Aces vs. Minnesota Lynx | FULL GAME HIGHLIGHTS | August 8, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8QdhAeSIV7Q",
+                "duration": 4177,
+                "title": "Indiana Fever vs Chicago Sky | Full Game | August 8,2026 | WNBA Season 2026 TODAY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u_JcZSfcfJE",
+                "duration": 979,
+                "title": "Arizona Wildcats vs. Kansas Jayhawks | Full Game Highlights | ESPN College Basketball"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z3qcgXs8SS0",
+                "duration": 1932,
+                "title": "Overnight In The World's Most Expensive Basketball Arena!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mui2_Frxhps",
+                "duration": 1607,
+                "title": "Boys vs Girls - Who is Better At Basketball?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EpUKFsgVyA4",
+                "duration": 850,
+                "title": "JRU vs ELITE STACKS | FULL GAME HIGHLIGHTS | 2026 NSAC WORLD INVITATIONAL | AUG 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y-bRie1cP8A",
+                "duration": 590,
+                "title": "Miami vs. Virginia Condensed Game | 2026 T. Rowe Price ACC Men's Basketball Tournament"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8gpX0-5C-Rg",
+                "duration": 1078,
+                "title": "#2 UConn vs Illinois FULL GAME Highlights | Men's Basketball Championship | College Basket"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fFOg2l7f5Y8",
+                "duration": 1157,
+                "title": "#1 Michigan vs UConn FULL GAME Highlights | Men's Basketball CHAMPIONSHIP | College Basket"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LQxY0OaWYIo",
+                "duration": 1319,
+                "title": "MERALCO vs BRGY. GINEBRA | EXTENDED HIGHLIGHTS | PBA SEASON 50 GOVERNORS' CUP | AUG 14, 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AOYACk7m7Fk",
+                "duration": 598,
+                "title": "WARRIORS at CELTICS | FULL GAME 6 NBA FINALS HIGHLIGHTS | June 16, 2022"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BKbZNTrwmbE",
+                "duration": 1650,
+                "title": "AMP 3v3 BASKETBALL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jR8GRWR8hZs",
+                "duration": 999,
+                "title": "#8 Purdue vs #13 Michigan State Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8IBx8TTJY2Y",
+                "duration": 677,
+                "title": "LA Riot vs Detroit Amps - FULL GAME HIGHLIGHTS 🔥 BIG3 Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2jr5rcjWG-M",
+                "duration": 925,
+                "title": "Kentucky Wildcats vs. Alabama Crimson Tide | Full Game Highlights | ESPN College Basketbal"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7r6BS435PRw",
+                "duration": 982,
+                "title": "#5 Houston vs 14 Kansas Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X6Ya9Y0x4uA",
+                "duration": 1087,
+                "title": "#1 Michigan vs Howard  Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aGmuTIosPV0",
+                "duration": 576,
+                "title": "#1 South Carolina vs UCLA Highlights | NCAA Women's Basketball NATIONAL CHAMPIONSHIP 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WYe8K1bkLpw",
+                "duration": 299,
+                "title": "Purdue vs. Nebraska | HIGHLIGHTS | 2026 Big Ten Men's Basketball Tournament | 03/13/26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pwxiH4VWLm8",
+                "duration": 297,
+                "title": "Kansas State vs. BYU Highlights | 2026 Phillips 66 Big 12 Men’s Basketball Tournament"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9X5dUYoAfH8",
+                "duration": 1233,
+                "title": "#1 Michigan vs Alabama FULL GAM Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c1CKK0blCs0",
+                "duration": 857,
+                "title": "#1 Duke vs #11 Virginia Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0QoVhSsT-wI",
+                "duration": 493,
+                "title": "Michigan at Illinois | EXTENDED HIGHLIGHTS | Big Ten Men's Basketball | 02/27/26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F_H8W2OlR7M",
+                "duration": 1161,
+                "title": "#1 Duke vs UConn FULL GAME Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=htAmBUxhTXQ",
+                "duration": 482,
+                "title": "FINAL 2min: Indiana Fever vs Los Angeles Sparks WNBA basketball | Caitlin Clark, Aliyah Bo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zUY9em7Ix_g",
+                "duration": 1219,
+                "title": "#2 UConn vs Michigan State FULL GAME Highlights | Men's Basketball | College Basketball 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uEnrD9iFw0w",
+                "duration": 945,
+                "title": "Indiana Fever vs Dallas Wings Full Game Highlights Aug 12 ,2026 WNBA Season 2026 ."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5sgZzmFMJxI",
+                "duration": 495,
+                "title": "Michigan State at Purdue | EXTENDED HIGHLIGHTS | Big Ten Men's Basketball | 02/26/2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QAUOuSAcLtU",
+                "duration": 1263,
+                "title": "Streamer University Basketball Championship | Official Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uwUMKcmqWxI",
+                "duration": 902,
+                "title": "#6 UConn vs #15 St. John's Highlights | Men's Basketball | College Basketball 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GUsmbrPxgsU",
+                "duration": 984,
+                "title": "Ohio State vs Iowa Highlights | Men's Basketball | College Basketball 2026"
             }
         ],
-        "search_query": "nba basketball game highlights"
+        "search_query": "basketball game highlights"
     }
 }

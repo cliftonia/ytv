@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Audio Bible",
         "network_type": "streaming",
-        "channel_number": 125,
+        "channel_number": 90,
         "network_long_name": "Audio Bible",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=az3iXhXglfY",
-                "duration": 6787,
-                "title": "43 | The Book JOHN (KJV) | Read By Alexander Scourby | AUDIO and TEXT"
+                "url": "https://www.youtube.com/watch?v=BNEWjMhs99s",
+                "duration": 871,
+                "title": "Day 228 | August 16 | One Year Bible Audio | Neh 11-12, 1 Cor 10, Ps 34, Prov 21"
             },
             {
-                "url": "https://www.youtube.com/watch?v=W2yzu2V0UwU",
-                "duration": 4190,
-                "title": "The Complete Holy Bible - NIVUK Audio Bible - 45 Romans"
+                "url": "https://www.youtube.com/watch?v=MGvZqMlvDxs",
+                "duration": 3578,
+                "title": "Enoch - The Movie (2026) The Film that Shocked the World | Complete Biblical Movie 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=544mWwg1egk",
+                "duration": 3578,
+                "title": "THE WARRIOR WHO SHOCKED THE WORLD (2026) The Book of JOSHUA 🎬 Full Movie in 4k"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hsbX9d9IMNw",
+                "duration": 4048,
+                "title": "ELIJAH – The Movie (2026): The Film that Shocked the World | Complete Full Biblical Film 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PhGVJIlYVqk",
+                "duration": 3475,
+                "title": "Day 001 Genesis 1-3 | Daily One Year Bible Study | Audio Bible Reading with Commentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F2R8-jXFl-4",
+                "duration": 3716,
+                "title": "The Book of REVELATION- The Movie (2026) The Film that Shocked the World |Complete Biblica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=79P2Nlo9lUM",
+                "duration": 335,
+                "title": "I Will Not Give Up (Official Video) - English Audio Bible"
             },
             {
                 "url": "https://www.youtube.com/watch?v=o91Jp1JENtw",
                 "duration": 3625,
-                "title": "45 | The Book ROMANS (KJV) | Read By Alexander Scourby | AUDIO and TEX"
+                "title": "45 | The Book ROMANS (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Together."
             },
             {
-                "url": "https://www.youtube.com/watch?v=zBPSUjphjSY",
-                "duration": 5778,
-                "title": "Holy Bible Audio: PROVERBS  1 to 31 - With Text (Contemporary English)"
+                "url": "https://www.youtube.com/watch?v=bF3JPv_-luI",
+                "duration": 5005,
+                "title": "Book of Revelation — The Last Vision of John (Bible Reading with Text)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bAubwVHmBms",
-                "duration": 5464,
-                "title": "The Complete Holy Bible - NIVUK Audio Bible - 41 Mark"
+                "url": "https://www.youtube.com/watch?v=xW6AdLwWM8Q",
+                "duration": 2410,
+                "title": "Ezekiel (2026) The Movie That Shocked the World - FULL MOVIE 4K"
             },
             {
-                "url": "https://www.youtube.com/watch?v=WC_VHfHo70I",
-                "duration": 6514,
-                "title": "The Book of Proverbs KJV | Audio Bible (FULL) by Max #McLean #KJV #aud"
+                "url": "https://www.youtube.com/watch?v=_MwOTnyQ0XA",
+                "duration": 4228,
+                "title": "66 | The Book of  REVELATION KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced To"
             },
             {
-                "url": "https://www.youtube.com/watch?v=acPQ3R51eOc",
-                "duration": 3909,
-                "title": "The Book of i Corinthians #KJV | Audio Bible (FULL) by Max #McLean #au"
+                "url": "https://www.youtube.com/watch?v=KHr4ieXipLM",
+                "duration": 5077,
+                "title": "41 | The Book MARK (KJV) | Read By Alexander Scourby | AUDIO & TEXT | Synced Together."
             },
             {
-                "url": "https://www.youtube.com/watch?v=uongSnAD35E",
-                "duration": 2855,
-                "title": "Hebrews — Run the Race of Faith (Full Dramatized Reading, ECV)"
+                "url": "https://www.youtube.com/watch?v=9u_Vz2nvr98",
+                "duration": 4601,
+                "title": "Book of Revelation KJV Audiobook | Full King James Audio Bible"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yU-wivUqlOA",
-                "duration": 4760,
-                "title": "The Book of Revelations KJV | Audio Bible (FULL) by Max #McLean #KJV #"
+                "url": "https://www.youtube.com/watch?v=XFV4HeoFi7E",
+                "duration": 1141,
+                "title": "49 | The Book EPHESIANS (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Togeth"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QF0_YCmsHko",
-                "duration": 4457,
-                "title": "The Book of Ezekiel KJV | Audio Bible (FULL) by Max #McLean #KJV #audi"
+                "url": "https://www.youtube.com/watch?v=FPHy934L-5w",
+                "duration": 3733,
+                "title": "27 | The Book of  DANIEL (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Toget"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Upld1qJJcw",
+                "duration": 317,
+                "title": "Whatever Was Stolen - Remix (Official Lyrics Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p01sAk95JBk",
+                "duration": 348,
+                "title": "Victory is Mine (Official Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N6VJQUwuQxU",
+                "duration": 4590,
+                "title": "The Book of Daniel — Complete Cinematic Audio Bible | KJV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1edKaFVh404",
+                "duration": 244,
+                "title": "Search My Heart (Official Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_nbT2cWNwJo",
+                "duration": 3717,
+                "title": "Daniel - The Movie (2026) The Film that Shocked the World | Complete Biblical Movie 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pMD0qYm082M",
+                "duration": 4852,
+                "title": "The Book of Revelation |FULL ANIMATED MOVIE| : The Dragon, The Beast and The Last Days"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w15AO_LCzNI",
+                "duration": 565,
+                "title": "1 Thessalonians – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0TS9cKo_qYE",
+                "duration": 755,
+                "title": "1 Timothy – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4wBhCezyx3w",
+                "duration": 312,
+                "title": "Titus – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wy9wQDlvs3c",
+                "duration": 2616,
+                "title": "Day 004 Job 1-5 | Daily One Year Bible Study | Audio Bible Reading with Commentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WhwD-RhHHws",
+                "duration": 5242,
+                "title": "The Complete Story The Book of Isaiah Like You've Never Seen It Before"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LdoMDW9nM_8",
+                "duration": 267,
+                "title": "No More Limits (Official Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tZe52l8Oe5A",
+                "duration": 1067,
+                "title": "Galatians – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iz0bmrdyK9Q",
+                "duration": 2453,
+                "title": "Daniel (2026) The Movie That Shocked the World - FULL MOVIE 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zmBVv7zZXL0",
+                "duration": 1710,
+                "title": "Audio Bible for Sleep & Prayer - The Book of 1 John (FULL)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eb3qCLDLpjY",
+                "duration": 298,
+                "title": "Sleep in Perfect Peace (Official Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a41E5a_yVKs",
+                "duration": 853,
+                "title": "50 | The Book PHILIPPIANS (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Toge"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sm1eIM9-dcw",
+                "duration": 1020,
+                "title": "Day 211 | July 30 | One Year Bible Audio | 2 Chr 26-28, Rom 13, Ps 23, Prov 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wdu84W3YcmU",
+                "duration": 1606,
+                "title": "🔴 LIVE KJV AUDIO BIBLE | Genesis to Revelation | 24/7 Scripture Reading"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A11O_lH0QoM",
+                "duration": 707,
+                "title": "Colossians – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R1mZN4ZBoUQ",
+                "duration": 1164,
+                "title": "48 | The Book GALATIANS (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Togeth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sAfS93-8w6c",
+                "duration": 259,
+                "title": "I Will Win (Official Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3sIiuwDv-mM",
+                "duration": 3833,
+                "title": "REVELATION: KJV Audio Bible | The Apocalypse | Pure Scripture Audio • No Music • Full Book"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-JbtKRhhg0M",
+                "duration": 4974,
+                "title": "The Book of Revelation Complete | Full Audio Bible | The Sound of Heaven"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lzG2zPiZJ3k",
+                "duration": 2837,
+                "title": "2 Corinthians (KJV Audio Bible) | Complete Book of 2 Corinthians | Listen While You're Bus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_FQ79Q2tjFU",
+                "duration": 1460,
+                "title": "The Book of Ephesians #KJV | Audio Bible (FULL) by Max #McLean #audiobible #audiobook  #bi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ou63RdKhF_g",
+                "duration": 3857,
+                "title": "The Book of Acts 11–20 | Complete KJV Audio Bible | Fall Asleep with God's Word | Bible Na"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2nPr8nD2Yew",
+                "duration": 370,
+                "title": "WHAT IS TRUTH, REALLY?? | John 18 Audio | BIBLE CHALLENGE 2026 | The Gospel of John"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NUYgAF_Dm_I",
+                "duration": 2791,
+                "title": "The Book of Hebrews KJV | Audio Bible (FULL) by Max #McLean #KJV #audiobible #audiobook #b"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gUZ0SBVcfDc",
+                "duration": 3371,
+                "title": "Zephaniah (2026) | The Complete Story of the Prophet of the Last Judgment"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9gOCRQ7JBU4",
+                "duration": 2202,
+                "title": "The Complete Story of the Book of James Like You’ve Never Seen It Before (No Ads)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NzAafjhKvug",
+                "duration": 3066,
+                "title": "Verse by Verse Bible Study  |  The Book of Jude  | Gary Hamrick"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ej_6dVdJSIU",
+                "duration": 467,
+                "title": "Book of Romans Summary: A Complete Animated Overview (Part 1)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U72nuv8z7Nw",
+                "duration": 1621,
+                "title": "Superbook - In The Beginning - Season 1 Episode 1 - Full Episode (Official HD Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZotxufOMcDY",
+                "duration": 743,
+                "title": "The Book of Colossians | Complete Audio Bible (KJV)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fDdbkKiW1Oo",
+                "duration": 612,
+                "title": "The Book of Zephaniah | Audio Bible (NLT)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_WVFdZhJ3k0",
+                "duration": 1508,
+                "title": "Superbook - In the Beginning -  Tagalog (Official HD Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M5jRW_xmRb4",
+                "duration": 258,
+                "title": "Wounds That Build and Heal | Audio Reading | Our Daily Bread Devotional | August 16, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x4HBRAlfiFU",
+                "duration": 556,
+                "title": "@ValleyCreekKids | Audio Bible Stories | The Fruit of the Spirit | August 8th, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RZ6B8W9qD2k",
+                "duration": 3599,
+                "title": "Revelation Full Book Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=upClgQ3kwW8",
+                "duration": 315,
+                "title": "Whatever Was Stolen (Official Video) - English Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yxBwimStOvY",
+                "duration": 4169,
+                "title": "The Book of Daniel | Full Movie | Powerful Biblical Story of Faith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bDdZx10CYKI",
+                "duration": 4290,
+                "title": "The Complete Story The Book of Acts Like You've Never Seen It Before"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HMmKkaBswos",
+                "duration": 1610,
+                "title": "Superbook - King Solomon - Season 3 Episode 11 - Full Episode (Official HD Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gyUpJ5RQa0Y",
+                "duration": 1610,
+                "title": "Habakkuk (2026) The Prophet Who Challenged God | Biblical Story 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DvAX_YxXvBc",
+                "duration": 278,
+                "title": "CRUCIFIED TV   MOVIE STYLE AUDIO BIBLE BOOK OF PSALMS 19 Psalms 037"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bEGDh3LlZmk",
+                "duration": 771,
+                "title": "Philippians – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RU1CyQD5l70",
+                "duration": 1067,
+                "title": "PHILIPPIANS | Full Book | True Names | YHWH Restored | Scriptures AudioBible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e43t2Prf370",
+                "duration": 1526,
+                "title": "Ruth KJV | 25 Min Audio Bible for Sleep | Complete Book | A Story of Love & Loyalty"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tDa8vXrJ0V8",
+                "duration": 507,
+                "title": "TITUS | Full Book | True Names | YHWH Restored | Scriptures AudioBible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SA6sY_uQuTU",
+                "duration": 290,
+                "title": "Book Of Philemon Sung Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Imx5kjTZlOg",
+                "duration": 445,
+                "title": "The Story of Abraham and Isaac | Bible Stories for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I896_FOzFQw",
+                "duration": 954,
+                "title": "62 | The Book 1 JOHN (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Together."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_f0ucArO1GM",
+                "duration": 2001,
+                "title": "The Complete Story of The Book of Jude Like You've Never Seen It Before (No Ads)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9ECwLgDuh5c",
+                "duration": 4238,
+                "title": "Colossians-FULL SERMON | Joyce Meyer | *UPDATED"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1cWRLUbQYX4",
+                "duration": 1094,
+                "title": "SANTIAGO 1-5: Audio & Text Bible (Tagalog) Dramatized #bible #salitangdiyos #audiobible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gnYTPlcjSIg",
+                "duration": 1600,
+                "title": "Superbook - Revelation: The Final Battle! - Season 1 Episode 13 - Full Episode (Official H"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gf0p-VlIxtk",
+                "duration": 690,
+                "title": "PSALMS 94 - 96 | FULL AUDIO BIBLE WITH TEXT | NEVER LIKE BEFORE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2EUXEyKjwh8",
+                "duration": 3220,
+                "title": "Romans – 2011 KJV Audio Bible (Full Book)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DXMOFB_djxk",
+                "duration": 4028,
+                "title": "11 Bible Stories to Build STRONG Kids! 💪"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hzgl17dtAt4",
+                "duration": 1956,
+                "title": "Audio Bible Study With Pst. Tunde Dada || August 5th, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3r6Fv7M9bGg",
+                "duration": 750,
+                "title": "Habakkuk | Full Book | True Names | YHWH Restored | Scriptures AudioBible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s6ip15FOIwU",
+                "duration": 576,
+                "title": "1 Kings 2 | Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wMuuoF8Jeq8",
+                "duration": 2245,
+                "title": "The Complete Story of the Book of Romans Like You’ve Never Seen It Before (No Ads)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=30fbOJH_Tqs",
+                "duration": 1730,
+                "title": "The Book of James Immersive Gospel Version — Gospel, R&B | Full Audio Bible ERV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zq-Ofuj-224",
+                "duration": 3747,
+                "title": "EZEKIEL 2026 THE WATCHMAN OF THE EXILE 🎬 Full Movie in 4k"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LDtncPpQ61w",
+                "duration": 1600,
+                "title": "Superbook - Roar! - Season 1 Episode 7 - Full Episode (Official HD Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0gQILVCBH8k",
+                "duration": 2936,
+                "title": "Healing Scriptures"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=59ZVYl7DvZY",
+                "duration": 247,
+                "title": "CRUCIFIED TV   MOVIE STYLE AUDIO BIBLE THE BOOK OF PSALMS 19 Psalms 069"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KhIjNfUCKUQ",
+                "duration": 1511,
+                "title": "The Book of Revelation Timeline (how the world ends)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qk6ymdHC6bs",
+                "duration": 5276,
+                "title": "The Complete Story The Book of Daniel Like You've Never Seen It Before"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kSHzKdSjA_g",
+                "duration": 4194,
+                "title": "The Complete Story The Book of 1st Corinthians Like You've Never Seen It Before"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NDE6F7D7I1E",
+                "duration": 2474,
+                "title": "Audio Bible Study With Pst. Tunde Dada || July 16th, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1k5kEdp_UWo",
+                "duration": 5042,
+                "title": "The Complete Story of the book of 1st Peter (Why You’re Suffering)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9lAfehzQcl4",
+                "duration": 926,
+                "title": "Day 228 | August 16 | Cover to Cover Bible Audio | Jeremiah 16-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4i3elmQWN78",
+                "duration": 2579,
+                "title": "The Complete Story of The Book of Isaiah Like You've Never Seen It Before (No Ads)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9pnRMHGfS0w",
+                "duration": 426,
+                "title": "Luke 11 – Audio Bible (NIV) | Read Along with Captions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mGgWaPGpGz4",
+                "duration": 433,
+                "title": "Book of Amos Summary: A Complete Animated Overview"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UJf1PJd3-ME",
+                "duration": 456,
+                "title": "How Does It All End? (Revelation for Kids) | Bible Stories for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FdGc2opgBB0",
+                "duration": 324,
+                "title": "If Jude Was Actually Written as a Blues Pop R&B Soul Album | Full BSB Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Va3CTYPRTXo",
+                "duration": 2136,
+                "title": "Job - The Movie (2026) The Strongest Story in the Bible | Complete Biblical Film 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oYXRauNJDs8",
+                "duration": 285,
+                "title": "2 Chronicles 7 | Audio Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K6eTy0XBiy4",
+                "duration": 1629,
+                "title": "DAB En Español August 5, 2026 | 1 Year Daily Audio Bible En Español"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uQcKiKimugA",
+                "duration": 2337,
+                "title": "Book of Hosea KJV Audiobook Full Book Read Along | Complete Audio Bible (King James Versio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wnNlMW03Wr0",
+                "duration": 514,
+                "title": "The Story of Samson's Hair | Bible Stories for Kids"
             }
         ],
-        "search_query": "audio bible full book reading"
+        "search_query": "audio bible full book"
     }
 }

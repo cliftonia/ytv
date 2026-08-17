@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Classical Music",
         "network_type": "streaming",
-        "channel_number": 104,
+        "channel_number": 64,
         "network_long_name": "Classical Music",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=HPbPg7JT0bM",
-                "duration": 3682,
-                "title": "Symphony No. 2 / Sergei Rachmaninoff / Vasily Petrenko / Oslo Philharm"
+                "url": "https://www.youtube.com/watch?v=mhUCNryY6Rk",
+                "duration": 328,
+                "title": "Titanic - My Heart Will Go On // Danish National Symphony Orchestra, Andrea & Diluckshan ("
             },
             {
-                "url": "https://www.youtube.com/watch?v=FwDo7MdaxhA",
-                "duration": 4060,
-                "title": "Beethoven: Symphony No. 9 | Jordi Savall with Le Concert des Nations ("
+                "url": "https://www.youtube.com/watch?v=t-uQe11OIfo",
+                "duration": 248,
+                "title": "Hans Zimmer - Chevaliers de Sangreal // The Danish National Symphony Orchestra (Live)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Rd0HnxWm5CY",
-                "duration": 2512,
-                "title": "Beethoven: Symphony No. 7 | Bernard Haitink & the Royal Concertgebouw"
+                "url": "https://www.youtube.com/watch?v=kLxIyVfVAt8",
+                "duration": 170,
+                "title": "Laufey & the Iceland Symphony Orchestra - I Wish You Love (Live at The Symphony)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4rgSzQwe5DQ",
-                "duration": 2628,
-                "title": "Vivaldi: The Four Seasons (Orquesta Reino de Aragón)"
+                "url": "https://www.youtube.com/watch?v=enuOArEfqGo",
+                "duration": 363,
+                "title": "The Good, the Bad and the Ugly - The Danish National Symphony Orchestra (Live)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0Cg_0jepxow",
-                "duration": 2988,
-                "title": "BEETHOVEN Concerto for Violin and Orchestra - Hilary Hahn, violin; Leo"
+                "url": "https://www.youtube.com/watch?v=PK02xDT_RWA",
+                "duration": 303,
+                "title": "Laufey & the Iceland Symphony Orchestra - Let You Break My Heart Again (Live at The Sympho"
             },
             {
-                "url": "https://www.youtube.com/watch?v=NXD-WJYtkyc",
-                "duration": 4270,
-                "title": "Ludovico Einaudi - Live From The Steve Jobs Theatre / 2019 (Official C"
+                "url": "https://www.youtube.com/watch?v=sf9CtbLGzgw",
+                "duration": 137,
+                "title": "Can Can from Orpheus in the Underworld: Gimnazija Kranj Symphony Orchestra (stunning perfo"
             },
             {
-                "url": "https://www.youtube.com/watch?v=eaebqmzm0RA",
-                "duration": 5343,
-                "title": "REQUIEM (full) - Giuseppe VERDI // Danish National Symphony Orchestra"
+                "url": "https://www.youtube.com/watch?v=bdZkFXiiio8",
+                "duration": 174,
+                "title": "Bang Bang - My Baby Shot me Down // The Danish National Symphony Orchestra & Tuva Semmings"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1sx6B3SUg5E",
-                "duration": 3916,
-                "title": "Opera gala: great arias from Puccini, Verdi, Donizetti, Bellini, Bizet"
+                "url": "https://www.youtube.com/watch?v=DT1NJwEi6nw",
+                "duration": 244,
+                "title": "For A Few Dollars More // The Danish National Symphony Orchestra (Live)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OSVSlddJMn8",
-                "duration": 2694,
-                "title": "P.Tchaikovsky Suite from the ballet \"Swan Lake\" Moscow State Symphony"
+                "url": "https://www.youtube.com/watch?v=Yo98PdmGzvo",
+                "duration": 404,
+                "title": "Hans Zimmer - Interstellar | Imperial Orchestra"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6Rq6G9n4oRw",
-                "duration": 1285,
-                "title": "Lloyd Webber: The Phantom Of The Opera - Symphonic Suite"
+                "url": "https://www.youtube.com/watch?v=TvHsN5-YBLI",
+                "duration": 231,
+                "title": "James Bond Theme 007 - Dr. No // The Danish National Symphony Orchestra (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4niv522mbtM",
+                "duration": 179,
+                "title": "A Fistful of Dollars - The Danish National Symphony Orchestra and Tuva Semmingsen  (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=97-0ghnBMcs",
+                "duration": 256,
+                "title": "STAR WARS - Duel of the Fates  // The Danish National Symphony Orchestra (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TJZDyIz-0lk",
+                "duration": 333,
+                "title": "Nick Cave and Warren Ellis - \"Push the Sky Away\" | Live at Sydney Opera House"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-NqaupGcCpw",
+                "duration": 375,
+                "title": "John Williams & Vienna Philharmonic – Williams: Theme from “Jurassic Park”"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=10IoEUE0__Q",
+                "duration": 250,
+                "title": "Laufey & the Iceland Symphony Orchestra - Fragile (Live at The Symphony)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zQ94Q4k3mZQ",
+                "duration": 387,
+                "title": "This Magnificent Russian Music Is Astonishing - Marvelous  Youth Symphony Orchestra in Hi-"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hrxwS3jukf8",
+                "duration": 230,
+                "title": "Hunger Games - The Hanging Tree // Danish National Symphony Orchestra and Andrea Lykke (Li"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yAV1Lfkzrn8",
+                "duration": 306,
+                "title": "Final Fantasy VII // The Danish National Symphony Orchestra (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GTIeVJh1Fvo",
+                "duration": 176,
+                "title": "Laufey & the Iceland Symphony Orchestra - Falling Behind (Live at The Symphony)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n3EiRynr1Us",
+                "duration": 404,
+                "title": "Beethoven: Symphony No. 5, First movement (Benjamin Zander, Boston Philharmonic Orchestra)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YKjAZZb25wU",
+                "duration": 224,
+                "title": "Warriors - League of Legends  // Tuva Semmingsen & Danish National Symphony Orchestra (Liv"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C1ZL5AxmK_A",
+                "duration": 278,
+                "title": "Delibes: Lakmé - Duo des fleurs (Flower Duet), Sabine Devieilhe & Marianne Crebassa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8lWXXHiQf6M",
+                "duration": 344,
+                "title": "2CELLOS - My Heart Will Go On [Live at Sydney Opera House]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6m2m_9Uijso",
+                "duration": 338,
+                "title": "John Farnham & Melbourne Symphony Orchestra - Your the voice"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hnXD6FRZtn0",
+                "duration": 364,
+                "title": "Skyrim - The Dragonborn Comes - Swedish Radio Symphony Orchestra / Sabina Zweiacker"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J_uiphwBdJk",
+                "duration": 206,
+                "title": "Shadow of the Colossus // The Danish National Symphony Orchestra (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zOdKS_ayMyM",
+                "duration": 181,
+                "title": "Trippie Redd Performs \"Wish\" with Live Orchestra | Audiomack Trap Symphony"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MmmVPH2j8Es",
+                "duration": 78,
+                "title": "UK National Anthem: God Save the Queen // London Symphony Orchestra & Sir Antonio Pappano"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eTyxSjeSfCE",
+                "duration": 245,
+                "title": "Fatma Said, Marianne Crebassa – Offenbach: Barcarolle: Belle nuit ô nuit d’amour (Contes d"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H9r597vJbSQ",
+                "duration": 279,
+                "title": "SYNTHONY - Darude Sandstorm by Auckland Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S8CK2ClEIug",
+                "duration": 227,
+                "title": "The MANDALORIAN (Star Wars) // Danish National Symphony Orchestra (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T5hLJ5bNPVU",
+                "duration": 344,
+                "title": "Baldur's Gate III // Danish National Symphony Orchestra, DNCC, Eivør & Isabel Schwartzbach"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vJUmx_bSolI",
+                "duration": 354,
+                "title": "Halo // The Danish National Symphony Orchestra & Eimear Noone (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_gM2tn2gXLw",
+                "duration": 403,
+                "title": "Helvegen // Einar Selvik with Eivør & The Danish National Symphonic Orchestra (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1PkD47rNkfY",
+                "duration": 363,
+                "title": "Bach: Air on the G String (Orchestral Suite No. 3)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l7eHO_PEWLk",
+                "duration": 183,
+                "title": "The Three Tenors in Concert 1994: Brindisi (\"Libiamo ne' lieti calici\") from La Traviata"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ez89l1NTFXU",
+                "duration": 278,
+                "title": "Assassin’s Creed II: Ezio’s Family Suite // The Danish National Symphony Orchestra (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MzuSW_i6vsk",
+                "duration": 239,
+                "title": "Muthu BGM - Oruvan Oruvan | 80-Piece Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8zW4pa7zSQY",
+                "duration": 363,
+                "title": "Opus & Gazebo & Orchestra - \"I Like Chopin\" - live Opera Graz 16.12.2019"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cSt8_reXpds",
+                "duration": 260,
+                "title": "Trippie Redd Performs \"Dark Knight Dummo\" With Live Orchestra | Audiomack Trap Symphony"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6nmeWg5gkec",
+                "duration": 214,
+                "title": "Lola - Mariage d'Amour (Live with Orchestra)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a8-vZJNY10k",
+                "duration": 127,
+                "title": "The Three Tenors in Concert 1994: \"La donna è mobile\" from Rigoletto"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pm738skMIU0",
+                "duration": 122,
+                "title": "Game of Thrones - Theme (Live Symphony Orchestra)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P8lkJq9O2S8",
+                "duration": 223,
+                "title": "\"Main on End\" - Avengers: Endgame (Alan Silvestri) - Film Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nvkVakdV4z8",
+                "duration": 209,
+                "title": "Jonas Kaufmann, RAI National Symphony Orchestra, Jochen Rieder - Parla più piano - Live"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3roQbeRyme4",
+                "duration": 201,
+                "title": "The Pink Panther // The Danish National Symphony Orchestra feat. Hans Ulrik (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pMPXzAcIKkI",
+                "duration": 276,
+                "title": "U2 - One - Live Symphony Orchestra & Choir"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=__LU8E6dUsI",
+                "duration": 396,
+                "title": "Pirates of the Caribbean Orchestral Medley, Zebrowski Music School Orchestra & Zygmunt Nit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SPTEgMRQ4M0",
+                "duration": 167,
+                "title": "Lil Durk Performs “Dis Ain't What U Want“ With Live Orchestra | Trap Symphony"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MxjbI294h0s",
+                "duration": 337,
+                "title": "\"Suite\" - Back to the Future (Alan Silvestri) - Film Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PRLto2s2w1I",
+                "duration": 262,
+                "title": "Jonathan Antoine | Parla Piu Piano (The Godfather Theme)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-mAFarwU18",
+                "duration": 216,
+                "title": "\"The Shark Theme\" - Jaws (John Williams) - Film Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6lomOwF-LFs",
+                "duration": 250,
+                "title": "Sol Gabetta - Saint-Saëns: Cello Concerto No. 2, Op. 119 (Opus Klassik 2019)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yiaTqfE_qT4",
+                "duration": 379,
+                "title": "\"Suite\" - Pirates of the Caribbean (Klaus Badelt) - Film Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7lKo6TYDXCQ",
+                "duration": 249,
+                "title": "Vienna Philharmonic & Zubin Mehta - Grieg: Morning Mood (Summer Night Concert 2015)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x3aGlKYlEiY",
+                "duration": 289,
+                "title": "André Rieu - You'll Never Walk Alone"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8PIR1kvaDkQ",
+                "duration": 260,
+                "title": "Linkin Park - Numb | Epic Orchestra (2020)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UA069eY1DS4",
+                "duration": 214,
+                "title": "The Mission: GABRIEL'S  OBOE  // Danish National Symphony Orchestra & Eva Steinaa (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rFv_CDJ-XBo",
+                "duration": 238,
+                "title": "SKYRIM Dragonborn Theme LIVE [4K] CHOIR & ORCHESTRA CONCERT | Music from OST Soundtrack(Do"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cXOanvv4plU",
+                "duration": 418,
+                "title": "Holst: The Planets, 'Mars' - BBC Proms"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f6pOLBqthd4",
+                "duration": 164,
+                "title": "Jenkins: Palladio (Concerto Grosso for Strings)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GaB9F3R9cIY",
+                "duration": 299,
+                "title": "Luciano Pavarotti, James Brown - It's A Man's Man's Man's World (Official Live Performance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WaVrf-i4w94",
+                "duration": 185,
+                "title": "MIKA - Grace Kelly (Mika: Sinfonia Pop) ft. L'Orchestra Sinfonica e Coro Affinis Consort"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CwzjlmBLfrQ",
+                "duration": 337,
+                "title": "Mr. Bean Live Performance at the London 2012 Olympic Games"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vgvdZsxc8fM",
+                "duration": 220,
+                "title": "Kashmir Led Zeppelin - Epic Symphonic Rock."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4cP26ndrmtg",
+                "duration": 212,
+                "title": "Trans-Siberian Orchestra - Christmas Canon (Official Music Video) [HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YxzIwX5g_eY",
+                "duration": 395,
+                "title": "Formula 1 — Hans Zimmer (OST F1 Movie) | Live by Imperial Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T-khaUWffEw",
+                "duration": 168,
+                "title": "Tchaikovsky - Swan Lake Theme (Metamorphose String Orchestra)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7-Vd8UfYgiU",
+                "duration": 236,
+                "title": "Cypress Hill, London Symphony Orchestra - Insane In The Brain (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MTfYGqfFSXE",
+                "duration": 128,
+                "title": "YouTube Symphony Orchestra 2011 Grand Finale Concert Recap"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J6qIzKxmW8Y",
+                "duration": 367,
+                "title": "Howl's Moving Castle - Merry go round of Life cover by Grissini Project"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=psXtaZ5cBLo",
+                "duration": 230,
+                "title": "Ennio Morricone - Chi Mai | Le Professionnel | Universe Orchestra Concert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nzo3atXtm54",
+                "duration": 226,
+                "title": "Johannes Brahms -- Hungarian Dance No.5 - Hungarian Symphony Orchestra Budapest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rtopccRfyUU",
+                "duration": 248,
+                "title": "Heart, Royal Philharmonic Orchestra - Alone (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6OLp72eLLc4",
+                "duration": 285,
+                "title": "Bastille - Million Pieces ft. The Chamber Orchestra Of London (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EBDxEHzidx0",
+                "duration": 364,
+                "title": "'The Music of The Night' Ramin Karimloo | The Phantom of The Opera"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZdqjcMmjeaA",
+                "duration": 135,
+                "title": "Copland: Fanfare for the Common Man - BBC Proms 2012"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=htekfsbqqwc",
+                "duration": 314,
+                "title": "SYMPHONIKA ON THE ROCK - The Final Countdown | Europe Cover - Rock Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CoI8ltxk30g",
+                "duration": 293,
+                "title": "Sherlock Suite // The Danish National Symphony Orchestra (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=glaFXGeaEl8",
+                "duration": 214,
+                "title": "Despacito - The Maestro & The European Pop Orchestra (Live Performance Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DcFpvolRN3w",
+                "duration": 304,
+                "title": "2CELLOS - Game of Thrones [OFFICIAL VIDEO]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8d0DXihYk5w",
+                "duration": 359,
+                "title": "The Chilling 'Music of the Night' | The Phantom Of The Opera"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M0Jc4sP0BEE",
+                "duration": 362,
+                "title": "George Meets the Orchestra | An Introduction to the Orchestra for Children"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CGmdlQA_RZ4",
+                "duration": 342,
+                "title": "ABBA - The Winner Takes It All | Epic Orchestra (2020)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TaZgBHFZV7I",
+                "duration": 356,
+                "title": "\"Come, Thou Fount of Every Blessing\" BYU Inauguration Combined Choirs and Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6VyMZ976u4s",
+                "duration": 302,
+                "title": "The Rock Orchestra - Zombie (The Cranberries) Feat. Erin Fox"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4UEtEuI_iko",
+                "duration": 293,
+                "title": "\"Laskar Pelangi\" | TRUST (Trinity Youth Symphony Orchestra)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p5_4Aqt7SWY",
+                "duration": 182,
+                "title": "\"Main Theme\" - Exodus (Ernest Gold) - Film Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HQQFWtw4FIQ",
+                "duration": 383,
+                "title": "Fauré: Pavane, Op. 50 - Radio Philharmonic Orchestra led by Peter Dijkstra - Live Concert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vziz86i-lsk",
+                "duration": 187,
+                "title": "Unter Donner und Blitz // Danish National Symphony Orchestra (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1SPP-nIbmu4",
+                "duration": 283,
+                "title": "'A Thousand Years' Live (with orchestra) [Twilight OST]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MslDnwerQRA",
+                "duration": 266,
+                "title": "Idina Menzel - Defying Gravity (from LIVE: Barefoot at the Symphony)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m5uQ3kEtKh0",
+                "duration": 170,
+                "title": "Two Great Sibelius Works by the Tasmanian Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SJZfCg51xlU",
+                "duration": 129,
+                "title": "\"Main Theme\" - Game of Thrones (Ramin Djawadi) - Film Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W9NNN6lE6us",
+                "duration": 313,
+                "title": "Berlioz: Hungarian March from La damnation de Faust | European Union Youth Orchestra and G"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BekjyAH7c2A",
+                "duration": 121,
+                "title": "2001: A Space Odyssey : Thus spoke Zarathustra - Jun Märk and the Orchestra National de Ly"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=32txcylDrGI",
+                "duration": 197,
+                "title": "The Music of the Ballet Orchestra 🎼 The Wiggles x Melbourne Symphony Orchestra 🩰 Ballet fo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bSuhFHw5epk",
+                "duration": 201,
+                "title": "Chief Keef \"Love Sosa\" w/ a Live Orchestra | Audiomack Trap Symphony"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BCqfqTvitcg",
+                "duration": 295,
+                "title": "Chopin: Nocturne Op. 9 No. 2 (Violin and Piano)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4f4Ed4JiD9A",
+                "duration": 123,
+                "title": "Lil Durk Performs “No Auto Durk“ With Live Orchestra | Trap Symphony"
             }
         ],
-        "search_query": "classical music full performance orchestra"
+        "search_query": "classical orchestra opera performance"
     }
 }

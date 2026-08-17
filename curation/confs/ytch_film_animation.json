@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Film & Animation",
         "network_type": "streaming",
-        "channel_number": 19,
+        "channel_number": 14,
         "network_long_name": "Film & Animation",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=B4EPW7JUMTM",
-                "duration": 786,
-                "title": "FOREVERGREEN — Academy Award®–Nominated Animated Short Film | Now Stre"
+                "url": "https://www.youtube.com/watch?v=GbbprRV-2-s",
+                "duration": 1166,
+                "title": "Sci-Fi Short Film \"The Harvester\" | DUST | Online Premiere"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DjG1E4n0PcA",
-                "duration": 1045,
-                "title": "RUN TOTTI RUN | Award Winning Animated Short Film"
+                "url": "https://www.youtube.com/watch?v=G_6bj8NoX_w",
+                "duration": 677,
+                "title": "Void | Sci-Fi Short Film | DUST"
             },
             {
-                "url": "https://www.youtube.com/watch?v=-p1P4fdhaF8",
-                "duration": 1003,
-                "title": "NAPO | *Award-Winning* Animated Short Film"
+                "url": "https://www.youtube.com/watch?v=a1HoB9_MxPI",
+                "duration": 417,
+                "title": "Sci-Fi Short Film \"The Keepers\" | DUST"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Bl1FOKpFY2Q",
-                "duration": 476,
-                "title": "UMBRELLA | Oscar® Qualified and Multi-Award Winning Animated Short Fil"
+                "url": "https://www.youtube.com/watch?v=eKC0iwn9sQs",
+                "duration": 2058,
+                "title": "ANDY (2026) - Short Sci-Fi Film"
             },
             {
-                "url": "https://www.youtube.com/watch?v=w7brpxPmvhU",
-                "duration": 651,
-                "title": "Foundling | Award Winning Animated Short Movie"
+                "url": "https://www.youtube.com/watch?v=v6AByaZr2WA",
+                "duration": 768,
+                "title": "The Last Person on Earth | Sci-Fi Short Film"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gZyjJtBIlow",
-                "duration": 384,
-                "title": "CGI **Award Winning** 3D Animated Short: \"A Fox And A Mouse\" - by ESMA"
+                "url": "https://www.youtube.com/watch?v=afTDnY05v9A",
+                "duration": 1100,
+                "title": "Sci-Fi Short Film \"Starfisher\" | DUST"
             },
             {
-                "url": "https://www.youtube.com/watch?v=efGqe1j3RNk",
+                "url": "https://www.youtube.com/watch?v=_A8uCMdAHp4",
+                "duration": 2556,
+                "title": "Invasions | DUST Sci-Fi Anthology"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Od49AfIS2-U",
+                "duration": 990,
+                "title": "Sci-Fi Short Film “Hyperlight\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ex-TziGcfA",
+                "duration": 2159,
+                "title": "Planet | Sci-Fi Short Film | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vDjcWlCT8rg",
+                "duration": 1137,
+                "title": "Sci-Fi Short Film “Seam\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sExRqXMTTc4",
                 "duration": 595,
-                "title": "WiNDUP: Award-winning animated short film | Unity"
+                "title": "Sci-Fi Short Film \"Would You Like To Try Again?\" | DUST"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0MX_fJAhmEE",
-                "duration": 511,
-                "title": "Let's Eat - Award Winning Animated Short Film"
+                "url": "https://www.youtube.com/watch?v=kl6F5lKuZ0g",
+                "duration": 846,
+                "title": "Tether | Sci-Fi Short Film | DUST"
             },
             {
-                "url": "https://www.youtube.com/watch?v=eDaNejmf-1A",
-                "duration": 875,
-                "title": "The Wrong Rock | A mushroom follows his dreams"
+                "url": "https://www.youtube.com/watch?v=22uTzx04_w8",
+                "duration": 285,
+                "title": "Sci-Fi Short Film \"Traveler\" | Throwback Thursday | DUST"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Jm0MLlE4x0U",
-                "duration": 727,
-                "title": "The Fox and the Bird - CGI short film by Fred and Sam Guillaume"
+                "url": "https://www.youtube.com/watch?v=TOBgggbLs_U",
+                "duration": 751,
+                "title": "Radiochrome | Sci-Fi Short Film | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XIiw5twKS1I",
+                "duration": 694,
+                "title": "Eon | A Sci-Fi Short Film (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TBzepYD1b64",
+                "duration": 1390,
+                "title": "Sci-Fi Short Film \"The Lord of All Future Space & Time\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iKjXvncZypE",
+                "duration": 368,
+                "title": "Sci-Fi Short Film \"ANIMA\" | DUST | Online Premiere"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3oDnRqNiqhc",
+                "duration": 852,
+                "title": "REMI - Award Winning Short Film - Dystopian Sci-Fi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mAOpk0LxgaI",
+                "duration": 407,
+                "title": "ELSEWHERE: The Catch | Sci-Fi Cosmic Horror AI Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qVgp9_fyJng",
+                "duration": 542,
+                "title": "Sci-Fi Short Film \"Moondays\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jyo_m_TdYj8",
+                "duration": 842,
+                "title": "The Immortal | Sci-Fi Short Film | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aYBF2v0pbCM",
+                "duration": 1000,
+                "title": "ASTERNAUTS - Award-winning Sci Fi Comedy Short Film [EN]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4t67Xd7iHXU",
+                "duration": 733,
+                "title": "Sci-Fi Short Film \"Outer Reaches\" | DUST | Online Premiere"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hpfHRsyNfDM",
+                "duration": 244,
+                "title": "Sci-Fi Short Film: \"FLOATERS\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I2PtHQDd1O8",
+                "duration": 859,
+                "title": "Sci-Fi Short Film \"Crash Site\" | DUST | Starring Steven Yeun & Sam Richardson"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K1nn6tR2AnU",
+                "duration": 1116,
+                "title": "Dreamlink | Sci-Fi Short Film | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h1iUibC60FA",
+                "duration": 870,
+                "title": "Sci-Fi Short Film \"Trial 54\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jQdu9nNahJ8",
+                "duration": 1175,
+                "title": "CATACOMBES | AI Sci-Fi Horror Short Film 2026 | Alien Invasion Paris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yrOTWKWp6xA",
+                "duration": 782,
+                "title": "Echoes of the Silent Planet | Sci Fi Short Film | Finalist AI London Film Festival & Canne"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iQ5gf8iVsJ4",
+                "duration": 1277,
+                "title": "096 | Sci-Fi Short Film | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1N25e4Ss34Q",
+                "duration": 1022,
+                "title": "Sci-Fi Short Film \"Laboratory Conditions\" | DUST | Starring Marisa Tomei & Minnie Driver"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EaTvBF1I6ZQ",
+                "duration": 1221,
+                "title": "What Remains | Short Film | Finalist · Seoul International AI Film Festival 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-b4178mGt-w",
+                "duration": 467,
+                "title": "Bisected | Sci-Fi Short Film | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dC08rLhGow0",
+                "duration": 612,
+                "title": "Sci-Fi Short Film \"The Girl And The Robot\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ToEfIA2ffco",
+                "duration": 1138,
+                "title": "LEGEND (2026) | Official Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NLAZubEa6X4",
+                "duration": 642,
+                "title": "WOODNUTS | Sci-Fi Short Film (Cosmic Horror)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ARAYZAsK5yk",
+                "duration": 872,
+                "title": "Sci-Fi Short Film \"Light Hearted\" | DUST | Starring Gillian Wright & Simon Greenall"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3v8AsTHfAG0",
+                "duration": 934,
+                "title": "Sci-Fi Short Film \"There Is No Antimemetics Division\" | DUST | Starring Jasika Nicole"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-EvRlM-_O3k",
+                "duration": 1165,
+                "title": "Alien Sci-Fi Horror Short Film | \"The Reveal\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QWhDG55OHyk",
+                "duration": 1710,
+                "title": "VELORA | He Betrayed Earth to Protect an Alien World | Sci-Fi Full Movie 2026 | 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RbzVIFJIE6A",
+                "duration": 1697,
+                "title": "EMPTY SHIP | 50,000 People Vanished for 32 years | Sci-Fi | Full movie 2026 | English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3d9ecV7vFKY",
+                "duration": 3095,
+                "title": "THE EXILED | A Soldier Declared Dead Finds New Life on an Alien World | Sci-Fi Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q98WM0Gta0A",
+                "duration": 776,
+                "title": "JACKPOT (2026) | Sci-Fi Comedy AI Short Film | #SpecialForAAIFF"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jsgubGPj8d4",
+                "duration": 1487,
+                "title": "Sci-Fi Short Film \"The Machine\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DBS3JPkXJjo",
+                "duration": 2257,
+                "title": "He Saved an Alien Queen When She was Betrayed| Episode 1 | Sci-Fi Full Action Movie 4K 202"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4gKBHYjbUAM",
+                "duration": 573,
+                "title": "2095 | A Dystopian AI Sci-Fi Short Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fItjxeUSQaY",
+                "duration": 2245,
+                "title": "NO WAY BACK | He Chose the Alien Woman Over the Army | Sci-Fi Full Movie 2026 | 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7sQA6JvCtIw",
+                "duration": 417,
+                "title": "Sci-Fi Short Film \"Killing of a Machine\" | DUST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ce13mP6ca84",
+                "duration": 3026,
+                "title": "THE LAST COORDINATE | He Saved the Alien Sent to Doom Earth | Sci-Fi Full Movie 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=urRwoKtI8yE",
+                "duration": 3672,
+                "title": "EXTINCTION PROTOCOL | 2026 Full Movie | Sci-Fi Action Horror | Brutal Survival Story | 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G-G51TQBHzE",
+                "duration": 3704,
+                "title": "LEGION: Dawn of Empire | 2026 Full Movie | English | Sci-Fi | Action | 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=inF5vSTBRo0",
+                "duration": 3688,
+                "title": "INVASION: Battle for New York  | English | Sci-Fi | Disaster |  Thriller | 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0JJILEafB1o",
+                "duration": 453,
+                "title": "The Visitor // Sci-Fi // Short Film (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aAg9iDh9_BQ",
+                "duration": 1189,
+                "title": "Oneiric | AI Sci-Fi Short Film | Higgsfield Originals (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hlhFogIk8Ao",
+                "duration": 746,
+                "title": "SCARABEUS | Sci-Fi Fantasy Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fyZhC2TXgcs",
+                "duration": 1676,
+                "title": "Pomegranate | Sci-Fi Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0KkdFmjiI5w",
+                "duration": 901,
+                "title": "Bunker (2026) | Sci-Fi Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vVS6Cb005IY",
+                "duration": 5376,
+                "title": "First Contact (2023) | FULL HORROR SCI-FI MOVIE | Anna Shields | James Liddell | Chris Cim"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YY-M5bxTY28",
+                "duration": 329,
+                "title": "AI Short Film: Discarded Companion — A Cinematic Sci-Fi Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e_ofen9SDeM",
+                "duration": 557,
+                "title": "THE RAISIN (award-winning short film)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5L4DQfVIcdg",
+                "duration": 315,
+                "title": "Coin Operated - Animated Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mjYnugWqljs",
+                "duration": 515,
+                "title": "Beyond the Wormhole, They Were Waiting  | Sci-Fi Cosmic Horror Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lKbQ8M9LglA",
+                "duration": 5098,
+                "title": "The Destructor | ACTION, SCI-FI | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SFwGOqZKapU",
+                "duration": 1136,
+                "title": "CAP AND TRADE | MULTI AWARD-WINNING SHORT SCI-FI DYSTOPIAN FILM | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lahBRBliANY",
+                "duration": 1223,
+                "title": "ECHO TORCH - A Cinematic Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fETXFxBI4Z0",
+                "duration": 1686,
+                "title": "Alien: Lost Transmission | Award Winning Fan Film 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vGLl-Ooi89o",
+                "duration": 395,
+                "title": "TEDDY | Post Apocalyptic Sci-Fi Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oUzGIZZ_YkQ",
+                "duration": 5283,
+                "title": "THE SPACE APART - Full Scifi Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=93zLZgpnk-c",
+                "duration": 807,
+                "title": "ONBOARD -  Award Winning Thriller Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aEULOBjIAsw",
+                "duration": 5311,
+                "title": "The Colony | SCIFI | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XYLgwxbwEb8",
+                "duration": 473,
+                "title": "Tunnel (Award-Winning Short Film)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ODCnqS6BeZ0",
+                "duration": 305,
+                "title": "DAY 3 | Sci-Fi | Horror | Ai Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V1DjAymyy-Q",
+                "duration": 403,
+                "title": "ASI (2026) – They Replaced Us | Sci-Fi Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pjis0dWes6k",
+                "duration": 1207,
+                "title": "Protocol 69: Inside the Singularity | Sci-Fi Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nSiBbAN7ixs",
+                "duration": 5154,
+                "title": "🎬 MICROCOSM: Giant Monster Survival | Sci-Fi Action Thriller | 2026 Full Movie | 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wuz_DTbMGzc",
+                "duration": 418,
+                "title": "COLLAPSE | Sci-fi Action AI Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NUMRf6a7IRk",
+                "duration": 383,
+                "title": "CGI 3D VFX Film: \"AFTER\" by SF FILM SCHOOL | The Rookies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HjfzVbVXLQY",
+                "duration": 370,
+                "title": "The Lookout — Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JQUEbv4f8f4",
+                "duration": 256,
+                "title": "Inside A Recovered UFO | Sci-Fi Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aqYryS935-E",
+                "duration": 1015,
+                "title": "SALT LUNG (2026) — A Post-Apocalyptic Sci-Fi Short Film | Drowned World Survival Thriller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=78LKNhGkRlw",
+                "duration": 1080,
+                "title": "Night Breakers | SXSW Sci-Fi Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kRj-30evTIs",
+                "duration": 962,
+                "title": "Not From Here (2026) | Sci-Fi Drama Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1DWoGEZJzDI",
+                "duration": 5268,
+                "title": "Earth's Final Judgment | SCIFI, ACTION | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YblzVVS0gd4",
+                "duration": 451,
+                "title": "ROBOYFRIEND (2026) | Sci-Fi Comedy Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hmu936_lMv8",
+                "duration": 4958,
+                "title": "Earth's Last Warriors | SCI FI | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Dtyq-NN0kmk",
+                "duration": 1283,
+                "title": "THE TIDE THAT DOESN'T GO OUT (2026) — An Isolation Sci-Fi Short Film | Lighthouse Survival"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QGemAXmqn4c",
+                "duration": 245,
+                "title": "ENTANGLED (2026) | A Quantum Sci-Fi Short Film by Sagar M."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T4FFtzLrX8w",
+                "duration": 1234,
+                "title": "Horizon – Rise of the Colonists (Part 1 | Full Sci-Fi War Movie)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZcDoV3xOLCo",
+                "duration": 1011,
+                "title": "PREDATOR UNLEASHED – Silver Metal Awakening | Epic Sci-Fi Action Movie 2026 Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hVlQ5itrARw",
+                "duration": 1855,
+                "title": "Better Life (2026) | Sci Fi AI Short Film | #SpecialForAAIFF"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NT681LXQYPI",
+                "duration": 366,
+                "title": "Adiliada | Sci-Fi AI Action Comedy | Higgsfield Originals (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=30WWrsCaNTM",
+                "duration": 823,
+                "title": "He Was Ordered to Hunt an Alien But He Chose Her SUBSCRIBE FOR FULL MOVIE |Sci-Fi Short Fi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AldqlGq0B9w",
+                "duration": 273,
+                "title": "Occupied - Animated Horror Comedy Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1QrmUeGsBvE",
+                "duration": 449,
+                "title": "Why Humanity Never Returned from Mars | AI Sci-Fi Short Film 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lq5Bb4BvtSY",
+                "duration": 636,
+                "title": "PROMETHEUS: The Forbidden moon |  Sci-Fi Short Film mystery| 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ulNyr5W9zRU",
+                "duration": 4690,
+                "title": "Indie Sci-Fi Gem: Prodigy (2017) | Full Feature Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tCm3IjjeYJ0",
+                "duration": 328,
+                "title": "SMALL | Sci-Fi Short Film | Higgsfield Global Film Festival"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xVM6Be8UV24",
+                "duration": 761,
+                "title": "SCI FI ACTION 2026 SHORT FILM -  THE ROBOTS NEED FS MEGA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UVbn8PKGCk8",
+                "duration": 694,
+                "title": "He Saved An Alien Queen Who Was Betrayed SPECIAL EPISODE| Sci-Fi Short Film 4K 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AcgJb5wMMSg",
+                "duration": 361,
+                "title": "RESIDUE | Sci-Fi Short Film (2026) | Cosmic Horror Action Mystery"
             }
         ],
-        "search_query": "award winning animated short film"
+        "search_query": "science fiction short film full"
     }
 }

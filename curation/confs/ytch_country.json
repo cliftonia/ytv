@@ -2,59 +2,509 @@
     "station_conf": {
         "network_name": "Country",
         "network_type": "streaming",
-        "channel_number": 97,
+        "channel_number": 57,
         "network_long_name": "Country",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=0jufTpOU2rI",
-                "duration": 5295,
-                "title": "Luke Combs - Full Concert (Lexington, KY | Feb. 14, 2020)"
+                "url": "https://www.youtube.com/watch?v=8P5VxMc1TOY",
+                "duration": 220,
+                "title": "Trailblazer (Live From The 60th Academy of Country Music Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=a1veY6_nUcE",
-                "duration": 4956,
-                "title": "Willie Nelson & Friends \"Live and Kicking\" - 2003"
+                "url": "https://www.youtube.com/watch?v=KgAQF-yVXoE",
+                "duration": 171,
+                "title": "Kane Brown - Woman (Live from the 61st ACM Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0jX42GseyzQ",
-                "duration": 2091,
-                "title": "Don Williams live stage coach 2013"
+                "url": "https://www.youtube.com/watch?v=2tZjT3L1wD4",
+                "duration": 212,
+                "title": "Ed Sheeran - Life Goes On ft. Luke Combs (Live at the 58th ACM Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KKlxrbpa9RU",
-                "duration": 5088,
-                "title": "The Chicks - Top of the World Tour | Full Concert"
+                "url": "https://www.youtube.com/watch?v=nlivpsQpZy8",
+                "duration": 260,
+                "title": "Cody Johnson - \"Travelin' Soldier\" [61st Academy of Country Music Awards]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1KJ3A5IJMxg",
-                "duration": 3027,
-                "title": "The Best of George Jones - Live Concert Performance"
+                "url": "https://www.youtube.com/watch?v=4KbYfH7EAm8",
+                "duration": 195,
+                "title": "Ella Langley - Be Her (61st Academy of Country Music Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OFDPDokJcOM",
-                "duration": 2405,
-                "title": "Brooks & Dunn + Friends CMT Crossroads FULL EPISODE | ft. Luke Combs &"
+                "url": "https://www.youtube.com/watch?v=SxZMfw94SNw",
+                "duration": 212,
+                "title": "Blake Shelton - The Gambler (Live from the 61st ACM Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3Km5CD68_-8",
-                "duration": 3399,
-                "title": "Blake Shelton – Live: It’s All About Tonight (2010 Concert Special) #S"
+                "url": "https://www.youtube.com/watch?v=OxYDMLDvCKw",
+                "duration": 243,
+                "title": "@AveryAnna - \"Bang Bang\" / \"Blood Runs Thicker\" [61st Academy of Country Music Awards]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pnsvWU5KqL0",
-                "duration": 1376,
-                "title": "Cody Johnson Fireside Concert ft. “Dear Rodeo” + “Cowboy Life” & More"
+                "url": "https://www.youtube.com/watch?v=-6HKPz0B-KQ",
+                "duration": 216,
+                "title": "Carrie Underwood & Jason Aldean - If I Didn't Love You (Live From The 57th ACM Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1ynPoUCbEOE",
-                "duration": 3665,
-                "title": "Vince Gill Live at the Grand Ole Opry"
+                "url": "https://www.youtube.com/watch?v=orXAg5dIMa8",
+                "duration": 317,
+                "title": "Taylor Swift - betty (Live from the 2020 Academy of Country Music Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Gb4yTHNCVdM",
-                "duration": 775,
-                "title": "Alan Jackson Tribute - Carrie Underwood, Dierks Bentley, Jon Pardi, La"
+                "url": "https://www.youtube.com/watch?v=IBLruNfUqUs",
+                "duration": 274,
+                "title": "Chris Stapleton - Tennessee Whiskey (Austin City Limits Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=waeAPna0Dqo",
+                "duration": 212,
+                "title": "@blakeshelton - \"The Gambler\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dNibWP8f5PQ",
+                "duration": 189,
+                "title": "George Strait - Amarillo By Morning (Live At Gruene Hall, New Braufels, TX/2016)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0xQd8saqd2o",
+                "duration": 192,
+                "title": "@KaceyMusgraves - \"Dry Spell\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ph_q3W8pWWg",
+                "duration": 184,
+                "title": "@RileyGreenMusic Performs \"Change My Mind\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A87oHNXvGYA",
+                "duration": 208,
+                "title": "@DanAndShay - \"Say So\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kyACwhtqkD4",
+                "duration": 191,
+                "title": "Alan Jackson - Livin' On Love - Keepin' It Country"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T6TrbqUv2Lw",
+                "duration": 261,
+                "title": "The War And Treaty - Cold (Live From The Academy Of Country Music Honors)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HJHHS2qmpMg",
+                "duration": 194,
+                "title": "@ParkerMcCollum & @LeeAnnWomack - \"Killin' Me\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xqyZowxfSe4",
+                "duration": 198,
+                "title": "Blake Shelton - Nobody But You (Duet with Gwen Stefani) (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I6F6NSqlBJU",
+                "duration": 219,
+                "title": "Blake Shelton - Stay Country or Die Tryin’ (Live from 2025 American Music Awards)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=40idMF-XugE",
+                "duration": 161,
+                "title": "Tyler Hubbard - 902180 (Official Performance Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s9gAXwYZtfk",
+                "duration": 250,
+                "title": "Artists Of Then, Now & Forever - Forever Country"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZrwCTY8GM0E",
+                "duration": 224,
+                "title": "@LaineyWilson - \"Can't Sit Still\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lZbDAlmDhgU",
+                "duration": 372,
+                "title": "Baby Come Back - Keith Urban Live @ 2026 Country Summer Music Festival, Santa Rosa, CA 6-1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6IfYsmYcN4Y",
+                "duration": 63,
+                "title": "@michaelbuble Presents Song of the Year [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gnAJE2yMZXw",
+                "duration": 177,
+                "title": "@mirandalambert Performs \"Crisco\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pGvOXUoTG7I",
+                "duration": 90,
+                "title": "@ShaniaTwain Presents Entertainer of the Year [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tjqKaIkudqk",
+                "duration": 333,
+                "title": "Brooks & Dunn - Boot Scootin' Boogie (Live at Cain's Ballroom)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q9gn2J0GCmk",
+                "duration": 240,
+                "title": "@littlebigtown  - \"Hey There Sunshine\" [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MXMeMstVAhE",
+                "duration": 292,
+                "title": "The Chicks - Cowboy Take Me Away (Live at VH1 Storytellers)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JJ3xH0nF79U",
+                "duration": 223,
+                "title": "Luke Combs - The Kind of Love We Make (Live from the 56th Annual CMA Awards)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tfN7lZJhK8U",
+                "duration": 226,
+                "title": "Randy Travis & Josh Turner Perform \"Your Man\" | CMT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rzE5nbWdKTs",
+                "duration": 278,
+                "title": "Travis Tritt - Anymore (from Live & Kickin')"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UIjvqFjWVwk",
+                "duration": 254,
+                "title": "Luke Bryan - Country Song Came On (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WtVrDud1gZM",
+                "duration": 308,
+                "title": "Tyler Childers - Whitehouse Road (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wl1zXGGykt4",
+                "duration": 199,
+                "title": "Kelly Clarkson - I Will Always Love You (Live from the 57th ACM Awards)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IUmnTfsY3hI",
+                "duration": 183,
+                "title": "John Denver - Take Me Home, Country Roads (from The Wildlife Concert)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0bJ55b_202o",
+                "duration": 188,
+                "title": "The Heartbreaking Moment Alan Jackson Said Goodbye to Country Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-89YFUilg8w",
+                "duration": 129,
+                "title": "@laurenalaina Introduces Dan and Shay's Performance [61st Academy of Country Music Awards]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yIQu_MVZcas",
+                "duration": 414,
+                "title": "Neil Young with Willie Nelson - Four Strong Winds (Live at Farm Aid 1995)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ELZNClmKX1E",
+                "duration": 235,
+                "title": "Kane Brown - Like I Love Country Music (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ScNhjB-YtGs",
+                "duration": 287,
+                "title": "Noah Kahan & Chappell Roan - California - Live at Rose Bowl (8/25/2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RM5aW83L_DE",
+                "duration": 206,
+                "title": "Luke Bryan - Drink A Beer (Live Performance Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y45yHd9Lg_k",
+                "duration": 343,
+                "title": "The Chicks - Travelin' Soldier (Live from MMXVI Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UFpaHMqz0nM",
+                "duration": 240,
+                "title": "The Chicks - Not Ready to Make Nice (Live at VH1 Storytellers)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mzMcjKKidMo",
+                "duration": 239,
+                "title": "Carrie Underwood, Dwight Yoakam - A Thousand Miles From Nowhere (Live From CMA Summer Jam)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cXLObTeZmcQ",
+                "duration": 233,
+                "title": "Ruin You (Live at Barefoot Country Music Fest 2026) | Maddie Hogan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6SF68TfBSL8",
+                "duration": 287,
+                "title": "Post Malone- ROCKSTAR (Live) @ Barefoot Country Music Festival 2026 (Big Ass Stadium Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RnGJ3KJri1g",
+                "duration": 301,
+                "title": "The Highwaymen - City of New Orleans (American Outlaws: Live at Nassau Coliseum, 1990)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6mcYl_XkJ38",
+                "duration": 199,
+                "title": "Your Man LIVE!  Josh Turner LIVE on The Country Music Cruise 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZEWGyyLiqY4",
+                "duration": 208,
+                "title": "Blake Shelton - God's Country (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G3YcWh8TSQ4",
+                "duration": 268,
+                "title": "Brett Eldredge & Meghan Trainor Perform 'Islands In the Stream' | CMT Crossroads"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=StWygkPN92E",
+                "duration": 273,
+                "title": "Luke Combs - Dive (Live with Ed Sheeran)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nWVaq6dpj2s",
+                "duration": 226,
+                "title": "Brooks & Dunn - My Maria (Live at Cain's Ballroom)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l9Edgy3eziA",
+                "duration": 257,
+                "title": "Cody Jinks - Must Be The Whiskey (Live at Red Rocks)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hQ_ccgOkJdI",
+                "duration": 411,
+                "title": "Zac Brown Band - Free/Into The Mystic (Recorded Live from Southern Ground HQ)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ns1Vs_csIus",
+                "duration": 236,
+                "title": "Tim McGraw + Faith Hill Perform “I Need You” at the 2008 CMT Music Awards | CMT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YEq-cvq_cK4",
+                "duration": 199,
+                "title": "Luke Bryan - One Margarita (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KxfSK1bgyiI",
+                "duration": 318,
+                "title": "Brooks & Dunn - Neon Moon (Live at Cain's Ballroom)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6klnKz0ndOU",
+                "duration": 357,
+                "title": "One Last Goodbye - Whitsitt Chapel Music (New Country Gospel Song 2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o_4s8HbDgto",
+                "duration": 253,
+                "title": "Larry Fleet - Where I Find God (feat. Morgan Wallen) (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2TvKYjKVzBw",
+                "duration": 134,
+                "title": "Graham Barham - COUNTRY MUSIC (Official Audio)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7qaHdHpSjX8",
+                "duration": 237,
+                "title": "Brett Young - In Case You Didn't Know"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lAj-Q_W9AT4",
+                "duration": 215,
+                "title": "George Strait - Write This Down (Official Music Video - Closed Captioned)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cqRQXAiB0dI",
+                "duration": 247,
+                "title": "The Wedding (Ave Maria) – Jody Wayne | Classic Country Music Cover (Golden Love Song)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ALV-QtDFpSw",
+                "duration": 234,
+                "title": "Luke Bryan - Play It Again (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hvKyBcCDOB4",
+                "duration": 347,
+                "title": "Darius Rucker - Wagon Wheel (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2HgS_gGfhZM",
+                "duration": 240,
+                "title": "Josh Turner - Your Man (Bing Lounge)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZhnV_HoPMpM",
+                "duration": 204,
+                "title": "Westlife - I Lay My Love on You (Coast to Coast)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rItv9i6c7AY",
+                "duration": 216,
+                "title": "Luke Combs - Beautiful Crazy (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pDNRjL7cY9w",
+                "duration": 227,
+                "title": "Shania Twain - You're Still The One (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ukick72Qafc",
+                "duration": 291,
+                "title": "Brantley Gilbert - Bottoms Up (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0DLeH2FWFTE",
+                "duration": 284,
+                "title": "Heart - These Dreams (Live In Seattle)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bNI1POQ9Nu8",
+                "duration": 167,
+                "title": "Dan + Shay, Justin Bieber - 10,000 Hours (CMA Awards 2020)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5EHqpiw50j8",
+                "duration": 345,
+                "title": "Teddy Swims - Tennessee Whiskey (Live From Our Basement)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xuZGBeF3_P0",
+                "duration": 328,
+                "title": "Chris Stapleton Performs \"Whenever You Come Around\" | CMT Giants: Vince Gill"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AbfgxznPmZM",
+                "duration": 368,
+                "title": "The Chicks - Travelin' Soldier (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NPn8OoOWPEs",
+                "duration": 206,
+                "title": "Jade Eagleson - Got Your Name On It"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rNReepITjN0",
+                "duration": 208,
+                "title": "Lainey Wilson - Heart Like A Truck (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TsfDpW7PYN8",
+                "duration": 293,
+                "title": "Morgan Wallen Covers Jason Isbell's 'Cover Me Up' and... WOW!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_MOavH-Eivw",
+                "duration": 227,
+                "title": "Maddie & Tae - Girl In A Country Song (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0VTcBO4q5kY",
+                "duration": 333,
+                "title": "Paul Simon - Graceland (from The Concert in Hyde Park)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aDnJcvM6wrU",
+                "duration": 172,
+                "title": "Garth Brooks Performs His Classic ‘Callin’ Baton Rouge’"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ltil4CNf-cY",
+                "duration": 272,
+                "title": "No Country Music For Old Men - Bellamy Brothers Ft. John Anderson"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uXyxFMbqKYA",
+                "duration": 300,
+                "title": "Luke Combs - When It Rains It Pours (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-7WefhTdpwc",
+                "duration": 301,
+                "title": "John Anderson sings \"Seminole Wind\" on Larry's Country Diner"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v2LixP7n_hM",
+                "duration": 222,
+                "title": "Cody Johnson - 'Til You Can't (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gOAabd-_rxw",
+                "duration": 292,
+                "title": "Cody Johnson - Travelin' Soldier (Acoustic)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wz0oHEC1WgY",
+                "duration": 202,
+                "title": "Florida Georgia Line & Nelly Perform \"Cruise\" | CMT Crossroads"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RJp4V4Q83Rk",
+                "duration": 194,
+                "title": "Kelsea Ballerini, LANY – I Quit Drinking (Live From Fenway Park)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cy1rAn9MLtQ",
+                "duration": 205,
+                "title": "Keith Urban, P!nk - One Too Many (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8-vZlrBYLSU",
+                "duration": 216,
+                "title": "Rascal Flatts - Bless The Broken Road (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jxiluPSmAF8",
+                "duration": 386,
+                "title": "Joni Mitchell – Both Sides Now (Live at the Newport Folk Festival 2022) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BixwVsiDdZM",
+                "duration": 236,
+                "title": "Luke Combs - Hurricane (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hvTwFl6OIAk",
+                "duration": 239,
+                "title": "\"I Told You So\" Carrie with Randy Travis from American Idol"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PkrTvtIxUaA",
+                "duration": 274,
+                "title": "Kenny Chesney - Knowing You (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Leex4LSf6aY",
+                "duration": 208,
+                "title": "Halsey & Kelsea Ballerini Perform 'Without Me' | CMT Crossroads"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=77qc4ZtufzM",
+                "duration": 240,
+                "title": "Morgan Wallen - Up Down ft. Florida Georgia Line (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=efdKVloTeqg",
+                "duration": 218,
+                "title": "Tyler Childers - All Your'n (Live at Red Rocks)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9xQjpcHGlzc",
+                "duration": 303,
+                "title": "Aaron Lewis - It's Been Awhile (Acoustic) // Country Rebel HQ Session"
             }
         ],
         "search_query": "country music live performance"

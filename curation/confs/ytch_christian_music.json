@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Christian Music",
         "network_type": "streaming",
-        "channel_number": 123,
+        "channel_number": 77,
         "network_long_name": "Christian Music",
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=wjJ-izYndWs",
+                "duration": 302,
+                "title": "Your Name Is God | Elevation Worship & Leeland Mooring"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9__ceHaHKEE",
+                "duration": 290,
+                "title": "Phil Wickham, Brandon Lake, Elevation Worship - So So Good (Live) [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F3E-svbfrYo",
+                "duration": 332,
+                "title": "Only Jesus - Live | Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_I9LCjx0few",
+                "duration": 372,
+                "title": "Fighting For Us - Live | Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jxpbp6ycpXg",
+                "duration": 273,
+                "title": "Good News - Acoustic Video | Hillsong Worship"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=f2oxGYpuLkw",
                 "duration": 305,
-                "title": "Praise (feat. Brandon Lake, Chris Brown & Chandler Moore) | Elevation"
+                "title": "Praise (feat. Brandon Lake, Chris Brown & Chandler Moore) | Elevation Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9tGnhSg-Hec",
-                "duration": 428,
-                "title": "Praise + I Thank God | feat. Isaiah Templeton | Gateway Worship"
+                "url": "https://www.youtube.com/watch?v=CO19nB364k4",
+                "duration": 362,
+                "title": "Yahweh Great I AM - Live | Hillsong Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rwsByFZKqLA",
-                "duration": 1906,
-                "title": "Anywhere Sessions | Golden Hour | Elevation Worship"
+                "url": "https://www.youtube.com/watch?v=5_iob6lOUOI",
+                "duration": 383,
+                "title": "Aware Worship - Trust In God (Featuring Mark Gutierrez)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dNSo9MKYy0c",
-                "duration": 2034,
-                "title": "Anywhere Sessions | Living Room | Elevation Worship"
+                "url": "https://www.youtube.com/watch?v=2go_dOJVwc4",
+                "duration": 355,
+                "title": "LION (feat. Chris Brown & Brandon Lake) | Elevation Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=jNwo1bz-UXU",
-                "duration": 2156,
-                "title": "Anywhere Sessions  | Living Room Vol. 02 | Elevation Worship"
+                "url": "https://www.youtube.com/watch?v=n0FBb6hnwTo",
+                "duration": 304,
+                "title": "Goodness Of God (LIVE) - Jenn Johnson | VICTORY"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FTvsWdbFWKg",
-                "duration": 3385,
-                "title": "REVIVAL - Live At Chapel | Planetshakers YouTube Premiere"
+                "url": "https://www.youtube.com/watch?v=1dY-X8GGPqo",
+                "duration": 303,
+                "title": "Yes He Lives - Live | Hillsong Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=8NtijaKu8i0",
-                "duration": 278,
-                "title": "TRIBES // Official LIVE Music Video"
+                "url": "https://www.youtube.com/watch?v=gjYrjH3Yr7k",
+                "duration": 349,
+                "title": "Only Jesus – ElenAmor | Spirit-Led Worship 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tf8Qjev0hjg",
+                "url": "https://www.youtube.com/watch?v=rW9MbYQrTUI",
+                "duration": 303,
+                "title": "In Control - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MgpaULjZOl8",
+                "duration": 352,
+                "title": "Casting Crowns - Praise You In This Storm (Live from YouTube Space New York)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YNqo4Un2uZI",
+                "duration": 383,
+                "title": "It Is Well - Kristene DiMarco | You Make Me Brave"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dQl4izxPeNU",
+                "duration": 291,
+                "title": "King of Kings (Live) - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XV4nOVmWW2A",
+                "duration": 346,
+                "title": "Chris Tomlin - How Great Is Our God (Live In Nashville 2022) ft. Hillsong UNITED"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lKM-8CZRplI",
+                "duration": 309,
+                "title": "Jesus I Need You - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nQWFzMvCfLE",
+                "duration": 343,
+                "title": "What A Beautiful Name - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dhU-Omwg2rU",
+                "duration": 327,
+                "title": "Charity Gayle - Thank You Jesus for the Blood (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FkRiYsTN7KY",
+                "duration": 417,
+                "title": "Chris Tomlin - Is He Worthy? (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_n6dfB2Z-Ko",
+                "duration": 362,
+                "title": "Still | Hillsong Worship Lyrics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=66H4mLGgZ54",
+                "duration": 273,
+                "title": "Victory Worship - Tribes (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4GthZbt1lPo",
+                "duration": 314,
+                "title": "Through It All - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Viiw6tGimHo",
+                "duration": 406,
+                "title": "Million Little Miracles | Elevation Worship & Maverick City"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qHLTW-jSvRg",
+                "duration": 314,
+                "title": "Worthy of It All | Live from Church | Legacy Worship (feat. Mariah Bernard)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mkbxP0rxt6E",
+                "duration": 387,
+                "title": "Highlands (Song Of Ascent) [Live] Hillsong UNITED"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1uxKbAWWlGI",
                 "duration": 335,
-                "title": "Matt Redman - The Praise Is Yours (Live From The Mission)"
+                "title": "One Day at a Time  ( Sweet  Jesus ) - THE ASIDORS 2022 COVERS | Christian Worship Songs"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PcmqSfr1ENY",
-                "duration": 467,
-                "title": "Charity Gayle - I Speak Jesus (feat. Steven Musso) [Live]"
+                "url": "https://www.youtube.com/watch?v=D5Y6K_IUfAc",
+                "duration": 313,
+                "title": "In The Waiting | feat. Zac Rowe | Gateway Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KwX1f2gYKZ4",
-                "duration": 453,
-                "title": "Graves Into Gardens ft. Brandon Lake | Live | Elevation Worship"
+                "url": "https://www.youtube.com/watch?v=E5ZZNvnMICE",
+                "duration": 322,
+                "title": "Waiting | Healing Place Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TwNTHThR-Fw",
+                "duration": 279,
+                "title": "Don Moen - I Offer My Life | Praise & Worship Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6EQM3I1s2yw",
+                "duration": 373,
+                "title": "Worthy of It All | feat. Michael Bethany | Gateway Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lie1L61Qnos",
+                "duration": 315,
+                "title": "You Are My All In All | Live | Brentwood Baptist Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FtUNQpu2b7Q",
+                "duration": 405,
+                "title": "This I Believe (The Creed) - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3fuJe84UXE8",
+                "duration": 360,
+                "title": "Living Hope (feat. Phil Wickham) | Live at Men's Summit | Gateway Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0-OsZLjz7oU",
+                "duration": 377,
+                "title": "Runnin (feat. Brandon Lake) | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=anz_4BZ1-2s",
+                "duration": 331,
+                "title": "JESUS HAVE IT ALL – LIVE IN THE PRAYER ROOM | JEREMY RIDDLE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sax4aTgZ9dw",
+                "duration": 354,
+                "title": "Don Moen - Thank You Lord | Live Worship Sessions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E8sAzBTAVCU",
+                "duration": 273,
+                "title": "Don Moen - Be It Unto Me | Live Worship Sessions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QaEx2A7p9Dk",
+                "duration": 276,
+                "title": "Seasons (Live) - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=klUgD0jhrQQ",
+                "duration": 374,
+                "title": "Spirit Of Praise 7 ft. Sipho Ngwenya - Ebenezer - Gospel Praise & Worship Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yAJnHGoo44E",
+                "duration": 217,
+                "title": "One Way - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O-3lMrhm8HQ",
+                "duration": 348,
+                "title": "Red Rocks Worship - Good Plans (Official Live Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yNg3ND_YjSc",
+                "duration": 360,
+                "title": "Behold The Lamb Of God - Live | Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_eQd3K2Fxp4",
+                "duration": 230,
+                "title": "Casting Crowns - Only Jesus (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7NyH9mDYECk",
+                "duration": 292,
+                "title": "My Testimony | Live | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HhbtVCI67pw",
+                "duration": 405,
+                "title": "\"WAY MAKER\" in Hebrew, Arabic & English (Worship by Jews & Arabs)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hnMevXQutyE",
+                "duration": 378,
+                "title": "Hosanna - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Gn2j7WGTyM",
+                "duration": 311,
+                "title": "Sadaa Raja - Ft. @JosephRajAllamOfficial & Ketki Allam | Nations Of Worship | NOW Original"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1yBzIt_z8oY",
+                "duration": 233,
+                "title": "Casting Crowns - Nobody (Official Music Video) ft. Matthew West"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IkHgxKemCRk",
+                "duration": 309,
+                "title": "Chris Tomlin - Holy Forever (Lyric Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FCPP-qovLtI",
+                "duration": 381,
+                "title": "Worthy Is The Lamb - Hillsong Worship & Delirious?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DwijX74r7tk",
+                "duration": 277,
+                "title": "What I See (feat. Chris Brown) | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0ekN5YbfIFc",
+                "duration": 303,
+                "title": "Still (Church Online) - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r5L6QlAH3L4",
+                "duration": 342,
+                "title": "What A Beautiful Name (Lyric Video) - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HWh0Fest6T0",
+                "duration": 344,
+                "title": "Lift Up Your Hands - THE ASIDORS 2023 COVERS | Christian Worship Songs"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4G3955CBNu0",
+                "duration": 397,
+                "title": "Bangaram Adugaledu || Worship Conference-22 || Telugu Christian Song | Raj Prakash Paul |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fp26y4YeSWA",
+                "duration": 341,
+                "title": "Sundaruda | సుందరుడ | Telugu Worship Songs | Featuring Ekklesia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BWsa2mkzhiQ",
+                "duration": 281,
+                "title": "Awake My Soul (Live) - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AaaMQqDb0To",
+                "duration": 329,
+                "title": "Mahonnathuda || Worship Conference-22 || Telugu Christian Song || Raj Prakash Paul || Jess"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0B_lnQIITxU",
+                "duration": 396,
+                "title": "Do It Again | Official Lyric Video | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ucY6NwQTI3M",
+                "duration": 343,
+                "title": "Tasha Cobbs Leonard - Break Every Chain (Live At Passion City Church)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yQKPrcr_reM",
+                "duration": 311,
+                "title": "Free Worship - Ulemelero Wanu feat. Praise Umali"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rnfOwCyPtZ0",
+                "duration": 386,
+                "title": "Guta Reutiziro (Live) - Minister Michael Mahendere & Direct Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=60k_gMGRnRk",
+                "duration": 269,
+                "title": "Don Moen - Hallelujah To The Lamb | Praise and Worship Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wPDmGct1iYs",
+                "duration": 363,
+                "title": "No Body (feat. Jonsal Barrientes) | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C0I59GlCCWs",
+                "duration": 354,
+                "title": "My Response ft. Jubilee Worship (Official Video) - Phil Thompson"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=grABLV6jhs0",
+                "duration": 279,
+                "title": "My Redeemer Lives (He Lives) | Official Live Worship Video | Kingdom Culture Worship x Sou"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GEAcs2B-kNc",
+                "duration": 409,
+                "title": "Mighty to Save - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WNgHinl3ThU",
+                "duration": 354,
+                "title": "I WILL NEVER DIE | Death Will Never Have the Final Word | Christian Viking Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OD4tB1o6YLw",
+                "duration": 323,
+                "title": "Matt Redman - The Heart Of Worship (Lyrics And Chords)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dmf2qg4hhB8",
+                "duration": 289,
+                "title": "Spirit Of Praise 7 feat. Ayanda Ntanzi - Nasempini - Gospel Praise & Worship Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HtR3yxVuKC8",
+                "duration": 403,
+                "title": "Transformation Worship - Overflow (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z8agqyGIaD8",
+                "duration": 229,
+                "title": "Echo (feat. Tauren Wells) | Live | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e3Cql61a4P0",
+                "duration": 305,
+                "title": "Praise (Elevation Worship) in Hebrew - Shevakh | Passover 2024"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lN-Gr173gWc",
+                "duration": 391,
+                "title": "Israel Mbonyi - Hari Ubuzima (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XKOoeTbjSeI",
+                "duration": 307,
+                "title": "Come Thou Fount (Official Music Video) | Celtic Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R1EwKwayzLM",
+                "duration": 186,
+                "title": "Lauren Daigle - Hold On To Me (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=getozwPDpNc",
+                "duration": 331,
+                "title": "Sang Tere | Hindi Christian Song | Nehemiah K ft. Bridge Music, Amit Kamble & Rachel F @Re"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DboMwgmXbQA",
+                "duration": 298,
+                "title": "Steve Crown- We Wait On You/ official video #worship #stevecrown #yahweh   #trending #tren"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qCdevloDE6E",
+                "duration": 264,
+                "title": "Casting Crowns - Scars in Heaven (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i4nc8cY9Z6s",
+                "duration": 388,
+                "title": "YOU ARE GREAT- STEVE CROWN (The Official Video)  #worship #stevecrown #yahweh #trending"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=660L8UmUR8g",
+                "duration": 313,
+                "title": "Way Maker - Christafari (Sinach Cover) - Reggae Version | New Christian Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9sE5kEnitqE",
+                "duration": 296,
+                "title": "CeCe Winans - Goodness of God (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HK3gTmYc4f0",
+                "duration": 293,
+                "title": "Deep Cries Out - Bethel Music Kids/ KCCNJ King's Kids VBS Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_98vsx2IvP4",
+                "duration": 343,
+                "title": "Goodness of God (Live Worship)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QZW4_8_zCBE",
+                "duration": 264,
+                "title": "Pat Barrett - Build My Life (Lyric Video) (ft. Cory Asbury)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RjdlMJhiC9Q",
+                "duration": 400,
+                "title": "Angayan - Blissful Worship (Official Lyric Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k6RpdqO0VrM",
+                "duration": 270,
+                "title": "Heaven Come Down (feat. Jasmine Hodge) | Citipointe Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4W65tpIsntU",
+                "duration": 338,
+                "title": "What A Beautiful Name | Hillsong Worship (Lyrics)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2vP9kSMGTm4",
+                "duration": 324,
+                "title": "DOE - You Will Have It All (Live Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1WZoYSuhwv0",
+                "duration": 304,
+                "title": "Because He Lives - 90’s Rock Ballad (AI Worship)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s5PpepxWcKI",
+                "duration": 268,
+                "title": "Judikay - Idinma (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jgcXR4U4kEc",
+                "duration": 293,
+                "title": "CHIDINMA - Jehovah Overdo (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wHnPVBp-8tQ",
+                "duration": 262,
+                "title": "You Raise Me Up - Sanboih (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZB5sEqs37gU",
+                "duration": 383,
+                "title": "Dhanyawad | Hindi Christian Song | Bridge Music ft. Sam Alex, Rachel Francis & Hemant  @Re"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0wrl-XfUhSg",
+                "duration": 296,
+                "title": "The Reason Why I Live"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U0SdoQqrE_8",
+                "duration": 386,
+                "title": "ADA EHI - I TESTIFY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hg_5_sAo6rI",
+                "duration": 302,
+                "title": "Mercy Chinwo - Obinasom (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LgMCm5NWtII",
+                "duration": 299,
+                "title": "Jennifer Hudson performs Hallelujah | Global Citizen Prize 2019"
             }
         ],
-        "search_query": "worship music live praise christian songs"
+        "search_query": "worship music live"
     }
 }

@@ -2,24 +2,224 @@
     "station_conf": {
         "network_name": "Comedy",
         "network_type": "streaming",
-        "channel_number": 27,
+        "channel_number": 19,
         "network_long_name": "Comedy",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=ftj16LX-sFE",
-                "duration": 4319,
-                "title": "Dan Cummins: Get Outta Here; Devil! (Full Show) | Dark & Unfiltered St"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=n5zeemXykrU",
-                "duration": 3224,
-                "title": "Des Bishop: Bridge & Tunnel | Full Comedy Special"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=NqK1gyTYt8M",
                 "duration": 4112,
                 "title": "Brian Simpson | Live From The Mothership (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MBUoyy2xq5c",
+                "duration": 3969,
+                "title": "Isaac Butterfield | PUBLIC ENEMY | FULL STAND UP COMEDY SPECIAL (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4ycfTfDZ1tU",
+                "duration": 2955,
+                "title": "Tom Cashman - The Formula for Happiness (Full Comedy Special) 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bmPrNext0I0",
+                "duration": 2410,
+                "title": "Shayne Smith: Prison for Wizards (Full Show) | FUNNIEST Stand-Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JHbgA38R1OM",
+                "duration": 3438,
+                "title": "Gary Owen: No Hard Feelings (2026) |  FULL SPECIAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xJtEyIcx_fs",
+                "duration": 4104,
+                "title": "Urzila Carlson — Just Jokes (Full Comedy Special) 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zTIuiOUakuo",
+                "duration": 3599,
+                "title": "Kirk Fox: That Guy | FULL COMEDY SPECIAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NECH1KkjY6w",
+                "duration": 3923,
+                "title": "Charles Haycock: Freezer Baby - Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BKWo0ezBIK8",
+                "duration": 1767,
+                "title": "The Craziest News Stories of 2026 | The Daily Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qowU0UY6REg",
+                "duration": 4205,
+                "title": "Gabriel Rutledge | A Reasonable Hour | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JxDyYbKjjyA",
+                "duration": 3722,
+                "title": "Matt Falk | Adrenaline and Cortisol | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qWZ4MLedAFA",
+                "duration": 3018,
+                "title": "Jack Tucker: Comedy Standup Hour | Full Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UPvzkc0bQ-Y",
+                "duration": 2622,
+                "title": "Ray O'Leary — Laughter? I Hardly Know Her! (Full Comedy Special) 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IXDA3HHcq5E",
+                "duration": 4183,
+                "title": "BRAD WILLIAMS: LIVE ON SHORT STREET {Full Stand-Up Comedy Special}"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VBcruyyPGhE",
+                "duration": 4531,
+                "title": "Dan Cummins: Don’t Wake The Bear (Full Show) | Sharp & Unfiltered Stand-Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sB9eWtzTOq0",
+                "duration": 3980,
+                "title": "Gianmarco Soresi: Thief of Joy | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qzsHolR05hg",
+                "duration": 3349,
+                "title": "Pete Holmes | Silly Silly Fun Boy (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fM63f2lVl0k",
+                "duration": 2785,
+                "title": "Sal Calanni MENTAL SPILLNESS (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xptOaD97HJA",
+                "duration": 3163,
+                "title": "Tyler Fischer LIVE IN PORTLAND | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oyoQiJtoHUM",
+                "duration": 3666,
+                "title": "Liz Zagone - Sick Lil Freak | Full Stand-Up Special [2026]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0E54LoeEdUc",
+                "duration": 4339,
+                "title": "Mario Adrion: My Struggle | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lFgkPuLdpeg",
+                "duration": 4177,
+                "title": "Mike Vecchione live from the Stress Factory | Full Comedy Special 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=POcxgiZBBDs",
+                "duration": 2975,
+                "title": "Nick Moore: Stay Black and Die | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XwFN2LOCrOw",
+                "duration": 2971,
+                "title": "Don Friesen: Ask Your Mom | FULL COMEDY SPECIAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MSQ8p5CrvcM",
+                "duration": 3775,
+                "title": "ISMO | Hello (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EkI0X8kcKO0",
+                "duration": 3513,
+                "title": "R U MAD? | Ben Bankas Standup Comedy (Full Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3bvkoxZ6xcw",
+                "duration": 3917,
+                "title": "Anjelah Johnson-Reyes: Ugly Baby | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b_DsDzysRJU",
+                "duration": 4504,
+                "title": "Jim Gaffigan’s LEGENDARY Stand-Up Comedy: Quality Time | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zqv-yKgUbCA",
+                "duration": 3810,
+                "title": "Charlie Berens: Neighborly (FULL SPECIAL 2025)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tGbZqHU-Xew",
+                "duration": 2769,
+                "title": "Janet McNamara: Not Smart Enough | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zBlytYhNCKg",
+                "duration": 4033,
+                "title": "ALI SIDDIQ: MONDAYS  {Full Stand Up Comedy Special}  NEW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P1S77UakCig",
+                "duration": 3976,
+                "title": "Louis CK 2026 – Back to Eden: Savage Jokes & Dark Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YYMqQoF2Z7g",
+                "duration": 3560,
+                "title": "Tom Papa: Human Mule (Full Show) | Relatable Stand-Up Comedy Gold"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c-iW-bLBiEU",
+                "duration": 2666,
+                "title": "Josh Edelman | The Jew Rogaine Experience (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nIMW_6BDoaY",
+                "duration": 4298,
+                "title": "Iliza Shlesinger: Freezing Hot (Full Show) | Hilarious Stand-Up Comedy Special."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DybW0Nf5g2g",
+                "duration": 5103,
+                "title": "Don't Judge a Book By Its Cover (Full Comedy Special)  | ALI SIDDIQ - Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vy6lCbSCuzg",
+                "duration": 3695,
+                "title": "Chris Higgins | Live at the Fort (2025 Full Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1Lik3hSyhrY",
+                "duration": 2351,
+                "title": "Dan Soder: On The Road | Full Stand Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dQgMDlDJMig",
+                "duration": 4287,
+                "title": "Andrew Santino: Homefield Advantage (Full Show) | Hilarious Stand-Up Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=14ps_hS1NiQ",
+                "duration": 4155,
+                "title": "Dusty Slay: Workin' Man | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=23L2sIZTA-E",
+                "duration": 3100,
+                "title": "Brad Wenzel: Desperate Times - Full Stand Up Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eZHJFscsZec",
+                "duration": 3215,
+                "title": "Jimmy O. Yang: Guess How Much  (Full Show) | Stand-Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j1AxfwQr-GA",
+                "duration": 3190,
+                "title": "Leslie Liao | Silky Smooth (Full Comedy Special)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=LYfZ60ijd1Q",
@@ -27,14 +227,49 @@
                 "title": "Emmy Blotnick | What's Her Secret? (Full Comedy Special)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=krQma_JwX98",
-                "duration": 4388,
-                "title": "Dan Cummins: TRYING TO GET BETTER [FULL Comedy Standup Special]"
+                "url": "https://www.youtube.com/watch?v=YF3FPYZJMY4",
+                "duration": 3812,
+                "title": "Dale Jones: Say It Ain't So | Full Comedy Special"
             },
             {
-                "url": "https://www.youtube.com/watch?v=y2YtIBYM4w0",
-                "duration": 5348,
-                "title": "Ari Shaffir - JEW (2022) FULL SPECIAL"
+                "url": "https://www.youtube.com/watch?v=o1Zddj5RByM",
+                "duration": 3194,
+                "title": "Ed Regine: We're All Idiots | Full Stand Up Comedy Special 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=37w8bTaQ3AA",
+                "duration": 1832,
+                "title": "Girl Really Went to Jail for This ?! [Full Crowd Work Show - 30 minutes] - Michael Blauste"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TSi5zOfEaQE",
+                "duration": 4174,
+                "title": "Chris D'Elia: Grow Or Die (STANDUP COMEDY SPECIAL)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N8yH253sEpM",
+                "duration": 3805,
+                "title": "Gary Owen: #DoinWhatIDo (Full Show) | Hilarious Stand-Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SgXSWbF02WE",
+                "duration": 4362,
+                "title": "Josh Wolf - The Campfire Special | Stand-Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NfLRNydJ0qA",
+                "duration": 4498,
+                "title": "Jay Pharoah: Jared | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Ep9IELFY5M",
+                "duration": 4426,
+                "title": "Tom Segura's 'Completely Normal' l Full Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NWgoc4Iz1RM",
+                "duration": 1898,
+                "title": "Positive Stuff | Drew Dunn | Stand Up Comedy Special"
             },
             {
                 "url": "https://www.youtube.com/watch?v=FSbE9EAHiGU",
@@ -42,21 +277,236 @@
                 "title": "ALI SIDDIQ: RUGGED [Full Stand Up Comedy Special]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=SJCt9aWtink",
-                "duration": 3578,
-                "title": "Rob Bebenek - Numpty | Full Comedy Special"
+                "url": "https://www.youtube.com/watch?v=k6WNXMLTB5o",
+                "duration": 3310,
+                "title": "60 Jokes That Are Pure Comedy Gold in 60 Minutes | Full Standup Comedy Compilation"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ijFQCbulaWs",
-                "duration": 2990,
-                "title": "Sam Morril - \"You've Changed\" Full Special (2024)"
+                "url": "https://www.youtube.com/watch?v=AKamQgLvb24",
+                "duration": 5388,
+                "title": "Jimmy Carr | Laughing and Joking (Full Comedy Special)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zTIuiOUakuo",
-                "duration": 3599,
-                "title": "Kirk Fox: That Guy | FULL COMEDY SPECIAL"
+                "url": "https://www.youtube.com/watch?v=TtRYQIqvDrE",
+                "duration": 2795,
+                "title": "Chad Daniels | For Reels (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O3S2WZ3fpQo",
+                "duration": 3140,
+                "title": "Steve Bugeja: Shiny | 2026 Full Stand-Up Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YZCMD1J0M3U",
+                "duration": 3493,
+                "title": "Jim Breuer: And Laughter For All (Full Show) | Seriously FUNNY Stand-Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BjDLXPzOVqc",
+                "duration": 4979,
+                "title": "Ralph Barbosa's Funniest Stand Up Comedy Moments! (2025)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uYqWsDhWkkA",
+                "duration": 3451,
+                "title": "Kelsey Cook | Mark Your Territory (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2S1Djh7oraI",
+                "duration": 3319,
+                "title": "Louie Anderson: Big Underwear (Full Show) | Legendary Stand-Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Inw31IqnykM",
+                "duration": 710,
+                "title": "No GPS Generation | Chris Porter Standup Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1WTO3Q8Id4Q",
+                "duration": 5080,
+                "title": "Matt Rife Latest Stand Up Comedy 2026 | Matt Rife Comedy Moments #226"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-2eVc01Lqo",
+                "duration": 3493,
+                "title": "Jim Breuer's CLASSIC Stand-Up Comedy: And Laughter For All | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nnKYmo_tUXQ",
+                "duration": 4563,
+                "title": "ALI SIDDIQ: MY TWO SONS [75 minute Full Stand Up Comedy Special]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jw6BW7TA3R8",
+                "duration": 3182,
+                "title": "Simon Brodkin: Screwed Up | 2025 Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=txN_qF7Sk6k",
+                "duration": 2827,
+                "title": "Unfiltered Matt Rife Comedy | Matt Rife Viral Crowd Work Moments"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Pjf-__JMko",
+                "duration": 2075,
+                "title": "J. Snow | Life Is Funny (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sGEAqq16gYU",
+                "duration": 1273,
+                "title": "“What Is Going On?” - Sebastian Maniscalco: Comedy Central Presents - Full Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hyOawy9gYbA",
+                "duration": 4260,
+                "title": "Josh Blue | Freak Accident (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oy2QyPQ5L5M",
+                "duration": 3000,
+                "title": "Max Amini FULL COMEDY SPECIAL 2025 | \"Randomly Selected\" | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OfqMkJwVgmo",
+                "duration": 3856,
+                "title": "David Cross | The End of The Beginning of The End (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mbU59XyGqcE",
+                "duration": 3868,
+                "title": "This Comedian is GUARANTEED to Make You Smile | Mike Paramore Double Feature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lM0HsAzDQjg",
+                "duration": 2378,
+                "title": "Matt Koff - Cat Man (2026) | Full Standup Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
+                "duration": 2885,
+                "title": "Shane Gillis Live In Austin | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t5q5KMc4Yho",
+                "duration": 3009,
+                "title": "Ryan Davis: UNDER-RATED {FULL COMEDY SPECIAL} Presented by Ali Siddiq"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OZ5WY4Q4IgI",
+                "duration": 3780,
+                "title": "Sebastian Maniscalco Presents: Pat McGann – When’s Mom Gonna Be Home? (Full Show) | Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FrgCQctDFDI",
+                "duration": 2365,
+                "title": "Emily Catalano - UNSPECIAL (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zQxXhKVW3BU",
+                "duration": 3838,
+                "title": "Urzila Carlson — Just No! (Full Comedy Special) 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D3HAdwAb_zs",
+                "duration": 818,
+                "title": "Healing and Happy Endings | Reg Thomas | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=46cxhMQYH74",
+                "duration": 2755,
+                "title": "Fahim Anwar: Intrusive Thoughts (Full Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q6ERutG0qTc",
+                "duration": 3117,
+                "title": "Chris Turner: Naturalized | Full Comedy Special | UK vs. USA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WyX4uqcBrto",
+                "duration": 1267,
+                "title": "Church Basketball Player from Tennessee - Nate Bargatze: Comedy Central Presents - Full Sp"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EWge7dihrRY",
+                "duration": 3397,
+                "title": "Brad Williams \"Starfish\" 2024 FULL COMEDY SPECIAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=82XEginF7lg",
+                "duration": 2655,
+                "title": "The Workout Industry is a SCAM | Paul Morrissey FULL SPECIAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UP8FWmG9BbY",
+                "duration": 4585,
+                "title": "Dr. Hilary Okello: Uganda Must Laugh 2 - (FULL STAND-UP COMEDY SPECIAL)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v8cvgqsbrbc",
+                "duration": 3044,
+                "title": "John Crist: Emotional Support (FULL SPECIAL)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_m0PU2MJPPo",
+                "duration": 2001,
+                "title": "IMPROVISED PLAY #83 | \"The Lemon Tree Affair\" | Shoot From The Hip"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rb05fiUz6cU",
+                "duration": 3030,
+                "title": "Unconceivable | Jim Norton | Full Stand Up Comedy Special 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hPH1oqPG6Ws",
+                "duration": 450,
+                "title": "Culturally Exposed! | Max Amini | Stand-up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EsKDNZQhVX0",
+                "duration": 4877,
+                "title": "The Domino Effect [One Hour Stand Up Comedy Special] by Ali Siddiq"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KajhtdIl2FA",
+                "duration": 2205,
+                "title": "America's Got Talent 2026 | FUNNIEST Comedians! 🤣"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P9ZX-4U7zvs",
+                "duration": 748,
+                "title": "Unseen Crowd Work From Comedy Special | Max Amini | Standup Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=caZs9faGMH0",
+                "duration": 1155,
+                "title": "Hilarious London Moments | Max Amini | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Si-4vPUzaZ4",
+                "duration": 2737,
+                "title": "Dan Mintz ('Bob's Burgers' Tina Belcher) | Well Rounded Entertainer (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vrIw2i4WtA4",
+                "duration": 1258,
+                "title": "An Escalator Can Never Break - Mitch Hedberg: Comedy Central Presents - Full Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=to_b5ueXFOU",
+                "duration": 3083,
+                "title": "Andy Huggins: Early Bird Special | Full Stand-Up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V6XoV-5X7as",
+                "duration": 4794,
+                "title": "Full Comedy Special: Country Boy Will Survive  |  Jim Breuer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6o6ZFZ2yuqU",
+                "duration": 4614,
+                "title": "Kyle Kinane | Shocks and Struts [Unabridged] (Full Comedy Special)"
             }
         ],
-        "search_query": "stand up comedy full special"
+        "search_query": "stand up comedy special full show"
     }
 }

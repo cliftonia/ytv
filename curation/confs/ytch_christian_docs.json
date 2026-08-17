@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Christian Docos",
         "network_type": "streaming",
-        "channel_number": 122,
+        "channel_number": 89,
         "network_long_name": "Christian Docos",
         "stream_rotation": "clock",
         "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=ETB9sHgbMhA",
+                "duration": 3695,
+                "title": "The Return of Christ - The Movie (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tCEItdHHkws",
+                "duration": 5375,
+                "title": "✨ The Ground Beneath Our Feet | Faith, Purpose, Inspiration | BMG Christian Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YCdCul9v9IA",
+                "duration": 5366,
+                "title": "THE BOOK OF ESTHER - Full Christian Movie | A Story of Courage, Faith, and Destiny"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0zlw6Qu6e4w",
+                "duration": 5268,
+                "title": "I'M NOT HIM | Full Movie #faith #christian"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HNf1PAW00iY",
+                "duration": 1096,
+                "title": "She Failed Everything: Until She leave it in God's Hands | Christian Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8BTixsGW54c",
+                "duration": 3872,
+                "title": "THE VOICE I REJECTED | Full Christian Movie 2026 | Powerful Gospel Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=38sWSyIifq4",
+                "duration": 1614,
+                "title": "A Whisper of Faith | A Christian Short Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UBmGbf8K5xs",
+                "duration": 5373,
+                "title": "Saving Faith | Full Christian Movie - Starring Nikki Love, Bryan Hanna"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x0uumVMueYo",
+                "duration": 5178,
+                "title": "A NEW MORNING ALWAYS COMES | If Not For His Grace - Inspiring CHRISTIAN DRAMA | Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPzEV7dv4ro",
+                "duration": 4989,
+                "title": "FAITH WINS | Full INSPIRATIONAL CHRISTIAN DRAMA Movie HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=61DJZZxXL_g",
+                "duration": 4904,
+                "title": "OPEN HEAVEN (Full Christian Movie 2026) | What Happens When We Pray?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OkMs16efy88",
+                "duration": 2580,
+                "title": "The Insane Christian Cult Ran by Deborah Green | Cult Justice"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vNa84GkLC70",
+                "duration": 3484,
+                "title": "The Terrifying Last Angels Who End the World | Book of Revelation (Full Movie) 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r_t6M9Kiq8Y",
+                "duration": 4866,
+                "title": "Measure of Faith | Full Drama Faith Movie | Free HD Inspirational Christian Film | FC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vuFVZlLTzDs",
+                "duration": 5096,
+                "title": "Shepherd | Full Christian Drama Movie | Finding Faith Through Suffering"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LNBOqGzs3uM",
+                "duration": 4615,
+                "title": "FLIES AND FIRE | A Powerful Christian Movie About Spiritual Fire & Consecration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X3LnTX0EAMA",
+                "duration": 4764,
+                "title": "2ND CHANCES: Grief Can Break You. But God Will Save You | CHRISTIAN DRAMA | Dove-Approved"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=33pVBlFAKE0",
+                "duration": 5335,
+                "title": "ROT | A Powerful Christian Marriage Movie About Bitterness, Forgiveness & Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fZdObTcBwxk",
+                "duration": 4866,
+                "title": "Can God Bring This Family Back Together? MEASURE OF FAITH | Full CHRISTIAN FAMILY DRAMA Mo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mzc3EM0ZjeA",
+                "duration": 5139,
+                "title": "In the Blink of an Eye | Full Christian Movie - Starring David A. R. White, Eric Roberts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QvL-B_wJrQk",
+                "duration": 4829,
+                "title": "HOME BEYOND THE SUN - Full Christian Movie | Pinnacle Peak Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rpWVRsuRpZ8",
+                "duration": 2310,
+                "title": "CHOICES || A Powerful Christian Movie on Decisions and Faith |   LATEST FSM 2026 MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hEdF_aD78tY",
+                "duration": 5336,
+                "title": "Hidden Secrets | Full Christian Movie | Starring John Schneider, David A R White"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F2LFy0PCe8s",
+                "duration": 3102,
+                "title": "Mennonites, an ultra-conservative Christian community"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ekNQZwJQD1Y",
+                "duration": 1416,
+                "title": "🎬 The God of Judah | A Christian Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mBMKbATR8QU",
+                "duration": 2323,
+                "title": "The Donald Trump Christian Movie is Terrible (Obviously)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=71S_cI0MGRo",
+                "duration": 5294,
+                "title": "The Christmas Movie That Will Restore Your Faith | Silver Bells FULL Christian Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_1vEj4F-rm8",
+                "duration": 2843,
+                "title": "Secrets of Christ's Tomb | SPECIAL | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bzp0HT6kLUY",
+                "duration": 2178,
+                "title": "The Birth of Jesus Christ | Animated Bible Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uKzNTNlUrEw",
+                "duration": 4731,
+                "title": "FORGIVEN - KEVIN SORBO | Full CHRISTIAN DRAMA Movie HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8v0UeEvP0_4",
+                "duration": 870,
+                "title": "ORIOLES vs. RAYS: Official Full Game Highlights (August 15) | 2026 MLB Season"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D152lWYtMuA",
+                "duration": 1766,
+                "title": "This Anti-Masker Christian Movie is Even Worse Than You Think"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4xdqeStiXP0",
+                "duration": 4080,
+                "title": "EVA | When God Is Silent — A Christian Movie on Prayer & Faith (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1TWS6Uc6aoM",
+                "duration": 4476,
+                "title": "MIRACLES ARE FOR REAL | Full CHRISTIAN FAMILY DRAMA Movie HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wvLvgO3irKE",
+                "duration": 2807,
+                "title": "Dramatic escape from an authoritarian Christian church | 60 Minutes Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jp_wSfDQS_Q",
+                "duration": 1422,
+                "title": "My Calling | A Christian Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SfKwNWmzS5c",
+                "duration": 2757,
+                "title": "Late at 18 || Latest Christian Movie 2026 || 4k"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1N6AmUZ6v3k",
+                "duration": 4257,
+                "title": "Sleeping Prophecy (2026) | Full Movie | Latest Christian Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QvXaNZ8twGk",
+                "duration": 5256,
+                "title": "WALKING ON WATER  - LATEST CHRISTIAN MOVIE 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4lNGdxHs4oM",
+                "duration": 4972,
+                "title": "Marriage Retreat | Full Christian Movie | Pinnacle Peak Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2ReatOT3A0s",
+                "duration": 4801,
+                "title": "My Name Is Melissa  | Full Movie | A Christian Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TqvP8hhMAYg",
+                "duration": 1543,
+                "title": "Close to Be Just Friends | Latest Nigerian Christian Movie | Closer Than She Knew"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sncy6FOmL9M",
+                "duration": 1755,
+                "title": "The Passion of the Christ 2: RESURRECTION (2027) Mel Gibson Reveals EVERYTHING"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rz2GgEcylJo",
+                "duration": 4867,
+                "title": "SPIRIT OF INFIRMITY || LATEST NIGERIA CHRISTIAN MOVIE || THE WINLOS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C1GOrbhgomM",
+                "duration": 705,
+                "title": "MARINERS vs. ASTROS: Official Full Game Highlights (August 15) | 2026 MLB Season"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q6WJE0A43ps",
+                "duration": 5278,
+                "title": "Hallmark Romantic Full Movie || She Had Given Up on Romance — Until He Changed Everything"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TBf-gHhyjAU",
+                "duration": 4935,
+                "title": "Johnny | Full Christian Movie | Starring Musetta Vander & Lee Majors"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=igtMfqLoqIM",
+                "duration": 4728,
+                "title": "SINGLE AT 37 // LATEST NIGERIAN CHRISTIAN MOVIE // ANORA FILMS // INSPIRATIONAL STORY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6HbGuY73pU0",
+                "duration": 1031,
+                "title": "God, When? | A Christian Short Film About Faith and Waiting"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=OMBQwGzn_TE",
                 "duration": 1800,
                 "title": "Why This Atheist Scientist Became a Believing Christian"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vXJIbvsb00s",
-                "duration": 2229,
-                "title": "Christian Apologists and Early Heresies"
+                "url": "https://www.youtube.com/watch?v=s44vGbkpV8c",
+                "duration": 5036,
+                "title": "ON ANGEL'S WINGS | Full INSPIRATIONAL CHRISTIAN Movie HD"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dLrvJeSugkM",
-                "duration": 5175,
-                "title": "No.1 Christianity Expert: If You DON'T Believe In a God You NEED to He"
+                "url": "https://www.youtube.com/watch?v=xfOmkOXYZUU",
+                "duration": 792,
+                "title": "Timeline of Christian Martyrs (this will make you cry)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TUfAe669pgQ",
-                "duration": 4559,
-                "title": "Astrophysicist Reveals NEW Evidence for God and the Bible"
+                "url": "https://www.youtube.com/watch?v=1bvi69A4dhI",
+                "duration": 3516,
+                "title": "The INCREDIBLE Story Behind Christian Film Director Alex Kendrick"
             },
             {
-                "url": "https://www.youtube.com/watch?v=-PaogH-qN9I",
-                "duration": 3487,
-                "title": "The Scientific Evidence for God: A NEW Documentary"
+                "url": "https://www.youtube.com/watch?v=rGwa2BIru00",
+                "duration": 642,
+                "title": "Rapture 2025 Animated Christian Movie that will change your life | AI Animation #biblestor"
             },
             {
-                "url": "https://www.youtube.com/watch?v=H2sWzApuuvc",
-                "duration": 4061,
-                "title": "Genesis Impact (Full Movie)"
+                "url": "https://www.youtube.com/watch?v=J5ApHjWevKg",
+                "duration": 5007,
+                "title": "NO MERCY: One Man's Brutal Revenge in Bangkok (2015) ACTION"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QhVPBNBAGY0",
-                "duration": 1148,
-                "title": "Can I Trust the Bible - Episode 1: The Right Books | @WesHuff"
+                "url": "https://www.youtube.com/watch?v=G8dopFww2Js",
+                "duration": 708,
+                "title": "The Cleaner (2025) | Christian Short Film"
             },
             {
-                "url": "https://www.youtube.com/watch?v=lpsKNd8tqHI",
-                "duration": 1997,
-                "title": "Can I Trust the Bible - Episode 3: The Council of Nicaea | @WesHuff"
+                "url": "https://www.youtube.com/watch?v=MTcQaHWYOA4",
+                "duration": 2086,
+                "title": "Bargain in the Spirit / A Short Christian Film"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nnjJbn32fZs",
-                "duration": 1502,
-                "title": "Justin Martyr: The Philosopher Who Died for Christ"
+                "url": "https://www.youtube.com/watch?v=A6PH29DJs08",
+                "duration": 1374,
+                "title": "Love or Purpose? | Faith, Love & Purpose | Latest Christian Movie 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=kWSG5okmUr8",
-                "duration": 2194,
-                "title": "A Historian Explains the Evidence for the Resurrection of Jesus (Dr. G"
+                "url": "https://www.youtube.com/watch?v=nToL_o654pY",
+                "duration": 5249,
+                "title": "Camp Harlow - Full Christian Movie | Pinnacle Peak Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AO3XjxktgS4",
+                "duration": 5062,
+                "title": "Price of Journey - THE ROAD OF HOPE - Love western movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sibcl8dMNjY",
+                "duration": 4651,
+                "title": "The Easter Story: Life, Death, and Resurrection of Jesus Christ (Full Movie)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WufHxyGwuOw",
+                "duration": 2022,
+                "title": "🎬 It Ended in Praise | A Christian Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JtphIb6IHUs",
+                "duration": 4991,
+                "title": "AWAKE O CHRISTIAN - LATEST CHRISTIAN FULL MOVIE 2025| ANORA MEDIA TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kYWS4FWgWyA",
+                "duration": 2102,
+                "title": "THE BIBLICAL DESTINY OF THE UNITED STATES📜 The Truth About the U.S.A. Written in the Bible"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aFA1CFYrAtY",
+                "duration": 4332,
+                "title": "GRACE IN THE FIRE || latest Christian Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2nk-q4ykhQc",
+                "duration": 851,
+                "title": "SAMSON (2026) | Strength Without Discipline | Full Christian Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jPgyZ7P-iWI",
+                "duration": 1532,
+                "title": "She Was Bold in Church… But Silent at Work | SALT (Christian Short Film)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S51sKe2z9JQ",
+                "duration": 3015,
+                "title": "PRIVATE WAR (2026) | Full Movie | Latest Christian Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ydfe0jg1NU0",
+                "duration": 3169,
+                "title": "WIFE || VALENTINE CAME WITH A COST || TRUE LIFE STORY || CHRISTIAN MOVIE || THE WINLOS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iSoXEMgiUos",
+                "duration": 1082,
+                "title": "I Lived Like A Orthodox Christian For 30 Days"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ftO-bvNMjHk",
+                "duration": 2682,
+                "title": "Angel Colony: Must-Watch Tamil Christian Short Film - Full HD Quality | AngelTV.Org"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Suj8Wp2w14",
+                "duration": 2557,
+                "title": "A Real Christian Routine The Movie Full 2026 🎞️ Living Alone Diaries 🩷 Kingdom Spouse Marr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rjyi8qqQAsI",
+                "duration": 1033,
+                "title": "HA KANO KA DUR NGI KYRKHU IA U TRAI? | Potternet tv | khubor step 2026 | Pastor Bantei"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xu4BhwOZAX4",
+                "duration": 1518,
+                "title": "Joel's Prophecy of The End Times |Full Story 2026|: Bible Story Animation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xcpUDyJ9L88",
+                "duration": 1890,
+                "title": "Tamil Christian Short Film | Dowry Awareness | Say No To Dowry | Social Awareness Video |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4MljaBkXaT0",
+                "duration": 4734,
+                "title": "FEARLESS ||  latest Christian Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=erIpV-eZGew",
+                "duration": 1914,
+                "title": "The Workplace |THE GOD KEEP| Christian Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cTql5ezzE-g",
+                "duration": 2131,
+                "title": "COVENANT WITH EVIL || LATEST NIGERIAN CHRISTIAN MOVIE || THE ONLY LAUREL || THE WINLOS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VjXYWIEPMeY",
+                "duration": 4251,
+                "title": "MELCHIZEDEK (2026) The Most MYSTERIOUS Priest-King In The Bible!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cgf_plLmpeM",
+                "duration": 290,
+                "title": "Jayasudha Singing \"Andaru Nannu Vidichina\" | Full Song - Telugu Christian Song (2019)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QQ3CFEwRDcs",
+                "duration": 5231,
+                "title": "THE REPAIR ROOM | A Christian Movie About Marriage |Written by Adeoluwa Boluwajaiye & Gide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UfPpHumgBgE",
+                "duration": 331,
+                "title": "Ummai Nesikkiren | Reenukumar | Timothy Sharan | New Tamil Christian Song | 4k | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7dXBpWiwxkw",
+                "duration": 949,
+                "title": "The 'trad wives' leaving high-control Christian nationalist communities"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EZvoAx6BgzM",
+                "duration": 289,
+                "title": "English Christian Song \"The Joy of Praising God\" | Kids Dance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=viuTY6UeCp0",
+                "duration": 3354,
+                "title": "55 Min of Christian Kids Music | Worship Songs for Children | Lighthouse Kids Family"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S5O1eqp1tL0",
+                "duration": 477,
+                "title": "Tor Se Wada New Christian Sadhri Single 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zexi3hz9XeQ",
+                "duration": 4597,
+                "title": "The Golden Voices| Full Drama Faith Movie | Free HD Inspirational Christian Film #singing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JurtiKYOFOY",
+                "duration": 2240,
+                "title": "What is the Millennial Reign of Christ?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l1vSBNmKrSI",
+                "duration": 2312,
+                "title": "VeggieTales | Noah's Ark"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RSrsz2daQQg",
+                "duration": 1763,
+                "title": "PROPHET SUDDENLY || WORSHIP SESSION WITH LAWRENCE OYOR || CUT OUT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1tfC3y79p88",
+                "duration": 4982,
+                "title": "MY PROPHET | Full Nigerian Christian Movie 2026 | Powerful Faith-Based Drama | Gospel Movi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MHOswo7MMc4",
+                "duration": 2224,
+                "title": "THE PROFESSOR PT 3 - Ebube Obio / Rosabell Andrew 2026 Latest Nigerian Nollywood Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r7sgZvRyQeE",
+                "duration": 254,
+                "title": "DISA JA OMDATAI | Male Version | Soura Christian Song | Music Video | 2026 | Soura"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3Cdy-bjyFO4",
+                "duration": 593,
+                "title": "Who is Archbishop Augustine Obiora Akubeze? A documentary put together by Didactic Media"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rB84ryWfmLk",
+                "duration": 259,
+                "title": "Jesus Christ's Greater Love for You | Easter 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=muT60Y3OACc",
+                "duration": 3772,
+                "title": "SNARED || REAL LIFE STORY || CHRISTIAN MOVIE  || THE WINLOS || THE ONLY LAUREL || MIOKUKUS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-aT2fNjLGGU",
+                "duration": 1760,
+                "title": "MOSES: THE PROPHET | The Complete Bible Story | Cinematic Christian Documentary (4K) 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j5ZFmjcqSrI",
+                "duration": 779,
+                "title": "2819 Worship — For Christ Alone (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nYnNIsbD74o",
+                "duration": 4952,
+                "title": "BLOWBACK | ACTION | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C1I8qn-kzn0",
+                "duration": 851,
+                "title": "Gideon and his 300 Men | Full Movie (2026) | 4K Biblical Movie"
             }
         ],
-        "search_query": "christian documentary apologetics"
+        "search_query": "christian documentary full"
     }
 }

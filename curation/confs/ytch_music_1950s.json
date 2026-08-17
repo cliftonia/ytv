@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "1950s Music",
         "network_type": "streaming",
-        "channel_number": 111,
+        "channel_number": 68,
         "network_long_name": "1950s Music",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=yt0_tx8Sqf4",
-                "duration": 1660,
-                "title": "Best of 50s & 60s Vol.4 *Oldies but Goldies* *Rock & Roll Greatest Hit"
+                "url": "https://www.youtube.com/watch?v=gqAbbOmZrsA",
+                "duration": 203,
+                "title": "1950s Americana - Back To The 50s"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Y_ZYnNmoAsY",
-                "duration": 3981,
-                "title": "Ultimate Juke-Box Hits of the 50S & 60S Medley 1: The Loco-Motion / Su"
+                "url": "https://www.youtube.com/watch?v=VsAlSuEG26A",
+                "duration": 122,
+                "title": "Bill Haley  His Comets  Rock Around The Clock OST 1956 Remastered And Colorize"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pf7VD9fYmGc",
-                "duration": 5134,
-                "title": "Rock and Roll 60s Music 🎸 | Best Dance Songs of the 1960s"
+                "url": "https://www.youtube.com/watch?v=reU99t1QS7E",
+                "duration": 318,
+                "title": "Take Me Back to 1958 | 1950s Americana Doo-Wop Love Song | Back to the Bay Lights (1958)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=kmTyHvI2UOc",
-                "duration": 3225,
-                "title": "The Best of Rock and Roll 50s 60s to Dance Non-Stop"
+                "url": "https://www.youtube.com/watch?v=5r9mWWE624A",
+                "duration": 257,
+                "title": "Hollywood Walk In 1959 - I Know No More Beautiful Time (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=EOcQ4Qr7Dk0",
-                "duration": 2422,
-                "title": "50s Music Mix 🎸 Best Rockabilly & Oldies Hits | Vintage Rock n Roll Pl"
+                "url": "https://www.youtube.com/watch?v=Rf55gHK48VQ",
+                "duration": 139,
+                "title": "Real 1950s Rock & Roll, Rockabilly dance from lindy hop !"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tMsYgTXBZRc",
-                "duration": 3662,
-                "title": "1950s rock & roll instrumental music"
+                "url": "https://www.youtube.com/watch?v=AOt4baMHtNE",
+                "duration": 244,
+                "title": "1950s Rock n Roll Tribute Band 50s Explosion- Available from alivenetwork.com"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0IM6Qc-x3jE",
-                "duration": 4663,
-                "title": "The best Doo-Wop style songs from the 50s and 60s."
+                "url": "https://www.youtube.com/watch?v=gj0Rz-uP4Mk",
+                "duration": 164,
+                "title": "Elvis Presley - Jailhouse Rock (Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=I0Z_DyEu1pc",
-                "duration": 1794,
-                "title": "Best of 50s & 60s Vol.3 *Oldies but Goldies* *Rock & Roll Greatest Hit"
+                "url": "https://www.youtube.com/watch?v=gBClG8kqG3A",
+                "duration": 234,
+                "title": "Telecaster 50's Rock"
             },
             {
-                "url": "https://www.youtube.com/watch?v=98affPT8mww",
-                "duration": 1250,
-                "title": "1950s ROCK & ROLL | Original Compilation 🔥 High Energy Rockabilly Mix"
+                "url": "https://www.youtube.com/watch?v=ffSjFjdg4Ds",
+                "duration": 257,
+                "title": "Rock n' Roll (classic)   video mix 50's and 60's ...\"America never stops dancing\""
             },
             {
-                "url": "https://www.youtube.com/watch?v=E-O0T5NWnP4",
-                "duration": 1252,
-                "title": "1950s Rock & Roll Vol. 2 🔥 High Energy Rockabilly Mix | DJ.MAM"
+                "url": "https://www.youtube.com/watch?v=4L3DiN9vIAc",
+                "duration": 228,
+                "title": "50's Rock & Roll - Gretsch 5422T"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ud_JZcC0tHI",
+                "duration": 151,
+                "title": "Rock Around the Clock-Bill Haley-original song-1955"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gdQDOFS5wkE",
+                "duration": 203,
+                "title": "RUBBER-BAND RHYTHM | 1950s Rock and Roll Twist Dance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ItbmkuGuq8g",
+                "duration": 181,
+                "title": "1950s Walk Through Hollywood - Memories Of A Wonderful Past"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NNFz9O3xPsY",
+                "duration": 266,
+                "title": "Stay Tonight 🎧 Emotional 50s Rock & Roll Ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O6qnSmS2NBE",
+                "duration": 213,
+                "title": "Rockin’ Rita 💃 | Wild 1950s Rock ’n’ Roll Dance | Retro Stereo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1oP5z6wbbN4",
+                "duration": 158,
+                "title": "1950s Rockabilly - Invisible to her Eyes (1950s Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A99sV18J0mk",
+                "duration": 156,
+                "title": "Jailhouse Rock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GvZdpxAxS48",
+                "duration": 191,
+                "title": "Rockin' All Night Long 🤘 | 1950s Rock & Roll Jukebox | Vintage Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8B7xr_EjbzE",
+                "duration": 157,
+                "title": "Shake, Rattle and Roll - Bill Haley and his Comets"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ib9QmZbfbbs",
+                "duration": 200,
+                "title": "MARDY – Eddie Peregrina 🎙️ 1950s Rock & Roll Ballad Cover"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JtBDZ8Rdrkw",
+                "duration": 161,
+                "title": "ROCK THE DINER | 1950s Rock and Roll Rockabilly"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FPtGqYbPfyU",
+                "duration": 230,
+                "title": "I FEEL BLUE – Eddie Peregrina 🎙️ 1950s Rock & Roll Ballad Cover"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_avqfITtOxA",
+                "duration": 318,
+                "title": "LIFETIME LOVE (1950s Rock & Roll Love Ballad)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hff24-zJYLU",
+                "duration": 323,
+                "title": "Baby Let’s Boogie 💥🕺 | High-Energy 1950s Rock & Roll Dance Party"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i053iRVJZcQ",
+                "duration": 122,
+                "title": "How Teenagers Ran the Rock 'n' Roll Era"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uvbLjBYyQ3c",
+                "duration": 109,
+                "title": "CRAZY ROCK AND ROLL DANCE IN SPAIN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SEPvoNA1OGw",
+                "duration": 151,
+                "title": "At The Hop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F1LZuQ9E4JQ",
+                "duration": 297,
+                "title": "Tina Turner & Chuck Berry - Rock n roll music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ndy-1-kuo6w",
+                "duration": 150,
+                "title": "Neon Diner Saturday Night – Ricky Raye – 1950s Rock and Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SbYa7NBYyRc",
+                "duration": 164,
+                "title": "The Wanderer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xz7MmEhWRlk",
+                "duration": 202,
+                "title": "Take Me Back to 1959 | 1950s Americana Love Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f8Vfin7mqdw",
+                "duration": 152,
+                "title": "Eddie Cochran  - Twenty Flight Rock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y-9Y4CCIWnM",
+                "duration": 163,
+                "title": "Johnny Be Goode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ebaKsr95fsA",
+                "duration": 409,
+                "title": "This Feels Like a Real 1950s Night… 🎶 Rock & Roll Jukebox Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ik57HLn0Nm0",
+                "duration": 157,
+                "title": "DION ~ RUNAROUND SUE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5C99vfGpYjU",
+                "duration": 165,
+                "title": "DONT EVER LEAVE ME - EDDIE PEREGRINA 🎙️ OPM Classics | 1950s Rock & Roll Ballad Cover"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YDkRGLuSS9k",
+                "duration": 209,
+                "title": "Your Touch Saved Me | A 1950s Rock & Roll Ballad Of First Love Beneath Silver Stars"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9ucwuwYNCwo",
+                "duration": 150,
+                "title": "Rock And Roll Is Here To Stay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n5ayTdT3WYk",
+                "duration": 239,
+                "title": "I Keep Dialing  | 1950s Rock & Roll Love Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GNEmhVAOi6s",
+                "duration": 323,
+                "title": "Oh California, Take Me Back to the 1950s Golden Era! doo-wop Music !"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QTDhQ2QECqE",
+                "duration": 128,
+                "title": "Good Golly Miss Molly"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IRC_2LzdoK8",
+                "duration": 216,
+                "title": "HERB KRAUS & THE WALKIN'  SHOES - OLD TIME ROCK AND ROLL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p9eKEgAH38w",
+                "duration": 195,
+                "title": "YOU'RE ALL I NEED – Eddie Peregrina 🎙️ 1950s Rock & Roll Ballad Cover"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uLF3YZIjucs",
+                "duration": 161,
+                "title": "Rockin' Robin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PD1dLBwXMHs",
+                "duration": 313,
+                "title": "Forever Starts With You | A 1950s Rock And Roll Love Ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xIScLKoQjd4",
+                "duration": 252,
+                "title": "The Prettiest Girl in School ❤️ | 1950s Doo-Wop Rock and Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sutLiL0F8k4",
+                "duration": 133,
+                "title": "Baby, Let's Dance | 1950s Americana Doo-Wop Rockabilly Song in 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ao3XrWxk6OM",
+                "duration": 147,
+                "title": "Saturday Night Boogie | Upbeat 1950s Rock'n'Roll Piano Blues 🎹"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zeFxNYg0mjo",
+                "duration": 235,
+                "title": "1950s Rockabilly - When Ironworkers Dance Above New York"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gerkxKUl3Bs",
+                "duration": 258,
+                "title": "Roll Away Jhonny - Chuck Berry | 1950s Rock n Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xJmmXZB1iFU",
+                "duration": 220,
+                "title": "JUKEBOX JIVE | Explosive 1950s Rock n Roll Rave-Up"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TReqmJ7iX2M",
+                "duration": 163,
+                "title": "Johnny B. Goode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i4i7U9C1Rc8",
+                "duration": 419,
+                "title": "50'S Rock & Roll Piano Secrets (Elvis-Style) Simple Patterns To Copy (Learn Beginning Pian"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iWAfWpInq64",
+                "duration": 272,
+                "title": "Oh, Angie My Love | A Dreamy 1950s Rock & Roll Ballad Of Moonlit Romance And Timeless Devo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nnAQvu7OqrY",
+                "duration": 180,
+                "title": "1959 Larry collins and Joe Maphis play live Ramrod!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-IlVXIx_AE8",
+                "duration": 197,
+                "title": "Don’t Play It Cold | Original 50s Rock ’n’ Roll Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=coLhlrS1Cms",
+                "duration": 133,
+                "title": "BUBBLEGUM BOP | 1950s Rock n Roll Doo Wop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2BTOfQjRH7U",
+                "duration": 197,
+                "title": "JITTERBUG RIOT | 1950s Boogie Woogie Rock n Roll | 50s Rock and Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9xWCy7b8bgg",
+                "duration": 143,
+                "title": "Little Bitty Pretty One"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jRV-t3yUYzo",
+                "duration": 166,
+                "title": "SHAKING AT THE SODA SHOP | 1950s Rock n Roll Boogie Woogie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oqCqi1g1MAQ",
+                "duration": 218,
+                "title": "HOT ROD HELLCAT | 1950s Rockabilly & High-Speed Rock n Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s3odyo7cwlk",
+                "duration": 288,
+                "title": "Hey! Little Mama, Rock! 🔥 Wild 1950s Piano Rock & Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9K_6gaukThM",
+                "duration": 275,
+                "title": "1950s Rock & Roll | Chuck Berry Style"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cj059o9OwqY",
+                "duration": 126,
+                "title": "Little Richard - Tutti Frutti (1956)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RPD_QpShwIU",
+                "duration": 234,
+                "title": "Burning Through The Night 1950s Rock And Roll | Nostalgia 1950s Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y-i_qFGmTks",
+                "duration": 200,
+                "title": "Quit Actin’ Shy | Original 1950s Rock ’n’ Roll / Rockabilly Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8CYBlcTCGLU",
+                "duration": 307,
+                "title": "I Never Stopped Loving You | A Tender 1950s Rock & Roll Ballad Of Endless Devotion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AxIUfxYSB9k",
+                "duration": 219,
+                "title": "Get A Rhythm – 1950s style Rock & Roll That Makes You Move!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0VJ1NuAbEBI",
+                "duration": 154,
+                "title": "Great Balls Of Fire"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nFch8vH81ks",
+                "duration": 172,
+                "title": "Runaround Sue"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3LTvBA5PJ7g",
+                "duration": 272,
+                "title": "Elvis Presley Inspired | First Time Heart ❤️ | 1950s Rock ’n’ Roll Love Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GBQ4TlWBdjk",
+                "duration": 228,
+                "title": "1950’s Rock & Roll Love Ballad – She Walked By in Red"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4HndzRtLndE",
+                "duration": 80,
+                "title": "Kyle Gordon - Marry That Girl (unreleased, 50s rock n roll)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0LhpZwpKw4M",
+                "duration": 244,
+                "title": "Rockin’ Twist Parade | 1950s Rock & Roll Dance Song | Retro Stereo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eBiak6eccEc",
+                "duration": 367,
+                "title": "Jive Bunny Rock and Roll Mix’s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zk89nErh4ms",
+                "duration": 154,
+                "title": "💥 Boom Boom Bop! 🔥 | 1950s Rock ’n’ Roll Dance Explosion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n4qw8ShkGdA",
+                "duration": 216,
+                "title": "Summertime In 1959 - Come With Me (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lTowfObm8Y8",
+                "duration": 192,
+                "title": "I Miss You (1950s Slow Rock’n’Roll) | Classic Love Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oQXM-2iBH0E",
+                "duration": 187,
+                "title": "She’s Got That Rhythm | Original 1950s Rock ’n’ Roll Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cLNxgkKVG-Y",
+                "duration": 195,
+                "title": "Runaround Sue (Dion) – AI Generated Cover | Vintage Doo-Wop Vibes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4mMSqf9UP8Y",
+                "duration": 77,
+                "title": "Kyle Gordon - Every 1950’s Rock N’ Roll Song (For Some Reason) feat. Johnny Tornado [Offic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oRfJMCv7ISM",
+                "duration": 215,
+                "title": "My Heart Won’t Lie  | 1960s rock and roll love ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XqTISFnbHa0",
+                "duration": 168,
+                "title": "Those Magic Changes (From Movie Grease) | AI Vintage Doo-Wop Cover 2026 | Cinematic 8K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QQi8MRvvlMc",
+                "duration": 302,
+                "title": "Back When We Were Kids | 1950s Rock & Roll Love Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7TD-U2ydvAw",
+                "duration": 226,
+                "title": "Living Across The Street (1950s Rock & Roll Love Story)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L0Meuz46Oeg",
+                "duration": 270,
+                "title": "YOU STOLE MY HEART ✨ | Original 1950s Rock and Roll Love Ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3AOIMMQOO0U",
+                "duration": 233,
+                "title": "Starlight, Stay Tonight | 1950s Doo-Wop Rock and Roll Love Song Under Neon Lights and Juke"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uicFo_zd7mo",
+                "duration": 183,
+                "title": "Classic 50s Rock ’n’ Roll Party! –🔥 Turn It Up! “Jukebox Heartbeat” 🎉🎸"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5MreSUSTbHY",
+                "duration": 360,
+                "title": "50s Rock and Roll Survival Kit | Tricks and Licks | Guitar Lesson"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OFLKGYXnALw",
+                "duration": 230,
+                "title": "STILL MY LOVE ✨ | Original 1950s Rock and Roll Love Ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f5-2ntzY2uA",
+                "duration": 174,
+                "title": "Shirley, Shirley - 1950s Rock 'n' Roll Classics | Root Beer Rock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DUB_DymdMV8",
+                "duration": 181,
+                "title": "Elvis Presley Inspired | Original 1950s Rock & Roll Love Song - “Pop Rock Roller Coaster”"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y487Z46qJrw",
+                "duration": 203,
+                "title": "ADIE & BRIELLE 🎧 Emotional 50s Rock & Roll Ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dJ3grJPkZcg",
+                "duration": 133,
+                "title": "Main Street Boogie | 1950s Americana Rock n Roll in 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oJ5k3feIr3s",
+                "duration": 216,
+                "title": "Midnight Fiesta Boogie  Fast 1950s Rock ’n’ Roll Dance Original"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wtvWmaZg9DE",
+                "duration": 186,
+                "title": "Diana - Paul Anka (Cover) | 1950s Rock and Roll Doo-Wop Style | Old America Dreams"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fW-NvjlDJUc",
+                "duration": 127,
+                "title": "Sunshine Shoes – Happy 1950s Rock and Roll Swing | Feel-Good Vintage Summer Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ge_bqhH9QuE",
+                "duration": 267,
+                "title": "The Last Letter I Never Burned 💔 50s Americana Rock & Roll  | Dreams By Hanna (Official Vi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_AVutwLzGX8",
+                "duration": 125,
+                "title": "The Starlighters – Saturday’s Ours | Original 1950s Rock ’n’ Roll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DwyC3pen3kQ",
+                "duration": 133,
+                "title": "There Goes My Baby | 1950s Rockabilly Classic - AI Generated Music Video"
             }
         ],
-        "search_query": "1950s rock and roll hits compilation"
+        "search_query": "1950s rock and roll"
     }
 }

@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Health & Fitness",
         "network_type": "streaming",
-        "channel_number": 89,
+        "channel_number": 52,
         "network_long_name": "Health & Fitness",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=c4TomZjzobY",
-                "duration": 1141,
-                "title": "20 Min Full Body Dumbbell Workout | FOLLOW ALONG"
+                "url": "https://www.youtube.com/watch?v=D9q9lvbj810",
+                "duration": 5218,
+                "title": "The Atlantic (2026) The Forbidden Ocean That Holds Earth’s True History"
             },
             {
-                "url": "https://www.youtube.com/watch?v=NQxEUC3-aaE",
-                "duration": 651,
-                "title": "COMPLETE Core Strengthening In Just 10 Minutes! Follow-Along Workout"
+                "url": "https://www.youtube.com/watch?v=6MLEDqdWgD0",
+                "duration": 4701,
+                "title": "The Future of Fitness | How Training Is Changing Forever | Fitness Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5KXZ9I2z1m4",
-                "duration": 1413,
-                "title": "Complete 20 Min Full Body Workout To Lose Weight (Follow Along)"
+                "url": "https://www.youtube.com/watch?v=uREx5LuickM",
+                "duration": 1496,
+                "title": "Week 23 - 2026 - The \"Documentary\" of Your Training: Would Your Actions Screen a Champion?"
             },
             {
-                "url": "https://www.youtube.com/watch?v=AxlTMs58tHw",
-                "duration": 2512,
-                "title": "FULL BODY FOLLOW ALONG WORKOUT💦 FAT BLASTING & NO NOISE CIRCUIT"
+                "url": "https://www.youtube.com/watch?v=uc-qiR8JU-0",
+                "duration": 779,
+                "title": "INDIVIDUAL FITNESS TRAINING DOCUMENTARY"
             },
             {
-                "url": "https://www.youtube.com/watch?v=XgI_p8bKg78",
-                "duration": 1420,
-                "title": "Complete 20 Min ABS Workout | Follow Along"
+                "url": "https://www.youtube.com/watch?v=CzRBu-5qZTw",
+                "duration": 2937,
+                "title": "I Went Back to the CrossFit Games | Behind The Scenes"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7GkMHPe_OXw",
-                "duration": 1309,
-                "title": "20 Min FULL BODY Workout For BEGINNERS (No Equipment)"
+                "url": "https://www.youtube.com/watch?v=3c1-txnKCMA",
+                "duration": 453,
+                "title": "Why dancing could be the ultimate brain workout - BBC World Service"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3YL8Tfr73rE",
-                "duration": 1480,
-                "title": "Complete 20 Min Full Body Workout | Follow Along"
+                "url": "https://www.youtube.com/watch?v=dPQXpxcf2IQ",
+                "duration": 1000,
+                "title": "🔵🔴FC BARCELONA's 2026/27 TRAINING CAMP | THE MOVIE 🍿🎥"
             },
             {
-                "url": "https://www.youtube.com/watch?v=fqCeYdMCnFs",
+                "url": "https://www.youtube.com/watch?v=B6QpO4vPB0c",
+                "duration": 1754,
+                "title": "The Bodybuilding Documentary Where the Famous “Fish and Rice Cakes” Meme Came From"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h3ZymzaPVSI",
+                "duration": 1317,
+                "title": "Exercise Scientist Critiques Famous Movie Training Scenes (Rocky & More!)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WJGpCCMPdoA",
+                "duration": 421,
+                "title": "2026 Wushu Training Documentary 🥋 | Liu Zhaohe 刘钊赫 (Shanghai University of Sport) | Changq"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iGPc6U6VLuk",
+                "duration": 2976,
+                "title": "Inside Gilbert Fernandez’s Mind: Full Workout Documentary (This Changed Me)”"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pbk6XqNpAsc",
+                "duration": 2540,
+                "title": "U.S. Army Basic Combat Training at Fort Jackson | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8-5xzxu04oc",
+                "duration": 1167,
+                "title": "25 Minute Victoria Sport High Impact Cardio  Lower Body Workout Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XazTJC0njX8",
+                "duration": 1686,
+                "title": "Goodbye, Tough Workouts: Japan's 3-Second Training - Medical Frontiers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=936zkKvervQ",
+                "duration": 366,
+                "title": "TBreez & Jackie Terry Workout Episode 1 Mini Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jhAu9MdWGwY",
+                "duration": 1502,
+                "title": "Training Movie Star KIT CONNOR For His Next Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J_L6nIla1O8",
+                "duration": 2002,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w17d7 | 11k controlled and p"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xbABGepKT2o",
+                "duration": 2670,
+                "title": "This Workout Feels Like a 12 Round Fight (BODYCOMBAT)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_O-v4IsOoHU",
+                "duration": 944,
+                "title": "15 Min Full Body HIIT - 2 Week Glow Up | Home Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=abP8Qlee7lg",
+                "duration": 971,
+                "title": "DO THIS Workout To Lose Weight | 2 Weeks Shred Challenge 2021"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mf1xQS_Zlkc",
                 "duration": 1382,
-                "title": "Complete 20 Min Cardio Workout To Replace Treadmill (Follow Along)"
+                "title": "20 Minute Full Body Dumbbell Workout NO REPEAT (Strength & Conditioning)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gXs3GRt3QpY",
-                "duration": 1813,
-                "title": "30 Minute Full Body Mobility Workout | Follow Along, Intermediate"
+                "url": "https://www.youtube.com/watch?v=aQ92cE_nKsI",
+                "duration": 262,
+                "title": "Workout Film Spring 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ke6gh40t5TU",
-                "duration": 1857,
-                "title": "30 MIN BEAST MODE DUMBBELL WORKOUT | Full Body Follow Along"
+                "url": "https://www.youtube.com/watch?v=d6iKiQUYvmk",
+                "duration": 863,
+                "title": "Encanto Dance Workout | We Don't Talk About Bruno, Surface Pressure & More"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rpbGJp-DBIk",
+                "duration": 1316,
+                "title": "20 MIN FULL BODY WORKOUT || Intermediate Pilates (No Equipment)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n9Rv7jeg9rQ",
+                "duration": 3116,
+                "title": "Arrow Up: 2026 BC Lions Training Camp Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SbURodJWeMM",
+                "duration": 404,
+                "title": "5 MIN FULL BODY STRETCH & COOL DOWN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gDfK9zf76AY",
+                "duration": 1280,
+                "title": "20 MIN MORNING PILATES || Full Body Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=63G8eh_Ps_M",
+                "duration": 1219,
+                "title": "What Navy Recruits Go Through In Boot Camp | Boot Camp | Business Insider"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jHQnb7RfI58",
+                "duration": 1359,
+                "title": "20 MINUTE FULL BODY WORKOUT | At-Home Pilates"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iN4AdD_van4",
+                "duration": 1665,
+                "title": "90s Bollywood workout 2.0 ultimate dance workout, Param with fitness ￼￼"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s1OvyDqm-ig",
+                "duration": 1467,
+                "title": "20 MIN EXPRESS PILATES WORKOUT || Intermediate Mat Pilates (No Equipment)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RAHsYlIdpEU",
+                "duration": 3734,
+                "title": "Ninja Training, Techniques, & Skills //  Ninjutsu 忍術 Documentary (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SupnEwKjOUI",
+                "duration": 269,
+                "title": "Connor Stutz | 2026 NFL Draft Eligible P (Uconn) | Workout Film w/ One On One Kicking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jFk-L7Wcg0g",
+                "duration": 553,
+                "title": "Arnold Schwarzenegger Shows His Gym & Fridge | Gym & Fridge | Men's Health"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vUQXg5V7y2Q",
+                "duration": 2023,
+                "title": "2 Mile Walk | At Home Workouts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yv97bFg9dHI",
+                "duration": 249,
+                "title": "Rodrigo Blankenship Spring 2026 Kicking Workout Film (Field Goals + Kickoffs)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iAwYKMLdWgA",
+                "duration": 323,
+                "title": "Jake Sudit - 2025/26 Spring Season - Goalkeeper Training Film (Fitness)  - Bard College"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u5dYN07-VEI",
+                "duration": 446,
+                "title": "Your Grip Is Sabotaging Every Lift You Do || Training Explain || Animation Documentary ||"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RP0Q8geTcJc",
+                "duration": 1893,
+                "title": "2 Mile SWEAT | At Home Workouts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yisu-kVkEyM",
+                "duration": 916,
+                "title": "NFL WR/TE BRANDON CLARY  WORKOUT Documentary PT.1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NCzNpWHIvTE",
+                "duration": 334,
+                "title": "5 MINUTES TONED ARMS WORKOUT | no equipment | Caro Daur #DAURPOWER"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DiWM4Kq4T4s",
+                "duration": 3128,
+                "title": "Clinton - Episode 4 (2012) | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oOAdY9lDv7s",
+                "duration": 2680,
+                "title": "The Last Weeks of Princess Diana | FULL DOCUMENTARY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ck1pvGQ8_nQ",
+                "duration": 1696,
+                "title": "Low impact, fat burning, cardio workout from home."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vFrbAxHBPtk",
+                "duration": 500,
+                "title": "Push Workout | Fat Loss Documentary| Day 28 | Chest Shoulders Triceps 🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3PVcUuNc-uc",
+                "duration": 621,
+                "title": "Chasing Sub 3 | Daily Marathon Training Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lXNUaCzhkWc",
+                "duration": 403,
+                "title": "60 Day Documentary Prompt/ Daily Workout at home/ Beast #challenge #beast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WlIbIaPrPPY",
+                "duration": 248,
+                "title": "Our England stars and World Champions return 🤩 | Inside Training"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d492B8NheF0",
+                "duration": 376,
+                "title": "5 MIN AB WORKOUT || At-Home Pilates (No Equipment)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1f8yoFFdkcY",
+                "duration": 630,
+                "title": "10 MIN BEGINNER AB WORKOUT // No Equipment | Pamela Reif"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VgmuUCp9D_o",
+                "duration": 498,
+                "title": "2026 MR. OLYMPIA - WHO WANTS IT MORE ? 🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WylB2nIBavk",
+                "duration": 1501,
+                "title": "Dhurandhar movie all song, Bollywood Dance workout easy for beginner ￼￼"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VtI5CHl9nvA",
+                "duration": 295,
+                "title": "Maidaan Movie Football Fitness Training short 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jBtJet6kmZ0",
+                "duration": 1349,
+                "title": "What It Takes To Survive Coast Guard Boot Camp"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZN0J6qKCIrI",
+                "duration": 372,
+                "title": "The Official 2026 Rowing Form Checklist (PERFECT STROKE!)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QNFt76y8-BM",
+                "duration": 409,
+                "title": "Painful Training Montage Scene | GOAT (2026) Movie CLIP 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rWAe4YOwm9w",
+                "duration": 305,
+                "title": "Jimmy Hunter | Brookstone High c/o 2026 | Workout Film w/ One On One Kicking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TEoye8sURvE",
+                "duration": 1040,
+                "title": "I Almost Didn’t Film This Workout… Then This Happened"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1D4WC3GjzCE",
+                "duration": 985,
+                "title": "British Army Fitness Training Film (1960s) Cold War Recruitment & Instruction"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d6ZDI3dGccE",
+                "duration": 570,
+                "title": "February 🌺🌺 actor Rajesh Kumar workout Bhojpuri film Mallyuddh video song 🌺🌺19, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p7riQFdjyM0",
+                "duration": 674,
+                "title": "Aesthetic Brah, Shredded Workout ft. David Laid"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b1H3xO3x_Js",
+                "duration": 1158,
+                "title": "Full Body Flow  |  20-Minute Yoga Practice"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9ptOwnTdXnY",
+                "duration": 615,
+                "title": "10 MIN INNER THIGH WORKOUT || Pilates For Strong & Toned Legs"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oevrrMF0C1I",
+                "duration": 248,
+                "title": "A HORSE With NO Name(Workout Film)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sgb7KicfizM",
+                "duration": 336,
+                "title": "Becoming a Gymnast in One Hour!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ltho8_PzC2U",
+                "duration": 364,
+                "title": "Learn How to Backflip in 5 Minutes | ASAP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mh_3ddy9zbY",
+                "duration": 674,
+                "title": "10 min Back & Arms Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8ldcETEXDgI",
+                "duration": 3001,
+                "title": "Killer Whales: Up Close and Personal"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OdzW3HoSOvY",
+                "duration": 377,
+                "title": "AMERICAN NINJA WARRIOR JUNIOR | Paxton from Ninja Kidz TV Hangs on for the Win!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rk2MTGqmAho",
+                "duration": 330,
+                "title": "Toofaani Transformation Of Farhan Akhtar | Amazon Prime Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q2E3BoClidQ",
+                "duration": 679,
+                "title": "Billy Blanks Tae Bo® Ab Burner!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_r3AAdEFVNM",
+                "duration": 1805,
+                "title": "30-Minute No-Equipment Abs and Butt-Toning Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GHARD46OOg8",
+                "duration": 469,
+                "title": "Recreating Handstand Scene from Commando movie| Jungle Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vr3h5X9kmUo",
+                "duration": 944,
+                "title": "15 MIN MORNING YOGA FLOW || Wake Up & Feel Energised"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6rG472iBvTo",
+                "duration": 1331,
+                "title": "Army Basic Combat Training (BCT) Documentary - The Forge"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-eGBCDa4_Tg",
+                "duration": 709,
+                "title": "Do This Workout Every Morning - 11 Minute Total Body"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tLcHTdzykgk",
+                "duration": 1764,
+                "title": "Day 1 - Here  |  MOVE - A 30 Day Yoga Journey"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qxd2kHoWvW0",
+                "duration": 1170,
+                "title": "ABC World News Tonight with David Muir Full Broadcast - Aug. 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0kvgj_UNZxI",
+                "duration": 1549,
+                "title": "25Mins Bollywood Superhit Mix Beginner Fat Burn Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WJjC1uJSgRE",
+                "duration": 249,
+                "title": "A Gymnastics Champ At 10 | On The Red Dot | CNA Insider"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y2eOW7XYWxc",
+                "duration": 1298,
+                "title": "20 MIN FULL BODY WORKOUT - Intense Version / No Equipment I Pamela Reif"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pli8vYrXinc",
+                "duration": 3091,
+                "title": "Jane Fonda Prime Time Workout | Full Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9JAR0GcL0kc",
+                "duration": 417,
+                "title": "5 MIN STANDING ABS WORKOUT || No Equipment"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ns2nYFzcM7M",
+                "duration": 481,
+                "title": "Zander Pughsley Pushes Big Bro Deloni Through Intense Workout!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1WFkNw_3m54",
+                "duration": 4035,
+                "title": "80s Movie Gym Soundtrack | Workout Set 1 - Epic Training Montage Music for Your Next Sessi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7GinCvfaaDM",
+                "duration": 248,
+                "title": "Hotel Inspection & HACCP Training Documentary 2026 Food Safety#hotelmanagement"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=60q_SfZK0kk",
+                "duration": 1017,
+                "title": "Their Training Exercise Just Became a Real War | WAR MACHINE (2026) Movie Recap"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JGWjop0j0sU",
+                "duration": 987,
+                "title": "WORLD'S FREAKIEST CHEST WORKOUT WITH MARKUS RUHL - CHEST DAY MOTIVATION"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=shVHHtrx3vc",
+                "duration": 1559,
+                "title": "Hoya Heavies Spring Training Camp 2026: Clemson Mini Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-tld0bc0t3k",
+                "duration": 1496,
+                "title": "How to Create the Perfect Workout Plan // Ultimate Guide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3IqQWAtGpNQ",
+                "duration": 836,
+                "title": "How Strong Was Franco Columbu Really?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j64BBgBGNIU",
+                "duration": 658,
+                "title": "10 Mins Toned Arms Workout | No Equipment"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-ZMzfihqOkQ",
+                "duration": 1275,
+                "title": "What Army Snipers Go Through At Sniper School | Boot Camp | Insider Business"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DrYc_PxQOcQ",
+                "duration": 2359,
+                "title": "punjabi gym workout songs | gym mashup | gym songs |  | Punjabi Mashup 2026 | Sidhu,Cheem"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jYV2JjadtWg",
+                "duration": 755,
+                "title": "10 Iconic CrossFit Games Moments"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2MoGxae-zyo",
+                "duration": 863,
+                "title": "Do This Everyday To Lose Weight | 2 Weeks Shred Challenge"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nYnNIsbD74o",
+                "duration": 4952,
+                "title": "BLOWBACK | ACTION | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NQmnJtB1gzo",
+                "duration": 1880,
+                "title": "30 Min Full Body Workout to BURN FAT & GET ABS + Toned Legs | FREE WORKOUT PROGRAM"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OWGXhg50EHI",
+                "duration": 1679,
+                "title": "CARDIO WORKOUT AT HOME by Cult Fit | Cardio Workout For Beginners | Home Workout | Cult Fi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=87MWvQ_nz4Q",
+                "duration": 313,
+                "title": "The end of my personal training studio. Where I film most of my YouTube videos. Thank you!"
             }
         ],
-        "search_query": "full workout follow along"
+        "search_query": "fitness training documentary"
     }
 }

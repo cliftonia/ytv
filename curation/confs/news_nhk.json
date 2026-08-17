@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "NHK World",
+        "network_long_name": "NHK World",
+        "network_type": "streaming",
+        "channel_number": 111,
+        "streams": [
+            {
+                "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8",
+                "duration": 600,
+                "title": "NHK World-Japan"
+            }
+        ]
+    }
+}

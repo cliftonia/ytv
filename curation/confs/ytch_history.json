@@ -2,34 +2,159 @@
     "station_conf": {
         "network_name": "History",
         "network_type": "streaming",
-        "channel_number": 58,
+        "channel_number": 33,
         "network_long_name": "History",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=a965A86aAJ8",
-                "duration": 4382,
-                "title": "Homer's Odyssey - The Real History & Archaeology Behind The Myth"
+                "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
+                "duration": 4085,
+                "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the Heinz Dynasty"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GbZ3eYt4liU",
-                "duration": 5305,
-                "title": "The Real Trojan War - Archaeology & History Behind Homer's Iliad Revea"
+                "url": "https://www.youtube.com/watch?v=jHtNTBO4vFI",
+                "duration": 3179,
+                "title": "The Rockefeller Dynasty - A Complete History | 2026 Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MtVP6dyrGss",
-                "duration": 3015,
-                "title": "Thirty Years of War in God’s Name I SLICE HISTORY | FULL DOCUMENTARY"
+                "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
+                "duration": 2665,
+                "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geog"
             },
             {
-                "url": "https://www.youtube.com/watch?v=RCI28U2TvVs",
-                "duration": 3091,
-                "title": "Ancient Athens: The Rise Of The Most Influential Society In History |"
+                "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
+                "duration": 5681,
+                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ya1UHZsGAc8",
-                "duration": 4683,
-                "title": "A Complete History of England with Dan Snow | Full History Hit Series"
+                "url": "https://www.youtube.com/watch?v=a2BLqQn_0M0",
+                "duration": 2281,
+                "title": "The Rise and Ruin of the Coca-Cola Family | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
+                "duration": 2457,
+                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vrtbxvefnjs",
+                "duration": 5442,
+                "title": "Antarctica (2026) The Forbidden Continent That Holds Earth's True History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TpJas6Tx-m8",
+                "duration": 8602,
+                "title": "The Weirdest Mysteries in History (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
+                "duration": 5012,
+                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
+                "duration": 3191,
+                "title": "The Real History of Africa They Never Taught You | Full Documentary | Africa's Great Civil"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dAHJ0omYo7U",
+                "duration": 4475,
+                "title": "THE ENTIRE World War II From The German Perspective | Documentary in PURE COLOR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g7Xn2psTWjY",
+                "duration": 4659,
+                "title": "Are we alone in the universe? | 60 Minutes Anthology"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IFcY4DSJ4_E",
+                "duration": 5329,
+                "title": "JFK’s Hidden Truth: Declassified Files That Change Everything - Documentary Historical - E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MgWQKLtLtSU",
+                "duration": 1992,
+                "title": "Lost Civilizations Beyond History | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
+                "duration": 2683,
+                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hlooGiqHpE8",
+                "duration": 2479,
+                "title": "What NASA Knows About Mars | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gyQqodlfLiA",
+                "duration": 3235,
+                "title": "Stone Age Temple Mystery | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPZKTfRYRjo",
+                "duration": 2657,
+                "title": "Lost Technologies of Ancient Civilizations | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7dUjAGTUGrU",
+                "duration": 3610,
+                "title": "Most Fascinating Ancient Mysteries | Expedition Files | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7KBwx1b53Ao",
+                "duration": 1406,
+                "title": "Too Many Similarities to Be a Coincidence | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
+                "duration": 8434,
+                "title": "Win or Die (FULL EPISODE) | Deadliest Battles for Survival | Animal documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
+                "duration": 7802,
+                "title": "Antarctica (2026) The Forbidden Documentary That Shocked The Whole World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UnvtdsiTgD8",
+                "duration": 2777,
+                "title": "Black Budget - The ENTIRE History of CIA | Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-YhuOv57ou8",
+                "duration": 2583,
+                "title": "Military Encounters with the Unknown | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hcPcoMD84mA",
+                "duration": 2665,
+                "title": "Did Aliens Build Ancient Power Plants? | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
+                "duration": 2842,
+                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nMJkWvEnuDU",
+                "duration": 2658,
+                "title": "The Rise Of Genghis Khan (Full Episode) | Genghis Khan: Secret History of the Mongols | Na"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xMYEICtixJk",
+                "duration": 2900,
+                "title": "Lady Gotti: The Untold True Story of John Gotti's Wife || Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3IFjQFIFraM",
+                "duration": 5743,
+                "title": "100 Findings That Still Nobody Can Explain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x4F5gIWS_Is",
+                "duration": 3283,
+                "title": "The Great Depression - America's Biggest Economic Crisis | Free Documentary History"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sonqx2Dim-0",
@@ -37,26 +162,351 @@
                 "title": "The House of Habsburg - The Inbred Family Empire Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1BrhZBMOS8U",
-                "duration": 3393,
-                "title": "Jericho - The First City on Earth? // Ancient History Documentary"
+                "url": "https://www.youtube.com/watch?v=XKM9anm8M5k",
+                "duration": 2317,
+                "title": "Mysteries of the Holy Grail & Beyond | Ancient Aliens"
             },
             {
-                "url": "https://www.youtube.com/watch?v=y03r7ls8BwM",
-                "duration": 3660,
-                "title": "Dan Snow's In Search of the Great Viking Army | Best History Documenta"
+                "url": "https://www.youtube.com/watch?v=gmoCC0QAfe4",
+                "duration": 2609,
+                "title": "(2026) THE MOST INSANE UFO DOCUMENTARY EVER MADE!  (Director's Cut)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
-                "duration": 3191,
-                "title": "The Real History of Africa They Never Taught You | Full Documentary |"
+                "url": "https://www.youtube.com/watch?v=vmRb-0v5xfI",
+                "duration": 6838,
+                "title": "The Eugenics Crusade | Full Documentary | AMERICAN EXPERIENCE | PBS"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
-                "duration": 4085,
-                "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the"
+                "url": "https://www.youtube.com/watch?v=m8PnhEXvzFk",
+                "duration": 2665,
+                "title": "Of the Land (Full Episode) | BRAND NEW SERIES | Life Below Zero: First Alaskans"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VIU4AYEH2BI",
+                "duration": 2444,
+                "title": "A-List to \"Grifters\": The Real Reason Everyone Turned on Meghan | Inside Royals | Full Doc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zmotKKgVBYM",
+                "duration": 3819,
+                "title": "The Rothschilds - History’s Richest Family Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kaUemcqIQ-k",
+                "duration": 6798,
+                "title": "United States of Secrets, Part One (full documentary) | FRONTLINE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kNuwCiuDz4E",
+                "duration": 6613,
+                "title": "The ENTIRE History of Israel (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rH1Y66IwKvc",
+                "duration": 3259,
+                "title": "The Madoff Affair (full documentary) | FRONTLINE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ms_l8Ydv3Wg",
+                "duration": 6419,
+                "title": "Iran vs Israel & USA: The Origins of The Conflict - Documentary Geopolitical - AT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CeEO9nRQjHc",
+                "duration": 3236,
+                "title": "Lost Tombs of Notre Dame | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1ZyUCAoMIpQ",
+                "duration": 7942,
+                "title": "Egypt’s Queens: Cleopatra, Nefertiti, & More | Lost Treasures of Egypt MEGA Episode | Nat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-ccCf5hGJxI",
+                "duration": 2929,
+                "title": "Inside the Mystery of the Greys | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DB_YPensOPE",
+                "duration": 5425,
+                "title": "TANZANIA LIONS: Ultimate Battles for Survival (Full Episode) | Nature animal documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kpkm50PIQx8",
+                "duration": 2101,
+                "title": "Prophecies from Beyond | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Me4hxOX8ULo",
+                "duration": 4351,
+                "title": "4.5 Billion Years of Earth's History in JUST 1 Hour | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D4ZF70ogq0I",
+                "duration": 3306,
+                "title": "Ku Klux Klan - An American History: Part 1 | Free Documentary History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=us5_eQO3KmM",
+                "duration": 3601,
+                "title": "The Last Years of the Atlantic Slave Trade | Free Documentary History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g9HmV_-EE8g",
+                "duration": 3200,
+                "title": "Nazi Town, USA | Full Documentary | AMERICAN EXPERIENCE | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JXmJXS5DElM",
+                "duration": 6250,
+                "title": "FULL DOCUMENTARY: The Rise & Fall of WCW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oM9WfDBRNcg",
+                "duration": 5541,
+                "title": "UFO's Are Real | FULL MOVIE | Aliens Sci-Fi Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1knIpTuzUW8",
+                "duration": 3236,
+                "title": "How Native Americans Read the Stars (And Built a Civilization) | Full Episode | Native Ame"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1B1Ctljd2uY",
+                "duration": 2665,
+                "title": "Mystery Mummies of New Guinea (Full Episode) | DOCUMENTARY SPECIAL | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HL0ucILjSxc",
+                "duration": 2362,
+                "title": "What Governments Know About Aliens | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4ngJ8Nd251k",
+                "duration": 3846,
+                "title": "2025’s Biggest Alien Discoveries (Part 2) | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=krfcq5pF8u8",
+                "duration": 6003,
+                "title": "13TH | FULL FEATURE | Netflix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CskfvgEItPA",
+                "duration": 5835,
+                "title": "The ENTIRE History of Egypt | Ancient Civilizations Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WvrBNCZqRig",
+                "duration": 2964,
+                "title": "The Perfect Heist | FULL EPISODE | The FBI Files"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
+                "duration": 1623,
+                "title": "CAUTION!!! This Case Made ME Question HUMANITY - True Crime Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jiAdjwJLihM",
+                "duration": 2962,
+                "title": "(Full Episode) War at Sea | Ep 1: The Dreadnoughts of Scapa Flow | BBC Select"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bNw5WQQegfA",
+                "duration": 1321,
+                "title": "Evidence of Aliens Found Underground? | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
+                "duration": 2665,
+                "title": "City of the Future: Singapore – Full Episode | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cKLlZoViByw",
+                "duration": 2416,
+                "title": "Vampires of New Orleans Documentary | Full Episode | Mysteries Decoded | The CW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WRUZc23hv0Y",
+                "duration": 1651,
+                "title": "A Secret She Thought No One Would Ever Discover | True Crime Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KNQuS8GoD0o",
+                "duration": 8617,
+                "title": "The ENTIRE History Of The Vietnam War | 1862 - 1975 (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dBPHMR5BVqU",
+                "duration": 6801,
+                "title": "Inside the Polarization | Divided States of America Part 1 (full documentary) | FRONTLINE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ufvC32TOBmc",
+                "duration": 2665,
+                "title": "Enter the Planet of the Birds (Full Episode) | DOCUMENTARY SPECIAL | Nat Geo Animals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=um2Q9aUecy0",
+                "duration": 3058,
+                "title": "Our Planet | Jungles | FULL EPISODE | Netflix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s-FbhEUdpGY",
+                "duration": 3126,
+                "title": "Inside North Korea: Life Under the World's Most Isolated Regime | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=raaqErbNeI0",
+                "duration": 8074,
+                "title": "The Third Reich in Colour | Full Series | Free Documentary History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8ImtbHTX9gc",
+                "duration": 3212,
+                "title": "Cat Tales | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9dCXW_r_0Pk",
+                "duration": 3646,
+                "title": "The Most MASSIVE Sharks in Shark Week History | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GxQxBUpCxSQ",
+                "duration": 1664,
+                "title": "UFO Activity Surges Across the U.S. | Unidentified: Inside America's UFO Investigation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2U8X41dCfpU",
+                "duration": 3002,
+                "title": "David Attenborough Presents: Tasmania - Weird & Wonderful | Free Documentary Nature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1GBV2FACzC0",
+                "duration": 1973,
+                "title": "AI Just Decoded the Dead Sea Scrolls… And It’s Worse Than We Thought"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-dAB72gsIiE",
+                "duration": 7645,
+                "title": "The Vietnam War | All Episodes | Free Documentary History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v-xdUkaPwKQ",
+                "duration": 4002,
+                "title": "El Chapo - Billionaire Cartel Boss Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PdSgSYkpkNI",
+                "duration": 6647,
+                "title": "THE ENTIRE HISTORY OF ANCIENT GREECE (3000 BC - 146 BC) - Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gxqgm-ruiW8",
+                "duration": 4086,
+                "title": "Philippine Seas: A documentary by Atom Araullo (Full Episode) (with English subtitles)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XmtXC_n6X6Q",
+                "duration": 3055,
+                "title": "Our Planet | From Deserts to Grasslands | FULL EPISODE | Netflix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5vfL2NzVtaQ",
+                "duration": 6358,
+                "title": "The ENTIRE History of The United Kingdom | History Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yQci_Z3DIrw",
+                "duration": 3128,
+                "title": "Clinton - Episode 1 (2012) | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iNFmbCHWd8A",
+                "duration": 2861,
+                "title": "How the CIA KILLED \"Mad Dog\" Gaddafi | CIA Declassified | Endevr Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N418_Yr-_Ec",
+                "duration": 2641,
+                "title": "America's Most Devastating Weapon | Combat Machines | Season 1 Episode 8"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xOWzRCPTLAc",
+                "duration": 3587,
+                "title": "Uncovering WWII Mysteries | Expedition Unknown | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D6_e6yKH26Q",
+                "duration": 2665,
+                "title": "Clan of the North (Full Episode) | Kingdom of the Polar Bears"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DHZDZXjAoPo",
+                "duration": 2899,
+                "title": "Texas True Crime: Pure Evil | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4mpm6x4wvls",
+                "duration": 7972,
+                "title": "Sir David Attenborough: Are These Extinct Animals Still Alive Today? | Full Documentary Mo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PNs6p5eTjnc",
+                "duration": 6230,
+                "title": "World’s Most Toxic Animals - No Antidote | Free Documentary Nature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WXOz9HHaO3I",
+                "duration": 3247,
+                "title": "Inside Einstein's Mind | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ztAf6__j9YI",
+                "duration": 7883,
+                "title": "Understanding the Sun: From Ancient Civilizations to New Technology | MEGA Episode Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iXxlaloPaYQ",
+                "duration": 1626,
+                "title": "Lost Islands, UFOs, and Crystal Skulls | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-sB12gk9ESA",
+                "duration": 3226,
+                "title": "A.I. Revolution | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WwA_7QyqtGI",
+                "duration": 4495,
+                "title": "UNREAL AMAZON – Nature’s Most Dangerous Paradise (Full Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OA-hGS4vtzs",
+                "duration": 2774,
+                "title": "Priceless Berlin Art Discovered in Soviet Vaults | Hunting Nazi Treasures Season 1 Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lnc9f4t-A7Y",
+                "duration": 3797,
+                "title": "Hurricane Katrina: The Storm That Drowned a City (4K Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jlDqi4MUOt0",
+                "duration": 3130,
+                "title": "The Secret Story of Freemasonry | ENDEVR Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mWPT2QhH29o",
+                "duration": 7037,
+                "title": "World’s Deadliest Snakes (FULL EPISODE) | A Brutal Fight for Survival | Animal documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Il5Bk6vcsmw",
+                "duration": 1480,
+                "title": "I-Witness: \"The Rape of Manila\", a documentary by Sandra Aguinaldo (full episode)"
             }
         ],
-        "search_query": "history documentary"
+        "search_query": "history documentary full episode"
     }
 }

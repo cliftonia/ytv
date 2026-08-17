@@ -2,24 +2,304 @@
     "station_conf": {
         "network_name": "Classic Anime",
         "network_type": "streaming",
-        "channel_number": 34,
+        "channel_number": 26,
         "network_long_name": "Classic Anime",
         "stream_rotation": "clock",
         "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=2JMgc9mSgIo",
+                "duration": 3049,
+                "title": "Devilman - The Birth (1987) English Dub 1080p"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hR_EgONHRWE",
+                "duration": 2832,
+                "title": "BUBBLEGUM CRISIS - TINSEL CITY | Episode 01 (English Dub) | Full 1980s ANIME OVA HD"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=uBwQlTdv6hM",
                 "duration": 2704,
                 "title": "Riding Bean (1989) FULL OVA - English Dub"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gHn6KCvRsdI",
-                "duration": 1457,
-                "title": "Speed Racer: Episode 1 - The Great Plan (Part 1) | Full Episode"
+                "url": "https://www.youtube.com/watch?v=ubSdfYqCgK8",
+                "duration": 365,
+                "title": "the devilman dub is a treasure"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rcfykg9jIZM",
-                "duration": 2795,
-                "title": "BAOH English full OVA (Anime) HIGH QUALITY"
+                "url": "https://www.youtube.com/watch?v=yX9B0QQo4-0",
+                "duration": 2643,
+                "title": "BUBBLEGUM CRISIS - MOONLIGHT RAMBLER | Episode 05 (English Dub) | Full 1980s ANIME OVA HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o8q6ETnCv4U",
+                "duration": 2760,
+                "title": "Fatal Fury - The Legend of The Hungry Wolf (1992) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=77U_dMKPTdY",
+                "duration": 2707,
+                "title": "RIDING BEAN (English Dub) | Kenichi Sonoda First Masterpiece | Full 1990s SEINEN ANIME OVA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jYkH3HnuNtk",
+                "duration": 2721,
+                "title": "Grappler Baki: The Ultimate Fighter (OVA) (1994) (ENGLISH DUB)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LfrJlpP8wFQ",
+                "duration": 3311,
+                "title": "Black Lion (1992) 📼 | VHS OVA | English Dub | Retro Samurai Sci-Fi Anime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FZY4SuXW_D0",
+                "duration": 3012,
+                "title": "BLACK JACK OVA Karte 04: THE TWO DARK DOCTORS (English Dub) | Osamu Tezuka & Dezaki"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AAhxchX38rM",
+                "duration": 4032,
+                "title": "Lily C.A.T. - English Dub | Full Anime Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Tr9KngtutKs",
+                "duration": 2935,
+                "title": "BLACK JACK OVA Karte 01: ICEBERG / CHIMAERA MAN (English Dub) | Osamu Tezuka & Osamu Dezak"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UJ5kOpm_fJ0",
+                "duration": 3610,
+                "title": "Dirty Pair: Affair on Nolandia | English Dub | Full OVA | Classic 80s Anime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HVjQp54UboA",
+                "duration": 5171,
+                "title": "Full Movie| FAIRY TAIL THE MOVIE: Phoenix Priestess (English Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sYrt4M-SCak",
+                "duration": 2797,
+                "title": "BUBBLEGUM CRASH! - ILLEGAL ARMY | Episode 01 (English Dub) | Full 1990s ANIME OVA HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DP-9AHdkv9k",
+                "duration": 2778,
+                "title": "Super Atragon (1996) 📼 | Complete OVA | English Dub | VHS Anime Classic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YH2KpQcMOuA",
+                "duration": 3576,
+                "title": "given movie (English Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tBJo84-n9qw",
+                "duration": 2813,
+                "title": "Baoh: The Visitor (1989 OVA Eng Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=10cLuWviwWM",
+                "duration": 3014,
+                "title": "BUBBLEGUM CRISIS - RED EYES | Episode 06 (English Dub) | Full 1980s ANIME OVA HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vb942Zpg_jI",
+                "duration": 3572,
+                "title": "Battle Royal High School OVA English Dubbed HQ (1987)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eaavz51l87g",
+                "duration": 1435,
+                "title": "Noblesse Episode 1 English Dub | What Must Be Protected / Ordinary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iexc86cEnuc",
+                "duration": 3757,
+                "title": "Super Mario Bros Super Dub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wjfo5E0Z8fk",
+                "duration": 2835,
+                "title": "ANIME SEM DUBLAGEM 🇺🇲-ZILLION, BURNING NIGHT-OVA (1988) EM INGLÊS/IN ENGLISH/DUBBED"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7Olwhy6L4xs",
+                "duration": 3132,
+                "title": "BLACK JACK OVA Karte 09: THE CARBUNCLE (English Dub) | 1990s Anime | Tezuka & Dezaki"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IvJINhijMys",
+                "duration": 2837,
+                "title": "Black Magic M-66 (1987) English Dub 1080p"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
+                "duration": 2472,
+                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtitled"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LlhpgVZyYcM",
+                "duration": 263,
+                "title": "Levi vs Kenny Squad *English Dubbed* - Full Fight HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0mDhVJZB3S8",
+                "duration": 3305,
+                "title": "Battle Angel - 1993 Full Movie (Gunnm)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EJD0BliblRQ",
+                "duration": 4602,
+                "title": "Blood Reign Curse of the Yoma English Dub Anime Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V6k4I7bQhWY",
+                "duration": 4767,
+                "title": "Ninja Resurrection (1997-1998) (DVD Rip)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SiER7mSJ7gY",
+                "duration": 4944,
+                "title": "Shadow Skill: Chapter One (1995) | Full Anime Movie | English Dub #anime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BevLSlQZY40",
+                "duration": 2921,
+                "title": "BLACK JACK OVA Karte 07: BLACK AND WHITE (English Dub) | 1990s Anime | Osamu Tezuka & Osam"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x2TkEePukIQ",
+                "duration": 3171,
+                "title": "Re:ZERO -Starting Life in Another World- Director's Cut Episode 1 English Dub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cqkn9-DjrY0",
+                "duration": 1460,
+                "title": "Classroom of the Elite Episode 1 English Dub | What is evil? Whatever springs from weaknes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jvXWJ4G2wTM",
+                "duration": 3213,
+                "title": "BLACK JACK OVA Karte 10: SINKING WOMAN (English Dub) | 1990s Anime | Osamu Tezuka & Osamu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jhnWgytQipA",
+                "duration": 4918,
+                "title": "Vampire Hunter D 1985 (Original English Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D6s1cZhpQm4",
+                "duration": 1420,
+                "title": "Wise Man's Grandchild Episode 1 English Dub | A Baby In The Woods Goes To The Capital"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8MY2s-bWvY8",
+                "duration": 1455,
+                "title": "JoJo's Bizarre Adventure OVA  Jotaro vs Dio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WCZkYw0d0WY",
+                "duration": 1414,
+                "title": "Shikimori's Not Just a Cutie Episode 1 English Dub | My Girlfriend is Super Cute"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FAgrQn8m_XM",
+                "duration": 3256,
+                "title": "Sonic the Hedgehog OVA Movie HD REMASTERED | 1080p AI Enhanced Remaster"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3PFi58Izv2M",
+                "duration": 3063,
+                "title": "BLACK JACK OVA Karte 08: THOUGHTS FOR GREEN (English Dub) | 1990s Anime | Tezuka & Dezaki"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nI1nZEVTSyg",
+                "duration": 295,
+                "title": "All Might vs Noumu | English Dub | Full Fight"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ctwc87iN0As",
+                "duration": 5121,
+                "title": "Full Movie| FAIRY TAIL THE MOVIE: Dragon Cry (English Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iPbhDwgrpJk",
+                "duration": 1430,
+                "title": "Masamune-kun's Revenge Episode 1 English Dub | The Boy Who Was Called Pig's Foot"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6wrQhkTNHUw",
+                "duration": 3510,
+                "title": "Initial D Legend 1 - Awakening (2014) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L0LhLzJ-kvg",
+                "duration": 2824,
+                "title": "Kimera (1996) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y5dXLHZCOyk",
+                "duration": 3066,
+                "title": "BLACK JACK OVA Karte 05: THE OWL OF SAN MERIDA (English Dub) | 1990s Anime | Osamu Tezuka"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wtrNSobon6U",
+                "duration": 4611,
+                "title": "Cardcaptor Sakura The Movie (1999) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Lb0b9Aw9npI",
+                "duration": 4635,
+                "title": "Hyper Combat Unit Dangaioh (1987) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l4NiLn3LIoM",
+                "duration": 1500,
+                "title": "BLUE LOCK Episode 1 English Dub | Dream"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cjH4cgXFqg4",
+                "duration": 1623,
+                "title": "BUBBLEGUM CRISIS - BLOW UP | Episode 03 (English Dub) | Full 1980s ANIME OVA HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=npzi_tMEQqg",
+                "duration": 1433,
+                "title": "Ranma 1 2 episode 7 English Dubbed"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1QbQxNrzT2g",
+                "duration": 2925,
+                "title": "Gatchaman OVA 1994 Ep 1 English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S2PHKqKpCjY",
+                "duration": 1417,
+                "title": "Berserk 1997 Episode 1, \"The Black Swordsman\" (黒い剣士)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l95TQb1Bsvk",
+                "duration": 4103,
+                "title": "Sol Bianca OVA English Dub VHS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-_q6e5ryO4g",
+                "duration": 507,
+                "title": "Eren's Rampage - Attack on Titan (English Dub with JAPANESE ROAR)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PUcT_l0hm5Y",
+                "duration": 2656,
+                "title": "Gall Force  New Era – Part 1   Sci Fi Cyberpunk OVA Movie English Dub Sub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aHkL_ViEKvY",
+                "duration": 2328,
+                "title": "BUBBLEGUM CRISIS - REVENGE ROAD | Episode 04 (English Dub) | Full 1980s ANIME OVA HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ASSsbXuGuoA",
+                "duration": 1431,
+                "title": "Classroom of the Elite Season 2 Episode 1 English Dub"
             },
             {
                 "url": "https://www.youtube.com/watch?v=7NV6PcZ5e4o",
@@ -27,36 +307,206 @@
                 "title": "Wizardry (1991) Animated Film [Japanese] [ENG SUB]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hR_EgONHRWE",
-                "duration": 2832,
-                "title": "BUBBLEGUM CRISIS - TINSEL CITY | Episode 01 (English Dub) | Full 1980s"
+                "url": "https://www.youtube.com/watch?v=Qayq4esPWEg",
+                "duration": 308,
+                "title": "The Devilman Experience"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
-                "duration": 2472,
-                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtit"
+                "url": "https://www.youtube.com/watch?v=vpA7jy1swo8",
+                "duration": 1694,
+                "title": "JoJo vs DIO (1993 OVA with 2015 dub)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aHkL_ViEKvY",
-                "duration": 2328,
-                "title": "BUBBLEGUM CRISIS - REVENGE ROAD | Episode 04 (English Dub) | Full 1980"
+                "url": "https://www.youtube.com/watch?v=7_wp2F4Kmi4",
+                "duration": 2933,
+                "title": "BUBBLEGUM CRISIS - DOUBLE VISION | Episode 07 (English Subs) | Full 1990s ANIME OVA HD"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CJDBuCBCh_A",
-                "duration": 1323,
-                "title": "TMNT (1987) FULL EPISODE: \"Return of the Technodrome\" 🌎 | Teenage Muta"
+                "url": "https://www.youtube.com/watch?v=O0MtKRQhsFg",
+                "duration": 3529,
+                "title": "Fake OVA English Dub"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rJKht7IY-Xg",
-                "duration": 1349,
-                "title": "Inspector Gadget 117 - The Infiltration | HD | Full Episode"
+                "url": "https://www.youtube.com/watch?v=tyzIq74DpPw",
+                "duration": 2506,
+                "title": "Puppet Princess (2000) English Dub 1080p"
             },
             {
-                "url": "https://www.youtube.com/watch?v=I0rULIYGIn8",
-                "duration": 3100,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 4 | Warner Classics"
+                "url": "https://www.youtube.com/watch?v=oIr-0YyVe8Q",
+                "duration": 1430,
+                "title": "Ranma 1 2 Episode 4 English Dubbed for free"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ILlar1UJ88",
+                "duration": 1453,
+                "title": "Dr. STONE Episode 1 English Dub | Stone World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iG6niJM8Cmk",
+                "duration": 492,
+                "title": "So Jojo's Bizarre Adventure 1993 Is Kinda Awesome...?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6-guOcATIHc",
+                "duration": 2826,
+                "title": "Starship Troopers: Chapter One (1988) | Full Anime Movie | Subbed #scifi #anime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rx5PzsN1Q7g",
+                "duration": 285,
+                "title": "Attack On Titan Season 2 English Dub - Reiner & Bertholdt's Transformation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jjkQawyHcWU",
+                "duration": 1224,
+                "title": "Tonikaku Kawaii: Joshikou-hen episode - 1 (Eng Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mcEoDr689EM",
+                "duration": 1502,
+                "title": "AD Police - Episode 2 (DUB)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ReqjbcJWl-Y",
+                "duration": 1626,
+                "title": "Ex-Driver Nina And Rei Danger Zone (2002) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sIkoz1mfM4o",
+                "duration": 4828,
+                "title": "Demonic's Descent | ANIME, FANTASY | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yAhAr6fbCMA",
+                "duration": 2235,
+                "title": "Jojo Ova 13"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wQeYbrY01ac",
+                "duration": 1459,
+                "title": "Toilet-bound Hanako-kun Episode 1 English Dub | Hanako-san of the Toilet"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=372_wZnHkqk",
+                "duration": 3324,
+                "title": "Mighty Space Miners (1994) 📼 | English Dub | VHS Anime OVA | Retro Sci-Fi Adventure"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yK0epJRoK7M",
+                "duration": 247,
+                "title": "Yujiro Hanma VS Kaku Kaioh | Baki (ONA) 2020 - English Dub [60FPS]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ORdzyxApS2Q",
+                "duration": 1381,
+                "title": "I Left my A-Rank Party to Help My Former Students Reach the Dungeon Depths! Episode 1 Engl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d_ObyvGNw0I",
+                "duration": 240,
+                "title": "Joseph attends his own funeral (dubbed version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bJ-fOnwmrQI",
+                "duration": 2734,
+                "title": "Land Lock | OVA 2 | DUB ITA | 90s Retro Anime Shounen | Action Adventure Fantasy Military"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Bg5_-SoFPo",
+                "duration": 257,
+                "title": "Adult Sasuke vs Madara FULL FIGHT (Part 1,2&3) | Boruto & Naruto Fan Animation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RA0ca2ubPXk",
+                "duration": 1431,
+                "title": "Raven of the Inner Palace Episode 1 English Dub | The Jade Earring, Part 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6cEAI-0ADXk",
+                "duration": 427,
+                "title": "Kakyoin's Death (OVA) + Stardust Crusaders OST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CkI-2j6V7sQ",
+                "duration": 1200,
+                "title": "SONIC X - EP 73 The Cosmo Conspiracy | English Dub | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EEohDkCSofw",
+                "duration": 1255,
+                "title": "Ichigo Kurosaki vs Ulquiorra Schiffer | Full Fight | English Dub [1080]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=arWv6BDnGGo",
+                "duration": 3263,
+                "title": "Submarine 707R – OVA Part 1   Classic Naval Warfare Anime English Dub Sub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eQ2giHSp49A",
+                "duration": 256,
+                "title": "Jojo TV - D'arby with OVA dub (English)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hDXFChAYabo",
+                "duration": 3888,
+                "title": "FULL MOVIE- Super Mario Bros.: The Great Mission to Rescue Princess Peach! (ENGLISH DUB)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D261aPLKOuk",
+                "duration": 1430,
+                "title": "Gachiakuta Episode 1 SUB/DUB | The Sphere"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5eoT_N3VA60",
+                "duration": 3484,
+                "title": "Nekopara OVA english sub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TsQ4M8UaeoQ",
+                "duration": 1686,
+                "title": "Sonic Soldier Borgman - Lover's Rain Full OVA (Eng Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ctjzErxRkFQ",
+                "duration": 704,
+                "title": "Ichigo vs Kenpachi Full Fight English Dub | Bleach Epic Fights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4kbw81qT034",
+                "duration": 601,
+                "title": "ranma 1/2 season1 episode 1 part 1 eng dub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bUECAFHHaWc",
+                "duration": 1402,
+                "title": "OURAN HIGH SCHOOL HOST CLUB- EPISODE 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=axAU_-IvMEU",
+                "duration": 1553,
+                "title": "Stardust Crusaders dubbed moments that make me ora ora|JJBA Part 3 dub|"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tqN5MIDIgQc",
+                "duration": 1288,
+                "title": "Daily Lives of High School Boys [English Dub] Episode 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8HkZD0yI2qM",
+                "duration": 282,
+                "title": "Eren meets Reiner after 4 Years English Dub & Eren's Transformation Attack on Titan Final"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o8WXtsyhuKk",
+                "duration": 754,
+                "title": "ICE OVA ENG(DUB) EP-2 Part-1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CQibv-WGMCk",
+                "duration": 4559,
+                "title": "Strait Jacket [English Dubbed Anime] (OVA - 2007)"
             }
         ],
-        "search_query": "classic anime full episode 1980s english"
+        "search_query": "retro anime OVA english dub"
     }
 }

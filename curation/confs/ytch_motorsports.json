@@ -2,49 +2,104 @@
     "station_conf": {
         "network_name": "Motorsports",
         "network_type": "streaming",
-        "channel_number": 13,
+        "channel_number": 9,
         "network_long_name": "Motorsports",
         "stream_rotation": "clock",
         "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=dDxiziDgy3k",
+                "duration": 598,
+                "title": "Race Highlights | 2026 INDYCAR at Markham"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b0hPiakCUHI",
+                "duration": 543,
+                "title": "Race Highlights | 2026 Hankook London E-Prix | Round 16 | Formula E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W5K13kSWYko",
+                "duration": 1803,
+                "title": "2026 Ontario Honda Dealers Indy at Markham | INDYCAR Extended Race Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z8AerDBcsHQ",
+                "duration": 531,
+                "title": "MX2 & MXGP News Highlights | 2026 MXGP of Sweden"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WHlQTEcEddM",
+                "duration": 276,
+                "title": "DTM 2026 Nürburgring: Race 1 Highlights | Drama, Crashes & Battle for the Podium!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0OeueLJSjTU",
+                "duration": 677,
+                "title": "Supersport Race 1 at Virginia 2026 - HIGHLIGHTS | MotoAmerica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sGsZDQgH2i4",
+                "duration": 904,
+                "title": "Extended Highlights: Race 23 - Bosch Power Tools Perth Super 440 | 2026 Repco Supercars Ch"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Byq_1VlBBmQ",
+                "duration": 2482,
+                "title": "2026 IMSA Motul SportsCar Endurance GP at Road America | Highlights | WeatherTech Champion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2MXQXf9aPjE",
+                "duration": 729,
+                "title": "Quad Lock Superbike Race 2 at Virginia 2026 - HIGHLIGHTS | MotoAmerica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0zyG32KLz_4",
+                "duration": 645,
+                "title": "World of Outlaws NOS Energy Drink Sprint Cars | Knoxville Raceway | August 15, 2026 | HIGH"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cd-neGZe-Ws",
+                "duration": 1035,
+                "title": "Full Race Highlights | 2026 Meguiar's Bathurst 12 Hour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YW8xcqwmrEI",
+                "duration": 1686,
+                "title": "Race Highlights | 24 Hours of Le Mans 2026 | FIA WEC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2TOTdOGqz5Y",
+                "duration": 595,
+                "title": "RACE HIGHLIGHTS: Rd 16, 17 & 18 @ Knockhill | BTCC 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zv7vEO64WVQ",
+                "duration": 394,
+                "title": "Race Highlights | 2026 INDYCAR at Portland"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=_JeaXt_3Mhc",
                 "duration": 495,
                 "title": "Race Highlights | 2026 Hungarian Grand Prix"
             },
             {
-                "url": "https://www.youtube.com/watch?v=b54HylZQKAo",
-                "duration": 1604,
-                "title": "Extended Highlights | Race | Nürburgring 2025  | GT World Challenge Eu"
+                "url": "https://www.youtube.com/watch?v=W5tnGCcCpwI",
+                "duration": 1227,
+                "title": "Extended Race Highlights | 2026 INDYCAR at Portland"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4BUkPIwkB5Q",
-                "duration": 518,
-                "title": "F3 Feature Race Highlights | 2026 Hungarian Grand Prix"
+                "url": "https://www.youtube.com/watch?v=1Tr_-12l0xo",
+                "duration": 917,
+                "title": "NASCAR Craftsman Truck Series Highlights | 2026 Richmond Raceway"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rgyh4BzFxrk",
-                "duration": 619,
-                "title": "MotoGP™ Race Highlights 🔥 | 2024 #SpanishGP"
+                "url": "https://www.youtube.com/watch?v=QrRh2vOJQbw",
+                "duration": 494,
+                "title": "Race Highlights | 2026 Canadian Grand Prix"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0lBA1DmeT1E",
-                "duration": 483,
-                "title": "2026 Nashville Superspeedway | NTT INDYCAR SERIES Highlights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Vx1bRasRwt4",
-                "duration": 356,
-                "title": "6 Minutes of Awesome GTD PRO Battles from the 12 Hours of Sebring | 20"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sH7d-seoSto",
-                "duration": 845,
-                "title": "Best Moments in Motorsports 2020 | Battles, Overtakes, Finishes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7k0siWw0rNM",
-                "duration": 432,
-                "title": "F3 Sprint Race Highlights | 2026 Hungarian Grand Prix"
+                "url": "https://www.youtube.com/watch?v=RSDzvLpAPkY",
+                "duration": 596,
+                "title": "Extended Race 1 Highlights - DUNLOP Sydney 500 | 2026 Repco Supercars Championship"
             },
             {
                 "url": "https://www.youtube.com/watch?v=I6RfOY_7leA",
@@ -52,9 +107,404 @@
                 "title": "Race Highlights | 2026 Belgian Grand Prix"
             },
             {
+                "url": "https://www.youtube.com/watch?v=Ey8j_BlLvFM",
+                "duration": 482,
+                "title": "Race Highlights | 2026 Barcelona-Catalunya Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=usP9O0zFVaA",
+                "duration": 488,
+                "title": "Race Highlights | 2026 Austrian Grand Prix"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ipOT9ruRobc",
                 "duration": 500,
                 "title": "Race Highlights | 2026 Monaco Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9EQExNuGEN8",
+                "duration": 660,
+                "title": "ERC Barum Czech Rally Zlín 2026 - CRASHES, MISTAKES & MAX ATTACK"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C7j9w1IxL6A",
+                "duration": 906,
+                "title": "Extended Highlights: Race 14 - Tyrepower Tasmania Super 440 | 2026 Repco Supercars Champio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rnjmSOUYVp8",
+                "duration": 494,
+                "title": "Race Highlights | 2026 British Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ys_o9q_swa8",
+                "duration": 1049,
+                "title": "MotoGP HIGHLIGHTS 🏁 2026 Catalan GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NsMhQT5AT9I",
+                "duration": 828,
+                "title": "Practice 2 Highlights | 2026 Ontario Honda Dealers Indy at Markham"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bUKDO7Hk3OY",
+                "duration": 1786,
+                "title": "Extended Race Highlights | 2026 INDYCAR at Nashville"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lL_d84cN1UY",
+                "duration": 491,
+                "title": "Race Highlights | 2026 Australian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q_JaKlaiTBQ",
+                "duration": 561,
+                "title": "Qualifying Highlights | 2026 INDYCAR at Markham"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bLkNa9PP35A",
+                "duration": 1404,
+                "title": "NASCAR Cup Series Highlights | 2026 Richmond Raceway"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=smDICUeLZKc",
+                "duration": 355,
+                "title": "Race Highlights | 2026 INDYCAR at Mid-Ohio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N49ZAeSHqAg",
+                "duration": 618,
+                "title": "Talent Cup Race 2 at Virginia 2026 - HIGHLIGHTS | MotoAmerica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pf7A4XJiqB0",
+                "duration": 819,
+                "title": "Extended Highlights: Race 17 - betr Darwin Triple Crown | 2026 Repco Supercars Championshi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZyYw2yNlZuo",
+                "duration": 587,
+                "title": "Race Highlights | 2026 INDYCAR at Road America"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5cC87atAd54",
+                "duration": 1533,
+                "title": "Extended Race Highlights | 2026 INDYCAR at Alabama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cE0Vw-ZQpM4",
+                "duration": 3731,
+                "title": "Extended Highlights | 24 Hours of Le Mans 2026 | FIA WEC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7_BJLlKdFtw",
+                "duration": 243,
+                "title": "FP1 Highlights | 2026 British Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T1WEHcbd9_w",
+                "duration": 1374,
+                "title": "2026 IMSA StubHub Monterey SportsCar Championship | Highlights | WeatherTech SportsCar Cha"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BaJI-x8IIzg",
+                "duration": 1039,
+                "title": "MotoGP HIGHLIGHTS 🚥 2026 Thai GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5gYys4GL7S0",
+                "duration": 504,
+                "title": "Race Highlights | 2026 Miami Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l3aB-W19bnc",
+                "duration": 481,
+                "title": "Sprint Highlights | 2026 Canadian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HKCVIIIM21c",
+                "duration": 3851,
+                "title": "Extended Highlights | CrowdStrike 24 Hours of Spa | GT World Challenge pwd by AWS 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5r933d6QeIg",
+                "duration": 486,
+                "title": "Race Highlights | 2026 Lianxin Sanya E-Prix | Round 11 | Formula E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pehGhCljrRE",
+                "duration": 612,
+                "title": "FULL HIGHLIGHTS: Race 1 at Misano 🏆 | 2026 #EmiliaRomagnaWorldSBK 🇮🇹"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ltmoQb3bJZ0",
+                "duration": 260,
+                "title": "FP1 Highlights | 2026 Austrian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iMN8ZgPTU70",
+                "duration": 1801,
+                "title": "Extended Race Highlights | 2026 INDYCAR at Mid-Ohio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PLgSHjmBI4g",
+                "duration": 792,
+                "title": "Cleetus McFarland Makes Super Late Model Debut | 2026 Tekton 250 Battle at Berlin Highligh"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OveGLOa-gb8",
+                "duration": 1946,
+                "title": "RACE HIGHLIGHTS: Rd 1,2 & 3 @ Donington Park | ITV Sport x BTCC 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-Uwz18sjRGA",
+                "duration": 1087,
+                "title": "MotoGP HIGHLIGHTS 🦾 2026 French GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8PEy8Voff7c",
+                "duration": 889,
+                "title": "Race Highlights | Rolex 6 Hours of São Paulo 2026 | FIA WEC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_rbk-REmCbg",
+                "duration": 1089,
+                "title": "MotoGP HIGHLIGHTS 👑 2026 German GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t8HpVlineX4",
+                "duration": 494,
+                "title": "Race Highlights | 2026 Chinese Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bf0ziY8tKNc",
+                "duration": 1949,
+                "title": "Extended Race Highlights | 2026 INDYCAR at Phoenix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bATfFSmV_Lk",
+                "duration": 576,
+                "title": "Race Highlights | 2026 INDYCAR at Phoenix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UaqoynqLkVE",
+                "duration": 524,
+                "title": "Race Highlights | 2026 INDYCAR at St. Pete"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wxfBR3cesis",
+                "duration": 1056,
+                "title": "MotoGP HIGHLIGHTS 🧊 2026 Dutch GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kIPOFq11t3g",
+                "duration": 646,
+                "title": "Bowman Gray Racing Highlights 8-15-2026 #nascar #bowmangraystadium"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h0akQ_N4XKk",
+                "duration": 978,
+                "title": "MotoGP HIGHLIGHTS 🤠 2026 US GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l8a3YmuTL1I",
+                "duration": 909,
+                "title": "Race Highlights | 4 Hours of Imola 2026 | ELMS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QQ1NjBi_qDQ",
+                "duration": 1800,
+                "title": "Extended Race Highlights | 2026 INDYCAR at Road America"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IucUnD5vKKE",
+                "duration": 258,
+                "title": "FP2 Highlights | 2026 Austrian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PCnQ1FQv8Uc",
+                "duration": 567,
+                "title": "Twins Cup Race 1 at Virginia 2026 - HIGHLIGHTS | MotoAmerica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0NlwNhNc8cw",
+                "duration": 1579,
+                "title": "LIVE: DTM Nürburgring 2026 – Post-Race 2 Press Conference 🎙️ | DTM 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rqTTczYv93A",
+                "duration": 487,
+                "title": "Qualifying Highlights | 2026 Hungarian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0pAbWMJ6sco",
+                "duration": 826,
+                "title": "2026 IMSA Chevrolet Detroit Sports Car Classic | Highlights | WeatherTech SportsCar Champi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0lBA1DmeT1E",
+                "duration": 483,
+                "title": "Race Highlights | 2026 INDYCAR at Nashville"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z_6fqXoJesU",
+                "duration": 1388,
+                "title": "NASCAR Cup Series Highlights | 2026 Iowa Speedway"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6-R2YdZHg7Q",
+                "duration": 903,
+                "title": "Race Highlights | TotalEnergies 6 Hours of Spa | FIA WEC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6RzRMLUB_DI",
+                "duration": 769,
+                "title": "Race Highlights | 2026 Indianapolis 500"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QUV5UYHliog",
+                "duration": 1381,
+                "title": "RACE HIGHLIGHTS: Rd 4, 5 & 6 @ Brands Hatch | BTCC 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0DpEpOSHtwE",
+                "duration": 2322,
+                "title": "2026 F1 Season | The Story So far"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zsmSgsY2Pwg",
+                "duration": 263,
+                "title": "Washougal 2026 | Pro Motocross 450 Class Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dF64VgAr_sQ",
+                "duration": 541,
+                "title": "F2 Feature Race Highlights | 2026 Austrian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f7GiEsizLy0",
+                "duration": 555,
+                "title": "RACE HIGHLIGHTS: Rd 10, 11 & 12 @ Oulton Park | BTCC 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iy2eh42cFc8",
+                "duration": 914,
+                "title": "NASCAR Cup Series 2026: Chicagoland Speedway | Extended Highlights | Motorsports on NBC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KZhfXHg_3bs",
+                "duration": 512,
+                "title": "HIGHLIGHTS: RST Superbike TT | 2026 Isle of Man TT Races"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xe58K2WiKWU",
+                "duration": 440,
+                "title": "Race Highlights | 2026 Shanghai E-Prix | Round 13 | Formula E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z9xH4IKMZXA",
+                "duration": 427,
+                "title": "Race Highlights | 2026 Monaco E-Prix Round 9 | Formula E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ALUB8Sr3qtI",
+                "duration": 908,
+                "title": "MotoGP HIGHLIGHTS 🍍 2026 Italian GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=182UwReXlag",
+                "duration": 1940,
+                "title": "NASCAR Cup Series: 2026 Goodyear 400 at Darlington Raceway Highlights 🏁 NASCAR on FOX"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t1iYJeVhZQc",
+                "duration": 514,
+                "title": "HIGHLIGHTS: Monster Energy Supersport TT Race 1 | 2026 Isle of Man TT Races"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RygWCtgw96g",
+                "duration": 1039,
+                "title": "MotoGP HIGHLIGHTS 🪇 2026 Brazil GP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S7jPwoIX4c0",
+                "duration": 883,
+                "title": "2026 Pro Motocross Rd 9 Unadilla 250 Moto 1 | Levi Kitchen Comes From Behind!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cGKbNxkqkUs",
+                "duration": 950,
+                "title": "NASCAR Cup Series 2026: EchoPark Speedway, Atlanta | Extended Highlights | Motorsports on"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H12mnCGnuDU",
+                "duration": 2087,
+                "title": "Extended Race Highlights | 2026 Indianapolis 500"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hv-karQaTCE",
+                "duration": 778,
+                "title": "FULL HIGHLIGHTS: Race 1 at Most 🏁 | 2026 #CzechWorldSBK 🇨🇿"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TDApfQdjyZo",
+                "duration": 687,
+                "title": "FULL HIGHLIGHTS: Race 1 at MotorLand Aragon 🚥 | 2026 #AragonWorldSBK 🇪🇸"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jYOvkr7iUYU",
+                "duration": 1090,
+                "title": "NASCAR Cup Series 2026: Iowa Speedway | EXTENDED HIGHLIGHTS | Motorsports on NBC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YTtOrGJIbEI",
+                "duration": 452,
+                "title": "Race Highlights | 2026 INDY NXT at Portland"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HYqZQd-WJX0",
+                "duration": 1421,
+                "title": "NASCAR Cup Series Highlights | 2026 Brickyard 400 at Indianapolis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rjLDgDc0td4",
+                "duration": 488,
+                "title": "Qualifying Highlights | 2026 Canadian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S04W86vxyTs",
+                "duration": 308,
+                "title": "DTM 2026 Round 1: Red Bull Ring Race Highlights & Safety Car Drama | DTM 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=93seXYX5b7s",
+                "duration": 506,
+                "title": "HIGHLIGHTS: Milwaukee Senior TT | 2026 Isle of Man TT Races"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IxyeVpIej6Y",
+                "duration": 937,
+                "title": "Day 2 Highlights | WRC Secto Rally Finland 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SFmsQDZN4jU",
+                "duration": 317,
+                "title": "Race 1 Highlights | 2026 INDY NXT at Mid-Ohio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kck98BkbNMo",
+                "duration": 587,
+                "title": "Race Highlights | 2026 TDK Tokyo E-Prix Round 15 Highlights | Formula E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N3bQ47dG0wU",
+                "duration": 1755,
+                "title": "NASCAR Cup Series Highlights | 2026 Talladega Superspeedway"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Drsyw_2ujlM",
+                "duration": 620,
+                "title": "Race Highlights | 2026 INDYCAR at Arlington"
             }
         ],
         "search_query": "motorsport race highlights"
