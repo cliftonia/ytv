@@ -26,6 +26,16 @@ class ExitReasonTest {
     }
 
     @Test
+    fun `a self-exit with a non-zero status is a fault, not a clean shutdown`() {
+        // libmpv's die() is a log line followed by exit(1). Android files that under
+        // REASON_EXIT_SELF, not under any crash reason - so excluding this outright made the
+        // reporter blind to the exact fault it was written to catch.
+        assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_EXIT_SELF, status = 1))
+        assertFalse("status 0 really is a clean shutdown",
+            ExitReason.isAbnormal(ApplicationExitInfo.REASON_EXIT_SELF, status = 0))
+    }
+
+    @Test
     fun `ordinary exits are not reported`() {
         // These happen every time the television is switched off or the app is backgrounded.
         // Surfacing them would put a TECHNICAL DIFFICULTIES card up during normal use.

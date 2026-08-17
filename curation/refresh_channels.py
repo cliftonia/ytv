@@ -12,10 +12,16 @@ query now travels with the channel it describes.
   python3 refresh_channels.py --only blues        one channel, for checking a query
   python3 refresh_channels.py --target 100        how many clips a channel should end up with
 
-Rotation is by conf modification time: refreshing rewrites the conf, so taking the N
-least-recently-written channels advances the rotation by itself with nothing to keep track of.
-At 8 a night the whole dial turns over in a fortnight, which is slow enough that a channel does
-not feel like it resets and fast enough that nothing on it is ever months old.
+Rotation is by a `last_refreshed` stamp written into each conf. It used to be by file
+modification time, which worked on a long-lived machine and was silently a no-op in CI: the job
+starts with `actions/checkout`, which writes every file at clone time, so all 90 confs carried
+the same instant and the "least recently refreshed" eight were simply the first eight
+alphabetically. The same eight channels refreshed every night for weeks and the other 82 never
+did - and the run went green each time, because nothing checks WHICH channels moved.
+
+The cursor has to survive cloning, so it lives in the committed json. At 8 a night the whole dial
+turns over in a fortnight, which is slow enough that a channel does not feel like it resets and
+fast enough that nothing on it is ever months old.
 """
 import argparse
 import datetime
@@ -26,6 +32,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 
 TARGET = 100
@@ -97,9 +104,19 @@ def ytdlp(target, timeout=300):
 
 
 def title_key(title):
-    """Loose identity for a clip, so the same song from two uploaders lands once."""
+    """Loose identity for a clip, so the same song from two uploaders lands once.
+
+    Digits are KEPT. Dropping standalone numbers was meant to stop "Live 2019" and "Live 2024"
+    counting as two, and instead it deleted every episode of every series: "Episode 1" and
+    "Episode 2" collapsed to the same key, so a season playlist was reduced to one episode before
+    search even began. That is why the episodic channels never had a run longer than two - not
+    because uploaders only post pilots, which is what the code used to say.
+
+    The duplicate-year case it was protecting against is rare and harmless; losing whole series
+    was neither.
+    """
     low = re.sub(r"[^a-z0-9 ]", " ", (title or "").lower())
-    return " ".join(w for w in low.split() if not w.isdigit())[:40]
+    return " ".join(low.split())[:60]
 
 
 def collect(target, lo, hi, seen, keys, out, want):
@@ -118,6 +135,15 @@ def collect(target, lo, hi, seen, keys, out, want):
         out.append({"url": url, "duration": seconds, "title": title.strip()})
         added += 1
     return added
+
+
+def last_refreshed(path):
+    """When this channel was last re-searched, as an epoch. Never refreshed sorts first."""
+    try:
+        with io.open(path, encoding="utf-8") as handle:
+            return json.load(handle)["station_conf"].get("last_refreshed", 0)
+    except Exception:
+        return 0
 
 
 def refresh(path, target):
@@ -172,6 +198,7 @@ def refresh(path, target):
         return name, len(station.get("streams", []))
 
     station["streams"] = streams
+    station["last_refreshed"] = int(time.time())
     with io.open(path, "w", encoding="utf-8") as handle:
         json.dump(conf, handle, indent=4, ensure_ascii=False)
     print("  %-26s %3d clips" % (name, len(streams)), flush=True)
@@ -193,10 +220,16 @@ def main():
         if not paths:
             print("no channel called %s" % args.only, file=sys.stderr)
             return 2
-    elif args.rotate:
-        paths.sort(key=os.path.getmtime)
+    elif args.rotate is not None:
+        # `is not None`, so --rotate 0 means "none" rather than falling through to all 90 and
+        # spending an hour getting the runner's egress address throttled.
+        if args.rotate <= 0:
+            print("--rotate 0: nothing to do", flush=True)
+            return 0
+        paths.sort(key=last_refreshed)
         paths = paths[:args.rotate]
-        print("rotating: %d least-recently-refreshed channels" % len(paths), flush=True)
+        print("rotating %d channels: %s" % (
+            len(paths), ", ".join(os.path.basename(p)[5:-5] for p in paths)), flush=True)
 
     results = []
     # Four at a time. yt-dlp is network-bound so this is worth doing, but more than a handful of
