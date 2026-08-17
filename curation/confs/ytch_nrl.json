@@ -2,51 +2,511 @@
     "station_conf": {
         "network_name": "Rugby League",
         "network_type": "streaming",
-        "channel_number": 7,
+        "channel_number": 79,
         "network_long_name": "Rugby League",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=nqWEmO5EzMg",
-                "duration": 1435,
-                "title": "NRL Highlights | NRL 2026 | Round Up | Round 21"
+                "url": "https://www.youtube.com/watch?v=g-kmk94H3iI",
+                "duration": 284,
+                "title": "NRL 2026 | Wests Tigers v Dragons | Match Highlights | Round 24"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Jb3jPPY_Frk",
-                "duration": 477,
-                "title": "NRL 2026 | Epic Foot Races | Match Highlights"
+                "url": "https://www.youtube.com/watch?v=yykuMuqjE74",
+                "duration": 287,
+                "title": "NRL 2026 | Knights v Titans | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BQQX1XZTlZU",
+                "duration": 270,
+                "title": "NRL 2026 | Broncos v Warriors | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zrrk9I9dEaQ",
+                "duration": 283,
+                "title": "NRL 2026 | Sharks v Raiders | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RoFIc15NGa0",
+                "duration": 295,
+                "title": "NRL 2026 | Sea Eagles v Dolphins | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mRlXpccGALk",
+                "duration": 291,
+                "title": "NRL 2026 | Eels v Cowboys | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=95j_lkXHO-c",
+                "duration": 320,
+                "title": "NRL Highlights: Knights v Titans - Round 24 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yjdzdYgTPUs",
+                "duration": 1491,
+                "title": "NRL Highlights | NRL 2026 | Round Up | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1WLJT-PgcM0",
+                "duration": 457,
+                "title": "NRL Highlights: Tigers v Dragons - Round 24 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BXICS0YYN0U",
+                "duration": 482,
+                "title": "NRL 2026 | Panthers v Roosters | Extended Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5pWQSYc7Gp0",
+                "duration": 295,
+                "title": "NRL 2026 | Bulldogs v Panthers | Match Highlights | Round 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b8ubpx-g1nA",
+                "duration": 300,
+                "title": "NRL 2026 | Dolphins v Broncos | Match Highlights | Round 23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6sspfWcQKBk",
+                "duration": 288,
+                "title": "NRL 2026 | Warriors v Panthers | Match Highlights | Round 23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kO2_YRytuD0",
+                "duration": 287,
+                "title": "NRL 2026 | Panthers v Roosters | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vA-ticxipDk",
+                "duration": 294,
+                "title": "NRL 2026 | Storm v Sea Eagles | Match Highlights | Round 23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lVXhm4Zgrtg",
+                "duration": 298,
+                "title": "NRL 2026 | Rabbitohs v Eels | Match Highlights | Round 23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u14w2FfDNQI",
+                "duration": 254,
+                "title": "NRLW 2026 | Cowboys v Sharks | Match Highlights | Round 7"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0CL9vnh834I",
+                "duration": 295,
+                "title": "NRLW 2026 | Wests Tigers v Warriors | Match Highlights | Round 7"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mU0MMGwmoO8",
+                "duration": 283,
+                "title": "NRL 2026 | Broncos v Titans | Match Highlights | Round 14"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sBLGZxyAJmw",
+                "duration": 295,
+                "title": "NRL 2026 | Dragons v Wests Tigers | Match Highlights | Round 18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TgpNtA4PyK0",
+                "duration": 296,
+                "title": "NRL 2026 | Cowboys v Roosters | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F5qGmaVzC6k",
+                "duration": 298,
+                "title": "NRL 2026 | Panthers v Storm | Match Highlights | Round 5"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Lih0dcnCZ50",
+                "duration": 298,
+                "title": "NRL 2026 | Roosters v Bulldogs | Match Highlights | Round 23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hDWUbtKMb3g",
+                "duration": 284,
+                "title": "NRL 2026 | Dragons v Dolphins | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yCmFB2cD7Iw",
+                "duration": 299,
+                "title": "NRL 2026 | Dolphins v Panthers | Match Highlights | Round 7"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sWBnXJmqCnc",
+                "duration": 282,
+                "title": "NRL 2026 | Titans v Bulldogs | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X23Ygd_9m6w",
+                "duration": 290,
+                "title": "NRL 2026 | Raiders v Knights | Match Highlights | Round 23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PThytH1OwwQ",
+                "duration": 273,
+                "title": "NRL 2026 | Broncos v Dragons | Match Highlights | Round 13"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oi9-3fMz2h4",
+                "duration": 717,
+                "title": "NRL Highlights: Broncos v Warriors - Round 24 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YujHFtXLIWM",
+                "duration": 295,
+                "title": "NRL 2026 | Wests Tigers v Eels | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iuTlWpDGFB4",
+                "duration": 274,
+                "title": "NRL 2026 | Titans v Warriors | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UIRLUVQ3_Yc",
+                "duration": 290,
+                "title": "NRL 2026 | Broncos v Knights | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3tT_tN0fxRc",
+                "duration": 566,
+                "title": "NRL Highlights: Sharks v Raiders - Round 24 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pAIs4euzJGY",
+                "duration": 289,
+                "title": "NRL 2026 | Knights v Dolphins | Match Highlights | Round 18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z3NeLHpaMoA",
+                "duration": 298,
+                "title": "NRL 2026 | Wests Tigers v Panthers | Match Highlights | Round 14"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=El-HLyiKX7o",
+                "duration": 299,
+                "title": "NRL 2026 | Dolphins v Rabbitohs | Match Highlights | Round 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f8IropfTOGc",
+                "duration": 292,
+                "title": "NRL 2026 | Bulldogs v Rabbitohs | Match Highlights | Round 24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hv7cMO1tCKU",
+                "duration": 294,
+                "title": "NRL 2026 | Warriors v Roosters | Match Highlights | Round 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hpq0DO2Fk9Q",
+                "duration": 269,
+                "title": "NRL 2026 | Warriors v Wests Tigers | Match Highlights | Round 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i16BBA4ax5k",
+                "duration": 280,
+                "title": "NRL 2026 | Panthers v Eels | Match Highlights | Round 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iZnvJgmJeNE",
+                "duration": 295,
+                "title": "NRL 2026 | Broncos v Cowboys | Match Highlights | Round 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RGLcn6PEc84",
+                "duration": 270,
+                "title": "NRL 2026 | Warriors v Broncos | Match Highlights | Round 11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ehh_gQqQnk",
+                "duration": 293,
+                "title": "NRL 2026 | Knights v Eels | Match Highlights | Round 13"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kS6DOP-I0DA",
+                "duration": 292,
+                "title": "NRL 2026 | Panthers v Raiders | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=frN2l-sPMGU",
+                "duration": 286,
+                "title": "NRL 2026 | Storm v Raiders | Match Highlights | Round 16"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SnK09VD7OXI",
+                "duration": 292,
+                "title": "NRL 2026 | Warriors v Dragons | Match Highlights | Round 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e0QJ5G01jyQ",
+                "duration": 276,
+                "title": "NRL 2026 | Raiders v Rabbitohs | Match Highlights | Round 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uFjwjWI3yFg",
+                "duration": 296,
+                "title": "Las Vegas 2026 | Bulldogs v Dragons | Match Highlights | NRL Round 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GclfM-59kIA",
+                "duration": 274,
+                "title": "NRL 2026 | Raiders v Wests Tigers | Match Highlights | Round 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eqM4OiD6Am4",
+                "duration": 292,
+                "title": "NRL 2026 | Sharks v Rabbitohs | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z_xF1O18qi0",
+                "duration": 291,
+                "title": "NRL 2026 | Storm v Broncos | Match Highlights | Round 3"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2JRq5zCJXuI",
+                "duration": 278,
+                "title": "NRL 2026 | Wests Tigers v Dolphins | Match Highlights | Round 16"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rGXJobccyyE",
+                "duration": 291,
+                "title": "NRL 2026 | Storm v Roosters | Match Highlights | Round 13"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K68NmZXBT6U",
+                "duration": 299,
+                "title": "NRL 2026 | Broncos v Eels | Match Highlights | Round 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=76GJUB0gu6E",
+                "duration": 291,
+                "title": "NRL 2026 | Raiders v Dragons | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j-5tHwZK3qY",
+                "duration": 291,
+                "title": "NRL 2026 | Broncos v Roosters | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YbbGH4GCEWs",
+                "duration": 282,
+                "title": "NRL 2026 | Storm v Warriors | Match Highlights | Round 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yOpjIdTfjdA",
+                "duration": 270,
+                "title": "NRL 2026 | Sharks v Roosters | Match Highlights | Round 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ntjWbvieGTw",
+                "duration": 300,
+                "title": "NRL 2026 | Bulldogs v Raiders | Match Highlights | Round 19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GAj1h-xpZos",
+                "duration": 287,
+                "title": "NRL 2026 | Dolphins v Warriors | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TJAhzV0WqWU",
+                "duration": 284,
+                "title": "NRL 2026 | Knights v Dragons | Match Highlights | Round 16"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k4rOzaQmDDQ",
+                "duration": 295,
+                "title": "NRL 2026 | Dolphins v Cowboys | Match Highlights | Round 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BlXxz_AtRB4",
+                "duration": 507,
+                "title": "NRL Highlights: Sea Eagles v Dolphins - Round 24 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wsSROKgiZtY",
+                "duration": 277,
+                "title": "NRL 2026 | Warriors v Titans | Match Highlights | Round 7"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8Z5inTJAPA4",
+                "duration": 275,
+                "title": "NRL 2026 | Roosters v Panthers | Match Highlights | Round 3"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C-5iocrUMKs",
+                "duration": 279,
+                "title": "NRL 2026 | Broncos v Bulldogs | Match Highlights | Round 8"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-YE28A7C6h0",
+                "duration": 281,
+                "title": "NRL 2026 | Eels v Rabbitohs | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QAeu5zjBV3s",
+                "duration": 288,
+                "title": "NRL 2026 | Knights v Wests Tigers | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QE0GVFw7M-8",
+                "duration": 288,
+                "title": "NRL 2026 | Wests Tigers v Broncos | Match Highlights | Round 7"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Lfjv9GZBwU",
+                "duration": 286,
+                "title": "NRL 2026 | Storm v Bulldogs | Match Highlights | Round 22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7mSj_dT6MxY",
+                "duration": 294,
+                "title": "NRL 2026 | Broncos v Dolphins | Match Highlights | Round 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WFNKyvJ7Zkw",
+                "duration": 295,
+                "title": "NRL 2026 | Broncos v Sharks | Match Highlights | Round 18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JVZWRwXt_cE",
+                "duration": 286,
+                "title": "NRL 2026 | Bulldogs v Knights | Match Highlights | Round 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=__IY99uCZAk",
+                "duration": 289,
+                "title": "NRL 2026 | Cowboys v Rabbitohs | Match Highlights | Round 12"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cJNXUg55LZg",
+                "duration": 258,
+                "title": "NRL 2026 | Raiders v Panthers | Match Highlights | Round 10"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d5uHB-4PQ1k",
+                "duration": 293,
+                "title": "NRL 2026 | Eels v Raiders | Match Highlights | Round 15"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qk457VC1N4k",
+                "duration": 294,
+                "title": "NRL 2026 | Rabbitohs v Storm | Match Highlights | Round 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZNArzxXO-vI",
+                "duration": 280,
+                "title": "NRL 2026 | Cowboys v Panthers | Match Highlights | Round 17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yoa5S7WYHPc",
+                "duration": 285,
+                "title": "NRL 2026 | Eels v Panthers | Match Highlights | Round 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b76Qdz8Rw0M",
+                "duration": 288,
+                "title": "NRL 2026 | Cowboys v Broncos | Match Highlights | Round 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ex1p2v3yGJs",
+                "duration": 279,
+                "title": "NRL 2026 | Rabbitohs v Dragons | Match Highlights | Round 7"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JardUIeGWNU",
+                "duration": 276,
+                "title": "NRL 2026 | Knights v Warriors | Match Highlights | Round 3"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w1QHKRyqndM",
+                "duration": 285,
+                "title": "NRL 2026 | Panthers v Sea Eagles | Match Highlights | Round 9"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w3ArE0bykao",
+                "duration": 288,
+                "title": "NRL 2026 | Titans v Sea Eagles | Match Highlights | Round 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zD3bkxzvwsY",
+                "duration": 276,
+                "title": "NRL 2026 | Roosters v Eels | Match Highlights | Round 19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eGJVcsvbLGg",
+                "duration": 277,
+                "title": "NRL 2026 | Cowboys v Storm | Match Highlights | Round 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXxSOLLkIBg",
+                "duration": 289,
+                "title": "NRL 2026 | Raiders v Dolphins | Match Highlights | Round 12"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FR6xGEkahks",
+                "duration": 294,
+                "title": "NRL 2026 | Sharks v Knights | Match Highlights | Round 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9AVND58N1qk",
+                "duration": 282,
+                "title": "NRL 2026 | Titans v Cowboys | Match Highlights | Round 23"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ey1RUgteILg",
                 "duration": 300,
-                "title": "Unbelievable finish | State of Origin 2026 | Blues v Maroons | Match H"
+                "title": "Unbelievable finish | State of Origin 2026 | Blues v Maroons | Match Highlights | Game I"
             },
             {
-                "url": "https://www.youtube.com/watch?v=EX1GvKeGvpA",
-                "duration": 589,
-                "title": "NRL Highlights: Bulldogs v Warriors - Round 21 | NRL on Nine"
+                "url": "https://www.youtube.com/watch?v=UietITGrVl8",
+                "duration": 299,
+                "title": "NRL 2026 | Panthers v Warriors | Match Highlights | Round 13"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cpMeSKmSM4Q",
-                "duration": 622,
-                "title": "Epic Foot Races | Match Highlights | Rounds 12-17 | NRL 2026"
+                "url": "https://www.youtube.com/watch?v=yXutHJHqihc",
+                "duration": 292,
+                "title": "NRL 2026 | Dolphins v Sea Eagles | Match Highlights | Round 5"
             },
             {
-                "url": "https://www.youtube.com/watch?v=u_A46tabbB8",
-                "duration": 617,
-                "title": "NRL Highlights: Cowboys v Broncos - Round 21 | NRL on Nine"
+                "url": "https://www.youtube.com/watch?v=7UUMf-b1u0w",
+                "duration": 288,
+                "title": "A special night | Rabbitohs v Broncos | Match Highlights | Round 15 | NRL 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0elCnSlbzyw",
-                "duration": 663,
-                "title": "NRL Highlights | NRL Grand Final 2025 | Melbourne Storm v Brisbane Bro"
+                "url": "https://www.youtube.com/watch?v=Ex8k3FcXpWs",
+                "duration": 298,
+                "title": "NRL 2026 | Knights v Roosters | Match Highlights | Round 21"
             },
             {
-                "url": "https://www.youtube.com/watch?v=r8JHZWv2XHU",
-                "duration": 300,
-                "title": "NRL Highlights | 2024 State of Origin Highlights | NSW Blues v QLD Mar"
+                "url": "https://www.youtube.com/watch?v=qNWIizKedIQ",
+                "duration": 260,
+                "title": "NRL 2026 | Sea Eagles v Sharks | Match Highlights | Round 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OmMT33ZaGY4",
+                "duration": 285,
+                "title": "NRL 2026 | Sea Eagles v Knights | Match Highlights | Round 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Og56kR7KKdQ",
+                "duration": 299,
+                "title": "NRL 2026 | Dolphins v Bulldogs | Match Highlights | Round 10"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P0ovTGJiEzQ",
+                "duration": 280,
+                "title": "NRL 2026 | Titans v Knights | Match Highlights | Round 11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gEo_-D_40N4",
+                "duration": 276,
+                "title": "NRL 2026 | Cowboys v Eels | Match Highlights | Round 10"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oQzCSV0Oy8M",
+                "duration": 279,
+                "title": "NRL 2026 | Dragons v Sharks | Match Highlights | Round 23"
             }
         ],
-        "search_query": "nrl full match highlights"
+        "search_query": "NRL match highlights"
     }
 }

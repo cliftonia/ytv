@@ -1,9 +1,0 @@
-{
- "station_conf": {
-  "network_name": "WeatherStar",
-  "network_type": "web",
-  "channel_number": 1,
-  "network_long_name": "WeatherStar 4000+",
-  "web_url": "http://localhost:9090/index.html?kiosk=true&latLonQuery=Keperra%2C+Queensland%2C+Australia&latLon=%7B%22lat%22%3A-27.4138%2C%22lon%22%3A152.947%7D&settings-mediaPlaying-boolean=false"
- }
-}

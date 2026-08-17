@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "CGTN",
+        "network_long_name": "CGTN",
+        "network_type": "streaming",
+        "channel_number": 113,
+        "streams": [
+            {
+                "url": "https://news.cgtn.com/resource/live/english/cgtn-news.m3u8",
+                "duration": 600,
+                "title": "CGTN"
+            }
+        ]
+    }
+}

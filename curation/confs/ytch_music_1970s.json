@@ -2,34 +2,174 @@
     "station_conf": {
         "network_name": "1970s Music",
         "network_type": "streaming",
-        "channel_number": 113,
+        "channel_number": 70,
         "network_long_name": "1970s Music",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=WanZkMp31xw",
-                "duration": 5037,
-                "title": "70s Music Greatest Hits | Redbone, Bee Gees, Bob Dylan, CCR, The Beatl"
+                "url": "https://www.youtube.com/watch?v=wvUQcnfwUUM",
+                "duration": 215,
+                "title": "Mungo Jerry - In The Summertime ORIGINAL 1970"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TsuVAQkfCes",
-                "duration": 3847,
-                "title": "Disco Music 70s - Video Mix"
+                "url": "https://www.youtube.com/watch?v=xvqeSJlgaNk",
+                "duration": 167,
+                "title": "The Monkees - Daydream Believer (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rkenWyUEyZM",
-                "duration": 3648,
-                "title": "One-Hit Wonders of The 70s"
+                "url": "https://www.youtube.com/watch?v=REJM5Vf0efc",
+                "duration": 239,
+                "title": "It STILL ISN'T GONNA SUCK ITSELF (BANNED 1970s Song) - Rhoda Hardcok"
             },
             {
-                "url": "https://www.youtube.com/watch?v=K5C4BYeASbU",
-                "duration": 3591,
-                "title": "1970 In One Hour"
+                "url": "https://www.youtube.com/watch?v=FTQbiNvZqaY",
+                "duration": 272,
+                "title": "Toto - Africa (Official HD Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qizKODkJVdY",
-                "duration": 3165,
-                "title": "70's Best Disco, Funk & R'n'B Hits Vol.1 (Serega Bolonkin Video Mix) │"
+                "url": "https://www.youtube.com/watch?v=C7cos83a5fw",
+                "duration": 213,
+                "title": "Rhoda Hardcok - C*M in my Back Door (BANNED 1970s Song) 70s Country Music AI Parody Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sxcYYLZ4m4A",
+                "duration": 92,
+                "title": "3 Forgotten Radio Hits That Every 1970s Teen Secretly Loved"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3pE2UYsSeog",
+                "duration": 192,
+                "title": "Johnny Young Cause of Death, Age, Wife, Family, Net Worth, Lifestyle & Biography"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WCGg6X0NvD0",
+                "duration": 168,
+                "title": "Can You Name These Iconic 1970s Hitmakers? 🎤"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xw5zev5OlKA",
+                "duration": 375,
+                "title": "15 तिरंगा यूँ ही लहराता रहे 🇮🇳| Romantic Bollywood 70s 80s 90s Songs Old Is Gold | New Hin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2wfGv-riHZ4",
+                "duration": 171,
+                "title": "Ultimate 1970s Music Trivia: Can You Name These Iconic Singers?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q8AMZmWqgRM",
+                "duration": 304,
+                "title": "Love and Happiness"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N4bFqW_eu2I",
+                "duration": 261,
+                "title": "The Animals - House Of The Rising Sun (Music Video) [4K HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CEwc9xixjho",
+                "duration": 121,
+                "title": "Country Hits Of The 40s 1970s Record Commercial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JaYTNsS_m2w",
+                "duration": 182,
+                "title": "Love Affair - Everlasting Love (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NmEyGiaqm7k",
+                "duration": 251,
+                "title": "Player - Baby Come Back"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b_n_NgGWpR4",
+                "duration": 166,
+                "title": "Dr Hook -  \"Sharing The Night Together\" (1978)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t4QK8RxCAwo",
+                "duration": 217,
+                "title": "Boston - More Than a Feeling (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PeMvMNpvB5M",
+                "duration": 265,
+                "title": "Heart - \"Barracuda\" (1977)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PqccEpqvwPY",
+                "duration": 381,
+                "title": "Eagles - Lyin' Eyes (Live 1977) (Official Video) [4K]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=45eRWpjoN8w",
+                "duration": 219,
+                "title": "Kenny Rogers - You Decorated My Life (lyrics)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=33p698xbtc8",
+                "duration": 285,
+                "title": "Computer Love"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7hx4gdlfamo",
+                "duration": 211,
+                "title": "Kenny Rogers - The Gambler"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s0KXV0gB0dw",
+                "duration": 196,
+                "title": "Bread - Make it with you (1970)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MxQXKO194XM",
+                "duration": 304,
+                "title": "Eagles - Take It To The Limit (Live 1977) (Official Video) [4K]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xFrGuyw1V8s",
+                "duration": 233,
+                "title": "ABBA - Dancing Queen (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vdxftd_FUPw",
+                "duration": 284,
+                "title": "Ambrosia - How Much I Feel (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=09839DpTctU",
+                "duration": 405,
+                "title": "Eagles - Hotel California (Live 1977) (Official Video) [HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tnV7dTXlXxs",
+                "duration": 212,
+                "title": "Ventura Highway"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I_2D8Eo15wE",
+                "duration": 145,
+                "title": "Ram Jam - Black Betty (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lZ1KBCSkH_Q",
+                "duration": 201,
+                "title": "Mama Told Me (Not To Come) (Single Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_1nKGVDhQ60",
+                "duration": 236,
+                "title": "James Taylor - Fire And Rain (BBC In Concert, 11/16/1970)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KuvfIePDbgY",
+                "duration": 169,
+                "title": "Dr Hook and the Medicine Show ~ \"Cover of the Rolling Stone\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uVXVO_vF2Io",
+                "duration": 173,
+                "title": "Dr Hook - \"When You're In Love With A Beautiful Woman\""
             },
             {
                 "url": "https://www.youtube.com/watch?v=WGU_4-5RaxU",
@@ -37,26 +177,131 @@
                 "title": "Blondie - Heart Of Glass"
             },
             {
-                "url": "https://www.youtube.com/watch?v=c-zj1jBuz-Y",
-                "duration": 2176,
-                "title": "EVERY BILLBOARD HOT 100 #1 HIT (1970 - 1979) WITH VIDEO"
+                "url": "https://www.youtube.com/watch?v=i6iBAuwBODA",
+                "duration": 300,
+                "title": "Bee Gees - Too Much Heaven"
             },
             {
-                "url": "https://www.youtube.com/watch?v=y5zkMlWj9AU",
-                "duration": 3679,
-                "title": "1977 In One Hour"
+                "url": "https://www.youtube.com/watch?v=FrkEDe6Ljqs",
+                "duration": 279,
+                "title": "Commodores - Nightshift (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6ZzUiyJtmGI",
-                "duration": 2635,
-                "title": "Songs of 1970 to 1974 Vol. 2 (David Bowie, Paul Mccartney, The Doors,"
+                "url": "https://www.youtube.com/watch?v=wddgskIRVeg",
+                "duration": 223,
+                "title": "Candi Staton - Young Hearts Run Free (Official Music Video) [HD]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=t4QK8RxCAwo",
+                "url": "https://www.youtube.com/watch?v=ln7Vn_WKkWU",
+                "duration": 209,
+                "title": "Stuck In The Middle With You"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P5ZJui3aPoQ",
+                "duration": 324,
+                "title": "Kansas - Carry on Wayward Son (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wtjro7_R3-4",
+                "duration": 267,
+                "title": "The Manhattans - Kiss and Say Goodbye (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xwy-3aI435o",
+                "duration": 161,
+                "title": "Have You Ever Seen The Rain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KfUkiUi1DyI",
+                "duration": 244,
+                "title": "Love Will Keep Us Alive (1999 Remaster)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oMfMUfgjiLg",
+                "duration": 357,
+                "title": "Sweet Child O' Mine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Tszq-LVyuN8",
+                "duration": 232,
+                "title": "Eagles - One of These Nights (Live 1977) (Official Video) [4K]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FzHVEjk9YII",
+                "duration": 334,
+                "title": "If You Think You're Lonely Now"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q3mfENm6VJc",
+                "duration": 218,
+                "title": "The Joker"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N-aK6JnyFmk",
+                "duration": 158,
+                "title": "The Mamas & The Papas - California Dreamin'"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rTVjnBo96Ug",
+                "duration": 163,
+                "title": "Otis Redding - (Sittin' On) The Dock Of The Bay (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5X-Mrc2l1d0",
+                "duration": 202,
+                "title": "Michael Jackson - Rock With You (Official Video - Upscaled)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tGv7CUutzqU",
+                "duration": 327,
+                "title": "The 1975 - About You (Official)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nNEb2k_EmMg",
+                "duration": 232,
+                "title": "Laura Branigan - Gloria (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NCtzkaL2t_Y",
+                "duration": 212,
+                "title": "The Beatles - The Beatles - Don't Let Me Down (Live Performance) [Mono / 2009 Remaster]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zpOULjyy-n8",
+                "duration": 292,
+                "title": "REO Speedwagon - Can't Fight This Feeling (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1IBdZ645S-o",
                 "duration": 217,
-                "title": "Boston - More Than a Feeling (Official HD Video)"
+                "title": "Gordon Lightfoot - Sundown (Official Audio)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z_IWtmWWEzA",
+                "duration": 328,
+                "title": "Can We Be Lovers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P96KFQQSeoE",
+                "duration": 359,
+                "title": "Elvis Presley - Suspicious Minds - 11 August 1970 DS - In HD, Complete & re-edited with St"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dLl4PZtxia8",
+                "duration": 392,
+                "title": "Eagles - Hotel California (Official Audio)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ldM2AUrbF-Q",
+                "duration": 187,
+                "title": "Rhoda Hardcok - It's Too Big To Put In My A** (Banned 70s Song) / Hit Songs of the 1970s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7flrKMGfwjw",
+                "duration": 250,
+                "title": "New Edition - Can You Stand The Rain"
             }
         ],
-        "search_query": "1970s music video hits"
+        "search_query": "1970s music hits"
     }
 }

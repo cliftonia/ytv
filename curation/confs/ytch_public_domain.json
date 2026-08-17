@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Public Domain Movies",
         "network_type": "streaming",
-        "channel_number": 23,
+        "channel_number": 16,
         "network_long_name": "Public Domain Movies",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=r_fGFu3TPlw",
-                "duration": 3063,
-                "title": "Maniac (1934) Full Movie | Classic Horror Cult Film | Vintage Public D"
+                "url": "https://www.youtube.com/watch?v=4w77MN75TEs",
+                "duration": 3861,
+                "title": "POWELL PERALTA PRESENTS: PUBLIC DOMAIN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IqHuMjEEgHw",
+                "duration": 5723,
+                "title": "A Christmas Without Snow 1980 -  PUBLIC DOMAIN FULL MOVIE"
             },
             {
                 "url": "https://www.youtube.com/watch?v=HpDVpxL7PnA",
                 "duration": 5607,
-                "title": "The Cocoanuts (1929) | Full Movie | Marx Brothers’ First Comedy Classi"
+                "title": "The Cocoanuts (1929) | Full Movie | Marx Brothers’ First Comedy Classic (Public Domain)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TTEzyKwxC_0",
-                "duration": 4498,
-                "title": "The Cameraman (1928) - Public Domain Movie | Free Classic Film"
+                "url": "https://www.youtube.com/watch?v=OmD-mM_q4zU",
+                "duration": 4243,
+                "title": "Mr Motos Last Warning (1939) || Full movie || Public Domain Movies"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IT8yb51WVfo",
-                "duration": 4660,
-                "title": "⭐ The Clairvoyant (1935) Full Movie | Claude Rains | Mystery Thriller"
+                "url": "https://www.youtube.com/watch?v=GJk5GRanRsY",
+                "duration": 5129,
+                "title": "Sherlock Holmes (1922) – John Barrymore Silent Mystery | Public Domain Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XUbnmtrytw8",
+                "duration": 3351,
+                "title": "Affairs Of Cappy Ricks (1937) - PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kHN8WC76rjI",
+                "duration": 4448,
+                "title": "A Tattered Web (1971) - PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6XfApCDuw7A",
+                "duration": 5284,
+                "title": "The Four Shaolin Challengers (1977) || Full movie || Public Domain Movies"
             },
             {
                 "url": "https://www.youtube.com/watch?v=XYhB5VHcxYg",
                 "duration": 4766,
-                "title": "Dangerous Partners (1945) – Full Movie | Classic Mystery Film Noir | P"
+                "title": "Dangerous Partners (1945) – Full Movie | Classic Mystery Film Noir | Public Domain Hollywo"
             },
             {
-                "url": "https://www.youtube.com/watch?v=jKVuh2PrtOs",
+                "url": "https://www.youtube.com/watch?v=O13Iq0U6YyE",
+                "duration": 2855,
+                "title": "⭐ Hay Foot (1942) Full Movie | William Tracy | Military Comedy | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QRltSkmwSkM",
+                "duration": 4748,
+                "title": "Africa Screams (1949) - PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7OTGwbigqEs",
+                "duration": 4113,
+                "title": "Earthworm Tractors (1936) | FULL MOVIE | Public Domain Classic Comedy starring Joe E. Brow"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l2BuAD1InH4",
+                "duration": 4466,
+                "title": "Five Minutes To Live (Public Domain Movies) 1961 Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N2GkdFBiYh4",
+                "duration": 4226,
+                "title": "Teenage Zombies (1959) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qdzWU0pWRFQ",
+                "duration": 5082,
+                "title": "Public domain full movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6ZJw7rwdUZM",
+                "duration": 3049,
+                "title": "Irish Luck (1939) – Full Movie – Public Domain Classic Detective Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qQD79zvklLc",
+                "duration": 5493,
+                "title": "A Lady To Love (1930)🎬Full Movie🎬Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2SY85_-MGMk",
+                "duration": 3399,
+                "title": "Marihuana (Public Domain Movies) 1936 Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zw7WNoKYDKo",
+                "duration": 5558,
+                "title": "Made For Each Other 1939 || HD 1080P || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p9XGbpWHC-Y",
+                "duration": 4146,
+                "title": "DETOUR (1945) | Full Movie | Classic Film Noir | Public Domain Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ett0BTddtCQ",
+                "duration": 6697,
+                "title": "Hidden Cinema | Sudden Fear (1952) | Full Film | Public Domain | Classic Challenge"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ktvFrwjzZdE",
+                "duration": 6661,
+                "title": "Impact (1949) FULL MOVIE — Ella Raines Vintage Film Noir"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xd1hVjF_QK0",
+                "duration": 4764,
+                "title": "The Hound of the Baskervilles (1939) | Sherlock Holmes Classic Movie [Public Domain]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_0Z8SjMXo-Q",
+                "duration": 4844,
+                "title": "The Battle of Russia (1943) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ojlLQqsVWG4",
+                "duration": 6653,
+                "title": "A Star is Born (1937) -  PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7EgFT6VLJoY",
+                "duration": 3997,
+                "title": "A Shriek in the Night (1933) -  PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gd1Ml5Vdsls",
+                "duration": 6019,
+                "title": "The Broadway Melody (1929) | Full Movie | Oscar-Winning Musical Classic (Public Domain)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_LzQ-BmmHZE",
+                "duration": 4149,
+                "title": "A Modern Musketeer (Public Domain Movie) | Full Film | Free Classic Cinema"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D3xFKP4_siQ",
+                "duration": 2959,
+                "title": "Behind The Sun Full Movie. Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w7obElqiO3A",
+                "duration": 3919,
+                "title": "Tonight for Sure (1962) | Public Domain Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-SpzfBgY058",
+                "duration": 4498,
+                "title": "Uptown New York (1932) | Pre-Code Romantic Drama | Public Domain Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LW5Mzz2_tus",
+                "duration": 3002,
+                "title": "Africa Speaks (Public Domain Movies) 1930 Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sZlrTrS9sw8",
+                "duration": 5473,
+                "title": "The Stranger (1946)  Orson Welles Public Domain Full Movie/Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h1HWJ8gjV_w",
+                "duration": 4701,
+                "title": "A Farewell to Arms (1932)  - PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ie4sFFgpSw8",
+                "duration": 4813,
+                "title": "The Life of Jesus Christ: The Great Commandment | Full Movie (Public Domain) #Jesus #Jesus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LGFxeto2RjA",
+                "duration": 4098,
+                "title": "Reefer Madness (1936)  Public Domain Full Movie/Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0Y6SLxF-Ezo",
+                "duration": 3833,
+                "title": "\"Wild Guitar\" (1962) \"Public Domain Theatre with Rex Underwood Jr.\" Comedy/Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_m01Q6_zvfo",
+                "duration": 4670,
+                "title": "Public Domain Classics: The Old Dark House (1932) Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fPJURyjEA-c",
+                "duration": 2981,
+                "title": "Undercover Agent (1939) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-8D2KTCe58Y",
+                "duration": 4498,
+                "title": "⭐ Grumpy (1930) Full Movie | Cyril Maude | Mystery Drama | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8xTcgfLMGAM",
+                "duration": 2784,
+                "title": "\"Indestructible Man\" (1956) \"Public Domain Theatre with Rex Underwood Jr.\"  Comedy/Satire/"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9QnAyfNXlfE",
+                "duration": 4263,
+                "title": "Fast and Loose (1930) - Full Movie | Public Domain | Carole Lombard | Pre-Code Romantic Co"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jDYWCGEFjEg",
+                "duration": 4433,
+                "title": "Safety Last! (1923) | Full Classic Movie | Harold Lloyd"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GicrWaRG6Xw",
+                "duration": 5033,
+                "title": "Ransom Money (1970) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MnwFnMgo9j4",
+                "duration": 6661,
+                "title": "Quality Street (1927) | FULL Movie | Silent Comedy Romance | Restored | Public Domain Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f7jkZXvaB4g",
+                "duration": 5743,
+                "title": "Night of the Living Dead (1968) – 4K Remastered | Full Public Domain Horror Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lw1Wua_IPIY",
+                "duration": 4292,
+                "title": "Charlie Chaplin's Tillies Punctured Romance (Public Domain Movies) 1914 Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fD0FRv0bhsQ",
+                "duration": 5224,
+                "title": "Horror Express (1972) Horror Public Domain Full Movie/Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e8it1bTzAOk",
+                "duration": 4593,
+                "title": "⭐ Borderline (1930) Full Movie | Paul Robeson | Silent Drama | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ajfXA9HtNR8",
+                "duration": 4980,
+                "title": "Carnival of Souls (1962) | Full Movie | Classic Public Domain Horror | Original Version"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UkEaDmmlVfM",
+                "duration": 4587,
+                "title": "Return of the Scarlet Pimpernel (1937)- Full Movie | Public Domain | James Mason | Adventu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EmNtTt4LWQg",
+                "duration": 7372,
+                "title": "Meet John Doe  (1941) comedy-drama film Frank Capra Public Domain Full Movie/Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BMMD6Z2EHGs",
+                "duration": 5956,
+                "title": "The Dark Corner (1946) | Full Film Noir Classic | Public Domain Movie | Mark Stevens & Luc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x9IUPCg_0ZM",
+                "duration": 8938,
+                "title": "Metropolis (1927) | English Titles | Fritz Lang | Full Movie | Public Domain | Scifi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=78lYFUyUwxU",
+                "duration": 4291,
+                "title": "Dressed To Kill Sherlock Holmes (1946) Public Domain Full Movie/Film Basil Rathbone"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c6qXt5kEQqs",
+                "duration": 5036,
+                "title": "Beyond Tomorrow (1940) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DLZ4rmxLe1A",
+                "duration": 5829,
+                "title": "Secret of the Incas   1954 Full Movie || Public Domain Movies || Old Classic Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rHNy3TP01qk",
+                "duration": 5874,
+                "title": "⭐ Lightnin’ (1930) Full Movie | Will Rogers | Comedy Drama | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=olkY5QPBNIw",
+                "duration": 3227,
+                "title": "John Wayne: An Innocent Man (1933) | Full Movie | Public Domain Classic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=00B-H70BGN8",
+                "duration": 4294,
+                "title": "East of Java (1935) - Full Movie | Public Domain | Adventure Drama starring Charles Bickfo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9RliMUqpNrU",
+                "duration": 5997,
+                "title": "Hallelujah! (1929) – Full Movie | Public Domain Classic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RgYNfZRoUNQ",
+                "duration": 2035,
+                "title": "A Night Out (1915) | Charlie Chaplin | Full Movie | Public Domain Silent Comedy | Improved"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z5Zuvlw3Fk0",
+                "duration": 3102,
+                "title": "Texas Terror (1935) John Wayne Western Public Domain Full Movie/Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2VlKFen1C-M",
+                "duration": 8183,
+                "title": "Bloody Pit Of Horror 1965 Public Domain Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WCCgeeyOkC8",
+                "duration": 6579,
+                "title": "[Full Movie] Impact (1949) – Public Domain Film Noir Classic | Crime, Mystery, Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KsjYx2-8PDs",
+                "duration": 3168,
+                "title": "Rhythm in the Clouds1937 Full Movie | Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H9pqVBxYQjg",
+                "duration": 5809,
+                "title": "⭐ Estrellados (1930) Full Movie | Buster Keaton | Spanish Comedy | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jzOgt_5W9lQ",
+                "duration": 5250,
+                "title": "\"Kung Fu Kids Break Away (1980) || Full movie || Public Domain Movies\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pw4kZl4Pu5A",
+                "duration": 4364,
+                "title": "Assignment Outer Space (1960) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4TcuS0U0e7s",
+                "duration": 3629,
+                "title": "Bank Alarm (1937) | Classic Crime Drama - Public Domain Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=216UyRWWy-Y",
+                "duration": 3520,
+                "title": "For Heaven's Sake (1926) | Full Movie | A Silent Comedy Gem | Public Domain Classic Cinema"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vPAaNZl_ahw",
+                "duration": 3173,
+                "title": "Telephone Operator (1937) | Full Movie | Public Domain Classic Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Psy73IvTeQY",
+                "duration": 1500,
+                "title": "The Bank (1915) | Charlie Chaplin | Silent Comedy | Public Domain Full Movie (HD)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S9Ax2jXX8A4",
+                "duration": 3391,
+                "title": "\"The Devil Bat\" (1940) \"Public Domain Theatre with Rex Underwood Jr.\" Full Movie/Bela Lugo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-qzkSfSU0H8",
                 "duration": 4094,
-                "title": "⭐ Escape! (1930) Full Movie | Gerald du Maurier | Crime Drama | Public"
+                "title": "The Devil Bat (1940) – Full Movie | Vintage Horror | Public Domain"
             },
             {
-                "url": "https://www.youtube.com/watch?v=mW17EkgebP8",
-                "duration": 6997,
-                "title": "Caravan 1946 Public Domain Don Carlos Gypsy Thieves Stewart Granger Cl"
+                "url": "https://www.youtube.com/watch?v=J00GftMz9lw",
+                "duration": 6137,
+                "title": "The Squall (1929) Full Movie | Public Domain | Myrna Loy & Loretta Young | pre-Code Melodr"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bkG20Kw0pB4",
-                "duration": 3819,
-                "title": "Cat-Women of the Moon (1953) | Full Movie | Classic Public Domain SciF"
+                "url": "https://www.youtube.com/watch?v=Kn5bk-BfHZQ",
+                "duration": 6611,
+                "title": "Kansas City Confidential (1952) | Full Movie | Crime Thriller | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ev_h4sReUeE",
+                "duration": 5213,
+                "title": "My Favorite Brunette (1947) Bob Hope Public Domain Full Movie/Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aZChqi4TIJ0",
+                "duration": 3877,
+                "title": "The Girl in 419 (1933) Full Movie | Public Domain | Gloria Stuart & James Dunn | pre-code"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FUhZ4AX2eOM",
+                "duration": 4138,
+                "title": "Mesa of Lost Women (1953) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5CA5xCl8CG8",
+                "duration": 4647,
+                "title": "Charlie Chaplin - Festival (1938) Full Movie - Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ekY4YH5w4B0",
+                "duration": 6340,
+                "title": "Jungle Book (1942) | Full Movie | Public Domain Classic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ROsShDw742w",
+                "duration": 3281,
+                "title": "The Virginian (1914) | Classic Silent Western | Cecil B. DeMille | Public Domain Full Movi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MwW6ncZk5fs",
+                "duration": 3380,
+                "title": "Bulldog Drummond's Bride (1939) | Classic Crime Thriller – Public Domain Full Movie"
             },
             {
                 "url": "https://www.youtube.com/watch?v=gNnGV91j4uo",
                 "duration": 4204,
-                "title": "1954 Action Classic – The Fast and the Furious | Full Movie (Public Do"
+                "title": "1954 Action Classic – The Fast and the Furious | Full Movie (Public Domain)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hk0ikm-eoH4",
-                "duration": 4178,
-                "title": "\"Manhattan Love Song\" 1934 American Classic Full Movie Film Public Dom"
+                "url": "https://www.youtube.com/watch?v=t4DAkRiFM9w",
+                "duration": 4277,
+                "title": "Charlie Chan at The Olympics Warner Oland - Keye Luke (Public Domain)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a4CJxA043_M",
+                "duration": 2813,
+                "title": "The Moonstone (1934) || Full movie || Public Domain Movies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F2Ow4C6AdF8",
+                "duration": 3446,
+                "title": "⭐ Unconquered Bandit (1935) Full Movie | Tom Tyler | Classic Western | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H8L5K1pbXwA",
+                "duration": 5362,
+                "title": "Abilene Town (1946)  - PUBLIC DOMAIN FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=60Z1nSHoTdo",
+                "duration": 4721,
+                "title": "The Hitch-Hiker (1953) | Full Movie | Public Domain Noir Thriller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9VbgUjKTeB0",
+                "duration": 3713,
+                "title": "The Amazing Adventure (1936)  Full Movie | Public Domain | Cary Grant & Mary Brian | Roman"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=930fouxdRQo",
+                "duration": 3611,
+                "title": "East Side Kids (1940) | FULL MOVIE | Classic Crime Drama | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IW9GMzvrUCk",
+                "duration": 4612,
+                "title": "Second Chorus (1940) | Full Movie | Fred Astaire Musical Comedy | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ebCIYeW4OIY",
+                "duration": 4387,
+                "title": "⭐ Safety Last! (1923) Full Movie | Harold Lloyd | Silent Comedy | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M1pRUEQSH28",
+                "duration": 4925,
+                "title": "The Phantom Planet (1961) | Classic Sci-Fi Full Movie | Public Domain Science Fiction"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4YgMZrVXOnk",
+                "duration": 4033,
+                "title": "King of the Zombies (1941) Full Movie | Horror Comedy Classic | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iYcXssVO5dk",
+                "duration": 1480,
+                "title": "The Rink (1916) | Charlie Chaplin | Full Movie | Public Domain | HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=niEqRjRvVF0",
+                "duration": 5818,
+                "title": "Mom and Dad (1945) – Controversial Social Drama | Full Movie | Public Domain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pTPXrvZH_PY",
+                "duration": 6177,
+                "title": "One of Our Aircraft is Missing (1942) Full Movie | Public Domain | British Wartime Adventu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ejFJ88cyoTA",
+                "duration": 4760,
+                "title": "Nosferatu (1922) | Full Movie HD | Classic Public Domain Horror"
             }
         ],
-        "search_query": "public domain full movie classic"
+        "search_query": "public domain full movie"
     }
 }

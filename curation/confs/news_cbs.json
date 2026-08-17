@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "CBS News",
+        "network_long_name": "CBS News",
+        "network_type": "streaming",
+        "channel_number": 115,
+        "streams": [
+            {
+                "url": "https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8",
+                "duration": 600,
+                "title": "CBS News 24/7"
+            }
+        ]
+    }
+}

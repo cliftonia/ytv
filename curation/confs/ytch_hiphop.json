@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Hip Hop",
         "network_type": "streaming",
-        "channel_number": 101,
+        "channel_number": 61,
         "network_long_name": "Hip Hop",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=DG6ormqnVHQ",
-                "duration": 827,
-                "title": "Underground Cypher on triple j Hip Hop Show"
+                "url": "https://www.youtube.com/watch?v=MEA7FBnL1fU",
+                "duration": 262,
+                "title": "Rema - OZEBA (Live at Rock in Rio Lisbon 2026)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TBc0uOrEYNQ",
+                "url": "https://www.youtube.com/watch?v=NZlNQ3ZsVTE",
+                "duration": 133,
+                "title": "Louisiana State University Dance Team Hip Hop 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zFg-iQ3jqjw",
+                "duration": 273,
+                "title": "Megan Thee Stallion - Plan B / Sweetest Pie [2022 Billboard Music Awards Performance]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KPpouY3N6Vs",
+                "duration": 351,
+                "title": "Roddy Ricch - The Box (Wireless Festival 2022)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lxoZ38cH8uc",
+                "duration": 273,
+                "title": "Rema - Dumebi Live Performance @ Couleur Café, Belgium | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1B7u1LWg--g",
+                "duration": 155,
+                "title": "Swagganauts - New Zealand | Varsity Division Gold Medalist | 2026 World Hip Hop Dance Cham"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OaGw-8Jktmc",
+                "duration": 275,
+                "title": "Femme MNL - Philippines | MegsCrew Division Gold Medalist | 2026 World Hip Hop Dance Champ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R0IabtdNvqY",
+                "duration": 177,
+                "title": "DIGITAL YE \"KANYE WEST\"  - Holy Footprints"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5f3sMmdG2sg",
+                "duration": 241,
+                "title": "Jungle - Sunshine (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VhzeCVeVc30",
+                "duration": 195,
+                "title": "UCF DANCE TEAM // 2026 UDA Nationals DIA HIP HOP FINALS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iWKVgwFpDXY",
+                "duration": 131,
+                "title": "Chino Kidd Live Performance Simba Day 2026 Uhuru Stadium"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WCd5tLjIyMI",
+                "duration": 240,
+                "title": "Pakkam Vanthu | Kaththi | HipHop Tamizha Live 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OpxzbdSvMsY",
+                "duration": 328,
+                "title": "Holy Ten Zim hip hop King live (THE HIT FACTOR ZIMDANCEHALL vs HIP HOP 2026 Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SnlGtlmA6hA",
+                "duration": 125,
+                "title": "1DUB1 - Japan | MiniCrew Division Gold Medalist | 2026 World Hip Hop Dance Championship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IhLmrX2AHSk",
+                "duration": 214,
+                "title": "Rema - Charm Live Performance @ Mawazine Festival, Morocco | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZEkh1s_UtZA",
+                "duration": 258,
+                "title": "Wu-Tang Clan - NBA Finals @NYKnicks Halftime Show 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8n1X8xU-7Ew",
                 "duration": 292,
-                "title": "BET & Walmart Present The 2022 Soul Cypher | Soul Train Awards '22"
+                "title": "Usher & Chris Brown - New Flame | The R&B Tour | Live at MetLife Stadium"
             },
             {
-                "url": "https://www.youtube.com/watch?v=P1D2imDPGss",
-                "duration": 218,
-                "title": "LAX to JFK | OSHUN & Camille Safiya (prod. G_Force) | Teambackpack Cyp"
+                "url": "https://www.youtube.com/watch?v=Aze7zTyIRtk",
+                "duration": 141,
+                "title": "Aura 10/10 - Music Video | Meesaya Murukku 2 | Hiphop Tamizha | Ketika Sharma"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cSMB63GMfWM",
+                "duration": 225,
+                "title": "Bruno Mars - 24K Magic (from the Victoria’s Secret 2016 Fashion Show) (Official Live Perfo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NuqVKRT66ls",
+                "duration": 248,
+                "title": "T.I. - \"Whatever You Like\" captured from The Live Room"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qa1IaUywiO8",
+                "duration": 217,
+                "title": "Tems \"Higher\" (Live Performance) | Open Mic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0TdSMhRfqO0",
+                "duration": 242,
+                "title": "Justin Bieber - Intentions (Live On The Tonight Show Starring Jimmy Fallon / 2020) ft. Qua"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zkE8HD10EU0",
+                "duration": 263,
+                "title": "Giveon - Heartbreak Anniversary (Wireless Festival 2022)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ul-b1-ar0p0",
+                "duration": 292,
+                "title": "Eminem & Rihanna Perform “Love the Way You Lie / Not Afraid” at 2010 VMAs | MTV"
             },
             {
                 "url": "https://www.youtube.com/watch?v=SKsW0QK68OM",
                 "duration": 226,
-                "title": "Brandy, Erykah Badu, Teyana Taylor & H.E.R. Represent In Their 2020 Cy"
+                "title": "Brandy, Erykah Badu, Teyana Taylor & H.E.R. Represent In Their 2020 Cypher | Hip Hop Award"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2MnNZMGSmyQ",
-                "duration": 351,
-                "title": "CYPHER Hip Hop Awards '11 [HQ] - Busta Rhymes, Reek da Villian, 2 Chai"
+                "url": "https://www.youtube.com/watch?v=ab93p0j52Xg",
+                "duration": 206,
+                "title": "Playboi Carti - Sky - Live Performance in London 2026 in 4K"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uVkxv6ZA7q8",
-                "duration": 182,
-                "title": "Les Twins judge showcase | Cypher Town Hip-Hop festival 2025"
+                "url": "https://www.youtube.com/watch?v=wlTVfHpvJyw",
+                "duration": 366,
+                "title": "XG - Woke Up LIVE @ HITC  2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=JWL_hD26tUA",
-                "duration": 261,
-                "title": "Desiigner, Lil Dicky & Anderson .Paak 2016 XXL Freshman Cypher"
+                "url": "https://www.youtube.com/watch?v=6GMSe-TjXgs",
+                "duration": 124,
+                "title": "Hip Hop India Season 2 | Sushant Khatri | Shayad Performance"
             },
             {
-                "url": "https://www.youtube.com/watch?v=f032Q6cMqco",
-                "duration": 273,
-                "title": "DaBaby, Megan Thee Stallion, YK Osiris and Lil Mosey's 2019 XXL Freshm"
+                "url": "https://www.youtube.com/watch?v=UwfG4HPVDXc",
+                "duration": 67,
+                "title": "Bagga Chamunorwa live performance Hit Factory 🇿🇼hip hop vs 🇿🇼 dancehall"
             },
             {
-                "url": "https://www.youtube.com/watch?v=L_r3Kgm5LXE",
-                "duration": 1391,
-                "title": "We Turned EVERY Block in NYC into a Hip-Hop CYPHER"
+                "url": "https://www.youtube.com/watch?v=Q8u8mHzug3w",
+                "duration": 324,
+                "title": "Rap/ Hip Hop Segment - Trip Lee, Tedashii, KB, Andy Mineo, & Lecrae (45th Dove Awards)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Bfwh_taxvVA",
-                "duration": 235,
-                "title": "NLE Choppa, Rod Wave, Lil Tjay and Chika's 2020 XXL Freshman Cypher"
+                "url": "https://www.youtube.com/watch?v=lE4JBRSkT-o",
+                "duration": 172,
+                "title": "Jack Harlow  - First Class (Wireless Festival 2022)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AE9tZ1sfcFE",
+                "duration": 102,
+                "title": "DC Young Fly, Karlous Miller & Chico Bean Pay Homage To Rap Legends | Hip Hop Awards '21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m1MCgdq0VWM",
+                "duration": 121,
+                "title": "HipHop Tamizha Adhi | Ethirneechal Adi | Live at Malaysia Concert 2026| Return of the Drag"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vH2gQOOKUvA",
+                "duration": 272,
+                "title": "Sushant Khatri's Mesmerizing Dance Performance on 'Laal Genda Phool' | Hip Hop India |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6OzP09nC79o",
+                "duration": 241,
+                "title": "Rema - TEA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j5-yKhDd64s",
+                "duration": 259,
+                "title": "Eminem - Not Afraid"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ntkD_Iumjlo",
+                "duration": 404,
+                "title": "Black Eyed Peas and Ariana Grande - Where Is The Love (One Love Manchester)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2IH8tNQAzSs",
+                "duration": 302,
+                "title": "Lil Wayne - Lollipop (Official Music Video) ft. Static"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_3wsZ8LGoRI",
+                "duration": 81,
+                "title": "SHANTIPUR WAS LOUD 🔥 | Banglar Thek Live | Bangla Hip-Hop Showreel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aYcipnyThfI",
+                "duration": 245,
+                "title": "Ako (Live in London)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cmtWoYJz0m0",
+                "duration": 349,
+                "title": "Sabrina Lust - SHAGALÉ — New Video, Remix, Iconic Models,  Deep House Music 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u_XxxQTMwAs",
+                "duration": 174,
+                "title": "Life For Hip Hop (Official Audio) Cheema Y | Gur Sidhu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pz3u3ZjTHgs",
+                "duration": 174,
+                "title": "T.I. & Master P Take Us From ATL To Nola In Kid Capri's Hip-Hop Celebration! | BET Awards"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zx6pXeulbyc",
+                "duration": 149,
+                "title": "Rajasthani Chhokro | Akshat Jakhar Jakhar | Hustle 5 Apna Homeground"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zh4t2TaeA38",
+                "duration": 230,
+                "title": "Tinashe - Melatonin (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=au2n7VVGv_c",
+                "duration": 237,
+                "title": "Post Malone - Psycho (Official Music Video) ft. Ty Dolla $ign"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=koVHN6eO4Xg",
+                "duration": 332,
+                "title": "T.I. - Live Your Life ft. Rihanna [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x9yop0nYR9g",
+                "duration": 167,
+                "title": "Quavo & Takeoff - HOTEL LOBBY | A COLORS SHOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=akJCVgdAYPo",
+                "duration": 206,
+                "title": "I AM WHO I AM – TVM Killa LIVE Hip-Hop Band Performance | ONEBIGMOB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kTlv5_Bs8aw",
+                "duration": 274,
+                "title": "BTS (방탄소년단) 'MIC Drop (Steve Aoki Remix)' Official MV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CJOZc02VwJM",
+                "duration": 225,
+                "title": "Roddy Ricch - Down Below [Official Music Video] (Dir. by JMP)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LXqhBZEzAEA",
+                "duration": 86,
+                "title": "Noyz Narcos - Sniper - Live in Milan 16 April 2026 #noyznarcos #hiphop #rap #live"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mrjHk2T_Eyk",
+                "duration": 78,
+                "title": "Hip Hop Hooray (Australian Idol Live Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h_-JFUci0BM",
+                "duration": 242,
+                "title": "Eminem - Love The Way You Lie ft Skylar Grey on Radio 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fyaI4-5849w",
+                "duration": 216,
+                "title": "DJ Khaled - Wild Thoughts (Official Video) ft. Rihanna, Bryson Tiller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=09u1xaIumCM",
+                "duration": 362,
+                "title": "Rush - Tom Sawyer (Scotiabank Arena, Toronto, Canada, 09.08.2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OZLUa8JUR18",
+                "duration": 243,
+                "title": "Lil Wayne - Mirror ft. Bruno Mars (Official Music Video) ft. Bruno Mars"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S9bCLPwzSC0",
+                "duration": 258,
+                "title": "Eminem - Mockingbird [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1vCrgvLmEps",
+                "duration": 231,
+                "title": "Jo Tum Mere Ho ❤️ | Suleman Live Performance | The K Hop 2026 | Kadapa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hb5VBoNlV0U",
+                "duration": 177,
+                "title": "WORSHIP (Live in London)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YVLHaqeJzEk",
+                "duration": 269,
+                "title": "Lloyd - You (Official Music Video) ft. Lil Wayne"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a35rNEBNiO4",
+                "duration": 407,
+                "title": "Rick Ross - Aston Martin Music ft. Drake, Chrisette Michele"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VYOjWnS4cMY",
+                "duration": 245,
+                "title": "Childish Gambino - This Is America (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0mN6sLIS9hM",
+                "duration": 150,
+                "title": "SO SHY | Real Boss x Gur Sidhu [Official Song] SKY Digital | HipHop | New Punjabi Songs 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kgdr2uytpDI",
+                "duration": 253,
+                "title": "T.I. - Whatever You Like (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=67Pylw3Kukc",
+                "duration": 281,
+                "title": "Dax - Dr. Dre ft. Snoop Dogg \"Still D.R.E.\" Remix [One Take Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GRZbRa7SIfU",
+                "duration": 194,
+                "title": "VIKING VIBES ⚔️🔥 | Ragal Ironbull (Viking Hip-Hop Anthem)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lik59RawVfw",
+                "duration": 375,
+                "title": "SLAY TO THE RHYTHM (Official Music Video) : Nora Fatehi | MA3IZ | Sanjoy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=47YClVMlthI",
+                "duration": 366,
+                "title": "Justin Bieber - Confident ft. Chance The Rapper"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2CNl_CCtE-I",
+                "duration": 189,
+                "title": "Lil Durk - Broadway Girls feat. Morgan Wallen - (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MHryuYVyHhk",
+                "duration": 176,
+                "title": "Lil Baby \"Freestyle\" Official Music Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AgU4D4zR094",
+                "duration": 214,
+                "title": "Stressed Out (Live in Mexico City)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SC4xMk98Pdc",
+                "duration": 227,
+                "title": "Post Malone - Congratulations (Official Music Video) ft. Quavo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1pDQjwaH3qk",
+                "duration": 151,
+                "title": "Oxlade - KU LO SA | A COLORS SHOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JZV0dN1VbC0",
+                "duration": 332,
+                "title": "Mia Last Forever (Bonus Track) Arena Summer Smash 2026 LIVE Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hX0aI5Jz8i8",
+                "duration": 137,
+                "title": "BigXthaPlug - Texas (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K2SpP0u8qA4",
+                "duration": 143,
+                "title": "Justin Bieber, The Kid LAROI - STAY (Live From The MTV VMAs / 2021)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JlT9vxK5Q2c",
+                "duration": 275,
+                "title": "ZA Live Performance - 2 Nights in Lagos #Anendlessocean #ZA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=78BUQPB8Z-c",
+                "duration": 200,
+                "title": "Goindhamma - Music Video | Meesaya Murukku 2 | Hiphop Tamizha | Ramya Ranganathan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l_lblj8Cq0o",
+                "duration": 395,
+                "title": "G-Eazy - No Limit REMIX ft. A$AP Rocky, Cardi B, French Montana, Juicy J, Belly"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=weeI1G46q0o",
+                "duration": 322,
+                "title": "DJ Khaled - I'm The One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sl4Xwqfy5Uw",
+                "duration": 166,
+                "title": "OZZY OSBOURNE with Post Malone - \"Take What You Want\" (Live Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EGNoA-hqWOQ",
+                "duration": 215,
+                "title": "Meri Aankhen Tujhe Dhunde ❤️ | Suleman Live Performance | The K Hop 2026 | Kadapa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8gyLR4NfMiI",
+                "duration": 249,
+                "title": "Chris Brown - Look at Me Now (Official Video) ft. Lil Wayne, Busta Rhymes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z4N8lzKNfy4",
+                "duration": 245,
+                "title": "Lil Durk - All My Life ft. J. Cole"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i_kF4zLNKio",
+                "duration": 245,
+                "title": "Fetty Wap  - Trap Queen (Official Video) Prod. By Tony Fadd"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oorVWW9ywG0",
+                "duration": 173,
+                "title": "POP SMOKE - DIOR (OFFICIAL VIDEO)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gGFIDduBe-I",
+                "duration": 153,
+                "title": "Ebleezy Heavy Shoulders (Live Performance )"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DaXqZfKb6JY",
+                "duration": 203,
+                "title": "Chennai City Gangsta Live | Hiphop Tamizha Concert Malaysia 2026 | Vanakkam Chennai | HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zdud0fIx8Qk",
+                "duration": 346,
+                "title": "1096 Luv (Sikaeom Live Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PEGccV-NOm8",
+                "duration": 234,
+                "title": "Cardi B - Bodak Yellow [OFFICIAL MUSIC VIDEO]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l9oiXpeSC-Y",
+                "duration": 269,
+                "title": "16 -3 MIYU (ID) VS MING FASHO (KR) HIPHOP ROUND OF 16 | 2026 LINE UP XI🇰🇷"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IWPrGxCMcUc",
+                "duration": 296,
+                "title": "August Alsina - Benediction ft. Rick Ross"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N6O2ncUKvlg",
+                "duration": 241,
+                "title": "Nelly - Just A Dream (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PjrAwC4TIPA",
+                "duration": 181,
+                "title": "BLACKPINK - ‘Shut Down’ DANCE PERFORMANCE VIDEO"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=No6iTovReIY",
+                "duration": 168,
+                "title": "Lavish (Live in Mexico City)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=llk9VrljLlY",
+                "duration": 190,
+                "title": "Parv Man | Parv | Hustle 5 Apna Homeground"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LsoLEjrDogU",
+                "duration": 223,
+                "title": "Bruno Mars - Finesse (Remix) (feat. Cardi B) (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=421w1j87fEM",
+                "duration": 174,
+                "title": "Burna Boy - Last Last [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jStOfwTVINE",
+                "duration": 136,
+                "title": "Deli Deli ❤️ | Hip-Hop Arabesk Pop Düet (Official Live Performance) 2026"
             }
         ],
-        "search_query": "hip hop live performance cypher"
+        "search_query": "hip hop live performance"
     }
 }

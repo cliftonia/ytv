@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Podcasts & Interviews",
         "network_type": "streaming",
-        "channel_number": 71,
+        "channel_number": 40,
         "network_long_name": "Podcasts & Interviews",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=O7xcD_5a2kU",
-                "duration": 3808,
-                "title": "Molly Shannon (Full Episode) | Conan O'Brien Needs A Friend"
+                "url": "https://www.youtube.com/watch?v=XuoqKYxDHVc",
+                "duration": 5107,
+                "title": "The full-length interview with Elon Musk | The Economist"
             },
             {
-                "url": "https://www.youtube.com/watch?v=8R3uCWzdOI8",
-                "duration": 3319,
-                "title": "CANCELLED! The Tommy Robinson and Karl Stefanovic Podcast They Don't W"
+                "url": "https://www.youtube.com/watch?v=flupGAB_iHs",
+                "duration": 6777,
+                "title": "Matt Rife | This Past Weekend w/ Theo Von #662"
             },
             {
-                "url": "https://www.youtube.com/watch?v=g2cQ2kD6lzs",
-                "duration": 2585,
-                "title": "KOBE BRYANT'S LAST GREAT INTERVIEW On How To FIND PURPOSE In LIFE | Ko"
+                "url": "https://www.youtube.com/watch?v=muM7YcClWeU",
+                "duration": 4460,
+                "title": "Tom Holland | Good Hang with Amy Poehler"
             },
             {
-                "url": "https://www.youtube.com/watch?v=04ajJZ9gNzs",
-                "duration": 3749,
-                "title": "The Lil Wayne Episode | Friends Keep Secrets"
+                "url": "https://www.youtube.com/watch?v=2v5uaXsbe2c",
+                "duration": 8029,
+                "title": "Amy Winehouse & Me: Blake Fielder Finally Tells His Story"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IU_cwY-P-g8",
-                "duration": 2564,
-                "title": "Super Soul Sunday S3E4 'Oprah and Michael Singer: The Untethered Soul'"
+                "url": "https://www.youtube.com/watch?v=eeU1fNZ2pZA",
+                "duration": 5300,
+                "title": "The Formula For Freedom, Confidence & Happiness - Tony Robbins (4K)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=___b_FVXtQo",
-                "duration": 4580,
-                "title": "Oprah Winfrey on Knowing Your Worth"
+                "url": "https://www.youtube.com/watch?v=BYizgB2FcAQ",
+                "duration": 3257,
+                "title": "Why AI is Overrated - with Neil deGrasse Tyson"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gl51eRbmC-0",
-                "duration": 4818,
-                "title": "Kenan Thompson | The Blocks Podcast w/ Neal Brennan | FULL EPISODE 19"
+                "url": "https://www.youtube.com/watch?v=M_-lc0sUdWM",
+                "duration": 3558,
+                "title": "Scrutiny of NDIS reforms and parliament's return | Insiders | ABC NEWS"
             },
             {
-                "url": "https://www.youtube.com/watch?v=r2YdF58trQs",
-                "duration": 3490,
-                "title": "Mike Shinoda Interview (Full Episode) | The Tim Ferriss Show (Podcast)"
+                "url": "https://www.youtube.com/watch?v=Ary1gIbaOTc",
+                "duration": 4666,
+                "title": "Ex-CIA Spy John Kiriakou on Israel, Double Agents, and Direct Energy Weapons (Podcast Inte"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pYGspxTSiNg",
-                "duration": 3368,
-                "title": "Why 'Theo of Golden' Has Touched Millions of Readers with Allen Levi a"
+                "url": "https://www.youtube.com/watch?v=oX7OduG1YmI",
+                "duration": 2830,
+                "title": "The Future Mark Zuckerberg Is Trying To Build"
             },
             {
-                "url": "https://www.youtube.com/watch?v=w9RUqC7xyzg",
-                "duration": 4991,
-                "title": "Jay Leno | The Blocks Podcast w/ Neal Brennan | FULL EPISODE 26"
+                "url": "https://www.youtube.com/watch?v=zUvRv5JrItk",
+                "duration": 8168,
+                "title": "MADONNA EXCLUSIVE: The Side That NOBODY Knows…"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E9UU5N0k0XY",
+                "duration": 4682,
+                "title": "It’s Not Too Late: How to Transform Your Life at Any Moment"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xfqk15Ml4_E",
+                "duration": 4942,
+                "title": "DRAKE: \"I'm Sorry\" | NOT THIS AGAIN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yQ879dB_Dt4",
+                "duration": 1903,
+                "title": "Davido on the West’s Afrobeats Obsession, Kagame Picking Him Up From the Airport, Being Yo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KPh0LOCWT5A",
+                "duration": 3191,
+                "title": "Neil deGrasse Tyson and Richard Dawkins Discuss Science, Religion & Evolution"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4T_0Tcts6aM",
+                "duration": 8262,
+                "title": "Joe Rogan Experience #2187 - Adam Sandler"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pBRSZBtirAk",
+                "duration": 4880,
+                "title": "BILL GATES REVEALS: \"I Was Wrong About Success…\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hte9d-g7idY",
+                "duration": 4208,
+                "title": "Hasan Scraps with Chris Christie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F-MEegYIWaM",
+                "duration": 4491,
+                "title": "Dr. Joe Dispenza: WATCH THIS To Rewire Your Brain & ATTRACT Anything You Want"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zjNfThCXXJw",
+                "duration": 2875,
+                "title": "What YouTube Actually Wants in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hb2rKGfIOrM",
+                "duration": 4079,
+                "title": "President Barack Obama in Conversation with Marc Maron | WTF Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4K9RDZg4y7o",
+                "duration": 4437,
+                "title": "Shia LaBeouf Interview"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9DvB4G2FZ_o",
+                "duration": 3432,
+                "title": "Tom Holland on SPIDER-MAN: BRAND NEW DAY, THE ODYSSEY, plus Kevin Feige & Amy Pascal!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=irUkFlX_dbE",
+                "duration": 3303,
+                "title": "What's Actually Working on Instagram in 2026 (Yapping, Trials & Reposts)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HxEQCHpZzHk",
+                "duration": 3788,
+                "title": "How to Grow Your Business SO Fast in 2026 It Feels ILLEGAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jVs4NBoHZic",
+                "duration": 2965,
+                "title": "Aliko Dangote: Building Africa's industrial future from the ground up | Podcast | In Good"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vOXFKYGkPvI",
+                "duration": 2094,
+                "title": "IELTS Listening Practice: Work & Career || English Podcast for IELTS Preparation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z_pk4eBDaLA",
+                "duration": 1705,
+                "title": "Hard Lessons: Stan Druckenmiller: Invest, then investigate"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CJaMEfU-Jwg",
+                "duration": 1365,
+                "title": "Job Interview Questions | English Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bY1EQ6HD-ao",
+                "duration": 4424,
+                "title": "What Bothers Physicists About Black Holes (Interview with Brian Cox)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5jnEizYzQl0",
+                "duration": 5967,
+                "title": "What Makes a Good Life? Lessons From the Longest Study on Happiness"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V360AygOv7A",
+                "duration": 3494,
+                "title": "Financial Literacy for Dummies (Like Me) with JL Collins"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bfn7xnVRcf8",
+                "duration": 1273,
+                "title": "Zendaya and Tom Holland open up like never before (exclusive interview)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nBQPnvmaNcE",
+                "duration": 2610,
+                "title": "Harvard Professor Explains The Rules of Writing — Steven Pinker"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6Qg-fQmqhM",
+                "duration": 1644,
+                "title": "20 Rules of Podcasting: How To Go From Zero Subscribers to Millions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jxbuu_Y_4JU",
+                "duration": 4098,
+                "title": "Pakistan का मोदी-भारत के खिलाफ नया खतरनाक प्लान | Lucky Bisht podcast with Sushant SINHA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1mGo9KXT8Ps",
+                "duration": 3177,
+                "title": "Miley Cyrus on Fame, Rage and How Therapy Saved Her Life | The Interview"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6r5aCyNKAOI",
+                "duration": 4885,
+                "title": "Marketing GENIUS: The Strategy Behind Content That Reaches Millions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eHW7nZTuQwU",
+                "duration": 1559,
+                "title": "Hailey Bieber’s Collab with Justin & Selling Rhode for $1 Billion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1qX8zcOz7k4",
+                "duration": 2728,
+                "title": "How to Start Vlogging in 2026 (Even If Your Life Is Boring)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q3H9MSLJYJU",
+                "duration": 3801,
+                "title": "Salish Matter Opens Up Off Camera!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oO8w6XcXJUs",
+                "duration": 1281,
+                "title": "Elon Musk (Full Interview) | Real Time with Bill Maher (HBO)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RTkGYbsJiAI",
+                "duration": 6421,
+                "title": "OutSouth 2026 Filmmaker Interviews!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iumKa5dFUNA",
+                "duration": 7359,
+                "title": "HEYS INTERVIEWS #6 - Dom Waterson - Traitors (2026) feat. Real History w/ Melissa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3jtLOEkFh6c",
+                "duration": 1697,
+                "title": "Auto Policy 2026: What’s the Progress? - Podcast with Ali Khizer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XZOJa-At410",
+                "duration": 2276,
+                "title": "WYATT FLORES x Dusty Boots Podcast - Bucking Bin Chicken Tour 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tiKsO3Kdr-U",
+                "duration": 1492,
+                "title": "Matt Damon Talks ‘The Odyssey\", Bourne & Oceans Sequels & More with Rich Eisen | Full Inte"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m7hipuxQUqY",
+                "duration": 1673,
+                "title": "Watch BEFORE Buying a Microphone for Filmmaking in 2026 | Buyers Guide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oZPI8kj6E7s",
+                "duration": 1923,
+                "title": "Eminem, Rosenberg, 50 Cent, Dr.Dre: 'The Shady Records Story' Interview [25th Anniversary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=--NqGw9rfNA",
+                "duration": 1471,
+                "title": "Social media and language learning - a British Council English podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BeH1I5n-798",
+                "duration": 2402,
+                "title": "How to Edit a Video in Adobe Premiere 2026! (Complete Beginners Tutorial)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vrJ2ghVDe7w",
+                "duration": 2301,
+                "title": "Podcasting Q&A: The 5 Things You Need to Grow in 2026  + What Podcast Equipment is Actuall"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FOrAvch2gKw",
+                "duration": 2169,
+                "title": "She Recorded 41 Episodes Before Launching Her Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7BHNrRSDnuo",
+                "duration": 7244,
+                "title": "Young Thug Interview | Its Up There Podcast (FULL INTERVIEW)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BcQXNjtPrcM",
+                "duration": 1279,
+                "title": "How to Start a Gaming Channel in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S31J5ACsOqU",
+                "duration": 4276,
+                "title": "Legendary Trader Paul Tudor Jones on AI Risk, Bubbles and Buffett"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dyZWh7VxtbY",
+                "duration": 4651,
+                "title": "Is the Future Already Written? The 13.5-Year Window That Could Change Humanity Forever"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mNSi-gNat28",
+                "duration": 3297,
+                "title": "IPS ਅਫ਼ਸਰ ਬਣਨਾ ਚਾਹੁੰਦੀ ਸੀ ਪਰ। Pali Lover। Podcast। SHORT MOVIE'S।"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LnliYAuNVPE",
+                "duration": 4354,
+                "title": "How do you build a successful podcast in 2026? |  Walid Malik | TBH with JJ | Episode 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zjVU8n_pGzw",
+                "duration": 2487,
+                "title": "Ariana Grande | New Album \"Eternal Sunshine\", Wicked, Glinda [Part 1]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=02RRZsuhc6U",
+                "duration": 1433,
+                "title": "How to Build Communication Skills ? | Learn English with Podcast | English Talks @Suuman_S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8k9XBavNVQY",
+                "duration": 4298,
+                "title": "Indian Army Special Forces: Inside a Covert Mission in Kashmir | Independence Day Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C47xoQgvj2w",
+                "duration": 6956,
+                "title": "TRIBUTE TO NIMS DAI - अब सम्झनामा मात्र... | Red Bull Inside The Bunker | S01E18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TyruajFwfZs",
+                "duration": 8754,
+                "title": "Defend the Cuban Revolution! | World School of Communism 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MzKfOvZxNko",
+                "duration": 3909,
+                "title": "Charles Leclerc on What Driving an F1 Car ACTUALLY Does to You"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=On4yG9tvYWw",
+                "duration": 7031,
+                "title": "Pelas Pistas Podcast entrevista Max Verstappen e Gabriel Bortoleto #PelasPistasPodcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rR-mxDCDKBQ",
+                "duration": 1741,
+                "title": "2026 is the end of influencers & the start of casual content.. here's what will work"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jw-HOnDexEc",
+                "duration": 4216,
+                "title": "Prop Firm Millionaire: They Changed The Rules Because Of Traders Like Me!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3otrmTL24OA",
+                "duration": 5813,
+                "title": "⁠Kiara Advani On Marriage, Motherhood, Relationships, Bollywood & Heartbreak | FO507 Raj S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=75tkthAzZog",
+                "duration": 2924,
+                "title": "Tanmay Reveals 0 to 1 Million Content Creator Path | Advanced Content Creation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l3ICit3qb4Q",
+                "duration": 2168,
+                "title": "State of the Podcast 2026: Finding Our “Why” and What’s Next"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sqNhUCrppOs",
+                "duration": 4380,
+                "title": "Liza Garga UPSC Rank 303 Unfiltered Podcast: How to Break the UPSC Labyrinth on Your First"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sGpc8-f2e8U",
+                "duration": 7369,
+                "title": "⁠Imtiaz Ali On Love, Heartbreak, Rockstar, Tamasha & Bollywood Filmmaking | FO517 Raj Sham"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dFx8Oe48RaY",
+                "duration": 5201,
+                "title": "Richard Campbell - The AI Infrastructure Race and Armenia’s High-Stakes Bet | Ep 577, Aug"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RlSSGbE0SJs",
+                "duration": 3688,
+                "title": "Senator Alex Padilla: How Democrats Can Win in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D1qZx5hxMbA",
+                "duration": 5894,
+                "title": "25Y Video Editor Earns 10 LAKHS/Month  (Full Roadmap 2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KsO3oVGxvnY",
+                "duration": 1328,
+                "title": "RENEET 2026 AIR 1 Full Interview | Complete Journey, Strategy, Notes, Routine & Secrets Re"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9dnNTl1Tom0",
+                "duration": 2251,
+                "title": "How to be successful Content Creator ft.  @AyushBhandari  | Creator Podcast -  Ep 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KdAzDlbr8jc",
+                "duration": 7121,
+                "title": "BIG Money Podcast - Step By Step Guide To Start A Business In India | Rajiv Gupta | TRS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SIES2qQk9AE",
+                "duration": 2106,
+                "title": "He Runs USA Faceless YouTube Channels in 2026! | Complete Guide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FRvYRI_J88s",
+                "duration": 2181,
+                "title": "YouTube CEO Reveals the Biggest Changes Coming in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wNmPY_VIFm4",
+                "duration": 4505,
+                "title": "Ankur Warikoo on ₹0 to ₹1 Crore in 2026, Personal Branding, Content Creation & More | ST 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QKt7MSrFiMo",
+                "duration": 4945,
+                "title": "Paparazzi EXPOSES Bollywood: Sara’s Anger, Janhvi’s Mood & Orry Party Secrets | Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NSDrlyrbHnY",
+                "duration": 2960,
+                "title": "Full Podcast - NEST 2026 AIR 1 🔥 | Sanidhya Kshitij Dongre | Raw & Unfiltered"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lfFKM7BSREE",
+                "duration": 3538,
+                "title": "How to Crack INI-CET 2026 with Dr. Aditya Gupta | Reflex Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aALIlgn358s",
+                "duration": 2757,
+                "title": "Full Podcast - IAT 2026 AIR 1 🔥 | Soumyaneel Mukherjee | Raw & Unfiltered |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VclNAxMnX0k",
+                "duration": 6281,
+                "title": "Don’t Ignore These Signals | @astroarunpandit's Yearly Horoscope 2026 |  @sadhikasehgal Po"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qg5coPIeqk8",
+                "duration": 1249,
+                "title": "Edit PODCAST Reels like a PRO in CAPCUT in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YExsP54biFQ",
+                "duration": 1304,
+                "title": "MAH MCA CET 2026 Podcast \"Vedant Parab\" Score 99.84%ile | Preparation Strategy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hMlSFcf14uQ",
+                "duration": 3416,
+                "title": "Rajab Butt Opens Up Like Never Before | Full Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=As7abwNhG7Y",
+                "duration": 2294,
+                "title": "Shorts Genius Shares Everything She Knows (Jenny Hoyos Interview)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LSVNXDgeb2s",
+                "duration": 5592,
+                "title": "How to start a YouTube Channel and Earn Money in 2026? @DeepakDaiya | Dr. Shikha Podcast 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UqddtyzC-U8",
+                "duration": 4875,
+                "title": "The Blade Runner Files: What They're Not Telling the Public"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6PsGsqMD6dQ",
+                "duration": 3468,
+                "title": "Kota Srinivas  Full Interview || cheran Talks || 2026 #interview#podcast #trending"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HGYgV74UHqg",
+                "duration": 2932,
+                "title": "Dr. Tipparthi Yadaiah || Cheran Talks || 2026 ||Full Interview #podcast #trending #intervi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2MYCRzUMqzE",
+                "duration": 5986,
+                "title": "Jama Desi Podcast with Dinesh Bishnoi | RAS Rank #1 2024 | @ponasarpanch #rasresult"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_9avCirivFg",
+                "duration": 3055,
+                "title": "Decoding Lubricant Myths with PARCO Gunvor Limited (PGL) | Podcast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lG8HffYOWt4",
+                "duration": 6450,
+                "title": "MARRIAGE FROM HELL ( This Story Will Shake You ) Featuring Roby Ekpo | Honest Bunch Podcas"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1xPB57LNbtI",
+                "duration": 3241,
+                "title": "They’re Preparing Us For OPEN CONTACT! Here’s the Timeline For Disclosure..| Darryl Anka"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CpWt5n7IJmQ",
+                "duration": 3697,
+                "title": "The Future of IT Jobs in Next 5 Years | AI Engineer Explains"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zNphcq6IWSI",
+                "duration": 2663,
+                "title": "IPL 2026:Virat Kohli Fans के लिए सबसे बड़ा Podcast |Rajkumar Sharma on London Phase & Spri"
             }
         ],
-        "search_query": "podcast interview full episode"
+        "search_query": "long form interview podcast"
     }
 }

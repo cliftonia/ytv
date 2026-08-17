@@ -2,19 +2,79 @@
     "station_conf": {
         "network_name": "Christianity",
         "network_type": "streaming",
-        "channel_number": 121,
+        "channel_number": 76,
         "network_long_name": "Christianity",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=7R1EERG_YK4",
-                "duration": 2455,
-                "title": "\"Hearing God Over Your Thoughts\" | Pastor Bobby Chandler"
+                "url": "https://www.youtube.com/watch?v=Puxne6fQN-c",
+                "duration": 1644,
+                "title": "God Is Preparing You in Secret: Faith, Purpose & Your Suddenly Moment | Sarah Jakes Robert"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Rd0wx_zfMO0",
-                "duration": 1665,
-                "title": "Put God First and Watch Him Handle the Rest | Tony Evans Sermon"
+                "url": "https://www.youtube.com/watch?v=lWmxgcPUBvo",
+                "duration": 2053,
+                "title": "Let God Heal Your Thoughts in 2026 | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s7_8I2SCZro",
+                "duration": 3735,
+                "title": "Don’t Let The Attack Distract You | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HHRllMZKmlc",
+                "duration": 2781,
+                "title": "Priscilla Shirer | God Can Restore Your Circumstances"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2R0iS4Q3l90",
+                "duration": 4982,
+                "title": "Priscilla Shirer: How to Follow the Holy Spirit in 2026 | FULL SERMON | Women of Faith on"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9-qVn_4mP9g",
+                "duration": 2421,
+                "title": "Fasting: Stay Humble and Hungry | Fast 2026 | Jentezen Franklin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hNye8lASyHc",
+                "duration": 3561,
+                "title": "Every Believer Needs To Stay Focused in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wv7lEyck2mg",
+                "duration": 3861,
+                "title": "The Sermon on the Mount | Lecture One (Official) | Peterson Academy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3FtdwhPAsto",
+                "duration": 4185,
+                "title": "Protect Your Inner Peace-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wcAAWThlQJw",
+                "duration": 3029,
+                "title": "FOCUS on Yourself in 2026 Until You WIN – God's Quiet Process | Apostle Joshua Selman"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iJL-bM_EnwU",
+                "duration": 3648,
+                "title": "Freed from the Dominion of Sin (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v2lcFS3FCEc",
+                "duration": 4767,
+                "title": "Vision Sunday Message: The Year of Much More (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r9HKyG7Ihgw",
+                "duration": 4821,
+                "title": "How to Hear God's Voice (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DYzkCtbwHqU",
+                "duration": 2817,
+                "title": "The Coming Demonic Invasion (Revelation 9:12–21) | John MacArthur"
             },
             {
                 "url": "https://www.youtube.com/watch?v=zbKXkpiLcfk",
@@ -22,9 +82,179 @@
                 "title": "The Holy Spirit and You | Billy Graham Classic Sermon"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hC5FHSY06Xk",
-                "duration": 2821,
-                "title": "Escaping the Trap of Casual Christianity [FULL SERMON]"
+                "url": "https://www.youtube.com/watch?v=hTz6uN5cgWM",
+                "duration": 2010,
+                "title": "The Powerful Lessons of the SERMON ON THE MOUNT: Jesus’ Words That Will Leave You SPEECHLE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QcxOOJAzpcE",
+                "duration": 3567,
+                "title": "Hope That Anchors Your Soul (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3gJkZpu6mgw",
+                "duration": 2560,
+                "title": "Anxious For Nothing | Max Lucado"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=REXKHTA5_ok",
+                "duration": 4435,
+                "title": "Hey You: She Poured It Out | Sarah Jakes Roberts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rd0wx_zfMO0",
+                "duration": 1665,
+                "title": "Put God First and Watch Him Handle the Rest | Tony Evans Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HExdi7ytt6A",
+                "duration": 1454,
+                "title": "Identifying Satan: What Every Christian Must Know | Dr. David Jeremiah"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cz0YykNuJxA",
+                "duration": 2884,
+                "title": "Resilient & Strong-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8vkzOZoevt4",
+                "duration": 5372,
+                "title": "Uncover the Enemy’s Tactics Against You (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2_DXr55f9e0",
+                "duration": 2814,
+                "title": "Healing The Soul Of A Woman-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BM1AV5pUQdo",
+                "duration": 5019,
+                "title": "Set Apart for Holiness (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gV9JugO_5Mk",
+                "duration": 3303,
+                "title": "Faith To Stay | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yGWyPIfAVDw",
+                "duration": 5132,
+                "title": "Speak By Faith Not By Sight (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q9cVu4Ayhzw",
+                "duration": 4802,
+                "title": "Be Occupied With The Word Not The Enemy (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qU0OHKq8bVw",
+                "duration": 1666,
+                "title": "You’re Closer to Victory Than You Think | Tony Evans Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jlGyKHxacmY",
+                "duration": 4823,
+                "title": "Protection Truths From Psalm 91 (Full Sermon) | Bible Study With Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iLVdYrYCl6I",
+                "duration": 2997,
+                "title": "Voddie Baucham Sermons - The 2026 Great Tribulation Has Arrived"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NzAafjhKvug",
+                "duration": 3066,
+                "title": "Verse by Verse Bible Study  |  The Book of Jude  | Gary Hamrick"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9kmExLQtbgQ",
+                "duration": 3707,
+                "title": "How to Live Above The Trials of Life (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AAsE-oComGQ",
+                "duration": 1289,
+                "title": "Watch These 5 Prophecies in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DbqimWcJnAI",
+                "duration": 4745,
+                "title": "Battlefield Of The Mind-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z1YICbJVSN8",
+                "duration": 3770,
+                "title": "True Prayer Drives Out Fear | Peter Tan-Chi | June 29, 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FvgJL1_4DU8",
+                "duration": 4453,
+                "title": "The Theology of Quietness - Bishop T.D. Jakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TDVPaWbzWtQ",
+                "duration": 1481,
+                "title": "How Satan Uses Doubt — And How to Fight Back with Faith | Dr. David Jeremiah | Ephesians 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oJ_pH9w6KKk",
+                "duration": 5180,
+                "title": "License to Live Holy Versus License to Sin (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0NVB1Pf2RPU",
+                "duration": 4511,
+                "title": "The Pursuit-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B_XAlrmnjcI",
+                "duration": 4401,
+                "title": "God's Healing For Long-Term Conditions (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iu3urc7I6yI",
+                "duration": 2379,
+                "title": "What is Heaven like?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DEVKV9UstR8",
+                "duration": 3384,
+                "title": "Priscilla Shirer | “The Perfect Patience of God” | Social Dallas"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vTJuQJmm4x4",
+                "duration": 4672,
+                "title": "Bayview Glen Church | Sunday Worship Experience | August 16, 2026 9:00am"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Eg_di-O8nM",
+                "duration": 3227,
+                "title": "You Can Change The End | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rY3Xf3ZDeOs",
+                "duration": 1710,
+                "title": "God Told Rick Renner A Shift Is Coming! (2026 Prophetic Word)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SGwp9qt0zMk",
+                "duration": 2731,
+                "title": "If You Don’t Change How You Start 2026, You’ll Repeat 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QIjIvvHGJ9E",
+                "duration": 3600,
+                "title": "A Troubled Mind And An Open Door | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cWL6bKHksnY",
+                "duration": 4309,
+                "title": "2026 Resurrection Sunday Gospel Partner Special (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bjQ2zr3rAVY",
+                "duration": 3059,
+                "title": "Understanding Emotions-FULL SERMON | Joyce Meyer"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Avyyn_-jcZs",
@@ -32,31 +262,251 @@
                 "title": "Joyce Meyer: Motivation in Life's Difficult Times (Full Sermon) | TBN"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9bLgDoFkdqo",
-                "duration": 3216,
-                "title": "Taking Control of Our Thoughts– Dr. Charles Stanley"
+                "url": "https://www.youtube.com/watch?v=Cyc9JHatavY",
+                "duration": 3635,
+                "title": "Let Them, Part 1 // Let Them // Pastor Mike McClure, Jr."
             },
             {
-                "url": "https://www.youtube.com/watch?v=2h3MmkXvI_o",
-                "duration": 2384,
-                "title": "Priscilla Shirer: Wear the Armor of God | FULL SERMON | Propel 2018 |"
+                "url": "https://www.youtube.com/watch?v=klkEKMTe3OY",
+                "duration": 3662,
+                "title": "Priscilla Shirer | The Importance of Finding Your Identity in Christ"
             },
             {
-                "url": "https://www.youtube.com/watch?v=r-9L2-aVR4I",
-                "duration": 2841,
-                "title": "Walking in the Holy Spirit – Dr. Charles Stanley"
+                "url": "https://www.youtube.com/watch?v=Ya2Ezl9LNiY",
+                "duration": 4424,
+                "title": "This Time Is Different - Sarah Jakes Roberts"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9jYtODX22ZY",
-                "duration": 2420,
-                "title": "Voddie Baucham: Do Not Love the World"
+                "url": "https://www.youtube.com/watch?v=2W_Bl99wNJk",
+                "duration": 2497,
+                "title": "Dealing With Depression: A Biblical Answer to Emotional Suffering"
             },
             {
-                "url": "https://www.youtube.com/watch?v=AMIMVTBwlvk",
-                "duration": 3207,
-                "title": "Pursuing Holiness [FULL SERMON] | John Bevere |"
+                "url": "https://www.youtube.com/watch?v=GZd4Son8nrk",
+                "duration": 2706,
+                "title": "Bishop Noel Jones - DON'T SETTLE - June 7, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1Q6IMhCQnL8",
+                "duration": 1652,
+                "title": "The Second Coming of Christ | Billy Graham Classic Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qfu2yc9KLWg",
+                "duration": 1664,
+                "title": "God Gave You the Holy Spirit For A Reason | Tony Evans Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NS1LfSNFbIk",
+                "duration": 3658,
+                "title": "The Grace to Make Changes- Bishop T.D. Jakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RiQd4gRol1Y",
+                "duration": 2813,
+                "title": "Priscilla Shirer | Remember God's Promises and Hold on to His Peace"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WZl_zE6T7VI",
+                "duration": 3755,
+                "title": "Priscilla Shirer: Walk in the Power of God in You! | FULL SERMON | Women of Faith on TBN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8qHhzkC1KuY",
+                "duration": 4912,
+                "title": "Ways The Devil Deceives Us-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cW860YDEudY",
+                "duration": 1993,
+                "title": "How to Trust God Through Trials AND Triumphs"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-uuOItseW3c",
+                "duration": 1286,
+                "title": "The Divine Key to Absolute Self Control and Lasting Peace | Dr. David Jeremiah"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=egedMZfeQBA",
+                "duration": 1711,
+                "title": "God, What Should I Do? | Joyce Meyer | Enjoying Everyday Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6WvtbDpFvk",
+                "duration": 4302,
+                "title": "Live The Heavenly Life On Earth (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=juMpY8HrXAc",
+                "duration": 2201,
+                "title": "The Funniest & Most Powerful Marriage Sermon Compilation 2026 😂🔥 | Laugh & Learn"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_w_bjzQ3yV0",
+                "duration": 1499,
+                "title": "Before God Sends You, He'll Interrupt You | Sarah Jakes Roberts Sermon | Woman Evolve"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R-0RljzinLo",
+                "duration": 2115,
+                "title": "Israel, Iran, and End Times | Oak Hills Church | March 29, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=edcc68JTpwc",
+                "duration": 3881,
+                "title": "Steady in The Storm - Bishop T.D. Jakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_VppOP_2h7M",
+                "duration": 3137,
+                "title": "Faith vs Fear-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0Jkvqgdboqk",
+                "duration": 2322,
+                "title": "There Is A Throne | Priscilla Shirer | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n2lLDZXxs9E",
+                "duration": 2805,
+                "title": "Walking with God in a wicked world | Doug Batchelor"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q8ZBKx6MYnA",
+                "duration": 5183,
+                "title": "Faith in the Middle of the Attack - Sunday Service"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KKQPDdPyMcw",
+                "duration": 2837,
+                "title": "YOUR REAL IDENTITY IN CHRIST| Dr. Abel Damina latest sermon 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I6Rr47wgx8g",
+                "duration": 3999,
+                "title": "Reign Over Stress And Unresolved Guilt (Full Sermon) | Joseph Prince"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V_FYsHNX_EU",
+                "duration": 3488,
+                "title": "Hindrances to Faith | Curry Blake Sermon 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CZk90baM79o",
+                "duration": 3857,
+                "title": "Tired On The Inside | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXkfAw10tfA",
+                "duration": 3221,
+                "title": "Faith To Win Every Battle (Full Sermon) | Joseph Prince | 2025 Resurrection Sunday Message"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YH0Q8U2b6lk",
+                "duration": 4691,
+                "title": "Faith Overcoming Fear-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=__N4pKDb3NU",
+                "duration": 2863,
+                "title": "\"God Is Preparing You for Something Amazing!\" | Joyce Meyer Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aenPPEavVgU",
+                "duration": 4529,
+                "title": "What Is True Love?- FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8mXUiZFRdCc",
+                "duration": 4041,
+                "title": "Sticks & Stones - Bishop T.D. Jakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eKuEFG2hSVU",
+                "duration": 3110,
+                "title": "Speak to your Mountain | Curry Blake 2026 Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vW42hOoNmt0",
+                "duration": 3953,
+                "title": "The Prayer That Repairs | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6J2pc68KMUw",
+                "duration": 5329,
+                "title": "Defense Against Offenses: Get Out of Your Feelings - Bishop T.D. Jakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YaJRYs40-kU",
+                "duration": 3896,
+                "title": "When God Says Let Go | Pastor Steven Furtick | Elevation Church"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sh4Z4EB-pEI",
+                "duration": 4435,
+                "title": "Trusting God to Rebuild What Was Broken - Tony Evans Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IzfoyRTGAkI",
+                "duration": 2761,
+                "title": "The Word of God on Divine Healing | Curry Blake 2026 Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=arQmQxKNUeE",
+                "duration": 2149,
+                "title": "Are You Enjoying Your Life? | Dr. David Jeremiah on Ecclesiastes & Living Fully Engaged"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G9qpVRfm4BE",
+                "duration": 3046,
+                "title": "5 Ways to De-Stress-FULL SERMON | Joyce Meyer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O_35jy3_JAA",
+                "duration": 4011,
+                "title": "Tim Keller Sermons 2026 | Why Christ Is Worth Everything | Tim Keller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t22r6lyB9Wo",
+                "duration": 1025,
+                "title": "Priscilla Shirer | Stand Firm in Your Decision to Follow Christ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NcgyOsUDoHg",
+                "duration": 2094,
+                "title": "Bishop Noel Jones - I'M STILL HERE - June 21, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=onjzu3fJHJk",
+                "duration": 2349,
+                "title": "Priscilla Shirer: Hold on to Faith When Life Breaks Your Heart"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5bBJEpjseG4",
+                "duration": 2277,
+                "title": "Ed Lapiz –More Blessings in Giving | Inspirational Christian Sermon on Generosity & Faith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ODcCD4NtKxo",
+                "duration": 2476,
+                "title": "THE PSYCHOLOGY OF PRAYERS | APOSTLE AROME OSAYI latest sermon 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ee9-l3xbe4g",
+                "duration": 1577,
+                "title": "Protecting Your Family From Cultural Confusion | Tony Evans Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BtzB-ICaz5o",
+                "duration": 4744,
+                "title": "Sermon: John 14 - August 2, 2026 - Sister Maria Luisa Piraquive #CGMJCI #IDMJI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pZfYxstmBCo",
+                "duration": 2035,
+                "title": "Lord, Please help me!"
             }
         ],
-        "search_query": "full sermon christian teaching message"
+        "search_query": "christian teaching sermon"
     }
 }

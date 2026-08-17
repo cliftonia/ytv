@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Euronews",
+        "network_long_name": "Euronews",
+        "network_type": "streaming",
+        "channel_number": 110,
+        "streams": [
+            {
+                "url": "https://jmp2.uk/plu-61de96114757070008d33cae.m3u8",
+                "duration": 600,
+                "title": "Euronews English"
+            }
+        ]
+    }
+}

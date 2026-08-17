@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Restoration",
         "network_type": "streaming",
-        "channel_number": 86,
+        "channel_number": 50,
         "network_long_name": "Restoration",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=54mpymkZruc",
-                "duration": 868,
-                "title": "Secret Treasure Inside - Restoring a French Cash Register with Hidden"
+                "url": "https://www.youtube.com/watch?v=kY_GvDqu5ik",
+                "duration": 877,
+                "title": "Forge Making 80 Layer Damascus Scissors | The Restoration Workshop"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pVWs2AFgHlA",
-                "duration": 597,
-                "title": "Drew’s 2-Year Stag Restoration Project Pays Off! | Salvage Hunters"
+                "url": "https://www.youtube.com/watch?v=VBYSaflJWXg",
+                "duration": 827,
+                "title": "70 Years Old Anvil Restoration  Antique ANVIL"
             },
             {
-                "url": "https://www.youtube.com/watch?v=WlL62mmlnBw",
-                "duration": 850,
-                "title": "Impossible Restoration of a Rusty Antique — This Was My Hardest Projec"
+                "url": "https://www.youtube.com/watch?v=hiHfHeH3F08",
+                "duration": 2334,
+                "title": "Complete RESTORATION Of A Bevel Pinion Shaft BROKEN into 2-Pieces Using Welding & Lathe Ma"
             },
             {
-                "url": "https://www.youtube.com/watch?v=b9Elh5y3hto",
-                "duration": 1408,
-                "title": "The Ultimate Sony Restoration! Bringing A 200 Year Abandoned Sound Sys"
+                "url": "https://www.youtube.com/watch?v=LqWm7lgf6FE",
+                "duration": 2214,
+                "title": "This Is the Most Cryptic Machine I’ve Ever Seen… [Full Restoration]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZoQaPoZBCTE",
-                "duration": 907,
-                "title": "Antique rusty lighter - Restoration project"
+                "url": "https://www.youtube.com/watch?v=KofcgdW-xlM",
+                "duration": 1214,
+                "title": "Why Welding Was Skipped! This Broken Crankshaft Was Strengthened With a Single Bolt!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nnz5GcmDa2E",
+                "url": "https://www.youtube.com/watch?v=64okH0lbREk",
+                "duration": 1024,
+                "title": "The most ingenious restoration techniques! Old rusty MACHETE Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YFe2a9MBUVQ",
+                "duration": 498,
+                "title": "Restoring a 1910 Antique Blacksmith Leg Vise | From Rust to Workshop Masterpiece !"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=THNgXNS0xt8",
+                "duration": 481,
+                "title": "Can This Rusty Tool Be Saved? | Full Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VIwGvlvI_a0",
+                "duration": 1289,
+                "title": "Massive Carrier Plate Repair | Precision Machining & Metal Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=epotwTnTxuw",
+                "duration": 709,
+                "title": "Vintage Hand Axe Restoration Incredible Before and After"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nC1TjUKZ37I",
+                "duration": 1915,
+                "title": "Broken Heavy Equipment Bracket Repair & Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wLJcqGPeL94",
+                "duration": 3211,
+                "title": "Rear BEARINGS steam restoration... pt1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3mpHiq_ooWc",
+                "duration": 2130,
+                "title": "Incredible Hitachi Combination Machine Restoration | From Scrap Metal to Workshop Beast"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wdAp-lwyydE",
+                "duration": 1962,
+                "title": "My Dream Power Hammer Restoration! Part 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tKTy8O3HvMo",
+                "duration": 1673,
+                "title": "Restoration of Rusty Skinning Knife"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uk_uY-7H7PQ",
+                "duration": 1825,
+                "title": "Vintage Hammer Restoration – Repairing a Rusty Abandoned 80-Year-Old Workshop Tool"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fY2wcRDNJ3o",
+                "duration": 3387,
+                "title": "Bulldozer Track Roller Shaft Repair | Complete Restoration Process"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K7dAnU_WLO0",
+                "duration": 1241,
+                "title": "Rare Vintage Tool Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ygaYsIZ9LzY",
+                "duration": 478,
+                "title": "Restoring Custom Homemade Knife"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rsTDwrA2fkA",
+                "duration": 1860,
+                "title": "5 Essential Tools for a Steel Boat Refit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NtkuOtPWGmw",
+                "duration": 689,
+                "title": "Restoration Very Big Rusty Knife🔥🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jlYdQ_GeJLE",
+                "duration": 997,
+                "title": "Proof Crafting a 20-Inch FLAMING Damascus Knife | The Restoration Workshop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XCyrLTkR1C0",
+                "duration": 1478,
+                "title": "Re-Restoring the Steam Hammer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JoPnppwu47M",
+                "duration": 699,
+                "title": "Antique tools restoration. Old Hammer Restoration. @TimeReseT."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lFLhznYK20k",
+                "duration": 791,
+                "title": "Restoring an Extremely Rusted Big Metal Knife | Complete Rust Removal and New Handle"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9BNoX_t76d8",
+                "duration": 758,
+                "title": "1965 Rusty Old Vise"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8pjuMWRUPlw",
+                "duration": 488,
+                "title": "“Restoring a 110-Year-Old Hammer from 1916 😱 | Satisfying Old Hammer Restoration”"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qcNPkaGuDq4",
+                "duration": 1557,
+                "title": "A Massive 2-Ton Hook Cracked Down the Middle — How This Master Mechanic Saved It With Pro"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A3_CbIy9U5E",
+                "duration": 2081,
+                "title": "Mystery Forge Blower Restoration and repair"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JwLdHEHDpsE",
+                "duration": 462,
+                "title": "How To Restore Cleaver 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XEMY6FWWFBg",
+                "duration": 543,
+                "title": "Rusty Handmade SHARP SWORD Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FvT7Ho4woPM",
+                "duration": 1049,
+                "title": "Vice Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uEos4lCvW24",
+                "duration": 1093,
+                "title": "HOW TO RESTORE A DIRTY AXE (FULL AND CLEAR BLACKSMITH PROCESS)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2DMSSBNArmQ",
+                "duration": 754,
+                "title": "Restoration Fixing a TOTALLY Ruined Axe | The Restoration Workshop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uZJNI3oSWWY",
+                "duration": 968,
+                "title": "Restoration Very Rusted Giant Machete"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D3PZGzef0pE",
+                "duration": 710,
+                "title": "Rust To Sharp Restoration Process"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TOLw526srw0",
+                "duration": 609,
+                "title": "Antique Caucasian Dagger Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XscfZm_JRME",
+                "duration": 670,
+                "title": "Restoration Rare Old Very Rusty Knife"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gKyrDYDcAiU",
+                "duration": 346,
+                "title": "Restoration Of A 125-Year-Old Antique Cross Dagger | Satisfying Restoration   #youtubevide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MlpimowXuZk",
+                "duration": 756,
+                "title": "INSANE Rusty Machete Restoration ASMR | The Restoration Workshop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vtYBzx2cOrc",
+                "duration": 249,
+                "title": "Rusty Chaff Cutter Restored Into Razor Sharp Knife 🔥 | Full Forging Timelapse"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zbiQOZJYrWs",
+                "duration": 1372,
+                "title": "This Anvil Restored Like New | Full Repair & Rebuild"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TFqJHaVvKfo",
+                "duration": 1011,
+                "title": "Rusty Broken Anvil Vise Restoration🔥🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qbCOSlPXb6s",
+                "duration": 434,
+                "title": "Rusty Old Knife Restoration - Amazing Transformation with New Wooden Handle | Bj Blacksmit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VO3n33URmcA",
+                "duration": 514,
+                "title": "This $20 Drill Was Headed for the Trash… Until Now | Rustsmith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sbv8rjgEL7Q",
+                "duration": 539,
+                "title": "Full Axe Restoration Process"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q6AR8CN_jPU",
+                "duration": 1158,
+                "title": "A Dagger Inspired by Game of Thrones. Extreme Restoration."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QGMySWyk8pI",
+                "duration": 1293,
+                "title": "Rusty & Broken Anvil Restored – Satisfying Full Restoration ✨ | Master Craftsmanship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CQft58jiXeA",
+                "duration": 1871,
+                "title": "Repairing a Completely Broken Gear Carrier | Skilled Workshop Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NCvZsYlr9u0",
+                "duration": 1010,
+                "title": "Blacksmithing Pexto Stake Plate Anvil Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A7Q6Zd4654w",
+                "duration": 1475,
+                "title": "Advanced Metal Finishing: Hammer, Dolly, and Shrink Disc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8byFaoryOJ4",
+                "duration": 1486,
+                "title": "Repairing a Heavily Rusted Broken Anvil |Amazing Blacksmith Restoration Process\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n6pcIBxRJVI",
+                "duration": 465,
+                "title": "Peter Wright Anvil Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mH6Kei82-Mw",
+                "duration": 480,
+                "title": "This Old Hydraulic Jack Was Completely Rusted… I Restored It!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HEFs2bu0Yqc",
+                "duration": 452,
+                "title": "A Forgotten Winchester Rifle Gets a Stunning Second Life | Amazing Restoration | Rustsmith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jjb9lwWZpd8",
+                "duration": 497,
+                "title": "Restoring a Rusty Hand Adze to Like New"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZjzoIQKyWts",
+                "duration": 340,
+                "title": "Rusty Broken Hammer Restoration \"before after\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FbuleotMUd8",
+                "duration": 429,
+                "title": "Cleaver Restoration/ Knifemaking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1R_UEdB7qQ0",
+                "duration": 1448,
+                "title": "1950s Vintage Slide Knife Restoration | Rebuilt Lock Mechanism"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dVoyint-Ehw",
+                "duration": 1592,
+                "title": "🔨 Restoring an Old Item to Brand New! | Amazing Repair Transformation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FxGEljFMrCQ",
+                "duration": 1068,
+                "title": "Re-Restoring The Steam Hammer - Part 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yuwwj7Jk24M",
                 "duration": 693,
-                "title": "Hungry Skull - Mechanical Coin Bank Restoration"
+                "title": "Satisfying Laser Restoration of a Rusty Outdoor Stove"
             },
             {
-                "url": "https://www.youtube.com/watch?v=s0f9BwbfvCs",
-                "duration": 595,
-                "title": "Drew Restores Stag Statue In A Two-Year Restoration Project! | Salvage"
+                "url": "https://www.youtube.com/watch?v=ReEO7-X8iL4",
+                "duration": 1421,
+                "title": "INSANE Knife Restoration!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TA-v8vHcaA0",
-                "duration": 4322,
-                "title": "Paid $40 and Earned $2960 : A Whole Hour of Amazing Restoration Techni"
+                "url": "https://www.youtube.com/watch?v=qqrz-B_EDrg",
+                "duration": 2707,
+                "title": "🔥 How To Restore Big Scrap Komatsu Armature | Amazing Full Repair Process"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KahctElSnpw",
-                "duration": 1109,
-                "title": "Barn Find Oil Lamp - Perfect Restoration"
+                "url": "https://www.youtube.com/watch?v=lTWk-KV1kro",
+                "duration": 671,
+                "title": "Bj Blacksmith | Restoring a Severely Rusted Mini Knife & Crafting a Custom Wooden Handle"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2sU-2SHK9qU",
-                "duration": 1515,
-                "title": "Trash to TREASURE Restoration | Furniture Restoration"
+                "url": "https://www.youtube.com/watch?v=Md4QsgaXaa8",
+                "duration": 3705,
+                "title": "Restoring a 100-Year-Old Rusty Mystery Tool | Lot of Amazing Restoration Techniques"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r9rqxIhUNuk",
+                "duration": 259,
+                "title": "I Restored a Rusted Knuckle Knife to Its Former Glory |Incredible Restoration#knifeRestora"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ntJ2Gp6KGKg",
+                "duration": 913,
+                "title": "Cast Iron Restoration: No talking just shop sounds and music part 2 ￼"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rHoeZqCxqCE",
+                "duration": 548,
+                "title": "Total Restoration A 100 Year Old Ancient Rusted Knife | Blacksmith Restoration |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mb-uAqQF7QA",
+                "duration": 1038,
+                "title": "Do NOT Watch This If You Think This 100-Year-Old Rust Belongs in the Trash 😱"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=24AceYpq-Y4",
+                "duration": 831,
+                "title": "Rusty Tractor Parts Restoration | Complete Workshop Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i1FnALEAXyo",
+                "duration": 1056,
+                "title": "Restoring a Turkish Butcher’s Knife. A relic from Atatürk’s era😱"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s0WqwZdoe08",
+                "duration": 1467,
+                "title": "Nobody Could Figure Out What This Rusty Tool Was... Until I Restored It! 😱‎"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Myji0u1Kn-0",
+                "duration": 2064,
+                "title": "99% of People Couldn’t Identify This Mystery Machine - Epic Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IlR5uPzWuGs",
+                "duration": 492,
+                "title": "8 MIN Restoring an Extremely Rusty Old Knife • Satisfying ASMR Rust Removal (Ambient Sound"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZJ1kbIbR9JY",
+                "duration": 323,
+                "title": "#HandmadeAxe #MetalworkingScrap  Metal to Viking Axe - Amazing Transformation & Restoratio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=woJlq6VgKmM",
+                "duration": 1400,
+                "title": "Broken Yoke Complete Repair & Restoration | Satisfying Welding Process 🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nYyRRpZtpno",
+                "duration": 252,
+                "title": "From Rust to Razor： Insane Cleaver Restoration #restoration #restore"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G27N198mFCI",
+                "duration": 1899,
+                "title": "Mystery GIANT Metal Shear Restoration and REPAIR! - (Rebar Cutter)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GUQ2ryIrINI",
+                "duration": 246,
+                "title": "Restoring a Rusted Crescent Axe to Razor Sharp!| Amazing Metal#Restoration#restoration#rus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w4DLAZeXuFA",
+                "duration": 1198,
+                "title": "Restoration Of Strange Antique - Rusty Antique Restoration! | Legend Restore"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G_aQwhnZ_dA",
+                "duration": 2948,
+                "title": "5 Most Satisfying Rusty Restorations | Before & After Marathon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WVkebzthuK8",
+                "duration": 593,
+                "title": "Restoring an Old Hammer | DIY Tool Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jrPadQ6eSJs",
+                "duration": 1374,
+                "title": "WORKSHOP WEDNESDAY: KV-1S Turret Restoration Begins. Evidence of Wartime Desperation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4x3bkDgixtU",
+                "duration": 592,
+                "title": "The Most Satisfying Antique Firearm Restoration You'll Ever Watch | Rustsmith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0W8OMpHf8lk",
+                "duration": 371,
+                "title": "From Rusty to Trusty: Kitchen knife restoration and sharpening"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MR85hqfxo-4",
+                "duration": 730,
+                "title": "Restoration Very Rusted Big Knife"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rJ6Eopm9uoU",
+                "duration": 1434,
+                "title": "Craftsman Hammer Makeover"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bt7XBXfkU-w",
+                "duration": 581,
+                "title": "Rusty Hoe Blade Restoration — Abandoned Phaora Brought Back to Life | Satisfying Rust to S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qLTqANIB2PM",
+                "duration": 5357,
+                "title": "Blacksmith Girl  Craft smithy, Recycle old knives - Restoration Detailling"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Tq6cJiOJl08",
+                "duration": 1800,
+                "title": "🔥 They Destroyed These Sun Gear Shafts… Then We Rebuilt Them!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hMxMLfA3Z4c",
+                "duration": 243,
+                "title": "Darryl Reeves Master Blacksmith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cGLv0RUXwQg",
+                "duration": 1698,
+                "title": "Impossible Cast Iron Repair...! Broken Axle Housing Restored with Pinning & Iron Plate Tec"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GgcGxSVmKmw",
+                "duration": 1717,
+                "title": "One Wrong Cut=Total Loss! | Impossible Industrial Auger Screw Shaft Restoration by Master"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cPDgqPjONmE",
+                "duration": 4335,
+                "title": "Skillful Restored Engine Inside Agricultural Tractor - A Severely Damaged Engine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ONoXM50a13s",
+                "duration": 966,
+                "title": "Cannedy Otto 16 blacksmith post drill restoration part 4?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0ZyOzV5L5Jg",
+                "duration": 601,
+                "title": "Rusty Abandoned Billhook Knife Restoration - Bringing Old Steel Back to Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AL3VbSCGlwM",
+                "duration": 1543,
+                "title": "K98 Bayonet Restoration | Rusty Military Knife"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HggESTa2nM8",
+                "duration": 774,
+                "title": "Restoration of a 100-Year-Old Rusty Sledgehammer (Village ASMR)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1Qfs6pG78xo",
+                "duration": 2715,
+                "title": "Severely Damaged Helical Gear Restoration | Amazing Workshop Rebuild Process"
             }
         ],
-        "search_query": "antique restoration project"
+        "search_query": "restoration blacksmithing workshop"
     }
 }

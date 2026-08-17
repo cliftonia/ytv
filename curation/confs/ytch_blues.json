@@ -2,24 +2,19 @@
     "station_conf": {
         "network_name": "Blues",
         "network_type": "streaming",
-        "channel_number": 98,
+        "channel_number": 58,
         "network_long_name": "Blues",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=1f6J2qh3KdY",
-                "duration": 331,
-                "title": "Fry Pan - Blue Shaddy - 2026 Blues on Broadbeach - Live"
+                "url": "https://www.youtube.com/watch?v=qehfPs70FZU",
+                "duration": 311,
+                "title": "Gregg Allman, Taj Mahal and Chris Stapleton with \"Statesboro Blues\" from Skyville Live"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MJo1r7d5xQk",
-                "duration": 313,
-                "title": "Laura Cox - Hard Blues Shot (Live)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qEZsjtMaE3c",
-                "duration": 279,
-                "title": "VOLBEAT - Shotgun Blues (Official Bootleg – Live from San Diego)"
+                "url": "https://www.youtube.com/watch?v=pbyyRCr60Q8",
+                "duration": 387,
+                "title": "Black Pumas - Colors (Live at Abbey Road Studios)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RCisGFYDrKQ",
@@ -27,44 +22,24 @@
                 "title": "Crossroads | Song Around The World | Playing For Change x Visit Mississippi #blues #robert"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qQn-w3tvti4",
-                "duration": 244,
-                "title": "Moby [feat. Jacob Lusk] – \"Natural Blues\" (Live From KCRW HQ)"
+                "url": "https://www.youtube.com/watch?v=yMNWC57yqNg",
+                "duration": 378,
+                "title": "Joe Bonamassa - I'll Play The Blues For You (Live At The Greek Theatre)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hrwRAjCr_lA",
-                "duration": 256,
-                "title": "Cam Cole - New Age Blues (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=b6VEHUJwUho",
+                "duration": 227,
+                "title": "Beth & Joe - Nutbush City Limits OFFICIAL Music Video"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zg4lrF_yd1A",
-                "duration": 347,
-                "title": "Morgan Luna - You Lost Me Forever - Blues Music - Soul Blues"
+                "url": "https://www.youtube.com/watch?v=Ql3Vz2642pk",
+                "duration": 364,
+                "title": "Chris Stapleton - I Was Wrong (Austin City Limits Performance)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=_oL_pCjPgUg",
-                "duration": 237,
-                "title": "Walking Blues (Robert Johnson) feat. Keb' Mo' | Playing For Change | Song Around The World"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Tv69YbJ_B1s",
-                "duration": 191,
-                "title": "This Blues Groove SHOOK the European Blues Challenge 2026 🎸🔥"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lpJguRiFy-Y",
-                "duration": 384,
-                "title": "Morgan Luna - You Are My Heaven - Blues Music - Soul Blues"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mZeRfEQo0wE",
-                "duration": 334,
-                "title": "Morgan Luna - Infinite Love | Soul Blues | Emotional Blues Music"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=69NWSgq7vuU",
-                "duration": 216,
-                "title": "Atomic Habitz (Marcus King, Chris Dave, MonoNeon) \"Red Hot Momma\" - live at Newport Jazz F"
+                "url": "https://www.youtube.com/watch?v=IBLruNfUqUs",
+                "duration": 274,
+                "title": "Chris Stapleton - Tennessee Whiskey (Austin City Limits Performance)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sSyJ9HYEX0w",
@@ -72,94 +47,49 @@
                 "title": "This Woman Sang One Blues Song... Simon Cowell Was Speechless 😭 Etta Mae Hartwell | AGT 20"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5f3sMmdG2sg",
-                "duration": 241,
-                "title": "Jungle - Sunshine (Official Video)"
+                "url": "https://www.youtube.com/watch?v=TJZDyIz-0lk",
+                "duration": 333,
+                "title": "Nick Cave and Warren Ellis - \"Push the Sky Away\" | Live at Sydney Opera House"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DNpnvc8oacY",
-                "duration": 256,
-                "title": "Flow Tribe - Ooh La La - Unleashed - Live at French Quarter Fest 2026"
+                "url": "https://www.youtube.com/watch?v=kyvDyZoyGUg",
+                "duration": 296,
+                "title": "Brandi Carlile - Uninvited (Newport Folk Fest 2026)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=kXhBKjDKF84",
-                "duration": 175,
-                "title": "David Guetta & Bebe Rexha - I'm Good (Blue) [Live Performance]"
+                "url": "https://www.youtube.com/watch?v=qEZsjtMaE3c",
+                "duration": 279,
+                "title": "VOLBEAT - Shotgun Blues (Official Bootleg – Live from San Diego)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KfZHuJ2ofw8",
-                "duration": 238,
-                "title": "Hayley Williams \"Parachute\" LIVE | House of Blues Boston, MA | April 4, 2026"
+                "url": "https://www.youtube.com/watch?v=HtmV2I4Fl7Q",
+                "duration": 408,
+                "title": "Gary Moore - Still Got The Blues 1997 Live HD"
             },
             {
-                "url": "https://www.youtube.com/watch?v=sQwEuiXd060",
-                "duration": 186,
-                "title": "Daddy Long Legs - Pink Lemonade - 2026 Blues on Broadbeach - Live"
+                "url": "https://www.youtube.com/watch?v=LwXQ7WUh-D0",
+                "duration": 314,
+                "title": "Adele - I Drink Wine (Live at The BRIT Awards 2022)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5OlFxQHdkiY",
-                "duration": 305,
-                "title": "Sinners (2025) 4K - MIND-BLOWING Time-Traveling Blues Song | Movieclips"
+                "url": "https://www.youtube.com/watch?v=qHZiIxprsrs",
+                "duration": 346,
+                "title": "Gary Barlow - Back For Good ft. JLS"
             },
             {
-                "url": "https://www.youtube.com/watch?v=g2i8IJOpwho",
-                "duration": 300,
-                "title": "Blues Traveler “Hook” at Howard Stern’s 1996 Birthday Show"
+                "url": "https://www.youtube.com/watch?v=NbdRLyixJpc",
+                "duration": 216,
+                "title": "Miley Cyrus - Heart Of Glass (Live from the iHeart Festival)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=eRyTyf2b-d0",
-                "duration": 208,
-                "title": "Hollywood Vampires “Highway to Hell” live @ O2 Arena, London 12th August 2026"
+                "url": "https://www.youtube.com/watch?v=fc1xsOr9Zek",
+                "duration": 336,
+                "title": "Harry Styles - Sign Of The Times | Harry Styles at the BBC"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CnEgFbYNyZk",
-                "duration": 388,
-                "title": "Amata Band LIVE Ghost Gum Rhythm & Blues 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VEHKlbEgp2g",
-                "duration": 317,
-                "title": "Morgan Luna - Don’t Let Me Down - Blues Music - Soul Blues"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GLiCR261wxM",
-                "duration": 234,
-                "title": "At My Worst | Nonoy Peña (Live at the Music Museum)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=o7oXCmOONTg",
-                "duration": 419,
-                "title": "Morgan Luna - Where Words End | Soul Blues | Emotional Blues Music"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fWA6AaOEp5E",
-                "duration": 273,
-                "title": "PAGSUKO | SOULFUL BLUES"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WqqkAgXMzqw",
-                "duration": 344,
-                "title": "🎶BLACK MAGIC WOMAN🎶 -🎶 STORYTELLING SOUL BLUES(2026)🎶"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6_5UdRaHBJs",
-                "duration": 405,
-                "title": "Morgan Luna - Never Not Loving You - Blues Music - Soul Blues"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1vED2mxfVWg",
-                "duration": 252,
-                "title": "Lamb of God - Blunt Force Blues (Official Visualizer)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I--Zsgwfc8M",
-                "duration": 309,
-                "title": "Sienna Rivers  | You Let The Fire Go – Deep Soul Blues Ballad (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xXBNlApwh0c",
-                "duration": 290,
-                "title": "Eva Cassidy - Autumn Leaves (Blues Alley performance)"
+                "url": "https://www.youtube.com/watch?v=KZ3BJYx43y0",
+                "duration": 341,
+                "title": "Bruce Springsteen - My Hometown (from Born In The U.S.A. Live: London 2013)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=09839DpTctU",
@@ -167,14 +97,309 @@
                 "title": "Eagles - Hotel California (Live 1977) (Official Video) [HD]"
             },
             {
+                "url": "https://www.youtube.com/watch?v=zg4lrF_yd1A",
+                "duration": 347,
+                "title": "Morgan Luna - You Lost Me Forever - Blues Music - Soul Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iv4wWCC2mk4",
+                "duration": 290,
+                "title": "Tedeschi Trucks Band - Statesboro Blues ( Derek playing Tiger) 3-13-26 Beacon Theater, NYC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1yfuCpcX7EU",
+                "duration": 297,
+                "title": "Sade - Your Love Is King (Live 2011)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GZ3zL7kT6_c",
+                "duration": 241,
+                "title": "Teddy Swims - Lose Control (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-BoTx70RRe0",
+                "duration": 350,
+                "title": "P!NK - What's Up (from Live from Wembley Arena, London, England)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sjbk8v915go",
+                "duration": 346,
+                "title": "Liam Gallagher - Stand By Me (MTV Unplugged) | MTV Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kXhBKjDKF84",
+                "duration": 175,
+                "title": "David Guetta & Bebe Rexha - I'm Good (Blue) [Live Performance]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j6-9p9O-nYw",
+                "duration": 259,
+                "title": "Bruce Springsteen - I'm Goin' Down (from Born In The U.S.A. Live: London 2013)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yoWJfsk0gvk",
+                "duration": 251,
+                "title": "Bruno Mars, Anderson .Paak, Silk Sonic - Leave The Door Open (Live from the BET Awards)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qGD-OmfQUbQ",
+                "duration": 199,
+                "title": "Gorillaz - On Melancholy Hill (Later Archive 2010)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kyACwhtqkD4",
+                "duration": 191,
+                "title": "Alan Jackson - Livin' On Love - Keepin' It Country"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tfN7lZJhK8U",
+                "duration": 226,
+                "title": "Randy Travis & Josh Turner Perform \"Your Man\" | CMT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6swgiM9vSEE",
+                "duration": 199,
+                "title": "Chuck Berry with Bruce Springsteen & The E Street Band \"Johnny B. Goode\" | Concert for the"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zkE8HD10EU0",
+                "duration": 263,
+                "title": "Giveon - Heartbreak Anniversary (Wireless Festival 2022)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GG7fLOmlhYg",
+                "duration": 201,
+                "title": "Bruno Mars, Anderson .Paak, Silk Sonic - Smokin Out The Window [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vW806AhP4qQ",
+                "duration": 360,
+                "title": "NORD LIVE: Joshua Domfeh - City Lights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t4sK8d48Exs",
+                "duration": 276,
+                "title": "Listen to the Music feat. Tom Johnston (The Doobie Brothers) | Playing For Change"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Tqm7-zN5s8k",
+                "duration": 337,
+                "title": "Harry Styles Covers Peter Gabriel’s “Sledgehammer” Live on the Howard Stern Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lpJguRiFy-Y",
+                "duration": 384,
+                "title": "Morgan Luna - You Are My Heaven - Blues Music - Soul Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IkLu7U_60J4",
+                "duration": 233,
+                "title": "Another Day Old"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ttlTus58MNA",
+                "duration": 246,
+                "title": "Bruno Mars - 24K Magic (from the 2016 American Music Awards) (Official Live Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zDKO6XYXioc",
+                "duration": 255,
+                "title": "Boyz II Men - End Of The Road"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0KXQ9eQxnuU",
+                "duration": 168,
+                "title": "Justin Bieber - Cold Water in the Live Lounge"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0IA3ZvCkRkQ",
+                "duration": 257,
+                "title": "Mariah Carey - Hero (Live) (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C5t-5ygKO9w",
+                "duration": 303,
+                "title": "Céline Dion - Immortality (feat. Bee Gees) (Studio Session - Let's Talk About Love)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mZeRfEQo0wE",
+                "duration": 334,
+                "title": "Morgan Luna - Infinite Love | Soul Blues | Emotional Blues Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rzE5nbWdKTs",
+                "duration": 278,
+                "title": "Travis Tritt - Anymore (from Live & Kickin')"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I--Zsgwfc8M",
+                "duration": 309,
+                "title": "Sienna Rivers  | You Let The Fire Go – Deep Soul Blues Ballad (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hl9lgV_1xi0",
+                "duration": 330,
+                "title": "We're Still Here - Celebrating America's 250th - Uncle Sam's Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R7yHYe9sbjo",
+                "duration": 415,
+                "title": "Alicia Keys - If I Ain't Got You (Live from iTunes Festival, London, 2012)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yIQu_MVZcas",
+                "duration": 414,
+                "title": "Neil Young with Willie Nelson - Four Strong Winds (Live at Farm Aid 1995)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZwDf-NMnUPA",
+                "duration": 279,
+                "title": "Bryan Adams - Heaven (Live At Wembley 1996)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8XNaPX6MKlU",
+                "duration": 248,
+                "title": "Mary J. Blige - Be Without You (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NQ1eqKQJwtw",
+                "duration": 168,
+                "title": "Justin Bieber - Lonely (Official Live Performance) | Vevo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JETXdfleBVo",
+                "duration": 241,
+                "title": "Empty Streets Blues – Slow Blues Backing Track in Am | For Practice"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=jgF2-y8ht88",
                 "duration": 221,
                 "title": "Faces Change | Soul Blues | Jerry’s Sound Room"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pdz5kCaCRFM",
-                "duration": 259,
-                "title": "Blues Traveler - Hook (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=mq2yReZWQf4",
+                "duration": 212,
+                "title": "A Man Can Cry"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DoYfTTFA-0k",
+                "duration": 417,
+                "title": "Gary Moore - Still Got The Blues (Gary Moore Live - From Baloise Session)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cu5hhxP_prE",
+                "duration": 157,
+                "title": "Justin Bieber & benny blanco - Lonely (Official Acoustic Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L5Q4wgPUmOY",
+                "duration": 315,
+                "title": "Too Late To Leave – Jada Monroe (Official Music Video) | Soul Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o74CEUC-Lw4",
+                "duration": 151,
+                "title": "Ayra Starr - Rhythm & Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t3JdQvmXaKw",
+                "duration": 310,
+                "title": "Chicago Blues Lab |  Old School Blues Music | Whiskey Music | Official Music Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=crtQSTYWtqE",
+                "duration": 186,
+                "title": "Ayra Starr - Rush (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mnt9hU2B7nA",
+                "duration": 296,
+                "title": "I’d Love You to Want Me (LOBO) – Late Night Blues Rock Cover | Midnight Vibes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CEw-7cMnBDY",
+                "duration": 204,
+                "title": "Bruno Mars, Anderson .Paak, Silk Sonic - Skate [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0kJRcO2u4Cs",
+                "duration": 208,
+                "title": "Keep Going - Jada Monroe (Official Music Video) | Soul Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lgwkXpgiYuE",
+                "duration": 312,
+                "title": "Sade - Kiss of Life (Lovers Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xXBNlApwh0c",
+                "duration": 290,
+                "title": "Eva Cassidy - Autumn Leaves (Blues Alley performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=APVjdHRhjCs",
+                "duration": 272,
+                "title": "Before I Go (Official Lyric Video) | Soul and Blues Ballad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tIvkqWKZVeQ",
+                "duration": 240,
+                "title": "Dayseeker — Neon Grave | LIVE Performance | Next Wave Vol. 5 | SiriusXM"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jfh0kzJCVNQ",
+                "duration": 258,
+                "title": "IKAW PA RIN | TED ITO | SUNDAY GRIT BLUES ROCK VERSION"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=13eY1K9kHE0",
+                "duration": 398,
+                "title": "Brian Setzer Rockabilly Riot - Folsom Prison Blues (Live in OSAKA)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ntkD_Iumjlo",
+                "duration": 404,
+                "title": "Black Eyed Peas and Ariana Grande - Where Is The Love (One Love Manchester)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YcoUa2Twy5I",
+                "duration": 262,
+                "title": "DELILAH – Tom Jones 🔥 Legendary Blues Rock Cover"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8fv8IqyqEjU",
+                "duration": 312,
+                "title": "Pet Shop Boys - It's A Sin | Glastonbury 2022"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fLexgOxsZu0",
+                "duration": 200,
+                "title": "Bruno Mars - The Lazy Song (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8g0v2SDe6MU",
+                "duration": 328,
+                "title": "@costatitchworld - Big Flexa ft. C'buda M, Alfa Kat, Banaba Des, Sdida & Man T (Official M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mAcQRgPWZDE",
+                "duration": 222,
+                "title": "The Weeknd - Save Your Tears (iHeartRadio Jingle Ball Live Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eIQbrfbcX5o",
+                "duration": 266,
+                "title": "Diva Luna – JUST FOR YOU | Soul Blues | Emotional Soul Blues (Official MV)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5IdfKPqDoQ8",
+                "duration": 360,
+                "title": "The Older I Get, the Less I Care | Delta Whiskey Blues | Delta Blues Brother"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VEHKlbEgp2g",
+                "duration": 317,
+                "title": "Morgan Luna - Don’t Let Me Down - Blues Music - Soul Blues"
             },
             {
                 "url": "https://www.youtube.com/watch?v=5RXmcPIv8RU",
@@ -182,29 +407,104 @@
                 "title": "T.L. AKO SA'YO – SUNDAY GRIT PH (Blues Rock Version)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pDSM6lKk4Cw",
-                "duration": 300,
-                "title": "HANGGANG – SUNDAY GRIT PH (Blues Rock Version)"
+                "url": "https://www.youtube.com/watch?v=_Dat9CRV800",
+                "duration": 212,
+                "title": "Paloma Faith - Only Love Can Hurt Like This (Live at The BRIT Awards, 2015)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4tAYoDbpQVE",
-                "duration": 341,
-                "title": "BLUES ON BROADBEACH 2026! 🎸 25th Anniversary Festival Vibe & Live Music Highlights | Gold"
+                "url": "https://www.youtube.com/watch?v=fWA6AaOEp5E",
+                "duration": 273,
+                "title": "PAGSUKO | SOULFUL BLUES"
             },
             {
-                "url": "https://www.youtube.com/watch?v=_N_hD7czB5M",
-                "duration": 133,
-                "title": "I Wanna Know-Live At Blues On Broadbeach 2026"
+                "url": "https://www.youtube.com/watch?v=RRNHLnzgDRo",
+                "duration": 370,
+                "title": "You Can’t Fix Stupid | Delta Blues Brother"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nYPhK2u0Nlc",
+                "url": "https://www.youtube.com/watch?v=T5WpkZXTEUE",
+                "duration": 229,
+                "title": "Soul Blues Icon - Sing Me a Love Song (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LXO7UL84rK0",
+                "duration": 269,
+                "title": "Michael Bolton - Soul Provider (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oVFKE7Cpqdc",
+                "duration": 235,
+                "title": "That's The Lesson - Jada Monroe  (Official Music Video) | Soul Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v8SNlvR86xc",
+                "duration": 204,
+                "title": "Mavins, Crayon, Ayra Starr, LADIPOE, Magixx & Boy Spyce - Overloading (OVERDOSE) [Performa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LgMCm5NWtII",
+                "duration": 299,
+                "title": "Jennifer Hudson performs Hallelujah | Global Citizen Prize 2019"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BMi-EKJ6kSQ",
+                "duration": 298,
+                "title": "Morgan Luna - Never Got Goodbye - Blues Music - Memphis Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MJo1r7d5xQk",
+                "duration": 313,
+                "title": "Laura Cox - Hard Blues Shot (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=15AaiX0vGxU",
                 "duration": 290,
-                "title": "SA PILING MO - BING RODRIGO | SUNDAY GRIT BLUES ROCK VERSION"
+                "title": "LARAWANG KUPAS | JEROME ABALOS | SUNDAY GRIT BLUES ROCK VERSION"
             },
             {
-                "url": "https://www.youtube.com/watch?v=L5Q4wgPUmOY",
-                "duration": 315,
-                "title": "Too Late To Leave – Jada Monroe (Official Music Video) | Soul Blues"
+                "url": "https://www.youtube.com/watch?v=lH_0vtzfBFU",
+                "duration": 220,
+                "title": "Still a Man (Official Lyric Video) - Benny Rivers | Vintage Soul & Blues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FuoWykVNwyI",
+                "duration": 175,
+                "title": "Bee Gees - Massachusetts (One For All Tour Live In Australia 1989)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1vED2mxfVWg",
+                "duration": 252,
+                "title": "Lamb of God - Blunt Force Blues (Official Visualizer)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3HbKnQxd0_E",
+                "duration": 224,
+                "title": "Shayne Ward - Breathless (Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qw20tg1v7Fc",
+                "duration": 276,
+                "title": "Steve Lacy - the feeling (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C5_BH-eCXzs",
+                "duration": 210,
+                "title": "Citizen - \"Halcyon Blues\" (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3QLvzLA8bMM",
+                "duration": 222,
+                "title": "Getting Older - Haylan Hayes - Official Music Video #bluesmusic #eddiedalton"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qQn-w3tvti4",
+                "duration": 244,
+                "title": "Moby [feat. Jacob Lusk] – \"Natural Blues\" (Live From KCRW HQ)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KtIZmFUdkT4",
+                "duration": 219,
+                "title": "Done (Not Angry, Just Done) - Jada Monroe  (Official Music Video) | Soul Blues"
             }
         ],
         "search_query": "blues music live performance"

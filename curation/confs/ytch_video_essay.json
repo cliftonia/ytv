@@ -2,19 +2,24 @@
     "station_conf": {
         "network_name": "Video Essay",
         "network_type": "streaming",
-        "channel_number": 70,
+        "channel_number": 39,
         "network_long_name": "Video Essay",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=4Sla1k3Rwu4",
-                "duration": 1109,
-                "title": "The College System Is About To Collapse"
+                "url": "https://www.youtube.com/watch?v=APOqxQExnuw",
+                "duration": 4684,
+                "title": "The internet is getting worse, and this is why | Video Essay"
             },
             {
-                "url": "https://www.youtube.com/watch?v=glegjpHk9Do",
-                "duration": 2723,
-                "title": "The tradwives found their new recruits... teenagers"
+                "url": "https://www.youtube.com/watch?v=m9315GIr2l0",
+                "duration": 1555,
+                "title": "nostalgia, the loneliness epidemic, & being in your 20's | video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WU1I6dDGVyo",
+                "duration": 1955,
+                "title": "The plastic problem is worse than we thought..."
             },
             {
                 "url": "https://www.youtube.com/watch?v=Qjna7PROMZ8",
@@ -22,29 +27,19 @@
                 "title": "Cultural Nihilism and the Rise of The Grifter"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6p4phB2Rybs",
-                "duration": 1919,
-                "title": "What’s Wrong With Eating Humans?"
+                "url": "https://www.youtube.com/watch?v=_QEnSSKLL48",
+                "duration": 2125,
+                "title": "How social media is slowly ruining society"
             },
             {
-                "url": "https://www.youtube.com/watch?v=403eGkWv4MA",
-                "duration": 1207,
-                "title": "Iilluminaughtii and the perils of lazy video essays"
+                "url": "https://www.youtube.com/watch?v=r8hhXBuXNb4",
+                "duration": 611,
+                "title": "Video Essays Are Completely Retarded."
             },
             {
-                "url": "https://www.youtube.com/watch?v=8n5aYwe8Fok",
-                "duration": 1375,
-                "title": "SpongeBob's Cultural Impact Explained"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ow5w631HpG8",
-                "duration": 1875,
-                "title": "Self Mythology, Critical Thinking and the Intimacy of Self Acceptance"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cfleDmpLIws",
-                "duration": 1318,
-                "title": "Nolan's Odyssey Is Way Darker Than You Think"
+                "url": "https://www.youtube.com/watch?v=He2K4WV3wyo",
+                "duration": 819,
+                "title": "video essayification"
             },
             {
                 "url": "https://www.youtube.com/watch?v=nC1vdV1SGyc",
@@ -52,9 +47,464 @@
                 "title": "Obsession & The Modern Male Adolescent (Video Essay)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6YiBI17oICI",
-                "duration": 1011,
-                "title": "Why No One Makes \"Original\" Videos Anymore"
+                "url": "https://www.youtube.com/watch?v=5FuxNr90T8o",
+                "duration": 4805,
+                "title": "the decline in literacy & rise in ai"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yuKXxHgZpdI",
+                "duration": 1885,
+                "title": "Finally a video essay that's not written by AI!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G8o5eWIAOAo",
+                "duration": 1117,
+                "title": "the death of sustainable fashion (video essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IMDr17SNh2s",
+                "duration": 2052,
+                "title": "Why are we creating a future that nobody wants?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sjlwh3VClug",
+                "duration": 2155,
+                "title": "Difficult women? Or a difficult system? | Female rage & shame in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=buTUeajsVzA",
+                "duration": 2033,
+                "title": "Is this the end of the influencer economy?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tK9_QFWI1Fc",
+                "duration": 1218,
+                "title": "How Obsession Exposed The Nice Guy Delusion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K870Gbh8AQM",
+                "duration": 1467,
+                "title": "what can you ACTUALLY learn from video essays??"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HuIklxc1bSI",
+                "duration": 1506,
+                "title": "This is a video essay about video essays"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WI02gZJUkyA",
+                "duration": 3685,
+                "title": "The Homoeroticism of Female Rivalry - (video essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SbMo3clQwbs",
+                "duration": 1281,
+                "title": "Title Fight are never coming back (a video essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nonCk3R7a_o",
+                "duration": 378,
+                "title": "From Relatable to Insufferable : How The \"Main Character Syndrome\" RUINED Bloom."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rkAVo0hyUls",
+                "duration": 3371,
+                "title": "Why Tywin Lannister was a bad king (video essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iqokUOGmeag",
+                "duration": 786,
+                "title": "Why Everything Is Slop Now"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jDRRrQRaUOw",
+                "duration": 1696,
+                "title": "Obsession (2026) in the Lens of Borderline Personality Disorder (BPD) | video essay/rant"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XdJdafUAYFQ",
+                "duration": 2838,
+                "title": "a video essay about I Saw the TV Glow"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bKCayy8RgIA",
+                "duration": 796,
+                "title": "When the comfy video essay is AI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9uAAcnPoGEE",
+                "duration": 362,
+                "title": "How Céline Sciamma Depicts Queer Love in Water Lilies (Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=02IB3LcSedM",
+                "duration": 2023,
+                "title": "Performative Reading, Tho***t Daughters, and the Luxury of Literacy in a Post-literate Age"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mtu5KOLet_U",
+                "duration": 4208,
+                "title": "David Lynch: Imaginary Reality [Video Essay]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ELIiMGUPbR0",
+                "duration": 744,
+                "title": "This is Ruining Movies | a video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pN30Zs1RKWY",
+                "duration": 669,
+                "title": "A Video Essay On Terrible Video Essays"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vbzi5W90ofc",
+                "duration": 907,
+                "title": "Awesome MBA Video Essay Advice | For Kellogg, Yale And More!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6hJqawjr3Q4",
+                "duration": 3036,
+                "title": "\"Poetcore\" is the New Dark Academia (aesthetics & the performance of intellectualism)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zkmhyn5RMyw",
+                "duration": 1724,
+                "title": "Minecraft but it's a video essay about Minecraft ARGs and horror"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0OoLokmqo0A",
+                "duration": 1023,
+                "title": "Tenet - A Misunderstood Masterpiece"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1epHMbSxIPE",
+                "duration": 1132,
+                "title": "What Happened to the Cowboy? | video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YtyqzU7Ry18",
+                "duration": 2833,
+                "title": "Rice Boy 20th Anniversary Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7TtkoDSoQpQ",
+                "duration": 2323,
+                "title": "Why does JK Rowling Keep Targeting Trans Women?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fXSBUX6GPsA",
+                "duration": 1922,
+                "title": "What no one wants to admit about comic book sales (BONE video essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N5qmyO9HJQk",
+                "duration": 1033,
+                "title": "The Down Payment Controversy || SATC Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YSdiCTmBt0c",
+                "duration": 755,
+                "title": "Kira Talent Interview - Video Essay: What They're REALLY Looking For (And How to Improve F"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rVr3Fa-IQSk",
+                "duration": 2045,
+                "title": "Why Jordan Peterson Makes No Sense - A Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T-BTPLEeIFM",
+                "duration": 1683,
+                "title": "How Religion Shaped Daredevil | Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=phM8qSiyHNY",
+                "duration": 312,
+                "title": "I will defend Starfield in 2026 - Short Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gLOxQxMnEz8",
+                "duration": 2674,
+                "title": "Bright: The Apotheosis of Lazy Worldbuilding | Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Olt57docm10",
+                "duration": 422,
+                "title": "Cognitive offloading to AI: how bad will it get? | Animated video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=poOmXZ9z7nU",
+                "duration": 914,
+                "title": "Choosing to be a lesbian and \"losing\" lesbians | Video essay | Speedpaint"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BG68tePm--Q",
+                "duration": 3971,
+                "title": "Outlast 2, Religion, and the Horrors of Groupthink (A Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UuOWNNvupik",
+                "duration": 261,
+                "title": "How to Write an Essay: 4 Minute Step-by-step Guide | Scribbr 🎓"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VwXDNIklyJc",
+                "duration": 1444,
+                "title": "gatekeeping a mainstream artist | a bts video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t106nKQDYzM",
+                "duration": 832,
+                "title": "when stalking is excused | a bts video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=asxDpvSJLxg",
+                "duration": 2200,
+                "title": "What Hollywood Gets WRONG about Dracula (video essay/literary analysis/rant)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mQ1LdzIlOxA",
+                "duration": 864,
+                "title": "The Michael Scott Lesson on Loneliness (Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ojXYH1R1eUg",
+                "duration": 4556,
+                "title": "His Dark Materials and Humanity - A Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AjXjBFw5tng",
+                "duration": 2508,
+                "title": "Why Was White Diamond Rushed? (Steven Universe Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dQRZ71JEAdo",
+                "duration": 1273,
+                "title": "Star Citizen's Disaster Livestream"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tipHF0PBDCU",
+                "duration": 812,
+                "title": "The Significance of Carrie's Apartment || SATC Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8Jv_2AfgtRk",
+                "duration": 668,
+                "title": "Corix 2026 Scholarship Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J76a8zpqtlU",
+                "duration": 946,
+                "title": "The Strange Legacy of True Lies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bebHNf8jlhY",
+                "duration": 1013,
+                "title": "The Lie About Who Magic Is For | Witch Hat Atelier Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WTEzpKR75oQ",
+                "duration": 2259,
+                "title": "Why is the Centipeetlee Mother Corrupted? (Steven Universe Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w1jAAHtStdA",
+                "duration": 515,
+                "title": "Work is dead; we have killed it│Animated Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mPxlLEG2pGg",
+                "duration": 1580,
+                "title": "The Beauty of Bones And All | A Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ck7BusVpv88",
+                "duration": 1545,
+                "title": "Why Do Modern Pokémon Feel… Off? | Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G4Qu11WOjcQ",
+                "duration": 1331,
+                "title": "The Rockstar Girlfriend Aesthetic Throughout History (Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pXtBFiF_32k",
+                "duration": 2280,
+                "title": "the death of personal style"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pU_VQ1NHzTA",
+                "duration": 1428,
+                "title": "Synthetic Man reacts to \"A Video Essay On Terrible Video Essays\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n0mLTxAVyts",
+                "duration": 1078,
+                "title": "Class of '09 and What About Me?: A Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1AO7axclZac",
+                "duration": 401,
+                "title": "barbie media video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UOOwMffD6ak",
+                "duration": 472,
+                "title": "Why Dybbuk is Objectively Bad Boss Design (Mewgenics Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cy-zmCMPv5w",
+                "duration": 507,
+                "title": "Count The Medals A Kamen Rider OOO Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yKqwwI6ZZtI",
+                "duration": 1104,
+                "title": "The Imaginative Genius of Eternity - Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DuqbGt5C2Zk",
+                "duration": 350,
+                "title": "Essay on Independence Day in English 2026 || Learn to Write Essay for Students || YK Educa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LLFr2CQKs_k",
+                "duration": 5149,
+                "title": "Fall Asleep To The Philosophy Of Gumball (Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=th_W2SjjwqM",
+                "duration": 2652,
+                "title": "The Psychology of Lestat | A Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=shZPJyPW4RA",
+                "duration": 2623,
+                "title": "Shuldo Jimmy Jr Date Tina?! (Bob's Burgers Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pxq0aqmiePQ",
+                "duration": 1621,
+                "title": "How Hollywood kills Gothic: Wuthering Heights 2026 deconstruction"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_c92evmbsSc",
+                "duration": 966,
+                "title": "How to DESTROY your main character | Heaven Official's Blessing video essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s1sgdyjSncM",
+                "duration": 504,
+                "title": "The Menu Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w42V1QPtETw",
+                "duration": 1100,
+                "title": "The Skateboard Trick Named After a Movie Star"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UFs_j8cX4y8",
+                "duration": 1958,
+                "title": "Was Steve Good for Miranda? || SATC Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o9aVjBHEEbU",
+                "duration": 879,
+                "title": "How to write a good essay: Paraphrasing the question"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GNL1_tNTqpw",
+                "duration": 1028,
+                "title": "English Essay: How to Write about ANY Essay Topic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sZky-Lddp9Y",
+                "duration": 496,
+                "title": "The Mastery of The Bear's Secret Episode (GARY VIDEO ESSAY)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YggzU7FlVbM",
+                "duration": 713,
+                "title": "kill bill vd video essay by runn"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IpnLLnnRaMQ",
+                "duration": 509,
+                "title": "From Mutt to Mockingjay Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FqtHSvkPWPk",
+                "duration": 3366,
+                "title": "What is Happening to Women's Figure Skating? | An Essay | PART 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nm6JS3lPiJI",
+                "duration": 562,
+                "title": "Official SteamOS support on Android Handhelds (Short Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kil-d6rKtLE",
+                "duration": 611,
+                "title": "The Scarecrow Who Forced The World To See Him | Batman: Caped Crusader"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6eNjHz4Q3hQ",
+                "duration": 4535,
+                "title": "Helluva Boss is Incredibly Painful to Watch | Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nRpMZ6URXzo",
+                "duration": 976,
+                "title": "I don't think you understand the pure genius of this scene"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cBSm6G9axXE",
+                "duration": 3400,
+                "title": "This Is My Favorite Puzzle Game of 2026, By Far! - Big Walk"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5-1faljMWFs",
+                "duration": 1199,
+                "title": "Video essay: “Joachim Trier: The Spaces Between Us” | MUBI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wnu3cR0d3_Y",
+                "duration": 312,
+                "title": "TAIKA WAITITI VIDEO ESSAY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bMUhiJnIyF0",
+                "duration": 284,
+                "title": "Video Essay IMME BECAS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YRhhImY7uW0",
+                "duration": 289,
+                "title": "Oppenheimer - Cinematic Talking (Video Essay)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UwjYHhjsJik",
+                "duration": 441,
+                "title": "FIM111 Video Essay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eE89dJZlH7A",
+                "duration": 624,
+                "title": "Is Gatekeeping Really A Bad Thing? (Video Essay )"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9k567_qzP-o",
+                "duration": 3400,
+                "title": "The Devils Rejects: Art Is Not Safe [Video Essay]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6LvvASt-nQo",
+                "duration": 1169,
+                "title": "An Unbiased Comparison Of Digital Circus AUs"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7q-HVVtlDQ0",
+                "duration": 1097,
+                "title": "Why is Everything Spicy Now?"
             }
         ],
         "search_query": "video essay"

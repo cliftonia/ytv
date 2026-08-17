@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Architecture & Interiors",
         "network_type": "streaming",
-        "channel_number": 84,
+        "channel_number": 48,
         "network_long_name": "Architecture & Interiors",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=7O3Unkchpuc",
-                "duration": 765,
-                "title": "Architect Steven Harris’ 5 Non-Negotiables When Designing His Own Home"
+                "url": "https://www.youtube.com/watch?v=pd8DCD88Nkw",
+                "duration": 839,
+                "title": "This 1963 Pierre Koenig–Designed Home Survived the 2025 Palisades Fire in Los Angeles | Ho"
             },
             {
-                "url": "https://www.youtube.com/watch?v=j1SgIoROS7s",
-                "duration": 377,
-                "title": "Architect Designs a Home 20 Years in the Making (House Tour)"
+                "url": "https://www.youtube.com/watch?v=_rdGfN_3Kdg",
+                "duration": 2450,
+                "title": "This Is What $14.9 Million Gets You in London"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dE0uB8BpHuQ",
-                "duration": 406,
-                "title": "Architect Designs Byron Bay’s Most Expensive Home (House Tour)"
+                "url": "https://www.youtube.com/watch?v=n50DZvVAulM",
+                "duration": 596,
+                "title": "Inside Adam Levine & Behati Prinsloo's Serene L.A. Home | Open Door | Architectural Digest"
             },
             {
-                "url": "https://www.youtube.com/watch?v=z5-lIA7BuwQ",
+                "url": "https://www.youtube.com/watch?v=AwhBTrzzqeg",
+                "duration": 602,
+                "title": "Inside Dakota Johnson's Serene Hollywood Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=haK2TnmVoT0",
+                "duration": 769,
+                "title": "Inside Gwyneth Paltrow's Tranquil Family Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EobMnSpjfTU",
+                "duration": 742,
+                "title": "Inside Troye Sivan’s Midcentury Melbourne Oasis | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZnzrwES65ok",
+                "duration": 299,
+                "title": "Inside Burna Boy's Lagos Mansion | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XNrTIQjHuKs",
+                "duration": 940,
+                "title": "Inside Debby Ryan & Josh Dun's Fascinating Ohio Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zEXXe9Ef_R8",
+                "duration": 775,
+                "title": "Inside David Harbour & Lily Allen's Brooklyn Townhouse | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P2V0qhiof_M",
+                "duration": 299,
+                "title": "Inside Robert Downey Jr.’s Windmill Home in the Hamptons | Open Door | Architectural Diges"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fk9cq3gRCP0",
+                "duration": 544,
+                "title": "Inside Iman & David Bowie’s Scenic Home Filled With Wonderful Objects | Vogue"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JvH4PSn4wm0",
+                "duration": 369,
+                "title": "Inside Mandy Moore's Mid-century Pasadena Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5vNoHwgoIjw",
+                "duration": 688,
+                "title": "Inside Hilary Duff's Family Home With A Chicken Coop | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eyUs2JgrV9E",
+                "duration": 621,
+                "title": "Inside Alicia Keys & Swizz Beatz’s Oceanside Mansion | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jX8hxcCSjog",
+                "duration": 355,
+                "title": "Inside Wiz Khalifa's $4.6M L.A. Mansion & Recording Studio | Open Door | Architectural Dig"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-zkOLKMiX9c",
+                "duration": 925,
+                "title": "Inside Kacey Musgraves's Serene Nashville Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FlsKjWqu82k",
+                "duration": 368,
+                "title": "Inside Lenny Kravitz's Brazilian Farm Compound | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hJaXjItxL6w",
+                "duration": 778,
+                "title": "Inside Nyjah Huston's Laguna Beach Mansion and Private Skatepark | Open Door | Architectur"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-TeeIEh2IE8",
+                "duration": 513,
+                "title": "Inside Serena Williams' New Home With A Trophy Room & Art Gallery | Open Door | Architectu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PWnDS45iDj4",
+                "duration": 597,
+                "title": "Inside NBA Star Devin Booker's Stylish Desert Oasis | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l2mtebeR3rA",
+                "duration": 607,
+                "title": "Inside Jessica Alba's Dream Family Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KHfP3InQc94",
+                "duration": 956,
+                "title": "Inside Travis Barker's Tranquil Family Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zgacuXdzCmw",
+                "duration": 611,
+                "title": "Inside Tyler Perry’s 300-Acre Studio Compound in Atlanta | Open Door | Architectural Diges"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zrqqrQmeQS4",
+                "duration": 744,
+                "title": "Inside Designer Rick Owens’s Minimalist Home Filled With Wonderful Objects | Vogue"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Axg27gwEqCE",
+                "duration": 896,
+                "title": "Inside Vanessa Hudgens's Enchanting L.A. Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ab2FtMeBovI",
+                "duration": 2388,
+                "title": "Family's ABANDONED $40,000,000 Mansion Left in 2023"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QMCR45FyfzU",
+                "duration": 602,
+                "title": "Inside Nikolaj Coster-Waldau's Hidden Los Angeles Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VxvfhuxOE1I",
+                "duration": 688,
+                "title": "Inside Sheryl Crow's Country Home With A Recording Studio in a Barn | Open Door"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vx09_4cEzlM",
+                "duration": 852,
+                "title": "Inside Cara Delevingne's Fantastical L.A. Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=80z6drP0NY8",
                 "duration": 531,
-                "title": "Architect Designs a Breathtaking Home Connected to Nature (House Tour)"
+                "title": "Inside Scottie Pippen's Chicago Mansion With An Indoor Court | Open Door | Architectural D"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OgribLSWhNE",
-                "duration": 838,
-                "title": "Inside a Woodland Home Built Over Water to Become One With Nature | Ar"
+                "url": "https://www.youtube.com/watch?v=KIqQ0gowzt4",
+                "duration": 546,
+                "title": "Inside Naomi Campbell's Luxury Villa In Kenya | Open Door | Architectural Digest"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3sXz96MdKzk",
-                "duration": 446,
-                "title": "An Architects Own Home Designed as a Tree House That Disappears Into t"
+                "url": "https://www.youtube.com/watch?v=q9JOWZR7UFY",
+                "duration": 416,
+                "title": "Inside Erykah Badu's Spiritual Home Studio Filled With Wonderful Objects | Vogue"
             },
             {
-                "url": "https://www.youtube.com/watch?v=incmD0ZiRWE",
+                "url": "https://www.youtube.com/watch?v=GiYK_6FxNts",
+                "duration": 662,
+                "title": "Inside NHL Star Connor McDavid's Cozy Modern Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RjVfU9WcPxE",
+                "duration": 647,
+                "title": "Inside Tyrese Gibson's Atlanta Dream Mansion | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2dkl0fUKHAM",
+                "duration": 325,
+                "title": "Inside Ricky Martin's Serene Los Angeles Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7Z76MiQv0zg",
+                "duration": 691,
+                "title": "Inside Liv Tyler's Gut-Renovated NYC Brownstone | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Txqq8q5-cRA",
                 "duration": 441,
-                "title": "This Home Is a Love Letter to Nature (House Tour)"
+                "title": "Inside Kim Kardashian's Home Filled With Wonderful Objects | Vogue"
             },
             {
-                "url": "https://www.youtube.com/watch?v=J4_rLK7F4fw",
-                "duration": 468,
-                "title": "The Award-Winning Home of an Architect That Unites Architecture, Art,"
+                "url": "https://www.youtube.com/watch?v=ExTP2rYqguE",
+                "duration": 938,
+                "title": "Inside Troian Bellisario & Patrick J. Adams’s Eclectic L.A. Home | Open Door | Architectur"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GJ0Hn4ywOlY",
-                "duration": 335,
-                "title": "This Home’s Design Will Change How You Think About Architecture (House"
+                "url": "https://www.youtube.com/watch?v=D-qQneOnJl0",
+                "duration": 909,
+                "title": "Inside Aaron Paul’s Rustic Riverside Home In Idaho | Open Door | Architectural Digest"
             },
             {
-                "url": "https://www.youtube.com/watch?v=q8dcnh-4I6g",
-                "duration": 861,
-                "title": "Inside Fallingwater: Frank Lloyd Wright's Architectural Genius in Penn"
+                "url": "https://www.youtube.com/watch?v=FLgLbdiBLCU",
+                "duration": 340,
+                "title": "Inside Sabrina Carpenter's home for a Perfect Night In | British Vogue"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FIDsKWis3jo",
+                "duration": 719,
+                "title": "Inside Nicole Scherzinger's LA House with a Cozy Home Theater | Open Door | Architectural"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uKgaVlMN7IY",
+                "duration": 445,
+                "title": "Margot Robbie Takes You Inside The Barbie Dreamhouse | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=isz-GIvjcRE",
+                "duration": 330,
+                "title": "A New York-Inspired Industrial Home Designed for Family Living (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9KapEXWynrA",
+                "duration": 1013,
+                "title": "Inside Nina Dobrev's 1920's Spanish-Style Home | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HQQCiZNCg8o",
+                "duration": 845,
+                "title": "Inside A Mansion Built On The Edge Of An Abandoned Quarry | Unique Spaces | Architectural"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q8nHd-kRhc0",
+                "duration": 657,
+                "title": "Crazy Rich Asians Home|Belanda House|Asia's Most Luxurious Mansion|Modern Extraordinary Ar"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CF97mtu3qlE",
+                "duration": 1094,
+                "title": "How This Famous Architect Revolutionized The Way Architects Design | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fWKCu1hw7Nk",
+                "duration": 311,
+                "title": "Modern luxury mansion by maya architects | Architecture & Interior Shoots | Cinematographe"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KBMW_Ir1AwE",
+                "duration": 407,
+                "title": "Why Kristen Stewart is Saving This Historic LA Movie Theatre | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FldUWZPC7JA",
+                "duration": 605,
+                "title": "Inside a $165,000,000 Estate Bigger Than The Taj Mahal | On The Market | Architectural Dig"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RNbPNnAx9xE",
+                "duration": 389,
+                "title": "A Family Spent Six Years Building This Off-Grid Timber Home (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7cGmj0AR3z8",
+                "duration": 716,
+                "title": "Inside Maluma’s Massive Colombian Mansion | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JyfVz-rfM_g",
+                "duration": 295,
+                "title": "Modern Luxury Villa Cinematic Tour | Ultra-Realistic Architectural Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9gXOBEgHaUM",
+                "duration": 484,
+                "title": "A Remote and Hidden Home with a Breathtaking View and Interior Design (House Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7rSDhn1dW6w",
+                "duration": 442,
+                "title": "The Rarely Seen Interior of the Vaile Mansion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ueu8DjJleNg",
+                "duration": 1933,
+                "title": "John Lautner’s Sheats-Goldstein Residence: Where Architecture Meets Nature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pt_5Faa_J-U",
+                "duration": 601,
+                "title": "Inside Maria Sharapova's House with a Basement Bowling Alley | Open Door | Architectural D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SVO-iq2bjTQ",
+                "duration": 608,
+                "title": "Inside Chlöe Bailey's Elegant L.A. Apartment | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rKeFCd1j5BE",
+                "duration": 2661,
+                "title": "Abstract: The Art of Design | Bjarke Ingels: Architecture | FULL EPISODE | Netflix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R2nTQXQjNyQ",
+                "duration": 2537,
+                "title": "A Moody & Modern Transformation of a Unique 1980s Virginia Home | House Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=keCH29MHaoc",
+                "duration": 293,
+                "title": "Luxury Forest Villa Tour 🌲 | Cinematic Modern Architecture Documentary (8K)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s5WZbL8ZUB4",
+                "duration": 385,
+                "title": "Architect Designs an Off Grid Cabin in the Woods (Cabin Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8YQpc1dndF0",
+                "duration": 268,
+                "title": "Ultra Luxury River Villa 🌊 | Modern Architecture Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NOVFh-zgCvY",
+                "duration": 1093,
+                "title": "Touring a $218,000,000 Florida Mega Mansion on a Private Island"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ARpODvxlCjI",
+                "duration": 1769,
+                "title": "16 August 2026 | Rome’s Two Illusions: Street Scam, Trevi Fountain & Fake Dome"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9V2LS8FlbwU",
+                "duration": 1242,
+                "title": "🍂 If Joanna Gaines Designed Fall 2026, This Is What a Magnolia Home Might Look Like"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p_8Z0cLWcn0",
+                "duration": 319,
+                "title": "Baring Street, London | Architectural Walkthrough Film with Julian McIntosh Architects"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fsYZye1Ykao",
+                "duration": 609,
+                "title": "Inside Ellen Pompeo’s Midcentury Malibu Beach House | Open Door | Architectural Digest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FNsCWDip8lg",
+                "duration": 724,
+                "title": "A Modern House in Ahmedabad With Traditional Sloping Roofs (Home Tour)."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gnMHgz6NQ_8",
+                "duration": 1633,
+                "title": "House Tour of this Stunning 1889 Historic Victorian House Tour in Middlesboro, Kentucky!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E8Bq4DbMaRU",
+                "duration": 870,
+                "title": "Off-Grid Living in a 5x 20ft Shipping Container Home"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wWABfmEIsLc",
+                "duration": 444,
+                "title": "Inside Sonam Kapoor Ahuja’s Art-Filled London Home & Studio | AD India"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eTVWqdSDihU",
+                "duration": 290,
+                "title": "Architectural Film | Garden Route | Wynand Wilsenach"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=meQKs7Wzzfk",
+                "duration": 1244,
+                "title": "The Malacañang Tour | Toni Talks"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nyZfMYQ-eCM",
+                "duration": 982,
+                "title": "The White House Construction - In Color (1792-1829)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z3JaV5HdbqU",
+                "duration": 645,
+                "title": "Inside Drake's $100 Million Dollar Mansion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=klsVFErmEls",
+                "duration": 2485,
+                "title": "HOUSE TOUR | The Country Home and Gardens of Interior Designer Bunny Williams"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bfe3gm7dqVA",
+                "duration": 494,
+                "title": "How Puebloans Built Adobe Houses to Survive 113°F Desert | Architecture Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RcUNJcY8unw",
+                "duration": 267,
+                "title": "ULTIMATE Luxury Villa Tour | Cinematic Architectural Documentary (4 Modern Villas)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=19SLiP6MRZI",
+                "duration": 358,
+                "title": "Kiawah Island Home Tour | Timeless Coastal Interior Design | Marie Flanigan Interiors"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QH_RfTzHFLA",
+                "duration": 536,
+                "title": "Inside Designer John Galliano’s Treasure-Filled French Hideaway with 7 Unique Objects | Vo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U8Cd_McCdow",
+                "duration": 2448,
+                "title": "Touring the MOST EXPENSIVE HOUSE in the United States!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D4eYcNowupQ",
+                "duration": 3469,
+                "title": "Our Unexplainable Night at Winchester Mystery House"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U8IMUlIF33A",
+                "duration": 1357,
+                "title": "Cape Town Most Luxurious Neighborhoods will Blow your Mind🇿🇦"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oi8XdMtn1Wc",
+                "duration": 1248,
+                "title": "INSIDE a $18,900,000 Customized Colorado SMART HOME | Modern Mansion Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gn4vi2S04Ac",
+                "duration": 964,
+                "title": "VIETNAM 2026! The Country of EXTREMELY BEAUTIFUL WOMEN And Pristine Architecture - Documen"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ngp3oxDqngc",
+                "duration": 1187,
+                "title": "the neuroscience trick that makes any home feel 10x better"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JJOQdDQpavo",
+                "duration": 2202,
+                "title": "Touring a $38,000,000 BEL AIR Modern Home That Will Shock You!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_JZxFm4MXMI",
+                "duration": 601,
+                "title": "Inside Scott Disick's Home with an Amazing Car Collection | Open Door | Architectural Dige"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xuyEvYRVk24",
+                "duration": 521,
+                "title": "10 Most Beautiful African Presidential Palaces"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BW6hxlThB_o",
+                "duration": 369,
+                "title": "What's Inside of the White House?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1WCQLjQ_Rqs",
+                "duration": 4557,
+                "title": "The Odyssey, The Real Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I9BhR1UPRIk",
+                "duration": 1264,
+                "title": "First Time Visiting Ottawa: Jail Hostel, Parliament Tour, Canadian Museum of History, Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HHSuUE4QnXY",
+                "duration": 258,
+                "title": "Inside Prince Harry and Meghan Markle’s California Mansion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ms2Zj9m4dIU",
+                "duration": 2973,
+                "title": "House Tour: Inside Ric Hassani's Home | Every Room Tells His Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vnMGIqNxulM",
+                "duration": 636,
+                "title": "CELINE DION’S FORMER JAW-DROPPING ESTATE | Secret Lives Of The Super Rich"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iuh5IC-VjuA",
+                "duration": 730,
+                "title": "What's inside the Sydney Opera House? (Sydney, Australia)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mwGz58GIFYQ",
+                "duration": 521,
+                "title": "Frank Lloyd Wright's Fallingwater: Inside the House That Forever Changed Architecture"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CfCB4G1g1ps",
+                "duration": 1084,
+                "title": "How She Turned a Cold Toronto Loft Into a Warm Mid-Century Modern Home – FULL TOUR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8yxDvKU6Eoo",
+                "duration": 1172,
+                "title": "New Jersey Life Style of the RICH PART 35 - $6.95 Million Luxurious Cedar Grove, NJ"
             }
         ],
-        "search_query": "architecture home tour design"
+        "search_query": "architecture documentary house tour"
     }
 }

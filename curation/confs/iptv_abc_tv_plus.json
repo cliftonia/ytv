@@ -1,15 +1,15 @@
 {
- "station_conf": {
-  "network_name": "ABC TV Plus",
-  "network_type": "streaming",
-  "channel_number": 127,
-  "network_long_name": "ABC TV Plus",
-  "streams": [
-   {
-    "url": "https://c.mjh.nz/abc-tv-plus.m3u8",
-    "duration": 600,
-    "title": "ABC TV Plus (720p)"
-   }
-  ]
- }
+    "station_conf": {
+        "network_name": "ABC TV Plus",
+        "network_type": "streaming",
+        "channel_number": 102,
+        "network_long_name": "ABC TV Plus",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-plus.m3u8",
+                "duration": 600,
+                "title": "ABC TV Plus"
+            }
+        ]
+    }
 }

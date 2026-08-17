@@ -2,34 +2,44 @@
     "station_conf": {
         "network_name": "Westerns",
         "network_type": "streaming",
-        "channel_number": 24,
+        "channel_number": 17,
         "network_long_name": "Westerns",
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=1Ax5BROAQPE",
+                "duration": 4689,
+                "title": "Clint Eastwood in One of the Most Intense and Violent Revenge Westerns | Full Movie HD"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=iZ1rnjzSls8",
                 "duration": 5728,
-                "title": "One Gunfighter Went Undercover to Save a Family of Hostages | Spaghett"
+                "title": "One Gunfighter Went Undercover to Save a Family of Hostages | Spaghetti Western | Full Mov"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1yWfnHyLJAc",
-                "duration": 6154,
-                "title": "Best Western Movies | The Invaders | Full Classic Western Cowboy Movie"
+                "url": "https://www.youtube.com/watch?v=IcXFXpVF9ME",
+                "duration": 5963,
+                "title": "Action movie legend Charles Bronson is back in action! 💥| Chato's Land (1972)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QwSZr9qAhzc",
-                "duration": 4204,
-                "title": "Nobody Knew Who He Was… Until They Saw His Badge | Best Western Movie"
+                "url": "https://www.youtube.com/watch?v=OUUvO4nDisg",
+                "duration": 4881,
+                "title": "He Hunted Outlaws... But Became the Most Wanted Man | Classic Western"
             },
             {
-                "url": "https://www.youtube.com/watch?v=WO1g_ywwcXU",
-                "duration": 5371,
-                "title": "Randolph Scott One of the Finest Films of His Career | Classic America"
+                "url": "https://www.youtube.com/watch?v=Gn5UFGezNKY",
+                "duration": 4666,
+                "title": "The Town Was Doomed… Until a Lone Gunslinger Rode In | Western Full Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=sJ8P62C3dPQ",
-                "duration": 5290,
-                "title": "Randolph Scott's Classic Western | Abilene Town (1946) Full Movie HD |"
+                "url": "https://www.youtube.com/watch?v=krc27qoPT2c",
+                "duration": 5912,
+                "title": "They Were Surrounded by Cowboys — Then the Fight Began | Full Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bC7VgMLKzhE",
+                "duration": 4372,
+                "title": "A TIME FOR DYING | Audie Murphy, Budd Boetticher | Full Classic Western Movie"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sp6JrxkMt1M",
@@ -37,24 +47,464 @@
                 "title": "Lawman | Western Movie | Burt Lancaster, Robert Ryan, Lee J. Cobb"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zEmj_NN1P0w",
-                "duration": 8902,
-                "title": "Best Western Movies | Big Deal | Full Classic Western Cowboy Movie (HD"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zdmZtFgIZdo",
-                "duration": 5067,
-                "title": "Wild West   Audie Murphy in Gunpoint 1966   Free Movies, Frontier Just"
+                "url": "https://www.youtube.com/watch?v=vsWZUiRARGY",
+                "duration": 4926,
+                "title": "Jack Nicholson Gritty Western | Ride in the Whirlwind (1966) | Classic Full Length Movie"
             },
             {
                 "url": "https://www.youtube.com/watch?v=LxZWbAESWx0",
                 "duration": 4867,
-                "title": "Buddy Ebsen and Warren Oates in One of the Finest Classic Westerns of"
+                "title": "Buddy Ebsen and Warren Oates in One of the Finest Classic Westerns of 1964 | WESTERN MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s8LVNGqUWMk",
+                "duration": 5802,
+                "title": "There's No Escape from the Apache Trap! A Thrilling Western Legend (1966)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5XPKIaIjf0I",
+                "duration": 4650,
+                "title": "He Retired Until the Whole Town Begged for Help | Classic Western Movies Full Length in En"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oWCiHBZew3s",
+                "duration": 5274,
+                "title": "Kirk Douglas Western Movie Wild West, Revenge, Action, Classic Movies Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qygc1GlYXPE",
+                "duration": 3724,
+                "title": "The Last Witness (1954) — When Silence Kills | Classic Western Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XO-lWlqmDOc",
+                "duration": 6408,
+                "title": "The Comancheros | John Wayne Western Movie | Classic Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xptDRTBDoz8",
+                "duration": 5621,
+                "title": "Texas | FREE MOVIE (William Holden, Glenn Ford, Claire Trevor)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_sXXosQSHLk",
+                "duration": 5968,
+                "title": "James Stewart, Dean Martin, Raquel Welch: Bloody Escape In The Wild West! | Western Movie!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aQB3H8tEhQk",
+                "duration": 5545,
+                "title": "The Sheriff’s Big Cleanup in a Lawless Town! | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Az2TTYPKt6w",
+                "duration": 4930,
+                "title": "Ride in the Whirlwind | Classic Western | Innocent Cowboys Hunted as Outlaws 🎬 Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=veRrPVYBdH4",
+                "duration": 3547,
+                "title": "From a Peaceful Farmer to the Most Dangerous Gunslinger in Texas | Classic Western"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wOklXezmwrA",
+                "duration": 5752,
+                "title": "Seven Alone | John Wayne | Full Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xrtDc5cBuBw",
+                "duration": 5052,
+                "title": "Panhandle (Old-School Western, Revenge, Justice, and the Price of Survival, Free Western M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WPVnJQka298",
+                "duration": 5121,
+                "title": "God in Heaven... Arizona on Earth | 4K Full Movie | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1PjeWb-PY9Y",
+                "duration": 5046,
+                "title": "Men from Oklahoma - Full Movie HD | Classic Western Action: Law and Vengeance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p_myqexeT3c",
+                "duration": 3962,
+                "title": "Zane Grey: West Of The Pecos | Full Classic Western Movie | Free Action Film | Robert Mitc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nHjn6NnqVpM",
+                "duration": 6334,
+                "title": "Bandolero! | James Stewart, Dean Martin, Raquel Welch Western Movie | Classic Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CRJlK9WQvWo",
+                "duration": 5646,
+                "title": "One Last Ride | Full Western Action Movie HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NSuF35tJwzk",
+                "duration": 4838,
+                "title": "The Man Who Brought Order to a Lawless Town | The Gunfight at Dodge City (1959)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CEShUplDLM8",
+                "duration": 5531,
+                "title": "This is the Most Brutal Western Film You Can’t Miss! | Full Action Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GISfNQcXoVk",
+                "duration": 6337,
+                "title": "Bandolero (1968) | A Classic Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mRKwCwCe8-M",
+                "duration": 5656,
+                "title": "Return of the Gunfighter Full Classic Western Movie Revenge, Justice & One Last Ride"
             },
             {
                 "url": "https://www.youtube.com/watch?v=T1374-IeSyg",
                 "duration": 5579,
                 "title": "Support Your Local Sheriff!  | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fG1ZZCcoFnU",
+                "duration": 4963,
+                "title": "LAST STAND AT RED CANYON 1957 | Classic Western | FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q5mPY_iTAhE",
+                "duration": 4613,
+                "title": "Silver Lode | Classic Film | WESTERN MOVIE | Full Length | Wild West | Cowboy Movies | Fre"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tFEE2nWOelI",
+                "duration": 5086,
+                "title": "Lone and Angry Man | Western Movie | 4K Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SN5TpDQAjGY",
+                "duration": 4815,
+                "title": "The Fury of the Apaches | Full Western Movie in english | HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vLpPP6qAt4M",
+                "duration": 5622,
+                "title": "HE HAD ONE LAST CHANCE TO BECOME A DIFFERENT MAN | Classic Western Movie Full English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-Yp_TQdpg2E",
+                "duration": 5496,
+                "title": "Gregory Peck And Lee Van Cleef In A Deadly Revenge In The Wild West! The Bravados I Wester"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J3qkN6Ukkmo",
+                "duration": 4417,
+                "title": "They Thought He'd Never Return... Then He Rode Into Town | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ood4OeOCemg",
+                "duration": 4418,
+                "title": "The Hanged Man (1974) | Full Classic Western Movie | Steve Forrest & Cameron Mitchell"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0s-xhQD4YPY",
+                "duration": 4826,
+                "title": "Fury of the Apaches | Western | Full Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wp5PZVLOxi4",
+                "duration": 4779,
+                "title": "Where the Law Ends, Bloodshed Begins | Full Western Film HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7e-2W12zo-s",
+                "duration": 7169,
+                "title": "Bullets Fly When Honor Meets Justice! | Classic Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I6WuB2aWQUo",
+                "duration": 5859,
+                "title": "They thought he was a helpless old rancher. Then he drew his Colt faster than light |Weste"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pfl6cLbvqMo",
+                "duration": 6756,
+                "title": "HE CHEATED DEATH, PUT ON THE BADGE, AND WENT HUNTING! | Clint Eastwood 4K COWBOY MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eqAuj82YPgw",
+                "duration": 4804,
+                "title": "The Most Underrated Spaghetti Western Ever | FORGOTTEN PISTOLERO (1969) | Full Classic Wes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6bL8znW7gcg",
+                "duration": 6415,
+                "title": "The Comancheros (1961) | Classic Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vn5IN3itG4w",
+                "duration": 4842,
+                "title": "Outlaws of the Canyon War"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0SQOumsBD0s",
+                "duration": 4333,
+                "title": "The Darkest Classic Western You Probably Haven't Seen | Full Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LuTkLSkMCXc",
+                "duration": 4417,
+                "title": "They Hung Him to Die... But He Came Back for Justice | Classic Western Drama | Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iGOafRFOPCo",
+                "duration": 4094,
+                "title": "Wagon Trail West | Lost Classic Western (1952) | Full Film HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fCxw4I5M95w",
+                "duration": 5688,
+                "title": "The Bravados | Gregory Peck Western Movie | Classic Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5xyEj6ipC58",
+                "duration": 5299,
+                "title": "HE RODE INTO A DEADLY TOWN... AND TURNED THE GAME AROUND! | FULL ACTION WESTERN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m5by8v3GYMo",
+                "duration": 5697,
+                "title": "Hell To Pay | A Classic Western Movie With James Drury!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zgIt9Cu5mpM",
+                "duration": 4240,
+                "title": "Clint Walker's Grittiest Western | The Bounty Man (1972) | Full Classic Movie 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M0Idbobqk2w",
+                "duration": 5796,
+                "title": "Django the Bastard  | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7IzRNaq2R6o",
+                "duration": 4804,
+                "title": "They Waited Years to Avenge Their Father | Leonard Mann | Full Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OrTxB-VnMO8",
+                "duration": 5824,
+                "title": "True Western Fans, Get Ready! 🌵 The Final Adventure of the Magnificent Seven"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cgDPzVmoNS4",
+                "duration": 4207,
+                "title": "\"Wagons West (1952) | Full Classic Western Movie | Starring Rod Cameron & Peggie Castle |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YB_A7hyEY5c",
+                "duration": 5201,
+                "title": "Randolph Scott | Classic Western Movie | An Undercover Agent Infiltrates a Deadly Outlaw G"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LCpAXJ7wO8g",
+                "duration": 5238,
+                "title": "Can they survive the wild west together? | The Plunderers | Full Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VjlN99yx0ts",
+                "duration": 5255,
+                "title": "Old Town Western | Four Friends Rode Into the Wild West... Only the Brave Would Survive |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_9VwQ_N4fJg",
+                "duration": 6619,
+                "title": "Last Chance to Survive in the Wild West! | Stagecoach"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gSMpUboUS8s",
+                "duration": 4995,
+                "title": "Lawless Town Showdown"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f4w_xmZ87vY",
+                "duration": 5137,
+                "title": "Randolph Scott | Classic Western Thriller | The Undercover Outlaw Hunter | Rage at Dawn (1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QmZNbfD25dA",
+                "duration": 4834,
+                "title": "They Thought the Sheriff Was Finished... Until He Faced Every Outlaw Alone | Full Western"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zKq2c8sEW9U",
+                "duration": 5159,
+                "title": "Santa Fe Passage | Cowboy and Indian Movie | ACTION | WESTERN | Classic Feature Film In Fu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MgK1T4_VINY",
+                "duration": 5609,
+                "title": "The Fearless Texas Ranger Walks the Road of Revenge! | Watch This Classic Western in Engli"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r5KhL8aGYyY",
+                "duration": 4245,
+                "title": "Clint Walker | Western Movie | The Hardest Bounty Man in the Old West 🎬Full Movie 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y_8EeIMzK6s",
+                "duration": 5630,
+                "title": "The Last Hard Men (1976) | Classic Western"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NwiEuRdBOU4",
+                "duration": 4383,
+                "title": "David Wayne in The Naked Hills (Classic Western) | A Gold Rush Adventure of Dreams  🎬 Full"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sAMkVlbWRrA",
+                "duration": 5209,
+                "title": "The Frontier’s Deadliest Train Robbers | Randolph Scott | Classic Western | Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W6jUfQD4ED4",
+                "duration": 5089,
+                "title": "Outlaw Gang Hunted by a Single Gunslinger! | WESTERN | Watch for Free Full Movie in Englis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vbts2lZ96eM",
+                "duration": 4241,
+                "title": "Clint Walker | A Ruthless Desert Manhunt | The Bounty Man (1972) | Classic Western Full Mo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qKW7OkKY6dA",
+                "duration": 4499,
+                "title": "A Gunslinger Seeks Vengeance in the West for His Sister’s Death | Western"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2fys7u4_35E",
+                "duration": 4857,
+                "title": "An Undercover Agent Entered the Deadliest Gang in the West | Classic Western Action | Full"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WT5ziepPCao",
+                "duration": 4765,
+                "title": "One Last Ride for Justice | VENGEANCE: A TOMBSTONE REMEMBRANCE | Full Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ilB3m3ewh1w",
+                "duration": 5740,
+                "title": "The Magnificent Texan | Western Movie | 4K Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KPxZt0La-j0",
+                "duration": 4240,
+                "title": "Clint Walker | Classic Western | A Ruthless Bounty Hunter On A Deadly Mission | Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5hC9DDSlByU",
+                "duration": 4303,
+                "title": "Western:Indian Uprising: 1952 english"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8IFUSJ8O6tM",
+                "duration": 5520,
+                "title": "Western Wind! Yul Brynner and the 7 Brave Men | Return of the Seven (1966)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SqpFsLeuQYA",
+                "duration": 4756,
+                "title": "Ruthless Outlaws Take a Homesteader Family — But a 12-Year-Old Sharpshooter Fights Back |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dNtNYOSxSxU",
+                "duration": 6000,
+                "title": "The Wild West Wasn’t Ready for Them | Classic Western Movie HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0bZDyFVE7WE",
+                "duration": 5643,
+                "title": "Old Town Western | He Was the New Sheriff, With an Old Score Still to Settle | English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tJ9hxYXc9IE",
+                "duration": 6417,
+                "title": "Butch Cassidy And The Sundance Kid (1969) | Two Legends. One Wild Ride Across The West!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xf-Bw-8PNKI",
+                "duration": 7492,
+                "title": "Terence Hill Comedy | A Genius, Two Partners and a Dupe | Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n1DgmyB8MIA",
+                "duration": 6908,
+                "title": "Death Rides a Horse (Classic WESTERN Feature Film, Movie in Full Length) *full movies for"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QLf7Z3SCy8A",
+                "duration": 5095,
+                "title": "Gunfighters - Western Movie, starring Randolph Scott, Full Length Classic Feature Film, En"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4GafutzEBC8",
+                "duration": 3270,
+                "title": "The Thundering Trail (1951) - Full Classic Western Movie | Lash LaRue | Black & White"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GG56jEXhZo8",
+                "duration": 4322,
+                "title": "Utah Blaine | Classic Western Movie | Rory Calhoun | Colorized"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iZ6YCDRoXrM",
+                "duration": 4830,
+                "title": "Classic Western Adventure! | THE SAN FRANCISCO STORY (1952) | FULL MOVIE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HtYB8HYH_pY",
+                "duration": 5839,
+                "title": "ONE OF THE MOST FEARED GUNSLINGERS OF THE WILD WEST | Western Movie in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ibm2_pBfO4I",
+                "duration": 4405,
+                "title": "The Young Man from Texas Who Turned the Wild West Upside Down! | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-zMi0eSnG74",
+                "duration": 5833,
+                "title": "The Last Wagon (1956) | Classic Western Heroics With Richard Widmark!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9KxuBj4HJfg",
+                "duration": 5121,
+                "title": "Man In The Saddle (1951) | Classic Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zVDqp3CWnxw",
+                "duration": 6861,
+                "title": "They Killed His Family… Now He’s Hunting Them One by One | Action Spaghetti Western | Full"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=smwZYXXq9Ec",
+                "duration": 6407,
+                "title": "THEY THOUGHT HE WAS JUST A DRUNK COWBOY... THEY WERE WRONG | Western Full HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HYns9TieIag",
+                "duration": 3762,
+                "title": "ONE DISGRACED SERGEANT Held the FORT Against an APACHE Siege | Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U0XyNDElO2A",
+                "duration": 5499,
+                "title": "They Left Him ALIVE… Biggest Mistake of Their Lives! | Western Movie in English | Full Fil"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pGtotWFKqBE",
+                "duration": 5648,
+                "title": "Henry Fonda I Western Movie"
             }
         ],
         "search_query": "classic western full movie"

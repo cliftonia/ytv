@@ -2,24 +2,469 @@
     "station_conf": {
         "network_name": "Economics & Finance",
         "network_type": "streaming",
-        "channel_number": 69,
+        "channel_number": 38,
         "network_long_name": "Economics & Finance",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=BLH6Z1-t5e0",
-                "duration": 1010,
-                "title": "How Chile's Economy Was Sold to The Highest Bidder"
+                "url": "https://www.youtube.com/watch?v=-OI7CL_kyUo",
+                "duration": 1076,
+                "title": "How Kim Jong Un \"Accidentally\" Fixed North Korea's Economy"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yhpyHV1iz00",
+                "url": "https://www.youtube.com/watch?v=zxVoCw3P1Gc",
+                "duration": 1152,
+                "title": "Once You Learn Economics, You Can't Be MANIPULATED Anymore"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H9TmscxKsNw",
+                "duration": 3004,
+                "title": "Ken Griffin - The Man Who Owns The Market | 2026 Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NngM_qdDMm8",
+                "duration": 1241,
+                "title": "The Entire Economics Degree in 20 Minutes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
+                "duration": 1860,
+                "title": "How The Economic Machine Works by Ray Dalio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y6-N0miNWZI",
+                "duration": 321,
+                "title": "How to Rebuild Wealth from $0 in 2026 (Full Roadmap)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D0toG8A20Rs",
+                "duration": 852,
+                "title": "Why Americans Feel Broke in 2026—Even as the Economy Grows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=27Ve8NXtYz0",
+                "duration": 791,
+                "title": "The Economics Of Owning A Gas Station"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7x8vIvwYzFg",
+                "duration": 317,
+                "title": "Why Bond Yields Are a Key Economic Barometer | WSJ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bOMksnSaAJ4",
+                "duration": 2012,
+                "title": "Thomas Sowell -- Basic Economics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R8VBRCs2jTU",
+                "duration": 494,
+                "title": "How does raising interest rates control inflation?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iNl9hJ40Y6o",
+                "duration": 656,
+                "title": "Why Jamaica's Economy Is Suddenly in Trouble (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XHlvkjubwNQ",
+                "duration": 1965,
+                "title": "CANADA The Truth About LIFE, Money & LIVING There #viral #viralvideo #fyp #fypシ #foryou #c"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=geoe-6NBy10",
+                "duration": 611,
+                "title": "Imports, Exports, and Exchange Rates: Crash Course Economics #15"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qnEZQRpWWi8",
+                "duration": 1064,
+                "title": "Introduction to Economics Part 1 - Professor Ryan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W-Pw6zN43iI",
+                "duration": 409,
+                "title": "The Economics of Owning a VPN Company"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MkziTQaJAGY",
+                "duration": 1680,
+                "title": "Trump Gave Canada an August 19 Ultimatum — Carney's Answer Could Change Everything"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3xC1a5r0zNY",
+                "duration": 992,
+                "title": "How The Big Short Actually Worked"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WYrX1XbokZQ",
+                "duration": 1320,
+                "title": "The REAL Economics Behind KFC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5h5rVRJ6EHM",
+                "duration": 906,
+                "title": "The Economics of Owning a McDonald’s Franchise."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8MIMDAPz8x8",
+                "duration": 1582,
+                "title": "GERMANY The TRUTH About LIVING, EARNING There #viral #viralvideo #fyp #fypシ #foryou #germa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6MRJVzl8bRs",
+                "duration": 734,
+                "title": "How Does Netflix Make Money in 2026? The Business Model Nobody Sees."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l5SbnZyfV10",
+                "duration": 621,
+                "title": "The Crazy President With a Chainsaw | Javier Milei’s Radical Plan |TheGeniusBlueprint"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FYf6VNqV38E",
+                "duration": 519,
+                "title": "The $4 Trillion Economy Illusion | [ documentary ] | Rihan Explainer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E2RZrDoRg18",
+                "duration": 318,
+                "title": "The Hidden Truth About Money Nobody Tells YouMoney Is Not What You Think The Hidden System"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TkRmrPQDPFw",
+                "duration": 562,
+                "title": "Why the world's superpowers are racing to control the Arctic - BBC World Service"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EDmblaAn1iU",
+                "duration": 3335,
+                "title": "CHINA COMPLETE Documentary History, Culture, Economy & Facts #viral #foryou #fyp #viralvid"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FZqqNZlPgsI",
+                "duration": 1234,
+                "title": "The Dangerous Reality of Owning an AI Company"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JYo-WjHodaU",
+                "duration": 982,
+                "title": "How Vladimir Putin Is Helping Kim Jong Un Become Rich | North Korea Economic Boom | The Bl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=roRlW2tgGXg",
+                "duration": 483,
+                "title": "Ukraine 2026 | Europe’s Hidden Treasure | Technology , War & Places to Visit in Ukraine 🇺🇦"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wxe6HScD3ys",
+                "duration": 408,
+                "title": "Why Germany Is So Powerful — The System Behind Its Economic Success"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wO2lWmgEK1Y",
+                "duration": 1705,
+                "title": "The Brexit effect: how leaving the EU hit the UK | FT Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D9N7QaIOkG8",
+                "duration": 286,
+                "title": "Why is it so hard to escape poverty? - Ann-Helén Bay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vO-_HXO7HwY",
+                "duration": 600,
+                "title": "Ten Minute History - The Weimar Republic and Nazi Germany (Short Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2mHsTKvAuZc",
+                "duration": 3292,
+                "title": "The Secret History of the Credit Card (full documentary) | FRONTLINE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BYXbipGQmVY",
+                "duration": 2327,
+                "title": "UNITED KINGDOM The Real Truth About Life, Money & Culture #viral #viralvideo #europe #fyp"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xguam0TKMw8",
+                "duration": 2623,
+                "title": "Principles for Dealing with the Changing World Order by Ray Dalio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KsMO_RjIgFo",
+                "duration": 682,
+                "title": "The Economics Of Owning A Football Club"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U-FLEO0Ndrg",
+                "duration": 1767,
+                "title": "Sequoia Capital and the evolution of the VC industry | FT Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uynhvHZUOOo",
+                "duration": 984,
+                "title": "What does three degrees of global warming look like? | The Economist"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uiUPD-z9DTg",
+                "duration": 899,
+                "title": "The Next Global Superpower Isn't Who You Think | Ian Bremmer | TED"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=92k6Y8rYp3U",
+                "duration": 883,
+                "title": "The $1.8 Trillion AI Empire Built on $0 Revenue is Cracking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oO-d3JT65lE",
+                "duration": 354,
+                "title": "AUGUST 19: The Day America Is Watching | USA Breaking News Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ADNxno9yHos",
+                "duration": 397,
+                "title": "America’s $1.26 Trillion Credit Card Debt Crisis — Why Americans Can’t Escape Debt"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DQq-zJPSf4U",
+                "duration": 1311,
+                "title": "Basic Concepts of Economics - Needs, Wants, Demand, Supply, Market, Utility, Price, Value,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B_jpWWuGmj8",
+                "duration": 304,
+                "title": "Why The Rich Keep Getting Richer (The Real Reason) #WealthInequality #WhyTheRichGetRicher"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6_CmRXlxoS0",
+                "duration": 1106,
+                "title": "Creator economy illusion or Opportunity | [ Documentary ] | Rihan Explainer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dyoQr6KdJLU",
+                "duration": 704,
+                "title": "All 19 Ways The New York Mafia Makes Money | How Crime Works | Insider"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XlTW69zmxEk",
+                "duration": 1369,
+                "title": "The Economics of Owning a Medieval Watermill | How Millers Made Money in the Middle Ages ⚙"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=De6rFH8oKsI",
+                "duration": 783,
+                "title": "The Economy Of SWITZERLAND, Unraveling Swiss Economy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ls5F71FyVA8",
+                "duration": 380,
+                "title": "America has a debt problem — and it goes far beyond credit cards |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_czPy0BMWV8",
+                "duration": 1120,
+                "title": "How BlackRock Controls $15 Trillion in Global Wealth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zhLa6I72K_g",
                 "duration": 872,
-                "title": "What Happens When Capitalism Doesn't Need Workers Anymore?"
+                "title": "Capitalism, Socialism, and Communism Compared"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tW6aT_nzl6Q",
-                "duration": 965,
-                "title": "Lebanon Lost 50% of Its Economy in 2 Years"
+                "url": "https://www.youtube.com/watch?v=GuqFF1sHI0A",
+                "duration": 670,
+                "title": "2026’s Biggest Box Office  Disasters Where Did $1 2 Billion Go?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z-Jcp1mSt64",
+                "duration": 1355,
+                "title": "The Economics of Owning a Hospital"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=deSWvrvpVVc",
+                "duration": 764,
+                "title": "The Hidden Econimics of Owning a Funeral Home Business"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GZ7y-yFdX9M",
+                "duration": 336,
+                "title": "Who Invented Money? | The History of Money | Barter System of Exchange | The Dr Binocs Sho"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UGMk9awb7SI",
+                "duration": 917,
+                "title": "The Economics of Owning a Billboard Empire      | How Billboards Really Make Money"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N_yxJloaBQE",
+                "duration": 797,
+                "title": "The Economics of Owning a Rental Property Empire"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UVf2Yw7uFoE",
+                "duration": 2546,
+                "title": "Global renewables: Pioneering the energy transition | DW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qQAn47w_SZ8",
+                "duration": 1472,
+                "title": "The Hidden Economics of Owning a Film Studio — Why Most Go Bankrupt"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lo_KRGqbMoY",
+                "duration": 4013,
+                "title": "Lenin & The Russian Revolution Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GRxOC0E1lHk",
+                "duration": 1494,
+                "title": "India’s Economic Journey 1947–2026: From Poor to Global Economic Power | 80 Years of Indep"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EtqVmE2U4Xo",
+                "duration": 264,
+                "title": "How Commodity Markets Work | WSJ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rG2UlGl-FHE",
+                "duration": 841,
+                "title": "The Economics of Owning a Night Club in Miami"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MKO1icFVtDc",
+                "duration": 1798,
+                "title": "Macroeconomics- Everything You Need to Know"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yit6K2fG41g",
+                "duration": 876,
+                "title": "Trump's Economic Gamble: Is America Paying the Price?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AUP2FqqSj-M",
+                "duration": 2038,
+                "title": "The Law That Made Miracle Cures — and Million-Dollar Prices | A Calm, Honest Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VfOR1XCMf7A",
+                "duration": 792,
+                "title": "The Roaring 20's: Crash Course US History #32"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lkOQNPIsO-Q",
+                "duration": 3198,
+                "title": "The Retirement Gamble (full documentary) | FRONTLINE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R5lRL4T7jX4",
+                "duration": 2425,
+                "title": "15 Business Opportunities in Canada in 2026 | Where Smart Entrepreneurs Are Investing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZDmrAI5xDuU",
+                "duration": 307,
+                "title": "THE WAR THAT CHANGED THE WORLD | Full Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hf52WakZuSE",
+                "duration": 1120,
+                "title": "Why Americans Keep Getting Richer but Feeling Poorer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=71t6l-srqaE",
+                "duration": 772,
+                "title": "The Economics of a $5 Coffee: Where Does the Money Actually Go?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2qDW73uPwJo",
+                "duration": 1435,
+                "title": "How China became a Superpower? | Case Study | Dhruv Rathee"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D6cRU_8ym_8",
+                "duration": 876,
+                "title": "The Elon Musk Cheat Code: Buy. Borrow. Die."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OVWZyDz--30",
+                "duration": 950,
+                "title": "Climate change: what is ocean acidification?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rzs8cVFyc3g",
+                "duration": 720,
+                "title": "# The Economics of Owning a Film Studio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6bTa2EsI8Yw",
+                "duration": 848,
+                "title": "The Economics Behind Costco: How It Really Makes Money"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e0Dlr07jfjA",
+                "duration": 632,
+                "title": "Why Tech Companies Are Quietly Cancelling AI Data Centers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HWLSccBmc4Y",
+                "duration": 359,
+                "title": "How Dirty Money Becomes Clean"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LYVc49Ty1WY",
+                "duration": 886,
+                "title": "How 200,000 Amish Families Shop ALL Their Food At Amish Bulk Stores  | The Amish Way"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QPKKQnijnsM",
+                "duration": 384,
+                "title": "Wealth Inequality in America"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LkC0rkA0sxo",
+                "duration": 570,
+                "title": "How To Make Explainer Videos That Go Viral in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wOI8RuhW7q0",
+                "duration": 739,
+                "title": "How Wealth Inequality Spiraled Out of Control | Robert Reich"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E817QceDr3c",
+                "duration": 1250,
+                "title": "The Economics of Following Torah Business Principles — What Billionaires Use"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9W900C9Bdg4",
+                "duration": 350,
+                "title": "The Real Economics of Owning a Gym"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c7z5q_xtqG0",
+                "duration": 741,
+                "title": "How 1 Fake Nuclear Claim Shook the Global Economy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
+                "duration": 2665,
+                "title": "City of the Future: Singapore – Full Episode | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0_PYq9Fvgqc",
+                "duration": 409,
+                "title": "The Economics of Owning a Liquor Store: How Much Money Do They Really Make?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bA_Pfm9D6Qw",
+                "duration": 1294,
+                "title": "The Economics of a Medieval Stained Glass Workshop | How Artisans Made Money in the Middle"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ig_EO805rpA",
+                "duration": 876,
+                "title": "The Economics of Foreign Exchange"
             },
             {
                 "url": "https://www.youtube.com/watch?v=t6m49vNjEGs",
@@ -27,36 +472,41 @@
                 "title": "How the rich get richer - Money in the world economy | DW Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hKGwGAHznFQ",
-                "duration": 713,
-                "title": "Norway: Is It The Perfect Economy?"
+                "url": "https://www.youtube.com/watch?v=W-Q9AOp2FW8",
+                "duration": 3199,
+                "title": "Money, Power and Wall Street, Part One (full documentary) | FRONTLINE"
             },
             {
-                "url": "https://www.youtube.com/watch?v=brW6-fbvmsQ",
-                "duration": 1140,
-                "title": "The Faltering Economy of Argentina | Economics Explained"
+                "url": "https://www.youtube.com/watch?v=iLom1WlqwS0",
+                "duration": 251,
+                "title": "What is GDP? | CNBC Explains"
             },
             {
-                "url": "https://www.youtube.com/watch?v=x-Q47erm5MI",
-                "duration": 897,
-                "title": "Stagflation"
+                "url": "https://www.youtube.com/watch?v=GPOv72Awo68",
+                "duration": 685,
+                "title": "How it Happened - The 2008 Financial Crisis: Crash Course Economics #12"
             },
             {
-                "url": "https://www.youtube.com/watch?v=72pGczK3j7s",
-                "duration": 1262,
-                "title": "Cuba Was Barely Holding On… And Then The Oil Ran Out"
+                "url": "https://www.youtube.com/watch?v=p7HKvqRI_Bo",
+                "duration": 270,
+                "title": "How does the stock market work? - Oliver Elfenbaum"
             },
             {
-                "url": "https://www.youtube.com/watch?v=M2LrHMKFcdU",
-                "duration": 796,
-                "title": "How Iceland Lost 50% of Its GDP... And Recovered"
+                "url": "https://www.youtube.com/watch?v=th3KE_H27bs",
+                "duration": 1024,
+                "title": "The dirty secret of capitalism -- and a new way forward | Nick Hanauer"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
-                "duration": 1860,
-                "title": "How The Economic Machine Works by Ray Dalio"
+                "url": "https://www.youtube.com/watch?v=pU_yyadYgG8",
+                "duration": 2142,
+                "title": "The Economy of Japan: how a Superpower Fell from Grace in Four Decades"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QAAbcNl4Lb8",
+                "duration": 5059,
+                "title": "The Power of Big Oil Part One: Denial (full documentary) | FRONTLINE"
             }
         ],
-        "search_query": "economics explained finance documentary"
+        "search_query": "economics documentary explainer"
     }
 }

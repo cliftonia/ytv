@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "CNA",
+        "network_long_name": "CNA",
+        "network_type": "streaming",
+        "channel_number": 112,
+        "streams": [
+            {
+                "url": "https://live1.mediadesk.al/cnatvlive.m3u8",
+                "duration": 600,
+                "title": "CNA"
+            }
+        ]
+    }
+}

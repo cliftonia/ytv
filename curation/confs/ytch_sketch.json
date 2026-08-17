@@ -2,39 +2,24 @@
     "station_conf": {
         "network_name": "Sketch Comedy",
         "network_type": "streaming",
-        "channel_number": 28,
+        "channel_number": 20,
         "network_long_name": "Sketch Comedy",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=c42Bl9vdjno",
-                "duration": 1879,
-                "title": "skitHOUSE - Sketch Comedy - 2004 Full Episode"
+                "url": "https://www.youtube.com/watch?v=Gss9mvt_-1U",
+                "duration": 1901,
+                "title": "uDlamini YiStar Part 05 - Last Extra Episode"
             },
             {
-                "url": "https://www.youtube.com/watch?v=AEg-qUdi_Rk",
-                "duration": 1317,
-                "title": "Dave Goes On Shark Tank | Dr. Ken | FULL EPISODE | S2E7 | Daily Laugh"
+                "url": "https://www.youtube.com/watch?v=3bvkoxZ6xcw",
+                "duration": 3917,
+                "title": "Anjelah Johnson-Reyes: Ugly Baby | Full Comedy Special"
             },
             {
-                "url": "https://www.youtube.com/watch?v=baDJ-ZIvYy0",
-                "duration": 528,
-                "title": "Anjelah Johnson - Nail Salon Uncut (Stand Up Comedy)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WyX4uqcBrto",
-                "duration": 1267,
-                "title": "Church Basketball Player from Tennessee - Nate Bargatze: Comedy Centra"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BLLfkV6ZJVU",
-                "duration": 371,
-                "title": "Atsuko Okatsuka Stand-Up Comedy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YD0xjyqiKIE",
-                "duration": 1320,
-                "title": "Comedy Inc | Season 2 Episode 5 | FULL EPISODE"
+                "url": "https://www.youtube.com/watch?v=hPH1oqPG6Ws",
+                "duration": 450,
+                "title": "Culturally Exposed! | Max Amini | Stand-up Comedy"
             },
             {
                 "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
@@ -42,21 +27,486 @@
                 "title": "Shane Gillis Live In Austin | Stand Up Comedy"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Lg7SztUnSro",
-                "duration": 1357,
-                "title": "Somebody's Sleepin' in My Bed | The Steve Harvey Show | FULL EPISODE |"
+                "url": "https://www.youtube.com/watch?v=34aUU-iSHZU",
+                "duration": 2345,
+                "title": "Mrs Bucket's Most Extroverted Moments | Keeping Up Appearances | BBC Comedy Greats"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7HVtrV9wCHI",
-                "duration": 1762,
-                "title": "QI FULL EPISODE! 'Deprivation' Episode 11, Series D Roger McGough, Vic"
+                "url": "https://www.youtube.com/watch?v=sB9eWtzTOq0",
+                "duration": 3980,
+                "title": "Gianmarco Soresi: Thief of Joy | Full Comedy Special"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vrIw2i4WtA4",
-                "duration": 1258,
-                "title": "An Escalator Can Never Break - Mitch Hedberg: Comedy Central Presents"
+                "url": "https://www.youtube.com/watch?v=uYqWsDhWkkA",
+                "duration": 3451,
+                "title": "Kelsey Cook | Mark Your Territory (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WyX4uqcBrto",
+                "duration": 1267,
+                "title": "Church Basketball Player from Tennessee - Nate Bargatze: Comedy Central Presents - Full Sp"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UTEcYC28GNY",
+                "duration": 4385,
+                "title": "Kullu | Fresher's Party | Full Stand up Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FSbE9EAHiGU",
+                "duration": 3610,
+                "title": "ALI SIDDIQ: RUGGED [Full Stand Up Comedy Special]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oy2QyPQ5L5M",
+                "duration": 3000,
+                "title": "Max Amini FULL COMEDY SPECIAL 2025 | \"Randomly Selected\" | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0jPUikpbyck",
+                "duration": 5360,
+                "title": "ALI SIDDIQ presents THE JIVE TURKEYS Comedy Special  {Full Stand Up Special}"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HBJ_qW84ITk",
+                "duration": 1233,
+                "title": "NEW PRISON S2E EP18 Prison Fight (Finale)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MLKtKNqPFGo",
+                "duration": 438,
+                "title": "North Korean Boyfriend | Max Amini | Stand-up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=caZs9faGMH0",
+                "duration": 1155,
+                "title": "Hilarious London Moments | Max Amini | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JMmM-Tduaac",
+                "duration": 1286,
+                "title": "NEW PRISON S2 - EP17 “Endless Fight”"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EjdVf-5ivfM",
+                "duration": 897,
+                "title": "Insane Police Roasts | Max Amini | Stand-up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vmSTWMBw6mU",
+                "duration": 1549,
+                "title": "Josh Blue's UNFILTERED Stand-Up Comedy: The Disabled List | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UGRcJQ9tMbY",
+                "duration": 266,
+                "title": "Air Traffic Control - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=14ps_hS1NiQ",
+                "duration": 4155,
+                "title": "Dusty Slay: Workin' Man | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ES4VeoprP5k",
+                "duration": 800,
+                "title": "Akpan and Oduma 'Beggars Association' | Latest Nigerian Comedy | 2026 Skit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n3l4hJS0jsc",
+                "duration": 2279,
+                "title": "40 Minutes of Black Comedy Excellence"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sGEAqq16gYU",
+                "duration": 1273,
+                "title": "“What Is Going On?” - Sebastian Maniscalco: Comedy Central Presents - Full Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pGUhBzSgOxw",
+                "duration": 1307,
+                "title": "21 Minutes of Nate Bargatze | Netflix Is A Joke"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BjDLXPzOVqc",
+                "duration": 4979,
+                "title": "Ralph Barbosa's Funniest Stand Up Comedy Moments! (2025)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EsKDNZQhVX0",
+                "duration": 4877,
+                "title": "The Domino Effect [One Hour Stand Up Comedy Special] by Ali Siddiq"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6t3Aew-oH50",
+                "duration": 924,
+                "title": "Greek God Name | Max Amini | Stand-up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YBdNXjxmj8M",
+                "duration": 272,
+                "title": "Good Morning Meth - Saturday Night Live"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c_Ghy-PucDI",
+                "duration": 4794,
+                "title": "Michael McIntyre’s FUNNIEST Stand-Up Routines On Comedy Roadshow | Jokes On Us"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5NStzr5PE5M",
+                "duration": 249,
+                "title": "Dining with Johnny LaRue: Italian Food with the Mob (John Candy) | SCTV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cbE9ncf9aFY",
+                "duration": 4627,
+                "title": "ALL STAR Comedy Jam 🔥 Stand-up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_pbr5nLNKHM",
+                "duration": 596,
+                "title": "PRESSURE | STAND-UP COMEDY BY SHARON VERMA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=buexsb6HWU4",
+                "duration": 1696,
+                "title": "Patrice O'Neal | Patrice O’Neal Live! (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mbOO0Z6ryO0",
+                "duration": 1202,
+                "title": "Ambulance - Stand Up Comedy Ft. Anubhav Singh Bassi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BfNHCavFtzQ",
+                "duration": 3273,
+                "title": "Nimesh Patel: FULL SPECIAL Thank You China | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Z-KLkjICoY",
+                "duration": 2736,
+                "title": "Desi Boyfriend - A Standup Comedy Special By Harsh Gujral"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OtPxvrPFwj4",
+                "duration": 1034,
+                "title": "India Unfiltered | Max Amini | Standup Comedy in Delhi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WanLo10BbCc",
+                "duration": 468,
+                "title": "Driving | Gurleen Pannu | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dMbnfxwus0s",
+                "duration": 249,
+                "title": "Rude Buddha - Saturday Night Live"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CbbWYQ6dLoE",
+                "duration": 606,
+                "title": "Papa In Police | Stand Up Comedy | Aashish Solanki"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=28Dh5jEqJlw",
+                "duration": 710,
+                "title": "My first Live-in Relationship | Stand-up comedy by Swati Sachdeva"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-7TxYcgioxg",
+                "duration": 655,
+                "title": "Mummy Aur Shopping | Zakir Khan | Stand Up Comedy | Sukha Puri 9"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ea-fUHCfgtI",
+                "duration": 305,
+                "title": "Biswa Kalyan Rath | Pakistani Accent | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NO9YIA5I_3E",
+                "duration": 1339,
+                "title": "Shop 'til You Drop - Pat Finn - Episode #218"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XbiObxjyAkE",
+                "duration": 678,
+                "title": "Bassi in USA & Canada | Stand Up Comedy | Ft  @AnubhavSinghBassi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GqqwbcgOHek",
+                "duration": 1068,
+                "title": "Adventure | Stand-up Comedy by Ravi Gupta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Vx3lWoDJXY",
+                "duration": 904,
+                "title": "Library BEAN | RARE episode | Mr Bean Official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cl618XVFKmc",
+                "duration": 533,
+                "title": "Love is Love | Stand-up comedy by Swati Sachdeva"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=far4bOQE69E",
+                "duration": 2332,
+                "title": "LOVERBOY- Stand up Comedy by Devesh Dixit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Lhrd-YW8yJE",
+                "duration": 669,
+                "title": "Biswa Kalyan Rath | Ghar Ke Kaam | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7zYMRPGTDKc",
+                "duration": 640,
+                "title": "Pyaari Maa | Stand Up Comedy | Aashish Solanki"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pK5WgUBakBA",
+                "duration": 746,
+                "title": "Biswa Kalyan Rath | Hinglish & Engdi | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VciOqt1D79o",
+                "duration": 2054,
+                "title": "Comedy Clash: Kristen Wiig vs Tina Fey | The Graham Norton Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hYBhpsZKkFc",
+                "duration": 1261,
+                "title": "Not hard to be an idiot! | Idiotest | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zTK5QHL5wWo",
+                "duration": 357,
+                "title": "Peak Couple Behaviour 😂 | Zakir Khan | Delulu Express | Standup Comedy | Prime Video India"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_XRcAdoEKCQ",
+                "duration": 824,
+                "title": "Women Are Delusional AF! - Comedian Ryan Davis - Chocolate Sundaes Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gWQzdnDBmSA",
+                "duration": 987,
+                "title": "Are you a buffalo? |  Stand up comedy by Manik Mahna"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mTfSyBqwIV8",
+                "duration": 1218,
+                "title": "Family First | Stand-up comedy by Swati Sachdeva | U/A 16+"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lHLBJ4yRMn8",
+                "duration": 294,
+                "title": "American Airlines | Stand Up Comedy | Ft  @AnubhavSinghBassi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fjNoS66fkGM",
+                "duration": 398,
+                "title": "Oprah: Dr. Phil, Marriage Counselor - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1_glHa8F7fA",
+                "duration": 297,
+                "title": "Irish Dating Show - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WduM5-nT200",
+                "duration": 2305,
+                "title": "Tapu Sena Babur aur Aananya | Standup comedy By Inder Sahani"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LO2k-BNySLI",
+                "duration": 267,
+                "title": "'Brian's Hat' Full Sketch - I Think You Should Leave with Tim Robinson Season 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KKnhgkmV7k8",
+                "duration": 327,
+                "title": "Printing Engineering | Standup Comedy by Samay Raina"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SSKJkGDT9AU",
+                "duration": 445,
+                "title": "Celebrity Family Feud: Super Bowl Edition - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pjSxOnCkHIA",
+                "duration": 821,
+                "title": "Cheenk | Stand-Up Comedy | Aakash Gupta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XcKSQsiZe9s",
+                "duration": 1314,
+                "title": "Bulbulay Season 2 Episode 341 | 7 Feb 2026 | Comedy | ARY Digital Drama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PfPdYYsEfAE",
+                "duration": 347,
+                "title": "Close Encounter - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MwsHgn_jdIY",
+                "duration": 1227,
+                "title": "22 Boyfriends | Crowd Work | Stand Up Comedy | Ft @Harshgujral"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S-Z3In9s_4E",
+                "duration": 1029,
+                "title": "Akpan and Oduma 'Nepo Babies' | Latest Nigerian Comedy | 2026 Skit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hreHfxZ3Szc",
+                "duration": 385,
+                "title": "He Converts to Islam | Max Amini | Stand Up Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZgnCiZhOXoM",
+                "duration": 3318,
+                "title": "The Vault! | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2mJAGwu9ZaI",
+                "duration": 475,
+                "title": "Varun Dhawan LOSES IT At Sunil & Kiku’s Comedy 😭 | Ft. David Dhawan | TGIKS | Netflix Indi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yPbUK9hi6T8",
+                "duration": 1016,
+                "title": "Parents | Stand-up Comedy by Ravi Gupta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vJLg2iVabLY",
+                "duration": 2819,
+                "title": "Hoshyarian | New Episode | 02 August 2026 | Saleem Albela | Goga Pasroori | Agha Majid | C"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3ZmrW9a3tjo",
+                "duration": 488,
+                "title": "Anxiety | Gurleen Pannu | Standup Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k0cqMK04i0s",
+                "duration": 1115,
+                "title": "Akpan and Oduma 'Separate Ways' | Latest Nigerian Comedy | 2026 Skit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UqV51LFm6C0",
+                "duration": 1060,
+                "title": "Akpan and Oduma 'Big Salary' | Latest Nigerian Comedy | 2026 Skit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ECx3wKaujOw",
+                "duration": 349,
+                "title": "Carrey Family Reunion - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MJEAGd1bQuc",
+                "duration": 307,
+                "title": "Meet Your Second Wife - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0YOgFYBF7uY",
+                "duration": 2641,
+                "title": "DIY Bean | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WUfnQPoJbSc",
+                "duration": 276,
+                "title": "Hawkeye Disappoints the Avengers - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2XTcIq4GaoE",
+                "duration": 484,
+                "title": "Trending Very Special Funny Comedy Video 😂 Amazing New Comedy Video 2026 Episode 286 By MY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KBZfnt80s54",
+                "duration": 631,
+                "title": "Sarojini Nagar | Excuse Me Brother | Stand-Up Comedy by Aakash Gupta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MC6xjO1JoR8",
+                "duration": 257,
+                "title": "Cha Cha Slide - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CYFcwiCgRYE",
+                "duration": 368,
+                "title": "'Aao Aao Natak Dekho' - Gurleen Pannu and Shreya Priyam‘s Comedy Sketch | Comicstaan | Pri"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mikEmpcv65s",
+                "duration": 3128,
+                "title": "CYBER Monday BEAN | Exclusive EXTRA scene | Mr Bean Funny Clips | Mr Bean Official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6d2wzfx4sRs",
+                "duration": 492,
+                "title": "Paan | Stand-up Comedy by Aakash Gupta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ocpJJLnaIPs",
+                "duration": 1341,
+                "title": "Sumona Becomes Auto-Pilot In Kapil's Airline! | The Kapil Sharma Show | Kapil Aur Sumona K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3-aQZpLRNIw",
+                "duration": 352,
+                "title": "Animal (Mark Angel Comedy) (Episode 206)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WzsOhuiPXog",
+                "duration": 2434,
+                "title": "Comedy Circus Ka Naya Daur - Ep 19 - Reality Show Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LwvWFR_qk8U",
+                "duration": 623,
+                "title": "Trump Hid in Catering Cart to Sneak Out of Turkey, Hosts Patriot Games & Do You Have Weed"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uaf2W1aVv_8",
+                "duration": 670,
+                "title": "TSHEPANG COMEDY SERIES: EPISODE 46 SEASON 3 (Maka sgedeza)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DoJpr-F84QY",
+                "duration": 3421,
+                "title": "Amanat Chan | Imran Ashraf | Mazaq Raat Season 2 | Ep #461 | Sakhawat Naz | Honey Albella"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GAlRLwyEJIU",
+                "duration": 2870,
+                "title": "The Bean Test | Funny Episodes | Mr Bean Official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qAtvxFFsoeg",
+                "duration": 457,
+                "title": "R. Kelly Interview Cold Open - SNL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NJtMkvGa_IY",
+                "duration": 310,
+                "title": "Bag Chori | @ZakirKhan  | Stand Up Comedy | Zakir Khan: Delulu Express | Prime Video India"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L_YJk7kdE5M",
+                "duration": 1366,
+                "title": "Very Special Trending Comedy Video 2026 😂 Amazing Funny Video Episode @125"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Es69YhCwH4",
+                "duration": 1362,
+                "title": "The Lavari Show Ep. 151 | ft. Bhavini Jani | The Comedy Factory"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_d2XfUXn0kY",
+                "duration": 361,
+                "title": "Jacuzzi Lifeguard - SNL"
             }
         ],
-        "search_query": "sketch comedy show full episode"
+        "search_query": "sketch comedy full episode"
     }
 }

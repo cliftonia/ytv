@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Electronic",
         "network_type": "streaming",
-        "channel_number": 102,
+        "channel_number": 62,
         "network_long_name": "Electronic",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=eBeeWwsCVls",
-                "duration": 4960,
-                "title": "Hardwell - Live at Parookaville 2026"
+                "url": "https://www.youtube.com/watch?v=oUbpmjOgmmU",
+                "duration": 397,
+                "title": "FISHER - Losing It - Live at Coachella 2019 Friday April 12, 2019"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cVFzblT5VPE",
-                "duration": 5921,
-                "title": "Einmusik b2b Jonas Saalbach live at Preikestolen in Norway for Cercle"
+                "url": "https://www.youtube.com/watch?v=qYAv8iiYLG4",
+                "duration": 268,
+                "title": "SYNTHONY - Darude Sandstorm (Live from Melbourne) | ProShot 4K"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rfxQxkUFhvE",
-                "duration": 5232,
-                "title": "Elderbrook (DJ Set) at Seismic Dance Event 8.0 | Full Set (Tsunami Sta"
+                "url": "https://www.youtube.com/watch?v=knm35iIoaK0",
+                "duration": 225,
+                "title": "EDM LIVE SET - FESTIVAL VIBES"
             },
             {
-                "url": "https://www.youtube.com/watch?v=UU95qr0mt0c",
-                "duration": 7041,
-                "title": "Fatboy Slim at Seismic Dance Event 5.0 | Full Set"
+                "url": "https://www.youtube.com/watch?v=kXhBKjDKF84",
+                "duration": 175,
+                "title": "David Guetta & Bebe Rexha - I'm Good (Blue) [Live Performance]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qr3Abo1Wdqk",
-                "duration": 5416,
-                "title": "Lilly Palmer at Seismic Dance Event 8.0 | Full Set (Tsunami Stage)"
+                "url": "https://www.youtube.com/watch?v=S69w0zMW-A0",
+                "duration": 197,
+                "title": "David Guetta ft Sia - Titanium (David Guetta & MORTEN Future Rave Remix) [Live Edit]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7R5HeDbmY9c",
-                "duration": 3459,
-                "title": "SWITCH DISCO - LIVE DJ SET FROM IBIZA ROCKS 2024 (IBIZA DANCE ANTHEMS)"
+                "url": "https://www.youtube.com/watch?v=fKFbnhcNnjE",
+                "duration": 330,
+                "title": "MEUTE - You & Me (Flume Remix)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ymXDgmDu-jY",
-                "duration": 3673,
-                "title": "Masha Vincent - Live DJ Mix 2025 - 88Terrace - Indie Dance, Electronic"
+                "url": "https://www.youtube.com/watch?v=E6V7RAw-sKw",
+                "duration": 81,
+                "title": "Electric Otto’s #Funk Factory @oakparksocial 1/11/2026 #liveset #beats #livebeats #electro"
             },
             {
-                "url": "https://www.youtube.com/watch?v=h96MGcsi7GQ",
-                "duration": 6360,
-                "title": "Lee Burridge at Savaya Bali in Indonesia for Cercle"
+                "url": "https://www.youtube.com/watch?v=AC7_JX_GRpk",
+                "duration": 188,
+                "title": "FRIDAY MOONS - Following (Studio Live Set 2026)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ObiAocVMTyo",
-                "duration": 5325,
-                "title": "Odd Mob at Seismic Dance Event 8.0 | Full Set (Volcano Stage)"
+                "url": "https://www.youtube.com/watch?v=IdlTpGzF24I",
+                "duration": 174,
+                "title": "MONOLIT - Only For Tonight (Live Set Electronic Music)🎵"
             },
             {
-                "url": "https://www.youtube.com/watch?v=J5oZ80Daduc",
-                "duration": 6300,
-                "title": "Hania Rani live at Invalides in Paris, France for Cercle"
+                "url": "https://www.youtube.com/watch?v=sWohID4_eZ8",
+                "duration": 209,
+                "title": "Sickick - Epic Sean Paul Mashup (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3432MLfaS10",
+                "duration": 400,
+                "title": "Electric Otto’s #Funk Factory @loopsessions_detroit313 5/23/2026 #beats #liveset #electron"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h1oijmXt74k",
+                "duration": 354,
+                "title": "Sadrican - Soft Collapse [Progressive Deep House] + Trance Melody Quiz! 🎧"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oRs6qZc7tvA",
+                "duration": 158,
+                "title": "“3/30/2026”-Electric Otto’s Funk #Factory #beats #beatculture #liveset #electronicmusic #m"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1eKMiIELrDs",
+                "duration": 275,
+                "title": "The Art Of Production: Surgeon's techno live setup"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2FkOeguHvBI",
+                "duration": 390,
+                "title": "This ISN’T a DJ set up 🚫 It’s LIVE ELECTRONIC MUSIC ✅"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ENoz2BwZYxM",
+                "duration": 148,
+                "title": "Gianluca Zanna & Claudette Lyons Live DJ Set from their Bedroom | Melodic Techno EDM Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1QS8-d_r1Jc",
+                "duration": 387,
+                "title": "The 6 Tips You Need To Start Playing Electronic Music Live"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EFMr1d5pBuI",
+                "duration": 326,
+                "title": "Barker - Performing Electronic Music Masterclass"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2P_Opp4a6iY",
+                "duration": 397,
+                "title": "Why your mixes sound thin and weak (probably)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P8JEm4d6Wu4",
+                "duration": 215,
+                "title": "Faithless - Insomnia (Official 4K Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8fv8IqyqEjU",
+                "duration": 312,
+                "title": "Pet Shop Boys - It's A Sin | Glastonbury 2022"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YaEG2aWJnZ8",
+                "duration": 227,
+                "title": "Sia - Unstoppable (Official Video - Live from the Nostalgic For The Present Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KDUJLBuGmVc",
+                "duration": 229,
+                "title": "Spielkinder's live minimal electronic music @ Beatburger Bites Back"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LDU_Txk06tM",
+                "duration": 193,
+                "title": "Noisestorm - Crab Rave [Monstercat Release]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1y6smkh6c-0",
+                "duration": 335,
+                "title": "Swedish House Mafia ft. John Martin - Don't You Worry Child (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TxvpctgU_s8",
+                "duration": 188,
+                "title": "Armin van Buuren feat. Sharon den Adel - In And Out Of Love (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YqeW9_5kURI",
+                "duration": 179,
+                "title": "Major Lazer & DJ Snake - Lean On (feat. MØ) [Official 4K Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B4V6vtIQFyY",
+                "duration": 410,
+                "title": "Adam-I-Echo | Live Set Practice for WestKill Brewing | 8/16/2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vZ_NpLWuL00",
+                "duration": 220,
+                "title": "Manali Trance | Yo Yo Honey Singh & Neha Kakkar | The Shaukeens | Lisa Haydon | Akshay Kum"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ebXbLfLACGM",
+                "duration": 234,
+                "title": "Calvin Harris - Summer (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLrLBJ_UJfU",
+                "duration": 371,
+                "title": "Electronic live set"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zaIsVnmwdqg",
+                "duration": 244,
+                "title": "Kygo - Happy Now ft. Sandro Cavazza (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-ZvsGmYKhcU",
+                "duration": 248,
+                "title": "Coldplay - Viva La Vida (Live In São Paulo)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KDxJlW6cxRk",
+                "duration": 208,
+                "title": "Duke Dumont - Ocean Drive"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6_BGKyAKigs",
+                "duration": 179,
+                "title": "Bingo Players ft. Far East Movement - Get Up (Rattle) (Official Music Video) | Ministry of"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JRfuAukYTKg",
+                "duration": 246,
+                "title": "David Guetta - Titanium ft. Sia (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oLgTCnJsXW4",
+                "duration": 194,
+                "title": "Live Drum & Bass DnB improvisation - Acoustic Electronic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Sc-ir2UwGU",
+                "duration": 223,
+                "title": "Kygo - Firestone ft. Conrad Sewell (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=93ASUImTedo",
+                "duration": 257,
+                "title": "Disclosure - Latch ft. Sam Smith"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5RDSkR8_AQ0",
+                "duration": 249,
+                "title": "50 Cent - Ayo Technology (Official Music Video) ft. Justin Timberlake"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lzkKzZmRZk8",
+                "duration": 229,
+                "title": "The Chainsmokers, ILLENIUM - Takeaway (Official Video) ft. Lennon Stella"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5xTX7uTjaxs",
+                "duration": 385,
+                "title": "HAVASI — Prelude | Age of Heroes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qetW6R9Jxs4",
+                "duration": 174,
+                "title": "Eric Prydz – Call On Me (Official Music Video) | Ministry of Sound"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n1a7o44WxNo",
+                "duration": 253,
+                "title": "Zedd - Beautiful Now ft. Jon Bellion (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cHHLHGNpCSA",
+                "duration": 231,
+                "title": "Avicii - Waiting For Love"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tpKCqp9CALQ",
+                "duration": 219,
+                "title": "The Chemical Brothers - Hey Boy Hey Girl (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6c-RbGZBnBI",
+                "duration": 409,
+                "title": "Röyksopp & Robyn \"Monument\" (Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=foE1mO2yM04",
+                "duration": 237,
+                "title": "Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FGBhQbmPwH8",
+                "duration": 322,
+                "title": "Daft Punk - One More Time (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y7fudcFIlZs",
+                "duration": 264,
+                "title": "RÜFÜS DU SOL - On My Knees (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IZ36b3q1elI",
+                "duration": 186,
+                "title": "Bob Sinclar Ft. Steve Edwards - World Hold On (Fisher Rework) (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AEp08vVYreg",
+                "duration": 306,
+                "title": "Coldplay - Fix You (Live In São Paulo)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nd2-q-WL07w",
+                "duration": 217,
+                "title": "Twenty One Pilots - Heathens//Stranger Things (Live from Romania)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e2vBLd5Egnk",
+                "duration": 231,
+                "title": "Martin Garrix & Dua Lipa - Scared To Be Lonely (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-e_3Cg9GZFU",
+                "duration": 371,
+                "title": "Skrillex - Summit (feat. Ellie Goulding) [Video by Pilerats]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a5uQMwRMHcs",
+                "duration": 340,
+                "title": "Daft Punk - Instant Crush (Official Video) ft. Julian Casablancas"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nBtDsQ4fhXY",
+                "duration": 185,
+                "title": "Major Lazer - Cold Water (feat. Justin Bieber & MØ) [Official Dance Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R6w4EI6bVfs",
+                "duration": 274,
+                "title": "RÜFÜS DU SOL ●● Treat You Better (Official Full Length Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Up4WjdabA2c",
+                "duration": 278,
+                "title": "Electric Light Orchestra - Last Train to London (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9vMh9f41pqE",
+                "duration": 199,
+                "title": "Dimitri Vegas, Martin Garrix, Like Mike - Tremor (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dzHdo4yxidc",
+                "duration": 190,
+                "title": "Afrojack & Martin Garrix - Turn Up The Speakers (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KBtk5FUeJbk",
+                "duration": 219,
+                "title": "Sub Urban - Cradles [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=54fea7wuV6s",
+                "duration": 338,
+                "title": "The Blaze - TERRITORY (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J-gYJBsln-w",
+                "duration": 207,
+                "title": "Krewella - Alive (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gKzKG0W1HKs",
+                "duration": 257,
+                "title": "Purple Disco Machine - Body Funk (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2cXDgFwE13g",
+                "duration": 195,
+                "title": "Skrillex - First Of The Year (Equinox) [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Y6Nne8RvaA",
+                "duration": 198,
+                "title": "Kungs vs Cookin’ on 3 Burners - This Girl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UtF6Jej8yb4",
+                "duration": 191,
+                "title": "Avicii - The Nights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yfX7mCHbroc",
+                "duration": 186,
+                "title": "T-Pain - Mashup (To The Beat with Kurt Hugo Schneider)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WjqYTpE6Qdg",
+                "duration": 240,
+                "title": "Adele - Set Fire to the Rain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YQRHrco73g4",
+                "duration": 172,
+                "title": "Alan Walker, K-391, Tungevaag, Mangoo - PLAY (Alan Walker's Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GsF05B8TFWg",
+                "duration": 204,
+                "title": "Axwell /\\ Ingrosso, Axwell, Sebastian Ingrosso - More Than You Know"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tD4HCZe-tew",
+                "duration": 202,
+                "title": "Zara Larsson - Lush Life (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXzis29vA6k",
+                "duration": 261,
+                "title": "Crowded House - Don't Dream It's Over | Glastonbury 2022"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CVvJp3d8xGQ",
+                "duration": 254,
+                "title": "ZHU - Faded (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ixkoVwKQaJg",
+                "duration": 232,
+                "title": "DJ Snake - Taki Taki ft. Selena Gomez, Ozuna, Cardi B (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o7iL2KzDh38",
+                "duration": 184,
+                "title": "Martin Garrix & David Guetta - So Far Away (Official Video) feat. Jamie Scott & Romy Dya"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oIwFJNguQgY",
+                "duration": 164,
+                "title": "Yellow Claw - Shotgun ft. Rochelle (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I41CX0RdmPQ",
+                "duration": 147,
+                "title": "DVBBS & Borgeous - TSUNAMI (Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BX0lKSa_PTk",
+                "duration": 170,
+                "title": "Oliver Tree & Robin Schulz - Miss You [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=peLRPSCeppI",
+                "duration": 234,
+                "title": "Moth To A Flame"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=naW6-WxmMiU",
+                "duration": 156,
+                "title": "Dennis Lloyd - Nevermind (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fqzhtvLWefA",
+                "duration": 305,
+                "title": "Avicii - Heaven (Tribute Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ppy-fgbPn2s",
+                "duration": 191,
+                "title": "Hardwell ft. Mitch Crown - Call Me A Spaceman (OFFICIAL MUSIC VIDEO)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AnMhdn0wJ4I",
+                "duration": 209,
+                "title": "Vicetone - Nevada (ft. Cozi Zuehlsdorff)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6gTmyhRM6k0",
+                "duration": 270,
+                "title": "Charlie Puth Creates an Original Beat on the Spot With a Mug and a Spoon | The Tonight Sho"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cHcVU5cGUNE",
+                "duration": 214,
+                "title": "Italobrothers - Stamp On The Ground (Official Video HD)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=98KPL3VhWrE",
+                "duration": 169,
+                "title": "Electronic Music Live Set from Berlin Park"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UZ1V6jMdMg8",
+                "duration": 251,
+                "title": "Clean Bandit - Symphony (Radio 1's Big Weekend 2017)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_t2TzJOyops",
+                "duration": 215,
+                "title": "Skrillex - Ruffneck - FULL Flex [Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gJ7yk9XLPUQ",
+                "duration": 202,
+                "title": "Electronic Music Live Set from Berlin - Techno"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ddw3JMBeMaA",
+                "duration": 177,
+                "title": "Electronic Music Live Set from Berlin Garage"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KAca7KQ9p-A",
+                "duration": 364,
+                "title": "Ellie Goulding - Love Me Like You Do (Vevo Presents: Live in London)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y2tEPmwWEiI",
+                "duration": 212,
+                "title": "DHARIA - Sugar & Brownies (by Monoir) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dUZiPSiajI4",
+                "duration": 327,
+                "title": "🎧 Armin van Buuren — Live at Seismic Spring 2024 (Full Set) | Austin, Texas | АРМИН поRUSS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FeHWDMbVasI",
+                "duration": 274,
+                "title": "Sakura Tsuruta Push 2 Performance Walkthrough"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ql1KMBqcFy0",
+                "duration": 292,
+                "title": "Ben Böhmer - Cappadocia (feat. Romain Garcia) (live version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LfPZrIXmDhI",
+                "duration": 205,
+                "title": "Zavoloka: Ukrainian Experimental Electronic Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YXF3aPEgt_I",
+                "duration": 401,
+                "title": "Nelasma | \"Unintentional\" | Experimental Downtempo Electronic Music | Modular Synth Jam Li"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WIYv8eKg85E",
+                "duration": 263,
+                "title": "Audio Portmanning - Live set \"Little Things From Electronic Music Production\""
             }
         ],
-        "search_query": "electronic dance music live set"
+        "search_query": "electronic music live set"
     }
 }

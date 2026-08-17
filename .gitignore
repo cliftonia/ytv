@@ -11,3 +11,5 @@ build/
 *.jks
 *.keystore
 keystore-*.txt
+__pycache__/
+*.pyc

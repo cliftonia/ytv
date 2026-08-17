@@ -2,44 +2,89 @@
     "station_conf": {
         "network_name": "Travel & Events",
         "network_type": "streaming",
-        "channel_number": 77,
+        "channel_number": 42,
         "network_long_name": "Travel & Events",
         "stream_rotation": "clock",
         "streams": [
-            {
-                "url": "https://www.youtube.com/watch?v=sY6BGVE-PBE",
-                "duration": 2369,
-                "title": "The Real Bali Most People Miss | 4K Travel Documentary"
-            },
             {
                 "url": "https://www.youtube.com/watch?v=vOkkWuEwUmc",
                 "duration": 2492,
                 "title": "10 Days in Vietnam 2026 - A Travel Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ss55E5Q1-do",
-                "duration": 2577,
-                "title": "TASMANIA: The Island at the Edge of The Earth"
+                "url": "https://www.youtube.com/watch?v=2nLciKQE4pY",
+                "duration": 3610,
+                "title": "British Columbia | Canada's Most Beautiful Province | Travel Documentary 4K"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZaCzkHkgrlc",
-                "duration": 2072,
-                "title": "OMAN: The Safe and Beautiful Country No One Knows About | 4K Travel Do"
+                "url": "https://www.youtube.com/watch?v=8x4VlPXsbic",
+                "duration": 3435,
+                "title": "NORWAY: The World’s Richest Country That Hides Its Wealth | 4K Travel Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PWha0F7NFF4",
-                "duration": 2682,
-                "title": "Malta: Hidden Wonders in the Mediterranean | 4K Travel Documentary"
+                "url": "https://www.youtube.com/watch?v=5oBrp1Ns1gg",
+                "duration": 4261,
+                "title": "TANZANIA TRAVEL DOCUMENTARY | Kilimanjaro & 4x4 Safari Roadtrip 🇹🇿"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xgqDj9A4UTc",
-                "duration": 1882,
-                "title": "MADAGASCAR: The World's Strangest Island"
+                "url": "https://www.youtube.com/watch?v=sY6BGVE-PBE",
+                "duration": 2369,
+                "title": "The Real Bali Most People Miss | 4K Travel Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pssnBA7-f98",
-                "duration": 2446,
-                "title": "Kazakhstan: The World’s Biggest Surprise | 4K Travel Documentary"
+                "url": "https://www.youtube.com/watch?v=9enNVmZ3z8k",
+                "duration": 1742,
+                "title": "The Real Hawaii Most People Miss | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OONmydfz5ls",
+                "duration": 3407,
+                "title": "AMAZON: The Side Most People Will Never See | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2LY-gPJMLfE",
+                "duration": 3604,
+                "title": "LEBANON: The Impossible Country Between Sea and Snow | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IkLoGKjPTCc",
+                "duration": 685,
+                "title": "Jakarta Travel Vlog | Jakarta, Indonesia History and Documentary | جکارتہ کی سیر"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IwKoPlt1tUs",
+                "duration": 3185,
+                "title": "BOSNIA: The Country Europe Pretends Doesn't Exist | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QqcGdA6kWD8",
+                "duration": 4300,
+                "title": "PATAGONIA: The Bottom of the World | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M1lG5VX_oRI",
+                "duration": 2013,
+                "title": "KERALA INDIA Road Trip, Travel, 2026, report, Documentary, vlog"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VyQcXXFuVDU",
+                "duration": 4744,
+                "title": "Wonders of Greece | The Most Amazing Places in Greece | Travel Documentary 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KvkMJ6tNXfc",
+                "duration": 3286,
+                "title": "Wonders of England | The Most Amazing Places in England | Travel Documentary 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WEokfaKrea8",
+                "duration": 3322,
+                "title": "Ecuador: The Most Impossible Country on Earth | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=62no_qL09nY",
+                "duration": 2973,
+                "title": "PERU: The Most Incredible and Surreal Places in Peru | 4K Travel Documentary"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ebZwyWG3JgA",
@@ -47,14 +92,419 @@
                 "title": "Montenegro: Europe’s Biggest Surprise | 4K Travel Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GV8lK1mZNDk",
-                "duration": 1906,
-                "title": "PORTUGAL | The Edge of Europe | The Most Incredible Places in Portugal"
+                "url": "https://www.youtube.com/watch?v=K7v55Npm5nw",
+                "duration": 3613,
+                "title": "Impossible Places: World's Most Dangerous Railway Roads on Earth | 4K Travel Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IralqVXQw8U",
-                "duration": 2547,
-                "title": "By train along the fjord coast of Norway | DW Documentary"
+                "url": "https://www.youtube.com/watch?v=794Xg2RzycI",
+                "duration": 3013,
+                "title": "TAJIKISTAN: Mystery of the Roof of Central Asia | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yKTdZ4N-U9g",
+                "duration": 3229,
+                "title": "10 Days in Thailand 2026 - A Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IkFB4VM3zeg",
+                "duration": 3648,
+                "title": "IMPOSSIBLE WONDERS | 35 Megaprojects That Are Changing the World Forever | Travel Document"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YTzvifuz_Qg",
+                "duration": 2185,
+                "title": "Ladakh in 4K | Complete Travel Guide 2026 | Full Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ga0aBsL90Xk",
+                "duration": 1655,
+                "title": "Exploring RUSSIA in 2026 🇷🇺  From Moscow to Siberia||Travel Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W8-Q32VR2ng",
+                "duration": 3039,
+                "title": "RUSSIA: The Country the Headlines Never Show You | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IW1eX2znqQY",
+                "duration": 2033,
+                "title": "ETHIOPIA: The Cradle of Civilization Nobody Travels To | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mhJs4kB0gBs",
+                "duration": 1881,
+                "title": "The Real Croatia Most People Miss | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hSAGUVe_Xd0",
+                "duration": 1881,
+                "title": "Incredible Israel: Secrets of the Holy Land 2026 | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2ZgX4qs3AsE",
+                "duration": 1326,
+                "title": "Life in YEMEN -The Most Dangerous Arab Country - Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6hJVIxX5KJA",
+                "duration": 3332,
+                "title": "MADAGASCAR: The Last Untouched Wilderness | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_JSlbVqTBlQ",
+                "duration": 3043,
+                "title": "Pakistan: The World’s Most Underrated Country | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p4UW391s8rA",
+                "duration": 2120,
+                "title": "INSIDE Canada | Most Magnificent Places in Canada | Travel Documentary 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-914uAcwy8",
+                "duration": 2827,
+                "title": "Wonders of Australia | The Most Amazing Places in Australia | Travel Documentary 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=is9_YCqgp3Q",
+                "duration": 1470,
+                "title": "Uzbekistan 2026: Living in the World’s Cheapest Country | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=74GhvWcVLtc",
+                "duration": 4709,
+                "title": "PAPUA NEW GUINEA: The Lost World Nobody Has Mapped | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ICfOtWktSUY",
+                "duration": 3040,
+                "title": "KENYA: The Beautiful Danger of East Africa | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bKtxyA70G94",
+                "duration": 3736,
+                "title": "UGANDA TRAVEL DOCUMENTARY | 4x4 Safari Roadtrip 🇺🇬"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nkP4RlWUrX8",
+                "duration": 811,
+                "title": "Travel To Australia 2026 | Amazing Facts & Documentary about Australia Urdu/Hindi | آسٹریل"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=79e7SY0ELbg",
+                "duration": 1805,
+                "title": "ISRAEL & PALESTINE: What the Holy Land Still Hides | 4K travel documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=roRlW2tgGXg",
+                "duration": 483,
+                "title": "Ukraine 2026 | Europe’s Hidden Treasure | Technology , War & Places to Visit in Ukraine 🇺🇦"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ma8BoDLsrZQ",
+                "duration": 3798,
+                "title": "The Real Morocco Most People Never Discover | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XmjRQhPP11E",
+                "duration": 1438,
+                "title": "Czech Republic 2026: Europe’s Atheist Nation, Unexpected Beauty  - Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MiPZGTTJ2HM",
+                "duration": 4529,
+                "title": "Inside Mongolia in 2026 | Full Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wXb6HpAUqLk",
+                "duration": 877,
+                "title": "18 Worst Tourist Scams in Pattaya (2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q2M-G0ebokE",
+                "duration": 3026,
+                "title": "TASMANIA: Australia's Lost World | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TRYPXaMlpAc",
+                "duration": 3267,
+                "title": "UNSEEN AMAZON: Inside the World’s Most Dangerous Rainforest | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fZcYLBzG7FM",
+                "duration": 4461,
+                "title": "The Real Tibet Most People Will Never See | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JkwSPaQHjA4",
+                "duration": 4147,
+                "title": "TIBET: The Most Mysterious Land on Earth | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gzLMAWPvA68",
+                "duration": 2441,
+                "title": "Umbria: Italy's Most Overlooked Region | 4K Slow Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BWqB7KGHTq4",
+                "duration": 3813,
+                "title": "Discover Thailand | The Most Amazing Places in Thailand | Thailand Travel Documentary 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L2IV7I7Z3T4",
+                "duration": 651,
+                "title": "Bangkok: Real Life in 2026 | A Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sREtOd8q2Ag",
+                "duration": 1454,
+                "title": "If I Wanted To Leave The US In 2026, I’d Move Here..."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-huNoyEX238",
+                "duration": 3048,
+                "title": "SIBERIA: The Land That Makes Russia More Mysterious | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yn916a8gS-M",
+                "duration": 3037,
+                "title": "UKRAINE: The Country You Only Know From the Headlines | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Yj86rvKz_Q",
+                "duration": 3766,
+                "title": "IMPOSSIBLE PHILIPINES | The Most Incredible Mountain Worlds Ever Seen | 4K Travel Document"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FMUYoVxPIA4",
+                "duration": 4010,
+                "title": "Front Row (2026) | Full Movie | Documentary | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L-A9Zt6vuVY",
+                "duration": 981,
+                "title": "“Exploring Punjab, India 🇮🇳 2026 | 4k Travel Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YYD2AcpVd-w",
+                "duration": 982,
+                "title": "Israel Travel Vlog 2026 🇮🇱 | Amazing Facts, History & Documentary About israel | اسرائیل ک"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eoMg-87UzWE",
+                "duration": 2341,
+                "title": "Universal Back Lot Studio Tour – August 2026 POV – Universal Studios Hollywood | 4K 60FPS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GaBtsPA7NPk",
+                "duration": 2794,
+                "title": "YUKON: The Most Isolated Land in North America | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bLEwzE3Zdzw",
+                "duration": 3230,
+                "title": "LAOS: The Only Landlocked Country in Southeast Asia | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p5Mpb7aapc4",
+                "duration": 2536,
+                "title": "Oasis Live ‘25 - The Journey (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i0dkmNf2ZCA",
+                "duration": 586,
+                "title": "Travel to Bosnia 2026 | Life in Europe | History and Travel Documentary about Bosnia in Hi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZI51g9ZENaQ",
+                "duration": 1793,
+                "title": "JEREMIAS - LATAM Tour 2026 Documentation (Mexico, Colombia, Paraguay, Argentina)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Pg3ACdsJR8",
+                "duration": 3296,
+                "title": "ALGERIA: The Hidden Secrets of an Ancient Land | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TQvX5BZ91lk",
+                "duration": 584,
+                "title": "Edinburgh, Scotland in 4K (2026) | A Cinematic Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x3O6zmzivtw",
+                "duration": 2557,
+                "title": "The Real Saudi Arabia Most People Will Never See | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fs4IsNIW7HE",
+                "duration": 3269,
+                "title": "GREENLAND: The Most Remote Place on Earth | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kI20gSPbxu0",
+                "duration": 2832,
+                "title": "ALASKA: Life at the Edge of the Wilderness | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7jpqj_pTPOg",
+                "duration": 1956,
+                "title": "Georgia: Ancient, Remote, and Unreal | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Fr8LTqUg5pQ",
+                "duration": 2147,
+                "title": "Albania: The Country Too Beautiful to Be Real | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jrg2JCVWVPg",
+                "duration": 411,
+                "title": "Travel To Makkah🕋 2026 | History, Amazing Facts & Urdu/Hindi Documentary | مکہ کی سیر"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=My4YWy5eVr8",
+                "duration": 541,
+                "title": "Malta 2026 | Amazing Facts About Malta | Complete Travel Documentary!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kpii2U1pn0E",
+                "duration": 802,
+                "title": "Sri Lanka Travel Documentary 𝟐𝟎𝟐𝟔 🇱🇰 | Amazing Facts, History & Documentary | سری لنکا کی"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pZ-xcNLFV7k",
+                "duration": 3061,
+                "title": "OAXACA | Where Mexico’s Ancient Heart Still Beats | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hZVpUroqEVI",
+                "duration": 3492,
+                "title": "CUBA: The Country That Stopped in 1959 | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5hfZogieoNM",
+                "duration": 4525,
+                "title": "Inside Philippines in 2026 | Full Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TgcYBp27Nno",
+                "duration": 672,
+                "title": "Pakistan Travel Documentary 2026 in Urdu | History, Nature & Culture || Travel to Pakistan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=my_bVTNHyDc",
+                "duration": 1814,
+                "title": "Roatán, Honduras Missions Trip Travel Documentary 2026 #travel #roatan #honduras #missions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gY41F9sBoH8",
+                "duration": 430,
+                "title": "FUERTEVENTURA (2026) - A Short Travel Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jQyKu4mGems",
+                "duration": 1863,
+                "title": "D23 Expo 2026 | HUGE DISNEY PARK NEWS - Villains Coaster, Figment Revamp & Fix the YETI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sG0JM9lChPk",
+                "duration": 2474,
+                "title": "Azerbaijan. Cities, Sights and People | Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4pDbUbO_ueg",
+                "duration": 1538,
+                "title": "2026 2PM Concert “THE RETURN” Making Film (1)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d0qLa-4bRCY",
+                "duration": 2731,
+                "title": "The Azores Islands: Europe's Secret Volcanic Eden | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lf_McnLyAyk",
+                "duration": 889,
+                "title": "Germany Travel | Amazing Facts & History | Immigration Reality in Germany 2026 | #Mesam"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ETZqwbvyz8U",
+                "duration": 1644,
+                "title": "Happening Across South Africa Today | 14 August 2026 — Yesteryear Highlights (14 August 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cnet5pukalY",
+                "duration": 609,
+                "title": "Mashhad Travel Vlog 2026 🇮🇷 | Amazing Facts, History & Documentary About Mashhad | مشہد کی"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dKrdv3Y_Hqo",
+                "duration": 2681,
+                "title": "CRETE — Birthplace of Gods, Empires & Resistance | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V-yhgBQfaCE",
+                "duration": 745,
+                "title": "Sri Lanka Travel Documentary 2026 in Urdu | History, Nature & Culture || Travel to Sri Lan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jDw-WZqY6og",
+                "duration": 316,
+                "title": "D23: The Ultimate Disney Fan Event 2026 - Pixar Pavilion Introduction and Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TgJH0SLpxoc",
+                "duration": 1455,
+                "title": "Impossible Places | UNSEEN AMAZON: Mysteries of the Wild Jungle | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FFyaqbAn-cA",
+                "duration": 5386,
+                "title": "MOROCCO TRAVEL DOCUMENTARY | The Grand Moroccan Roadtrip"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xbRn61DdTf8",
+                "duration": 893,
+                "title": "Travel To Lahore 2026 | History & Documentary | Interesting Facts about Lahore | لاہور کی"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BGa1hE_2rwg",
+                "duration": 901,
+                "title": "Cleveland Browns vs. Chicago Bears | 2026 Preseason Week 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jPVb38vWLDQ",
+                "duration": 1384,
+                "title": "Like this from now: Itchy Boots side-car? 🇨🇳 |S8, EP151"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kWVARNQN8Bs",
+                "duration": 896,
+                "title": "Vancouver Island Road Trip and Travel Guide | Documentary and Itinerary | 4K | 2026 Tips"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ERkzZoBlAjI",
+                "duration": 917,
+                "title": "Travel to Karachi | Amazing facts Documentary About Karachi | کراچی کی سیر"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v04Dd3QGBEQ",
+                "duration": 680,
+                "title": "Travel To Dubai Village 2026 | Unseen Culture, History & Lifestyle Documentary In Urdu & H"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l1LU8jyn-yI",
+                "duration": 522,
+                "title": "Brunei 2026 | Amazing Facts About Brunei | Complete Travel Documentary!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vrmmZcTPOjA",
+                "duration": 3364,
+                "title": "Is This Europe’s Most Magical Country? | Travel Documentary 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RjSXOwKMDDY",
+                "duration": 369,
+                "title": "Travel to Kashmir 2026 | Amazing Facts, History, and Documentary about Kashmir | A Tour of"
             }
         ],
         "search_query": "travel documentary tour"

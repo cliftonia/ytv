@@ -2,61 +2,511 @@
     "station_conf": {
         "network_name": "Aussie TV",
         "network_type": "streaming",
-        "channel_number": 18,
+        "channel_number": 13,
         "network_long_name": "Aussie TV",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=iyRtKVCqtqk",
-                "duration": 1318,
-                "title": "Australia's Funniest Home Video Show [Full Episode] (1997)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GoBpSvm75rk",
-                "duration": 2653,
-                "title": "Fast Forward - Series 3 - Episode 13 (1991)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=D-bVPT_sdr0",
                 "duration": 2877,
-                "title": "PREMIERE: Antiques Roadshow In Australia's Norman Lindsay House 🇦🇺 | F"
+                "title": "PREMIERE: Antiques Roadshow In Australia's Norman Lindsay House 🇦🇺 | FULL EPISODE | AR Aus"
             },
             {
-                "url": "https://www.youtube.com/watch?v=kGAAzXQubBs",
-                "duration": 2642,
-                "title": "FULL EPISODE | The Tense Moment A $500,000 Gold Blower Fails! | Aussie"
+                "url": "https://www.youtube.com/watch?v=BH-lRt2Mvw4",
+                "duration": 1617,
+                "title": "People with rare skin conditions answer questions | You Can't Ask That | Full Episode"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GyQujKP8_LM",
-                "duration": 1555,
-                "title": "Mother and Son   Season 2 Episode 7   The Morning After"
+                "url": "https://www.youtube.com/watch?v=OmEpDosVIV4",
+                "duration": 4715,
+                "title": "Border Security Australia 1.5 Hour Marathon | Season 14: Episodes 5 - 9"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VvnkJ52YrXc",
+                "duration": 1158,
+                "title": "Do David and Victoria Beckham owe their son Brooklyn an apology? | 60 Minutes Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cYnIwJlWlRI",
+                "duration": 913,
+                "title": "Inside the Afrikaner Resistance Movement's Race War | 60 Minutes Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l9lDzh3H_Lk",
+                "duration": 5124,
+                "title": "There’s NO holding back 🫣 | Australian Ninja Warrior | S4 EP6 | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wlafGZRHxJM",
+                "duration": 1157,
+                "title": "Aggressive Woman Refuses To Answer Questions | FULL EPISODE | Border Security Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4lAxLKNVAks",
+                "duration": 5097,
+                "title": "4 Full Episodes Of Border Security Australia | Season 7: Episodes 9 - 12"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H_0xi1FRym4",
+                "duration": 729,
+                "title": "Sam Pang takes home the Gold Logie | 7NEWS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8MOD9mexI-4",
+                "duration": 1210,
+                "title": "Last Minute Traveler's Empty Baggage Raises Red Flags | FULL EPISODE | Border Security Aus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rlDqpHXWKog",
+                "duration": 1283,
+                "title": "Mischievous Party Boy's Strange Behavior Raises Red Flags | FULL EPISODE | Border Security"
             },
             {
                 "url": "https://www.youtube.com/watch?v=HrPbo0qxeUA",
                 "duration": 3131,
-                "title": "When emergency care meets humanity ❤️ | S3 Ep3 | Ambulance Australia |"
+                "title": "When emergency care meets humanity ❤️ | S3 Ep3 | Ambulance Australia | Full Episode"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FzIrh1EVhxo",
-                "duration": 2555,
-                "title": "[Full Episode] It's a Knockout (Australia) - 1987"
+                "url": "https://www.youtube.com/watch?v=HLQh-1B9pvM",
+                "duration": 2494,
+                "title": "Bizarre Discovery In Elderly Woman’s Underwear! | FULL EPISODES | Border Security Australi"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xD8NENlILig",
-                "duration": 2390,
-                "title": "Australia's Funniest Home Videos | FULL EPISODE | 24 September 2011"
+                "url": "https://www.youtube.com/watch?v=qgcwaD8oFMs",
+                "duration": 1062,
+                "title": "Maymay and G-Force's dance showcase in Australia | ASAP XP August 9, 2026 | Part 5 of 6"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R9Bb4nI53Fw",
-                "duration": 4448,
-                "title": "Kath & Kim Season 1 Episodes 1-3 | Full Episodes | Classic Australian"
+                "url": "https://www.youtube.com/watch?v=3uwGjeecMG0",
+                "duration": 2964,
+                "title": "[News24 Australia] Paul Murray Live - 2nd August 2026 FULL EPISODE"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rEb3wC-1t1k",
-                "duration": 3919,
-                "title": "The Most Aussie Episodes Ever - Bondi Rescue Full Episode Marathon"
+                "url": "https://www.youtube.com/watch?v=0g2n0B9K8rU",
+                "duration": 4630,
+                "title": "The Most Adrenaline-Packed Episodes - Bondi Rescue Full Episode Marathon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w3VMY48jSZY",
+                "duration": 2429,
+                "title": "Fuming Boxer Fights Customs Over Undeclared Dollars! | DOUBLE EPISODE | Border Security Au"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RMw6XarsNNc",
+                "duration": 270,
+                "title": "Robert Irwin honours late father Steve Irwin by bringing reptiles to the Logie Awards | 7N"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZY3j_ZYVK1E",
+                "duration": 2482,
+                "title": "Jocelyn Peters and the Notebook | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FnJ3uxqgZpE",
+                "duration": 3165,
+                "title": "Taskmaster Australia - Season 3, Episode 10 - 'Wee/wee.'"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YwfZQzJ_uvs",
+                "duration": 1307,
+                "title": "New Mom | Teen Mom Australia | Full Episode | Series 2 Episode 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sl4mkG1KyWg",
+                "duration": 4447,
+                "title": "This INSANE course keeps getting CRAZIER! 🫨 | Australian Ninja Warrior | S1 E4 | Full Epis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RfbERFyA3HI",
+                "duration": 1259,
+                "title": "Erratic Loose Lipped Passenger Is A Walking Red Flag | FULL EPISODE | Border Security Aust"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EQ9covox_4o",
+                "duration": 311,
+                "title": "Queen of rock Suzi Quatro returns to Australia | A Current Affair"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yk0obSV0gNg",
+                "duration": 2673,
+                "title": "Heart STOPPING emergencies 😳🚨| S3 Ep1 | Ambulance Australia | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cjsgCnvLLew",
+                "duration": 698,
+                "title": "Ashlin Herbert speeds through Grand Final Stage 1 course | Australian Ninja Warrior 2021"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=foep4p1B8GQ",
+                "duration": 825,
+                "title": "Little girl overcomes life threatening food allergies | 60 Minutes Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qo0xto_ExQ8",
+                "duration": 4742,
+                "title": "1 Hour of Beach Chaos - Bondi Rescue Full Episode Marathon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5zpjscgN250",
+                "duration": 2535,
+                "title": "Taskmaster Australia: Season 1, Episode 1 - 'Foot juice'. | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jeADRjJwRj0",
+                "duration": 933,
+                "title": "Philly to Fresh Start in Sydney 🦘 Full Episode Recap | House Hunters International | HGTV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sva5uFwA4F8",
+                "duration": 2581,
+                "title": "Stranded On A Frozen Island! | Winter Survival In Nova Scotia | FULL EPISODE | Dual Surviv"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DGgI5KKJUf0",
+                "duration": 2485,
+                "title": "Alarming Swab Test Uncovers Travel's Criminal Past | FULL EPISODES | Border Security Austr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qywfckqgWM4",
+                "duration": 3059,
+                "title": "[News24 Australia] Sharri - 4th August 2026 FULL EPISODE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OrmCJ3ETVQs",
+                "duration": 1251,
+                "title": "Home Full of History vs Moving on to Modern - Full Episode Recap | Love It or List It | HG"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jTn8LUz16EY",
+                "duration": 1348,
+                "title": "Burden of Proof: August 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TBgL18Ziznc",
+                "duration": 698,
+                "title": "Paulo Avelino sings \"Sandalan\" for Australia crowd | ASAP XP August 16, 2026 | Part 4 of 6"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IaF_BsNEXto",
+                "duration": 4481,
+                "title": "TV Patrol Livestream | August 7, 2026 Full Episode Replay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Myalj0M8wms",
+                "duration": 2294,
+                "title": "Australia's real life Wolf Creek horror story | 60 Minutes Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fxylLh8fSQg",
+                "duration": 1044,
+                "title": "My Husband’s Double Life | Evil Lives Here | FULL EPISODE RECAP | ID"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XNmMzAuDgwY",
+                "duration": 2137,
+                "title": "Controlling Husbands | FULL EPISODE | Dr. Phil"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kvonyuBE2iI",
+                "duration": 322,
+                "title": "Episode 10 Recap: A bride storms out, REJECTED on ‘Ultimate Fantasy Night’ | MAFS Australi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bixnqd1LXiY",
+                "duration": 4344,
+                "title": "Can ANYONE conquer Australia's TOUGHEST course? 😳 | Australian Ninja Warrior | S1 EP2 | Fu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ByA3AdmNm0s",
+                "duration": 2385,
+                "title": "Supernanny vs. the Ultimate Bossy Child | FULL EPISODE | Supernanny UK"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1xHa-bSSamo",
+                "duration": 787,
+                "title": "ASAP XP (5/6) | August 9, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qedj22dI4S8",
+                "duration": 2910,
+                "title": "Bluey: The Videogame - Full Episodes Playthrough"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AgeNPx46Zc4",
+                "duration": 2451,
+                "title": "Spoilt Brat Fights Strict Parents | Full Episode | World’s Strictest Parents USA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=81Z3N7-qbZ0",
+                "duration": 662,
+                "title": "Octonauts Above & Beyond: Volcano Sharks 🌋🦈 | Full Episode | CBeebies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bRegw1wyNX4",
+                "duration": 2647,
+                "title": "Air Crash Investigation - Control Catastrophe (S23E05) - [FULL EPISODE]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v0KJ0edruOA",
+                "duration": 2665,
+                "title": "Taskmaster Australia Season 5, Episode 4 - 'Jesus would have nailed this.'"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UtdsOjxismI",
+                "duration": 2709,
+                "title": "Have You Been Paying Attention? With Tom Gleisner | Full Episode | Season 14 Episode 14 |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PFZlQwHvvVQ",
+                "duration": 3664,
+                "title": "Hunting for Bigger Homes - Full Episode Compilation | House Hunters | HGTV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KAWvDsghyc8",
+                "duration": 2545,
+                "title": "Hell's Kitchen Season 19 - Ep. 1 | Welcome to Vegas | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AtgWy8xrHm8",
+                "duration": 1106,
+                "title": "A Deadly Obsession | FULL EPISODE RECAP | Evil Lives Here | ID"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f9KP7ItkSjI",
+                "duration": 1339,
+                "title": "Octonauts Above & Beyond Season 6 ENGLISH FULL EPISODE Australian Wildfires LAST SPECIAL T"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q_s-jQ0q5f4",
+                "duration": 1933,
+                "title": "Octonauts: Above & Beyond | FULL EPISODES | Turtles, Portuguese Man-of-War & Armadillo🪼🐢💦"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B__18K-LJQQ",
+                "duration": 441,
+                "title": "The heartbreak of the Strathfield Massacre 35 years on | A Current Affair"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vayZ_0uYOTU",
+                "duration": 2658,
+                "title": "Cannibal Sharks: Shark vs. Shark (Full Episode) | SPECIAL | Nat Geo Animals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-hnTi8yV-vY",
+                "duration": 2710,
+                "title": "Extreme Prep Edition (Full Episode) | Doomsday Preppers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rX37j89BeZs",
+                "duration": 2156,
+                "title": "The Love Triangle | FULL EPISODE | Dr. Phil"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WWTgcubWBn4",
+                "duration": 3306,
+                "title": "AGT 2026: Judges' Callbacks Ep 01 - ALL PERFORMANCES [4K]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pVGF9XbyJOs",
+                "duration": 1222,
+                "title": "Dodgy Woman Plays Dumb Over Stash Worth $500K | FULL EPISODE | Border Security Australia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OG8ZQdEMpeA",
+                "duration": 323,
+                "title": "Episode 25 Recap: Two brides walk out after the experts call out bad behaviour | MAFS Aust"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4z7YAcnUNkE",
+                "duration": 1197,
+                "title": "NBC Nightly News Full Episode - August 8"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6h8Zlf-xWxU",
+                "duration": 2696,
+                "title": "⭐🔥  NEW Episodes 🔥⭐ Teen Titans Go! Season 9 Adventures 💥💅🦸🐟🌭 | PART 1 | Cartoon Network A"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uDiZzAxCLCc",
+                "duration": 3775,
+                "title": "Shopping At The Food Market 🛍️ | Peppa Pig Official Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=le_BVJ2JH1g",
+                "duration": 738,
+                "title": "Modern Or Character Homes In Brisbane? – House Hunters International Full Episode Recap |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aT357-pDRFk",
+                "duration": 3601,
+                "title": "A War of Whether to Love or List - Full Episode Compilation | Love it or List it | HGTV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Jhj7I5Jv8g",
+                "duration": 4481,
+                "title": "Biggest Dress Drama from S15 | Say Yes to the Dress | TLC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PvPxriH3hE8",
+                "duration": 4307,
+                "title": "Survivor South Africa Premiere! | Survivor  South Africa - Season 7 Episode 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MoMWinq_Iuc",
+                "duration": 1205,
+                "title": "ABC World News Tonight with David Muir Full Broadcast - Aug. 5, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NZCaTFZQ_64",
+                "duration": 753,
+                "title": "Drummer’s Japan Dream – House Hunters International Full Episode Recap | HGTV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_R3p3ylaBLg",
+                "duration": 4478,
+                "title": "TV Patrol Livestream | July 24, 2026 Full Episode Replay"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H0N_7rw89aA",
+                "duration": 2964,
+                "title": "Tracks Of A Killer | FULL EPISODE | The FBI Files"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sf26FHjnM2U",
+                "duration": 4625,
+                "title": "🔴 LIVE! PAW Patrol 11-Min FULL Episodes | Pirate, Alien & Penguin Adventures + More #FULLE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPfTi712OZQ",
+                "duration": 2022,
+                "title": "Raja London Ka Episode 22 | 11th Aug 2026 | Samar Jafri | Zaviyar Ejaz | Ameema Saleem"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vSgJlwbisdo",
+                "duration": 2146,
+                "title": "Naraz Hai Zindagi - Episode 11 [Eng Sub] - 11th Aug 2026 [Alizeh Shah, Subhan Awan, Saniya"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xV91t6dXp38",
+                "duration": 1080,
+                "title": "Peppa Pig Travels to America 🌎 | Full Episodes | Flying to Hollywood | Holiday Mini Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MzHUwWB4fzc",
+                "duration": 1910,
+                "title": "The World Tonight | Full Episode Replay | August 7, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4_q6z0xhV0I",
+                "duration": 3777,
+                "title": "Mr Bull's New Road ⚠️ | Peppa Pig Official Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-W01gJFS6s",
+                "duration": 3737,
+                "title": "The American Breakfast 🍳 | Peppa Pig Official Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mio1m9gBZL0",
+                "duration": 1711,
+                "title": "The cost of ice addiction nobody talks about | You Can't Ask That | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UTifI5lwLaQ",
+                "duration": 833,
+                "title": "'The Five': AOC DISTANCES herself from Francesca Hong"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zr_XGMzNM14",
+                "duration": 479,
+                "title": "Parker Hits $42M But Tony Still Takes The Crown | Gold Rush"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bO5DloC3mpI",
+                "duration": 5048,
+                "title": "Sweet Moments - Jungle Beat | Munki and Trunk | WildBrain Fizz | Full Episodes | Kids Cart"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HpiptTDCiaU",
+                "duration": 1445,
+                "title": "Atuta Bandhana | Full Ep - 706 | 5th Aug 2026 | Odia Serial | Tarang TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tAB2SAK5mVM",
+                "duration": 551,
+                "title": "THE NEW BABY! Episode Season 4 of BLUEY (IDEA)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GCyG3x_TyM8",
+                "duration": 312,
+                "title": "Lanterns | First 5 Minutes | HBO Max"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4arXJYhZqh4",
+                "duration": 4058,
+                "title": "Motu Patlu और Freezing तबाही! | Motu Patlu | मोटू पतलू"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j1i5xlKQJvs",
+                "duration": 2495,
+                "title": "The Rutherfords | Season 1 Episode 7 | The World's Strictest Parents USA | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bnm8RPDTMdw",
+                "duration": 1075,
+                "title": "Peppa Pig Gets a ROBOT BABYSITTER! 🤖 Robot Miss Rabbit Chaos | Tales Full Episodes | 18 Mi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SI6dPM_6bPc",
+                "duration": 1299,
+                "title": "Man Offers Officer $100 Bribe Before Search Even Begins | FULL EPISODE | Border Security A"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WGvH11I6Rnk",
+                "duration": 2665,
+                "title": "Exploring Indo-Pacific Snakes (Full Episode) | World's Deadliest Snakes | Nat Geo Animals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oOcipL6xkAs",
+                "duration": 457,
+                "title": "Caty McNally vs. Alexandra Eala | 2026 Toronto Round 3 | WTA Match Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J230L6uXMPw",
+                "duration": 3122,
+                "title": "WILD TALES - EPISODE 4: POSSUM POWER | Night Survivors of Australia (Wildlife Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pCaz3NX0XdM",
+                "duration": 1283,
+                "title": "Wheel of Fortune Full Episode | The Moment this Teacher’s Life Changed Forever 🤯"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kpkm50PIQx8",
+                "duration": 2101,
+                "title": "Prophecies from Beyond | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bzvKZOpmxLo",
+                "duration": 1276,
+                "title": "Rangula Ratnam | 29th July 2026 | Full Episode No 1469 | ETV Telugu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IheWIIsf-Rs",
+                "duration": 306,
+                "title": "Episode 21 Recap: A husband quits mid Commitment Ceremony, and an 'apology' | MAFS Austral"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XJQpD3j5m0M",
+                "duration": 2650,
+                "title": "Cocaine Shoes (Full Episode) | To Catch a Smuggler"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WusQOOJPgL8",
+                "duration": 568,
+                "title": "Motu Patlu की सबसे बड़ी Holi! | Motu Patlu | मोटू पतलू"
             }
         ],
-        "search_query": "australian tv show full episode"
+        "search_query": "australian television full episode"
     }
 }
