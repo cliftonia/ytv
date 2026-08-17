@@ -29,8 +29,8 @@ permissions:
 
 concurrency:
   # Two refreshes writing confs at once would interleave their commits and one would lose. A
-  # skipped nightly run costs nothing; the next one picks up the same least-recently-refreshed
-  # channels, because the rotation is derived from the files rather than remembered separately.
+  # skipped nightly run costs nothing: the rotation cursor lives in the confs themselves, so the
+  # next run picks up exactly where this one would have.
   group: lineup
   cancel-in-progress: false
 
@@ -41,6 +41,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # No token in .git/config. This job installs the newest yt-dlp on every run - which is
+          # the right call for yt-dlp, since YouTube breaks it without notice - but it means
+          # freshly downloaded third-party code executes in a job that can push to the branch two
+          # televisions fetch directly. The commit step sets its own remote instead.
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -84,30 +90,79 @@ jobs:
         working-directory: curation
         run: python3 -m unittest discover -s tests -v
 
-      - name: Check the lineup before committing it
-        # The televisions have no way to reject a bad lineup - they cache whatever parses. A
-        # malformed or suddenly-tiny channels.json would take the dial down until someone
-        # noticed, so it is checked here, where failing is free.
+      - name: Check the lineup against the one it replaces
+        # The televisions have no way to reject a bad lineup - they cache whatever parses - so
+        # this is the only gate. It compares against the COMMITTED file rather than testing
+        # absolute floors, because the failure that actually happens is a slice of the dial
+        # collapsing while the totals stay healthy: eight channels dropping to one clip each
+        # still leaves 8231 clips across 108 channels, which sailed through the old absolute
+        # guards. A channel reduced to one clip loops one programme forever.
         run: |
+          git show HEAD:channels.json > /tmp/previous.json 2>/dev/null || echo '{}' > /tmp/previous.json
           python3 - <<'PY'
           import json, sys
+
           dial = json.load(open("channels.json"))
           channels = dial["channels"]
           clips = sum(len(c["streams"]) for c in channels)
           print("%d channels, %d clips" % (len(channels), clips))
+
+          problems = []
           if len(channels) < 50:
-              sys.exit("only %d channels - refusing to publish a collapsed dial" % len(channels))
+              problems.append("only %d channels - a collapsed dial" % len(channels))
           if clips < 500:
-              sys.exit("only %d clips - refusing to publish an empty dial" % clips)
+              problems.append("only %d clips - an empty dial" % clips)
+
           numbers = [c["number"] for c in channels]
           if len(numbers) != len(set(numbers)):
-              sys.exit("duplicate channel numbers")
+              problems.append("duplicate channel numbers")
+
+          # A youtube channel this thin repeats itself constantly; below 10 it is one programme
+          # on a loop, which is worse than the channel being absent.
+          for c in channels:
+              if c["kind"] == "youtube" and len(c["streams"]) < 10:
+                  problems.append("%s (ch %d) has only %d clips"
+                                  % (c["name"], c["number"], len(c["streams"])))
+              if c["kind"] == "youtube" and c.get("rotation") != "clock":
+                  problems.append("%s (ch %d) has rotation %r, so it would replay clip 0 forever"
+                                  % (c["name"], c["number"], c.get("rotation")))
+
+          # The youtube block must stay contiguous. A channel that empties is dropped silently by
+          # build_lineup, and the viewer just finds a number missing.
+          yt = sorted(c["number"] for c in channels if c["kind"] == "youtube")
+          if yt and yt != list(range(1, len(yt) + 1)):
+              missing = [n for n in range(1, max(yt) + 1) if n not in yt]
+              problems.append("gaps in the youtube block: %s" % missing)
+
+          previous = json.load(open("/tmp/previous.json")).get("channels", [])
+          if previous:
+              was = {c["number"]: len(c["streams"]) for c in previous}
+              now = {c["number"]: len(c["streams"]) for c in channels}
+              for number, before in was.items():
+                  after = now.get(number, 0)
+                  # Half is the threshold because a refresh legitimately replaces a channel's
+                  # whole list; what it must never do is come back with a fraction of one.
+                  if before >= 20 and after < before // 2:
+                      problems.append("ch %d fell from %d clips to %d" % (number, before, after))
+              for number in was:
+                  if number not in now:
+                      problems.append("ch %d disappeared" % number)
+
+          if problems:
+              print("\nREFUSING TO PUBLISH:")
+              for p in problems:
+                  print("  " + p)
+              sys.exit(1)
           PY
 
       - name: Commit
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           git config user.name "lineup"
           git config user.email "lineup@users.noreply.github.com"
+          git remote set-url origin \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add channels.json curation/confs
           # Nothing to commit is a normal outcome: a refresh can legitimately find the same clips
           # it found last time, and that must not fail the run.

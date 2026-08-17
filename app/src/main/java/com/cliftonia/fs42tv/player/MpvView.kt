@@ -211,11 +211,29 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
     }
 
     override fun observeProperties() {
+        // Registered against a PROCESS-GLOBAL list - `MPVLib` is an object, and its observer list
+        // is static. The base class's `destroy()` does not remove it, so every engine rebuild used
+        // to leave one behind, and each holds this view, its context, and therefore the whole
+        // activity with the parsed nine-thousand-clip dial hanging off it. See `detach`.
         MPVLib.addObserver(observer)
         // Only what the dial acts on. The reference implementation observes nineteen properties
         // because it draws a full player UI; each one is a JNI callback on every change, and this
         // app draws its banner from its own clock arithmetic instead.
         MPVLib.observeProperty("paused-for-cache", MPVLib.MpvFormat.MPV_FORMAT_FLAG)
+    }
+
+    /**
+     * Unregister from mpv's global observer list.
+     *
+     * Must be called before `destroy()`. `BaseMPVView.destroy()` clears properties and tears the
+     * core down but never touches the observer list, which is static on `MPVLib` and therefore
+     * outlives every instance. Without this each engine rebuild leaks an entire activity graph on
+     * a television with 2.34GB of memory, and every future mpv event is dispatched to every dead
+     * observer as well as the live one.
+     */
+    fun detachObserver() {
+        runCatching { MPVLib.removeObserver(observer) }
+            .onFailure { Log.w("fs42", "could not remove the mpv observer: $it") }
     }
 
     /**

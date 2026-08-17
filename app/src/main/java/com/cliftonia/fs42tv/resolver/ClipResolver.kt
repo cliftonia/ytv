@@ -26,6 +26,12 @@ interface ClipResolver {
     /**
      * Resolve [videoId], preferring the first rung of [ladder] that this clip actually offers.
      *
+     * [refused] holds "<id>/<tier>" pairs the CDN has already rejected this session, and skipping
+     * them is the entire point of refusing a tier. Without it the ladder was recomputed, a rung
+     * was marked refused, and then the resolver walked the full ladder again and handed back the
+     * same rejected url - so a single 403 cost three or four identical failures before the clip
+     * was finally condemned.
+     *
      * Returns null on any failure rather than throwing: the caller's correct response to "cannot
      * resolve" is to skip the clip, and an exception here would take the player down instead.
      *
@@ -35,6 +41,7 @@ interface ClipResolver {
         videoId: String,
         nowSeconds: Long,
         ladder: List<String> = DEFAULT_LADDER,
+        refused: Set<String> = emptySet(),
     ): Resolved?
 
     companion object {

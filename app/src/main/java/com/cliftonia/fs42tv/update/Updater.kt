@@ -40,6 +40,18 @@ class Updater(private val context: Context, private val repo: String) {
         if (!UpdateCheck.isNewer(installedVersion, published) || published == null) return false
 
         Log.i("fs42", "update available: ${published.version} (running $installedVersion)")
+        // Already downloaded? Do not fetch 66MB again.
+        //
+        // The check runs on every onResume, and a viewer who dismisses the install prompt is the
+        // normal case - so glancing at the home screen and coming back re-downloaded the whole
+        // apk, over a car hotspot, competing with the video that is playing. The marker records
+        // which version is sitting in the cache.
+        val marker = File(context.cacheDir, "ytv-update.version")
+        if (apkFile.exists() && runCatching { marker.readText().trim().toInt() }.getOrNull()
+            == published.version) {
+            Log.i("fs42", "update ${published.version} is already downloaded")
+            return true
+        }
         return try {
             val target = apkFile
             // Written to a temporary name and moved into place, so a download interrupted by the
@@ -51,6 +63,7 @@ class Updater(private val context: Context, private val repo: String) {
             }
             if (target.exists()) target.delete()
             partial.renameTo(target)
+            marker.writeText(published.version.toString())
             Log.i("fs42", "update downloaded: ${target.length() / 1024 / 1024} MB")
             true
         } catch (e: Exception) {
