@@ -21,12 +21,15 @@ import org.schabi.newpipe.extractor.stream.StreamInfo
 class FormatProbe {
 
     private val ids = listOf(
-        "SHSR0PJj0Xs" to "Runway: Chanel Couture",
-        "7Ux4GeY5MXQ" to "Runway: Chanel FW26 (4K in title)",
-        "eI4zWeqTmIk" to "Runway: Max Mara (4K in title)",
-        "Huam5sSRjwc" to "Literature: The Door in the Wall",
-        "TsD-8FGA84A" to "Literature: Great Books #1",
-        "aqz-KE-bpKQ" to "CONTROL: Big Buck Bunny",
+        "4EWmehaG76A" to "Fashion #77",
+        "S6ObXtGZS_4" to "Fashion #78",
+        "VQJDrvnI_24" to "Fashion #79",
+        "b_qbI2hFgQs" to "Fashion #80",
+        "hSAGUVe_Xd0" to "Travel & Events #26",
+        "W8-Q32VR2ng" to "Travel & Events #27",
+        "ma8BoDLsrZQ" to "Travel & Events #28",
+        "_JSlbVqTBlQ" to "Travel & Events #29",
+
     )
 
     @Test

@@ -334,7 +334,11 @@ class MainActivity : ComponentActivity() {
         // Surfaced immediately, before a channel has even been tuned. A crash on a television
         // with no adb is otherwise invisible, and the card is already the place the app uses to
         // say something has gone wrong.
-        CrashLog.summary(filesDir)?.let { crashNotice.value = "LAST RUN: $it" }
+        // Android's account first, ours second. A native crash or a low-memory kill leaves
+        // nothing in CrashLog - that is precisely the gap this fills - and when both have
+        // something to say, Android's is the one that names what actually happened.
+        val died = ExitReason.lastAbnormal(this) ?: CrashLog.summary(filesDir)
+        died?.let { crashNotice.value = "LAST RUN: $it" }
         // Stop the television deciding nobody is there.
         //
         // A remote that has not been touched for half an hour looks exactly like an idle device
@@ -1008,7 +1012,7 @@ class MainActivity : ComponentActivity() {
             ?: PlayerEngine.default(displayModeCount)
         val channels = navigator?.channels.orEmpty()
         val clips = channels.sumOf { it.streams.size }
-        val crash = CrashLog.summary(filesDir)
+        val crash = ExitReason.lastAbnormal(this) ?: CrashLog.summary(filesDir)
         return listOfNotNull(
             crash?.let {
                 SettingRow(
