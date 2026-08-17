@@ -76,7 +76,7 @@ private val OsdOutlineWidth = 1.5.dp
  * the stroke pass in the first place.
  */
 @Composable
-private fun OsdText(
+internal fun OsdText(
     text: String,
     fontSize: TextUnit,
     modifier: Modifier = Modifier,
@@ -207,10 +207,10 @@ fun ChannelOsd(
  * against moving footage underneath would be a wall of flicker, so the picker gets its own
  * background rather than relying on [OsdText]'s outline alone.
  */
-private val PickerBackground = Color(0xE6000000)
+internal val PickerBackground = Color(0xE6000000)
 
 /** A dark tint of [OsdGreen] rather than a neutral grey, so the focus highlight reads as part of the same product as the outline text sitting on it. */
-private val PickerRowFocusedBackground = Color(0xFF1A3B1A)
+internal val PickerRowFocusedBackground = Color(0xFF1A3B1A)
 
 
 /**
