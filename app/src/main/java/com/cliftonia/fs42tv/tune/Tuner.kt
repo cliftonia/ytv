@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.tune
 
 import com.cliftonia.fs42tv.resolver.Hls
+import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.Unplayable
@@ -70,5 +71,29 @@ object Tuner {
         }
 
         return Tuned(channel, index, stream, playable, offset)
+    }
+
+    /**
+     * Tune to a specific clip, from its beginning, ignoring the clock.
+     *
+     * For the one case where the schedule is wrong rather than the app: a clip whose published
+     * duration is longer than what actually plays ends while the rotation still believes it is on
+     * air, so re-tuning would land straight back on it. There is nothing meaningful to seek to in
+     * a programme that was never scheduled to be on now, so it starts at zero.
+     */
+    fun tuneToIndex(
+        channel: Channel,
+        index: Int,
+        refused: Set<String> = emptySet(),
+        ladder: List<String> = listOf("hd", "sd"),
+    ): Tuned? {
+        val stream = channel.streams.getOrNull(index) ?: return null
+        val playable: Playable = when {
+            channel.kind == "live" -> Hls(stream.url)
+            stream.id == null ->
+                Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
+            else -> NeedsResolving(stream.id)
+        }
+        return Tuned(channel, index, stream, playable, 0.0)
     }
 }

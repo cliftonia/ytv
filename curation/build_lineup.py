@@ -57,11 +57,13 @@ def channel_from(path):
         url = stream.get("url")
         if not url:
             continue
-        entry = {
-            "url": url,
-            "duration": int(stream.get("duration") or 0),
-            "title": stream.get("title") or "",
-        }
+        duration = int(stream.get("duration") or 0)
+        if duration <= 0:
+            # The rotation skips these, so they occupy a slot in the list and can never be on
+            # air - a phantom that makes the channel's cycle shorter than it looks and can never
+            # be diagnosed from the screen.
+            continue
+        entry = {"url": url, "duration": duration, "title": stream.get("title") or ""}
         if is_youtube:
             identifier = video_id(url)
             if not identifier:

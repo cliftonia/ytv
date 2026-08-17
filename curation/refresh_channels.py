@@ -91,6 +91,10 @@ def ytdlp(target, timeout=300):
     except Exception as exc:
         print("    [warn] %s: %s" % (target[:60], exc), flush=True)
         return []
+    if out.returncode != 0 and not out.stdout.strip():
+        # Distinguishes "this search legitimately found nothing" from "yt-dlp could not run".
+        print("    [warn] yt-dlp exited %d: %s"
+              % (out.returncode, (out.stderr or "").strip()[:120]), flush=True)
     rows = []
     for line in out.stdout.splitlines():
         parts = line.split("\t")
@@ -242,6 +246,15 @@ def main():
     print("\nrefreshed %d channels" % len(results), flush=True)
     if thin:
         print("thin: %s" % ", ".join(thin), flush=True)
+
+    # A night where every request was refused looked exactly like a night where nothing had
+    # changed: all confs untouched, no diff, "no changes", green tick. The dial could stop
+    # updating for weeks with no signal anywhere. Half the slice coming back thin is not a
+    # content problem, it is yt-dlp being throttled, and it should be visible.
+    if results and len(thin) > len(results) // 2:
+        print("\nFAILED: %d of %d channels came back thin - almost certainly throttled"
+              % (len(thin), len(results)), file=sys.stderr)
+        return 1
     return 0
 
 

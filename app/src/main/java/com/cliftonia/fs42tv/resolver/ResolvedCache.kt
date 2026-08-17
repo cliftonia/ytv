@@ -35,6 +35,26 @@ class ResolvedCache {
 
     fun put(videoId: String, playable: Progressive, expiresAtSeconds: Long) {
         entries[videoId] = Entry(playable, expiresAtSeconds)
+        if (entries.size > SWEEP_ABOVE) sweep(nowSeconds = expiresAtSeconds - MAX_LIFETIME_SECONDS)
+    }
+
+    /**
+     * Drop everything already expired.
+     *
+     * Entries were only ever removed when [get] happened to land on a stale one, so a clip
+     * resolved once and never revisited was kept for the life of the process - dead url and all.
+     * On a dial of nine thousand clips, an evening of surfing accumulates a few megabytes of
+     * urls that can never be used again, on a television with 2.34GB in total.
+     *
+     * Triggered from [put] rather than on a timer: entries only ever arrive through it, so that
+     * is the one moment the cache can have grown, and it costs nothing to check.
+     */
+    private fun sweep(nowSeconds: Long) {
+        val before = entries.size
+        entries.entries.removeAll { nowSeconds + SAFETY_MARGIN_SECONDS >= it.value.expiresAtSeconds }
+        if (entries.size < before) {
+            android.util.Log.d("fs42", "resolve cache swept ${before - entries.size} expired")
+        }
     }
 
     /** Forget an entry whose URL the CDN refused, so the next resolve fetches a fresh one. */
@@ -54,5 +74,25 @@ class ResolvedCache {
      */
     fun clear() {
         entries.clear()
+    }
+
+    private companion object {
+        /**
+         * Only sweep once the cache is big enough to be worth it.
+         *
+         * A dial of a hundred channels is unlikely to hold more live resolutions than this at
+         * once, so in ordinary use the sweep never runs at all; it exists for the long session
+         * that would otherwise accumulate quietly.
+         */
+        const val SWEEP_ABOVE = 200
+
+        /**
+         * The longest a signed googlevideo url has ever been observed to last - six hours.
+         *
+         * Used to derive "now" from an entry's own expiry rather than reading the clock, which
+         * keeps this class free of any notion of the current time and therefore testable with
+         * nothing but the values passed in.
+         */
+        const val MAX_LIFETIME_SECONDS = 21_600L
     }
 }
