@@ -69,9 +69,20 @@ jobs:
             python3 refresh_channels.py --rotate "$ROTATE"
           fi
 
+      - name: Put each series in episode order
+        working-directory: curation
+        run: python3 sequence.py
+
       - name: Rebuild channels.json
         working-directory: curation
         run: python3 build_lineup.py
+
+      - name: Test
+        # After the rebuild, because the suite checks the real channels.json as well as the code -
+        # a duplicate channel number or a live stream carrying a video id is only visible once the
+        # file exists.
+        working-directory: curation
+        run: python3 -m unittest discover -s tests -v
 
       - name: Check the lineup before committing it
         # The televisions have no way to reject a bad lineup - they cache whatever parses. A
