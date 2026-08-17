@@ -154,6 +154,9 @@ class MainActivity : ComponentActivity() {
     // picker is that surfing is frozen while it's up, so nothing should move these under it.
     // Backs the stand-by card. A black screen is indistinguishable from a dead app or a
     // dead TV; the card says the app knows and is retrying.
+    /** What the update row says right now, so a slow download does not look like a dead button. */
+    private val updateStatus = mutableStateOf("")
+
     private val settingsVisible = mutableStateOf(false)
     private val settingsRows = mutableStateOf<List<SettingRow>>(emptyList())
 
@@ -927,6 +930,7 @@ class MainActivity : ComponentActivity() {
      */
     private fun openSettings() {
         generation.incrementAndGet()
+        updateStatus.value = ""
         settingsRows.value = buildSettingsRows()
         settingsVisible.value = true
         composeView.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
@@ -971,8 +975,14 @@ class MainActivity : ComponentActivity() {
             ),
             SettingRow(
                 label = "CHECK FOR UPDATE",
-                value = if (updateReady.value) "READY - PRESS OK ON THE DIAL" else "CHECK NOW",
-                action = { checkForUpdate() },
+                value = updateStatus.value.ifEmpty { "CHECK NOW" },
+                action = {
+                    checkForUpdate(installWhenReady = true) { status ->
+                        updateStatus.value = status
+                        settingsRows.value = buildSettingsRows()
+                    }
+                    settingsRows.value = buildSettingsRows()
+                },
             ),
             SettingRow("VERSION", BuildConfig.VERSION_CODE.toString()),
             SettingRow("DISPLAY MODES", displayModeCount.toString()),
@@ -1000,16 +1010,52 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun checkForUpdate() {
-        if (updateReady.value) return
+    /**
+     * Look for a newer build, and optionally go straight on to installing it.
+     *
+     * [installWhenReady] is what separates the two callers. On launch the check is a background
+     * courtesy - it finds a build, says so on the dial, and waits for OK, because interrupting
+     * someone who just turned the television on with an installer is rude. Asked for explicitly
+     * from settings it should simply do the thing: a button called CHECK FOR UPDATE that finds an
+     * update and then requires you to leave the screen and press a different button is a button
+     * that has not finished its job.
+     *
+     * [onStatus] reports progress in words for the settings row, so a thirty-second download on a
+     * slow connection looks like progress rather than a dead button.
+     */
+    private fun checkForUpdate(
+        installWhenReady: Boolean = false,
+        onStatus: (String) -> Unit = {},
+    ) {
         if (!updateCheckRunning.compareAndSet(false, true)) return
+        onStatus("CHECKING...")
         Thread {
+            var status = "UP TO DATE"
             try {
-                if (Updater(this, RELEASES_REPO).downloadIfNewer(BuildConfig.VERSION_CODE)) {
+                val updater = Updater(this, RELEASES_REPO)
+                if (updater.downloadIfNewer(BuildConfig.VERSION_CODE)) {
                     runOnUiThread { if (!destroyed) updateReady.value = true }
+                    if (installWhenReady) {
+                        status = "INSTALLING..."
+                        runOnUiThread {
+                            if (destroyed) return@runOnUiThread
+                            // Cleared before handing over, exactly as the dial's OK path does:
+                            // whether the viewer accepts Android's dialog or dismisses it, the
+                            // prompt has done its job and must not sit there afterwards.
+                            updateReady.value = false
+                            updater.install()
+                        }
+                    } else {
+                        status = "READY - PRESS OK"
+                    }
                 }
+            } catch (e: Exception) {
+                // The publisher being unreachable is the normal state of a television in a car.
+                Log.w("fs42", "update check failed: $e")
+                status = "COULD NOT CHECK"
             } finally {
                 updateCheckRunning.set(false)
+                runOnUiThread { if (!destroyed) onStatus(status) }
             }
         }.apply { isDaemon = true }.start()
     }

@@ -60,7 +60,12 @@ jobs:
           YTV_VERSION: ${{ steps.version.outputs.code }}
           YTV_KEYSTORE: ${{ steps.keystore.outputs.present == 'true' && format('{0}/ytv-release.jks', runner.temp) || '' }}
           YTV_KEYSTORE_PASSWORD: ${{ secrets.YTV_KEYSTORE_PASSWORD }}
-          YTV_KEY_ALIAS: ytv
+          # From a secret, because which alias is correct depends on which keystore was
+          # uploaded: a purpose-made release keystore uses `ytv`, while the Android debug
+          # keystore - which is what the televisions are currently signed with - uses
+          # `androiddebugkey`. Signing with the wrong alias fails the build rather than
+          # producing something subtly uninstallable, which is the right way round.
+          YTV_KEY_ALIAS: ${{ secrets.YTV_KEY_ALIAS || 'ytv' }}
         run: ./gradlew :app:assembleRelease
 
       - name: Name the apk after nothing in particular
