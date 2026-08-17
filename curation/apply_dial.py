@@ -86,22 +86,41 @@ def main():
                 changes.append("name %r->%r" % (station.get("network_name"), name))
             if station.get("search_query") != query:
                 changes.append("query")
+            playlists = DIAL.PLAYLISTS.get(slug)
+            extra = DIAL.EXTRA_QUERIES.get(slug)
+            if station.get("playlists") != playlists:
+                changes.append("playlists")
+            if station.get("extra_queries") != extra:
+                changes.append("extra queries")
             if not changes:
                 continue
             station["channel_number"] = number
             station["network_name"] = name
             station["network_long_name"] = name
             station["search_query"] = query
+            if playlists:
+                station["playlists"] = playlists
+            else:
+                station.pop("playlists", None)
+            if extra:
+                station["extra_queries"] = extra
+            else:
+                station.pop("extra_queries", None)
             station.setdefault("network_type", "streaming")
             station.setdefault("stream_rotation", "clock")
             station.setdefault("streams", [])
             do("update  %-18s %s" % (slug, ", ".join(changes)), lambda p=p, c=conf: save(p, c))
         else:
-            conf = {"station_conf": {
+            station = {
                 "network_name": name, "network_long_name": name, "network_type": "streaming",
                 "channel_number": number, "stream_rotation": "clock",
                 "search_query": query, "streams": [],
-            }}
+            }
+            if DIAL.PLAYLISTS.get(slug):
+                station["playlists"] = DIAL.PLAYLISTS[slug]
+            if DIAL.EXTRA_QUERIES.get(slug):
+                station["extra_queries"] = DIAL.EXTRA_QUERIES[slug]
+            conf = {"station_conf": station}
             do("create  %-18s ch %d (empty until the next refresh)" % (slug, number),
                lambda p=p, c=conf: save(p, c))
 

@@ -2,19 +2,19 @@
     "station_conf": {
         "network_name": "Christian Music",
         "network_type": "streaming",
-        "channel_number": 77,
+        "channel_number": 89,
         "network_long_name": "Christian Music",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=wjJ-izYndWs",
-                "duration": 302,
-                "title": "Your Name Is God | Elevation Worship & Leeland Mooring"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=9__ceHaHKEE",
                 "duration": 290,
                 "title": "Phil Wickham, Brandon Lake, Elevation Worship - So So Good (Live) [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wjJ-izYndWs",
+                "duration": 302,
+                "title": "Your Name Is God | Elevation Worship & Leeland Mooring"
             },
             {
                 "url": "https://www.youtube.com/watch?v=F3E-svbfrYo",
@@ -57,14 +57,14 @@
                 "title": "Goodness Of God (LIVE) - Jenn Johnson | VICTORY"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1dY-X8GGPqo",
-                "duration": 303,
-                "title": "Yes He Lives - Live | Hillsong Worship"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=gjYrjH3Yr7k",
                 "duration": 349,
                 "title": "Only Jesus – ElenAmor | Spirit-Led Worship 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1dY-X8GGPqo",
+                "duration": 303,
+                "title": "Yes He Lives - Live | Hillsong Worship"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rW9MbYQrTUI",
@@ -117,14 +117,14 @@
                 "title": "Still | Hillsong Worship Lyrics"
             },
             {
-                "url": "https://www.youtube.com/watch?v=66H4mLGgZ54",
-                "duration": 273,
-                "title": "Victory Worship - Tribes (Official Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=4GthZbt1lPo",
                 "duration": 314,
                 "title": "Through It All - Hillsong Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=66H4mLGgZ54",
+                "duration": 273,
+                "title": "Victory Worship - Tribes (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Viiw6tGimHo",
@@ -152,34 +152,14 @@
                 "title": "In The Waiting | feat. Zac Rowe | Gateway Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=E5ZZNvnMICE",
-                "duration": 322,
-                "title": "Waiting | Healing Place Worship"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TwNTHThR-Fw",
-                "duration": 279,
-                "title": "Don Moen - I Offer My Life | Praise & Worship Music"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6EQM3I1s2yw",
-                "duration": 373,
-                "title": "Worthy of It All | feat. Michael Bethany | Gateway Worship"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lie1L61Qnos",
-                "duration": 315,
-                "title": "You Are My All In All | Live | Brentwood Baptist Worship"
+                "url": "https://www.youtube.com/watch?v=3fuJe84UXE8",
+                "duration": 360,
+                "title": "Living Hope (feat. Phil Wickham) | Live at Men's Summit | Gateway Worship"
             },
             {
                 "url": "https://www.youtube.com/watch?v=FtUNQpu2b7Q",
                 "duration": 405,
                 "title": "This I Believe (The Creed) - Hillsong Worship"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3fuJe84UXE8",
-                "duration": 360,
-                "title": "Living Hope (feat. Phil Wickham) | Live at Men's Summit | Gateway Worship"
             },
             {
                 "url": "https://www.youtube.com/watch?v=0-OsZLjz7oU",
@@ -192,9 +172,24 @@
                 "title": "JESUS HAVE IT ALL – LIVE IN THE PRAYER ROOM | JEREMY RIDDLE"
             },
             {
+                "url": "https://www.youtube.com/watch?v=SlEEgMWwxhc",
+                "duration": 389,
+                "title": "Chris Tomlin - Holy Forever (Live) feat. Jenn & Brian Johnson"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JNJqnRI9d50",
+                "duration": 381,
+                "title": "Imong Gunit (Official Music Video) - All For Jesus Worship"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=sax4aTgZ9dw",
                 "duration": 354,
                 "title": "Don Moen - Thank You Lord | Live Worship Sessions"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ArLrkBgrhmw",
+                "duration": 367,
+                "title": "Heart of Worship + Nothing Else (Live at Men’s Summit) | feat. Michael Bethany | Gateway W"
             },
             {
                 "url": "https://www.youtube.com/watch?v=E8sAzBTAVCU",
@@ -292,19 +287,24 @@
                 "title": "Bangaram Adugaledu || Worship Conference-22 || Telugu Christian Song | Raj Prakash Paul |"
             },
             {
-                "url": "https://www.youtube.com/watch?v=fp26y4YeSWA",
-                "duration": 341,
-                "title": "Sundaruda | సుందరుడ | Telugu Worship Songs | Featuring Ekklesia"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=BWsa2mkzhiQ",
                 "duration": 281,
                 "title": "Awake My Soul (Live) - Hillsong Worship"
             },
             {
+                "url": "https://www.youtube.com/watch?v=fp26y4YeSWA",
+                "duration": 341,
+                "title": "Sundaruda | సుందరుడ | Telugu Worship Songs | Featuring Ekklesia"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=AaaMQqDb0To",
                 "duration": 329,
                 "title": "Mahonnathuda || Worship Conference-22 || Telugu Christian Song || Raj Prakash Paul || Jess"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yQKPrcr_reM",
+                "duration": 311,
+                "title": "Free Worship - Ulemelero Wanu feat. Praise Umali"
             },
             {
                 "url": "https://www.youtube.com/watch?v=0B_lnQIITxU",
@@ -315,11 +315,6 @@
                 "url": "https://www.youtube.com/watch?v=ucY6NwQTI3M",
                 "duration": 343,
                 "title": "Tasha Cobbs Leonard - Break Every Chain (Live At Passion City Church)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yQKPrcr_reM",
-                "duration": 311,
-                "title": "Free Worship - Ulemelero Wanu feat. Praise Umali"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rnfOwCyPtZ0",
@@ -362,21 +357,6 @@
                 "title": "Matt Redman - The Heart Of Worship (Lyrics And Chords)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dmf2qg4hhB8",
-                "duration": 289,
-                "title": "Spirit Of Praise 7 feat. Ayanda Ntanzi - Nasempini - Gospel Praise & Worship Song"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HtR3yxVuKC8",
-                "duration": 403,
-                "title": "Transformation Worship - Overflow (Live)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z8agqyGIaD8",
-                "duration": 229,
-                "title": "Echo (feat. Tauren Wells) | Live | Elevation Worship"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=e3Cql61a4P0",
                 "duration": 305,
                 "title": "Praise (Elevation Worship) in Hebrew - Shevakh | Passover 2024"
@@ -392,14 +372,14 @@
                 "title": "Come Thou Fount (Official Music Video) | Celtic Worship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R1EwKwayzLM",
-                "duration": 186,
-                "title": "Lauren Daigle - Hold On To Me (Official Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=getozwPDpNc",
                 "duration": 331,
                 "title": "Sang Tere | Hindi Christian Song | Nehemiah K ft. Bridge Music, Amit Kamble & Rachel F @Re"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R1EwKwayzLM",
+                "duration": 186,
+                "title": "Lauren Daigle - Hold On To Me (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=DboMwgmXbQA",
@@ -457,14 +437,14 @@
                 "title": "What A Beautiful Name | Hillsong Worship (Lyrics)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2vP9kSMGTm4",
-                "duration": 324,
-                "title": "DOE - You Will Have It All (Live Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=1WZoYSuhwv0",
                 "duration": 304,
                 "title": "Because He Lives - 90’s Rock Ballad (AI Worship)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2vP9kSMGTm4",
+                "duration": 324,
+                "title": "DOE - You Will Have It All (Live Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=s5PpepxWcKI",
@@ -475,11 +455,6 @@
                 "url": "https://www.youtube.com/watch?v=jgcXR4U4kEc",
                 "duration": 293,
                 "title": "CHIDINMA - Jehovah Overdo (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wHnPVBp-8tQ",
-                "duration": 262,
-                "title": "You Raise Me Up - Sanboih (LIVE)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZB5sEqs37gU",
@@ -505,8 +480,40 @@
                 "url": "https://www.youtube.com/watch?v=LgMCm5NWtII",
                 "duration": 299,
                 "title": "Jennifer Hudson performs Hallelujah | Global Citizen Prize 2019"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wHnPVBp-8tQ",
+                "duration": 262,
+                "title": "You Raise Me Up - Sanboih (LIVE)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L4fc1F414wY",
+                "duration": 342,
+                "title": "He Will Carry You - THE ASIDORS 2023 COVERS | Christian Worship Songs"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zo_1tSEe8jI",
+                "duration": 283,
+                "title": "Battle Belongs (feat. Phil Wickham) | Live at Men's Summit | Gateway Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cheR3BUiJ50",
+                "duration": 276,
+                "title": "Zaihla Sa In - Hebrew Group Ministry || Most Myanmar Christian Viewed Song (Chin Song)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h3UxoIlptWI",
+                "duration": 372,
+                "title": "Holy Forever (Live) - Bethel Music, Jenn Johnson, and Natalie Grant"
             }
         ],
-        "search_query": "worship music live"
+        "search_query": "worship music live",
+        "extra_queries": [
+            "Hillsong Worship live",
+            "Elevation Worship full set",
+            "Bethel Music live worship",
+            "Chris Tomlin live",
+            "gospel choir live performance"
+        ]
     }
 }

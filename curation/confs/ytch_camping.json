@@ -2,19 +2,19 @@
     "station_conf": {
         "network_name": "Camping & Bushcraft",
         "network_type": "streaming",
-        "channel_number": 47,
+        "channel_number": 53,
         "network_long_name": "Camping & Bushcraft",
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=9Ynz4R1G2eE",
+                "duration": 5104,
+                "title": "6 Days ALONE in the ALASKAN Wilderness | No FOOD, No Water!"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=iK0pHbqy-0s",
                 "duration": 1318,
                 "title": "3 Days Camping & Hunting Big Game - Bushcraft Survival Shelter, Cooking, Exploring the Wil"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XKOMGCeBywE",
-                "duration": 1354,
-                "title": "Solo Camping by a Wild River | Catch & Cook"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ciln6CC2j3E",
@@ -22,39 +22,9 @@
                 "title": "Two Days Alone on a Remote Island 🌊 Fishing, Catch & Cook and Bushcraft"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Zaf4s6CIFyo",
-                "duration": 2357,
-                "title": "2 Days Boating And Bushcraft- Wales Hammock Camping With A Rapper!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QmsFQkXTwF0",
-                "duration": 1959,
-                "title": "TRAPPED UNDER A TREE IN A BRUTAL BLIZZARD | SOLO WINTER SURVIVAL"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CvL_xqlpbxw",
-                "duration": 3221,
-                "title": "Solo Bushcraft Camping in the Rain"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-PJZaIVQtME",
-                "duration": 4306,
-                "title": "Alone in a -21°C Deadly Winter Blizzard | No Tent, No Sleeping Bag, Only a Long Fire"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HZ045AMsv6c",
-                "duration": 3945,
-                "title": "Heavy Rain Bushcraft Survival | SOLO Camping, Shelter Building & Fire"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9Ynz4R1G2eE",
-                "duration": 5104,
-                "title": "6 Days ALONE in the ALASKAN Wilderness | No FOOD, No Water!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W-y2hrQGTJ4",
-                "duration": 905,
-                "title": "Winter Hot Tent Camping; Survival in the Wild. Bushcraft Skills. Fish Cooking"
+                "url": "https://www.youtube.com/watch?v=IQPNnVqQmJ4",
+                "duration": 1337,
+                "title": "Solo Bivvy Camp in Heavy Rain"
             },
             {
                 "url": "https://www.youtube.com/watch?v=3Qf4ABaXmFM",
@@ -62,29 +32,14 @@
                 "title": "My 1st Bushcraft Camping Trip in Alaska"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TlAUOZ1wajs",
-                "duration": 892,
-                "title": "60 days solo camping. Build shelter in the jungle.Survival bushcraft"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=XJ8cjTOasxA",
                 "duration": 1166,
                 "title": "Bushcraft Camping with Coyotes & Hunting My Dinner"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6mzk4Hrc7oc",
-                "duration": 2979,
-                "title": "My New Forest Camp | Fishing, Bushcraft & Campfire Cooking"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UmLVL5_k9qY",
                 "duration": 893,
                 "title": "Camping in a Bushcraft Shelter with Newbies! Fishing, camping and campfire cooking in Alas"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=c1ik9CGLeCI",
-                "duration": 1799,
-                "title": "Winter Camping in Extreme Cold and Heavy Snow | Solo Survival Challenge"
             },
             {
                 "url": "https://www.youtube.com/watch?v=yHGsV1dUjNI",
@@ -97,89 +52,9 @@
                 "title": "Plane Crash Survival Camping & Bushcraft Shelter - Surviving like DB Cooper"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gd28LggagwY",
-                "duration": 1431,
-                "title": "Arctic Blizzard Camping in Survival Shelter - Building, Hunting, & Setting Snares for Brea"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1KNATbaeKe4",
-                "duration": 1411,
-                "title": "Vintage Bushcraft Wild Camping UK in strong winds | Solo Overnight - I HAD TO LEAVE"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0lhe5fOZm7E",
-                "duration": 1565,
-                "title": "Bushcraft Camping in Snow | Building a Survival Shelter Alone"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7bj5vpr8elA",
-                "duration": 4378,
-                "title": "5 Days SOLO Survival Challenge on a Remote Island with NO FOOD!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KFALdxRBBtI",
-                "duration": 4499,
-                "title": "Perfect Bushcraft Survival House 🪵 Built with Round Logs and Natural Stone Deep in the For"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iys_pmJSp9M",
-                "duration": 1546,
-                "title": "3 Days in Arctic Survival Shelter - Solo Bushcraft Camping & Blacksmithing."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WJaQMfrWyCc",
-                "duration": 635,
-                "title": "20+ Camping, Survival, and Bushcraft HACKS learned from YEARS in the Wilderness!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F-yg3Zi48iQ",
-                "duration": 825,
-                "title": "Beginner Wild Camping Kit Guide 2026 - Scotland/UK"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wMHLxYDEUEA",
-                "duration": 1957,
-                "title": "Solo Bushcraft: 3 Days Camping Inside a Massive Cave Shelter"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fzkbxlZ4K9c",
-                "duration": 2193,
-                "title": "Snugpak Ionosphere Mesh Bivi Wild Camp in an Ancient Forest. LOTS of OWLS"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=60TZIwEpjzo",
-                "duration": 1396,
-                "title": "Marriage Survival Camping! -22 Degrees with Wife & 3 Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8F9KT12EIlo",
-                "duration": 1323,
-                "title": "Extreme Bushcraft Camping | Building a Survival Shelter in the Wilderness"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rOwsdU4CNy4",
-                "duration": 1217,
-                "title": "Survival Shelter Winter Camping in Blizzard - Deep Snow Camping in Alaska"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Sk710MJzzFw",
-                "duration": 1995,
-                "title": "Solo Survival & Camping Fhising 24 Hours | Catch and Cook"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bgCoJaewagI",
-                "duration": 2154,
-                "title": "Building a survival bamboo shelter spanning the stream | Solo Bushcraft"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7YtPB1UrwWc",
-                "duration": 2716,
-                "title": "5 Days Solo Survival in Bear Cove | No Food, Water, Shelter or Fire"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mpYK6PK8lYs",
-                "duration": 2841,
-                "title": "6 DAYS WINTER BUSHCRAFT - ARTISTS CHARCOAL - MULTI SAPLING BOWSAW - SINGLE CANVAS PONCHO S"
+                "url": "https://www.youtube.com/watch?v=CvL_xqlpbxw",
+                "duration": 3221,
+                "title": "Solo Bushcraft Camping in the Rain"
             },
             {
                 "url": "https://www.youtube.com/watch?v=nrGDtP-6uKo",
@@ -187,49 +62,9 @@
                 "title": "10 Survival and Bushcraft HACKS you probably didn't know!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Zz7os_kWwnM",
-                "duration": 1121,
-                "title": "Winter Camping in Raised Bushcraft Shelter - Level 100 Campfire Cooking"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oNxUsPCUWvU",
-                "duration": 1216,
-                "title": "Winter Camping in Snow Storm with Survival Shelter & Bushcraft Cot."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YbKSPjDgfX0",
-                "duration": 1330,
-                "title": "No Food Survival Camping - Foraging  Wild Edibles & Building Shelter (Axe Only Bushcraft C"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=00idjNP5Od0",
-                "duration": 1043,
-                "title": "I Attempted to Build a Survival Shelter with Zero Experience"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OtVX-WV0Dgg",
-                "duration": 1723,
-                "title": "10 Years Of Wild Camping Advice in 29 Minutes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G83NKJCd4VY",
-                "duration": 1320,
-                "title": "Survival Camping in 12 ft (4 m) of Snow During a Blizzard"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1TojezQWmac",
-                "duration": 1083,
-                "title": "No Tent Winter Camping During Snow Storm - Exploring Natural Stone Maze"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2HRfirXHdsQ",
-                "duration": 849,
-                "title": "TRAPPED IN HEAVY RAIN! Very Long Heavy Rain Camping"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BKo_BJwe3MM",
-                "duration": 476,
-                "title": "Wilderness Survival Kit: 10 Essentials You NEED"
+                "url": "https://www.youtube.com/watch?v=HZ045AMsv6c",
+                "duration": 3945,
+                "title": "Heavy Rain Bushcraft Survival | SOLO Camping, Shelter Building & Fire"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RGx_JSOHaO0",
@@ -237,224 +72,29 @@
                 "title": "Testing our 72 Hr Survival Kits While Camping in Crazy Storm"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bhmdTXjt7-Y",
-                "duration": 1670,
-                "title": "Making a Simple Survival Shelter CRAZY Warm! Winter Bushcraft Camping & Cooking"
+                "url": "https://www.youtube.com/watch?v=QmsFQkXTwF0",
+                "duration": 1959,
+                "title": "TRAPPED UNDER A TREE IN A BRUTAL BLIZZARD | SOLO WINTER SURVIVAL"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4pmRIwP3orY",
-                "duration": 1924,
-                "title": "Survival Camping with 4 yr Old - Trapping, Knapping, Friction Fire & Campfire Cooking"
+                "url": "https://www.youtube.com/watch?v=iys_pmJSp9M",
+                "duration": 1546,
+                "title": "3 Days in Arctic Survival Shelter - Solo Bushcraft Camping & Blacksmithing."
             },
             {
-                "url": "https://www.youtube.com/watch?v=2JCP98SQys4",
-                "duration": 789,
-                "title": "25 Camping Tips to Feel Like a Pro"
+                "url": "https://www.youtube.com/watch?v=7YtPB1UrwWc",
+                "duration": 2716,
+                "title": "5 Days Solo Survival in Bear Cove | No Food, Water, Shelter or Fire"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IlmZ8MErYMA",
-                "duration": 1241,
-                "title": "SOLO Winter Bushcraft Camping In A Survival Shelter - Snowing!"
+                "url": "https://www.youtube.com/watch?v=Zz7os_kWwnM",
+                "duration": 1121,
+                "title": "Winter Camping in Raised Bushcraft Shelter - Level 100 Campfire Cooking"
             },
             {
-                "url": "https://www.youtube.com/watch?v=oT6E9TbwNMo",
-                "duration": 1529,
-                "title": "Survival Camping on Remote Scottish Island with My Son"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=93zzKz-2PZU",
-                "duration": 1797,
-                "title": "3 Days Camping & Fishing Alaska's Wilderness (Near Dick Proenneke's Cabin)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3UkJU-CXOUM",
-                "duration": 1164,
-                "title": "2 Days SOLO Bushcraft | CATCH & COOK at my Survival Shelter | Hot Stone Cooking"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LGuXMeYlcDA",
-                "duration": 2318,
-                "title": "I Nearly Abandoned This Camp | 3 Days Alone in a WINDSTORM"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ep5lD36FNX8",
-                "duration": 1150,
-                "title": "-26 F (-32 C) Solo Camping at 11,500 ft (3500 m)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SJ6jIgOBGWk",
-                "duration": 838,
-                "title": "Winter Hot Tent Camping in Rain; Survival in the Wild. Bushcraft Skills"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nfd-VM4yG-k",
-                "duration": 646,
-                "title": "I Built a Survival Shelter in the middle of nowhere"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e65rRpTwEeY",
-                "duration": 2402,
-                "title": "Solo Winter Survival: Heated Rock Bed in the Wild"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XAHBTyACwFM",
-                "duration": 1573,
-                "title": "Rafting the Ice Flow & Solo Bushcraft Camping in Alaska"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JE6PtW4grWE",
-                "duration": 2221,
-                "title": "7 Days Alone in the Guyana Jungle (Solo Survival) | 36 Hours In - Amazon Rainforest"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=i7jlH5bomUQ",
-                "duration": 1487,
-                "title": "3 Days SOLO SURVIVAL CAMPING In Rain Forest; Bushcraft Shelter UNDER FALLEN BIG TREE. Fish"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Ym3LW8ZVeY",
-                "duration": 1949,
-                "title": "3 Days Stranded in Alaska Without a Tent - Camping in Deep Snow Survival Shelters"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tBfy2Dw76nM",
-                "duration": 2336,
-                "title": "Wild Camping in FREEZING Scottish Wilderness Bushcraft Survival Solo Trip in Scotland"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zn4OeXba7jo",
-                "duration": 1034,
-                "title": "20 Beginner Bushcraft Mistakes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lwtF-UGzJMU",
-                "duration": 1151,
-                "title": "Alone in the Wild | Bushcraft Camping & Survival Shelter Build"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=21gVw2eXN6I",
-                "duration": 2120,
-                "title": "5 DAYS ALONE AT SEA - FISHING - CAMPING"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Vg27c5gxvtc",
-                "duration": 2005,
-                "title": "12 Yrs Old & Alone in Alaska's Backcountry - Solo Winter Camping"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uGEXYnbXB10",
-                "duration": 1405,
-                "title": "Back Country Camping & Hiking - Searching for Hidden Waterfall & Abandoned Mine"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8oyYpLy4xwU",
-                "duration": 2485,
-                "title": "3 Days Alone – No Food, No Water, No Fire (Extreme Survival)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=682dDcNcCNM",
-                "duration": 1144,
-                "title": "Storm Destroyed the Forest - Building a Bushcraft Shelter & Camping 3 Days"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GX-aTFJjSQ8",
-                "duration": 1096,
-                "title": "I Camped Alone in a Heavy Snowstorm | Winter Bushcraft Survival"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mK2GRxR__rk",
-                "duration": 1042,
-                "title": "Three Days Living in the Wilderness 🌲 Bushcraft, Catch & Cook and Campfire Cooking"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p3QkwI4-cLg",
-                "duration": 5172,
-                "title": "5 Days Alone Amazon Jungle Survival | No Food, Water or Shelter"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=q-beiq50Pz0",
-                "duration": 553,
-                "title": "The Ultimate Camping Trailer? Inside the Penpod at Bushcraft Show 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=in_VuC9iydc",
-                "duration": 2070,
-                "title": "2 Day Solo Survival Camping Heavy Rain | Building a cabin from bamboo in Wild Forest | New"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H9W01OQINPY",
-                "duration": 2959,
-                "title": "I Took Temu Survival Gear Into the Australian Outback"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6b-k041xdcs",
-                "duration": 1475,
-                "title": "Amazon VS Temu Overnight Survival Challenge!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=T1ae67XeLgY",
-                "duration": 1582,
-                "title": "-60F/-51C Winter Camping in Hot Tent"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Os_nNanqeEA",
-                "duration": 4679,
-                "title": "Building an Amazing Shelter Cabin on a Giant Fallen Tree | Bushcraft Treehouse, Catch and"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=skHd8BWjVP8",
-                "duration": 3213,
-                "title": "TIMELAPSE: 15days Bushcraft Survival: Solo Girl Builds a Hidden House Inside a Tree Trunk"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YbBy8StZB9U",
-                "duration": 1434,
-                "title": "☁️ 2 Days of Survival Camping by a Wild River | Fishing, Waterfall & Campfire | ASMR"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=78cX0yLJPMw",
-                "duration": 1987,
-                "title": "I spent $15,000 on the Ultimate Survival Tech"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OZ7L5TyFGJQ",
-                "duration": 2559,
-                "title": "Alone Survival in Wilderness Rainstorm, Building Shelter, Bushcraft, Fishing, Cooking"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rQ2fGJZqDrk",
-                "duration": 1795,
-                "title": "Building a Secret Hillside Cave Shelter with heavy Fallen Tree, Bushcraft, Survival"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gz4NtAq-Dzs",
-                "duration": 1686,
-                "title": "Camping, Bushcraft & Hunting In The Desert!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tc_T2d-Y5nU",
-                "duration": 1448,
-                "title": "🔥 SOLO BUSHCRAFT CAMPING in the WILD | TARP SHELTER, CAMPFIRE & RELAXING"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2OdYv8YKSaI",
-                "duration": 4382,
-                "title": "6 Days Jungle Survival Camping with NO Food - US Marine Corps Jungle Survival School"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nQmajd18iKI",
-                "duration": 4732,
-                "title": "7 Days Solo Survival on Shipwreck Island (NO FOOD, NO WATER, NO SHELTER) Catch and Cook. B"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3j9Bl_BF4PE",
-                "duration": 1130,
-                "title": "Two Days in the Wilderness 🌲 Bushcraft, Fishing, Catch & Cook and Simple Living"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VwTHacun58A",
-                "duration": 629,
-                "title": "Bushcraft Camping In Uttarakhand | Solo Camping In Wild Uttarakhand | Vineet Camping"
+                "url": "https://www.youtube.com/watch?v=BKo_BJwe3MM",
+                "duration": 476,
+                "title": "Wilderness Survival Kit: 10 Essentials You NEED"
             },
             {
                 "url": "https://www.youtube.com/watch?v=uSuEdw6HAFE",
@@ -462,29 +102,139 @@
                 "title": "Camping in Arctic Circle with No Tent (-26 Degrees)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=fDk_qV3Ins0",
-                "duration": 1354,
-                "title": "Hot Tent Camping in Alaska  (surrounded by wolves)"
+                "url": "https://www.youtube.com/watch?v=1TojezQWmac",
+                "duration": 1083,
+                "title": "No Tent Winter Camping During Snow Storm - Exploring Natural Stone Maze"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xJRtjAdQEJQ",
-                "duration": 837,
-                "title": "A Rainy Day in a Hot Tent 🌧️ Bushcraft, Fishing and Catch & Cook"
+                "url": "https://www.youtube.com/watch?v=XKEhlk2MLvU",
+                "duration": 2297,
+                "title": "3 DAY SOLO SURVIVAL - NO Food NO Water No Shelter"
             },
             {
-                "url": "https://www.youtube.com/watch?v=SbOENPyxvyI",
-                "duration": 1417,
-                "title": "Winter Camping with Lightest Backpacking Gear in the World - Ultralight Backing Gear Revie"
+                "url": "https://www.youtube.com/watch?v=c1ik9CGLeCI",
+                "duration": 1799,
+                "title": "Winter Camping in Extreme Cold and Heavy Snow | Solo Survival Challenge"
             },
             {
-                "url": "https://www.youtube.com/watch?v=N1fCwW3Yrfs",
-                "duration": 1890,
-                "title": "-40° Winter Camping | Coldest Night of My Life (Brutal Cold Survival)"
+                "url": "https://www.youtube.com/watch?v=GDCZvSuzarg",
+                "duration": 1880,
+                "title": "Extreme Winter Survival Camping in Heavy Snowfall | Building a Bushcraft Shelter Alone"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GdJuN4MTL7o",
-                "duration": 2340,
-                "title": "Building a Warm and Cozy Dugout for Survival. Log Shelter, Secret cave in the hill. Winter"
+                "url": "https://www.youtube.com/watch?v=93zzKz-2PZU",
+                "duration": 1797,
+                "title": "3 Days Camping & Fishing Alaska's Wilderness (Near Dick Proenneke's Cabin)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bhmdTXjt7-Y",
+                "duration": 1670,
+                "title": "Making a Simple Survival Shelter CRAZY Warm! Winter Bushcraft Camping & Cooking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G83NKJCd4VY",
+                "duration": 1320,
+                "title": "Survival Camping in 12 ft (4 m) of Snow During a Blizzard"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rOwsdU4CNy4",
+                "duration": 1217,
+                "title": "Survival Shelter Winter Camping in Blizzard - Deep Snow Camping in Alaska"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p3QkwI4-cLg",
+                "duration": 5172,
+                "title": "5 Days Alone Amazon Jungle Survival | No Food, Water or Shelter"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8oyYpLy4xwU",
+                "duration": 2485,
+                "title": "3 Days Alone – No Food, No Water, No Fire (Extreme Survival)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gd28LggagwY",
+                "duration": 1431,
+                "title": "Arctic Blizzard Camping in Survival Shelter - Building, Hunting, & Setting Snares for Brea"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oNxUsPCUWvU",
+                "duration": 1216,
+                "title": "Winter Camping in Snow Storm with Survival Shelter & Bushcraft Cot."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W-y2hrQGTJ4",
+                "duration": 905,
+                "title": "Winter Hot Tent Camping; Survival in the Wild. Bushcraft Skills. Fish Cooking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RnCoLyYeKPM",
+                "duration": 2649,
+                "title": "3 Days SOLO SURVIVAL With Only 3 Items… No Food, No Water, No Help"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aRcUVhVlSHg",
+                "duration": 1908,
+                "title": "Men Vs Women Survive In The Wilderness For $500,000"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nfd-VM4yG-k",
+                "duration": 646,
+                "title": "I Built a Survival Shelter in the middle of nowhere"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XAHBTyACwFM",
+                "duration": 1573,
+                "title": "Rafting the Ice Flow & Solo Bushcraft Camping in Alaska"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=60TZIwEpjzo",
+                "duration": 1396,
+                "title": "Marriage Survival Camping! -22 Degrees with Wife & 3 Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8hvbcAvkuJs",
+                "duration": 3021,
+                "title": "Camping on Frozen Ocean - 6 Days Fishing for King Crab & Hunting Ptarmigan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vg27c5gxvtc",
+                "duration": 2005,
+                "title": "12 Yrs Old & Alone in Alaska's Backcountry - Solo Winter Camping"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YbKSPjDgfX0",
+                "duration": 1330,
+                "title": "No Food Survival Camping - Foraging  Wild Edibles & Building Shelter (Axe Only Bushcraft C"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ep5lD36FNX8",
+                "duration": 1150,
+                "title": "-26 F (-32 C) Solo Camping at 11,500 ft (3500 m)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_6J-UPxiPPc",
+                "duration": 856,
+                "title": "Beginner's Guide to Solo Backpacking: Essential Gear and Setup for Your First Adventure"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3Ym3LW8ZVeY",
+                "duration": 1949,
+                "title": "3 Days Stranded in Alaska Without a Tent - Camping in Deep Snow Survival Shelters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HKEz5BCIcc0",
+                "duration": 1376,
+                "title": "Caught in Sudden Heavy Rain | Raw Bushcraft Survival"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zaf4s6CIFyo",
+                "duration": 2357,
+                "title": "2 Days Boating And Bushcraft- Wales Hammock Camping With A Rapper!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uWqC7gSPxCI",
+                "duration": 2006,
+                "title": "Camping, Fishing & Clamming in a Snow Storm - Coastal Foraging in Alaska"
             },
             {
                 "url": "https://www.youtube.com/watch?v=6Zy5VLcEbZc",
@@ -492,19 +242,269 @@
                 "title": "I Stranded 100 People In The Wilderness For $250,000"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ICRGlhGLDRE",
-                "duration": 1202,
-                "title": "Off-Grid Camping by a Remote Stream | Fishing & Bushcraft"
+                "url": "https://www.youtube.com/watch?v=H9W01OQINPY",
+                "duration": 2959,
+                "title": "I Took Temu Survival Gear Into the Australian Outback"
             },
             {
-                "url": "https://www.youtube.com/watch?v=p56q70hg4P0",
-                "duration": 1993,
-                "title": "4 Days Solo Bushcraft - Wild Camping, Swedish wilderness, Campfire cooking"
+                "url": "https://www.youtube.com/watch?v=vt-Pz6DoKWg",
+                "duration": 2068,
+                "title": "4 Days Solo Boat Camp On Remote Islands (Craziest Squid Catch & Cook)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1PYNm17ci_w",
-                "duration": 4609,
-                "title": "Our Lunch Depended on This Fishing Net! 😱🐟 | Deep Jungle Camping Part 2 @TRIPTHEWILD"
+                "url": "https://www.youtube.com/watch?v=682dDcNcCNM",
+                "duration": 1144,
+                "title": "Storm Destroyed the Forest - Building a Bushcraft Shelter & Camping 3 Days"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oT6E9TbwNMo",
+                "duration": 1529,
+                "title": "Survival Camping on Remote Scottish Island with My Son"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mpYK6PK8lYs",
+                "duration": 2841,
+                "title": "6 DAYS WINTER BUSHCRAFT - ARTISTS CHARCOAL - MULTI SAPLING BOWSAW - SINGLE CANVAS PONCHO S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uGEXYnbXB10",
+                "duration": 1405,
+                "title": "Back Country Camping & Hiking - Searching for Hidden Waterfall & Abandoned Mine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-PJZaIVQtME",
+                "duration": 4306,
+                "title": "Alone in a -21°C Deadly Winter Blizzard | No Tent, No Sleeping Bag, Only a Long Fire"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OtVX-WV0Dgg",
+                "duration": 1723,
+                "title": "10 Years Of Wild Camping Advice in 29 Minutes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XKOMGCeBywE",
+                "duration": 1354,
+                "title": "Solo Camping by a Wild River | Catch & Cook"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1KNATbaeKe4",
+                "duration": 1411,
+                "title": "Vintage Bushcraft Wild Camping UK in strong winds | Solo Overnight - I HAD TO LEAVE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2JCP98SQys4",
+                "duration": 789,
+                "title": "25 Camping Tips to Feel Like a Pro"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=78cX0yLJPMw",
+                "duration": 1987,
+                "title": "I spent $15,000 on the Ultimate Survival Tech"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fzkbxlZ4K9c",
+                "duration": 2193,
+                "title": "Snugpak Ionosphere Mesh Bivi Wild Camp in an Ancient Forest. LOTS of OWLS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kd-ABokZCkA",
+                "duration": 1285,
+                "title": "The Survivor Games"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6b-k041xdcs",
+                "duration": 1475,
+                "title": "Amazon VS Temu Overnight Survival Challenge!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fDk_qV3Ins0",
+                "duration": 1354,
+                "title": "Hot Tent Camping in Alaska  (surrounded by wolves)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nEj00Gy0SFI",
+                "duration": 1286,
+                "title": "Winter Camping in Remote Survival Cabin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YO7nBuUO9as",
+                "duration": 753,
+                "title": "Survival Games In Real Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aTdPsBLo8C8",
+                "duration": 1249,
+                "title": "CHEAPEST Walmart Gear Camping Challenge + Fossil Hunting Adventure"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rtHFT3F54-Q",
+                "duration": 2765,
+                "title": "5 Days Alone with the Wilderness"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KFALdxRBBtI",
+                "duration": 4499,
+                "title": "Perfect Bushcraft Survival House 🪵 Built with Round Logs and Natural Stone Deep in the For"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d1010B3sKNQ",
+                "duration": 789,
+                "title": "Surviving 24 Hours Straight In A Rain Forest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SQ3eO3lG6F0",
+                "duration": 1075,
+                "title": "Solo Hot Tent Camping and Fishing in the Rain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wMHLxYDEUEA",
+                "duration": 1957,
+                "title": "Solo Bushcraft: 3 Days Camping Inside a Massive Cave Shelter"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sk710MJzzFw",
+                "duration": 1995,
+                "title": "Solo Survival & Camping Fhising 24 Hours | Catch and Cook"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R3736W2qrpk",
+                "duration": 1873,
+                "title": "3 Days Alone - If I Don't Catch Food - I Don't Eat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hS4Mso8gvNU",
+                "duration": 1998,
+                "title": "6 Days Fishing, Camping & Exploring Spain with my Son"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nQmajd18iKI",
+                "duration": 4732,
+                "title": "7 Days Solo Survival on Shipwreck Island (NO FOOD, NO WATER, NO SHELTER) Catch and Cook. B"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kJ-0bd7ydCs",
+                "duration": 1680,
+                "title": "I Found an Abandoned Native American City - Hiking & Camping in Snow Storm"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B0QFA0UmY40",
+                "duration": 603,
+                "title": "24 Hour Walmart Survival - Camping and Catching Food with only Walmart Gear"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uAWp02IB-7U",
+                "duration": 3974,
+                "title": "Building an Elevated Survival Shelter with Rope Ladder to Stay Safe from Ground Predators"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BVzmHPOdVBs",
+                "duration": 927,
+                "title": "The Gear You MUST HAVE To Start Camping"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3UkJU-CXOUM",
+                "duration": 1164,
+                "title": "2 Days SOLO Bushcraft | CATCH & COOK at my Survival Shelter | Hot Stone Cooking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T1ae67XeLgY",
+                "duration": 1582,
+                "title": "-60F/-51C Winter Camping in Hot Tent"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mLivzfKJlu4",
+                "duration": 1386,
+                "title": "I Rated EVERY Outdoor Boys Meal"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YXUviNxh9eM",
+                "duration": 2102,
+                "title": "Bulding a Cave Shelter - CAMPING ALONE IN HEAVY SNOW"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hb50ey9_e5U",
+                "duration": 414,
+                "title": "MOTORCYCLE CAMPING SIMPLIFIED - Expert Advice"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KqGEgrqSYyU",
+                "duration": 3151,
+                "title": "9 Days Fishing & Foraging in Hawaii - Lobster Diving + Spearfishing Catch & Cook"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q2mdxYXzPIk",
+                "duration": 2204,
+                "title": "BBQ Meats Smoked to PERFECTION | ASMR Wilderness Cooking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TDfWksvKMVU",
+                "duration": 2625,
+                "title": "4 Days in Alaskan Yupik Village - Moose Hunting, Fishing & Spearing Seals with Atlatls"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X21MOiqSTk0",
+                "duration": 812,
+                "title": "SURVIVING THE WORLD'S MOST EXTREME WEATHER!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PKLxv0trWZQ",
+                "duration": 309,
+                "title": "The Gear You WANT vs The Gear You NEED"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cA6Tcnj2nyc",
+                "duration": 1931,
+                "title": "Life Saving Tips Everyone Should Know | 6 Survival Scenarios | Basic Survival Tips | Dr. B"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mR6lxSA47F4",
+                "duration": 2405,
+                "title": "I Camped Using Only Temu Products"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F-yg3Zi48iQ",
+                "duration": 825,
+                "title": "Beginner Wild Camping Kit Guide 2026 - Scotland/UK"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=abBxLrDKVbI",
+                "duration": 1058,
+                "title": "Surviving 50 Hours on a Deserted Island!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YbBy8StZB9U",
+                "duration": 1434,
+                "title": "☁️ 2 Days of Survival Camping by a Wild River | Fishing, Waterfall & Campfire | ASMR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gz4NtAq-Dzs",
+                "duration": 1686,
+                "title": "Camping, Bushcraft & Hunting In The Desert!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SJ6jIgOBGWk",
+                "duration": 838,
+                "title": "Winter Hot Tent Camping in Rain; Survival in the Wild. Bushcraft Skills"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xJRtjAdQEJQ",
+                "duration": 837,
+                "title": "A Rainy Day in a Hot Tent 🌧️ Bushcraft, Fishing and Catch & Cook"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6mzk4Hrc7oc",
+                "duration": 2979,
+                "title": "My New Forest Camp | Fishing, Bushcraft & Campfire Cooking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3CNPGvT8E6Q",
+                "duration": 2275,
+                "title": "4 Day Survival on Haunted Island..."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CCcttTHWd8M",
+                "duration": 1306,
+                "title": "6 Real Camping Encounters So Scary, They Were NEVER Seen Again! V6"
             }
         ],
         "search_query": "bushcraft camping wild"

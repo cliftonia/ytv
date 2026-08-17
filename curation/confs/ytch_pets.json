@@ -2,79 +2,19 @@
     "station_conf": {
         "network_name": "Pets & Animals",
         "network_type": "streaming",
-        "channel_number": 31,
+        "channel_number": 36,
         "network_long_name": "Pets & Animals",
         "stream_rotation": "clock",
         "streams": [
-            {
-                "url": "https://www.youtube.com/watch?v=Nl3q0Q_X8KA",
-                "duration": 2665,
-                "title": "Treating Injured Tigers and Elephants (Full Episode) | Jungle Animal Rescue"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EAJPLqzDVlw",
-                "duration": 2965,
-                "title": "How Baby Animals Survive in the Wild | HD Nature Documentary"
-            },
             {
                 "url": "https://www.youtube.com/watch?v=D9q9lvbj810",
                 "duration": 5218,
                 "title": "The Atlantic (2026) The Forbidden Ocean That Holds Earth’s True History"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QpZ8VjCnPcY",
-                "duration": 1728,
-                "title": "Safari Trips Went Horribly Wrong"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2U8X41dCfpU",
-                "duration": 3002,
-                "title": "David Attenborough Presents: Tasmania - Weird & Wonderful | Free Documentary Nature"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9qhDWt0tzVQ",
-                "duration": 1631,
-                "title": "Incredible Safari Moments Caught on Camera"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8ImtbHTX9gc",
-                "duration": 3212,
-                "title": "Cat Tales | Full Documentary | NOVA | PBS"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=T2ATfQXUo20",
-                "duration": 1365,
-                "title": "Staying Overnight Inside an Indian Billionaire’s Private Wildlife Rescue Center"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LsOpR7ibbU4",
-                "duration": 2081,
-                "title": "28 Last Photos of Extinct Animals | Full Series"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pUKoepUtOKw",
+                "url": "https://www.youtube.com/watch?v=Nl3q0Q_X8KA",
                 "duration": 2665,
-                "title": "Birth of a Pride: Lion Conservation (Full Episode) | SPECIAL | Nat Geo Animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VRzuXo7JdUI",
-                "duration": 5157,
-                "title": "I Bought The Deadliest Animals (to keep as pets)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QtfFXg2V8gI",
-                "duration": 795,
-                "title": "I Saved an Abandoned Axolotl..."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ceww6yLijFc",
-                "duration": 3007,
-                "title": "The Depths of the North Sea: Life in the Cold Abyss | Secrets of the Seas Ep. 1 | 4K UHD D"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=COk0Sbbc_co",
-                "duration": 2710,
-                "title": "Animal Parents of the Arctic (Full Episode) | Incredible Animal Journeys | Nat Geo"
+                "title": "Treating Injured Tigers and Elephants (Full Episode) | Jungle Animal Rescue"
             },
             {
                 "url": "https://www.youtube.com/watch?v=fzlbDhxo9Qc",
@@ -82,14 +22,14 @@
                 "title": "Rescuing The World's Most Unusual Monkeys | Monkey Life"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nySwmVPnhYw",
-                "duration": 764,
-                "title": "A Homeless Girl, Her Dog… and Simon's Most HUMAN Moment."
+                "url": "https://www.youtube.com/watch?v=EAJPLqzDVlw",
+                "duration": 2965,
+                "title": "How Baby Animals Survive in the Wild | HD Nature Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hnsO_ke9Mcc",
-                "duration": 1134,
-                "title": "Private Tour Of World's Largest Animal Sanctuary"
+                "url": "https://www.youtube.com/watch?v=ydR3eQ6S-gk",
+                "duration": 2665,
+                "title": "Saving Baby Chimps (Full Episode) | DOCUMENTARY SPECIAL | Nat Geo Animals"
             },
             {
                 "url": "https://www.youtube.com/watch?v=yD8YvEg4hI4",
@@ -97,384 +37,39 @@
                 "title": "Private Tour Of My 240 Acre Animal Sanctuary"
             },
             {
+                "url": "https://www.youtube.com/watch?v=T2ATfQXUo20",
+                "duration": 1365,
+                "title": "Staying Overnight Inside an Indian Billionaire’s Private Wildlife Rescue Center"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2U8X41dCfpU",
+                "duration": 3002,
+                "title": "David Attenborough Presents: Tasmania - Weird & Wonderful | Free Documentary Nature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8ImtbHTX9gc",
+                "duration": 3212,
+                "title": "Cat Tales | Full Documentary | NOVA | PBS"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Xrk2S4ZzwxQ",
                 "duration": 538,
                 "title": "Meet the Billionaire That Built The World’s Largest Animal Rescue (Anant Ambani)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=_c8Csht9n4U",
-                "duration": 2877,
-                "title": "Cops Take Down A Pitbull Fighting Ring | Animal Cops South Africa Ep1 | Our World"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pRbI7zsMn4k",
-                "duration": 1676,
-                "title": "Private Tour of Billionaire's Secret Animal Sanctuary in India"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QJ86kj7k888",
-                "duration": 958,
-                "title": "Face to Face with India’s Deadliest Animals (Private Tour)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fKsrERSd_Lo",
-                "duration": 3918,
-                "title": "WILD SAVANNAH | Survival Stories from the Heart of Africa | Animal documentary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6-TdaYx3mgA",
-                "duration": 5390,
-                "title": "A touching family drama that will leave no one indifferent 🎬💛 Movies HD in English"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qi4MwuZC1Eo",
-                "duration": 969,
-                "title": "A Lioness Becomes a Mother for the First Time | Maasai Mara National Reserve, Kenya"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FDtCJVlxbww",
-                "duration": 5321,
-                "title": "Exploring the Miracle on the Hudson (Full Episode) | DOCUMENTARY SPECIAL | National Geogra"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CaFGSRfamTU",
-                "duration": 3630,
-                "title": "TIMELAPSE - Survival in the Wild: Heavy Storm Wrecked My Shelter Overnight"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YHZgV2XLI5c",
-                "duration": 1544,
-                "title": "1.000.000.000 $ - Billionaire is Secretly Saving all the Animals on this Planet - Real or"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HQ8ezK9xBTY",
-                "duration": 1587,
-                "title": "We Rescued 10 BLACK CATS… Here’s Their Story 🐈‍⬛"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HPJKxAhLw5I",
-                "duration": 443,
-                "title": "Planting 20,000,000 Trees, My Biggest Project Ever!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KaU9tRbXXwY",
-                "duration": 1921,
-                "title": "I Found 8 Lost Puppies in a Dumpster"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nLV_3JsJomI",
-                "duration": 3633,
-                "title": "Dora's Daring Animal Rescues! 😺 1 Hour | Dora & Friends"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bw6mUcyx-L0",
-                "duration": 3637,
-                "title": "Stuck in a Giraffe Suit | Creature Rescue | Wild Kratts"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=udzblk7r1ig",
-                "duration": 1193,
-                "title": "Wild Animals Stories for Kids | Kids Learn Wild Animals | Nursery Rhymes & Kids Songs | Ba"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nMOAU63mQpM",
-                "duration": 3624,
-                "title": "Return Little Crocodile Home | Safety Rules | Kids Cartoons | Sheriff Labrador  | BabyBus"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=c8e7f7UGh_U",
-                "duration": 3640,
-                "title": "Dora's Daring Animal Rescues! w/ Boots #2 🐧 60 Minutes | Dora & Friends"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MiWZsNyL_1o",
-                "duration": 3420,
-                "title": "Paw Patrol - Town Hall Rescue | WildBrain Zoo | Cartoons for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5PmEkNxwOs0",
-                "duration": 1965,
-                "title": "My New SECRET Puppy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q1tdsTjLgKE",
-                "duration": 727,
-                "title": "7 last videos of extinct animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RTQd28utl7I",
-                "duration": 3706,
-                "title": "Duplicated Dholes Take on a Tiger | Creature Rescues | Wild Kratts"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zdN16n827ZQ",
-                "duration": 291,
-                "title": "Bheem's Mighty Moon Rescue 🌕🐍 The Mighty Little Bheem | Netflix Jr"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G4x7Zjuubnk",
-                "duration": 1882,
-                "title": "Not A Normal ANIMAL HOSPITAL in Roblox!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NigrQ9UcJy4",
-                "duration": 481,
-                "title": "I Strapped A GoPro To A Fish!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yf_J3vKDDg8",
-                "duration": 900,
-                "title": "I Found 100 Puppies From A Dumpster!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QDUHUHFYZl8",
-                "duration": 2580,
-                "title": "I Adopted BABY Animals in One Color!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=y5brOY8JxWU",
-                "duration": 415,
-                "title": "Chris and Niki PAW Patrol Mighty Movie Toys Rescue Mission"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dFrODXXSAK4",
-                "duration": 1137,
-                "title": "Kids Take Care of Animals at the Shelter"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H96J5YEZQU4",
-                "duration": 403,
-                "title": "Vlad and Niki PAW Patrol Dino Rescue Mission"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FPczjPUHthY",
-                "duration": 255,
-                "title": "Toy Story Rival: Sid | Pixar's Toy Story | @disneykids​"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5kj__m_07rI",
-                "duration": 1986,
-                "title": "I Found an Abandoned Axolotl Pet Store..."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9uRFZSxy9bg",
-                "duration": 1387,
-                "title": "Risky Rescue from a Speeding Train | Full Episode | SPIRIT RIDING FREE"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f-8mhxoKmUo",
-                "duration": 1383,
-                "title": "Fairy Tale Rescue! Kids Inside a Magic Book"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Bl8h8ks400Y",
-                "duration": 789,
-                "title": "I Turned a Restaurant Crab into a Pet..."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iKD5QhVAbP8",
-                "duration": 3665,
-                "title": "Rescuing Endangered Species | Creature Rescues | Wild Kratts"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4_mfi2q3jr0",
-                "duration": 3614,
-                "title": "Dora & Diego's Rainforest Animal Rescues for 60 Minutes! 🐆 #4 | Dora & Friends"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=z7m5qVkb0Ng",
-                "duration": 3707,
-                "title": "Marshall Helps A Sabretooth With An Ouchy Paw + MORE | PAW Patrol | 1 Hour Compilation"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_jGs9HsMeE0",
-                "duration": 1214,
-                "title": "ABC World News Tonight with David Muir Full Broadcast - Aug. 11, 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O-7xEH2mJaU",
-                "duration": 240,
-                "title": "Vlad and Niki PAW Patrol Ultimate Cruiser Rescue"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ExR2X6wY9Ls",
-                "duration": 1345,
-                "title": "JJ's Bear Dance + Nina Meets the Garbage Truck + Pajama Party Song FULL EPISODE 🐞 CoComelo"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_odwT14rPnQ",
-                "duration": 383,
-                "title": "Vlad and Niki PAW Patrol Toy Trucks Rescue mission"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0mKkA1pg67Q",
-                "duration": 478,
-                "title": "Sheriff from the Sky | Police Rescue Mission | Safety Cartoon | Sheriff Labrador"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EB90SQ6Ugj4",
-                "duration": 426,
-                "title": "Dino Rescue Christmas Special! 🎄 - PAW Patrol Rescue Episode - Cartoons for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=915nrUJohQ4",
-                "duration": 763,
-                "title": "New Puppy Surprise! *Emotional*"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zQyU4wBRZkM",
-                "duration": 2613,
-                "title": "Wild Autumn: Survival of Giants & Predators in Africa | documentary in hindi national geog"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fUUBCajm2vQ",
-                "duration": 1678,
-                "title": "All Creature Transformations Part 4 | Animals for Kids | Wild Kratts"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4Nefi0l9LEc",
-                "duration": 2010,
-                "title": "Good Morning America Full Broadcast - Sunday, August 16, 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZdscQZBYYOY",
-                "duration": 1541,
-                "title": "Super Panda's Ocean Rescue Mission | Baby Shark | Super Rescue Team | Kids Cartoon | BabyB"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WwIa3pkw1rY",
-                "duration": 2286,
-                "title": "Vet Discovers Rarest Condition In Peeing Puppy | Bondi Vet"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ei-TcECJVXU",
+                "url": "https://www.youtube.com/watch?v=pUKoepUtOKw",
                 "duration": 2665,
-                "title": "Uncovering the Secrets of the International Space Station (Full Episode) | Superstructures"
+                "title": "Birth of a Pride: Lion Conservation (Full Episode) | SPECIAL | Nat Geo Animals"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9RJALqZac18",
-                "duration": 269,
-                "title": "South Side Of The Kingdom"
+                "url": "https://www.youtube.com/watch?v=YZVAVxI7qnU",
+                "duration": 2469,
+                "title": "The Vantara Story | World’s Largest Rescue Operations for Wildlife | Anant Ambani’s Dream"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FxmDEvV0bxY",
-                "duration": 1407,
-                "title": "The International Mission to Rescue Six Baboons | Monkey Life Season 16 Episode 20"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IJUAdPaANWw",
-                "duration": 2263,
-                "title": "Angry Bull's Rampage! Cow Family Rescue | Super Cow Saves the Day!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kvElAkYILv8",
-                "duration": 1172,
-                "title": "Monkey Cartoon Doing Farm Work With Funny Animals On Farm, Rescue The Goat With An Excavat"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ghZkMHjAVYg",
-                "duration": 482,
-                "title": "UNGRATEFUL Boy Doesn't Want USED DOG, What Happens Is Shocking"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tbJ5AMta3uw",
-                "duration": 1876,
-                "title": "Cow vs. Buffalo: Epic Farm Animals Food Battle! | Mr. Donald’s Heroic Rescue Mission!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0fts6x_EE_E",
-                "duration": 1045,
-                "title": "A Rare Look at the Secret Life of Orangutans | Short Film Showcase"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OdEpPSM2siE",
-                "duration": 4453,
-                "title": "WILD OCEAN | The Most Extraordinary Creatures Hidden Beneath the Sea | Nature Animal Docum"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=X19-y45lt6o",
-                "duration": 2086,
-                "title": "I Found Deadly Fish in an Abandoned Pool…"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x_Zq_0_cfIo",
-                "duration": 1080,
-                "title": "D23 2026: Everything Disney Parks Just Announced"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XT0pcFSpu5k",
-                "duration": 1051,
-                "title": "How Paw Patrol Characters Look In Real Life 🐶 (2025) ~ Guess The Paw Patrol Characters by"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kk60WsqwoRw",
-                "duration": 2668,
-                "title": "Mamba in My Closet! (Full Episode) | Snake City"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wIWLp6YwKq8",
-                "duration": 454,
-                "title": "Ultimate Rescue | Safety Rules for Kids | Preschool Cartoon | Sheriff Labrador"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1DWoGEZJzDI",
-                "duration": 5268,
-                "title": "Earth's Final Judgment | SCIFI, ACTION | Full Movie in English"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mWfSOw4jqRo",
-                "duration": 2923,
-                "title": "Fear on the Savannah - Hindi Documentary | Wildlife documentary in Hindi"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DxxfYgsNnNY",
-                "duration": 3602,
-                "title": "Baby Orangutans Find New Families: Rescues, Reunions & Emotional Goodbyes | Monkey Life"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mIv0YJwROmc",
-                "duration": 654,
-                "title": "KING KONG vs GIANT CHICKEN : An unstoppable clash on Skull Island | Kong Full movie"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-DTtRJIivnE",
-                "duration": 599,
-                "title": "Keith Races To Save Jake’s Crew In Deadly Ocean Rescue After Emergency Evacuation | Deadli"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sEJ2SI-QIo4",
-                "duration": 567,
-                "title": "The Shepherd's Gritty Rescue: What Psalm 23 Hides"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Pl8opHL9cQ4",
-                "duration": 717,
-                "title": "CAN I RESCUE MY FRIENDS FROM MR. MEAT ?"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
-                "duration": 3120,
-                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2Wi8BoQikFc",
-                "duration": 2285,
-                "title": "Bas Tera Saath Ho Episode 29 | 10 August 2026 | Farhan Saeed | Sana Javed | ENG SUB | ARY"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sZkyv29WHLg",
-                "duration": 4285,
-                "title": "Good Morning America Full Broadcast - Friday, August 14, 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xB1WVwypZVg",
-                "duration": 1410,
-                "title": "The Unexpected Underdog Who Conquered a Monkey Troop | Monkey Life Season 17 Episode 2"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ca0b78V71dU",
-                "duration": 2494,
-                "title": "Giving Britains Smallest Monkeys a Second Chance | Monkey Life"
+                "url": "https://www.youtube.com/watch?v=9cm753kp0uo",
+                "duration": 868,
+                "title": "WILD CONNECTION - Award Winning Short Documentary"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wo0z011dq4E",
@@ -482,9 +77,64 @@
                 "title": "WILD INDONESIA | The Hidden Creatures of the Planet’s Most Pristine Rainforest | Animal Do"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PF5f5xuMwkc",
-                "duration": 1331,
-                "title": "Thomas' Animal Rescue NETFLIX MOVIE? SP's Thoughts on Thomas' 2026 Reboot!"
+                "url": "https://www.youtube.com/watch?v=_c8Csht9n4U",
+                "duration": 2877,
+                "title": "Cops Take Down A Pitbull Fighting Ring | Animal Cops South Africa Ep1 | Our World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ceww6yLijFc",
+                "duration": 3007,
+                "title": "The Depths of the North Sea: Life in the Cold Abyss | Secrets of the Seas Ep. 1 | 4K UHD D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9qhDWt0tzVQ",
+                "duration": 1631,
+                "title": "Incredible Safari Moments Caught on Camera"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DxxfYgsNnNY",
+                "duration": 3602,
+                "title": "Baby Orangutans Find New Families: Rescues, Reunions & Emotional Goodbyes | Monkey Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=COk0Sbbc_co",
+                "duration": 2710,
+                "title": "Animal Parents of the Arctic (Full Episode) | Incredible Animal Journeys | Nat Geo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CaFGSRfamTU",
+                "duration": 3630,
+                "title": "TIMELAPSE - Survival in the Wild: Heavy Storm Wrecked My Shelter Overnight"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6-TdaYx3mgA",
+                "duration": 5390,
+                "title": "A touching family drama that will leave no one indifferent 🎬💛 Movies HD in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fKsrERSd_Lo",
+                "duration": 3918,
+                "title": "WILD SAVANNAH | Survival Stories from the Heart of Africa | Animal documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FxmDEvV0bxY",
+                "duration": 1407,
+                "title": "The International Mission to Rescue Six Baboons | Monkey Life Season 16 Episode 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QpZ8VjCnPcY",
+                "duration": 1728,
+                "title": "Safari Trips Went Horribly Wrong"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NjbYaRYN_2Y",
+                "duration": 364,
+                "title": "Good Boy | A Dog Senses Something Evil (4K)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pRbI7zsMn4k",
+                "duration": 1676,
+                "title": "Private Tour of Billionaire's Secret Animal Sanctuary in India"
             },
             {
                 "url": "https://www.youtube.com/watch?v=8NS5sT7sLTE",
@@ -492,9 +142,264 @@
                 "title": "A Spoiled Alpha Chimp Panics During His First Meeting | Monkey Life Season 17 Episode 4"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R5s-LpFjwpk",
-                "duration": 2655,
-                "title": "Can The Rescue Dog Nobody Wanted Find Her Forever Home? | Vet on the Hill | Full Episode"
+                "url": "https://www.youtube.com/watch?v=nLV_3JsJomI",
+                "duration": 3633,
+                "title": "Dora's Daring Animal Rescues! 😺 1 Hour | Dora & Friends"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q1tdsTjLgKE",
+                "duration": 727,
+                "title": "7 last videos of extinct animals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x_Zq_0_cfIo",
+                "duration": 1080,
+                "title": "D23 2026: Everything Disney Parks Just Announced"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QtfFXg2V8gI",
+                "duration": 795,
+                "title": "I Saved an Abandoned Axolotl..."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N0iNDfMlM4Y",
+                "duration": 4048,
+                "title": "Rex Saves the Dino Wilds and More Rescue Episodes | PAW Patrol | Cartoons for Kids Compila"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c8e7f7UGh_U",
+                "duration": 3640,
+                "title": "Dora's Daring Animal Rescues! w/ Boots #2 🐧 60 Minutes | Dora & Friends"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LsOpR7ibbU4",
+                "duration": 2081,
+                "title": "28 Last Photos of Extinct Animals | Full Series"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xlLwShlCN6A",
+                "duration": 2428,
+                "title": "Cute to Killer: The Journey of a Lion | National Geographic Hindi | Wildlife Documentary 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2zb1b36LaQs",
+                "duration": 4048,
+                "title": "PAW Patrol Pup Rex Saves the Dino Wilds and MORE! 🦕 | PAW Patrol | Cartoons for Kids Compi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P1I_wpp0Ocw",
+                "duration": 482,
+                "title": "Desert Fox Tale | TEAM MEKBOTS ANIMAL RESCUE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FDtCJVlxbww",
+                "duration": 5321,
+                "title": "Exploring the Miracle on the Hudson (Full Episode) | DOCUMENTARY SPECIAL | National Geogra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oe7yi75vL9o",
+                "duration": 318,
+                "title": "Good Boy | Ghost Dog or Nightmare? (4K)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yf_J3vKDDg8",
+                "duration": 900,
+                "title": "I Found 100 Puppies From A Dumpster!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z7m5qVkb0Ng",
+                "duration": 3707,
+                "title": "Marshall Helps A Sabretooth With An Ouchy Paw + MORE | PAW Patrol | 1 Hour Compilation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hnsO_ke9Mcc",
+                "duration": 1134,
+                "title": "Private Tour Of World's Largest Animal Sanctuary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xfUSg_4Oefk",
+                "duration": 916,
+                "title": "NEW Paw Patrol Dino Movie Toys Unboxing! ASMR Collection"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IyS8TzxpcMU",
+                "duration": 380,
+                "title": "🔥Jungle Animals Rescue | Hero vs Hunters Full Action Adventure Movie 2026 part 1 Shani Pah"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9rCPzhryEfE",
+                "duration": 2555,
+                "title": "Amazon Rainforest: The Untold Secrets | National Geographic Hindi | Wildlife Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x3Nw-kmVp9Q",
+                "duration": 1365,
+                "title": "I Rescued 5 Stolen Zoo Animals!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bw6mUcyx-L0",
+                "duration": 3637,
+                "title": "Stuck in a Giraffe Suit | Creature Rescue | Wild Kratts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MiWZsNyL_1o",
+                "duration": 3420,
+                "title": "Paw Patrol - Town Hall Rescue | WildBrain Zoo | Cartoons for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=udzblk7r1ig",
+                "duration": 1193,
+                "title": "Wild Animals Stories for Kids | Kids Learn Wild Animals | Nursery Rhymes & Kids Songs | Ba"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mWfSOw4jqRo",
+                "duration": 2923,
+                "title": "Fear on the Savannah - Hindi Documentary | Wildlife documentary in Hindi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5zbpmneAGrg",
+                "duration": 2270,
+                "title": "Flood Rescue Mission | Outdoor Safety Rules for Kids | Cartoon | Sheriff Labrador"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y5brOY8JxWU",
+                "duration": 415,
+                "title": "Chris and Niki PAW Patrol Mighty Movie Toys Rescue Mission"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
+                "duration": 3120,
+                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4_mfi2q3jr0",
+                "duration": 3614,
+                "title": "Dora & Diego's Rainforest Animal Rescues for 60 Minutes! 🐆 #4 | Dora & Friends"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9IdXa-BWssg",
+                "duration": 1635,
+                "title": "MY NEW DOG ❤️"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RTQd28utl7I",
+                "duration": 3706,
+                "title": "Duplicated Dholes Take on a Tiger | Creature Rescues | Wild Kratts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QJ86kj7k888",
+                "duration": 958,
+                "title": "Face to Face with India’s Deadliest Animals (Private Tour)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CUbd3Bwqi-8",
+                "duration": 1291,
+                "title": "Cat Pack PAW Patrol Rescues 😺- PAW Patrol - Cartoons for Kids Compilation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QDUHUHFYZl8",
+                "duration": 2580,
+                "title": "I Adopted BABY Animals in One Color!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8jpDxbX7t00",
+                "duration": 1924,
+                "title": "ROBLOX ANIMAL HOSPITAL.."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nMOAU63mQpM",
+                "duration": 3624,
+                "title": "Return Little Crocodile Home | Safety Rules | Kids Cartoons | Sheriff Labrador  | BabyBus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dFrODXXSAK4",
+                "duration": 1137,
+                "title": "Kids Take Care of Animals at the Shelter"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=njijzPcbYYs",
+                "duration": 3803,
+                "title": "🏔️ A hard day with the Zagros nomads | Building shelters for goats and collecting firewood"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a0lMnpkpHoE",
+                "duration": 649,
+                "title": "They Built TWO Nests to Save Their Chicks | White-breasted Waterhen Survival Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ds5RDF17HAg",
+                "duration": 3321,
+                "title": "Pups Save a Tyrannosaurus’ Birthday and MORE! - PAW Patrol - Cartoons for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iKD5QhVAbP8",
+                "duration": 3665,
+                "title": "Rescuing Endangered Species | Creature Rescues | Wild Kratts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PxvobLSwNnI",
+                "duration": 4483,
+                "title": "Barbie & Her Sisters in The Great Puppy Adventure 🐶🩷 | Full Movie | Barbie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VRzuXo7JdUI",
+                "duration": 5157,
+                "title": "I Bought The Deadliest Animals (to keep as pets)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dxUEQ3k7thk",
+                "duration": 306,
+                "title": "Ready Race Rescue! 🏎️| PAW Patrol | Nick Jr."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ca0b78V71dU",
+                "duration": 2494,
+                "title": "Giving Britains Smallest Monkeys a Second Chance | Monkey Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DJhaExkzkdA",
+                "duration": 2698,
+                "title": "Lion Queens: Fighting For Survival | Lion Documentary | Animal Planet  In Hindi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2FO6jfqM3f0",
+                "duration": 2696,
+                "title": "Chase and Rescue Mission | PJ Masks Official | Cartoons for Kids | Animation for Kids | FU"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Lm2B8DnfzKs",
+                "duration": 3469,
+                "title": "Water Pollution Rescue Mission | Protect the Earth | Good Habits for Kids | Sheriff Labrad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gCgCgFijEcY",
+                "duration": 1210,
+                "title": "ABC World News Tonight with David Muir Full Broadcast - Aug. 15, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sEJ2SI-QIo4",
+                "duration": 567,
+                "title": "The Shepherd's Gritty Rescue: What Psalm 23 Hides"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gtd8FubSHOw",
+                "duration": 1191,
+                "title": "PAW Patrol Royal Rescues! 👑 - PAW Patrol - Cartoons for Kids Compilation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pDzi9oPxWz8",
+                "duration": 2516,
+                "title": "Wild, Rescued & Thriving: Tiny Primates Taking Over Monkey World | Monkey Life"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bl8h8ks400Y",
+                "duration": 789,
+                "title": "I Turned a Restaurant Crab into a Pet..."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mxfacbX8RAI",
+                "duration": 807,
+                "title": "Tiger Enters House at Night… And Then What Happened. Facts Phylum"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EdrStmT2YBg",
@@ -502,9 +407,104 @@
                 "title": "Africa’s Deadliest: Migration Rute | Animal planet in hindi | Lion Documentary | National"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bEKY_FQP--k",
-                "duration": 4128,
-                "title": "Mountain Foraging Adventure: Harvesting Wild Roots and Rescuing a Trapped Baby Goat"
+                "url": "https://www.youtube.com/watch?v=tbJ5AMta3uw",
+                "duration": 1876,
+                "title": "Cow vs. Buffalo: Epic Farm Animals Food Battle! | Mr. Donald’s Heroic Rescue Mission!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZdscQZBYYOY",
+                "duration": 1541,
+                "title": "Super Panda's Ocean Rescue Mission | Baby Shark | Super Rescue Team | Kids Cartoon | BabyB"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ucqq0SDRobY",
+                "duration": 4409,
+                "title": "FernGully 2: The Magical Rescue | FULL MOVIE | Family Animation Fantasy Adventure"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ghZkMHjAVYg",
+                "duration": 482,
+                "title": "UNGRATEFUL Boy Doesn't Want USED DOG, What Happens Is Shocking"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JaqV_P2NV3k",
+                "duration": 1057,
+                "title": "Dora Ka Dost Leny Mandi Agaiy😍"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nySwmVPnhYw",
+                "duration": 764,
+                "title": "A Homeless Girl, Her Dog… and Simon's Most HUMAN Moment."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ExR2X6wY9Ls",
+                "duration": 1345,
+                "title": "JJ's Bear Dance + Nina Meets the Garbage Truck + Pajama Party Song FULL EPISODE 🐞 CoComelo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WnDnPuoX8hI",
+                "duration": 1913,
+                "title": "Missing Zoo Animals Episode | Cartoon Animation For Children | Videogyan Kids Shows | Zool"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Nefi0l9LEc",
+                "duration": 2010,
+                "title": "Good Morning America Full Broadcast - Sunday, August 16, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sZkyv29WHLg",
+                "duration": 4285,
+                "title": "Good Morning America Full Broadcast - Friday, August 14, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DPXLvI4q4ak",
+                "duration": 728,
+                "title": "Dora Ka Dost Le Rhy Hain Hum😍Kachwy Ny Bagola Ko Kat Diya😔"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kk60WsqwoRw",
+                "duration": 2668,
+                "title": "Mamba in My Closet! (Full Episode) | Snake City"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y4cSOPbbFRw",
+                "duration": 3620,
+                "title": "PAW Patrol To The Rescue: Search & Rescue Missions! #3 w/ Marshall | Nick Jr."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IJUAdPaANWw",
+                "duration": 2263,
+                "title": "Angry Bull's Rampage! Cow Family Rescue | Super Cow Saves the Day!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KaU9tRbXXwY",
+                "duration": 1921,
+                "title": "I Found 8 Lost Puppies in a Dumpster"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0fts6x_EE_E",
+                "duration": 1045,
+                "title": "A Rare Look at the Secret Life of Orangutans | Short Film Showcase"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KvKbizYH0wk",
+                "duration": 1202,
+                "title": "Deadly quake collapses buildings: ABC World News Tonight with David Muir - Aug. 10, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G4x7Zjuubnk",
+                "duration": 1882,
+                "title": "Not A Normal ANIMAL HOSPITAL in Roblox!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nd-UTGeeAkI",
+                "duration": 1492,
+                "title": "I Raised a Capybara! (100 Day Evolution)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-DTtRJIivnE",
+                "duration": 599,
+                "title": "Keith Races To Save Jake’s Crew In Deadly Ocean Rescue After Emergency Evacuation | Deadli"
             }
         ],
         "search_query": "animal rescue documentary"

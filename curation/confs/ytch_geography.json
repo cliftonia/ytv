@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Geography & Expeditions",
         "network_type": "streaming",
-        "channel_number": 32,
+        "channel_number": 37,
         "network_long_name": "Geography & Expeditions",
         "stream_rotation": "clock",
         "streams": [
@@ -17,9 +17,19 @@
                 "title": "Bigfoot Expedition Turns Terrifying | Full Documentary | Cascade Bigfoot Blood Mystery"
             },
             {
+                "url": "https://www.youtube.com/watch?v=Uf5sA0Uds_I",
+                "duration": 3291,
+                "title": "Mount Everest Expedition Documentary: Storms, Survival & Summit Dreams #everest"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=zlBNdiv2e5k",
                 "duration": 2560,
                 "title": "Everest Expedition 2026 | Full Documentary | 8,848.86m"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FPwQv_r030M",
+                "duration": 673,
+                "title": "Climbing Mount Elbrus 2026 | Full Expedition Documentary ft. Raju Lama (Mongolian Heart)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=7dUjAGTUGrU",
@@ -32,139 +42,9 @@
                 "title": "Uncovering WWII Mysteries | Expedition Unknown | Discovery"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IBBiChWqYNg",
-                "duration": 2141,
-                "title": "21 Day Expedition up the Deadliest Mountain in North America"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F_t9lfDwaE8",
-                "duration": 3799,
-                "title": "Searching for Atlantis with Josh Gates | Expedition Unknown | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8N2SnWzgVbY",
-                "duration": 3653,
-                "title": "Unsolved Mysteries with Josh Gates Expedition Unknown | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cvFt2Xcuois",
-                "duration": 2777,
-                "title": "Breathtaking: K2 - The World's Most Dangerous Mountain | Eddie Bauer"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gCr4Pg9mEA4",
-                "duration": 2843,
-                "title": "Behind The First Summit of The World's Tallest Mountain (Full Episode) | Lost on Everest"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=szicR4CwqlU",
-                "duration": 2625,
-                "title": "A Journey Through The Darién Gap: The World's Deadliest Jungle"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=11bINdW0sew",
-                "duration": 2843,
-                "title": "Lost Giants: Epic Shipwrecks of the Century (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
-                "duration": 2457,
-                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f7-RQZavU3U",
-                "duration": 2567,
-                "title": "EXPEDITION ABRAHAM: From his birthplace to the Promised Land!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
-                "duration": 2842,
-                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Uf5sA0Uds_I",
-                "duration": 3291,
-                "title": "Mount Everest Expedition Documentary: Storms, Survival & Summit Dreams #everest"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xuRpF9RnrOM",
-                "duration": 2843,
-                "title": "Sunken Treasures (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=n05r48HwxZs",
-                "duration": 2217,
-                "title": "Lost Civilizations Beneath Antarctica? | Ancient Aliens | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5cg1phiqcLo",
-                "duration": 887,
-                "title": "Finally, at 51, Mireya Mayor Confirms the TRUTH | Expedition Bigfoot"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GVASftNawjY",
-                "duration": 1802,
-                "title": "The UnXplained: Jack the Ripper's Unsolvable Killing Spree | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cVzyPnDYX2Y",
-                "duration": 4565,
-                "title": "Most Unbelievable UFO Encounters Ever | The Proof Is Out There | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cTQ3Ko9ZKg8",
-                "duration": 3212,
-                "title": "Our Planet | Frozen Worlds | FULL EPISODE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3cm1HofMv1Y",
-                "duration": 3657,
-                "title": "Aliens, Yetis, UFOs, and Other Paranormal Phenomena | Expedition Files | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fypnwjHoaro",
-                "duration": 2709,
-                "title": "Expedition Search For The Nile With Ben Fogle S1E1 | Into Africa Retracing Livingstone"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4FIMsKKvBRM",
-                "duration": 874,
-                "title": "Clair Obscur: Expedition 33 | Full Orchestral Session [Official Music Video]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a1T-f7usCiI",
-                "duration": 1290,
-                "title": "Last Surviving Member of Admiral Byrd's Expedition Reveals The Truth About Antartica"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qX4xZSIkaeE",
-                "duration": 388,
-                "title": "Chip Coffey Senses Something Terrifying! | Expedition Unknown After The Search S5 E1"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TjPxmxDZogg",
-                "duration": 3479,
-                "title": "Extraordinary Finds from Season 3 Pt. 1 | Expedition Files | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YTNnh6fqe2g",
-                "duration": 3585,
-                "title": "Tomb-Raiding Around the World 🏺🔍 Expedition Unknown | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=24YvHmu--eE",
-                "duration": 3030,
-                "title": "Biblical Mysteries | Expedition Unknown | Discovery"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=odZ5Rvp9YJs",
                 "duration": 944,
                 "title": "The Horrors of Broad Peak"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QtUNHjDmGOY",
-                "duration": 1205,
-                "title": "Exploring Babylon and the Prophecies Against Her"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Reh84EUrUas",
@@ -172,124 +52,19 @@
                 "title": "The Lost Franklin Expedition - 2026 Update"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KTji1hOICEI",
-                "duration": 240,
-                "title": "Expedition Everest front seat on-ride 4K POV @60fps Disney's Animal Kingdom"
+                "url": "https://www.youtube.com/watch?v=F_t9lfDwaE8",
+                "duration": 3799,
+                "title": "Searching for Atlantis with Josh Gates | Expedition Unknown | Discovery"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TiQBTesZUJQ",
-                "duration": 3149,
-                "title": "Borneo Death Blow - Full Documentary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xjuy3SMlyUE",
-                "duration": 3215,
-                "title": "I joined Les Stroud’s Bigfoot expedition"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Pfyx5bEZK80",
-                "duration": 2665,
-                "title": "Witness the Volcanoes of Hawai'i (Full Episode) | America's National Parks"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qWcDYEE5_rs",
-                "duration": 3318,
-                "title": "Josh Gates Is Literally Indiana Jones 🤠🐍 | Expedition Unknown | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cJGNTXQC6QQ",
-                "duration": 4186,
-                "title": "THE LAST EXPEDITION — Reviving the Camel Trophy Australia Never Got"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GeCodRjs1Bs",
-                "duration": 1485,
-                "title": "The UnXplained: PROOF the Devil is Real?! | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fW7cG0apZwU",
+                "url": "https://www.youtube.com/watch?v=gCr4Pg9mEA4",
                 "duration": 2843,
-                "title": "Drain Alcatraz: The World's Most Notorious Prison (Full Episode) | Drain the Oceans SPECIA"
+                "title": "Behind The First Summit of The World's Tallest Mountain (Full Episode) | Lost on Everest"
             },
             {
-                "url": "https://www.youtube.com/watch?v=__6mXmIc3p4",
-                "duration": 3135,
-                "title": "Birds: Melodies, Feathers, and Flight | Full Wildlife Documentary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OfSnTONYMag",
-                "duration": 3274,
-                "title": "Central Africa, at Your Own Risk | Deadliest Journeys"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CjHzqHW1BTE",
-                "duration": 2111,
-                "title": "A Vault, A Swamp, And A Buried City | Expedition Unknown S7 E12,13,16,17 | Discovery Chann"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oZBSwzplLu8",
-                "duration": 2979,
-                "title": "Congo, Thrill of the River | Deadliest Journeys"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D6_e6yKH26Q",
-                "duration": 2665,
-                "title": "Clan of the North (Full Episode) | Kingdom of the Polar Bears"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1QeMXEm-BNQ",
-                "duration": 2258,
-                "title": "OceanXplorers: Giants of the Deep with James Cameron (Full Episode) | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=q20iyTriITs",
-                "duration": 3217,
-                "title": "World's Most Mysterious Places: Gate to Hell & Places of Rituals | Czech Republic | Free D"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-P38sFPkMpQ",
-                "duration": 1159,
-                "title": "Return to Bigfoot Country in the Bay Area | Expedition Bigfoot | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YtAL8y2lACs",
-                "duration": 2840,
-                "title": "Storming Antarctica (Full Episode) | Continent 7: Antarctica"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-idr3GEYf1Q",
-                "duration": 2665,
-                "title": "Moon Landing Declassified (Full Episode) | Undercover History Updates | National Geographi"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XV8V9h24NOA",
-                "duration": 527,
-                "title": "What Is Hiding Behind This Sealed Nazi Entrance? | Expedition Unknown S7 E11"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gxqgm-ruiW8",
-                "duration": 4086,
-                "title": "Philippine Seas: A documentary by Atom Araullo (Full Episode) (with English subtitles)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vN_6jfIoYE4",
-                "duration": 3042,
-                "title": "Congo: Jungle Fever | Deadliest Journeys"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-San7qEfAMg",
-                "duration": 2988,
-                "title": "A Deadly Encounter in the Wild: Guyana's Giant Anacondas | Wildlife Documentary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uUL6jN78jeI",
-                "duration": 4346,
-                "title": "Pakistan's Secret Billion Dollar Emerald Mines | Gem Trails of Pakistan S1E5"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=40RfQC0ceGc",
-                "duration": 2865,
-                "title": "The Hidden Tribe That Has Never Seen The Modern World | First Contact: Lost Tribe Of The A"
+                "url": "https://www.youtube.com/watch?v=V7h0bruJDKc",
+                "duration": 5251,
+                "title": "The Frozen Expedition | SCIFI, THRILLER | Full Movie in English"
             },
             {
                 "url": "https://www.youtube.com/watch?v=JJBkQCebplU",
@@ -297,89 +72,14 @@
                 "title": "Swamp Beasts Unleashed | Expedition X | Discovery"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Vq2LR3SBwu0",
-                "duration": 545,
-                "title": "Inside Hitler’s Hidden Nazi Tunnel | Expedition Unknown S7 E10 | Discovery Channel India"
+                "url": "https://www.youtube.com/watch?v=yN2ep_tnztU",
+                "duration": 3131,
+                "title": "Dying For Everest | Full Documentary | Beyond Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aGGBGcjdjXA",
-                "duration": 5339,
-                "title": "Chasing Coral | FULL FEATURE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kZ_4h9UA7Uo",
-                "duration": 3017,
-                "title": "Expedition Antarctica | Free Documentary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BR2ZMj3o5EU",
-                "duration": 2665,
-                "title": "Pyramids and King Tut (Full Episode) | Lost Treasures of Egypt | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZWOG4-WDBNI",
-                "duration": 3802,
-                "title": "Karluk Disaster: The Expedition that was Destroyed by the Arctic Ice"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2L3FhKySvBI",
-                "duration": 5147,
-                "title": "Cannibal Horde | Hollywood Action Thriller Movie | Full English HD Movie | Jungle Survival"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_7qHrb0EwAs",
-                "duration": 552,
-                "title": "The Amelia Earhart 2026 Expedition Just Got Greenlit! (Huge Update)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8ZhWUQMOXTc",
-                "duration": 5147,
-                "title": "Jungle of Bones Full Movie HD | Deadly Jungle Adventure, Savage Creatures & Survival Actio"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JH5s1ytGjGw",
-                "duration": 1764,
-                "title": "Discovering Alexander the Great's Lost Tomb | Expedition Unknown | Discovery"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RGjKXUQXpfA",
-                "duration": 5346,
-                "title": "Expedition to Alien Life | Humanity’s Last Hope | A Powerful Sci-Fi Film Beyond the Edge o"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nY46GnlWKqU",
-                "duration": 2858,
-                "title": "K2 SUMMIT VIDEO! (FULL)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ei-TcECJVXU",
-                "duration": 2665,
-                "title": "Uncovering the Secrets of the International Space Station (Full Episode) | Superstructures"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SY9wE9lQR7o",
-                "duration": 4882,
-                "title": "TITANIC 2026: What's Still Inside the Wreck? (New Dive Expedition)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kOUuk7mdLfc",
-                "duration": 2355,
-                "title": "2026 Expedition - Trek 3 - Video 16 - Boat repairs catch and cook and sea eagles."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_1vEj4F-rm8",
-                "duration": 2843,
-                "title": "Secrets of Christ's Tomb | SPECIAL | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XA5xu15_Hsw",
-                "duration": 513,
-                "title": "EXPEDITION: HUNTED BY THE ANCIENT BEAST (2026) | Full Movie | Survival | 4K"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=M241amQ29hA",
-                "duration": 941,
-                "title": "Amelia Earhart's Plane May Finally Be Found — Inside the 2026 Expedition to Nikumaroro"
+                "url": "https://www.youtube.com/watch?v=9gBYY9RwTYA",
+                "duration": 1236,
+                "title": "Expedition Bigfoot BANNED Episode Surfaces After Years Of Being Hidden..."
             },
             {
                 "url": "https://www.youtube.com/watch?v=Pe5IDeVG_AE",
@@ -387,54 +87,104 @@
                 "title": "The 7-Foot Terror of Cambodia’s Jungle! | Expedition X | Full Episode | Discovery Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=66SP6IGBn9Y",
-                "duration": 327,
-                "title": "Ancient Aliens: Crystal City Discovered Under Antarctica (Season 18) | History"
+                "url": "https://www.youtube.com/watch?v=-P38sFPkMpQ",
+                "duration": 1159,
+                "title": "Return to Bigfoot Country in the Bay Area | Expedition Bigfoot | Discovery"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Cj3fhRVbqTA",
-                "duration": 706,
-                "title": "Namib Desert Expedition 2026 - DOCUMENTARY - Insights into a one-of-a-kind journey"
+                "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
+                "duration": 2457,
+                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History"
             },
             {
-                "url": "https://www.youtube.com/watch?v=fgh99bFeMLM",
-                "duration": 599,
-                "title": "Josh Gates Investigates Hitler’s Suspected Argentinian Hideout | Expedition Unknown"
+                "url": "https://www.youtube.com/watch?v=3cm1HofMv1Y",
+                "duration": 3657,
+                "title": "Aliens, Yetis, UFOs, and Other Paranormal Phenomena | Expedition Files | Discovery"
             },
             {
-                "url": "https://www.youtube.com/watch?v=m3Yg7hHCOYM",
-                "duration": 3940,
-                "title": "Josh Gates Swims With Sharks 🦈🤿 Expedition Unknown | Discovery"
+                "url": "https://www.youtube.com/watch?v=SY9wE9lQR7o",
+                "duration": 4882,
+                "title": "TITANIC 2026: What's Still Inside the Wreck? (New Dive Expedition)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ag7_o2qvR3Q",
-                "duration": 2827,
-                "title": "HIMALAYAN ICE: PUSHING THE LIMITS | Expedition To The Unclimbed | Deep Dive Documentary HD"
+                "url": "https://www.youtube.com/watch?v=w1cuJaX-C0A",
+                "duration": 2608,
+                "title": "Voyage to Himalaya: The Kangchenjunga Expedition 2022 | Climbers Documentary | Full Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nKu_3kp_EIY",
-                "duration": 2664,
-                "title": "The Skyjacker That Got Away: D.B. Cooper (Full Episode) | Undercover History"
+                "url": "https://www.youtube.com/watch?v=RGjKXUQXpfA",
+                "duration": 5346,
+                "title": "Expedition to Alien Life | Humanity’s Last Hope | A Powerful Sci-Fi Film Beyond the Edge o"
             },
             {
-                "url": "https://www.youtube.com/watch?v=30Na_FWHMyM",
-                "duration": 1365,
-                "title": "9th Edition of Northern Sarawak Expedition 2026"
+                "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
+                "duration": 2842,
+                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans"
             },
             {
-                "url": "https://www.youtube.com/watch?v=agyOeuCWIjs",
-                "duration": 596,
-                "title": "Investigating Hitler's Secret Escape House In Argentina | Expedition Unknown"
+                "url": "https://www.youtube.com/watch?v=CjHzqHW1BTE",
+                "duration": 2111,
+                "title": "A Vault, A Swamp, And A Buried City | Expedition Unknown S7 E12,13,16,17 | Discovery Chann"
             },
             {
-                "url": "https://www.youtube.com/watch?v=T2NFMzbt0FE",
-                "duration": 4110,
-                "title": "Who Sank The Titanic? - The Secrets Behind the History | Free Documentary History"
+                "url": "https://www.youtube.com/watch?v=5cg1phiqcLo",
+                "duration": 887,
+                "title": "Finally, at 51, Mireya Mayor Confirms the TRUTH | Expedition Bigfoot"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dyRIpETB28I",
-                "duration": 561,
-                "title": "Klondike Reef Expedition Documentary | Lake Superior, Michigan"
+                "url": "https://www.youtube.com/watch?v=cVzyPnDYX2Y",
+                "duration": 4565,
+                "title": "Most Unbelievable UFO Encounters Ever | The Proof Is Out There | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cJGNTXQC6QQ",
+                "duration": 4186,
+                "title": "THE LAST EXPEDITION — Reviving the Camel Trophy Australia Never Got"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vTsTyOD07es",
+                "duration": 1298,
+                "title": "Things Are TRAGIC For The Cast of Expedition X Now In 2026..."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zNZHTlRFD6E",
+                "duration": 3448,
+                "title": "Alien Encounters You Won't Believe | Ancient Aliens | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=11bINdW0sew",
+                "duration": 2843,
+                "title": "Lost Giants: Epic Shipwrecks of the Century (Full Episode) | Drain the Oceans"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TjPxmxDZogg",
+                "duration": 3479,
+                "title": "Extraordinary Finds from Season 3 Pt. 1 | Expedition Files | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IyVqxElfD0g",
+                "duration": 3957,
+                "title": "13 Bigfoot Sightings You Have to See to Believe | The Proof is Out There | Compilation | H"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OfSnTONYMag",
+                "duration": 3274,
+                "title": "Central Africa, at Your Own Risk | Deadliest Journeys"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n05r48HwxZs",
+                "duration": 2217,
+                "title": "Lost Civilizations Beneath Antarctica? | Ancient Aliens | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TiQBTesZUJQ",
+                "duration": 3149,
+                "title": "Borneo Death Blow - Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YtAL8y2lACs",
+                "duration": 2840,
+                "title": "Storming Antarctica (Full Episode) | Continent 7: Antarctica"
             },
             {
                 "url": "https://www.youtube.com/watch?v=v2TJdDqSXf8",
@@ -442,19 +192,224 @@
                 "title": "Inside the Titanic Wreck: Full 6-Hour Expedition (June 2026)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KNBP5XKiwrY",
-                "duration": 1031,
-                "title": "Polar Expedition in Antarctica: Sailing the MS Roald Amundsen | Mar 2026 | Highlights of A"
+                "url": "https://www.youtube.com/watch?v=qX4xZSIkaeE",
+                "duration": 388,
+                "title": "Chip Coffey Senses Something Terrifying! | Expedition Unknown After The Search S5 E1"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OFyY5khbACY",
-                "duration": 5187,
-                "title": "The Anacondas (2026) Hindi Dubbed Full Movie | Giant Snake Survival Adventure | 4K UHD"
+                "url": "https://www.youtube.com/watch?v=fW7cG0apZwU",
+                "duration": 2843,
+                "title": "Drain Alcatraz: The World's Most Notorious Prison (Full Episode) | Drain the Oceans SPECIA"
             },
             {
-                "url": "https://www.youtube.com/watch?v=wo30zwf95aM",
-                "duration": 758,
-                "title": "Antarctica Expedition from Ushuaia 🇦🇷 | Beagle Channel, Penguins & Icebergs | Full Documen"
+                "url": "https://www.youtube.com/watch?v=KIcwyLQVQVg",
+                "duration": 1257,
+                "title": "Shocking Evidence of Bigfoot's Existence | Expedition Bigfoot | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2qcgeQW15Ac",
+                "duration": 505,
+                "title": "Shadow Figure Appears As Team Contacts Killer Spirit | Expedition X"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kZ_4h9UA7Uo",
+                "duration": 3017,
+                "title": "Expedition Antarctica | Free Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XV8V9h24NOA",
+                "duration": 527,
+                "title": "What Is Hiding Behind This Sealed Nazi Entrance? | Expedition Unknown S7 E11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6j2-MvKgWuc",
+                "duration": 349,
+                "title": "THE KEPLER EXPEDITION"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8ldcETEXDgI",
+                "duration": 3001,
+                "title": "Killer Whales: Up Close and Personal"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q20iyTriITs",
+                "duration": 3217,
+                "title": "World's Most Mysterious Places: Gate to Hell & Places of Rituals | Czech Republic | Free D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4FIMsKKvBRM",
+                "duration": 874,
+                "title": "Clair Obscur: Expedition 33 | Full Orchestral Session [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9dCXW_r_0Pk",
+                "duration": 3646,
+                "title": "The Most MASSIVE Sharks in Shark Week History | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-idr3GEYf1Q",
+                "duration": 2665,
+                "title": "Moon Landing Declassified (Full Episode) | Undercover History Updates | National Geographi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eCEVL_L_LQI",
+                "duration": 540,
+                "title": "Real Giant Squid Captured On Camera Deep Beneath The Ocean | Expedition Files"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T2NFMzbt0FE",
+                "duration": 4110,
+                "title": "Who Sank The Titanic? - The Secrets Behind the History | Free Documentary History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xjuy3SMlyUE",
+                "duration": 3215,
+                "title": "I joined Les Stroud’s Bigfoot expedition"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M241amQ29hA",
+                "duration": 941,
+                "title": "Amelia Earhart's Plane May Finally Be Found — Inside the 2026 Expedition to Nikumaroro"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gxqgm-ruiW8",
+                "duration": 4086,
+                "title": "Philippine Seas: A documentary by Atom Araullo (Full Episode) (with English subtitles)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ug97aPf7cJ0",
+                "duration": 2138,
+                "title": "We Rode NightFlight Expedition! Dollywood’s $50 MILLION Attraction Is INCREDIBLE!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ei-TcECJVXU",
+                "duration": 2665,
+                "title": "Uncovering the Secrets of the International Space Station (Full Episode) | Superstructures"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FBLNLJRE71o",
+                "duration": 2665,
+                "title": "Hunt for the Giant Squid | SPECIAL | Nat Geo Animals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GVASftNawjY",
+                "duration": 1802,
+                "title": "The UnXplained: Jack the Ripper's Unsolvable Killing Spree | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l7x_OrITB-I",
+                "duration": 2542,
+                "title": "Manaslu Expedition 2025 | Full Documentary | 4K Ultra HD | Real Raw Footage."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XjM7mWkqJ88",
+                "duration": 4774,
+                "title": "AMAZON EXPEDITION | Full Wildlife Documentary (4K)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cTQ3Ko9ZKg8",
+                "duration": 3212,
+                "title": "Our Planet | Frozen Worlds | FULL EPISODE | Netflix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EF8C4v7JIbA",
+                "duration": 4043,
+                "title": "Travel to the Depths of Our Mysterious Oceans | 4K UHD | Blue Planet II | BBC Earth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iqIgb5Ko0eo",
+                "duration": 2556,
+                "title": "Expedition Morocco 2026 (EN)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gP3nKYQLcbA",
+                "duration": 568,
+                "title": "Josh Gates Investigates The Extinction Of The VICIOUS Tasmanian Tiger! | Expedition Unknow"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YTNnh6fqe2g",
+                "duration": 3585,
+                "title": "Tomb-Raiding Around the World 🏺🔍 Expedition Unknown | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oZBSwzplLu8",
+                "duration": 2979,
+                "title": "Congo, Thrill of the River | Deadliest Journeys"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cvFt2Xcuois",
+                "duration": 2777,
+                "title": "Breathtaking: K2 - The World's Most Dangerous Mountain | Eddie Bauer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x_Zq_0_cfIo",
+                "duration": 1080,
+                "title": "D23 2026: Everything Disney Parks Just Announced"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e57JN5V6NbM",
+                "duration": 1024,
+                "title": "Clair Obscur: Expedition 33's WILD 6 Year Development Cycle"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vN_6jfIoYE4",
+                "duration": 3042,
+                "title": "Congo: Jungle Fever | Deadliest Journeys"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rdneevYAwfc",
+                "duration": 1654,
+                "title": "The Proof Is Out There: 5 Mysterious Bigfoot Encounters | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OdhxjDXBP8Q",
+                "duration": 3330,
+                "title": "America's Most Notorious Outlaws🤠💰 | Expedition Unknown | Discovery"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QtUNHjDmGOY",
+                "duration": 1205,
+                "title": "Exploring Babylon and the Prophecies Against Her"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GeCodRjs1Bs",
+                "duration": 1485,
+                "title": "The UnXplained: PROOF the Devil is Real?! | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zPy-irCtZ4k",
+                "duration": 1096,
+                "title": "Biggest Discoveries Found on the Moon *Part 2* | Ancient Aliens | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fypnwjHoaro",
+                "duration": 2709,
+                "title": "Expedition Search For The Nile With Ben Fogle S1E1 | Into Africa Retracing Livingstone"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BR2ZMj3o5EU",
+                "duration": 2665,
+                "title": "Pyramids and King Tut (Full Episode) | Lost Treasures of Egypt | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a1T-f7usCiI",
+                "duration": 1290,
+                "title": "Last Surviving Member of Admiral Byrd's Expedition Reveals The Truth About Antartica"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gsB9nX8FS5I",
+                "duration": 2665,
+                "title": "Flooded Tombs of the Nile (Full Episode) | SPECIAL | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8BjqI0FN7fs",
+                "duration": 2770,
+                "title": "Hells Canyon BDR-X Documentary Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KRxOSS2JRR8",
+                "duration": 2079,
+                "title": "Josh Gates Uncovers Ancient Secrets | Expedition Unknown S7 E18,19,20,12 | discovery+ Indi"
             },
             {
                 "url": "https://www.youtube.com/watch?v=e8h0c07L0dk",
@@ -462,34 +417,24 @@
                 "title": "Spiti Valley Expedition 2026 | The Middle Land of the World | Ride On Expeditions"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KPehrNUREIU",
-                "duration": 3101,
-                "title": "Antarctica: Tales from the End of the World"
+                "url": "https://www.youtube.com/watch?v=f7-RQZavU3U",
+                "duration": 2567,
+                "title": "EXPEDITION ABRAHAM: From his birthplace to the Promised Land!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nNQ6oUcWbQg",
-                "duration": 301,
-                "title": "🏔️ Beyond the Summit: Inside an Elite Everest Expedition"
+                "url": "https://www.youtube.com/watch?v=__6mXmIc3p4",
+                "duration": 3135,
+                "title": "Birds: Melodies, Feathers, and Flight | Full Wildlife Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FPwQv_r030M",
-                "duration": 673,
-                "title": "Climbing Mount Elbrus 2026 | Full Expedition Documentary ft. Raju Lama (Mongolian Heart)"
+                "url": "https://www.youtube.com/watch?v=Vq2LR3SBwu0",
+                "duration": 545,
+                "title": "Inside Hitler’s Hidden Nazi Tunnel | Expedition Unknown S7 E10 | Discovery Channel India"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yfbAxJQ-2us",
-                "duration": 585,
-                "title": "Josh Gates Investigates Hitler’s SECRET \"America Bomber\" | Expedition Unknown"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BMKbNLCmUzw",
-                "duration": 2482,
-                "title": "Strain Hunters Jamaica Expedition"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dvMm5Fic28M",
-                "duration": 4439,
-                "title": "The Last Expedition Never Returned | BURIAL GROUND ALPHA | 2026 Full Movie | Survival | 4k"
+                "url": "https://www.youtube.com/watch?v=_7qHrb0EwAs",
+                "duration": 552,
+                "title": "The Amelia Earhart 2026 Expedition Just Got Greenlit! (Huge Update)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=CDFdulYbH5c",
@@ -497,14 +442,69 @@
                 "title": "The Hunt’s Biggest Moments in Kentucky | Expedition Bigfoot | Discovery"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TigZxAw93QA",
-                "duration": 526,
-                "title": "The Dyatlov Pass Incident: Russia's Most Haunting Mystery | Full Documentary"
+                "url": "https://www.youtube.com/watch?v=wo30zwf95aM",
+                "duration": 758,
+                "title": "Antarctica Expedition from Ushuaia 🇦🇷 | Beagle Channel, Penguins & Icebergs | Full Documen"
             },
             {
-                "url": "https://www.youtube.com/watch?v=H19OUVWwks4",
-                "duration": 1222,
-                "title": "1 MINUTE AGO: Bryce Johnson From Expedition Bigfoot Is Breaking The News…"
+                "url": "https://www.youtube.com/watch?v=ag7_o2qvR3Q",
+                "duration": 2827,
+                "title": "HIMALAYAN ICE: PUSHING THE LIMITS | Expedition To The Unclimbed | Deep Dive Documentary HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KTji1hOICEI",
+                "duration": 240,
+                "title": "Expedition Everest front seat on-ride 4K POV @60fps Disney's Animal Kingdom"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tM-jXE8U-fM",
+                "duration": 908,
+                "title": "Expedition of the Australian Outback (1927) Silent Documentary | 16mm Film Scan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xkPd2_GmrqU",
+                "duration": 1796,
+                "title": "The Ambitious Life of Nims Dai"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pfyx5bEZK80",
+                "duration": 2665,
+                "title": "Witness the Volcanoes of Hawai'i (Full Episode) | America's National Parks"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=COk0Sbbc_co",
+                "duration": 2710,
+                "title": "Animal Parents of the Arctic (Full Episode) | Incredible Animal Journeys | Nat Geo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UkgOSWxNQEE",
+                "duration": 3314,
+                "title": "Spring Expedition 2026: Climbing Mera Peak & Annapurna I @Saila_mingma"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kNp0Pdz7scU",
+                "duration": 421,
+                "title": "A DAY IN THE LIFE OF A JAMAICAN RASTA (4K)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fgh99bFeMLM",
+                "duration": 599,
+                "title": "Josh Gates Investigates Hitler’s Suspected Argentinian Hideout | Expedition Unknown"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_1vEj4F-rm8",
+                "duration": 2843,
+                "title": "Secrets of Christ's Tomb | SPECIAL | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rPp79T5kzuE",
+                "duration": 436,
+                "title": "The UnXplained: Pterodactyl Creature Spotted in 1800s Arizona (Season 4) | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=agyOeuCWIjs",
+                "duration": 596,
+                "title": "Investigating Hitler's Secret Escape House In Argentina | Expedition Unknown"
             }
         ],
         "search_query": "expedition documentary full"

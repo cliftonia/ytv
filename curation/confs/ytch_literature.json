@@ -2,14 +2,14 @@
     "station_conf": {
         "network_name": "Literature",
         "network_type": "streaming",
-        "channel_number": 36,
+        "channel_number": 41,
         "network_long_name": "Literature",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=TsD-8FGA84A",
-                "duration": 2719,
-                "title": "Great Books #1:  Secrets of the Universe"
+                "url": "https://www.youtube.com/watch?v=Huam5sSRjwc",
+                "duration": 2542,
+                "title": "The Door in the Wall by H.G. Wells | Short Story Audiobook"
             },
             {
                 "url": "https://www.youtube.com/watch?v=nBQPnvmaNcE",
@@ -17,9 +17,19 @@
                 "title": "Harvard Professor Explains The Rules of Writing — Steven Pinker"
             },
             {
+                "url": "https://www.youtube.com/watch?v=TsD-8FGA84A",
+                "duration": 2719,
+                "title": "Great Books #1:  Secrets of the Universe"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=XFLcHOA-Q0g",
                 "duration": 3991,
                 "title": "Critical Thinking Mastery: Transform Your Mindset for Ultimate Personal Growth (Audiobook)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OTvm5LfhDzg",
+                "duration": 375,
+                "title": "3 Books That Will Change Your Life"
             },
             {
                 "url": "https://www.youtube.com/watch?v=lLLp1TOpMg8",
@@ -32,24 +42,14 @@
                 "title": "The Odyssey's Calypso — On the Burden of Forever | Ghost Lectures"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PapPHxmLcEg",
-                "duration": 1335,
-                "title": "26 books I *HAVE* to read in 2026 📚literary fiction, classics, non-fiction, & more"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a8n8tMt0be8",
-                "duration": 972,
-                "title": "Learn English Through a Dark Love Story | Wuthering Heights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I3g7_bTLebo",
-                "duration": 368,
-                "title": "If I Built a School – 🏫 Creative read aloud kids book by Chris Van Dusen"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=YG4wLL40_ws",
                 "duration": 345,
                 "title": "SICK SIMON - Read Aloud Book for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vtkv3-endYc",
+                "duration": 286,
+                "title": "Why should you read “Crime and Punishment”? - Alex Gendler"
             },
             {
                 "url": "https://www.youtube.com/watch?v=n70Ev0pPI1I",
@@ -62,19 +62,19 @@
                 "title": "The Smartest Giant in Town - Animated Read Aloud Book"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YBJijrwy9q4",
-                "duration": 1991,
-                "title": "26 books i want to read in 2026! 📚 *bookmas day 10*"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=j4bRXWQrM9A",
-                "duration": 547,
-                "title": "Clever Fox Outsmarts Cruel Lion 🦊🦁 | English Moral Stories | Bedtime Stories #kidsstories"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=X5Irl_oWD6M",
                 "duration": 602,
                 "title": "The Cat in the Hat | Brand New Full Episode | Official Animated Read-Along | Dr. Seuss"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lFRnIjEVmXk",
+                "duration": 432,
+                "title": "🔥This Book is on FIRE!! 🔥(kids books read aloud) This Book is Perfect"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a8n8tMt0be8",
+                "duration": 972,
+                "title": "Learn English Through a Dark Love Story | Wuthering Heights"
             },
             {
                 "url": "https://www.youtube.com/watch?v=BbD0o4yKyBw",
@@ -82,14 +82,34 @@
                 "title": "Are Classic Books Still Worth Reading? | English Listening Practice | Learn English Podcas"
             },
             {
+                "url": "https://www.youtube.com/watch?v=veeGj6oJlpo",
+                "duration": 413,
+                "title": "Are You My Mother | Mr Storytime | Read Aloud Book"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_jGjPZuBMZg",
+                "duration": 1920,
+                "title": "Peter Pan - English Reading for Beginners Full AUDIOBOOK (leitura guiada em inglês para in"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=LFSJPQmZvgM",
                 "duration": 314,
                 "title": "📚 Kids Read-Aloud Book 📚 The Mean Bean - Learning To Be Kind By Sonica Ellis"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nr-Su0Zb6Qw",
-                "duration": 2144,
-                "title": "The Psychology of Emotion by David J. Lieberman | Book Summary in Hindi | Audiobook"
+                "url": "https://www.youtube.com/watch?v=73X7UUR6w-I",
+                "duration": 780,
+                "title": "The Silent Princess & The Talkative Princess | Stories for Teenagers | @EnglishFairyTales"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QTu39aMg_mU",
+                "duration": 309,
+                "title": "Why should you read \"Hamlet\"? - Iseult Gillespie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j4bRXWQrM9A",
+                "duration": 547,
+                "title": "Clever Fox Outsmarts Cruel Lion 🦊🦁 | English Moral Stories | Bedtime Stories #kidsstories"
             },
             {
                 "url": "https://www.youtube.com/watch?v=OwZT8_lARa4",
@@ -102,9 +122,34 @@
                 "title": "10 Stoic Principles So That NOTHING Can AFFECT YOU | Epictetus Stoicism (2026)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=WqocXW4JUdk",
-                "duration": 2277,
-                "title": "a calm playlist for reading"
+                "url": "https://www.youtube.com/watch?v=LInND2d6dtA",
+                "duration": 5321,
+                "title": "How to Write Something Truly Beautiful (Alain de Botton Interview)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HDhlXPBXwFA",
+                "duration": 3654,
+                "title": "IELTS 2026 Complete Course in 1 HOUR! (You won't need another video!)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I3g7_bTLebo",
+                "duration": 368,
+                "title": "If I Built a School – 🏫 Creative read aloud kids book by Chris Van Dusen"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=amNQkwMKh3c",
+                "duration": 427,
+                "title": "Olivia Colman reads The Gruffalo's Child | CBeebies Bedtime Story"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fiCMKLg3SxM",
+                "duration": 629,
+                "title": "Gulliver's Travels Bedtime Stories for Kids in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2rpILyUYNfY",
+                "duration": 2108,
+                "title": "i read the 10 most disturbing books ever written."
             },
             {
                 "url": "https://www.youtube.com/watch?v=aYViMcZtwTs",
@@ -112,14 +157,24 @@
                 "title": "The Spirit & Influence of Vedanta | Practice Reading English with Swami Vivekananda"
             },
             {
-                "url": "https://www.youtube.com/watch?v=_3sKp6_gA_w",
-                "duration": 457,
-                "title": "Stay Wild My Child! | Read Aloud Kids Book | Vooks Narrated Storybooks"
+                "url": "https://www.youtube.com/watch?v=WqocXW4JUdk",
+                "duration": 2277,
+                "title": "a calm playlist for reading"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yP3S1fHc3IQ",
-                "duration": 562,
-                "title": "One Fish, Two Fish, Red Fish, Blue Fish | Full Episode | Official Animated Read-Along | Dr"
+                "url": "https://www.youtube.com/watch?v=maqaUxL0lM8",
+                "duration": 264,
+                "title": "Hansel and Gretel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pVboJN7YJ0o",
+                "duration": 1946,
+                "title": "Read These 40 Books to Get Rich, Live Rich, and Stay Rich"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o91Jp1JENtw",
+                "duration": 3625,
+                "title": "45 | The Book ROMANS (KJV) | Read By Alexander Scourby | AUDIO and TEXT | Synced Together."
             },
             {
                 "url": "https://www.youtube.com/watch?v=izViUOTv8oY",
@@ -127,44 +182,29 @@
                 "title": "To Kill a Mockingbird - Book Summary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YWT9CDHS-_Y",
-                "duration": 317,
-                "title": "📚 Kids Read-Aloud Book 📚 Pencil Hospital - School Supplies Story By Jennifer Jones"
+                "url": "https://www.youtube.com/watch?v=HljqHNf85nE",
+                "duration": 2107,
+                "title": "EP 2: Peter's Coal-Mine 🚂 | The Railway Children Audiobook | Cozy Classic Story (Ch 2) 🚂🌾"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dlxE-aWzFoc",
+                "url": "https://www.youtube.com/watch?v=BLEYCyrLpkI",
+                "duration": 2055,
+                "title": "The Power of Your Subconscious Mind by Dr. Joseph Murphy Audiobook | Books Summary in Hind"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2REgyGbR00w",
                 "duration": 274,
-                "title": "The Wall in the Middle of the Book | Read Aloud Kids Book | Vooks Narrated Storybooks"
+                "title": "Bad Wolf and the Intelligent Buffalo | Bedtime Stories for Kids in English | Fairy Tales"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MYFNvbArjvM",
-                "duration": 920,
-                "title": "The Invisible Princess Story | Stories for Teenagers | @EnglishFairyTales"
+                "url": "https://www.youtube.com/watch?v=9ubqURmsfZI",
+                "duration": 341,
+                "title": "The Pout-Pout Fish | Mr Storytime | Read Aloud Book"
             },
             {
-                "url": "https://www.youtube.com/watch?v=-9ocVnX7Td0",
-                "duration": 3563,
-                "title": "Why Was Europe's First Great Civilization Completely Forgotten? | History for Sleep"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bOMksnSaAJ4",
-                "duration": 2012,
-                "title": "Thomas Sowell -- Basic Economics"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5rRHpNE87uk",
-                "duration": 1855,
-                "title": "California DMV Written Test 2026 ( 50 REAL TEST Questions and Answers )"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YsuOOAptFOA",
-                "duration": 553,
-                "title": "✍  Bartleby by Herman Melville — Summary, Analysis & Life Lessons"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OrLJFsxdn6w",
-                "duration": 553,
-                "title": "✍  The Count of Monte Cristo by Alexandre Dumas — Summary, Analysis & Life Lessons"
+                "url": "https://www.youtube.com/watch?v=MC8Z4cUc6YA",
+                "duration": 4692,
+                "title": "Writing Advice Every Writer Should Hear (Anne Lamott Interview)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=4GSCWDa1qcE",
@@ -172,19 +212,39 @@
                 "title": "Shakespeare in Seven Minutes: Macbeth Summary"
             },
             {
+                "url": "https://www.youtube.com/watch?v=dlxE-aWzFoc",
+                "duration": 274,
+                "title": "The Wall in the Middle of the Book | Read Aloud Kids Book | Vooks Narrated Storybooks"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nr-Su0Zb6Qw",
+                "duration": 2144,
+                "title": "The Psychology of Emotion by David J. Lieberman | Book Summary in Hindi | Audiobook"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YWT9CDHS-_Y",
+                "duration": 317,
+                "title": "📚 Kids Read-Aloud Book 📚 Pencil Hospital - School Supplies Story By Jennifer Jones"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OrLJFsxdn6w",
+                "duration": 553,
+                "title": "✍  The Count of Monte Cristo by Alexandre Dumas — Summary, Analysis & Life Lessons"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YsuOOAptFOA",
+                "duration": 553,
+                "title": "✍  Bartleby by Herman Melville — Summary, Analysis & Life Lessons"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5rRHpNE87uk",
+                "duration": 1855,
+                "title": "California DMV Written Test 2026 ( 50 REAL TEST Questions and Answers )"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=NIvBYawWvNY",
                 "duration": 379,
                 "title": "Alice in Wonderland | A1 English Story for Beginners | Episode 1: The White Rabbit 🐇"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MGvZqMlvDxs",
-                "duration": 3578,
-                "title": "Enoch - The Movie (2026) The Film that Shocked the World | Complete Biblical Movie 4K"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nxXF8DRbJNU",
-                "duration": 1490,
-                "title": "Macbeth by Shakespeare Summary Retold in Modern English"
             },
             {
                 "url": "https://www.youtube.com/watch?v=x1Kksn76jZk",
@@ -197,24 +257,19 @@
                 "title": "A Treatise on Government Audiobook(Book 3/8)| Classical Political Philosophy | For Critica"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ejY6V8bxeD4",
-                "duration": 4392,
-                "title": "Building Blocks in Economics ONE SHOT 🔥 | Class 9 SST | New Book & Syllabus 2026-27 | Sidd"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=DbqimWcJnAI",
                 "duration": 4745,
                 "title": "Battlefield Of The Mind-FULL SERMON | Joyce Meyer"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R2ft5ZpaZP4",
-                "duration": 2062,
-                "title": "The Art Of Persuasion by Bob Burg | Book Summary in Hindi | Audiobook"
+                "url": "https://www.youtube.com/watch?v=nxXF8DRbJNU",
+                "duration": 1490,
+                "title": "Macbeth by Shakespeare Summary Retold in Modern English"
             },
             {
-                "url": "https://www.youtube.com/watch?v=LlbqMS0BQQ4",
-                "duration": 2057,
-                "title": "North and South by Elizabeth Gaskell chapter 40 | Audiobook"
+                "url": "https://www.youtube.com/watch?v=rM-zN4sqOAo",
+                "duration": 589,
+                "title": "Wuthering Heights Video Summary"
             },
             {
                 "url": "https://www.youtube.com/watch?v=lOgw2yPu4L0",
@@ -222,9 +277,24 @@
                 "title": "David Copperfield: Novel By Charles Dickens in Hindi summary Explanation and full analysis"
             },
             {
+                "url": "https://www.youtube.com/watch?v=ejY6V8bxeD4",
+                "duration": 4392,
+                "title": "Building Blocks in Economics ONE SHOT 🔥 | Class 9 SST | New Book & Syllabus 2026-27 | Sidd"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yHKKtxliYaY",
+                "duration": 1056,
+                "title": "How to Write a Book: 13 Steps From a Bestselling Author"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=jg7BdlqYqAU",
                 "duration": 668,
                 "title": "The Jealous Neighbour | Bedtime Stories for Kids in English | Fairy Tales"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LlbqMS0BQQ4",
+                "duration": 2057,
+                "title": "North and South by Elizabeth Gaskell chapter 40 | Audiobook"
             },
             {
                 "url": "https://www.youtube.com/watch?v=McwXY_BUpdo",
@@ -237,14 +307,14 @@
                 "title": "Moral Stories For Kids |  Learning Stories For Kids | Tia & Tofu Story Telling | Kids Hut"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pVboJN7YJ0o",
-                "duration": 1946,
-                "title": "Read These 40 Books to Get Rich, Live Rich, and Stay Rich"
+                "url": "https://www.youtube.com/watch?v=uw_PlF2s72s",
+                "duration": 1091,
+                "title": "Lord of the Flies Plot Summary - Full Lesson - Schooling Online"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
-                "duration": 1953,
-                "title": "Philosophy for Beginners"
+                "url": "https://www.youtube.com/watch?v=uizuQ3_fLCw",
+                "duration": 270,
+                "title": "The Book With No Pictures – 📄 Hilarious read aloud of a kids book with no pictures!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=T09QAF7LnOo",
@@ -252,19 +322,9 @@
                 "title": "45-Minute NCLEX Last-Minute Crash Course | Priority High Yield Topics + Free NCLEX Notes"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MC8Z4cUc6YA",
-                "duration": 4692,
-                "title": "Writing Advice Every Writer Should Hear (Anne Lamott Interview)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=IcxZa7HOW1o",
                 "duration": 989,
                 "title": "Les Brown - CHANGE THE WAY YOU SEE YOURSELF (Les Brown Motivation)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yHKKtxliYaY",
-                "duration": 1056,
-                "title": "How to Write a Book: 13 Steps From a Bestselling Author"
             },
             {
                 "url": "https://www.youtube.com/watch?v=McjXU2Pf4fk",
@@ -272,9 +332,9 @@
                 "title": "Silly Crocodile Can't Sleep Without A Bedtime Story"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vyYJuMXt2EU",
-                "duration": 373,
-                "title": "Children's Books Read Aloud - 💪😺Building Confidence & Self-Esteem"
+                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
+                "duration": 1953,
+                "title": "Philosophy for Beginners"
             },
             {
                 "url": "https://www.youtube.com/watch?v=jPPzvuDIr1w",
@@ -282,34 +342,9 @@
                 "title": "The Psychology of Money in 33 minutes | Animated Book Summary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tKbaf0M6DGM",
-                "duration": 996,
-                "title": "Edward Payson Roe - A Day Of Fate (5/36) Mutual Discoveries"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uw_PlF2s72s",
-                "duration": 1091,
-                "title": "Lord of the Flies Plot Summary - Full Lesson - Schooling Online"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DOSBfR4X3kU",
-                "duration": 470,
-                "title": "Anatomy of a Mistake #americanliterature #thefableforest #ytubeshortvideo #learning"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KW675ZFyIwI",
-                "duration": 1627,
-                "title": "Night meditation by Louise Hay - No ads"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7hrczJyqJFA",
-                "duration": 835,
-                "title": "The Adventures of Pinocchio 🤥🎪 | Bedtime Stories for Kids in English | Fairy Tales"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Oj4gT24G2Tk",
-                "duration": 240,
-                "title": "Russian Realities And Problems - Preface by James Duff Duff"
+                "url": "https://www.youtube.com/watch?v=yKYVBIYhwDw",
+                "duration": 2479,
+                "title": "English Listening Practice: 1-Hour Real Story | Improve Your English – Speak Fluently (A1A"
             },
             {
                 "url": "https://www.youtube.com/watch?v=T0G-yYbqpNc",
@@ -317,54 +352,19 @@
                 "title": "The ULTIMATE Fantasy Reading Guide (Where to Start & Find What You Like)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gxzSkjIl6s8",
-                "duration": 1461,
-                "title": "A Draught of Kindness by Charles Dickens with Malayalam explanation _Plus one English"
+                "url": "https://www.youtube.com/watch?v=tKbaf0M6DGM",
+                "duration": 996,
+                "title": "Edward Payson Roe - A Day Of Fate (5/36) Mutual Discoveries"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OSh_TkJF6zQ",
-                "duration": 3563,
-                "title": "Sunday Suspense | Feluda | Feluda r Goendagiri | Satyajit Ray | Mirchi Bangla Audio Story"
+                "url": "https://www.youtube.com/watch?v=DOSBfR4X3kU",
+                "duration": 470,
+                "title": "Anatomy of a Mistake #americanliterature #thefableforest #ytubeshortvideo #learning"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DNg26rPHAFo",
-                "duration": 453,
-                "title": "Jack and the Beanstalk | Magical Fairy Tale for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CxMJ3m-NyW8",
-                "duration": 538,
-                "title": "The Brave Little Donkey | English Moral Stories | Bedtime Stories"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YaDvRdLMkHs",
-                "duration": 534,
-                "title": "Existentialism: Crash Course Philosophy #16"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jLhVTd-6oE4",
-                "duration": 1629,
-                "title": "Superbook - Ruth - Season 3 Episode 1 - Full Episode (Official HD Version)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SR-JA-ncDGs",
-                "duration": 576,
-                "title": "The Wolf and the Seven Little Goats 🐺🐐 | English Moral Stories | Bedtime Stories"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XbZf-ZHyADU",
-                "duration": 4047,
-                "title": "Russian Realities And Problems - Poland Old And New by Roman Dmowski"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OypvnhySrDs",
-                "duration": 1261,
-                "title": "George Joseph Gustave Masson (19/29) Richelieu"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Wd1sSgtGTWI",
-                "duration": 938,
-                "title": "Edward Payson Roe - A Day Of Fate (8/36) The Mystery Of Mysteries"
+                "url": "https://www.youtube.com/watch?v=tD201OQwsFI",
+                "duration": 780,
+                "title": "Animal Farm Summary - George Orwell - Schooling Online"
             },
             {
                 "url": "https://www.youtube.com/watch?v=iC6sKBiASxA",
@@ -372,29 +372,94 @@
                 "title": "IELTS Listening Practice Test 2026 with Answers [Real Exam - 302 ]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=32HRUge-7y4",
-                "duration": 271,
-                "title": "The Secret of Secrets by Dan Brown [ Full Audiobook Free ]"
+                "url": "https://www.youtube.com/watch?v=Oj4gT24G2Tk",
+                "duration": 240,
+                "title": "Russian Realities And Problems - Preface by James Duff Duff"
             },
             {
-                "url": "https://www.youtube.com/watch?v=lFRnIjEVmXk",
-                "duration": 432,
-                "title": "🔥This Book is on FIRE!! 🔥(kids books read aloud) This Book is Perfect"
+                "url": "https://www.youtube.com/watch?v=dAHJ0omYo7U",
+                "duration": 4475,
+                "title": "THE ENTIRE World War II From The German Perspective | Documentary in PURE COLOR"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zo_ZYM1QqaU",
-                "duration": 505,
-                "title": "The Wolf in Sheep’s Clothing Story 🐺🐑 | English Moral Stories | Bedtime Stories"
+                "url": "https://www.youtube.com/watch?v=pFy3Wnmchd8",
+                "duration": 617,
+                "title": "Hansel and Gretel | Fairy Tales | Gigglebox"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xott1I59gM0",
-                "duration": 592,
-                "title": "The Honest Cow and the Tiger 🐮🐯 | English Moral Stories | Bedtime Stories"
+                "url": "https://www.youtube.com/watch?v=DNg26rPHAFo",
+                "duration": 453,
+                "title": "Jack and the Beanstalk | Magical Fairy Tale for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kO3lA0P0Yr4",
+                "duration": 1454,
+                "title": "From B1 to B2 English Listening Practice: Deeper Conversations"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CxMJ3m-NyW8",
+                "duration": 538,
+                "title": "The Brave Little Donkey | English Moral Stories | Bedtime Stories"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R2ft5ZpaZP4",
+                "duration": 2062,
+                "title": "The Art Of Persuasion by Bob Burg | Book Summary in Hindi | Audiobook"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9KK2OBZIcRw",
+                "duration": 251,
+                "title": "Nicole Kidman Is Blown Away By Stephen Fry’s Intelligence | The Graham Norton Show"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FiWp7XUTO4s",
+                "duration": 263,
+                "title": "George Strait singing Boot Scootin' Boogie (HD) - Brooks and Dunn ACM Last Rodeo"
             },
             {
                 "url": "https://www.youtube.com/watch?v=uLN6IdRtDhg",
                 "duration": 3755,
                 "title": "Advanced Vocabulary in 60 Minutes (Precise words you need to know!)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wd1sSgtGTWI",
+                "duration": 938,
+                "title": "Edward Payson Roe - A Day Of Fate (8/36) The Mystery Of Mysteries"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=32HRUge-7y4",
+                "duration": 271,
+                "title": "The Secret of Secrets by Dan Brown [ Full Audiobook Free ]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=32KUrAdSrgo",
+                "duration": 1051,
+                "title": "How to Fix Your Entire Life in 1 Day (Jim Rohn Seminar)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OypvnhySrDs",
+                "duration": 1261,
+                "title": "George Joseph Gustave Masson (19/29) Richelieu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I9iuj-0t84k",
+                "duration": 517,
+                "title": "Paradise lost book 1 summary in hindi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5DqXHg52H1g",
+                "duration": 413,
+                "title": "How to Journal (Like a Philosopher)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hKks7D7DVZw",
+                "duration": 283,
+                "title": "Sting - Shape of My Heart (Live at the Rijksmuseum)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OSWLxj4kTKA",
+                "duration": 583,
+                "title": "The Ugly Duckling | Full Story |  Fairytale | Bedtime Stories For Kids | 4K UHD"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZJkSFWH2SAs",
@@ -407,69 +472,9 @@
                 "title": "A Doll's House by Henrik Ibsen in hindi Summary and explanation"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Z5Ns_3zSRdA",
-                "duration": 955,
-                "title": "EP 1; Introduction to Thomas Edward Lawrence's translation of the Odyssey"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BDqvzFY72mg",
-                "duration": 3375,
-                "title": "Lecture 1: Introduction to Power and Politics in Today’s World"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NUYtXFX518E",
-                "duration": 1794,
-                "title": "Lesson 15: Tolerance | Napoleon Hill’s Law of Success"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=vLkPeRifUaI",
                 "duration": 2447,
                 "title": "Dua Lipa In Conversation With Margaret Atwood, Author of The Handmaid's Tale"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C_7XVhOy248",
-                "duration": 1863,
-                "title": "Lesson 14: Failure | Napoleon Hill’s Law of Success"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BHEhxPuMmQI",
-                "duration": 1339,
-                "title": "Physicist Brian Cox explains quantum physics in 22 minutes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MqYwP9w9pJ4",
-                "duration": 2382,
-                "title": "If You Can Understand Her, Your English Is Excellent! | Real British Accent | Podcast Ep 5"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OSWLxj4kTKA",
-                "duration": 583,
-                "title": "The Ugly Duckling | Full Story |  Fairytale | Bedtime Stories For Kids | 4K UHD"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zmEv7vTOQGE",
-                "duration": 3602,
-                "title": "Baby Learning with Ms Rachel - Baby Songs, Speech, Sign Language for Babies - Baby Videos"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=l_94AMGMUK0",
-                "duration": 1026,
-                "title": "Edward Payson Roe - A Day Of Fate (11/36) Moved"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UH4Qzk85iWM",
-                "duration": 1607,
-                "title": "Superbook - Nehemiah - Season 3 Episode 8 - Full Episode Premiere"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HTIVuT_g204",
-                "duration": 485,
-                "title": "💫 Children's Books Read Aloud | 🍄🍇Hilarious and Fun Story About Unlikely Friendship 🤣"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qzoIAJYPQwo",
-                "duration": 2576,
-                "title": "Seth Godin – Leadership vs. Management - What it means to make a difference"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1GBV2FACzC0",
@@ -477,34 +482,29 @@
                 "title": "AI Just Decoded the Dead Sea Scrolls… And It’s Worse Than We Thought"
             },
             {
-                "url": "https://www.youtube.com/watch?v=93WQa9aFAko",
-                "duration": 3499,
-                "title": "Jane Eyre by Charlotte Brontë — Chapter 17 | Classic Novel Audiobook -"
+                "url": "https://www.youtube.com/watch?v=Z5Ns_3zSRdA",
+                "duration": 955,
+                "title": "EP 1; Introduction to Thomas Edward Lawrence's translation of the Odyssey"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bisUxWGk-Nw",
-                "duration": 5266,
-                "title": "SHORT STORY for CHILDREN (15 Moral Stories) | Jack and Beanstalk, Rapunzel"
+                "url": "https://www.youtube.com/watch?v=EVxkcRY8JHA",
+                "duration": 2193,
+                "title": "Calm Down at the End of the Day"
             },
             {
-                "url": "https://www.youtube.com/watch?v=S0RnSM3x_X0",
-                "duration": 687,
-                "title": "The Three Little Pigs & The Big Bad Wolf 🐷🐺 | Bedtime Stories & Fairy Tales for Kids"
+                "url": "https://www.youtube.com/watch?v=g_CaPgFTs7U",
+                "duration": 445,
+                "title": "The Merchant of Venice - Play Summary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=LqAZd96DY-4",
-                "duration": 295,
-                "title": "A Classic Story in Slow Portuguese"
+                "url": "https://www.youtube.com/watch?v=rZC56gGyh1g",
+                "duration": 486,
+                "title": "The Odyssey in 8 Minutes"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FVJU7nipS-s",
-                "duration": 269,
-                "title": "YESTERDAY ONCE MORE - Carpenters (KARAOKE VERSION)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6IegDENuxU4",
-                "duration": 1361,
-                "title": "How To Learn & Study Chess Openings"
+                "url": "https://www.youtube.com/watch?v=NUYtXFX518E",
+                "duration": 1794,
+                "title": "Lesson 15: Tolerance | Napoleon Hill’s Law of Success"
             }
         ],
         "search_query": "literature lecture audiobook classic"

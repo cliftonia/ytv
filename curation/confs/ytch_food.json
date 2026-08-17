@@ -2,24 +2,19 @@
     "station_conf": {
         "network_name": "Food",
         "network_type": "streaming",
-        "channel_number": 41,
+        "channel_number": 47,
         "network_long_name": "Food",
         "stream_rotation": "clock",
         "streams": [
             {
                 "url": "https://www.youtube.com/watch?v=wBCaiXxhbsY",
                 "duration": 1226,
-                "title": "The ULTIMATE Thailand Street Food Tour!"
+                "title": "Thailand Night Market FOOD CHALLENGE!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7dQcK7IzRkk",
-                "duration": 4221,
-                "title": "Wonderful Cambodian Street Food Tour 2026 - Walking Tour in Toul Tom Poung Market Food, Ph"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DvkoA_TPep8",
-                "duration": 3981,
-                "title": "Hidden Cambodian Street Food Tour 2026 - Evening Walking Tour Around Orussey Market in Phn"
+                "url": "https://www.youtube.com/watch?v=LNr9urMNCyQ",
+                "duration": 2097,
+                "title": "Melbourne's MOST UNDERRATED food street | High Street Food Tour"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1xlnBWjKUBE",
@@ -27,129 +22,19 @@
                 "title": "Amazing Place! Cambodian Street Food 2026 Walking Tour Riverside Market Food, Phnom Penh ["
             },
             {
-                "url": "https://www.youtube.com/watch?v=NlfjWG_1fnw",
-                "duration": 4230,
-                "title": "Cambodian Street Food Tour! Phnom Penh City 2026 - Walk Explore Around Orussey Traditional"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=kIpc6pQJ9-Q",
                 "duration": 4043,
                 "title": "IZMIR TURKEY 2026 4K WALKING TOUR | Kemeraltı Bazaar, Street Food & Shopping"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Yr_pMmVBr9U",
-                "duration": 864,
-                "title": "Da Lat Market 2026 🇻🇳 Full Walking Tour | Street Food, Meat Market, Fresh Produce & Local"
+                "url": "https://www.youtube.com/watch?v=DvkoA_TPep8",
+                "duration": 3981,
+                "title": "Hidden Cambodian Street Food Tour 2026 - Evening Walking Tour Around Orussey Market in Phn"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MY3Qy6vAbZQ",
-                "duration": 1623,
-                "title": "24 Hour Thai Street Food Challenge in Bangkok | Epic Food Journeys with Mark Wiens | Nat G"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hxw1WI_vuLU",
-                "duration": 3206,
-                "title": "Iraq is DANGEROUS for Food Lovers!! (Baghdad's Insane Street Food)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JLIIR-KrsSY",
-                "duration": 833,
-                "title": "$100 Vietnamese Night Market Challenge!! Super CHEAP Street Food in Saigon!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E3g-zgSmwUs",
-                "duration": 2787,
-                "title": "Mauritius Street Food!! 🇲🇺 14 Hours Eating Only MAURITIAN FOOD in Port Louis!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Wc_F_BesIT0",
-                "duration": 2420,
-                "title": "EXTREME Vietnamese Street Food - 5 Must Eat Foods in Hanoi!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=P9bGrG-95cw",
-                "duration": 1704,
-                "title": "24 Hours of CAMBODIAN STREET FOOD in Siem Reap 🇰🇭 Khmer Steakhouse + Lort Cha in Cambodia!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nwToqbn51fQ",
-                "duration": 3107,
-                "title": "Philippines Street Food!! 14 Hour FILIPINO STREET FOOD Tour in Cagayan de Oro (CDO)!! 🇵🇭"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r-zRHk9n5GM",
-                "duration": 1545,
-                "title": "AMSTERDAM'S Hottest Summer Street Food Festival!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WMkg42p4FMU",
-                "duration": 3294,
-                "title": "First Time in Costa Rica!! 🇨🇷 COSTA RICAN STREET FOOD Tour in San Jose!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0e6dEi6rB9A",
-                "duration": 1568,
-                "title": "24 Hours In SARDINIA, Italy - Ultimate Street Food Tour Of Cagliari & Surprises!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=q_9SVXm4LPM",
-                "duration": 1403,
-                "title": "STREET FOOD TOUR | CHINATOWN BINONDO MANILA PHILIPPINES | CHINESE NEW YEAR 2026[4k]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8bzcL10M6wY",
-                "duration": 2545,
-                "title": "MANILA PHILIPPINES Walking & Street Food Tour - QUIAPO MARKET 🇵🇭 Manila City 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I-S2-qe4EuQ",
-                "duration": 2725,
-                "title": "I Visited SPICY Island Paradise!! (Taste Buds Shocked)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lMSoj7wsf3A",
-                "duration": 2597,
-                "title": "WORLD’S MOST UNDERRATED STREET FOOD? Philippines’ MOST INSANE Filipino Street Food Tour in"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R4x9QJBfhXg",
-                "duration": 3311,
-                "title": "China Street Food Heaven!! 14-Hour CHINESE FOOD TOUR in Xi’an, China!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SdhVP-C1vA4",
-                "duration": 2145,
-                "title": "Philippines Street Food Tour in Balibago, Angeles City, Pampanga 🇵🇭 | AMAZING Filipino Foo"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=u4VKdjbZJ5I",
-                "duration": 1362,
-                "title": "Manila After Midnight!! Filipino Street Food After Dark!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2XZtodM7oio",
-                "duration": 4177,
-                "title": "Cambodian Street Food 2026 - Walking Tour 4K - Sunday Walk  Phnom Penh Night Market at Riv"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Y6KjcUQMWLM",
-                "duration": 1848,
-                "title": "ISTANBUL TURKEY 2026 4K WALKING TOUR | Sirkeci Street Food, Cağ Kebab & Turkish Restaurant"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3zLvByt52go",
-                "duration": 3125,
-                "title": "Japanese Street Food in Osaka!! 🇯🇵 KING OF TUNA + 5 Foods You Have to Try in Osaka, Japan!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t2TGvr7DA6g",
-                "duration": 1224,
-                "title": "Exposing China's EXTREME Street Food!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Wq3MJL0xNiE",
-                "duration": 2196,
-                "title": "Philippines Street Food Tour in San Fernando City, Pampanga 🇵🇭 | AMAZING Filipino Food 202"
+                "url": "https://www.youtube.com/watch?v=ddWFEuAMn9s",
+                "duration": 1378,
+                "title": "2026 Taiwan Food Guide: 30 Budget Eats (w/ Prices) • Street Food & Night Markets • Taipei"
             },
             {
                 "url": "https://www.youtube.com/watch?v=0FpfBlKSkjY",
@@ -157,9 +42,169 @@
                 "title": "Awesome CAMBODIAN Street Food Tour 2026 – Sunday Walking at Riverside & Massive Delicious"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2TakVUoKoDc",
-                "duration": 1244,
-                "title": "Punjab Food Tour | Mohali Street Food | Punjab Famous Food | Punjab Street Food | Indian S"
+                "url": "https://www.youtube.com/watch?v=NlfjWG_1fnw",
+                "duration": 4230,
+                "title": "Cambodian Street Food Tour! Phnom Penh City 2026 - Walk Explore Around Orussey Traditional"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MY3Qy6vAbZQ",
+                "duration": 1623,
+                "title": "24 Hour Thai Street Food Challenge in Bangkok | Epic Food Journeys with Mark Wiens | Nat G"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E3g-zgSmwUs",
+                "duration": 2787,
+                "title": "Mauritius Street Food!! 🇲🇺 14 Hours Eating Only MAURITIAN FOOD in Port Louis!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=koL9p1-mV1I",
+                "duration": 2801,
+                "title": "72 HOURS Greek Street Food 🇬🇷 30+ MUST EAT Foods in Athens, Greece"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=76HlN_qb70M",
+                "duration": 1754,
+                "title": "24 Hour Pakistani Street Food Tour | Epic Food Journeys with Mark Wiens | National Geograp"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yr_pMmVBr9U",
+                "duration": 864,
+                "title": "Da Lat Market 2026 🇻🇳 Full Walking Tour | Street Food, Meat Market, Fresh Produce & Local"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r-zRHk9n5GM",
+                "duration": 1545,
+                "title": "AMSTERDAM'S Hottest Summer Street Food Festival!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wc_F_BesIT0",
+                "duration": 2420,
+                "title": "EXTREME Vietnamese Street Food - 5 Must Eat Foods in Hanoi!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0e6dEi6rB9A",
+                "duration": 1568,
+                "title": "24 Hours In SARDINIA, Italy - Ultimate Street Food Tour Of Cagliari & Surprises!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hxw1WI_vuLU",
+                "duration": 3206,
+                "title": "Iraq is DANGEROUS for Food Lovers!! (Baghdad's Insane Street Food)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_tI4yUbDYmw",
+                "duration": 2245,
+                "title": "Timor-Leste Street Food - 24 Hours in Asia's Least Visited Country!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R4x9QJBfhXg",
+                "duration": 3311,
+                "title": "China Street Food Heaven!! 14-Hour CHINESE FOOD TOUR in Xi’an, China!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h7rRb1IajsE",
+                "duration": 1258,
+                "title": "I Tried the Spiciest Indian Street Food for Breakfast!! (Old Delhi)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cpD5d1SL7e4",
+                "duration": 2891,
+                "title": "Street Food in Guatemala!! 🥓 CRISPIEST CHICHARRON with Jalapeños!! 🫑"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nwToqbn51fQ",
+                "duration": 3107,
+                "title": "Philippines Street Food!! 14 Hour FILIPINO STREET FOOD Tour in Cagayan de Oro (CDO)!! 🇵🇭"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLIIR-KrsSY",
+                "duration": 833,
+                "title": "$100 Vietnamese Night Market Challenge!! Super CHEAP Street Food in Saigon!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Feu-DN-UleE",
+                "duration": 2245,
+                "title": "Vietnam Street Food - ULTIMATE PHO TOUR!! (How Pho Became World’s #1 Vietnamese Food)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=90_z41hZg0Y",
+                "duration": 1137,
+                "title": "Tokyo's Ultimate Street Food Tour: 15 Must-Try Eats You Can't Miss!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lMSoj7wsf3A",
+                "duration": 2597,
+                "title": "WORLD’S MOST UNDERRATED STREET FOOD? Philippines’ MOST INSANE Filipino Street Food Tour in"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3zLvByt52go",
+                "duration": 3125,
+                "title": "Japanese Street Food in Osaka!! 🇯🇵 KING OF TUNA + 5 Foods You Have to Try in Osaka, Japan!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MhApgf9SHxU",
+                "duration": 1365,
+                "title": "Saigon After Midnight!! Vietnam Late Night Street Food!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uCF-xVf7CAM",
+                "duration": 2791,
+                "title": "Thai Street Food - 5 Must-Eat Spots in Pattaya, Thailand!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WXOuM4wTTxU",
+                "duration": 3098,
+                "title": "First time in Trinidad and Tobago!! 🇹🇹 20-HOUR STREET FOOD TOUR - Ultimate Food in Port of"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=msa0AFSkB40",
+                "duration": 4248,
+                "title": "Taiwan Street Food Marathon!! From $1 to $1000!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BSUCQQt3d28",
+                "duration": 632,
+                "title": "AMAZING CAMBODIAN STREET FOOD TOUR 2026 - WALKING AT TOUL TOM POUNG TRADITIONAL MARKET, PH"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t2TGvr7DA6g",
+                "duration": 1224,
+                "title": "Exposing China's EXTREME Street Food!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4ehNo4zhwkQ",
+                "duration": 1639,
+                "title": "$100 Thailand Street Food Challenge!! Budget Bombshell!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hg2DYOvMC9Q",
+                "duration": 983,
+                "title": "Delhi No.1 Street Food Breakfast in Paharganj |Delhi Food Tour|Bathure chole,Samose ,Mutan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7dQcK7IzRkk",
+                "duration": 4221,
+                "title": "Wonderful Cambodian Street Food Tour 2026 - Walking Tour in Toul Tom Poung Market Food, Ph"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VX9z-KZzNMs",
+                "duration": 1645,
+                "title": "Street Food in Budapest!! 🇭🇺 THE ULTIMATE HUNGARIAN FOOD Tour in Budapest, Hungary!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tGYUl9XoXpU",
+                "duration": 1964,
+                "title": "8 AM Taiwanese Street Food Tour!! 🇹🇼  BREAKFAST BUFFET + Danzai Noodles in Taiwan!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5dyC5essnTw",
+                "duration": 1186,
+                "title": "24 Hours Vietnamese STREET FOOD Tour + BIGGEST Bánh mì in Saigon Vietnam"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u4VKdjbZJ5I",
+                "duration": 1362,
+                "title": "Manila After Midnight!! Filipino Street Food After Dark!!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=DnrG7QaGQFc",
@@ -172,9 +217,14 @@
                 "title": "Cambodian Street Food Tour 2026 - Chaktomuk Night Market, Phnom Penh"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cpD5d1SL7e4",
-                "duration": 2891,
-                "title": "Street Food in Guatemala!! 🥓 CRISPIEST CHICHARRON with Jalapeños!! 🫑"
+                "url": "https://www.youtube.com/watch?v=Wq3MJL0xNiE",
+                "duration": 2196,
+                "title": "Philippines Street Food Tour in San Fernando City, Pampanga 🇵🇭 | AMAZING Filipino Food 202"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-4U0AhFleyw",
+                "duration": 3924,
+                "title": "Most Famous Place for Cambodian STREET FOOD 2026 - 4K Walking Tour Phnom Penh, Riverside M"
             },
             {
                 "url": "https://www.youtube.com/watch?v=U5Gt4JN4CaI",
@@ -182,19 +232,14 @@
                 "title": "🇹🇷Delicious Turkish Street Foods Tour in Istanbul Turkey 2026 | 4K Walking Tour"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CTbXXbPhDAM",
-                "duration": 1132,
-                "title": "Lakemba Ramadan Night Market 2026 | Sydney Street Food Tour"
+                "url": "https://www.youtube.com/watch?v=SdhVP-C1vA4",
+                "duration": 2145,
+                "title": "Philippines Street Food Tour in Balibago, Angeles City, Pampanga 🇵🇭 | AMAZING Filipino Foo"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Feu-DN-UleE",
-                "duration": 2245,
-                "title": "Vietnam Street Food - ULTIMATE PHO TOUR!! (How Pho Became World’s #1 Vietnamese Food)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O84NVCoIZQQ",
-                "duration": 1296,
-                "title": "Tampines Central Ramadan Bazaar 2026 | Singapore Street Food Tour [4K]"
+                "url": "https://www.youtube.com/watch?v=GMbXj3rbG0o",
+                "duration": 4276,
+                "title": "CRAZY INDONESIAN STREET FOOD IN JAKARTA | MOST FAVOURITE INDONESIAN STREET FOOD COLLECTION"
             },
             {
                 "url": "https://www.youtube.com/watch?v=86s09j5lSNk",
@@ -202,289 +247,19 @@
                 "title": "World’s Craziest Indian Street Food – 1 Hour Mega Collection"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bmKEzushctE",
-                "duration": 2910,
-                "title": "Pampanga, Philippines - Street Food Tour in GUAGUA 🇵🇭 | Real Filipino Food 2026!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=d4jCshRgHgc",
-                "duration": 2758,
-                "title": "Taste of Manila 2026 Toronto -Filipino Street  Food  Festival"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1wF-oYvSESM",
-                "duration": 1588,
-                "title": "UNBELIEVABLE Street Food Phnom Penh | Cambodia Walking Tour 2026 Unique Khmer Food Experie"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q0N_E-zkB3Q",
-                "duration": 4591,
-                "title": "Amazing Khmer Wet Market Tour in Cambodia 2026 - Cambodian Street Food Compilation"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jq1VrG0Vysw",
-                "duration": 1092,
-                "title": "Amazing Khmer Food Tour 2026  Phnom Penh Pop Street Food."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WNMMW2mHhhc",
-                "duration": 2553,
-                "title": "CRAZIEST PAKISTANI MOBILE STREET FOOD 😍 Ultimate Food Cart Compilation 2026 | Pakistan Foo"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=xzZb0KsUmwA",
                 "duration": 438,
                 "title": "Halal Street Food in Malaysia | Kuala Lumpur Food Tour 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nLzfYlsOYQo",
-                "duration": 847,
-                "title": "Lakemba Food Market 2026: Street Food Tour"
+                "url": "https://www.youtube.com/watch?v=O84NVCoIZQQ",
+                "duration": 1296,
+                "title": "Tampines Central Ramadan Bazaar 2026 | Singapore Street Food Tour [4K]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DU87NT1wCTU",
-                "duration": 3919,
-                "title": "Amazing Cambodian Street Food 2026 - Explore Phnom Penh Riverside Food Market On Weekend"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=feuv2_fmRC4",
-                "duration": 1541,
-                "title": "$100 Japanese Street Food Challenge in Kyoto!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DcFLbFhca0g",
-                "duration": 972,
-                "title": "[4K] STREET FOOD TOUR 2026 - SUNDAY MASSIVE CROWD AT QUIAPO MANILA, PHILIPPINES"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rv7aXLwkjRM",
-                "duration": 1555,
-                "title": "Street Food Fest in Milano, Italy. Grilled Meat, Burgers, Roasted and Pulled Pork, Pasta,"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R2K9gMnpTME",
-                "duration": 305,
-                "title": "AMAZING CAMBODIAN STREET FOOD TOUR 2026 – HIDDEN GEMS NIGHT WALKING AROUND RIVERSIDE DELIC"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wE1SiIhYXJk",
-                "duration": 1730,
-                "title": "🇰🇷 Korean Street Food HEAVEN in Seoul Myeongdong & Gwangjang Market"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H_TK4ObpQnA",
-                "duration": 2397,
-                "title": "$1 Egyptian STREET FOOD!! Cairo is Food Paradise!! 🇪🇬"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OnP2poZgDIw",
-                "duration": 1427,
-                "title": "🔥The Real Taste of IRAN !! Most Authentic Street Food Tour !!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TZHaO8zAdQQ",
-                "duration": 4669,
-                "title": "Amazing Cambodian Street Food Tour 2026 - Phnom Penh Riverside Market Food Compilation Sun"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZiX8Q0Xsf9M",
-                "duration": 2400,
-                "title": "STREET FOOD in PAMPANGA, Philippines | Masantol – Amazing Local Food Tour 2026 🇵🇭"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gUew3Ko3Gwo",
-                "duration": 2184,
-                "title": "Ultimate Cambodia Street Food Tour 2026 | Delicious Street Food & Relaxing Weekend Walking"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PjvpzRl4MLA",
-                "duration": 2993,
-                "title": "PHILIPPINES: Downtown SAN FERNANDO CITY, PAMPANGA - Streets, Food Market & Street Food Tou"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cs8gno6z0qk",
-                "duration": 1293,
-                "title": "$100 Sri Lanka Street Food Challenge!! (They went too far!!)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2EeNZDnyNZg",
-                "duration": 3950,
-                "title": "Hidden CAMBODIAN Street Food in Phnom Penh 2026 - Relaxing Evening Walking Tour By Riversi"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FkR1squNhiw",
-                "duration": 3126,
-                "title": "Cambodian Traditional Market 2026 🇰🇭 | Real Local Life, Street Food, Fish, Fruit, Snail, C"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=esqxAvETaKk",
-                "duration": 737,
-                "title": "Insane Wok Skills! Cambodian Street Food Night Market Tour 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=h2bsBS_DLzs",
-                "duration": 1274,
-                "title": "Cambodian Street Food 2026 - Chaktomuk Night Market - Phnom Penh Tour"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hg2DYOvMC9Q",
-                "duration": 983,
-                "title": "Delhi No.1 Street Food Breakfast in Paharganj |Delhi Food Tour|Bathure chole,Samose ,Mutan"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vYfbxQcDAoc",
-                "duration": 782,
-                "title": "Awesome Cambodian Street Food 2026​ | Evening Walking Tour at Riverside"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XdkiVom46LA",
-                "duration": 4428,
-                "title": "Street Food at Chaktomuk Walk Street in Phnom Penh City, Cambodia Food Tour 2026 #533"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C2-cVVFhodo",
-                "duration": 4039,
-                "title": "Amazing Cambodian Street Food 2026 - Evening Walking Tour at Riverside Night Market in Phn"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ANishvW7ioI",
-                "duration": 873,
-                "title": "Montreal’s BIG Cultural Free Summer Festival Is HERE! | Festival Orientalys Food Tour"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WHNxkc4LaIM",
-                "duration": 1039,
-                "title": "Binondo Food Crawl 2026 | Ongpin Street Food Tour"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2Rajc0XVMKc",
-                "duration": 4355,
-                "title": "Riverside Street Food Paradise 🇰🇭 | Phnom Penh Walking Tour 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uSgS0dPF4uM",
-                "duration": 662,
-                "title": "Toronto Taco Fest 2026 - Full Vlog & Food Tour"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FWe16Fmnh3k",
-                "duration": 1409,
-                "title": "Amazing Street Food Breakfast in Vietnam 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KCF7OeGD1b4",
-                "duration": 2180,
-                "title": "Street Food in Senegal!! 🇸🇳 ULTIMATE SENEGALESE FOOD TOUR in Dakar | West African Food!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RNePQW56rDU",
-                "duration": 1883,
-                "title": "I Tried $1 Street Food Around The World"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1E2avA402tU",
-                "duration": 3876,
-                "title": "Amazing Cambodian Street Food 2026 🇰🇭 | Evening Food Walk Around Chhouk Meas Market, Phnom"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BlxDVIvxRzs",
-                "duration": 1228,
-                "title": "Wonderful Cambodian Street Food 2026 - Evening Walking Tour in Chaktomuk Night Market, Phn"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BsvUrSzsjqQ",
-                "duration": 1105,
-                "title": "Hidden Gems CAMBODIAN Street Food 2026 🇰🇭🍜 | Ultimate Walking Tour in Phnom Penh Night Mar"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MSQroOnP-cg",
-                "duration": 3238,
-                "title": "First Time in Syria!! 14-Hour SYRIAN STREET FOOD Tour in Damascus!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PpI__tMUY_c",
-                "duration": 3208,
-                "title": "Afghanistan 2026 Walking Tour 🇦🇫 | Jalalabad Street Food & Busy Local Markets (4K 60FPS)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XWg6NQiRhjA",
-                "duration": 5018,
-                "title": "Amazing CAMBODIAN Street Food Tour 2026 | Walk Around in Boeng Tumpun Market, Phnom Penh"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WXOuM4wTTxU",
-                "duration": 3098,
-                "title": "First time in Trinidad and Tobago!! 🇹🇹 20-HOUR STREET FOOD TOUR - Ultimate Food in Port of"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fEe0sjNBnPM",
-                "duration": 1525,
-                "title": "$100 Myanmar Street Food Challenge!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a6xOi1cPls0",
-                "duration": 1395,
-                "title": "KOREAN Night Market Street Food Tour 🇰🇷 Eating 10 Korean Food in Busan"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bTmJgbaT7zA",
-                "duration": 1951,
-                "title": "CHINESE FOOD in China is Better Than You Think!  Chengdu Street Food Tour 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O-bHBBEe4DE",
-                "duration": 1210,
-                "title": "BULACAN Filipino Street Food Tour 🇵🇭 10 Must Eats sa Bocaue!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xdya8eym9nM",
-                "duration": 2123,
-                "title": "Street Food in Pakistan - ULTIMATE 16-HOUR PAKISTANI FOOD Tour in Lahore, Pakistan!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4OJcNbiixEQ",
-                "duration": 2565,
-                "title": "Chinese Street Food!! 24-Hour CHINESE FOOD TOUR in Shanghai, China!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0VM85mKNX6E",
-                "duration": 1301,
-                "title": "Most Popular Vietnamese Street Food in 2026 - Breakfast Version"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QoG1-v1xagU",
-                "duration": 3064,
-                "title": "Istanbul Street Food!! 🇹🇷 ULTIMATE TURKISH FOOD You Must-Try in Istanbul, Türkiye!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IU3B7QAwpxs",
-                "duration": 4009,
-                "title": "BEST! Cambodian Street Food Walking Tour! Phnom Penh City - Cambodia Food Market Collectio"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_tpr73ZAi2s",
-                "duration": 2683,
-                "title": "Portugal Street Food!! 🇵🇹 KING OF SANDWICHES - Portuguese Food Tour in Porto!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9_qURV2NClY",
-                "duration": 3231,
-                "title": "Philippines BINONDO FOOD TOUR in MANILA | Street Food & Famous Gold Jewelry Shop Streets 2"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nV8zOhYBHP4",
-                "duration": 2530,
-                "title": "Italian Street Food in Naples!! SEAFOOD SPAGHETTI + Pizza in Naples, Italy!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LxTVLl2WoZA",
-                "duration": 1123,
-                "title": "Must-Try Cambodian Street Food 2026 - Chaktomuk Night Market, Phnom Penh"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gNhBfh8_DoI",
-                "duration": 556,
-                "title": "Osaka Food Tour 2026 🇯🇵 Must Try Japanese Street Food"
+                "url": "https://www.youtube.com/watch?v=fSEj5lHgYYo",
+                "duration": 3550,
+                "title": "First Time in Fiji 🇫🇯 FIJIAN STREET FOOD - Taro Leaves, Fish Kokoda + Market Tour!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-VQGX0UTD-c",
@@ -492,19 +267,244 @@
                 "title": "Philippines CEBU AT NIGHT! Explore Local Nightlife, Markets + Street Food | Cebu City 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pIwCc7RuaQU",
-                "duration": 2739,
-                "title": "Ultimate EGYPTIAN Street Food Tour!! They WARNED Me About Cairo!! 🇪🇬"
+                "url": "https://www.youtube.com/watch?v=H_TK4ObpQnA",
+                "duration": 2397,
+                "title": "$1 Egyptian STREET FOOD!! Cairo is Food Paradise!! 🇪🇬"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CoUkhgfHzOA",
-                "duration": 1405,
-                "title": "I Tested NYC Street Food in Every Borough"
+                "url": "https://www.youtube.com/watch?v=6c9DZ7KKH3w",
+                "duration": 1252,
+                "title": "Vietnam’s Michelin Street Food Under $1"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tv-PiTFxJa0",
-                "duration": 953,
-                "title": "Gurgaon Sector 49 Food Tour Arcadia Market, Rodeo Drive | Veggie Paaji"
+                "url": "https://www.youtube.com/watch?v=PjvpzRl4MLA",
+                "duration": 2993,
+                "title": "PHILIPPINES: Downtown SAN FERNANDO CITY, PAMPANGA - Streets, Food Market & Street Food Tou"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=el9PBqQg6zA",
+                "duration": 1123,
+                "title": "Crazy Food Tour in Rabat 🇲🇦 Unique Street Food of Morocco"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-n0lKyrSJB4",
+                "duration": 2632,
+                "title": "New Orleans - HUGE FOOD TOUR!! Green Oysters, Mufuletta, Jambalaya, + Po’boys!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uYG28TZb2s4",
+                "duration": 1230,
+                "title": "$1 Mexican Street Food 🇲🇽"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=slxfDsiHkXM",
+                "duration": 2558,
+                "title": "Bazar Ramadan Stadium Shah Alam 2026 💥 MASSIVE Malaysia Street Food Attack!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=P9bGrG-95cw",
+                "duration": 1704,
+                "title": "24 Hours of CAMBODIAN STREET FOOD in Siem Reap 🇰🇭 Khmer Steakhouse + Lort Cha in Cambodia!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iVsn8X5K7pw",
+                "duration": 2884,
+                "title": "Ultimate MALAYSIAN STREET FOOD in Penang!! 🇲🇾 5 MUST-EAT Foods in Penang, Malaysia!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rv7aXLwkjRM",
+                "duration": 1555,
+                "title": "Street Food Fest in Milano, Italy. Grilled Meat, Burgers, Roasted and Pulled Pork, Pasta,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=feuv2_fmRC4",
+                "duration": 1541,
+                "title": "$100 Japanese Street Food Challenge in Kyoto!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d4jCshRgHgc",
+                "duration": 2758,
+                "title": "Taste of Manila 2026 Toronto -Filipino Street  Food  Festival"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jq1VrG0Vysw",
+                "duration": 1092,
+                "title": "Amazing Khmer Food Tour 2026  Phnom Penh Pop Street Food."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CTbXXbPhDAM",
+                "duration": 1132,
+                "title": "Lakemba Ramadan Night Market 2026 | Sydney Street Food Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KCF7OeGD1b4",
+                "duration": 2180,
+                "title": "Street Food in Senegal!! 🇸🇳 ULTIMATE SENEGALESE FOOD TOUR in Dakar | West African Food!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1wF-oYvSESM",
+                "duration": 1588,
+                "title": "UNBELIEVABLE Street Food Phnom Penh | Cambodia Walking Tour 2026 Unique Khmer Food Experie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N3K3f_y1Yb0",
+                "duration": 3552,
+                "title": "Viral Bazar Ramadan Taman Samudera 2026 🇲🇾 Insane Halal Street Food & Huge Crowd! 🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dPVJf6NYrLA",
+                "duration": 1444,
+                "title": "Philippines STREET FOOD & Market Walk in Angeles City, Pampanga 🇵🇭 Night Market & Downtown"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RNePQW56rDU",
+                "duration": 1883,
+                "title": "I Tried $1 Street Food Around The World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tmDY1_PbMW4",
+                "duration": 2220,
+                "title": "Fantastic Street Food Tour in Morocco 🇲🇦 72 Hours of Crazy Food Adventure in Larache and A"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BSRIjF5hQpE",
+                "duration": 1490,
+                "title": "24 Hours of Street Food in Bali 🇮🇩 Indonesian Food PARADISE & Balinese Sausage!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wfdVDc4awuw",
+                "duration": 1576,
+                "title": "Street Food Tour of Bali - INSANELY DELICIOUS Indonesian Food in Bali, Indonesia!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vp5O4Q2LzjQ",
+                "duration": 2313,
+                "title": "Heavenly Street Food Tour in Casablanca 🇲🇦 Foodie's Paradise in Morocco"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xXX8Y5r7E5A",
+                "duration": 1903,
+                "title": "The ULTIMATE Mexican Street Food Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DU87NT1wCTU",
+                "duration": 3919,
+                "title": "Amazing Cambodian Street Food 2026 - Explore Phnom Penh Riverside Food Market On Weekend"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nLzfYlsOYQo",
+                "duration": 847,
+                "title": "Lakemba Food Market 2026: Street Food Tour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0GjoFljAW98",
+                "duration": 1375,
+                "title": "DELICIOUS Dutch Street Food Tour in Utrecht"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DcFLbFhca0g",
+                "duration": 972,
+                "title": "[4K] STREET FOOD TOUR 2026 - SUNDAY MASSIVE CROWD AT QUIAPO MANILA, PHILIPPINES"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4-i9Au6r00g",
+                "duration": 3549,
+                "title": "8 MUST TRY FILIPINO STREET FOOD in MANILA | THE ULTIMATE ONE-DAY FOOD ADVENTURE | KAFOODTR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cs8gno6z0qk",
+                "duration": 1293,
+                "title": "$100 Sri Lanka Street Food Challenge!! (They went too far!!)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TDSTgGM2AnY",
+                "duration": 1604,
+                "title": "UNIQUE Street Food in Uzbekistan 🇺🇿 EXTREME Food Market + LAMB Jacuzzi + TANDOORI Samsa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B7gfpMXd0qo",
+                "duration": 2185,
+                "title": "Bazar Ramadan Desa Pandan 2026 | Foodies’ Paradise | Must-Try Street Food! 🔥"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ArHC_18gF1Q",
+                "duration": 3713,
+                "title": "CHEAPEST STREET FOOD OF ISLAMABAD, PAKISTAN | ULTIMATE STREET FOOD PAKISTAN VIDEO COMPILAT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IKYWEZyGWOs",
+                "duration": 1064,
+                "title": "Italy $100 Street Food Challenge!! Italians Really Eat This??"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MSQroOnP-cg",
+                "duration": 3238,
+                "title": "First Time in Syria!! 14-Hour SYRIAN STREET FOOD Tour in Damascus!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OnP2poZgDIw",
+                "duration": 1427,
+                "title": "🔥The Real Taste of IRAN !! Most Authentic Street Food Tour !!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WNMMW2mHhhc",
+                "duration": 2553,
+                "title": "CRAZIEST PAKISTANI MOBILE STREET FOOD 😍 Ultimate Food Cart Compilation 2026 | Pakistan Foo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R2K9gMnpTME",
+                "duration": 305,
+                "title": "AMAZING CAMBODIAN STREET FOOD TOUR 2026 – HIDDEN GEMS NIGHT WALKING AROUND RIVERSIDE DELIC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZiX8Q0Xsf9M",
+                "duration": 2400,
+                "title": "STREET FOOD in PAMPANGA, Philippines | Masantol – Amazing Local Food Tour 2026 🇵🇭"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2TakVUoKoDc",
+                "duration": 1244,
+                "title": "Punjab Food Tour | Mohali Street Food | Punjab Famous Food | Punjab Street Food | Indian S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OvWXCWLQwEo",
+                "duration": 655,
+                "title": "India’s Craziest Chole Kulche Street Food | Massive Tawa Cooking in Delhi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7e2uxaUE_Kc",
+                "duration": 1081,
+                "title": "Only Eating Street Food for 24 Hours in Puerto Rico! 🇵🇷"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z09_iZ9M1S4",
+                "duration": 2134,
+                "title": "Turkish street food is HEAVEN - 10 Amazing Turkish Street Foods!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hXnlCbZRYig",
+                "duration": 2511,
+                "title": "Lebanon Street Food - MELTED CHEESE WATERFALL + Ultimate Food Tour in Tripoli!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v0NNI5wS_GM",
+                "duration": 899,
+                "title": "Filipino Street Food That Will Kill You!! Manila Heart Attack Tour!!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BOLCymHJDL4",
+                "duration": 1067,
+                "title": "ULTIMATE Brazilian BAR FOOD & STREET FOOD Tour in Rio de Janeiro Brazil"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TZHaO8zAdQQ",
+                "duration": 4669,
+                "title": "Amazing Cambodian Street Food Tour 2026 - Phnom Penh Riverside Market Food Compilation Sun"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2EeNZDnyNZg",
+                "duration": 3950,
+                "title": "Hidden CAMBODIAN Street Food in Phnom Penh 2026 - Relaxing Evening Walking Tour By Riversi"
             }
         ],
         "search_query": "street food tour"

@@ -22,97 +22,192 @@ reaches for directly.
 # appears on screen and can. Where a channel absorbed another, its query was widened to cover both
 # - see ABSORBED below for what went where.
 YOUTUBE = [
+    # Sport, 1-14. Every code together, rather than the three Australian ones stranded in the
+    # eighties where the old numbering had left them.
     (1,  "ufc",              "UFC",                      "UFC fight highlights"),
     (2,  "boxing",           "Boxing",                   "boxing fight highlights"),
     (3,  "wrestling",        "Wrestling",                "pro wrestling match highlights"),
     (4,  "soccer",           "Soccer",                   "football match highlights"),
     (5,  "rugby_union",      "Rugby Union",              "rugby union match highlights"),
-    (6,  "basketball",       "Basketball",               "basketball game highlights"),
-    (7,  "tennis",           "Tennis",                   "tennis match highlights"),
-    (8,  "golf",             "Golf",                     "golf tournament highlights"),
-    (9,  "motorsports",      "Motorsports",              "motorsport race highlights"),
-    (10, "surfing",          "Surfing",                  "surfing competition heat"),
-    (11, "darts_snooker",    "Darts & Snooker",          "darts snooker match highlights"),
-    (12, "documentaries",    "Documentaries",            "full documentary"),
-    (13, "aussie_tv",        "Aussie TV",                "australian television full episode"),
-    (14, "film_animation",   "Film & Animation",         "science fiction short film full"),
-    (15, "short_films",      "Short Films",              "award winning short film"),
-    (16, "public_domain",    "Public Domain Movies",     "public domain full movie"),
-    (17, "westerns",         "Westerns",                 "classic western full movie"),
-    (18, "martial_arts",     "Martial Arts",             "martial arts full movie english"),
-    (19, "comedy",           "Comedy",                   "stand up comedy special full show"),
-    (20, "sketch",           "Sketch Comedy",            "sketch comedy full episode"),
-    (21, "panel_shows",      "Panel Shows",              "QI full episode"),
-    (22, "sitcoms",          "Classic Sitcoms",          "classic sitcom full episode 1950s"),
-    (23, "talk_shows",       "Talk Shows",               "late night talk show full interview"),
-    (24, "cartoons",         "Cartoons",                 "classic cartoon full episode"),
-    (25, "anime",            "Anime",                    "anime full episode english dub"),
-    (26, "anime_classic",    "Classic Anime",            "retro anime OVA english dub"),
-    (27, "game_shows",       "Game Shows",               "game show full episode"),
-    (28, "true_crime",       "True Crime",               "true crime documentary full"),
-    (29, "scitech",          "Science & Exploration",    "science documentary full episode"),
-    (30, "nature",           "Nature & Wildlife",        "wildlife documentary full episode"),
-    (31, "pets",             "Pets & Animals",           "animal rescue documentary"),
-    (32, "geography",        "Geography & Expeditions",  "expedition documentary full"),
-    (33, "history",          "History",                  "history documentary full episode"),
-    (34, "military_history", "Military History",         "military history documentary full"),
-    (35, "abandoned",        "Abandoned Places",         "abandoned places urban exploration"),
-    (36, "literature",       "Literature",               "literature lecture audiobook classic"),
-    (37, "programming",      "Programming",              "software engineering conference talk"),
-    (38, "economics",        "Economics & Finance",      "economics documentary explainer"),
-    (39, "video_essay",      "Video Essay",              "video essay"),
-    (40, "podcasts",         "Podcasts & Interviews",    "long form interview podcast"),
-    (41, "food",             "Food",                     "street food tour"),
-    (42, "travel",           "Travel & Events",          "travel documentary tour"),
-    (43, "fashion",          "Fashion",                  "fashion documentary designer"),
-    (44, "runway",           "Runway",                   "runway show full fashion week"),
-    (45, "vintage_fashion",  "Vintage Fashion",          "vintage fashion history"),
-    (46, "sewing",           "Sewing & Dressmaking",     "sewing dressmaking tutorial"),
-    (47, "camping",          "Camping & Bushcraft",      "bushcraft camping wild"),
-    (48, "architecture",     "Architecture & Interiors", "architecture documentary house tour"),
-    (49, "arts_crafts",      "Arts & Crafts",            "pottery painting craft process"),
-    (50, "restoration",      "Restoration",              "restoration blacksmithing workshop"),
-    (51, "model_railways",   "Model Railways",           "model railway layout scenic railway"),
-    (52, "health_fitness",   "Health & Fitness",         "fitness training documentary"),
-    (53, "autos",            "Autos & Vehicles",         "car restoration road test"),
-    (54, "gaming",           "Gaming",                   "retro gaming documentary"),
-    (55, "concerts",         "Concerts",                 "tiny desk concert NPR Music"),
-    (56, "rock",             "Rock",                     "rock live performance"),
-    (57, "country",          "Country",                  "country music live performance"),
-    (58, "blues",            "Blues",                    "blues music live performance"),
-    (59, "soul_motown",      "Soul & Motown",            "soul motown classic performance"),
-    (60, "reggae",           "Reggae",                   "reggae live performance"),
-    (61, "hiphop",           "Hip Hop",                  "hip hop live performance"),
-    (62, "electronic",       "Electronic",               "electronic music live set"),
-    (63, "yacht_rock",       "Yacht Rock",               "yacht rock soft rock 70s 80s"),
-    (64, "classical",        "Classical Music",          "classical orchestra opera performance"),
-    (65, "music_1920s",      "1920s Music",              "1920s jazz music"),
-    (66, "music_1930s",      "1930s Music",              "1930s swing music"),
-    (67, "music_1940s",      "1940s Music",              "1940s big band music"),
-    (68, "music_1950s",      "1950s Music",              "1950s rock and roll"),
-    (69, "music_1960s",      "1960s Music",              "1960s music hits"),
-    (70, "music_1970s",      "1970s Music",              "1970s music hits"),
-    (71, "music_1980s",      "1980s Music",              "1980s music video"),
-    (72, "music_1990s",      "1990s Music",              "1990s music video"),
-    (73, "music_2000s",      "2000s Music",              "2000s music video"),
-    (74, "music_2010s",      "2010s Music",              "2010s music video"),
-    (75, "music_now",        "Music Now",                "new music video"),
-    (76, "christianity",     "Christianity",             "christian teaching sermon"),
-    (77, "christian_music",  "Christian Music",          "worship music live"),
-    (78, "bossa_nova",       "Bossa Nova",               "bossa nova classics"),
-    (79, "nrl",              "Rugby League",             "NRL match highlights"),
-    (80, "afl",              "AFL",                      "AFL match highlights"),
-    (81, "cricket",          "Cricket",                  "cricket match highlights"),
-    (82, "fishing",          "Fishing & Boating",        "fishing charter boating"),
-    (83, "jazz",             "Jazz",                     "jazz live performance"),
-    (84, "ambient",          "Ambient",                  "ambient lofi long mix"),
-    (85, "space",            "Space & Astronomy",        "space astronomy documentary"),
-    (86, "aviation",         "Engineering & Aviation",   "aviation engineering documentary"),
-    (87, "philosophy",       "Philosophy & Psychology",  "philosophy psychology lecture"),
-    (88, "gardening",        "Gardening",                "gardening farming smallholding"),
-    (89, "christian_docs",   "Christian Docos",          "christian documentary full"),
+    (6,  "nrl",              "Rugby League",             "NRL match highlights"),
+    (7,  "afl",              "AFL",                      "AFL match highlights"),
+    (8,  "cricket",          "Cricket",                  "cricket match highlights"),
+    (9,  "basketball",       "Basketball",               "basketball game highlights"),
+    (10, "tennis",           "Tennis",                   "tennis match highlights"),
+    (11, "golf",             "Golf",                     "golf tournament highlights"),
+    (12, "motorsports",      "Motorsports",              "motorsport race highlights"),
+    (13, "surfing",          "Surfing",                  "surfing competition heat"),
+    (14, "darts_snooker",    "Darts & Snooker",          "darts snooker match highlights"),
+
+    # Film, 15-21.
+    (15, "documentaries",    "Documentaries",            "full documentary"),
+    (16, "aussie_tv",        "Aussie TV",                "australian television full episode"),
+    (17, "film_animation",   "Film & Animation",         "science fiction short film full"),
+    (18, "short_films",      "Short Films",              "award winning short film"),
+    (19, "public_domain",    "Public Domain Movies",     "public domain full movie"),
+    (20, "westerns",         "Westerns",                 "classic western full movie"),
+    (21, "martial_arts",     "Martial Arts",             "martial arts full movie english"),
+
+    # Comedy and television, 22-31.
+    (22, "comedy",           "Comedy",                   "stand up comedy special full show"),
+    (23, "sketch",           "Sketch Comedy",            "sketch comedy full episode"),
+    (24, "panel_shows",      "Panel Shows",              "QI full episode"),
+    (25, "sitcoms",          "Classic Sitcoms",          "classic sitcom full episode 1950s"),
+    (26, "talk_shows",       "Talk Shows",               "late night talk show full interview"),
+    (27, "cartoons",         "Cartoons",                 "classic cartoon full episode"),
+    (28, "anime",            "Anime",                    "anime full episode english dub"),
+    (29, "anime_classic",    "Classic Anime",            "retro anime OVA english dub"),
+    (30, "game_shows",       "Game Shows",               "game show full episode"),
+    (31, "true_crime",       "True Crime",               "true crime documentary full"),
+
+    # Factual, 32-46.
+    (32, "scitech",          "Science & Exploration",    "science documentary full episode"),
+    (33, "space",            "Space & Astronomy",        "space astronomy documentary"),
+    (34, "aviation",         "Engineering & Aviation",   "aviation engineering documentary"),
+    (35, "nature",           "Nature & Wildlife",        "wildlife documentary full episode"),
+    (36, "pets",             "Pets & Animals",           "animal rescue documentary"),
+    (37, "geography",        "Geography & Expeditions",  "expedition documentary full"),
+    (38, "history",          "History",                  "history documentary full episode"),
+    (39, "military_history", "Military History",         "military history documentary full"),
+    (40, "abandoned",        "Abandoned Places",         "abandoned places urban exploration"),
+    (41, "literature",       "Literature",               "literature lecture audiobook classic"),
+    (42, "philosophy",       "Philosophy & Psychology",  "philosophy psychology lecture"),
+    (43, "programming",      "Programming",              "software engineering conference talk"),
+    (44, "economics",        "Economics & Finance",      "economics documentary explainer"),
+    (45, "video_essay",      "Video Essay",              "video essay"),
+    (46, "podcasts",         "Podcasts & Interviews",    "long form interview podcast"),
+
+    # Making, growing, going places, 47-62.
+    (47, "food",             "Food",                     "street food tour"),
+    (48, "travel",           "Travel & Events",          "travel documentary tour"),
+    (49, "fashion",          "Fashion",                  "fashion documentary designer"),
+    (50, "runway",           "Runway",                   "runway show full fashion week"),
+    (51, "vintage_fashion",  "Vintage Fashion",          "vintage fashion history"),
+    (52, "sewing",           "Sewing & Dressmaking",     "sewing dressmaking tutorial"),
+    (53, "camping",          "Camping & Bushcraft",      "bushcraft camping wild"),
+    (54, "fishing",          "Fishing & Boating",        "fishing charter boating"),
+    (55, "gardening",        "Gardening",                "gardening farming smallholding"),
+    (56, "architecture",     "Architecture & Interiors", "architecture documentary house tour"),
+    (57, "arts_crafts",      "Arts & Crafts",            "pottery painting craft process"),
+    (58, "restoration",      "Restoration",              "restoration blacksmithing workshop"),
+    (59, "model_railways",   "Model Railways",           "model railway layout scenic railway"),
+    (60, "health_fitness",   "Health & Fitness",         "fitness training documentary"),
+    (61, "autos",            "Autos & Vehicles",         "car restoration road test"),
+    (62, "gaming",           "Gaming",                   "retro gaming documentary"),
+
+    # Music, 63-86: genres first, then the decades in order, then what came out this week.
+    (63, "concerts",         "Concerts",                 "tiny desk concert NPR Music"),
+    (64, "rock",             "Rock",                     "rock live performance"),
+    (65, "country",          "Country",                  "country music live performance"),
+    (66, "blues",            "Blues",                    "blues music live performance"),
+    (67, "soul_motown",      "Soul & Motown",            "soul motown classic performance"),
+    (68, "reggae",           "Reggae",                   "reggae live performance"),
+    (69, "hiphop",           "Hip Hop",                  "hip hop live performance"),
+    (70, "electronic",       "Electronic",               "electronic music live set"),
+    (71, "yacht_rock",       "Yacht Rock",               "yacht rock soft rock 70s 80s"),
+    (72, "jazz",             "Jazz",                     "jazz live performance"),
+    (73, "bossa_nova",       "Bossa Nova",               "bossa nova classics"),
+    (74, "classical",        "Classical Music",          "classical orchestra opera performance"),
+    (75, "ambient",          "Ambient",                  "ambient lofi long mix"),
+    (76, "music_1920s",      "1920s Music",              "1920s jazz music"),
+    (77, "music_1930s",      "1930s Music",              "1930s swing music"),
+    (78, "music_1940s",      "1940s Music",              "1940s big band music"),
+    (79, "music_1950s",      "1950s Music",              "1950s rock and roll"),
+    (80, "music_1960s",      "1960s Music",              "1960s music hits"),
+    (81, "music_1970s",      "1970s Music",              "1970s music hits"),
+    (82, "music_1980s",      "1980s Music",              "1980s music video"),
+    (83, "music_1990s",      "1990s Music",              "1990s music video"),
+    (84, "music_2000s",      "2000s Music",              "2000s music video"),
+    (85, "music_2010s",      "2010s Music",              "2010s music video"),
+    (86, "music_now",        "Music Now",                "new music video"),
+
+    # Christian, 87-90, together at the end of the clip block rather than split across it.
+    (87, "christianity",     "Christianity",             "christian teaching sermon"),
+    (88, "christian_docs",   "Christian Docos",          "christian documentary full"),
+    (89, "christian_music",  "Christian Music",          "worship music live"),
     (90, "audio_bible",      "Audio Bible",              "audio bible full book"),
 ]
+
+# Curated playlists pinned to a channel, tried before search and in this order.
+#
+# Only for channels search cannot fill. A search asks YouTube for whatever it feels like ranking
+# today; a playlist is a hundred of the thing that somebody has already sat down and gathered, and
+# for a decade nobody is still uploading that is the difference between a channel and a gap.
+#
+# Several are allowed per channel because the 1930s has no single deep list - the best one found
+# holds 37 songs inside the duration window, so it takes three to make a channel.
+PLAYLISTS = {
+    "music_1920s": ["PL7D797EBD172C452D"],
+    "music_1930s": ["PLXkLwx3USrbXz6Ogrwvox1XXnxJ7dmAMv",
+                    "PLIvacmZCzEbCAfqbkgzLAPZYgLI_g2yEu",
+                    "PLF4noIcOSXnvuluLjMOCElbMUXTIzXxqc"],
+    "music_1960s": ["PLs5nLtKbGBVOZBCzgXxcN9fyCz6sQ1fab"],
+    "music_1970s": ["PLyqXsO_d0hU1EqKKNY2MdtiXitI3zEVqg"],
+    "bossa_nova":  ["PLUXl043M6v4PlGqvrXAjiVaG9NZCwCnP3"],
+}
+
+# Extra searches for a channel, tried after its main query.
+#
+# Naming the programme beats naming the genre, every time. "panel shows" returned a hundred
+# Supernatural fan-convention panels because a convention panel is also a panel; "QI full episode"
+# has no such twin. The same is true of people: a search for "christian teaching sermon" returns
+# whatever is being pushed this week, while naming the preachers returns the preachers.
+#
+# This is also how a channel reaches a hundred without padding. One query exhausts long before
+# YouTube runs out of the thing - it simply stops offering new results - so a second angle on the
+# same subject is worth more than a deeper crawl of the first.
+EXTRA_QUERIES = {
+    "christianity": [
+        "Joel Osteen full sermon", "Billy Graham classic crusade sermon",
+        "T D Jakes full sermon", "Joyce Meyer full teaching",
+        "Charles Stanley In Touch full sermon", "Rick Warren full message",
+        "Andrew Wommack full teaching", "Steven Furtick full sermon",
+        "Tony Evans full sermon", "Greg Laurie full message",
+    ],
+    "christian_docs": [
+        "christian documentary feature film", "bible archaeology documentary",
+        "missionary documentary full", "church history documentary full",
+    ],
+    "christian_music": [
+        "Hillsong Worship live", "Elevation Worship full set",
+        "Bethel Music live worship", "Chris Tomlin live",
+        "gospel choir live performance",
+    ],
+    "panel_shows": [
+        "Would I Lie To You full episode", "Taskmaster full episode",
+        "8 Out of 10 Cats Does Countdown full episode",
+        "Have I Got News For You full episode", "Mock the Week full episode",
+    ],
+    "comedy": [
+        "Live at the Apollo full episode", "Dry Bar Comedy full special",
+        "Melbourne Comedy Festival gala full", "Just for Laughs full special",
+    ],
+    "anime": [
+        "isekai anime full episode english dub", "shonen anime full episode english sub",
+        "anime full movie english dub",
+    ],
+    "game_shows": [
+        "The Chase full episode", "Family Feud full episode",
+        "Wheel of Fortune full episode", "Jeopardy full episode",
+        "Hard Quiz full episode",
+    ],
+    "music_1930s": [
+        "Glenn Miller Orchestra", "Duke Ellington 1930s", "Benny Goodman big band",
+        "Billie Holiday 1930s", "Fats Waller", "Cab Calloway",
+    ],
+    "music_1920s": [
+        "Louis Armstrong Hot Five", "Bessie Smith blues", "Jelly Roll Morton",
+        "Paul Whiteman orchestra",
+    ],
+    "bossa_nova": [
+        "Joao Gilberto", "Antonio Carlos Jobim", "Stan Getz Astrud Gilberto",
+        "Sergio Mendes bossa",
+    ],
+    "electronic": [
+        "Boiler Room set", "Cercle live set", "essential mix live",
+        "techno live set", "house music live set", "drum and bass live set",
+    ],
+}
 
 # Channels that were folded into another, and where they went. Their confs are deleted; the
 # survivor's query above was widened to cover the ground both used to.

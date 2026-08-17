@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "1990s Music",
         "network_type": "streaming",
-        "channel_number": 72,
+        "channel_number": 83,
         "network_long_name": "1990s Music",
         "stream_rotation": "clock",
         "streams": [
@@ -12,14 +12,24 @@
                 "title": "Vanilla Ice - Ice Ice Baby (Official Music Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=uIbXvaE39wM",
+                "duration": 221,
+                "title": "Wilson Phillips - Hold On (Official Music Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=NHozn0YXAeE",
                 "duration": 232,
                 "title": "Hanson - MMMBop (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uIbXvaE39wM",
-                "duration": 221,
-                "title": "Wilson Phillips - Hold On (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=i9HGwRbMiVY",
+                "duration": 181,
+                "title": "Lisa Loeb \"Stay (I Missed You)\" Music Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iqIq4B1rgl4",
+                "duration": 219,
+                "title": "Peter Andre - Mysterious Girl (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Zzyfcys1aLM",
@@ -32,49 +42,9 @@
                 "title": "TLC - No Scrubs (Official HD Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Jne9t8sHpUc",
-                "duration": 247,
-                "title": "Alanis Morissette - Ironic (Official 4K Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C-u5WLJ9Yk4",
-                "duration": 237,
-                "title": "Britney Spears - ...Baby One More Time (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gJLIiF15wjQ",
-                "duration": 236,
-                "title": "Spice Girls - Wannabe (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GuJQSAiODqI",
-                "duration": 294,
-                "title": "Madonna - Vogue (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iqIq4B1rgl4",
-                "duration": 219,
-                "title": "Peter Andre - Mysterious Girl (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=i9HGwRbMiVY",
-                "duration": 181,
-                "title": "Lisa Loeb \"Stay (I Missed You)\" Music Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6NXnxTNIWkc",
-                "duration": 293,
-                "title": "4 Non Blondes - What's Up (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3KL9mRus19o",
+                "url": "https://www.youtube.com/watch?v=4Fc67yQsPqQ",
                 "duration": 271,
-                "title": "Blackstreet - No Diggity (Official Music Video) ft. Dr. Dre, Queen Pen"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-oqAU5VxFWs",
-                "duration": 270,
-                "title": "Counting Crows - Mr. Jones (Official Music Video)"
+                "title": "Seal - Crazy (Official Music Video) [HD]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Eo-KmOd3i7s",
@@ -82,59 +52,19 @@
                 "title": "*NSYNC - Bye Bye Bye (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3qVPNONdF58",
+                "url": "https://www.youtube.com/watch?v=Jne9t8sHpUc",
                 "duration": 247,
-                "title": "Blind Melon - No Rain"
+                "title": "Alanis Morissette - Ironic (Official 4K Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9SOryJvTAGs",
-                "duration": 259,
-                "title": "The B-52's - Love Shack (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WQnAxOQxQIU",
-                "duration": 262,
-                "title": "Savage Garden - Truly Madly Deeply (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=etviGf1uWlg",
-                "duration": 291,
-                "title": "Deee-Lite - Groove Is In The Heart (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cjIvu7e6Wq8",
-                "duration": 266,
-                "title": "Missy Elliott - Work It [Official Music Video]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=d73tiBBzvFM",
-                "duration": 214,
-                "title": "Ace of Base - All That She Wants (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qSIOp_K5GMw",
-                "duration": 242,
-                "title": "Brandy & Monica - The Boy Is Mine (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4Fc67yQsPqQ",
+                "url": "https://www.youtube.com/watch?v=3KL9mRus19o",
                 "duration": 271,
-                "title": "Seal - Crazy (Official Music Video) [HD]"
+                "title": "Blackstreet - No Diggity (Official Music Video) ft. Dr. Dre, Queen Pen"
             },
             {
-                "url": "https://www.youtube.com/watch?v=w6Q3mHyzn78",
-                "duration": 266,
-                "title": "Tiffany - I Think We're Alone Now (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xPU8OAjjS4k",
-                "duration": 235,
-                "title": "3 Doors Down - Kryptonite (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=diYAc7gB-0A",
-                "duration": 400,
-                "title": "George Michael - Freedom! ’90 (Official Video)"
+                "url": "https://www.youtube.com/watch?v=C-u5WLJ9Yk4",
+                "duration": 237,
+                "title": "Britney Spears - ...Baby One More Time (Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=BtK_y1n2ERk",
@@ -142,24 +72,19 @@
                 "title": "PM Dawn - Set Adrift On Memory Bliss 1991 (Official Music Video) Remastered"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YlUKcNNmywk",
-                "duration": 322,
-                "title": "Red Hot Chili Peppers - Californication (Official Music Video) [HD UPGRADE]"
+                "url": "https://www.youtube.com/watch?v=qSIOp_K5GMw",
+                "duration": 242,
+                "title": "Brandy & Monica - The Boy Is Mine (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=t0bPrt69rag",
-                "duration": 232,
-                "title": "Britney Spears - Sometimes (Official HD Video)"
+                "url": "https://www.youtube.com/watch?v=etviGf1uWlg",
+                "duration": 291,
+                "title": "Deee-Lite - Groove Is In The Heart (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=8WYHDfJDPDc",
-                "duration": 281,
-                "title": "Nelly - Dilemma (Official Music Video) ft. Kelly Rowland"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lTaXtWWR16A",
-                "duration": 385,
-                "title": "Madonna - Vogue (Live at the MTV Awards 1990) [Official Video]"
+                "url": "https://www.youtube.com/watch?v=gJLIiF15wjQ",
+                "duration": 236,
+                "title": "Spice Girls - Wannabe (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=VV1XWJN3nJo",
@@ -167,19 +92,34 @@
                 "title": "Natalie Imbruglia - Torn (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6M6samPEMpM",
-                "duration": 363,
-                "title": "Backstreet Boys - Everybody (Backstreet's Back) (Official HD Video)"
+                "url": "https://www.youtube.com/watch?v=GuJQSAiODqI",
+                "duration": 294,
+                "title": "Madonna - Vogue (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xGytDsqkQY8",
-                "duration": 233,
-                "title": "Semisonic - Closing Time (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=3qVPNONdF58",
+                "duration": 247,
+                "title": "Blind Melon - No Rain"
             },
             {
-                "url": "https://www.youtube.com/watch?v=AQqMKqArUvA",
-                "duration": 275,
-                "title": "A1 - Everytime (Video)"
+                "url": "https://www.youtube.com/watch?v=diYAc7gB-0A",
+                "duration": 400,
+                "title": "George Michael - Freedom! ’90 (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6Q3mHyzn78",
+                "duration": 266,
+                "title": "Tiffany - I Think We're Alone Now (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6NXnxTNIWkc",
+                "duration": 293,
+                "title": "4 Non Blondes - What's Up (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xPU8OAjjS4k",
+                "duration": 235,
+                "title": "3 Doors Down - Kryptonite (Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=GwOBqHszJLk",
@@ -187,9 +127,44 @@
                 "title": "Tiffany - All This Time"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qORYO0atB6g",
-                "duration": 275,
-                "title": "Beastie Boys - Intergalactic"
+                "url": "https://www.youtube.com/watch?v=d73tiBBzvFM",
+                "duration": 214,
+                "title": "Ace of Base - All That She Wants (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cjIvu7e6Wq8",
+                "duration": 266,
+                "title": "Missy Elliott - Work It [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F2AitTPI5U0",
+                "duration": 383,
+                "title": "Michael Jackson - Black Or White (Official Video - Shortened Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uB1D9wWxd2w",
+                "duration": 227,
+                "title": "Mark Morrison - Return of the Mack (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kr0tTbTbmVA",
+                "duration": 241,
+                "title": "DJ Jazzy Jeff & The Fresh Prince - Summertime (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DL7-CKirWZE",
+                "duration": 278,
+                "title": "New Radicals - You Get What You Give (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=010KyIQjkTk",
+                "duration": 198,
+                "title": "Kris Kross - Jump (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0hiUuL5uTKc",
+                "duration": 234,
+                "title": "Montell Jordan - This Is How We Do It (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1plPyJdXKIY",
@@ -197,34 +172,44 @@
                 "title": "Warren G - Regulate (Official Music Video) ft. Nate Dogg"
             },
             {
+                "url": "https://www.youtube.com/watch?v=8WYHDfJDPDc",
+                "duration": 281,
+                "title": "Nelly - Dilemma (Official Music Video) ft. Kelly Rowland"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AQqMKqArUvA",
+                "duration": 275,
+                "title": "A1 - Everytime (Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xGytDsqkQY8",
+                "duration": 233,
+                "title": "Semisonic - Closing Time (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xkj1An6Wnec",
+                "duration": 251,
+                "title": "Brandy - Have You Ever (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NRtvqT_wMeY",
+                "duration": 264,
+                "title": "Soul Asylum - Runaway Train (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3SoYkCAzMBk",
+                "duration": 257,
+                "title": "Tevin Campbell - Can We Talk (Official Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=PCsGRCf8T9Y",
                 "duration": 274,
                 "title": "Spacehog - In the Meantime (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TR3Vdo5etCQ",
-                "duration": 301,
-                "title": "No Doubt - Don't Speak (Official 4K Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iMKcWsUjdzg",
-                "duration": 177,
-                "title": "Jax - 90s Kids (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nspxAG12Cpc",
-                "duration": 306,
-                "title": "TOOL - Sober (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C2cMG33mWVY",
-                "duration": 228,
-                "title": "OMC - How Bizarre (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hgnhVcyLy1I",
-                "duration": 296,
-                "title": "Bell Biv DeVoe - Poison (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=YlUKcNNmywk",
+                "duration": 322,
+                "title": "Red Hot Chili Peppers - Californication (Official Music Video) [HD UPGRADE]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=4aeETEoNfOg",
@@ -237,14 +222,34 @@
                 "title": "The Highwaymen - Highwayman (American Outlaws: Live at Nassau Coliseum, 1990)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=4gAsPT-vgeM",
+                "duration": 235,
+                "title": "98º - Because Of You (Official Music Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=nPXqkjpXZ_k",
                 "duration": 300,
                 "title": "All Saints - Never Ever (US Version) (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=F2AitTPI5U0",
-                "duration": 383,
-                "title": "Michael Jackson - Black Or White (Official Video - Shortened Version)"
+                "url": "https://www.youtube.com/watch?v=Cx0xzO73Amo",
+                "duration": 273,
+                "title": "Soul For Real - Candy Rain (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CqBtS6BIP1E",
+                "duration": 238,
+                "title": "Mariah Carey - Dreamlover (Official 4K Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qORYO0atB6g",
+                "duration": 275,
+                "title": "Beastie Boys - Intergalactic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i7iQbBbMAFE",
+                "duration": 255,
+                "title": "En Vogue - Free Your Mind (Official Music Video) [HD]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=UrIiLvg58SY",
@@ -257,19 +262,39 @@
                 "title": "Bon Jovi - It's My Life (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=mwhwGmoYv1s",
-                "duration": 270,
-                "title": "En Vogue - Don't Let Go (Love) (Official Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=cP4yAnbtDZE",
                 "duration": 272,
                 "title": "Keith Sweat - Twisted (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4gAsPT-vgeM",
-                "duration": 235,
-                "title": "98º - Because Of You (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=hgnhVcyLy1I",
+                "duration": 296,
+                "title": "Bell Biv DeVoe - Poison (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t0bPrt69rag",
+                "duration": 232,
+                "title": "Britney Spears - Sometimes (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nspxAG12Cpc",
+                "duration": 306,
+                "title": "TOOL - Sober (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TR3Vdo5etCQ",
+                "duration": 301,
+                "title": "No Doubt - Don't Speak (Official 4K Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zplc4Ienkws",
+                "duration": 370,
+                "title": "Reba McEntire - Fancy (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6M6samPEMpM",
+                "duration": 363,
+                "title": "Backstreet Boys - Everybody (Backstreet's Back) (Official HD Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=TTA2buWlNyM",
@@ -277,39 +302,14 @@
                 "title": "Alan Jackson - Remember When (Official HD Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DL7-CKirWZE",
-                "duration": 278,
-                "title": "New Radicals - You Get What You Give (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6thmPrTxBtI",
-                "duration": 265,
-                "title": "*NSYNC - This I Promise You (Official Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=qjuEXKwnkLE",
                 "duration": 317,
                 "title": "Skid Row - I Remember You (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=NRtvqT_wMeY",
-                "duration": 264,
-                "title": "Soul Asylum - Runaway Train (Official HD Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uB1D9wWxd2w",
-                "duration": 227,
-                "title": "Mark Morrison - Return of the Mack (Official Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=LXO7UL84rK0",
                 "duration": 269,
                 "title": "Michael Bolton - Soul Provider (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zplc4Ienkws",
-                "duration": 370,
-                "title": "Reba McEntire - Fancy (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=JW5UEW2kYvc",
@@ -322,14 +322,14 @@
                 "title": "Bette Midler - From A Distance (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Cx0xzO73Amo",
-                "duration": 273,
-                "title": "Soul For Real - Candy Rain (Official Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Y5qKNlcUwKs",
                 "duration": 226,
                 "title": "Nelly - Country Grammar (Hot...) (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6thmPrTxBtI",
+                "duration": 265,
+                "title": "*NSYNC - This I Promise You (Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=vn_or9gEB6g",
@@ -342,19 +342,24 @@
                 "title": "*NSYNC - It's Gonna Be Me (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1aVHLL5egRY",
-                "duration": 253,
-                "title": "Hootie & The Blowfish - Let Her Cry (Official Music Video) [HD]"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=tov22NtCMC4",
                 "duration": 210,
                 "title": "Mariah Carey - Vision Of Love"
             },
             {
+                "url": "https://www.youtube.com/watch?v=1aVHLL5egRY",
+                "duration": 253,
+                "title": "Hootie & The Blowfish - Let Her Cry (Official Music Video) [HD]"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=araU0fZj6oQ",
                 "duration": 304,
                 "title": "Staind - It's Been Awhile (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V3M723634Rc",
+                "duration": 249,
+                "title": "Jaheim - Put That Woman First (Official Music Video) | Warner Records"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RiSfTyrvJlg",
@@ -367,24 +372,14 @@
                 "title": "Sublime - Santeria (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FkDpwF6-QiA",
-                "duration": 230,
-                "title": "Mariah Carey - Love Takes Time (Official HD Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=znlFu_lemsU",
                 "duration": 225,
                 "title": "Mary J. Blige - Family Affair (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3SoYkCAzMBk",
-                "duration": 257,
-                "title": "Tevin Campbell - Can We Talk (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TSffz_bl6zo",
-                "duration": 246,
-                "title": "Snow - Informer (Official Music Video) [4K Remaster]"
+                "url": "https://www.youtube.com/watch?v=FkDpwF6-QiA",
+                "duration": 230,
+                "title": "Mariah Carey - Love Takes Time (Official HD Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
@@ -392,9 +387,9 @@
                 "title": "Haddaway - What Is Love (Official 4K Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=V3M723634Rc",
-                "duration": 249,
-                "title": "Jaheim - Put That Woman First (Official Music Video) | Warner Records"
+                "url": "https://www.youtube.com/watch?v=TSffz_bl6zo",
+                "duration": 246,
+                "title": "Snow - Informer (Official Music Video) [4K Remaster]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=8N2k-gv6xNE",
@@ -415,11 +410,6 @@
                 "url": "https://www.youtube.com/watch?v=jrL_LzX5wv4",
                 "duration": 216,
                 "title": "House of Pain - Jump Around (Official 4K Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CqBtS6BIP1E",
-                "duration": 238,
-                "title": "Mariah Carey - Dreamlover (Official 4K Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=aIq1LvzSLsk",
@@ -472,11 +462,6 @@
                 "title": "En Vogue - Hold On (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=i7iQbBbMAFE",
-                "duration": 255,
-                "title": "En Vogue - Free Your Mind (Official Music Video) [HD]"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ZM5qIJdBtX0",
                 "duration": 169,
                 "title": "Cher - The Shoop Shoop Song (It's In His Kiss) (Alternate Version)"
@@ -485,11 +470,6 @@
                 "url": "https://www.youtube.com/watch?v=Ti1bFMBd6V4",
                 "duration": 238,
                 "title": "J.J. Fad - Supersonic (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5LxCICsV7Lk",
-                "duration": 267,
-                "title": "Carl Thomas - Summer Rain (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Jfoxsfhi-kk",
@@ -505,6 +485,26 @@
                 "url": "https://www.youtube.com/watch?v=ZDPIK7Fz_g4",
                 "duration": 235,
                 "title": "Another Bad Creation - Iesha (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0-EF60neguk",
+                "duration": 309,
+                "title": "Sinéad O'Connor - Nothing Compares 2 U (Official Music Video) [HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=976b8TPPFJU",
+                "duration": 279,
+                "title": "SWV - Weak (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=djV11Xbc914",
+                "duration": 244,
+                "title": "a-ha - Take On Me (Official Video) [4K]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hTWKbfoikeg",
+                "duration": 279,
+                "title": "Nirvana - Smells Like Teen Spirit (Official Music Video)"
             }
         ],
         "search_query": "1990s music video"

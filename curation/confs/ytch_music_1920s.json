@@ -2,10 +2,295 @@
     "station_conf": {
         "network_name": "1920s Music",
         "network_type": "streaming",
-        "channel_number": 65,
+        "channel_number": 76,
         "network_long_name": "1920s Music",
         "stream_rotation": "clock",
         "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=VjgF971gAjg",
+                "duration": 194,
+                "title": "Arden-Ohman Orch. - Hallelujah, 1927"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p_FruGFtwFA",
+                "duration": 185,
+                "title": "\"I'm Following You\" (1929) Lawrence Gray"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wcUuz0DzXHA",
+                "duration": 187,
+                "title": "\"Just Another Kiss\" (1928) Waltz - The Troubadours"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KiqclXgAFBQ",
+                "duration": 204,
+                "title": "Rudy Vallee - You're Just Another Memory"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4NXv5B65z-U",
+                "duration": 160,
+                "title": "\"You Were Meant For Me\" (1929) Harold Scrappy Lambert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eb36JID2jRA",
+                "duration": 122,
+                "title": "I'm Just a Vagabond Lover (1929) Rudy Vallee"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CtGSE90RycI",
+                "duration": 203,
+                "title": "\"Louise\" (Maurice Chevalier, 1929)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tmwc9artTUM",
+                "duration": 167,
+                "title": "Roaring Twenties: Irene Bordoni sings Cole Porter, 1928"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S8GVT72ZP6M",
+                "duration": 188,
+                "title": "Honey Bunch- Paul Specht Orchestra-1926"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XSCvzX6nQw4",
+                "duration": 209,
+                "title": "\"Love Me Or Leave Me\" (1929) Bob Haring"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r3M4KHAerOI",
+                "duration": 187,
+                "title": "Huggable Kissable You-Bob Haring Orchestra-1929"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GR7e-0TTA-0",
+                "duration": 194,
+                "title": "\"Together\" (1927) Bob Haring - Waltz"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uJgCAarFgEo",
+                "duration": 196,
+                "title": "\"Always\" (1926) Waltz - Bob Haring"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bg_snJloZwY",
+                "duration": 176,
+                "title": "Jack Hylton - I Want To Be Bad (video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RoyxFtvAgWY",
+                "duration": 170,
+                "title": "You're the cream in my coffee"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QhAGfp4DIbY",
+                "duration": 174,
+                "title": "\"I'll See You in My Dreams\" (Isham Jones, 1924)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5Z9DfgCpx-0",
+                "duration": 226,
+                "title": "Roaring 20s: Isham Jones' Orch. - Thinking Of You, 1926"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qveKFZPbFok",
+                "duration": 208,
+                "title": "JUST AN HOUR OF LOVE by Irene Bordoni 1929"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qd0crXQV2n0",
+                "duration": 176,
+                "title": "Roaring 1920s: My Sweeter Than Sweet, 1929"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G4fyZZaWifI",
+                "duration": 191,
+                "title": "My Wonderful You-Harold White Orchestra .wmv"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i-T9H5cZblM",
+                "duration": 288,
+                "title": "I Found A Million Dollar Baby- Don Voorhees Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MdH8LOelEb4",
+                "duration": 200,
+                "title": "Call Me Darling-The Cavaliers.wmv"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yLzCSMAJ2X8",
+                "duration": 170,
+                "title": "To Be In Love- Hal Kemp Orchestra 1929"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_KjNdQyyNyY",
+                "duration": 172,
+                "title": "When I'm Walking With My Sweetness -Jack Miller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Vx6fCZXo8k",
+                "duration": 175,
+                "title": "Take It From Me Jerry Fenwyck Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=opsUyMaZmYI",
+                "duration": 183,
+                "title": "Ooh! Maybe It's You -Ben Selvin Orchestra-1927"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5DOh6A2iSl0",
+                "duration": 178,
+                "title": "Jack Hylton And His Orchestra  Happy Feet"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5z93Zird4cA",
+                "duration": 197,
+                "title": "Ben Selvin's Orch. - You're The Cream In My Coffee, 1928"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RVtdCydcfUc",
+                "duration": 187,
+                "title": "April Showers - Al Jolson"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z3jmMoImXeo",
+                "duration": 188,
+                "title": "\"When the Red, Red Robin Comes Bob-bob-bobbin' Along\" (\"Whispering\" Jack Smith, 1926)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3zw7lYS0k68",
+                "duration": 242,
+                "title": "\"You Can't Believe My Eyes\" (1929) High Hatters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C05eakhgA4Y",
+                "duration": 194,
+                "title": "That Old Gang of Mine, Billy Murray - Ed Smalle."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_p1qCujJZv4",
+                "duration": 188,
+                "title": "I May Be Wrong -Sam Lanin Troubadours"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kuh1tY52YUo",
+                "duration": 175,
+                "title": "Popular 1929 Music - Hollywood Dance Orchestra - I'm Following You @Pax41"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G9IVJNrTXCY",
+                "duration": 222,
+                "title": "\"I Wanna Sing About You\"- BEN SELVIN & HIS ORCHESTRA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iz8berkyH0w",
+                "duration": 200,
+                "title": "1920s Music - Gus Arnheim & His Orchestra - I'm Feathering A Nest @Pax41"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bq1CexZ2bkE",
+                "duration": 202,
+                "title": "Popular 1929 Music - Herman Kenin & Ambassador Orchestra  - Kids Again"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gRv2r3BmL2k",
+                "duration": 301,
+                "title": "Comic Jazzy 20's song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C0A71GPEWNo",
+                "duration": 183,
+                "title": "Popular 1929 Music - Arden & Ohman - Love Your Spell Is Everywhere @Pax41"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1mBJJpDYKYQ",
+                "duration": 193,
+                "title": "Love Me Or Leave Me-Biltmore Trio.wmv"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=beZuKw6ZJqg",
+                "duration": 143,
+                "title": "Johnny Marvin \"If I Had a Talking Picture of You\" (1929)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yabcULuXf-8",
+                "duration": 190,
+                "title": "Chick Endor & Leonard Joy Orch.- Love Me Or Leave Me, 1928"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4KfiFRpv5_0",
+                "duration": 187,
+                "title": "Bert Lown's Orchestra - When I Take My Sugar To Tea, 1931"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yke1iSsc5G4",
+                "duration": 356,
+                "title": "1920s Music of The Rounders (Harry Reser)  - Rio Rita and Singin In The Rain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v_kNWZOhzBg",
+                "duration": 216,
+                "title": "\"ALWAYS\" - Henry Burr (1926)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_62pKiiVSIs",
+                "duration": 140,
+                "title": "Fanny Brice - I'd Rather Be Blue Over You, 1929"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0XuNkxxQx4s",
+                "duration": 187,
+                "title": "He May Be Your Dog But He's Wearing My Collar"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=InTuAeGjr4M",
+                "duration": 90,
+                "title": "Eddie Cantor- If You Knew Susie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uzzskg1mAkc",
+                "duration": 190,
+                "title": "Ben Pollack & His Orch. - Waitin' For Katie, 1927"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cUnB1jas__c",
+                "duration": 169,
+                "title": "Ben Bernie & His Orch. - Miss Annabelle Lee, 1927"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qdq7-gfMaes",
+                "duration": 173,
+                "title": "Eddie Cantor - Oh Gee, Oh Gosh, Oh Golly, I'm In Love (1923)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JB9VVTMiX1k",
+                "duration": 200,
+                "title": "Love Me or Leave Me   Ruth Etting"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oEMLjnAi8kU",
+                "duration": 181,
+                "title": "Ruth Etting - I'm Nobody's Baby (1927)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C4kBLxaDAt0",
+                "duration": 206,
+                "title": "Paul Godwin Jazz-Symphoniker - Erst trink mit mir ein bisschen Alkohol, mein Schatz, 1928"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3HeasqkO1Ko",
+                "duration": 212,
+                "title": "Helen Morgan - Bill"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZhphfksE73U",
+                "duration": 189,
+                "title": "Chinatown, My Chinatown - Red Nichols & His Five Pennies (w Benny Goodman, Dudley Fosdick)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qEIBmGZxAhg",
+                "duration": 178,
+                "title": "Jimmie Rodgers - Blue Yodel No 1 (T For Texas)"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=LqEIEDEBnfg",
                 "duration": 314,
@@ -17,239 +302,14 @@
                 "title": "Puttin' On The Ritz | The Lady Gatsby Jazz Band | 1920s jazz band to hire"
             },
             {
-                "url": "https://www.youtube.com/watch?v=psch9N4PmO4",
-                "duration": 175,
-                "title": "1920s dances featuring the Charleston, the Peabody, Turkey Trot and more"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Qn_pDASw0-I",
-                "duration": 236,
-                "title": "Levitating - Dua Lipa (1920s Style Cover) ft. Sweet Megg"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UXInk1PCsc8",
-                "duration": 160,
-                "title": "Cab Calloway 1933 Cartoon of St. James Infirmary Blues"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=af13b2RQPUE",
-                "duration": 129,
-                "title": "Stockyard Stomp"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=z5FItLLqhx4",
-                "duration": 196,
-                "title": "I've Got My Eye On You"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=o_8z2onSYnI",
-                "duration": 152,
-                "title": "Charleston !"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qNlPm5XnDBA",
-                "duration": 348,
-                "title": "The Reason I Fell for You | A 1920s Harlem Jazz Love Ballad | GodModeGroove"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZbxjHfbbpgs",
-                "duration": 183,
-                "title": "1920s Jazz Nights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wc2xPSH5eyU",
-                "duration": 280,
-                "title": "The Night the Ballroom Went Dark - Evelyn Hart | Cinematic 1920s Swing Jazz Song"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cem3Wa_6YLU",
-                "duration": 214,
-                "title": "Smoky Lounge Jazz · Paris Midnight | Echoes of Desire - Vintage 1920s-1950s by MortonLab"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fBM--uNKK7Q",
-                "duration": 230,
-                "title": "Friendship Bracelets – Nu Jazz   1920s Charleston Fashion Music Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q0hNuEDl3GQ",
-                "duration": 129,
-                "title": "The Book of Life (1920s Golden Jazz Orchestration)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WUwPNq8_Z2o",
-                "duration": 225,
-                "title": "The Book of Life (1920s Golden Jazz Worship Fusion Version)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9FgbK2txUtU",
-                "duration": 138,
-                "title": "Funny 1920s Ragtime Music🎸\"Get You an Old Guy\"❤️(AI Video + Human Lyrics✍️) Roaring Twenti"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Zf7N4b79j2c",
-                "duration": 172,
-                "title": "Back Alley Blues"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ARd0Tg7yHHY",
-                "duration": 255,
-                "title": "E-Ton Duo–Basin street blues |Jazz Standards 1920s–30s |Marjana music house,Tallinn | 1 Au"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=P9BLMTHkyYY",
-                "duration": 60,
-                "title": "Blow a Fuse 1920s"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NSuHLr7P9yU",
-                "duration": 150,
-                "title": "Bronze Shadow Shuffle"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O4ticsPYf0o",
-                "duration": 141,
-                "title": "Last Call in 1929"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=A2J66r4Fo9A",
-                "duration": 110,
-                "title": "Grant Park Stomp"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qh4VZJ0T4uU",
-                "duration": 182,
-                "title": "Midnight Jazz · After Hours in Montmartre | Whispering Dreams - Vintage 1920s-1950s by Mor"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0uX-r85TrAI",
-                "duration": 145,
-                "title": "Black and Tan Fantasy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KIwK8nJ6ipk",
-                "duration": 320,
-                "title": "Tommy Guns & Dark Jazz Blues | Dark Noir Mafia Jazz | Speakeasy Blues By Slick Devil"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HQbRY7IOwtQ",
-                "duration": 144,
-                "title": "Take the El"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=w99EcIzEBBE",
-                "duration": 162,
-                "title": "Frolicking Foxtrot (Vinyl Mix)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2T3nkxAd2QU",
-                "duration": 188,
-                "title": "Uptown Undertow"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oxSkQBn3wLA",
-                "duration": 335,
-                "title": "Until the Rain Stops — Vintage Soul-Jazz for Love, Loss & Letting Go | GodModeGroove"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OwcrMscRM4M",
-                "duration": 128,
-                "title": "Green Mill Midnight"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qbnKzXhz3ds",
-                "duration": 187,
-                "title": "Smoky Lounge Jazz · Montmartre After Dark | Echoes of Desire - Vintage 1920s-1950s by Mort"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gsKmWYFTeYA",
-                "duration": 162,
-                "title": "Cotton Club Crossroads"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FcaKbvAXhJY",
-                "duration": 143,
-                "title": "Blue Note Blackout"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vdCF3mGrnGM",
-                "duration": 215,
-                "title": "Whisper Jazz · Old Town Reverie | Echoes of Distant Dreams - Vintage 1920s-1950s by Morton"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CuSsf79tydM",
-                "duration": 140,
-                "title": "The Third Rail"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kzC1TKl28pI",
-                "duration": 230,
-                "title": "Velvet Bebop · Une Nuit à Paris | Echoes of Quiet Longing - Vintage 1920s-1950s by MortonL"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6bInaa5hC10",
-                "duration": 228,
-                "title": "Gold Dress at Midnight - Evelyn Hart | Vintage Swing Jazz with Roaring Twenties Glamour"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gvnwpGoUtbg",
-                "duration": 232,
-                "title": "I wrote a 1920s style Jazz Song | A Tribute to Jelly Roll Morton and Fats Waller"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AQWUjw7jvsY",
-                "duration": 193,
-                "title": "(1910) Lo, Here the Gentle Lark - Nellie Melba"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LrOxZRhhtOs",
-                "duration": 197,
-                "title": "(1923) Maggie- (Yes Ma_am) - Fields and Bernard"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Fs1546Pituk",
-                "duration": 149,
-                "title": "(1904) I NEED THEE EVERY HOUR - H. BURR"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=VCTOpdlZJ8U",
                 "duration": 276,
                 "title": "Bad Romance - Vintage 1920's Gatsby Style Lady Gaga Cover ft. Ariana Savalas & Sarah Reich"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Rve03u7oEvI",
-                "duration": 243,
-                "title": "Gangsta's Paradise - Vintage 1920's Al Capone Style Coolio Cover ft. Robyn Adele Anderson"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HKWTXsiiYEY",
-                "duration": 245,
-                "title": "1920s Jazz Age"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=21Q35PlDbWs",
-                "duration": 132,
-                "title": "Love In A Bottle (Hazbin Hotel) 60's Version - Jazz Cover Lyric Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7hHZnvjCbVw",
-                "duration": 234,
-                "title": "Habits - Vintage 1930's Jazz Tove Lo Cover ft. Haley Reinhart"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZEcqHA7dbwM",
-                "duration": 148,
-                "title": "Fly Me To The Moon (2008 Remastered)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zuPHuiSnnQw",
-                "duration": 126,
-                "title": "The One Who's Running The Show  (TADC) 60's Version - Jazz Cover Lyric Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CWPvZrLMl9o",
-                "duration": 139,
-                "title": "It's Been So Long (Five Nights At Freddy's 2) 60's Version - Jazz Cover Lyric Video"
+                "url": "https://www.youtube.com/watch?v=B2yike6Zs9k",
+                "duration": 231,
+                "title": "Al Bowlly - The Very Thought Of You (1934)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=_ZdMxFiUf9Q",
@@ -257,79 +317,24 @@
                 "title": "Tuba Skinny - Jubilee Stomp - Royal Street II"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5CYlK1w-Du4",
-                "duration": 224,
-                "title": "Charlie's Inferno (60's Version) - Jazz Cover Lyric Video"
+                "url": "https://www.youtube.com/watch?v=Qn_pDASw0-I",
+                "duration": 236,
+                "title": "Levitating - Dua Lipa (1920s Style Cover) ft. Sweet Megg"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qzc7vY9VTnk",
-                "duration": 346,
-                "title": "Hellzapoppin' in full color | Colorized with DeOldify"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bkPUC3gWvbE",
-                "duration": 128,
-                "title": "20s Charleston Dance - \"Charleston\" by Enoch Light"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kSXqCgvVpiE",
-                "duration": 290,
-                "title": "Moonlight in the Garden Room - Evelyn Hart | Romantic 1920s Vintage Jazz Song"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MB6p4BhTPv4",
-                "duration": 268,
-                "title": "\"Oh, The Times!\" - 1920s Charleston Jazz🎺AI Music Video + Human-Written Lyrics✍️Roaring Tw"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I-S2ha7XN7w",
-                "duration": 170,
-                "title": "Champagne Nights — Golden Charleston | 1920s Jazz Swing, Vintage Love Song, Romantic Speak"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Nz33G0IZEfE",
-                "duration": 183,
-                "title": "Midnight Charleston | 1920s Jazz Age Dance Instrumental"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SkA6rLt_0nY",
+                "url": "https://www.youtube.com/watch?v=HKWTXsiiYEY",
                 "duration": 245,
-                "title": "Welcome to the Starlight - Evelyn Hart | 1920s Swing Jazz Song"
+                "title": "1920s Jazz Age"
             },
             {
-                "url": "https://www.youtube.com/watch?v=WkBCZkizx80",
-                "duration": 301,
-                "title": "Don’t Fix My Coffee (Official Audio)  #GodModeGroove  #roboticgold #jazz #1920s"
+                "url": "https://www.youtube.com/watch?v=7hHZnvjCbVw",
+                "duration": 234,
+                "title": "Habits - Vintage 1930's Jazz Tove Lo Cover ft. Haley Reinhart"
             },
             {
-                "url": "https://www.youtube.com/watch?v=HOAzgL6VNvY",
-                "duration": 219,
-                "title": "Habits - Jazz Vintage 1930 (Lyrics) (Tove Lo Cover ft. Haley Reinhart)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a_HDld0n0ws",
-                "duration": 210,
-                "title": "Cinematic Jazz · Café Lumière | Whispers of Moonlit Dreams - Vintage 1920s-1950s by Morton"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YQGL5srDBO4",
-                "duration": 169,
-                "title": "Ain't Misbehavin' | The Lady Gatsby Jazz Band | 1920s jazz band to hire"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PXdSNhP_nJM",
-                "duration": 132,
-                "title": "Psalm 134 – Bless the Lord | 1920s Cool Jazz Worship"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fPFqn9alwOs",
-                "duration": 187,
-                "title": "Two Time Travelers Ft. Parker Edmondson (Official Music Video) 1920’s Jazz"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VAuTouBhN5k",
-                "duration": 347,
-                "title": "Rhapsody in Blue Debut | Rhapsody In Blue | Warner Archive"
+                "url": "https://www.youtube.com/watch?v=UXInk1PCsc8",
+                "duration": 160,
+                "title": "Cab Calloway 1933 Cartoon of St. James Infirmary Blues"
             },
             {
                 "url": "https://www.youtube.com/watch?v=r2S1I_ien6A",
@@ -337,24 +342,9 @@
                 "title": "\"SING, SING, SING\" BY BENNY GOODMAN"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cb2w2m1JmCY",
-                "duration": 194,
-                "title": "Duke Ellington, \"Take the A Train\""
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ejGfaYnmdFw",
-                "duration": 220,
-                "title": "I'm Still Here - 1920's Jazz"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dXjZeCL0C9o",
-                "duration": 262,
-                "title": "Lovefool - Vintage Jazz Cardigans Cover ft. Haley Reinhart"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aLnZ1NQm2uk",
-                "duration": 255,
-                "title": "All About That Bass - Postmodern Jukebox European Tour Version"
+                "url": "https://www.youtube.com/watch?v=5CYlK1w-Du4",
+                "duration": 224,
+                "title": "Charlie's Inferno (60's Version) - Jazz Cover Lyric Video"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sB6HY8r983c",
@@ -362,44 +352,49 @@
                 "title": "Seven Nation Army - Vintage New Orleans Dirge White Stripes Cover ft. Haley Reinhart"
             },
             {
-                "url": "https://www.youtube.com/watch?v=m4jU8IQK5b0",
-                "duration": 120,
-                "title": "Billie Holiday & Louis Armstrong - New Orleans"
+                "url": "https://www.youtube.com/watch?v=_CI-0E_jses",
+                "duration": 216,
+                "title": "Glenn Miller - In The Mood [HQ]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cX3S2CjJI5M",
-                "duration": 174,
-                "title": "Midnight Tea Club | 1920s Speakeasy Noir Jazz"
+                "url": "https://www.youtube.com/watch?v=7DdfcIlePLI",
+                "duration": 198,
+                "title": "1920s Ragtime Jazz Music🎹\"Love Me or Leave Me\"💋(AI Video + Authentic 1928 Song Lyrics✍️)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=HR0MB5K8Qh8",
-                "duration": 215,
-                "title": "Dancing Queen, Abba - 1920s Hot Jazz Cover ft Gunhild Carling"
+                "url": "https://www.youtube.com/watch?v=UODWiL67k48",
+                "duration": 195,
+                "title": "1920s Charleston Jazz Music🎹\"Love Me or Leave Me\"💋"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yKDJ-zOmbxQ",
-                "duration": 276,
-                "title": "The Things You Said | Vintage Jazz Meets Modern Heartbreak"
+                "url": "https://www.youtube.com/watch?v=iP0tHmoc1rs",
+                "duration": 206,
+                "title": "It's Been a Long, Long Time"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zSnCjyoMNgs",
-                "duration": 340,
-                "title": "1920's Party - Saturday Night Live"
+                "url": "https://www.youtube.com/watch?v=-4uzfkYIIpc",
+                "duration": 311,
+                "title": "New York Roaring - lofi, 1920s Jazz fusion, hip-hop"
             },
             {
-                "url": "https://www.youtube.com/watch?v=m3lF2qEA2cw",
-                "duration": 296,
-                "title": "Creep - Vintage Postmodern Jukebox Radiohead Cover ft. Haley Reinhart"
+                "url": "https://www.youtube.com/watch?v=GH79MhBHN5s",
+                "duration": 112,
+                "title": "20s Charleston Dance - \"Black Bottom\""
             },
             {
-                "url": "https://www.youtube.com/watch?v=hxswqXa3Wfk",
-                "duration": 260,
-                "title": "Dragon Noir Jazz | Chapter 03: The Crimson Note | Dark Jazz Noir & 1920s Speakeasy Ambienc"
+                "url": "https://www.youtube.com/watch?v=bkPUC3gWvbE",
+                "duration": 128,
+                "title": "20s Charleston Dance - \"Charleston\" by Enoch Light"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MpbRkA_TXBc",
-                "duration": 226,
-                "title": "Son of the King (1920's Jazz) Early Modern English"
+                "url": "https://www.youtube.com/watch?v=O0omgVTeGZA",
+                "duration": 205,
+                "title": "The God of All Comfort: 1920s Jazz Club Gospel | 2 Corinthians 1:3-4 (Cinematic Performanc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NBeFa5cnRr0",
+                "duration": 164,
+                "title": "Champagne Nights & Silver Dreams — Golden Charleston | 1920s Swing Jazz Love Song"
             },
             {
                 "url": "https://www.youtube.com/watch?v=R7ruixMDol4",
@@ -407,41 +402,120 @@
                 "title": "King Of Swing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OAVZuSoP8dk",
-                "duration": 185,
-                "title": "Ella Fitzgerald, Louis Armstrong - Dream A Little Dream Of Me (Audio)"
+                "url": "https://www.youtube.com/watch?v=FWaaCyjyZ-4",
+                "duration": 249,
+                "title": "1920s Jazz Music Project"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PzYbBL1VaaQ",
-                "duration": 295,
-                "title": "Ajeeb Dasta Hai Yeh | अजीब दस्ता है ये | Female Bollywood Jazz-Blues |UnderGod Music"
+                "url": "https://www.youtube.com/watch?v=o_8z2onSYnI",
+                "duration": 152,
+                "title": "Charleston !"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uwFD57FrY-E",
-                "duration": 213,
-                "title": "My Original 1920s Film Noir Jazz Composition | #illphated music"
+                "url": "https://www.youtube.com/watch?v=Nz33G0IZEfE",
+                "duration": 183,
+                "title": "Midnight Charleston | 1920s Jazz Age Dance Instrumental"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R6RD6mjiIZE",
-                "duration": 292,
-                "title": "Black Hole Sun - Vintage Soundgarden Cover ft. Haley Reinhart"
+                "url": "https://www.youtube.com/watch?v=GT15GezkGu0",
+                "duration": 169,
+                "title": "Step Into the Shine (Original)| 1920s Jazz Dance Music | Vintage Swing Vibe"
             },
             {
-                "url": "https://www.youtube.com/watch?v=x0cJaKVcpxo",
-                "duration": 153,
-                "title": "Speakeasy Strut - 1920s vintage Jazz (Prohibition Flapper Dance) [royalty free music]"
+                "url": "https://www.youtube.com/watch?v=b2ZWtB8KppE",
+                "duration": 302,
+                "title": "1920s Old Hollywood Radio Jazz ( Dangerous Femme Fatale Energy )"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bwfkn3iXTi0",
-                "duration": 214,
-                "title": "Midnight Jazz · Saint-Germain at 2AM | Echoes of Longing - Vintage 1920s-1950s by MortonLa"
+                "url": "https://www.youtube.com/watch?v=OHYtoOXiZvM",
+                "duration": 181,
+                "title": "Velvet Skies — Golden Charleston | Vintage Jazz Love Song, 1920s Swing Romance"
             },
             {
-                "url": "https://www.youtube.com/watch?v=JvzqHNNbEUE",
-                "duration": 250,
-                "title": "The Swing of Freedom ( Full Version ) (1920s \"플래퍼\") #StoryMusic #History #jazz pop"
+                "url": "https://www.youtube.com/watch?v=qNlPm5XnDBA",
+                "duration": 348,
+                "title": "The Reason I Fell for You | A 1920s Harlem Jazz Love Ballad | GodModeGroove"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nieDhXoEyUI",
+                "duration": 216,
+                "title": "The Smooth Talker | 1920s Jazz Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gcrp8VOd69M",
+                "duration": 405,
+                "title": "Jazz Age & Entertainment Revolution - 1920s America - Cinema, Radio & Sport | GCSE History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MHd22OwvSys",
+                "duration": 151,
+                "title": "1920s Speakeasy🍸Jazz Music🥀\"Young Woman's Blues\"🎷AI Video + 1926 Authentic Song Lyrics✍️ R"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZbxjHfbbpgs",
+                "duration": 183,
+                "title": "1920s Jazz Nights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6bInaa5hC10",
+                "duration": 228,
+                "title": "Gold Dress at Midnight - Evelyn Hart | Vintage Swing Jazz with Roaring Twenties Glamour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z2f4Ji-SF2s",
+                "duration": 152,
+                "title": "Mozart but 1920s JAZZ (Rondo alla turca)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ATdk-wKHm0A",
+                "duration": 271,
+                "title": "Time Hop – 1920s Jazz Speakeasy EDM"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WkBCZkizx80",
+                "duration": 301,
+                "title": "Don’t Fix My Coffee — A Sassy 1920s Jazz-Blues Morning | GodModeGroove"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLPuZdHc940",
+                "duration": 192,
+                "title": "1920s Lively Jazz Instrumental — A Moment in Time"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m4jU8IQK5b0",
+                "duration": 120,
+                "title": "Billie Holiday & Louis Armstrong - New Orleans"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lVXziMFEqX0",
+                "duration": 236,
+                "title": "Careless Whisper - Vintage 1930's Jazz Wham! Cover feat. Robyn Adele Anderson & Dave Koz"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-s5rIqXX10A",
+                "duration": 133,
+                "title": "🎺🎉 Stompin' Jazz Night (Energetic 1920s Jazz for Dancing & Good Vibes) - Golden Age Radio["
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wwqLhct01lU",
+                "duration": 89,
+                "title": "I Am Anchored | 1920s Jazz Style Worship (Romans Inspired)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MB6p4BhTPv4",
+                "duration": 268,
+                "title": "\"Oh, The Times!\" - 1920s Charleston Jazz🎺AI Music Video + Human-Written Lyrics✍️Roaring Tw"
             }
         ],
-        "search_query": "1920s jazz music"
+        "search_query": "1920s jazz music",
+        "playlists": [
+            "PL7D797EBD172C452D"
+        ],
+        "extra_queries": [
+            "Louis Armstrong Hot Five",
+            "Bessie Smith blues",
+            "Jelly Roll Morton",
+            "Paul Whiteman orchestra"
+        ]
     }
 }

@@ -2,34 +2,384 @@
     "station_conf": {
         "network_name": "1930s Music",
         "network_type": "streaming",
-        "channel_number": 66,
+        "channel_number": 77,
         "network_long_name": "1930s Music",
         "stream_rotation": "clock",
         "streams": [
-            {
-                "url": "https://www.youtube.com/watch?v=aME0qvhZ37o",
-                "duration": 202,
-                "title": "Glenn Miller - In The Mood | Colorized (1941) 4K"
-            },
             {
                 "url": "https://www.youtube.com/watch?v=r2S1I_ien6A",
                 "duration": 324,
                 "title": "\"SING, SING, SING\" BY BENNY GOODMAN"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3-k9XRTSEiM",
-                "duration": 255,
-                "title": "History Brief: Big Bands & Swing Music in the 1930s"
+                "url": "https://www.youtube.com/watch?v=3mJ4dpNal_k",
+                "duration": 132,
+                "title": "Benny Goodman Orchestra \"Sing, Sing, Sing\" Gene Krupa - Drums, from \"Hollywood Hotel\" film"
             },
             {
-                "url": "https://www.youtube.com/watch?v=acb-js00c40",
-                "duration": 215,
-                "title": "The Speakeasy Three ft. The Swing Ninjas - When I Get Low, I Get High (Official MV)"
+                "url": "https://www.youtube.com/watch?v=45Kx4KzfMn0",
+                "duration": 303,
+                "title": "Benny Goodman - St. Louis Blues"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QTkRStdoH9o",
-                "duration": 116,
-                "title": "1930's Swing"
+                "url": "https://www.youtube.com/watch?v=0jE2g055zRA",
+                "duration": 250,
+                "title": "Sweet Georgia Brown🎶 - Benny Goodman 1980"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sHcneaZIvVM",
+                "duration": 218,
+                "title": "Benny Goodman - Moonglow"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NTKOgTk2gGE",
+                "duration": 233,
+                "title": "The Benny Goodman Quartet 1959-I Got Rhythm"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aWr2X6J26Uk",
+                "duration": 280,
+                "title": "Benny Goodman Let's Dance - Don't Be That Way"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wbU4zwhOGVg",
+                "duration": 336,
+                "title": "Benny Goodman Quartet - Avalon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=prnS5URkyc8",
+                "duration": 190,
+                "title": "BENNY GOODMAN - Minnie's in the Money - 1943 big band swing jazz jitterbug dancers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xPXwkWVEIIw",
+                "duration": 202,
+                "title": "Glenn Miller - In The Mood"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-XQybKMXL-k",
+                "duration": 284,
+                "title": "Chattanooga Choo Choo - Glenn  Miller Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n92ATE3IgIs",
+                "duration": 217,
+                "title": "Moonlight Serenade"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E0Skao81GIQ",
+                "duration": 203,
+                "title": "Perfidia - Glenn MIller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YOG89TrL4Vk",
+                "duration": 181,
+                "title": "\"LITTLE BROWN JUG\" BY GLENN MILLER"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DK-lBi5r6Jk",
+                "duration": 225,
+                "title": "Glenn Miller-\"American Patrol\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iBTYcqtaOjg",
+                "duration": 153,
+                "title": "Tuxedo Junction - Glenn Miller"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m_muFwwTSMs",
+                "duration": 193,
+                "title": "\"PENNSYLVANIA 6-5000\" BY GLENN MILLER"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pt-dfPnBeLE",
+                "duration": 199,
+                "title": "Boogie Woogie - Glenn Miller & Tommy Dorsey"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SxdkUwF4I5U",
+                "duration": 195,
+                "title": "I Cried for You . Billie Holiday 1936"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uYUqbnk7tCY",
+                "duration": 176,
+                "title": "Billie Holiday - Summertime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5zjftiwSoTg",
+                "duration": 182,
+                "title": "Billie Holiday - You Go To My Head"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IQlehVpcAes",
+                "duration": 205,
+                "title": "Billie Holiday, My Man"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KUCyjDOlnPU",
+                "duration": 190,
+                "title": "Gloomy Sunday - Billie Holiday"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ntDnwBiORu8",
+                "duration": 206,
+                "title": "Billie Holiday - Blue Moon (1952)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=45YPO2FyXVI",
+                "duration": 203,
+                "title": "Billie Holiday - Don't explain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8eLl84iMsrQ",
+                "duration": 206,
+                "title": "Billie Holiday - Solitude"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iALyrLFJjlE",
+                "duration": 344,
+                "title": "Billie Holiday - All or nothing at all"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u2bigf337aU",
+                "duration": 220,
+                "title": "Ella Fitzgerald - Summertime (1968)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Gn9A-kdsRo",
+                "duration": 258,
+                "title": "Ella Fitzgerald - Cry me a river"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PEM_63_P0CY",
+                "duration": 192,
+                "title": "Ella Fitzgerald - Night and Day (w/ lyrics)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=__rruTlr4EU",
+                "duration": 268,
+                "title": "Ella Fitzgerald -Feelings"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lXYKGL6MgKM",
+                "duration": 221,
+                "title": "Let's Do It (Let's Fall In Love) by Ella Fitzgerald"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mQouJdvB80U",
+                "duration": 174,
+                "title": "Ella Fitzgerald - Misty  (Ella Fitzgerald Swings with the Tommy Flanagan Trio-London 1965)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DEaDj6TXiQQ",
+                "duration": 197,
+                "title": "Ella Fitzgerald - Round Midnight"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mxPgplMujzQ",
+                "duration": 147,
+                "title": "Swing Time - Rogers and Astaire"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OMOBdQykKQY",
+                "duration": 181,
+                "title": "Fred Astaire and Ginger Rogers - Smoke Gets In Your Eyes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WUhhKELUxB0",
+                "duration": 250,
+                "title": "Fred Astaire & Rita Hayworth - The Shorty George"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yCc7dkA5PAA",
+                "duration": 169,
+                "title": "Sunday : Benny Carter - Recorded in New York, 16 October 1941"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k407YKDGITM",
+                "duration": 151,
+                "title": "Jimmie Lunceford: Ain't She Sweet - vocal by The Lunceford Trio & Trummy Young #Foxtrot"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B-dXhKJGaGs",
+                "duration": 177,
+                "title": "Teddy Wilson: Exactly Like You - Recorded in New York, 28 June 1939"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Mkoa60ky8Y",
+                "duration": 194,
+                "title": "Count Basie: Topsy - Recorded in New York, 9 August 1937"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nH0f9IhWey0",
+                "duration": 198,
+                "title": "Woody Herman & His Orchestra: At The Woodchoppers' Ball Recorded 1939"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7lPqkPpuEQ4",
+                "duration": 179,
+                "title": "Benny Goodman - Air Mail Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LL7tDT83ouU",
+                "duration": 199,
+                "title": "Harry James - Music Makers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yLjp9QZ-ikA",
+                "duration": 194,
+                "title": "Duke Ellington - Exposition Swing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z4pZS7RwPwk",
+                "duration": 175,
+                "title": "Lil Armstrong - Lindy Hop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M6rro3rTiCs",
+                "duration": 183,
+                "title": "Johnny Hodges - Good Queen Bess"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f6Od5eqOOV0",
+                "duration": 172,
+                "title": "Cab Calloway - The Jumpin' Jive"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RozDke-4LzQ",
+                "duration": 241,
+                "title": "Tommy Dorsey - Deep River"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Tpd3qx-TdkA",
+                "duration": 180,
+                "title": "Lionel Hampton - Flying Home from the album Perfect Swing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IdLwXELf-ys",
+                "duration": 217,
+                "title": "Glenn Miller - Wham (Re-Bop-Boom-Bam)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FqIVxZztpm4",
+                "duration": 163,
+                "title": "John Kirby - Blue Skies"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5UmeogevJRI",
+                "duration": 190,
+                "title": "Andy Kirk & His Clouds Of Joy - Wednesday Night Hop"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xvBiqPfddj4",
+                "duration": 173,
+                "title": "Louis Armstrong with Jimmy Dorsey & Orchestra: Swing That Music Recorded in L.A. 1936"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ao2i9_SdRsA",
+                "duration": 192,
+                "title": "Artie Shaw & His Orchestra: Oh! Lady Be Good (Balboa) Recorded in New York 1939"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nrIXDs6inug",
+                "duration": 200,
+                "title": "Jimmy Dorsey & His Orchestra: Major And Minor Stomp Recorded in New York 1939"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k5YR7LpCesA",
+                "duration": 125,
+                "title": "Earl Hines - Indiana"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wl5PJIgQXtU",
+                "duration": 191,
+                "title": "Red Norvo - It Can Happen To You"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RQeDrjN3L1k",
+                "duration": 183,
+                "title": "Charlie Barnet & His Orchestra: Skyliner Recorded in Los Angeles 1944"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SPvthOdHSNc",
+                "duration": 167,
+                "title": "Bud Freeman & His Summa Cum Laude Orchestra - The Eel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TqKYIqjB0Bs",
+                "duration": 183,
+                "title": "Benny Goodman - Wrappin' It Up"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o2u1YK6lJMs",
+                "duration": 178,
+                "title": "Red Norvo - Just You, Just Me"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=62ZSQUyU00s",
+                "duration": 376,
+                "title": "The Benny Goodman Orchestra - Sing Sing Sing (With a Swing)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D6mFGy4g_n8",
+                "duration": 173,
+                "title": "Duke Ellington and his Orchestra - Take The A Train (1962) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_CI-0E_jses",
+                "duration": 216,
+                "title": "Glenn Miller - In The Mood [HQ]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=28r0pEU9cn8",
+                "duration": 198,
+                "title": "The Artie Shaw Orchestra: Begin The Beguine [DR-'95]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=28ULUQgxJ5M",
+                "duration": 202,
+                "title": "Mack the Knife by Louis Armstrong"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jorNp0LQJ5s",
+                "duration": 207,
+                "title": "CHATTANOOGA CHOO CHOO Glenn Miller Version THE SWING ERA (STEREO) Vocals Tex Beneke & Mode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xe2UXccid40",
+                "duration": 190,
+                "title": "The Andrew Sisters - Bei Mir Bist Du Shein"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8jicdlUctNE",
+                "duration": 151,
+                "title": "Boogie Woogie Bugle Boy - The Andrew Sisters (Cover By The Spinettes)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4OcySBum734",
+                "duration": 242,
+                "title": "Woody Herman & His Swingin' Herd - Woodchopper's Ball"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mnEVppghro4",
+                "duration": 225,
+                "title": "Jumping at the Woodside - Count Basie and his Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xJ3am1qB2xA",
+                "duration": 183,
+                "title": "T'Ain't What You Do - Billy May & His Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b4G7bJhY6_c",
+                "duration": 198,
+                "title": "One O'Clock Jump - Count Basie and his Orchestra (1965)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aME0qvhZ37o",
+                "duration": 202,
+                "title": "Glenn Miller - In The Mood | Colorized (1941) 4K"
             },
             {
                 "url": "https://www.youtube.com/watch?v=TOPSETBUgvQ",
@@ -37,14 +387,9 @@
                 "title": "Louis Prima - Sing,Sing,Sing (With a Swing)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qzc7vY9VTnk",
-                "duration": 346,
-                "title": "Hellzapoppin' in full color | Colorized with DeOldify"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iP0tHmoc1rs",
-                "duration": 206,
-                "title": "It's Been a Long, Long Time"
+                "url": "https://www.youtube.com/watch?v=loUwoTGOtb8",
+                "duration": 239,
+                "title": "Neon Moon – 1930s Boosted Electro Swing (Art Deco Album)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=R7ruixMDol4",
@@ -52,14 +397,9 @@
                 "title": "King Of Swing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=loUwoTGOtb8",
-                "duration": 239,
-                "title": "Neon Moon – 1930s Boosted Electro Swing (Art Deco Album)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pyMU8O2B2Vs",
-                "duration": 206,
-                "title": "Singin' in the Rain | Good Mornin' | Warner Bros. Entertainment"
+                "url": "https://www.youtube.com/watch?v=Ci9MJvISFKY",
+                "duration": 210,
+                "title": "Dancing in the Moonlight – 1930s Swing Jazz | Vintage Ballroom Love Song"
             },
             {
                 "url": "https://www.youtube.com/watch?v=biHGUSn_MCk",
@@ -67,54 +407,14 @@
                 "title": "All of Me – Vintage 1930s Jazz (Armstrong meets Fatha Style) | Acoustic Swing Duet"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ci9MJvISFKY",
-                "duration": 210,
-                "title": "Dancing in the Moonlight – 1930s Swing Jazz | Vintage Ballroom Love Song"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=oiaEQuTXllk",
                 "duration": 167,
                 "title": "Brunettes and Blondes | Vintage 1930s Swing Love Song | AI Music Video"
             },
             {
-                "url": "https://www.youtube.com/watch?v=eNp_tHdU2s0",
-                "duration": 300,
-                "title": "Vintage Evening Radio Jazz – 1930s 1940s Smooth Swing & Vinyl Background Music"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8of3uhG1tCI",
-                "duration": 138,
-                "title": "Andrews Sisters   Boogie Woogie Bugle Boy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=06RlwN0nddQ",
-                "duration": 144,
-                "title": "SWING TIME ('36): “Pick Yourself Up”"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aLnZ1NQm2uk",
+                "url": "https://www.youtube.com/watch?v=3-k9XRTSEiM",
                 "duration": 255,
-                "title": "All About That Bass - Postmodern Jukebox European Tour Version"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7hHZnvjCbVw",
-                "duration": 234,
-                "title": "Habits - Vintage 1930's Jazz Tove Lo Cover ft. Haley Reinhart"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H1K5M5xluZs",
-                "duration": 226,
-                "title": "The Big Apple / Keep Punching (1939) in full color | Colorized with DeOldify"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HOAzgL6VNvY",
-                "duration": 219,
-                "title": "Habits - Jazz Vintage 1930 (Lyrics) (Tove Lo Cover ft. Haley Reinhart)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_8yGGtVKrD8",
-                "duration": 288,
-                "title": "Jumpin Jive - Cab Calloway and the Nicholas Brothers"
+                "title": "History Brief: Big Bands & Swing Music in the 1930s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Eco4z98nIQY",
@@ -122,16 +422,104 @@
                 "title": "Parov Stelar - Booty Swing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=iiTHZATOMyM",
-                "duration": 245,
-                "title": "All Of Me - San Lyon - Swing Jazz"
+                "url": "https://www.youtube.com/watch?v=R4SPIbGmGN0",
+                "duration": 200,
+                "title": "Swing Jazz 1930's – Retro Vintage Jazz for Relaxing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=m4jU8IQK5b0",
-                "duration": 120,
-                "title": "Billie Holiday & Louis Armstrong - New Orleans"
+                "url": "https://www.youtube.com/watch?v=HOAzgL6VNvY",
+                "duration": 219,
+                "title": "Habits - Jazz Vintage 1930 (Lyrics) (Tove Lo Cover ft. Haley Reinhart)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Z6K-QTERcI",
+                "duration": 158,
+                "title": "1930s Swing Jazz Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Ws6DdrDtyo",
+                "duration": 204,
+                "title": "Glenn Miller & His Orchestra - Moonlight Serenade (Audio)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QAa12XKTb9U",
+                "duration": 220,
+                "title": "Glenn Miller Orchestra   In the Mood   Firenze"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bMdb2TB7-YI",
+                "duration": 320,
+                "title": "Glenn Miller   Moonlight Serenade  - 1941"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8PdLYb_bU78",
+                "duration": 326,
+                "title": "Glenn Miller In Concert arranged by Paul Murtha"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RzMHMWjVZc0",
+                "duration": 193,
+                "title": "Glenn Miller Orchestra directed by Wil Salden - Little Brown Jug"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mWdUKrhlOQg",
+                "duration": 193,
+                "title": "Perfidia – Glenn Miller Orchestra Scandinavia, en vivo Västerås Concert Hall Abril 25, 201"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-CYGwSza9vc",
+                "duration": 205,
+                "title": "The Glenn Miller Orchestra - In The Mood (Live 4/14/24)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vj21E6fvbng",
+                "duration": 188,
+                "title": "The GLENN MILLER ORCHESTRA  - Adios."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AQseFAcWvtE",
+                "duration": 212,
+                "title": "Glenn Miller Orchestra - Moonlight Serenade"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-fpcaE9l4dI",
+                "duration": 212,
+                "title": "Perfidia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F9gFogXFKig",
+                "duration": 201,
+                "title": "Perfidia ~ Glenn Miller & His Orchestra (1941)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=REawWpsKzu8",
+                "duration": 196,
+                "title": "A String Of Pearls"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DWAvcNVR8_s",
+                "duration": 217,
+                "title": "In the Mood"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EAVejLjXVdw",
+                "duration": 205,
+                "title": "AMERICAN PATROL - GLENN MILLER"
             }
         ],
-        "search_query": "1930s swing music"
+        "search_query": "1930s swing music",
+        "playlists": [
+            "PLXkLwx3USrbXz6Ogrwvox1XXnxJ7dmAMv",
+            "PLIvacmZCzEbCAfqbkgzLAPZYgLI_g2yEu",
+            "PLF4noIcOSXnvuluLjMOCElbMUXTIzXxqc"
+        ],
+        "extra_queries": [
+            "Glenn Miller Orchestra",
+            "Duke Ellington 1930s",
+            "Benny Goodman big band",
+            "Billie Holiday 1930s",
+            "Fats Waller",
+            "Cab Calloway"
+        ]
     }
 }
