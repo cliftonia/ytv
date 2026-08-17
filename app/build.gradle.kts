@@ -36,6 +36,10 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        // NewPipeExtractor uses java.nio.file, which does not exist below API 33. minSdk here is
+        // 30, so without this the app compiles and then dies with NoClassDefFoundError the first
+        // time anything is resolved - on the television, not on this desk.
+        isCoreLibraryDesugaringEnabled = true
     }
 
     buildFeatures {
@@ -79,5 +83,16 @@ dependencies {
     // 30MB of native code for one ABI, so the abiFilter below matters.
     implementation("io.github.wohal:mpv-android-lib:0.2.4")
 
+    // Resolves a YouTube id to playable stream urls on the device. This replaced a server
+    // endpoint running yt-dlp, and with it the last reason the app needed a machine at home:
+    // signed urls die every few hours, so resolving cannot be done ahead of time and cached
+    // into the published lineup. Rhino travels inside the library, so nothing else is needed
+    // to run YouTube's signature javascript.
+    implementation("com.github.TeamNewPipe:NewPipeExtractor:v0.26.5")
+
     testImplementation("junit:junit:4.13.2")
+
+    // Backfills java.nio.file and the java.time pieces NewPipeExtractor expects, for the API
+    // levels below 33 that this app still supports.
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs_nio:2.1.5")
 }

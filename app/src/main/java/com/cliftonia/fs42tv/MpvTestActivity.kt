@@ -7,8 +7,7 @@ import android.util.Log
 import android.widget.FrameLayout
 import android.view.ViewGroup
 import com.cliftonia.fs42tv.player.MpvView
-import org.json.JSONObject
-import java.net.URL
+import com.cliftonia.fs42tv.resolver.DeviceResolver
 import java.util.concurrent.Executors
 
 /**
@@ -23,13 +22,13 @@ import java.util.concurrent.Executors
  *   adb shell am start -n com.cliftonia.fs42tv/.MpvTestActivity \
  *       --es v <videoId> --ei offset <seconds>
  */
-/** Same publisher the app uses; duplicated because MainActivity's copy is file-private. */
-private const val PUBLISHER = "http://192.168.4.203:4243"
-
 class MpvTestActivity : Activity() {
 
     private var view: MpvView? = null
     private val io = Executors.newSingleThreadExecutor()
+
+    /** Its own instance, so the harness stays runnable without MainActivity having started. */
+    private val resolver = DeviceResolver()
 
     /**
      * The clips this harness can switch between, and where it is in that list.
@@ -79,21 +78,18 @@ class MpvTestActivity : Activity() {
 
     private fun load(videoId: String, offset: Double) {
 
-        // Resolve off the main thread: this is the same publisher the app uses, and it can take
-        // seconds when it has to extract.
+        // Resolve off the main thread: this is the same resolver the app uses, and extracting
+        // takes seconds.
         io.execute {
             try {
-                val body = URL("$PUBLISHER/resolve?v=$videoId").readText()
-                val json = JSONObject(body)
-                val tier = listOf("hd", "sd", "uhd")
-                    .firstOrNull { json.optJSONObject(it)?.optString("video")?.isNotEmpty() == true }
-                    ?.let { json.getJSONObject(it) }
-                if (tier == null) {
+                val resolved = resolver.resolveDetailed(
+                    videoId, System.currentTimeMillis() / 1000, listOf("hd", "sd", "uhd"))
+                if (resolved == null) {
                     Log.e("fs42mpv", "no playable tier for $videoId")
                     return@execute
                 }
-                val video = tier.getString("video")
-                val audio = tier.optString("audio", "")
+                val video = resolved.playable.videoUrl
+                val audio = resolved.playable.audioUrl.orEmpty()
                 val url = if (audio.isEmpty()) video else MpvView.edl(video, audio)
                 Log.i("fs42mpv", "playing $videoId at ${offset.toInt()}s, " +
                     "audio=${if (audio.isEmpty()) "muxed" else "separate"}")

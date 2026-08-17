@@ -23,8 +23,9 @@ import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
+import com.cliftonia.fs42tv.resolver.ClipResolver
+import com.cliftonia.fs42tv.resolver.DeviceResolver
 import com.cliftonia.fs42tv.resolver.ResolvedCache
-import com.cliftonia.fs42tv.resolver.ServerResolver
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.TierLadder
 import com.cliftonia.fs42tv.resolver.Unplayable
@@ -157,7 +158,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var composeView: ComposeView
 
     private lateinit var prefs: SharedPreferences
-    private lateinit var resolver: ServerResolver
+    private lateinit var resolver: ClipResolver
 
     // urls.json covers about 46% of the dial's clips, so most tunes fall through to the server.
     // Without this, every later pass over the same channel pays that round trip again. Lives
@@ -262,7 +263,7 @@ class MainActivity : ComponentActivity() {
         window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
-        resolver = ServerResolver(fetch = { url -> URL(url).readText() }, baseUrl = SERVER)
+        resolver = DeviceResolver()
 
         // Which engine plays the dial, and why it is not simply "the newer one".
         //
