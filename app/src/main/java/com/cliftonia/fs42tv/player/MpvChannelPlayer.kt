@@ -100,8 +100,12 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 if (released) return
                 // Distinct from a playback error on purpose: the URL may have been fine, and the
                 // engine itself is now dead. Only a new instance fixes this.
-                Log.w("fs42", "mpv core shut down; engine must be rebuilt")
-                main.post { onPlaybackError?.invoke(ENGINE_DIED) }
+                // Report WHAT mpv said, not merely that it died. "MPV_SHUTDOWN" on a stand-by
+                // card tells nobody anything; mpv logged the actual reason a moment earlier.
+                val reason = MpvLog.lastReason()
+                Log.w("fs42", "mpv core shut down; engine must be rebuilt. reason: $reason")
+                val code = if (reason.isNullOrEmpty()) ENGINE_DIED else "$ENGINE_DIED: $reason"
+                main.post { onPlaybackError?.invoke(code) }
             }
 
             override fun onFirstFrame() {

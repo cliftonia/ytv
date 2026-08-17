@@ -17,6 +17,30 @@ object PlaybackDiagnostics {
     var lastStream: String = "NOTHING YET"
         private set
 
+    /** How the last tune spent its time, and whether the prefetch had already done the work. */
+    @Volatile
+    var lastTiming: String = "NOTHING YET"
+        private set
+
+    private val prefetchHits = java.util.concurrent.atomic.AtomicInteger(0)
+    private val prefetchMisses = java.util.concurrent.atomic.AtomicInteger(0)
+
+    /**
+     * Record where a tune's time went.
+     *
+     * Split deliberately. "Channel switching is slow" has two completely different causes with
+     * two completely different fixes: resolving the url, which prefetching removes, and getting
+     * the first frame out of the player, which it cannot touch. Without the split there is no way
+     * to tell which one is being complained about.
+     */
+    fun recordTune(resolveMillis: Long, firstFrameMillis: Long, fromCache: Boolean) {
+        if (fromCache) prefetchHits.incrementAndGet() else prefetchMisses.incrementAndGet()
+        val hits = prefetchHits.get()
+        val total = hits + prefetchMisses.get()
+        lastTiming = "RESOLVE %dms + PLAY %dms, READY %d/%d".format(
+            resolveMillis, firstFrameMillis - resolveMillis, hits, total)
+    }
+
     fun record(tier: String, resolution: String?, codec: String?) {
         lastStream = "%s %s %s".format(
             tier.uppercase(), resolution ?: "?", DecoderSupport.family(codec))

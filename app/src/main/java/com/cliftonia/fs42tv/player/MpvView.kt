@@ -187,6 +187,9 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // Stay alive with nothing loaded: the dial tunes into this instance repeatedly, and an
         // mpv that shuts down when its file ends would take the app with it.
         MPVLib.setOptionString("idle", "yes")
+        // Send warnings and errors to the log observer. Without a msg-level mpv reports almost
+        // nothing through the callback, and the reason for a shutdown is exactly what is wanted.
+        MPVLib.setOptionString("msg-level", "all=warn")
     }
 
     override fun postInitOptions() {
@@ -210,12 +213,29 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
             "keep-open=${MPVLib.getPropertyString("keep-open")}")
     }
 
+    /**
+     * mpv's own log, at warning and above.
+     *
+     * Registered alongside the event observer and on the same process-global list, so it is
+     * removed in [detachObserver] for the same reason.
+     */
+    private val logObserver = object : MPVLib.LogObserver {
+        override fun logMessage(prefix: String, level: Int, text: String) {
+            MpvLog.record(prefix, level, text)
+        }
+    }
+
     override fun observeProperties() {
         // Registered against a PROCESS-GLOBAL list - `MPVLib` is an object, and its observer list
         // is static. The base class's `destroy()` does not remove it, so every engine rebuild used
         // to leave one behind, and each holds this view, its context, and therefore the whole
         // activity with the parsed nine-thousand-clip dial hanging off it. See `detach`.
         MPVLib.addObserver(observer)
+        // mpv explains every failure it has, immediately before acting on it. Without this the
+        // explanation goes only to logcat, which needs an authorised adb connection to a
+        // television that does not have one - so a shutdown could only ever be reported as the
+        // fact that it happened.
+        MPVLib.addLogObserver(logObserver)
         // Only what the dial acts on. The reference implementation observes nineteen properties
         // because it draws a full player UI; each one is a JNI callback on every change, and this
         // app draws its banner from its own clock arithmetic instead.
@@ -234,6 +254,8 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
     fun detachObserver() {
         runCatching { MPVLib.removeObserver(observer) }
             .onFailure { Log.w("fs42", "could not remove the mpv observer: $it") }
+        runCatching { MPVLib.removeLogObserver(logObserver) }
+            .onFailure { Log.w("fs42", "could not remove the mpv log observer: $it") }
     }
 
     /**
