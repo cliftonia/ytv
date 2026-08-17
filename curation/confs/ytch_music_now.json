@@ -3,7 +3,7 @@
         "network_name": "Music Now",
         "network_long_name": "Music Now",
         "network_type": "streaming",
-        "channel_number": 75,
+        "channel_number": 86,
         "stream_rotation": "clock",
         "search_query": "new music video",
         "streams": [
@@ -13,24 +13,19 @@
                 "title": "Blaqbonez - Chanel (feat. Asake) [Official Music Video]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=kSBQZH3dkZ8",
-                "duration": 178,
-                "title": "Tyla - THAT GIRL (Official Music Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=rtwpk9rb1Dc",
                 "duration": 216,
                 "title": "Tyla - SHE DID IT AGAIN (Official Music Video) ft. Zara Larsson"
             },
             {
+                "url": "https://www.youtube.com/watch?v=kSBQZH3dkZ8",
+                "duration": 178,
+                "title": "Tyla - THAT GIRL (Official Music Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ptlsli-QXXc",
                 "duration": 263,
                 "title": "Benson Boone - The Time Of My Life (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rt9tW3cMLhI",
-                "duration": 217,
-                "title": "Olivia Rodrigo - stupid song (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ouoUo4lYvyg",
@@ -48,11 +43,6 @@
                 "title": "Nickelback - Rattle The Cage (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cv5chGtfVTg",
-                "duration": 150,
-                "title": "Wizkid, Asake - Turbulence (Official Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=f6ZDmAhaH_Q",
                 "duration": 157,
                 "title": "Future - Konnichiwa (Official Music Video)"
@@ -63,24 +53,24 @@
                 "title": "T.I. - Mr. Him (Official Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=TTRCk8UROwU",
+                "duration": 239,
+                "title": "Latto - Okayyy (Official Video) ft. Doja Cat"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=YNwmYliuUfE",
                 "duration": 185,
                 "title": "Moneybagg Yo - I See Why (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7gKpREE5Z3w",
-                "duration": 237,
-                "title": "DJ Khaled, Future, Lil Baby - One of Them (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=ko70cExuzZM",
+                "duration": 239,
+                "title": "Taylor Swift - The Fate of Ophelia (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=78wrful9cVU",
-                "duration": 251,
-                "title": "Olivia Rodrigo - drop dead (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VBqUGKcAfNA",
-                "duration": 168,
-                "title": "Meghan Trainor - Shimmer (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=cv5chGtfVTg",
+                "duration": 150,
+                "title": "Wizkid, Asake - Turbulence (Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=w24EE2ns2UM",
@@ -88,34 +78,19 @@
                 "title": "Tinashe - Crash Out (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qSGgcw3Yo6U",
-                "duration": 180,
-                "title": "Vybz Kartel - God and Time (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=VBqUGKcAfNA",
+                "duration": 168,
+                "title": "Meghan Trainor - Shimmer (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YdrW1SJwiMs",
-                "duration": 191,
-                "title": "Tyla - IS IT LOVE (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=78wrful9cVU",
+                "duration": 251,
+                "title": "Olivia Rodrigo - drop dead (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=owxHUouEIBU",
-                "duration": 151,
-                "title": "Future - California Girls (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jdlCOIaWwTQ",
-                "duration": 335,
-                "title": "Chris Brown - It Depends/Obvious (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=82-jTNka3uc",
-                "duration": 301,
-                "title": "Ariana Grande - hate that i made you love me (official music video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TTRCk8UROwU",
-                "duration": 239,
-                "title": "Latto - Okayyy (Official Video) ft. Doja Cat"
+                "url": "https://www.youtube.com/watch?v=7gKpREE5Z3w",
+                "duration": 237,
+                "title": "DJ Khaled, Future, Lil Baby - One of Them (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=366CV87TguE",
@@ -123,9 +98,59 @@
                 "title": "Bebe Rexha & Faithless - New Religion (Official Visual)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=qSGgcw3Yo6U",
+                "duration": 180,
+                "title": "Vybz Kartel - God and Time (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mrV8kK5t0V8",
+                "duration": 213,
+                "title": "Bruno Mars - I Just Might [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=82-jTNka3uc",
+                "duration": 301,
+                "title": "Ariana Grande - hate that i made you love me (official music video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=6OzP09nC79o",
                 "duration": 241,
                 "title": "Rema - TEA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rt9tW3cMLhI",
+                "duration": 217,
+                "title": "Olivia Rodrigo - stupid song (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=owxHUouEIBU",
+                "duration": 151,
+                "title": "Future - California Girls (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o6jQo3-iCao",
+                "duration": 228,
+                "title": "Harry Styles - American Girls (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XGKJxb2b3ZI",
+                "duration": 190,
+                "title": "benny blanco, Selena Gomez, Becky G - Te Olvido (La La) [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jdlCOIaWwTQ",
+                "duration": 335,
+                "title": "Chris Brown - It Depends/Obvious (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TIRkQPe77J0",
+                "duration": 177,
+                "title": "Asake - MCBH (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ZmJvlGiF5k",
+                "duration": 265,
+                "title": "Becky G - EPA (Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ak4Ti54Y6rY",
@@ -138,14 +163,14 @@
                 "title": "Sabrina Carpenter - House Tour (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=X7Hwiw8yLko",
-                "duration": 190,
-                "title": "Jelly Roll - Thorns (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=_2zXB420w4o",
+                "duration": 244,
+                "title": "Kehlani - Back and Forth (feat. Missy Elliott) [Official Music Video]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=o6jQo3-iCao",
-                "duration": 228,
-                "title": "Harry Styles - American Girls (Official Video)"
+                "url": "https://www.youtube.com/watch?v=YdrW1SJwiMs",
+                "duration": 191,
+                "title": "Tyla - IS IT LOVE (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=twLhSqabby0",
@@ -153,29 +178,9 @@
                 "title": "Charli xcx - SS26 (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=XGKJxb2b3ZI",
-                "duration": 190,
-                "title": "benny blanco, Selena Gomez, Becky G - Te Olvido (La La) [Official Music Video]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mrV8kK5t0V8",
-                "duration": 213,
-                "title": "Bruno Mars - I Just Might [Official Music Video]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5ZmJvlGiF5k",
-                "duration": 265,
-                "title": "Becky G - EPA (Official Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=eO3zsYsDnbI",
                 "duration": 157,
                 "title": "Charli xcx - Camera (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=S8vRK4WWybY",
-                "duration": 204,
-                "title": "Stunna Girl - I'm Really Her (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-rkjE0xc730",
@@ -183,9 +188,9 @@
                 "title": "Harry Styles - Dance No More (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TIRkQPe77J0",
-                "duration": 177,
-                "title": "Asake - MCBH (Official Video)"
+                "url": "https://www.youtube.com/watch?v=S8vRK4WWybY",
+                "duration": 204,
+                "title": "Stunna Girl - I'm Really Her (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=AHuKFYTSrZU",
@@ -198,44 +203,14 @@
                 "title": "Kodak Black - Lemon Squeeze (Official Music Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=EpBnHrdg2iI",
+                "duration": 252,
+                "title": "6IX9INE & Cardi B - UNTOUCHABLE ft. Lil Baby (RapKing Music Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=sDqEXirnuy4",
                 "duration": 221,
                 "title": "T.I. - Trauma Bond (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ko70cExuzZM",
-                "duration": 239,
-                "title": "Taylor Swift - The Fate of Ophelia (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_2zXB420w4o",
-                "duration": 244,
-                "title": "Kehlani - Back and Forth (feat. Missy Elliott) [Official Music Video]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-NKqonGjL6E",
-                "duration": 134,
-                "title": "Future - No Misery (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1ZL5TreJAHk",
-                "duration": 218,
-                "title": "YA BABA (Official Video) - NORA FATEHI | SANJOY | SHILPA RAO | VAYU | BHUSHAN KUMAR"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=h3vLawxCp6c",
-                "duration": 132,
-                "title": "Young Jonn - Elumelu"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z3Zvr_oZ2Q8",
-                "duration": 158,
-                "title": "Victony - FRE$H (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=90jy5Jgzb-Y",
-                "duration": 178,
-                "title": "Ayra Starr - Tornado (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=PAZ0eGMWhuM",
@@ -243,39 +218,14 @@
                 "title": "BNXN, Sarz - Back Outside (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qRNXrz_MyFw",
-                "duration": 242,
-                "title": "Chris Brown - For The Moment (Official Video)"
+                "url": "https://www.youtube.com/watch?v=TKICNQfIRXE",
+                "duration": 184,
+                "title": "Kodak Black - Time To Be Free [Official Music Video]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nFDsUUyF66w",
-                "duration": 171,
-                "title": "Vybz Kartel - Victory (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m7k9UMcHbr0",
-                "duration": 191,
-                "title": "KATSEYE (캣츠아이) \"Animal\" Official MV"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5PmU_YvJiIk",
-                "duration": 144,
-                "title": "Do You (Performance Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I6u7lHT37Ng",
-                "duration": 290,
-                "title": "Tribby Wadi Bhozza - Menateng [Feat. Patron West, Gallarbass & Stellenbosch] (Official Mus"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Btg-ynQL7mU",
-                "duration": 278,
-                "title": "Ek Banjaara (Official Video) | Emraan Hashmi, Disha Patani | New Heartbreaking Sad Song 20"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nB2RyEuO7k8",
-                "duration": 281,
-                "title": "New Song 2026 | New Hindi Song | Aawargi Pe Dil | Emraan Hashmi | Disha Patani | New Song"
+                "url": "https://www.youtube.com/watch?v=-NKqonGjL6E",
+                "duration": 134,
+                "title": "Future - No Misery (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=PXxbEfhtDiM",
@@ -283,14 +233,29 @@
                 "title": "Lil Baby - Dead Fresh (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=U5scXMfbAgQ",
-                "duration": 191,
-                "title": "Kehlani - Cruise Control [Official Music Video]"
+                "url": "https://www.youtube.com/watch?v=qRNXrz_MyFw",
+                "duration": 242,
+                "title": "Chris Brown - For The Moment (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yAUedzRJMpw",
-                "duration": 235,
-                "title": "Charlie Puth - Sideways (feat. Coco Jones) [Official Video]"
+                "url": "https://www.youtube.com/watch?v=5PmU_YvJiIk",
+                "duration": 144,
+                "title": "Do You (Performance Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=90jy5Jgzb-Y",
+                "duration": 178,
+                "title": "Ayra Starr - Tornado (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I6u7lHT37Ng",
+                "duration": 290,
+                "title": "Tribby Wadi Bhozza - Menateng [Feat. Patron West, Gallarbass & Stellenbosch] (Official Mus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nFDsUUyF66w",
+                "duration": 171,
+                "title": "Vybz Kartel - Victory (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=d2BJRWwmVU0",
@@ -298,34 +263,9 @@
                 "title": "Valiant x Shenseea x Rvssian - My Turn (Official Music Video) | ISLAND VILLA RIDDIM"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QW29Ly55Kvs",
-                "duration": 196,
-                "title": "Drake - Plot Twist"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ipOSrQNrp1U",
-                "duration": 248,
-                "title": "Drake, Future, Molly Santana - Ran To Atlanta"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=T8DLCWW6EpY",
-                "duration": 218,
-                "title": "Skusta Clee - Since Day One ft. Flow G (Offical Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=013iZB8p8UU",
-                "duration": 202,
-                "title": "Nsi Namba - Sheebah & T Paul 256 (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GEk4jHwfFTA",
-                "duration": 207,
-                "title": "BTS (방탄소년단) ‘NORMAL’ Official MV"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Ix-CNBVDJM",
-                "duration": 158,
-                "title": "Young M.A \"Still Free\" (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=m7k9UMcHbr0",
+                "duration": 191,
+                "title": "KATSEYE (캣츠아이) \"Animal\" Official MV"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1FVF-9KQiPo",
@@ -333,9 +273,54 @@
                 "title": "Taylor Swift - Opalite (Official Music Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=yAUedzRJMpw",
+                "duration": 235,
+                "title": "Charlie Puth - Sideways (feat. Coco Jones) [Official Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U5scXMfbAgQ",
+                "duration": 191,
+                "title": "Kehlani - Cruise Control [Official Music Video]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lA7Bzwhzk-U",
+                "duration": 212,
+                "title": "Yo Maps & Makhadzi - It's Over (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=013iZB8p8UU",
+                "duration": 202,
+                "title": "Nsi Namba - Sheebah & T Paul 256 (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3Ix-CNBVDJM",
+                "duration": 158,
+                "title": "Young M.A \"Still Free\" (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ipOSrQNrp1U",
+                "duration": 248,
+                "title": "Drake, Future, Molly Santana - Ran To Atlanta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GcZKTouyYq8",
+                "duration": 242,
+                "title": "Meghan Trainor - Get In Girl (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QW29Ly55Kvs",
+                "duration": 196,
+                "title": "Drake - Plot Twist"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=n7guVY6LclY",
                 "duration": 232,
                 "title": "B2K - Mileage (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fo7MlimxqFQ",
+                "duration": 238,
+                "title": "Davido, JAZZWRLD, GL_Ceejay - I Know Who I Be (Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rm4QSrBaWoo",
@@ -348,9 +333,9 @@
                 "title": "Asake, DJ Snake - WORSHIP (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=fo7MlimxqFQ",
-                "duration": 238,
-                "title": "Davido, JAZZWRLD, GL_Ceejay - I Know Who I Be (Official Video)"
+                "url": "https://www.youtube.com/watch?v=MPLmRaDQDWA",
+                "duration": 207,
+                "title": "Squash, Masicka - 16 (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=AuifemOMjGU",
@@ -358,14 +343,19 @@
                 "title": "Kane Brown - Woman (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KoBUE6I4R9I",
-                "duration": 243,
-                "title": "sombr - Potential (official video)"
+                "url": "https://www.youtube.com/watch?v=IMJXmn-3Jdo",
+                "duration": 271,
+                "title": "Benthara Palame ( බෙන්තර පාලමේ ) - Dimanka Wellalage ft. Kapilan Kugavel (Official Music V"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MPLmRaDQDWA",
-                "duration": 207,
-                "title": "Squash, Masicka - 16 (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=QA2vzqQ_CG8",
+                "duration": 170,
+                "title": "Shaboozey - Born To Die (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VmrX6X2X-0Y",
+                "duration": 270,
+                "title": "Harmonize - Beautiful (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=MCxuPwjDDcs",
@@ -373,29 +363,19 @@
                 "title": "Lutty Neika ft. Bravion Emcee - Anaconda (Official 4K Music Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=uvVQAABnWto",
+                "duration": 263,
+                "title": "Kenny Sol - Godzilla (Official Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Nm_XfyHm9YM",
                 "duration": 206,
                 "title": "Kodak Black Ft Albee Al - Peter Roll (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gkyEl8P8R7s",
-                "duration": 221,
-                "title": "Sean Paul - Magnificent / Press Back (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dKmPEhJ4wjY",
-                "duration": 150,
-                "title": "Anyma, LISA - Bad Angel (with LISA) (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IMJXmn-3Jdo",
-                "duration": 271,
-                "title": "Benthara Palame ( බෙන්තර පාලමේ ) - Dimanka Wellalage ft. Kapilan Kugavel (Official Music V"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uvVQAABnWto",
-                "duration": 263,
-                "title": "Kenny Sol - Godzilla (Official Video)"
+                "url": "https://www.youtube.com/watch?v=JsS7DPlED7g",
+                "duration": 202,
+                "title": "FOLA, Ayra Starr - treat u right (official video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-KdvidY4iYs",
@@ -406,6 +386,11 @@
                 "url": "https://www.youtube.com/watch?v=syc4SzrubKY",
                 "duration": 139,
                 "title": "DaBaby - POP DAT THANG"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8EjcYircKvw",
+                "duration": 286,
+                "title": "Ethiopian Music : Yo Marios ዮ ማሪዮስ (ድግስ ነው) - New Ethiopian Music 2026(Official Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=yNa8jP4zoJo",
@@ -423,19 +408,9 @@
                 "title": "Kim Petras - Need For Speed (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=fBOvfOpR39E",
-                "duration": 187,
-                "title": "Diamond Platnumz - Happy (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QA2vzqQ_CG8",
-                "duration": 170,
-                "title": "Shaboozey - Born To Die (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8w6ytPiQJ7E",
-                "duration": 274,
-                "title": "Melat Kelemework - መላ መላ - Mela Mela 🔥 | New Ethiopian Music 2026 (official Music Video)"
+                "url": "https://www.youtube.com/watch?v=4UH0c8M6orU",
+                "duration": 393,
+                "title": "The Summer I Turned Petty (Official Music Video) - Jenna Davis"
             },
             {
                 "url": "https://www.youtube.com/watch?v=_hKuvfH1j_w",
@@ -456,6 +431,11 @@
                 "url": "https://www.youtube.com/watch?v=aGqAWdgmUK0",
                 "duration": 227,
                 "title": "Mulest Vankay, Pcee, Scotts Maphuma - Mark Zuckerberg (Official Music Video) ft Slyzza RSA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kF4MVeWFiDs",
+                "duration": 182,
+                "title": "Latto, GloRilla - GOMF (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=lu4JJm_G_EU",
@@ -488,9 +468,14 @@
                 "title": "mgk, Wiz Khalifa - passport (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=EawYwGeNZjg",
-                "duration": 352,
-                "title": "Flow G - DRIFTSTAR (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=8w6ytPiQJ7E",
+                "duration": 274,
+                "title": "Melat Kelemework - መላ መላ - Mela Mela 🔥 | New Ethiopian Music 2026 (official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bkbmMeTf2DU",
+                "duration": 286,
+                "title": "Sqiniseko SqinQ & Danya Devs - Sabela (Official Music Video)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=VhxIcmhydos",
@@ -498,14 +483,29 @@
                 "title": "Robyn - Talk To Me (Official Music Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=ZlqLaaPbB1c",
+                "duration": 184,
+                "title": "Dogstar - All In Now (Official Music Video)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Y7djiDvcxio",
                 "duration": 154,
                 "title": "Hunter Root - Cocaine Cocaine (Official Music Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZlqLaaPbB1c",
-                "duration": 184,
-                "title": "Dogstar - All In Now (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=NlohfwTunwU",
+                "duration": 258,
+                "title": "Kacey Musgraves - Dry Spell (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Btg-ynQL7mU",
+                "duration": 278,
+                "title": "Ek Banjaara (Official Video) | Emraan Hashmi, Disha Patani | New Heartbreaking Sad Song 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EawYwGeNZjg",
+                "duration": 352,
+                "title": "Flow G - DRIFTSTAR (Official Music Video)"
             }
         ]
     }

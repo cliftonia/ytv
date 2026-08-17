@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Classic Anime",
         "network_type": "streaming",
-        "channel_number": 26,
+        "channel_number": 29,
         "network_long_name": "Classic Anime",
         "stream_rotation": "clock",
         "streams": [
@@ -47,6 +47,11 @@
                 "title": "Grappler Baki: The Ultimate Fighter (OVA) (1994) (ENGLISH DUB)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=rcfykg9jIZM",
+                "duration": 2795,
+                "title": "BAOH English full OVA (Anime) HIGH QUALITY"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=LfrJlpP8wFQ",
                 "duration": 3311,
                 "title": "Black Lion (1992) 📼 | VHS OVA | English Dub | Retro Samurai Sci-Fi Anime"
@@ -77,19 +82,14 @@
                 "title": "Full Movie| FAIRY TAIL THE MOVIE: Phoenix Priestess (English Dub)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=sYrt4M-SCak",
-                "duration": 2797,
-                "title": "BUBBLEGUM CRASH! - ILLEGAL ARMY | Episode 01 (English Dub) | Full 1990s ANIME OVA HD"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=DP-9AHdkv9k",
                 "duration": 2778,
                 "title": "Super Atragon (1996) 📼 | Complete OVA | English Dub | VHS Anime Classic"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YH2KpQcMOuA",
-                "duration": 3576,
-                "title": "given movie (English Dub)"
+                "url": "https://www.youtube.com/watch?v=sYrt4M-SCak",
+                "duration": 2797,
+                "title": "BUBBLEGUM CRASH! - ILLEGAL ARMY | Episode 01 (English Dub) | Full 1990s ANIME OVA HD"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tBJo84-n9qw",
@@ -100,6 +100,11 @@
                 "url": "https://www.youtube.com/watch?v=10cLuWviwWM",
                 "duration": 3014,
                 "title": "BUBBLEGUM CRISIS - RED EYES | Episode 06 (English Dub) | Full 1980s ANIME OVA HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YH2KpQcMOuA",
+                "duration": 3576,
+                "title": "given movie (English Dub)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vb942Zpg_jI",
@@ -122,6 +127,11 @@
                 "title": "ANIME SEM DUBLAGEM 🇺🇲-ZILLION, BURNING NIGHT-OVA (1988) EM INGLÊS/IN ENGLISH/DUBBED"
             },
             {
+                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
+                "duration": 2472,
+                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtitled"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=7Olwhy6L4xs",
                 "duration": 3132,
                 "title": "BLACK JACK OVA Karte 09: THE CARBUNCLE (English Dub) | 1990s Anime | Tezuka & Dezaki"
@@ -130,11 +140,6 @@
                 "url": "https://www.youtube.com/watch?v=IvJINhijMys",
                 "duration": 2837,
                 "title": "Black Magic M-66 (1987) English Dub 1080p"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
-                "duration": 2472,
-                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtitled"
             },
             {
                 "url": "https://www.youtube.com/watch?v=LlhpgVZyYcM",
@@ -147,19 +152,19 @@
                 "title": "Battle Angel - 1993 Full Movie (Gunnm)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=EJD0BliblRQ",
-                "duration": 4602,
-                "title": "Blood Reign Curse of the Yoma English Dub Anime Movie"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V6k4I7bQhWY",
-                "duration": 4767,
-                "title": "Ninja Resurrection (1997-1998) (DVD Rip)"
+                "url": "https://www.youtube.com/watch?v=jvXWJ4G2wTM",
+                "duration": 3213,
+                "title": "BLACK JACK OVA Karte 10: SINKING WOMAN (English Dub) | 1990s Anime | Osamu Tezuka & Osamu"
             },
             {
                 "url": "https://www.youtube.com/watch?v=SiER7mSJ7gY",
                 "duration": 4944,
                 "title": "Shadow Skill: Chapter One (1995) | Full Anime Movie | English Dub #anime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EJD0BliblRQ",
+                "duration": 4602,
+                "title": "Blood Reign Curse of the Yoma English Dub Anime Movie"
             },
             {
                 "url": "https://www.youtube.com/watch?v=BevLSlQZY40",
@@ -175,11 +180,6 @@
                 "url": "https://www.youtube.com/watch?v=cqkn9-DjrY0",
                 "duration": 1460,
                 "title": "Classroom of the Elite Episode 1 English Dub | What is evil? Whatever springs from weaknes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jvXWJ4G2wTM",
-                "duration": 3213,
-                "title": "BLACK JACK OVA Karte 10: SINKING WOMAN (English Dub) | 1990s Anime | Osamu Tezuka & Osamu"
             },
             {
                 "url": "https://www.youtube.com/watch?v=jhnWgytQipA",
@@ -312,6 +312,16 @@
                 "title": "The Devilman Experience"
             },
             {
+                "url": "https://www.youtube.com/watch?v=SrotJf7_7W4",
+                "duration": 1444,
+                "title": "Yu Yu Hakusho The Movie - The Golden Seal (1993) English Dub 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=soxTt2bQsjk",
+                "duration": 3000,
+                "title": "BLACK JACK OVA Karte 02: A FUNERAL / THE PROCESSION GAME (English Dub) | Osamu Tezuka & Os"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=vpA7jy1swo8",
                 "duration": 1694,
                 "title": "JoJo vs DIO (1993 OVA with 2015 dub)"
@@ -327,14 +337,24 @@
                 "title": "Fake OVA English Dub"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tyzIq74DpPw",
-                "duration": 2506,
-                "title": "Puppet Princess (2000) English Dub 1080p"
+                "url": "https://www.youtube.com/watch?v=372_wZnHkqk",
+                "duration": 3324,
+                "title": "Mighty Space Miners (1994) 📼 | English Dub | VHS Anime OVA | Retro Sci-Fi Adventure"
             },
             {
                 "url": "https://www.youtube.com/watch?v=oIr-0YyVe8Q",
                 "duration": 1430,
                 "title": "Ranma 1 2 Episode 4 English Dubbed for free"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AhVAYWSWaJ4",
+                "duration": 1415,
+                "title": "Super Sonic X Universe OVA 1 - The Pinnacle of Power - (ENGLISH DUB)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tyzIq74DpPw",
+                "duration": 2506,
+                "title": "Puppet Princess (2000) English Dub 1080p"
             },
             {
                 "url": "https://www.youtube.com/watch?v=5ILlar1UJ88",
@@ -345,11 +365,6 @@
                 "url": "https://www.youtube.com/watch?v=iG6niJM8Cmk",
                 "duration": 492,
                 "title": "So Jojo's Bizarre Adventure 1993 Is Kinda Awesome...?"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6-guOcATIHc",
-                "duration": 2826,
-                "title": "Starship Troopers: Chapter One (1988) | Full Anime Movie | Subbed #scifi #anime"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rx5PzsN1Q7g",
@@ -367,11 +382,6 @@
                 "title": "AD Police - Episode 2 (DUB)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ReqjbcJWl-Y",
-                "duration": 1626,
-                "title": "Ex-Driver Nina And Rei Danger Zone (2002) English Dub 4K"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=sIkoz1mfM4o",
                 "duration": 4828,
                 "title": "Demonic's Descent | ANIME, FANTASY | Full Movie in English"
@@ -385,11 +395,6 @@
                 "url": "https://www.youtube.com/watch?v=wQeYbrY01ac",
                 "duration": 1459,
                 "title": "Toilet-bound Hanako-kun Episode 1 English Dub | Hanako-san of the Toilet"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=372_wZnHkqk",
-                "duration": 3324,
-                "title": "Mighty Space Miners (1994) 📼 | English Dub | VHS Anime OVA | Retro Sci-Fi Adventure"
             },
             {
                 "url": "https://www.youtube.com/watch?v=yK0epJRoK7M",
@@ -422,14 +427,14 @@
                 "title": "Raven of the Inner Palace Episode 1 English Dub | The Jade Earring, Part 1"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6cEAI-0ADXk",
-                "duration": 427,
-                "title": "Kakyoin's Death (OVA) + Stardust Crusaders OST"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=CkI-2j6V7sQ",
                 "duration": 1200,
                 "title": "SONIC X - EP 73 The Cosmo Conspiracy | English Dub | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6cEAI-0ADXk",
+                "duration": 427,
+                "title": "Kakyoin's Death (OVA) + Stardust Crusaders OST"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EEohDkCSofw",
@@ -457,14 +462,14 @@
                 "title": "Gachiakuta Episode 1 SUB/DUB | The Sphere"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5eoT_N3VA60",
-                "duration": 3484,
-                "title": "Nekopara OVA english sub"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=TsQ4M8UaeoQ",
                 "duration": 1686,
                 "title": "Sonic Soldier Borgman - Lover's Rain Full OVA (Eng Dub)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5eoT_N3VA60",
+                "duration": 3484,
+                "title": "Nekopara OVA english sub"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ctjzErxRkFQ",
@@ -500,11 +505,6 @@
                 "url": "https://www.youtube.com/watch?v=o8WXtsyhuKk",
                 "duration": 754,
                 "title": "ICE OVA ENG(DUB) EP-2 Part-1"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CQibv-WGMCk",
-                "duration": 4559,
-                "title": "Strait Jacket [English Dubbed Anime] (OVA - 2007)"
             }
         ],
         "search_query": "retro anime OVA english dub"

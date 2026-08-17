@@ -2,10 +2,15 @@
     "station_conf": {
         "network_name": "1940s Music",
         "network_type": "streaming",
-        "channel_number": 67,
+        "channel_number": 78,
         "network_long_name": "1940s Music",
         "stream_rotation": "clock",
         "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=cCYGyg1H56s",
+                "duration": 199,
+                "title": "Artie Shaw  - Beguin The Beguine ( Cole Porter )"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=aME0qvhZ37o",
                 "duration": 202,
@@ -17,19 +22,9 @@
                 "title": "\"SING, SING, SING\" BY BENNY GOODMAN"
             },
             {
-                "url": "https://www.youtube.com/watch?v=F5slaYJM2ts",
-                "duration": 210,
-                "title": "Big Band Swing Music - Ain’t Seen You in a While — 1940s Swing Jazz Original Song (Big Ban"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cCYGyg1H56s",
-                "duration": 199,
-                "title": "Artie Shaw  - Beguin The Beguine ( Cole Porter )"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_CI-0E_jses",
-                "duration": 216,
-                "title": "Glenn Miller - In The Mood [HQ]"
+                "url": "https://www.youtube.com/watch?v=j_Qc8s0h4gg",
+                "duration": 166,
+                "title": "1940s Swing & Boogie-Woogie🎺 \"As Time goes by\"🎶 AI Music-Video + Authentic Song Lyrics fro"
             },
             {
                 "url": "https://www.youtube.com/watch?v=TOPSETBUgvQ",
@@ -37,14 +32,9 @@
                 "title": "Louis Prima - Sing,Sing,Sing (With a Swing)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1tVCktDDCbk",
-                "duration": 164,
-                "title": "Boogie Woogie Bugle Boy - Wartime Radio Revue"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=j_Qc8s0h4gg",
-                "duration": 166,
-                "title": "1940s Swing & Boogie-Woogie🎺 \"As Time goes by\"🎶 AI Music-Video + Authentic Song Lyrics fro"
+                "url": "https://www.youtube.com/watch?v=_CI-0E_jses",
+                "duration": 216,
+                "title": "Glenn Miller - In The Mood [HQ]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=_8yGGtVKrD8",
@@ -52,49 +42,14 @@
                 "title": "Jumpin Jive - Cab Calloway and the Nicholas Brothers"
             },
             {
-                "url": "https://www.youtube.com/watch?v=8of3uhG1tCI",
-                "duration": 138,
-                "title": "Andrews Sisters   Boogie Woogie Bugle Boy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HLFUoPqkGwQ",
-                "duration": 259,
-                "title": "Buddy Rich with Tommy Dorsey & His Orchestra 1943 \"Well Git It\" | from \"Du Barry Was a Lad"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ymt_cBfCjZM",
-                "duration": 241,
-                "title": "Lovesong - The Cure (1940s Big Band Style Cover) feat. Emma Smith"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3-k9XRTSEiM",
-                "duration": 255,
-                "title": "History Brief: Big Bands & Swing Music in the 1930s"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UdjY-4Ei1Ws",
-                "duration": 163,
-                "title": "Big Band Swing Music - Money Troubles – 1940s Jazz Swing Song Lyrics & Vintage Crooner Sty"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=K3wAz1xmPJU",
-                "duration": 238,
-                "title": "The Lazy Song - Bruno Mars (1940s Big Band Swing Remix)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qfUbqBOS-bg",
-                "duration": 286,
-                "title": "WhatIfMusic - AC/DC- Back in Black (1940s Big Band Style by The AC/DC Orchestra) #acdc #ba"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=vpmqe1uqrlk",
                 "duration": 200,
                 "title": "Big Band Swing Music - Dance All Night – 1940s Swing Jazz Song | Big Band Dance Music"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DM1g5U9gaLk",
-                "duration": 173,
-                "title": "\"The Difference is You\" | Classic 1940s Big Band Swing 🎺 (AI Music & Human-Written Lyrics)"
+                "url": "https://www.youtube.com/watch?v=IH1Fru-RttA",
+                "duration": 176,
+                "title": "Hot Chocolate (Cottontail) – Duke Ellington (Swing Big Band Music, 1940s Soundie)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=jvBinUODRME",
@@ -102,9 +57,9 @@
                 "title": "Big Band Swing Music - Hurry Up, Honey – 1940s Swing/Jazz Song Lyrics"
             },
             {
-                "url": "https://www.youtube.com/watch?v=UviVYc9qzy4",
-                "duration": 224,
-                "title": "Somebody That I Used To Know - Vintage '40s Big Band Gotye Cover ft. Hannah Gill"
+                "url": "https://www.youtube.com/watch?v=DM1g5U9gaLk",
+                "duration": 173,
+                "title": "\"The Difference is You\" | Classic 1940s Big Band Swing 🎺 (AI Music & Human-Written Lyrics)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=10bb87edJd0",
@@ -132,9 +87,19 @@
                 "title": "How The Stars Will Fall | 1940s Big Band Swing"
             },
             {
+                "url": "https://www.youtube.com/watch?v=qfUbqBOS-bg",
+                "duration": 286,
+                "title": "WhatIfMusic - AC/DC- Back in Black (1940s Big Band Style by The AC/DC Orchestra) #acdc #ba"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=GfOTvcE7vK4",
                 "duration": 172,
                 "title": "“Hello” – 1940s Style Jazz / Swing Song (Female Vocals, Vintage Big Band Feel)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mjKHBopGQ54",
+                "duration": 153,
+                "title": "1940s Big Band Swing🎺\"The Difference is You\"🎷AI Music Video + Human-Written Lyrics✍️"
             },
             {
                 "url": "https://www.youtube.com/watch?v=m88ErDptC4U",
@@ -142,29 +107,14 @@
                 "title": "The Prettiest Girl In The World | 1940s Big Band Swing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1tWwRCAhTOs",
-                "duration": 178,
-                "title": "Big Band Swing Music - Swingin’ Under the Mistletoe 🎷 | Vintage 1940s Christmas Jazz Swing"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=dq2YURZVTgQ",
                 "duration": 187,
                 "title": "Big Band Swing Music - Hey There Baby – Original 1940s Jazz Swing Song | Big Band Vintage"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7vs5z0tnpw8",
-                "duration": 222,
-                "title": "1940s Love Song — Romantic Slow Swing Big Band Music | Dance Me Close Tonight"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IH1Fru-RttA",
-                "duration": 176,
-                "title": "Hot Chocolate (Cottontail) – Duke Ellington (Swing Big Band Music, 1940s Soundie)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cb2w2m1JmCY",
-                "duration": 194,
-                "title": "Duke Ellington, \"Take the A Train\""
+                "url": "https://www.youtube.com/watch?v=1tVCktDDCbk",
+                "duration": 164,
+                "title": "Boogie Woogie Bugle Boy - Wartime Radio Revue"
             },
             {
                 "url": "https://www.youtube.com/watch?v=9-XBwOPqB3A",
@@ -175,11 +125,6 @@
                 "url": "https://www.youtube.com/watch?v=G3m6u8w5pQ4",
                 "duration": 164,
                 "title": "1940s Big Band Swing Harmony | The Spalding Sisters sing \"When the Clock Strikes Four\""
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R7ruixMDol4",
-                "duration": 299,
-                "title": "King Of Swing"
             },
             {
                 "url": "https://www.youtube.com/watch?v=TKHNY4qZp_4",
@@ -204,7 +149,7 @@
             {
                 "url": "https://www.youtube.com/watch?v=Tm8a2VqsngE",
                 "duration": 258,
-                "title": "Romantic 1940s Swing Ballad — If You Were Mine Tonight | Vintage Big Band Love Song"
+                "title": "If You Were Mine Tonight — Romantic 1940s Big Band Ballad | Vintage Love Song"
             },
             {
                 "url": "https://www.youtube.com/watch?v=zG5ITGsRSTs",
@@ -217,14 +162,19 @@
                 "title": "Big Band Swing Music - Kissing Under the Mistletoe – A 1940s Swing Christmas Duet"
             },
             {
+                "url": "https://www.youtube.com/watch?v=qtBb_GSCJfA",
+                "duration": 193,
+                "title": "Hey There Baby – Original Big Band Swing | Vintage 1940s Jazz Revival"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=aFI1DHUzzUY",
                 "duration": 168,
                 "title": "Big Band Swing Music - Next Time We Meet – A 1940s Jazz Swing Song of Love and Longing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=qtBb_GSCJfA",
-                "duration": 193,
-                "title": "Hey There Baby – Original Big Band Swing | Vintage 1940s Jazz Revival"
+                "url": "https://www.youtube.com/watch?v=1tWwRCAhTOs",
+                "duration": 178,
+                "title": "Big Band Swing Music - Swingin’ Under the Mistletoe 🎷 | Vintage 1940s Christmas Jazz Swing"
             },
             {
                 "url": "https://www.youtube.com/watch?v=BH7OYG4nzNE",
@@ -237,14 +187,14 @@
                 "title": "One More Walk Around The Garden | 1940s Big Band Swing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3X7t9-WFHlE",
-                "duration": 162,
-                "title": "Romantic Foxtrot Jazz — 1940s Big Band Swing Music | Dance Me Near"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=BXEoM0mK62U",
                 "duration": 192,
                 "title": "Velvet Lights | 1940s Big Band Swing – The Silver Note Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3X7t9-WFHlE",
+                "duration": 162,
+                "title": "Romantic Foxtrot Jazz — 1940s Big Band Swing Music | Dance Me Near"
             },
             {
                 "url": "https://www.youtube.com/watch?v=pVmCNC3TRPs",
@@ -252,9 +202,19 @@
                 "title": "Vintage 1940s Big Band Music Video: Appropriate | True Love, Defiance  Swing | Pearl & The"
             },
             {
+                "url": "https://www.youtube.com/watch?v=oqN5s6cFpSE",
+                "duration": 398,
+                "title": "TAKE ME BACK TO SATURDAY NIGHT 1947 | 1940s SWING & BIG BAND DANCE PARTY"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=mXD1bsY6-sE",
                 "duration": 215,
                 "title": "The Song That Used To Play | 1940s Big Band Swing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wWOcM83ZfXM",
+                "duration": 237,
+                "title": "AI Creates STUNNING 1940s Big Band Music That Will Blow Your Mind!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=oza_MQYb3x0",
@@ -292,14 +252,19 @@
                 "title": "Big Band Swing Music - Hey There Baby (1940s Swing Original) | Classic Big Band Jazz Reviv"
             },
             {
+                "url": "https://www.youtube.com/watch?v=tbQ7ptHITSg",
+                "duration": 215,
+                "title": "Angel Eyes | 1940s Big Band Swing Jazz (Vintage Song)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=EEgutjpSXVw",
                 "duration": 305,
                 "title": "Big Band Swing Vibes – “There’s Something About You” (1940s-Style Jazz)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tbQ7ptHITSg",
+                "url": "https://www.youtube.com/watch?v=JkDXHB-U3U0",
                 "duration": 215,
-                "title": "Angel Eyes | 1940s Big Band Swing Jazz (Vintage Song)"
+                "title": "Little Big Band Blues"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2lkTlxov_aw",
@@ -322,19 +287,14 @@
                 "title": "1940s Big Band Jazz — Cloverleaf Turn | Relaxed Vintage Instrumental"
             },
             {
+                "url": "https://www.youtube.com/watch?v=Slgfg_Mprok",
+                "duration": 200,
+                "title": "Big Band Swing Music - Money Troubles – 1940s Jazz Swing Song with Female Vocals & Vintage"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=QRb9OjO7Qig",
                 "duration": 177,
                 "title": "Big Band Swing Music - You Look Like Trouble – Original Swing Jazz Love Song Lyrics"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wWOcM83ZfXM",
-                "duration": 237,
-                "title": "AI Creates STUNNING 1940s Big Band Music That Will Blow Your Mind!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eYhuToqCdYE",
-                "duration": 160,
-                "title": "Stolen Kisses | 1940s Big Band Swing"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tNOjztFKikA",
@@ -350,6 +310,16 @@
                 "url": "https://www.youtube.com/watch?v=s4iUILZzppY",
                 "duration": 148,
                 "title": "A Dance to 1940's Big Band Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R7ruixMDol4",
+                "duration": 299,
+                "title": "King Of Swing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KTG12vRiiss",
+                "duration": 192,
+                "title": "Big Band Swing Music - Rent Is Due (1940s Jazz/Swing Original Song) – Vintage Big Band Sty"
             },
             {
                 "url": "https://www.youtube.com/watch?v=BAAEXmseu40",
@@ -377,11 +347,6 @@
                 "title": "Big Band Swing Music - Swingin’ Snowmen Christmas Jazz – 1940s Holiday Swing Tune #christm"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Cb-a_fsKYIk",
-                "duration": 123,
-                "title": "Big Band Swing Music - Money Money Money – 1940s Swing Jazz Original | Big Band Style Song"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UwRdk1dDmNE",
                 "duration": 220,
                 "title": "Slow Swing Jazz — Silver Lantern | Romantic 1940s Big Band"
@@ -392,14 +357,14 @@
                 "title": "Big Band Swing Music - Spin Me ‘Round Tonight: 1940s Swing Jazz Song About Dancing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vz3eZfqZ5kE",
-                "duration": 283,
-                "title": "Big Band Swing Music - Relaxing Snowfall Swingin’ Christmas | 1940s Jazz Big Band Holiday"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ASwUtjhHExo",
                 "duration": 213,
                 "title": "THE BINGIE-BINGIE-BOOGIE | 1940s Big Band Swing Song 2026 | Vintage Jazz Dance Party Anthe"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vz3eZfqZ5kE",
+                "duration": 283,
+                "title": "Big Band Swing Music - Relaxing Snowfall Swingin’ Christmas | 1940s Jazz Big Band Holiday"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z9OKeGUaB7U",
@@ -422,14 +387,19 @@
                 "title": "Jingle Bell Cheer – 1940s Swing Jazz Christmas Song | Big Band Holiday Music"
             },
             {
+                "url": "https://www.youtube.com/watch?v=koOSowQ7_sA",
+                "duration": 211,
+                "title": "Big Band Swing Music - Decked Out | Vintage Swing Jazz Tune, Big Band Vibes #vintagevibes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xrrcj_k1bbg",
+                "duration": 223,
+                "title": "【AI音楽】Moonlight Ballroom Serenade  |Classic Swing Orchestra • Big Band Jazz • 1940s Dance"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=qzc7vY9VTnk",
                 "duration": 346,
                 "title": "Hellzapoppin' in full color | Colorized with DeOldify"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mjKHBopGQ54",
-                "duration": 153,
-                "title": "1940s Big Band Swing🎺\"The Difference is You\"🎷AI Music Video + Human-Written Lyrics✍️"
             },
             {
                 "url": "https://www.youtube.com/watch?v=LMZSbxduFYA",
@@ -437,9 +407,9 @@
                 "title": "Sing, Sing, Sing (With a Swing)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=VAuTouBhN5k",
-                "duration": 347,
-                "title": "Rhapsody in Blue Debut | Rhapsody In Blue | Warner Archive"
+                "url": "https://www.youtube.com/watch?v=HLFUoPqkGwQ",
+                "duration": 259,
+                "title": "Buddy Rich with Tommy Dorsey & His Orchestra 1943 \"Well Git It\" | from \"Du Barry Was a Lad"
             },
             {
                 "url": "https://www.youtube.com/watch?v=cm_b2tUjsbI",
@@ -447,44 +417,29 @@
                 "title": "The Night the Marquee Sang | Original 1940s Broadway Musical | Cinematic Big Band Swing"
             },
             {
+                "url": "https://www.youtube.com/watch?v=7vs5z0tnpw8",
+                "duration": 222,
+                "title": "1940s Love Song — Romantic Slow Swing Big Band Music | Dance Me Close Tonight"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eO9BRlnI7uc",
+                "duration": 172,
+                "title": "Crazy About This Girl | 1940s Big Band Swing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VAuTouBhN5k",
+                "duration": 347,
+                "title": "Rhapsody in Blue Debut | Rhapsody In Blue | Warner Archive"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=AjkduqtENW0",
                 "duration": 177,
                 "title": "Lick It, Stick It, Put It In by Anita Hardcok (Banned 1940s Song) Lola May - Put It In (Pa"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4dWS9_IhAaA",
-                "duration": 145,
-                "title": "1940s Swing Jazz - Last Train to Harlem (Big Band Instrumental)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wD_540RQXXk",
-                "duration": 154,
-                "title": "Richard Cheese \"Creep (Big Band Version)\" from the album \"The Sunny Side Of The Moon\" (200"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rp8ADZkJ7V4",
-                "duration": 266,
-                "title": "A Vintage Affair - A day of 1940's Big Band Swing Music"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ykyFzV8FGsM",
-                "duration": 101,
-                "title": "Laura romantic classic love song 1940's big band sax ballad easy listening music"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IoMbeDhG9fU",
-                "duration": 353,
-                "title": "Stormy Weather in color - The Nicholas Brothers and Cab Calloway | Colorized with DeOldify"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oqN5s6cFpSE",
-                "duration": 398,
-                "title": "TAKE ME BACK TO SATURDAY NIGHT 1947 | 1940s SWING & BIG BAND DANCE PARTY"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lsDXnYKkdqw",
-                "duration": 172,
-                "title": "Charlie Barnet - Skyliner"
+                "url": "https://www.youtube.com/watch?v=5CYlK1w-Du4",
+                "duration": 224,
+                "title": "Charlie's Inferno (60's Version) - Jazz Cover Lyric Video"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tkF8gXvQC0U",
@@ -492,14 +447,59 @@
                 "title": "WHERE THE HORSES MEET THE MOON  | 1940s British Big Band × Mongolian Horse Music | Epic Wo"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CWPvZrLMl9o",
-                "duration": 139,
-                "title": "It's Been So Long (Five Nights At Freddy's 2) 60's Version - Jazz Cover Lyric Video"
+                "url": "https://www.youtube.com/watch?v=Rp8ADZkJ7V4",
+                "duration": 266,
+                "title": "A Vintage Affair - A day of 1940's Big Band Swing Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mr7Tu5UlrhE",
+                "duration": 203,
+                "title": "Moonlight Serenade"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ykyFzV8FGsM",
+                "duration": 101,
+                "title": "Laura romantic classic love song 1940's big band sax ballad easy listening music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wD_540RQXXk",
+                "duration": 154,
+                "title": "Richard Cheese \"Creep (Big Band Version)\" from the album \"The Sunny Side Of The Moon\" (200"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E3xUyD2aQXs",
+                "duration": 105,
+                "title": "1940s Big Band"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IoMbeDhG9fU",
+                "duration": 353,
+                "title": "Stormy Weather in color - The Nicholas Brothers and Cab Calloway | Colorized with DeOldify"
             },
             {
                 "url": "https://www.youtube.com/watch?v=13SL926vC2s",
                 "duration": 177,
                 "title": "Big Band Boogie | Dancing All Night"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CWPvZrLMl9o",
+                "duration": 139,
+                "title": "It's Been So Long (Five Nights At Freddy's 2) 60's Version - Jazz Cover Lyric Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UviVYc9qzy4",
+                "duration": 224,
+                "title": "Somebody That I Used To Know - Vintage '40s Big Band Gotye Cover ft. Hannah Gill"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=weSbx-q2_4g",
+                "duration": 267,
+                "title": "SLEEP TOKEN - CARAMEL (40s Big Band Swing AI Cover) | THEONAIST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MLHZx6OyETQ",
+                "duration": 411,
+                "title": "SLEEP TOKEN - TAKE ME BACK TO EDEN (40s Big Band Swing AI) | THEONAIST"
             },
             {
                 "url": "https://www.youtube.com/watch?v=zuPHuiSnnQw",

@@ -135,10 +135,12 @@ def refresh(path, target):
     lo, hi = window(slug)
     streams, seen, keys = [], set(), set()
 
-    # A curated playlist pinned to this channel is the best material it has; it goes in first and
-    # search only fills whatever is left over.
-    playlist = station.get("playlist")
-    if playlist:
+    # Curated playlists pinned to this channel are the best material it has; they go in first and
+    # search only fills whatever is left over. Several are allowed because some subjects have no
+    # single deep list - the 1930s needs three to make a hundred.
+    for playlist in station.get("playlists") or []:
+        if len(streams) >= target:
+            break
         collect("https://www.youtube.com/playlist?list=" + playlist, lo, hi, seen, keys,
                 streams, target)
 
@@ -149,6 +151,10 @@ def refresh(path, target):
         # nothing from this year still fills rather than emptying itself.
         attempts.insert(0, "%s %d" % (query, year))
     attempts.append("%s full" % query)
+    # Named programmes and named people, which beat a genre word every time - see EXTRA_QUERIES
+    # in dial.py. They come after the general query so the channel still leads with the broad
+    # sweep, and they are what actually carries a thin channel to a hundred.
+    attempts.extend(station.get("extra_queries") or [])
 
     for attempt in attempts:
         if len(streams) >= target:

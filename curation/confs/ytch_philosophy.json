@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Philosophy & Psychology",
         "network_type": "streaming",
-        "channel_number": 87,
+        "channel_number": 42,
         "network_long_name": "Philosophy & Psychology",
         "stream_rotation": "clock",
         "streams": [
@@ -27,6 +27,11 @@
                 "title": "2017 Personality 22: Conclusion: Psychology and Belief"
             },
             {
+                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
+                "duration": 1953,
+                "title": "Philosophy for Beginners"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=GzZa7nfBfUM",
                 "duration": 8209,
                 "title": "Psychology of Thinking, Lecture 6: Induction"
@@ -37,14 +42,14 @@
                 "title": "Krs-One full lecture on philosophy"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
-                "duration": 1953,
-                "title": "Philosophy for Beginners"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=MajfZIyHP8U",
                 "duration": 2719,
                 "title": "24. Suicide, Part I: The rationality of suicide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9U9E588zVIY",
+                "duration": 1976,
+                "title": "Before You See Nolan’s THE ODYSSEY (2026): Read This Psychology First! -Prof.Jiang Xueqin"
             },
             {
                 "url": "https://www.youtube.com/watch?v=h69SwIn-bA4",
@@ -72,6 +77,11 @@
                 "title": "Dr. Jordan B. Peterson | Introduction to Nietzsche | Lecture 1 (Official)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=D5EaGMklyX4",
+                "duration": 1298,
+                "title": "Conscience Psychology: From Bernays to the Paradinha Pause - Aug 3, 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=fn_zPal2YWM",
                 "duration": 8536,
                 "title": "Psychology of Thinking, Lecture 4: Concepts and Categories"
@@ -80,6 +90,11 @@
                 "url": "https://www.youtube.com/watch?v=329Hdnssh_s",
                 "duration": 4526,
                 "title": "Dr. Jordan B. Peterson | Nietzsche: Further Down the Rabbit Hole"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p82ph6JIXrk",
+                "duration": 4088,
+                "title": "Theories of Personality | Sigmund Freud: Psychoanalysis 1 | Psychology Lecture (TagLish)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=pgWf6M0HoaM",
@@ -95,11 +110,6 @@
                 "url": "https://www.youtube.com/watch?v=78W_8-y2n2Q",
                 "duration": 3003,
                 "title": "Theories of Personality | Melanie Klein: Object Relations Theory| Psychology Lecture (TagL"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r8bfw9EzEE4",
-                "duration": 1708,
-                "title": "Think Like a Fox, Never Like a Lion | Machiavelli's 6 Dark Psychology Lessons"
             },
             {
                 "url": "https://www.youtube.com/watch?v=qOsz9b3Mj-U",
@@ -122,11 +132,6 @@
                 "title": "How To Build Self Confidence"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6ezuks5kabE",
-                "duration": 2247,
-                "title": "History of Psychology: In-depth Revision | Part ONE | CUET PG 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=yCHIgiMhKxM",
                 "duration": 6375,
                 "title": "GREEK PHILOSOPHERS | UNIT-1 EMERGENCE OF PSYCHOLOGY | UGC NET DECEMBER 2026 | HARSHITA MAH"
@@ -142,14 +147,14 @@
                 "title": "Social Intelligence: Mastering The Psychology Of Human Behavior (Audiobook)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=VYw8eNgp3lg",
-                "duration": 4492,
-                "title": "Dr. Samantha F. Anderson | UBC Psychology Colloquia 2025-2026 | (Apr 2, 2026)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Jogm0fa_Xso",
                 "duration": 2207,
                 "title": "MAUNi   Lecture 4  \"Philosophy and Coaching: Insights into Philosophical Psychology - Lect"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VYw8eNgp3lg",
+                "duration": 4492,
+                "title": "Dr. Samantha F. Anderson | UBC Psychology Colloquia 2025-2026 | (Apr 2, 2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=YdMCL9_UTE4",
@@ -162,14 +167,14 @@
                 "title": "UGC NET Psychology | UGC NET Psychology Psychological Testing By Anjali Ma'am"
             },
             {
-                "url": "https://www.youtube.com/watch?v=D5EaGMklyX4",
-                "duration": 1298,
-                "title": "Conscience Psychology: From Bernays to the Paradinha Pause - Aug 3, 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=MC5MIIbbz1A",
                 "duration": 3269,
                 "title": "UGC NET Psychology | UGC NET Psychology Greek Philosophers By Anjali Ma'am"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r8bfw9EzEE4",
+                "duration": 1708,
+                "title": "Think Like a Fox, Never Like a Lion | Machiavelli's 6 Dark Psychology Lessons"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wv7lEyck2mg",
@@ -207,11 +212,6 @@
                 "title": "Ep: 1 | What is Philosophy? Dr. Vikas Divyakirti"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0YAXjD7duac",
-                "duration": 3251,
-                "title": "CUET PG Psychology 2026 🔥 Most Important Topics | Revision | Greek Philosopher | By Nirdes"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=r5KRnstXYUg",
                 "duration": 3648,
                 "title": "Psychedelics Don't Distort Reality — They Reveal How Your Brain Constructs It"
@@ -220,6 +220,11 @@
                 "url": "https://www.youtube.com/watch?v=lR30TBFjUhI",
                 "duration": 2791,
                 "title": "Eastern Paradigm of Psychology Lecture 4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0YAXjD7duac",
+                "duration": 3251,
+                "title": "CUET PG Psychology 2026 🔥 Most Important Topics | Revision | Greek Philosopher | By Nirdes"
             },
             {
                 "url": "https://www.youtube.com/watch?v=u4uR6aI2Yy8",
@@ -237,6 +242,11 @@
                 "title": "What Creates Consciousness? | World Science Festival"
             },
             {
+                "url": "https://www.youtube.com/watch?v=Q_uNRlXVnx0",
+                "duration": 7980,
+                "title": "How to Be More Articulate; How to Speak Confidently and Clearly   (Audiobook)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=V0BVLUwYrkI",
                 "duration": 5618,
                 "title": "Western Philosophy || Plato || By Dr. Tanu Jain Ma'am || Fresh Batch 2024 || Live Session"
@@ -245,11 +255,6 @@
                 "url": "https://www.youtube.com/watch?v=KYRA9BmawLQ",
                 "duration": 1806,
                 "title": "Solano Psychology Syllabus Fall, 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q_uNRlXVnx0",
-                "duration": 7980,
-                "title": "How to Be More Articulate; How to Speak Confidently and Clearly   (Audiobook)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=agjhcL9nFQ0",
@@ -277,11 +282,6 @@
                 "title": "Idealism, Naturalism, Pragmatism Philosophy of Education/B.Ed./M.Ed./CTET/TET's/Western ph"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zSISCA_A6-c",
-                "duration": 1415,
-                "title": "Neville Goddard — Was He Teaching Mysticism or Psychology?"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=9uSXOr-AdAU",
                 "duration": 6981,
                 "title": "Chase Hughes: The 3 \"Dark Psychology\" Tricks To Read Anyone's Mind!"
@@ -290,6 +290,11 @@
                 "url": "https://www.youtube.com/watch?v=lh97670SW30",
                 "duration": 2916,
                 "title": "CUET PG | UGC NET/JRF | UP PGT | EVGC | Psychology 2026 | Greek Philosopher | by Nirdesh M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zSISCA_A6-c",
+                "duration": 1415,
+                "title": "Neville Goddard — Was He Teaching Mysticism or Psychology?"
             },
             {
                 "url": "https://www.youtube.com/watch?v=J4sYkNBErpU",
@@ -302,11 +307,6 @@
                 "title": "Piaget, Vygotsky, Kohlberg Theory | CDP Complete Marathon for CTET-2026 by Himanshi Singh"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tNimr42DDRE",
-                "duration": 3427,
-                "title": "The Spiritual Psychology of Tasbih Al Zahraa - Sheikh Azhar Nasser | Night 25 - 2026 MYC R"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=cILRkfhqnbs",
                 "duration": 3841,
                 "title": "Deconstructing Gender in Mental Health Discourse | Prof. Dr. Shalina Mehta | AIF"
@@ -317,9 +317,9 @@
                 "title": "Freud: The Fraud and the Id-iot"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9SkYVN16O-E",
-                "duration": 2170,
-                "title": "CUET PG 2026 Psychology History of Psychology Unit 1 Complete Theory + MCQs"
+                "url": "https://www.youtube.com/watch?v=tNimr42DDRE",
+                "duration": 3427,
+                "title": "The Spiritual Psychology of Tasbih Al Zahraa - Sheikh Azhar Nasser | Night 25 - 2026 MYC R"
             },
             {
                 "url": "https://www.youtube.com/watch?v=9KArWcMldPM",
@@ -342,9 +342,9 @@
                 "title": "If I Started Martial Arts In 2026, I'd Do THIS"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
-                "duration": 3213,
-                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS"
+                "url": "https://www.youtube.com/watch?v=pyK2siK73wI",
+                "duration": 2999,
+                "title": "UGC NET Philosophy | UGC NET Philosophy Unit 6 Recent Western Philosophy William James | T"
             },
             {
                 "url": "https://www.youtube.com/watch?v=I_qirYNLgaY",
@@ -352,9 +352,14 @@
                 "title": "Why Short-Term Pleasure is Ruining Your Life"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pyK2siK73wI",
-                "duration": 2999,
-                "title": "UGC NET Philosophy | UGC NET Philosophy Unit 6 Recent Western Philosophy William James | T"
+                "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
+                "duration": 3213,
+                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iyqf-HglVfc",
+                "duration": 5838,
+                "title": "History of Psychology Complete Lecture | UGC NET Psychology June 2026 Preparation By Sanja"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ju-N3gnfHRg",
@@ -367,24 +372,19 @@
                 "title": "Quantum Consciousness Theory"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Iyqf-HglVfc",
-                "duration": 5838,
-                "title": "History of Psychology Complete Lecture | UGC NET Psychology June 2026 Preparation By Sanja"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=h02GeV0drL8",
                 "duration": 2461,
                 "title": "Plato: The Philosopher Who Changed the World Forever"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nr-Su0Zb6Qw",
-                "duration": 2144,
-                "title": "The Psychology of Emotion by David J. Lieberman | Book Summary in Hindi | Audiobook"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=v17uUbgIMyY",
                 "duration": 2050,
                 "title": "Build Laser Focus,Ruthless Discipline & Strategic Detachment Until No One Can Break You |M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FvAyrwzgPoQ",
+                "duration": 3770,
+                "title": "Psychology Class 11 Chapter 1 | मनोविज्ञान क्या है ? | Class 11th Psychology Chapter 1 | P"
             },
             {
                 "url": "https://www.youtube.com/watch?v=QvULe3mVt3o",
@@ -395,16 +395,6 @@
                 "url": "https://www.youtube.com/watch?v=BlqOTQT3V2o",
                 "duration": 1733,
                 "title": "The only Trading Psychology Video you need 📈| Wizard Trader"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aNsnfMPAzpQ",
-                "duration": 1597,
-                "title": "Vikings: The Uncomfortable Truth Nobody Wants to Face"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2ysxJNPH64I",
-                "duration": 5778,
-                "title": "Psychology Class-1 for UP Health Education Officer 2026 | UPPSC HEO CLASS Anthropolgy, Soc"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Dj-gPrHIXnI",
@@ -427,6 +417,21 @@
                 "title": "UGC NET JUNE 2026 PROVISIONAL ANSWERKEY OUT"
             },
             {
+                "url": "https://www.youtube.com/watch?v=2ysxJNPH64I",
+                "duration": 5778,
+                "title": "Psychology Class-1 for UP Health Education Officer 2026 | UPPSC HEO CLASS Anthropolgy, Soc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gf2zI0Ek9yY",
+                "duration": 5140,
+                "title": "Tat (S) & (HS) l શૈક્ષણિક મનોવિજ્ઞાન Most IMP MCQ l Live on @8.30 pm 🚀 GYANLIVE શિક્ષણ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3_D155Mb1NA",
+                "duration": 2026,
+                "title": "KTET  PSYCHOLOGY  30/30 ൽ ഉറപ്പിക്കാം | KTET EXAM 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=zcROsECn7f4",
                 "duration": 3168,
                 "title": "When They Play Dirty, Think Like Machiavelli"
@@ -442,14 +447,9 @@
                 "title": "CTET Feb 2026 | All Psychologists | CDP by Sachin Choudhary live 8pm"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uNpBoFAwGCY",
-                "duration": 2640,
-                "title": "The Psychology Of Being \"Cold\" (And Why It Works) - Machiavelli"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xrhm9SseuHU",
-                "duration": 6839,
-                "title": "UGC NET 2026 | AIFER MEGA MARATHONE JUNE 2026 - PSYCHOLOGY"
+                "url": "https://www.youtube.com/watch?v=JkXYLpqjiHU",
+                "duration": 3455,
+                "title": "Reet Patrata Pariksha 2026|Shiksha Manovigyan ka Parichay | REET Pre Level 1 & 2 Psycholog"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Kfun-YXNjPY",
@@ -467,14 +467,19 @@
                 "title": "Peterson x Tony Robbins | EP 517"
             },
             {
+                "url": "https://www.youtube.com/watch?v=PuBXy348Kbk",
+                "duration": 2220,
+                "title": "5 Things to Tell Yourself Every Morning - Stoic Philosophy"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=hcXkp0c_q4c",
                 "duration": 6480,
                 "title": "Pedagogy Theories: Complete Piaget, Vygotsky & Kohlberg Theories for CTET, DSSSB, KVS, REE"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PuBXy348Kbk",
-                "duration": 2220,
-                "title": "5 Things to Tell Yourself Every Morning - Stoic Philosophy"
+                "url": "https://www.youtube.com/watch?v=uTAnWPe-PEk",
+                "duration": 3801,
+                "title": "Acharya Prashant at the British Parliament (2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EvaKYqA4wzs",
@@ -500,11 +505,6 @@
                 "url": "https://www.youtube.com/watch?v=B7Y6Sfyvb_o",
                 "duration": 3277,
                 "title": "Complete Strategy for UPSC 2026/2027 |  Dr. Tanu Jain Ma'am | Tathastu ICS | UPSC EXAM"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uHrSsLeLIF8",
-                "duration": 1433,
-                "title": "The World Will Use You Until You Learn This | Machiavelli"
             }
         ],
         "search_query": "philosophy psychology lecture"

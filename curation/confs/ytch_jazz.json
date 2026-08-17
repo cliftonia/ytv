@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Jazz",
         "network_type": "streaming",
-        "channel_number": 83,
+        "channel_number": 72,
         "network_long_name": "Jazz",
         "stream_rotation": "clock",
         "streams": [
@@ -32,11 +32,6 @@
                 "title": "MOBY - Porcelain (Live) | Montreux Jazz Festival 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=o-hkfvppQGo",
-                "duration": 179,
-                "title": "NIKI - The Apartment We Won't Share (SUMMERTIME TOUR at Prambanan Jazz Festival 2026)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=uGBPiYk67YI",
                 "duration": 179,
                 "title": "SIENNA SPIRO - Great Expectation (Live) | Montreux Jazz Festival 2026"
@@ -57,11 +52,6 @@
                 "title": "Ohio State University Dance Team Jazz 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bXdnqBFzl0Q",
-                "duration": 411,
-                "title": "Deep Purple - Smoke On The Water - Live at 60th Montreux Jazz Festival 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=JXYotcnYF2Q",
                 "duration": 418,
                 "title": "RAYE - It's A Man's Man's Man's World (Live at Montreux Jazz Festival)"
@@ -77,9 +67,9 @@
                 "title": "DEEP PURPLE - Scriblin' Gib'rish (Live) | Montreux Jazz Festival 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GhRCbwVIVS0",
-                "duration": 251,
-                "title": "NIKI - You'll Be In My Heart - Prambanan Jazz Festival, 4th July 2026"
+                "url": "https://www.youtube.com/watch?v=W0yWDhw5TF4",
+                "duration": 260,
+                "title": "NIKI - Tsunami (SUMMERTIME TOUR at Prambanan Jazz Festival 2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=FgXhmc2IuTk",
@@ -87,9 +77,9 @@
                 "title": "Montreux Jazz Festival 2026 – Official Aftermovie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7NrNZ5JWgk4",
-                "duration": 274,
-                "title": "TheOvertunes - I Still Love You — Live at Java Jazz Festival 2026"
+                "url": "https://www.youtube.com/watch?v=GhRCbwVIVS0",
+                "duration": 251,
+                "title": "NIKI - You'll Be In My Heart - Prambanan Jazz Festival, 4th July 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=bir6zLAb0A0",
@@ -102,6 +92,11 @@
                 "title": "Admas | Astawesalehu | Live at Addis Jazz Festival 2026 | አድማስ | አስታውሳለው | አዲስ ጃዝ ፌስቲቫል 20"
             },
             {
+                "url": "https://www.youtube.com/watch?v=bXdnqBFzl0Q",
+                "duration": 411,
+                "title": "Deep Purple - Smoke On The Water - Live at 60th Montreux Jazz Festival 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=4wF7qwdwLsc",
                 "duration": 182,
                 "title": "RAYE – Purple Rain (Prince Cover) | Live at Montreux Jazz Festival 2026"
@@ -112,19 +107,9 @@
                 "title": "HERMANOS GUTIÉRREZ - LAGRIMAS (Live) | Montreux Jazz Festival 2025"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tOr6tFkLoDM",
-                "duration": 294,
-                "title": "HERMANOS GUTIÉRREZ - THUNDERBIRD (Live) | Montreux Jazz Festival 2025"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JfK0hXqFSgc",
-                "duration": 377,
-                "title": "Morris Day and the Time live at the 2026 Seabreeze Jazz Festival"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XBDsq8yL8QA",
-                "duration": 259,
-                "title": "Johnny Hates Jazz - Shattered Dreams - LIVE at 80s Classical, 2019"
+                "url": "https://www.youtube.com/watch?v=7NrNZ5JWgk4",
+                "duration": 274,
+                "title": "TheOvertunes - I Still Love You — Live at Java Jazz Festival 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=cTCGZlpQ__g",
@@ -132,9 +117,9 @@
                 "title": "Butcher Brown at Newport Jazz Festival 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=BVoe45rewMU",
-                "duration": 254,
-                "title": "Build Our Machine (Bendy and The Ink Machine) 60's Version - Jazz Cover Lyric Video"
+                "url": "https://www.youtube.com/watch?v=jjSXWsauDLQ",
+                "duration": 374,
+                "title": "Yuni Shara Jazz Project \"Akad\" live at Java Jazz Festival 2020"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Zwd-aQfCvb0",
@@ -142,14 +127,9 @@
                 "title": "Jazz in the Gardens returns to Hard Rock Stadium"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1yfuCpcX7EU",
-                "duration": 297,
-                "title": "Sade - Your Love Is King (Live 2011)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jjSXWsauDLQ",
-                "duration": 374,
-                "title": "Yuni Shara Jazz Project \"Akad\" live at Java Jazz Festival 2020"
+                "url": "https://www.youtube.com/watch?v=BVoe45rewMU",
+                "duration": 254,
+                "title": "Build Our Machine (Bendy and The Ink Machine) 60's Version - Jazz Cover Lyric Video"
             },
             {
                 "url": "https://www.youtube.com/watch?v=vW806AhP4qQ",
@@ -162,24 +142,9 @@
                 "title": "NIKI - Every Summertime (SUMMERTIME TOUR at Prambanan Jazz Festival 2026)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6JMeEHq1WJs",
-                "duration": 219,
-                "title": "NIKI - You'll Be in My Heart (SUMMERTIME TOUR at Prambanan Jazz Festival 2026)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VC8PaKriQUM",
-                "duration": 329,
-                "title": "Toto - I'll Be Over You (live at Montreux Jazz Festival 1991)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JtqnP5CmF4g",
-                "duration": 152,
-                "title": "ARÔMA  — Live In Germany 2026 | Spiritual Jazz / Afro-Electronic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qV1-G9v4xfk",
-                "duration": 184,
-                "title": "CHARLOTTE CARDIN - Feel Good (Live) | Montreux Jazz Festival 2026"
+                "url": "https://www.youtube.com/watch?v=1yfuCpcX7EU",
+                "duration": 297,
+                "title": "Sade - Your Love Is King (Live 2011)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tPc2O8tCsg4",
@@ -197,9 +162,9 @@
                 "title": "The One Who's Running The Show  (TADC) 60's Version - Jazz Cover Lyric Video"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zVBDor0Tpbs",
-                "duration": 121,
-                "title": "Louisiana State University Dance Team Jazz 2026"
+                "url": "https://www.youtube.com/watch?v=IAG1zOgQ7fk",
+                "duration": 235,
+                "title": "Retrovivals - Araw-Gabi - Regine Velasquez/Maestro Ryan Cayabyab (OPM Jazz AI Cover by Jar"
             },
             {
                 "url": "https://www.youtube.com/watch?v=3qWSyJIU42A",
@@ -207,14 +172,19 @@
                 "title": "Hollywood Vampires - Raise The Dead (At Montreux Jazz Festival)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Jmf2GEObhDc",
-                "duration": 310,
-                "title": "Raye & Alicia Keys Montreux Jazz Festival"
+                "url": "https://www.youtube.com/watch?v=TXT5pBbKVyA",
+                "duration": 234,
+                "title": "It’s Oh, So Nice - Performance by The Ames Jazz Band at San Jose Jazz Summer Fest 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Wd1Iz6j4WC0",
-                "duration": 297,
-                "title": "Bruno Mars - Versace on the Floor (Billboard Music Awards 2017) (Official Live Performance"
+                "url": "https://www.youtube.com/watch?v=UgnuMd7HaNw",
+                "duration": 356,
+                "title": "\"Dracula Flow 6\" | Jazz | 2026 National YoungArts Week"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HHVOAgNg0k4",
+                "duration": 208,
+                "title": "Mamang Sorbetero (Motown Soul Jazz-Funk Cover) | Brought To You"
             },
             {
                 "url": "https://www.youtube.com/watch?v=21Q35PlDbWs",
@@ -222,14 +192,19 @@
                 "title": "Love In A Bottle (Hazbin Hotel) 60's Version - Jazz Cover Lyric Video"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hOIYSWSa9Ec",
-                "duration": 342,
-                "title": "Toni Braxton \"Unbreak My Heart\" Live at Java Jazz Festival 2010"
+                "url": "https://www.youtube.com/watch?v=Jmf2GEObhDc",
+                "duration": 310,
+                "title": "Raye & Alicia Keys Montreux Jazz Festival"
             },
             {
                 "url": "https://www.youtube.com/watch?v=YIJth479y4w",
                 "duration": 188,
                 "title": "Hollywood Vampires - Ace of Spades (At Montreux Jazz Festival)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CSJmFw_aBoQ",
+                "duration": 167,
+                "title": "BILLIE JEAN: Jazz Large Group (2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=_gqgc05GVxU",
@@ -287,11 +262,6 @@
                 "title": "Dancing in the Streets - TRS live at Middle C Jazz 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ymd2QqQiyqk",
-                "duration": 237,
-                "title": "Henry Taylor & James Taylor - You Can Close Your Eyes (Live at Honda Center, 10/30/2021)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=EQcFqCbENDg",
                 "duration": 237,
                 "title": "Salma Salsabil - Hatchu!! (Live from Prambanan Jazz 2026)"
@@ -300,6 +270,11 @@
                 "url": "https://www.youtube.com/watch?v=ecF6v6_l0QM",
                 "duration": 209,
                 "title": "OG MAKK & JAZZ OCEAN - FAVORITE SONG (Live Performance) | SoundTrip EPISODE 117"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ymd2QqQiyqk",
+                "duration": 237,
+                "title": "Henry Taylor & James Taylor - You Can Close Your Eyes (Live at Honda Center, 10/30/2021)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rDCqSSJOuco",
@@ -327,11 +302,6 @@
                 "title": "Araw Gabi (Jazz Cover) | Soulful Live Performance"
             },
             {
-                "url": "https://www.youtube.com/watch?v=HHMeJ3JeJiI",
-                "duration": 211,
-                "title": "Sam Smith - When He’s Gone (Live) - Spotify Live Room"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ufRGsL3w8X0",
                 "duration": 276,
                 "title": "Retrovivals - Pangako – Regine Velasquez (OPM Jazz AI Cover by Jared)"
@@ -345,6 +315,11 @@
                 "url": "https://www.youtube.com/watch?v=rNMOzI9dOdA",
                 "duration": 195,
                 "title": "Sienna Spiro - Mono No Aware LIVE | North Sea Jazz Festival | 10 July 2026 | Rotterdam"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HHMeJ3JeJiI",
+                "duration": 211,
+                "title": "Sam Smith - When He’s Gone (Live) - Spotify Live Room"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sVG371IOCIw",
@@ -372,11 +347,6 @@
                 "title": "Jeffrey Osborne Columbus Ohio Jazz & Ribfest 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=czmKsrVmxEc",
-                "duration": 322,
-                "title": "NIKI - Oceans & Engines (SUMMERTIME TOUR at Prambanan Jazz Festival 2026)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=cJGbJNPjmmA",
                 "duration": 256,
                 "title": "Green Day \"Basket Case\" Epic Live Performance | Rock Hall 2015 Induction"
@@ -385,6 +355,11 @@
                 "url": "https://www.youtube.com/watch?v=DQmAUjw_fsg",
                 "duration": 256,
                 "title": "Tokyo Ska Paradise Orchestra \"Theme from the Godfather\" live at Java Jazz Festival 2016"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=czmKsrVmxEc",
+                "duration": 322,
+                "title": "NIKI - Oceans & Engines (SUMMERTIME TOUR at Prambanan Jazz Festival 2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=lgwkXpgiYuE",
@@ -407,9 +382,9 @@
                 "title": "LIRA Live in Cape Town | Something Inside So Strong | Business Premium Jazz Festival, Thik"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vAqu_M1JnBA",
-                "duration": 401,
-                "title": "ANGINE DE POITRINE - Yor Zarad (Montreal Jazz Fest 2026)"
+                "url": "https://www.youtube.com/watch?v=qV1-G9v4xfk",
+                "duration": 184,
+                "title": "CHARLOTTE CARDIN - Feel Good (Live) | Montreux Jazz Festival 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=X655o5vlDZk",
@@ -420,11 +395,6 @@
                 "url": "https://www.youtube.com/watch?v=8aFRGXWnCWM",
                 "duration": 168,
                 "title": "Mamang Sorbetero – Tagalog Classic Song | Soul Jazz Duet Version | KANCIONAN"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hCkxj-IyW-I",
-                "duration": 396,
-                "title": "Mata Zyklek - Angine de Poitrine (U.S. Debut @Newport Jazz Festival 2026) (4K HDR)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=WloefhnqYhw",
@@ -442,14 +412,14 @@
                 "title": "Giveon - Heartbreak Anniversary (Wireless Festival 2022)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=wrB7siccyLQ",
-                "duration": 133,
-                "title": "Looping The Rooms (Backrooms Universe) English 60's Version - Jazz Cover Lyric Video"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=b0KOAeHpH80",
                 "duration": 256,
                 "title": "Sade - Like a Tattoo (Live Video from San Diego)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wrB7siccyLQ",
+                "duration": 133,
+                "title": "Looping The Rooms (Backrooms Universe) English 60's Version - Jazz Cover Lyric Video"
             },
             {
                 "url": "https://www.youtube.com/watch?v=OAO1gzxplwg",
@@ -457,19 +427,24 @@
                 "title": "NECTAR WOODE - How It's Gotta Be (Live) | Montreux Jazz Festival 2026"
             },
             {
+                "url": "https://www.youtube.com/watch?v=vAqu_M1JnBA",
+                "duration": 401,
+                "title": "ANGINE DE POITRINE - Yor Zarad (Montreal Jazz Fest 2026)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=xyTa_gJkYwI",
                 "duration": 191,
                 "title": "Tony Bennett, Lady Gaga - I've Got You Under My Skin (Official Music Video)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=LELWTf4nhMg",
+                "duration": 250,
+                "title": "Angine de poitrine - Fabienk Live Performance 2026 Festival de International Jazz de Montr"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Ayvi3kXfgEg",
                 "duration": 384,
                 "title": "Wabash III - The Nick Granville Group - Tauranga Jazz Festival 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PWHcOA-uUsw",
-                "duration": 306,
-                "title": "​RAYE – “Where Is My Husband?” LIVE at Montreux Jazz Festival 2026 (Full Performance)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=5Ro_sf4uE-E",
@@ -479,7 +454,7 @@
             {
                 "url": "https://www.youtube.com/watch?v=oBPhhZd1pyM",
                 "duration": 380,
-                "title": "Rock With You - Michael Jackson (live jazz cover)"
+                "title": "Michael Jackson but it's all jazz musicians in a park (no AI)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=GaB9F3R9cIY",
@@ -490,6 +465,11 @@
                 "url": "https://www.youtube.com/watch?v=egqqtAo8WSI",
                 "duration": 221,
                 "title": "SIX The Musical | Tony Awards Performance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PWHcOA-uUsw",
+                "duration": 306,
+                "title": "​RAYE – “Where Is My Husband?” LIVE at Montreux Jazz Festival 2026 (Full Performance)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1EDMjQQGp2w",
@@ -505,6 +485,26 @@
                 "url": "https://www.youtube.com/watch?v=CwzjlmBLfrQ",
                 "duration": 337,
                 "title": "Mr. Bean Live Performance at the London 2012 Olympic Games"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KpYaj-hsIkA",
+                "duration": 396,
+                "title": "Wicked Dub Division meets North East Ska Jazz Orchestra - Mama [Official Video 2017]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L7cGgHw_wVU",
+                "duration": 207,
+                "title": "Bollywood Jazz | Expressions 2026 | Tansen Mehrauli"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FflfOb4BWCU",
+                "duration": 189,
+                "title": "Ariana Grande - 7 rings (Live From The Billboard Music Awards / 2019)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SgleO7aTR7I",
+                "duration": 340,
+                "title": "RAYE - CRY ME A RIVER (Live) | Montreux Jazz Festival 2025"
             }
         ],
         "search_query": "jazz live performance"

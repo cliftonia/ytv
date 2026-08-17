@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Cartoons",
         "network_type": "streaming",
-        "channel_number": 24,
+        "channel_number": 27,
         "network_long_name": "Cartoons",
         "stream_rotation": "clock",
         "streams": [
@@ -10,6 +10,21 @@
                 "url": "https://www.youtube.com/watch?v=rDxwiOKSfcQ",
                 "duration": 3039,
                 "title": "Pluto Cartoon 50 min Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t0Q2otsqC4I",
+                "duration": 1298,
+                "title": "Tom & Jerry | Tom & Jerry in Full Screen | Classic Cartoon Compilation | WB Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DWUf443sF1s",
+                "duration": 458,
+                "title": "School Bully: FULL EPISODE | Cow And Chicken | Cartoon Cartoons"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HJFxTsX0Ok0",
+                "duration": 280,
+                "title": "Tom & Jerry | Doctor Jerry in the House! 🩺 | Classic Cartoon | WB Kids"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZJJHL5p9UIE",
@@ -22,14 +37,9 @@
                 "title": "Looney Tunes 🐰| The Looneys on a Rampage! | Compilation | Cartoon for Kids 😍| @cnindia"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DWUf443sF1s",
-                "duration": 458,
-                "title": "School Bully: FULL EPISODE | Cow And Chicken | Cartoon Cartoons"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t0Q2otsqC4I",
-                "duration": 1298,
-                "title": "Tom & Jerry | Tom & Jerry in Full Screen | Classic Cartoon Compilation | WB Kids"
+                "url": "https://www.youtube.com/watch?v=rilFfbm7j8k",
+                "duration": 1189,
+                "title": "Tom & Jerry | Triple Trouble | Classic Cartoon Compilation | WB Kids"
             },
             {
                 "url": "https://www.youtube.com/watch?v=7gZQcEM_uQc",
@@ -37,29 +47,9 @@
                 "title": "Looney Tunes | Bugs Bunny vs. Yosemite Sam Mega Full Episodes Compilation | Warner Classic"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rilFfbm7j8k",
-                "duration": 1189,
-                "title": "Tom & Jerry | Triple Trouble | Classic Cartoon Compilation | WB Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HJFxTsX0Ok0",
-                "duration": 280,
-                "title": "Tom & Jerry | Doctor Jerry in the House! 🩺 | Classic Cartoon | WB Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nONJU-c8ZQY",
-                "duration": 2584,
-                "title": "Teddy Hotel | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Official"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4ZmeUj7cFu4",
-                "duration": 778,
-                "title": "Scooby-Doo! | Ahoy Scooby Doo! 🛥| Classic Cartoon Compilation | WB Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7LPoPqNMz4s",
-                "duration": 1370,
-                "title": "The Beatles Cartoon - Episode 39 - Full Episode From 16mm Film Print (With Commercials & B"
+                "url": "https://www.youtube.com/watch?v=Oh3nQ1RjYE4",
+                "duration": 3608,
+                "title": "Shaun the Sheep 🐑 SNACKS!!!! - Cartoons for Kids 🐑 Full Episodes Compilation [1 hour]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=WWreUDT8mlw",
@@ -67,24 +57,14 @@
                 "title": "Curious George 🐵Old McGeorgie Had  A Farm 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids"
             },
             {
-                "url": "https://www.youtube.com/watch?v=r0XYL1Vog2E",
-                "duration": 658,
-                "title": "Twisted Sister (Full Episode) | The Powerpuff Girls (Classic) | Cartoon Network Asia"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ofJ0_NbSQa0",
-                "duration": 2583,
-                "title": "Mr Bean Cooks CHRISTMAS DINNER | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Offici"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UIaEMz2KTcM",
                 "duration": 1556,
                 "title": "Looney Tunes | Daffy Duck VS Speedy Gonzales | Classic Cartoon Compilation | WB Kids"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DJ6Hg4_Do6g",
-                "duration": 2552,
-                "title": "Too Much Noise! | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Official"
+                "url": "https://www.youtube.com/watch?v=nONJU-c8ZQY",
+                "duration": 2584,
+                "title": "Teddy Hotel | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Official"
             },
             {
                 "url": "https://www.youtube.com/watch?v=NIxmzVli_aY",
@@ -92,9 +72,14 @@
                 "title": "The Land Before Time Full Episodes | The Great Egg Adventure | Kids Cartoon | Videos For K"
             },
             {
-                "url": "https://www.youtube.com/watch?v=LNyaeBXvK9Q",
-                "duration": 2573,
-                "title": "Animated Adventures #4 | Full Episodes | Mr. Bean Official Cartoon"
+                "url": "https://www.youtube.com/watch?v=N8QDjji7hCs",
+                "duration": 684,
+                "title": "Smurfette's Rose • The Smurfs • 45th Hanna Barbera Anniversary • Full Episode • Classic Ca"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ofJ0_NbSQa0",
+                "duration": 2583,
+                "title": "Mr Bean Cooks CHRISTMAS DINNER | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Offici"
             },
             {
                 "url": "https://www.youtube.com/watch?v=P9r_T1BP0zc",
@@ -102,34 +87,14 @@
                 "title": "The Amazing World of Gumball | FULL EPISODE The Mystery | Cartoon Network"
             },
             {
-                "url": "https://www.youtube.com/watch?v=PbiW7M2Htj4",
-                "duration": 1199,
-                "title": "Animaniacs | Everyone But the Warners | Classic Cartoon Compilation | WB Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5oH9Nr3bKfw",
-                "duration": 1376,
-                "title": "Tom & Jerry | A Bit of Fresh Air! | Classic Cartoon Compilation | @WB Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zeoCFjM84TA",
-                "duration": 3228,
-                "title": "CHRISTMAS DAY With Mr Bean | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Official"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IhJdoBo_wm8",
-                "duration": 634,
-                "title": "BETTY BOOP: Poor Cinderella - Full Cartoon Episode - HD"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=N8QDjji7hCs",
-                "duration": 684,
-                "title": "Smurfette's Rose • The Smurfs • 45th Hanna Barbera Anniversary • Full Episode • Classic Ca"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=gn-evG8RE0s",
                 "duration": 262,
                 "title": "Looney Tunes | Taz's Cooking Menu | Classic Cartoon | WB Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DJ6Hg4_Do6g",
+                "duration": 2552,
+                "title": "Too Much Noise! | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Official"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-o3iKTe9Gdg",
@@ -142,9 +107,19 @@
                 "title": "Caillou Full Episodes | Caillou and the Dirty Car | Cartoon Movie | WATCH ONLINE | Cartoon"
             },
             {
-                "url": "https://www.youtube.com/watch?v=d5nB-Y76C7E",
-                "duration": 2243,
-                "title": "Lamput | Full Episodes - Season 1 and Season 2 | Cartoon Network UK"
+                "url": "https://www.youtube.com/watch?v=uU3AIBmXF1o",
+                "duration": 1369,
+                "title": "Tom und Jerry auf Deutsch | Klassischer Cartoon 115 | WB Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6DQrfYYnwi4",
+                "duration": 3302,
+                "title": "Pizza Bean! | Mr Bean Cartoon Season 2 | Full Episodes | Mr Bean Official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pzKJ-yhg9JY",
+                "duration": 2413,
+                "title": "Curious George 🐵 A Monkey's Duckling 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids"
             },
             {
                 "url": "https://www.youtube.com/watch?v=hWdLhB2okqA",
@@ -152,14 +127,129 @@
                 "title": "Peppa Pig Full Episodes | Swimming with Peppa and George Family Kids Cartoon"
             },
             {
-                "url": "https://www.youtube.com/watch?v=HB13XUQwWFw",
-                "duration": 437,
-                "title": "Outta Time | A Mickey Mouse Cartoon | Disney Shorts"
+                "url": "https://www.youtube.com/watch?v=zeoCFjM84TA",
+                "duration": 3228,
+                "title": "CHRISTMAS DAY With Mr Bean | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Official"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yJErPi2Tq0U",
-                "duration": 437,
-                "title": "Surprise! | A Mickey Mouse Cartoon | @disneykids"
+                "url": "https://www.youtube.com/watch?v=5oH9Nr3bKfw",
+                "duration": 1376,
+                "title": "Tom & Jerry | A Bit of Fresh Air! | Classic Cartoon Compilation | @WB Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UisLIsbHQaE",
+                "duration": 1442,
+                "title": "Curious George 🐑 George Goes to the Farm 🚜 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=chDzys9QnIs",
+                "duration": 2599,
+                "title": "Chocolate Bean 🍫 | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IhJdoBo_wm8",
+                "duration": 634,
+                "title": "BETTY BOOP: Poor Cinderella - Full Cartoon Episode - HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PV76K0gJTcg",
+                "duration": 1124,
+                "title": "Make Lemonade! 🐵 Curious George 🐵Kids Cartoon 🐵 Kids Movies 🐵Videos for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ik_QP4oA_Hg",
+                "duration": 1472,
+                "title": "Curious George 🐵 Maple Monkey Madness 🥞 Pancake Day! 🐵Kids Cartoon 🐵"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=we8amlzi-jg",
+                "duration": 1308,
+                "title": "Caillou English Full Episodes | Caillou and the Loud Lunch | Cartoon Movie | Cartoons for"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oLdjfDy6rn4",
+                "duration": 1309,
+                "title": "The Fixies | The Cartoons | Cartoon in English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dsm_45L8pdI",
+                "duration": 655,
+                "title": "Curious George ⛵️ Building a boat ⛵️ FULL EPISODE 🐵 Kids Cartoon 🐵 Kids Movies 🐵 Videos fo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f-vwXP0XNXc",
+                "duration": 2410,
+                "title": "Tom and Jerry | Mega Compilation | Vol. 34 | Warner Classics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XVpDSxezAAs",
+                "duration": 1207,
+                "title": "Curious George 🐵  Bath Time! 🐵 20 Minute Show 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yxzXvtPBIbs",
+                "duration": 462,
+                "title": "Maternal Combat: FULL EPISODE | Dexter's Laboratory | Cartoon Cartoons"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ibUq3p_GpI",
+                "duration": 687,
+                "title": "Clarence | FULL EPISODE | The Big Game | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LfFsXznB2UI",
+                "duration": 245,
+                "title": "Carnaval | A Mickey Mouse Cartoon | @disneykids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a49wOpNDZVw",
+                "duration": 2357,
+                "title": "Caillou Visits an Ice Cream Truck | Caillou Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h4ZI7G8PhMs",
+                "duration": 743,
+                "title": "Don Smurfo • The Smurfs • 45th Hanna Barbera Anniversary • Full Episode • Classic Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l-zdDoNCVfQ",
+                "duration": 3585,
+                "title": "Ben and Holly’s Little Kingdom 🌹 Gaston's Valentine's Day Special 🌹 Cartoon for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZgnCiZhOXoM",
+                "duration": 3318,
+                "title": "The Vault! | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lJx753KxYZE",
+                "duration": 2753,
+                "title": "Peppa Pig Visits Madame Gazelle's House! | Peppa Pig Official Family Kids Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VuwkcVs7Cbg",
+                "duration": 4317,
+                "title": "Arthur Goes To Summer Camp & MORE! | Full Episodes | ARTHUR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r0XYL1Vog2E",
+                "duration": 658,
+                "title": "Twisted Sister (Full Episode) | The Powerpuff Girls (Classic) | Cartoon Network Asia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PbiW7M2Htj4",
+                "duration": 1199,
+                "title": "Animaniacs | Everyone But the Warners | Classic Cartoon Compilation | WB Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p-e2R-O3iTo",
+                "duration": 1415,
+                "title": "Caillou Hurts His Knees | Caillou Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zlYUhmXCkZk",
+                "duration": 300,
+                "title": "NEW Steven Universe Future | Steven Has A Snow Day | Cartoon Network"
             },
             {
                 "url": "https://www.youtube.com/watch?v=OUOc2qxLAoI",
@@ -172,214 +262,9 @@
                 "title": "Ben and Holly's Little Kingdom Full Episodes | Granny & Granpapa | Kids Cartoon Shows"
             },
             {
-                "url": "https://www.youtube.com/watch?v=a49wOpNDZVw",
-                "duration": 2357,
-                "title": "Caillou Visits an Ice Cream Truck | Caillou Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wCL9LnsHct8",
-                "duration": 1385,
-                "title": "FULL EPISODE: Panini For President/Chowder's Babysitter | Chowder | Cartoon Network"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=B_5ZKdHC-l0",
-                "duration": 1813,
-                "title": "Ben and Holly's Little Kingdom | Triple Episode: 46 to 48 | Kids Cartoon Shows"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SV3A9OpJ3SE",
-                "duration": 4947,
-                "title": "Caillou Full Episodes | Caillou at the Playground | Cartoon Movie | WATCH ONLINE | Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VmjXVFNU6Lk",
-                "duration": 3687,
-                "title": "Woody Woodpecker Show | Date With Destiny | Full Episode | Kids Cartoon | Videos For Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=l-zdDoNCVfQ",
-                "duration": 3585,
-                "title": "Ben and Holly’s Little Kingdom 🌹 Gaston's Valentine's Day Special 🌹 Cartoon for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OL6X7Ib35Vo",
-                "duration": 2641,
-                "title": "Jurassic Bean | Mr Bean Cartoon Season 2 | Full Episodes | Mr Bean Official"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UisLIsbHQaE",
-                "duration": 1442,
-                "title": "Curious George 🐑 George Goes to the Farm 🚜 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rmki3iAuuHk",
-                "duration": 296,
-                "title": "Ben 10 | Ben Meets Old Ben | Cartoon Network UK 🇬🇧"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=we8amlzi-jg",
-                "duration": 1308,
-                "title": "Caillou English Full Episodes | Caillou and the Loud Lunch | Cartoon Movie | Cartoons for"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RCJNzCuIQew",
-                "duration": 2599,
-                "title": "Go Fish Bean (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Official"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=chDzys9QnIs",
-                "duration": 2599,
-                "title": "Chocolate Bean 🍫 | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PV76K0gJTcg",
-                "duration": 1124,
-                "title": "Make Lemonade! 🐵 Curious George 🐵Kids Cartoon 🐵 Kids Movies 🐵Videos for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xPZ4od9Kn98",
-                "duration": 319,
-                "title": "Johnny Bravo | Becoming the Worst Super Hero | Cartoon Network"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dsm_45L8pdI",
-                "duration": 655,
-                "title": "Curious George ⛵️ Building a boat ⛵️ FULL EPISODE 🐵 Kids Cartoon 🐵 Kids Movies 🐵 Videos fo"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=htfevr4H80Q",
-                "duration": 3586,
-                "title": "Ben and Holly’s Little Kingdom | Giants Ben and Holly | Cartoon for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZgnCiZhOXoM",
-                "duration": 3318,
-                "title": "The Vault! | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p-e2R-O3iTo",
-                "duration": 1415,
-                "title": "Caillou Hurts His Knees | Caillou Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XVpDSxezAAs",
-                "duration": 1207,
-                "title": "Curious George 🐵  Bath Time! 🐵 20 Minute Show 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HFwNUQxgCIk",
-                "duration": 3742,
-                "title": "Ben and Holly’s Little Kingdom 🎅 Christmas Special | Cartoon for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yOFzSorKp0U",
-                "duration": 2658,
-                "title": "George Breaks His Leg! __ Curious George __ Kids Cartoon __ Kids Movies __Videos for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aN47aaoE1K4",
-                "duration": 1362,
-                "title": "Caillou at the Restaurant | Caillou Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KPQrTv4Htus",
-                "duration": 2439,
-                "title": "CHILLI Bean  | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Official"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QDhdMF0qZI8",
-                "duration": 437,
-                "title": "Ku'u Lei Melody | A Mickey Mouse Cartoon | @disneykids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kihDaobxVOs",
-                "duration": 662,
-                "title": "Fun Dungeon | Clarence | Cartoon Network"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O8QG9mXgFvw",
-                "duration": 3417,
-                "title": "LARVA - LARVA SPARTANS - LARVA 300 | Videos For Kids | Larva Cartoon || Larva Animation"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ySpwBpCZ-EM",
-                "duration": 648,
-                "title": "Drafty, Isn't It - 1957 Cartoon - Full video - Looney Tunes (Government Video) HD/Blueray"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gsH1-7FHiLU",
-                "duration": 695,
-                "title": "The Fixies ★ The Cartoon - The Alarm  ★ Fixies English 2017 | Videos For Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pzKJ-yhg9JY",
-                "duration": 2413,
-                "title": "Curious George 🐵 A Monkey's Duckling 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LfFsXznB2UI",
-                "duration": 245,
-                "title": "Carnaval | A Mickey Mouse Cartoon | @disneykids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=J-mf8lD_LTw",
-                "duration": 247,
-                "title": "Good Sports | A Mickey Mouse Cartoon | @disneykids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xY1FEsAGP74",
-                "duration": 3890,
-                "title": "Awesome Collection #1 | Ben 10 (Classic) | Cartoon Network Asia"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mqCrZVo_KLA",
-                "duration": 4092,
-                "title": "PJ Masks | Catboy & Owlette Arrive! | 1 HOUR COMPILATION | Kids Cartoon | Superheroes | Ki"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QZj58gaWBQk",
-                "duration": 3715,
-                "title": "🎄 Peppa Pig Christmas Special Episodes! | Peppa Pig Official Family Kids Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uU3AIBmXF1o",
-                "duration": 1369,
-                "title": "Tom und Jerry auf Deutsch | Klassischer Cartoon 115 | WB Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W9suBMVysz8",
-                "duration": 646,
-                "title": "Mr Bean | Roadworks | Videos For Kids | Mr Bean Cartoon | Full Episode | WildBrain Videos"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oLdjfDy6rn4",
-                "duration": 1309,
-                "title": "The Fixies | The Cartoons | Cartoon in English"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Y9VZ7ASHcMs",
-                "duration": 1448,
-                "title": "Curious George 🦷 Why do we brush our teeth? 🦷 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WTr9SjjGny8",
-                "duration": 1311,
-                "title": "Caillou English Full Episodes | Caillou hates Healthy Food | Cartoon Movie | Cartoons for"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TJ1IbqPNfpU",
-                "duration": 1887,
-                "title": "PJ Masks | Losing Control of our Powers! | Kids Cartoon Video | Animation for Kids | COMPI"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SQoynr6GqTs",
-                "duration": 609,
-                "title": "Lamput Presents: Spider and Baby Elephant (Ep. 28) | Lamput | Cartoon Network Asia"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lJx753KxYZE",
-                "duration": 2753,
-                "title": "Peppa Pig Visits Madame Gazelle's House! | Peppa Pig Official Family Kids Cartoon"
+                "url": "https://www.youtube.com/watch?v=XbdAkvSGe1Y",
+                "duration": 2583,
+                "title": "REDECORATING In Time For Christmas | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Of"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Nz18QfdLXfM",
@@ -387,54 +272,9 @@
                 "title": "Land Before Time | The Lone Dinosaur Returns  | Cartoon for Kids | Kids Movies"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DlMeZG8YDec",
-                "duration": 646,
-                "title": "Mr Bean | Chocks Away | Cartoon for kids | Mr Bean Cartoon | Full Episode | WildBrain"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Tphz-X3Ks0o",
-                "duration": 1314,
-                "title": "Trial And Terror | Supa Strikas - Rookie Season | Soccer Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3uBo90KM6gI",
-                "duration": 3485,
-                "title": "Awesome Collection #2 | Ben 10 | Cartoon Network Asia"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gKCMpKGwh64",
-                "duration": 2552,
-                "title": "Curious George 🐵 Muddy Monkey 🐵 Kids Cartoon 🐵 Kids Movies | Videos For Kids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xzUc7c-yHQ8",
-                "duration": 2162,
-                "title": "★NEW★ Caillou and the FOOD FAIR | Funny Animated cartoon for Kids | Cartoon Caillou l Cart"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OEVQltW5Ts8",
-                "duration": 1159,
-                "title": "Caillou and the Vehicles | Caillou Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Y0-S1puWmyc",
-                "duration": 2657,
-                "title": "SCOUT Bean | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zlYUhmXCkZk",
-                "duration": 300,
-                "title": "NEW Steven Universe Future | Steven Has A Snow Day | Cartoon Network"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TgluhxsUU14",
-                "duration": 935,
-                "title": "Caillou Stuck in an Elevator | Caillou Cartoon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MfHAaupJOCg",
-                "duration": 250,
-                "title": "The Amazing World of Gumball | The Origins | Cartoon Network"
+                "url": "https://www.youtube.com/watch?v=O8QG9mXgFvw",
+                "duration": 3417,
+                "title": "LARVA - LARVA SPARTANS - LARVA 300 | Videos For Kids | Larva Cartoon || Larva Animation"
             },
             {
                 "url": "https://www.youtube.com/watch?v=0YOgFYBF7uY",
@@ -442,14 +282,54 @@
                 "title": "DIY Bean | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
             },
             {
-                "url": "https://www.youtube.com/watch?v=k9hlWp0qUYE",
-                "duration": 3230,
-                "title": "NEW Cat! | Mr Bean Cartoon Season 1 | Full Episodes | Mr Bean Official"
+                "url": "https://www.youtube.com/watch?v=_jNHb7MWHRw",
+                "duration": 1634,
+                "title": "Autumn Fun with Guess How Much I Love You | Cozy Preschool Cartoon 🍂🐰"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4r8SeAj7imo",
-                "duration": 666,
-                "title": "Islander of the Year | Full Episode | Cartoons for Kids | Clifford the Big Red Dog"
+                "url": "https://www.youtube.com/watch?v=yOFzSorKp0U",
+                "duration": 2658,
+                "title": "George Breaks His Leg! __ Curious George __ Kids Cartoon __ Kids Movies __Videos for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=htfevr4H80Q",
+                "duration": 3586,
+                "title": "Ben and Holly’s Little Kingdom | Giants Ben and Holly | Cartoon for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QZj58gaWBQk",
+                "duration": 3715,
+                "title": "🎄 Peppa Pig Christmas Special Episodes! | Peppa Pig Official Family Kids Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OEVQltW5Ts8",
+                "duration": 1159,
+                "title": "Caillou and the Vehicles | Caillou Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J-mf8lD_LTw",
+                "duration": 247,
+                "title": "Good Sports | A Mickey Mouse Cartoon | @disneykids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xaxF7fWhJAw",
+                "duration": 306,
+                "title": "Ben 10 | The Omnitrix Saves Ben | Omni Tricked | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FOeInY91XZo",
+                "duration": 3666,
+                "title": "Woody Woodpecker Show | Hospital Hi-Jinx | Full Episode | Kids Cartoon | Videos For Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QDhdMF0qZI8",
+                "duration": 437,
+                "title": "Ku'u Lei Melody | A Mickey Mouse Cartoon | @disneykids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aN47aaoE1K4",
+                "duration": 1362,
+                "title": "Caillou at the Restaurant | Caillou Cartoon"
             },
             {
                 "url": "https://www.youtube.com/watch?v=aRb0ycq_q9Q",
@@ -457,24 +337,84 @@
                 "title": "Bean Cartoon - Long Compilation #328 ᐸ3 Mister Bean Number One Fan in HD"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aI6jbz4q2Qs",
-                "duration": 3586,
-                "title": "Ben and Holly’s Little Kingdom | Wise Old Elf Becomes Honey Bees | Cartoon for Kids"
+                "url": "https://www.youtube.com/watch?v=iG5y7C392Ro",
+                "duration": 3705,
+                "title": "Peppa Pig is on TV | Peppa Pig Official | Family Kids Cartoon"
             },
             {
-                "url": "https://www.youtube.com/watch?v=_ZUgyOwhOPA",
-                "duration": 281,
-                "title": "Teen Titans Go! | Transformation Chamber: Cars | Cartoon Network UK"
+                "url": "https://www.youtube.com/watch?v=jWtQMgGnQ-E",
+                "duration": 296,
+                "title": "Ben 10 | All Omni-Enhanced Aliens | Cartoon Network"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZscGift-T9U",
-                "duration": 1452,
-                "title": "Caillou's Front Crawl | Caillou Cartoon"
+                "url": "https://www.youtube.com/watch?v=RafDio654Ws",
+                "duration": 781,
+                "title": "Peppa Pig's New Tree House | Family Kids Cartoon"
             },
             {
-                "url": "https://www.youtube.com/watch?v=h4ZI7G8PhMs",
-                "duration": 743,
-                "title": "Don Smurfo • The Smurfs • 45th Hanna Barbera Anniversary • Full Episode • Classic Cartoon"
+                "url": "https://www.youtube.com/watch?v=HFwNUQxgCIk",
+                "duration": 3742,
+                "title": "Ben and Holly’s Little Kingdom 🎅 Christmas Special | Cartoon for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SQoynr6GqTs",
+                "duration": 609,
+                "title": "Lamput Presents: Spider and Baby Elephant (Ep. 28) | Lamput | Cartoon Network Asia"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TgluhxsUU14",
+                "duration": 935,
+                "title": "Caillou Stuck in an Elevator | Caillou Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G60PiMIEbtQ",
+                "duration": 991,
+                "title": "Caillou and the Lunch Box | Caillou Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SV3A9OpJ3SE",
+                "duration": 4947,
+                "title": "Caillou Full Episodes | Caillou at the Playground | Cartoon Movie | WATCH ONLINE | Cartoon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uVPUwNQ2sf8",
+                "duration": 356,
+                "title": "Looney Tunes – Ain’t Nature Grand | Classic Cartoon | Full Episode 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TJ1IbqPNfpU",
+                "duration": 1887,
+                "title": "PJ Masks | Losing Control of our Powers! | Kids Cartoon Video | Animation for Kids | COMPI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xzUc7c-yHQ8",
+                "duration": 2162,
+                "title": "★NEW★ Caillou and the FOOD FAIR | Funny Animated cartoon for Kids | Cartoon Caillou l Cart"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5s4RPViE2NY",
+                "duration": 605,
+                "title": "Ben and Holly's Little Kingdom | Planet Bong 2 - Full Episode | Kids Cartoon Shows"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WTr9SjjGny8",
+                "duration": 1311,
+                "title": "Caillou English Full Episodes | Caillou hates Healthy Food | Cartoon Movie | Cartoons for"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MfHAaupJOCg",
+                "duration": 250,
+                "title": "The Amazing World of Gumball | The Origins | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WnDnPuoX8hI",
+                "duration": 1913,
+                "title": "Missing Zoo Animals Episode | Cartoon Animation For Children | Videogyan Kids Shows | Zool"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cXn2ojjyYDQ",
+                "duration": 299,
+                "title": "Everything's Allowed When Dad's In Charge | Gumball | Cartoon Network"
             },
             {
                 "url": "https://www.youtube.com/watch?v=PtTzOTq1IOo",
@@ -482,29 +422,89 @@
                 "title": "Ben 10 | Alien X-Tinction: What is Going On? | Cartoon Network UK"
             },
             {
-                "url": "https://www.youtube.com/watch?v=jewSY5EuEhQ",
-                "duration": 2615,
-                "title": "MARATHON Bean 😅 | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=b1bJFh8F-iU",
-                "duration": 300,
-                "title": "The Fast and the Furry | Tom and Jerry | Cartoon Network Asia"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tTuSm7-oii4",
-                "duration": 2642,
-                "title": "Curious George 🐵Candy Counter 🐵Kids Cartoon 🐵Kids Movies 🐵Videos for Kids"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=iWR_5lG7_fE",
                 "duration": 1541,
                 "title": "★NEW★ CAILLOU LEARNS TO SWIM | Funny Animated cartoon for Kids | Cartoon Caillou l Cartoon"
             },
             {
-                "url": "https://www.youtube.com/watch?v=jWTYvFOwioE",
-                "duration": 245,
-                "title": "Swimmin’ Hole | A Mickey Mouse Cartoon | @disneykids"
+                "url": "https://www.youtube.com/watch?v=gsH1-7FHiLU",
+                "duration": 695,
+                "title": "The Fixies ★ The Cartoon - The Alarm  ★ Fixies English 2017 | Videos For Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jewSY5EuEhQ",
+                "duration": 2615,
+                "title": "MARATHON Bean 😅 | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KPQrTv4Htus",
+                "duration": 2439,
+                "title": "CHILLI Bean  | (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g2YQ6_55eFk",
+                "duration": 625,
+                "title": "Mr Bean Cartoon: Episode 12 (Pizza Bean) | Mr Bean Episode | Mister Bean Number 1 Fan in H"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yTwfWrZl3pE",
+                "duration": 292,
+                "title": "Teen Titans Go! | Multi-Personality Robin | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MiGHBJf-rWk",
+                "duration": 321,
+                "title": "Gumball | Watterson's Weird Dreams! | The Night | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W9suBMVysz8",
+                "duration": 646,
+                "title": "Mr Bean | Roadworks | Videos For Kids | Mr Bean Cartoon | Full Episode | WildBrain Videos"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Dw_YcPmnK5M",
+                "duration": 1669,
+                "title": "Johnny Bravo Full Episode 😂 | Classic Cartoon | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ln3tXC46yHk",
+                "duration": 288,
+                "title": "Gwen confronts Ben | Cirque-Us | Ben 10 | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xPZ4od9Kn98",
+                "duration": 319,
+                "title": "Johnny Bravo | Becoming the Worst Super Hero | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DlMeZG8YDec",
+                "duration": 646,
+                "title": "Mr Bean | Chocks Away | Cartoon for kids | Mr Bean Cartoon | Full Episode | WildBrain"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VmjXVFNU6Lk",
+                "duration": 3687,
+                "title": "Woody Woodpecker Show | Date With Destiny | Full Episode | Kids Cartoon | Videos For Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ob9YL-PQ7WI",
+                "duration": 4183,
+                "title": "Max and Ruby | Celebration and Party Compilation! | Funny HD Cartoon Collection for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EzNUvHTj-3I",
+                "duration": 677,
+                "title": "Chhota Bheem - Dholakpur Mein Bhoot Trouble | ढोलकपुर हुआ भुत से परेशन | Cartoon for Kids"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aUcRfOX-FT0",
+                "duration": 664,
+                "title": "Ben 10 | Alien Homeworlds | Cartoon Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4r8SeAj7imo",
+                "duration": 666,
+                "title": "Islander of the Year | Full Episode | Cartoons for Kids | Clifford the Big Red Dog"
             }
         ],
         "search_query": "classic cartoon full episode"

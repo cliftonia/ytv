@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Golf",
         "network_type": "streaming",
-        "channel_number": 8,
+        "channel_number": 11,
         "network_long_name": "Golf",
         "stream_rotation": "clock",
         "streams": [
@@ -10,6 +10,11 @@
                 "url": "https://www.youtube.com/watch?v=ocHoCz5j13Q",
                 "duration": 872,
                 "title": "Round 4 Highlights | 2026 Danish Golf Championship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zvNzkaTjOLs",
+                "duration": 897,
+                "title": "Danish Golf Championship 2026 | Round 3 Highlights"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZfF9yvF-6Ok",
@@ -27,19 +32,9 @@
                 "title": "Scottie Scheffler TIES COURSE RECORD to take lead! | Round 2 | FedEx St. Jude | 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=zvNzkaTjOLs",
-                "duration": 897,
-                "title": "Danish Golf Championship 2026 | Round 3 Highlights"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Xf-SdaSobbY",
                 "duration": 596,
                 "title": "PGA TOUR Highlights | Final Round | Wyndham Championship | 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=M_dsiD175RM",
-                "duration": 1323,
-                "title": "FULL HIGHLIGHTS | LIV Golf South Africa Final Round | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=bMehQsPOM_Q",
@@ -47,9 +42,9 @@
                 "title": "PGA Tour Highlights: 2026 RBC Heritage, Round 3 | Golf Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=L1ajkzeFjmA",
-                "duration": 1060,
-                "title": "FULL HIGHLIGHTS | LIV Golf New York Round 4 | 2026"
+                "url": "https://www.youtube.com/watch?v=M_dsiD175RM",
+                "duration": 1323,
+                "title": "FULL HIGHLIGHTS | LIV Golf South Africa Final Round | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=B3wY9Gq-WZU",
@@ -57,9 +52,19 @@
                 "title": "Condensed Round 3 presented by SHI | 2026 The Standard Portland Classic"
             },
             {
+                "url": "https://www.youtube.com/watch?v=L1ajkzeFjmA",
+                "duration": 1060,
+                "title": "FULL HIGHLIGHTS | LIV Golf New York Round 4 | 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=GZwQI3V0dmU",
                 "duration": 426,
                 "title": "Jeeno Thitikul Highlights | 2026 The Standard Portland Classic Rd. 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7SRapJ5ceog",
+                "duration": 539,
+                "title": "Golf is Hard | THE PLAYERS Championship 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=XyLN81S5ByQ",
@@ -77,24 +82,19 @@
                 "title": "Golf Is Hard | FedEx St. Jude Championship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cIgFvTCu3AE",
-                "duration": 835,
-                "title": "PGA Tour Highlights: The CJ Cup Byron Nelson, Round One | Golf Channel"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=xdyyXDfMR9M",
                 "duration": 1471,
                 "title": "FULL HIGHLIGHTS | LIV Golf South Africa Round 1 | 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=EVdj0aWbSo8",
-                "duration": 4506,
-                "title": "Every shot from Rory McIlroy’s win | THE PLAYERS | 2025"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=f3mUmgRJoxM",
                 "duration": 1025,
                 "title": "FULL HIGHLIGHTS | LIV Golf Hong Kong Round 4 | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EVdj0aWbSo8",
+                "duration": 4506,
+                "title": "Every shot from Rory McIlroy’s win | THE PLAYERS | 2025"
             },
             {
                 "url": "https://www.youtube.com/watch?v=YlEo9kXKdUM",
@@ -112,19 +112,14 @@
                 "title": "2026 FedEx St. Jude Championship: Jordan Spieth shares lead as Rory McIlroy struggles afte"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YC54JrR3DcQ",
-                "duration": 5311,
-                "title": "On The Range from the FedEx St. Jude Championship | 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=AKM2t30ktNk",
                 "duration": 614,
                 "title": "PGA Tour Highlights: 2026 Zurich Classic of New Orleans, Round 3 | Golf Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FH2d2riWG6k",
-                "duration": 278,
-                "title": "NCAA Golf Highlights: 2026 Western Intercollegiate, Round Two | Golf Channel"
+                "url": "https://www.youtube.com/watch?v=YC54JrR3DcQ",
+                "duration": 5311,
+                "title": "On The Range from the FedEx St. Jude Championship | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=h1vgHJALoTM",
@@ -162,14 +157,14 @@
                 "title": "FULL HIGHLIGHTS | LIV Golf Singapore Round 1 | 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=8qTwJxoxXQY",
-                "duration": 1668,
-                "title": "50 Crazy Golf Shots"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=fsa6RnCQAaM",
                 "duration": 1098,
                 "title": "FULL HIGHLIGHTS | LIV Golf Virginia Round 4 | 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8qTwJxoxXQY",
+                "duration": 1668,
+                "title": "50 Crazy Golf Shots"
             },
             {
                 "url": "https://www.youtube.com/watch?v=UiL1LgHuUfI",
@@ -202,14 +197,24 @@
                 "title": "2026 Big 12 Men's Golf Championship presented by Allstate Highlights"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KBwvwuXuNME",
-                "duration": 903,
-                "title": "LPGA Highlights: The 2026 Amundi Evian Championship, Final Round | Golf Channel"
+                "url": "https://www.youtube.com/watch?v=t0YkzXBP49I",
+                "duration": 998,
+                "title": "Final Round Highlights | FPO | 2026 DGPT Doubles Championship at the Preserve"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VyWUXTgbX9s",
+                "duration": 492,
+                "title": "Jordan Spieth takes co-lead in Memphis | Round 1 | FedEx St. Jude | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=DeRjCQrPWgE",
                 "duration": 541,
                 "title": "Valero Texas Open: Round 3 Suspended Due to Weather | Golf Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cIe8imvGIWs",
+                "duration": 977,
+                "title": "Final Round Highlights | MPO | 2026 DGPT Doubles Championship at the Preserve"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z20sS7rM51Q",
@@ -220,11 +225,6 @@
                 "url": "https://www.youtube.com/watch?v=5uI6gpVjHdw",
                 "duration": 435,
                 "title": "Naomi Osaka vs. Elena Rybakina | 2026 Toronto Quarterfinal | WTA Match Highlights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VyWUXTgbX9s",
-                "duration": 492,
-                "title": "Jordan Spieth takes co-lead in Memphis | Round 1 | FedEx St. Jude | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-bXKUP_z178",
@@ -242,14 +242,14 @@
                 "title": "The Open Championship Golf Live Stream | Round 1 | 2026 154th Open Championship Golf Full"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cIe8imvGIWs",
-                "duration": 977,
-                "title": "Final Round Highlights | MPO | 2026 DGPT Doubles Championship at the Preserve"
+                "url": "https://www.youtube.com/watch?v=GF0b05_nzns",
+                "duration": 959,
+                "title": "Round 2 Highlights | FPO | 2026 DGPT Doubles Championship at the Preserve"
             },
             {
-                "url": "https://www.youtube.com/watch?v=t0YkzXBP49I",
-                "duration": 998,
-                "title": "Final Round Highlights | FPO | 2026 DGPT Doubles Championship at the Preserve"
+                "url": "https://www.youtube.com/watch?v=FH2d2riWG6k",
+                "duration": 278,
+                "title": "NCAA Golf Highlights: 2026 Western Intercollegiate, Round Two | Golf Channel"
             },
             {
                 "url": "https://www.youtube.com/watch?v=q6OeooVKb5c",
@@ -267,11 +267,6 @@
                 "title": "PGA Tour Highlights 2026: Farmers Insurance Open, Round 3 | Golf Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=idmXO8LGam0",
-                "duration": 1383,
-                "title": "2026 FedEx St. Jude Championship: Scottie Scheffler holds 2-shot lead, Sam Burns makes his"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=vt_Cc-IH_8c",
                 "duration": 1406,
                 "title": "Funniest Golf Moments of the Year | 2025 Edition"
@@ -282,14 +277,14 @@
                 "title": "Jackson Koivun highlights from the 2026 NCAA golf championships"
             },
             {
-                "url": "https://www.youtube.com/watch?v=jUyl4R8bCVs",
-                "duration": 1188,
-                "title": "FULL HIGHLIGHTS | LIV Golf Adelaide Round 3 | 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=XMxhJ1ZVpvY",
                 "duration": 1370,
                 "title": "He did it AGAIN... Bryson DeChambeau Wins at LIV Golf South Africa 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jUyl4R8bCVs",
+                "duration": 1188,
+                "title": "FULL HIGHLIGHTS | LIV Golf Adelaide Round 3 | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=8mJYAQlE2qw",
@@ -297,9 +292,9 @@
                 "title": "Trophy Lift Madness! Bryson DeChambeau Celebrates LIV Golf South Africa 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GF0b05_nzns",
-                "duration": 959,
-                "title": "Round 2 Highlights | FPO | 2026 DGPT Doubles Championship at the Preserve"
+                "url": "https://www.youtube.com/watch?v=idmXO8LGam0",
+                "duration": 1383,
+                "title": "2026 FedEx St. Jude Championship: Scottie Scheffler holds 2-shot lead, Sam Burns makes his"
             },
             {
                 "url": "https://www.youtube.com/watch?v=n8YYktuwHfI",
@@ -322,11 +317,6 @@
                 "title": "2026 OTB Open | MPO R1B9 | Lizotte, Ulibarri, Robinson, Gossage | Jomez Disc Golf"
             },
             {
-                "url": "https://www.youtube.com/watch?v=s5Yab-a4d8k",
-                "duration": 283,
-                "title": "LPGA Highlights: 2026 Mizuho Americas Open, Final Round | Golf Channel"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=mhQ2b7lfUU0",
                 "duration": 763,
                 "title": "LIV Golf UK 2026 Round 2 Full Highlights | JCB Golf & Country Club"
@@ -335,11 +325,6 @@
                 "url": "https://www.youtube.com/watch?v=9WNyGsnQ7Y0",
                 "duration": 639,
                 "title": "NCAA Golf Highlights: Division 1 Women's Golf Championship | Golf Channel"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ye21Xu3kSnQ",
-                "duration": 411,
-                "title": "NCAA Golf Highlights: 2026 NCAA Women's Individual Championship | Golf Channel"
             },
             {
                 "url": "https://www.youtube.com/watch?v=6Y_jRtNYgeY",
@@ -362,14 +347,9 @@
                 "title": "MOROCCO VS CAMEROON(1-3)-WAFCON 2026-PENALTIES SHOOTOUT"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Gd1Jdy-0jAA",
-                "duration": 656,
-                "title": "PGA Tour Highlights 2026: WM Phoenix Open, final round | Golf Channel"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hoe3Fo61NpA",
-                "duration": 315,
-                "title": "PGA Tour highlights: 2026 ONEFlight Myrtle Beach Classic, Second Round | Golf Channel"
+                "url": "https://www.youtube.com/watch?v=NcqKgxlQ83Q",
+                "duration": 733,
+                "title": "PGA Tour highlights: 2026 Memorial Tournament, Round One | Golf Channel"
             },
             {
                 "url": "https://www.youtube.com/watch?v=kc5eHTkkza0",
@@ -392,29 +372,19 @@
                 "title": "Charley Hull | Second Round Highlights | 62 (-11) Course Record | PIF London Championship"
             },
             {
-                "url": "https://www.youtube.com/watch?v=NcqKgxlQ83Q",
-                "duration": 733,
-                "title": "PGA Tour highlights: 2026 Memorial Tournament, Round One | Golf Channel"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_40JyL7EU_s",
-                "duration": 2482,
-                "title": "2026 Northwest Championship | FPO R3F9 | Saarinen, Scoggins, Midtlyng, Gannon | Jomez Disc"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=_f7YOuIqgxY",
                 "duration": 593,
                 "title": "PGA Tour Highlights 2026: WM Phoenix Open, Round 3 | Golf Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=JwkbAvCDPWA",
-                "duration": 1040,
-                "title": "Bryson DeChambeau’s INSANE Comeback Win in LIV Golf Singapore 2026 (Wild Playoff)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=TwYi1XbWB0I",
                 "duration": 1659,
                 "title": "Full Highlights | Pakistan Greens vs Pakistan Whites | Match 1 | National Champions Cup 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JwkbAvCDPWA",
+                "duration": 1040,
+                "title": "Bryson DeChambeau’s INSANE Comeback Win in LIV Golf Singapore 2026 (Wild Playoff)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Q01jhHH8abY",
@@ -452,6 +422,26 @@
                 "title": "Bryson DeChambeau’s RIDICULOUS drives on No. 6 at Arnold Palmer"
             },
             {
+                "url": "https://www.youtube.com/watch?v=BolEEFPmY1M",
+                "duration": 1120,
+                "title": "Golf Fails | 2024 Edition"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k0Xt5vjzHss",
+                "duration": 316,
+                "title": "Oklahoma State's Preston Stout wins 2026 NCAA men's golf individual title"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cOjIaxL6m1Y",
+                "duration": 674,
+                "title": "HIGHLIGHTS: Good Good Tour, West Point | Golf Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rACyzDpzYJ4",
+                "duration": 248,
+                "title": "HIGHLIGHTS | 11th Bradby Golf 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=uvPNyAc3hvo",
                 "duration": 397,
                 "title": "Senior PGA Championship Highlights: Round 2 | Golf Channel"
@@ -460,6 +450,11 @@
                 "url": "https://www.youtube.com/watch?v=-BBxdtEO1hg",
                 "duration": 363,
                 "title": "Rory McIlroy Truist Championship First Round Highlights | Golf Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lbTlK9CNBQ4",
+                "duration": 1052,
+                "title": "Final Round Highlights | 2026 United States Women's Disc Golf Championship"
             },
             {
                 "url": "https://www.youtube.com/watch?v=vR6NQgnE19o",
@@ -472,9 +467,24 @@
                 "title": "Kelly Slater vs Gabriel Medina | Outerknown Tahiti Pro pres by I-SEA 2026 - Round 2 Full R"
             },
             {
+                "url": "https://www.youtube.com/watch?v=ATqEY5yychw",
+                "duration": 438,
+                "title": "NCAA Golf Highlights: 2026 NCAA Women's Team Match Play, Quarterfinals | Golf Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_40JyL7EU_s",
+                "duration": 2482,
+                "title": "2026 Northwest Championship | FPO R3F9 | Saarinen, Scoggins, Midtlyng, Gannon | Jomez Disc"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=gte5BrNU_7g",
                 "duration": 491,
                 "title": "Tiger Woods | Round 1 Highlights | 2024 PGA Championship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E1DqWUg_GM0",
+                "duration": 433,
+                "title": "LPGA Tour Highlights 2026: Aramco Championship, Round Two | Golf Channel"
             },
             {
                 "url": "https://www.youtube.com/watch?v=YLSpbYK-3To",
@@ -487,24 +497,14 @@
                 "title": "Lucas Herbert Round 2 Full Day Highlights | LIV Golf UK 2026 | Every Shot, Birdie & Eagle"
             },
             {
-                "url": "https://www.youtube.com/watch?v=-QwjACwTDw0",
-                "duration": 420,
-                "title": "Coco Gauff vs. Elena Rybakina | 2026 Toronto Semifinal | WTA Match Highlights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9Eod-c4mrpI",
-                "duration": 903,
-                "title": "Indianapolis Colts vs. New England Patriots | 2026 Preseason Week 1"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=PoepwlLjGeU",
                 "duration": 601,
                 "title": "Legion XIII FULL Round 4 Highlights | LIV Golf Mexico City | 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=_ao9lrkDsjc",
-                "duration": 904,
-                "title": "Minnesota Vikings vs. New York Giants | 2026 Preseason Week 1"
+                "url": "https://www.youtube.com/watch?v=9Eod-c4mrpI",
+                "duration": 903,
+                "title": "Indianapolis Colts vs. New England Patriots | 2026 Preseason Week 1"
             }
         ],
         "search_query": "golf tournament highlights"

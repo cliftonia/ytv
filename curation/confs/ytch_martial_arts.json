@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Martial Arts",
         "network_type": "streaming",
-        "channel_number": 18,
+        "channel_number": 21,
         "network_long_name": "Martial Arts",
         "stream_rotation": "clock",
         "streams": [
@@ -32,19 +32,19 @@
                 "title": "【ENG DUB】The Master of HongQuan | He Turned Pain Into Power and Became a Legend | Kung Fu"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cGMlnPhkpjE",
-                "duration": 4900,
-                "title": "A secret society of martial artists wages war against a cruel lord! | ACTION Full Movie |"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=neBQl6Uyk8A",
                 "duration": 4046,
                 "title": "New Martial Arts Action 2026! Assassin Takes Revenge For His Family!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bxV1TsKemTc",
-                "duration": 4918,
-                "title": "【2026 Action】Epic Martial Arts: Lone Desert Swordsman Fights A Thousand Wasteland Warriors"
+                "url": "https://www.youtube.com/watch?v=cGMlnPhkpjE",
+                "duration": 4900,
+                "title": "A secret society of martial artists wages war against a cruel lord! | ACTION Full Movie |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ik_JRTCvz3c",
+                "duration": 5287,
+                "title": "Death Fighter FULL MOVIE | Martial Arts Movies | Don ‘The Dragon’ Wilson | Movies Max"
             },
             {
                 "url": "https://www.youtube.com/watch?v=gH8lJGEIZGA",
@@ -52,9 +52,9 @@
                 "title": "Incredible Action KUNG FU MOVIE! Wushu Warrior | Full movies in English"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ik_JRTCvz3c",
-                "duration": 5287,
-                "title": "Death Fighter FULL MOVIE | Martial Arts Movies | Don ‘The Dragon’ Wilson | Movies Max"
+                "url": "https://www.youtube.com/watch?v=bxV1TsKemTc",
+                "duration": 4918,
+                "title": "【2026 Action】Epic Martial Arts: Lone Desert Swordsman Fights A Thousand Wasteland Warriors"
             },
             {
                 "url": "https://www.youtube.com/watch?v=kqkje9y8Q14",
@@ -82,14 +82,14 @@
                 "title": "The Mortal Master I| Chinese Old Action Kung Fu Movie In English"
             },
             {
-                "url": "https://www.youtube.com/watch?v=beF1mgDtazs",
-                "duration": 1239,
-                "title": "Japanese Samurai Mocked Chinese Martial Arts, But a Kung Fu Kid Destroyed Him in One Strik"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=FdO4-d0rtuk",
                 "duration": 4410,
                 "title": "Kung Fu Sequel: The Fire-Cloud Evil God - English | Martial Arts Action Movie, Full Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=beF1mgDtazs",
+                "duration": 1239,
+                "title": "Japanese Samurai Mocked Chinese Martial Arts, But a Kung Fu Kid Destroyed Him in One Strik"
             },
             {
                 "url": "https://www.youtube.com/watch?v=XUFKHirsnTY",
@@ -97,19 +97,9 @@
                 "title": "Explosive Kung Fu: Legendary fighter battles ninjas in the rain. The leader is his ex-love"
             },
             {
-                "url": "https://www.youtube.com/watch?v=6IfoI5d63NM",
-                "duration": 5364,
-                "title": "When His Partner Was Killed, He Swore Vengeance | White Tiger | Martial Arts Action Movie"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=azodJQ68RtY",
                 "duration": 5318,
                 "title": "Death Ring | MARTIAL ARTS ACTION | Full Movie"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bwu_EKCC854",
-                "duration": 5400,
-                "title": "The Professional: Shadowless | Chinese Wuxia Martial Arts Action Movie English Sub, Full M"
             },
             {
                 "url": "https://www.youtube.com/watch?v=5cnNywHBt68",
@@ -122,14 +112,19 @@
                 "title": "【ENG DUB】Ten Tigers of Guangdong: Huang Chengke's Thorned Path|  Wounded Boy Was a Kung Fu"
             },
             {
+                "url": "https://www.youtube.com/watch?v=4D9Au64Mp6o",
+                "duration": 4252,
+                "title": "Drunken Master - English | Chinese Kung Fu Martial Arts Action Movie, Full Movie HD"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=QG8iQUPLVqc",
                 "duration": 5292,
                 "title": "THEY PICKED THE WRONG FIGHTER | Full Action Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4D9Au64Mp6o",
-                "duration": 4252,
-                "title": "Drunken Master - English | Chinese Kung Fu Martial Arts Action Movie, Full Movie HD"
+                "url": "https://www.youtube.com/watch?v=JFREFb_FUd8",
+                "duration": 3939,
+                "title": "The Mystic Nine:Changsha Vendetta |Kungfu/Action/Martial Arts|Chinese movie 2025|iQIYI Mov"
             },
             {
                 "url": "https://www.youtube.com/watch?v=bgv4j1xZ6Vc",
@@ -142,11 +137,6 @@
                 "title": "Revenge movie!After his parents are killed,a boy masters peerless swordsmanship and avenge"
             },
             {
-                "url": "https://www.youtube.com/watch?v=JFREFb_FUd8",
-                "duration": 3939,
-                "title": "The Mystic Nine:Changsha Vendetta |Kungfu/Action/Martial Arts|Chinese movie 2025|iQIYI Mov"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=XBAzG7zqA2k",
                 "duration": 5351,
                 "title": "Fierce action movie: Kung Fu siblings wipe out gangsters barehanded to save dad!"
@@ -155,6 +145,11 @@
                 "url": "https://www.youtube.com/watch?v=eI6JjwkwL4E",
                 "duration": 5090,
                 "title": "【ENG DUB】Ten Tigers: the Kungfu King Iron Bridges' glory | Heroes expel foreign intruders"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pD5dJAWeEDo",
+                "duration": 5068,
+                "title": "Latest Kung Fu action movie | Gang Kidnaps Boy, Fighter Destroys Entire Crime Syndicate Al"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZVotTGNpl9U",
@@ -167,14 +162,9 @@
                 "title": "[Kung Fu Movie] Kung Fu beauty disguised as a nurse defeated all the Japanese soldiers!#mo"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pD5dJAWeEDo",
-                "duration": 5068,
-                "title": "Latest Kung Fu action movie | Gang Kidnaps Boy, Fighter Destroys Entire Crime Syndicate Al"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a_oIaM-zJgY",
-                "duration": 5269,
-                "title": "Shaolin: Dawn of the Demons | Fantasy/Action/Drama | Chinese movie 2025 | iQIYI Movie Engl"
+                "url": "https://www.youtube.com/watch?v=0hv_7tQfHCM",
+                "duration": 5317,
+                "title": "JUNGLE HUNT (2026) | Tony Jaa × Iko Uwais | Full Action Survival Movie"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2upE6fyvwEY",
@@ -182,14 +172,14 @@
                 "title": "The World's Deadliest Assassin Broke One Rule | Full Action Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=iQgfHPC_ju8",
-                "duration": 3759,
-                "title": "The Road of Revenge | Chinese Wuxia Martial Arts Action Movie English Sub, Full Movie HD"
+                "url": "https://www.youtube.com/watch?v=hQsB1kb_Npk",
+                "duration": 4874,
+                "title": "Duel with the Devils | Full Martial Arts Action Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=0hv_7tQfHCM",
-                "duration": 5317,
-                "title": "JUNGLE HUNT (2026) | Tony Jaa × Iko Uwais | Full Action Survival Movie"
+                "url": "https://www.youtube.com/watch?v=3OxaPc_gLD4",
+                "duration": 4918,
+                "title": "Breathing Fire (1991) | Full Martial Arts Movie | Kickboxing Action Thriller"
             },
             {
                 "url": "https://www.youtube.com/watch?v=iFy5aHqtUmg",
@@ -197,19 +187,9 @@
                 "title": "He Was Trained To Kill… But His Tears Told Another Story | Full Action Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hQsB1kb_Npk",
-                "duration": 4874,
-                "title": "Duel with the Devils | Full Martial Arts Action Movie"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Xy0InKTRHAY",
                 "duration": 5109,
                 "title": "NO MERCY FIGHT (2026) | Tony Jaa | Full Action Movie"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3OxaPc_gLD4",
-                "duration": 4918,
-                "title": "Breathing Fire (1991) | Full Martial Arts Movie | Kickboxing Action Thriller"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-HF26d3FwMw",
@@ -222,19 +202,24 @@
                 "title": "They Challenged a Nobody, But He Defeated 10 Martial Arts Legends Alone!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IxbYJ-e5_iA",
-                "duration": 5049,
-                "title": "DEAD YARD (2026) | Scott Adkins | Full Action Movie"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=0GiuA4SFt5Y",
                 "duration": 4830,
                 "title": "Jet Li and Leung Ka-yan stars in the film \"Legend of Fang Shiyu\"🔥 |  Action | Kungfu | Wux"
             },
             {
+                "url": "https://www.youtube.com/watch?v=IxbYJ-e5_iA",
+                "duration": 5049,
+                "title": "DEAD YARD (2026) | Scott Adkins | Full Action Movie"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=axt5Nxfopm4",
                 "duration": 1461,
                 "title": "🔥 WING CHUN WARPATH! 🔥 | Ip Man 2 Wild Fight Scenes | @ActionReload"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KJYLXDD7UwM",
+                "duration": 5093,
+                "title": "TRAIN HUNT (2026) | Jason Statham & Iko Uwais | Full Action Movie"
             },
             {
                 "url": "https://www.youtube.com/watch?v=cliCeGwS8y4",
@@ -247,19 +232,14 @@
                 "title": "The Drunken Monk | Full Martial Arts Action Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KJYLXDD7UwM",
-                "duration": 5093,
-                "title": "TRAIN HUNT (2026) | Jason Statham & Iko Uwais | Full Action Movie"
+                "url": "https://www.youtube.com/watch?v=pabciQ-MJD0",
+                "duration": 5193,
+                "title": "Ninja | Full Movie | Action Martial Arts | Scott Adkins"
             },
             {
                 "url": "https://www.youtube.com/watch?v=vnqhqNAFNBk",
                 "duration": 477,
                 "title": "3 damn good KARATE scenes from Minions 2  🌀 4K"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pabciQ-MJD0",
-                "duration": 5193,
-                "title": "Ninja | Full Movie | Action Martial Arts | Scott Adkins"
             },
             {
                 "url": "https://www.youtube.com/watch?v=VZ4rsa5fI5c",
@@ -282,6 +262,26 @@
                 "title": "The Original Drunken Master's Student | Full Kung Fu Movie (1979)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=_tIFCMDxsF8",
+                "duration": 5144,
+                "title": "The Masters of Shaolin Temple (1978) | Full Martial Arts Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iQgfHPC_ju8",
+                "duration": 3759,
+                "title": "The Road of Revenge | Chinese Wuxia Martial Arts Action Movie English Sub, Full Movie HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FT64a-8ygg0",
+                "duration": 1715,
+                "title": "Jackie Chan | Insane Fight Scenes Compilation | ClipZone: High Octane Hits"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dNPFH90DvYQ",
+                "duration": 5396,
+                "title": "Enter the Game of Death (1978) | Full Martial Arts Movie | Classic Kung Fu Action | Bolo Y"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=nYnNIsbD74o",
                 "duration": 4952,
                 "title": "BLOWBACK | ACTION | Full Movie in English"
@@ -292,14 +292,14 @@
                 "title": "Snake Fist Fighter (1973) | Full Martial Arts Movie | Jackie Chan Kung Fu Classic"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Y2qqXQYkr7U",
-                "duration": 5237,
-                "title": "HARD ROCK :: (2026) Scott Adkins | NEW Action Movie Adventure | 4K HDR #actionmovies"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=r8f7pqDx03Y",
                 "duration": 4297,
                 "title": "Action Movie | 👊Japanese Master Mocks Kung Fu, Then Gets Dropped by One Punch! #KungFu #Ho"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y2qqXQYkr7U",
+                "duration": 5237,
+                "title": "HARD ROCK :: (2026) Scott Adkins | NEW Action Movie Adventure | 4K HDR #actionmovies"
             },
             {
                 "url": "https://www.youtube.com/watch?v=l6S67tUGurY",
@@ -342,14 +342,19 @@
                 "title": "IN THE LINE OF DUTY II - THE SUPER COPS | Michelle Yeoh's 1980s Martial Arts Classic | Ful"
             },
             {
-                "url": "https://www.youtube.com/watch?v=syPO8e36YSI",
-                "duration": 696,
-                "title": "NIGHT SHIFT - Martial Arts Action Short Film"
+                "url": "https://www.youtube.com/watch?v=a_oIaM-zJgY",
+                "duration": 5269,
+                "title": "Shaolin: Dawn of the Demons | Fantasy/Action/Drama | Chinese movie 2025 | iQIYI Movie Engl"
             },
             {
                 "url": "https://www.youtube.com/watch?v=o2rNxyxKztE",
                 "duration": 5400,
                 "title": "KARMA :: (2026) Donnie Yen | Full Action Movie - Thriller - Adventure | 4K HDR #actionmovi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=syPO8e36YSI",
+                "duration": 696,
+                "title": "NIGHT SHIFT - Martial Arts Action Short Film"
             },
             {
                 "url": "https://www.youtube.com/watch?v=wjBSgudUnDw",
@@ -372,24 +377,19 @@
                 "title": "Jackie Chan and Jaden Smith unleash the devastating power of Kung Fu – The Karate Kid"
             },
             {
-                "url": "https://www.youtube.com/watch?v=W-8Wn8ltsl0",
-                "duration": 5133,
-                "title": "NO WAY OUT (2026) | Jason Statham × Tony Jaa | Full Action Movie"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UpRwcB79E5k",
                 "duration": 5141,
                 "title": "Jackie Chan's Wake of the Warrior Full Movie HD | Epic Martial Arts Action Power & Legenda"
             },
             {
-                "url": "https://www.youtube.com/watch?v=u8RMCUsB6T4",
-                "duration": 4898,
-                "title": "2025 Action Blockbuster: The drunken beggar is the strongest, instantly killing a company"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=o0Tx6-eVYmo",
                 "duration": 5103,
                 "title": "JUNGLE CAGE (2025) | Jason Statham × Scott Adkins × Tony Jaa | Full Action Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u8RMCUsB6T4",
+                "duration": 4898,
+                "title": "2025 Action Blockbuster: The drunken beggar is the strongest, instantly killing a company"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2jOdkQGw9u0",
@@ -432,14 +432,19 @@
                 "title": "DEATH ORDER (2026) | Scott Adkins × Michael Jai White | Full Action Movie"
             },
             {
-                "url": "https://www.youtube.com/watch?v=h0k0v1BzIYw",
-                "duration": 4836,
-                "title": "The Raid 2 Full Movie 2014 | English Movies Full Movie | The Raid street fight | Movie Sce"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=SEuktEFMyq0",
                 "duration": 564,
                 "title": "Li vs Conor in the Final Fight | KARATE KID: LEGENDS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ELgJ7SUqhP0",
+                "duration": 3683,
+                "title": "Kung Fu Movie!A poisoned young man is saved by a mysterious old man and masters the NO.1 k"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h0k0v1BzIYw",
+                "duration": 4836,
+                "title": "The Raid 2 Full Movie 2014 | English Movies Full Movie | The Raid street fight | Movie Sce"
             },
             {
                 "url": "https://www.youtube.com/watch?v=fHpLEGIVyCA",
@@ -472,16 +477,6 @@
                 "title": "The Imperial Bodyguards 2 | Martial Arts Action Movie English Sub, Full Movie HD"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GMiqzcjB7tg",
-                "duration": 4518,
-                "title": "The Legend of Mermaid - English | Fantasy Love Story Romance & Adventure Action Movie HD"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ELgJ7SUqhP0",
-                "duration": 3683,
-                "title": "Kung Fu Movie!A poisoned young man is saved by a mysterious old man and masters the NO.1 k"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=2NLmTLVDt6w",
                 "duration": 5310,
                 "title": "CHINESE BODYGUARD (2023) Kung Fu Action Movie"
@@ -505,6 +500,11 @@
                 "url": "https://www.youtube.com/watch?v=S3O5pjILbgs",
                 "duration": 5314,
                 "title": "The Killing Inn | New Blockbuster Hindi Dubbed Movie | 2026 Hollywood Action Movie In Hind"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bkLSNIlBuOo",
+                "duration": 5089,
+                "title": "Motu और Patlu की Japan की Martial Arts Adventure | Kung-Fu Kings 4:The Challenge of Kung F"
             }
         ],
         "search_query": "martial arts full movie english"

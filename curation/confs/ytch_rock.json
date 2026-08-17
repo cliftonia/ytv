@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Rock",
         "network_type": "streaming",
-        "channel_number": 56,
+        "channel_number": 64,
         "network_long_name": "Rock",
         "stream_rotation": "clock",
         "streams": [
@@ -27,16 +27,6 @@
                 "title": "Camp Rock 3 Live Performance at D23 2026 Presented by the Jonas Brothers"
             },
             {
-                "url": "https://www.youtube.com/watch?v=D5bZsM43DfY",
-                "duration": 239,
-                "title": "Electric Callboy - MC THUNDER LIVE at Rock Am Ring 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RG0V0eC-Ghc",
-                "duration": 399,
-                "title": "Smoke on The Water - Deep Purple - Live - Aug. 9 2026 - Hard Rock Live - Fl."
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=i2I-uUIwIQc",
                 "duration": 253,
                 "title": "Mötley Crüe & Carrie Underwood ROCK The Grand Finale With 2 Iconic Hits!  - American Idol"
@@ -47,9 +37,24 @@
                 "title": "Carrie Underwood & Billy Idol Rock \"Rebel Yell\"! More, More, More! – American Idol 2026"
             },
             {
+                "url": "https://www.youtube.com/watch?v=D5bZsM43DfY",
+                "duration": 239,
+                "title": "Electric Callboy - MC THUNDER LIVE at Rock Am Ring 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RG0V0eC-Ghc",
+                "duration": 399,
+                "title": "Smoke on The Water - Deep Purple - Live - Aug. 9 2026 - Hard Rock Live - Fl."
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=5pjV1cgg5jo",
                 "duration": 263,
                 "title": "Nova Rock Festival 2026 - Official Aftermovie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HyWajWueH2w",
+                "duration": 329,
+                "title": "Europe 'The Final Countdown' - From 'Live At Sweden Rock - 30 Anniversary Show'"
             },
             {
                 "url": "https://www.youtube.com/watch?v=h-nrLO-ZsZk",
@@ -62,14 +67,14 @@
                 "title": "Five Live in Sydney 2026 - We will Rock You"
             },
             {
+                "url": "https://www.youtube.com/watch?v=05K4eIL9CCs",
+                "duration": 220,
+                "title": "ONE OK ROCK - Puppets Can't Control You [DETOX JAPAN TOUR 2025 AT NISSAN STADIUM]"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=mtD0iXKT-jg",
                 "duration": 401,
                 "title": "Gaither - I Go to the Rock (Live) (Official Music Video) ft. Chris Blue, Jason Crabb, Ange"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HyWajWueH2w",
-                "duration": 329,
-                "title": "Europe 'The Final Countdown' - From 'Live At Sweden Rock - 30 Anniversary Show'"
             },
             {
                 "url": "https://www.youtube.com/watch?v=otrrxZm57rQ",
@@ -87,19 +92,9 @@
                 "title": "Nene Royal CRUSHES \"Hysteria\" by Muse | Judges' Callbacks | AGT 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=G19UqSnNuO8",
-                "duration": 374,
-                "title": "Disturbed - Down with the Sickness [Live at Rock Am Ring 2008] - HD"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lxoZ38cH8uc",
-                "duration": 273,
-                "title": "Rema - Dumebi Live Performance @ Couleur Café, Belgium | 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jx9LezLlD8s",
-                "duration": 186,
-                "title": "[SPECIAL VIDEO] SEVENTEEN(세븐틴) - 'Rock with you' Band Live Session"
+                "url": "https://www.youtube.com/watch?v=Jb9rzO9yqvs",
+                "duration": 271,
+                "title": "Uriah Heep \"Easy Livin'\"\" Live Rock Legends Cruise XIII, Pool Deck 2/26/2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=TB7lHWHwbgk",
@@ -107,9 +102,9 @@
                 "title": "Linkin Park - Two Faced | Live @ Rock am Ring 2026 #RAR2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Jb9rzO9yqvs",
-                "duration": 271,
-                "title": "Uriah Heep \"Easy Livin'\"\" Live Rock Legends Cruise XIII, Pool Deck 2/26/2026"
+                "url": "https://www.youtube.com/watch?v=lxoZ38cH8uc",
+                "duration": 273,
+                "title": "Rema - Dumebi Live Performance @ Couleur Café, Belgium | 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RL6ppQX8Dv8",
@@ -117,14 +112,14 @@
                 "title": "Livin’ on a Prayer – HAUSER | THE KING OF THE CELLO (Live in Sofia 2025)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=MWtVpwKeFRg",
-                "duration": 131,
-                "title": "ONE OK ROCK x Ikura (YOASOBI) performing \"wherever you are\" live at MUSIC STADIUM 2026 con"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=h1PN7LEH2Vs",
                 "duration": 305,
                 "title": "ONE OK ROCK - The Beginning [Official Video from \"EYE OF THE STORM\" JAPAN TOUR]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MWtVpwKeFRg",
+                "duration": 131,
+                "title": "ONE OK ROCK x Ikura (YOASOBI) performing \"wherever you are\" live at MUSIC STADIUM 2026 con"
             },
             {
                 "url": "https://www.youtube.com/watch?v=NWU33fvPxd0",
@@ -162,9 +157,24 @@
                 "title": "NIGHTWISH - Last Ride of the Day (LIVE AT MASTERS OF ROCK)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=mTUUrBc5L5Y",
-                "duration": 195,
-                "title": "Unsainted - Hourglass (Live from Tallinn Rock Festival 2026)"
+                "url": "https://www.youtube.com/watch?v=ivPEKaBHjYA",
+                "duration": 271,
+                "title": "P!NK - Try (The Truth About Love - Live From Los Angeles)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vzWbCD67YFY",
+                "duration": 366,
+                "title": "KID ROCK　with　Lynyrd Skynyrd　 All Summer Long　&　Sweet Home Alabama"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=crQbVqASghU",
+                "duration": 235,
+                "title": "Michael Learns to Rock - Sleeping Child (Live in Sydney 2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RxCEMy022Do",
+                "duration": 274,
+                "title": "ONE OK ROCK - I was King [Official Video from Orchestra Japan Tour]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=fFrxqe5RI7w",
@@ -172,19 +182,24 @@
                 "title": "Face the Mirror – Live Concert Rock Anthem | Inspired by Linkin Park | Emily Armstrong Sty"
             },
             {
+                "url": "https://www.youtube.com/watch?v=QgzVegTD2J4",
+                "duration": 235,
+                "title": "Bring Me to Life By: Evanescence | Live Performance at Kubyertoast | Band Dogz | Tukar Ses"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=h2veI5qnKxo",
                 "duration": 262,
                 "title": "Olivia Rodrigo Covers Carly Simon's \"You’re So Vain\" | Rock Hall 2022 Induction"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2c7sLLQKCOM",
-                "duration": 407,
-                "title": "RUSH - The Spirit of Radio   Toronto, Ontario August 9th 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UU8mic7Z1HY",
                 "duration": 240,
                 "title": "TREASURE - 2023 CONCERT [REBOOT] IN SEOUL ‘음 (MMM)’ Rock Ver. LIVE PERFORMANCE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mTUUrBc5L5Y",
+                "duration": 195,
+                "title": "Unsainted - Hourglass (Live from Tallinn Rock Festival 2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=uA832zpafis",
@@ -197,14 +212,14 @@
                 "title": "Korn - Blind (Live @ Rock am Ring 2006)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5VeflGoMOv0",
-                "duration": 342,
-                "title": "Foo Fighters - Let There Be Rock (AC/DC cover) in the Live Lounge"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=xwu5TxBLNH8",
                 "duration": 256,
                 "title": "Michael Learns To Rock - Someday (Live in Sydney 2026)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5VeflGoMOv0",
+                "duration": 342,
+                "title": "Foo Fighters - Let There Be Rock (AC/DC cover) in the Live Lounge"
             },
             {
                 "url": "https://www.youtube.com/watch?v=mXkc-cdtm6c",
@@ -217,6 +232,11 @@
                 "title": "ONE OK ROCK - Taking Off [Official Video from Nagisaen]"
             },
             {
+                "url": "https://www.youtube.com/watch?v=Xy9IqrKjilg",
+                "duration": 234,
+                "title": "Heart \"Alone\" performed by The Classic Rock Show"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=_HZM0QiuUS8",
                 "duration": 343,
                 "title": "Goo Goo Dolls - Iris (Live in Buffalo, NY, 7/4/2004) [Official Video]"
@@ -225,11 +245,6 @@
                 "url": "https://www.youtube.com/watch?v=aFRoB3e5c-U",
                 "duration": 228,
                 "title": "AC/DC with Steven Tyler \"You Shook Me All Night Long\" | Rock Hall 2003 Induction"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JU4cnyhMY6k",
-                "duration": 174,
-                "title": "The Offspring - You’re Gonna Go Far, Kid | Live in London (2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=wdEe68SR-uY",
@@ -247,11 +262,6 @@
                 "title": "Coldplay - Viva La Vida (Live In São Paulo)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=crQbVqASghU",
-                "duration": 235,
-                "title": "Michael Learns to Rock - Sleeping Child (Live in Sydney 2026)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=2AlY9pMhsbk",
                 "duration": 323,
                 "title": "Karthik & Saindhavi’s Love Duet That Melted Hearts❤️ | Harris Jayaraj | Rock On Harris 2.0"
@@ -267,19 +277,24 @@
                 "title": "The Cure \"Boys Don't Cry\" Live | Rock Hall 2019 Induction"
             },
             {
+                "url": "https://www.youtube.com/watch?v=tXVP279pSmc",
+                "duration": 366,
+                "title": "The Spinners Tribute: New Edition’s Live Performance | Rock Hall 2023 Induction"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=CoXD2CexGrw",
                 "duration": 198,
                 "title": "Lordi - Hard Rock Hallelujah (LIVE) | Finland 🇫🇮 | Semi Final | Eurovision 2006 WINNER"
             },
             {
-                "url": "https://www.youtube.com/watch?v=83m85sXK4xM",
-                "duration": 264,
-                "title": "Stevie Nicks “Edge of 17\" performed by The Classic Rock Show (2026) 4K"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ox1Eemj8FDo",
                 "duration": 124,
                 "title": "Charli xcx - Rock Music (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=83m85sXK4xM",
+                "duration": 264,
+                "title": "Stevie Nicks “Edge of 17\" performed by The Classic Rock Show (2026) 4K"
             },
             {
                 "url": "https://www.youtube.com/watch?v=8xb_P7ureNU",
@@ -292,24 +307,19 @@
                 "title": "Elton John - Crocodile Rock (Live At Madison Square Garden)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=-D_uT0kXlRw",
-                "duration": 238,
-                "title": "Twenty One Pilots Cover The White Stripes \"Seven Nation Army\" | Rock Hall 2025 Induction"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=98u4xC4zkcQ",
                 "duration": 234,
                 "title": "ONE OK ROCK - C.U.R.I.O.S.I.T.Y. [DETOX JAPAN TOUR 2025 AT NISSAN STADIUM]"
             },
             {
+                "url": "https://www.youtube.com/watch?v=-D_uT0kXlRw",
+                "duration": 238,
+                "title": "Twenty One Pilots Cover The White Stripes \"Seven Nation Army\" | Rock Hall 2025 Induction"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=20fEwvRRvpY",
                 "duration": 355,
                 "title": "Sarah Thomson Hard Rock Festival | Born Under The Open Sky | 80s Arena Rock"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tXVP279pSmc",
-                "duration": 366,
-                "title": "The Spinners Tribute: New Edition’s Live Performance | Rock Hall 2023 Induction"
             },
             {
                 "url": "https://www.youtube.com/watch?v=jgwshUJNbmU",
@@ -327,14 +337,14 @@
                 "title": "ONE OK ROCK - Mighty Long Fall [Mighty Long Fall at Yokohama Stadium]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9NuNPc160K0",
-                "duration": 217,
-                "title": "The Cure perform “Just Like Heaven” | Rock Hall 2019 Induction"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=bFHcgBfZEq0",
                 "duration": 232,
                 "title": "ONE OK ROCK - Stand Out Fit In [Orchestra Ver.]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9NuNPc160K0",
+                "duration": 217,
+                "title": "The Cure perform “Just Like Heaven” | Rock Hall 2019 Induction"
             },
             {
                 "url": "https://www.youtube.com/watch?v=8Fn8zrne6DU",
@@ -347,24 +357,14 @@
                 "title": "16-Year-Old Thailand Girl SHOCKS Judges With Insane Rock Performance!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YzKyxf5KOlE",
-                "duration": 380,
-                "title": "Wild Women - Michael Learns to Rock Live in Sydney 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tESZ92ugf7g",
-                "duration": 195,
-                "title": "Cast of Camp Rock - One Beat Away (From \"Camp Rock 3\")"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=bBr0FJsDk1g",
                 "duration": 349,
                 "title": "Talking Heads perform “Life During Wartime” | Rock Hall 2002 Induction"
             },
             {
-                "url": "https://www.youtube.com/watch?v=72xA0Ai2ylI",
-                "duration": 303,
-                "title": "Girish And The Chronicles Turn “Unstoppable” By Sia Into A Rock Anthem | AGT 2025"
+                "url": "https://www.youtube.com/watch?v=tESZ92ugf7g",
+                "duration": 195,
+                "title": "Cast of Camp Rock - One Beat Away (From \"Camp Rock 3\")"
             },
             {
                 "url": "https://www.youtube.com/watch?v=htekfsbqqwc",
@@ -377,9 +377,9 @@
                 "title": "Harry Styles - Sign Of The Times | Harry Styles at the BBC"
             },
             {
-                "url": "https://www.youtube.com/watch?v=eRyTyf2b-d0",
-                "duration": 208,
-                "title": "Hollywood Vampires “Highway to Hell” live @ O2 Arena, London 12th August 2026"
+                "url": "https://www.youtube.com/watch?v=Qa1FjKgQ9v0",
+                "duration": 193,
+                "title": "FIVE - We will rock you - LIVE in Melbourne- 23 May 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=GlG-vN8i9Qc",
@@ -387,9 +387,19 @@
                 "title": "School of Rock Students Perform \"California Dreamin'\" by The Mamas & The Papas"
             },
             {
+                "url": "https://www.youtube.com/watch?v=_iRtrDCeFe4",
+                "duration": 193,
+                "title": "Camp Rock 3  - D23 - Musical Performance"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=jWBRli52Cp4",
                 "duration": 403,
                 "title": "Bonnie Tyler \"Total Eclipse of the Heart\" performed by The Classic Rock Show (2023) 4K"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eRyTyf2b-d0",
+                "duration": 208,
+                "title": "Hollywood Vampires “Highway to Hell” live @ O2 Arena, London 12th August 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=llWhsWaPes4",
@@ -402,6 +412,16 @@
                 "title": "KISS “Detroit Rock City” Live on the Stern Show"
             },
             {
+                "url": "https://www.youtube.com/watch?v=72xA0Ai2ylI",
+                "duration": 303,
+                "title": "Girish And The Chronicles Turn “Unstoppable” By Sia Into A Rock Anthem | AGT 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gTmPA6x3O0I",
+                "duration": 192,
+                "title": "Justin Bieber - Confident (Live at Rock In Rio)"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=3cjTHyFYJbk",
                 "duration": 274,
                 "title": "Matchbox Twenty - Bright Lights (MTV Hard Rock) [Live]"
@@ -410,11 +430,6 @@
                 "url": "https://www.youtube.com/watch?v=Jb0W9twmYvY",
                 "duration": 316,
                 "title": "Happen To Me - Live From Red Rocks"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gTmPA6x3O0I",
-                "duration": 192,
-                "title": "Justin Bieber - Confident (Live at Rock In Rio)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=QW7bNALh9lo",
@@ -427,9 +442,9 @@
                 "title": "Demi Lovato “Heart Attack (Rock Version)” Live on the Stern Show"
             },
             {
-                "url": "https://www.youtube.com/watch?v=spe_ROgVbi8",
-                "duration": 166,
-                "title": "The Offspring - Burn It Up | Live In Athens, Greece (2026)"
+                "url": "https://www.youtube.com/watch?v=t-kwwVkGFYE",
+                "duration": 275,
+                "title": "Motionless in White - Afraid of the Dark (Live) @ Red Rocks Amphitheatre, Colorado, 8/9/20"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ne1oIaPIyIw",
@@ -442,6 +457,11 @@
                 "title": "Kid Rock - Don't Tell Me How To Live (Official Video) - ft. Monster Truck"
             },
             {
+                "url": "https://www.youtube.com/watch?v=5zfY8JT7FXs",
+                "duration": 67,
+                "title": "2026 GRAMMYs: Rosé and Bruno Mars ROCK OUT With 'APT.'"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=om2SWmuthQQ",
                 "duration": 327,
                 "title": "RUSH - \"The Analog Kid\" - Live in Toronto (Scotiabank Arena) - 09 August 2026"
@@ -452,19 +472,14 @@
                 "title": "“Higher Rock” - Robert Plant with Saving Grace (LIVE on The Late Show)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZwDf-NMnUPA",
-                "duration": 279,
-                "title": "Bryan Adams - Heaven (Live At Wembley 1996)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UhbixyxgsiU",
                 "duration": 145,
                 "title": "Lil Uzi Vert - Just Wanna Rock [Official Music Video]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=wvxQY70y5uw",
-                "duration": 263,
-                "title": "Alexisonfire - Dogs of Chernobyl (Live Debut)(Toronto N2 2026)"
+                "url": "https://www.youtube.com/watch?v=ZwDf-NMnUPA",
+                "duration": 279,
+                "title": "Bryan Adams - Heaven (Live At Wembley 1996)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=W5pAo2RCKuQ",
@@ -472,9 +487,9 @@
                 "title": "Burning heart live - Rock Meets Classic 2012 feat. Jimi Jamison of SURVIVOR"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5zfY8JT7FXs",
-                "duration": 67,
-                "title": "2026 GRAMMYs: Rosé and Bruno Mars ROCK OUT With 'APT.'"
+                "url": "https://www.youtube.com/watch?v=wvxQY70y5uw",
+                "duration": 263,
+                "title": "Alexisonfire - Dogs of Chernobyl (Live Debut)(Toronto N2 2026)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=61-QTEzjzaA",
@@ -482,29 +497,14 @@
                 "title": "Hollywood Vampires “Heroes” live @ O2 Arena, London 12th August 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=wpLO66IOpv0",
-                "duration": 201,
-                "title": "Royal Blood - Ten Over Ten (Official Video)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=uzPfL0jMPBM",
                 "duration": 308,
                 "title": "Rush perform \"Tom Sawyer\" | Rock Hall 2013 Induction"
             },
             {
-                "url": "https://www.youtube.com/watch?v=8Uvn_p7-MBQ",
-                "duration": 195,
-                "title": "SKÅL by Miracle Of Sound - Official Live Music Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3kpSAn2uIq4",
-                "duration": 210,
-                "title": "ONE OK ROCK - Tropical Therapy [OFFICIAL MUSIC VIDEO]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=09u1xaIumCM",
-                "duration": 362,
-                "title": "Rush - Tom Sawyer (Scotiabank Arena, Toronto, Canada, 09.08.2026)"
+                "url": "https://www.youtube.com/watch?v=wpLO66IOpv0",
+                "duration": 201,
+                "title": "Royal Blood - Ten Over Ten (Official Video)"
             }
         ],
         "search_query": "rock live performance"

@@ -3,7 +3,7 @@
         "network_name": "Fishing & Boating",
         "network_long_name": "Fishing & Boating",
         "network_type": "streaming",
-        "channel_number": 82,
+        "channel_number": 54,
         "stream_rotation": "clock",
         "search_query": "fishing charter boating",
         "streams": [
@@ -33,69 +33,9 @@
                 "title": "Sea Bass, Triggerfish & BIG Flounder on the Angler - November Party Boat Fishing in Ocean"
             },
             {
-                "url": "https://www.youtube.com/watch?v=INqE2jINYmI",
-                "duration": 1216,
-                "title": "We've Been Hiding Something Big..."
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lUkHvDgwRg8",
-                "duration": 944,
-                "title": "Bluefin are BACK!"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=b5Nt3bxJnnc",
                 "duration": 525,
                 "title": "Phil & Andys Fishing Adventure 2026 Episode 1"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lgGN7Wu_af0",
-                "duration": 1320,
-                "title": "Jacksonville Offshore fishing charter half day expectations"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3fviidbB8aQ",
-                "duration": 1388,
-                "title": "Head Boat Fishing in Key West Florida worth it?"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DjXYSzriukw",
-                "duration": 945,
-                "title": "Shimano Mackerel Classic 2026 | Fishing Fleet FLOODS the Gold Coast Seaway"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EwfDfjUK_-k",
-                "duration": 1039,
-                "title": "Pursuit Sportfishing Catalina Island February 21st 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3ndTRKja7P0",
-                "duration": 1433,
-                "title": "Night Fishing for Tuna 36 Hour Trip Pt. 2 | Williams Party Boat"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xaMXKZdQGPI",
-                "duration": 243,
-                "title": "6 still missing, 4 rescued after charter boat sinks in B.C.'s Georgia Strait"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bBj_yHky1tM",
-                "duration": 1325,
-                "title": "John's Pass Deep Sea Fishing Hubbard's Marina 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qmCatEf68VE",
-                "duration": 1993,
-                "title": "30 Hour Tuna Trip with Galveston Party Boats"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Gahw-MvsZrg",
-                "duration": 1095,
-                "title": "Cheapest Sport Fishing Charter In California? Sign Me Up!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yJJ0CXShNN4",
-                "duration": 1188,
-                "title": "We Took My Bay Boat 70 Miles One Way To Catch THIS One Fish! *Catch, Clean, & Cook*"
             },
             {
                 "url": "https://www.youtube.com/watch?v=3pNNrPbWVg4",
@@ -103,14 +43,49 @@
                 "title": "Fishing Trip to Tg Pinang  8 to 10 May 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=2OVAiPQGJSE",
-                "duration": 801,
-                "title": "Producer Sportfishing Overnight Coronados Islands  March 8th 2026"
+                "url": "https://www.youtube.com/watch?v=lUkHvDgwRg8",
+                "duration": 944,
+                "title": "Bluefin are BACK!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9NHAlTTYCw8",
-                "duration": 1128,
-                "title": "HOW To Catch A Ton Of Fish on a Charter (Florida Saltwater Fishing)"
+                "url": "https://www.youtube.com/watch?v=DjXYSzriukw",
+                "duration": 945,
+                "title": "Shimano Mackerel Classic 2026 | Fishing Fleet FLOODS the Gold Coast Seaway"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3fviidbB8aQ",
+                "duration": 1388,
+                "title": "Head Boat Fishing in Key West Florida worth it?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bBj_yHky1tM",
+                "duration": 1325,
+                "title": "John's Pass Deep Sea Fishing Hubbard's Marina 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3ndTRKja7P0",
+                "duration": 1433,
+                "title": "Night Fishing for Tuna 36 Hour Trip Pt. 2 | Williams Party Boat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qmCatEf68VE",
+                "duration": 1993,
+                "title": "30 Hour Tuna Trip with Galveston Party Boats"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lgGN7Wu_af0",
+                "duration": 1320,
+                "title": "Jacksonville Offshore fishing charter half day expectations"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7QIwoPdaLpo",
+                "duration": 553,
+                "title": "2026 Ensenada Mexico, fishing trip with Sergio‘s sport fishing"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EwfDfjUK_-k",
+                "duration": 1039,
+                "title": "Pursuit Sportfishing Catalina Island February 21st 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=C4r_wcXVSno",
@@ -118,14 +93,19 @@
                 "title": "This Was My FIRST Ocean Salmon Trip… WOW!"
             },
             {
+                "url": "https://www.youtube.com/watch?v=YQ9R92GPW5Q",
+                "duration": 1081,
+                "title": "Galveston Party Boats 12 hour fishing trip 🎣"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=C1em_-RUYGU",
                 "duration": 1417,
                 "title": "Trophy Yellowtail Madness, Coronado Islands, Liberty Sportfishing,  March 25, 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YQ9R92GPW5Q",
-                "duration": 1081,
-                "title": "Galveston Party Boats 12 hour fishing trip 🎣"
+                "url": "https://www.youtube.com/watch?v=2OVAiPQGJSE",
+                "duration": 801,
+                "title": "Producer Sportfishing Overnight Coronados Islands  March 8th 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2SX19xVqYJw",
@@ -133,9 +113,9 @@
                 "title": "First fishing trip of 2026 Coronado island bonito bite is just insane!!!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=XEdD8rYRxQI",
-                "duration": 2920,
-                "title": "The Keel Fell Off My £200 Sailboat"
+                "url": "https://www.youtube.com/watch?v=yJJ0CXShNN4",
+                "duration": 1188,
+                "title": "We Took My Bay Boat 70 Miles One Way To Catch THIS One Fish! *Catch, Clean, & Cook*"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1-0ZgQOJ9sQ",
@@ -143,29 +123,14 @@
                 "title": "Really awsome 4 Hour Bay trip with Galveston Party Boats  epic day on the water !!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GhfiJnTGi2A",
-                "duration": 2302,
-                "title": "San Diego Sportfishing,  Coronado Islands Yellowtail Fishing,  May 21, 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vTVNvlSR1yQ",
-                "duration": 1487,
-                "title": "🎣 Fishing for Porgy on the NeverEnuff Charter | Glen Cove, NY 🛥️"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1KhK4-jqJTE",
-                "duration": 3513,
-                "title": "4 Days at sea.. Filled the Boat! (Deep Sea Catch Clean Cook)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Cfi-INElWo4",
                 "duration": 1877,
                 "title": "Toronado Sportfishing Long Beach 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7kTWAh4ZVj8",
-                "duration": 758,
-                "title": "Spring Haddock Massacre:  Eastman's 2026"
+                "url": "https://www.youtube.com/watch?v=9NHAlTTYCw8",
+                "duration": 1128,
+                "title": "HOW To Catch A Ton Of Fish on a Charter (Florida Saltwater Fishing)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=JLy9uUBFDXM",
@@ -173,24 +138,14 @@
                 "title": "BRINGING IN 2026 | FISHING, CATCH & COOK + DOLPHINS + ISLAND STAY"
             },
             {
-                "url": "https://www.youtube.com/watch?v=QnEMWUgLlxU",
-                "duration": 1516,
-                "title": "Alaska Fishing Charter Questions and Answers"
+                "url": "https://www.youtube.com/watch?v=7kTWAh4ZVj8",
+                "duration": 758,
+                "title": "Spring Haddock Massacre:  Eastman's 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=W1z_imkLSJ8",
-                "duration": 1091,
-                "title": "8-Day Long Range: Endless Yellowtail"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Mj8N50idRCY",
-                "duration": 710,
-                "title": "Drop-Cast Fishing Charters # Vanuatu April 2026 3 way deep drop hookup #fishing #fish"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yyDoPxOFzQU",
-                "duration": 394,
-                "title": "2026 King Salmon on The Central Coast CA!"
+                "url": "https://www.youtube.com/watch?v=3Tw4d98M35o",
+                "duration": 592,
+                "title": "DEEP SEA Fishing out of MORRO BAY California {VIRGS LANDING}"
             },
             {
                 "url": "https://www.youtube.com/watch?v=SGgpI335Gr8",
@@ -198,14 +153,29 @@
                 "title": "First Halibut Trip San Francisco Bay 2026 | Lots of Action!"
             },
             {
+                "url": "https://www.youtube.com/watch?v=QnEMWUgLlxU",
+                "duration": 1516,
+                "title": "Alaska Fishing Charter Questions and Answers"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mj8N50idRCY",
+                "duration": 710,
+                "title": "Drop-Cast Fishing Charters # Vanuatu April 2026 3 way deep drop hookup #fishing #fish"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GhfiJnTGi2A",
+                "duration": 2302,
+                "title": "San Diego Sportfishing,  Coronado Islands Yellowtail Fishing,  May 21, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yyDoPxOFzQU",
+                "duration": 394,
+                "title": "2026 King Salmon on The Central Coast CA!"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=jTTumbyKIG4",
                 "duration": 1185,
                 "title": "Offshore Boats NZ Small Boats 2026 Fishing Competition | Epic Turnout & Fishing Action!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DriKTHfJ2RA",
-                "duration": 5281,
-                "title": "Into The Mind Of A Fishing Guide Part 2 | Buoy 10 Salmon Fishing Short Film"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sf5q7Pd3fOs",
@@ -218,9 +188,14 @@
                 "title": "4 Days Boat Camping–Fishing & Exploring for Sea Creatures"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uJXDrgc9i0w",
-                "duration": 819,
-                "title": "What it’s like to fish a charter boat in Tampa FL | 1Deep Outdoors"
+                "url": "https://www.youtube.com/watch?v=INqE2jINYmI",
+                "duration": 1216,
+                "title": "We've Been Hiding Something Big..."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DriKTHfJ2RA",
+                "duration": 5281,
+                "title": "Into The Mind Of A Fishing Guide Part 2 | Buoy 10 Salmon Fishing Short Film"
             },
             {
                 "url": "https://www.youtube.com/watch?v=BywW0MBWERw",
@@ -228,14 +203,19 @@
                 "title": "Ensenada Fishing Guide 2026: Licenses, Spots, Fish, Gear & More | Phil Friedman x Victor B"
             },
             {
-                "url": "https://www.youtube.com/watch?v=J5abPqqWf7I",
-                "duration": 1547,
-                "title": "Eastman's Deep Sea Fishing Trip (4/12/2026) | First Trip of 2026"
+                "url": "https://www.youtube.com/watch?v=uJXDrgc9i0w",
+                "duration": 819,
+                "title": "What it’s like to fish a charter boat in Tampa FL | 1Deep Outdoors"
             },
             {
                 "url": "https://www.youtube.com/watch?v=E9fLQBs4Jzs",
                 "duration": 1067,
                 "title": "First Fishing Trip of 2026 aboard the City of Long Beach fishing Boat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vTVNvlSR1yQ",
+                "duration": 1487,
+                "title": "🎣 Fishing for Porgy on the NeverEnuff Charter | Glen Cove, NY 🛥️"
             },
             {
                 "url": "https://www.youtube.com/watch?v=6HfAY155nx0",
@@ -246,6 +226,16 @@
                 "url": "https://www.youtube.com/watch?v=xZnnr0Yiov0",
                 "duration": 2184,
                 "title": "What's biting close inshore Sunshine Coast 2026. Can deckie break an ugly stick? Trip in o"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W1z_imkLSJ8",
+                "duration": 1091,
+                "title": "8-Day Long Range: Endless Yellowtail"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J5abPqqWf7I",
+                "duration": 1547,
+                "title": "Eastman's Deep Sea Fishing Trip (4/12/2026) | First Trip of 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=X0clmAFdkXo",
@@ -263,14 +253,14 @@
                 "title": "Drop cast charters , Vanuatu April 2026 #fishing #fish #lifeisbutadream"
             },
             {
+                "url": "https://www.youtube.com/watch?v=XEdD8rYRxQI",
+                "duration": 2920,
+                "title": "The Keel Fell Off My £200 Sailboat"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=YvuIw0k9FgY",
                 "duration": 1426,
                 "title": "Fishing the \"Jubilee Deep Sea Fishing Charter\" Panama City Beach Fl. A Fun Day & A Boatloa"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=g2GODUH4kaU",
-                "duration": 320,
-                "title": "Polaris Supreme 3 Day Fishing Trip | Bluefin Tuna & Yellowtail | August 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=oerlS7LmBS8",
@@ -293,24 +283,19 @@
                 "title": "2026 SoCal Tuna Fishing (El Niño)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=4pxdet6_rzg",
-                "duration": 1030,
-                "title": "Bluefin & Dorado: A HOT Start to 2026 Fishing!"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=xvVB5HoWPrc",
                 "duration": 983,
                 "title": "First mackerel trip of 2026 scotland westcoast sea fishing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=D9q9lvbj810",
-                "duration": 5218,
-                "title": "The Atlantic (2026) The Forbidden Ocean That Holds Earth’s True History"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=M4gUa9r6O1w",
                 "duration": 296,
                 "title": "Dauntless Fishing 01 04 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4pxdet6_rzg",
+                "duration": 1030,
+                "title": "Bluefin & Dorado: A HOT Start to 2026 Fishing!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=VRSrj4N37Nc",
@@ -323,24 +308,19 @@
                 "title": "EXPERIENCING HAMILTON ISLAND 2026 - FISHING, BOAT CRUISE & A CHOPPER RIDE"
             },
             {
-                "url": "https://www.youtube.com/watch?v=iaPppkd-1HE",
-                "duration": 1248,
-                "title": "2026 SEASON - Episode 6, Atlantic City, New Jersey - Striped Bass Of The Back Bays!"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=o3q32jzDueg",
                 "duration": 1646,
                 "title": "10 Mile Offshore Salmon Fishing Trip! BIG LAKE TROUT!  Portage, IN  Lake Michigan  5/25/20"
             },
             {
+                "url": "https://www.youtube.com/watch?v=iaPppkd-1HE",
+                "duration": 1248,
+                "title": "2026 SEASON - Episode 6, Atlantic City, New Jersey - Striped Bass Of The Back Bays!"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=6exCqZLemrw",
                 "duration": 1231,
                 "title": "Buoy 10 Salmon Fishing: River & Ocean | Week 2 — 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SCcGAHyUGEY",
-                "duration": 615,
-                "title": "Eastman's Deep Sea Fishing Trip (4/22/2026) | First Time Ever"
             },
             {
                 "url": "https://www.youtube.com/watch?v=wk9AQd7gM8s",
@@ -353,6 +333,16 @@
                 "title": "Lake Ontario Kings Were ON FIRE! (Epic Salmon Fishing Action)"
             },
             {
+                "url": "https://www.youtube.com/watch?v=1KhK4-jqJTE",
+                "duration": 3513,
+                "title": "4 Days at sea.. Filled the Boat! (Deep Sea Catch Clean Cook)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AIRm9TbYXcc",
+                "duration": 3816,
+                "title": "5 Days Living on a Fishing Boat in ALASKA"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=gJb9Bu1O8_c",
                 "duration": 1750,
                 "title": "2026 First Fishing Trip - South Townsville"
@@ -361,6 +351,11 @@
                 "url": "https://www.youtube.com/watch?v=zXnPGT1nD1g",
                 "duration": 2212,
                 "title": "Three Kings Fishing Charter | New Zealand"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SCcGAHyUGEY",
+                "duration": 615,
+                "title": "Eastman's Deep Sea Fishing Trip (4/22/2026) | First Time Ever"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Uv06o11jcLo",
@@ -388,14 +383,14 @@
                 "title": "Insane New Custom Freeman Boat - Full Tour!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Yq6qHnkPXnA",
-                "duration": 1427,
-                "title": "CHARTER FISHING ON WILLIAMS PARTY BOAT!! *Big Sting Ray Caught!*"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=vUwvvjQMgaw",
                 "duration": 1590,
                 "title": "April 2nd 2026 Long Island Metro Fishing Report with Matthew Broderick"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yq6qHnkPXnA",
+                "duration": 1427,
+                "title": "CHARTER FISHING ON WILLIAMS PARTY BOAT!! *Big Sting Ray Caught!*"
             },
             {
                 "url": "https://www.youtube.com/watch?v=LVTfa11y-vg",
@@ -413,9 +408,9 @@
                 "title": "Scotland Sib & Rib Trip July 2026 Loch Leven"
             },
             {
-                "url": "https://www.youtube.com/watch?v=3Tw4d98M35o",
-                "duration": 592,
-                "title": "DEEP SEA Fishing out of MORRO BAY California {VIRGS LANDING}"
+                "url": "https://www.youtube.com/watch?v=g2GODUH4kaU",
+                "duration": 320,
+                "title": "Polaris Supreme 3 Day Fishing Trip | Bluefin Tuna & Yellowtail | August 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EqPWrldx9EU",
@@ -438,19 +433,19 @@
                 "title": "Pre-Bermagui Trip Vlog 2026 | Marlin Fishing"
             },
             {
+                "url": "https://www.youtube.com/watch?v=D9q9lvbj810",
+                "duration": 5218,
+                "title": "The Atlantic (2026) The Forbidden Ocean That Holds Earth’s True History"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Qm4qnSeqh2k",
                 "duration": 2089,
                 "title": "May 14th, 2026 New Jersey/Delaware Bay Fishing Report with Jim Hutchinson, Jr."
             },
             {
-                "url": "https://www.youtube.com/watch?v=45g_2bd_Vyk",
-                "duration": 1551,
-                "title": "EPIC Bluefin Tuna Fishing 100 Miles Offshore | Navy SEAL Foundation San Diego"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Yaw5aibI8GM",
-                "duration": 1332,
-                "title": "Fishing Point Turton Guaranteed Catch"
+                "url": "https://www.youtube.com/watch?v=95HhyB6ujeY",
+                "duration": 943,
+                "title": "This is why you fish BROKEN Piers in GALVESTON | Texas Saltwater Fishing"
             },
             {
                 "url": "https://www.youtube.com/watch?v=DJ5Nx5jf46s",
@@ -506,6 +501,11 @@
                 "url": "https://www.youtube.com/watch?v=aQkflsFDCOA",
                 "duration": 1034,
                 "title": "Fishing Trip sa Tag-Init | Dubai Fishing Adventure Ep. 11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Nzi0HaFMkI",
+                "duration": 705,
+                "title": "Iluka 2026 returning from a days fishing"
             }
         ]
     }

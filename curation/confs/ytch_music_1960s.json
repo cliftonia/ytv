@@ -2,114 +2,29 @@
     "station_conf": {
         "network_name": "1960s Music",
         "network_type": "streaming",
-        "channel_number": 69,
+        "channel_number": 80,
         "network_long_name": "1960s Music",
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=Y2e8B2CmicQ",
-                "duration": 168,
-                "title": "The Shirelles  - Will You Love Me Tomorrow    (1960)"
+                "url": "https://www.youtube.com/watch?v=SbyAZQ45uww",
+                "duration": 150,
+                "title": "Nancy Sinatra - These Boots Are Made for Walkin'"
             },
             {
-                "url": "https://www.youtube.com/watch?v=xvqeSJlgaNk",
-                "duration": 167,
-                "title": "The Monkees - Daydream Believer (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=y3KJ7d2qBoA",
+                "duration": 165,
+                "title": "The Temptations - My Girl (Lyric Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nWBSmfZTi4s",
-                "duration": 187,
-                "title": "Chris Farlowe - Out Of Time (1966)"
+                "url": "https://www.youtube.com/watch?v=rm9coqlk8fY",
+                "duration": 152,
+                "title": "Bob Dylan - Knockin' On Heaven's Door (Official Audio)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=wsIbfYEizLk",
-                "duration": 157,
-                "title": "The Seekers - Georgy Girl (1967 - Stereo)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=N4bFqW_eu2I",
-                "duration": 261,
-                "title": "The Animals - House Of The Rising Sun (Music Video) [4K HD]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JTyOlV0H6E4",
-                "duration": 153,
-                "title": "THEN HE KISSED ME - 24K Gold Music - 60's Girl Group HIT Song - The Crystals - Oldies But"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NnWOBMQhNBQ",
-                "duration": 179,
-                "title": "Be My Baby - The Ronettes - 1963 - Stereo - Music Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lTYe9eDqxe8",
-                "duration": 344,
-                "title": "Everly Brothers- \"All I Have To Do Is Dream/Cathy's Clown\" 1960 (Reelin' In The Years Arch"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eepLY8J4E6c",
+                "url": "https://www.youtube.com/watch?v=DRd-bjFfjNc",
                 "duration": 178,
-                "title": "The Temptations - My Girl"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rTVjnBo96Ug",
-                "duration": 163,
-                "title": "Otis Redding - (Sittin' On) The Dock Of The Bay (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-CCgDvUM4TM",
-                "duration": 157,
-                "title": "Chubby Checker - The Twist"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RBj2HN2uuNA",
-                "duration": 168,
-                "title": "The Platters - The Great Pretender (1959) 4K"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wVHAQX5sSaU",
-                "duration": 148,
-                "title": "Bobby Darin - Dream Lover"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7hx4gdlfamo",
-                "duration": 211,
-                "title": "Kenny Rogers - The Gambler"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kvazBqAlx58",
-                "duration": 163,
-                "title": "Put Your Head On My Shoulder"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m0EBs6uRgtw",
-                "duration": 322,
-                "title": "Righteous Brothers -- Unchained Melody (Live, 1965) (Picture and Sound Restored)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nFch8vH81ks",
-                "duration": 172,
-                "title": "Runaround Sue"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=N-aK6JnyFmk",
-                "duration": 158,
-                "title": "The Mamas & The Papas - California Dreamin'"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GM1kzbAgo_E",
-                "duration": 170,
-                "title": "Nancy Sinatra - These Boots Are Made For Walkin' (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wvUQcnfwUUM",
-                "duration": 215,
-                "title": "Mungo Jerry - In The Summertime ORIGINAL 1970"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PQHb4z0prjo",
-                "duration": 187,
-                "title": "Scott McKenzie - San Francisco"
+                "title": "You've Really Got A Hold On Me"
             },
             {
                 "url": "https://www.youtube.com/watch?v=425GpjTSlS4",
@@ -117,9 +32,24 @@
                 "title": "The Marvelettes - Please Mr. Postman (1961)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=SbYa7NBYyRc",
-                "duration": 164,
-                "title": "The Wanderer"
+                "url": "https://www.youtube.com/watch?v=vGJTaP6anOU",
+                "duration": 181,
+                "title": "Elvis Presley - Can't Help Falling In Love (Official Audio)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jrVbawRPO7I",
+                "duration": 133,
+                "title": "𝐓𝐡𝐞 𝐑𝐨𝐧𝐞𝐭𝐭𝐞𝐬 - 𝐁𝐞 𝐌𝐲 𝐁𝐚𝐛𝐲 - 𝐥𝐢𝐯𝐞 [𝐇𝐐] 𝐑.𝐈.𝐏. 𝐍𝐞𝐝𝐫𝐚 𝐓𝐚𝐥𝐥𝐞𝐲-𝐑𝐨𝐬𝐬 - 𝐉𝐚𝐧.𝟐𝟕,𝟏𝟗𝟒𝟔–†𝐀𝐩𝐫𝐢𝐥 𝟐𝟔, 𝟐𝟎"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xvqeSJlgaNk",
+                "duration": 167,
+                "title": "The Monkees - Daydream Believer (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=juTeHsKPWhY",
+                "duration": 157,
+                "title": "James Brown - It's A Man's Man's Man's World"
             },
             {
                 "url": "https://www.youtube.com/watch?v=1qJU8G7gR_g",
@@ -127,169 +57,14 @@
                 "title": "At Last"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aOZPBUu7Fro",
-                "duration": 189,
-                "title": "Jeannie C. Riley - Harper Valley P.T.A."
+                "url": "https://www.youtube.com/watch?v=Vbg7YoXiKn0",
+                "duration": 179,
+                "title": "Ben E. King - Stand by me"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7TwULx_wDiI",
-                "duration": 175,
-                "title": "The Shadows - Apache (1960) 4K"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mTUhnIY3oRM",
-                "duration": 201,
-                "title": "Frankie Valli & The Four Seasons - December, 1963 (Oh, What a Night) (Official Music Video"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I_2D8Eo15wE",
-                "duration": 145,
-                "title": "Ram Jam - Black Betty (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=reU99t1QS7E",
-                "duration": 318,
-                "title": "Take Me Back to 1958 | 1950s Americana Doo-Wop Love Song | Back to the Bay Lights (1958)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iNLXxDMxe18",
+                "url": "https://www.youtube.com/watch?v=Hce74cEAAaE",
                 "duration": 146,
-                "title": "let's dance ~Chris Montez"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rAUJSc6unAg",
-                "duration": 163,
-                "title": "The Platters - Only You, And You Alone (1955) 4K"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=veRHPL9xFpY",
-                "duration": 138,
-                "title": "Runaway"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QBDem6bffyo",
-                "duration": 161,
-                "title": "Be My Baby"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8Jtokmp8zoE",
-                "duration": 161,
-                "title": "I Can't Help Myself (Sugar Pie, Honey Bunch)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e-dr1PZZMds",
-                "duration": 161,
-                "title": "The Ronettes - Be My Baby (Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PSddD6w5SKc",
-                "duration": 162,
-                "title": "Under the Boardwalk"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8kAU3B9Pi_U",
-                "duration": 191,
-                "title": "Glen Campbell - Rhinestone Cowboy"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eJKDa22mSdQ",
-                "duration": 207,
-                "title": "Love Me with All Your Heart - Engelbert Humperdinck | Karaoke Version | KaraFun"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xHa6a3FtPJg",
-                "duration": 158,
-                "title": "The End of the World"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=h1U2GfCGIEs",
-                "duration": 155,
-                "title": "Cry to Me"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_2hXBf1DakE",
-                "duration": 144,
-                "title": "The Zombies - She's Not There"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jMcWldfg28s",
-                "duration": 153,
-                "title": "The Four Seasons - Sherry (Official Audio)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FzHVEjk9YII",
-                "duration": 334,
-                "title": "If You Think You're Lonely Now"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E9PNVUpI19A",
-                "duration": 161,
-                "title": "Frankie Lymon \"Little Bitty Pretty One\""
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=px3vJx-XiS8",
-                "duration": 210,
-                "title": "The Night Speaks Softly – A 1960s Italian Romance by the Sea"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-mjFoo9BOXE",
-                "duration": 255,
-                "title": "Sotto La Luna – A 1960s Italian Love Song Beneath the Moon"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TTA2buWlNyM",
-                "duration": 268,
-                "title": "Alan Jackson - Remember When (Official HD Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=00I1PvQvKDw",
-                "duration": 361,
-                "title": "60s Popular Sadabahar Song | Old is Gold Romantic Hindi Song | 60s–70s Melodious Bollywood"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uSiHqxgE2d0",
-                "duration": 123,
-                "title": "Ray Charles - Hit The Road Jack (Official Lyrics Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ssBp5B3j0Zs",
-                "duration": 195,
-                "title": "SWEET CAROLINE -  VICTOR WOOD lyrics"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DWJWWHCFPbE",
-                "duration": 167,
-                "title": "The Bee Gees - To Love Somebody (1967)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PqccEpqvwPY",
-                "duration": 381,
-                "title": "Eagles - Lyin' Eyes (Live 1977) (Official Video) [4K]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MbnrdCS57d0",
-                "duration": 163,
-                "title": "Patsy Cline - Crazy (1961)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wtjro7_R3-4",
-                "duration": 267,
-                "title": "The Manhattans - Kiss and Say Goodbye (Official Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6T-6vxLXj9M",
-                "duration": 232,
-                "title": "Fortunate Son - Apocalypse Now Version"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tnV7dTXlXxs",
-                "duration": 212,
-                "title": "Ventura Highway"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Y-9Y4CCIWnM",
-                "duration": 163,
-                "title": "Johnny Be Goode"
+                "title": "The Troggs - Wild Thing"
             },
             {
                 "url": "https://www.youtube.com/watch?v=3KFvoDDs0XM",
@@ -297,131 +72,444 @@
                 "title": "Oh, Pretty Woman"
             },
             {
-                "url": "https://www.youtube.com/watch?v=j3plj_Xplus",
-                "duration": 182,
-                "title": "The Archies - Sugar, Sugar (Official Animated Music Video)"
+                "url": "https://www.youtube.com/watch?v=wVHAQX5sSaU",
+                "duration": 148,
+                "title": "Bobby Darin - Dream Lover"
             },
             {
-                "url": "https://www.youtube.com/watch?v=oRfJMCv7ISM",
-                "duration": 215,
-                "title": "My Heart Won’t Lie  | 1960s rock and roll love ballad"
+                "url": "https://www.youtube.com/watch?v=FT_Jp5hN16Y",
+                "duration": 213,
+                "title": "Angela Winters - Under the Moonlight"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hwZNL7QVJjE",
-                "duration": 178,
-                "title": "Ben E. King - Stand By Me (Audio)"
+                "url": "https://www.youtube.com/watch?v=MgTSfJEf_jM",
+                "duration": 249,
+                "title": "The Animals - House of the Rising Sun (1964) High Quality [HQ].flv"
             },
             {
-                "url": "https://www.youtube.com/watch?v=swJOIjjW69U",
-                "duration": 258,
-                "title": "Dreams (2004 Remaster)"
+                "url": "https://www.youtube.com/watch?v=Bcus42ihkTI",
+                "duration": 157,
+                "title": "I'd Rather Go Blind"
             },
             {
-                "url": "https://www.youtube.com/watch?v=mRCe5L1imxg",
-                "duration": 168,
-                "title": "The Turtles - Happy Together - 1967"
+                "url": "https://www.youtube.com/watch?v=wsIbfYEizLk",
+                "duration": 157,
+                "title": "The Seekers - Georgy Girl (1967 - Stereo)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=pTjQgkHzbTk",
-                "duration": 178,
-                "title": "Ray Peterson - Tell Laura I Love Her (RCA 1960)"
+                "url": "https://www.youtube.com/watch?v=UCmUhYSr-e4",
+                "duration": 162,
+                "title": "Otis Redding-Sitting on the dock of the bay"
             },
             {
-                "url": "https://www.youtube.com/watch?v=rfRKzouM9lo",
-                "duration": 277,
-                "title": "The O'Jays - Forever Mine (Official HD Video)"
+                "url": "https://www.youtube.com/watch?v=SzlpTRNIAvc",
+                "duration": 180,
+                "title": "James Brown - I Feel Good (Legends of Rock 'n' Roll)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=TLV4_xaYynY",
-                "duration": 242,
-                "title": "The Jimi Hendrix Experience - All Along The Watchtower (Official Audio)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ywL6tMQdG4c",
-                "duration": 206,
-                "title": "Summer Breeze"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xwy-3aI435o",
-                "duration": 161,
-                "title": "Have You Ever Seen The Rain"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HE1hf2nhi0s",
-                "duration": 166,
-                "title": "Bring It On Home To Me"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=S2ujotDMluo",
-                "duration": 198,
-                "title": "A Man Without Love LYRICS Video Engelbert Humperdinck 1968 🌙 Moon Knight Episode 1"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mwgg1Pu6cNg",
-                "duration": 295,
-                "title": "Fleetwood Mac - Gypsy (Official Music Video) [HD]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=00BBdKciuLY",
-                "duration": 167,
-                "title": "Someone To Love Me (The Prisoner's Song)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jSPpbOGnFgk",
-                "duration": 163,
-                "title": "The Ronettes - Be My Baby (Official Audio)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RbmS3tQJ7Os",
-                "duration": 271,
-                "title": "The Rolling Stones - Gimme Shelter (Official Lyric Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jQAK6sVovUk",
-                "duration": 407,
-                "title": "Fleetwood Mac - Rhiannon (Official Music Video) [HD]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_Bu9QLDTHX4",
-                "duration": 327,
-                "title": "Lyrical: Khud Ko Tere Paas | 1920 Evil Returns | Aftab Shivdasani, Tia Bajpai"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8IjOQmwlGmk",
+                "url": "https://www.youtube.com/watch?v=kcRD8RREL4w",
                 "duration": 262,
-                "title": "Neon Moon"
+                "title": "Calvin Hart – If I Could Only Tell You"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1IBdZ645S-o",
-                "duration": 217,
-                "title": "Gordon Lightfoot - Sundown (Official Audio)"
+                "url": "https://www.youtube.com/watch?v=6FOUqQt3Kg0",
+                "duration": 150,
+                "title": "Aretha Franklin - Respect [1967] (Aretha's Original Version)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ARmYzdIdrmM",
+                "url": "https://www.youtube.com/watch?v=d1DscUAo-8s",
+                "duration": 244,
+                "title": "Moonlight Confession – Dreamy Oldies Love Song"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rblYSKz_VnI",
+                "duration": 209,
+                "title": "The Beatles - The Beatles - Hello, Goodbye (Remastered 2015)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9muzyOd4Lh8",
+                "duration": 297,
+                "title": "The Moody Blues - Nights In White Satin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S-rB0pHI9fU",
                 "duration": 187,
-                "title": "Prema Yatralaku Full Video Song | Gundamma Katha | NTR | ANR | Savitri | Jamuna | ETV Cine"
+                "title": "The Beatles - The Beatles - Penny Lane (Official Music Video) [Remastered 2015]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FTQbiNvZqaY",
-                "duration": 272,
-                "title": "Toto - Africa (Official HD Video)"
+                "url": "https://www.youtube.com/watch?v=Qyclqo_AV2M",
+                "duration": 138,
+                "title": "The Beatles - The Beatles - We Can Work It Out (Official Music Video) [Remastered 2015]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OeP4FFr88SQ",
-                "duration": 356,
-                "title": "Mr. Tambourine Man (Live at the Newport Folk Festival. 1964)"
+                "url": "https://www.youtube.com/watch?v=rMbATaj7Il8",
+                "duration": 211,
+                "title": "Steppenwolf - Born To Be Wild"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nNEb2k_EmMg",
-                "duration": 232,
-                "title": "Laura Branigan - Gloria (Official Music Video)"
+                "url": "https://www.youtube.com/watch?v=PU5xxh5UX4U",
+                "duration": 129,
+                "title": "Elvis Presley - Return To Sender [Video]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=09839DpTctU",
-                "duration": 405,
-                "title": "Eagles - Hotel California (Live 1977) (Official Video) [HD]"
+                "url": "https://www.youtube.com/watch?v=yWP6Qki8mWc",
+                "duration": 188,
+                "title": "The Beatles • \"Help\" (Live) • 1965 (Reelin' In The Years Archives)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9C1BCAgu2I8",
+                "duration": 244,
+                "title": "Simon & Garfunkel - Mrs. Robinson (Audio)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2s4slliAtQU",
+                "duration": 221,
+                "title": "Beach Boys - Surfin Usa HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gp5JCrSXkJY",
+                "duration": 158,
+                "title": "Buffalo Springfield - For What It's Worth 1967"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n-XQ26KePUQ",
+                "duration": 149,
+                "title": "Save the last dance for me - The Drifters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1vhFnTjia_I",
+                "duration": 211,
+                "title": "Neil Diamond - Sweet Caroline High Quality neildiamond"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5Jj3wZVc7nw",
+                "duration": 193,
+                "title": "Jefferson Airplane - Somebody to love"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h81Ojd3d2rY",
+                "duration": 189,
+                "title": "The Mamas & The Papas - Monday Monday"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H_a46WJ1viA",
+                "duration": 292,
+                "title": "Simon and Garfunkel - Bridge Over Troubled Water"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pVlr4g5-r18",
+                "duration": 168,
+                "title": "The Beatles- Twist n Shout(Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=im9XuJJXylw",
+                "duration": 156,
+                "title": "The Twist - Chubby Checker"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_PLq0_7k1jk",
+                "duration": 379,
+                "title": "Roy Orbison - Oh, Pretty Woman (from Black & White Night)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vWwgrjjIMXA",
+                "duration": 156,
+                "title": "Blowing In The Wind (Live On TV, March 1963)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jbt8oH5Lxto",
+                "duration": 143,
+                "title": "The Beatles - Love me Do"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y7dGdrP3pms",
+                "duration": 371,
+                "title": "Marvin Gaye - Heard It Through The Grapevine (Live at Montreux)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hzM71scYw0M",
+                "duration": 128,
+                "title": "The Doors - Hello, I Love You"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HIWY8UyW9bw",
+                "duration": 113,
+                "title": "The Box Tops - The Letter (Upbeat 1967)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W4ga_M5Zdn4",
+                "duration": 238,
+                "title": "The Byrds - Turn! Turn! Turn!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3QCZ_bv9aLc",
+                "duration": 165,
+                "title": "The Beach Boys - Don't Worry Baby"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kqXSBe-qMGo",
+                "duration": 187,
+                "title": "Van Morrison - Brown Eyed Girl (Original Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AapxXRlsdwA",
+                "duration": 160,
+                "title": "sherry"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XjiOtouyBOg",
+                "duration": 223,
+                "title": "The Ventures - Wipe Out"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ipADNlW7yBM",
+                "duration": 144,
+                "title": "The Beatles - I Want To Hold your Hand [HD]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JDUjeR01wnU",
+                "duration": 124,
+                "title": "Lesley Gore - You Don't Own Me (HD)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zx06XNfDvk0",
+                "duration": 183,
+                "title": "Petula Clark   Downtown. original version"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-2GmzyeeXnQ",
+                "duration": 176,
+                "title": "the kinks- you really got me"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v0fy1HeJv80",
+                "duration": 132,
+                "title": "The Marcels   -   Blue Moon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IkMFLUXTEwM",
+                "duration": 140,
+                "title": "I Think We`re Alone Now - Tommy James & The Shondells"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qJFVPxBpezk",
+                "duration": 185,
+                "title": "Gary Puckett & The Union Gap - Young Girl - HQ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PzpWKAGvGdA",
+                "duration": 193,
+                "title": "Frankie Valli - Can't take my eyes off you"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SfcSXmFFVfE",
+                "duration": 226,
+                "title": "THESE EYES  Propiedad  de Sony Music Entertainment"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qzpPy9hJYA8",
+                "duration": 214,
+                "title": "Zombies - Time Of The Season HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CdvITn5cAVc",
+                "duration": 166,
+                "title": "Martha & The Vandellas \"Dancing in the Streets\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6iRNVwslM4",
+                "duration": 156,
+                "title": "Bad Moon Rising - Creedence Clearwater Revival (HQ - 5.1 Studio )"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uPqAvgN6Tyw",
+                "duration": 163,
+                "title": "The Byrds - \"Mr. Tambourine Man\" - 5/11/65"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6iaR3WO71j4",
+                "duration": 190,
+                "title": "JOHNNY RIVERS - Secret Agent  Man 1966"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kYBZqfOZiS4",
+                "duration": 175,
+                "title": "The Four Seasons - Rag Doll"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bcrEqIpi6sg",
+                "duration": 218,
+                "title": "Joni Mitchell - Both Sides Now (Live, 1970)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4M7gKZqgHn4",
+                "duration": 128,
+                "title": "Mamas & Papas - Dedicated To The One I Love"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3kcmwXUdDCE",
+                "duration": 164,
+                "title": "The Mamas And The Papas - California Dreamin'. Audio Gold Song ful HD.mp4"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=08083BNaYcA",
+                "duration": 162,
+                "title": "Gerry & The Pacemakers - Ferry Cross The Mersey (1965)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pkMgs3lFwkQ",
+                "duration": 151,
+                "title": "Mony Mony by Tommy James & The Shondells"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5m6lymJy57E",
+                "duration": 145,
+                "title": "Dion The Wanderer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bPLWBhNW3FM",
+                "duration": 278,
+                "title": "Moody Blues - Tuesday Afternoon (1970)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q8UKf65NOzM",
+                "duration": 155,
+                "title": "The Shangri-Las -Leader Of The Pack Video with High Quality Sound"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ziLagAgoPCE",
+                "duration": 141,
+                "title": "Del Shannon - Runaway (Rare Stereo Version)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oxzg_iM-T4E",
+                "duration": 161,
+                "title": "Royal Guardsmen - Snoopy Vs. The Red Baron"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wwIYSofgpY0",
+                "duration": 166,
+                "title": "Shelley Fabares - Johnny Angel [Full Video Edit] 1961"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WpePWo56zm4",
+                "duration": 164,
+                "title": "THIS MAGIC MOMENT-JAY AND THE AMERICANS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qh9ZZgDqzAg",
+                "duration": 143,
+                "title": "Jimmy Soul - If you wanna be happy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3pWBnodrR1M",
+                "duration": 230,
+                "title": "The Four Season & Frankie Valli hits live Sherry, Rag doll, Walk"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cqxTUxzOceE",
+                "duration": 151,
+                "title": "Surfin´ Bulldog (Beach Boys - Surfin´ USA)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r1M5eEJeT38",
+                "duration": 152,
+                "title": "Mary Wells - My Guy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KzYWTIHqutA",
+                "duration": 220,
+                "title": "The Rolling Stones - (I Can't Get No) Satisfaction (Live- Ireland 1965)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UiKcd7yPLdU",
+                "duration": 175,
+                "title": "Three Dog Night \"One\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LJ9D0UHP7x4",
+                "duration": 273,
+                "title": "Jumpin' Jack Flash　－　The Rolling Stones"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=My9I8q-iJCI",
+                "duration": 178,
+                "title": "I Am a Rock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kK62tfoCmuQ",
+                "duration": 154,
+                "title": "Blood Sweat & Tears - Spinning wheel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HaRacIzZSPo",
+                "duration": 286,
+                "title": "Ode to Billie Joe - Bobbie Gentry (BBC Live 1968)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z_KDPUTyDyQ",
+                "duration": 164,
+                "title": "Herb Alpert & the Tijuana Brass A Taste of Honey Video 1966"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5akEgsZSfhg",
+                "duration": 150,
+                "title": "Up Up and Away"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n4FOiVM4bQc",
+                "duration": 143,
+                "title": "the beach boys - fun, fun, fun"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S5Vz-z4PEkk",
+                "duration": 143,
+                "title": "Lemon Pipers - Green Tambourine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zBn5aIfZElE",
+                "duration": 162,
+                "title": "Sam Cooke - Chain Gang (High Quality)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rq2P8pTrDvw",
+                "duration": 169,
+                "title": "Percy Sledge When a Man Loves a Woman 1966 TV NORTEAMERICANA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vvXCYqd8AAs",
+                "duration": 183,
+                "title": "Neil Diamond, 'Cherry Cherry' (circa 1967)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JCKXxJRgVgc",
+                "duration": 136,
+                "title": "Tommy Roe - Sweet Pea"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5h2zp96Hzhg",
+                "duration": 190,
+                "title": "Neil Sedaka \"Happy Birthday Sweet Sixteen\""
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EPrtvdzhmts",
+                "duration": 177,
+                "title": "The Four Tops - I Can't Help Myself"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RghL1rViX34",
+                "duration": 176,
+                "title": "Strawberry Alarm Clock - Incense and Peppermints"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4RabQLuj4N8",
+                "duration": 363,
+                "title": "The Supremes: Live @ The Hollywood Palace (1966) - \"You Keep Me Hangin' On\" & \"Somewhere\""
             }
         ],
-        "search_query": "1960s music hits"
+        "search_query": "1960s music hits",
+        "playlists": [
+            "PLs5nLtKbGBVOZBCzgXxcN9fyCz6sQ1fab"
+        ]
     }
 }

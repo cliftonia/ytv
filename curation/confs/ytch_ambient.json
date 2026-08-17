@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Ambient",
         "network_type": "streaming",
-        "channel_number": 84,
+        "channel_number": 75,
         "network_long_name": "Ambient",
         "stream_rotation": "clock",
         "streams": [
@@ -22,19 +22,29 @@
                 "title": "No AI Lofi · Study, Focus & Relax Session · Gentle Sea Ambience 🌊"
             },
             {
-                "url": "https://www.youtube.com/watch?v=O9XbnbLbZ9U",
-                "duration": 3705,
-                "title": "DEEP CHILL OUT LOUNGE MIX 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=EtD7_8kCMHA",
                 "duration": 4968,
                 "title": "Flow Of Time ☯︎ Japanese LoFi HipHop Mix - Collection 時間の流れ"
             },
             {
+                "url": "https://www.youtube.com/watch?v=O9XbnbLbZ9U",
+                "duration": 3705,
+                "title": "DEEP CHILL OUT LOUNGE MIX 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d0MeskbA0ec",
+                "duration": 3804,
+                "title": "Slow Mornings ☕️ [jazzy lofi beats / chill instrumental mix]"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=fsPRybb-xXg",
                 "duration": 3868,
                 "title": "cozy spring lofi 🌸 chill music to study & relax to"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LuRpuxgL_kQ",
+                "duration": 3789,
+                "title": "Chillhop Solarpunk 🌿 [sunny chill beats / no AI lofi]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=xx3X4HRbtgI",
@@ -52,16 +62,6 @@
                 "title": "BTS - ARIRANG Full Album LoFi Mix 🎧 [+Come Over] | chill / study / relax 방탄소년단"
             },
             {
-                "url": "https://www.youtube.com/watch?v=d0MeskbA0ec",
-                "duration": 3804,
-                "title": "Slow Mornings ☕️ [jazzy lofi beats / chill instrumental mix]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wkCJi6vmdiw",
-                "duration": 3749,
-                "title": "Morning Calm 🌿 Soft Lofi Beats from a Peaceful Balcon"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=DkD3dJaqjcE",
                 "duration": 3680,
                 "title": "No AI Lofi Music for Study, Relax, Work and Focus · Chill with Us by the Lake"
@@ -72,9 +72,14 @@
                 "title": "Afternoon Jazz 🎷 [jazz lofi]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=VfDKe-Sn_H0",
-                "duration": 4913,
-                "title": "The Legend of Zelda - Ultimate Lofi & Chill-Hop Album Mix"
+                "url": "https://www.youtube.com/watch?v=wkCJi6vmdiw",
+                "duration": 3749,
+                "title": "Morning Calm 🌿 Soft Lofi Beats from a Peaceful Balcon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vsuG3XEoItM",
+                "duration": 1543,
+                "title": "🎶2026 Ultimate Mind Relaxing Lofi Beats | Study, Sleep & Chill#trendingsong"
             },
             {
                 "url": "https://www.youtube.com/watch?v=PVLInwNYd-I",
@@ -82,24 +87,19 @@
                 "title": "SAD LO-FI 🥺 💔 2026 Ultimate Mind Relaxing Lofi Beats | Study Sleep & Chill #lofimusic #tre"
             },
             {
-                "url": "https://www.youtube.com/watch?v=LuRpuxgL_kQ",
-                "duration": 3789,
-                "title": "Chillhop Solarpunk 🌿 [sunny chill beats / no AI lofi]"
+                "url": "https://www.youtube.com/watch?v=XVFUtEh9zrY",
+                "duration": 3661,
+                "title": "summer lofi ☀️ chill beats to relax to"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CihmFK_vg_I",
-                "duration": 3990,
-                "title": "Hip Hop/Trap Instrumental Beats Mix 2026  | 1 HOUR"
+                "url": "https://www.youtube.com/watch?v=cyzx45mupcQ",
+                "duration": 3699,
+                "title": "4 A.M Chill Session 🌌 synthwave music for long gaming nights"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ESIBptJ5ewc",
                 "duration": 4351,
                 "title": "📻 90s LoFi Vibes - Chill-hop Mix to Study📚 | Work | Listen All Day🎧 | Relax"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=P7byzjndpyc",
-                "duration": 1269,
-                "title": "🎶2026 Ultimate Mind Relaxing Lofi Beats | Study, Sleep & Chill#trendingsong"
             },
             {
                 "url": "https://www.youtube.com/watch?v=xVWzROJdth0",
@@ -112,6 +112,11 @@
                 "title": "Quiet Classroom Vibes 📖 | Lofi for Studying, Concentration and Boost Your Focus 🎧|"
             },
             {
+                "url": "https://www.youtube.com/watch?v=TKuYk3RU3xg",
+                "duration": 1910,
+                "title": "Study Focus Music | Soft Bollywood Lofi Mix 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=c6rtIpImQj8",
                 "duration": 1794,
                 "title": "2026 HEART ❤️ TOUCHING LOFI SONG | STUDY, SLEEP & CHILL LOFI #lofimusic #trendingsong"
@@ -122,14 +127,19 @@
                 "title": "Lofi Girl x The Sims - cozy music to feel ooh be gah!"
             },
             {
+                "url": "https://www.youtube.com/watch?v=GUDXI3Gb0eg",
+                "duration": 1705,
+                "title": "🎶2026 New Romantic song  Ultimate Mind Relaxing Lofi  | Study, Sleep & Chill 🎧 New Hindi L"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=N3ur5Ey21zg",
                 "duration": 3600,
                 "title": "Studio Ghibli but it's lofi beats | No AI"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GUDXI3Gb0eg",
-                "duration": 1705,
-                "title": "🎶2026 New Romantic song  Ultimate Mind Relaxing Lofi  | Study, Sleep & Chill 🎧 New Hindi L"
+                "url": "https://www.youtube.com/watch?v=CihmFK_vg_I",
+                "duration": 3990,
+                "title": "Hip Hop/Trap Instrumental Beats Mix 2026  | 1 HOUR"
             },
             {
                 "url": "https://www.youtube.com/watch?v=zqmIUKoe-q0",
@@ -182,14 +192,14 @@
                 "title": "Soft Chill House Mix - Amii Watson B2B Jimmi Harvey"
             },
             {
-                "url": "https://www.youtube.com/watch?v=yvsRrpIPCoE",
-                "duration": 3340,
-                "title": "Modern Ambient Jungle Mix [3] (Intelligent DnB)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=O5p2ZX7UU9w",
                 "duration": 3699,
                 "title": "forgotten dreams // dark ambient music mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yvsRrpIPCoE",
+                "duration": 3340,
+                "title": "Modern Ambient Jungle Mix [3] (Intelligent DnB)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EMTNk6t0bKc",
@@ -212,6 +222,11 @@
                 "title": "Chris Luno - Ibiza Deep House Mix @ Ocean Drive Talamanca"
             },
             {
+                "url": "https://www.youtube.com/watch?v=EimlcPL1Eis",
+                "duration": 1856,
+                "title": "2026 Ultimate Mind Relaxing Lofi Songs | Study, Sleep & Chill lofi | #lofimusic #trendings"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=hwkq1qlVbqc",
                 "duration": 2483,
                 "title": "2:00am Soul R&B Bedroom Playlist | SZA, Miguel, PARTYNEXTDOOR, Brent Faiyaz, Kehlani Mix b"
@@ -232,14 +247,14 @@
                 "title": "HUMAN NATURE (SWG Extended Mix) - MICHAEL JACKSON (Thriller)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=APljvOxetas",
-                "duration": 516,
-                "title": "A Guide to Making Lo-fi"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=95PvO2Owop4",
                 "duration": 2703,
                 "title": "R&B & Neo Soul Café Playlist (Erykah Badu, Sade, Alicia Keys) w/xBloom | Play this Playlis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=APljvOxetas",
+                "duration": 516,
+                "title": "A Guide to Making Lo-fi"
             },
             {
                 "url": "https://www.youtube.com/watch?v=wzqqxhGcXR4",
@@ -252,11 +267,6 @@
                 "title": "SAD LO-FI Part 2 🥺 💔 2026 Ultimate Mind-Relaxing Lofi Beats | Study #lofimusic #trendingso"
             },
             {
-                "url": "https://www.youtube.com/watch?v=EimlcPL1Eis",
-                "duration": 1856,
-                "title": "2026 Ultimate Mind Relaxing Lofi Songs | Study, Sleep & Chill lofi | #lofimusic #trendings"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Ql-l8cOOMU4",
                 "duration": 1301,
                 "title": "Heartbreaking Song 🎵 💔  Lofi Song 2026 Afzal Beats"
@@ -265,6 +275,11 @@
                 "url": "https://www.youtube.com/watch?v=m_GoB8SFOeM",
                 "duration": 2287,
                 "title": "sunset deep house mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YYNmEphea4k",
+                "duration": 1650,
+                "title": "Mind Relax Lofi Beats 2026 ❤️ | Deep Focus Lofi Mix for Study, Sleep & Chill Vibes"
             },
             {
                 "url": "https://www.youtube.com/watch?v=5b1qTD0ZABo",
@@ -292,11 +307,6 @@
                 "title": "Late Night Feels Playlist (pt.5) | Drake, SZA, Chris Brown, Summer Walker, Frank Ocean"
             },
             {
-                "url": "https://www.youtube.com/watch?v=YYNmEphea4k",
-                "duration": 1650,
-                "title": "Mind Relax Lofi Beats 2026 ❤️ | Deep Focus Lofi Mix for Study, Sleep & Chill Vibes"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=XfW2V4-KaWY",
                 "duration": 3601,
                 "title": "Snowfall - øneheart x Reidenshi // One Hour Loop // Dark Ambient Music"
@@ -317,19 +327,24 @@
                 "title": "🖤🖤🖤 Bondage | 10 ( a sensual playlist) | lofi | sex music | dark chill and trip hop | bdsm"
             },
             {
-                "url": "https://www.youtube.com/watch?v=oxnJppzjKsA",
-                "duration": 3441,
-                "title": "L U X U R Y - Deep House Mix Vol.8 ' by Gentleman"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=RZ4s4Hl2p6I",
                 "duration": 967,
                 "title": "Tamil × Malayalam Romantic melodies lofi ~ malayalam lofi / tamil lofi | old songs lofi pl"
             },
             {
+                "url": "https://www.youtube.com/watch?v=oxnJppzjKsA",
+                "duration": 3441,
+                "title": "L U X U R Y - Deep House Mix Vol.8 ' by Gentleman"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=1YvdAZ9LMik",
                 "duration": 4406,
                 "title": "Relaxing Tropical Island Music for Beach Vacation Vibes & Summer Chill"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tgB_cVEWAnM",
+                "duration": 1688,
+                "title": "2026 ULTIMATE MIND RELAXING SONGS ✨ | SLEEP, STUDY & CHILL LOFI #lofimusic #trendingsong"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ghgig0fYDRE",
@@ -367,11 +382,6 @@
                 "title": "Deep Love 💕 | Ultimate Mind Relax 2026 | Study, Sleep & Chill Lofi Beats ✨ #lofimusic #tre"
             },
             {
-                "url": "https://www.youtube.com/watch?v=tgB_cVEWAnM",
-                "duration": 1688,
-                "title": "2026 ULTIMATE MIND RELAXING SONGS ✨ | SLEEP, STUDY & CHILL LOFI #lofimusic #trendingsong"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=mmwo4kdVKT4",
                 "duration": 931,
                 "title": "tape speed - the secret sauce to ambient and lofi music"
@@ -380,11 +390,6 @@
                 "url": "https://www.youtube.com/watch?v=6qtLueAbAj8",
                 "duration": 3896,
                 "title": "🔥 Dub Reggae From the Roots 🔥 |  Organic Reggae Set & Dubwise Mix 2025"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cIZhlFIyJ_Y",
-                "duration": 3652,
-                "title": "Night lofi playlist • lofi music | chill beats to relax/study to"
             },
             {
                 "url": "https://www.youtube.com/watch?v=otSuo6QNYLg",
@@ -397,19 +402,9 @@
                 "title": "Take It Slow ☕️ [Chill Acoustic, lofi mix] Forest Café BGM to Unwind and Breathe｜study, wo"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FFfdyV8gnWk",
-                "duration": 3670,
-                "title": "City of Gamers - Chill/Gaming/Studying Lofi Hip Hop Mix - (1 hour)"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=CMNyHBx1gak",
                 "duration": 4239,
                 "title": "Lonely Night 🌑 [dark ambient]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m8WjnuhoeDg",
-                "duration": 3722,
-                "title": "remember when lofi hip-hop was smooth like this."
             },
             {
                 "url": "https://www.youtube.com/watch?v=D-ya6U-pbWo",
@@ -417,14 +412,34 @@
                 "title": "Avatar: The Last Airbender☁️ ~ 1 HOUR OF LOFI CHILLOUT MUSIC | Vol.1"
             },
             {
+                "url": "https://www.youtube.com/watch?v=l98w9OSKVNA",
+                "duration": 3449,
+                "title": "12 A.M Study Session 📚 [lofi hip hop]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ihe1QbeGt7U",
+                "duration": 3748,
+                "title": "Linkin Park Lofi Vol. 2 — Soft Beats to Unwind & Sleep"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z-aMmJJEjbQ",
+                "duration": 4191,
+                "title": "Michael Jackson Lofi Mix - Chill Remix Beats for Study & Relax"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ny-GPZbPgOI",
+                "duration": 3602,
+                "title": "Morning Vibes 🌞 - Lofi Mix"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=1bvbsx-hpFc",
                 "duration": 3681,
                 "title": "Restful Holidays ☀️ [summer lofi]"
             },
             {
-                "url": "https://www.youtube.com/watch?v=lTRiuFIWV54",
-                "duration": 3674,
-                "title": "1 A.M Study Session 📚 [lofi hip hop]"
+                "url": "https://www.youtube.com/watch?v=VfDKe-Sn_H0",
+                "duration": 4913,
+                "title": "The Legend of Zelda - Ultimate Lofi & Chill-Hop Album Mix"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rt1mRnRp79A",
@@ -435,11 +450,6 @@
                 "url": "https://www.youtube.com/watch?v=2J8nm-4VSgg",
                 "duration": 3977,
                 "title": "Cozy Wooden Balcony 🌿 Chill Lofi Beats for Relaxing Nights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CtVJw06v5AA",
-                "duration": 3622,
-                "title": "metal gear solid lofi 💿 chill ops: tactical beats [to relax/study to]"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2ojMshIhLmw",
@@ -487,24 +497,14 @@
                 "title": "RAINING IN ＯＳＡＫＡ (Lofi HipHop)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=cyzx45mupcQ",
-                "duration": 3699,
-                "title": "4 A.M Chill Session 🌌 synthwave music for long gaming nights"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XVFUtEh9zrY",
-                "duration": 3661,
-                "title": "summer lofi ☀️ chill beats to relax to"
+                "url": "https://www.youtube.com/watch?v=3Oe4yhzxp44",
+                "duration": 4262,
+                "title": "Michael Jackson's Hotel Room | Lofi Chill Mix For Sleep, Study & Meditation | the detail."
             },
             {
                 "url": "https://www.youtube.com/watch?v=25Bc1rHffu4",
                 "duration": 3600,
                 "title": "Zelda but it's lofi beats | No AI"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Oe4yhzxp44",
-                "duration": 4262,
-                "title": "Michael Jackson's Hotel Room | Lofi Chill Mix For Sleep, Study & Meditation | the detail."
             }
         ],
         "search_query": "ambient lofi long mix"

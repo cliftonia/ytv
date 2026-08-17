@@ -2,7 +2,7 @@
     "station_conf": {
         "network_name": "Sewing & Dressmaking",
         "network_type": "streaming",
-        "channel_number": 46,
+        "channel_number": 52,
         "network_long_name": "Sewing & Dressmaking",
         "stream_rotation": "clock",
         "streams": [
@@ -22,6 +22,11 @@
                 "title": "26 Patterns to Sew in 2026! | Sewing Ideas and Inspiration"
             },
             {
+                "url": "https://www.youtube.com/watch?v=mVLkX4SfZ2k",
+                "duration": 382,
+                "title": "🌺 Basic Ways to Women's Collar Sewing ✅️ Sewing Tutorial and Techniques"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=WqMabbi5Y0Q",
                 "duration": 390,
                 "title": "Very easy frill baby frock cutting and stitching tutorial | How to sew baby frock for begi"
@@ -32,19 +37,14 @@
                 "title": "DIY Straight-Leg, High-Waisted Pants + Sewing Pattern by Dressmaking Amóre"
             },
             {
-                "url": "https://www.youtube.com/watch?v=mZg2w-O1U4s",
-                "duration": 503,
-                "title": "✅ Designer Cowl Sleeve Blouse | Trending Sleeve Cutting & Stitching | New Cowl Sleeve Tren"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mVLkX4SfZ2k",
-                "duration": 382,
-                "title": "🌺 Basic Ways to Women's Collar Sewing ✅️ Sewing Tutorial and Techniques"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Wjb--F60GMI",
                 "duration": 365,
                 "title": "Umbrella Cut Frill Baby Frock Cutting and stitching | Baby Frock Cutting and stitching | B"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mZg2w-O1U4s",
+                "duration": 503,
+                "title": "✅ Designer Cowl Sleeve Blouse | Trending Sleeve Cutting & Stitching | New Cowl Sleeve Tren"
             },
             {
                 "url": "https://www.youtube.com/watch?v=TKaXzL7-kQI",
@@ -52,9 +52,19 @@
                 "title": "How to start SEWING your own clothes in 2026 | Sewing tools | Sewing 101 PART 1"
             },
             {
+                "url": "https://www.youtube.com/watch?v=lQqp7fRDmu0",
+                "duration": 971,
+                "title": "Building a Work Wardrobe I'll Actually Wear Beyond the Office | Sewing Diaries"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=voAydziW5eY",
                 "duration": 1721,
                 "title": "50 Easy Sewing Projects That Sell Like Crazy in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VMBDPSFJwnY",
+                "duration": 2333,
+                "title": "My first time Sewing with Liquid Organza - Mixing 18th century stays with modern fabrics!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=hKNKXl-3l4s",
@@ -72,14 +82,14 @@
                 "title": "Easy gown tutorial 💕 Beginner friendly|| No pattern #sewing"
             },
             {
-                "url": "https://www.youtube.com/watch?v=VMBDPSFJwnY",
-                "duration": 2333,
-                "title": "My first time Sewing with Liquid Organza - Mixing 18th century stays with modern fabrics!"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=1KmjR3RlDpg",
                 "duration": 456,
                 "title": "3 year old Baby Elastic Neck Frock Cutting and Stitching"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=i3CSfSndNlg",
+                "duration": 1754,
+                "title": "Beautiful Panels Kurti/Frock👗|Easy Cutting & Stitching 😍|8 Panels Frock Detailed tutorial"
             },
             {
                 "url": "https://www.youtube.com/watch?v=E-LBS6spRMM",
@@ -87,19 +97,39 @@
                 "title": "Full Suit Cutting & Stitching Tutorial at Home 2026 latest tricks 💫|Step by Step Easy Sew"
             },
             {
-                "url": "https://www.youtube.com/watch?v=lQqp7fRDmu0",
-                "duration": 971,
-                "title": "Building a Work Wardrobe I'll Actually Wear Beyond the Office | Sewing Diaries"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=dZZ62Eg1W6g",
                 "duration": 1753,
                 "title": "How to Sew a Sparkly Princess Party Dress for Girls | Full Step-By-Step Sewing Tutorial"
             },
             {
+                "url": "https://www.youtube.com/watch?v=FGuGDP9ct1Q",
+                "duration": 751,
+                "title": "How to Cut and Sew a Full 360 degree Flare Skirt /Beginners friendly"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kRbJwrSYrDM",
+                "duration": 1171,
+                "title": "Recreating Insta Viral Anarkali Cutting And Stitching Very Easy/(16 Panel)Anarkali Dress M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_NtmRDo3g-Q",
+                "duration": 401,
+                "title": "Round yoke baby frock cutting and stitching | 1-2 year baby girl frock tutorial @anyonecan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rB2yJV983jk",
+                "duration": 774,
+                "title": "10 Sewing Projects to MAKE and SELL To make in under 10 minutes"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ETt0-E3zNvw",
                 "duration": 482,
                 "title": "Square Yoke Baby Frock with Plazo Cutting & Stitching | Easy DIY Baby Girl Dress Tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X7_ZlJ_sd74",
+                "duration": 724,
+                "title": "New Neck Design Cutting and Stitching|| Unique and Stylish Neckline Sewing Tutorial"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RdZm4VSaQqc",
@@ -112,9 +142,9 @@
                 "title": "Latest Stylish Neck Design for Kameez 2026 | Easy Cutting & Stitching Tutorial ✂️😍"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R56o9vpzRe4",
-                "duration": 1190,
-                "title": "Amazing Dress Design Transformation with Lace & Cut Piece | Full Stitching Tutorial Step b"
+                "url": "https://www.youtube.com/watch?v=KwJB3Q4PPo8",
+                "duration": 576,
+                "title": "Blouse Design Cutting and stitching Tutorial 2026 Blouse Cutting and stitching 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=7lfqwpy3rHo",
@@ -132,16 +162,6 @@
                 "title": "New Dori & Pearl Neck Design 2026  | Unique Gala Cutting & Stitching | Easy Tutorial for B"
             },
             {
-                "url": "https://www.youtube.com/watch?v=KwJB3Q4PPo8",
-                "duration": 576,
-                "title": "Blouse Design Cutting and stitching Tutorial 2026 Blouse Cutting and stitching 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=41wNZye0Ft8",
-                "duration": 709,
-                "title": "How to Cut and Sew a Handkerchief Skirt | The Easiest Method."
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=BaY4rs9OFa4",
                 "duration": 634,
                 "title": "Stylish Baby Jumpsuit/Dungaree Dress Cutting and Stitching"
@@ -157,14 +177,9 @@
                 "title": "Stylish Neck Design Simple Kurti Cutting and Stitching 2026"
             },
             {
-                "url": "https://www.youtube.com/watch?v=gtdC_HaYJIk",
-                "duration": 1177,
-                "title": "Yumna Zedi Viral🔥 Neck Design Cutting And Stitching Tutorial || Drama Neck Design Dekh Zar"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=uW5m9QL-wG8",
                 "duration": 301,
-                "title": "Latest Men's Fashion Shirt Design 2026 | Shirt Stitching @Royal_tailor_Kannadiga"
+                "title": "How to stitch  Latest Men's Fashion Shirt Design 2026 | Shirt Stitching @Royal_tailor_Kann"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EWiYGSLsv1Y",
@@ -172,14 +187,9 @@
                 "title": "Coat Collar Baby Dress Cutting and Stitching | 5-Year-Old Baby Frock Design 2026 | Nobi De"
             },
             {
-                "url": "https://www.youtube.com/watch?v=hqSqIYWRvwA",
-                "duration": 571,
-                "title": "Sewing tutorial, sewing tips and tricks, sewing ideas, Dress design ideas, neck design, la"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7SxvltbtGlg",
-                "duration": 518,
-                "title": "New Trending Viral Plain Kurti Stitching Tutorial for 14 August | Solid Dress Stitching 20"
+                "url": "https://www.youtube.com/watch?v=cpbR_qr3YG4",
+                "duration": 390,
+                "title": "V Yoke Beautiful Baby Girl Dress Sewing Tutorial || Easy DIY Baby Dress For 1 to 2 Year Ba"
             },
             {
                 "url": "https://www.youtube.com/watch?v=xk_jSH5JYOA",
@@ -187,29 +197,24 @@
                 "title": "Very Easy Baby Jhabala Frock Cutting and Stitching Tutorial Step-by-Step| Baby Frock DIY"
             },
             {
-                "url": "https://www.youtube.com/watch?v=5h0KIHkkaFQ",
-                "duration": 256,
-                "title": "New Trending Sleeves Design cutting & stitching | बाजू का डिजाइन | Latest Baju Design Tuto"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8lqVbJYmvXE",
-                "duration": 1213,
-                "title": "Pakistani Model Style Farshi Shalwar Cutting & Stitching Tutorial Step by Step | Easy Sewi"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cpbR_qr3YG4",
-                "duration": 390,
-                "title": "V Yoke Beautiful Baby Girl Dress Sewing Tutorial || Easy DIY Baby Dress For 1 to 2 Year Ba"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=DIVj5PwNPbI",
                 "duration": 413,
                 "title": "2 year Baby Elastic Frock Cutting and Stitching Tutorial"
             },
             {
-                "url": "https://www.youtube.com/watch?v=FGuGDP9ct1Q",
-                "duration": 751,
-                "title": "How to Cut and Sew a Full 360 degree Flare Skirt /Beginners friendly"
+                "url": "https://www.youtube.com/watch?v=SY03wfaEKec",
+                "duration": 1351,
+                "title": "Saree to Gown Transformation | Saree Gown Cutting & Stitching Tutorial | Easy Sewing #sare"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hqSqIYWRvwA",
+                "duration": 571,
+                "title": "Sewing tutorial, sewing tips and tricks, sewing ideas, Dress design ideas, neck design, la"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5h0KIHkkaFQ",
+                "duration": 256,
+                "title": "New Trending Sleeves Design cutting & stitching | बाजू का डिजाइन | Latest Baju Design Tuto"
             },
             {
                 "url": "https://www.youtube.com/watch?v=m6pT2mJnUxE",
@@ -217,14 +222,9 @@
                 "title": "Ethnic Style Eid baby dress Cutting and stitching Tutorial || Eid Outfit For Baby girls"
             },
             {
-                "url": "https://www.youtube.com/watch?v=VRznZA4py0A",
-                "duration": 305,
-                "title": "Ramzan Eid Special Beautiful Neck Design 2026 | Elegant Pearl Lace Stitching Tutorial | Sa"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=60W2Po-eMC0",
-                "duration": 705,
-                "title": "Master the Art of Shirt Cutting: Professional Tailoring Secrets 2026"
+                "url": "https://www.youtube.com/watch?v=8lqVbJYmvXE",
+                "duration": 1213,
+                "title": "Pakistani Model Style Farshi Shalwar Cutting & Stitching Tutorial Step by Step | Easy Sewi"
             },
             {
                 "url": "https://www.youtube.com/watch?v=S01LlyBVCFQ",
@@ -237,6 +237,11 @@
                 "title": "How to sew round yoke baby frock for 7-8 year baby | Baby frock cutting and stitching tuto"
             },
             {
+                "url": "https://www.youtube.com/watch?v=60W2Po-eMC0",
+                "duration": 705,
+                "title": "Master the Art of Shirt Cutting: Professional Tailoring Secrets 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=K94smIRNml8",
                 "duration": 637,
                 "title": "Most Viral  Neck Design 2026 | Easy Stitching Tutorial 😍 |Gala Design with Lace & Dori"
@@ -247,34 +252,14 @@
                 "title": "The Beauty of Slow Stitching | Giving Fabric Scraps a New Life"
             },
             {
+                "url": "https://www.youtube.com/watch?v=Mw6PUUQ6fvw",
+                "duration": 944,
+                "title": "Deep Neck with Belt Blouse | V Neck Blouse Cutting and Stitching | Magenta Blouse | Deep V"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=lfKgatKDMFg",
                 "duration": 794,
                 "title": "😍 The Most Viral 3D Fashion Shirt Design of 2026 | Full Tutorial 👉🏻Shirt Design shirt"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qFTIKiEXFao",
-                "duration": 491,
-                "title": "Trending Kanchi Cotton saree blouse design ❤️✨//stitching tutorial//in Tamil"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2C4LfmE9bck",
-                "duration": 730,
-                "title": "Latest Blouse Sleeve Design Cutting & Stitching in Telugu | Easy Tailoring Tutorial"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_NtmRDo3g-Q",
-                "duration": 401,
-                "title": "Round yoke baby frock cutting and stitching | 1-2 year baby girl frock tutorial @anyonecan"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iETDe6pcElg",
-                "duration": 702,
-                "title": "Simple & Beautiful Frock | Full Cutting & Stitching Tutorial | Designer Frock Making |"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=X7_ZlJ_sd74",
-                "duration": 724,
-                "title": "New Neck Design Cutting and Stitching|| Unique and Stylish Neckline Sewing Tutorial"
             },
             {
                 "url": "https://www.youtube.com/watch?v=6Cgh6l-qTo8",
@@ -282,14 +267,9 @@
                 "title": "Trending sleeve design cutting and stitching | Baju ki design 2026 | Astin ki design बाजू"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vXqyshQsnuc",
-                "duration": 1050,
-                "title": "Lungi to Cute Dress 😍✨ | Full Sewing Tutorial | DIY Dress Making @pavijes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=A6pq0T8BNys",
-                "duration": 484,
-                "title": "Adorable Baby Frock Cutting & Stitching Tutorial | Easy DIY Baby Dress"
+                "url": "https://www.youtube.com/watch?v=iETDe6pcElg",
+                "duration": 702,
+                "title": "Simple & Beautiful Frock | Full Cutting & Stitching Tutorial | Designer Frock Making |"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ov_bp1pSWBc",
@@ -297,19 +277,19 @@
                 "title": "🎉🤫2026 Latest Sleeves Design |👉 Beautyfull Stitching Tutorial | Easy Sewing Tutorial👍"
             },
             {
+                "url": "https://www.youtube.com/watch?v=R56o9vpzRe4",
+                "duration": 1190,
+                "title": "Amazing Dress Design Transformation with Lace & Cut Piece | Full Stitching Tutorial Step b"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=RkOA4rbW8l8",
                 "duration": 479,
                 "title": "Beautiful Cloths Cutting and Stitching Tips Sewing Tutorial Handmade Fashion desing Style"
             },
             {
-                "url": "https://www.youtube.com/watch?v=XYWAHO93aIs",
-                "duration": 831,
-                "title": "Very Pretty 😍 Stylish Neck Design With Fabric Patti Cutting & Stitching | Double Neck Desi"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WiMwJrYqWf8",
-                "duration": 963,
-                "title": "Class 56 how to make straight pant | pant cutting & stitching #pantcuttingandstitching #pa"
+                "url": "https://www.youtube.com/watch?v=A6pq0T8BNys",
+                "duration": 484,
+                "title": "Adorable Baby Frock Cutting & Stitching Tutorial | Easy DIY Baby Dress"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ofM0egm2H_E",
@@ -317,24 +297,19 @@
                 "title": "How to make unique neck design without cutting 🌸Beautiful Finishing with Lace"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Bidx41jZ_H4",
-                "duration": 500,
-                "title": "How to Sew Pant Back Pockets | How to Sew a Welt Pocket Easily"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=marHPtVlWwQ",
                 "duration": 335,
                 "title": "Latest Baby Frock Design 2026 _ Shoulder Frill Frock Cutting & Stitching Tutorial for Begi"
             },
             {
-                "url": "https://www.youtube.com/watch?v=i3CSfSndNlg",
-                "duration": 1754,
-                "title": "Beautiful Panels Kurti/Frock👗|Easy Cutting & Stitching 😍|8 Panels Frock Detailed tutorial"
+                "url": "https://www.youtube.com/watch?v=WiMwJrYqWf8",
+                "duration": 963,
+                "title": "Class 56 how to make straight pant | pant cutting & stitching #pantcuttingandstitching #pa"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Gbd3WJHhn3A",
-                "duration": 909,
-                "title": "Latest Viral Sleeves Design 2026 | Trending Blouse Sleeve Cutting & Stitching Tutorial"
+                "url": "https://www.youtube.com/watch?v=vXqyshQsnuc",
+                "duration": 1050,
+                "title": "Lungi to Cute Dress 😍✨ | Full Sewing Tutorial | DIY Dress Making @pavijes"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wt9BdAHsB7A",
@@ -360,6 +335,31 @@
                 "url": "https://www.youtube.com/watch?v=on_BE1fuUA8",
                 "duration": 490,
                 "title": "V Yoke Baby frock With Lace Cutting and stitching Tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gbd3WJHhn3A",
+                "duration": 909,
+                "title": "Latest Viral Sleeves Design 2026 | Trending Blouse Sleeve Cutting & Stitching Tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Asxsr7cgA4",
+                "duration": 559,
+                "title": "Latest Stylish Neck Design for kurti 2026 | Easy Cutting & Stitching Tutorial by amnakastu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bidx41jZ_H4",
+                "duration": 500,
+                "title": "How to Sew Pant Back Pockets | How to Sew a Welt Pocket Easily"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UbQelj_Jcec",
+                "duration": 266,
+                "title": "Comfortable plazzo pant cutting and stitching  || Easy perfect fit for beginners."
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XYWAHO93aIs",
+                "duration": 831,
+                "title": "Very Pretty 😍 Stylish Neck Design With Fabric Patti Cutting & Stitching | Double Neck Desi"
             },
             {
                 "url": "https://www.youtube.com/watch?v=nI7KW26_Xlo",
@@ -402,24 +402,14 @@
                 "title": "😲Plain Kurti Design Stitching Tutorial Step by Step For Beginners | Plain Kurti Design 202"
             },
             {
+                "url": "https://www.youtube.com/watch?v=gtdC_HaYJIk",
+                "duration": 1177,
+                "title": "Yumna Zedi Viral🔥 Neck Design Cutting And Stitching Tutorial || Drama Neck Design Dekh Zar"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=0j0btmtrVx0",
                 "duration": 625,
                 "title": "New Back Neck Blouse Design 2026 | Full Cutting & Stitching Tutorial | Easy Blouse Making"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=POa1aB-yeog",
-                "duration": 466,
-                "title": "Latest neck design cutting and stitching beautiful gala design 2026New neck design for kur"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RMIZs9UrBlI",
-                "duration": 688,
-                "title": "Latest Stylish Blouse Back Neck Design Cutting & Stitching | Easy Sewing Tutorial 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0O4hv68pRtI",
-                "duration": 1875,
-                "title": "Trending Angrakha Jacket Short Pleated Kurti Cutting and Stitching | Part 1: Very Easy Tut"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rAC996Z1dBw",
@@ -432,9 +422,14 @@
                 "title": "Flat bain Collar Cutting & Stitching Tutorial 2026 / Easy flat collar neck design for begi"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZX6Ks3c7puw",
-                "duration": 507,
-                "title": "New Style Overlap Neck Design | Easy Gala Cutting & Stitching | Latest Design 2026"
+                "url": "https://www.youtube.com/watch?v=RMIZs9UrBlI",
+                "duration": 688,
+                "title": "Latest Stylish Blouse Back Neck Design Cutting & Stitching | Easy Sewing Tutorial 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0O4hv68pRtI",
+                "duration": 1875,
+                "title": "Trending Angrakha Jacket Short Pleated Kurti Cutting and Stitching | Part 1: Very Easy Tut"
             },
             {
                 "url": "https://www.youtube.com/watch?v=bE1baOLdeMI",
@@ -442,24 +437,29 @@
                 "title": "Ready to Wear Saree Cutting & Stitching Tutorial | Easy 1-Minute Saree Stitching Malayalam"
             },
             {
+                "url": "https://www.youtube.com/watch?v=QLRCKRdNG88",
+                "duration": 509,
+                "title": "Easy way to cutting and stitching kurti neck design wi pin tucks | Sewing techniques for b"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=POa1aB-yeog",
+                "duration": 466,
+                "title": "Latest neck design cutting and stitching beautiful gala design 2026New neck design for kur"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WMU1iu9ttiU",
+                "duration": 763,
+                "title": "Perfect Tulip Trouser Cutting and stitching Just In 10 Minutes | Easy Tulip Pant Diy At Ho"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=uUGk8kEWEyk",
                 "duration": 1068,
                 "title": "New Stylish Neck Design 2026 | Easy Sewing Tutorial for Beginners | Step by Step"
             },
             {
-                "url": "https://www.youtube.com/watch?v=H16sp5q8Rz0",
-                "duration": 1236,
-                "title": "😲Plain kameez Designing  With Lace & Pintucks Cutting & Stitching | Solid Dress Designer L"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Urvxnw77nF4",
                 "duration": 569,
                 "title": "Viral🔥 Blouse cutting & stitching | 2 min blouse/wrap blouse cutting/ umbrella sleeve/lehe"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=b9cMw7qS5Lc",
-                "duration": 630,
-                "title": "Latest Back Neck Blouse Designs | Blouse Ka Design | Cutting And Stitching Back Neck Blous"
             },
             {
                 "url": "https://www.youtube.com/watch?v=k3iEF6G4euY",
@@ -472,19 +472,24 @@
                 "title": "Old Saree Convert into Anarkali Dress Cutting & Stitching Easily ll Anarkali Dress Cutting"
             },
             {
+                "url": "https://www.youtube.com/watch?v=b9cMw7qS5Lc",
+                "duration": 630,
+                "title": "Latest Back Neck Blouse Designs | Blouse Ka Design | Cutting And Stitching Back Neck Blous"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=E-ujXvKKRzQ",
                 "duration": 936,
                 "title": "Baby Frock. New Baby Frock. Baby Frock Design 2026. Baby Frock Cutting and Stitching easy"
             },
             {
-                "url": "https://www.youtube.com/watch?v=7F8xNwfKTNs",
-                "duration": 1978,
-                "title": "Complete Kameez Stitching Tutorial 2026 | Chaak, Palta, Daman & Sleeve Design | Easy Sewin"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=odJb1oBfn8Q",
                 "duration": 577,
                 "title": "New Latest Beautiful Neck Design For Sewing Lovers♥️/Cutwork & Pearls Neckline Cutting & S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7F8xNwfKTNs",
+                "duration": 1978,
+                "title": "Complete Kameez Stitching Tutorial 2026 | Chaak, Palta, Daman & Sleeve Design | Easy Sewin"
             },
             {
                 "url": "https://www.youtube.com/watch?v=VKfPi75Oa4I",
@@ -497,14 +502,9 @@
                 "title": "So cute gift bags in Japanese style sewing ideas 💟 Easy to sew and fast 💟"
             },
             {
-                "url": "https://www.youtube.com/watch?v=OAMDg_IluSY",
-                "duration": 364,
-                "title": "लेस तो सब लगाते हैं, ऐसे कौन लगाता है? 😂✨ Trending Way Of Lace Attach | Sleeves And Trouse"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VdZgR_k9d0c",
-                "duration": 640,
-                "title": "Boutique Style Designer Kurti Neck Design With Gotta Work Stitching Tutorial | Designer Ne"
+                "url": "https://www.youtube.com/watch?v=BFHrH2wSSpc",
+                "duration": 576,
+                "title": "New 14 August Baby Dress Cutting and stitching Tutorial || Jhabla frock"
             }
         ],
         "search_query": "sewing dressmaking tutorial"
