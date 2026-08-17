@@ -3,11 +3,10 @@ package com.cliftonia.fs42tv.resolver
 import com.cliftonia.fs42tv.sync.Tier
 
 /**
- * One freshness rule for [Tier], shared by [StreamResolver] (reading the local cache) and
- * [ServerResolver] (asking the publisher directly). Both ultimately hand back the same signed
- * URLs, so both must retire them on the same schedule - otherwise a server response served from
- * its own cache could hand back a URL the cached path had already rejected as too close to
- * expiry.
+ * One freshness rule for [Tier], shared by [StreamResolver] (reading the published cache) and
+ * [ClipResolver] (extracting on the device). Both ultimately hand back the same signed URLs, so
+ * both must retire them on the same schedule - otherwise a freshly resolved URL could be trusted
+ * for longer than an identical one the cached path had already rejected as too close to expiry.
  */
 
 /** Treat a tier as dead slightly before its stated expiry, since signing is not exact. */
