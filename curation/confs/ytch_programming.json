@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Programming",
+        "network_type": "streaming",
+        "channel_number": 68,
+        "network_long_name": "Programming",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=jTJvyKZDFsY",
+                "duration": 867,
+                "title": "20 Programming Projects That Will Make You A God At Coding"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CAeWjoP525M",
+                "duration": 1140,
+                "title": "How To Structure A Programming Project…"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=moQ625SEwmY",
+                "duration": 336,
+                "title": "how I learned to code personal projects (use tutorials the right way)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zX4u3SudI-0",
+                "duration": 1343,
+                "title": "3 Coding Projects to Break the Coding Barrier (w/ Instructions Include"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AGWyx96lP8U",
+                "duration": 1037,
+                "title": "How I Plan My Coding Projects - 9 Steps"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4TODW-IP4XM",
+                "duration": 327,
+                "title": "Coding my first app from scratch (aesthetic & cozy raw html css :3)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HdNypiphMRg",
+                "duration": 518,
+                "title": "How To Start Programming Projects The Lazy Way"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qS4mvrWWO_M",
+                "duration": 618,
+                "title": "How I Plan My Coding Projects"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=btxGSJ3Dh8E",
+                "duration": 1092,
+                "title": "How to code your first cute application from scratch (beginner friendl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qkFYqY3vr84",
+                "duration": 588,
+                "title": "coding is easy, actually"
+            }
+        ],
+        "search_query": "programming project tutorial"
+    }
+}

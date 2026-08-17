@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Science & Technology",
+        "network_type": "streaming",
+        "channel_number": 44,
+        "network_long_name": "Science & Technology",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
+                "duration": 2395,
+                "title": "Five Wonders of our Universe | Universe | BBC Earth Science"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iy6eAE3hmas",
+                "duration": 2546,
+                "title": "Smart insects - The astonishing intelligence of bumblebees, wasps & co"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UVf2Yw7uFoE",
+                "duration": 2546,
+                "title": "Global renewables: Pioneering the energy transition | DW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CNywxo7xZ_I",
+                "duration": 2623,
+                "title": "Understanding Science’s Great Mysteries | BBC Earth Science"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RMcYf4eNiPI",
+                "duration": 2603,
+                "title": "The Physics of Space Travel | Galaxy | Free Documentary Space"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
+                "duration": 2665,
+                "title": "City of the Future: Singapore – Full Episode | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ixnVL-m0-QA",
+                "duration": 2588,
+                "title": "The Rise Of Genetic Engineering | Gene-Editing Technology | Science Do"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rN5f72lhJz8",
+                "duration": 2403,
+                "title": "ENGINEERING EARTH:  Sci-fi Solutions to Earth's Problems | 4K Document"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2xkODJbAY6Q",
+                "duration": 1013,
+                "title": "Timelapse of Future Technology 2 (Sci-Fi Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RtGCDyfru-A",
+                "duration": 2546,
+                "title": "Our immune system - Miracle weapon against cancer? | DW Documentary"
+            }
+        ],
+        "search_query": "science and technology documentary"
+    }
+}

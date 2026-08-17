@@ -1,0 +1,10 @@
+{
+    "station_conf": {
+        "network_name": "PPV",
+        "network_type": "web",
+        "channel_number": 47,
+        "network_long_name": "Pay Per View",
+        "content_dir": "catalog/ppv",
+        "web_url": "http://localhost:4242/static/ppv/ppv.html"
+    }
+}

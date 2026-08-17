@@ -1,0 +1,20 @@
+{
+    "station_conf": {
+        "network_name": "ABC Australia",
+        "network_type": "streaming",
+        "channel_number": 108,
+        "network_long_name": "ABC Australia",
+        "streams": [
+            {
+                "url": "http://103.154.3.101:5001/live/2782.m3u8",
+                "duration": 600,
+                "title": "ABC Australia (1080p)"
+            },
+            {
+                "url": "http://103.137.83.62:9090/play/40/index.m3u8",
+                "duration": 600,
+                "title": "ABC Australia (720p)"
+            }
+        ]
+    }
+}

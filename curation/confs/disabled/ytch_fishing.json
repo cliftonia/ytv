@@ -1,0 +1,86 @@
+{
+    "station_conf": {
+        "network_name": "Fishing & Boating",
+        "network_type": "streaming",
+        "channel_number": 17,
+        "network_long_name": "Fishing & Boating",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=lVQokPrAKxI",
+                "duration": 533,
+                "title": "BEST INSHORE VISIBILITY EVER | BARRAMUNDI FINGERMARK & TUSKFISH - Spea"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rIPw-Kb1vf4",
+                "duration": 1373,
+                "title": "Epic Creek Fishing: Catching Barramundi, Monster Mangrove Jack & A Fre"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=irrtecSrd7E",
+                "duration": 722,
+                "title": "Land-based fishing for saltwater barramundi Mackay, Australia (lures)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RRFfHqt7J8M",
+                "duration": 965,
+                "title": "Exploring Remote Rivers For Land-based BARRAMUNDI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8qDWHdOvKzk",
+                "duration": 601,
+                "title": "INSANE Giant Fish Feeding Frenzy!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nMEf_ocSXNo",
+                "duration": 1112,
+                "title": "We Found a remote Coastal Creek No One Fishes!! part 3"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aKIzIKLjDrU",
+                "duration": 1062,
+                "title": "EEF Part 1   Barramundi net check with Nathan"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nqPp4L7HS1I",
+                "duration": 792,
+                "title": "Easy Way to CATCH FISH - LIVE BAIT!! - Cook Fish!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RQHKDXRGJsk",
+                "duration": 751,
+                "title": "CATCH FISH the EASY WAY | Secret to Barramundi Fishing Action! | LIVE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3uuf6fYjqsI",
+                "duration": 2501,
+                "title": "TRAPPED Fishing Reef Holes LOADED With Fish"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uo7QRn9b3h4",
+                "duration": 1241,
+                "title": "Barramundi Fishing Remote Australia (Big Barra on Lures)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mmmzyh14PDQ",
+                "duration": 603,
+                "title": "THIS Will Change Your Barra Fishing: 7 BEST Barra Lures for Inshore Wa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gbRt2jsOLgQ",
+                "duration": 792,
+                "title": "The Barramundi Battle - New Coastal Creeks (WE MESSED UP)!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RKWme67HCx0",
+                "duration": 507,
+                "title": "BARRAMUNDI FISHING AUSTRALIA FAR NORTH QLD COMPETITION"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7lx06SqfKgo",
+                "duration": 1437,
+                "title": "Ultimate 4-Day Aussie Beach Camping Adventure"
+            }
+        ]
+    }
+}

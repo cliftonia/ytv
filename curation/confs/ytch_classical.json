@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Classical Music",
+        "network_type": "streaming",
+        "channel_number": 104,
+        "network_long_name": "Classical Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=HPbPg7JT0bM",
+                "duration": 3682,
+                "title": "Symphony No. 2 / Sergei Rachmaninoff / Vasily Petrenko / Oslo Philharm"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FwDo7MdaxhA",
+                "duration": 4060,
+                "title": "Beethoven: Symphony No. 9 | Jordi Savall with Le Concert des Nations ("
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rd0HnxWm5CY",
+                "duration": 2512,
+                "title": "Beethoven: Symphony No. 7 | Bernard Haitink & the Royal Concertgebouw"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4rgSzQwe5DQ",
+                "duration": 2628,
+                "title": "Vivaldi: The Four Seasons (Orquesta Reino de Aragón)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0Cg_0jepxow",
+                "duration": 2988,
+                "title": "BEETHOVEN Concerto for Violin and Orchestra - Hilary Hahn, violin; Leo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NXD-WJYtkyc",
+                "duration": 4270,
+                "title": "Ludovico Einaudi - Live From The Steve Jobs Theatre / 2019 (Official C"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eaebqmzm0RA",
+                "duration": 5343,
+                "title": "REQUIEM (full) - Giuseppe VERDI // Danish National Symphony Orchestra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1sx6B3SUg5E",
+                "duration": 3916,
+                "title": "Opera gala: great arias from Puccini, Verdi, Donizetti, Bellini, Bizet"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OSVSlddJMn8",
+                "duration": 2694,
+                "title": "P.Tchaikovsky Suite from the ballet \"Swan Lake\" Moscow State Symphony"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Rq6G9n4oRw",
+                "duration": 1285,
+                "title": "Lloyd Webber: The Phantom Of The Opera - Symphonic Suite"
+            }
+        ],
+        "search_query": "classical music full performance orchestra"
+    }
+}

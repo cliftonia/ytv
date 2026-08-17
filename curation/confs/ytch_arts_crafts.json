@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Arts & Crafts",
+        "network_type": "streaming",
+        "channel_number": 85,
+        "network_long_name": "Arts & Crafts",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=HP4CE-FIOOc",
+                "duration": 377,
+                "title": "How To Make Easy This Rose Collage | Full Art Process - Easy Craft Ide"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rdZivg4b9k4",
+                "duration": 757,
+                "title": "Decoupage for Beginners: Step-by-Step Tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SLfH9yOGs3o",
+                "duration": 467,
+                "title": "How to find your art style FAST in 3 easy steps (yeah, really)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-nIyy9Y-Wzc",
+                "duration": 502,
+                "title": "How to use epoxy resin for complete beginners"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fSUyNkNLTdA",
+                "duration": 564,
+                "title": "how i film my videos ✷ overhead camera setup"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7h0Bwk66g3o",
+                "duration": 762,
+                "title": "Shrink Plastic for Beginners: Coloring, Cutting, Shrinking, and Sealin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kPkDRGSVMmc",
+                "duration": 864,
+                "title": "Lino-Cut Printmaking Process - Tips and Tricks - EHollingsheadArt"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NVCMFSf9yqw",
+                "duration": 791,
+                "title": "Resin Art for Beginners: Complete Resin Coaster Tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rcfMSeilPkg",
+                "duration": 591,
+                "title": "Paint ANYTHING in just 4 Simple Steps!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6YWW6RmhwP0",
+                "duration": 549,
+                "title": "Paper Quilling for Beginners | Paper Crafts"
+            }
+        ],
+        "search_query": "art process craft tutorial"
+    }
+}

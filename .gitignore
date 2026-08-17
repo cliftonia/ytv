@@ -5,3 +5,9 @@ build/
 *.iml
 .idea/
 .DS_Store
+
+# Signing material. Kept in ~/.ytv and mirrored into GitHub secrets - never here, because this
+# repository is public and the key is the only thing that lets a build update an installed app.
+*.jks
+*.keystore
+keystore-*.txt

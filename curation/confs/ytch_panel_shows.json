@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Panel Shows",
+        "network_type": "streaming",
+        "channel_number": 29,
+        "network_long_name": "Panel Shows",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=JmhkaJPdU1M",
+                "duration": 2644,
+                "title": "QI FULL EPISODE! Series Q, Episode 16, David Mitchell, Aisling Bea and"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CQsmtKYNkRQ",
+                "duration": 1741,
+                "title": "Would I Lie to You? - Series 6 Episode 6 | S06 E06 - Full Episode | Wo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x1Csr2ezs5M",
+                "duration": 2642,
+                "title": "Mock the Week Series 22 Episode 1 | Mock the Week Full Episodes 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E9ccGttZBBs",
+                "duration": 2146,
+                "title": "Was it Something I Said? Uncut 01x01 Episode 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WGnK5xHuhEs",
+                "duration": 1738,
+                "title": "Series 6 Episode 6 FULL EPISODE | Would I Lie To You?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a-3zT5uDYug",
+                "duration": 2645,
+                "title": "Mock the Week Series 22 Episode 2 | Mock the Week Full Episodes 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oYdm9nNQHbg",
+                "duration": 1723,
+                "title": "QI FULL EPISODE! 'Europe' Series E, Episode 5, Featuring David Mitchel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KKLgdXFiGZk",
+                "duration": 2787,
+                "title": "Taskmaster - S11 Episode 03 - Full Episodes | Run up a tree to the moo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Fn40iBJz40",
+                "duration": 1749,
+                "title": "Would I Lie to You? - Series 6 Episode 4 | S06 E04 - Full Episode | Wo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ulpwg-Wh0wI",
+                "duration": 2872,
+                "title": "Taskmaster - S10 Episode 9 - Full Episode | 20 Apr 2021"
+            }
+        ],
+        "search_query": "british panel show full episode"
+    }
+}

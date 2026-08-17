@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Mountaineering",
+        "network_type": "streaming",
+        "channel_number": 55,
+        "network_long_name": "Mountaineering",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Fx8ZPoIdCXA",
+                "duration": 3992,
+                "title": "The Biggest Climber Disaster | Mount Everest | Documentary | Mountaine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F1wjWAJ9ZU4",
+                "duration": 3366,
+                "title": "The Mount Everest (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RiOp8b7nyR4",
+                "duration": 2798,
+                "title": "The Horrible Truth About Climbing Mount Everest | 4K Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QEcHBFs-qME",
+                "duration": 2631,
+                "title": "Mount Everest : Into the Death Zone - the fifth estate"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cHpo4V5No0A",
+                "duration": 2394,
+                "title": "Dhaulagiri"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jHLP8ww5mz4",
+                "duration": 4010,
+                "title": "How A 68 Year Old Climbed Everest! | Accidental Climber | @DocoCentral"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yN2ep_tnztU",
+                "duration": 3131,
+                "title": "Dying For Everest | Full Documentary | Beyond Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DG4zskBx30U",
+                "duration": 2783,
+                "title": "Left For Dead: What Happens When Climbers Break Down on Everest"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7pSiRMnYM5M",
+                "duration": 3423,
+                "title": "Everest 2026 Documentary: Record Crowds, Extreme Risks & the Final Pus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nDbE00gV20k",
+                "duration": 3536,
+                "title": "Sir Edmund Hillary - The Race for Everest"
+            }
+        ],
+        "search_query": "mountaineering everest climbing documentary"
+    }
+}

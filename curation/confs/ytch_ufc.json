@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "UFC",
+        "network_type": "streaming",
+        "channel_number": 3,
+        "network_long_name": "UFC",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=CK93Pgxgztw",
+                "duration": 956,
+                "title": "Paddy Pimblett vs Michael Chandler | FULL FIGHT | UFC 329"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m3N1WuErSlg",
+                "duration": 1702,
+                "title": "Dustin Poirier vs Dan Hooker | FULL FIGHT | UFC Classics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c_ZHlvDn4vM",
+                "duration": 1287,
+                "title": "Illia tuporia vs Justin gaethje full fight"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N86epPb_HpA",
+                "duration": 551,
+                "title": "NASTY KNOCKOUT | Carlos Prates vs Leon Edwards | FULL FIGHT | UFC Pert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aPA6kHYSRrg",
+                "duration": 343,
+                "title": "Ilia Topuria vs Charles Oliveira | FULL FIGHT | UFC Freedom 250"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PCJBnCVlLQ0",
+                "duration": 996,
+                "title": "Paddy Pimblett vs Michael Chandler | FULL FIGHT | UFC 324"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oflDi1pCvyo",
+                "duration": 1008,
+                "title": "Sean O'Malley vs Song Yadong | FULL FIGHT | UFC Freedom 250"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kQ8NRlPTML0",
+                "duration": 907,
+                "title": "Sean Strickland vs Anthony Hernandez | FULL FIGHT | UFC 328"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OY_ISlQoCvI",
+                "duration": 1742,
+                "title": "Sean O'Malley vs Marlon Vera 2 | FULL FIGHT | UFC 324"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dj0r8DKjJtE",
+                "duration": 1696,
+                "title": "Magomed Ankalaev vs Alex Pereira | FULL FIGHT | UFC Abu Dhabi"
+            }
+        ],
+        "search_query": "ufc full fight free"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Racing.com",
+        "network_type": "streaming",
+        "channel_number": 138,
+        "network_long_name": "Racing.com",
+        "streams": [
+            {
+                "url": "https://racingvic-i.akamaized.net/hls/live/598695/racingvic/index1500.m3u8",
+                "duration": 600,
+                "title": "Racing.com (720p)"
+            }
+        ]
+    }
+}

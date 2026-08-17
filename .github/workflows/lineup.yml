@@ -1,0 +1,110 @@
+name: lineup
+
+# Rebuild part of the dial every night and commit the result.
+#
+# This is the job that replaced a cron on a mini-pc at home. The televisions read channels.json
+# straight from this branch, so a successful run here IS the update reaching them - there is no
+# publish step and nothing to be switched on for it to work.
+#
+# Only a slice of the dial is refreshed each night. The whole thing turns over in a fortnight,
+# which is slow enough that a channel never feels like it resets under the viewer and fast enough
+# that nothing on it is ever months old.
+
+on:
+  schedule:
+    # 03:00 in Brisbane, which is UTC+10 and has no daylight saving to complicate it.
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      rotate:
+        description: "How many channels to refresh"
+        required: false
+        default: "8"
+      only:
+        description: "A single channel slug, for checking one query"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # Two refreshes writing confs at once would interleave their commits and one would lose. A
+  # skipped nightly run costs nothing; the next one picks up the same least-recently-refreshed
+  # channels, because the rotation is derived from the files rather than remembered separately.
+  group: lineup
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install yt-dlp
+        # Newest release every night, deliberately unpinned. YouTube changes what it serves
+        # without notice and yt-dlp is usually fixed within hours; pinning would mean the dial
+        # quietly stops refreshing until someone notices and bumps a version.
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade yt-dlp
+
+      - name: Refresh a slice of the dial
+        working-directory: curation
+        # Through the environment rather than interpolated into the script. `${{ }}` is
+        # substituted into the shell text before bash sees it, so an input containing a quote
+        # and a semicolon would run as a command - and this repository is public.
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+          ROTATE: ${{ github.event.inputs.rotate || '8' }}
+        run: |
+          if [ -n "$ONLY" ]; then
+            python3 refresh_channels.py --only "$ONLY"
+          else
+            python3 refresh_channels.py --rotate "$ROTATE"
+          fi
+
+      - name: Rebuild channels.json
+        working-directory: curation
+        run: python3 build_lineup.py
+
+      - name: Check the lineup before committing it
+        # The televisions have no way to reject a bad lineup - they cache whatever parses. A
+        # malformed or suddenly-tiny channels.json would take the dial down until someone
+        # noticed, so it is checked here, where failing is free.
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          dial = json.load(open("channels.json"))
+          channels = dial["channels"]
+          clips = sum(len(c["streams"]) for c in channels)
+          print("%d channels, %d clips" % (len(channels), clips))
+          if len(channels) < 50:
+              sys.exit("only %d channels - refusing to publish a collapsed dial" % len(channels))
+          if clips < 500:
+              sys.exit("only %d clips - refusing to publish an empty dial" % clips)
+          numbers = [c["number"] for c in channels]
+          if len(numbers) != len(set(numbers)):
+              sys.exit("duplicate channel numbers")
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "lineup"
+          git config user.email "lineup@users.noreply.github.com"
+          git add channels.json curation/confs
+          # Nothing to commit is a normal outcome: a refresh can legitimately find the same clips
+          # it found last time, and that must not fail the run.
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "chore: refresh the dial
+
+          - Update \`channels.json\` and the confs behind it"
+          git push

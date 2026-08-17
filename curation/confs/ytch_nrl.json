@@ -1,0 +1,52 @@
+{
+    "station_conf": {
+        "network_name": "Rugby League",
+        "network_type": "streaming",
+        "channel_number": 7,
+        "network_long_name": "Rugby League",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=nqWEmO5EzMg",
+                "duration": 1435,
+                "title": "NRL Highlights | NRL 2026 | Round Up | Round 21"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jb3jPPY_Frk",
+                "duration": 477,
+                "title": "NRL 2026 | Epic Foot Races | Match Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ey1RUgteILg",
+                "duration": 300,
+                "title": "Unbelievable finish | State of Origin 2026 | Blues v Maroons | Match H"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EX1GvKeGvpA",
+                "duration": 589,
+                "title": "NRL Highlights: Bulldogs v Warriors - Round 21 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cpMeSKmSM4Q",
+                "duration": 622,
+                "title": "Epic Foot Races | Match Highlights | Rounds 12-17 | NRL 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u_A46tabbB8",
+                "duration": 617,
+                "title": "NRL Highlights: Cowboys v Broncos - Round 21 | NRL on Nine"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0elCnSlbzyw",
+                "duration": 663,
+                "title": "NRL Highlights | NRL Grand Final 2025 | Melbourne Storm v Brisbane Bro"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r8JHZWv2XHU",
+                "duration": 300,
+                "title": "NRL Highlights | 2024 State of Origin Highlights | NSW Blues v QLD Mar"
+            }
+        ],
+        "search_query": "nrl full match highlights"
+    }
+}

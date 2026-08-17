@@ -1,0 +1,86 @@
+{
+ "station_conf": {
+  "network_name": "Menswear & Tailoring",
+  "network_type": "streaming",
+  "channel_number": 89,
+  "network_long_name": "Menswear & Tailoring",
+  "stream_rotation": "clock",
+  "streams": [
+   {
+    "url": "https://www.youtube.com/watch?v=4fb4GyOylK8",
+    "duration": 1090,
+    "title": "A Master Tailor's Guide To The Perfect Suit"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=-nTfrtzsup8",
+    "duration": 491,
+    "title": "How to Suit Up | Men\u2019s Fashion Tips | Doctor Mike"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=R8xkFEPWuRI",
+    "duration": 2441,
+    "title": "15 Suit styles reviewed by Master bespoke tailor [Style Guide] | Eric"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=W9y8odz-OXE",
+    "duration": 1550,
+    "title": "Neapolitan Style: Why Men from Naples Are So Dapper"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=80s7rE9cv9Y",
+    "duration": 327,
+    "title": "English vs Italian Tailoring: Which Style Is More Suitable & Why (Hint"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=bLcGL6rKBBg",
+    "duration": 872,
+    "title": "Master Tailor Reveals The Most Common Suit Mistakes\u2014And How To Fix The"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=riypX84RlKk",
+    "duration": 563,
+    "title": "The ULTIMATE Beginner\u2019s Capsule Wardrobe | 25 Men\u2019s Wardrobe Essential"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=VQ2qd71JAqw",
+    "duration": 693,
+    "title": "The Ultimate Clothing Fit Guide | Suit, Shirt, Pant Breaks, Tie Length"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=LMMb0FMK9hM",
+    "duration": 1029,
+    "title": "How To DRESS Like Daniel Craig (Style Guide for Men 40+)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OSQ_Q8PI8Y4",
+    "duration": 521,
+    "title": "The Ultimate Guide to Business Casual (Upgrade Your Wardrobe!)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=bEddhMSO0ps",
+    "duration": 1269,
+    "title": "Look FLAWLESS In Suits | The Ultimate Guide To Buying Your First Suit"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=K7MISHOn60U",
+    "duration": 408,
+    "title": "Dress Like the Most Stylish Men in The World | Italian Style Secrets"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=stUZ4ibtKIo",
+    "duration": 1496,
+    "title": "What Men REALLY Wore in the 1930s"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kwF8iJw5W9o",
+    "duration": 894,
+    "title": "How To DRESS Like George Clooney (Style Guide for Men 40+)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Y6mRzIIHAcI",
+    "duration": 2780,
+    "title": "The Secret to Buying the Perfect Suit in 2026"
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Jazz",
+        "network_type": "streaming",
+        "channel_number": 103,
+        "network_long_name": "Jazz",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=1tk1ss5CJ-4",
+                "duration": 3642,
+                "title": "\"22\" - New Jazz Underground | Live in NYC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p9dRg8yQ2DY",
+                "duration": 3404,
+                "title": "Smooth Jazz House DJ Mix - Cozy Vibes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zhcDMf3GG68",
+                "duration": 3906,
+                "title": "SMOOTH LOUNGE JAZZ  | Sunset Luxury Chillout | Relaxing Saxophone Melo"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_E64uGx0ibo",
+                "duration": 6062,
+                "title": "Smooth Jazz House Music Mix - Cozy Evening Dinner"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c7-IUCpwOSw",
+                "duration": 7086,
+                "title": "Whiskey Lounge Jazz Blues  Slow Southern Guitar, Night Bar Mood & Rela"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6xZS6E8QJgw",
+                "duration": 3265,
+                "title": "Smootie ✨ Relaxing Smooth Jazz for A Cool Night"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_ytFg0hFad8",
+                "duration": 3799,
+                "title": "Smooth Jazz Chillout Lounge • Smooth Jazz Saxophone Instrumental Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JdkAqW2PwX8",
+                "duration": 4938,
+                "title": "Smooth Jazz & Soulful R&B Grooves Cozy Cafe Ambience – Relax & Focus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DpBWUv_91ho",
+                "duration": 6665,
+                "title": "New York Jazz Lounge - Bar Jazz Masterpieces"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gy_f4lMr514",
+                "duration": 3789,
+                "title": "🎷 Jazz No Ads | Night Smooth Jazz for Relax & Sleep (1 Hour)"
+            }
+        ],
+        "search_query": "smooth jazz bar lounge live session"
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Talk Shows",
+        "network_type": "streaming",
+        "channel_number": 31,
+        "network_long_name": "Talk Shows",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=jilvUpiCTnM",
+                "duration": 799,
+                "title": "The Buzz Classics: Robin at Claudine, may ligawan sa set! | Jeepney TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_q471WB5Tgw",
+                "duration": 2280,
+                "title": "The First Episode Of \"Late Night With Conan O'Brien\" | Late Night with"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VNEHHNKVk_o",
+                "duration": 2997,
+                "title": "Lucille Ball | The Dean Martin Celebrity Roasts | FULL EPISODE | Class"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ad3Z9JKgR5I",
+                "duration": 1604,
+                "title": "ELAINE STRITCH's 88th Birthday Bash on THEATER TALK (full episode)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zcvuQ9YPzhM",
+                "duration": 3158,
+                "title": "Muhammad Ali | The Dean Martin Celebrity Roasts | FULL EPISODE | Class"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8q6txrSPWyA",
+                "duration": 2513,
+                "title": "Super Soul Sunday S3E2 'Oprah & Caroline Myss: Intuition, Power and Gr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yhqlD7PeAFs",
+                "duration": 1770,
+                "title": "Andy Richter (FULL EPISODE) | Conan O'Brien Needs A Friend"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VDx-gS_Fpbc",
+                "duration": 3498,
+                "title": "The George Jones Show (FULL EPISODE) Merle Haggard, Trace Adkins, Lorr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DqbvsDt_D3o",
+                "duration": 2412,
+                "title": "Jerry Seinfeld & Eddie Murphy Debate The Funniest Comedian Of All Time"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bi7EDbuMH4E",
+                "duration": 942,
+                "title": "Graham Norton LOVES The Scottish! | The Graham Norton Show | Part Two"
+            }
+        ],
+        "search_query": "classic talk show full episode interview"
+    }
+}

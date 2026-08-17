@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "6PR Perth",
+        "network_type": "streaming",
+        "channel_number": 103,
+        "network_long_name": "6PR Perth",
+        "streams": [
+            {
+                "url": "https://6prlive.akamaized.net/hls/live/2033806/6PR/index.m3u8",
+                "duration": 600,
+                "title": "6PR Perth (1080p)"
+            }
+        ]
+    }
+}

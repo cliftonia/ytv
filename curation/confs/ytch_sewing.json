@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Sewing & Dressmaking",
+        "network_type": "streaming",
+        "channel_number": 81,
+        "network_long_name": "Sewing & Dressmaking",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=ND00UsnZvZI",
+                "duration": 362,
+                "title": "5 Easy Clothing Sewing Beginner Projects"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2LHSEX3W7YE",
+                "duration": 2200,
+                "title": "Skirt Tutorial | Beginner Sewing Project | Self Drafted - No Pattern N"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XlTatdhSIsc",
+                "duration": 725,
+                "title": "Sew This Dress From Two Large Rectangles | Beginner Sewing Pattern"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KDvK_q7ohaE",
+                "duration": 698,
+                "title": "make the perfect dress in 3 hours [SEWING TUTORIAL]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QhZTc1x1-pM",
+                "duration": 1377,
+                "title": "How to Sew by Hand for BEGINNERS!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vsn7TE0FEOk",
+                "duration": 1290,
+                "title": "Make a Summer Wrap Dress ✂️ | Easy DIY Pattern & Sewing Tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=creNPY8u9qo",
+                "duration": 998,
+                "title": "Learn to sew in 20 minutes! | easy step-by-step tutorial"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TwxNv8IkNqY",
+                "duration": 424,
+                "title": "make the dress of YOUR DREAMS in one day [SEWING TUTORIAL]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=34VAM-cvkco",
+                "duration": 2343,
+                "title": "Lane Pants Sewing Tutorial | Beginner Sewing Pattern"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tBudnRKg_r8",
+                "duration": 605,
+                "title": "How to understand sewing patterns (for beginners!)"
+            }
+        ],
+        "search_query": "sewing dressmaking tutorial project"
+    }
+}

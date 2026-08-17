@@ -1,0 +1,37 @@
+{
+    "station_conf": {
+        "network_name": "Fireplace & Aquarium",
+        "network_type": "streaming",
+        "channel_number": 119,
+        "network_long_name": "Fireplace & Aquarium",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=tnRKeWFW7qU",
+                "duration": 4163,
+                "title": "🔥 Lofi Music & EPIC Aquarium Views | 1Hr Chill for Sleep, Study & Pets"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KipmNTuqSJQ",
+                "duration": 5465,
+                "title": "🔥 Cozy Fireplace & Real Aquarium Ambience 🐠 Relaxing Fire Crackling So"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FqnAV6tkwzA",
+                "duration": 3600,
+                "title": "Minecraft Soothing Scenes – Relaxing Fireplace"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RnnctM5Rf9I",
+                "duration": 3600,
+                "title": "Minecraft Soothing Scenes – Relaxing Aquarium"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dVkK36KOcqs",
+                "duration": 6682,
+                "title": "The Best 4K Aquarium for Relaxation 🐠 Relaxing Oceanscapes - Sleep Med"
+            }
+        ],
+        "search_query": "4k fireplace aquarium relaxing ambience"
+    }
+}

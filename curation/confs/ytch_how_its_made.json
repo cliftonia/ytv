@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "How It's Made",
+        "network_type": "streaming",
+        "channel_number": 48,
+        "network_long_name": "How It's Made",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=O9vO_CVNXlg",
+                "duration": 303,
+                "title": "How Laptops Are Made in Factories | How It's Made"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UvBWvgs_Ewk",
+                "duration": 3005,
+                "title": "Gummie Candy, Croissants, Sandwich Cookies, & More Snacks | How It's M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4R73agfIa4I",
+                "duration": 3589,
+                "title": "Fabrics, Fibers, Clothing & Accessories, Pt. 1 | How It's Made | Scien"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9n8gNyIOZDM",
+                "duration": 324,
+                "title": "How It's Made: Tissues"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8rWmRxvUnS8",
+                "duration": 325,
+                "title": "How It's Made: Pre-Packaged Sandwiches"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jCudYf2n0VI",
+                "duration": 1466,
+                "title": "Massive Machines | How It's Made | Science Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0VM74BHb_s4",
+                "duration": 325,
+                "title": "How It's Made: Car Tires"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1Dpoh5Kb5TA",
+                "duration": 1586,
+                "title": "How It's Made: Hot Wheel Toys, Doll, Teddy Bears"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YO_cs_aLw7s",
+                "duration": 2102,
+                "title": "How Pencils, School Buses, Ballpoint Pens & More Are Made! | How It’s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N4iKXCOoEII",
+                "duration": 1886,
+                "title": "How It's Made: Beer, Whiskey, Coca-Cola, Coffee"
+            }
+        ],
+        "search_query": "how its made factory manufacturing"
+    }
+}

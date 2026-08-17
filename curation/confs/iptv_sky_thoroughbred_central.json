@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "Sky Thoroughbred Central",
+  "network_type": "streaming",
+  "channel_number": 135,
+  "network_long_name": "Sky Thoroughbred Central",
+  "streams": [
+   {
+    "url": "https://skylivetab-new.akamaized.net/hls/live/2038782/stcsd/index.m3u8",
+    "duration": 600,
+    "title": "Sky Thoroughbred Central (720p) [Geo-blocked]"
+   }
+  ]
+ }
+}

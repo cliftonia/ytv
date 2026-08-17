@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1970s Music",
+        "network_type": "streaming",
+        "channel_number": 113,
+        "network_long_name": "1970s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=WanZkMp31xw",
+                "duration": 5037,
+                "title": "70s Music Greatest Hits | Redbone, Bee Gees, Bob Dylan, CCR, The Beatl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TsuVAQkfCes",
+                "duration": 3847,
+                "title": "Disco Music 70s - Video Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rkenWyUEyZM",
+                "duration": 3648,
+                "title": "One-Hit Wonders of The 70s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K5C4BYeASbU",
+                "duration": 3591,
+                "title": "1970 In One Hour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qizKODkJVdY",
+                "duration": 3165,
+                "title": "70's Best Disco, Funk & R'n'B Hits Vol.1 (Serega Bolonkin Video Mix) │"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WGU_4-5RaxU",
+                "duration": 223,
+                "title": "Blondie - Heart Of Glass"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c-zj1jBuz-Y",
+                "duration": 2176,
+                "title": "EVERY BILLBOARD HOT 100 #1 HIT (1970 - 1979) WITH VIDEO"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y5zkMlWj9AU",
+                "duration": 3679,
+                "title": "1977 In One Hour"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6ZzUiyJtmGI",
+                "duration": 2635,
+                "title": "Songs of 1970 to 1974 Vol. 2 (David Bowie, Paul Mccartney, The Doors,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t4QK8RxCAwo",
+                "duration": 217,
+                "title": "Boston - More Than a Feeling (Official HD Video)"
+            }
+        ],
+        "search_query": "1970s music video hits"
+    }
+}

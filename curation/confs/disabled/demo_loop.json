@@ -1,0 +1,9 @@
+{
+    "station_conf": {
+        "network_name": "DemoLoop",
+        "network_type": "loop",
+        "channel_number": 41,
+        "content_dir": "catalog/loop",
+        "network_long_name": "Royal Demo Channel"
+    }
+}

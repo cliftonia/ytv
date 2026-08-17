@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1960s Music",
+        "network_type": "streaming",
+        "channel_number": 112,
+        "network_long_name": "1960s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=xvqeSJlgaNk",
+                "duration": 167,
+                "title": "The Monkees - Daydream Believer (Official Music Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0Rw5ryIlPYM",
+                "duration": 2277,
+                "title": "Songs of 1960 to 1969 Vol 3 (Rolling Stones, The Beatles, The Doors, T"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cHk77-bhw5Q",
+                "duration": 2592,
+                "title": "EVERY BILLBOARD #1 HIT (1960 - 1969) WITH VIDEO"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Co2xyrBEcC8",
+                "duration": 3694,
+                "title": "Late 60s Songs by Female Artists (1965-1969)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I_2D8Eo15wE",
+                "duration": 145,
+                "title": "Ram Jam - Black Betty (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gQRdz7jJqjI",
+                "duration": 4086,
+                "title": "Greatest Hits Of The 60s - Best Old Songs - 60s Music Hits"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S-rB0pHI9fU",
+                "duration": 187,
+                "title": "The Beatles - The Beatles - Penny Lane (Official Music Video) [Remaste"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YtsQmBm-1jU",
+                "duration": 4950,
+                "title": "Oldies 60s 70s 80s 🎵 Classic Playlist – Old School Music Hits That Nev"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hzv-K-s_WCQ",
+                "duration": 4295,
+                "title": "60s & 70s Summer Road Trip playlist with 60sDJ"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nNEb2k_EmMg",
+                "duration": 232,
+                "title": "Laura Branigan - Gloria (Official Music Video)"
+            }
+        ],
+        "search_query": "1960s music video hits"
+    }
+}

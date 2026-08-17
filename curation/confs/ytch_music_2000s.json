@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "2000s Music",
+        "network_type": "streaming",
+        "channel_number": 116,
+        "network_long_name": "2000s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Lt2wjJlP2N4",
+                "duration": 241,
+                "title": "T-Pain - Bartender (Official HD Video) ft. Akon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9AdBRzJLTdg",
+                "duration": 4880,
+                "title": "90s - 2000s Throwback Hip Hop Rap Video Mix - Dj Presley Ft Dmx, 50 ce"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bk5_aL3y4ig",
+                "duration": 3452,
+                "title": "🎉 Pop Party Hits Mix #03 | Middle 2000s & Early 2010s Mix - Dj StarSun"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8XymA7fKN7w",
+                "duration": 3819,
+                "title": "BEST OF 2000's THROWBACK OLD SCHOOL RNB VIDEO MIX - DJ MR T SPINCYCLE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iBHNgV6_znU",
+                "duration": 205,
+                "title": "Ciara - 1, 2 Step (Official Video) ft. Missy Elliott"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FC3y9llDXuM",
+                "duration": 247,
+                "title": "Wheatus - Teenage Dirtbag"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C-u5WLJ9Yk4",
+                "duration": 237,
+                "title": "Britney Spears - ...Baby One More Time (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Rg3sAb8Id8",
+                "duration": 283,
+                "title": "Christina Aguilera - Dirrty (Official HD Video) ft. Redman"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FrLequ6dUdM",
+                "duration": 250,
+                "title": "TLC - No Scrubs (Official HD Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KlyXNRrsk4A",
+                "duration": 485,
+                "title": "Katy Perry - Last Friday Night (T.G.I.F.) (Official Music Video)"
+            }
+        ],
+        "search_query": "2000s music video hits"
+    }
+}

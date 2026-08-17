@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Soul & Motown",
+        "network_type": "streaming",
+        "channel_number": 99,
+        "network_long_name": "Soul & Motown",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Wf1cs5_EseU",
+                "duration": 3780,
+                "title": "👑 The Ultimate Motown & Soul Classics Collection | 60s & 70s Timeless"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O0Iu8mVupgY",
+                "duration": 784,
+                "title": "Motown Party Dance Mix #1  (15 Min)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cfsd2kpUM1k",
+                "duration": 2252,
+                "title": "Motown Classics Mix 1 🎶 60s & 70s Soul Greatest Hits | Stevie Wonder,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M5KYlYrfK1E",
+                "duration": 4537,
+                "title": "60’s Soul Classic (1966) [Unreleased Album] Etta James & Aretha Frankl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S4gU7j64uRg",
+                "duration": 4884,
+                "title": "Vintage Soul Grooves | Timeless Hits from the 60’s & 70’s | Rare Motow"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DTaxYfW46v8",
+                "duration": 3512,
+                "title": "SOUL MUSIC (60's/70's) - Various Artists"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Czu8njwOLSs",
+                "duration": 3611,
+                "title": "CLASSIC SOUL & MOTOWN HITS ACROSS THE DECADES. MUSIC THAT YOU DANCED &"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7cjnmh-mlso",
+                "duration": 3859,
+                "title": "Motown Greatest Hits   100 Greatest Motown Songs   The Temptations, Ji"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AjE1ZTYjEf4",
+                "duration": 3134,
+                "title": "Tamla Motown Mix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ftwid4UdLLA",
+                "duration": 1587,
+                "title": "70's 80's R&B Soul Groove - Aretha Franklin, Marvin Gaye, Stevie Wonde"
+            }
+        ],
+        "search_query": "motown soul classic hits"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "CTB Perth Movies",
+        "network_type": "streaming",
+        "channel_number": 132,
+        "network_long_name": "CTB Perth Movies",
+        "streams": [
+            {
+                "url": "https://movies.ctbperth.net.au/hls/stream.m3u8",
+                "duration": 600,
+                "title": "CTB Perth Movies (720p)"
+            }
+        ]
+    }
+}

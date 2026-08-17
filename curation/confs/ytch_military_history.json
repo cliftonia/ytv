@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Military History",
+        "network_type": "streaming",
+        "channel_number": 61,
+        "network_long_name": "Military History",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=2BNPxO88REI",
+                "duration": 2832,
+                "title": "\"From All Sides\" -1862 Battle of Fredericksburg - Unaired Civil War TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zsSf1Yt4UZA",
+                "duration": 1625,
+                "title": "24 Hours in Hell: Australia's Darkest Day (WW1 Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nVFDtKVrAXg",
+                "duration": 2954,
+                "title": "Guadalcanal: America's Pacific Push That Turned WW2 Around | Battles W"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zlKuojthuNo",
+                "duration": 4282,
+                "title": "The Battle of Stalingrad: Jul 1942 - Feb 1943 | World War II Documenta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9BlbdNq1UCE",
+                "duration": 5341,
+                "title": "Battle of the Somme - WW1 Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2beCzLtLegg",
+                "duration": 1876,
+                "title": "The Battle of Fallujah and the Iraq War 2003-04 (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VqXQfVkvVps",
+                "duration": 1572,
+                "title": "The British Trap That Drowned Japan's Last Army"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0THpux__SXA",
+                "duration": 1832,
+                "title": "Why Germany Lost the Battle of the Bulge (4K WW2 Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S2LuRhNcZ9s",
+                "duration": 2991,
+                "title": "How Did America Defeat Japan At Guadalcanal? | Battles Won & Lost"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=unq07r0iCzM",
+                "duration": 2993,
+                "title": "Blitzkrieg As It Happened: How Hitler's Army Took Europe So Quickly |"
+            }
+        ],
+        "search_query": "military history documentary battle"
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1940s Music",
+        "network_type": "streaming",
+        "channel_number": 110,
+        "network_long_name": "1940s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=im4VlefwNNs",
+                "duration": 3753,
+                "title": "1940s Big Band Swing: Classic Hits & Vintage Vibes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1kTKHPgeQ00",
+                "duration": 4504,
+                "title": "Great American Big Bands of the 1930s & 1940s Glenn Miller & Duke Elli"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ALU66mO-39o",
+                "duration": 3846,
+                "title": "1 Hour of Glenn Miller’s Greatest Hits – Classic 1940s Recordings"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=83suG7R6hQw",
+                "duration": 3673,
+                "title": "Happy Morning Swing Jazz: Vintage Music from the 1930s and 40s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n5pvJSlFdSA",
+                "duration": 4281,
+                "title": "👉 1940s MUSIC FROM WWII | BIG BAND HITS FROM WWII | 1940s WARTIME MUSI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iJyXtaldklQ",
+                "duration": 3352,
+                "title": "👉 BIG BAND SOUNDTRACK OF THE 1940s | 1940s WARTIME MUSIC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UtarMIzVOHw",
+                "duration": 1702,
+                "title": "Wonderful Big Band Music Of The 1930s & 1940s Era @Pax41"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z-TPrW8iNWE",
+                "duration": 2066,
+                "title": "👉 1940s BIG BAND SWING | 1940s JAZZ MUSIC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MSw33RUSi0M",
+                "duration": 3410,
+                "title": "\"Classic Swing & Big Band Jazz 🎷 1930s & 1940s Music Collection\":"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bq9V4FivznU",
+                "duration": 2662,
+                "title": "1940s Big Band Music ✈️ Swing from the Hangar | Authentic WWII V-Disc"
+            }
+        ],
+        "search_query": "1940s big band music hits compilation"
+    }
+}

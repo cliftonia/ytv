@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Literature",
+        "network_type": "streaming",
+        "channel_number": 65,
+        "network_long_name": "Literature",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=qf6RCtDeK4g",
+                "duration": 1212,
+                "title": "A beginner's guide to Critical Literary Analysis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KZhQpsHVYWk",
+                "duration": 1140,
+                "title": "Tips for Doing Great Literary Analysis! [step by step]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nEBuBgzGOp0",
+                "duration": 2258,
+                "title": "Literary Critic explores Wuthering Heights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0EblOaE1wNU",
+                "duration": 901,
+                "title": "Ulysses by James Joyce: Great Books Explained"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5FVp3LBidQg",
+                "duration": 760,
+                "title": "How to Analyze a Book - 101"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r6RdMSYSQDE",
+                "duration": 2039,
+                "title": "How to Analyze Books like a Renaissance Scholar"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Vh2miANqUA",
+                "duration": 1104,
+                "title": "AN INTRODUCTION TO LITERARY THEORY:  What is Literary Theory?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O5axQ_yy3MA",
+                "duration": 2360,
+                "title": "how to read critically in the age of bad media literacy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=olgDaGLZXx8",
+                "duration": 542,
+                "title": "Literary Analysis: A Beginner's Guide to Writing a Literary Analysis E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jMsyUsY1uoY",
+                "duration": 1369,
+                "title": "Symbolism, Lenses and Writing Your First Analysis"
+            }
+        ],
+        "search_query": "literature book analysis"
+    }
+}

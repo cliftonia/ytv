@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Rugby Union",
+        "network_type": "streaming",
+        "channel_number": 8,
+        "network_long_name": "Rugby Union",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=iMQUJdROV6o",
+                "duration": 1289,
+                "title": "EPIC encounter in Hong Kong | New Zealand v Australia | HSBC SVNS Hong"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YALDB3wNIws",
+                "duration": 1070,
+                "title": "Best Match Ever? - Australia v New Zealand - Tri Nations 2000 | Rugby"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=csvH9yg6db0",
+                "duration": 505,
+                "title": "LATE DRAMA 👀 | England v Argentina extended highlights | 2026 Nations"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IoIgTjNdVeg",
+                "duration": 975,
+                "title": "All Blacks 7s edge epic | USA v New Zealand | Singapore HSBC SVNS | Fu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=siyAmjtcZns",
+                "duration": 1514,
+                "title": "INCREDIBLE golden point win! 🔥 | Argentina v USA | Perth HSBC SVNS 202"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8qCRKI6Iuk0",
+                "duration": 1120,
+                "title": "Fiji steal it from South Africa | Fiji v South Africa | Full Match Rep"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uzv_MMywGEU",
+                "duration": 1093,
+                "title": "Los Pumas DOMINATE in Final 🔥 | Argentina v Australia | Perth HSBC SVN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2FUmusIuK3Q",
+                "duration": 1798,
+                "title": "2003 Rugby World Cup Final - Extended Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=99uEeuJaqoI",
+                "duration": 1191,
+                "title": "The most DRAMATIC SVNS match ever? | Fiji v New Zealand |  Perth HSBC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0fs4u8P3fDA",
+                "duration": 843,
+                "title": "Springboks vs Wales | Extended Highlights | 18 July 2026"
+            }
+        ],
+        "search_query": "rugby union full match highlights"
+    }
+}

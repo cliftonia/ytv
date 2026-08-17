@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Vintage Fashion",
+        "network_type": "streaming",
+        "channel_number": 80,
+        "network_long_name": "Vintage Fashion",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=nRmsX685pQY",
+                "duration": 1967,
+                "title": "The (ancient) History of Modern Fashion Trends"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WhmxbMmasIg",
+                "duration": 369,
+                "title": "100 years History of Fashion (1900s - 2000s) Evolution of Women’s Fash"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ikbb0_hC8iM",
+                "duration": 2549,
+                "title": "The Best And Worst Decades Of Fashion"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-pCECNvUs2Q",
+                "duration": 2387,
+                "title": "THE ULTIMATE FASHION HISTORY: The 1920s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TCVGN-Ndjg0",
+                "duration": 2364,
+                "title": "THE ULTIMATE FASHION HISTORY: The 1930s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hiHJku0M7PM",
+                "duration": 2257,
+                "title": "HISTORY OF WESTERN FASHION:1700s to 2000s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2VSz5G_qeS8",
+                "duration": 810,
+                "title": "19th Century Fashion - How To Tell Different Decades Apart?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3Wuhq3hyTq8",
+                "duration": 938,
+                "title": "1930's Fashion - FASHION HISTORY SESSIONS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jtHpSD2eHC4",
+                "duration": 591,
+                "title": "1930s Style: Why It Was the Most Elegant Decade Ever"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=remc6xSlWs8",
+                "duration": 720,
+                "title": "THE FASHION OF THE 1920'S - FASHION HISTORY SESSIONS"
+            }
+        ],
+        "search_query": "vintage fashion history decades style"
+    }
+}

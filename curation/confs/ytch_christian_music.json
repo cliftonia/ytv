@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Christian Music",
+        "network_type": "streaming",
+        "channel_number": 123,
+        "network_long_name": "Christian Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=f2oxGYpuLkw",
+                "duration": 305,
+                "title": "Praise (feat. Brandon Lake, Chris Brown & Chandler Moore) | Elevation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9tGnhSg-Hec",
+                "duration": 428,
+                "title": "Praise + I Thank God | feat. Isaiah Templeton | Gateway Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rwsByFZKqLA",
+                "duration": 1906,
+                "title": "Anywhere Sessions | Golden Hour | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dNSo9MKYy0c",
+                "duration": 2034,
+                "title": "Anywhere Sessions | Living Room | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jNwo1bz-UXU",
+                "duration": 2156,
+                "title": "Anywhere Sessions  | Living Room Vol. 02 | Elevation Worship"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FTvsWdbFWKg",
+                "duration": 3385,
+                "title": "REVIVAL - Live At Chapel | Planetshakers YouTube Premiere"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8NtijaKu8i0",
+                "duration": 278,
+                "title": "TRIBES // Official LIVE Music Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tf8Qjev0hjg",
+                "duration": 335,
+                "title": "Matt Redman - The Praise Is Yours (Live From The Mission)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PcmqSfr1ENY",
+                "duration": 467,
+                "title": "Charity Gayle - I Speak Jesus (feat. Steven Musso) [Live]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KwX1f2gYKZ4",
+                "duration": 453,
+                "title": "Graves Into Gardens ft. Brandon Lake | Live | Elevation Worship"
+            }
+        ],
+        "search_query": "worship music live praise christian songs"
+    }
+}

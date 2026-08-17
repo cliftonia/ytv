@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Cooking",
+        "network_type": "streaming",
+        "channel_number": 73,
+        "network_long_name": "Cooking",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=J_tohEVZJtA",
+                "duration": 632,
+                "title": "World's Best Mac & Cheese"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lVcTvHTn6Dw",
+                "duration": 1072,
+                "title": "How to Cook the Perfect Steak | Chef Jean-Pierre"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aTx5FpfJito",
+                "duration": 2029,
+                "title": "Step by Step Guide to a Perfect Chicken Cordon Bleu | Chef Jean-Pierre"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TftxhRgkwhc",
+                "duration": 677,
+                "title": "I Asked Chefs How They Make Burgers At Home"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2wtPLmldono",
+                "duration": 857,
+                "title": "Chef Nate’s Top 5 Blackstone Recipes of 2022 | Blackstone Griddle Reci"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=visxjkAQpTU",
+                "duration": 1277,
+                "title": "My Chef’s Guide To Week Night Meal Prepping"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zZR7KRyf_dE",
+                "duration": 600,
+                "title": "100 Chef Secrets In 10 Minutes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WFtA4ZJzQpA",
+                "duration": 639,
+                "title": "Adorable 6-Year Old Has Her Own Cooking Show - Chef Paisley Makes Panc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MUesLbKX1bA",
+                "duration": 365,
+                "title": "Michelin Star Indian Chef Reveals How To Make The Perfect Dal | My Gre"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C8ReU5s4i0k",
+                "duration": 625,
+                "title": "Perfect Clarified Butter Everytime! | Chef Jean-Pierre"
+            }
+        ],
+        "search_query": "chef cooking recipe tutorial"
+    }
+}

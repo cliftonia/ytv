@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Westerns",
+        "network_type": "streaming",
+        "channel_number": 24,
+        "network_long_name": "Westerns",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=iZ1rnjzSls8",
+                "duration": 5728,
+                "title": "One Gunfighter Went Undercover to Save a Family of Hostages | Spaghett"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1yWfnHyLJAc",
+                "duration": 6154,
+                "title": "Best Western Movies | The Invaders | Full Classic Western Cowboy Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QwSZr9qAhzc",
+                "duration": 4204,
+                "title": "Nobody Knew Who He Was… Until They Saw His Badge | Best Western Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WO1g_ywwcXU",
+                "duration": 5371,
+                "title": "Randolph Scott One of the Finest Films of His Career | Classic America"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sJ8P62C3dPQ",
+                "duration": 5290,
+                "title": "Randolph Scott's Classic Western | Abilene Town (1946) Full Movie HD |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sp6JrxkMt1M",
+                "duration": 5677,
+                "title": "Lawman | Western Movie | Burt Lancaster, Robert Ryan, Lee J. Cobb"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zEmj_NN1P0w",
+                "duration": 8902,
+                "title": "Best Western Movies | Big Deal | Full Classic Western Cowboy Movie (HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zdmZtFgIZdo",
+                "duration": 5067,
+                "title": "Wild West   Audie Murphy in Gunpoint 1966   Free Movies, Frontier Just"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LxZWbAESWx0",
+                "duration": 4867,
+                "title": "Buddy Ebsen and Warren Oates in One of the Finest Classic Westerns of"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T1374-IeSyg",
+                "duration": 5579,
+                "title": "Support Your Local Sheriff!  | Western Movie"
+            }
+        ],
+        "search_query": "classic western full movie"
+    }
+}

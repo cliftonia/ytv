@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "ABC Entertains",
+  "network_type": "streaming",
+  "channel_number": 128,
+  "network_long_name": "ABC Entertains",
+  "streams": [
+   {
+    "url": "https://c.mjh.nz/abc-me.m3u8",
+    "duration": 600,
+    "title": "ABC Entertains (720p)"
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Health & Fitness",
+        "network_type": "streaming",
+        "channel_number": 89,
+        "network_long_name": "Health & Fitness",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=c4TomZjzobY",
+                "duration": 1141,
+                "title": "20 Min Full Body Dumbbell Workout | FOLLOW ALONG"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NQxEUC3-aaE",
+                "duration": 651,
+                "title": "COMPLETE Core Strengthening In Just 10 Minutes! Follow-Along Workout"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5KXZ9I2z1m4",
+                "duration": 1413,
+                "title": "Complete 20 Min Full Body Workout To Lose Weight (Follow Along)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AxlTMs58tHw",
+                "duration": 2512,
+                "title": "FULL BODY FOLLOW ALONG WORKOUT💦 FAT BLASTING & NO NOISE CIRCUIT"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XgI_p8bKg78",
+                "duration": 1420,
+                "title": "Complete 20 Min ABS Workout | Follow Along"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7GkMHPe_OXw",
+                "duration": 1309,
+                "title": "20 Min FULL BODY Workout For BEGINNERS (No Equipment)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3YL8Tfr73rE",
+                "duration": 1480,
+                "title": "Complete 20 Min Full Body Workout | Follow Along"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fqCeYdMCnFs",
+                "duration": 1382,
+                "title": "Complete 20 Min Cardio Workout To Replace Treadmill (Follow Along)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gXs3GRt3QpY",
+                "duration": 1813,
+                "title": "30 Minute Full Body Mobility Workout | Follow Along, Intermediate"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ke6gh40t5TU",
+                "duration": 1857,
+                "title": "30 MIN BEAST MODE DUMBBELL WORKOUT | Full Body Follow Along"
+            }
+        ],
+        "search_query": "full workout follow along"
+    }
+}

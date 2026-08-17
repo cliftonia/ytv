@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Storm Chasing",
+        "network_type": "streaming",
+        "channel_number": 54,
+        "network_long_name": "Storm Chasing",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=3lyH7EZqWLA",
+                "duration": 1740,
+                "title": "Storm Chasers: On the hunt for tornados | Full Episode | SBS Dateline"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1A5dn2cu_n0",
+                "duration": 1577,
+                "title": "A Storm Chasing Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6nX7J8_mZpE",
+                "duration": 2546,
+                "title": "Tornado Alley - Real Time Tornado: Joplin, Missouri"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d3Zv1C_sQeE",
+                "duration": 1730,
+                "title": "Tornado chasers: The people hunting for supercell storms | Full Episod"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V0SuPglv7s0",
+                "duration": 1482,
+                "title": "Tornado Hunting: Chase It From The South"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jfnJ1-G3mww",
+                "duration": 962,
+                "title": "Matador - The Tornado That Erased Half a Texas Town"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xSMn5imOn4U",
+                "duration": 876,
+                "title": "The Rolling Fork Tornado - A Town Completely Destroyed"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0-m5OUKVGaw",
+                "duration": 1680,
+                "title": "Chasing Bolts - the hunt to capture the perfect bolt of lightning ⚡🌩 |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bDrvj83MNJY",
+                "duration": 2325,
+                "title": "The Worst Tornado Disaster in 70 years - The Joplin EF5"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h_7yWYas2uM",
+                "duration": 1321,
+                "title": "The Most Extreme Tornado Chase Ever"
+            }
+        ],
+        "search_query": "storm chasing tornado documentary"
+    }
+}

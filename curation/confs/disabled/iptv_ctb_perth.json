@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "CTB Perth",
+        "network_type": "streaming",
+        "channel_number": 131,
+        "network_long_name": "CTB Perth",
+        "streams": [
+            {
+                "url": "https://live.ctbperth.net.au/hls/0/stream.m3u8",
+                "duration": 600,
+                "title": "CTB Perth (720p)"
+            }
+        ]
+    }
+}

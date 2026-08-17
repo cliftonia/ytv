@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Motorsports",
+        "network_type": "streaming",
+        "channel_number": 13,
+        "network_long_name": "Motorsports",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=_JeaXt_3Mhc",
+                "duration": 495,
+                "title": "Race Highlights | 2026 Hungarian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b54HylZQKAo",
+                "duration": 1604,
+                "title": "Extended Highlights | Race | Nürburgring 2025  | GT World Challenge Eu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4BUkPIwkB5Q",
+                "duration": 518,
+                "title": "F3 Feature Race Highlights | 2026 Hungarian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rgyh4BzFxrk",
+                "duration": 619,
+                "title": "MotoGP™ Race Highlights 🔥 | 2024 #SpanishGP"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0lBA1DmeT1E",
+                "duration": 483,
+                "title": "2026 Nashville Superspeedway | NTT INDYCAR SERIES Highlights"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vx1bRasRwt4",
+                "duration": 356,
+                "title": "6 Minutes of Awesome GTD PRO Battles from the 12 Hours of Sebring | 20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sH7d-seoSto",
+                "duration": 845,
+                "title": "Best Moments in Motorsports 2020 | Battles, Overtakes, Finishes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7k0siWw0rNM",
+                "duration": 432,
+                "title": "F3 Sprint Race Highlights | 2026 Hungarian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I6RfOY_7leA",
+                "duration": 487,
+                "title": "Race Highlights | 2026 Belgian Grand Prix"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ipOT9ruRobc",
+                "duration": 500,
+                "title": "Race Highlights | 2026 Monaco Grand Prix"
+            }
+        ],
+        "search_query": "motorsport race highlights"
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Slow TV",
+        "network_type": "streaming",
+        "channel_number": 120,
+        "network_long_name": "Slow TV",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=oHrnBcYW6U0",
+                "duration": 2917,
+                "title": "Scotland’s most picturesque railway journey | The West Highland Line R"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mn65_rlabwQ",
+                "duration": 3803,
+                "title": "Trains 4K Film With Relaxing Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2_lKWEhfj20",
+                "duration": 5814,
+                "title": "★ 4K 🇨🇭Samedan - Albulabahn - Chur; cab ride after over 1 meter snowfa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h0vrvXBLoCU",
+                "duration": 1859,
+                "title": "Winter Special Grindelwald to Interlaken, Switzerland | Cab Ride - Tra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kUDxhIyaCEA",
+                "duration": 2420,
+                "title": "4K Train Driver view - Montreux to Montbovon - Goldenpass Panoramic MO"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nKOe2PuERD0",
+                "duration": 6644,
+                "title": "★ 4K 🇮🇹Tirano - 🇨🇭St. Moritz summer cab ride, Italy to Switzerland [06"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=maqfO-ELNbM",
+                "duration": 6964,
+                "title": "Real time train journey - Bondi Junction to Wollongong | Slow TV"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B1yUQwpNhJA",
+                "duration": 6942,
+                "title": "Front view of Colorado's STUNNING Royal Gorge Route Railroad"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YZ9kdU76s3w",
+                "duration": 1547,
+                "title": "Switzerland’s Most Beautiful Train Ride – Grindelwald to Lauterbrunnen"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GxYGs0nDDJU",
+                "duration": 1118,
+                "title": "World’s Most Scenic Train Journey in Switzerland _ Schynige Platte , T"
+            }
+        ],
+        "search_query": "slow tv scenic train journey 4k"
+    }
+}

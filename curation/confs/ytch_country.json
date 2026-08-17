@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Country",
+        "network_type": "streaming",
+        "channel_number": 97,
+        "network_long_name": "Country",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=0jufTpOU2rI",
+                "duration": 5295,
+                "title": "Luke Combs - Full Concert (Lexington, KY | Feb. 14, 2020)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a1veY6_nUcE",
+                "duration": 4956,
+                "title": "Willie Nelson & Friends \"Live and Kicking\" - 2003"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0jX42GseyzQ",
+                "duration": 2091,
+                "title": "Don Williams live stage coach 2013"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KKlxrbpa9RU",
+                "duration": 5088,
+                "title": "The Chicks - Top of the World Tour | Full Concert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1KJ3A5IJMxg",
+                "duration": 3027,
+                "title": "The Best of George Jones - Live Concert Performance"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OFDPDokJcOM",
+                "duration": 2405,
+                "title": "Brooks & Dunn + Friends CMT Crossroads FULL EPISODE | ft. Luke Combs &"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3Km5CD68_-8",
+                "duration": 3399,
+                "title": "Blake Shelton – Live: It’s All About Tonight (2010 Concert Special) #S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pnsvWU5KqL0",
+                "duration": 1376,
+                "title": "Cody Johnson Fireside Concert ft. “Dear Rodeo” + “Cowboy Life” & More"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1ynPoUCbEOE",
+                "duration": 3665,
+                "title": "Vince Gill Live at the Grand Ole Opry"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Gb4yTHNCVdM",
+                "duration": 775,
+                "title": "Alan Jackson Tribute - Carrie Underwood, Dierks Bentley, Jon Pardi, La"
+            }
+        ],
+        "search_query": "country music live performance"
+    }
+}

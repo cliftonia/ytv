@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "9Life",
+        "network_type": "streaming",
+        "channel_number": 106,
+        "network_long_name": "9Life",
+        "streams": [
+            {
+                "url": "https://9now-livestreams.akamaized.net/hls/live/2008313/life-syd/master.m3u8",
+                "duration": 600,
+                "title": "9Life (720p) [Geo-blocked]"
+            }
+        ]
+    }
+}

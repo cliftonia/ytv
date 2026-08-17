@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Economics & Finance",
+        "network_type": "streaming",
+        "channel_number": 69,
+        "network_long_name": "Economics & Finance",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=BLH6Z1-t5e0",
+                "duration": 1010,
+                "title": "How Chile's Economy Was Sold to The Highest Bidder"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yhpyHV1iz00",
+                "duration": 872,
+                "title": "What Happens When Capitalism Doesn't Need Workers Anymore?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tW6aT_nzl6Q",
+                "duration": 965,
+                "title": "Lebanon Lost 50% of Its Economy in 2 Years"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t6m49vNjEGs",
+                "duration": 2545,
+                "title": "How the rich get richer - Money in the world economy | DW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hKGwGAHznFQ",
+                "duration": 713,
+                "title": "Norway: Is It The Perfect Economy?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=brW6-fbvmsQ",
+                "duration": 1140,
+                "title": "The Faltering Economy of Argentina | Economics Explained"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x-Q47erm5MI",
+                "duration": 897,
+                "title": "Stagflation"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=72pGczK3j7s",
+                "duration": 1262,
+                "title": "Cuba Was Barely Holding On… And Then The Oil Ran Out"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M2LrHMKFcdU",
+                "duration": 796,
+                "title": "How Iceland Lost 50% of Its GDP... And Recovered"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
+                "duration": 1860,
+                "title": "How The Economic Machine Works by Ray Dalio"
+            }
+        ],
+        "search_query": "economics explained finance documentary"
+    }
+}

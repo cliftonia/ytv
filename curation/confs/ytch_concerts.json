@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Full Concerts",
+        "network_type": "streaming",
+        "channel_number": 106,
+        "network_long_name": "Full Concerts",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=C3zHObUWdk4",
+                "duration": 5717,
+                "title": "SYNTHONY - Full Length Concert - Live at SYNTHONY Festival 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0jufTpOU2rI",
+                "duration": 5295,
+                "title": "Luke Combs - Full Concert (Lexington, KY | Feb. 14, 2020)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MLie88A7SZU",
+                "duration": 8634,
+                "title": "𝐏𝐢𝐧𝐤 𝐅𝐥𝐨𝐲𝐝 - 𝐏𝐮𝐥𝐬𝐞 𝟏𝟗𝟗𝟒 - 𝟒𝐊 𝐑𝐞𝐦𝐚𝐬𝐭𝐞𝐫 𝐅𝐮𝐥𝐥 𝐂𝐨𝐧𝐜𝐞𝐫𝐭 #pinkfloyd"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FmrGz8qSyrk",
+                "duration": 6117,
+                "title": "Red Hot Chili Peppers - Live at Slane Castle 2003 Full Concert (High Q"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8aR1go5-qHQ",
+                "duration": 5588,
+                "title": "Celine Dion - A New Day (2007) DVD |Live In Las Vegas | Full Concert |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AIa0dj9MXn8",
+                "duration": 6238,
+                "title": "GREEN DAY: 'Rock In Rio 2022' [Live 4K | Full Proshot Concert]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xweRJNcDfOY",
+                "duration": 5021,
+                "title": "The Cranberries - Beneath The Skin (Live in Paris, 1999) | Full Concer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jxa1j7nRQuw",
+                "duration": 7020,
+                "title": "Coldplay - Music of the Spheres 2025 - Live in Las Vegas, NV (06/06/20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bFqzXDf9AOM",
+                "duration": 6690,
+                "title": "AC/DC - Live At River Plate 2009 - (Full Concert - Remastered)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RwXSBALm0dg",
+                "duration": 7107,
+                "title": "PRINCE - Live At The Los Angeles Forum (April 28, 2011) [Full Concert"
+            }
+        ],
+        "search_query": "full concert live show"
+    }
+}

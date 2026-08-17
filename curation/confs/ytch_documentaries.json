@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Documentaries",
+        "network_type": "streaming",
+        "channel_number": 16,
+        "network_long_name": "Documentaries",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=_qpXYOc2RN8",
+                "duration": 4073,
+                "title": "THE KINAHAN’S - Murder, Money & The Manhunt | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CeEO9nRQjHc",
+                "duration": 3236,
+                "title": "Lost Tombs of Notre Dame | Full Documentary | NOVA | PBS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ijqxUXDBPjI",
+                "duration": 3007,
+                "title": "Ancient Apocalypse: The Collapse of Easter Island Explained | Full Doc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DEseiA72yVM",
+                "duration": 2993,
+                "title": "Trump's 40-Year Entanglement with the FBI and Organized Crime | FULL D"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zankYHjNIWk",
+                "duration": 5073,
+                "title": "Edgar Allan Poe: Buried Alive | Full Documentary | American Masters |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JtM_iTPJIJw",
+                "duration": 3511,
+                "title": "EIC - The Company That Ruled the World | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pw4qW50Qjaw",
+                "duration": 5393,
+                "title": "Propaganda: The Art of Selling Lies (2019) | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
+                "duration": 5048,
+                "title": "The Thinking Game | Full documentary | Tribeca Film Festival official"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rH1Y66IwKvc",
+                "duration": 3259,
+                "title": "The Madoff Affair (full documentary) | FRONTLINE"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SpVkEIgS8iE",
+                "duration": 5093,
+                "title": "Surburban Nightmare Chris Watts Full Documentary 2022"
+            }
+        ],
+        "search_query": "full documentary"
+    }
+}

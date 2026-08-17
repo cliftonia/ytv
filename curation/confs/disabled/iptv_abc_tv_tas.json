@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV TAS",
+        "network_type": "streaming",
+        "channel_number": 118,
+        "network_long_name": "ABC TV TAS",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-tas.m3u8",
+                "duration": 600,
+                "title": "ABC TV TAS (720p)"
+            }
+        ]
+    }
+}

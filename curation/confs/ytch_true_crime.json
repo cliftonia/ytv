@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "True Crime",
+        "network_type": "streaming",
+        "channel_number": 40,
+        "network_long_name": "True Crime",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=A42Bt-0DAiY",
+                "duration": 1769,
+                "title": "A Betrayal So Cold-Blooded It’s Chilling: He Framed His Wife to Hide a"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WRUZc23hv0Y",
+                "duration": 1651,
+                "title": "A Secret She Thought No One Would Ever Discover | True Crime Documenta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X_M6BIX3UYo",
+                "duration": 2836,
+                "title": "Real-Life Freddy Krueger: This Murder Scene Terrified The FBI"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
+                "duration": 1623,
+                "title": "CAUTION!!! This Case Made ME Question HUMANITY - True Crime Documentar"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xt4EHxymIlg",
+                "duration": 3272,
+                "title": "Obsessed: Unraveling Jodi Arias  | True crime documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UNi0dvB-4L0",
+                "duration": 1972,
+                "title": "Cases With The Most INSANE Twists You've Ever Heard"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AdB6aYXVO-A",
+                "duration": 2834,
+                "title": "The Almost Perfect Murder (True Crime Documentary) | Real Stories"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qh_PQFlf44w",
+                "duration": 1649,
+                "title": "A Secret She Thought No One Would Ever Discover? - True Crime Document"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ThVABfppei8",
+                "duration": 2564,
+                "title": "The Disappearance of his 3rd Wife Exposed the Murders of his Previous"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KECHTe9QsPw",
+                "duration": 1780,
+                "title": "Family Who Disappeared Found Trapped Inside Secret Room Locked For 9 Y"
+            }
+        ],
+        "search_query": "true crime documentary case"
+    }
+}

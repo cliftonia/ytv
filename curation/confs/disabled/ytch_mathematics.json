@@ -1,0 +1,86 @@
+{
+ "station_conf": {
+  "network_name": "Mathematics",
+  "network_type": "streaming",
+  "channel_number": 74,
+  "network_long_name": "Mathematics",
+  "stream_rotation": "clock",
+  "streams": [
+   {
+    "url": "https://www.youtube.com/watch?v=1srQ7Mq_ToI",
+    "duration": 849,
+    "title": "ALL OF MATH explained in 14 minutes"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=brvugRQVDLM",
+    "duration": 929,
+    "title": "Becoming good at math is easy, actually"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=WsQQvHm4lSw",
+    "duration": 2182,
+    "title": "Understand Calculus in 35 Minutes"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=J7DzL2_Na80",
+    "duration": 2389,
+    "title": "1. The Geometry of Linear Equations"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ZQElzjCsl9o",
+    "duration": 1025,
+    "title": "Math is the hidden secret to understanding the world | Roger Antonsen"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OmJ-4B-mS-Y",
+    "duration": 666,
+    "title": "The Map of Mathematics"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ZWH-4GJaErM",
+    "duration": 2290,
+    "title": "Learn ALL THE MATH IN THE WORLD from START to FINISH"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vLFc-YSOt1U",
+    "duration": 830,
+    "title": "Every Branch of Math Explained"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=LNZl4GqVm58",
+    "duration": 2429,
+    "title": "Learn All of Functions in only 40 Minutes! (ultimate study guide)"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=cDr_y0kGddA",
+    "duration": 2359,
+    "title": "How Math Becomes Difficult"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=pTnEG_WGd2Q",
+    "duration": 1084,
+    "title": "Learn Mathematics from START to FINISH"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=NZ3Mva95UsQ",
+    "duration": 1296,
+    "title": "Lecture 1, Part III: Bond \u201cMathematics\u201d"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Vp570S6Plt8",
+    "duration": 1484,
+    "title": "Mathematician Explains Infinity in 5 Levels of Difficulty | WIRED"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=fb_v5Bc8PSk",
+    "duration": 496,
+    "title": "How To Self-Study Math"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Zrv1EDIqHkY",
+    "duration": 1893,
+    "title": "The Oldest Unsolved Problem in Math"
+   }
+  ]
+ }
+}

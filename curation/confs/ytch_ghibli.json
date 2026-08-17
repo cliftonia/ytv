@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Studio Ghibli",
+        "network_type": "streaming",
+        "channel_number": 36,
+        "network_long_name": "Studio Ghibli",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=0jZNKV5ROBM",
+                "duration": 3419,
+                "title": "Joe Hisaishi : Studio Ghibli Experience, Part 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U80peJfJW7w",
+                "duration": 1113,
+                "title": "The Boy And The Heron Complete OST"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AhPoaxvJYug",
+                "duration": 6962,
+                "title": "Joe Hisaishi in Budokan, Studio Ghibli 25 Years Concert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tq_8STgmDM0",
+                "duration": 5598,
+                "title": "Joe Hisaishi 29 Song Golden Collection"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y3gA3AXngKk",
+                "duration": 1435,
+                "title": "Joe Hisaishi: Miyazaki's Maestro | A Studio Ghibli Music Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LIy9L7ghx4M",
+                "duration": 5699,
+                "title": "MUSIC ONLY Joe Hisaishi in Budokan   Studio Ghibli 25 Years Concert"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FrX7tnM80M8",
+                "duration": 5580,
+                "title": "Joe Hisaishi : Studio Ghibli Experience, Part 2"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QFGaCgQ-oIM",
+                "duration": 5679,
+                "title": "J. Hisaishi - Song Golden Collection - Joe Hisaishi Best Songs 2021 -"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g6xSaa347n8",
+                "duration": 689,
+                "title": "Studio Ghibli composer: ‘I wrote the Totoro theme in 20 minutes!’"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F8-_zNZw1ZM",
+                "duration": 901,
+                "title": "The GENIUS Behind Studio Ghibli's Magical Sound"
+            }
+        ],
+        "search_query": "studio ghibli soundtrack joe hisaishi documentary"
+    }
+}

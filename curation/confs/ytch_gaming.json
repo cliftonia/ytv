@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Gaming",
+        "network_type": "streaming",
+        "channel_number": 91,
+        "network_long_name": "Gaming",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=l9kGK6oy_zw",
+                "duration": 3945,
+                "title": "Why STALKER Matters: A Retrospective Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eAQAGqC9yII",
+                "duration": 4583,
+                "title": "ASTERIX & OBELIX: The History & The Games | Retrospective Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VohdYI8lEXM",
+                "duration": 3379,
+                "title": "Portal Retrospective"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Wm8qRQ6OGdY",
+                "duration": 5180,
+                "title": "A Gruesome 'Masterpiece' | Postal Retrospective"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yqtnRoXGhBs",
+                "duration": 4353,
+                "title": "A Battlefield Franchise Retrospective"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J-FIPO4HM1Y",
+                "duration": 3244,
+                "title": "The Story of Mother | Retrospective Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_fQtxKmgJC8",
+                "duration": 3571,
+                "title": "The Story of Tetris"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZjS6rLKnU0c",
+                "duration": 1523,
+                "title": "Unreal 20 Years Later: An LGR Retrospective"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wIWyHd3FFFU",
+                "duration": 3142,
+                "title": "Akalabeth & Ultima I Retrospective | The First Age of Darkness"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=keqYUO-umN8",
+                "duration": 4004,
+                "title": "Bullying Kids The Video Game"
+            }
+        ],
+        "search_query": "video game documentary retrospective"
+    }
+}

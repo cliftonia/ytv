@@ -1,0 +1,15 @@
+{
+ "station_conf": {
+  "network_name": "Bloomberg TV Australia",
+  "network_type": "streaming",
+  "channel_number": 15,
+  "network_long_name": "Bloomberg TV Australia",
+  "streams": [
+   {
+    "url": "https://bloomberg.com/media-manifest/streams/aus.m3u8",
+    "duration": 600,
+    "title": "Bloomberg TV Australia (270p)"
+   }
+  ]
+ }
+}

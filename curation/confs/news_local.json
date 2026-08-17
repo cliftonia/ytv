@@ -1,0 +1,30 @@
+{
+ "station_conf": {
+  "network_name": "AUS News",
+  "network_type": "streaming",
+  "channel_number": 131,
+  "network_long_name": "Australian News",
+  "streams": [
+   {
+    "url": "https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8",
+    "duration": 600,
+    "title": "ABC News"
+   },
+   {
+    "url": "https://c.mjh.nz/abc-qld.m3u8",
+    "duration": 600,
+    "title": "ABC TV QLD"
+   },
+   {
+    "url": "https://9now-livestreams-fhd-t.akamaized.net/u/prod/simulcast/bne/ch9/hls/r1/index.m3u8",
+    "duration": 600,
+    "title": "Channel 9 Brisbane"
+   },
+   {
+    "url": "https://d9quh89lh7dtw.cloudfront.net/public-output/index.m3u8",
+    "duration": 600,
+    "title": "ausbiz TV"
+   }
+  ]
+ }
+}

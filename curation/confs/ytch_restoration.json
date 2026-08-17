@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Restoration",
+        "network_type": "streaming",
+        "channel_number": 86,
+        "network_long_name": "Restoration",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=54mpymkZruc",
+                "duration": 868,
+                "title": "Secret Treasure Inside - Restoring a French Cash Register with Hidden"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pVWs2AFgHlA",
+                "duration": 597,
+                "title": "Drew’s 2-Year Stag Restoration Project Pays Off! | Salvage Hunters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WlL62mmlnBw",
+                "duration": 850,
+                "title": "Impossible Restoration of a Rusty Antique — This Was My Hardest Projec"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b9Elh5y3hto",
+                "duration": 1408,
+                "title": "The Ultimate Sony Restoration! Bringing A 200 Year Abandoned Sound Sys"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZoQaPoZBCTE",
+                "duration": 907,
+                "title": "Antique rusty lighter - Restoration project"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nnz5GcmDa2E",
+                "duration": 693,
+                "title": "Hungry Skull - Mechanical Coin Bank Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s0f9BwbfvCs",
+                "duration": 595,
+                "title": "Drew Restores Stag Statue In A Two-Year Restoration Project! | Salvage"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TA-v8vHcaA0",
+                "duration": 4322,
+                "title": "Paid $40 and Earned $2960 : A Whole Hour of Amazing Restoration Techni"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KahctElSnpw",
+                "duration": 1109,
+                "title": "Barn Find Oil Lamp - Perfect Restoration"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2sU-2SHK9qU",
+                "duration": 1515,
+                "title": "Trash to TREASURE Restoration | Furniture Restoration"
+            }
+        ],
+        "search_query": "antique restoration project"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV NT",
+        "network_type": "streaming",
+        "channel_number": 114,
+        "network_long_name": "ABC TV NT",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-nt.m3u8",
+                "duration": 600,
+                "title": "ABC TV NT (720p)"
+            }
+        ]
+    }
+}

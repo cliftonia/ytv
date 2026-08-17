@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Darts & Snooker",
+        "network_type": "streaming",
+        "channel_number": 15,
+        "network_long_name": "Darts & Snooker",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Pjo26higPaI",
+                "duration": 4703,
+                "title": "Ronnie O'Sullivan vs Ding Junhui - World Grand Prix Snooker - Semi-Fin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-zao622pQsE",
+                "duration": 1749,
+                "title": "Simon Whitlock vs Maik Kuivenhoven | UK Open 2024 | PDC Darts Full Mat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cKz2QL0tWnc",
+                "duration": 1035,
+                "title": "RIDICULOUS AVERAGES! | Aspinall v Smith | 2023 New Zealand Darts Maste"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2j3UL8LUk6w",
+                "duration": 2729,
+                "title": "Luke Littler vs Luke Humphries 2026 Winmau World Masters FINAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=muOPJLZ7TTQ",
+                "duration": 3965,
+                "title": "Judd Trump vs John Higgins | 2023 Championship League Snooker | Full M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gF7JYunMuRU",
+                "duration": 4355,
+                "title": "Snooker Full Match - John Higgins vs Mark Williams - Championship Leag"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a1g3PlHzKx8",
+                "duration": 4527,
+                "title": "2013 World Matchplay Final Taylor vs Lewis"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oh-EflP6Unc",
+                "duration": 2712,
+                "title": "Luke Littler vs Gerwyn Price 2026 Winmau World Masters Semi-finals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k97uWksAwD0",
+                "duration": 1427,
+                "title": "Top 5 Matches Down Under | 2023 World Series of Darts"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jO-2iOsw93Q",
+                "duration": 1331,
+                "title": "THE NEXT LUKE LITTLER? 👀 - Johnson v Hutton - 2025 JDC National Volts"
+            }
+        ],
+        "search_query": "darts snooker full match"
+    }
+}

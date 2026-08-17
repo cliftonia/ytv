@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Short Films",
+        "network_type": "streaming",
+        "channel_number": 20,
+        "network_long_name": "Short Films",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=xhSuFVnoTNk",
+                "duration": 825,
+                "title": "The Darkest Blue – Award-Winning British Short Film | Directed by Andr"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xfMQ7hzyFW4",
+                "duration": 1648,
+                "title": "Writing Doom – Award-Winning Short Film on Superintelligence (2024)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xbcL8hhm4L8",
+                "duration": 725,
+                "title": "One in Three (award-winning short film)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gDZ2oO9Ny1M",
+                "duration": 1182,
+                "title": "THE FENCE | Award Winning Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oagv4Vt8zQg",
+                "duration": 898,
+                "title": "Laura Living Backwards: Award-Winning Time Travel Short Film (2024)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4VrLQXR7mKU",
+                "duration": 1350,
+                "title": "“I’m Not a Robot” (2025 Academy Award Winner) | The New Yorker Screeni"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yu24PZIbkoY",
+                "duration": 318,
+                "title": "DIFFERENT | Award Winning Short Film by Tahneek Rahman"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AL-Dpcle3FE",
+                "duration": 619,
+                "title": "Unexpected Item | Award Winning Short Film | Romantic Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xVNMedsWhl8",
+                "duration": 384,
+                "title": "Two Minutes | Award Winning Short Film | British Comedy"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O9LLiJDZNU0",
+                "duration": 665,
+                "title": "BAFTA Winning Short Film | Quiet Life - BBC Comedy Short"
+            }
+        ],
+        "search_query": "award winning short film"
+    }
+}

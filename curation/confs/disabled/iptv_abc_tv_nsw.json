@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV NSW",
+        "network_type": "streaming",
+        "channel_number": 113,
+        "network_long_name": "ABC TV NSW",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-nsw.m3u8",
+                "duration": 600,
+                "title": "ABC TV NSW (720p)"
+            }
+        ]
+    }
+}

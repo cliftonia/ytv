@@ -1,0 +1,86 @@
+{
+    "station_conf": {
+        "network_name": "Horror",
+        "network_type": "streaming",
+        "channel_number": 26,
+        "network_long_name": "Horror",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=OFYDiMe8wSo",
+                "duration": 303,
+                "title": "\"Double Vision\" | Independent Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pqzTpseVWZk",
+                "duration": 794,
+                "title": "RAIN RAIN GO AWAY - Horror Short Film | Award Winning"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F1PGurk9NeI",
+                "duration": 1137,
+                "title": "The Recipient | Multi Award-Winning Short Horror Film | 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZQ80_j3CXJQ",
+                "duration": 841,
+                "title": "IN THE DARK - Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4f3hG-5grlw",
+                "duration": 500,
+                "title": "DON'T LOOK AWAY | Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zk-eY5S1Nck",
+                "duration": 382,
+                "title": "Horror Short Film \u201cThe Smiling Man\u201d | ALTER"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XuLpHncqaYY",
+                "duration": 350,
+                "title": "Never Left | Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hik4n3Ld88Y",
+                "duration": 1164,
+                "title": "WARNINGS (Horror Short Film)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=js2932fcKOU",
+                "duration": 833,
+                "title": "Turn Around (2016) | Award-Winning Horror Short"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sTtmpFIaFqc",
+                "duration": 466,
+                "title": "The Ballerina - Short Horror Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TTi5PXlscy4",
+                "duration": 337,
+                "title": "INSOMNIA - Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HjfzVbVXLQY",
+                "duration": 370,
+                "title": "The Lookout \u2014 Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Azpe11UdRI",
+                "duration": 312,
+                "title": "Bugaboo - Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xm6NjBngIx0",
+                "duration": 469,
+                "title": "CLOSING TIME - Horror Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rE1ykHiI05U",
+                "duration": 595,
+                "title": "DEADLINE | Horror Short Film"
+            }
+        ]
+    }
+}

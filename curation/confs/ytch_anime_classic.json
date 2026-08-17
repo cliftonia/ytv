@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Classic Anime",
+        "network_type": "streaming",
+        "channel_number": 34,
+        "network_long_name": "Classic Anime",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=uBwQlTdv6hM",
+                "duration": 2704,
+                "title": "Riding Bean (1989) FULL OVA - English Dub"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gHn6KCvRsdI",
+                "duration": 1457,
+                "title": "Speed Racer: Episode 1 - The Great Plan (Part 1) | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rcfykg9jIZM",
+                "duration": 2795,
+                "title": "BAOH English full OVA (Anime) HIGH QUALITY"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7NV6PcZ5e4o",
+                "duration": 3046,
+                "title": "Wizardry (1991) Animated Film [Japanese] [ENG SUB]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hR_EgONHRWE",
+                "duration": 2832,
+                "title": "BUBBLEGUM CRISIS - TINSEL CITY | Episode 01 (English Dub) | Full 1980s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
+                "duration": 2472,
+                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtit"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aHkL_ViEKvY",
+                "duration": 2328,
+                "title": "BUBBLEGUM CRISIS - REVENGE ROAD | Episode 04 (English Dub) | Full 1980"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CJDBuCBCh_A",
+                "duration": 1323,
+                "title": "TMNT (1987) FULL EPISODE: \"Return of the Technodrome\" 🌎 | Teenage Muta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rJKht7IY-Xg",
+                "duration": 1349,
+                "title": "Inspector Gadget 117 - The Infiltration | HD | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I0rULIYGIn8",
+                "duration": 3100,
+                "title": "Tom and Jerry | Mega Compilation | Vol. 4 | Warner Classics"
+            }
+        ],
+        "search_query": "classic anime full episode 1980s english"
+    }
+}

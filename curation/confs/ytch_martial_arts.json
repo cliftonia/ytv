@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Martial Arts",
+        "network_type": "streaming",
+        "channel_number": 26,
+        "network_long_name": "Martial Arts",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=lHTQL6wSLjI",
+                "duration": 4975,
+                "title": "New Fong Sai-Yuk - English | Wuxia-Martial Arts & Kung Fu Action Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kqkje9y8Q14",
+                "duration": 5216,
+                "title": "Bloody Mission | Full Martial Arts Adventure Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J1CPtQgpl1c",
+                "duration": 5272,
+                "title": "The Shadow of Five Elements || Best Chinese Action Kung Fu Movies In E"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0l46rEbOr6o",
+                "duration": 6693,
+                "title": "Jackie Chan's THE FIST MASTER | Hollywood Kung Fu Action Full English"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y1S-iqLInnw",
+                "duration": 5244,
+                "title": "Odd Couple (1979) | Full Martial Arts Movie | Legendary Weapon Masters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8WxLmBZJJR0",
+                "duration": 5012,
+                "title": "Dressed to Fight | Full Martial Arts Adventure Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gu8Pq2V0r98",
+                "duration": 5306,
+                "title": "Incredible Kung Fu Mission (1979) | Full Martial Arts Action Movie | Y"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4D9Au64Mp6o",
+                "duration": 4252,
+                "title": "Drunken Master - English | Chinese Kung Fu Martial Arts Action Movie,"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wjBSgudUnDw",
+                "duration": 4896,
+                "title": "Snake in the Eagle's Shadow (1978) | Full Martial Arts Movie | Jackie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xiLnAGs7yj8",
+                "duration": 5714,
+                "title": "Fong Sai Yuk | FULL MOVIE | Jet Li | Martial Arts Kung Fu Action Comed"
+            }
+        ],
+        "search_query": "kung fu martial arts full movie"
+    }
+}

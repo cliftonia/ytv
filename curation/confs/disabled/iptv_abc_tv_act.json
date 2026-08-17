@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "ABC TV ACT",
+        "network_type": "streaming",
+        "channel_number": 112,
+        "network_long_name": "ABC TV ACT",
+        "streams": [
+            {
+                "url": "https://c.mjh.nz/abc-act.m3u8",
+                "duration": 600,
+                "title": "ABC TV ACT (720p)"
+            }
+        ]
+    }
+}

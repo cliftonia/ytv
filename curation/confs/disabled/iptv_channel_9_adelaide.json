@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Channel 9 Adelaide",
+        "network_type": "streaming",
+        "channel_number": 125,
+        "network_long_name": "Channel 9 Adelaide",
+        "streams": [
+            {
+                "url": "https://9now-livestreams-fhd-t.akamaized.net/u/prod/simulcast/adl/ch9/hls/r1/index.m3u8",
+                "duration": 600,
+                "title": "Channel 9 Adelaide (720p) [Geo-blocked]"
+            }
+        ]
+    }
+}

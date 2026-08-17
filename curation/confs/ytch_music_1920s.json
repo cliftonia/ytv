@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1920s Music",
+        "network_type": "streaming",
+        "channel_number": 108,
+        "network_long_name": "1920s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=pnc_kk63oJA",
+                "duration": 1092,
+                "title": "1920s Jazz music compilation Nr. 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3e9yKs_fY-M",
+                "duration": 4353,
+                "title": "Doris Day, Ella Fitzgerald, Billie Holiday, Charlie Parker, Miles Davi"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I_sxlKQ_JYc",
+                "duration": 1371,
+                "title": "1920s Jazz music compilation Nr. 8"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gsxo1agB6SU",
+                "duration": 1471,
+                "title": "1920s music compilation Nr.4 (1920s Jazz and Charleston)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uaIUXLnIlOg",
+                "duration": 1681,
+                "title": "1920s music compilation Nr. 9"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bKlUG1AjunM",
+                "duration": 3665,
+                "title": "Nightfall: Cool & Smooth Jazz Classics 1920s 30s & 40s (Past Perfect)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QTs7DG7ntB8",
+                "duration": 4973,
+                "title": "1920s & 1930s ORIGINAL Vintage Music | Golden Age Of Swing Jazz From T"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5X5H5JLWeI0",
+                "duration": 1130,
+                "title": "1920s Vintage Swing Jazz & Blues 🎶 | Retro Jazz | Charleston & Swing V"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FsyJ73b08fk",
+                "duration": 1681,
+                "title": "1920s music compilation Nr. 2 (A song for every year 1921-1929)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0_tGe7KNJhU",
+                "duration": 5382,
+                "title": "Best Relaxing Jazz Classics  : Franks Sinatra , Louis Armstrong, Nat K"
+            }
+        ],
+        "search_query": "1920s jazz music compilation"
+    }
+}

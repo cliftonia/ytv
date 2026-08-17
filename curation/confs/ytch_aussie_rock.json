@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Aussie Rock",
+        "network_type": "streaming",
+        "channel_number": 96,
+        "network_long_name": "Aussie Rock",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=7XaSm9-r_4U",
+                "duration": 488,
+                "title": "Powderfinger - These Days (Final Live Performance)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E4X56wIOZns",
+                "duration": 1443,
+                "title": "Glass Beams - Full Performance (Live on KEXP)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MIPg4SdtuYU",
+                "duration": 3092,
+                "title": "Silverchair - Full Concert [HD] | Live at Pinkpop 1997"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AufMa3dGhHI",
+                "duration": 293,
+                "title": "Men At Work ft. Ringo Star Band - Down Under (Live)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f-eHtulpgbo",
+                "duration": 223,
+                "title": "New Sensation (INXS Cover) | Live Band Concert | Sing It Live Performa"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o0ZbENMWVzM",
+                "duration": 1319,
+                "title": "Buffalo Live GTK - Sydney 1974 (Full Concert)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VXJ1BLHPGNw",
+                "duration": 3553,
+                "title": "Amyl And The Sniffers – Full Show live | Freak Valley Festival | 2024"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w1y4aDrGAw8",
+                "duration": 354,
+                "title": "CRUSHED - LIVE IN SYDNEY AUSTRALIA - 20 YEAR ANNIVERSARY TOUR"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HLuHxEzO3sE",
+                "duration": 5118,
+                "title": "Airbourne - Live Wacken 2019 (Full Show) HD"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3hxYDqhy2Vc",
+                "duration": 247,
+                "title": "Choirboys - Run To Paradise (Official Music Video)"
+            }
+        ],
+        "search_query": "australian rock band live performance"
+    }
+}

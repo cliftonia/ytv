@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "US Game Shows",
+        "network_type": "streaming",
+        "channel_number": 39,
+        "network_long_name": "US Game Shows",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=24Zu7bFUm2Q",
+                "duration": 1236,
+                "title": "Chain Reaction | FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zgPqOItiG0Q",
+                "duration": 1231,
+                "title": "People Puzzler | FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yI2zUJ7RA0A",
+                "duration": 1276,
+                "title": "Common Knowledge | FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nCvoUm8QvYI",
+                "duration": 2771,
+                "title": "Lingo: Series 2, Episode 15 - FULL EPISODE (2021)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nTvx0QffQww",
+                "duration": 1246,
+                "title": "America Says | FULL EPISODE | Game Show Network"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-o3SVKu2GYA",
+                "duration": 3312,
+                "title": "Not quite right 😅🤔 | Total Wipeout Official | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tXMXNTc4OdU",
+                "duration": 1201,
+                "title": "Let's Get It On! FAMILY FEUD With Steve Harvey FULL EPISODE!"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V7_CDcPiTP8",
+                "duration": 2720,
+                "title": "Family Feud Full Episode | Episode 15 Season 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8pfZIcWNIvQ",
+                "duration": 3406,
+                "title": "The 1% Club Season 4 Episode 1 | The 1 Percent Club AU Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ueUDLFqfRms",
+                "duration": 2901,
+                "title": "The 1% Club - Series 5 Episode 2 | The 1% Club uk Full Episodes"
+            }
+        ],
+        "search_query": "american game show full episode"
+    }
+}

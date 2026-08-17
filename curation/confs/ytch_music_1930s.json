@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "1930s Music",
+        "network_type": "streaming",
+        "channel_number": 109,
+        "network_long_name": "1930s Music",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=1kTKHPgeQ00",
+                "duration": 4504,
+                "title": "Great American Big Bands of the 1930s & 1940s Glenn Miller & Duke Elli"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=im4VlefwNNs",
+                "duration": 3753,
+                "title": "1940s Big Band Swing: Classic Hits & Vintage Vibes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=83suG7R6hQw",
+                "duration": 3673,
+                "title": "Happy Morning Swing Jazz: Vintage Music from the 1930s and 40s"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MSw33RUSi0M",
+                "duration": 3410,
+                "title": "\"Classic Swing & Big Band Jazz 🎷 1930s & 1940s Music Collection\":"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ALU66mO-39o",
+                "duration": 3846,
+                "title": "1 Hour of Glenn Miller’s Greatest Hits – Classic 1940s Recordings"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Wq98KVBOl0",
+                "duration": 1689,
+                "title": "Classic 1930's Big Band Swing Music Medley: Have You Got Any Castles B"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kkWf4cux4LM",
+                "duration": 3227,
+                "title": "Big Band Swing Jazz 🎷1920s 1930s 1940s 🎵 Old Radio Vintage Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aAnmCqRXdy8",
+                "duration": 3707,
+                "title": "Big Band Swing Collection | The Best of 1930s & 1940s 🎷✨"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7q7zm3u2U68",
+                "duration": 5072,
+                "title": "Vintage Swing Jazz ~ 1930s Swing Music & 1940s Big Band Swing Classics"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bMnulNC-3HM",
+                "duration": 1689,
+                "title": "Classic 1930s Big Band Swing Music For Ballroom Dancing @Pax41"
+            }
+        ],
+        "search_query": "1930s swing big band music compilation"
+    }
+}

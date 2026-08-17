@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Retro TV & Ads",
+        "network_type": "streaming",
+        "channel_number": 42,
+        "network_long_name": "Retro TV & Ads",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=h1v6IC_K8QI",
+                "duration": 3105,
+                "title": "50 Minutes of Mid 80s TV Ads: Unearthed from the Depths of Betamax Obl"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tgoUa2wWvAQ",
+                "duration": 3479,
+                "title": "One Hour of 1980s TV Commercials - 80s Commercial Compilation #1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mwVxlw_6gGM",
+                "duration": 2474,
+                "title": "Forgotten Early 80s TV Commercials! 🔥📼  Retro TV Commercials VOL 474"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3rxiEaJbxnI",
+                "duration": 570,
+                "title": "Poorly Aged 80s Commercials"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pB_G57KMLjQ",
+                "duration": 1963,
+                "title": "Half-Hour of TV Commercials from 1985 🔥📼  Retro TV Commercials VOL 507"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4xj7QQ7VKtw",
+                "duration": 3006,
+                "title": "50 Minutes of 80s Daytime TV Commercials - 1980s Commercial Compilatio"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rL9_S0mbl9w",
+                "duration": 1154,
+                "title": "Vintage Television Commercials - 1980s - Part 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l9kPJrpMsIk",
+                "duration": 1292,
+                "title": "Mid 1980s TV Commercials - 80s Commercial Compilation #10"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u_KxHUEmg_E",
+                "duration": 2550,
+                "title": "1980s VINTAGE CHRISTMAS TELEVISION COMMERCIALS"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W-g6atUlpx4",
+                "duration": 1913,
+                "title": "Half-Hour of 1989 TV Commercials - 80s Commercial Compilation #7"
+            }
+        ],
+        "search_query": "1980s television commercials compilation"
+    }
+}

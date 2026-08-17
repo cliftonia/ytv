@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Travel & Events",
+        "network_type": "streaming",
+        "channel_number": 77,
+        "network_long_name": "Travel & Events",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=sY6BGVE-PBE",
+                "duration": 2369,
+                "title": "The Real Bali Most People Miss | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vOkkWuEwUmc",
+                "duration": 2492,
+                "title": "10 Days in Vietnam 2026 - A Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ss55E5Q1-do",
+                "duration": 2577,
+                "title": "TASMANIA: The Island at the Edge of The Earth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZaCzkHkgrlc",
+                "duration": 2072,
+                "title": "OMAN: The Safe and Beautiful Country No One Knows About | 4K Travel Do"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PWha0F7NFF4",
+                "duration": 2682,
+                "title": "Malta: Hidden Wonders in the Mediterranean | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xgqDj9A4UTc",
+                "duration": 1882,
+                "title": "MADAGASCAR: The World's Strangest Island"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pssnBA7-f98",
+                "duration": 2446,
+                "title": "Kazakhstan: The World’s Biggest Surprise | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ebZwyWG3JgA",
+                "duration": 2054,
+                "title": "Montenegro: Europe’s Biggest Surprise | 4K Travel Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GV8lK1mZNDk",
+                "duration": 1906,
+                "title": "PORTUGAL | The Edge of Europe | The Most Incredible Places in Portugal"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IralqVXQw8U",
+                "duration": 2547,
+                "title": "By train along the fjord coast of Norway | DW Documentary"
+            }
+        ],
+        "search_query": "travel documentary tour"
+    }
+}

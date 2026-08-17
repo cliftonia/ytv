@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Film & Animation",
+        "network_type": "streaming",
+        "channel_number": 19,
+        "network_long_name": "Film & Animation",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=B4EPW7JUMTM",
+                "duration": 786,
+                "title": "FOREVERGREEN — Academy Award®–Nominated Animated Short Film | Now Stre"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DjG1E4n0PcA",
+                "duration": 1045,
+                "title": "RUN TOTTI RUN | Award Winning Animated Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-p1P4fdhaF8",
+                "duration": 1003,
+                "title": "NAPO | *Award-Winning* Animated Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bl1FOKpFY2Q",
+                "duration": 476,
+                "title": "UMBRELLA | Oscar® Qualified and Multi-Award Winning Animated Short Fil"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w7brpxPmvhU",
+                "duration": 651,
+                "title": "Foundling | Award Winning Animated Short Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gZyjJtBIlow",
+                "duration": 384,
+                "title": "CGI **Award Winning** 3D Animated Short: \"A Fox And A Mouse\" - by ESMA"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=efGqe1j3RNk",
+                "duration": 595,
+                "title": "WiNDUP: Award-winning animated short film | Unity"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0MX_fJAhmEE",
+                "duration": 511,
+                "title": "Let's Eat - Award Winning Animated Short Film"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eDaNejmf-1A",
+                "duration": 875,
+                "title": "The Wrong Rock | A mushroom follows his dreams"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jm0MLlE4x0U",
+                "duration": 727,
+                "title": "The Fox and the Bird - CGI short film by Fred and Sam Guillaume"
+            }
+        ],
+        "search_query": "award winning animated short film"
+    }
+}

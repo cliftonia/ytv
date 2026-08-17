@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Fashion",
+        "network_type": "streaming",
+        "channel_number": 78,
+        "network_long_name": "Fashion",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=fcOtX3mCjeg",
+                "duration": 568,
+                "title": "Inside Valentino’s Haute Couture Atelier With Alessandro Michele | Vog"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5Hjfpj0_1XM",
+                "duration": 1508,
+                "title": "Ralph Lauren | Fashion Tycoon | Designer Career | Documentary | Biogra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VTI7mFhw2-c",
+                "duration": 2464,
+                "title": "Great Fashion Sense | VIVIENNE WESTWOOD: GOD SAVE THE QUEEN | Full Doc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s4PNBLV8o38",
+                "duration": 1158,
+                "title": "Reviews of Every Fashion Documentary Ever"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l8aF7pSRFVA",
+                "duration": 2488,
+                "title": "VISIONARIES: TOM FORD DOCUMENTARY | Mr Tom Ford"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V92SVMimV3I",
+                "duration": 2497,
+                "title": "Vivienne Westwood: Britain's Most Influential Fashion Designer"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XPt1dAwHM_o",
+                "duration": 2546,
+                "title": "Karl Lagerfeld - German fashion designer and icon | DW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gD8yw68TgGs",
+                "duration": 1467,
+                "title": "Givenchy Unveiled: A Stylish Odyssey Through An Icons Legacy | Absolut"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K36uZgYEBOU",
+                "duration": 696,
+                "title": "How to Break into the Fashion Industry with Alexa Chung | S1, E1 | Fut"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9kNFJo1-wUc",
+                "duration": 2045,
+                "title": "The History of Balenciaga"
+            }
+        ],
+        "search_query": "fashion documentary designer"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "station_conf": {
+        "network_name": "Channel 9 Perth",
+        "network_type": "streaming",
+        "channel_number": 127,
+        "network_long_name": "Channel 9 Perth",
+        "streams": [
+            {
+                "url": "https://9now-livestreams-fhd-t.akamaized.net/u/prod/simulcast/per/ch9/hls/r1/index.m3u8",
+                "duration": 600,
+                "title": "Channel 9 Perth (720p) [Geo-blocked]"
+            }
+        ]
+    }
+}

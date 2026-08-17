@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Space & Astronomy",
+        "network_type": "streaming",
+        "channel_number": 45,
+        "network_long_name": "Space & Astronomy",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
+                "duration": 2395,
+                "title": "Five Wonders of our Universe | Universe | BBC Earth Science"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mO3Q4bRQZ3k",
+                "duration": 5291,
+                "title": "Journey Through The Universe - HD Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=omUUQrvoYfw",
+                "duration": 5154,
+                "title": "Where Is Everything In The Universe Going? | Space Documentary 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s4-uI7jFq6I",
+                "duration": 5126,
+                "title": "Searching For Aliens and Our Place in the Universe | How the Universe"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
+                "duration": 4813,
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Docu"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QOOkS0E9whU",
+                "duration": 3165,
+                "title": "The Universe's Great IMPOSSIBILITIES! | How the Universe Works | Scien"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=feLUycJF318",
+                "duration": 4705,
+                "title": "A Journey to the Edge of the Unexplored | Space Documentary 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AHCc39l8nac",
+                "duration": 3819,
+                "title": "Searching the Deepest Corners of Space | How the Universe Works | Scie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wLHpynnmVIw",
+                "duration": 3570,
+                "title": "What Is the Universe Really? | The Search for Ultimate Truth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FNR7a8joCGs",
+                "duration": 4605,
+                "title": "Chaos in Space 💥 | How the Universe Works | Science Channel"
+            }
+        ],
+        "search_query": "space astronomy documentary universe"
+    }
+}

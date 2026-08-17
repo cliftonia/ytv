@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Engineering",
+        "network_type": "streaming",
+        "channel_number": 47,
+        "network_long_name": "Engineering",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=Bo4f_5vozC8",
+                "duration": 3043,
+                "title": "Pearl River Tower: The Skyscraper That Generates Its Own Electricity |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V_HYOpcknjU",
+                "duration": 3141,
+                "title": "Singapore's Vegas: Inside Singapore's Most Luxurious Casino Resort | M"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4GpuTjbU5ak",
+                "duration": 2805,
+                "title": "Megastructures: Queen Mary 2 [ENG][DOC]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OnpfY1Rq2cI",
+                "duration": 2802,
+                "title": "Busiest Railway Station on Earth | Shinjuku: Inside the 24/7 Megastruc"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3srSlk5-P9w",
+                "duration": 3047,
+                "title": "Shanghai Super Tower: The 60,000 Ton Behemoth Made Out Of Steel | Mega"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7WnKd_r761k",
+                "duration": 3000,
+                "title": "Building the Impossible in Singapore | Megastructures: Gardens By The"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yl0DpG8uiNc",
+                "duration": 3038,
+                "title": "Megastructures: Building the Burj Al Arab | Dubai Engineering Document"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9--bUBZmArI",
+                "duration": 3331,
+                "title": "Legendary Megastructures | The Gigantic Architectural Transformation o"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4leP0GXZucI",
+                "duration": 2820,
+                "title": "Dubai Mall, Dubai - Megastructures: Dubai Mega Mall - Dubai, UAE Engin"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uTSpdD6MswA",
+                "duration": 2964,
+                "title": "World’s Most Extreme Railway | Megastructures | Free Documentary"
+            }
+        ],
+        "search_query": "megastructures engineering documentary"
+    }
+}

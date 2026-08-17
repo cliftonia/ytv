@@ -33,6 +33,38 @@ android {
         ndk { abiFilters += listOf("armeabi-v7a") }
     }
 
+    /**
+     * Release signing, taken from the environment so no key material is ever in this repository -
+     * which is public.
+     *
+     * The identity matters more than the secrecy here. Android will not install an update signed
+     * by a different key than the installed app, so every build the televisions ever accept has
+     * to come from this one keystore. A CI job that generated its own debug key each run would
+     * produce apks that install fine on a clean device and then refuse to update it ever again.
+     */
+    val keystorePath = System.getenv("YTV_KEYSTORE")
+    signingConfigs {
+        if (keystorePath != null) {
+            create("release") {
+                storeFile = file(keystorePath)
+                storePassword = System.getenv("YTV_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("YTV_KEY_ALIAS") ?: "ytv"
+                keyPassword = System.getenv("YTV_KEY_PASSWORD")
+                    ?: System.getenv("YTV_KEYSTORE_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // Without the keystore this falls back to whatever `assembleRelease` would do
+            // unsigned, which is the right outcome for someone who has cloned this and just
+            // wants to build it - not a hard failure over a key they were never going to have.
+            signingConfig = signingConfigs.findByName("release")
+            isMinifyEnabled = false
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17

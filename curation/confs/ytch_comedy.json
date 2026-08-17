@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Comedy",
+        "network_type": "streaming",
+        "channel_number": 27,
+        "network_long_name": "Comedy",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=ftj16LX-sFE",
+                "duration": 4319,
+                "title": "Dan Cummins: Get Outta Here; Devil! (Full Show) | Dark & Unfiltered St"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n5zeemXykrU",
+                "duration": 3224,
+                "title": "Des Bishop: Bridge & Tunnel | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NqK1gyTYt8M",
+                "duration": 4112,
+                "title": "Brian Simpson | Live From The Mothership (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LYfZ60ijd1Q",
+                "duration": 2694,
+                "title": "Emmy Blotnick | What's Her Secret? (Full Comedy Special)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=krQma_JwX98",
+                "duration": 4388,
+                "title": "Dan Cummins: TRYING TO GET BETTER [FULL Comedy Standup Special]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y2YtIBYM4w0",
+                "duration": 5348,
+                "title": "Ari Shaffir - JEW (2022) FULL SPECIAL"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FSbE9EAHiGU",
+                "duration": 3610,
+                "title": "ALI SIDDIQ: RUGGED [Full Stand Up Comedy Special]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SJCt9aWtink",
+                "duration": 3578,
+                "title": "Rob Bebenek - Numpty | Full Comedy Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ijFQCbulaWs",
+                "duration": 2990,
+                "title": "Sam Morril - \"You've Changed\" Full Special (2024)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zTIuiOUakuo",
+                "duration": 3599,
+                "title": "Kirk Fox: That Guy | FULL COMEDY SPECIAL"
+            }
+        ],
+        "search_query": "stand up comedy full special"
+    }
+}

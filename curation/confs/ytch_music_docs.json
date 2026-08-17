@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Music Documentaries",
+        "network_type": "streaming",
+        "channel_number": 107,
+        "network_long_name": "Music Documentaries",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=85hQDAo-XRU",
+                "duration": 1192,
+                "title": "How Led Zeppelin Became the Biggest Band in the World (Documentary)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jbqPau3HIGs",
+                "duration": 3906,
+                "title": "The History of System of a Down | Band History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mQVNCrSyiJk",
+                "duration": 1012,
+                "title": "A Band That Broke Every Rule of Rock"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CVpEUhWtGPQ",
+                "duration": 1721,
+                "title": "The Rise and Fall of The Cars: The Band That Had Everything  and the S"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mS_0Ok1dJ8w",
+                "duration": 3635,
+                "title": "The Most Musically Complex Band In Rock History | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UpvyltmeG1I",
+                "duration": 3064,
+                "title": "The Most Successful Heavy Metal Band Of All Time | Iron Maiden | Music"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uuvhrhag8cE",
+                "duration": 3543,
+                "title": "Free The True Story Behind the Iconic Rock Band | Exclusive Footage &"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oSHlWLfQOfw",
+                "duration": 1922,
+                "title": "The Band That Lived Outside the Rules"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=br-Ed3NxjN4",
+                "duration": 1299,
+                "title": "The Band That Turned Rebellion Into Art"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-udvFTJI0Wk",
+                "duration": 3627,
+                "title": "Yes: The Band Behind The Songs | Full Music Documentary | Jon Anderson"
+            }
+        ],
+        "search_query": "music documentary band history"
+    }
+}

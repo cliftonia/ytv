@@ -1,0 +1,62 @@
+{
+    "station_conf": {
+        "network_name": "Christianity",
+        "network_type": "streaming",
+        "channel_number": 121,
+        "network_long_name": "Christianity",
+        "stream_rotation": "clock",
+        "streams": [
+            {
+                "url": "https://www.youtube.com/watch?v=7R1EERG_YK4",
+                "duration": 2455,
+                "title": "\"Hearing God Over Your Thoughts\" | Pastor Bobby Chandler"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rd0wx_zfMO0",
+                "duration": 1665,
+                "title": "Put God First and Watch Him Handle the Rest | Tony Evans Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zbKXkpiLcfk",
+                "duration": 1652,
+                "title": "The Holy Spirit and You | Billy Graham Classic Sermon"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hC5FHSY06Xk",
+                "duration": 2821,
+                "title": "Escaping the Trap of Casual Christianity [FULL SERMON]"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Avyyn_-jcZs",
+                "duration": 3166,
+                "title": "Joyce Meyer: Motivation in Life's Difficult Times (Full Sermon) | TBN"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9bLgDoFkdqo",
+                "duration": 3216,
+                "title": "Taking Control of Our Thoughts– Dr. Charles Stanley"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2h3MmkXvI_o",
+                "duration": 2384,
+                "title": "Priscilla Shirer: Wear the Armor of God | FULL SERMON | Propel 2018 |"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r-9L2-aVR4I",
+                "duration": 2841,
+                "title": "Walking in the Holy Spirit – Dr. Charles Stanley"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9jYtODX22ZY",
+                "duration": 2420,
+                "title": "Voddie Baucham: Do Not Love the World"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AMIMVTBwlvk",
+                "duration": 3207,
+                "title": "Pursuing Holiness [FULL SERMON] | John Bevere |"
+            }
+        ],
+        "search_query": "full sermon christian teaching message"
+    }
+}
