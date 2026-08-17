@@ -486,6 +486,12 @@ class MainActivity : ComponentActivity() {
                         if (tier != null) {
                             Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
                             refusedTiers.add(StreamResolver.refusedKey(id, tier))
+                            // The cache is keyed by id alone, so it still holds the url of the
+                            // rung just refused. Leaving it meant the "fall to the next rung"
+                            // re-tune replayed the identical refused url - three or four times
+                            // over, each re-arming the stand-by grace, which is why a 403 showed
+                            // as several seconds of unexplained black instead of a quick recovery.
+                            resolvedCache.forget(id)
                         } else {
                             Log.w("fs42", "all tiers refused for $id; asking the server")
                             deadIds.add(id)
@@ -589,7 +595,21 @@ class MainActivity : ComponentActivity() {
         val initialRequestedAt = SystemClock.elapsedRealtime()
         executor.execute {
             val repo = DialRepository(
-                fetch = { url -> URL(url).readText() },
+                // Timeouts, because the default is none at all. This runs on the SAME
+                // single-threaded executor as every tune, so one hung connection to a CDN edge
+                // meant no channel ever tuned again and every keypress queued silently behind it -
+                // a television that looks bricked with nothing on screen to say why.
+                fetch = { url ->
+                    (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
+                        connectTimeout = 10_000
+                        readTimeout = 20_000
+                        try {
+                            inputStream.bufferedReader().use { it.readText() }
+                        } finally {
+                            disconnect()
+                        }
+                    }
+                },
                 cacheDir = cacheDir,
             )
             val synced = runCatching { repo.sync(LINEUP_URL) }.getOrNull()
@@ -788,11 +808,11 @@ class MainActivity : ComponentActivity() {
         executor.execute {
             if (destroyed) return@execute
             val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now, ladder, refusedTiers.toSet()) ?: return@execute
+            val tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot()) ?: return@execute
             var playable: Playable = tuned.playable
             if (playable is NeedsResolving) {
                 playable = resolvedCache.get(playable.videoId, now)
-                    ?: resolver.resolveDetailed(playable.videoId, now, ladder)?.also {
+                    ?: resolver.resolveDetailed(playable.videoId, now, ladder, refusedSnapshot())?.also {
                         resolvedCache.put(playable.videoId, it.playable, it.expiresAtSeconds)
                     }?.playable ?: return@execute
             }
@@ -892,7 +912,7 @@ class MainActivity : ComponentActivity() {
         }
 
         val now = nowSeconds()
-        val tuned = Tuner.tune(channel, urls, now, ladder, refusedTiers.toSet())
+        val tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot())
         if (tuned == null) {
             Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
             return
@@ -915,7 +935,7 @@ class MainActivity : ComponentActivity() {
                 playable = remembered
             } else {
                 Log.d("fs42", "resolve miss; asking the server for $videoId")
-                val resolved = resolver.resolveDetailed(videoId, now, ladder)
+                val resolved = resolver.resolveDetailed(videoId, now, ladder, refusedSnapshot())
                 if (resolved != null) {
                     resolvedCache.put(videoId, resolved.playable, resolved.expiresAtSeconds)
                     deadIds.remove(videoId)
@@ -1164,6 +1184,15 @@ class MainActivity : ComponentActivity() {
      * beginning, because there is nothing meaningful to seek to in a programme that was never
      * scheduled to be on now.
      */
+    /**
+     * A snapshot of the refused tiers, taken under the monitor.
+     *
+     * `Collections.synchronizedSet` guards each operation, NOT iteration - and copying is an
+     * iteration. The set is added to on the main thread while the executor reads it, so an
+     * unsynchronised copy can throw ConcurrentModificationException in the middle of a tune.
+     */
+    private fun refusedSnapshot(): Set<String> = synchronized(refusedTiers) { refusedTiers.toSet() }
+
     private fun resolveNextPlayable(channel: Channel, failedIndex: Int, now: Long): Playable? {
         for (step in 1..SKIP_DEAD_CLIPS) {
             if (destroyed) return null
@@ -1175,7 +1204,7 @@ class MainActivity : ComponentActivity() {
                 Log.i("fs42", "skipped to clip ${failedIndex + step} (cached)")
                 return it
             }
-            val resolved = resolver.resolveDetailed(id, now, ladder)
+            val resolved = resolver.resolveDetailed(id, now, ladder, refusedSnapshot())
             if (resolved != null) {
                 resolvedCache.put(id, resolved.playable, resolved.expiresAtSeconds)
                 Log.i("fs42", "skipped to clip ${failedIndex + step} after $step dead clip(s)")

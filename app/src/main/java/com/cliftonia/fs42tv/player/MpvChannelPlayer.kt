@@ -55,16 +55,40 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
 
     private var requestedAtMillis = 0L
 
-    /** Set once a picture is up, so a load in progress is never reported as a stall. */
-    private var hasPicture = false
+    /**
+     * Set once a picture is up, so a load in progress is never reported as a stall.
+     *
+     * `@Volatile` because mpv delivers events on its own native thread while `play` and `stop` are
+     * called from the UI thread. Without it neither side is guaranteed to see the other's write.
+     */
+    @Volatile private var hasPicture = false
 
-    /** Guards against reporting the same clip's end twice while the next tune is in flight. */
-    private var ended = false
+    /**
+     * Guards against reporting the same clip's end twice while the next tune is in flight.
+     *
+     * `@Volatile` for the same reason, and it matters more here: a stale read means an end-file
+     * event for the OUTGOING clip is acted on, which re-tunes the channel while a load is already
+     * in flight - the tight loop measured at six re-tunes in fifty milliseconds. A plain boolean
+     * closed the window that was reproduced but not the race underneath it.
+     */
+    @Volatile private var ended = false
+
+    /**
+     * True once [release] has run. Nothing may touch the mpv core afterwards.
+     *
+     * libmpv's binding is a process-global singleton: after `destroy` the handle is null, and its
+     * native property setters respond to a null handle by logging and calling `exit(1)`. So a late
+     * event arriving from mpv's own thread - one already past the `events` null-check when release
+     * began - could take the whole process down, or trigger a SECOND engine rebuild against a core
+     * that is already gone.
+     */
+    @Volatile private var released = false
 
     init {
         mpv.initialize(context.filesDir.path, context.cacheDir.path)
         mpv.events = object : MpvView.Events {
             override fun onFileLoaded() {
+                if (released) return
                 // Only now do end-file events refer to the clip the dial actually asked for.
                 // Anything before this belongs to the outgoing file that `loadfile ... replace`
                 // displaced, and acting on it re-tunes the channel in a tight loop - six times in
@@ -73,6 +97,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
             }
 
             override fun onShutdown() {
+                if (released) return
                 // Distinct from a playback error on purpose: the URL may have been fine, and the
                 // engine itself is now dead. Only a new instance fixes this.
                 Log.w("fs42", "mpv core shut down; engine must be rebuilt")
@@ -80,7 +105,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
             }
 
             override fun onFirstFrame() {
-                if (hasPicture) return
+                if (released || hasPicture) return
                 hasPicture = true
                 val requested = requestedAtMillis
                 if (requested > 0) {
@@ -179,9 +204,25 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     }
 
     override fun release() {
+        // Order matters. `released` first, so any event already in flight on mpv's thread finds
+        // the door shut; then the callbacks are dropped so nothing can reach the activity even if
+        // it slips past; then the queue is cleared; and only then is the core destroyed.
+        //
+        // Clearing the callbacks is the part that was missing. `events = null` cannot stop a
+        // callback that is already past its own null-check, and that callback's `main.post` lands
+        // AFTER the queue was drained - so a dying engine could ask for a second rebuild, against
+        // a core the first rebuild had already replaced.
+        released = true
+        onPlaybackError = null
+        onClipEnded = null
+        onFirstFrame = null
+        onBuffering = null
         proxy.release()
         main.removeCallbacksAndMessages(null)
         mpv.events = null
+        // Before destroy: the observer lives on a static list that outlives the core, so leaving
+        // it registered leaks this whole view - and the activity behind it - once per rebuild.
+        mpv.detachObserver()
         mpv.destroy()
     }
 }

@@ -35,6 +35,7 @@ class DeviceResolver(
         videoId: String,
         nowSeconds: Long,
         ladder: List<String>,
+        refused: Set<String>,
     ): ClipResolver.Resolved? {
         ensureInitialised()
         val info = runCatching {
@@ -53,6 +54,9 @@ class DeviceResolver(
         }
 
         for (name in ladder) {
+            // A rung the CDN already refused this session will be refused again; walking onto it
+            // costs a playback attempt and several seconds of black for a known answer.
+            if (StreamResolver.refusedKey(videoId, name) in refused) continue
             val video = bestVideoForTier(info.videoOnlyStreams, name) ?: continue
             val videoUrl = video.content ?: continue
             val audioUrl = audio.content ?: continue
