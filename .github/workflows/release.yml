@@ -33,8 +33,20 @@ jobs:
         # for Android to consider one build newer than another, and yyyyMMddHHmm overflows Int.
         # The tag carries the same number so the update check can read it without downloading
         # anything.
+        #
+        # A tag push supplies the version; a manual run computes one. Without this a tagged run
+        # would build v<tag> and then publish under a DIFFERENT, freshly stamped tag, leaving the
+        # pushed one behind as a stray that points at no release.
         id: version
-        run: echo "code=$(date -u '+%y%j%H%M')" >> "$GITHUB_OUTPUT"
+        env:
+          REF: ${{ github.ref }}
+        run: |
+          tagged="${REF#refs/tags/v}"
+          if [ "$tagged" != "$REF" ] && [ -n "$tagged" ]; then
+            echo "code=$tagged" >> "$GITHUB_OUTPUT"
+          else
+            echo "code=$(date -u '+%y%j%H%M')" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Restore the signing keystore
         # Absent on a fork, or before the secrets have been set. The build still runs and still
@@ -85,6 +97,8 @@ jobs:
         run: |
           # The tag IS the version, because that is what the app compares against its own
           # versionCode. A release tagged anything else is invisible to the update check.
+          # --verify-tag is deliberately absent: a manual run has no tag yet and needs one
+          # created, while a tagged run already has it and gh reuses it rather than failing.
           gh release create "v$VERSION" out/ytv.apk \
             --title "v$VERSION" \
             --notes "Automated build. The televisions pick this up on their next launch." \
