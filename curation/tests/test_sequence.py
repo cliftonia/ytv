@@ -60,6 +60,26 @@ class TestParse(unittest.TestCase):
         self.assertIsNone(sequence.parse("Sarah McLachlan: Tiny Desk Concert"))
         self.assertIsNone(sequence.parse(""))
 
+    def test_a_bare_series_letter_is_read_as_the_season(self):
+        # QI uploaders leave the word "Series" off about a third of the time. Parsed as season 1,
+        # those sorted ahead of every genuine lettered series - so the largest run on the whole
+        # dial opened in the middle of itself.
+        show, season, episode = sequence.parse(
+            "QI FULL EPISODE! 'Death' Episode 5 D Sean Lock, Jeremy Hardy")
+        self.assertEqual("D", season)
+        self.assertEqual(5, episode)
+        self.assertEqual("qi", show)
+
+    def test_a_bare_letter_sorts_with_its_own_series(self):
+        self.assertLess(sequence.sort_key("D", 1), sequence.sort_key("D", 5))
+        self.assertLess(sequence.sort_key("D", 5), sequence.sort_key("E", 1))
+
+    def test_qi_xl_is_the_same_show_as_qi(self):
+        # The old test was named for this case and its body did not contain an XL title, so it
+        # passed while asserting nothing about it.
+        self.assertEqual(sequence.show_name("QI XL Full Episode"),
+                         sequence.show_name("QI Full Episode"))
+
     def test_the_qi_variants_land_in_one_bucket(self):
         # "QI Full Episode", "QI XL Full Episode" and "QI FULL EPISODE!" are the same programme.
         # Before the noise words were stripped these were three shows and none of them sorted.

@@ -5,10 +5,12 @@ The app needs no changes for this. `ClockRotation.playPointFor` already walks th
 order and cycles, so a channel plays clip 0, then 1, then 2 - the only reason it feels shuffled
 is that the list arrives in YouTube search-result order. Sorting the list IS the feature.
 
-What this cannot do is invent sequences that were never sourced. A search for
-"anime full episode english dub" returns episode one of fifty different shows, because episode one
-is what everybody uploads; measured on the real dial, only 10 of 100 anime clips sat in a run of
-more than one episode. Ordering that gives runs of two, which nobody would notice.
+What this cannot do is invent sequences that were never sourced - but note that the measurement
+once quoted here blamed the wrong thing. "Only 10 of 100 anime clips in a run" was read as
+uploaders posting nothing but episode one; the real cause was our own deduplication, which
+stripped standalone digits from titles and so collapsed "Episode 1" and "Episode 2" into a single
+key, deleting whole series before search had even finished. That is fixed in refresh_channels.py,
+and the runs should now reflect what YouTube actually offers rather than what we threw away.
 
 So this pays off in proportion to how much of a channel comes from SEASON PLAYLISTS rather than
 search - a season playlist arrives already complete and already in order. See PLAYLISTS in
@@ -36,6 +38,10 @@ SEASON_DASH_EPISODE = re.compile(r"\bS(\d+)\s*-\s*(\d+)\b", re.I)
 # QI numbers its series with LETTERS - "Series D, Episode 3" - so the season group is not \d+.
 SERIES_THEN_EP = re.compile(r"\bSeries\s+([A-Z0-9]+).{0,30}?\bEp(?:isode)?\.?\s*(\d+)\b", re.I)
 EP_THEN_SERIES = re.compile(r"\bEp(?:isode)?\.?\s*(\d+).{0,30}?\bSeries\s+([A-Z0-9]+)\b", re.I)
+# "Episode 5 D" - the series letter with the word "Series" left off entirely, which QI uploaders
+# do about a third of the time. Without this those parsed as season 1, and since numeric seasons
+# sort ahead of lettered ones they were all hoisted to the front of the biggest run on the dial.
+EP_THEN_BARE_LETTER = re.compile(r"\bEp(?:isode)?\.?\s*(\d+)[\s,]+([A-Z])\b")
 BARE_EPISODE = re.compile(r"\bEp(?:isode)?\.?\s*(\d+)\b", re.I)
 
 # An episode title in quotes, of any of the shapes uploaders actually use.
@@ -46,7 +52,7 @@ QUOTED = re.compile(r"[\'\"\u2018\u2019\u201c\u201d][^\'\"\u2018\u2019\u201c\u20
 # "QI Full Episode" and "QI XL Full Episode" become two different shows and neither gets ordered.
 NOISE = re.compile(
     r"\b(full|complete|official|new|hd|4k|1080p|720p|english|eng|dub|dubbed|sub|subbed|"
-    r"subtitles|multi|episode|episodes|ep|series|season|part|the|a|an|watch|free|online)\b")
+    r"subtitles|multi|episode|episodes|ep|series|season|part|the|a|an|watch|free|online|xl)\b")
 
 
 def parse(title):
@@ -56,7 +62,8 @@ def parse(title):
     2 would raise. Sorting is done on a key that copes with both.
     """
     for pattern, order in ((SEASON_EPISODE, "se"), (SEASON_DASH_EPISODE, "se"),
-                           (SERIES_THEN_EP, "se"), (EP_THEN_SERIES, "es")):
+                           (SERIES_THEN_EP, "se"), (EP_THEN_SERIES, "es"),
+                           (EP_THEN_BARE_LETTER, "es")):
         match = pattern.search(title)
         if match:
             first, second = match.group(1), match.group(2)

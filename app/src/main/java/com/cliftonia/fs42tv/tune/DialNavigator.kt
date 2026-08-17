@@ -39,6 +39,28 @@ class DialNavigator(channels: List<Channel>, startNumber: Int? = null) {
         return current
     }
 
+    /**
+     * The channel one step up from [from], without moving.
+     *
+     * For prefetching: the dial needs to know where a press WOULD go so it can resolve that
+     * channel in advance, and doing it with [up] followed by [down] would move the navigator
+     * under whatever else is reading it.
+     *
+     * Takes an explicit channel rather than reading [current], because the prefetch is queued
+     * from a background thread and the viewer may have moved on by the time it runs - it should
+     * prepare the neighbours of the channel that actually came on air.
+     */
+    fun peekUp(from: Channel): Channel? = neighbour(from, +1)
+
+    /** The channel one step down from [from], without moving. */
+    fun peekDown(from: Channel): Channel? = neighbour(from, -1)
+
+    private fun neighbour(from: Channel, step: Int): Channel? {
+        val at = channels.indexOfFirst { it.number == from.number }
+        if (at < 0) return null
+        return channels[(at + step + channels.size) % channels.size]
+    }
+
     /** Move to a channel by number, or return null and stay put if it is not on the dial. */
     fun jumpTo(number: Int): Channel? {
         val found = channels.indexOfFirst { it.number == number }

@@ -33,7 +33,13 @@ object GuideRows {
      * take a position in, and inventing one would put a stale title against a channel showing
      * whatever it is actually showing.
      */
-    fun titleOn(channel: Channel, nowSeconds: Long): String? =
-        ClockRotation.playPointFor(channel.streams.map { it.duration }, nowSeconds)
+    fun titleOn(channel: Channel, nowSeconds: Long): String? {
+        // Only a clock-rotating channel has a schedule to read. Live feeds carry a placeholder
+        // duration of 600 per stream, so running the rotation over them made the guide name
+        // whichever feed the fake schedule landed on - while the player always plays the first.
+        // The guide confidently listed a programme that was not on.
+        if (channel.rotation != "clock") return channel.streams.firstOrNull()?.title
+        return ClockRotation.playPointFor(channel.streams.map { it.duration }, nowSeconds)
             ?.let { channel.streams.getOrNull(it.index)?.title }
+    }
 }

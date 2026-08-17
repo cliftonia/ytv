@@ -117,4 +117,31 @@ class DialNavigatorTest {
         nav.down()
         assertEquals(2, nav.currentIndex)
     }
+
+    @Test
+    fun `peeking does not move the dial`() {
+        // The whole point: prefetch needs to know where a press WOULD go, and must not move the
+        // navigator under the key handling that is its only writer.
+        val nav = DialNavigator(dial(1, 2, 3), startNumber = 2)
+        assertEquals(3, nav.peekUp(nav.current)?.number)
+        assertEquals(1, nav.peekDown(nav.current)?.number)
+        assertEquals("the dial moved", 2, nav.currentNumber)
+    }
+
+    @Test
+    fun `peeking wraps at both ends, like the dial itself`() {
+        val channels = dial(1, 2, 3)
+        val nav = DialNavigator(channels, startNumber = 1)
+        assertEquals(3, nav.peekDown(channels[0])?.number)
+        assertEquals(1, nav.peekUp(channels[2])?.number)
+    }
+
+    @Test
+    fun `peeking from a channel that has left the dial gives nothing`() {
+        // The prefetch is queued from a background thread against the channel that came on air,
+        // and a re-sync could in principle have replaced the dial by the time it runs.
+        val nav = DialNavigator(dial(1, 2))
+        assertNull(nav.peekUp(dial(99).first()))
+        assertNull(nav.peekDown(dial(99).first()))
+    }
 }

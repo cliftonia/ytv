@@ -36,6 +36,10 @@ class DialRepository(
         // Parse BEFORE writing: caching a malformed response would poison the fallback
         // that exists precisely for when the lineup cannot be fetched.
         val dial = DialContract.parseDial(dialText)
+        // A body of `{}` parses perfectly - `channels` defaults to empty - and caching it would
+        // overwrite the last good lineup with nothing, leaving both televisions with no dial and
+        // no way back except a good fetch. Parsing is not the same as being usable.
+        require(dial.channels.isNotEmpty()) { "the lineup parsed but has no channels" }
         cacheDir.mkdirs()
         dialFile.writeText(dialText)
         // Left by the version that synced two files. Harmless if read - every tier in it expired

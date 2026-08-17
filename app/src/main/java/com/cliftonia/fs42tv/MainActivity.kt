@@ -149,6 +149,13 @@ class MainActivity : ComponentActivity() {
      */
     @Volatile private var onAir: Tuned? = null
 
+    /**
+     * The clip index that just reported it had ended, or -1.
+     *
+     * Consumed by the next tune of the same channel and then cleared. See onClipEnded.
+     */
+    @Volatile private var justEndedIndex: Int = -1
+
     // Compose state backing the tune banner. Written only from the runOnUiThread block below,
     // and only on a genuine success: a failed re-tune must not touch these, since bumping
     // bannerGeneration would replay the LaunchedEffect in ChannelOsd and pop a banner back up
@@ -257,6 +264,15 @@ class MainActivity : ComponentActivity() {
     // Single-threaded so a rapid burst of channel presses queues in order rather than racing
     // each other over the shared navigator and player.
     private val executor: ExecutorService = Executors.newSingleThreadExecutor()
+
+    /**
+     * A second thread, for resolving channels nobody has asked for yet.
+     *
+     * Separate from [executor] on purpose: that one serves the channel the viewer is actually
+     * waiting for, and a speculative resolve queued ahead of a real keypress would make surfing
+     * slower rather than faster - the exact opposite of why this exists.
+     */
+    private val prefetchExecutor: ExecutorService = Executors.newSingleThreadExecutor()
 
     // Bumped on every keypress. A tune captures the current value when queued and abandons
     // itself if the value has since moved on - that is how a burst of presses on the dial
@@ -454,9 +470,20 @@ class MainActivity : ComponentActivity() {
         // core down on a fatal, and a replacement with nothing listening reports no first
         // frame - the stand-by card would then never come down again.
         fun wire(player: ChannelPlayback) {
-            player.onClipEnded = { retuneCurrent("clip ended") }
+            player.onClipEnded = {
+                // Remember which clip ended, so the re-tune cannot land back on it.
+                //
+                // The published duration comes from yt-dlp's metadata; what actually plays is the
+                // shorter of the separately-muxed video and audio tracks. Whenever that is less
+                // than the published figure, the clip ends while the clock still says it is on -
+                // so the rotation returns the SAME index, at an offset a fraction from the end,
+                // and the app re-tunes into the programme it just finished. That is the flash of
+                // black at roll-over, and with a badly truncated track it repeats.
+                justEndedIndex = onAir?.streamIndex ?: -1
+                retuneCurrent("clip ended")
+            }
             player.onPlaybackError = { code ->
-                if (code == MpvChannelPlayer.ENGINE_DIED) {
+                if (code == MpvChannelPlayer.ENGINE_DIED && !destroyed) {
                     // The engine, not the clip. Rebuild first, then let the normal recovery below
                     // re-tune into the new instance.
                     rebuildEngine?.invoke()
@@ -514,7 +541,8 @@ class MainActivity : ComponentActivity() {
                 tuning.value = true
                 updateProgrammeVolume()
                 recoveryHandler.removeCallbacksAndMessages(null)
-                recoveryHandler.postDelayed({ standByReason.value = code }, RECOVERY_GRACE_MILLIS)
+                recoveryHandler.postDelayed(
+                    { if (!destroyed) standByReason.value = code }, RECOVERY_GRACE_MILLIS)
                 retuneCurrent("playback error $code")
             }
             // The card comes down when a picture actually appears, not when a tune is merely
@@ -912,7 +940,22 @@ class MainActivity : ComponentActivity() {
         }
 
         val now = nowSeconds()
-        val tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot())
+        var tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot())
+
+        // If the rotation hands back the clip that just finished, take the next one instead.
+        //
+        // See onClipEnded: the published duration can exceed what actually plays, so the clock
+        // still believes the finished clip is on air. Without this the app re-tunes into it,
+        // seeks to a fraction from its end, plays a moment and ends again.
+        val ended = justEndedIndex
+        justEndedIndex = -1
+        if (ended >= 0 && tuned != null && tuned.streamIndex == ended &&
+            channel.streams.size > 1) {
+            Log.i("fs42", "rotation still on the finished clip $ended; taking the next")
+            val next = (ended + 1) % channel.streams.size
+            tuned = Tuner.tuneToIndex(channel, next, refusedSnapshot())
+        }
+
         if (tuned == null) {
             Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
             return
@@ -988,6 +1031,10 @@ class MainActivity : ComponentActivity() {
         // owner.
         if (playedSuccessfully && !destroyed && requestGeneration == generation.get()) {
             onAir = tuned
+            // With the picture up, get the neighbours ready. Surfing is overwhelmingly up and
+            // down one at a time, and the next press is usually a second or two away - which is
+            // exactly long enough to have resolved where it is going.
+            prefetchNeighbours(channel)
             prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
         }
 
@@ -1191,6 +1238,40 @@ class MainActivity : ComponentActivity() {
      * iteration. The set is added to on the main thread while the executor reads it, so an
      * unsynchronised copy can throw ConcurrentModificationException in the middle of a tune.
      */
+    /**
+     * Resolve what is on the channels either side, so pressing up or down is instant.
+     *
+     * This is what replaced the server's `urls.json`. That file carried signed urls for about
+     * half the dial and made those tunes immediate; it could not survive the server going away,
+     * because googlevideo signs urls for about six hours and a nightly file would be dead by
+     * morning. So the work moved here, to the moment it is actually predictive: the viewer is
+     * watching something, and the overwhelmingly likely next press is one channel up or down.
+     *
+     * On its own thread, so it can never delay a real tune - a prefetch in progress when the
+     * viewer presses a button is simply abandoned mid-flight and its result discarded or, if it
+     * finishes anyway, kept in the cache where the next press will find it.
+     *
+     * Costs one metadata extraction per neighbour and downloads no media at all.
+     */
+    private fun prefetchNeighbours(from: Channel) {
+        val nav = navigator ?: return
+        val around = listOfNotNull(nav.peekUp(from), nav.peekDown(from))
+        for (channel in around) {
+            prefetchExecutor.execute {
+                if (destroyed) return@execute
+                val now = nowSeconds()
+                val tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot()) ?: return@execute
+                val id = (tuned.playable as? NeedsResolving)?.videoId ?: return@execute
+                if (id in deadIds || resolvedCache.get(id, now) != null) return@execute
+                val resolved = resolver.resolveDetailed(id, now, ladder, refusedSnapshot())
+                if (resolved != null && !destroyed) {
+                    resolvedCache.put(id, resolved.playable, resolved.expiresAtSeconds)
+                    Log.d("fs42", "prefetched channel ${channel.number} ${channel.name}")
+                }
+            }
+        }
+    }
+
     private fun refusedSnapshot(): Set<String> = synchronized(refusedTiers) { refusedTiers.toSet() }
 
     private fun resolveNextPlayable(channel: Channel, failedIndex: Int, now: Long): Playable? {
@@ -1285,7 +1366,12 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         player?.setPaused(true)
         // The guide music is a second player and would otherwise keep playing on its own.
-        musicPlayer?.playWhenReady = false
+        // Released rather than paused. Holding an idle ExoPlayer keeps a MediaCodec instance
+        // reserved, and stopPickerMusic explains at length why that caused frame drops across
+        // every channel - the same reasoning applies while the app is in the background, where it
+        // is doing nothing whatsoever with it.
+        musicPlayer?.release()
+        musicPlayer = null
     }
 
     override fun onDestroy() {
@@ -1294,6 +1380,7 @@ class MainActivity : ComponentActivity() {
         stallHandler.removeCallbacksAndMessages(null)
         recoveryHandler.removeCallbacksAndMessages(null)
         executor.shutdownNow()
+        prefetchExecutor.shutdownNow()
         // Both are null'd as well as released, so a tune that outlived the activity finds
         // nothing to touch rather than a released player.
         musicPlayer?.release()

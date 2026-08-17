@@ -92,6 +92,17 @@ def main():
                 changes.append("playlists")
             if station.get("extra_queries") != extra:
                 changes.append("extra queries")
+            # Defaults BEFORE the early exit. They used to sit after it, so a conf whose name,
+            # number and query already matched could never acquire a missing `stream_rotation` -
+            # and a youtube channel without it is published with `rotation: null`, which makes the
+            # tuner replay clip 0 from the start on every single visit.
+            for key, default in (("network_type", "streaming"),
+                                 ("stream_rotation", "clock"),
+                                 ("streams", [])):
+                if key not in station:
+                    station[key] = default
+                    changes.append("added %s" % key)
+
             if not changes:
                 continue
             station["channel_number"] = number
@@ -106,9 +117,6 @@ def main():
                 station["extra_queries"] = extra
             else:
                 station.pop("extra_queries", None)
-            station.setdefault("network_type", "streaming")
-            station.setdefault("stream_rotation", "clock")
-            station.setdefault("streams", [])
             do("update  %-18s %s" % (slug, ", ".join(changes)), lambda p=p, c=conf: save(p, c))
         else:
             station = {
