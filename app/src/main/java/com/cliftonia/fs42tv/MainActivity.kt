@@ -154,6 +154,16 @@ class MainActivity : ComponentActivity() {
     // picker is that surfing is frozen while it's up, so nothing should move these under it.
     // Backs the stand-by card. A black screen is indistinguishable from a dead app or a
     // dead TV; the card says the app knows and is retrying.
+    /**
+     * A crash from the PREVIOUS run, shown on the stand-by card at launch.
+     *
+     * Separate from [standByReason] so that a successful tune cannot wipe it before it has been
+     * read - which it otherwise would, within a second or two of starting. Cleared by the first
+     * keypress instead, because the viewer pressing a button is the only reliable signal that
+     * somebody actually saw it.
+     */
+    private val crashNotice = mutableStateOf("")
+
     /** What the update row says right now, so a slow download does not look like a dead button. */
     private val updateStatus = mutableStateOf("")
 
@@ -296,6 +306,13 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // First, so that anything failing during the rest of setup is still recorded. A crash on
+        // a television with no adb is otherwise unreadable.
+        CrashLog.install(filesDir)
+        // Surfaced immediately, before a channel has even been tuned. A crash on a television
+        // with no adb is otherwise invisible, and the card is already the place the app uses to
+        // say something has gone wrong.
+        CrashLog.summary(filesDir)?.let { crashNotice.value = "LAST RUN: $it" }
         // Stop the television deciding nobody is there.
         //
         // A remote that has not been touched for half an hour looks exactly like an idle device
@@ -341,7 +358,11 @@ class MainActivity : ComponentActivity() {
                         titleLine = bannerTitleLine.value,
                         generation = bannerGeneration.value,
                     )
-                    StandBy(standByReason.value.isNotEmpty(), standByReason.value)
+                    // One card, two sources: a live playback failure, or last run's crash.
+                    // The crash wins while it is showing, since a channel that is currently
+                    // failing will say so again in four seconds anyway.
+                    val standByText = crashNotice.value.ifEmpty { standByReason.value }
+                    StandBy(standByText.isNotEmpty(), standByText)
                     if (settingsVisible.value) {
                         SettingsScreen(rows = settingsRows.value, onDismiss = ::closeSettings)
                     }
@@ -530,6 +551,13 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        // Any key dismisses last run's crash. Pressing a button is the only reliable evidence
+        // somebody was in front of the television to read it; a timer would expire while the
+        // room was empty and the notice would be gone by the time anyone looked.
+        if (crashNotice.value.isNotEmpty()) {
+            crashNotice.value = ""
+            CrashLog.clear(filesDir)
+        }
         val nav = navigator ?: return super.onKeyDown(keyCode, event)
 
         // Belt and braces alongside the focus handoff in openPicker(): once the picker is up,
@@ -956,7 +984,20 @@ class MainActivity : ComponentActivity() {
             ?: PlayerEngine.default(displayModeCount)
         val channels = navigator?.channels.orEmpty()
         val clips = channels.sumOf { it.streams.size }
-        return listOf(
+        val crash = CrashLog.summary(filesDir)
+        return listOfNotNull(
+            crash?.let {
+                SettingRow(
+                    label = "LAST CRASH",
+                    value = it,
+                    // OK clears it, so the next crash is unambiguously new rather than possibly
+                    // the same one being read twice.
+                    action = {
+                        CrashLog.clear(filesDir)
+                        settingsRows.value = buildSettingsRows()
+                    },
+                )
+            },
             SettingRow(
                 label = "VIDEO ENGINE",
                 value = engine.name,
