@@ -48,7 +48,23 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicInteger
 
-private const val SERVER = "http://192.168.4.203:4243"
+/**
+ * Where the lineup lives.
+ *
+ * A file in a public git repository, not an endpoint on a machine at home. The dial is rebuilt
+ * nightly by a workflow and committed, so the television picks up new content by fetching one
+ * file over the open internet - which is the whole point, because one of these televisions lives
+ * in a car and is rarely on the house network.
+ *
+ * `raw.githubusercontent.com` rather than the api: no rate limit worth worrying about, no token,
+ * and it serves the file at whatever the branch currently points to.
+ */
+private const val LINEUP_URL =
+    "https://raw.githubusercontent.com/cliftonia/ytv/main/channels.json"
+
+/** The repository whose releases carry the apk, for the self-update check. */
+private const val RELEASES_REPO = "cliftonia/ytv"
+
 private const val PREFS_NAME = "fs42"
 private const val CHANNEL_KEY = "channel"
 
@@ -96,7 +112,17 @@ class MainActivity : ComponentActivity() {
 
     @Volatile private var navigator: DialNavigator? = null
     @Volatile private var destroyed: Boolean = false
-    private var urls: UrlCache? = null
+
+    /**
+     * Signed urls published alongside the lineup - always null now, and deliberately still here.
+     *
+     * The server used to publish a `urls.json` covering about 46% of the dial's clips, which let
+     * those tune with no resolve at all. Nothing publishes it any more, so every clip takes the
+     * [DeviceResolver] path and the tier machinery in [StreamResolver] reads this as "nothing
+     * cached". Kept as the seam rather than deleted: it is what a future pre-resolved cache would
+     * fill, and removing it would mean unpicking the tier ladder that the 403 fallback relies on.
+     */
+    private val urls: UrlCache? = null
 
     /**
      * What is actually on air right now, as opposed to where the navigator points. A failed
@@ -468,9 +494,8 @@ class MainActivity : ComponentActivity() {
                 fetch = { url -> URL(url).readText() },
                 cacheDir = cacheDir,
             )
-            val synced = runCatching { repo.sync(SERVER) }.getOrNull()
+            val synced = runCatching { repo.sync(LINEUP_URL) }.getOrNull()
             val dial = synced?.dial ?: repo.cachedDial()
-            urls = synced?.urls ?: repo.cachedUrls()
 
             val channels = dial?.channels
             if (channels.isNullOrEmpty()) {
@@ -516,7 +541,7 @@ class MainActivity : ComponentActivity() {
                 // hijacking the guide button afterwards.
                 if (updateReady.value) {
                     updateReady.value = false
-                    Updater(this, SERVER).install()
+                    Updater(this, RELEASES_REPO).install()
                 } else {
                     openPicker(nav)
                 }
@@ -876,7 +901,7 @@ class MainActivity : ComponentActivity() {
         if (!updateCheckRunning.compareAndSet(false, true)) return
         Thread {
             try {
-                if (Updater(this, SERVER).downloadIfNewer(BuildConfig.VERSION_CODE)) {
+                if (Updater(this, RELEASES_REPO).downloadIfNewer(BuildConfig.VERSION_CODE)) {
                     runOnUiThread { if (!destroyed) updateReady.value = true }
                 }
             } finally {
