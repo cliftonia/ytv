@@ -44,4 +44,15 @@ class ResolvedCache {
 
     /** For logging and tests; not a correctness signal. */
     val size: Int get() = entries.size
+
+    /**
+     * Forget everything resolved so far.
+     *
+     * Used when the quality ceiling changes: the cache holds urls for the OLD ceiling, and
+     * without this the setting would appear to do nothing until every cached entry expired -
+     * up to six hours of looking like a broken button.
+     */
+    fun clear() {
+        entries.clear()
+    }
 }

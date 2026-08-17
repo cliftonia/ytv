@@ -22,6 +22,7 @@ import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
+import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.DeviceResolver
@@ -79,6 +80,9 @@ private const val CHANNEL_KEY = "channel"
  * use at all in that moment.
  */
 private const val ENGINE_KEY = "engine"
+
+/** Remembered quality ceiling; see qualityLadders. */
+private const val QUALITY_KEY = "quality"
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -299,6 +303,24 @@ class MainActivity : ComponentActivity() {
      */
     @Volatile private var ladder: List<String> = listOf("hd", "sd")
 
+    /**
+     * The quality ceiling, as a remembered preference.
+     *
+     * This exists because the ladder above was declared, documented at length, and then never
+     * assigned from the display - so every device has silently run at `hd` regardless of its
+     * panel. Rather than quietly switch a 4K television to 4K and change playback for everyone at
+     * once, the ceiling is now something to choose and to observe the effect of.
+     *
+     * It also settles an argument the code could not: on a 2.34GB 32-bit panel a smooth 720p
+     * H.264 beats a 1080p60 VP9 that stalls, and the only way to know which is happening is to be
+     * able to switch between them.
+     */
+    private val qualityLadders = listOf(
+        "1080p" to listOf("hd", "sd"),
+        "720p" to listOf("sd"),
+        "4K" to listOf("uhd", "hd", "sd"),
+    )
+
     @Volatile private var fixedNowSeconds: Long = -1L
 
     private fun nowSeconds(): Long =
@@ -338,6 +360,8 @@ class MainActivity : ComponentActivity() {
         val modeCount = (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
             display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
         displayModeCount = modeCount
+        ladder = qualityLadders.firstOrNull { it.first == prefs.getString(QUALITY_KEY, null) }
+            ?.second ?: qualityLadders.first().second
         val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
             ?: PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
             ?: PlayerEngine.default(modeCount)
@@ -1014,6 +1038,23 @@ class MainActivity : ComponentActivity() {
                     Log.i("fs42", "engine set to $next; takes effect on next launch")
                 },
             ),
+            SettingRow(
+                label = "MAX QUALITY",
+                value = qualityLadders.firstOrNull { it.second == ladder }?.first ?: "1080p",
+                // Applies to the NEXT tune rather than the current one, which is why the row does
+                // not restart playback: flipping channel is how you see the effect, and that is
+                // the thing you were already doing when you noticed the problem.
+                action = {
+                    val current = qualityLadders.indexOfFirst { it.second == ladder }
+                    val next = qualityLadders[(current + 1).mod(qualityLadders.size)]
+                    ladder = next.second
+                    prefs.edit().putString(QUALITY_KEY, next.first).apply()
+                    resolvedCache.clear()
+                    settingsRows.value = buildSettingsRows()
+                    Log.i("fs42", "quality ceiling now ${next.first} -> ${next.second}")
+                },
+            ),
+            SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
             SettingRow(
                 label = "CHECK FOR UPDATE",
                 value = updateStatus.value.ifEmpty { "CHECK NOW" },
