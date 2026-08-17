@@ -51,16 +51,6 @@ class DialContractTest {
     }
 
     @Test
-    fun `parses the real url cache and its tiers`() {
-        val cache = DialContract.parseUrls(fixture("urls-sample.json"))
-        assertTrue("an empty cache would mean every tune pays a server round trip",
-            cache.urls.isNotEmpty())
-        val tiers = cache.urls.values.first()
-        assertTrue("hd is the tier every device can play and must always be present",
-            tiers.containsKey("hd"))
-    }
-
-    @Test
     fun `an unknown field does not break parsing`() {
         val json = """{"generated":1,"channels":[{"number":1,"name":"X","kind":"live",
             "rotation":null,"streams":[],"somethingNew":true}]}"""
@@ -72,54 +62,36 @@ class DialContractTest {
     @Test
     fun `sync caches what it fetched`() {
         val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
-        val repo = DialRepository(
-            fetch = { url -> if (url.endsWith("channels.json")) fixture("channels-sample.json")
-                             else fixture("urls-sample.json") },
-            cacheDir = dir,
-        )
-        val result = repo.sync("http://example")
+        val repo = DialRepository(fetch = { fixture("channels-sample.json") }, cacheDir = dir)
+        val result = repo.sync("http://example/channels.json")
         assertTrue(result.dial.channels.isNotEmpty())
-        assertTrue("sync must hand back the parsed url cache too, not just the dial",
-            result.urls.urls.isNotEmpty())
-        assertNotNull("without a cached copy the app is dead the moment the server is unreachable",
+        assertNotNull("without a cached copy the app is dead the moment the lineup is unreachable",
             repo.cachedDial())
     }
 
     @Test
-    fun `a malformed response is not cached over a good one`() {
+    fun `sync clears the url cache left by the version that published one`() {
+        // Signed urls last about six hours; the file this deletes was published nightly by a
+        // server that no longer exists, so anything still on disk expired long ago. Freshness
+        // checks would reject it anyway - this is about not carrying three megabytes of dead
+        // json around on a device with 2.3GB of storage.
         val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
-        val good = DialRepository({ if (it.endsWith("channels.json")) fixture("channels-sample.json")
-                                    else fixture("urls-sample.json") }, dir)
-        good.sync("http://example")
-        val bad = DialRepository({ "{ this is not json" }, dir)
-        runCatching { bad.sync("http://example") }
-        assertTrue("a bad response must never destroy the last good cache",
-            bad.cachedDial()!!.channels.isNotEmpty())
+        val stale = java.io.File(dir, "urls.json").apply { writeText("{}") }
+        DialRepository(fetch = { fixture("channels-sample.json") }, cacheDir = dir)
+            .sync("http://example/channels.json")
+        assertTrue("the stale url cache should be gone after a sync", !stale.exists())
     }
 
     @Test
-    fun `a good dial paired with a malformed url cache is not cached over a good one`() {
+    fun `a malformed response is not cached over a good one`() {
+        // This is the whole reason parsing happens before writing. GitHub can serve a truncated
+        // file mid-push, and the cached lineup is the only thing standing between that and a
+        // television with no channels - which, in the car, is a television with no way to recover.
         val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
-        val goodFetch: (String) -> String = { url ->
-            if (url.endsWith("channels.json")) fixture("channels-sample.json") else fixture("urls-sample.json")
-        }
-        val good = DialRepository(goodFetch, dir)
-        good.sync("http://example")
-        val goodChannelNumbers = good.cachedDial()!!.channels.map { it.number }
-        assertTrue("the cache must have something to protect before the failure case is exercised",
-            goodChannelNumbers.isNotEmpty())
-
-        // A different, but individually valid, channels.json - distinguishable from the
-        // one cached above so an early write can be told apart from no write at all.
-        val newButUnrelatedChannels = """{"generated":2,"channels":[{"number":999,"name":"Impostor",
-            "kind":"live","rotation":null,"streams":[]}]}"""
-        val halfBad = DialRepository(
-            fetch = { url -> if (url.endsWith("channels.json")) newButUnrelatedChannels
-                             else "{ this is not json" },
-            cacheDir = dir,
-        )
-        runCatching { halfBad.sync("http://example") }
-        assertEquals("a half-failed sync must not destroy the fallback that exists for when the server is unreachable",
-            goodChannelNumbers, halfBad.cachedDial()!!.channels.map { it.number })
+        DialRepository({ fixture("channels-sample.json") }, dir).sync("http://example/channels.json")
+        val bad = DialRepository({ "{ this is not json" }, dir)
+        runCatching { bad.sync("http://example/channels.json") }
+        assertTrue("a bad response must never destroy the last good cache",
+            bad.cachedDial()!!.channels.isNotEmpty())
     }
 }

@@ -18,7 +18,7 @@ import java.net.URL
  * system install dialog is the only thing standing between a background download and arbitrary
  * code. So this gets as far as "downloaded and ready", and the viewer presses OK.
  */
-class Updater(private val context: Context, private val baseUrl: String) {
+class Updater(private val context: Context, private val repo: String) {
 
     /** Where a downloaded build waits. One file, overwritten - never a directory that grows. */
     private val apkFile get() = File(context.cacheDir, "ytv-update.apk")
@@ -31,12 +31,12 @@ class Updater(private val context: Context, private val baseUrl: String) {
      * state of a television in a car, and is not something to interrupt anyone about.
      */
     fun downloadIfNewer(installedVersion: Int): Boolean {
-        val manifest = try {
-            URL("${baseUrl.trimEnd('/')}/app.json").readText()
+        val release = try {
+            URL(UpdateCheck.latestReleaseUrl(repo)).readText()
         } catch (e: Exception) {
             return false
         }
-        val published = UpdateCheck.parse(manifest)
+        val published = UpdateCheck.parse(release)
         if (!UpdateCheck.isNewer(installedVersion, published) || published == null) return false
 
         Log.i("fs42", "update available: ${published.version} (running $installedVersion)")
@@ -46,7 +46,7 @@ class Updater(private val context: Context, private val baseUrl: String) {
             // television being switched off cannot leave a half-apk that the installer would
             // reject and the viewer would have to be told about.
             val partial = File(context.cacheDir, "ytv-update.part")
-            URL(UpdateCheck.downloadUrl(baseUrl, published)).openStream().use { input ->
+            URL(published.apkUrl).openStream().use { input ->
                 partial.outputStream().use { input.copyTo(it) }
             }
             if (target.exists()) target.delete()

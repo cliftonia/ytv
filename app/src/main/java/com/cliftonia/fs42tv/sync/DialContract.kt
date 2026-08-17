@@ -44,5 +44,4 @@ object DialContract {
 
     fun parseDial(text: String): Dial = json.decodeFromString(Dial.serializer(), text)
 
-    fun parseUrls(text: String): UrlCache = json.decodeFromString(UrlCache.serializer(), text)
 }
