@@ -41,6 +41,24 @@ object PlaybackDiagnostics {
             resolveMillis, firstFrameMillis - resolveMillis, hits, total)
     }
 
+    /**
+     * How mpv is pacing frames, and whether it knows the panel's refresh rate.
+     *
+     * Worth showing because the answer was wrong and silent for the whole life of this app.
+     * `display-resample` resamples audio to the display's rate, so `display-fps-override=nothing`
+     * beside it means the audio is being resampled against a guess - which is audio drifting
+     * against the picture, and is invisible unless something says so.
+     */
+    @Volatile
+    var lastSync: String = "NOT STARTED"
+        private set
+
+    fun recordSync(videoSync: String?, fpsOverride: String?) {
+        lastSync = "%s @ %s".format(
+            videoSync ?: "?",
+            fpsOverride?.takeIf { it.isNotBlank() && it != "0.000000" } ?: "NO FPS")
+    }
+
     fun record(tier: String, resolution: String?, codec: String?) {
         lastStream = "%s %s %s".format(
             tier.uppercase(), resolution ?: "?", DecoderSupport.family(codec))
