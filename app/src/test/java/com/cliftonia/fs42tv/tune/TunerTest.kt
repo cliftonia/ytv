@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv.tune
 
+import com.cliftonia.fs42tv.TestDial
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Progressive
@@ -7,9 +8,7 @@ import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.sync.Tier
-import com.cliftonia.fs42tv.sync.UrlCache
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
 
@@ -19,24 +18,14 @@ import org.junit.Test
  */
 class TunerTest {
 
-    private fun ytChannel(vararg durations: Int) = Channel(
-        number = 9, name = "AFL", kind = "youtube", rotation = "clock",
-        streams = durations.mapIndexed { i, d ->
-            Stream(id = "vid$i".padEnd(11, 'x'), url = "https://youtube.com/watch?v=vid$i",
-                duration = d, title = "clip $i")
-        },
-    )
+    private fun ytChannel(vararg durations: Int) = TestDial.ytChannel(*durations)
 
-    private val liveChannel = Channel(
-        number = 103, name = "ABC TV QLD", kind = "live", rotation = null,
-        streams = listOf(Stream(id = null, url = "https://x/abc.m3u8", duration = 600,
-            title = "ABC")),
-    )
+    private val liveChannel = TestDial.liveChannel("ABC")
 
-    private fun cacheFor(index: Int) = UrlCache(
-        urls = mapOf("vid$index".padEnd(11, 'x') to
-            mapOf("hd" to Tier(video = "https://v/$index", audio = "https://a/$index",
-                expires = 9_999_999_999))),
+    private fun cacheFor(index: Int) = TestDial.cacheOf(
+        "vid$index".padEnd(11, 'x'),
+        "hd" to Tier(video = "https://v/$index", audio = "https://a/$index",
+            expires = 9_999_999_999),
     )
 
     @Test
@@ -71,23 +60,15 @@ class TunerTest {
     }
 
     @Test
-    fun `an unplayable clip is not treated as a resolvable cache miss`() {
-        // Collapsing these back into one case would send the server an id it has already
-        // rejected: NeedsResolving triggers a resolve call, Unplayable must not.
-        assertNotEquals(Unplayable("no id"), NeedsResolving(""))
-    }
-
-    @Test
     fun `a cache miss reports what needs resolving rather than failing`() {
-        val tuned = Tuner.tune(ytChannel(100), UrlCache(), nowSeconds = 10)
+        val tuned = Tuner.tune(ytChannel(100), TestDial.cacheOf("nothing"), nowSeconds = 10)
         assertEquals("a miss is the common case at 46% coverage and must stay recoverable",
             NeedsResolving("vid0xxxxxxx"), tuned!!.playable)
     }
 
     @Test
     fun `an empty channel yields nothing to tune`() {
-        val empty = Channel(number = 1, name = "Empty", kind = "youtube", rotation = "clock",
-            streams = emptyList())
+        val empty = TestDial.ytChannelOf(1, "Empty")
         assertNull("returning a Tuned with no stream would crash the caller downstream",
             Tuner.tune(empty, null, nowSeconds = 10))
     }
@@ -106,5 +87,41 @@ class TunerTest {
         val tuned = Tuner.tune(ytChannel(100, 200, 300), null, nowSeconds = 250)
         assertEquals("a mismatched index and stream would show one programme and title another",
             tuned!!.channel.streams[tuned.streamIndex], tuned.stream)
+    }
+
+    @Test
+    fun `tuning to an index ignores the clock and starts the clip from zero`() {
+        // The recovery path for a clip whose published duration is longer than what actually
+        // plays: the rotation still believes it is on air, so re-tuning by the clock would land
+        // straight back on it.
+        val tuned = Tuner.tuneToIndex(ytChannel(100, 200, 300), index = 2)
+        assertEquals(2, tuned!!.streamIndex)
+        assertEquals("there is nothing meaningful to seek to in a programme that was never " +
+            "scheduled to be on now", 0.0, tuned.offsetSeconds, 0.001)
+        assertEquals(NeedsResolving("vid2xxxxxxx"), tuned.playable)
+    }
+
+    @Test
+    fun `tuning a live channel to an index still yields HLS`() {
+        val tuned = Tuner.tuneToIndex(liveChannel, index = 0)
+        assertEquals(Hls("https://x/abc.m3u8"), tuned!!.playable)
+        assertEquals(0.0, tuned.offsetSeconds, 0.001)
+    }
+
+    @Test
+    fun `tuning to an index with no video id is unplayable rather than resolvable`() {
+        val oddball = Channel(number = 5, name = "Odd", kind = "youtube", rotation = "clock",
+            streams = listOf(Stream(id = null, url = "https://youtube.com/watch?v=x",
+                duration = 100, title = "t")))
+        assertEquals(Unplayable("Odd: a youtube stream has no video id to resolve"),
+            Tuner.tuneToIndex(oddball, index = 0)!!.playable)
+    }
+
+    @Test
+    fun `tuning past the end of the clip list yields nothing rather than throwing`() {
+        // The rollover path computes the next index by arithmetic, so an off-by-one here would
+        // crash the executor rather than show a stand-by card.
+        assertNull(Tuner.tuneToIndex(ytChannel(100, 200), index = 2))
+        assertNull(Tuner.tuneToIndex(ytChannel(100, 200), index = -1))
     }
 }

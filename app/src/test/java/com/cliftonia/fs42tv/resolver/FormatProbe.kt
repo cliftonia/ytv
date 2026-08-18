@@ -17,7 +17,7 @@ import org.schabi.newpipe.extractor.stream.StreamInfo
  * userspace behind a 4K panel - and AV1 at 2160p is exactly the combination it will accept a URL
  * for and then fail to draw.
  */
-// probe run
+@Ignore("hits the live network; run by hand when a channel resolves and shows nothing")
 class FormatProbe {
 
     private val ids = listOf(

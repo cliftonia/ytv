@@ -57,8 +57,12 @@ class RangeWindowsTest {
         // that is megabytes thrown away on every single tune.
         val windows = RangeWindows.of(0, 100 * mb, 8 * mb)
         assertEquals(RangeWindows.FIRST_WINDOW, windows.first().last - windows.first().first + 1)
-        assertEquals("later windows must reach the full bounded size that defeats the throttle",
-            8 * mb, windows.last { it.last - it.first + 1 == 8 * mb }.let { 8 * mb })
+        // The ramp itself, not just its first rung: the previous assertion here compared the
+        // window limit against itself, so it held whatever RangeWindows.of did.
+        assertEquals("the first three windows must climb to the full bounded size that defeats " +
+            "the throttle, or every tune pays the small-window cost for the whole clip",
+            listOf(512 * 1024L, 2 * mb, 8 * mb),
+            windows.take(3).map { it.last - it.first + 1 })
     }
 
     @Test
@@ -113,5 +117,25 @@ class RangeWindowsTest {
             val threw = runCatching { RangeWindows.of(0, 100, bad) }.isFailure
             assertTrue("window size $bad must be rejected", threw)
         }
+    }
+
+    @Test
+    fun `the total length is read from the tail of a Content-Range header`() {
+        // The only place the total appears at all. Without it Media3 treats the stream as
+        // unbounded, which costs seeking and changes how it buffers, and the proxy has nothing
+        // to clamp a client's range against.
+        assertEquals(12_345L, RangeWindows.totalLength("bytes 0-8388607/12345"))
+        assertEquals(12_345L, RangeWindows.totalLength("bytes 0-0/ 12345 "))
+    }
+
+    @Test
+    fun `a missing or unusable Content-Range yields null rather than a guess`() {
+        // A guessed total is worse than none: it would be reported upward as fact and every
+        // seek past it would land somewhere the file does not go.
+        assertNull(RangeWindows.totalLength(null))
+        assertNull(RangeWindows.totalLength("bytes 0-99"))
+        assertNull("an unsatisfied range carries a * where the total would be",
+            RangeWindows.totalLength("bytes */*"))
+        assertNull(RangeWindows.totalLength(""))
     }
 }

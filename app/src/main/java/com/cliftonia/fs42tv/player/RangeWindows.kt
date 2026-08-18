@@ -71,7 +71,13 @@ object RangeWindows {
     /**
      * 8 MB, measured rather than picked: 2 MB already reached 154 Mbps and 8 MB reached 399, so
      * the win is mostly there by 2 and comfortably saturated by 8. Larger windows mean fewer
-     * requests but a longer stall whenever one has to be retried.
+     * requests but a longer stall whenever one has to be retried, and 8 MB is roughly four seconds
+     * of a 1080p stream - short enough to recover from, long enough that the per-request overhead
+     * disappears.
+     *
+     * Used by both engines: [ChunkedProxy] fetches mpv's bytes in windows of this size, and it is
+     * also the chunk [ChunkedDataSource] opens for Media3. Written once because it is one measured
+     * number, not two that happen to agree.
      */
     const val DEFAULT_WINDOW = 8L * 1024 * 1024
 
@@ -80,4 +86,19 @@ object RangeWindows {
      * Still bounded, so it is served at line speed like every other request here.
      */
     const val FIRST_WINDOW = 512L * 1024
+
+    /**
+     * The total resource size stated by a `Content-Range: bytes a-b/total` header, or null.
+     *
+     * The total appears nowhere else. Without it, Media3 treats the stream as unbounded, and the
+     * proxy has no length to clamp a client's range against - so the same three-line parse was
+     * written twice, in a data source and in a socket loop, and only one of them was reachable
+     * from a test.
+     *
+     * The header LOOKUP stays at each call site rather than moving here, because the two are
+     * genuinely different: Media3 hands back a raw `Map<String, List<String>>` needing both
+     * casings tried, while `HttpURLConnection.getHeaderField` is already case-insensitive.
+     */
+    fun totalLength(header: String?): Long? =
+        header?.substringAfter('/', "")?.trim()?.toLongOrNull()
 }

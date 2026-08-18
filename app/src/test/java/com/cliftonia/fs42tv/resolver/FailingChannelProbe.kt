@@ -13,7 +13,7 @@ import org.junit.Test
  *
  * `@Ignore` because it hits the live network. Edit [IDS] and drop the annotation to use it.
  */
-// probe run
+@Ignore("hits the live network; run by hand when a channel shows a banner and no picture")
 class FailingChannelProbe {
 
     private val ids = listOf(

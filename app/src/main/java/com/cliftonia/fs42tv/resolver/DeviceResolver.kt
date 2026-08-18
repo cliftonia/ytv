@@ -73,50 +73,34 @@ class DeviceResolver(
     /**
      * The best video-only stream sitting inside [tier]'s height band.
      *
-     * Bands rather than "at or below", so the rungs are disjoint the way the server's published
-     * tiers were. If they overlapped, a clip with no 1080p rendition would resolve `hd` and `sd`
-     * to the same 720p stream and the ladder would try the identical url twice before giving up.
+     * The band table and the ranking live in [TierBands], which needs neither the extractor nor
+     * Android and can therefore be tested; what stays here is the part that cannot be, which is
+     * reading the extractor's stream list and asking this device's decoders about it.
      *
      * Video-only, never the muxed progressive streams: YouTube caps those at 360p, so accepting
      * one would silently hand a 4K panel a picture from 2009.
      */
     private fun bestVideoForTier(streams: List<VideoStream>?, tier: String): VideoStream? {
-        val (low, high) = when (tier) {
-            // Capped at 2160, NOT open-ended. YouTube publishes 4320p on a growing number of
-            // uploads, and an unbounded top band takes it: four times the pixels of the panel's
-            // native resolution, on a television with 2.34GB of memory in total. The server this
-            // replaced capped its top tier at 2160 and this quietly did not.
-            "uhd" -> 1081 to 2160
-            "hd" -> 721 to 1080
-            "sd" -> 0 to 720
-            else -> return null
-        }
+        val band = TierBands.bandFor(tier) ?: return null
         return streams.orEmpty()
             .filter { it.deliveryMethod == DeliveryMethod.PROGRESSIVE_HTTP }
-            .filter { heightOf(it) in low..high }
+            .filter { heightOf(it) in band }
             // Only what this device's decoders say they can handle. Without this the 4K television
             // takes the 2160p rendition of everything - which above 1080p is always VP9, because
             // YouTube publishes no H.264 up there - and a 32-bit panel either draws nothing or
             // takes the app down with it inside mediacodec.
             .filter { decoders.canPlay(it.codec, heightOf(it)) }
-            // Highest inside the band, then H.264 ahead of an equal-height VP9. Both usually play
-            // where both are offered, but H.264 is the one every device has decoded in hardware
-            // for fifteen years, and the cost of preferring it is nothing.
             .maxWithOrNull(
-                compareBy<VideoStream> { heightOf(it) }
-                    .thenBy { if (DecoderSupport.family(it.codec) == DecoderSupport.AVC) 1 else 0 }
+                TierBands.preference(
+                    height = { stream: VideoStream -> heightOf(stream) },
+                    isAvc = { stream: VideoStream ->
+                        DecoderSupport.family(stream.codec) == DecoderSupport.AVC
+                    },
+                )
             )
     }
 
-    /**
-     * Height in pixels, read from the resolution label.
-     *
-     * The label is what the extractor has always exposed and it survives version changes that the
-     * numeric accessors have not. It reads like "1080p60" or "2160p", so everything up to the `p`
-     * is the height; anything unparseable sorts to the bottom rather than throwing.
-     */
-    private fun heightOf(stream: VideoStream): Int =
-        stream.resolution?.substringBefore('p')?.toIntOrNull() ?: 0
+    private fun heightOf(stream: VideoStream): Int = TierBands.heightOf(stream.resolution)
 
     /**
      * The loudest-quality audio track available.

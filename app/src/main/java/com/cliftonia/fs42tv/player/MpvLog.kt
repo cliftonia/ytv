@@ -33,10 +33,11 @@ object MpvLog {
     }
 
     /**
-     * The most recent line that reads like a cause, or null.
+     * The most recent line kept, or null.
      *
-     * Searched newest first: the last error before a shutdown is the one that caused it, and the
-     * ones before are usually consequences of it being reported once per stream in the EDL.
+     * The newest one, with no search: the last error before a shutdown is the one that caused it,
+     * and the ones before are usually consequences of it being reported once per stream in the
+     * EDL. Truncated to what the stand-by card can draw on a television at viewing distance.
      */
     fun lastReason(): String? = synchronized(lines) {
         lines.lastOrNull()?.take(90)

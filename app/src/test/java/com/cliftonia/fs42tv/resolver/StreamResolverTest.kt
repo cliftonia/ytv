@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv.resolver
 
+import com.cliftonia.fs42tv.TestDial
 import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.sync.Tier
 import com.cliftonia.fs42tv.sync.UrlCache
@@ -9,8 +10,12 @@ import org.junit.Test
 
 /**
  * Picking the wrong source is rarely a crash. It is 480p on a 4K panel, silence where
- * there should be audio, or a round trip to the server that a cached URL would have
- * avoided - all of which look like "the app is bad" rather than a bug with a location.
+ * there should be audio, or an extraction that a cached URL would have avoided - all of which
+ * look like "the app is bad" rather than a bug with a location.
+ *
+ * The path under test is DORMANT in the shipped app: `MainActivity.urls` is always null, so
+ * `StreamResolver.resolve` is reached from here and nowhere else. `refusedKey` is the live
+ * member. These stay because the seam stays - see StreamResolver's own note.
  */
 class StreamResolverTest {
 
@@ -21,7 +26,7 @@ class StreamResolverTest {
     private val live = Stream(id = null, url = "https://x/stream.m3u8", duration = 600, title = "t")
 
     private fun cacheOf(vararg tiers: Pair<String, Tier>) =
-        UrlCache(generated = 0, urls = mapOf("abc12345678" to tiers.toMap()))
+        TestDial.cacheOf("abc12345678", *tiers)
 
     @Test
     fun `a live stream plays directly as HLS`() {

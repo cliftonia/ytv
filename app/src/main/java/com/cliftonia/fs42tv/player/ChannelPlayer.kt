@@ -3,22 +3,12 @@ package com.cliftonia.fs42tv.player
 import android.os.SystemClock
 import android.util.Log
 import androidx.media3.common.C
-import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSource
-import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.ExoPlayer
-import androidx.media3.exoplayer.hls.HlsMediaSource
-import androidx.media3.exoplayer.source.MediaSource
-import androidx.media3.exoplayer.source.MergingMediaSource
-import androidx.media3.exoplayer.source.ProgressiveMediaSource
-import com.cliftonia.fs42tv.resolver.Hls
-import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
-import com.cliftonia.fs42tv.resolver.Progressive
-import com.cliftonia.fs42tv.resolver.Unplayable
 
 /**
  * Turns a Playable into something ExoPlayer can start, at a given offset.
@@ -54,9 +44,10 @@ class ChannelPlayer(
      * given. `bufferForPlayback` stays at the Media3 default: shaving it was tried and produced
      * worse results.
      *
-     * These values live HERE, with the player they configure. They previously lived in
-     * ChannelPreloader, which also built the player - so a class named "Preloader" owned playback
-     * itself, and switching preloading off left it silently load-bearing.
+     * These values live HERE, with the player they configure. They previously lived in a
+     * ChannelPreloader that also built the player - so a class named "Preloader" owned playback
+     * itself, and switching preloading off left it silently load-bearing. That class is gone;
+     * the reason for keeping the numbers beside the player they configure is not.
      */
     private val loadControl = DefaultLoadControl.Builder()
         .setBufferDurationsMsForStreaming(
@@ -90,80 +81,6 @@ class ChannelPlayer(
         )
         .build()
 
-
-    companion object {
-            fun sourceFor(factory: DataSource.Factory, playable: Playable): MediaSource? = when (playable) {
-            is Hls -> HlsMediaSource.Factory(factory)
-                .createMediaSource(MediaItem.fromUri(playable.url))
-
-            is Progressive -> {
-                val video = ProgressiveMediaSource.Factory(factory)
-                    .createMediaSource(MediaItem.fromUri(playable.videoUrl))
-                // YouTube serves video and audio separately above 360p, so they are merged
-                // rather than played one after the other.
-                //
-                // Both flags are ON deliberately. The plain constructor leaves adjustPeriodTimeOffsets
-                // false, which merges two independently-timed files without aligning their period
-                // start times - and these ARE two independent files, muxed by nobody, each with its
-                // own offsets. Media3's own guidance is that in almost all cases both should be true
-                // so every source starts and ends together.
-                //
-                // Left false, video is rendered against an audio clock that sits at a different
-                // origin, so frame release times are continuously nudged to chase it. Measured, that
-                // showed up as a frame-hold sequence of 32222233332323... - the picture running fast
-                // then slow several times a second - against a clean 232323... when it went right,
-                // with the SAME file, the same frame rate, no dropped frames and identical hold
-                // counts. The offsets depend on where in each file the clock-derived seek lands,
-                // which is why the same clip was smooth on one tune and juddery on the next.
-                if (playable.audioUrl == null) video else MergingMediaSource(
-                    /* adjustPeriodTimeOffsets = */ true,
-                    /* clipDurations = */ true,
-                    video,
-                    ProgressiveMediaSource.Factory(factory)
-                        .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
-                )
-            }
-
-            is NeedsResolving -> {
-                // Nothing usable is cached for this id. Asking the server to resolve it is
-                // later-phase work; for now, make the miss legible instead of a silent
-                // black screen behind a healthy-looking log line.
-                Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
-                null
-            }
-
-            is Unplayable -> {
-                // No server round trip would help this one - make that legible too, rather
-                // than a silent black screen behind a healthy-looking log line.
-                Log.w("fs42", "cannot play: ${playable.reason}")
-                null
-            }
-        }
-
-
-        /**
-         * Cross-protocol redirects would let an https media URL be silently downgraded to plain
-         * http mid-stream; on untrusted Wi-Fi that is an open door for URL injection, so this
-         * stays false even though it means a stream that genuinely needs such a redirect fails
-         * loudly instead.
-         *
-         * Shared with the preloader rather than built twice: a preloaded source fetched through
-         * a different data source than the played one is bytes buffered and thrown away.
-         */
-        fun dataSourceFactory(): DataSource.Factory =
-            // Wrapped so every read is a BOUNDED byte range. googlevideo throttles an
-            // open-ended request to roughly the video's own bitrate - 2.57 Mbps measured - and
-            // serves a bounded one at 398.85 Mbps. It is the boundedness that matters, not the
-            // header: `Range: bytes=0-` is throttled exactly like no range at all, and that is
-            // what DefaultHttpDataSource sends on its own.
-            //
-            // Measured effect: the same 4K clip went from 16.3s to 5.1s to first frame, and
-            // once a connection is warm a further window opens in 37-58ms. This is what makes
-            // 4K affordable at all.
-            ChunkedDataSource.factory(
-                DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(false)
-            )
-    }
 
     /** Set when a tune starts, cleared when its first frame lands. Main thread only. */
     private var requestedAtMillis = 0L
@@ -247,14 +164,9 @@ class ChannelPlayer(
             /**
              * Log the source frame rate, because judder on this panel depends entirely on it.
              *
-             * The television reports exactly one display mode, 60Hz, so there is nothing to
-             * switch the panel to. 30fps and 60fps material maps cleanly onto that; 25fps PAL
-             * content - which this dial carries a lot of, being full of British and Australian
-             * programmes - needs an uneven 2:2:2:2:3 cadence, and 23.976fps film needs 3:2.
-             * Both read as periodic stutter, and no software setting can fix either.
-             *
              * Without this line, "the picture is janky sometimes" is unattributable. With it,
-             * the answer is in the log next to the channel that caused it.
+             * the answer is in the log next to the channel that caused it. [FrameCadence] holds
+             * what each rate does to a panel with one 60Hz mode and no software fix for either.
              */
             override fun onRenderedFirstFrame() {
                 val requested = requestedAtMillis
@@ -269,26 +181,10 @@ class ChannelPlayer(
                 hasPicture = true
                 // Frame rate read HERE, not at onVideoSizeChanged: the format is not populated
                 // that early and reported -1.0fps every time, which made the one diagnostic that
-                // matters useless.
-                //
-                // This panel reports a single display mode, 60Hz, so there is nothing to switch
-                // it to. 30 and 60fps map onto that cleanly. 25fps PAL - which a dial full of
-                // British and Australian programmes carries a lot of - needs an uneven
-                // 2:2:2:2:3 cadence, and 23.976fps film needs 3:2. Both look like stutter and
-                // NEITHER drops a frame, which is exactly what the dropped-frame counter showed:
-                // zero, while the picture visibly juddered.
+                // matters useless. What the number means for this panel is in [FrameCadence].
                 val fps = exo.videoFormat?.frameRate ?: -1f
-                val cadence = when {
-                    fps <= 0f -> "unknown"
-                    kotlin.math.abs(fps - 60f) < 1f -> "60fps - clean on a 60Hz panel"
-                    kotlin.math.abs(fps - 30f) < 1f -> "30fps - clean 2:2 on a 60Hz panel"
-                    kotlin.math.abs(fps - 50f) < 1f -> "50fps PAL - UNEVEN on a 60Hz panel"
-                    kotlin.math.abs(fps - 25f) < 1f -> "25fps PAL - UNEVEN on a 60Hz panel"
-                    kotlin.math.abs(fps - 24f) < 1.5f -> "24fps film - 3:2 pulldown on a 60Hz panel"
-                    else -> "non-standard"
-                }
                 Log.i("fs42", "playing ${exo.videoFormat?.width}x${exo.videoFormat?.height} " +
-                    "@ ${fps}fps - $cadence")
+                    "@ ${fps}fps - ${FrameCadence.describe(fps)}")
                 onFirstFrame?.invoke()
             }
         })
@@ -315,13 +211,6 @@ class ChannelPlayer(
     }
 
     /**
-     * The MediaSource for a playable, or null when there is nothing to play.
-     *
-     * Split out of [play] because the preload manager needs sources built exactly the way the
-     * player builds them - a preloaded source that differs from the played one buffers bytes
-     * that are then thrown away.
-     */
-    /**
      * The view showing the picture.
      *
      * Built here rather than in the activity so the engine owns its own surface: the mpv
@@ -346,7 +235,7 @@ class ChannelPlayer(
     override fun setVolume(volume: Float) { exo.volume = volume }
 
     override fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
-        val source = sourceFor(factory, playable) ?: return
+        val source = Media3Sources.sourceFor(factory, playable) ?: return
         hasPicture = false
         this.requestedAtMillis = requestedAtMillis
         // Reset the renderer's frame timing before loading anything else.
@@ -363,9 +252,10 @@ class ChannelPlayer(
         //
         // surfTo() also stops, but only on a deliberate channel change. Clip roll-over and
         // error recovery reach here without it, and those cross frame rates just as often.
+
         // The split between deciding what to play and being able to show it. "first frame" alone
         // is one number covering three very different costs - working out the clip from the
-        // clock, resolving its URL (cache hit or a server round trip), and then connecting and
+        // clock, resolving its URL (cache hit or a fresh extraction), and then connecting and
         // filling the buffer - and the same number came out as 844ms and 8939ms on consecutive
         // tunes. Logging the hand-off makes the first two separable from the third; the third
         // then falls out of the fs42chunk open timings, which already carry timestamps.

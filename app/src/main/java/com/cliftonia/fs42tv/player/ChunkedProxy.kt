@@ -86,12 +86,12 @@ class ChunkedProxy(private val window: Long = RangeWindows.DEFAULT_WINDOW) {
             }
         }
 
-        val id = requestLine.split(' ').getOrNull(1)?.trimStart('/') ?: return
+        val id = ProxyProtocol.idFrom(requestLine) ?: return
         val target = registry[id] ?: run {
             client.getOutputStream().write("HTTP/1.1 404 Not Found\r\n\r\n".toByteArray())
             return
         }
-        val head = requestLine.startsWith("HEAD")
+        val head = ProxyProtocol.isHead(requestLine)
 
         // The first window doubles as the length probe. Every request here comes back with
         // `Content-Range: bytes a-b/total`, so asking separately was a whole extra connection -
@@ -100,7 +100,9 @@ class ChunkedProxy(private val window: Long = RangeWindows.DEFAULT_WINDOW) {
             client.getOutputStream().write("HTTP/1.1 502 Bad Gateway\r\n\r\n".toByteArray())
             return
         }
-        val total = first.getHeaderField("Content-Range")?.substringAfter('/')?.trim()?.toLongOrNull()
+        // One casing is enough here: HttpURLConnection.getHeaderField is case-insensitive,
+        // unlike the raw header map Media3 hands ChunkedDataSource.
+        val total = RangeWindows.totalLength(first.getHeaderField("Content-Range"))
         runCatching { first.inputStream.close() }
         if (total == null) {
             client.getOutputStream().write("HTTP/1.1 502 Bad Gateway\r\n\r\n".toByteArray())
@@ -109,18 +111,9 @@ class ChunkedProxy(private val window: Long = RangeWindows.DEFAULT_WINDOW) {
         val asked = RangeWindows.parse(rangeHeader, total) ?: 0..(total - 1)
         val out = client.getOutputStream()
 
-        // Answer 206 whenever a Range was asked for, even when it covers the whole resource:
-        // ffmpeg decides a stream is seekable from the status and the Content-Range, and a
-        // stream it thinks is unseekable cannot be started at a wall-clock offset at all.
-        val partial = rangeHeader != null
-        val header = buildString {
-            append(if (partial) "HTTP/1.1 206 Partial Content\r\n" else "HTTP/1.1 200 OK\r\n")
-            append("Content-Type: video/mp4\r\n")
-            append("Accept-Ranges: bytes\r\n")
-            append("Content-Length: ${asked.last - asked.first + 1}\r\n")
-            if (partial) append("Content-Range: bytes ${asked.first}-${asked.last}/$total\r\n")
-            append("Connection: close\r\n\r\n")
-        }
+        // 206 whenever a Range was asked for, even when it covers the whole resource - see
+        // ProxyProtocol.header, which holds the reason and can be tested without a socket.
+        val header = ProxyProtocol.header(partial = rangeHeader != null, asked = asked, total = total)
         out.write(header.toByteArray())
         if (head) { out.flush(); return }
 

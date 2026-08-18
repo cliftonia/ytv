@@ -39,7 +39,7 @@ import android.util.Log
 @UnstableApi
 class ChunkedDataSource(
     private val upstream: DataSource,
-    private val chunkSize: Long = DEFAULT_CHUNK_SIZE,
+    private val chunkSize: Long = RangeWindows.DEFAULT_WINDOW,
 ) : DataSource {
 
     private var spec: DataSpec? = null
@@ -72,13 +72,16 @@ class ChunkedDataSource(
         return remaining
     }
 
-    /** Total resource size from `Content-Range`, or null when the header is absent. */
-    private fun totalLength(): Long? {
-        val header = upstream.responseHeaders["Content-Range"]?.firstOrNull()
+    /**
+     * Total resource size from `Content-Range`, or null when the header is absent.
+     *
+     * Both casings are tried because Media3 hands the headers back as a plain map rather than a
+     * case-insensitive one, and which casing arrives depends on the server.
+     */
+    private fun totalLength(): Long? = RangeWindows.totalLength(
+        upstream.responseHeaders["Content-Range"]?.firstOrNull()
             ?: upstream.responseHeaders["content-range"]?.firstOrNull()
-            ?: return null
-        return header.substringAfter('/', "").trim().toLongOrNull()
-    }
+    )
 
     /**
      * Open the next bounded window.
@@ -150,15 +153,6 @@ class ChunkedDataSource(
     }
 
     companion object {
-        /**
-         * 8 MB, measured rather than picked: 2 MB already reached 154 Mbps and 8 MB reached 399,
-         * so the win is mostly there by 2 MB and comfortably saturated by 8. Larger windows would
-         * mean fewer requests but a longer stall whenever one has to be retried, and 8 MB is
-         * roughly four seconds of a 1080p stream - short enough to recover from, long enough that
-         * the per-request overhead disappears.
-         */
-        const val DEFAULT_CHUNK_SIZE = 8L * 1024 * 1024
-
         /** Wraps any factory so every source it makes reads in bounded windows. */
         fun factory(upstream: DataSource.Factory): DataSource.Factory =
             DataSource.Factory { ChunkedDataSource(upstream.createDataSource()) }
