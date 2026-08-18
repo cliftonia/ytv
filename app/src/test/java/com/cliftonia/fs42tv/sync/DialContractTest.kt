@@ -94,4 +94,18 @@ class DialContractTest {
         assertTrue("a bad response must never destroy the last good cache",
             bad.cachedDial()!!.channels.isNotEmpty())
     }
+
+    @Test
+    fun `a lineup that parses but has no channels is refused`() {
+        // `{}` and `{"channels":[]}` both parse perfectly, because `channels` defaults to empty.
+        // Caching that would overwrite the last good lineup with nothing, which in the car is a
+        // television with no dial and no way back except a good fetch.
+        val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
+        DialRepository({ fixture("channels-sample.json") }, dir).sync("http://example/channels.json")
+        val empty = DialRepository({ """{"generated":1,"channels":[]}""" }, dir)
+        val outcome = runCatching { empty.sync("http://example/channels.json") }
+        assertTrue("an empty lineup must be rejected rather than cached", outcome.isFailure)
+        assertTrue("the last good lineup must survive an empty publish",
+            empty.cachedDial()!!.channels.isNotEmpty())
+    }
 }

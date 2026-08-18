@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import com.cliftonia.fs42tv.player.ChannelPlayback
 import com.cliftonia.fs42tv.player.ChannelPlayer
+import com.cliftonia.fs42tv.player.Media3Sources
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
 import com.cliftonia.fs42tv.player.PlayerEngine
 import com.cliftonia.fs42tv.schedule.ClockRotation
@@ -137,7 +138,12 @@ class MainActivity : ComponentActivity() {
      * those tune with no resolve at all. Nothing publishes it any more, so every clip takes the
      * [DeviceResolver] path and the tier machinery in [StreamResolver] reads this as "nothing
      * cached". Kept as the seam rather than deleted: it is what a future pre-resolved cache would
-     * fill, and removing it would mean unpicking the tier ladder that the 403 fallback relies on.
+     * fill.
+     *
+     * The 403 fallback does NOT depend on it. That path runs through `refusedTiers` to
+     * `refusedSnapshot()` and into [DeviceResolver], and the only member of [StreamResolver] it
+     * touches is `refusedKey`. Removing this field would leave the fallback intact; it stays for
+     * the reason above, not to hold that path up.
      */
     private val urls: UrlCache? = null
 
@@ -443,7 +449,7 @@ class MainActivity : ComponentActivity() {
         fun newEngine(): ChannelPlayback = when (engine) {
             PlayerEngine.MPV -> MpvChannelPlayer(this)
             PlayerEngine.MEDIA3 -> ChannelPlayer(
-                this, ChannelPlayer.dataSourceFactory(), canSwitchDisplayMode = modeCount > 1)
+                this, Media3Sources.dataSourceFactory(), canSwitchDisplayMode = modeCount > 1)
         }
 
         var player: ChannelPlayback = newEngine()
@@ -870,8 +876,8 @@ class MainActivity : ComponentActivity() {
             // stream under a translucent list; it has none of the frame-pacing problem that put
             // mpv on the video path, and giving it a second engine would mean a second set of
             // native libraries loaded to play 128kbps of bossa nova.
-            val source = ChannelPlayer.sourceFor(
-                ChannelPlayer.dataSourceFactory(), audioOnly) ?: return@execute
+            val source = Media3Sources.sourceFor(
+                Media3Sources.dataSourceFactory(), audioOnly) ?: return@execute
 
             runOnUiThread {
                 if (destroyed || !pickerVisible.value) return@runOnUiThread

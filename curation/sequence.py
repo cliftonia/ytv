@@ -22,12 +22,11 @@ dial.py. Run this after refresh_channels.py, on channels marked `sequence` in di
 """
 import argparse
 import collections
-import glob
-import io
-import json
 import os
 import re
 import sys
+
+import confs
 
 # Ordered most-specific first: "S2E13" must win before the bare "Episode 13" pattern sees it.
 SEASON_EPISODE = re.compile(
@@ -148,7 +147,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only")
     parser.add_argument("--report", action="store_true")
-    parser.add_argument("--confs", default=os.path.join(os.path.dirname(__file__), "confs"))
+    parser.add_argument("--confs", default=confs.default_dir())
     args = parser.parse_args()
 
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -156,12 +155,11 @@ def main():
 
     wanted = {args.only} if args.only else set(DIAL.SEQUENCED)
     touched = 0
-    for path in sorted(glob.glob(os.path.join(args.confs, "ytch_*.json"))):
-        slug = os.path.basename(path)[5:-5]
+    for path in confs.youtube_paths(args.confs):
+        slug = confs.slug_for(path)
         if slug not in wanted:
             continue
-        with io.open(path, encoding="utf-8") as handle:
-            conf = json.load(handle)
+        conf = confs.load(path)
         station = conf["station_conf"]
         streams = station.get("streams", [])
         found = runs(streams)
@@ -172,8 +170,7 @@ def main():
             print("       %-34s %d episodes" % (show[:34], count))
         if not args.report:
             station["streams"] = ordered(streams)
-            with io.open(path, "w", encoding="utf-8") as handle:
-                json.dump(conf, handle, indent=4, ensure_ascii=False)
+            confs.save(path, conf)
             touched += 1
 
     print("\n%d channel%s %s" % (touched, "" if touched == 1 else "s",
