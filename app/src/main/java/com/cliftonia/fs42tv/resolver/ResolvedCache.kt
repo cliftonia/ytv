@@ -5,10 +5,10 @@ import java.util.concurrent.ConcurrentHashMap
 /**
  * Server-resolved URLs, remembered for as long as they are usable.
  *
- * Roughly half of all tunes miss `urls.json` and fall through to `GET /resolve`. Without this,
- * every later pass over the same channel pays that round trip again - and the preloader makes it
- * worse, because it resolves neighbours too, multiplying the trips by the preload fan-out on
- * every press.
+ * Every tune has to resolve, now that nothing publishes `urls.json` and the extraction happens on
+ * the device. Without this, every later pass over the same channel pays that extraction again -
+ * and the prefetch makes it worse, because it resolves neighbours too, multiplying the cost by
+ * the prefetch fan-out on every press.
  *
  * In memory only, on purpose. These URLs are signed and expire in about six hours; persisting
  * them would mean starting up holding URLs that may already be dead, and a stale signed URL is a

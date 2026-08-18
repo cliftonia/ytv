@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv.tune
 
+import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
@@ -31,7 +32,7 @@ object Tuner {
         channel: Channel,
         cache: UrlCache?,
         nowSeconds: Long,
-        ladder: List<String> = listOf("hd", "sd"),
+        ladder: List<String> = ClipResolver.DEFAULT_LADDER,
         /**
          * Tiers the CDN has already refused this session, as `<id>/<tier>` - see
          * [StreamResolver.refusedKey]. Passed through so a 403 on hd falls to the sd already
@@ -85,7 +86,7 @@ object Tuner {
         channel: Channel,
         index: Int,
         refused: Set<String> = emptySet(),
-        ladder: List<String> = listOf("hd", "sd"),
+        ladder: List<String> = ClipResolver.DEFAULT_LADDER,
     ): Tuned? {
         val stream = channel.streams.getOrNull(index) ?: return null
         val playable: Playable = when {

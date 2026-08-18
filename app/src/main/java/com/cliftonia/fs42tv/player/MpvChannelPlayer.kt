@@ -6,11 +6,8 @@ import android.os.Looper
 import android.os.SystemClock
 import android.util.Log
 import android.view.View
-import com.cliftonia.fs42tv.resolver.Hls
-import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
-import com.cliftonia.fs42tv.resolver.Progressive
-import com.cliftonia.fs42tv.resolver.Unplayable
+import com.cliftonia.fs42tv.resolver.unplayableReason
 import `is`.xyz.mpv.MPVLib
 
 /**
@@ -143,32 +140,13 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     }
 
     override fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
-        val url = when (playable) {
-            is Progressive ->
-                if (playable.audioUrl == null) proxy.proxied(playable.videoUrl)
-                // YouTube serves video and audio apart above 360p. mpv's EDL plays them as one
-                // stream, which is how the box has always played these same URLs. BOTH go through
-                // the proxy - the audio track is small but it is fetched over the same throttled
-                // connection, and a starved audio track stalls the video just as surely.
-                else MpvView.edl(
-                    proxy.proxied(playable.videoUrl),
-                    proxy.proxied(playable.audioUrl),
-                )
-
-            // Live HLS is left alone: it is already a series of bounded segment requests, which
-            // is why it was never throttled and never slow. Proxying it would add a hop for
-            // nothing.
-            is Hls -> playable.url
-
-            is NeedsResolving -> {
-                Log.w("fs42", "no cached stream for video id ${playable.videoId}; needs server resolve")
-                return
-            }
-
-            is Unplayable -> {
-                Log.w("fs42", "cannot play: ${playable.reason}")
-                return
-            }
+        // Which tracks go through the proxy is decided in MpvSource, which needs no libmpv and
+        // is therefore testable. The reason a miss is logged at all is that a miss which logs
+        // nothing is a black screen with a healthy-looking log above it - worded once in
+        // unplayableReason and shared with the Media3 engine.
+        val url = MpvSource.urlFor(playable, proxy::proxied) ?: run {
+            Log.w("fs42", unplayableReason(playable).orEmpty())
+            return
         }
         hasPicture = false
         // Stays TRUE across the load. `loadfile ... replace` makes mpv end the outgoing file,

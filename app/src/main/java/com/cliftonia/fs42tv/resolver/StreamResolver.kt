@@ -4,26 +4,18 @@ import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.sync.Tier
 import com.cliftonia.fs42tv.sync.UrlCache
 
-/** What the player should be handed. */
-sealed interface Playable
-
-/** Separate video and audio streams, as YouTube serves them above 360p. */
-data class Progressive(val videoUrl: String, val audioUrl: String?) : Playable
-
-/** A live HLS feed, played as-is. */
-data class Hls(val url: String) : Playable
-
-/** Nothing usable is cached; the caller must ask the server to resolve this id. */
-data class NeedsResolving(val videoId: String) : Playable
-
-/** The stream cannot be played and no server round trip would help. */
-data class Unplayable(val reason: String) : Playable
-
 /**
  * Decides what to play from what has already been resolved.
  *
  * Deliberately pure: it performs no I/O and makes no network call, so every branch is
- * testable on the JVM. Asking the server is represented as a RESULT, not performed here.
+ * testable on the JVM. Needing a resolve is represented as a RESULT, not performed here.
+ *
+ * DORMANT. This whole path reads a published [UrlCache], and nothing publishes one any more:
+ * `MainActivity.urls` is always null, so [resolve] is only ever reached from tests. The live
+ * member of this file is [refusedKey], which the 403 fallback uses on every tune. Kept rather
+ * than deleted because it is the shape a future pre-resolved cache would fill, and because
+ * removing it would land in the middle of the tune path while channel switching still has
+ * unresolved bugs. The vocabulary it returns moved to `Playable.kt`, which is not dormant.
  */
 object StreamResolver {
 

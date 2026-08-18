@@ -21,6 +21,8 @@ import re
 import sys
 import time
 
+import confs
+
 # `https://www.youtube.com/watch?v=dQw4w9WgXcQ` and nothing else. The app splits live channels
 # from clips by whether a stream carries an id, so a url this fails to read would be played as
 # though it were an HLS feed - silently, and wrongly.
@@ -34,8 +36,7 @@ def video_id(url):
 
 def channel_from(path):
     """One channel in the app's contract, or None if this conf cannot become one."""
-    with io.open(path, encoding="utf-8") as handle:
-        conf = json.load(handle)
+    conf = confs.load(path)
     station = conf.get("station_conf")
     if not station:
         return None
@@ -92,7 +93,7 @@ def channel_from(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--confs", default=os.path.join(os.path.dirname(__file__), "confs"))
+    parser.add_argument("--confs", default=confs.default_dir())
     parser.add_argument("--out", default=os.path.join(os.path.dirname(__file__), "..",
                                                      "channels.json"))
     args = parser.parse_args()

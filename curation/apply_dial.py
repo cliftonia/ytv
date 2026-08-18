@@ -15,29 +15,16 @@ an hour of searching.
 """
 import argparse
 import glob
-import io
-import json
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Through the module rather than by name, so the confs directory this reconciles is the one
+# `confs` currently points at. That is what lets the tests run the whole reconciliation against a
+# temporary dial without a real channel on disk being at risk from a script whose job is deleting
+# channel confs.
+import confs
 import dial as DIAL
-
-CONFS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "confs")
-
-
-def path_for(slug, live=False):
-    return os.path.join(CONFS, "%s.json" % (slug if live else "ytch_%s" % slug))
-
-
-def load(path):
-    with io.open(path, encoding="utf-8") as handle:
-        return json.load(handle)
-
-
-def save(path, conf):
-    with io.open(path, "w", encoding="utf-8") as handle:
-        json.dump(conf, handle, indent=4, ensure_ascii=False)
 
 
 def main():
@@ -53,7 +40,7 @@ def main():
 
     # 1. Renames first, so later steps find the slug they expect.
     for old, new in DIAL.RENAMED_SLUGS.items():
-        src, dst = path_for(old), path_for(new)
+        src, dst = confs.path_for(old), confs.path_for(new)
         if os.path.exists(src) and not os.path.exists(dst):
             do("rename  ytch_%s -> ytch_%s" % (old, new),
                lambda s=src, d=dst: os.rename(s, d))
@@ -61,23 +48,23 @@ def main():
     # 2. Absorbed channels. The survivor's query in dial.py already covers their ground, so the
     #    conf is simply removed - its clips would be replaced by the next refresh regardless.
     for slug, into in sorted(DIAL.ABSORBED.items()):
-        p = path_for(slug)
+        p = confs.path_for(slug)
         if os.path.exists(p):
             do("merge   %-18s -> %s" % (slug, into), lambda p=p: os.remove(p))
 
     # 3. Dropped channels.
     for slug, why in sorted(DIAL.DROPPED.items()):
-        p = path_for(slug)
+        p = confs.path_for(slug)
         if os.path.exists(p):
             do("drop    %-18s (%s)" % (slug, why), lambda p=p: os.remove(p))
 
     # 4. YouTube channels: create what is missing, and set number, name and query on all of them.
     wanted_files = set()
     for number, slug, name, query in DIAL.YOUTUBE:
-        p = path_for(slug)
+        p = confs.path_for(slug)
         wanted_files.add(os.path.basename(p))
         if os.path.exists(p):
-            conf = load(p)
+            conf = confs.load(p)
             station = conf.setdefault("station_conf", {})
             changes = []
             if station.get("channel_number") != number:
@@ -117,7 +104,8 @@ def main():
                 station["extra_queries"] = extra
             else:
                 station.pop("extra_queries", None)
-            do("update  %-18s %s" % (slug, ", ".join(changes)), lambda p=p, c=conf: save(p, c))
+            do("update  %-18s %s" % (slug, ", ".join(changes)),
+               lambda p=p, c=conf: confs.save(p, c))
         else:
             station = {
                 "network_name": name, "network_long_name": name, "network_type": "streaming",
@@ -130,14 +118,14 @@ def main():
                 station["extra_queries"] = DIAL.EXTRA_QUERIES[slug]
             conf = {"station_conf": station}
             do("create  %-18s ch %d (empty until the next refresh)" % (slug, number),
-               lambda p=p, c=conf: save(p, c))
+               lambda p=p, c=conf: confs.save(p, c))
 
     # 5. Live channels.
     for number, slug, name, streams in DIAL.LIVE:
-        p = path_for(slug, live=True)
+        p = confs.path_for(slug, live=True)
         wanted_files.add(os.path.basename(p))
         if os.path.exists(p):
-            conf = load(p)
+            conf = confs.load(p)
             station = conf.setdefault("station_conf", {})
             changed = station.get("channel_number") != number or station.get("network_name") != name
             station["channel_number"] = number
@@ -150,21 +138,21 @@ def main():
                     station["streams"] = new
                     changed = True
             if changed:
-                do("live    %-18s ch %d" % (slug, number), lambda p=p, c=conf: save(p, c))
+                do("live    %-18s ch %d" % (slug, number), lambda p=p, c=conf: confs.save(p, c))
         elif streams is not None:
             conf = {"station_conf": {
                 "network_name": name, "network_long_name": name, "network_type": "streaming",
                 "channel_number": number,
                 "streams": [{"url": u, "duration": 600, "title": t} for t, u in streams],
             }}
-            do("create  %-18s ch %d (live)" % (slug, number), lambda p=p, c=conf: save(p, c))
+            do("create  %-18s ch %d (live)" % (slug, number), lambda p=p, c=conf: confs.save(p, c))
         else:
             actions.append("MISSING %-18s ch %d has no conf and no urls declared" % (slug, number))
 
     # 6. Anything left over. Named rather than deleted: a conf this does not know about is either
     #    something to add to dial.py or something to remove from it, and guessing which would
     #    eventually throw away a channel somebody wanted.
-    for p in sorted(glob.glob(os.path.join(CONFS, "*.json"))):
+    for p in sorted(glob.glob(os.path.join(confs.CONFS, "*.json"))):
         base = os.path.basename(p)
         if base not in wanted_files:
             actions.append("ORPHAN  %s is on disk but not in dial.py" % base)
