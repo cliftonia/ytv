@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.util.Log
 // `is` is a Kotlin keyword, so mpv's package has to be quoted to be importable.
 import `is`.xyz.mpv.BaseMPVView
+import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import `is`.xyz.mpv.MPVLib
 import `is`.xyz.mpv.MPVNode
 
@@ -97,9 +98,17 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // detection is unreliable on Android - the reference implementation overrides it for
         // exactly this reason. This panel reports 60.000004Hz, not 60; that difference is the
         // difference between resampling to the right rate and slowly drifting against it.
-        displayRefreshHz()?.let {
-            MPVLib.setOptionString("display-fps-override", it.toString())
-            Log.i("fs42", "mpv display-fps-override=$it")
+        val refreshHz = displayRefreshHz()
+        if (refreshHz != null) {
+            MPVLib.setOptionString("display-fps-override", refreshHz.toString())
+            Log.i("fs42", "mpv display-fps-override=$refreshHz")
+        } else {
+            // No trustworthy refresh rate, so do NOT resample audio against a guess. Syncing
+            // video to the audio clock is mpv's default and cannot drift; it gives up the frame
+            // pacing that put mpv here in the first place, which is the right way round - judder
+            // is irritating, audio out of step with a talking head is unwatchable.
+            Log.w("fs42", "no display refresh rate; falling back to video-sync=audio")
+            MPVLib.setOptionString("video-sync", "audio")
         }
 
         // --- video output, from mpv-android's reference implementation -----------------------
@@ -209,8 +218,15 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // Read back rather than assumed: mpv logged `event: idle` at startup and then still shut
         // itself down the moment a file failed to open, so whether this option is actually held
         // is the difference between a dial that survives a 403 and one that dies on the first.
+        // Read back, because an option that silently fails to apply is what caused the audio
+        // drift this block exists to prevent - and the only way to know is to ask.
         Log.i("fs42", "mpv idle=${MPVLib.getPropertyString("idle")} " +
-            "keep-open=${MPVLib.getPropertyString("keep-open")}")
+            "keep-open=${MPVLib.getPropertyString("keep-open")} " +
+            "video-sync=${MPVLib.getPropertyString("video-sync")} " +
+            "display-fps-override=${MPVLib.getPropertyString("display-fps-override")}")
+        PlaybackDiagnostics.recordSync(
+            MPVLib.getPropertyString("video-sync"),
+            MPVLib.getPropertyString("display-fps-override"))
     }
 
     /**
@@ -281,15 +297,33 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
     }
 
     /** The panel's real refresh rate, or null when it cannot be read. */
+    /**
+     * The panel's real refresh rate, asked of the system rather than of this view.
+     *
+     * `View.getDisplay()` returns NULL until the view is attached to a window, and options are set
+     * from the constructor - long before that. So the previous implementation always returned
+     * null, the `?.let` below it never ran, and `display-fps-override` was never applied once.
+     *
+     * That is not a cosmetic miss. `video-sync=display-resample` locks video to the display's real
+     * refresh and RESAMPLES THE AUDIO to follow, so mpv's idea of the refresh rate is the rate the
+     * audio is resampled at. Without the override mpv falls back to its own detection, which the
+     * comment above already records as unreliable on Android - and any error accumulates as audio
+     * sliding steadily ahead of or behind the picture. Lip sync drifting on a talking head is
+     * exactly the shape of that fault.
+     *
+     * DisplayManager answers without a window, which is the whole reason for using it here.
+     */
     private fun displayRefreshHz(): Float? {
-        val d = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
-            display
-        } else {
-            @Suppress("DEPRECATION")
-            (context.getSystemService(Context.WINDOW_SERVICE) as? android.view.WindowManager)
-                ?.defaultDisplay
-        }
-        return d?.mode?.refreshRate
+        val manager = context.getSystemService(Context.DISPLAY_SERVICE)
+            as? android.hardware.display.DisplayManager
+        val fromManager = manager?.getDisplay(android.view.Display.DEFAULT_DISPLAY)
+        // The attached view first if there is one - it names the display this surface is actually
+        // on - and the default display otherwise.
+        val chosen = display ?: fromManager
+        val hz = chosen?.mode?.refreshRate ?: chosen?.refreshRate
+        // A rate outside anything a television does means something answered with a placeholder,
+        // and resampling audio to a placeholder is worse than not resampling at all.
+        return hz?.takeIf { it > 20f && it < 250f }
     }
 
     /**
