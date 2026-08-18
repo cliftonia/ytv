@@ -1,7 +1,6 @@
 package com.cliftonia.fs42tv.resolver
 
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 

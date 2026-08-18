@@ -98,7 +98,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // detection is unreliable on Android - the reference implementation overrides it for
         // exactly this reason. This panel reports 60.000004Hz, not 60; that difference is the
         // difference between resampling to the right rate and slowly drifting against it.
-        val refreshHz = displayRefreshHz()
+        val refreshHz = DisplayRefresh.of(context, this)
         if (refreshHz != null) {
             MPVLib.setOptionString("display-fps-override", refreshHz.toString())
             Log.i("fs42", "mpv display-fps-override=$refreshHz")
@@ -155,7 +155,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // Without a bundle it can only connect by not verifying, which is not a trade worth
         // making on a device fetching signed URLs over someone else's network.
         MPVLib.setOptionString("tls-verify", "yes")
-        MPVLib.setOptionString("tls-ca-file", caBundlePath())
+        MPVLib.setOptionString("tls-ca-file", CaBundle.extract(context))
 
         // --- startup, lifted from the box's [googlevideo] profile ---------------------------
         // These are plain mp4 whose shape is already known, so deep probing is a second of black
@@ -275,58 +275,6 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
     }
 
     /**
-     * Path to a CA bundle on disk, extracting it from assets the first time.
-     *
-     * mpv's TLS is mbedtls reading a PEM file from a path; it cannot use Android's system trust
-     * store, and an asset is not a path. Without this every https URL fails to open with
-     * `mbedtls_x509_crt_parse_file ... -15872` and the channel goes straight to a re-tune.
-     * mpv-android ships the same bundle for the same reason.
-     *
-     * Copied every run rather than only when absent: it is 182KB against an app that downloads
-     * megabytes of video per minute, and a half-written file from a killed first launch would
-     * otherwise poison TLS until someone cleared the app's data.
-     */
-    private fun caBundlePath(): String {
-        val out = java.io.File(context.filesDir, "cacert.pem")
-        runCatching {
-            context.assets.open("cacert.pem").use { input ->
-                out.outputStream().use { input.copyTo(it) }
-            }
-        }.onFailure { Log.e("fs42", "could not extract cacert.pem: $it") }
-        return out.path
-    }
-
-    /** The panel's real refresh rate, or null when it cannot be read. */
-    /**
-     * The panel's real refresh rate, asked of the system rather than of this view.
-     *
-     * `View.getDisplay()` returns NULL until the view is attached to a window, and options are set
-     * from the constructor - long before that. So the previous implementation always returned
-     * null, the `?.let` below it never ran, and `display-fps-override` was never applied once.
-     *
-     * That is not a cosmetic miss. `video-sync=display-resample` locks video to the display's real
-     * refresh and RESAMPLES THE AUDIO to follow, so mpv's idea of the refresh rate is the rate the
-     * audio is resampled at. Without the override mpv falls back to its own detection, which the
-     * comment above already records as unreliable on Android - and any error accumulates as audio
-     * sliding steadily ahead of or behind the picture. Lip sync drifting on a talking head is
-     * exactly the shape of that fault.
-     *
-     * DisplayManager answers without a window, which is the whole reason for using it here.
-     */
-    private fun displayRefreshHz(): Float? {
-        val manager = context.getSystemService(Context.DISPLAY_SERVICE)
-            as? android.hardware.display.DisplayManager
-        val fromManager = manager?.getDisplay(android.view.Display.DEFAULT_DISPLAY)
-        // The attached view first if there is one - it names the display this surface is actually
-        // on - and the default display otherwise.
-        val chosen = display ?: fromManager
-        val hz = chosen?.mode?.refreshRate ?: chosen?.refreshRate
-        // A rate outside anything a television does means something answered with a placeholder,
-        // and resampling audio to a placeholder is worse than not resampling at all.
-        return hz?.takeIf { it > 20f && it < 250f }
-    }
-
-    /**
      * Start [url] at [startSeconds], the way a channel is joined mid-programme.
      *
      * `start=` is part of the load rather than a seek afterwards: a seek issued before playback
@@ -340,19 +288,4 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         MPVLib.command("loadfile", url, "replace", "0", "start=${startSeconds.toInt()}")
     }
 
-    companion object {
-        /**
-         * mpv's EDL syntax for playing separate video and audio files as one stream.
-         *
-         * YouTube serves them apart above 360p. The box already does exactly this - `edl_url()`
-         * in fs42/yt_cache.py - and the byte-length prefixes are what make it safe to embed URLs
-         * full of `&`, `;` and `=` without escaping any of it.
-         */
-        fun edl(videoUrl: String, audioUrl: String): String {
-            val v = videoUrl.toByteArray(Charsets.UTF_8).size
-            val a = audioUrl.toByteArray(Charsets.UTF_8).size
-            return "edl://!no_clip;!track_meta,title=video;%$v%$videoUrl" +
-                ";!new_stream;!no_clip;!track_meta,title=audio;%$a%$audioUrl"
-        }
-    }
 }

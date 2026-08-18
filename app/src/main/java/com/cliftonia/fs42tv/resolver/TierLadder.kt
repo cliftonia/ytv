@@ -14,9 +14,16 @@ package com.cliftonia.fs42tv.resolver
  * expired simply drops through to the next rung, which is why the lower rungs matter more than
  * they look - without them a stale `hd` means the channel plays nothing at all.
  *
- * Heights come from the server's `TIER_HEIGHTS` in `fs42/yt_cache.py`: sd 720, hd 1080,
- * uhd 2160. Keep the two in step; a rung named here that the server never publishes is simply
- * skipped, but a rung the server publishes and this omits is quality thrown away.
+ * Heights come from the same table as `TierBands`, which is what turns a rung name into the
+ * pixel band a rendition has to fall in: sd 720, hd 1080, uhd 2160. Keep the two in step; a rung
+ * named here with no band there is simply skipped, but a band there with no rung here is quality
+ * thrown away.
+ *
+ * NOT WIRED IN. The quality ceiling is a stored preference now - `MainActivity.qualityLadders` -
+ * because a viewer who can see the panel is a better judge than a detected height, and because
+ * capping it by hand is how a 4K decode gets ruled out when a channel stutters. This type is the
+ * display-derived default a future version would reinstate, which is why it and its measurement
+ * note below are kept rather than deleted.
  */
 object TierLadder {
 

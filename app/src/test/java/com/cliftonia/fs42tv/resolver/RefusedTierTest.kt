@@ -1,8 +1,8 @@
 package com.cliftonia.fs42tv.resolver
 
+import com.cliftonia.fs42tv.TestDial
 import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.sync.Tier
-import com.cliftonia.fs42tv.sync.UrlCache
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -13,14 +13,16 @@ import org.junit.Test
  * Condemning the whole id means a `/resolve`, which runs yt-dlp - measured at 7.7 and 12.2
  * seconds against a 4s grace period before the viewer sees a stand-by card. The next rung is
  * already published in a file the app is holding.
+ *
+ * Dormant, like [StreamResolverTest]: nothing publishes the file these read. The rule itself is
+ * not dormant - `refusedKey` is how the live device path skips a rung the CDN has refused.
  */
 class RefusedTierTest {
 
     private val now = 1_000_000L
     private val fresh = now + 100_000
 
-    private fun cacheOf(vararg tiers: Pair<String, Tier>) =
-        UrlCache(urls = mapOf("vid1" to tiers.toMap()))
+    private fun cacheOf(vararg tiers: Pair<String, Tier>) = TestDial.cacheOf("vid1", *tiers)
 
     private val stream = Stream(id = "vid1", url = "https://youtube.com/watch?v=vid1", duration = 600)
 

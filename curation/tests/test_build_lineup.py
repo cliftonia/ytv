@@ -84,6 +84,35 @@ class TestChannelFrom(unittest.TestCase):
         channel = build_lineup.channel_from(path)
         self.assertEqual(1, len(channel["streams"]))
 
+    def test_a_stream_with_no_duration_is_dropped_while_its_siblings_survive(self):
+        # The rotation skips a zero-length clip, so leaving it in the list gives the channel a
+        # slot that can never be on air: the cycle is shorter than the clip count says and there
+        # is nothing on the screen to diagnose it from. Only the channel total was asserted on
+        # the published lineup, which a single phantom among a hundred good clips sails past.
+        path = self.write("ytch_x.json", {
+            "network_name": "X", "channel_number": 5,
+            "streams": [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa",
+                         "duration": 212, "title": "first"},
+                        {"url": "https://www.youtube.com/watch?v=bbbbbbbbbbb",
+                         "duration": 0, "title": "phantom"},
+                        {"url": "https://www.youtube.com/watch?v=ccccccccccc",
+                         "title": "no duration at all"},
+                        {"url": "https://www.youtube.com/watch?v=ddddddddddd",
+                         "duration": -1, "title": "negative"},
+                        {"url": "https://www.youtube.com/watch?v=eeeeeeeeeee",
+                         "duration": 300, "title": "last"}]})
+        channel = build_lineup.channel_from(path)
+        self.assertEqual(["first", "last"], [s["title"] for s in channel["streams"]])
+
+    def test_a_channel_of_nothing_but_zero_length_clips_is_not_published(self):
+        # Every clip dropped leaves an empty list, which is a dead number on the dial rather than
+        # a channel that plays nothing.
+        path = self.write("ytch_x.json", {
+            "network_name": "X", "channel_number": 5,
+            "streams": [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa",
+                         "duration": 0, "title": "phantom"}]})
+        self.assertIsNone(build_lineup.channel_from(path))
+
     def test_an_empty_channel_is_not_published(self):
         # A channel with nothing on it is a dead number: it tunes to black and the viewer has to
         # press twice to get past it.

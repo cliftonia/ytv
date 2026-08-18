@@ -6,6 +6,7 @@ import android.view.KeyEvent
 import android.util.Log
 import android.widget.FrameLayout
 import android.view.ViewGroup
+import com.cliftonia.fs42tv.player.MpvEdl
 import com.cliftonia.fs42tv.player.MpvView
 import com.cliftonia.fs42tv.resolver.DeviceResolver
 import java.util.concurrent.Executors
@@ -90,7 +91,7 @@ class MpvTestActivity : Activity() {
                 }
                 val video = resolved.playable.videoUrl
                 val audio = resolved.playable.audioUrl.orEmpty()
-                val url = if (audio.isEmpty()) video else MpvView.edl(video, audio)
+                val url = if (audio.isEmpty()) video else MpvEdl.of(video, audio)
                 Log.i("fs42mpv", "playing $videoId at ${offset.toInt()}s, " +
                     "audio=${if (audio.isEmpty()) "muxed" else "separate"}")
                 runOnUiThread { view?.playAt(url, offset) }

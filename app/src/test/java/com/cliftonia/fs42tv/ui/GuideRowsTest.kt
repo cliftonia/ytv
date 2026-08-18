@@ -1,6 +1,6 @@
 package com.cliftonia.fs42tv.ui
 
-import com.cliftonia.fs42tv.sync.Channel
+import com.cliftonia.fs42tv.TestDial
 import com.cliftonia.fs42tv.sync.Stream
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
@@ -14,13 +14,10 @@ import org.junit.Test
  */
 class GuideRowsTest {
 
-    private fun clip(title: String, duration: Int) =
-        Stream(id = "x", url = "https://www.youtube.com/watch?v=x", duration = duration,
-               title = title)
+    private fun clip(title: String, duration: Int) = TestDial.clip(title, duration)
 
     private fun channel(number: Int, name: String, vararg streams: Stream) =
-        Channel(number = number, name = name, kind = "youtube", rotation = "clock",
-                streams = streams.toList())
+        TestDial.ytChannelOf(number, name, *streams)
 
     @Test
     fun `the title reflects where the clock sits in the rotation`() {
@@ -42,15 +39,16 @@ class GuideRowsTest {
     }
 
     @Test
-    fun `a live channel has no title rather than a stale one`() {
+    fun `a live channel names the feed the player plays, not the one the clock lands on`() {
         // A broadcast feed has no clip list to take a position in. Inventing one would put a
         // fixed title against a channel showing whatever it is actually showing.
-        val live = Channel(number = 101, name = "ABC", kind = "live", rotation = null,
-                           streams = listOf(Stream(url = "https://x/abc.m3u8", duration = 600,
-                                                   title = "ABC News")))
-        // It still has a duration, so it does resolve - what matters is that the guide renders it
-        // without pretending to know a schedule.
-        assertEquals("ABC News", GuideRows.titleOn(live, 0))
+        //
+        // TWO feeds, and a clock past the first placeholder duration: with a single feed the
+        // rotation and the first-stream rule both answer the same string, so a one-feed fixture
+        // cannot tell the fix from the bug it replaced. At 700s a rotation over 600s
+        // placeholders would say "feed two" while the player always plays the first.
+        val live = TestDial.liveChannel("feed one", "feed two", number = 101, name = "ABC")
+        assertEquals("feed one", GuideRows.titleOn(live, 700))
     }
 
     @Test
