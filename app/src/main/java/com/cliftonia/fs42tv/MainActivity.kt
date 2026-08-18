@@ -1190,6 +1190,7 @@ class MainActivity : ComponentActivity() {
             SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
             SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
             SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
+            SettingRow("AV SYNC", PlaybackDiagnostics.lastSync),
             SettingRow(
                 label = "CHECK FOR UPDATE",
                 value = updateStatus.value.ifEmpty { "CHECK NOW" },
