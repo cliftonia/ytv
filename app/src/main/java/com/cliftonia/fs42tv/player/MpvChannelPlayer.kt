@@ -7,6 +7,7 @@ import android.os.SystemClock
 import android.util.Log
 import android.view.View
 import com.cliftonia.fs42tv.resolver.Playable
+import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.unplayableReason
 import `is`.xyz.mpv.MPVLib
 
@@ -81,11 +82,29 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
      */
     @Volatile private var released = false
 
+    /** The caption handed to the last load, so onFileLoaded can report what mpv did with it. */
+    @Volatile private var wantedCaption: String? = null
+
     init {
         mpv.initialize(context.filesDir.path, context.cacheDir.path)
         mpv.events = object : MpvView.Events {
             override fun onFileLoaded() {
                 if (released) return
+                // Ask mpv what it actually did with the subtitle, rather than assuming the
+                // option took. `sid` is the selected track and `sub-text` is what is on screen
+                // at this instant; between them they distinguish "never loaded" from "loaded and
+                // not selected" from "selected and this clip simply has no cue here yet".
+                val caption = wantedCaption
+                if (caption != null) {
+                    // Added here, once the file is open, because a track added before there is
+                    // anything to attach it to is discarded.
+                    mpv.addSubtitle(caption)
+                    val sid = runCatching { MPVLib.getPropertyString("sid") }.getOrNull()
+                    val count = runCatching { MPVLib.getPropertyString("track-list/count") }
+                        .getOrNull()
+                    PlaybackDiagnostics.recordCaptions("MPV sid=$sid tracks=$count")
+                    Log.i("fs42", "mpv subtitle: sid=$sid tracks=$count")
+                }
                 // Only now do end-file events refer to the clip the dial actually asked for.
                 // Anything before this belongs to the outgoing file that `loadfile ... replace`
                 // displaced, and acting on it re-tunes the channel in a tight loop - six times in
@@ -155,6 +174,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // and over. onFileLoaded clears it once the new file is really the current one.
         ended = true
         this.requestedAtMillis = requestedAtMillis
+        wantedCaption = load.subFile
         mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile)
     }
 

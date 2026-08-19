@@ -281,6 +281,19 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
      * has begun is silently dropped, and every channel then opens at 00:00. The Media3 path
      * passes its start position into setMediaSource for the same reason.
      */
+    /**
+     * Attach a subtitle track to whatever is playing, and show it.
+     *
+     * Called after the file is loaded rather than passed with it. `sub-add` is mpv's documented
+     * way to add a track at runtime, it takes `select` so the viewer does not have to find a
+     * track menu this dial has no button for, and unlike a per-file option it can be checked
+     * afterwards by reading `sid`.
+     */
+    fun addSubtitle(url: String) {
+        runCatching { MPVLib.command("sub-add", url, "select") }
+            .onFailure { Log.w("fs42", "sub-add failed: $it") }
+    }
+
     fun playAt(
         url: String,
         startSeconds: Double,
@@ -299,10 +312,11 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         val options = buildString {
             append("start=").append(startSeconds.toInt())
             if (audioFile != null) append(",audio-file=").append(audioFile)
-            // sub-file rather than sub-files: the singular option appends one track, which is
-            // what there is. Shown immediately because a viewer who turned captions on wants
-            // them now, not after finding a track menu that this dial has no remote for.
-            if (subFile != null) append(",sub-file=").append(subFile).append(",sid=1")
+            // The subtitle is NOT set here. It is added with `sub-add` once the file is
+            // loaded - see addSubtitle - because a per-file option is applied while mpv is still
+            // opening the file, gives no indication of whether it worked, and cannot be checked
+            // afterwards. `sub-add ... select` is the documented runtime way, and it fails
+            // loudly rather than silently.
         }
         // Newer mpv takes an insertion INDEX before the per-file options; without it the options
         // string is parsed as that index and the command is rejected outright.

@@ -44,6 +44,11 @@ object ServerTiers {
         // and the fast path had nowhere to carry a track - captions could only ever have worked
         // in the car, where the server is out of reach.
         val caption = if (wantCaptions) field(body, "caption") else null
+        PlaybackDiagnostics.recordCaptions(when {
+            !wantCaptions -> "OFF"
+            caption == null -> "NONE ON THIS CLIP (server)"
+            else -> "FOUND (server)"
+        })
         for (name in ladder) {
             // A rung the CDN already refused this session will be refused again, whoever resolved
             // it. The server has no idea which urls this particular television has been turned

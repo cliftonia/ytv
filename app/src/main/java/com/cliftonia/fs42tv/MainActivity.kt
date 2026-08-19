@@ -1268,6 +1268,7 @@ class MainActivity : ComponentActivity() {
             ),
             SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
             SettingRow("DECODERS", PlaybackDiagnostics.decoders),
+            SettingRow("CAPTION STATE", PlaybackDiagnostics.captions),
             SettingRow("RESOLVED BY", PlaybackDiagnostics.lastSource),
             SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
             SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
