@@ -170,7 +170,23 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // The option exists for precisely this - it was added for AV receivers that click or
         // mute while re-syncing - and the cost is a device kept open, which this app wants
         // anyway since it is never idle for long.
-        MPVLib.setOptionString("audio-stream-silence", "yes")
+        // DELIBERATELY NOT audio-stream-silence.
+        //
+        // It was set to stop a speaker click on every channel change, which this dial makes
+        // constantly - and it worked. But mpv warns about it on every single load:
+        //
+        //     [ao/opensles] The --audio-stream-silence option is set.
+        //                   This will break certain player behavior.
+        //
+        // That warning was being logged and never read. The option holds the audio device open
+        // streaming silence between clips, so the audio clock never stops - and BOTH pacing modes
+        // derive video timing from that clock, `audio` directly and `display-resample` through
+        // the resampler. Audio sliding against the picture is exactly what a clock that keeps
+        // running when nothing is playing would produce.
+        //
+        // The option exists for AV receivers that mute while re-syncing. A click at a channel
+        // change is a second of mild annoyance; a programme whose voices do not match the mouths
+        // is unwatchable, so the trade goes the other way.
         // A short grace period before the device is considered ready, so the first moments of a
         // clip are not swallowed while the output is still coming up.
         MPVLib.setOptionString("audio-wait-open", "0.2")
