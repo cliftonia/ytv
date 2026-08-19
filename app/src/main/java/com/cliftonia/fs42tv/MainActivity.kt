@@ -412,7 +412,7 @@ class MainActivity : ComponentActivity() {
 
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         resolver = AcceleratedResolver(
-            server = ServerResolver(RESOLVE_SERVER) { url, timeout ->
+            server = ServerResolver(RESOLVE_SERVER, captionsWanted = { captionsOn }) { url, timeout ->
                 (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
                     connectTimeout = timeout
                     readTimeout = timeout

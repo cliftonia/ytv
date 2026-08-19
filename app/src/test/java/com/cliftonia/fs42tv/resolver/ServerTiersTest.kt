@@ -69,4 +69,37 @@ class ServerTiersTest {
         assertFalse(Health.isUsable(""))
         assertFalse(Health.isUsable("<html>502 Bad Gateway</html>"))
     }
+
+    private val withCaption = """
+        {"id":"abc12345678","warm":true,
+         "caption":"https://www.youtube.com/api/timedtext?v=abc&fmt=vtt",
+         "hd":{"video":"https://v/hd","audio":"https://a/1","expires":9999}}
+    """.trimIndent()
+
+    @Test
+    fun `the caption is read when captions are wanted`() {
+        // This field is why captions did nothing on the television at home: the accelerator
+        // answers every resolve when reachable, so the on-device caption picking never ran and
+        // the fast path had nowhere to carry a track.
+        val got = ServerTiers.parse(withCaption, listOf("hd"), emptySet(), "abc12345678", 100,
+                                    wantCaptions = true)
+        assertEquals("https://www.youtube.com/api/timedtext?v=abc&fmt=vtt",
+                     got?.playable?.captionUrl)
+    }
+
+    @Test
+    fun `no caption is attached when the viewer has them off`() {
+        val got = ServerTiers.parse(withCaption, listOf("hd"), emptySet(), "abc12345678", 100,
+                                    wantCaptions = false)
+        assertNull(got?.playable?.captionUrl)
+    }
+
+    @Test
+    fun `a response with no caption is not a failure`() {
+        // Most clips have no English track, and that must play normally rather than be refused.
+        val got = ServerTiers.parse(body, listOf("hd"), emptySet(), "abc12345678", 100,
+                                    wantCaptions = true)
+        assertEquals("https://v/hd", got?.playable?.videoUrl)
+        assertNull(got?.playable?.captionUrl)
+    }
 }
