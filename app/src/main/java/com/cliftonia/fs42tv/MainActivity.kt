@@ -15,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import com.cliftonia.fs42tv.player.ChannelPlayback
+import com.cliftonia.fs42tv.player.FrameCadence
 import com.cliftonia.fs42tv.player.ChannelPlayer
 import com.cliftonia.fs42tv.player.Media3Sources
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
@@ -98,6 +99,9 @@ private const val QUALITY_KEY = "quality"
 
 /** Whether to show English subtitles when a clip offers them. */
 private const val CAPTIONS_KEY = "captions"
+
+/** Remembered frame pacing mode for mpv; see FrameCadence.SYNC_MODES. */
+private const val VIDEO_SYNC_KEY = "videosync"
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -443,6 +447,9 @@ class MainActivity : ComponentActivity() {
             display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
         displayModeCount = modeCount
         captionsOn = prefs.getBoolean(CAPTIONS_KEY, false)
+        // Read before the engine is built, because mpv applies it during initialisation.
+        com.cliftonia.fs42tv.player.videoSyncMode =
+            prefs.getString(VIDEO_SYNC_KEY, null) ?: FrameCadence.SYNC_MODES.first()
         ladder = qualityLadders.firstOrNull { it.first == prefs.getString(QUALITY_KEY, null) }
             ?.second ?: qualityLadders.first().second
         val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
@@ -1269,6 +1276,21 @@ class MainActivity : ComponentActivity() {
             SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
             SettingRow("DECODERS", PlaybackDiagnostics.decoders),
             SettingRow("CAPTION STATE", PlaybackDiagnostics.captions),
+            SettingRow(
+                label = "FRAME PACING",
+                value = com.cliftonia.fs42tv.player.videoSyncMode ?: "DISPLAY",
+                // Takes effect on the next launch: mpv reads it while the core initialises, and
+                // rebuilding the engine to change it would restart whatever is playing.
+                action = {
+                    val modes = FrameCadence.SYNC_MODES
+                    val next = modes[(modes.indexOf(
+                        com.cliftonia.fs42tv.player.videoSyncMode) + 1).mod(modes.size)]
+                    com.cliftonia.fs42tv.player.videoSyncMode = next
+                    prefs.edit().putString(VIDEO_SYNC_KEY, next).apply()
+                    settingsRows.value = buildSettingsRows()
+                    Log.i("fs42", "frame pacing $next; takes effect on next launch")
+                },
+            ),
             SettingRow("RESOLVED BY", PlaybackDiagnostics.lastSource),
             SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
             SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),

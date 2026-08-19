@@ -28,4 +28,24 @@ object FrameCadence {
         kotlin.math.abs(fps - 24f) < 1.5f -> "24fps film - 3:2 pulldown on a 60Hz panel"
         else -> "non-standard"
     }
+
+    /**
+     * The two frame-pacing modes worth offering, and what each trades away.
+     *
+     * DISPLAY locks video to the panel's real refresh and resamples the audio to follow. It is
+     * the reason mpv is in this app: nothing else fixed the judder.
+     *
+     * AUDIO is mpv's default. Video is timed against the audio clock, so the two CANNOT drift
+     * apart, at the cost of the pacing above.
+     *
+     * Offered rather than decided because `vo=mediacodec_embed` - forced on this television, since
+     * gpu and gpu-next both SIGSEGV in its Mali driver - means MediaCodec presents the frames.
+     * Whether mpv's pacing still governs anything under that vo is genuinely unsettled, and the
+     * device is the only thing that can settle it. Judder and drift are different faults with
+     * different cures.
+     */
+    val SYNC_MODES = listOf("DISPLAY", "AUDIO")
+
+    fun optionFor(mode: String?): String =
+        if (mode == "AUDIO") "audio" else "display-resample"
 }
