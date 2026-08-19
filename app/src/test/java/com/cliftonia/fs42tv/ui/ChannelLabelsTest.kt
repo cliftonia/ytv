@@ -123,4 +123,26 @@ class ChannelLabelsTest {
         assertEquals("103 ABC NEWS", line)
         assertEquals("ABC News HD", title)
     }
+
+    @Test
+    fun `the banner follows the clock, so asking again mid-clip names what is on now`() {
+        // Right on the remote recomputes these rather than replaying what was stored at tune
+        // time. A channel left on for an hour has rolled over several clips since, and replaying
+        // the stored line would name the programme before this one - confidently wrong, which is
+        // worse than showing nothing.
+        val channel = Channel(
+            number = 7, name = "Tennis", kind = "youtube", rotation = "clock",
+            streams = listOf(
+                Stream(id = "a", url = "https://www.youtube.com/watch?v=a", duration = 100,
+                       title = "first match"),
+                Stream(id = "b", url = "https://www.youtube.com/watch?v=b", duration = 100,
+                       title = "second match"),
+            ),
+        )
+        assertEquals("first match", ChannelLabels.bannerLinesFor(channel, 10).second)
+        assertEquals("second match", ChannelLabels.bannerLinesFor(channel, 150).second)
+        // And the channel half of the line is the same either way.
+        assertEquals(ChannelLabels.bannerLinesFor(channel, 10).first,
+                     ChannelLabels.bannerLinesFor(channel, 150).first)
+    }
 }

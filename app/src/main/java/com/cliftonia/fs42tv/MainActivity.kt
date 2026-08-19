@@ -746,6 +746,13 @@ class MainActivity : ComponentActivity() {
                 openSettings()
                 true
             }
+            // Right shows what is on, which is what INFO does on a real remote - and right is the
+            // one d-pad direction the dial had left. KEYCODE_INFO is accepted alongside it for
+            // the remotes that have the button; the Google TV and TCL remotes do not.
+            KeyEvent.KEYCODE_DPAD_RIGHT, KeyEvent.KEYCODE_INFO -> {
+                showBanner()
+                true
+            }
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
                 surfTo(nav.up())
                 true
@@ -1161,6 +1168,30 @@ class MainActivity : ComponentActivity() {
      * change pressed a moment earlier still has a tune in flight, and letting it land would change
      * the channel under an open overlay.
      */
+    /**
+     * Put the channel banner back up, recomputed rather than replayed.
+     *
+     * The stored lines were written when the channel was tuned, and a clip that has rolled over
+     * since would name the programme before this one - which is worse than no banner, because it
+     * is confidently wrong. [ChannelLabels.bannerLinesFor] is pure clock arithmetic over a list
+     * already in memory, so recomputing costs nothing and is always right.
+     *
+     * Falls back to the stored lines only when nothing is on air, which is a channel between
+     * clips rather than a mistake.
+     */
+    private fun showBanner() {
+        val channel = onAir?.channel ?: navigator?.current
+        if (channel != null) {
+            val (line, title) = ChannelLabels.bannerLinesFor(channel, nowSeconds())
+            bannerChannelLine.value = line
+            if (title.isNotEmpty()) bannerTitleLine.value = title
+        }
+        // The generation is what replays the auto-hide timer in ChannelOsd, so bumping it is what
+        // actually shows the banner. Incrementing it with no change to the lines is exactly what
+        // pressing OK on the channel already playing does.
+        bannerGeneration.value += 1
+    }
+
     private fun openSettings() {
         generation.incrementAndGet()
         updateStatus.value = ""
