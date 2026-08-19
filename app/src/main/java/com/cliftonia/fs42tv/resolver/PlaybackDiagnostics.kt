@@ -74,6 +74,22 @@ object PlaybackDiagnostics {
     var decoders: String = "NOT ASKED"
         private set
 
+    /**
+     * What happened to captions on the last tune, in enough detail to end an argument.
+     *
+     * Written because "captions do not work" has now been diagnosed wrongly three times, each
+     * time by reasoning about code rather than observing the device. There are four separate
+     * places it can fail - the viewer's toggle, the resolve, the handover to the player, and the
+     * player itself - and from the sofa they are indistinguishable. This names which.
+     */
+    @Volatile
+    var captions: String = "NOT TRIED"
+        private set
+
+    fun recordCaptions(state: String) {
+        captions = state
+    }
+
     fun recordDecoders(summary: String) {
         decoders = summary.uppercase()
     }

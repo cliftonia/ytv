@@ -70,6 +70,11 @@ class DeviceResolver(
             val audioUrl = audio.content ?: continue
             val expires = expiryOf(videoUrl, audioUrl, nowSeconds)
             val caption = if (captionsWanted()) captionFor(info) else null
+            PlaybackDiagnostics.recordCaptions(when {
+                !captionsWanted() -> "OFF"
+                caption == null -> "NONE ON THIS CLIP (device)"
+                else -> "FOUND (device)"
+            })
             PlaybackDiagnostics.record(name, video.resolution, video.codec)
             Log.i("fs42", "resolved $videoId at $name (${video.resolution} ${video.codec}), " +
                 "expires in ${expires - nowSeconds}s")
@@ -138,13 +143,50 @@ class DeviceResolver(
      * armeabi-v7a device whose hardware AAC decoder is a known quantity, while opus falls to
      * software. Bitrate still wins over container - a 160k opus beats a 48k m4a.
      */
-    private fun bestAudio(streams: List<AudioStream>?): AudioStream? =
-        streams.orEmpty()
-            .filter { it.deliveryMethod == DeliveryMethod.PROGRESSIVE_HTTP }
-            .maxWithOrNull(
-                compareBy<AudioStream> { it.averageBitrate }
-                    .thenBy { if (it.format?.suffix == "m4a") 1 else 0 }
-            )
+    /**
+     * The audio track to play, which is not simply the fattest one.
+     *
+     * YouTube ships several audio tracks on one video now - an English original with German,
+     * Spanish and Hindi dubs beside it - and choosing by bitrate took whichever dub happened to
+     * be largest. A creator who is always in English would arrive in German with nothing on the
+     * dial having changed. See [AudioChoice], where the rule lives so it can be tested.
+     */
+    private fun bestAudio(streams: List<AudioStream>?): AudioStream? {
+        val usable = streams.orEmpty().filter { it.deliveryMethod == DeliveryMethod.PROGRESSIVE_HTTP }
+        if (usable.isEmpty()) return null
+        val chosen = AudioChoice.pick(
+            usable.map {
+                AudioChoice.Track(
+                    bitrate = it.averageBitrate,
+                    languageTag = runCatching { it.audioLocale?.language }.getOrNull(),
+                    kind = kindOf(it),
+                    container = it.format?.suffix,
+                )
+            }
+        ) ?: return null
+        // Matched back by position, because AudioChoice deliberately knows nothing about
+        // NewPipeExtractor's types and so cannot hand the stream itself back.
+        return usable.getOrNull(
+            usable.indexOfFirst {
+                it.averageBitrate == chosen.bitrate &&
+                    it.format?.suffix == chosen.container &&
+                    runCatching { it.audioLocale?.language }.getOrNull() == chosen.languageTag
+            }.takeIf { it >= 0 } ?: 0
+        )
+    }
+
+    private fun kindOf(stream: AudioStream): AudioChoice.Kind = runCatching {
+        when (stream.audioTrackType) {
+            org.schabi.newpipe.extractor.stream.AudioTrackType.ORIGINAL -> AudioChoice.Kind.ORIGINAL
+            org.schabi.newpipe.extractor.stream.AudioTrackType.DUBBED -> AudioChoice.Kind.DUBBED
+            org.schabi.newpipe.extractor.stream.AudioTrackType.DESCRIPTIVE ->
+                AudioChoice.Kind.DESCRIPTIVE
+            org.schabi.newpipe.extractor.stream.AudioTrackType.SECONDARY ->
+                AudioChoice.Kind.SECONDARY
+            else -> AudioChoice.Kind.UNKNOWN
+        }
+    }.getOrDefault(AudioChoice.Kind.UNKNOWN)
+
 
     /**
      * When the signed urls stop working.
