@@ -144,7 +144,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // is therefore testable. The reason a miss is logged at all is that a miss which logs
         // nothing is a black screen with a healthy-looking log above it - worded once in
         // unplayableReason and shared with the Media3 engine.
-        val url = MpvSource.urlFor(playable, proxy::proxied) ?: run {
+        val load = MpvSource.loadFor(playable, proxy::proxied) ?: run {
             Log.w("fs42", unplayableReason(playable).orEmpty())
             return
         }
@@ -155,7 +155,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // and over. onFileLoaded clears it once the new file is really the current one.
         ended = true
         this.requestedAtMillis = requestedAtMillis
-        mpv.playAt(url, startAtSeconds)
+        mpv.playAt(load.url, startAtSeconds, load.audioFile)
     }
 
     override fun stop() {
