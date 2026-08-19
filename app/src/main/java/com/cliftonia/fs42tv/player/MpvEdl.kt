@@ -7,6 +7,13 @@ package com.cliftonia.fs42tv.player
  * fs42/yt_cache.py - and the byte-length prefixes are what make it safe to embed URLs full of
  * `&`, `;` and `=` without escaping any of it.
  *
+ * NO LONGER ON THE DIAL'S PLAY PATH. [MpvSource] attaches the audio as an external track
+ * instead, because an EDL whose streams all fail is a fatal error that shuts mpv's core down,
+ * and a dial has to survive a dead clip. This is kept, and kept in use by [MpvTestActivity],
+ * precisely so the two can still be compared on the television - the change was made on upstream
+ * evidence rather than on a measurement of this device, and being able to switch back is what
+ * makes that honest.
+ *
  * Out of [MpvView] and into its own file because `MPVLib`'s static initialiser calls
  * `System.loadLibrary("mpv")`. This is callable from a JVM test today only by accident of where
  * `BaseMPVView`'s fields happen to sit; a single `private val` in that class referencing an

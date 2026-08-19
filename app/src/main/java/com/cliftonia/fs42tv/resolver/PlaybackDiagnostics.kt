@@ -53,6 +53,21 @@ object PlaybackDiagnostics {
     var lastSync: String = "NOT STARTED"
         private set
 
+    /**
+     * Which path resolved the last clip.
+     *
+     * Shown in settings because "is the accelerator actually being used" is otherwise
+     * unanswerable from the sofa, and a server that has quietly stopped being reached looks
+     * exactly like a server that was never worth having.
+     */
+    @Volatile
+    var lastSource: String = "NOT STARTED"
+        private set
+
+    fun recordSource(source: String) {
+        lastSource = source.uppercase()
+    }
+
     fun recordSync(videoSync: String?, fpsOverride: String?) {
         lastSync = "%s @ %s".format(
             videoSync ?: "?",
