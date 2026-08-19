@@ -7,7 +7,10 @@ import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.hls.HlsMediaSource
 import androidx.media3.exoplayer.source.MediaSource
+import androidx.media3.common.C
+import androidx.media3.common.MimeTypes
 import androidx.media3.exoplayer.source.MergingMediaSource
+import androidx.media3.exoplayer.source.SingleSampleMediaSource
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
@@ -55,12 +58,39 @@ object Media3Sources {
             // with the SAME file, the same frame rate, no dropped frames and identical hold
             // counts. The offsets depend on where in each file the clock-derived seek lands,
             // which is why the same clip was smooth on one tune and juddery on the next.
-            if (playable.audioUrl == null) video else MergingMediaSource(
+            val programme = if (playable.audioUrl == null) video else MergingMediaSource(
                 /* adjustPeriodTimeOffsets = */ true,
                 /* clipDurations = */ true,
                 video,
                 ProgressiveMediaSource.Factory(factory)
                     .createMediaSource(MediaItem.fromUri(playable.audioUrl)),
+            )
+            val caption = playable.captionUrl ?: return@sourceFor programme
+
+            // The subtitle joins with BOTH flags false, unlike the audio above.
+            //
+            // A subtitle track carries its own absolute timestamps and no media clock of its own,
+            // so aligning period offsets against it would shift the cues rather than the picture,
+            // and clipping durations to the shortest source would end the programme when the last
+            // caption did. The audio needed both flags for exactly the opposite reason: it is a
+            // second independently-timed MEDIA file, and leaving them false was the frame-pacing
+            // fault described above.
+            MergingMediaSource(
+                /* adjustPeriodTimeOffsets = */ false,
+                /* clipDurations = */ false,
+                programme,
+                SingleSampleMediaSource.Factory(factory).createMediaSource(
+                    MediaItem.SubtitleConfiguration.Builder(android.net.Uri.parse(caption))
+                        .setMimeType(MimeTypes.TEXT_VTT)
+                        .setLanguage("en")
+                        // SELECTION_FLAG_DEFAULT, so the track is shown without anyone choosing
+                        // it. A viewer who turned captions on in settings has already chosen;
+                        // making them find a track menu this dial has no remote button for would
+                        // be a feature that appears not to work.
+                        .setSelectionFlags(C.SELECTION_FLAG_DEFAULT)
+                        .build(),
+                    /* durationUs = */ C.TIME_UNSET,
+                ),
             )
         }
 

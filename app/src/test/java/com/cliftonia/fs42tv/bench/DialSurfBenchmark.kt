@@ -74,7 +74,7 @@ class DialSurfBenchmark {
 
     @Test
     fun `surf the whole dial and time every resolve`() {
-        val resolver = DeviceResolver(DecoderSupport.EVERYTHING)
+        val resolver = DeviceResolver(decoders = DecoderSupport.EVERYTHING)
         val channels = dial()
         println("surfing %d channels, cold cache".format(channels.size))
         val tunes = channels.map { channel ->
@@ -99,7 +99,7 @@ class DialSurfBenchmark {
     fun `the cache is what makes a second visit instant`() {
         // Proves the thing the neighbour prefetch relies on: once a clip is resolved, coming back
         // to that channel costs nothing. If this is not near zero the prefetch cannot help either.
-        val resolver = DeviceResolver(DecoderSupport.EVERYTHING)
+        val resolver = DeviceResolver(decoders = DecoderSupport.EVERYTHING)
         val cache = ResolvedCache()
         val channels = dial().take(12)
         val now = System.currentTimeMillis() / 1000

@@ -155,7 +155,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // and over. onFileLoaded clears it once the new file is really the current one.
         ended = true
         this.requestedAtMillis = requestedAtMillis
-        mpv.playAt(load.url, startAtSeconds, load.audioFile)
+        mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile)
     }
 
     override fun stop() {
