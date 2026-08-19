@@ -95,6 +95,9 @@ private const val ENGINE_KEY = "engine"
 
 /** Remembered quality ceiling; see qualityLadders. */
 private const val QUALITY_KEY = "quality"
+
+/** Whether to show English subtitles when a clip offers them. */
+private const val CAPTIONS_KEY = "captions"
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -219,6 +222,18 @@ class MainActivity : ComponentActivity() {
      * which is the whole reason two engines exist.
      */
     private var displayModeCount: Int = 0
+
+    /**
+     * Whether the viewer wants English subtitles.
+     *
+     * Off by default. Most of the dial is in English and captions on a channel nobody needed them
+     * for is a worse default than absence; the channels that genuinely need them - dubbed martial
+     * arts, subtitled anime - are the reason it exists at all.
+     *
+     * `@Volatile` because the toggle is flipped on the UI thread and read on the tuning executor
+     * and the prefetch executor when a clip is resolved.
+     */
+    @Volatile private var captionsOn: Boolean = false
 
     private val standByReason = mutableStateOf("")
 
@@ -408,7 +423,9 @@ class MainActivity : ComponentActivity() {
                     }
                 }
             },
-            device = DeviceResolver(),
+            // Read per resolve rather than captured, so turning captions on in settings takes
+            // effect on the next channel change instead of the next launch.
+            device = DeviceResolver(captionsWanted = { captionsOn }),
         )
 
         // Which engine plays the dial, and why it is not simply "the newer one".
@@ -425,6 +442,7 @@ class MainActivity : ComponentActivity() {
         val modeCount = (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
             display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
         displayModeCount = modeCount
+        captionsOn = prefs.getBoolean(CAPTIONS_KEY, false)
         ladder = qualityLadders.firstOrNull { it.first == prefs.getString(QUALITY_KEY, null) }
             ?.second ?: qualityLadders.first().second
         val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
@@ -1222,6 +1240,22 @@ class MainActivity : ComponentActivity() {
             SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
             SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
             SettingRow("AV SYNC", PlaybackDiagnostics.lastSync),
+            SettingRow(
+                label = "CAPTIONS",
+                value = if (captionsOn) "ON" else "OFF",
+                // Applies to the NEXT clip rather than the current one. Attaching a subtitle
+                // track means reopening what is playing, and restarting a programme somebody is
+                // watching to add captions to it is a worse outcome than waiting for the next
+                // channel change. The cached resolves are dropped so the next one carries the
+                // track it would otherwise have been resolved without.
+                action = {
+                    captionsOn = !captionsOn
+                    prefs.edit().putBoolean(CAPTIONS_KEY, captionsOn).apply()
+                    resolvedCache.clear()
+                    settingsRows.value = buildSettingsRows()
+                    Log.i("fs42", "captions ${if (captionsOn) "on" else "off"}")
+                },
+            ),
             SettingRow(
                 label = "CHECK FOR UPDATE",
                 value = updateStatus.value.ifEmpty { "CHECK NOW" },

@@ -7,7 +7,11 @@ import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.Unplayable
 
 /** What mpv is asked to open: one file, and optionally a separate audio track alongside it. */
-data class MpvLoad(val url: String, val audioFile: String? = null)
+data class MpvLoad(
+    val url: String,
+    val audioFile: String? = null,
+    val subFile: String? = null,
+)
 
 /**
  * What mpv is handed for a playable, or null when there is nothing to hand it.
@@ -21,7 +25,8 @@ object MpvSource {
 
     fun loadFor(playable: Playable, proxied: (String) -> String): MpvLoad? = when (playable) {
         is Progressive ->
-            if (playable.audioUrl == null) MpvLoad(proxied(playable.videoUrl))
+            if (playable.audioUrl == null)
+                MpvLoad(proxied(playable.videoUrl), subFile = playable.captionUrl)
             // YouTube serves video and audio apart above 360p, and mpv offers two ways to put
             // them back together. An EDL welds them into one synthetic stream; `audio-file`
             // opens the video normally and attaches the audio as an external track. This takes
@@ -43,7 +48,15 @@ object MpvSource {
             // BOTH still go through the proxy. The audio track is small but it is fetched over
             // the same throttled connection, and a starved audio track stalls the video just as
             // surely.
-            else MpvLoad(proxied(playable.videoUrl), proxied(playable.audioUrl))
+            else MpvLoad(
+                proxied(playable.videoUrl),
+                proxied(playable.audioUrl),
+                // NOT proxied. The proxy exists because googlevideo throttles unbounded requests
+                // for media, and a subtitle track is a few kilobytes of text fetched once - it
+                // has nothing to be throttled. Sending it through would add a registration and a
+                // socket per clip for no gain.
+                playable.captionUrl,
+            )
 
         // Live HLS is left alone: it is already a series of bounded segment requests, which
         // is why it was never throttled and never slow. Proxying it would add a hop for

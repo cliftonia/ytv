@@ -281,7 +281,12 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
      * has begun is silently dropped, and every channel then opens at 00:00. The Media3 path
      * passes its start position into setMediaSource for the same reason.
      */
-    fun playAt(url: String, startSeconds: Double, audioFile: String? = null) {
+    fun playAt(
+        url: String,
+        startSeconds: Double,
+        audioFile: String? = null,
+        subFile: String? = null,
+    ) {
         awaitingFirstFrame = true
         // Per-FILE options, so they apply to this load and are gone by the next one. `audio-file`
         // set as a property would persist, and the following clip - which has its own audio, or
@@ -294,6 +299,10 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         val options = buildString {
             append("start=").append(startSeconds.toInt())
             if (audioFile != null) append(",audio-file=").append(audioFile)
+            // sub-file rather than sub-files: the singular option appends one track, which is
+            // what there is. Shown immediately because a viewer who turned captions on wants
+            // them now, not after finding a track menu that this dial has no remote for.
+            if (subFile != null) append(",sub-file=").append(subFile).append(",sid=1")
         }
         // Newer mpv takes an insertion INDEX before the per-file options; without it the options
         // string is parsed as that index and the command is rejected outright.
