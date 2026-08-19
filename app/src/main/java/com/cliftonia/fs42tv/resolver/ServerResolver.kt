@@ -22,6 +22,13 @@ import android.util.Log
  */
 class ServerResolver(
     private val baseUrl: String,
+    /**
+     * Whether to read the caption track out of the response.
+     *
+     * The same lambda [DeviceResolver] takes, for the same reason: the viewer can change it while
+     * the app is running. Without it here, captions worked only when this server was unreachable.
+     */
+    private val captionsWanted: () -> Boolean = { false },
     private val fetch: (String, Int) -> String,
 ) : ClipResolver {
 
@@ -63,7 +70,7 @@ class ServerResolver(
             healthyUntil = 0
             return null
         }
-        return ServerTiers.parse(body, ladder, refused, videoId, nowSeconds)
+        return ServerTiers.parse(body, ladder, refused, videoId, nowSeconds, captionsWanted())
     }
 
     private companion object {

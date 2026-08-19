@@ -34,7 +34,16 @@ object ServerTiers {
         refused: Set<String>,
         videoId: String,
         nowSeconds: Long,
+        wantCaptions: Boolean = false,
     ): ClipResolver.Resolved? {
+        // Read once, outside the ladder loop: the caption belongs to the video, not to a
+        // rendition of it.
+        //
+        // This field is why captions did nothing on the television at home. The accelerator
+        // answers every resolve when it is reachable, so the on-device caption picking never ran
+        // and the fast path had nowhere to carry a track - captions could only ever have worked
+        // in the car, where the server is out of reach.
+        val caption = if (wantCaptions) field(body, "caption") else null
         for (name in ladder) {
             // A rung the CDN already refused this session will be refused again, whoever resolved
             // it. The server has no idea which urls this particular television has been turned
@@ -47,7 +56,7 @@ object ServerTiers {
             // The same margin the device applies to its own resolves, so a url is retired at the
             // same moment whichever path produced it.
             if (expires - SAFETY_MARGIN_SECONDS <= nowSeconds) continue
-            return ClipResolver.Resolved(Progressive(video, audio), expires)
+            return ClipResolver.Resolved(Progressive(video, audio, caption), expires)
         }
         return null
     }
