@@ -281,11 +281,23 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
      * has begun is silently dropped, and every channel then opens at 00:00. The Media3 path
      * passes its start position into setMediaSource for the same reason.
      */
-    fun playAt(url: String, startSeconds: Double) {
+    fun playAt(url: String, startSeconds: Double, audioFile: String? = null) {
         awaitingFirstFrame = true
+        // Per-FILE options, so they apply to this load and are gone by the next one. `audio-file`
+        // set as a property would persist, and the following clip - which has its own audio, or
+        // none - would inherit the last one's track.
+        //
+        // Safe to build by concatenation only because both urls are the proxy's own
+        // `http://127.0.0.1:<port>/<id>`, which carries no comma or equals sign. mpv parses this
+        // string as a comma-separated key=value list, so a raw googlevideo url with either would
+        // be cut in half. If the proxy is ever bypassed this has to be revisited.
+        val options = buildString {
+            append("start=").append(startSeconds.toInt())
+            if (audioFile != null) append(",audio-file=").append(audioFile)
+        }
         // Newer mpv takes an insertion INDEX before the per-file options; without it the options
         // string is parsed as that index and the command is rejected outright.
-        MPVLib.command("loadfile", url, "replace", "0", "start=${startSeconds.toInt()}")
+        MPVLib.command("loadfile", url, "replace", "0", options)
     }
 
 }

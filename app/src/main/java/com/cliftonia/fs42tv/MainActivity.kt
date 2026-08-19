@@ -26,7 +26,9 @@ import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.ClipResolver
+import com.cliftonia.fs42tv.resolver.AcceleratedResolver
 import com.cliftonia.fs42tv.resolver.DeviceResolver
+import com.cliftonia.fs42tv.resolver.ServerResolver
 import com.cliftonia.fs42tv.resolver.ResolvedCache
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.TierLadder
@@ -66,6 +68,15 @@ import java.util.concurrent.atomic.AtomicInteger
  */
 private const val LINEUP_URL =
     "https://raw.githubusercontent.com/cliftonia/ytv/main/channels.json"
+
+/**
+ * A resolve accelerator on the home network, if this set can reach one.
+ *
+ * Optional by construction. The television in the car will not reach it and must not care; see
+ * [AcceleratedResolver]. Hard-wired rather than configurable because there is exactly one of
+ * these and a setting would only be another thing to get wrong.
+ */
+private const val RESOLVE_SERVER = "http://100.74.3.68:4243"
 
 /** The repository whose releases carry the apk, for the self-update check. */
 private const val RELEASES_REPO = "cliftonia/ytv"
@@ -385,7 +396,20 @@ class MainActivity : ComponentActivity() {
         window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
-        resolver = DeviceResolver()
+        resolver = AcceleratedResolver(
+            server = ServerResolver(RESOLVE_SERVER) { url, timeout ->
+                (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
+                    connectTimeout = timeout
+                    readTimeout = timeout
+                    try {
+                        inputStream.bufferedReader().use { it.readText() }
+                    } finally {
+                        disconnect()
+                    }
+                }
+            },
+            device = DeviceResolver(),
+        )
 
         // Which engine plays the dial, and why it is not simply "the newer one".
         //
@@ -1194,6 +1218,7 @@ class MainActivity : ComponentActivity() {
                 },
             ),
             SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
+            SettingRow("RESOLVED BY", PlaybackDiagnostics.lastSource),
             SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
             SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
             SettingRow("AV SYNC", PlaybackDiagnostics.lastSync),
