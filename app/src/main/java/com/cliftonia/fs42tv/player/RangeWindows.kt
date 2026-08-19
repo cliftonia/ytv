@@ -79,7 +79,28 @@ object RangeWindows {
      * also the chunk [ChunkedDataSource] opens for Media3. Written once because it is one measured
      * number, not two that happen to agree.
      */
-    const val DEFAULT_WINDOW = 8L * 1024 * 1024
+    /**
+     * How much is asked for per bounded request.
+     *
+     * Sized against 4K, because a window measured in BYTES buys wildly different amounts of
+     * playback as the bitrate changes and 8MB was chosen when this app played 1080p:
+     *
+     *     1080p   8 Mbps    8MB = 8.0s      48MB = 48s
+     *     2160p30 25 Mbps   8MB = 2.6s      48MB = 15s
+     *     2160p60 45 Mbps   8MB = 1.4s      48MB = 8.5s
+     *
+     * At 8MB a 4K stream needed a fresh window every second and a half, and any stumble in that
+     * cycle starved the decoder - which is what "1080p is smooth and 4K is not, on both engines"
+     * actually was. It looked like a decode limit and was a fetch cadence.
+     *
+     * Costs nothing in memory: [pump] streams each window through an 8KB buffer rather than
+     * holding it, so this only changes how often a request is made.
+     *
+     * Still BOUNDED, which is the whole point - googlevideo throttles an unbounded request to
+     * roughly the video's own bitrate and serves a bounded one at line speed. A 48MB range is as
+     * bounded as an 8MB one.
+     */
+    const val DEFAULT_WINDOW = 48L * 1024 * 1024
 
     /**
      * 512 KB, enough for an mp4 header without committing to a window that will be abandoned.

@@ -138,4 +138,26 @@ class RangeWindowsTest {
             RangeWindows.totalLength("bytes */*"))
         assertNull(RangeWindows.totalLength(""))
     }
+
+    @Test
+    fun `a window buys enough seconds of playback at 4k, not just at 1080p`() {
+        // The fault this size exists to prevent. A window measured in bytes buys wildly different
+        // amounts of video as the bitrate changes, and the old 8MB was chosen when this app
+        // played 1080p - at 4K60 it bought 1.4 seconds, so the proxy fetched constantly and any
+        // stumble starved the decoder.
+        val fourKSixtyBytesPerSecond = 45L * 1_000_000 / 8
+        val seconds = RangeWindows.DEFAULT_WINDOW / fourKSixtyBytesPerSecond
+        assertTrue("a window must buy at least 5s at 4K60, buys ${seconds}s", seconds >= 5)
+    }
+
+    @Test
+    fun `the first window is still small, so a seek wastes little`() {
+        // mpv reads a header and seeks straight to the clock offset, abandoning the connection.
+        // Committing to the full window up front would fetch tens of megabytes to discard.
+        val windows = RangeWindows.of(0, 200L * 1024 * 1024, RangeWindows.DEFAULT_WINDOW)
+        val first = windows.first()
+        assertEquals(RangeWindows.FIRST_WINDOW, first.last - first.first + 1)
+        assertTrue("later windows must reach the full size",
+            windows.any { it.last - it.first + 1 == RangeWindows.DEFAULT_WINDOW })
+    }
 }
