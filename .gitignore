@@ -13,3 +13,7 @@ build/
 keystore-*.txt
 __pycache__/
 *.pyc
+
+# Working notes for whoever picks this up next. Deliberately untracked: it is a snapshot of
+# open problems and dead ends, which would be stale the moment it was committed.
+HANDOVER.md
