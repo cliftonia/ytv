@@ -51,4 +51,25 @@ class FrameCadenceTest {
         assertEquals("unknown", FrameCadence.describe(-1f))
         assertEquals("unknown", FrameCadence.describe(0f))
     }
+
+    @Test
+    fun `the two pacing modes map onto mpv's option`() {
+        assertEquals("display-resample", FrameCadence.optionFor("DISPLAY"))
+        assertEquals("audio", FrameCadence.optionFor("AUDIO"))
+    }
+
+    @Test
+    fun `an unset or unrecognised mode keeps the judder fix`() {
+        // display-resample is the reason mpv is in this app. A missing preference, or one written
+        // by an older build, must not silently give that up - the fault it fixes is far more
+        // visible than the one it may cause.
+        assertEquals("display-resample", FrameCadence.optionFor(null))
+        assertEquals("display-resample", FrameCadence.optionFor(""))
+        assertEquals("display-resample", FrameCadence.optionFor("something-else"))
+    }
+
+    @Test
+    fun `display is the default, so an existing television is unchanged by upgrading`() {
+        assertEquals("DISPLAY", FrameCadence.SYNC_MODES.first())
+    }
 }

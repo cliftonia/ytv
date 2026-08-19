@@ -20,6 +20,15 @@ import `is`.xyz.mpv.MPVNode
  * MPVView (the reference implementation), the box's `~/.config/mpv/mpv.conf` which plays these
  * exact googlevideo URLs, and this panel's measured refresh rate.
  */
+/**
+ * Which pacing mode to ask mpv for; see initOptions.
+ *
+ * A file-level variable rather than a constructor argument because `BaseMPVView.initialize()`
+ * calls `initOptions()` itself, so there is no parameter to thread through. Set before the engine
+ * is built and read once during init.
+ */
+var videoSyncMode: String? = null
+
 class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(context, attrs) {
 
     /** What the dial needs to hear about. Set before use; cleared on destroy. */
@@ -89,7 +98,23 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // --- the reason mpv is here ---------------------------------------------------------
         // Lock video to the display's real refresh and resample audio to follow, rather than
         // scheduling frames against a media clock and letting the compositor place them.
-        MPVLib.setOptionString("video-sync", "display-resample")
+        // Chosen at runtime rather than fixed, because which is right here is genuinely unsettled
+        // and the device is the only thing that can answer.
+        //
+        // `display-resample` locks video to the panel's real refresh and RESAMPLES THE AUDIO to
+        // follow. It is why mpv is in this app at all: it is the only thing that fixed the judder.
+        //
+        // But `vo=mediacodec_embed` means MediaCodec presents the frames and mpv never touches
+        // the pixels - that vo was forced on us because gpu and gpu-next both SIGSEGV in this
+        // television's Mali driver. Resampling audio to follow a clock mpv does not fully own is
+        // a plausible cause of the audio sliding against the picture, which is what is reported.
+        //
+        // `audio` is mpv's default: video is timed against the audio clock and CANNOT drift from
+        // it, at the cost of the frame pacing that display-resample buys.
+        //
+        // So both are offered and the setting says which. Judder and drift are different faults
+        // with different cures, and guessing between them has now cost several rounds.
+        MPVLib.setOptionString("video-sync", FrameCadence.optionFor(videoSyncMode))
         // A separate feature that blends frames. display-resample does not need it and on a
         // 32-bit SoC it is expensive - off unless it is ever measured to help.
         MPVLib.setOptionString("interpolation", "no")
