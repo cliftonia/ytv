@@ -77,4 +77,38 @@ class CaptionsTest {
         val tracks = listOf(track("en-GB"), track("en-US"), track("en"))
         assertEquals(Captions.pick(tracks), Captions.pick(tracks.reversed()))
     }
+
+    @Test
+    fun `the track is asked for as webvtt, because ttml plays nowhere`() {
+        // NewPipeExtractor builds these urls with fmt=ttml, which mpv cannot read at all and
+        // which Media3 was being handed while labelled WebVTT. Captions were broken twice over
+        // and silently both times.
+        val got = Captions.pick(listOf(track("en",
+            url = "https://www.youtube.com/api/timedtext?v=abc&lang=en&fmt=ttml")))
+        assertEquals("https://www.youtube.com/api/timedtext?v=abc&lang=en&fmt=vtt", got?.url)
+    }
+
+    @Test
+    fun `the format is replaced, never appended`() {
+        // A second fmt parameter is ignored by the endpoint, which is exactly what made the first
+        // attempt at this look as though vtt was unsupported.
+        val out = Captions.asWebVtt("https://www.youtube.com/api/timedtext?v=a&fmt=ttml&x=1")
+        assertEquals(1, Regex("fmt=").findAll(out).count())
+        assertTrue(out.contains("fmt=vtt"))
+        assertTrue("other parameters must survive", out.contains("x=1"))
+    }
+
+    @Test
+    fun `a timedtext url with no format is given one`() {
+        assertTrue(Captions.asWebVtt("https://www.youtube.com/api/timedtext?v=a")
+            .endsWith("fmt=vtt"))
+    }
+
+    @Test
+    fun `a url that is not youtube timedtext is left alone`() {
+        // A hand-authored track hosted elsewhere is already whatever format it is, and rewriting
+        // a parameter it never had would break the url.
+        val other = "https://example.com/subs/en.vtt"
+        assertEquals(other, Captions.asWebVtt(other))
+    }
 }
