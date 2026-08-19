@@ -75,6 +75,15 @@ jobs:
             python3 refresh_channels.py --rotate "$ROTATE"
           fi
 
+      - name: Drop anything YouTube says is not in English
+        working-directory: curation
+        # Reads a verdict rather than computing one. The declared language needs a full
+        # extraction per clip, which is over an hour across the dial - so the accelerator does
+        # that work continuously and this only asks what it found. Unreachable is not a failure:
+        # it means no information, and the title rules carry on doing what they always did.
+        continue-on-error: true
+        run: python3 language_sweep.py
+
       - name: Put each series in episode order
         working-directory: curation
         run: python3 sequence.py
