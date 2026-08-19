@@ -81,6 +81,10 @@ object Media3Sources {
                 programme,
                 SingleSampleMediaSource.Factory(factory).createMediaSource(
                     MediaItem.SubtitleConfiguration.Builder(android.net.Uri.parse(caption))
+                        // WebVTT because Captions.asWebVtt asked YouTube for it. This said VTT
+                        // while the url still served TTML, so Media3 parsed nothing and reported
+                        // nothing - a caption track that is silently ignored looks exactly like a
+                        // clip that never had one.
                         .setMimeType(MimeTypes.TEXT_VTT)
                         .setLanguage("en")
                         // SELECTION_FLAG_DEFAULT, so the track is shown without anyone choosing

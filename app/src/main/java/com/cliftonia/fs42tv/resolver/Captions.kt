@@ -33,7 +33,28 @@ object Captions {
      * Media3 a format it cannot parse produces a clip that plays with no captions and no error,
      * which is indistinguishable from a clip that simply had none.
      */
-    fun pick(tracks: List<Track>): Track? =
+    fun pick(tracks: List<Track>): Track? = best(tracks)?.let { it.copy(url = asWebVtt(it.url)) }
+
+    /**
+     * The same track, asked for as WebVTT.
+     *
+     * NewPipeExtractor builds YouTube subtitle urls with `fmt=ttml`, and TTML is the wrong answer
+     * for both engines: mpv cannot read it at all, and Media3 needs to be told the mime type
+     * matches - it was being handed TTML labelled as WebVTT, so it parsed nothing and said
+     * nothing. Captions appeared to be broken for both reasons at once.
+     *
+     * YouTube's timedtext endpoint will serve the same track as WebVTT if asked, and both engines
+     * read that. The parameter is REPLACED rather than appended - a second `fmt` is ignored,
+     * which is what made the first attempt at this look like the endpoint did not support it.
+     */
+    fun asWebVtt(url: String): String =
+        if (FMT.containsMatchIn(url)) FMT.replace(url) { "${it.groupValues[1]}fmt=vtt" }
+        else if (url.contains("timedtext")) url + (if ('?' in url) "&" else "?") + "fmt=vtt"
+        else url
+
+    private val FMT = Regex("([?&])fmt=[^&]*")
+
+    private fun best(tracks: List<Track>): Track? =
         tracks
             .filter { it.url.isNotBlank() }
             .filter { isEnglish(it.languageTag) }
