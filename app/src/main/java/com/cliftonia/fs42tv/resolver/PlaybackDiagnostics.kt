@@ -64,6 +64,20 @@ object PlaybackDiagnostics {
     var lastSource: String = "NOT STARTED"
         private set
 
+    /**
+     * What the decoders say they can sustain, which is not what they say they accept.
+     *
+     * Shown because "4K is janky and 1080p is smooth, on both engines" is answered by this line
+     * and by nothing else on the screen.
+     */
+    @Volatile
+    var decoders: String = "NOT ASKED"
+        private set
+
+    fun recordDecoders(summary: String) {
+        decoders = summary.uppercase()
+    }
+
     fun recordSource(source: String) {
         lastSource = source.uppercase()
     }
