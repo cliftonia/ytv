@@ -94,6 +94,45 @@ CONTENT_SCRIPTS = _ranges(
 )
 
 
+# Latin-script languages, which the script check above cannot see at all.
+#
+# Two tiers, because matching a short function word at a word boundary looks precise and is not:
+# `kung` matches "Kung Fu", `ng` matches "Andrew Ng", `yang` matches "Jimmy Yang", `de la` matches
+# "De La Soul". English titles are full of loanwords and proper nouns from every language on this
+# list, and a single-tier filter deletes them all.
+#
+# STRONG markers convict alone - no English title contains them by accident.
+STRONG_FOREIGN = re.compile(
+    r"\b(pinoy|tagalog|taglish|pilipino|bagong|sub\s*indo|indo\s*sub|dublado|legendado|"
+    r"pelicula\s+completa|filme\s+completo|película|sinhala|vietsub)\b", re.I)
+
+# WEAK markers mean nothing alone and a great deal together. Two distinct ones is the threshold:
+# one is a loanword or a surname, two is a sentence in another language.
+WEAK_FOREIGN = (
+    re.compile(r"\b(ang|mga|ako|ikaw|kayo|sa'yo|kung|wala|salamat|sigaw|gintong|payapang|"
+               r"probinsya|araw|ulan|alon|hulaan|bilis)\b", re.I),          # filipino
+    re.compile(r"\b(dan|yang|untuk|dengan|tidak|adalah|animasi|sekolah|lucu)\b", re.I),  # indonesian
+    re.compile(r"\b(que|una|con|para|por|del|como|capitulo|completo|nino)\b", re.I),     # spanish
+    re.compile(r"\b(nao|voce|episodio|dos|uma|pela)\b", re.I),                            # portuguese
+    re.compile(r"\b(icin|bolum|izle|ile|olarak)\b", re.I),                                # turkish
+    re.compile(r"\b(cua|nguoi|khong|duoc|nhung|phim)\b", re.I),                           # vietnamese
+)
+
+# Two or more distinct words from ONE language. Requiring them from the same language stops a
+# title borrowing one word each from three languages - which is what a global music channel's
+# titles look like - from being read as foreign.
+WEAK_THRESHOLD = 2
+
+
+def latin_script_foreign(title):
+    """Whether a title written in the Latin alphabet is nonetheless in another language."""
+    text = title or ""
+    if STRONG_FOREIGN.search(text):
+        return True
+    return any(len({w.lower() for w in rx.findall(text)}) >= WEAK_THRESHOLD
+               for rx in WEAK_FOREIGN)
+
+
 def english_speech(title):
     """Whether this looks like something an English speaker can follow.
 
@@ -113,6 +152,9 @@ def english_speech(title):
     if ENGLISH.search(text):
         return True
     if CONTENT_LANGUAGE.search(text):
+        return False
+    # Another language written in our alphabet, which no script check can catch.
+    if latin_script_foreign(text):
         return False
     # Two classes of script, because they mean different things in a title.
     #

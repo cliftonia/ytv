@@ -151,3 +151,46 @@ class TestEnglishSpeech(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestLatinScriptForeign(unittest.TestCase):
+    """Another language written in our own alphabet, which no script check can see.
+
+    Every title here is real, and the English ones are the point: `kung` appears in "Kung Fu",
+    `ng` in "Andrew Ng", `yang` in "Jimmy Yang", `de la` in "De La Soul". Matching a short function
+    word at a word boundary looks precise and deletes all of them, which is why the rule needs two
+    tiers rather than one list.
+    """
+
+    def test_a_marker_no_english_title_carries_convicts_alone(self):
+        self.assertFalse(filters.english_speech(
+            "LATEST 2026! UPSET Victory ng Pinoy sa JAPAN! PINOY BAGONG WBO Champion"))
+        self.assertFalse(filters.english_speech(
+            "Payapang Probinsya (Live At Hidden Grove) - Pinoy Reggae Republic"))
+
+    def test_two_common_words_from_one_language_convict_together(self):
+        self.assertFalse(filters.english_speech(
+            "Kung Wala Na Ang Mga Mata (Live At Hidden Grove)"))
+        self.assertFalse(filters.english_speech("DI DEPAN TERAS PART 14 - Animasi Sekolah"))
+
+    def test_one_common_word_is_a_loanword_or_a_surname(self):
+        # Each of these carries exactly one marker, and every one is an English title. Convicting
+        # on a single word would have deleted the whole Martial Arts channel.
+        for title in ("Kung Fu Chaos (Original Xbox) - Playthrough | Retro Gaming 2026",
+                      "The Future of AI Agents with Andrew Ng | Interrupt 26",
+                      "Jimmy O. Yang: Guess How Much (Full Show) | Stand-Up Comedy Special",
+                      "De La Soul: Tiny Desk Concert",
+                      "Snake in the Eagle's Shadow (1978) | Full Martial Arts Movie"):
+            self.assertTrue(filters.english_speech(title), title)
+
+    def test_a_place_name_is_not_a_language(self):
+        # Diacritics in a proper noun are not evidence of anything; these are English broadcasts.
+        for title in ("Race Highlights | Rolex 6 Hours of Sao Paulo 2026 | FIA WEC",
+                      "2026 SoCal Tuna Fishing (El Nino)",
+                      "IZMIR TURKEY 2026 4K WALKING TOUR | Kemeralti Bazaar"):
+            self.assertTrue(filters.english_speech(title), title)
+
+    def test_the_markers_must_come_from_one_language(self):
+        # A global music channel's titles borrow a word each from several languages. Counting
+        # across languages would read that as foreign when it is nothing of the kind.
+        self.assertTrue(filters.english_speech("Una Mas | Dan Auerbach | Live Sessions"))
