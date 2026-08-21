@@ -8,10 +8,15 @@ package com.cliftonia.fs42tv.player
  * clip drops frames badly enough that the viewer switches back to 1080p by hand. The vendor's
  * claim is what the device will ACCEPT; this is what it can actually hold.
  *
- * So the ceiling is decided by observation instead. mpv counts dropped and late frames, and a rate
+ * So the ceiling COULD be decided by observation. mpv counts dropped and late frames, and a rate
  * above a frame or so a second is visible as stutter - measured on this panel, `display-resample`
  * at 1080p produced late frames climbing 9, 27, 45 over fifty seconds and looked wrong, while the
  * same clip under `video-sync=audio` produced zero.
+ *
+ * Deliberately DORMANT: nothing calls [shouldDemote] yet. The quality ceiling is a manual,
+ * observable preference (MAX QUALITY in settings), and auto-demotion would change the picture
+ * with nothing on screen to say why. This is the policy held ready - and pinned by tests - for
+ * the day observation shows the manual ceiling is not enough.
  *
  * Pure, because the judgement is the part worth getting right and it is invisible from the sofa:
  * demote too eagerly and a capable panel is capped at 1080p forever; too reluctantly and the

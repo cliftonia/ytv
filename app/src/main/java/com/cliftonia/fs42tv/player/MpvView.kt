@@ -61,10 +61,13 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         fun onBuffering(buffering: Boolean)
     }
 
-    var events: Events? = null
+    // Same two threads as awaitingFirstFrame, and release() relies on the null being seen.
+    @Volatile var events: Events? = null
 
     /** True between a load and its first presented frame, so mid-clip restarts are not reported. */
-    private var awaitingFirstFrame = false
+    // mpv delivers events on its own native thread while playAt/release run on the UI
+    // thread; @Volatile for the same reason every equivalent flag in MpvChannelPlayer has it.
+    @Volatile private var awaitingFirstFrame = false
 
     private val observer = object : MPVLib.EventObserver {
         override fun event(eventId: Int, node: MPVNode) {

@@ -47,7 +47,13 @@ class ChunkedProxy(private val window: Long = RangeWindows.DEFAULT_WINDOW) {
         pool.execute {
             while (!socket.isClosed) {
                 val client = runCatching { socket.accept() }.getOrNull() ?: break
-                pool.execute { runCatching { serve(client) }; runCatching { client.close() } }
+                // runCatching, because release() shuts the pool down while accept() may
+                // have one last connection in hand: dispatching it then throws
+                // RejectedExecutionException on the accept thread, and an uncaught exception
+                // there takes the whole process down over a socket nobody wanted.
+                runCatching {
+                    pool.execute { runCatching { serve(client) }; runCatching { client.close() } }
+                }.onFailure { runCatching { client.close() } }
             }
         }
     }
