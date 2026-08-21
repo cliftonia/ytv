@@ -15,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import com.cliftonia.fs42tv.player.ChannelPlayback
+import com.cliftonia.fs42tv.player.AudioSync
 import com.cliftonia.fs42tv.player.FrameCadence
 import com.cliftonia.fs42tv.player.ChannelPlayer
 import com.cliftonia.fs42tv.player.Media3Sources
@@ -102,6 +103,9 @@ private const val CAPTIONS_KEY = "captions"
 
 /** Remembered frame pacing mode for mpv; see FrameCadence.SYNC_MODES. */
 private const val VIDEO_SYNC_KEY = "videosync"
+
+/** Remembered A/V trim in milliseconds of picture hold-back; see AudioSync. */
+private const val AUDIO_HOLD_KEY = "audiohold"
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -450,6 +454,12 @@ class MainActivity : ComponentActivity() {
         // Read before the engine is built, because mpv applies it during initialisation.
         com.cliftonia.fs42tv.player.videoSyncMode =
             prefs.getString(VIDEO_SYNC_KEY, null) ?: FrameCadence.SYNC_MODES.first()
+        // Same reason, and it must be re-read on every engine build rather than only on the first:
+        // mpv is rebuilt whenever its core shuts down, and a trim that reset itself on that path
+        // would look exactly like the audio fault coming back.
+        com.cliftonia.fs42tv.player.audioHoldMillis = prefs.getInt(AUDIO_HOLD_KEY, 0)
+        Log.i("fs42", "audio out ${describeAudioRoute()}, hold " +
+            "${com.cliftonia.fs42tv.player.audioHoldMillis}ms")
         ladder = qualityLadders.firstOrNull { it.first == prefs.getString(QUALITY_KEY, null) }
             ?.second ?: qualityLadders.first().second
         val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
@@ -1222,6 +1232,34 @@ class MainActivity : ComponentActivity() {
      * once at startup would be quietly wrong by the time anyone looked at it, and a settings
      * screen that lies is worse than none.
      */
+    /**
+     * Ask Android what outputs exist and let [AudioSync] name the one that will carry the sound.
+     *
+     * The Android half is here and the choosing is in [AudioSync] because `getDevices` needs a
+     * real AudioManager and the routing rules do not - and the routing rules are the part that
+     * can be wrong.
+     *
+     * Asked afresh every time the row is drawn rather than cached at startup: a Bluetooth speaker
+     * switched off halfway through an evening changes the answer, and a diagnostic that goes stale
+     * is worse than no diagnostic, because it is believed.
+     */
+    private fun describeAudioRoute(): String {
+        val audio = getSystemService(android.media.AudioManager::class.java)
+            ?: return "NOT ASKED"
+        val outputs = runCatching {
+            audio.getDevices(android.media.AudioManager.GET_DEVICES_OUTPUTS)
+                .map { it.type to it.productName.toString() }
+        }.getOrElse {
+            Log.w("fs42", "could not enumerate audio outputs: $it")
+            return "NOT ASKED"
+        }
+        val described = AudioSync.describeRoute(outputs)
+        // Spelled out rather than left to be inferred: a route the player cannot compensate for
+        // is the single most useful thing this screen can say when somebody is looking at it
+        // because the audio sounds late.
+        return if (AudioSync.needsManualTrim(outputs)) "$described - USE AV DELAY" else described
+    }
+
     private fun buildSettingsRows(): List<SettingRow> {
         val engine = PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
             ?: PlayerEngine.default(displayModeCount)
@@ -1273,9 +1311,6 @@ class MainActivity : ComponentActivity() {
                     Log.i("fs42", "quality ceiling now ${next.first} -> ${next.second}")
                 },
             ),
-            SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
-            SettingRow("DECODERS", PlaybackDiagnostics.decoders),
-            SettingRow("CAPTION STATE", PlaybackDiagnostics.captions),
             SettingRow(
                 label = "FRAME PACING",
                 value = com.cliftonia.fs42tv.player.videoSyncMode ?: "DISPLAY",
@@ -1291,10 +1326,23 @@ class MainActivity : ComponentActivity() {
                     Log.i("fs42", "frame pacing $next; takes effect on next launch")
                 },
             ),
-            SettingRow("RESOLVED BY", PlaybackDiagnostics.lastSource),
-            SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
-            SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
-            SettingRow("AV SYNC", PlaybackDiagnostics.lastSync),
+            SettingRow(
+                label = "AV DELAY",
+                value = AudioSync.label(com.cliftonia.fs42tv.player.audioHoldMillis),
+                // Applies to whatever is playing RIGHT NOW, unlike every other row here, and that
+                // is deliberate. The right value cannot be derived: it is however long the sound
+                // takes to get from this app to the speaker, and on this television that is a
+                // Bluetooth link whose sink reports its own buffering as zero. The only way to
+                // find it is to press this until the mouths match, which needs the picture and the
+                // sound to keep running while you do.
+                action = {
+                    val next = AudioSync.next(com.cliftonia.fs42tv.player.audioHoldMillis)
+                    prefs.edit().putInt(AUDIO_HOLD_KEY, next).apply()
+                    (player as? MpvChannelPlayer)?.setAudioHoldMillis(next)
+                        ?: run { com.cliftonia.fs42tv.player.audioHoldMillis = next }
+                    settingsRows.value = buildSettingsRows()
+                },
+            ),
             SettingRow(
                 label = "CAPTIONS",
                 value = if (captionsOn) "ON" else "OFF",
@@ -1322,6 +1370,26 @@ class MainActivity : ComponentActivity() {
                     settingsRows.value = buildSettingsRows()
                 },
             ),
+            // Everything below is read-only. Controls come FIRST because the screen is
+            // finite: when this was a plain unscrolling column, adding diagnostics
+            // silently pushed the captions toggle and the update check off the bottom,
+            // and a control you cannot see is a control that does not exist.
+            SettingRow("--- DIAGNOSTICS ---", ""),
+            // FIRST of the readings, deliberately. The highlight only ever lands on a row that
+            // OK can act on, and the list scrolls to the highlight - so the readings furthest
+            // down are visible only as far as the last control drags them into view, and the
+            // bottom of this list cannot be brought on screen at all. Anything that has to be
+            // read has to be near the top of this section, and after five builds spent looking
+            // for an audio fault inside the player while the sound was leaving over Bluetooth,
+            // this is the reading that has to be seen.
+            SettingRow("AUDIO OUT", describeAudioRoute()),
+            SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
+            SettingRow("DECODERS", PlaybackDiagnostics.decoders),
+            SettingRow("CAPTION STATE", PlaybackDiagnostics.captions),
+            SettingRow("RESOLVED BY", PlaybackDiagnostics.lastSource),
+            SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
+            SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
+            SettingRow("AV SYNC", PlaybackDiagnostics.lastSync),
             SettingRow("VERSION", BuildConfig.VERSION_CODE.toString()),
             SettingRow("DISPLAY MODES", displayModeCount.toString()),
             SettingRow("CHANNELS", "${channels.size} / $clips CLIPS"),

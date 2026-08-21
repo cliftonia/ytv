@@ -29,6 +29,19 @@ import `is`.xyz.mpv.MPVNode
  */
 var videoSyncMode: String? = null
 
+/**
+ * How far to hold the picture back, in milliseconds, to meet audio that arrives late downstream.
+ *
+ * A file-level variable for the same reason as [videoSyncMode]: `BaseMPVView.initialize()` calls
+ * `initOptions()` itself, so there is no constructor parameter to thread through. Unlike the
+ * pacing mode this one is ALSO settable while a clip is playing - see
+ * [MpvChannelPlayer.setAudioHoldMillis] - because the right value cannot be reasoned to, only
+ * heard, and trimming it by ear needs the sound to keep running while you turn the knob.
+ *
+ * See [AudioSync] for the measurement that put it here.
+ */
+var audioHoldMillis: Int = 0
+
 class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(context, attrs) {
 
     /** What the dial needs to hear about. Set before use; cleared on destroy. */
@@ -119,6 +132,15 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // 32-bit SoC it is expensive - off unless it is ever measured to help.
         MPVLib.setOptionString("interpolation", "no")
 
+        // Deliberate A/V offset, for a delay that happens BELOW the player and that mpv therefore
+        // cannot measure. On this television the sound leaves over Bluetooth SBC to a paired
+        // speaker which reports its own buffering as zero, so mpv's `avsync` reads +-6ms while
+        // the viewer hears the audio well behind the picture. Set as an option as well as a
+        // runtime property so it survives an engine rebuild after a shutdown, which happens
+        // often enough that a trim that quietly reset itself would look like the fault returning.
+        MPVLib.setOptionString(
+            "audio-delay", AudioSync.mpvAudioDelaySeconds(audioHoldMillis).toString())
+
         // display-resample is only as good as mpv's idea of the refresh rate, and mpv's own
         // detection is unreliable on Android - the reference implementation overrides it for
         // exactly this reason. This panel reports 60.000004Hz, not 60; that difference is the
@@ -147,6 +169,17 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // is released, not who draws it, so mpv still paces to the display's real refresh.
         // What is given up is everything mpv would do to the pixels - scaling, interpolation,
         // colour management - none of which this dial asks for.
+        //
+        // MEASURED, AND NOT WHAT HAPPENS: `current-vo` reads `gpu` on this television, not
+        // `mediacodec_embed`. The reason is in the library, not here - `BaseMPVView` keeps its
+        // own `voInUse` field, initialised to "gpu", and `surfaceCreated` writes THAT to the `vo`
+        // property once the surface arrives, after `initOptions` has run. The option below is set
+        // and then overwritten. `BaseMPVView.setVo(...)` is the only thing that changes both.
+        //
+        // Left as it is on purpose. Switching to mediacodec_embed for real is a change to the
+        // vo that this file records as having SIGSEGV'd in the Mali driver, it belongs to the
+        // mid-session shutdown fault rather than to audio sync, and the audio measurement above
+        // rules the vo out either way: mpv is in sync under `gpu` too.
         MPVLib.setOptionString("vo", "mediacodec_embed")
         MPVLib.setOptionString("hwdec", "mediacodec")
 
@@ -264,7 +297,8 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         Log.i("fs42", "mpv idle=${MPVLib.getPropertyString("idle")} " +
             "keep-open=${MPVLib.getPropertyString("keep-open")} " +
             "video-sync=${MPVLib.getPropertyString("video-sync")} " +
-            "display-fps-override=${MPVLib.getPropertyString("display-fps-override")}")
+            "display-fps-override=${MPVLib.getPropertyString("display-fps-override")} " +
+            "audio-delay=${MPVLib.getPropertyString("audio-delay")}")
         PlaybackDiagnostics.recordSync(
             MPVLib.getPropertyString("video-sync"),
             MPVLib.getPropertyString("display-fps-override"))

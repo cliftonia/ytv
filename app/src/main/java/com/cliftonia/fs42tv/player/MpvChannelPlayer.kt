@@ -99,12 +99,29 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                     // Added here, once the file is open, because a track added before there is
                     // anything to attach it to is discarded.
                     mpv.addSubtitle(caption)
-                    val sid = runCatching { MPVLib.getPropertyString("sid") }.getOrNull()
-                    val count = runCatching { MPVLib.getPropertyString("track-list/count") }
-                        .getOrNull()
-                    PlaybackDiagnostics.recordCaptions("MPV sid=$sid tracks=$count")
-                    Log.i("fs42", "mpv subtitle: sid=$sid tracks=$count")
+                    fun prop(name: String) =
+                        runCatching { MPVLib.getPropertyString(name) }.getOrNull()
+                    // Everything that decides whether a selected track is actually DRAWN. A
+                    // track can be loaded and current and still invisible, which is what has
+                    // been reported, and only mpv can say which of these is the reason.
+                    val state = "sid=%s vis=%s vo=%s scale=%s".format(
+                        prop("sid"), prop("sub-visibility"), prop("current-vo"), prop("sub-scale"))
+                    PlaybackDiagnostics.recordCaptions("MPV $state")
+                    Log.i("fs42", "mpv subtitle: $state tracks=${prop("track-list/count")}")
                 }
+                // mpv measures the audio/video offset itself and publishes it as `avsync`, in
+                // seconds. "The audio is delayed" was chased five times without anyone once
+                // asking mpv how far - and it has known the whole time.
+                //
+                // OUTSIDE the caption branch. It used to be inside it, so on a dial where almost
+                // no clip carries a caption the probe never ran once, which is why five builds
+                // shipped with the logging in place and the number still unobserved.
+                //
+                // Sampled repeatedly rather than once, because the two candidate faults look
+                // identical in a single reading: a fixed offset (a seek landing the two tracks
+                // apart, or a latency mpv cannot see) holds still, while drift (a resampler
+                // running against the wrong clock) grows. One sample cannot tell them apart.
+                probeSync()
                 // Only now do end-file events refer to the clip the dial actually asked for.
                 // Anything before this belongs to the outgoing file that `loadfile ... replace`
                 // displaced, and acting on it re-tunes the channel in a tight loop - six times in
@@ -158,6 +175,43 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         }
     }
 
+    /**
+     * Ask mpv where it thinks audio and video are, several times across one clip.
+     *
+     * `avsync` is mpv's OWN measurement of the offset between the audio it has played and the
+     * video it has shown, in seconds and signed: positive means video is ahead of audio, which
+     * is what "the audio is delayed" would look like from inside the player.
+     *
+     * It is worth reading only alongside `current-vo`. mpv is asked for `mediacodec_embed` and
+     * has been observed reporting `gpu`, and under `gpu` the frames are drawn by mpv while under
+     * `mediacodec_embed` they are presented by MediaCodec - a difference that changes who owns
+     * the video clock and therefore what `avsync` even means.
+     */
+    private fun probeSync() {
+        // 3s, 10s, 25s, 50s. The first is after the seek has settled and the cache has filled;
+        // the last is far enough out that a resampler running at the wrong rate would have
+        // accumulated a visible error even at a few parts per million.
+        for (atSeconds in intArrayOf(3, 10, 25, 50)) {
+            main.postDelayed({
+                if (released) return@postDelayed
+                fun prop(name: String) =
+                    runCatching { MPVLib.getPropertyString(name) }.getOrNull()
+                val off = prop("avsync")
+                val delay = prop("audio-delay")
+                Log.w("fs42", "AVSYNC t=${atSeconds}s avsync=$off audio-delay=$delay " +
+                    "vo=${prop("current-vo")} ao=${prop("current-ao")} " +
+                    "vsync=${prop("video-sync")} fps=${prop("container-fps")} " +
+                    "estimated=${prop("estimated-vf-fps")} " +
+                    "display-fps=${prop("display-fps-override")} " +
+                    "vf-fps=${prop("estimated-display-fps")} " +
+                    "pos=${prop("time-pos")} apts=${prop("audio-pts")} " +
+                    "drop=${prop("frame-drop-count")}/${prop("decoder-frame-drop-count")} " +
+                    "delayed=${prop("vo-delayed-frame-count")}")
+                PlaybackDiagnostics.recordSync("avsync ${off}s", delay)
+            }, atSeconds * 1_000L)
+        }
+    }
+
     override fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long) {
         // Which tracks go through the proxy is decided in MpvSource, which needs no libmpv and
         // is therefore testable. The reason a miss is logged at all is that a miss which logs
@@ -199,6 +253,24 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // mpv's own pause property rather than stopping: the demuxer cache and the decoded
         // frames survive, so coming back is instant instead of paying the seek again.
         MPVLib.setPropertyBoolean("pause", paused)
+    }
+
+    /**
+     * Hold the picture back by [holdMillis] to meet audio that arrives late below the player.
+     *
+     * Applied to the running clip, not the next one, and that is the point: the correct value
+     * depends on what the television is paired with and is not knowable from inside the app - on
+     * this set the sink reports its own buffering as zero - so it can only be found by turning it
+     * up until the mouths match. That needs the sound to keep playing while the row is pressed.
+     *
+     * Also written into the options for the next engine build; see [audioHoldMillis].
+     */
+    fun setAudioHoldMillis(holdMillis: Int) {
+        audioHoldMillis = holdMillis
+        val seconds = AudioSync.mpvAudioDelaySeconds(holdMillis)
+        runCatching { MPVLib.setPropertyDouble("audio-delay", seconds) }
+            .onFailure { Log.w("fs42", "could not set audio-delay: $it") }
+        Log.i("fs42", "audio hold ${holdMillis}ms -> mpv audio-delay=$seconds")
     }
 
     override fun setVolume(volume: Float) {
