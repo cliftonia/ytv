@@ -24,6 +24,7 @@ import json
 import sys
 import urllib.request
 
+import build_lineup
 import confs
 
 SERVER = "http://100.74.3.68:4243"
@@ -66,12 +67,19 @@ def main():
         conf = confs.load(path)
         station = conf["station_conf"]
         streams = station.get("streams", [])
-        keep = [s for s in streams if s.get("id") not in foreign]
+        # Conf streams carry only a url - the "id" field is minted later, by build_lineup, when
+        # the lineup is published. Matching on s.get("id") here compared None against the foreign
+        # map for every stream, so the sweep reported a healthy-looking run while never removing
+        # anything. The id has to be derived from the url, with the same extraction the publisher
+        # uses, or the sweep and the lineup disagree about which clip is which.
+        keep = [s for s in streams
+                if build_lineup.video_id(s.get("url")) not in foreign]
         if len(keep) == len(streams):
             continue
         for stream in streams:
-            if stream.get("id") in foreign:
-                print("  [%s] %-22s %s" % (foreign[stream["id"]],
+            identifier = build_lineup.video_id(stream.get("url"))
+            if identifier in foreign:
+                print("  [%s] %-22s %s" % (foreign[identifier],
                                            station.get("network_name", "?")[:22],
                                            (stream.get("title") or "")[:52]))
         removed += len(streams) - len(keep)
