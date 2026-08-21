@@ -40,12 +40,29 @@ EP_THEN_SERIES = re.compile(r"\bEp(?:isode)?\.?\s*(\d+).{0,30}?\bSeries\s+([A-Z0
 # "Episode 5 D" - the series letter with the word "Series" left off entirely, which QI uploaders
 # do about a third of the time. Without this those parsed as season 1, and since numeric seasons
 # sort ahead of lettered ones they were all hoisted to the front of the biggest run on the dial.
-EP_THEN_BARE_LETTER = re.compile(r"\bEp(?:isode)?\.?\s*(\d+)[\s,]+([A-Z])\b")
+#
+# "A" and "I" are the two letters that are also English words, and an uploader who writes
+# "Ep 5 A Deadly Verdict" means the episode is CALLED "A Deadly Verdict", not that it sits in
+# series A. So those two only count as a series letter when no unquoted word follows - which
+# keeps QI's genuine "Episode 5 A" at the end of a title, and also refuses the comma form
+# "Ep 3, I, Darrin", where the word after the comma gives the game away. The letter lands in one
+# of two groups depending on which alternative matched, and parse() takes whichever is present.
+EP_THEN_BARE_LETTER = re.compile(
+    r"\bEp(?:isode)?\.?\s*(\d+)[\s,]+(?:([B-HJ-Z])\b|([AI])\b(?![\s,]+[A-Za-z]))")
 BARE_EPISODE = re.compile(r"\bEp(?:isode)?\.?\s*(\d+)\b", re.I)
 
-# An episode title in quotes, of any of the shapes uploaders actually use.
-QUOTED = re.compile(r"[\'\"\u2018\u2019\u201c\u201d][^\'\"\u2018\u2019\u201c\u201d]{1,60}"
-                    r"[\'\"\u2018\u2019\u201c\u201d]")
+# An episode title in quotes, of any of the shapes uploaders actually use. Straight double
+# quotes and matched curly pairs are unambiguous, but the single quote is also the apostrophe:
+# "Dad's Army 'The Deadly Attachment'" used to OPEN at the possessive and close at the real
+# opening quote, so half of the show's own name was stripped and the two apostrophe styles
+# parsed to two different shows. A single-quote match therefore needs a non-letter on the
+# OUTSIDE of both ends - both ends, not just the opening one, because an open-side-only guard
+# still lets the match CLOSE on the apostrophe inside a contraction like "Don't" and swallow
+# everything up to it. The curly-close guard does the same job for "Dad’s".
+QUOTED = re.compile(r"\"[^\"]{1,60}\""
+                    r"|(?<![A-Za-z])'[^\n]{1,60}?'(?![A-Za-z])"
+                    r"|\u2018[^\n]{1,60}?\u2019(?![A-Za-z])"
+                    r"|\u201c[^\u201c\u201d]{1,60}\u201d")
 
 # Words that are in every uploader's title and say nothing about which show it is. Without these
 # "QI Full Episode" and "QI XL Full Episode" become two different shows and neither gets ordered.
@@ -65,7 +82,10 @@ def parse(title):
                            (EP_THEN_BARE_LETTER, "es")):
         match = pattern.search(title)
         if match:
-            first, second = match.group(1), match.group(2)
+            # The groups that matched, in order. Every pattern produces exactly two, but
+            # EP_THEN_BARE_LETTER carries its letter in one of two alternative groups - see the
+            # pattern - so the pair cannot be read from fixed group numbers.
+            first, second = (g for g in match.groups() if g is not None)
             season, episode = (first, second) if order == "se" else (second, first)
             return show_name(title[:match.start()]), str(season).upper(), int(episode)
     match = BARE_EPISODE.search(title)

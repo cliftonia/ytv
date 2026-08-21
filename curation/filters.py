@@ -31,12 +31,23 @@ COMMENTARY = ("top ", "best ", "ranked", "tier list", "greatest", "need to watch
               "shorts compilation")
 
 
-# Languages that turn up on this dial. Matched only where the word names the language OF the
-# content, never where it merely describes the subject - see english_speech().
-FOREIGN = (r"hindi|urdu|tamil|telugu|bangla|bengali|punjabi|marathi|malayalam|kannada|"
-           r"indonesia|bahasa|espa[nñ]ol|latino|portugu[eê]s|brasil|fran[cç]ais|deutsch|"
-           r"t[uü]rk[cç]e|russian|filipino|tagalog|vietnam|thai|arabic|farsi|persian|"
-           r"mandarin|cantonese|korean|japanese|italiano|nederlands|polski")
+# Languages that turn up on this dial, split by whether the word can be trusted on its own.
+# Matched only where the word names the language OF the content, never where it merely describes
+# the subject - see english_speech().
+#
+# The UNAMBIGUOUS tier almost never labels anything but the language itself: an English title has
+# no reason to contain "Hindi" or "Deutsch" unless it is telling the viewer what they will hear.
+FOREIGN_UNAMBIGUOUS = (r"hindi|urdu|tamil|telugu|bangla|bengali|punjabi|marathi|malayalam|"
+                       r"kannada|indonesia|bahasa|espa[nñ]ol|latino|portugu[eê]s|brasil|"
+                       r"fran[cç]ais|deutsch|t[uü]rk[cç]e|italiano|nederlands|polski")
+
+# The AMBIGUOUS tier doubles as demonyms, and in an English title that is usually what it is
+# doing: "Korean War Documentary", "Thai Street Food" and "Russian history lecture" are English
+# programmes ABOUT Korea, Thailand and Russia, and a documentary channel is full of exactly
+# these. A word from this tier says nothing about the audio unless the title also names the
+# audio - see AUDIO_NOUN below.
+FOREIGN_AMBIGUOUS = (r"vietnam|thai|korean|japanese|russian|persian|farsi|arabic|mandarin|"
+                     r"cantonese|filipino|tagalog")
 
 # The language word standing next to something that says it IS the audio: a dub, a feed, a
 # commentary. "Hindi Dubbed" and "National Geographic Hindi |" are the content's language;
@@ -48,20 +59,43 @@ MEDIA_NOUN = (r"film|movie|serial|drama|episode|sermon|documentary|show|series|c
               r"dub|dubbed|sub|subs|subbed|subtitle[sd]?|audio|version|voice[- ]?over|"
               r"commentary|highlights|explained|summary|news|channel|tv")
 
-CONTENT_LANGUAGE = re.compile(
-    # The language, then a media noun within a few words: "Hindi Dubbed", "Tamil Christian Short
-    # Film", "Telugu Full Episode".
-    r"(?:\b(?:%s)\b[\w\s'&-]{0,24}?\b(?:%s)\b"
-    # Or the other way round: "Dubbed in Hindi", "Audio: Telugu".
-    r"|\b(?:%s)\b[\s|,:-]*(?:in\s+)?\b(?:%s)\b"
-    # Or the language ENDING a pipe-delimited segment, which is how a feed names itself:
-    # "| National Geographic Hindi |", "| ETV Telugu".
-    r"|(?:%s)\s*(?:\||$))" % (FOREIGN, MEDIA_NOUN, MEDIA_NOUN, FOREIGN, FOREIGN), re.I)
+# The narrower set an AMBIGUOUS language word needs before it convicts. "Documentary", "show"
+# and "news" are precisely the words that follow a subject - "Korean War Documentary", "Japanese
+# engineering documentary" - so within this tier they prove nothing; a movie, a drama, a dub or
+# a named language track is speech, and speech has a language.
+AUDIO_NOUN = (r"film|movie|drama|serial|natok|episode|dub|dubbed|sub|subs|subbed|"
+              r"subtitle[sd]?|audio|language|version|voice[- ]?over")
 
-# An explicit statement that this IS in English. Overrides everything below: a Japanese OVA
-# labelled "[Eng Dub]" is exactly what the Classic Anime channel wants, original title and all.
-ENGLISH = re.compile(r"\b(eng(?:lish)?[\s.-]*(?:dub|dubbed|sub|subbed|subtitle[sd]?|audio)"
-                     r"|english|\[eng\]|\(eng\)|eng\s*dub|multi[- ]?sub)\b", re.I)
+CONTENT_LANGUAGE = re.compile(
+    # An unambiguous language, then a media noun within a few words: "Hindi Dubbed", "Tamil
+    # Christian Short Film", "Telugu Full Episode".
+    r"(?:\b(?:%(unambiguous)s)\b[\w\s'&-]{0,24}?\b(?:%(media)s)\b"
+    # An ambiguous one needs the narrower audio nouns: "Thai drama" is a drama in Thai, while
+    # "Thai Street Food" and "Korean War Documentary" are subjects, not soundtracks.
+    r"|\b(?:%(ambiguous)s)\b[\w\s'&-]{0,24}?\b(?:%(audio)s)\b"
+    # Or the other way round: "Dubbed in Hindi", "Audio: Telugu".
+    r"|\b(?:%(media)s)\b[\s|,:-]*(?:in\s+)?\b(?:%(unambiguous)s)\b"
+    r"|\b(?:%(audio)s)\b[\s|,:-]*(?:in\s+)?\b(?:%(ambiguous)s)\b"
+    # Or the language ENDING a pipe-delimited segment, which is how a feed names itself:
+    # "| National Geographic Hindi |", "| ETV Telugu". The unambiguous tier only: a segment
+    # ending in "...Korean" or "...Japanese" is far more often naming a subject than a feed.
+    r"|(?:%(unambiguous)s)\s*(?:\||$))"
+    % {"unambiguous": FOREIGN_UNAMBIGUOUS, "ambiguous": FOREIGN_AMBIGUOUS,
+       "media": MEDIA_NOUN, "audio": AUDIO_NOUN}, re.I)
+
+# An explicit statement that the AUDIO is English. Wins outright, before anything else is even
+# consulted: a Japanese OVA labelled "[Eng Dub]" is exactly what the Classic Anime channel wants,
+# original title and all.
+ENGLISH_AUDIO = re.compile(
+    r"(?:\beng(?:lish)?[\s.-]*(?:dub(?:bed)?|audio|version|voice[- ]?over|commentary)\b"
+    r"|\bin\s+english\b|\benglish\s+language\b|[\[(]\s*eng(?:lish)?\s*[\])])", re.I)
+
+# English SUBTITLES are weaker evidence than English audio, and keeping them apart is the whole
+# point: "Full Movie Hindi Dubbed | English Subtitles" is a Hindi soundtrack with English text
+# under it, and a room listening to the television rather than reading it cannot follow that.
+# Subtitles only save a title that named no other language - see the ordering in english_speech.
+ENGLISH_SUBS = re.compile(
+    r"(?:\beng(?:lish)?[\s.-]*(?:sub(?:bed|s)?|subtitle[sd]?)\b|\bmulti[- ]?sub\b)", re.I)
 
 # How much of a title may be in another script before it stops being an English title. A few
 # characters are an original title in brackets or a stylistic flourish; a third of the line is
@@ -143,16 +177,23 @@ def english_speech(title):
     speech in it at all. Meanwhile "National Geographic Hindi" and "KBC के मंच पर पहुंची" genuinely
     are in another language.
 
-    So: an explicit English marker wins outright, then a language named as the audio loses, then
-    a title mostly written in another script loses.
+    So: a marker that the AUDIO is English wins outright, then a language named as the audio
+    loses, then English subtitles save whatever named no other language, then a title mostly
+    written in another script loses.
     """
     text = title or ""
     if not text:
         return False
-    if ENGLISH.search(text):
+    if ENGLISH_AUDIO.search(text):
         return True
     if CONTENT_LANGUAGE.search(text):
         return False
+    # Consulted AFTER the content language on purpose. "Hindi Dubbed | English Subtitles" has
+    # named its soundtrack, and the subtitles do not change what the room hears; but on a title
+    # that names no other language, "[English Subbed]" is the uploader saying an English speaker
+    # can follow it, which is the question being asked.
+    if ENGLISH_SUBS.search(text):
+        return True
     # Another language written in our alphabet, which no script check can catch.
     if latin_script_foreign(text):
         return False

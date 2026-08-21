@@ -99,6 +99,30 @@ class TestEnglishSpeech(unittest.TestCase):
         # A pipe is a segment boundary, so the language and the media noun are not related.
         self.assertTrue(filters.english_speech("Japanese Garden Design | Documentary"))
 
+    def test_a_language_word_naming_the_subject_is_kept(self):
+        # The demonym tier. In each of these the language word names what the programme is
+        # ABOUT, not what its soundtrack is in - a distinction the single-tier filter could not
+        # make, and these are the staple of every documentary channel on the dial.
+        for title in ("Korean War Documentary",
+                      "Thai Street Food",
+                      "Vietnam War in colour",
+                      "Japanese engineering documentary",
+                      "Russian history lecture",
+                      "Persian empire documentary"):
+            self.assertTrue(filters.english_speech(title), title)
+
+    def test_english_subtitles_do_not_save_a_foreign_soundtrack(self):
+        # Subtitles are consulted after the content language on purpose. The soundtrack is
+        # Hindi; the English is text under it, and a room listening to the television rather
+        # than reading it cannot follow the programme.
+        for title in ("Full Movie Hindi Dubbed | English Subtitles",
+                      "Hindi Dubbed Movie eng sub"):
+            self.assertFalse(filters.english_speech(title), title)
+
+    def test_english_subtitles_save_a_title_that_names_no_other_language(self):
+        self.assertTrue(filters.english_speech(
+            "Ghost Stories Episode 1 [English Subbed]"))
+
     def test_a_language_naming_the_audio_is_rejected(self):
         self.assertFalse(filters.english_speech("HARIMIYA LOVE STORY FULL SEASON 1 HINDI DUBBED"))
         self.assertFalse(filters.english_speech("Tamil Christian Short Film | Dowry Awareness"))

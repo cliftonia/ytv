@@ -39,7 +39,12 @@ TARGET = 100
 
 
 def refresh(path, target):
-    """Refill one channel. Returns (name, clip count)."""
+    """Refill one channel. Returns (name, clip count, kept).
+
+    `kept` is True only when the search came back empty and yesterday's clips were left in
+    place. One kept channel is a query having a bad night; most of a slice kept is yt-dlp
+    having one, and main() is the only place that can see the difference.
+    """
     conf = confs.load(path)
     station = conf["station_conf"]
     slug = confs.slug_for(path)
@@ -47,7 +52,7 @@ def refresh(path, target):
     query = station.get("search_query")
     if not query:
         print("  [skip] %s has no search_query" % name, flush=True)
-        return name, len(station.get("streams", []))
+        return name, len(station.get("streams", [])), False
 
     lo, hi = filters.window(slug)
     streams, seen, keys = [], set(), set()
@@ -75,15 +80,18 @@ def refresh(path, target):
 
     if not streams:
         # Writing an empty list would take the channel off the dial entirely. Leaving yesterday's
-        # content is strictly better than that, and the next rotation will try again.
+        # content is strictly better than that, and the next rotation will try again. Nothing is
+        # saved here, so `last_refreshed` deliberately does not advance: a channel that found
+        # nothing has not been refreshed, and stamping it would push it to the back of the
+        # rotation for a fortnight on the strength of a failed search.
         print("  %-26s search returned nothing, keeping what was there" % name, flush=True)
-        return name, len(station.get("streams", []))
+        return name, len(station.get("streams", [])), True
 
     station["streams"] = streams
     station["last_refreshed"] = int(time.time())
     confs.save(path, conf)
     print("  %-26s %3d clips" % (name, len(streams)), flush=True)
-    return name, len(streams)
+    return name, len(streams), False
 
 
 def main():
@@ -119,7 +127,8 @@ def main():
         for result in pool.map(lambda p: refresh(p, args.target), paths):
             results.append(result)
 
-    thin = ["%s(%d)" % (n, c) for n, c in results if c < args.target // 2]
+    thin = ["%s(%d)" % (n, c) for n, c, _ in results if c < args.target // 2]
+    kept = sum(1 for _, _, k in results if k)
     print("\nrefreshed %d channels" % len(results), flush=True)
     if thin:
         print("thin: %s" % ", ".join(thin), flush=True)
@@ -131,6 +140,17 @@ def main():
     if results and len(thin) > len(results) // 2:
         print("\nFAILED: %d of %d channels came back thin - almost certainly throttled"
               % (len(thin), len(results)), file=sys.stderr)
+        return 1
+
+    # The thin guard above cannot see the other failure shape. A channel whose search came back
+    # EMPTY keeps yesterday's clips, which is right for one channel and camouflage for a whole
+    # run: a night of total yt-dlp breakage returns every channel at yesterday's healthy count,
+    # no conf changes, no diff, green tick - while the dial quietly stops updating. Kept channels
+    # are the signal thinness cannot carry, and the threshold is the same: half the slice having
+    # a bad night is not a coincidence.
+    if results and kept > len(results) // 2:
+        print("\nFAILED: %d of %d channels found nothing and kept yesterday's clips - almost"
+              " certainly yt-dlp breakage" % (kept, len(results)), file=sys.stderr)
         return 1
     return 0
 

@@ -14,6 +14,7 @@ import glob
 import io
 import json
 import os
+import sys
 
 CONFS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "confs")
 
@@ -53,14 +54,32 @@ def save(path, conf):
     reads the diff: a refresh that replaced a channel's clips should show as a hundred changed
     lines, not as one unreadable line. channels.json is the opposite case and is written minified
     by build_lineup - two televisions fetch it over mobile data every time they start.
+
+    Written to a sibling temporary file first and moved into place, because a run can be killed
+    mid-write - a CI timeout, a full disk, a ctrl-C - and an in-place open(path, "w") truncates
+    the conf before the first byte of the new dump has arrived. A truncated conf then fails to
+    parse, sorts to the front of every rotation as "never refreshed", and breaks every nightly
+    from then on. os.replace is atomic on the same filesystem, so what is on disk is always
+    either the old conf or the new one, never a torn half of each.
     """
-    with io.open(path, "w", encoding="utf-8") as handle:
+    tmp = path + ".tmp"
+    with io.open(tmp, "w", encoding="utf-8") as handle:
         json.dump(conf, handle, indent=4, ensure_ascii=False)
+    os.replace(tmp, path)
 
 
 def last_refreshed(path):
-    """When this channel was last re-searched, as an epoch. Never refreshed sorts first."""
+    """When this channel was last re-searched, as an epoch. Never refreshed sorts first.
+
+    A conf that cannot be parsed also sorts first, but it says so: silently returning 0 made a
+    corrupted file look like a fresh channel patiently waiting its turn, when what it actually
+    needs is a human. It will then fail loudly when refresh() tries to load it, rather than
+    skewing the rotation with nobody the wiser. The warning goes to stderr so a green run's
+    stdout stays a clean report.
+    """
     try:
         return load(path)["station_conf"].get("last_refreshed", 0)
-    except Exception:
+    except Exception as exc:
+        print("warning: %s cannot be parsed (%s); treating it as never refreshed"
+              % (path, exc), file=sys.stderr)
         return 0
