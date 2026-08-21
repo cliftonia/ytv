@@ -27,15 +27,17 @@ class Updater(private val context: Context, private val repo: String) {
      * Ask the publisher what is available, and download it if it is newer.
      *
      * Returns true when a build is on disk and ready to install. Blocking: call it off the main
-     * thread. Every failure is silent by design - the publisher being unreachable is the normal
-     * state of a television in a car, and is not something to interrupt anyone about.
+     * thread. Download failures are logged, never surfaced - the publisher being unreachable is
+     * the normal state of a television in a car. The manifest fetch, though, THROWS: the caller
+     * has a "COULD NOT CHECK" branch for exactly this, and swallowing it here made an explicit
+     * CHECK FOR UPDATE on a dead network answer "UP TO DATE", which is a lie.
+     *
+     * Both reads carry timeouts, because the default is none at all: one stalled connection
+     * held [updateCheckRunning] forever, and a box that installs its own updates had quietly
+     * stopped doing so with nothing on screen or in the log to say why.
      */
     fun downloadIfNewer(installedVersion: Int): Boolean {
-        val release = try {
-            URL(UpdateCheck.latestReleaseUrl(repo)).readText()
-        } catch (e: Exception) {
-            return false
-        }
+        val release = fetch(UpdateCheck.latestReleaseUrl(repo))
         val published = UpdateCheck.parse(release)
         if (!UpdateCheck.isNewer(installedVersion, published) || published == null) return false
 
@@ -58,8 +60,15 @@ class Updater(private val context: Context, private val repo: String) {
             // television being switched off cannot leave a half-apk that the installer would
             // reject and the viewer would have to be told about.
             val partial = File(context.cacheDir, "ytv-update.part")
-            URL(published.apkUrl).openStream().use { input ->
-                partial.outputStream().use { input.copyTo(it) }
+            val connection = URL(published.apkUrl).openConnection() as java.net.HttpURLConnection
+            connection.connectTimeout = CONNECT_TIMEOUT_MILLIS
+            connection.readTimeout = READ_TIMEOUT_MILLIS
+            try {
+                connection.inputStream.use { input ->
+                    partial.outputStream().use { input.copyTo(it) }
+                }
+            } finally {
+                connection.disconnect()
             }
             if (target.exists()) target.delete()
             partial.renameTo(target)
@@ -94,5 +103,23 @@ class Updater(private val context: Context, private val repo: String) {
         } catch (e: Exception) {
             Log.w("fs42", "could not start the installer: $e")
         }
+    }
+
+    private fun fetch(url: String): String {
+        val connection = URL(url).openConnection() as java.net.HttpURLConnection
+        connection.connectTimeout = CONNECT_TIMEOUT_MILLIS
+        connection.readTimeout = READ_TIMEOUT_MILLIS
+        return try {
+            connection.inputStream.bufferedReader().use { it.readText() }
+        } finally {
+            connection.disconnect()
+        }
+    }
+
+    private companion object {
+        // The DialRepository values, for the same reason it has them: the default is to wait
+        // forever, and forever is what an idle hotspot delivers.
+        const val CONNECT_TIMEOUT_MILLIS = 10_000
+        const val READ_TIMEOUT_MILLIS = 20_000
     }
 }
