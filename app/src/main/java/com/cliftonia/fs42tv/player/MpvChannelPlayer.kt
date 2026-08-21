@@ -28,6 +28,15 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     companion object {
         /** Error code meaning "this player is finished" rather than "this clip failed". */
         const val ENGINE_DIED = "MPV_SHUTDOWN"
+
+        /**
+         * How long after a load to ask mpv what it thinks the subtitle is doing.
+         *
+         * Long enough that the clip is genuinely running and a cue is due - every clip on this
+         * dial joins partway through, so there is dialogue almost immediately - and short enough
+         * that it lands well before the average clip rolls over.
+         */
+        private const val SUBTITLE_PROBE_MILLIS = 8_000L
     }
 
 
@@ -87,6 +96,9 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
 
     init {
         mpv.initialize(context.filesDir.path, context.cacheDir.path)
+        // After initialize, because the base class writes its own vo over the property when the
+        // surface is created and this is the call that changes both.
+        mpv.useDirectVideoOutput()
         mpv.events = object : MpvView.Events {
             override fun onFileLoaded() {
                 if (released) return
@@ -99,15 +111,24 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                     // Added here, once the file is open, because a track added before there is
                     // anything to attach it to is discarded.
                     mpv.addSubtitle(caption)
-                    fun prop(name: String) =
-                        runCatching { MPVLib.getPropertyString(name) }.getOrNull()
-                    // Everything that decides whether a selected track is actually DRAWN. A
-                    // track can be loaded and current and still invisible, which is what has
-                    // been reported, and only mpv can say which of these is the reason.
-                    val state = "sid=%s vis=%s vo=%s scale=%s".format(
-                        prop("sid"), prop("sub-visibility"), prop("current-vo"), prop("sub-scale"))
-                    PlaybackDiagnostics.recordCaptions("MPV $state")
-                    Log.i("fs42", "mpv subtitle: $state tracks=${prop("track-list/count")}")
+                    val sid = runCatching { MPVLib.getPropertyString("sid") }.getOrNull()
+                    val count = runCatching { MPVLib.getPropertyString("track-list/count") }
+                        .getOrNull()
+                    // `current-vo`, because the option and the reality differ. MpvView asks for
+                    // `vo=mediacodec_embed`; this television answers `current-vo=gpu`, measured.
+                    // Every theory that started from the option rather than from this reading was
+                    // reasoning about a vo that is not running.
+                    val vo = runCatching { MPVLib.getPropertyString("current-vo") }.getOrNull()
+                    PlaybackDiagnostics.recordCaptions("MPV sid=$sid tracks=$count vo=$vo")
+                    Log.i("fs42", "mpv subtitle: sid=$sid tracks=$count current-vo=$vo")
+                    logSubtitleState()
+                    // Hidden, because the app draws the cues itself now - see CaptionLine - and
+                    // two renderers drawing the same track would stack two copies of every line.
+                    //
+                    // Do NOT read a later `sub-visibility=no` in the log as the cause of fault 2.
+                    // It is set here, deliberately, AFTER mpv has been asked what it thinks; the
+                    // measurement below was taken with it still `yes` and nothing on the panel.
+                    runCatching { MPVLib.setPropertyBoolean("sub-visibility", false) }
                 }
                 // mpv measures the audio/video offset itself and publishes it as `avsync`, in
                 // seconds. "The audio is delayed" was chased five times without anyone once
@@ -198,7 +219,20 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                     runCatching { MPVLib.getPropertyString(name) }.getOrNull()
                 val off = prop("avsync")
                 val delay = prop("audio-delay")
-                Log.w("fs42", "AVSYNC t=${atSeconds}s avsync=$off audio-delay=$delay " +
+                // Frame drops, alongside the sync numbers, because "4K drops frames like crazy" has two
+                            // completely different causes with different cures. `frame-drop-count` is the
+                            // DECODER failing to keep up; `vo-delayed-frame-count` is the output missing its
+                            // vsync deadline; and a `demuxer-cache-duration` near zero means neither - the
+                            // bytes simply are not arriving, which is a fetch problem and not a decode one.
+                            val drops = prop("frame-drop-count")
+                            val late = prop("vo-delayed-frame-count")
+                            val cache = prop("demuxer-cache-duration")
+                            val fps = prop("estimated-vf-fps")
+                            Log.w("fs42", "FRAMES drops=$drops late=$late cache=${cache}s " +
+                                "fps=$fps container=${prop("container-fps")} " +
+                                "res=${prop("video-params/w")}x${prop("video-params/h")} " +
+                                "codec=${prop("video-codec")} hwdec=${prop("hwdec-current")}")
+                            Log.w("fs42", "AVSYNC t=${atSeconds}s avsync=$off audio-delay=$delay " +
                     "vo=${prop("current-vo")} ao=${prop("current-ao")} " +
                     "vsync=${prop("video-sync")} fps=${prop("container-fps")} " +
                     "estimated=${prop("estimated-vf-fps")} " +
@@ -230,6 +264,64 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         this.requestedAtMillis = requestedAtMillis
         wantedCaption = load.subFile
         mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile)
+    }
+
+    /**
+     * Read mpv's own view of the subtitle once the clip is properly under way.
+     *
+     * Separates the two things `sid=1` cannot: whether mpv DECODED a cue, and whether it DREW
+     * one. `sub-text` is the text mpv believes is on screen at this instant and is populated by
+     * the subtitle decoder, independently of the renderer. A non-empty `sub-text` beside a
+     * screenshot with no caption on it means the track is fine and the drawing is not, which is
+     * the whole of fault 2 in one line.
+     *
+     * Delayed rather than read at file-load, because at load there is no cue yet - the earlier
+     * diagnostic read `sid` at a moment when `sub-text` was legitimately empty, which is
+     * precisely why it could not tell these two cases apart.
+     *
+     * What it returned on the TCL, channel 21, 21 Aug 2026, with a screenshot taken at the same
+     * moment showing NO caption anywhere on the panel:
+     *
+     *     sub-text=" \nJULIA." sub-visibility=yes sid=1 sub-pos=100.000000 sub-scale=1.000000
+     *     sub-ass-override=scale osd-width=1920 osd-height=1080   (current-vo=gpu)
+     *
+     * So the track downloaded, decoded, was selected, was visible, was positioned inside a
+     * full-size 1920x1080 OSD - and no pixel of it reached the display. Nothing about the
+     * subtitle is wrong; the drawing is. That rules out every off-screen theory at once:
+     * `sub-pos=100` with `osd-height=1080` cannot be overscanned off the bottom of a panel whose
+     * own banner is legible in the same screenshot.
+     *
+     * The explanation that fits is `hwdec=mediacodec` - the direct one, not `-copy`. MediaCodec
+     * presents decoded frames straight to the SurfaceView, so mpv's renderer never composites
+     * the picture that is actually shown and anything it draws on top goes nowhere. The one
+     * option that would test that is `hwdec=mediacodec-copy`, which MpvView records as a SIGSEGV
+     * in this television's Mali driver - so it is not a trade this dial can make, and drawing the
+     * cue in Compose instead is the only way it appears at all.
+     */
+    private fun logSubtitleState() {
+        main.postDelayed({
+            if (released) return@postDelayed
+            fun read(name: String) =
+                runCatching { MPVLib.getPropertyString(name) }.getOrNull()
+            Log.i("fs42", "mpv subtitle state: sub-text=${read("sub-text")?.take(60)} " +
+                "sub-visibility=${read("sub-visibility")} sid=${read("sid")} " +
+                "sub-pos=${read("sub-pos")} sub-scale=${read("sub-scale")} " +
+                "sub-ass-override=${read("sub-ass-override")} osd-width=${read("osd-width")} " +
+                "osd-height=${read("osd-height")}")
+        }, SUBTITLE_PROBE_MILLIS)
+    }
+
+    /**
+     * mpv's `time-pos`, which is seconds from the start of the file.
+     *
+     * Guarded by [released] and by runCatching for the same reason everything else here is: after
+     * `destroy` the native handle is null and libmpv's own accessors respond to that by calling
+     * `exit(1)`. This is polled several times a second by the caption overlay, so it is the most
+     * likely thing in the class to still be running when the engine is torn down.
+     */
+    override fun positionSeconds(): Double? {
+        if (released) return null
+        return runCatching { MPVLib.getPropertyString("time-pos")?.toDoubleOrNull() }.getOrNull()
     }
 
     override fun stop() {

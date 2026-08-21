@@ -225,7 +225,29 @@ class ChannelPlayer(
         // and defaults are the first thing a library changes.
         setKeepContentOnPlayerReset(false)
         setShutterBackgroundColor(android.graphics.Color.BLACK)
+        // PlayerView draws selected text tracks in its own SubtitleView, and the subtitle source
+        // built in Media3Sources is flagged SELECTION_FLAG_DEFAULT so it is selected without
+        // anyone asking. The app draws the cues itself now - see CaptionLine - because mpv on the
+        // other television will not draw them at all, and one caption drawn by the app on both
+        // devices beats two renderers with two different results on two different panels. Left
+        // visible this would put a second copy of every line under the app's own.
+        subtitleView?.visibility = android.view.View.GONE
         player = exo
+    }
+
+    /**
+     * ExoPlayer's position, which is seconds from the start of the file.
+     *
+     * The start offset was handed to `setMediaSource` rather than applied as a seek, so this is
+     * already measured from 00:00 of the clip even though the dial joined it partway through -
+     * the same origin a WebVTT timestamp uses.
+     *
+     * `C.TIME_UNSET` before anything is prepared, which must not be reported as position zero:
+     * that would show the opening caption over whatever is really on screen.
+     */
+    override fun positionSeconds(): Double? {
+        val millis = exo.currentPosition
+        return if (millis == C.TIME_UNSET) null else millis / 1000.0
     }
 
     override fun stop() = exo.stop()
