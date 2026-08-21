@@ -16,9 +16,9 @@ import org.junit.Test
 class AcceleratedResolverTest {
 
     private val resolved = ClipResolver.Resolved(
-        Progressive("https://v/from-device", "https://a/from-device"), expiresAtSeconds = 9_999)
+        Progressive("https://v/from-device", "https://a/from-device"), expiresAtSeconds = 9_999, tier = "hd")
     private val fromServer = ClipResolver.Resolved(
-        Progressive("https://v/from-server", "https://a/from-server"), expiresAtSeconds = 9_999)
+        Progressive("https://v/from-server", "https://a/from-server"), expiresAtSeconds = 9_999, tier = "hd")
 
     private class FakeDevice(val answer: ClipResolver.Resolved?) : ClipResolver {
         var calls = 0

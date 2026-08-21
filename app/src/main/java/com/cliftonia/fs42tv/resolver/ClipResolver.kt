@@ -21,7 +21,17 @@ interface ClipResolver {
      * carried here rather than folded into [Progressive] because [Progressive] is a `Playable`
      * that flows all the way to the player, and the player has no business knowing about it.
      */
-    data class Resolved(val playable: Progressive, val expiresAtSeconds: Long)
+    data class Resolved(
+        val playable: Progressive,
+        val expiresAtSeconds: Long,
+        /**
+         * Which rung of the ladder this url came from. Carried so the 403 handler can refuse
+         * the tier that actually played rather than recomputing "first rung not yet refused" -
+         * a guess that condemns the wrong rung whenever the clip lacked the top tier or a
+         * prefetch raced the refusal.
+         */
+        val tier: String,
+    )
 
     /**
      * Resolve [videoId], preferring the first rung of [ladder] that this clip actually offers.

@@ -13,6 +13,10 @@ class ResolvedCacheTest {
 
     private fun progressive(url: String) = Progressive(url, null)
 
+    /** The old put shape, kept so the boundary fixtures below read as they always did. */
+    private fun ResolvedCache.put(id: String, playable: Progressive, expiresAtSeconds: Long) =
+        put(id, ClipResolver.Resolved(playable, expiresAtSeconds, tier = "hd"))
+
     @Test
     fun `a stored entry comes back before it expires`() {
         val cache = ResolvedCache()
@@ -114,5 +118,41 @@ class ResolvedCacheTest {
         cache.put("id200", progressive("https://v/200"), expiresAtSeconds = newest)
         assertEquals("the hundred dead entries should be gone and the live ones untouched",
             101, cache.size)
+    }
+
+    @Test
+    fun `a resolve at a refused tier is not cached`() {
+        // The race this guards: a prefetch resolves a neighbour at the very tier a 403 is
+        // condemning. Cached, it replays the identical rejected url on the next tune - the exact
+        // loop refusing the tier exists to break.
+        val cache = ResolvedCache()
+        cache.put("abcdefghijk", ClipResolver.Resolved(progressive("https://v/1"), 10_000, "hd"),
+            refused = setOf(StreamResolver.refusedKey("abcdefghijk", "hd")))
+        assertNull(cache.get("abcdefghijk", nowSeconds = 1_000))
+    }
+
+    @Test
+    fun `the tier an entry was resolved at is remembered`() {
+        val cache = ResolvedCache()
+        cache.put("abcdefghijk", ClipResolver.Resolved(progressive("https://v/1"), 10_000, "sd"))
+        assertEquals("the 403 handler refuses the tier that actually played, which is this",
+            "sd", cache.tierOf("abcdefghijk"))
+        assertNull(cache.tierOf("zzzzzzzzzzz"))
+    }
+
+    @Test
+    fun `one entry with a garbage far-future expiry does not disarm the sweep`() {
+        // The sweep used to derive "now" from the INCOMING entry's expiry. One clip carrying an
+        // expiry years out then made every honest entry look ancient the moment it arrived - or,
+        // arriving first, kept the reference so high nothing ever survived. 200+ honest entries
+        // and one liar must leave the honest ones intact.
+        val cache = ResolvedCache()
+        cache.put("bogus000000", ClipResolver.Resolved(progressive("https://v/bogus"),
+            expiresAtSeconds = 4_000_000_000L, tier = "hd"))
+        for (i in 0 until 205) {
+            cache.put("real%08d".format(i),
+                ClipResolver.Resolved(progressive("https://v/$i"), 10_000, "hd"))
+        }
+        assertEquals("https://v/204", cache.get("real%08d".format(204), nowSeconds = 1_000)?.videoUrl)
     }
 }

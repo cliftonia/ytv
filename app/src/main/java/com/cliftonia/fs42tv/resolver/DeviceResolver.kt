@@ -78,7 +78,7 @@ class DeviceResolver(
             PlaybackDiagnostics.record(name, video.resolution, video.codec)
             Log.i("fs42", "resolved $videoId at $name (${video.resolution} ${video.codec}), " +
                 "expires in ${expires - nowSeconds}s")
-            return ClipResolver.Resolved(Progressive(videoUrl, audioUrl, caption), expires)
+            return ClipResolver.Resolved(Progressive(videoUrl, audioUrl, caption), expires, name)
         }
         Log.w("fs42", "no tier of $ladder available for $videoId")
         return null
@@ -154,25 +154,22 @@ class DeviceResolver(
     private fun bestAudio(streams: List<AudioStream>?): AudioStream? {
         val usable = streams.orEmpty().filter { it.deliveryMethod == DeliveryMethod.PROGRESSIVE_HTTP }
         if (usable.isEmpty()) return null
-        val chosen = AudioChoice.pick(
-            usable.map {
-                AudioChoice.Track(
-                    bitrate = it.averageBitrate,
-                    languageTag = runCatching { it.audioLocale?.language }.getOrNull(),
-                    kind = kindOf(it),
-                    container = it.format?.suffix,
-                )
-            }
-        ) ?: return null
-        // Matched back by position, because AudioChoice deliberately knows nothing about
-        // NewPipeExtractor's types and so cannot hand the stream itself back.
-        return usable.getOrNull(
-            usable.indexOfFirst {
-                it.averageBitrate == chosen.bitrate &&
-                    it.format?.suffix == chosen.container &&
-                    runCatching { it.audioLocale?.language }.getOrNull() == chosen.languageTag
-            }.takeIf { it >= 0 } ?: 0
-        )
+        val mapped = usable.map {
+            AudioChoice.Track(
+                bitrate = it.averageBitrate,
+                languageTag = runCatching { it.audioLocale?.language }.getOrNull(),
+                kind = kindOf(it),
+                container = it.format?.suffix,
+            )
+        }
+        val chosen = AudioChoice.pick(mapped) ?: return null
+        // Matched back by POSITION in the mapped list, not by re-comparing attributes:
+        // AudioChoice deliberately knows nothing about NewPipeExtractor's types, and an
+        // attribute match that omits the kind can hand back a DESCRIPTIVE track sharing the
+        // winner's bitrate, language and container - the exact track AudioChoice refused.
+        // indexOf compares every field including the kind, and the winner came out of this
+        // very list, so the index always exists.
+        return usable[mapped.indexOf(chosen)]
     }
 
     private fun kindOf(stream: AudioStream): AudioChoice.Kind = runCatching {

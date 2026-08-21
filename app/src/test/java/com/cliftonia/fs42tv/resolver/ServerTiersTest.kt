@@ -105,4 +105,23 @@ class ServerTiersTest {
         assertEquals("https://v/hd", got?.playable?.videoUrl)
         assertNull(got?.playable?.captionUrl)
     }
+
+    @Test
+    fun `a json null is an absent value, not the string null`() {
+        // json.dumps renders None as a bare null and the field regex captures the word. Flowing
+        // onwards it becomes the literal url "null" - handed to the player, or to sub-add.
+        val nullCaption = """
+            {"caption":null,
+             "hd":{"video":"https://v/hd","audio":"https://a/1","expires":9999}}
+        """.trimIndent()
+        val got = ServerTiers.parse(nullCaption, listOf("hd"), emptySet(), "abc12345678", 100)
+        assertEquals("https://v/hd", got?.playable?.videoUrl)
+        assertNull(got?.playable?.captionUrl)
+    }
+
+    @Test
+    fun `the tier the url came from rides along`() {
+        val got = ServerTiers.parse(body, listOf("hd"), emptySet(), "abc12345678", 100)
+        assertEquals("the 403 handler refuses the rung that actually played", "hd", got?.tier)
+    }
 }
