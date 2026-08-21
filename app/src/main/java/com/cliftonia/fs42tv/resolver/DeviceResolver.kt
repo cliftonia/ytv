@@ -31,7 +31,6 @@ class DeviceResolver(
      * running, and a value captured at construction would not take effect until the next launch.
      * Consulted per resolve, which costs nothing: the tracks are already in the extraction.
      */
-    private val captionsWanted: () -> Boolean = { false },
     /**
      * What this device can decode. Injected so the policy can be tested without an Android
      * runtime, and defaulted so nothing else has to know it exists.
@@ -69,12 +68,13 @@ class DeviceResolver(
             val videoUrl = video.content ?: continue
             val audioUrl = audio.content ?: continue
             val expires = expiryOf(videoUrl, audioUrl, nowSeconds)
-            val caption = if (captionsWanted()) captionFor(info) else null
-            PlaybackDiagnostics.recordCaptions(when {
-                !captionsWanted() -> "OFF"
-                caption == null -> "NONE ON THIS CLIP (device)"
-                else -> "FOUND (device)"
-            })
+            // Unconditional, and free: this reads the track list already fetched with the
+            // streams. Gating it on the toggle is what stopped the toggle working - see the
+            // note in ServerTiers.
+            val caption = captionFor(info)
+            PlaybackDiagnostics.recordCaptions(
+                if (caption == null) "NONE ON THIS CLIP (device)" else "FOUND (device)"
+            )
             PlaybackDiagnostics.record(name, video.resolution, video.codec)
             Log.i("fs42", "resolved $videoId at $name (${video.resolution} ${video.codec}), " +
                 "expires in ${expires - nowSeconds}s")

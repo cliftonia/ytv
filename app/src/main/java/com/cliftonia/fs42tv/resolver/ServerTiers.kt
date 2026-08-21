@@ -34,7 +34,6 @@ object ServerTiers {
         refused: Set<String>,
         videoId: String,
         nowSeconds: Long,
-        wantCaptions: Boolean = false,
     ): ClipResolver.Resolved? {
         // Read once, outside the ladder loop: the caption belongs to the video, not to a
         // rendition of it.
@@ -43,12 +42,16 @@ object ServerTiers {
         // answers every resolve when it is reachable, so the on-device caption picking never ran
         // and the fast path had nowhere to carry a track - captions could only ever have worked
         // in the car, where the server is out of reach.
-        val caption = if (wantCaptions) field(body, "caption") else null
-        PlaybackDiagnostics.recordCaptions(when {
-            !wantCaptions -> "OFF"
-            caption == null -> "NONE ON THIS CLIP (server)"
-            else -> "FOUND (server)"
-        })
+        //
+        // Read whether or not the viewer wants captions, because reading it is free - the server
+        // sends the field regardless and this only picks it out of a body already in hand. It
+        // used to be conditional, which made the TOGGLE the thing that could not work: the clip
+        // on screen was resolved with captions off, so it carried no track, and turning them on
+        // could do nothing until the viewer left the channel and came back.
+        val caption = field(body, "caption")
+        PlaybackDiagnostics.recordCaptions(
+            if (caption == null) "NONE ON THIS CLIP (server)" else "FOUND (server)"
+        )
         for (name in ladder) {
             // A rung the CDN already refused this session will be refused again, whoever resolved
             // it. The server has no idea which urls this particular television has been turned

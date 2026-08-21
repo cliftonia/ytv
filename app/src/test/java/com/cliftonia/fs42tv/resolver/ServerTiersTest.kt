@@ -77,28 +77,31 @@ class ServerTiersTest {
     """.trimIndent()
 
     @Test
-    fun `the caption is read when captions are wanted`() {
+    fun `the caption url is carried through`() {
         // This field is why captions did nothing on the television at home: the accelerator
         // answers every resolve when reachable, so the on-device caption picking never ran and
         // the fast path had nowhere to carry a track.
-        val got = ServerTiers.parse(withCaption, listOf("hd"), emptySet(), "abc12345678", 100,
-                                    wantCaptions = true)
+        val got = ServerTiers.parse(withCaption, listOf("hd"), emptySet(), "abc12345678", 100)
         assertEquals("https://www.youtube.com/api/timedtext?v=abc&fmt=vtt",
                      got?.playable?.captionUrl)
     }
 
     @Test
-    fun `no caption is attached when the viewer has them off`() {
-        val got = ServerTiers.parse(withCaption, listOf("hd"), emptySet(), "abc12345678", 100,
-                                    wantCaptions = false)
-        assertNull(got?.playable?.captionUrl)
+    fun `the track is carried even though the viewer may have captions off`() {
+        // The second half of the same fault, and the reason this is not conditional on the
+        // toggle. Reading the field is free - it is already in the body - and a resolve that
+        // dropped it left the clip on screen with no track at all, so turning captions ON could
+        // not do anything until the viewer left the channel and came back. Whether to DRAW them
+        // is the toggle's business; whether the url is available is not.
+        val got = ServerTiers.parse(withCaption, listOf("hd"), emptySet(), "abc12345678", 100)
+        assertEquals("https://www.youtube.com/api/timedtext?v=abc&fmt=vtt",
+                     got?.playable?.captionUrl)
     }
 
     @Test
     fun `a response with no caption is not a failure`() {
         // Most clips have no English track, and that must play normally rather than be refused.
-        val got = ServerTiers.parse(body, listOf("hd"), emptySet(), "abc12345678", 100,
-                                    wantCaptions = true)
+        val got = ServerTiers.parse(body, listOf("hd"), emptySet(), "abc12345678", 100)
         assertEquals("https://v/hd", got?.playable?.videoUrl)
         assertNull(got?.playable?.captionUrl)
     }
