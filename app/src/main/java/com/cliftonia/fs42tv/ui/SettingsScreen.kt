@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -74,7 +75,16 @@ fun SettingsScreen(rows: List<SettingRow>, onDismiss: () -> Unit) {
     var selected by remember { mutableStateOf(selectable.firstOrNull() ?: 0) }
     val focusRequester = remember { FocusRequester() }
     val listState = rememberLazyListState()
-    LaunchedEffect(Unit) { focusRequester.requestFocus() }
+    // Re-requested whenever focus is lost, not merely once on open.
+    //
+    // Requesting it once was enough until the caption overlay arrived: it updates its own state
+    // ten times a second, and something in that recomposition takes focus away from this screen.
+    // The symptom is that the highlight vanishes and the remote stops working entirely, which
+    // reads as the settings screen being broken rather than as a focus problem.
+    var hasFocus by remember { mutableStateOf(false) }
+    LaunchedEffect(hasFocus) {
+        if (!hasFocus) focusRequester.requestFocus()
+    }
 
     // Keep the highlighted row on screen as it moves past the bottom, which is the whole point of
     // the change: the rows below the fold were unreachable rather than merely out of sight.
@@ -86,6 +96,7 @@ fun SettingsScreen(rows: List<SettingRow>, onDismiss: () -> Unit) {
                 .fillMaxSize()
                 .background(PickerBackground)
                 .focusRequester(focusRequester)
+                .onFocusChanged { hasFocus = it.isFocused }
                 .focusable()
                 .onKeyEvent { event ->
                     if (event.nativeKeyEvent.action != android.view.KeyEvent.ACTION_DOWN) {

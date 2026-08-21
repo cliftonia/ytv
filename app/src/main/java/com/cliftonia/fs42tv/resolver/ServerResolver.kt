@@ -28,7 +28,6 @@ class ServerResolver(
      * The same lambda [DeviceResolver] takes, for the same reason: the viewer can change it while
      * the app is running. Without it here, captions worked only when this server was unreachable.
      */
-    private val captionsWanted: () -> Boolean = { false },
     private val fetch: (String, Int) -> String,
 ) : ClipResolver {
 
@@ -70,7 +69,7 @@ class ServerResolver(
             healthyUntil = 0
             return null
         }
-        return ServerTiers.parse(body, ladder, refused, videoId, nowSeconds, captionsWanted())
+        return ServerTiers.parse(body, ladder, refused, videoId, nowSeconds)
     }
 
     private companion object {

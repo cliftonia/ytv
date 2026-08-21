@@ -35,12 +35,14 @@ import com.cliftonia.fs42tv.resolver.ResolvedCache
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.TierLadder
 import com.cliftonia.fs42tv.resolver.Unplayable
+import com.cliftonia.fs42tv.resolver.VttCues
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.DialRepository
 import com.cliftonia.fs42tv.sync.UrlCache
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.Tuned
 import com.cliftonia.fs42tv.tune.Tuner
+import com.cliftonia.fs42tv.ui.CaptionLine
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import com.cliftonia.fs42tv.ui.ChannelOsd
 import com.cliftonia.fs42tv.ui.GuideRows
@@ -100,6 +102,15 @@ private const val QUALITY_KEY = "quality"
 
 /** Whether to show English subtitles when a clip offers them. */
 private const val CAPTIONS_KEY = "captions"
+
+/**
+ * How long to wait for a subtitle file before giving up on it.
+ *
+ * Generous, because nothing is waiting on it: the picture is already up by the time this runs, so
+ * a slow track costs a late caption rather than a late channel. Bounded all the same - a
+ * connection that never answers would otherwise hold the caption thread for the whole session.
+ */
+private const val CAPTION_TIMEOUT_MILLIS = 10_000
 
 /** Remembered frame pacing mode for mpv; see FrameCadence.SYNC_MODES. */
 private const val VIDEO_SYNC_KEY = "videosync"
@@ -243,6 +254,15 @@ class MainActivity : ComponentActivity() {
      */
     @Volatile private var captionsOn: Boolean = false
 
+    /**
+     * The cues of the clip currently playing, as the overlay draws them.
+     *
+     * The app parses and draws subtitles itself rather than handing the track to the player -
+     * see [com.cliftonia.fs42tv.ui.CaptionLine] for why. Written only on the UI thread: cleared
+     * where the clip starts, filled by [loadCaptions] once the file has come down.
+     */
+    private val captionCues = mutableStateOf<List<VttCues.Cue>>(emptyList())
+
     private val standByReason = mutableStateOf("")
 
     // True from choosing a channel until its first frame arrives, so the previous channel is not
@@ -318,6 +338,17 @@ class MainActivity : ComponentActivity() {
      * slower rather than faster - the exact opposite of why this exists.
      */
     private val prefetchExecutor: ExecutorService = Executors.newSingleThreadExecutor()
+
+    /**
+     * A third thread, for downloading the subtitle file of the clip that just started.
+     *
+     * Its own thread for the same reason [prefetchExecutor] has one, in both directions. Putting
+     * this on [executor] would add a round trip to googlevideo in front of the next channel
+     * change, and the resolve already costs 2.4s on device; putting it on [prefetchExecutor]
+     * would queue it behind two speculative resolves, so the captions for the programme actually
+     * being watched would arrive after the neighbours nobody has asked for.
+     */
+    private val captionExecutor: ExecutorService = Executors.newSingleThreadExecutor()
 
     // Bumped on every keypress. A tune captures the current value when queued and abandons
     // itself if the value has since moved on - that is how a burst of presses on the dial
@@ -420,7 +451,7 @@ class MainActivity : ComponentActivity() {
 
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         resolver = AcceleratedResolver(
-            server = ServerResolver(RESOLVE_SERVER, captionsWanted = { captionsOn }) { url, timeout ->
+            server = ServerResolver(RESOLVE_SERVER) { url, timeout ->
                 (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
                     connectTimeout = timeout
                     readTimeout = timeout
@@ -431,9 +462,7 @@ class MainActivity : ComponentActivity() {
                     }
                 }
             },
-            // Read per resolve rather than captured, so turning captions on in settings takes
-            // effect on the next channel change instead of the next launch.
-            device = DeviceResolver(captionsWanted = { captionsOn }),
+            device = DeviceResolver(),
         )
 
         // Which engine plays the dial, and why it is not simply "the newer one".
@@ -476,6 +505,15 @@ class MainActivity : ComponentActivity() {
                 Box(modifier = Modifier.fillMaxSize()) {
                     // Beneath the OSD, so the banner stays readable through the change.
                     TuningBlank(tuning.value)
+                    // Above the blank so it is not drawn over black between channels, and below
+                    // everything else so a banner, a card or the guide always wins the bottom of
+                    // the screen. Hidden whenever something is up in front of the programme:
+                    // subtitles for a channel nobody is currently looking at are noise.
+                    CaptionLine(
+                        cues = captionCues.value,
+                        positionSeconds = { player?.positionSeconds() },
+                        visible = !tuning.value && !pickerVisible.value && !settingsVisible.value,
+                    )
                     UpdatePrompt(updateReady.value)
                     ChannelOsd(
                         channelLine = bannerChannelLine.value,
@@ -1148,6 +1186,11 @@ class MainActivity : ComponentActivity() {
                 }
                 if (!destroyed) {
                     player?.play(playable, tuned.offsetSeconds, requestedAtMillis)
+                    // Cleared on the same thread that starts the clip, so the outgoing
+                    // programme's dialogue cannot be left sitting over the incoming one for as
+                    // long as it takes the new track to arrive.
+                    captionCues.value = emptyList()
+                    if (captionsOn) loadCaptions(playable, requestGeneration)
 
                     // Only a genuine success touches the banner, and it reads the current onAir
                     // rather than this tune's outcome directly - a failed tune leaves onAir on
@@ -1163,6 +1206,80 @@ class MainActivity : ComponentActivity() {
                         bannerGeneration.value += 1
                     }
                 }
+            }
+        }
+    }
+
+    /**
+     * Fetch and parse the subtitle track of the clip that has just started, if it has one.
+     *
+     * The URL came out of the same extraction as the streams, so nothing is resolved again here -
+     * this is one GET of a few tens of kilobytes. It runs after the player has been handed the
+     * clip rather than before, because a picture with no captions yet is a far better second than
+     * a caption with no picture yet.
+     *
+     * [requestGeneration] is re-checked after the download for the same reason every other stage
+     * of a tune checks it: this is the slowest thing in the sequence, and a viewer surfing past a
+     * channel would otherwise get its subtitles pasted over whatever they landed on.
+     *
+     * Failures are swallowed. Captions are a courtesy, and a clip that plays with none is a far
+     * better outcome than a stand-by card because a subtitle file would not download.
+     */
+    /**
+     * Find and draw a caption track for whatever is playing right now.
+     *
+     * Only for the toggle. A tune already loads captions as part of resolving, and this exists
+     * because the clip on screen was resolved before the viewer asked for them - re-resolving is
+     * a couple of seconds on the caption thread and costs the picture nothing, since it is only
+     * the subtitle url that is wanted.
+     */
+    private fun loadCaptionsForCurrentClip() {
+        val id = onAir?.stream?.id ?: run {
+            Log.i("fs42", "captions: nothing on air to caption")
+            return
+        }
+        val playable = resolvedCache.get(id, nowSeconds()) ?: run {
+            // Only reachable if the clip's urls expired while it was still playing, which the
+            // tune path handles by re-resolving anyway.
+            Log.i("fs42", "captions: $id is not in the resolved cache")
+            PlaybackDiagnostics.recordCaptions("NOT CACHED")
+            return
+        }
+        loadCaptions(playable, generation.get())
+    }
+
+    private fun loadCaptions(playable: Playable, requestGeneration: Int) {
+        val url = (playable as? Progressive)?.captionUrl ?: run {
+            // Said out loud. A silent return here is indistinguishable from a broken toggle, and
+            // that ambiguity is most of why this took so many attempts to find.
+            Log.i("fs42", "captions: this clip offers no english track")
+            return
+        }
+        captionExecutor.execute {
+            val cues = runCatching {
+                val body = (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
+                    connectTimeout = CAPTION_TIMEOUT_MILLIS
+                    readTimeout = CAPTION_TIMEOUT_MILLIS
+                    try {
+                        inputStream.bufferedReader().use { it.readText() }
+                    } finally {
+                        disconnect()
+                    }
+                }
+                VttCues.parse(body)
+            }.getOrElse {
+                Log.w("fs42", "captions: could not fetch the track: $it")
+                PlaybackDiagnostics.recordCaptions("FETCH FAILED: $it")
+                return@execute
+            }
+            // Said out loud because "captions do not work" has been diagnosed wrongly several
+            // times over, and the number of cues separates a track that arrived and had nothing
+            // in it from one that never arrived at all.
+            Log.i("fs42", "captions: ${cues.size} cues parsed")
+            PlaybackDiagnostics.recordCaptions("DRAWN: ${cues.size} cues")
+            runOnUiThread {
+                if (destroyed || requestGeneration != generation.get()) return@runOnUiThread
+                captionCues.value = cues
             }
         }
     }
@@ -1354,7 +1471,13 @@ class MainActivity : ComponentActivity() {
                 action = {
                     captionsOn = !captionsOn
                     prefs.edit().putBoolean(CAPTIONS_KEY, captionsOn).apply()
-                    resolvedCache.clear()
+                    // Act on the clip already playing, rather than only the next one.
+                    //
+                    // Every resolve now carries its caption url whether or not captions are
+                    // on, so the clip already playing has its track waiting in the cache and
+                    // this is a fetch of the track alone - no re-resolve, and nothing that could
+                    // be lost to a generation change on the way back.
+                    if (captionsOn) loadCaptionsForCurrentClip() else captionCues.value = emptyList()
                     settingsRows.value = buildSettingsRows()
                     Log.i("fs42", "captions ${if (captionsOn) "on" else "off"}")
                 },
@@ -1593,6 +1716,7 @@ class MainActivity : ComponentActivity() {
         recoveryHandler.removeCallbacksAndMessages(null)
         executor.shutdownNow()
         prefetchExecutor.shutdownNow()
+        captionExecutor.shutdownNow()
         // Both are null'd as well as released, so a tune that outlived the activity finds
         // nothing to touch rather than a released player.
         musicPlayer?.release()
