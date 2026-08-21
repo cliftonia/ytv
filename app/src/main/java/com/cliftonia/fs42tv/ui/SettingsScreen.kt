@@ -6,6 +6,10 @@ import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -58,10 +62,23 @@ data class SettingRow(
 fun SettingsScreen(rows: List<SettingRow>, onDismiss: () -> Unit) {
     BackHandler(onBack = onDismiss)
 
-    val actionable = remember(rows) { rows.indices.filter { rows[it].action != null } }
-    var selected by remember { mutableStateOf(actionable.firstOrNull() ?: 0) }
+    // Every row except a separator, NOT just the ones OK can act on.
+    //
+    // This used to visit only actionable rows, and since the list scrolls to follow the
+    // highlight, the read-only rows below them could never be reached - the diagnostics existed
+    // and were unreachable, which is worse than a highlight that does nothing when pressed. Every
+    // television settings screen lets you move onto a reading; none of them hide it.
+    val selectable = remember(rows) {
+        rows.indices.filter { !rows[it].label.startsWith("---") }
+    }
+    var selected by remember { mutableStateOf(selectable.firstOrNull() ?: 0) }
     val focusRequester = remember { FocusRequester() }
+    val listState = rememberLazyListState()
     LaunchedEffect(Unit) { focusRequester.requestFocus() }
+
+    // Keep the highlighted row on screen as it moves past the bottom, which is the whole point of
+    // the change: the rows below the fold were unreachable rather than merely out of sight.
+    LaunchedEffect(selected) { listState.animateScrollToItem(selected) }
 
     MaterialTheme {
         Box(
@@ -79,10 +96,10 @@ fun SettingsScreen(rows: List<SettingRow>, onDismiss: () -> Unit) {
                         // this the highlight lands on a version number and OK does nothing, which
                         // reads as a broken button rather than as a deliberate non-control.
                         android.view.KeyEvent.KEYCODE_DPAD_DOWN -> {
-                            selected = nextActionable(actionable, selected, forward = true); true
+                            selected = nextSelectable(selectable, selected, forward = true); true
                         }
                         android.view.KeyEvent.KEYCODE_DPAD_UP -> {
-                            selected = nextActionable(actionable, selected, forward = false); true
+                            selected = nextSelectable(selectable, selected, forward = false); true
                         }
                         android.view.KeyEvent.KEYCODE_DPAD_CENTER,
                         android.view.KeyEvent.KEYCODE_ENTER -> {
@@ -99,32 +116,36 @@ fun SettingsScreen(rows: List<SettingRow>, onDismiss: () -> Unit) {
             contentAlignment = Alignment.Center,
         ) {
             Column(
-                modifier = Modifier.fillMaxWidth(0.7f).padding(32.dp),
+                modifier = Modifier.fillMaxWidth(0.7f).fillMaxHeight().padding(32.dp),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
                 OsdText(text = "SETTINGS", fontSize = 27.5.sp)
-                Box(modifier = Modifier.padding(top = 16.dp)) {
-                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                        rows.forEachIndexed { index, row ->
-                            SettingsRowView(row, focused = index == selected)
-                        }
+                // SCROLLS. This was a plain Column, and as diagnostic rows were added the
+                // controls at the bottom - the captions toggle and the update check - simply
+                // stopped being on the screen. Nothing indicated that; they were gone, and a
+                // control you cannot see is a control that does not exist.
+                LazyColumn(
+                    state = listState,
+                    modifier = Modifier.weight(1f).padding(top = 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
+                ) {
+                    itemsIndexed(rows) { index, row ->
+                        SettingsRowView(row, focused = index == selected)
                     }
                 }
-                Box(modifier = Modifier.padding(top = 24.dp)) {
-                    OsdText(text = "OK TO CHANGE - BACK TO RETURN", fontSize = 11.sp)
-                }
+                OsdText(text = "OK TO CHANGE - BACK TO RETURN", fontSize = 11.sp)
             }
         }
     }
 }
 
-/** The next row that OK can do something with, wrapping at both ends. */
-internal fun nextActionable(actionable: List<Int>, current: Int, forward: Boolean): Int {
-    if (actionable.isEmpty()) return current
-    val position = actionable.indexOf(current)
-    if (position < 0) return actionable.first()
+/** The next row the highlight may rest on, wrapping at both ends. Separators are stepped over. */
+internal fun nextSelectable(selectable: List<Int>, current: Int, forward: Boolean): Int {
+    if (selectable.isEmpty()) return current
+    val position = selectable.indexOf(current)
+    if (position < 0) return selectable.first()
     val step = if (forward) 1 else -1
-    return actionable[(position + step + actionable.size) % actionable.size]
+    return selectable[(position + step + selectable.size) % selectable.size]
 }
 
 @Composable
