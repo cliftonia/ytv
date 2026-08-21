@@ -5,6 +5,7 @@ The rotation cursor lives in here because it is a property of a conf, not of the
 whole nightly conveyor is `sorted(paths, key=last_refreshed)[:n]`, and the one bug that mattered
 was in the key.
 """
+import contextlib
 import io
 import json
 import os
@@ -50,12 +51,21 @@ class TestRotation(unittest.TestCase):
         recent = self.write("recent", stamp=9000)
         self.assertEqual([never, recent], sorted([recent, never], key=confs.last_refreshed))
 
-    def test_an_unreadable_conf_sorts_first_rather_than_raising(self):
-        # It will then fail loudly in refresh() instead of silently skewing the rotation.
+    def test_an_unreadable_conf_sorts_first_and_says_so(self):
+        # A truncated conf - the leftovers of a save killed mid-write, before saves went through
+        # a temporary file - must not raise here, because raising in a sort key takes the whole
+        # rotation down. But it must not be silent either: quietly returning 0 made a corrupted
+        # file look like a fresh channel waiting its turn, when it needs a human. It sorts first
+        # and names itself on stderr, then fails loudly in refresh() where someone will see it.
         path = os.path.join(self.dir, "ytch_broken.json")
         with io.open(path, "w") as handle:
             handle.write("{ not json")
-        self.assertEqual(0, confs.last_refreshed(path))
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            stamp = confs.last_refreshed(path)
+        self.assertEqual(0, stamp)
+        self.assertIn("ytch_broken.json", err.getvalue())
+        self.assertIn("warning", err.getvalue())
 
 
 class TestPaths(unittest.TestCase):
@@ -116,6 +126,14 @@ class TestSave(unittest.TestCase):
         conf = {"station_conf": {"network_name": "X", "streams": [{"url": "u", "duration": 1}]}}
         confs.save(path, conf)
         self.assertEqual(conf, confs.load(path))
+
+    def test_a_save_leaves_no_temporary_file_behind(self):
+        # The save goes through a sibling .tmp file so a killed process can only ever leave the
+        # OLD conf in place, never a truncated one. The .tmp must then be moved, not copied and
+        # forgotten - a directory slowly filling with stale temporaries would be its own bug.
+        path = os.path.join(self.dir, "ytch_x.json")
+        confs.save(path, {"station_conf": {"network_name": "X"}})
+        self.assertEqual(["ytch_x.json"], sorted(os.listdir(self.dir)))
 
 
 if __name__ == "__main__":

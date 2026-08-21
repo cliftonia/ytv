@@ -70,6 +70,39 @@ class TestParse(unittest.TestCase):
         self.assertEqual(5, episode)
         self.assertEqual("qi", show)
 
+    def test_an_english_word_is_not_a_series_letter(self):
+        # "A" opens the episode's own title, and reading it as a series letter filed the episode
+        # under season A - ahead of every numbered season, in a show that has none.
+        show, season, episode = sequence.parse("Perry Mason Ep 5 A Deadly Verdict")
+        self.assertEqual("1", season)
+        self.assertEqual(5, episode)
+        self.assertIn("perry", show)
+
+    def test_the_comma_form_of_an_episode_title_is_not_a_series_letter(self):
+        # "I" is the other letter that is also a word, and the comma form is how Bewitched
+        # uploaders write it. The word after the comma is what gives the game away.
+        _, season, episode = sequence.parse("Bewitched Ep 3, I, Darrin Take This Witch")
+        self.assertEqual("1", season)
+        self.assertEqual(3, episode)
+
+    def test_a_genuine_trailing_bare_letter_still_reads_as_the_series(self):
+        # QI really does have a series A, and a title that ENDS on the bare letter has no
+        # following word to mistake it for - so A and I are only refused when one follows.
+        _, season, episode = sequence.parse("QI FULL EPISODE! 'Fire' Episode 5 A")
+        self.assertEqual("A", season)
+        self.assertEqual(5, episode)
+
+    def test_a_possessive_apostrophe_is_not_an_opening_quote(self):
+        # Uploaders use straight and curly apostrophes interchangeably, and the straight one is
+        # also the single quote. Reading the possessive as an opening quote stripped half of the
+        # show's own name, so the two apostrophe styles landed in two different show buckets and
+        # neither run was long enough to sort.
+        straight = sequence.parse("Dad's Army 'The Deadly Attachment' Episode 1")
+        curly = sequence.parse("Dad\u2019s Army \u2018The Deadly Attachment\u2019 Episode 1")
+        self.assertEqual(straight[0], curly[0])
+        self.assertIn("army", straight[0])
+        self.assertEqual(1, straight[2])
+
     def test_a_bare_letter_sorts_with_its_own_series(self):
         self.assertLess(sequence.sort_key("D", 1), sequence.sort_key("D", 5))
         self.assertLess(sequence.sort_key("D", 5), sequence.sort_key("E", 1))
