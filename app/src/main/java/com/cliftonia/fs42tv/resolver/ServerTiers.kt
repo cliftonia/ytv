@@ -64,11 +64,18 @@ object ServerTiers {
             // The same margin the device applies to its own resolves, so a url is retired at the
             // same moment whichever path produced it.
             if (expires - SAFETY_MARGIN_SECONDS <= nowSeconds) continue
-            return ClipResolver.Resolved(Progressive(video, audio, caption), expires)
+            return ClipResolver.Resolved(Progressive(video, audio, caption), expires, name)
         }
         return null
     }
 
-    private fun field(block: String, name: String): String? =
+    private fun field(block: String, name: String): String? {
+        // json.dumps renders None as a bare null, and the character class happily captures the
+        // word - which would flow onwards as the literal url "null". takeUnless keeps the
+        // hand-rolled parser honest about absent values without growing into a JSON parser.
+        return fieldRaw(block, name)?.takeUnless { it == "null" }
+    }
+
+    private fun fieldRaw(block: String, name: String): String? =
         Regex("\"$name\"\\s*:\\s*\"?([^\",}]+)\"?").find(block)?.groupValues?.get(1)
 }

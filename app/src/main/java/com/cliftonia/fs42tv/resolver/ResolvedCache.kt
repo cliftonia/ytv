@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap
  */
 class ResolvedCache {
 
-    private data class Entry(val playable: Progressive, val expiresAtSeconds: Long)
+    private data class Entry(val playable: Progressive, val expiresAtSeconds: Long, val tier: String)
 
     private val entries = ConcurrentHashMap<String, Entry>()
 
@@ -33,10 +33,48 @@ class ResolvedCache {
         return entry.playable
     }
 
-    fun put(videoId: String, playable: Progressive, expiresAtSeconds: Long) {
-        entries[videoId] = Entry(playable, expiresAtSeconds)
-        if (entries.size > SWEEP_ABOVE) sweep(nowSeconds = expiresAtSeconds - MAX_LIFETIME_SECONDS)
+    /**
+     * [refused] is the same "<id>/<tier>" set the resolvers consult. A resolve can race a
+     * refusal - the prefetch resolves a neighbour at the very tier a 403 is condemning - and a
+     * cached entry at a refused tier replays the identical rejected url on the next tune, which
+     * is precisely what refusing the tier exists to prevent.
+     */
+    fun put(videoId: String, resolved: ClipResolver.Resolved, refused: Set<String> = emptySet()) {
+        if (StreamResolver.refusedKey(videoId, resolved.tier) in refused) {
+            android.util.Log.d("fs42", "not caching $videoId at refused tier ${resolved.tier}")
+            return
+        }
+        entries[videoId] = Entry(resolved.playable, resolved.expiresAtSeconds, resolved.tier)
+        if (entries.size > SWEEP_ABOVE) sweep(nowSeconds = sweepReference() - MAX_LIFETIME_SECONDS)
     }
+
+    /**
+     * The expiry to derive "now" from when sweeping.
+     *
+     * The largest expiry in the cache, UNLESS it stands implausibly far above the second
+     * largest - further than a signed url can live - in which case the second largest is used.
+     * Deriving from the incoming entry alone let one clip with a garbage expiry disarm the
+     * sweep for everyone: "now" computed from an expiry years out makes every honest entry look
+     * ancient or, from an expiry of zero, makes nothing ever expire. One O(n) scan, only on the
+     * rare puts that cross [SWEEP_ABOVE].
+     */
+    private fun sweepReference(): Long {
+        var largest = 0L
+        var second = 0L
+        for (entry in entries.values) {
+            val expiry = entry.expiresAtSeconds
+            if (expiry > largest) {
+                second = largest
+                largest = expiry
+            } else if (expiry > second) {
+                second = expiry
+            }
+        }
+        return if (second > 0 && largest - second > MAX_LIFETIME_SECONDS) second else largest
+    }
+
+    /** The tier [videoId] was resolved at, if it is still cached. */
+    fun tierOf(videoId: String): String? = entries[videoId]?.tier
 
     /**
      * Drop everything already expired.

@@ -18,7 +18,30 @@ import android.util.Log
 class AcceleratedResolver(
     private val server: ServerResolver,
     private val device: ClipResolver,
+    /**
+     * A provider rather than a value so the MediaCodecList walk happens on the resolve path's
+     * executor, not on the main thread at construction. [AndroidDecoders] caches, so it runs
+     * once.
+     */
+    private val decoders: () -> DecoderSupport = { AndroidDecoders.support() },
 ) : ClipResolver {
+
+    /**
+     * The ladder with every rung this device cannot decode removed - for the SERVER path only.
+     *
+     * The device path already asks the decoders per stream, but the server's response is opaque:
+     * it names tiers, not codecs, so with the 4K ladder selected it happily hands a 2160p VP9
+     * url to a panel whose VP9 decoder tops out at 1080 - which plays as a black frame or a
+     * crash. A rung survives if ANY codec family can decode the band's upper bound; upper bound
+     * because the response does not say which height inside the band it chose, and refusing on
+     * the worst case is the only answer that never hands over an unplayable url.
+     */
+    private fun decodableLadder(ladder: List<String>): List<String> = ladder.filter { tier ->
+        val top = TierBands.bandFor(tier)?.last ?: return@filter true
+        val support = decoders()
+        listOf(DecoderSupport.AVC, DecoderSupport.VP9, DecoderSupport.AV1, DecoderSupport.HEVC)
+            .any { support.canPlay(it, top) }
+    }
 
     override fun resolveDetailed(
         videoId: String,
@@ -30,7 +53,7 @@ class AcceleratedResolver(
         // nothing per tune. Without the caching this would pay a connection timeout on every
         // channel change - an accelerator that makes the dial slower.
         if (server.isAvailable(nowSeconds * 1000)) {
-            server.resolveDetailed(videoId, nowSeconds, ladder, refused)?.let {
+            server.resolveDetailed(videoId, nowSeconds, decodableLadder(ladder), refused)?.let {
                 PlaybackDiagnostics.recordSource("server")
                 return it
             }

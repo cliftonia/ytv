@@ -106,7 +106,7 @@ class DialSurfBenchmark {
         for (channel in channels) {
             val id = onAir(channel) ?: continue
             resolver.resolveDetailed(id, now, ladder)
-                ?.let { cache.put(id, it.playable, it.expiresAtSeconds) }
+                ?.let { cache.put(id, it) }
         }
         val tunes = channels.mapNotNull { channel ->
             val id = onAir(channel) ?: return@mapNotNull null
