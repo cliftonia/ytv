@@ -180,7 +180,11 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // vo that this file records as having SIGSEGV'd in the Mali driver, it belongs to the
         // mid-session shutdown fault rather than to audio sync, and the audio measurement above
         // rules the vo out either way: mpv is in sync under `gpu` too.
-        MPVLib.setOptionString("vo", "mediacodec_embed")
+        // NOT set here - see useDirectVideoOutput. `BaseMPVView` keeps its own `voInUse` field
+        // initialised to "gpu" and writes THAT to the vo property from `surfaceCreated`, after
+        // `initOptions` has run, so an option set here is overwritten before a frame is drawn.
+        // Every theory that reasoned from this line rather than from `current-vo` was reasoning
+        // about a video output that was not running.
         MPVLib.setOptionString("hwdec", "mediacodec")
 
         // --- audio --------------------------------------------------------------------------
@@ -364,6 +368,29 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
      * track menu this dial has no button for, and unlike a per-file option it can be checked
      * afterwards by reading `sid`.
      */
+    /**
+     * Ask MediaCodec to present frames straight to this SurfaceView.
+     *
+     * This is the difference between us and the YouTube app at 4K, and it is why 4K stuttered
+     * here on a panel that plays 4K perfectly well elsewhere. Under `vo=gpu` a hardware-decoded
+     * frame goes MediaCodec -> AImageReader -> GL texture -> composite -> present, so every frame
+     * is copied through the GPU: at 2160p that is 8.3 million pixels a frame on a 32-bit Mali.
+     * `mediacodec_embed` is the zero-copy path - the decoder renders onto the surface and nothing
+     * touches the pixels in between.
+     *
+     * It could not be used before because mpv cannot draw subtitles under it. That cost is gone:
+     * the app draws its own cues in the Compose overlay now, which was forced by this same vo
+     * question from the other side.
+     *
+     * `setVo` rather than `setOptionString`, because only this updates `voInUse` as well - the
+     * field the base class writes back over the property when the surface is created.
+     */
+    fun useDirectVideoOutput() {
+        runCatching { setVo("mediacodec_embed") }
+            .onFailure { Log.w("fs42", "could not switch to mediacodec_embed: $it") }
+        Log.i("fs42", "vo requested=mediacodec_embed current=${MPVLib.getPropertyString("current-vo")}")
+    }
+
     fun addSubtitle(url: String) {
         runCatching { MPVLib.command("sub-add", url, "select") }
             .onFailure { Log.w("fs42", "sub-add failed: $it") }

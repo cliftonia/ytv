@@ -44,6 +44,18 @@ interface ChannelPlayback {
      */
     fun play(playable: Playable, startAtSeconds: Double, requestedAtMillis: Long)
 
+    /**
+     * How far into the current FILE playback has reached, in seconds, or null when unknown.
+     *
+     * From the start of the file, not from where the dial joined it - which is what makes it
+     * directly comparable with a WebVTT timestamp, since those are from the start of the file
+     * too. The caption overlay needs exactly this and nothing else.
+     *
+     * Called from the UI thread a few times a second, so an implementation must be cheap and
+     * must answer null rather than block or throw when there is nothing playing.
+     */
+    fun positionSeconds(): Double?
+
     /** Stop rendering immediately, so the previous channel is not left under a new banner. */
     fun stop()
 
