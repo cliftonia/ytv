@@ -9,9 +9,10 @@ import java.io.File
  *
  * A ceiling on file length is really a ceiling on how many ideas share a file: MainActivity
  * reached nineteen hundred lines by absorbing tuning, refusals, settings, captions and the
- * guide one convenient edit at a time, and no single edit looked like the problem. The number
- * below is the line the cleanup landed at plus room to breathe - when a file outgrows it, the
- * answer is the next extraction, not a bigger number.
+ * guide one convenient edit at a time, and no single edit looked like the problem. Five
+ * hundred lines - roughly half comment, in this codebase - holds one idea comfortably and two
+ * uncomfortably, which is exactly the discomfort wanted: when a file outgrows it, the answer
+ * is the next extraction, not a bigger number.
  */
 class SourceHygieneTest {
 
@@ -45,6 +46,6 @@ class SourceHygieneTest {
     }
 
     private companion object {
-        const val MAX_LINES = 1300
+        const val MAX_LINES = 500
     }
 }
