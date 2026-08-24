@@ -31,7 +31,7 @@ import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.AcceleratedResolver
 import com.cliftonia.fs42tv.resolver.DeviceResolver
 import com.cliftonia.fs42tv.resolver.ServerResolver
-import com.cliftonia.fs42tv.resolver.ResolvedCache
+import com.cliftonia.fs42tv.resolver.RefusalLedger
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.TierLadder
 import com.cliftonia.fs42tv.resolver.Unplayable
@@ -49,6 +49,7 @@ import com.cliftonia.fs42tv.ui.GuideRows
 import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
 import com.cliftonia.fs42tv.ui.SettingRow
+import com.cliftonia.fs42tv.ui.SettingsCatalog
 import com.cliftonia.fs42tv.ui.SettingsScreen
 import com.cliftonia.fs42tv.ui.StandBy
 import com.cliftonia.fs42tv.ui.TuningBlank
@@ -89,21 +90,6 @@ private const val PREFS_NAME = "fs42"
 private const val CHANNEL_KEY = "channel"
 
 /**
- * Remembers the chosen video engine so an override survives a relaunch.
- *
- * Persisted rather than decided fresh each start because the point of the flag is to put Media3
- * back in a hurry when mpv misbehaves - and a setting that evaporates on the next launch is no
- * use at all in that moment.
- */
-private const val ENGINE_KEY = "engine"
-
-/** Remembered quality ceiling; see qualityLadders. */
-private const val QUALITY_KEY = "quality"
-
-/** Whether to show English subtitles when a clip offers them. */
-private const val CAPTIONS_KEY = "captions"
-
-/**
  * How long to wait for a subtitle file before giving up on it.
  *
  * Generous, because nothing is waiting on it: the picture is already up by the time this runs, so
@@ -111,12 +97,6 @@ private const val CAPTIONS_KEY = "captions"
  * connection that never answers would otherwise hold the caption thread for the whole session.
  */
 private const val CAPTION_TIMEOUT_MILLIS = 10_000
-
-/** Remembered frame pacing mode for mpv; see FrameCadence.SYNC_MODES. */
-private const val VIDEO_SYNC_KEY = "videosync"
-
-/** Remembered A/V trim in milliseconds of picture hold-back; see AudioSync. */
-private const val AUDIO_HOLD_KEY = "audiohold"
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -140,12 +120,6 @@ private const val RECOVERY_GRACE_MILLIS = 4_000L
  */
 private const val DIAL_RETRY_MILLIS = 30_000L
 
-/**
- * How long a refused tier stays refused - the longest a signed googlevideo url has been observed
- * to live, shared with ResolvedCache.MAX_LIFETIME_SECONDS in spirit: a refusal must not outlive
- * every url it could possibly describe.
- */
-private const val REFUSAL_TTL_SECONDS = 21_600L
 
 /**
  * How many dead clips to step over before giving up on a channel.
@@ -187,8 +161,8 @@ class MainActivity : ComponentActivity() {
      * cached". Kept as the seam rather than deleted: it is what a future pre-resolved cache would
      * fill.
      *
-     * The 403 fallback does NOT depend on it. That path runs through `refusedTiers` to
-     * `refusedSnapshot()` and into [DeviceResolver], and the only member of [StreamResolver] it
+     * The 403 fallback does NOT depend on it. That path runs through the [RefusalLedger] to
+     * `ledger.refusedSnapshot()` and into [DeviceResolver], and the only member of [StreamResolver] it
      * touches is `refusedKey`. Removing this field would leave the fallback intact; it stays for
      * the reason above, not to hold that path up.
      */
@@ -313,42 +287,14 @@ class MainActivity : ComponentActivity() {
     private lateinit var composeView: ComposeView
 
     private lateinit var prefs: SharedPreferences
+    private lateinit var settingsCatalog: SettingsCatalog
     private lateinit var resolver: ClipResolver
 
-    // urls.json covers about 46% of the dial's clips, so most tunes fall through to the server.
-    // Without this, every later pass over the same channel pays that round trip again. Lives
-    // for the session only: these URLs are signed and expire in hours, so persisting them would
-    // mean starting up holding URLs that may already be dead.
-    private val resolvedCache = ResolvedCache()
-
-    /**
-     * Tiers the CDN refused this session, as `<id>/<tier>`.
-     *
-     * Separate from [deadIds], which condemns a whole clip and so forces a `/resolve` - and that
-     * runs yt-dlp, measured at 7.7 and 12.2 seconds, well past the 4s after which the viewer is
-     * shown a stand-by card. Nearly every clip is published with both an hd and an sd tier in a
-     * file the app already holds, so a refused hd falls to sd with no round trip at all.
-     */
-    private val refusedTiers = java.util.Collections.synchronizedMap(mutableMapOf<String, Long>())
-
-    /**
-     * The clip and tier most recently handed to the video player, so the 403 handler can refuse
-     * the rung that actually failed. Written on the tuning executor, read on player callback
-     * threads.
-     */
-    @Volatile private var lastPlayed: Pair<String, String>? = null
-
-    /**
-     * Video ids whose cached URL was rejected by the CDN, so the next tune asks the server for a
-     * fresh one instead of handing back the same dead link.
-     *
-     * A signed googlevideo URL can be refused with 403 well inside its stated expiry, so the
-     * timestamp alone cannot decide whether it is usable - the box learned the same thing and
-     * keeps a `drop()` for exactly this. Without it a re-tune resolves to the identical dead URL
-     * and fails identically, which is what put a stand-by card up on every attempt to select a
-     * distant channel from the picker.
-     */
-    private val deadIds = java.util.Collections.synchronizedSet(mutableSetOf<String>())
+    // One object rather than four fields, because a refusal is a four-part update - see the
+    // ledger's own comment for the invariant that shipped broken twice as separate fields.
+    private val ledger = RefusalLedger(
+        nowElapsedSeconds = { SystemClock.elapsedRealtime() / 1000 },
+    )
 
     // Single-threaded so a rapid burst of channel presses queues in order rather than racing
     // each other over the shared navigator and player.
@@ -416,24 +362,6 @@ class MainActivity : ComponentActivity() {
     @Volatile private var ladder: List<String> = listOf("hd", "sd")
 
     /**
-     * The quality ceiling, as a remembered preference.
-     *
-     * This exists because the ladder above was declared, documented at length, and then never
-     * assigned from the display - so every device has silently run at `hd` regardless of its
-     * panel. Rather than quietly switch a 4K television to 4K and change playback for everyone at
-     * once, the ceiling is now something to choose and to observe the effect of.
-     *
-     * It also settles an argument the code could not: on a 2.34GB 32-bit panel a smooth 720p
-     * H.264 beats a 1080p60 VP9 that stalls, and the only way to know which is happening is to be
-     * able to switch between them.
-     */
-    private val qualityLadders = listOf(
-        "1080p" to listOf("hd", "sd"),
-        "720p" to listOf("sd"),
-        "4K" to listOf("uhd", "hd", "sd"),
-    )
-
-    /**
      * Wall-clock seconds, or a frozen instant when one was supplied at launch.
      *
      * Every channel on this dial derives its clip and offset from the current time, so two runs
@@ -474,6 +402,28 @@ class MainActivity : ComponentActivity() {
         window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        settingsCatalog = SettingsCatalog(this, SettingsCatalog.Deps(
+            prefs = prefs,
+            displayModeCount = { displayModeCount },
+            channels = { navigator?.channels.orEmpty() },
+            ladder = { ladder },
+            setLadder = { ladder = it },
+            clearResolved = ledger::clearResolved,
+            captionsOn = { captionsOn },
+            toggleCaptions = ::toggleCaptions,
+            applyAudioHold = { millis ->
+                (player as? MpvChannelPlayer)?.setAudioHoldMillis(millis)
+                    ?: run { com.cliftonia.fs42tv.player.audioHoldMillis = millis }
+            },
+            checkForUpdate = { onStatus ->
+                checkForUpdate(installWhenReady = true) { status ->
+                    updateStatus.value = status
+                    onStatus(status)
+                }
+            },
+            updateStatus = { updateStatus.value },
+            refresh = ::refreshSettingsRows,
+        ))
         resolver = AcceleratedResolver(
             server = ServerResolver(RESOLVE_SERVER) { url, timeout ->
                 (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
@@ -506,18 +456,19 @@ class MainActivity : ComponentActivity() {
         val modeCount = (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
             display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
         displayModeCount = modeCount
-        captionsOn = prefs.getBoolean(CAPTIONS_KEY, false)
+        captionsOn = prefs.getBoolean(SettingsCatalog.CAPTIONS_KEY, false)
         // Read before the engine is built, because mpv applies it during initialisation.
         com.cliftonia.fs42tv.player.videoSyncMode =
-            prefs.getString(VIDEO_SYNC_KEY, null) ?: FrameCadence.SYNC_MODES.first()
+            prefs.getString(SettingsCatalog.VIDEO_SYNC_KEY, null) ?: FrameCadence.SYNC_MODES.first()
         // Same reason, and it must be re-read on every engine build rather than only on the first:
         // mpv is rebuilt whenever its core shuts down, and a trim that reset itself on that path
         // would look exactly like the audio fault coming back.
-        com.cliftonia.fs42tv.player.audioHoldMillis = prefs.getInt(AUDIO_HOLD_KEY, 0)
-        Log.i("fs42", "audio out ${describeAudioRoute()}, hold " +
+        com.cliftonia.fs42tv.player.audioHoldMillis = prefs.getInt(SettingsCatalog.AUDIO_HOLD_KEY, 0)
+        Log.i("fs42", "audio out ${settingsCatalog.audioRoute()}, hold " +
             "${com.cliftonia.fs42tv.player.audioHoldMillis}ms")
-        ladder = qualityLadders.firstOrNull { it.first == prefs.getString(QUALITY_KEY, null) }
-            ?.second ?: qualityLadders.first().second
+        ladder = SettingsCatalog.QUALITY_LADDERS
+            .firstOrNull { it.first == prefs.getString(SettingsCatalog.QUALITY_KEY, null) }
+            ?.second ?: SettingsCatalog.QUALITY_LADDERS.first().second
         // The measurement seam: tools/measure-switch.sh passes `--el fs42.now` to pin the
         // clock, so a latency sweep tunes the same clips at the same offsets on every run
         // instead of measuring whatever happens to be on air. Disconnected once during a
@@ -526,9 +477,9 @@ class MainActivity : ComponentActivity() {
         fixedNowSeconds = intent?.getLongExtra("fs42.now", -1L) ?: -1L
         if (fixedNowSeconds > 0) Log.i("fs42", "clock pinned to $fixedNowSeconds")
         val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
-            ?: PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
+            ?: PlayerEngine.parse(prefs.getString(SettingsCatalog.ENGINE_KEY, null))
             ?: PlayerEngine.default(modeCount)
-        prefs.edit().putString(ENGINE_KEY, engine.name.lowercase()).apply()
+        prefs.edit().putString(SettingsCatalog.ENGINE_KEY, engine.name.lowercase()).apply()
         Log.i("fs42", "player engine $engine ($modeCount display mode(s))")
         composeView = ComposeView(this).apply {
             // The picker needs focus when open; the OSD does not, and must not steal it from
@@ -639,40 +590,15 @@ class MainActivity : ComponentActivity() {
                 if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
                     code.startsWith("MPV_")) {
                     onAir?.stream?.id?.let { id ->
-                        // Refuse the TIER, not the clip. Condemning the whole id forces a
-                        // /resolve, which runs yt-dlp - measured at 7.7 and 12.2 seconds, well
-                        // past the 4s after which the viewer is shown a stand-by card. Nearly
-                        // every clip is published with both an hd and an sd tier in a file the
-                        // app already holds, so the next rung costs no round trip at all.
-                        //
-                        // The failing tier is whichever rung the resolver would have taken - the
-                        // first fresh one not already refused - so it can be recomputed here
-                        // rather than threaded back out of the player.
-                        // The recorded (id, tier) pair beats recomputation whenever it is
-                        // available: "first fresh rung of the ladder" is only right when the
-                        // clip offered every rung and nothing raced, and when it is wrong the
-                        // refusal condemns a rung that never played while the guilty one is
-                        // retried forever. The recomputation stays as the fallback for an error
-                        // arriving before anything was recorded.
-                        val fresh = refusedSnapshot()
-                        val tier = lastPlayed?.takeIf { it.first == id }?.second
-                            ?: ladder.firstOrNull {
-                                StreamResolver.refusedKey(id, it) !in fresh
-                            }
+                        // Refuse the TIER, not the clip - condemning the whole id forces a
+                        // /resolve, which runs yt-dlp at seven to twelve measured seconds, and
+                        // nearly every clip carries a lower rung in a file the app already
+                        // holds. Which rung, and what to forget, is the ledger's decision.
+                        val tier = ledger.condemn(id, ladder)
                         if (tier != null) {
                             Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
-                            refusedTiers[StreamResolver.refusedKey(id, tier)] =
-                                SystemClock.elapsedRealtime() / 1000
-                            // The cache is keyed by id alone, so it still holds the url of the
-                            // rung just refused. Leaving it meant the "fall to the next rung"
-                            // re-tune replayed the identical refused url - three or four times
-                            // over, each re-arming the stand-by grace, which is why a 403 showed
-                            // as several seconds of unexplained black instead of a quick recovery.
-                            resolvedCache.forget(id)
                         } else {
                             Log.w("fs42", "all tiers refused for $id; asking the server")
-                            deadIds.add(id)
-                            resolvedCache.forget(id)
                         }
                     }
                 }
@@ -1030,12 +956,13 @@ class MainActivity : ComponentActivity() {
         executor.execute {
             if (destroyed) return@execute
             val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot()) ?: return@execute
+            val tuned = Tuner.tune(channel, urls, now, ladder, ledger.refusedSnapshot()) ?: return@execute
             var playable: Playable = tuned.playable
             if (playable is NeedsResolving) {
-                playable = resolvedCache.get(playable.videoId, now)
-                    ?: resolver.resolveDetailed(playable.videoId, now, ladder, refusedSnapshot())?.also {
-                        resolvedCache.put(playable.videoId, it, refusedSnapshot())
+                playable = ledger.recall(playable.videoId, now)
+                    ?: resolver.resolveDetailed(
+                        playable.videoId, now, ladder, ledger.refusedSnapshot())?.also {
+                        ledger.remember(playable.videoId, it)
                     }?.playable ?: return@execute
             }
             // Only the audio track is wanted, so the audio URL is handed over as the source and
@@ -1168,7 +1095,7 @@ class MainActivity : ComponentActivity() {
 
         val now = nowSeconds()
         lastTuneRequestedAt = requestedAtMillis
-        var tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot())
+        var tuned = Tuner.tune(channel, urls, now, ladder, ledger.refusedSnapshot())
 
         // If the rotation hands back the clip that just finished, take the next one instead.
         //
@@ -1184,7 +1111,7 @@ class MainActivity : ComponentActivity() {
             channel.streams.size > 1) {
             Log.i("fs42", "rotation still on the finished clip $ended; taking the next")
             val next = (ended + 1) % channel.streams.size
-            tuned = Tuner.tuneToIndex(channel, next, refusedSnapshot())
+            tuned = Tuner.tuneToIndex(channel, next, ledger.refusedSnapshot())
         }
 
         if (tuned == null) {
@@ -1198,29 +1125,26 @@ class MainActivity : ComponentActivity() {
         // A cached URL that the CDN already refused is worse than no cached URL at all: it will
         // be refused again. Treat it as a miss so the server is asked for a fresh one.
         val tunedId = tuned.stream.id
-        if (tunedId != null && tunedId in deadIds && playable is Progressive) {
+        if (tunedId != null && ledger.isDead(tunedId) && playable is Progressive) {
             playable = NeedsResolving(tunedId)
         }
 
         if (playable is NeedsResolving) {
             val videoId = playable.videoId
             val resolveStarted = SystemClock.elapsedRealtime()
-            val remembered = resolvedCache.get(videoId, now)
+            val remembered = ledger.recallToPlay(videoId, now)
             if (remembered != null) {
                 Log.d("fs42", "resolve hit from cache for $videoId")
-                resolvedCache.tierOf(videoId)?.let { lastPlayed = videoId to it }
                 playable = remembered
                 lastResolveMillis = SystemClock.elapsedRealtime() - resolveStarted
                 lastResolveWasCached = true
             } else {
                 Log.d("fs42", "resolve miss; extracting $videoId")
                 lastResolveWasCached = false
-                val resolved = resolver.resolveDetailed(videoId, now, ladder, refusedSnapshot())
+                val resolved = resolver.resolveDetailed(videoId, now, ladder, ledger.refusedSnapshot())
                 lastResolveMillis = SystemClock.elapsedRealtime() - resolveStarted
                 if (resolved != null) {
-                    resolvedCache.put(videoId, resolved, refusedSnapshot())
-                    deadIds.remove(videoId)
-                    lastPlayed = videoId to resolved.tier
+                    ledger.rememberPlayed(videoId, resolved)
                     playable = resolved.playable
                 } else {
                     // Try the NEXT clips in the rotation rather than giving up on the channel.
@@ -1363,7 +1287,7 @@ class MainActivity : ComponentActivity() {
             Log.i("fs42", "captions: nothing on air to caption")
             return
         }
-        val playable = resolvedCache.get(id, nowSeconds()) ?: run {
+        val playable = ledger.recall(id, nowSeconds()) ?: run {
             // Only reachable if the clip's urls expired while it was still playing, which the
             // tune path handles by re-resolving anyway.
             Log.i("fs42", "captions: $id is not in the resolved cache")
@@ -1461,7 +1385,7 @@ class MainActivity : ComponentActivity() {
     private fun openSettings() {
         generation.incrementAndGet()
         updateStatus.value = ""
-        settingsRows.value = buildSettingsRows()
+        refreshSettingsRows()
         settingsVisible.value = true
         composeView.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
         composeView.requestFocus()
@@ -1477,202 +1401,27 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * Ask Android what outputs exist and let [AudioSync] name the one that will carry the sound.
-     *
-     * The Android half is here and the choosing is in [AudioSync] because `getDevices` needs a
-     * real AudioManager and the routing rules do not - and the routing rules are the part that
-     * can be wrong.
-     *
-     * Asked afresh every time the row is drawn rather than cached at startup: a Bluetooth speaker
-     * switched off halfway through an evening changes the answer, and a diagnostic that goes stale
-     * is worse than no diagnostic, because it is believed.
+     * The settings screen's rows live in [SettingsCatalog]; the activity only provides the
+     * capabilities its [SettingsCatalog.Deps] names and republishes the list when asked.
      */
-    private fun describeAudioRoute(): String {
-        val audio = getSystemService(android.media.AudioManager::class.java)
-            ?: return "NOT ASKED"
-        val outputs = runCatching {
-            audio.getDevices(android.media.AudioManager.GET_DEVICES_OUTPUTS)
-                .map { it.type to it.productName.toString() }
-        }.getOrElse {
-            Log.w("fs42", "could not enumerate audio outputs: $it")
-            return "NOT ASKED"
-        }
-        val described = AudioSync.describeRoute(outputs)
-        // Spelled out rather than left to be inferred: a route the player cannot compensate for
-        // is the single most useful thing this screen can say when somebody is looking at it
-        // because the audio sounds late.
-        return if (AudioSync.needsManualTrim(outputs)) "$described - USE AV DELAY" else described
+    private fun refreshSettingsRows() {
+        settingsRows.value = settingsCatalog.rows()
     }
 
     /**
-     * The settings list, rebuilt each time it opens.
+     * The captions flag, applied to the clip already playing.
      *
-     * Rebuilt rather than held, because every row is a reading of something that changes -
-     * which engine is running, how old the lineup is, whether an update is waiting. A list built
-     * once at startup would be quietly wrong by the time anyone looked at it, and a settings
-     * screen that lies is worse than none.
+     * Every resolve carries its caption url whether or not captions are on, so turning them on
+     * is a fetch of the current clip's track out of the cache - no re-resolve. Off clears the
+     * overlay immediately.
      */
-    private fun buildSettingsRows(): List<SettingRow> {
-        val engine = PlayerEngine.parse(prefs.getString(ENGINE_KEY, null))
-            ?: PlayerEngine.default(displayModeCount)
-        val channels = navigator?.channels.orEmpty()
-        val clips = channels.sumOf { it.streams.size }
-        val crash = ExitReason.lastAbnormal(this) ?: CrashLog.summary(filesDir)
-        return listOfNotNull(
-            crash?.let {
-                SettingRow(
-                    label = "LAST CRASH",
-                    value = it,
-                    // OK clears it, so the next crash is unambiguously new rather than possibly
-                    // the same one being read twice.
-                    action = {
-                        CrashLog.clear(filesDir)
-                        settingsRows.value = buildSettingsRows()
-                    },
-                )
-            },
-            SettingRow(
-                label = "VIDEO ENGINE",
-                value = engine.name,
-                // Takes effect on the next launch rather than swapping the player under a running
-                // channel. Rebuilding the engine live is possible - the recovery path does it -
-                // but doing it from a settings screen would mean re-resolving and re-seeking the
-                // current clip, and the one moment this setting is reached for is when playback
-                // is already misbehaving.
-                action = {
-                    val next = if (engine == PlayerEngine.MPV) PlayerEngine.MEDIA3
-                               else PlayerEngine.MPV
-                    prefs.edit().putString(ENGINE_KEY, next.name.lowercase()).apply()
-                    settingsRows.value = buildSettingsRows()
-                    Log.i("fs42", "engine set to $next; takes effect on next launch")
-                },
-            ),
-            SettingRow(
-                label = "MAX QUALITY",
-                value = qualityLadders.firstOrNull { it.second == ladder }?.first ?: "1080p",
-                // Applies to the NEXT tune rather than the current one, which is why the row does
-                // not restart playback: flipping channel is how you see the effect, and that is
-                // the thing you were already doing when you noticed the problem.
-                action = {
-                    val current = qualityLadders.indexOfFirst { it.second == ladder }
-                    val next = qualityLadders[(current + 1).mod(qualityLadders.size)]
-                    ladder = next.second
-                    prefs.edit().putString(QUALITY_KEY, next.first).apply()
-                    resolvedCache.clear()
-                    settingsRows.value = buildSettingsRows()
-                    Log.i("fs42", "quality ceiling now ${next.first} -> ${next.second}")
-                },
-            ),
-            SettingRow(
-                label = "FRAME PACING",
-                value = com.cliftonia.fs42tv.player.videoSyncMode ?: "DISPLAY",
-                // Takes effect on the next launch: mpv reads it while the core initialises, and
-                // rebuilding the engine to change it would restart whatever is playing.
-                action = {
-                    val modes = FrameCadence.SYNC_MODES
-                    val next = modes[(modes.indexOf(
-                        com.cliftonia.fs42tv.player.videoSyncMode) + 1).mod(modes.size)]
-                    com.cliftonia.fs42tv.player.videoSyncMode = next
-                    prefs.edit().putString(VIDEO_SYNC_KEY, next).apply()
-                    settingsRows.value = buildSettingsRows()
-                    Log.i("fs42", "frame pacing $next; takes effect on next launch")
-                },
-            ),
-            SettingRow(
-                label = "AV DELAY",
-                value = AudioSync.label(com.cliftonia.fs42tv.player.audioHoldMillis),
-                // Applies to whatever is playing RIGHT NOW, unlike every other row here, and that
-                // is deliberate. The right value cannot be derived: it is however long the sound
-                // takes to get from this app to the speaker, and on this television that is a
-                // Bluetooth link whose sink reports its own buffering as zero. The only way to
-                // find it is to press this until the mouths match, which needs the picture and the
-                // sound to keep running while you do.
-                action = {
-                    val next = AudioSync.next(com.cliftonia.fs42tv.player.audioHoldMillis)
-                    prefs.edit().putInt(AUDIO_HOLD_KEY, next).apply()
-                    (player as? MpvChannelPlayer)?.setAudioHoldMillis(next)
-                        ?: run { com.cliftonia.fs42tv.player.audioHoldMillis = next }
-                    settingsRows.value = buildSettingsRows()
-                },
-            ),
-            SettingRow(
-                label = "CAPTIONS",
-                value = if (captionsOn) "ON" else "OFF",
-                // Applies to the NEXT clip rather than the current one. Attaching a subtitle
-                // track means reopening what is playing, and restarting a programme somebody is
-                // watching to add captions to it is a worse outcome than waiting for the next
-                // channel change. The cached resolves are dropped so the next one carries the
-                // track it would otherwise have been resolved without.
-                action = {
-                    captionsOn = !captionsOn
-                    prefs.edit().putBoolean(CAPTIONS_KEY, captionsOn).apply()
-                    // Act on the clip already playing, rather than only the next one.
-                    //
-                    // Every resolve now carries its caption url whether or not captions are
-                    // on, so the clip already playing has its track waiting in the cache and
-                    // this is a fetch of the track alone - no re-resolve, and nothing that could
-                    // be lost to a generation change on the way back.
-                    if (captionsOn) loadCaptionsForCurrentClip() else captionCues.value = emptyList()
-                    settingsRows.value = buildSettingsRows()
-                    Log.i("fs42", "captions ${if (captionsOn) "on" else "off"}")
-                },
-            ),
-            SettingRow(
-                label = "CHECK FOR UPDATE",
-                value = updateStatus.value.ifEmpty { "CHECK NOW" },
-                action = {
-                    checkForUpdate(installWhenReady = true) { status ->
-                        updateStatus.value = status
-                        settingsRows.value = buildSettingsRows()
-                    }
-                    settingsRows.value = buildSettingsRows()
-                },
-            ),
-            // Everything below is read-only. Controls come FIRST because the screen is
-            // finite: when this was a plain unscrolling column, adding diagnostics
-            // silently pushed the captions toggle and the update check off the bottom,
-            // and a control you cannot see is a control that does not exist.
-            SettingRow("--- DIAGNOSTICS ---", ""),
-            // FIRST of the readings, deliberately. The highlight only ever lands on a row that
-            // OK can act on, and the list scrolls to the highlight - so the readings furthest
-            // down are visible only as far as the last control drags them into view, and the
-            // bottom of this list cannot be brought on screen at all. Anything that has to be
-            // read has to be near the top of this section, and after five builds spent looking
-            // for an audio fault inside the player while the sound was leaving over Bluetooth,
-            // this is the reading that has to be seen.
-            SettingRow("AUDIO OUT", describeAudioRoute()),
-            SettingRow("LAST STREAM", PlaybackDiagnostics.lastStream),
-            SettingRow("DECODERS", PlaybackDiagnostics.decoders),
-            SettingRow("CAPTION STATE", PlaybackDiagnostics.captions),
-            SettingRow("RESOLVED BY", PlaybackDiagnostics.lastSource),
-            SettingRow("MPV SAID", com.cliftonia.fs42tv.player.MpvLog.lastReason() ?: "nothing"),
-            SettingRow("LAST TUNE", PlaybackDiagnostics.lastTiming),
-            SettingRow("AV SYNC", PlaybackDiagnostics.lastSync),
-            SettingRow("VERSION", BuildConfig.VERSION_CODE.toString()),
-            SettingRow("DISPLAY MODES", displayModeCount.toString()),
-            SettingRow("CHANNELS", "${channels.size} / $clips CLIPS"),
-            SettingRow("LINEUP", lineupAge()),
-        )
+    private fun toggleCaptions() {
+        captionsOn = !captionsOn
+        prefs.edit().putBoolean(SettingsCatalog.CAPTIONS_KEY, captionsOn).apply()
+        if (captionsOn) loadCaptionsForCurrentClip() else captionCues.value = emptyList()
+        Log.i("fs42", "captions ${if (captionsOn) "on" else "off"}")
     }
 
-    /**
-     * How stale the lineup is, in words.
-     *
-     * The single most useful reading on this screen. When the dial misbehaves the first question
-     * is whether the content is old or the extractor has broken, and those have opposite fixes -
-     * a lineup fetched today with nothing playing means the extractor; a lineup from three weeks
-     * ago means the nightly workflow has been failing and nobody noticed.
-     */
-    private fun lineupAge(): String {
-        val file = java.io.File(cacheDir, "channels.json")
-        if (!file.exists()) return "NOT FETCHED"
-        val days = (System.currentTimeMillis() - file.lastModified()) / 86_400_000L
-        return when {
-            days <= 0L -> "FETCHED TODAY"
-            days == 1L -> "1 DAY OLD"
-            else -> "$days DAYS OLD"
-        }
-    }
 
     /**
      * Resolve what is on the channels either side, so pressing up or down is instant.
@@ -1696,37 +1445,15 @@ class MainActivity : ComponentActivity() {
             prefetchExecutor.execute {
                 if (destroyed) return@execute
                 val now = nowSeconds()
-                val tuned = Tuner.tune(channel, urls, now, ladder, refusedSnapshot()) ?: return@execute
+                val tuned = Tuner.tune(channel, urls, now, ladder, ledger.refusedSnapshot()) ?: return@execute
                 val id = (tuned.playable as? NeedsResolving)?.videoId ?: return@execute
-                if (id in deadIds || resolvedCache.get(id, now) != null) return@execute
-                val resolved = resolver.resolveDetailed(id, now, ladder, refusedSnapshot())
+                if (ledger.isDead(id) || ledger.recall(id, now) != null) return@execute
+                val resolved = resolver.resolveDetailed(id, now, ladder, ledger.refusedSnapshot())
                 if (resolved != null && !destroyed) {
-                    resolvedCache.put(id, resolved, refusedSnapshot())
+                    ledger.remember(id, resolved)
                     Log.d("fs42", "prefetched channel ${channel.number} ${channel.name}")
                 }
             }
-        }
-    }
-
-    /**
-     * A snapshot of the refused tiers, taken under the monitor.
-     *
-     * `Collections.synchronizedMap` guards each operation, NOT iteration - and copying is an
-     * iteration. The map is written on player callback threads while the executor reads it, so an
-     * unsynchronised copy can throw ConcurrentModificationException in the middle of a tune.
-     */
-    private fun refusedSnapshot(): Set<String> {
-        // Refusals expire after the life of the longest signed url. A 403 describes ONE url,
-        // and every url it could describe is dead within six hours - but the entry used to live
-        // for the whole process, so on an always-on television two network blips condemned a
-        // clip's every tier until someone power-cycled the box. Monotonic clock, not wall time:
-        // the box has no battery and corrects its clock over NTP after boot, and a wall-clock
-        // jump would age every refusal instantly.
-        val cutoff = SystemClock.elapsedRealtime() / 1000 - REFUSAL_TTL_SECONDS
-        synchronized(refusedTiers) {
-            val stale = refusedTiers.entries.iterator()
-            while (stale.hasNext()) if (stale.next().value < cutoff) stale.remove()
-            return refusedTiers.keys.toSet()
         }
     }
 
@@ -1756,21 +1483,19 @@ class MainActivity : ComponentActivity() {
             val idx = (failedIndex + step) % channel.streams.size
             val next = channel.streams.getOrNull(idx) ?: return null
             val id = next.id ?: continue
-            if (id in deadIds) continue
-            resolvedCache.get(id, now)?.let {
-                resolvedCache.tierOf(id)?.let { tier -> lastPlayed = id to tier }
+            if (ledger.isDead(id)) continue
+            ledger.recallToPlay(id, now)?.let {
                 Log.i("fs42", "skipped to clip $idx (cached)")
                 return idx to it
             }
-            val resolved = resolver.resolveDetailed(id, now, ladder, refusedSnapshot())
+            val resolved = resolver.resolveDetailed(id, now, ladder, ledger.refusedSnapshot())
             if (resolved != null) {
-                resolvedCache.put(id, resolved, refusedSnapshot())
-                lastPlayed = id to resolved.tier
+                ledger.rememberPlayed(id, resolved)
                 Log.i("fs42", "skipped to clip $idx after $step dead clip(s)")
                 return idx to resolved.playable
             }
             // Remember it so the next tune of this channel does not pay for it again.
-            deadIds.add(id)
+            ledger.markDead(id)
         }
         Log.w("fs42", "channel ${channel.number}: $SKIP_DEAD_CLIPS consecutive clips unplayable")
         return null
