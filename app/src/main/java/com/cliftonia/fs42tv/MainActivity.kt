@@ -1,6 +1,5 @@
 package com.cliftonia.fs42tv
 
-import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.SystemClock
@@ -15,16 +14,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import com.cliftonia.fs42tv.player.ChannelPlayback
-import com.cliftonia.fs42tv.player.AudioSync
 import com.cliftonia.fs42tv.player.FrameCadence
 import com.cliftonia.fs42tv.player.ChannelPlayer
 import com.cliftonia.fs42tv.player.Media3Sources
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
 import com.cliftonia.fs42tv.player.PlayerEngine
-import com.cliftonia.fs42tv.schedule.ClockRotation
 import com.cliftonia.fs42tv.resolver.Hls
-import com.cliftonia.fs42tv.resolver.NeedsResolving
-import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.ClipResolver
@@ -32,16 +27,10 @@ import com.cliftonia.fs42tv.resolver.AcceleratedResolver
 import com.cliftonia.fs42tv.resolver.DeviceResolver
 import com.cliftonia.fs42tv.resolver.ServerResolver
 import com.cliftonia.fs42tv.resolver.RefusalLedger
-import com.cliftonia.fs42tv.resolver.StreamResolver
-import com.cliftonia.fs42tv.resolver.TierLadder
-import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.resolver.VttCues
-import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.DialRepository
-import com.cliftonia.fs42tv.sync.UrlCache
 import com.cliftonia.fs42tv.tune.DialNavigator
-import com.cliftonia.fs42tv.tune.Tuned
-import com.cliftonia.fs42tv.tune.Tuner
+import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.ui.CaptionLine
 import com.cliftonia.fs42tv.ui.ChannelLabels
 import com.cliftonia.fs42tv.ui.ChannelOsd
@@ -49,6 +38,7 @@ import com.cliftonia.fs42tv.ui.GuideRows
 import com.cliftonia.fs42tv.ui.PickerMusic
 import com.cliftonia.fs42tv.ui.ChannelPicker
 import com.cliftonia.fs42tv.ui.SettingRow
+import com.cliftonia.fs42tv.ui.CaptionLoader
 import com.cliftonia.fs42tv.ui.SettingsCatalog
 import com.cliftonia.fs42tv.ui.SettingsScreen
 import com.cliftonia.fs42tv.ui.StandBy
@@ -58,7 +48,6 @@ import com.cliftonia.fs42tv.update.Updater
 import java.net.URL
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import java.util.concurrent.atomic.AtomicInteger
 
 /**
  * Where the lineup lives.
@@ -89,14 +78,6 @@ private const val RELEASES_REPO = "cliftonia/ytv"
 private const val PREFS_NAME = "fs42"
 private const val CHANNEL_KEY = "channel"
 
-/**
- * How long to wait for a subtitle file before giving up on it.
- *
- * Generous, because nothing is waiting on it: the picture is already up by the time this runs, so
- * a slow track costs a late caption rather than a late channel. Bounded all the same - a
- * connection that never answers would otherwise hold the caption thread for the whole session.
- */
-private const val CAPTION_TIMEOUT_MILLIS = 10_000
 private const val NO_REMEMBERED_CHANNEL = -1
 
 /** Long enough not to flash on the brief stalls that clear themselves. */
@@ -121,16 +102,6 @@ private const val RECOVERY_GRACE_MILLIS = 4_000L
 private const val DIAL_RETRY_MILLIS = 30_000L
 
 
-/**
- * How many dead clips to step over before giving up on a channel.
- *
- * Each attempt costs a full extraction - a couple of seconds - so this is a trade between
- * recovering from the ordinary case and leaving someone watching black while the app grinds.
- * Three covers a run of removed videos; a channel with four consecutive dead clips has a real
- * problem and should say so rather than hide it.
- */
-private const val SKIP_DEAD_CLIPS = 3
-
 class MainActivity : ComponentActivity() {
 
     // @Volatile: assigned on the UI thread in onCreate, read from the executor when tuning.
@@ -151,45 +122,6 @@ class MainActivity : ComponentActivity() {
 
     @Volatile private var navigator: DialNavigator? = null
     @Volatile private var destroyed: Boolean = false
-
-    /**
-     * Signed urls published alongside the lineup - always null now, and deliberately still here.
-     *
-     * The server used to publish a `urls.json` covering about 46% of the dial's clips, which let
-     * those tune with no resolve at all. Nothing publishes it any more, so every clip takes the
-     * [DeviceResolver] path and the tier machinery in [StreamResolver] reads this as "nothing
-     * cached". Kept as the seam rather than deleted: it is what a future pre-resolved cache would
-     * fill.
-     *
-     * The 403 fallback does NOT depend on it. That path runs through the [RefusalLedger] to
-     * `ledger.refusedSnapshot()` and into [DeviceResolver], and the only member of [StreamResolver] it
-     * touches is `refusedKey`. Removing this field would leave the fallback intact; it stays for
-     * the reason above, not to hold that path up.
-     */
-    private val urls: UrlCache? = null
-
-    /**
-     * What is actually on air right now, as opposed to where the navigator points. A failed
-     * tune leaves the previous picture up with the navigator already moved on, so this is set
-     * only on a genuine success. Written on the executor thread, read from the UI thread by the
-     * phase 2b corner indicator and banner; `@Volatile` is enough because `Tuned` is immutable.
-     */
-    @Volatile private var onAir: Tuned? = null
-
-    /**
-     * The clip index that just reported it had ended, or -1.
-     *
-     * Consumed by the next tune of the same channel and then cleared. See onClipEnded.
-     */
-    // The channel number rides along with the index because an end-of-clip retune can be
-    // superseded by a channel change: the marker must only steer the tune of the channel whose
-    // clip actually ended, not whatever channel the viewer surfed to next.
-    @Volatile private var justEnded: Pair<Int, Int>? = null
-
-    // How the last tune spent its time. Written on the executor, read when the first frame lands.
-    @Volatile private var lastResolveMillis: Long = 0
-    @Volatile private var lastResolveWasCached: Boolean = false
-    @Volatile private var lastTuneRequestedAt: Long = 0
 
     // Compose state backing the tune banner. Written only from the runOnUiThread block below,
     // and only on a genuine success: a failed re-tune must not touch these, since bumping
@@ -287,6 +219,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var composeView: ComposeView
 
     private lateinit var prefs: SharedPreferences
+    private lateinit var tune: TuneController
     private lateinit var settingsCatalog: SettingsCatalog
     private lateinit var resolver: ClipResolver
 
@@ -320,11 +253,15 @@ class MainActivity : ComponentActivity() {
      */
     private val captionExecutor: ExecutorService = Executors.newSingleThreadExecutor()
 
-    // Bumped on every keypress. A tune captures the current value when queued and abandons
-    // itself if the value has since moved on - that is how a burst of presses on the dial
-    // collapses to only the last one actually reaching the player, instead of running every
-    // intermediate channel to completion.
-    private val generation = AtomicInteger(0)
+    private val captions by lazy {
+        CaptionLoader(
+            executor = captionExecutor,
+            runOnUi = { block -> runOnUiThread(block) },
+            generationNow = { tune.generationNow() },
+            halted = { destroyed },
+            show = { captionCues.value = it },
+        )
+    }
 
     /** Drives the stand-by card when playback stalls mid-clip. */
     private val stallHandler by lazy { android.os.Handler(mainLooper) }
@@ -439,6 +376,8 @@ class MainActivity : ComponentActivity() {
             device = DeviceResolver(),
         )
 
+        tune = createTuneController()
+
         // Which engine plays the dial, and why it is not simply "the newer one".
         //
         // Media3 judders on this television - roughly two tunes in five come back with the
@@ -550,123 +489,7 @@ class MainActivity : ComponentActivity() {
         //
         // Guarded by a fresh generation so a recovery cannot fight a channel change the viewer
         // has already made, and skipped entirely once the activity is gone.
-        fun retuneCurrent(reason: String) {
-            if (destroyed) return
-            val channel = onAir?.channel ?: return
-            Log.i("fs42", "re-tuning ${channel.number} ${channel.name} after $reason")
-            val gen = generation.incrementAndGet()
-            val at = SystemClock.elapsedRealtime()
-            executor.execute { tuneTo(channel, gen, at) }
-        }
-        // Extracted so a rebuilt engine can be given the same callbacks. mpv shuts its
-        // core down on a fatal, and a replacement with nothing listening reports no first
-        // frame - the stand-by card would then never come down again.
-        fun wire(player: ChannelPlayback) {
-            player.onClipEnded = {
-                // Remember which clip ended, so the re-tune cannot land back on it.
-                //
-                // The published duration comes from yt-dlp's metadata; what actually plays is the
-                // shorter of the separately-muxed video and audio tracks. Whenever that is less
-                // than the published figure, the clip ends while the clock still says it is on -
-                // so the rotation returns the SAME index, at an offset a fraction from the end,
-                // and the app re-tunes into the programme it just finished. That is the flash of
-                // black at roll-over, and with a badly truncated track it repeats.
-                justEnded = onAir?.let { it.channel.number to it.streamIndex }
-                retuneCurrent("clip ended")
-            }
-            player.onPlaybackError = { code ->
-                if (code.startsWith(MpvChannelPlayer.ENGINE_DIED) && !destroyed) {
-                    // The engine, not the clip. Rebuild first, then let the normal recovery below
-                    // re-tune into the new instance.
-                    rebuildEngine?.invoke()
-                }
-                // A rejected URL is the one error worth reacting to specifically: re-tuning without
-                // forgetting it would resolve to the same dead link and fail the same way.
-                // Engine-agnostic on purpose. Media3 names the fault precisely; mpv reports only
-                // that the file ended in error, and its commonest cause by far is exactly this - a
-                // signed URL the CDN refused. Matching only Media3's spellings meant an mpv 403
-                // re-tuned to the very same dead URL, forever. Being wrong in the other direction
-                // costs one server resolve.
-                if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
-                    code.startsWith("MPV_")) {
-                    onAir?.stream?.id?.let { id ->
-                        // Refuse the TIER, not the clip - condemning the whole id forces a
-                        // /resolve, which runs yt-dlp at seven to twelve measured seconds, and
-                        // nearly every clip carries a lower rung in a file the app already
-                        // holds. Which rung, and what to forget, is the ledger's decision.
-                        val tier = ledger.condemn(id, ladder)
-                        if (tier != null) {
-                            Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
-                        } else {
-                            Log.w("fs42", "all tiers refused for $id; asking the server")
-                        }
-                    }
-                }
-
-                // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused with
-                // 403 while still inside its stated expiry, and the recovery below - drop the dead
-                // id, ask the server for a fresh one, tune again - puts a picture back in about a
-                // second. Announcing that as a fault showed the viewer an error code for something
-                // the app had already fixed, which reads as far more broken than the brief blank a
-                // channel change produces anyway.
-                //
-                // The card is only delayed, never skipped: if the retune has not produced a picture
-                // by the time the grace period is up, this is a real fault and says so. Blanking
-                // meanwhile is what a channel change already does, so the transition looks the same
-                // as any other.
-                tuning.value = true
-                updateProgrammeVolume()
-                recoveryHandler.removeCallbacksAndMessages(null)
-                recoveryHandler.postDelayed(
-                    { if (!destroyed) standByReason.value = code }, RECOVERY_GRACE_MILLIS)
-                retuneCurrent("playback error $code")
-            }
-            // The card comes down when a picture actually appears, not when a tune is merely
-            // dispatched - a tune that fails again would otherwise clear it and leave black.
-            player.onFirstFrame = {
-                // Split the wait into the two halves that have different fixes: resolving the
-                // url, which the neighbour prefetch removes, and everything the player does
-                // afterwards, which it cannot touch.
-                if (lastTuneRequestedAt > 0) {
-                    PlaybackDiagnostics.recordTune(
-                        resolveMillis = lastResolveMillis,
-                        firstFrameMillis = SystemClock.elapsedRealtime() - lastTuneRequestedAt,
-                        fromCache = lastResolveWasCached,
-                    )
-                }
-                recoveryHandler.removeCallbacksAndMessages(null)
-                standByReason.value = ""
-                tuning.value = false
-                updateProgrammeVolume()
-            }
-
-            // A stall is the third way this player goes quiet, and the only silent one - no error,
-            // no end of media, just a stopped picture. The box calls the same condition a fault
-            // after two seconds and puts a stand-by card up (field_player.py:575).
-            //
-            // The card is ALL that happens. Re-tuning on a stall was tried and made things far
-            // worse: it discards whatever has buffered and restarts the deep seek, so on a
-            // connection that cannot sustain the bitrate it produced a permanent cycle of six
-            // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
-            // resumes by itself; interrupting that is the one thing that stops it recovering.
-            player.onBuffering = { buffering ->
-                stallHandler.removeCallbacksAndMessages(null)
-                if (buffering) {
-                    stallHandler.postDelayed({
-                        if (!destroyed) standByReason.value = "BUFFERING"
-                    }, STALL_CARD_MILLIS)
-                    // NO automatic re-tune on a stall. It was tried and it made things materially
-                    // worse: a re-tune discards whatever has buffered and restarts the deep seek, so
-                    // on a connection that cannot sustain the bitrate it produced a permanent cycle -
-                    // six seconds of playback, twelve seconds of nothing, repeat. ExoPlayer keeps
-                    // filling the buffer during a stall and resumes on its own; interrupting that is
-                    // the one thing guaranteed to stop it recovering.
-                } else {
-                    standByReason.value = ""
-                }
-            }
-        }
-        wire(player)
+        wirePlayer(player)
 
         // Below the callback wiring so a rebuilt engine gets the same callbacks the first one
         // had - a fresh player with nothing listening reports no first frame, so the stand-by
@@ -695,7 +518,7 @@ class MainActivity : ComponentActivity() {
             root.removeView(dead?.view)
 
             val fresh = newEngine()
-            wire(fresh)
+            wirePlayer(fresh)
             this.player = fresh
             player = fresh
             root.addView(fresh.view, 0, matchParent())
@@ -707,6 +530,171 @@ class MainActivity : ComponentActivity() {
         val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
 
         loadDial(remembered)
+    }
+
+    /**
+     * The dial's engine room, with the screen's half of every tune spelled out as callbacks.
+     * See [TuneController] for why the generation logic lives outside the activity.
+     */
+    private fun createTuneController() = TuneController(TuneController.Deps(
+        executor = executor,
+        prefetchExecutor = prefetchExecutor,
+        resolver = resolver,
+        ledger = ledger,
+        urls = null,
+        ladder = { ladder },
+        navigator = { navigator },
+        nowSeconds = ::nowSeconds,
+        elapsedMillis = { SystemClock.elapsedRealtime() },
+        halted = { destroyed },
+        runOnUi = { block -> runOnUiThread(block) },
+        rememberChannel = { number ->
+            prefs.edit().putInt(CHANNEL_KEY, number).apply()
+        },
+        screen = TuneController.Screen(
+            startBlank = { target ->
+                // Stop the old channel at the SOURCE rather than covering it. A Compose
+                // overlay needs a recomposition and a frame to appear, and the previous
+                // channel keeps rendering underneath in the meantime - which showed up as an
+                // intermittent flash of the old picture right after choosing a new one.
+                // stop() ends that render immediately, and the blank covers the gap between
+                // the shutter and the first frame of the new channel.
+                player?.stop()
+                // A deliberate channel change supersedes any error still waiting to be
+                // announced: the card would name a channel the viewer has already left.
+                recoveryHandler.removeCallbacksAndMessages(null)
+                standByReason.value = ""
+                tuning.value = true
+                updateProgrammeVolume()
+                // The title comes from the clock rotation right here, not from the tune that
+                // follows. Waiting for the tune meant the banner showed a bare channel name
+                // whenever the tune was superseded - which is every press but the last when
+                // surfing quickly. What is on a channel is knowable without tuning to it.
+                val (line, title) = ChannelLabels.bannerLinesFor(target, nowSeconds())
+                bannerChannelLine.value = line
+                bannerTitleLine.value = title
+                bannerGeneration.value += 1
+            },
+            paint = { painted, playable, requestedAt, played, gen ->
+                player?.play(playable, painted.offsetSeconds, requestedAt)
+                // A tune that lands while the app is in the background must not leave the
+                // player running: onStop already paused whatever was playing, and this tune
+                // would otherwise stream and decode to a screen nobody is watching.
+                if (stopped) player?.setPaused(true)
+                // Cleared on the same thread that starts the clip, so the outgoing
+                // programme's dialogue cannot be left sitting over the incoming one.
+                captionCues.value = emptyList()
+                if (captionsOn) captions.load(playable, gen)
+                // Only a genuine success touches the banner, and it reads the current onAir
+                // rather than this tune's outcome directly - a failed tune leaves onAir on
+                // whatever last actually played, exactly as the picture itself does.
+                if (played) {
+                    tune.onAir?.let { nowOnAir ->
+                        val (channelLine, titleLine) = ChannelLabels.bannerLines(nowOnAir)
+                        bannerChannelLine.value = channelLine
+                        bannerTitleLine.value = titleLine
+                    }
+                    bannerGeneration.value += 1
+                }
+            },
+            channelUnavailable = { channel ->
+                standByReason.value = "CHANNEL ${channel.number} UNAVAILABLE"
+            },
+        ),
+    ))
+
+    /**
+     * Give [player] the four callbacks that keep the dial honest.
+     *
+     * A method rather than wiring inline in onCreate so a REBUILT engine gets the same
+     * callbacks the first one had: mpv shuts its core down on a fatal, and a replacement with
+     * nothing listening reports no first frame - the stand-by card would then never come down
+     * again.
+     */
+    private fun wirePlayer(player: ChannelPlayback) {
+        player.onClipEnded = { tune.clipEnded() }
+        player.onPlaybackError = { code ->
+            if (code.startsWith(MpvChannelPlayer.ENGINE_DIED) && !destroyed) {
+                // The engine, not the clip. Rebuild first, then let the normal recovery below
+                // re-tune into the new instance.
+                rebuildEngine?.invoke()
+            }
+            // A rejected URL is the one error worth reacting to specifically: re-tuning without
+            // forgetting it would resolve to the same dead link and fail the same way.
+            // Engine-agnostic on purpose. Media3 names the fault precisely; mpv reports only
+            // that the file ended in error, and its commonest cause by far is exactly this - a
+            // signed URL the CDN refused. Matching only Media3's spellings meant an mpv 403
+            // re-tuned to the very same dead URL, forever. Being wrong in the other direction
+            // costs one server resolve.
+            if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
+                code.startsWith("MPV_")) {
+                tune.onAir?.stream?.id?.let { id ->
+                    // Refuse the TIER, not the clip - condemning the whole id forces a
+                    // /resolve, which runs yt-dlp at seven to twelve measured seconds, and
+                    // nearly every clip carries a lower rung in a file the app already
+                    // holds. Which rung, and what to forget, is the ledger's decision.
+                    val tier = ledger.condemn(id, ladder)
+                    if (tier != null) {
+                        Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
+                    } else {
+                        Log.w("fs42", "all tiers refused for $id; asking the server")
+                    }
+                }
+            }
+
+            // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused with
+            // 403 while still inside its stated expiry, and the recovery below - drop the dead
+            // id, ask the server for a fresh one, tune again - puts a picture back in about a
+            // second. Announcing that as a fault showed the viewer an error code for something
+            // the app had already fixed, which reads as far more broken than the brief blank a
+            // channel change produces anyway.
+            //
+            // The card is only delayed, never skipped: if the retune has not produced a picture
+            // by the time the grace period is up, this is a real fault and says so. Blanking
+            // meanwhile is what a channel change already does, so the transition looks the same
+            // as any other.
+            tuning.value = true
+            updateProgrammeVolume()
+            recoveryHandler.removeCallbacksAndMessages(null)
+            recoveryHandler.postDelayed(
+                { if (!destroyed) standByReason.value = code }, RECOVERY_GRACE_MILLIS)
+            tune.retuneCurrent("playback error $code")
+        }
+        // The card comes down when a picture actually appears, not when a tune is merely
+        // dispatched - a tune that fails again would otherwise clear it and leave black.
+        player.onFirstFrame = {
+            tune.noteFirstFrame()
+            recoveryHandler.removeCallbacksAndMessages(null)
+            standByReason.value = ""
+            tuning.value = false
+            updateProgrammeVolume()
+        }
+
+        // A stall is the third way this player goes quiet, and the only silent one - no error,
+        // no end of media, just a stopped picture. The box calls the same condition a fault
+        // after two seconds and puts a stand-by card up (field_player.py:575).
+        //
+        // The card is ALL that happens. Re-tuning on a stall was tried and made things far
+        // worse: it discards whatever has buffered and restarts the deep seek, so on a
+        // connection that cannot sustain the bitrate it produced a permanent cycle of six
+        // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
+        // resumes by itself; interrupting that is the one thing that stops it recovering.
+        player.onBuffering = { buffering ->
+            stallHandler.removeCallbacksAndMessages(null)
+            if (buffering) {
+                stallHandler.postDelayed({
+                    if (!destroyed) standByReason.value = "BUFFERING"
+                }, STALL_CARD_MILLIS)
+                // NO automatic re-tune on a stall. It was tried and it made things materially
+                // worse: a re-tune discards whatever has buffered and restarts the deep seek, so
+                // on a connection that cannot sustain the bitrate it produced a permanent cycle -
+                // six seconds of playback, twelve seconds of nothing, repeat. ExoPlayer keeps
+                // filling the buffer during a stall and resumes on its own; interrupting that is
+                // the one thing guaranteed to stop it recovering.
+            } else {
+                standByReason.value = ""
+            }
+        }
     }
 
     /**
@@ -764,7 +752,7 @@ class MainActivity : ComponentActivity() {
 
             val nav = DialNavigator(channels, remembered.takeIf { it > 0 })
             navigator = nav
-            tuneTo(nav.current, generation.get(), initialRequestedAt)
+            tune.tuneFirst(nav.current, initialRequestedAt)
         }
     }
 
@@ -804,11 +792,11 @@ class MainActivity : ComponentActivity() {
                 true
             }
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
-                surfTo(nav.up())
+                tune.surfTo(nav.up())
                 true
             }
             KeyEvent.KEYCODE_DPAD_DOWN, KeyEvent.KEYCODE_CHANNEL_DOWN -> {
-                surfTo(nav.down())
+                tune.surfTo(nav.down())
                 true
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_GUIDE -> {
@@ -832,56 +820,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    /**
-     * Move the dial now, show it now, and let the picture catch up.
-     *
-     * The navigator used to be advanced INSIDE the executor lambda, which meant a second press
-     * could not move the dial until the first tune's network round trip had finished - about two
-     * seconds during which the remote appeared dead and nothing on screen acknowledged the
-     * press. Surfing quickly was impossible even though every press was being registered.
-     *
-     * Advancing here makes the UI thread the navigator's single writer instead of the executor,
-     * which is the same invariant moved rather than broken: `up()`/`down()`/`jumpTo` are now only
-     * ever called from key handling, and the executor only reads.
-     *
-     * The banner goes up immediately with no title, because the title is not known until the
-     * clip is resolved. That is how a television behaves - the number changes the instant you
-     * press, and the programme name arrives with the picture.
-     */
-    private fun surfTo(target: Channel) {
-        // The title comes from the clock rotation right here, not from the tune that follows.
-        // Waiting for the tune meant the banner showed a bare channel name whenever the tune was
-        // superseded - which is every press but the last when surfing quickly - and whenever a
-        // channel was chosen from the picker, where the title was already known and thrown away.
-        //
-        // It costs one walk of one channel's clip list, no network, and it is the same
-        // arithmetic the guide uses. What is on a channel is knowable without tuning to it.
-        // Stop the old channel at the SOURCE rather than covering it. A Compose overlay needs a
-        // recomposition and a frame to appear, and the previous channel keeps rendering
-        // underneath in the meantime - which showed up as an intermittent flash of the old
-        // picture right after choosing a new one. stop() ends that render immediately, and
-        // PlayerView's own shutter takes the surface black in the same frame.
-        //
-        // Safe to do here: surfTo only runs on a deliberate channel change, and the tune that
-        // follows calls setMediaSource and prepare regardless of what state the player was left
-        // in. The blank overlay stays as well, to cover the gap between the shutter and the
-        // first frame of the new channel.
-        player?.stop()
-        // A deliberate channel change supersedes any error still waiting to be
-        // announced: the card would name a channel the viewer has already left.
-        recoveryHandler.removeCallbacksAndMessages(null)
-        standByReason.value = ""
-        tuning.value = true
-        updateProgrammeVolume()
-        val (line, title) = ChannelLabels.bannerLinesFor(target, nowSeconds())
-        bannerChannelLine.value = line
-        bannerTitleLine.value = title
-        bannerGeneration.value += 1
-
-        val gen = generation.incrementAndGet()
-        val requestedAt = SystemClock.elapsedRealtime()
-        executor.execute { tuneTo(target, gen, requestedAt) }
-    }
 
     /**
      * Opens the picker seeded on the channel actually on air - [onAir], not [DialNavigator.currentIndex]:
@@ -896,9 +834,9 @@ class MainActivity : ComponentActivity() {
         // tune passes its own generation check, moves the navigator out from under the rows
         // captured below, and starts playing with its banner drawn behind the open list. That
         // was reproduced on device before this line existed, not theorised.
-        generation.incrementAndGet()
+        tune.supersede()
 
-        val onAirNumber = onAir?.channel?.number ?: nav.currentNumber
+        val onAirNumber = tune.onAir?.channel?.number ?: nav.currentNumber
         val startIndex = nav.channels.indexOfFirst { it.number == onAirNumber }
             .let { if (it >= 0) it else nav.currentIndex }
 
@@ -955,19 +893,10 @@ class MainActivity : ComponentActivity() {
         updateProgrammeVolume()
         executor.execute {
             if (destroyed) return@execute
-            val now = nowSeconds()
-            val tuned = Tuner.tune(channel, urls, now, ladder, ledger.refusedSnapshot()) ?: return@execute
-            var playable: Playable = tuned.playable
-            if (playable is NeedsResolving) {
-                playable = ledger.recall(playable.videoId, now)
-                    ?: resolver.resolveDetailed(
-                        playable.videoId, now, ladder, ledger.refusedSnapshot())?.also {
-                        ledger.remember(playable.videoId, it)
-                    }?.playable ?: return@execute
-            }
+            val tuned = tune.resolveForAudio(channel) ?: return@execute
             // Only the audio track is wanted, so the audio URL is handed over as the source and
             // the video URL is dropped entirely - no second decode, no second video fetch.
-            val audioOnly = when (playable) {
+            val audioOnly = when (val playable = tuned.playable) {
                 is Progressive -> playable.audioUrl?.let { Progressive(it, null) }
                 is Hls -> playable
                 else -> null
@@ -1042,11 +971,9 @@ class MainActivity : ComponentActivity() {
      */
     private fun recoverIfAbandoned() {
         if (!tuning.value || destroyed) return
-        val channel = onAir?.channel ?: navigator?.current ?: return
+        val channel = tune.onAir?.channel ?: navigator?.current ?: return
         Log.i("fs42", "re-tuning ${channel.number} ${channel.name}: overlay closed over an unfinished tune")
-        val gen = generation.incrementAndGet()
-        val at = SystemClock.elapsedRealtime()
-        executor.execute { tuneTo(channel, gen, at) }
+        tune.tune(channel)
     }
 
     /**
@@ -1068,211 +995,15 @@ class MainActivity : ComponentActivity() {
             // so the picture visibly jumps for no reason - the viewer asked for the channel they
             // are already watching, and the correct answer is "you have it". The banner is still
             // re-shown, because pressing OK on a channel is a request to be told what it is.
-            if (onAir?.channel?.number == channel.number) {
+            if (tune.onAir?.channel?.number == channel.number) {
                 bannerGeneration.value += 1
             } else {
-                surfTo(channel)
+                tune.surfTo(channel)
             }
         }
         closePicker()
     }
 
-    /**
-     * Runs on the background executor: resolves what a channel is showing right now and starts
-     * it on the UI thread. A cache miss is resolved from the server before giving up; when even
-     * that fails, the current picture is left up rather than blanking the screen.
-     *
-     * [requestGeneration] is checked at the start and again right before the result would reach
-     * the player: if a later keypress has since bumped [generation], this tune is superseded and
-     * abandons without touching the player, prefs, or [onAir]. That is what lets a burst of
-     * presses skip every intermediate channel instead of running each one to completion.
-     */
-    private fun tuneTo(channel: Channel, requestGeneration: Int, requestedAtMillis: Long) {
-        if (requestGeneration != generation.get()) {
-            Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before tuning; abandoning")
-            return
-        }
-
-        val now = nowSeconds()
-        lastTuneRequestedAt = requestedAtMillis
-        var tuned = Tuner.tune(channel, urls, now, ladder, ledger.refusedSnapshot())
-
-        // If the rotation hands back the clip that just finished, take the next one instead.
-        //
-        // See onClipEnded: the published duration can exceed what actually plays, so the clock
-        // still believes the finished clip is on air. Without this the app re-tunes into it,
-        // seeks to a fraction from its end, plays a moment and ends again.
-        // Read and cleared unconditionally, honoured only when the channel matches - see the
-        // field's comment.
-        val je = justEnded
-        justEnded = null
-        val ended = if (je?.first == channel.number) je.second else -1
-        if (ended >= 0 && tuned != null && tuned.streamIndex == ended &&
-            channel.streams.size > 1) {
-            Log.i("fs42", "rotation still on the finished clip $ended; taking the next")
-            val next = (ended + 1) % channel.streams.size
-            tuned = Tuner.tuneToIndex(channel, next, ledger.refusedSnapshot())
-        }
-
-        if (tuned == null) {
-            Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
-            postChannelUnavailable(channel, requestGeneration)
-            return
-        }
-
-        var playable: Playable = tuned.playable
-
-        // A cached URL that the CDN already refused is worse than no cached URL at all: it will
-        // be refused again. Treat it as a miss so the server is asked for a fresh one.
-        val tunedId = tuned.stream.id
-        if (tunedId != null && ledger.isDead(tunedId) && playable is Progressive) {
-            playable = NeedsResolving(tunedId)
-        }
-
-        if (playable is NeedsResolving) {
-            val videoId = playable.videoId
-            val resolveStarted = SystemClock.elapsedRealtime()
-            val remembered = ledger.recallToPlay(videoId, now)
-            if (remembered != null) {
-                Log.d("fs42", "resolve hit from cache for $videoId")
-                playable = remembered
-                lastResolveMillis = SystemClock.elapsedRealtime() - resolveStarted
-                lastResolveWasCached = true
-            } else {
-                Log.d("fs42", "resolve miss; extracting $videoId")
-                lastResolveWasCached = false
-                val resolved = resolver.resolveDetailed(videoId, now, ladder, ledger.refusedSnapshot())
-                lastResolveMillis = SystemClock.elapsedRealtime() - resolveStarted
-                if (resolved != null) {
-                    ledger.rememberPlayed(videoId, resolved)
-                    playable = resolved.playable
-                } else {
-                    // Try the NEXT clips in the rotation rather than giving up on the channel.
-                    //
-                    // "Leaving the current picture up" was never what happened. Arriving here
-                    // from a channel change, the previous picture has already been torn down and
-                    // the black tuning card raised - and that card is only ever cleared by a
-                    // first frame, which is now never coming. So the channel sat black and silent
-                    // with no error and no retry until the clock rolled past the clip, which on a
-                    // documentary channel is ninety minutes. It read as a dead remote.
-                    //
-                    // Dead clips are ordinary: the lineup is built nightly and videos are removed,
-                    // made private or geo-blocked between then and airtime, and a finished
-                    // livestream offers no progressive rendition at all. A television skips to
-                    // what it CAN show.
-                    Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
-                        "$videoId; trying the next clips")
-                    val substitute = resolveNextPlayable(channel, tuned.streamIndex, now)
-                    if (substitute != null) {
-                        val (idx, sub) = substitute
-                        // The whole Tuned is rebuilt, not just the playable: the banner, onAir
-                        // and the end-of-clip marker all read the identity out of it, and leaving
-                        // the dead clip's identity there labelled the substitute as a programme
-                        // it is not. Offset zero because a clip that was never scheduled to be on
-                        // now has nothing meaningful to seek to - which the old code documented
-                        // and then did not do, playing substitutes from the dead clip's offset.
-                        tuned = tuned.copy(
-                            streamIndex = idx,
-                            stream = channel.streams[idx],
-                            playable = sub,
-                            offsetSeconds = 0.0,
-                        )
-                        playable = sub
-                    }
-                }
-            }
-        }
-
-        Log.i(
-            "fs42",
-            "channel ${channel.number} ${channel.name}: clip ${tuned.streamIndex} at " +
-                "${tuned.offsetSeconds}s -> ${playable::class.simpleName}",
-        )
-
-        // Only a Playable that genuinely reaches the player is a successful tune. A cache miss
-        // the server also could not resolve, and anything Unplayable, must leave onAir and the
-        // remembered channel as whatever last actually played - otherwise a dead channel becomes
-        // what the app reports as on air, and what it resumes on next launch, with no picture
-        // and no obvious reason why.
-        val playedSuccessfully = when (playable) {
-            is Progressive, is Hls -> true
-            is NeedsResolving, is Unplayable -> false
-        }
-
-        if (requestGeneration != generation.get()) {
-            Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded before posting; abandoning")
-            return
-        }
-
-        // A tune that failed outright must say so. The blank is already up (surfTo raised it)
-        // and only a first frame ever clears it, so without the card this is a permanently
-        // black, muted channel indistinguishable from a dead remote. tuning.value is left alone
-        // - the card draws above the blank - and recoveryHandler is not used, because this is a
-        // definitive failure, not a grace-period case.
-        if (!playedSuccessfully) postChannelUnavailable(channel, requestGeneration)
-
-        // NeedsResolving here means the server round trip above also failed: play nothing and
-        // leave whatever was already on screen rather than blanking it. The destroyed check
-        // guards against a tune completing after onDestroy has already released the player -
-        // most likely a resolver network call that outlived the activity.
-        if (playable !is NeedsResolving && !destroyed) {
-            runOnUiThread {
-                // The generation is re-checked HERE, not only on the executor. runOnUiThread
-                // queues behind whatever the main thread is already doing, so a tune that was
-                // current when it posted can run after a newer keypress has already moved the
-                // dial - snapping the picture and banner back to a channel the viewer surfed
-                // past, and leaving it there if the newer tune then fails to resolve.
-                if (requestGeneration != generation.get()) {
-                    Log.d("fs42", "channel ${channel.number}: superseded before painting; abandoning")
-                    return@runOnUiThread
-                }
-                if (!destroyed) {
-                    // The commit lives HERE, behind the authoritative generation check and next
-                    // to the play() it certifies - not on the executor side of the hop. Committed
-                    // there, a tune superseded in the hop window still claimed to be on air, and
-                    // if the superseding tune then failed, the picker seed, the resume pref and
-                    // every recovery re-tune all pointed at a channel whose picture never reached
-                    // the screen. Before play() rather than after, because onClipEnded and
-                    // onPlaybackError read onAir from player callback threads and the field must
-                    // be fresh before playback can emit its first event.
-                    if (playedSuccessfully) {
-                        onAir = tuned
-                        prefs.edit().putInt(CHANNEL_KEY, channel.number).apply()
-                        // With the picture up, get the neighbours ready. Surfing is
-                        // overwhelmingly up and down one at a time, and the next press is usually
-                        // a second or two away - exactly long enough to have resolved where it
-                        // is going.
-                        prefetchNeighbours(channel)
-                    }
-                    player?.play(playable, tuned.offsetSeconds, requestedAtMillis)
-                    // A tune that lands while the app is in the background must not leave the
-                    // player running: onStop already paused whatever was playing, and this tune
-                    // would otherwise stream and decode to a screen nobody is watching until the
-                    // app is next brought forward.
-                    if (stopped) player?.setPaused(true)
-                    // Cleared on the same thread that starts the clip, so the outgoing
-                    // programme's dialogue cannot be left sitting over the incoming one for as
-                    // long as it takes the new track to arrive.
-                    captionCues.value = emptyList()
-                    if (captionsOn) loadCaptions(playable, requestGeneration)
-
-                    // Only a genuine success touches the banner, and it reads the current onAir
-                    // rather than this tune's outcome directly - a failed tune leaves onAir on
-                    // whatever last actually played, exactly as the picture itself does. Bumping
-                    // bannerGeneration regardless would replay ChannelOsd's LaunchedEffect and
-                    // re-show the banner for a channel that never actually changed.
-                    if (playedSuccessfully) {
-                        onAir?.let { nowOnAir ->
-                            val (channelLine, titleLine) = ChannelLabels.bannerLines(nowOnAir)
-                            bannerChannelLine.value = channelLine
-                            bannerTitleLine.value = titleLine
-                        }
-                        bannerGeneration.value += 1
-                    }
-                }
-            }
-        }
-    }
 
     /**
      * Find and draw a caption track for whatever is playing right now.
@@ -1283,7 +1014,7 @@ class MainActivity : ComponentActivity() {
      * the subtitle url that is wanted.
      */
     private fun loadCaptionsForCurrentClip() {
-        val id = onAir?.stream?.id ?: run {
+        val id = tune.onAir?.stream?.id ?: run {
             Log.i("fs42", "captions: nothing on air to caption")
             return
         }
@@ -1294,58 +1025,7 @@ class MainActivity : ComponentActivity() {
             PlaybackDiagnostics.recordCaptions("NOT CACHED")
             return
         }
-        loadCaptions(playable, generation.get())
-    }
-
-    /**
-     * Fetch and parse the subtitle track of the clip that has just started, if it has one.
-     *
-     * The URL came out of the same extraction as the streams, so nothing is resolved again here -
-     * this is one GET of a few tens of kilobytes. It runs after the player has been handed the
-     * clip rather than before, because a picture with no captions yet is a far better second than
-     * a caption with no picture yet.
-     *
-     * [requestGeneration] is re-checked after the download for the same reason every other stage
-     * of a tune checks it: this is the slowest thing in the sequence, and a viewer surfing past a
-     * channel would otherwise get its subtitles pasted over whatever they landed on.
-     *
-     * Failures are swallowed. Captions are a courtesy, and a clip that plays with none is a far
-     * better outcome than a stand-by card because a subtitle file would not download.
-     */
-    private fun loadCaptions(playable: Playable, requestGeneration: Int) {
-        val url = (playable as? Progressive)?.captionUrl ?: run {
-            // Said out loud. A silent return here is indistinguishable from a broken toggle, and
-            // that ambiguity is most of why this took so many attempts to find.
-            Log.i("fs42", "captions: this clip offers no english track")
-            return
-        }
-        captionExecutor.execute {
-            val cues = runCatching {
-                val body = (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
-                    connectTimeout = CAPTION_TIMEOUT_MILLIS
-                    readTimeout = CAPTION_TIMEOUT_MILLIS
-                    try {
-                        inputStream.bufferedReader().use { it.readText() }
-                    } finally {
-                        disconnect()
-                    }
-                }
-                VttCues.parse(body)
-            }.getOrElse {
-                Log.w("fs42", "captions: could not fetch the track: $it")
-                PlaybackDiagnostics.recordCaptions("FETCH FAILED: $it")
-                return@execute
-            }
-            // Said out loud because "captions do not work" has been diagnosed wrongly several
-            // times over, and the number of cues separates a track that arrived and had nothing
-            // in it from one that never arrived at all.
-            Log.i("fs42", "captions: ${cues.size} cues parsed")
-            PlaybackDiagnostics.recordCaptions("DRAWN: ${cues.size} cues")
-            runOnUiThread {
-                if (destroyed || requestGeneration != generation.get()) return@runOnUiThread
-                captionCues.value = cues
-            }
-        }
+        captions.load(playable, tune.generationNow())
     }
 
     /** Guards against a second check while one is already running. */
@@ -1363,7 +1043,7 @@ class MainActivity : ComponentActivity() {
      * clips rather than a mistake.
      */
     private fun showBanner() {
-        val channel = onAir?.channel ?: navigator?.current
+        val channel = tune.onAir?.channel ?: navigator?.current
         if (channel != null) {
             val (line, title) = ChannelLabels.bannerLinesFor(channel, nowSeconds())
             bannerChannelLine.value = line
@@ -1383,7 +1063,7 @@ class MainActivity : ComponentActivity() {
      * the channel under an open overlay.
      */
     private fun openSettings() {
-        generation.incrementAndGet()
+        tune.supersede()
         updateStatus.value = ""
         refreshSettingsRows()
         settingsVisible.value = true
@@ -1423,100 +1103,8 @@ class MainActivity : ComponentActivity() {
     }
 
 
-    /**
-     * Resolve what is on the channels either side, so pressing up or down is instant.
-     *
-     * This is what replaced the server's `urls.json`. That file carried signed urls for about
-     * half the dial and made those tunes immediate; it could not survive the server going away,
-     * because googlevideo signs urls for about six hours and a nightly file would be dead by
-     * morning. So the work moved here, to the moment it is actually predictive: the viewer is
-     * watching something, and the overwhelmingly likely next press is one channel up or down.
-     *
-     * On its own thread, so it can never delay a real tune - a prefetch in progress when the
-     * viewer presses a button is simply abandoned mid-flight and its result discarded or, if it
-     * finishes anyway, kept in the cache where the next press will find it.
-     *
-     * Costs one metadata extraction per neighbour and downloads no media at all.
-     */
-    private fun prefetchNeighbours(from: Channel) {
-        val nav = navigator ?: return
-        val around = listOfNotNull(nav.peekUp(from), nav.peekDown(from))
-        for (channel in around) {
-            prefetchExecutor.execute {
-                if (destroyed) return@execute
-                val now = nowSeconds()
-                val tuned = Tuner.tune(channel, urls, now, ladder, ledger.refusedSnapshot()) ?: return@execute
-                val id = (tuned.playable as? NeedsResolving)?.videoId ?: return@execute
-                if (ledger.isDead(id) || ledger.recall(id, now) != null) return@execute
-                val resolved = resolver.resolveDetailed(id, now, ladder, ledger.refusedSnapshot())
-                if (resolved != null && !destroyed) {
-                    ledger.remember(id, resolved)
-                    Log.d("fs42", "prefetched channel ${channel.number} ${channel.name}")
-                }
-            }
-        }
-    }
 
-    /**
-     * Walk forward through a channel's clips until one resolves.
-     *
-     * Bounded, and deliberately not the whole list: each attempt is a full extraction of several
-     * seconds, so trying a hundred would leave the viewer staring at black for minutes while the
-     * app worked - far worse than admitting defeat and putting a card up. A handful covers the
-     * ordinary case, which is one or two dead clips in a row, and a channel where even that many
-     * consecutive clips are dead has a real problem worth showing.
-     *
-     * Starts at the clip AFTER the one the clock chose, so the rotation is respected as closely
-     * as it can be. The offset is deliberately dropped - a substitute clip starts at its
-     * beginning, because there is nothing meaningful to seek to in a programme that was never
-     * scheduled to be on now.
-     */
-    private fun resolveNextPlayable(
-        channel: Channel,
-        failedIndex: Int,
-        now: Long,
-    ): Pair<Int, Playable>? {
-        for (step in 1..SKIP_DEAD_CLIPS) {
-            if (destroyed) return null
-            // The wrapped index is what gets returned, because the caller rebuilds the Tuned
-            // around it and channel.streams is indexed by the wrapped value, not the raw sum.
-            val idx = (failedIndex + step) % channel.streams.size
-            val next = channel.streams.getOrNull(idx) ?: return null
-            val id = next.id ?: continue
-            if (ledger.isDead(id)) continue
-            ledger.recallToPlay(id, now)?.let {
-                Log.i("fs42", "skipped to clip $idx (cached)")
-                return idx to it
-            }
-            val resolved = resolver.resolveDetailed(id, now, ladder, ledger.refusedSnapshot())
-            if (resolved != null) {
-                ledger.rememberPlayed(id, resolved)
-                Log.i("fs42", "skipped to clip $idx after $step dead clip(s)")
-                return idx to resolved.playable
-            }
-            // Remember it so the next tune of this channel does not pay for it again.
-            ledger.markDead(id)
-        }
-        Log.w("fs42", "channel ${channel.number}: $SKIP_DEAD_CLIPS consecutive clips unplayable")
-        return null
-    }
 
-    /**
-     * Raise the stand-by card for a channel that definitively failed to tune.
-     *
-     * The generation check runs INSIDE the runnable, matching the play path: runOnUiThread
-     * queues behind main-thread work, so a check done on the executor can pass and then a
-     * keypress can move the dial before the runnable executes - after which a stale card names
-     * a channel the viewer already left, painted over the new tune.
-     */
-    private fun postChannelUnavailable(channel: Channel, requestGeneration: Int) {
-        if (destroyed) return
-        runOnUiThread {
-            if (!destroyed && requestGeneration == generation.get()) {
-                standByReason.value = "CHANNEL ${channel.number} UNAVAILABLE"
-            }
-        }
-    }
 
     /**
      * Ask the publisher whether there is a newer build, and fetch it if so.
