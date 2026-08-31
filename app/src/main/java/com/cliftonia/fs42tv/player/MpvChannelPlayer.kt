@@ -36,6 +36,12 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
          */
         private const val END_SLACK_SECONDS = 20.0
 
+        /**
+         * How long after the newest load a mismatched first frame is still treated as stale.
+         * Longer than any burst of surfing, far shorter than a viewer would stare at black.
+         */
+        private const val RESYNC_MILLIS = 2_500L
+
         /** Error code meaning "this player is finished" rather than "this clip failed". */
         const val ENGINE_DIED = "MPV_SHUTDOWN"
 
@@ -90,6 +96,23 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
      */
     @Volatile private var ended = false
 
+    // How many loads have been ASKED for versus how many mpv has finished opening. When the
+    // accelerator paints two surfs sixteen milliseconds apart, mpv still briefly opens the
+    // superseded file - and its events must not be mistaken for the current one's. Seen < asked
+    // means the event in hand belongs to a file that has already been replaced.
+    private val loadsAsked = java.util.concurrent.atomic.AtomicInteger(0)
+    private val loadsSeen = java.util.concurrent.atomic.AtomicInteger(0)
+
+    /**
+     * When the newest load was asked for. The counters above can skew - a load that dies
+     * before opening consumes an ask without ever producing a file-loaded - and unrepaired
+     * skew would swallow every future first frame, which is a permanently black dial. The
+     * repair is time: mpv processes loads serially and quickly, so a first frame arriving
+     * with no NEW ask in the last couple of seconds belongs to the newest file no matter
+     * what the counters say, and they are resynced to it.
+     */
+    @Volatile private var lastAskMillis = 0L
+
     /**
      * True once [release] has run. Nothing may touch the mpv core afterwards.
      *
@@ -111,6 +134,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         mpv.useDirectVideoOutput()
         mpv.events = object : MpvView.Events {
             override fun onFileLoaded() {
+                loadsSeen.incrementAndGet()
                 if (released) return
                 // Ask mpv what it actually did with the subtitle, rather than assuming the
                 // option took. `sid` is the selected track and `sub-text` is what is on screen
@@ -174,6 +198,21 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
 
             override fun onFirstFrame() {
                 if (released || hasPicture) return
+                // The first frame of a REPLACED file must not drop the blank: with tunes
+                // painted milliseconds apart, mpv shows a beat of the superseded channel before
+                // the wanted one loads, and clearing the cover here put another channel's
+                // picture on screen until the right file took over. The cover waits for the
+                // file most recently asked for.
+                if (loadsSeen.get() < loadsAsked.get()) {
+                    if (SystemClock.elapsedRealtime() - lastAskMillis < RESYNC_MILLIS) {
+                        Log.i("fs42", "first frame of a replaced file; keeping the blank up")
+                        return
+                    }
+                    // Nothing newer was asked for in seconds: the pipeline has drained and
+                    // this frame IS the newest file - the counters skewed on a dead load.
+                    Log.i("fs42", "accepting first frame after load-count skew")
+                    loadsSeen.set(loadsAsked.get())
+                }
                 hasPicture = true
                 val requested = requestedAtMillis
                 if (requested > 0) {
@@ -210,6 +249,16 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                     // Never showed a frame: a dead url or an unplayable stream.
                     Log.w("fs42", "playback failed: MPV_END_FILE_ERROR (no picture)")
                     main.post { onPlaybackError?.invoke("MPV_ERROR") }
+                } else if (!hasPicture) {
+                    // A non-error end from a file that never showed a frame is the ghost of a
+                    // REPLACED file, not a clip finishing: `loadfile replace` ends the outgoing
+                    // file, the `ended` guard above swallows that - but the guard is cleared
+                    // when the NEXT file loads, and with the accelerator painting surfs sixteen
+                    // milliseconds apart, file A's end can arrive after the guard was already
+                    // cleared for file B. Mistaking it for B ending skipped to the next clip,
+                    // so the viewer saw one programme for a beat before it jumped. A genuine
+                    // roll-over has always shown a picture first.
+                    Log.i("fs42", "ignoring end of a replaced file that never showed a frame")
                 } else {
                     if (reason == "error") {
                         Log.i("fs42", "clip ended in error near its tail; treating as roll-over")
@@ -287,6 +336,8 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
             return
         }
         hasPicture = false
+        loadsAsked.incrementAndGet()
+        lastAskMillis = SystemClock.elapsedRealtime()
         // Stays TRUE across the load. `loadfile ... replace` makes mpv end the outgoing file,
         // and that end-file is indistinguishable from the new clip finishing - clearing the guard
         // here meant every channel change was immediately read as "clip ended" and re-tuned, over
