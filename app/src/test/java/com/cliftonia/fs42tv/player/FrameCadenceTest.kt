@@ -69,7 +69,11 @@ class FrameCadenceTest {
     }
 
     @Test
-    fun `display is the default, so an existing television is unchanged by upgrading`() {
-        assertEquals("DISPLAY", FrameCadence.SYNC_MODES.first())
+    fun `audio is the default, decided by measurement rather than kept by inertia`() {
+        // Same clip, same pinned offset, under vo=mediacodec_embed: DISPLAY accumulated 137
+        // late frames in 75 seconds while AUDIO produced zero with avsync at 0.00004s. A
+        // television that had chosen DISPLAY by hand keeps its choice - the pref stores the
+        // mode by name, and only a set that never chose follows this default.
+        assertEquals("AUDIO", FrameCadence.SYNC_MODES.first())
     }
 }
