@@ -26,6 +26,16 @@ import `is`.xyz.mpv.MPVLib
 class MpvChannelPlayer(context: Context) : ChannelPlayback {
 
     companion object {
+        /**
+         * How close to the published end an "error" ending still counts as the clip finishing.
+         *
+         * Generous, because the published duration comes from yt-dlp's metadata and what
+         * actually plays is the shorter of two separately-muxed tracks - gaps of several
+         * seconds are ordinary. A 403 mid-clip is nowhere near the tail, so the two do not
+         * overlap in practice.
+         */
+        private const val END_SLACK_SECONDS = 20.0
+
         /** Error code meaning "this player is finished" rather than "this clip failed". */
         const val ENGINE_DIED = "MPV_SHUTDOWN"
 
@@ -179,10 +189,31 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 // other must drop a dead URL first or it will resolve straight back to it.
                 if (ended) return
                 ended = true
-                if (reason == "error") {
+                // An "error" end in the last seconds of a clip is a ROLL-OVER, not a fault.
+                // These files are separately-muxed video and audio, and whichever track is
+                // shorter ends the file "in error" moments before the published duration - so
+                // routing it to the error path raised the blank, armed the stand-by grace, and
+                // whenever the re-tune's resolve outran the four seconds, flashed TECHNICAL
+                // DIFFICULTIES at the viewer on every single programme boundary. The dial's
+                // correct response to both endings is identical: play whatever is on next.
+                // A genuine dead url still reports as an error, because it fails at the START.
+                val nearEnd = runCatching {
+                    val position = MPVLib.getPropertyDouble("time-pos")
+                    val duration = MPVLib.getPropertyDouble("duration")
+                    position != null && duration != null && duration > 0 &&
+                        duration - position < END_SLACK_SECONDS
+                }.getOrDefault(false)
+                if (reason == "error" && hasPicture && !nearEnd) {
                     Log.w("fs42", "playback failed: MPV_END_FILE_ERROR")
                     main.post { onPlaybackError?.invoke("MPV_ERROR") }
+                } else if (reason == "error" && !hasPicture) {
+                    // Never showed a frame: a dead url or an unplayable stream.
+                    Log.w("fs42", "playback failed: MPV_END_FILE_ERROR (no picture)")
+                    main.post { onPlaybackError?.invoke("MPV_ERROR") }
                 } else {
+                    if (reason == "error") {
+                        Log.i("fs42", "clip ended in error near its tail; treating as roll-over")
+                    }
                     main.post { onClipEnded?.invoke() }
                 }
             }

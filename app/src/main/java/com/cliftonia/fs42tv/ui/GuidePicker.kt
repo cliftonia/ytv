@@ -156,7 +156,16 @@ class GuidePicker(private val deps: Deps) {
             // One instant for the whole dial - see GuideRows. Walking a hundred channels while
             // reading the clock per channel would let the list straddle a programme boundary
             // and show two different moments at once.
-            val filled = GuideRows.forChannels(channels, deps.nowSeconds())
+            val filled = GuideRows.forChannels(channels, deps.nowSeconds()).toMutableList()
+            // The on-air channel's row shows what is ACTUALLY playing. For every other channel
+            // the clock's answer is the only one there is, but for this one the truth is in
+            // hand, and it is the row the picker opens on - the first thing the viewer reads.
+            deps.tune.onAir?.let { onAir ->
+                val i = channels.indexOfFirst { it.number == onAir.channel.number }
+                if (i >= 0) {
+                    filled[i] = ChannelLabels.listRow(channels[i], onAir.stream.title)
+                }
+            }
             val took = deps.elapsedMillis() - started
             deps.runOnUi {
                 if (deps.halted() || !visible.value) return@runOnUi

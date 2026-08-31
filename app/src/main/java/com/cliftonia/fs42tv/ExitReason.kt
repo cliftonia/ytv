@@ -20,8 +20,29 @@ import android.os.Build
  */
 object ExitReason {
 
+    /** An abnormal exit and when it happened, so a caller can decline to report it twice. */
+    data class Abnormal(val text: String, val timestampMillis: Long)
+
     /** The last abnormal exit, in a form that fits on a television screen, or null if clean. */
-    fun lastAbnormal(context: Context): String? {
+    fun lastAbnormal(context: Context): String? = lastAbnormalTimed(context)?.text
+
+    /**
+     * The last abnormal exit NOT yet shown to anyone, stamping it seen.
+     *
+     * The exit history is forever, so without this the same old death greeted the viewer on
+     * every launch until a newer one happened to replace it. The settings row keeps using
+     * [lastAbnormal] - a diagnostic should keep answering; only the launch card must not nag.
+     */
+    fun unseenAbnormal(context: Context, prefs: android.content.SharedPreferences): String? {
+        val exit = lastAbnormalTimed(context) ?: return null
+        val seen = prefs.getLong(SEEN_KEY, 0)
+        prefs.edit().putLong(SEEN_KEY, exit.timestampMillis).apply()
+        return exit.takeIf { it.timestampMillis > seen }?.text
+    }
+
+    private const val SEEN_KEY = "exit_seen"
+
+    fun lastAbnormalTimed(context: Context): Abnormal? {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return null
         val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as? ActivityManager
             ?: return null
@@ -31,13 +52,14 @@ object ExitReason {
             manager.getHistoricalProcessExitReasons(context.packageName, 0, 1).firstOrNull()
         }.getOrNull() ?: return null
 
-        if (!isAbnormal(info.reason, info.status)) return null
+        if (!isAbnormal(info.reason, info.status, info.importance)) return null
         val detail = info.description?.take(48).orEmpty()
-        return buildString {
+        val text = buildString {
             append(name(info.reason))
             if (info.status != 0) append(" (status ").append(info.status).append(')')
             if (detail.isNotEmpty()) append(": ").append(detail)
         }
+        return Abnormal(text, info.timestamp)
     }
 
     /**
@@ -46,11 +68,21 @@ object ExitReason {
      * A normal exit, a user-requested stop, or Android reclaiming a backgrounded app are all
      * ordinary and constant on a television - reporting them would bury the one that matters.
      */
-    internal fun isAbnormal(reason: Int, status: Int = 0): Boolean = when (reason) {
+    internal fun isAbnormal(
+        reason: Int,
+        status: Int = 0,
+        importance: Int = android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND,
+    ): Boolean = when (reason) {
+        // Reclaiming a BACKGROUNDED app for memory is Android housekeeping, not a fault: on a
+        // 2.34GB television it happens most times the viewer visits another app for a while,
+        // and reporting it put "KILLED - LOW MEMORY" on the screen at every return - read,
+        // reasonably, as the app leaking. A kill while the viewer was WATCHING is different
+        // and stays reported: that one interrupts a programme.
+        ApplicationExitInfo.REASON_LOW_MEMORY ->
+            importance <= android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_VISIBLE
         ApplicationExitInfo.REASON_CRASH,
         ApplicationExitInfo.REASON_CRASH_NATIVE,
         ApplicationExitInfo.REASON_ANR,
-        ApplicationExitInfo.REASON_LOW_MEMORY,
         ApplicationExitInfo.REASON_SIGNALED,
         ApplicationExitInfo.REASON_EXCESSIVE_RESOURCE_USAGE,
         -> true
