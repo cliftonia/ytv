@@ -51,7 +51,7 @@ class AcceleratedResolverTest {
         // picture exactly as they did before any of this existed.
         val device = FakeDevice(resolved)
         val (s, _) = server(health = null, resolve = null)
-        val got = AcceleratedResolver(s, device).resolveDetailed("abc12345678", 100, listOf("hd"))
+        val got = AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd"))
         assertEquals("https://v/from-device", (got?.playable)?.videoUrl)
         assertEquals(1, device.calls)
     }
@@ -60,7 +60,7 @@ class AcceleratedResolverTest {
     fun `a reachable server is preferred, and the device is not troubled`() {
         val device = FakeDevice(resolved)
         val (s, _) = server(healthy, tiers)
-        val got = AcceleratedResolver(s, device).resolveDetailed("abc12345678", 100, listOf("hd"))
+        val got = AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd"))
         assertEquals("https://v/from-server", (got?.playable)?.videoUrl)
         assertEquals("the device must not resolve what the server already answered", 0, device.calls)
     }
@@ -71,7 +71,7 @@ class AcceleratedResolverTest {
         // by skipping a dead one is simply not in its cache yet.
         val device = FakeDevice(resolved)
         val (s, _) = server(health = healthy, resolve = null)
-        val got = AcceleratedResolver(s, device).resolveDetailed("abc12345678", 100, listOf("hd"))
+        val got = AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd"))
         assertEquals("https://v/from-device", (got?.playable)?.videoUrl)
     }
 
@@ -82,7 +82,7 @@ class AcceleratedResolverTest {
         // never asking.
         val device = FakeDevice(resolved)
         val (s, asked) = server(health = """{"ok":false,"extractor":{"ok":false}}""", resolve = tiers)
-        AcceleratedResolver(s, device).resolveDetailed("abc12345678", 100, listOf("hd"))
+        AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd"))
         assertEquals(1, device.calls)
         assertTrue("a server that says it is broken must not be asked to resolve",
             asked.none { it.contains("/resolve") })
@@ -94,7 +94,7 @@ class AcceleratedResolverTest {
         // an accelerator that makes the dial slower than it was.
         val device = FakeDevice(resolved)
         val (s, asked) = server(healthy, tiers)
-        val accelerated = AcceleratedResolver(s, device)
+        val accelerated = AcceleratedResolver(listOf(s), device)
         repeat(5) { accelerated.resolveDetailed("abc12345678", 100, listOf("hd")) }
         assertEquals("health should be checked once for the whole burst",
             1, asked.count { it.contains("/health") })
@@ -104,7 +104,25 @@ class AcceleratedResolverTest {
     fun `the device still answers when neither has anything`() {
         val device = FakeDevice(null)
         val (s, _) = server(health = null, resolve = null)
-        assertNull(AcceleratedResolver(s, device).resolveDetailed("abc12345678", 100, listOf("hd")))
+        assertNull(AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd")))
         assertEquals(1, device.calls)
+    }
+
+    @Test
+    fun `an unreachable first server falls through to the second, not to the device`() {
+        // One machine, two networks: at home the LAN address answers and the tailnet one is
+        // never consulted; a set that reaches only the tailnet must still get its 5ms resolves
+        // rather than paying a 2.4-second on-device extraction.
+        val (dead, _) = server(health = null, resolve = null)
+        val (alive, asked) = server(
+            health = """{"ok":true}""",
+            resolve = """{"hd":{"video":"https://v/from-server","audio":"https://a/1","expires":9999}}""",
+        )
+        val device = FakeDevice(resolved)
+        val got = AcceleratedResolver(listOf(dead, alive), device)
+            .resolveDetailed("abc12345678", 100, listOf("hd"))
+        assertEquals("https://v/from-server", got?.playable?.videoUrl)
+        assertEquals("the device must not have been consulted", 0, device.calls)
+        assertTrue(asked.any { it.contains("/resolve") })
     }
 }

@@ -16,7 +16,14 @@ import android.util.Log
  * tune, with no setting to get wrong.
  */
 class AcceleratedResolver(
-    private val server: ServerResolver,
+    /**
+     * In preference order, asked in turn until one is healthy. Two addresses for one server:
+     * the LAN one answers in single-digit milliseconds when the television is at home, and the
+     * tailnet one is the same machine for anything that can reach the tailnet. Each failure is
+     * remembered by the resolver's own health cache, so the car pays the probes once per health
+     * window, not per tune.
+     */
+    private val servers: List<ServerResolver>,
     private val device: ClipResolver,
     /**
      * A provider rather than a value so the MediaCodecList walk happens on the resolve path's
@@ -52,7 +59,8 @@ class AcceleratedResolver(
         // Asked first and answered from a cached health check, so an unreachable server costs
         // nothing per tune. Without the caching this would pay a connection timeout on every
         // channel change - an accelerator that makes the dial slower.
-        if (server.isAvailable(nowSeconds * 1000)) {
+        for (server in servers) {
+            if (!server.isAvailable(nowSeconds * 1000)) continue
             server.resolveDetailed(videoId, nowSeconds, decodableLadder(ladder), refused)?.let {
                 PlaybackDiagnostics.recordSource("server")
                 return it
@@ -61,6 +69,7 @@ class AcceleratedResolver(
             // clip reached some other way - a dead-clip skip, a clip that rolled over early - is
             // simply not in its cache yet.
             Log.d("fs42", "server had nothing for $videoId; resolving here")
+            break
         }
         PlaybackDiagnostics.recordSource("device")
         return device.resolveDetailed(videoId, nowSeconds, ladder, refused)
