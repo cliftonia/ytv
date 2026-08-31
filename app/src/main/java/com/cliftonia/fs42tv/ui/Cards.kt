@@ -69,3 +69,35 @@ fun UpdatePrompt(visible: Boolean) {
         OsdText(text = "UPDATE READY - PRESS OK", fontSize = 20.sp)
     }
 }
+
+/**
+ * A small corner pill for a mid-clip stall, drawn over the FROZEN picture.
+ *
+ * Deliberately not the stand-by card. A stall is weather, not a breakdown: ExoPlayer and mpv
+ * both keep filling their buffers and resume on their own, and covering the programme with
+ * TECHNICAL DIFFICULTIES while that happened made every slow patch of Wi-Fi read as a fault.
+ * The last frame stays up - which is what the player naturally shows - and this says why it
+ * is not moving. Top-right, clear of the banner (top-left), the captions (bottom centre) and
+ * the update prompt (bottom-left).
+ *
+ * The trailing dots pulse so a LONG stall still reads as "working" rather than "hung" - a
+ * static label over a static frame is indistinguishable from a freeze, which is the exact
+ * ambiguity this pill exists to remove.
+ */
+@Composable
+fun BufferingPill(visible: Boolean) {
+    if (!visible) return
+    var dots by remember { mutableStateOf(1) }
+    LaunchedEffect(Unit) {
+        while (true) {
+            kotlinx.coroutines.delay(500)
+            dots = dots % 3 + 1
+        }
+    }
+    Box(modifier = Modifier.fillMaxSize().padding(top = 25.dp, end = 48.dp),
+        contentAlignment = Alignment.TopEnd) {
+        Box(modifier = Modifier.background(Color(0xCC000000)).padding(horizontal = 14.dp, vertical = 6.dp)) {
+            OsdText(text = "BUFFERING" + ".".repeat(dots), fontSize = 16.sp)
+        }
+    }
+}

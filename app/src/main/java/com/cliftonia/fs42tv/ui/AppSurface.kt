@@ -35,6 +35,7 @@ fun AppSurface(
             visible = !director.tuning.value && !guide.visible.value && !settingsVisible,
         )
         UpdatePrompt(update.ready.value)
+        BufferingPill(director.buffering.value)
         ChannelOsd(
             channelLine = director.bannerChannelLine.value,
             titleLine = director.bannerTitleLine.value,

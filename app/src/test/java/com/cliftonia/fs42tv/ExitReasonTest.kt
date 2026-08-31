@@ -21,8 +21,22 @@ class ExitReasonTest {
         assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_CRASH_NATIVE))
         assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_CRASH))
         assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_ANR))
-        assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_LOW_MEMORY))
         assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_SIGNALED))
+    }
+
+    @Test
+    fun `a memory kill is only a fault when someone was watching`() {
+        // Android reclaiming a BACKGROUNDED app is housekeeping that happens most times the
+        // viewer visits another app for a while on a 2.34GB television. Reporting it greeted
+        // every return with "KILLED - LOW MEMORY", read - reasonably - as the app leaking.
+        // A kill while the picture was up is different: that one interrupted a programme.
+        val fg = android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND
+        val visible = android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_VISIBLE
+        val cached = android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_CACHED
+        assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_LOW_MEMORY, importance = fg))
+        assertTrue(ExitReason.isAbnormal(ApplicationExitInfo.REASON_LOW_MEMORY, importance = visible))
+        assertFalse("a background reclaim is not news",
+            ExitReason.isAbnormal(ApplicationExitInfo.REASON_LOW_MEMORY, importance = cached))
     }
 
     @Test

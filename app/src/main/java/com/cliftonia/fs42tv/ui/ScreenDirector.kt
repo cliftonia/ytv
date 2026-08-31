@@ -59,6 +59,14 @@ class ScreenDirector(private val deps: Deps) {
     // TV; the card says the app knows and is retrying.
     val standByReason = mutableStateOf("")
 
+    /**
+     * A mid-clip stall, shown as a small pill over the FROZEN picture rather than the full
+     * stand-by card. The card is for faults; a stall is weather. Covering the programme with
+     * TECHNICAL DIFFICULTIES while ExoPlayer was quietly refilling its buffer made every slow
+     * patch of Wi-Fi look like a breakdown.
+     */
+    val buffering = mutableStateOf(false)
+
     // Compose state backing the tune banner. Written only on the UI thread, and only on a
     // genuine success: a failed re-tune must not touch these, since bumping bannerGeneration
     // would replay the LaunchedEffect in ChannelOsd and pop a banner back up for a channel
@@ -130,7 +138,9 @@ class ScreenDirector(private val deps: Deps) {
         // A deliberate channel change supersedes any error still waiting to be announced: the
         // card would name a channel the viewer has already left.
         deps.recoveryHandler.removeCallbacksAndMessages(null)
+        deps.stallHandler.removeCallbacksAndMessages(null)
         standByReason.value = ""
+        buffering.value = false
         tuning.value = true
         updateProgrammeVolume()
         // The title comes from the clock rotation right here, not from the tune that follows.
@@ -231,6 +241,7 @@ class ScreenDirector(private val deps: Deps) {
             deps.tune().noteFirstFrame()
             deps.recoveryHandler.removeCallbacksAndMessages(null)
             standByReason.value = ""
+            buffering.value = false
             tuning.value = false
             updateProgrammeVolume()
         }
@@ -243,14 +254,14 @@ class ScreenDirector(private val deps: Deps) {
         // connection that cannot sustain the bitrate it produced a permanent cycle of six
         // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
         // resumes by itself; interrupting that is the one thing that stops it recovering.
-        player.onBuffering = { buffering ->
+        player.onBuffering = { stalled ->
             deps.stallHandler.removeCallbacksAndMessages(null)
-            if (buffering) {
+            if (stalled) {
                 deps.stallHandler.postDelayed({
-                    if (!deps.halted()) standByReason.value = "BUFFERING"
+                    if (!deps.halted()) buffering.value = true
                 }, STALL_CARD_MILLIS)
             } else {
-                standByReason.value = ""
+                buffering.value = false
             }
         }
     }
@@ -264,11 +275,22 @@ class ScreenDirector(private val deps: Deps) {
      * air, which is a channel between clips rather than a mistake.
      */
     fun showBanner() {
-        val channel = deps.tune().onAir?.channel ?: deps.fallbackChannel()
-        if (channel != null) {
-            val (line, title) = ChannelLabels.bannerLinesFor(channel, deps.nowSeconds())
+        // The channel on air is described from what is ACTUALLY playing, not recomputed from
+        // the clock: after an early roll-over or a dead-clip substitution the rotation names a
+        // programme the player is not showing, and an info button that answers with a guess
+        // when the truth is in hand is worse than none.
+        val onAir = deps.tune().onAir
+        if (onAir != null) {
+            val (line, title) = ChannelLabels.bannerLines(onAir)
             bannerChannelLine.value = line
             if (title.isNotEmpty()) bannerTitleLine.value = title
+        } else {
+            val channel = deps.fallbackChannel()
+            if (channel != null) {
+                val (line, title) = ChannelLabels.bannerLinesFor(channel, deps.nowSeconds())
+                bannerChannelLine.value = line
+                if (title.isNotEmpty()) bannerTitleLine.value = title
+            }
         }
         // The generation is what replays the auto-hide timer in ChannelOsd, so bumping it is
         // what actually shows the banner - exactly what pressing OK on the current channel does.

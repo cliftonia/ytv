@@ -159,17 +159,17 @@ class MainActivity : ComponentActivity() {
         // First, so that anything failing during the rest of setup is still recorded. A crash
         // on a television with no adb is otherwise unreadable.
         CrashLog.install(filesDir)
-        // Android's account first, ours second. A native crash or a low-memory kill leaves
-        // nothing in CrashLog - that is precisely the gap ExitReason fills - and when both
-        // have something to say, Android's is the one that names what actually happened.
-        val died = ExitReason.lastAbnormal(this) ?: CrashLog.summary(filesDir)
+        prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        // Android's account first, ours second. A native crash leaves nothing in CrashLog -
+        // that is precisely the gap ExitReason fills - and when both have something to say,
+        // Android's is the one that names what actually happened. Reported once, ever.
+        val died = ExitReason.unseenAbnormal(this, prefs) ?: CrashLog.summary(filesDir)
         died?.let { crashNotice.value = "LAST RUN: $it" }
         // Stop the television deciding nobody is there. A remote that has not been touched for
         // half an hour looks exactly like an idle device to Android, and it turns the screen
         // off mid-programme. This applies only while this activity is in front.
         window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         updateFlow = UpdateFlow(
             context = this,
             repo = RELEASES_REPO,
