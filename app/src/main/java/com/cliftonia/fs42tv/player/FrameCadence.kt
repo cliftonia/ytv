@@ -32,19 +32,21 @@ object FrameCadence {
     /**
      * The two frame-pacing modes worth offering, and what each trades away.
      *
-     * DISPLAY locks video to the panel's real refresh and resamples the audio to follow. It is
-     * the reason mpv is in this app: nothing else fixed the judder.
+     * AUDIO first, because it is now the measured winner and therefore the default. Under
+     * `vo=mediacodec_embed` the question this list existed to leave open was settled on the
+     * device, twice, same clip at the same pinned offset (25fps PAL, 1080p H.264):
      *
-     * AUDIO is mpv's default. Video is timed against the audio clock, so the two CANNOT drift
-     * apart, at the cost of the pacing above.
+     *     DISPLAY: drops 11->19, late frames 68->137 and climbing, over 75 seconds
+     *     AUDIO:   drops 2, late 0, avsync 0.00004s
      *
-     * Offered rather than decided because `vo=mediacodec_embed` - forced on this television, since
-     * gpu and gpu-next both SIGSEGV in its Mali driver - means MediaCodec presents the frames.
-     * Whether mpv's pacing still governs anything under that vo is genuinely unsettled, and the
-     * device is the only thing that can settle it. Judder and drift are different faults with
-     * different cures.
+     * DISPLAY (`display-resample`) locks video to the panel's refresh and resamples audio to
+     * follow - the setting that originally justified mpv, measured under `vo=gpu`. With
+     * MediaCodec presenting the frames directly, chasing the display clock only makes frames
+     * late; the presenter is already tied to the panel. It stays offered as the escape hatch,
+     * because the judder it once fixed was real and this dial changes video outputs rarely but
+     * not never.
      */
-    val SYNC_MODES = listOf("DISPLAY", "AUDIO")
+    val SYNC_MODES = listOf("AUDIO", "DISPLAY")
 
     fun optionFor(mode: String?): String =
         if (mode == "AUDIO") "audio" else "display-resample"
