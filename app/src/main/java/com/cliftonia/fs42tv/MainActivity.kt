@@ -31,13 +31,18 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 /**
- * A resolve accelerator on the home network, if this set can reach one.
+ * The resolve accelerator's two addresses, in preference order - one machine, two networks.
  *
- * Optional by construction. The television in the car will not reach it and must not care; see
- * [AcceleratedResolver]. Hard-wired rather than configurable because there is exactly one of
- * these and a setting would only be another thing to get wrong.
+ * The LAN address first: at home it answers in single-digit milliseconds, and the LAN is where
+ * both televisions actually live. The tailnet address is the same box for anything that can
+ * reach the tailnet. Optional by construction - the television in the car reaches neither and
+ * must not care; see [AcceleratedResolver]. Hard-wired rather than configurable because there
+ * is exactly one of these and a setting would only be another thing to get wrong.
  */
-private const val RESOLVE_SERVER = "http://100.74.3.68:4243"
+private val RESOLVE_SERVERS = listOf(
+    "http://192.168.4.58:4243",
+    "http://100.74.3.68:4243",
+)
 
 /** The repository whose releases carry the apk, for the self-update check. */
 private const val RELEASES_REPO = "cliftonia/ytv"
@@ -178,17 +183,7 @@ class MainActivity : ComponentActivity() {
             runOnUi = { block -> runOnUiThread(block) },
         )
         resolver = AcceleratedResolver(
-            server = ServerResolver(RESOLVE_SERVER) { url, timeout ->
-                (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
-                    connectTimeout = timeout
-                    readTimeout = timeout
-                    try {
-                        inputStream.bufferedReader().use { it.readText() }
-                    } finally {
-                        disconnect()
-                    }
-                }
-            },
+            servers = RESOLVE_SERVERS.map(ServerResolver::overHttp),
             device = DeviceResolver(),
         )
 

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Cleartext HTTP is permitted ONLY for the publisher on the local network. Everything else,
-  including the googlevideo CDN that stream URLs point at, must use HTTPS - this device runs
-  on untrusted Wi-Fi in a car, so a blanket usesCleartextTraffic would let anything on the
-  network path inject stream URLs straight into the player.
+  Cleartext HTTP is permitted ONLY for the resolve accelerator's two addresses. Everything
+  else, including the googlevideo CDN that stream URLs point at, must use HTTPS - this device
+  runs on untrusted Wi-Fi in a car, so a blanket usesCleartextTraffic would let anything on
+  the network path inject stream URLs straight into the player.
+
+  This list is why the televisions resolved on-device for weeks while the accelerator sat
+  idle: it still named the wiped FieldStation42 box, so Android refused every health check
+  before a packet left the device - and the failure is silent, indistinguishable in the log
+  from the server being down. If the accelerator ever moves, this file moves with it.
 -->
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">192.168.4.203</domain>
+        <domain includeSubdomains="false">192.168.4.58</domain>
+        <domain includeSubdomains="false">100.74.3.68</domain>
     </domain-config>
 </network-security-config>

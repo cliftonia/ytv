@@ -72,7 +72,24 @@ class ServerResolver(
         return ServerTiers.parse(body, ladder, refused, videoId, nowSeconds)
     }
 
-    private companion object {
+    companion object {
+        /**
+         * The standard way to reach an accelerator over plain http, with the timeouts the
+         * repository fetch uses and for the same reason: the default is to wait forever, and
+         * forever is what an idle hotspot delivers.
+         */
+        fun overHttp(baseUrl: String): ServerResolver = ServerResolver(baseUrl) { url, timeout ->
+            (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
+                connectTimeout = timeout
+                readTimeout = timeout
+                try {
+                    inputStream.bufferedReader().use { it.readText() }
+                } finally {
+                    disconnect()
+                }
+            }
+        }
+
         /**
          * Short on purpose. This is the question "is it worth asking", and a set that has to wait
          * for the answer has already lost more than the server could save.
@@ -90,4 +107,5 @@ class ServerResolver(
          */
         const val UNHEALTHY_FOR_MILLIS = 30_000L
     }
+
 }
