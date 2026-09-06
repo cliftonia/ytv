@@ -7,6 +7,11 @@
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=GdeCxgNp11o",
+                "duration": 3845,
+                "title": "Experience the Universe's VIOLENT Extremes | How the Universe Works | Science Channel"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=T663g9hY2o4",
                 "duration": 2656,
                 "title": "How AI & Physics Are Unlocking the Truth (Full Episode) | UFOs: Investigating the Unknown"
@@ -15,6 +20,21 @@
                 "url": "https://www.youtube.com/watch?v=FNR7a8joCGs",
                 "duration": 4605,
                 "title": "Chaos in Space 💥 | How the Universe Works | Science Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vzS7cEuInRY",
+                "duration": 3544,
+                "title": "DESTRUCTION From the Cosmos! | How the Universe Works | Science Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c08Zzc0xepI",
+                "duration": 2667,
+                "title": "The Universe: New Evidence of Parallel Worlds (S3, E2) | Full Episode | History"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QOOkS0E9whU",
+                "duration": 3165,
+                "title": "The Universe's Great IMPOSSIBILITIES! | How the Universe Works | Science Channel"
             },
             {
                 "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
@@ -27,49 +47,9 @@
                 "title": "The Beginning and End of the Universe | How the Universe Works | Science Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=c08Zzc0xepI",
-                "duration": 2667,
-                "title": "The Universe: New Evidence of Parallel Worlds (S3, E2) | Full Episode | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GdeCxgNp11o",
-                "duration": 3845,
-                "title": "Experience the Universe's VIOLENT Extremes | How the Universe Works | Science Channel"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
                 "duration": 3234,
                 "title": "Rain Bombs | Full Documentary | NOVA | PBS"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QOOkS0E9whU",
-                "duration": 3165,
-                "title": "The Universe's Great IMPOSSIBILITIES! | How the Universe Works | Science Channel"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ah8U0-fV6k8",
-                "duration": 2552,
-                "title": "Masterminds: Secrets of the Octopus (Full Episode) | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SLmWY_ycFUA",
-                "duration": 2665,
-                "title": "Uncovering the Secrets of the Sun (Full Episode) | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CNywxo7xZ_I",
-                "duration": 2623,
-                "title": "Understanding Science’s Great Mysteries | BBC Earth Science"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yVwZSoFJWSQ",
-                "duration": 4283,
-                "title": "The Mystery of Time | Through the Wormhole | Science Channel"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
-                "duration": 5034,
-                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
@@ -77,14 +57,49 @@
                 "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geog"
             },
             {
+                "url": "https://www.youtube.com/watch?v=yVwZSoFJWSQ",
+                "duration": 4283,
+                "title": "The Mystery of Time | Through the Wormhole | Science Channel"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CNywxo7xZ_I",
+                "duration": 2623,
+                "title": "Understanding Science’s Great Mysteries | BBC Earth Science"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
+                "duration": 5034,
+                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=4wQSwNvVI5I",
                 "duration": 3039,
                 "title": "The Endless Mysteries of the Universe! | How the Universe Works | Science Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1knIpTuzUW8",
-                "duration": 3236,
-                "title": "How Native Americans Read the Stars (And Built a Civilization) | Full Episode | Native Ame"
+                "url": "https://www.youtube.com/watch?v=UySJY1ZaRDM",
+                "duration": 3119,
+                "title": "The True Scale of the Cosmos | Beyond Our Earth | Free Documentary Space"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
+                "duration": 2395,
+                "title": "Five Wonders of our Universe | Universe | BBC Earth Science"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=34dB_Dlv_1U",
+                "duration": 4026,
+                "title": "What Made the Universe Real? | Quantum Physics Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rfqalXigeOc",
+                "duration": 3942,
+                "title": "Why We Dream - Science Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXXBvHoWQo8",
+                "duration": 4903,
+                "title": "How Does Light Actually Work? | Space Documentary 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=Q6ECB-aDibo",
@@ -92,99 +107,29 @@
                 "title": "Is Time Travel Possible Through Black Holes? | How the Universe Works | Science Channel"
             },
             {
-                "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
-                "duration": 4930,
-                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R_y3lB0lNmo",
-                "duration": 2815,
-                "title": "A Traveler's Guide to the Planets Full Episode | Saturn | @natgeokids"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cTQ3Ko9ZKg8",
-                "duration": 3212,
-                "title": "Our Planet | Frozen Worlds | FULL EPISODE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ei-TcECJVXU",
-                "duration": 2665,
-                "title": "Uncovering the Secrets of the International Space Station (Full Episode) | Superstructures"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KufqzZ9NqsM",
-                "duration": 5371,
-                "title": "Gene editing and clones | 60 Minutes Full Episodes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Qn9kWK6AqIA",
-                "duration": 2665,
-                "title": "Secret Sunken Cities (Full Episode) | Drain the Oceans Compilations | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6nUStkcig4k",
-                "duration": 2595,
-                "title": "Super-Sized Sharks (Full Episode) | SPECIAL | Nat Geo Animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gQcMa9kPfR4",
-                "duration": 2535,
-                "title": "The Global Threat (Full Episode) | UFOs: Investigating the Unknown"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GfO-3Oir-qM",
-                "duration": 2968,
-                "title": "Our Planet | One Planet | FULL EPISODE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R2DU85qLfJQ",
-                "duration": 2924,
-                "title": "Our Planet | Fresh Water | FULL EPISODE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PFRcEXIpBe0",
-                "duration": 2658,
-                "title": "Secrets of the Dinosaurs: The Real Jurassic Americas (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nyIjxzl5Nbs",
-                "duration": 2665,
-                "title": "Hammerheads: Shark Side of the Moon (Full Episode) | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=h8xShOnXdUw",
-                "duration": 2665,
-                "title": "The Pacific Northwest Megaquake (Full Episode) | X-Ray Earth | Nat Geo Animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3mHiPV8A2NA",
-                "duration": 2658,
-                "title": "Unearthing Secrets of the Past (Full Episode) | Drain the Oceans | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fFKEedgHd9U",
-                "duration": 2658,
-                "title": "Secrets of the Deadly T-Rex: King of the Dinosaurs (Full Episode) | Lost Beasts Unearthed"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XmtXC_n6X6Q",
-                "duration": 3055,
-                "title": "Our Planet | From Deserts to Grasslands | FULL EPISODE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=um2Q9aUecy0",
-                "duration": 3058,
-                "title": "Our Planet | Jungles | FULL EPISODE | Netflix"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2tMCrutzckE",
-                "duration": 2665,
-                "title": "Exploring a Potential East Coast Tsunami (Full Episode) | X-Ray Earth | Nat Geo Animals"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=wn4e-gu3OuY",
                 "duration": 2208,
                 "title": "The World in 100 Years FULL EPISODE | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MNc_zuK9kCM",
+                "duration": 5238,
+                "title": "How Many Multiverses Are There? | Space Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
+                "duration": 4813,
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R0QpE-0fMS8",
+                "duration": 3731,
+                "title": "Exploring the Most Extreme World in the Solar System | Space Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kIP8r7kUc5c",
+                "duration": 2909,
+                "title": "The Evolution of Life with David Attenborough (4K Documentary)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ufvC32TOBmc",
@@ -192,284 +137,9 @@
                 "title": "Enter the Planet of the Birds (Full Episode) | DOCUMENTARY SPECIAL | Nat Geo Animals"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Hoidr7HgYP0",
-                "duration": 1275,
-                "title": "Touch of Evil | Forensic Files | S14 E8 | FULL EPISODE"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fBENVqtkjtE",
-                "duration": 2662,
-                "title": "The Final Days of Earth (S1, E6) | The Universe | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RK4dFv-0FdQ",
-                "duration": 4335,
-                "title": "Wildlife Conservation | Earth Day | Science for Kids | Full Episodes | The Magic School Bu"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=klTbcJX5ICU",
-                "duration": 2542,
-                "title": "Ancient Aliens: Civilization Buried Under Antarctica's Ice?! (S14, E1) | Full Episode | Hi"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MkCNJbnkKp0",
-                "duration": 1302,
-                "title": "Forensic Files | Accident Or Murder | FULL EPISODE | HD | True Crime Procedure Investigati"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
-                "duration": 2842,
-                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XZIPsgHJO1k",
-                "duration": 2552,
-                "title": "Portrait of a Killer | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zxQgyHlekFg",
-                "duration": 1277,
-                "title": "Skeleton Key | Forensic Files | S14 E19 | FULL EPISODE"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eS6a6btDK8M",
-                "duration": 2678,
-                "title": "Antarctica: Home at the End of the Earth (Full Episode) | Incredible Animal Journeys"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f50yp-OndFQ",
-                "duration": 2539,
-                "title": "Eyewitness Accounts of Bigfoot | The UnXplained (S2, E13) | Full Episode | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8gPMGbWcBps",
-                "duration": 2660,
-                "title": "Bible Secrets Revealed: The Real Jesus (S1, E4) | Full Episode | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vayZ_0uYOTU",
-                "duration": 2658,
-                "title": "Cannibal Sharks: Shark vs. Shark (Full Episode) | SPECIAL | Nat Geo Animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1oLQz1vMmvk",
-                "duration": 4799,
-                "title": "Alzheimer's and Dementia | 60 Minutes Full Episodes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=on1pjsxYOwc",
-                "duration": 2665,
-                "title": "Surviving Largest Tornado Outbreak Ever Recorded (Full Episode) | Witness to Disaster | Na"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BR2ZMj3o5EU",
-                "duration": 2665,
-                "title": "Pyramids and King Tut (Full Episode) | Lost Treasures of Egypt | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cCXyYpH0Ub4",
-                "duration": 3205,
-                "title": "New reports on 9/11 | 60 Minutes Full Episodes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
-                "duration": 2665,
-                "title": "City of the Future: Singapore – Full Episode | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lwrkwELp6kY",
-                "duration": 2513,
-                "title": "The Woman Who Died Twice | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ky_Zw7bQ7VE",
-                "duration": 1276,
-                "title": "Low Maintenance | Forensic Files | S14 E13 | FULL EPISODE"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UpqRWlL5Hfc",
-                "duration": 3002,
-                "title": "The Hive (Full Episode) | Secrets of the Bees | Earth Month Special | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7chW-M3uPgE",
-                "duration": 1302,
-                "title": "Forensic Files | Ultimate Betrayal | FULL EPISODE | HD | True Crime Procedure Investigatio"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oQs8Xg08S4I",
-                "duration": 1378,
-                "title": "Forensic Files - Season 7, Episode 35 - X Marks the Spot - Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=A9K7cZvrBH0",
-                "duration": 1280,
-                "title": "Filtered Out | Forensic Files | S14 E10 | FULL EPISODE"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Nszho9pq57w",
-                "duration": 2736,
-                "title": "The Most Terrifying Predictions For The End Of Earth"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gUOb7MraizM",
-                "duration": 2660,
-                "title": "Bible Secrets Revealed: Mysterious Prophecies (S1, E5) | Full Episode | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YtAL8y2lACs",
-                "duration": 2840,
-                "title": "Storming Antarctica (Full Episode) | Continent 7: Antarctica"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8EnVC_N6z00",
-                "duration": 2665,
-                "title": "Old Testament: Genesis and Exodus (Full Episode) | Buried Secrets of the Bible with Albert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=szg3dIZ8xDc",
-                "duration": 2842,
-                "title": "Oceans (Full Episode) | Hostile Planet"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_A34tQIrATs",
-                "duration": 1496,
-                "title": "Makes a Rainbow | The Science of Light and Color | Full Episode | The Magic School Bus"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xn-oLJ_XtkE",
-                "duration": 1496,
-                "title": "Dinosaurs | The Busasaurus | Full Episode | The Magic School Bus"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tSAKzVP2IGk",
-                "duration": 1609,
-                "title": "Wild Kratts FULL EPISODE! | Stuck on Sharks | PBS KIDS"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Wt9k4V1OoSU",
-                "duration": 2521,
-                "title": "Missing in Alaska: Vicious Arctic Mermaid Attacks - Full Episode (S1, E8) | History"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XOTOIVgqU3g",
-                "duration": 1495,
-                "title": "The Water Cycle | Wet All Over | Full Episode | The Magic School Bus"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NP4RrJCYFGs",
-                "duration": 2657,
-                "title": "Secrets of Pompeii's Dead (Full Episode) | Drain the Oceans | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UiR8zweh-OY",
-                "duration": 2665,
-                "title": "The New Air Force One: Flying Fortress (Full Episode) | SPECIAL | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VRRbOsQgRXU",
-                "duration": 2665,
-                "title": "Black Market Organs (Full Episode) | Trafficked with Mariana van Zeller"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gxqgm-ruiW8",
-                "duration": 4086,
-                "title": "Philippine Seas: A documentary by Atom Araullo (Full Episode) (with English subtitles)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=s1ISnaUQgUE",
-                "duration": 3227,
-                "title": "Our latest reports on robots | 60 Minutes Full Episodes"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0lIuz5lelYQ",
-                "duration": 2658,
-                "title": "The Origins of Maya Civilization (Full Episode) | Rise and Fall of the Maya | National Geo"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
-                "duration": 3120,
-                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eLCdsXRiouE",
-                "duration": 2665,
-                "title": "Undercover in North Korea (Full Episode) | Then and Now with Lisa Ling | National Geograph"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8bwciotcnYo",
-                "duration": 1377,
-                "title": "Forensic Files - Season 7, Episode 36 - All Charged Up - Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R6Pd8xAzxhc",
-                "duration": 2800,
-                "title": "New Life Under the Sea (Full Episode) | Incredible Animal Journeys | Nat Geo Animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KX2HzjI0XO4",
-                "duration": 1596,
-                "title": "Wild Kratts FULL EPISODE | 🕷🕸Secrets of the Spider's Web 🕸🕷 | PBS KIDS"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=myBmq87fJeQ",
-                "duration": 2843,
-                "title": "Malaysia Airlines (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=11bINdW0sew",
-                "duration": 2843,
-                "title": "Lost Giants: Epic Shipwrecks of the Century (Full Episode) | Drain the Oceans"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D3QNqp4y8Sc",
-                "duration": 2658,
-                "title": "Secrets of the Megalodon Shark (Full Episode) | Lost Beasts Unearthed | Nat Geo Animals"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1wOKDmhQ-cM",
-                "duration": 1324,
-                "title": "Forensic Files - Season 8, Episode 27 - True Lies - Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YidVA9iDsEw",
-                "duration": 1301,
-                "title": "Forensic Files | Til Death Do Us Part | FULL EPISODE | HD | True Crime Procedure Investiga"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5XpyVz5Bb7c",
-                "duration": 1609,
-                "title": "Wild Kratts FULL EPISODE | Outfoxed | PBS KIDS"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rsXMASTYFB8",
-                "duration": 1305,
-                "title": "Forensic Files - Season 12, Episode 30 - Smoking Out A Killer - Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=txrsmUmV808",
-                "duration": 2511,
-                "title": "The Mother I Wish I Knew | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tTHzQa2wrbY",
-                "duration": 2461,
-                "title": "Murder at the Mall: The Michelle Martinko Case | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4RFUkJ31x5s",
-                "duration": 4159,
-                "title": "Titanic: The Digital Resurrection (Full Episode) | SPECIAL | National Geographic"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TrRTUTv66Nw",
-                "duration": 2490,
-                "title": "The Footprint | Full Episode"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rw28JpjsjrQ",
-                "duration": 2665,
-                "title": "Uncovering Ancient Engineering (Full Episode) | Lost Cities with Albert Lin SPECIAL | Nat"
+                "url": "https://www.youtube.com/watch?v=cYe4tF6NZco",
+                "duration": 3568,
+                "title": "Timelapse to the Future of Earth | Full Documentary"
             },
             {
                 "url": "https://www.youtube.com/watch?v=yBJL3bpH6LI",
@@ -477,37 +147,367 @@
                 "title": "The World in 1000 Years FULL EPISODE | Science Fiction Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=mC6EjyvktW4",
-                "duration": 2665,
-                "title": "Tallest Building in Dubai (Full Episode) | Superstructures: Engineering Marvels | Nat Geo"
+                "url": "https://www.youtube.com/watch?v=fd6XUtJAWWw",
+                "duration": 869,
+                "title": "The Last Generation of Human Workers FULL EPISODE | Science Fiction Documentary"
             },
             {
-                "url": "https://www.youtube.com/watch?v=IPiIquWn6J8",
+                "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
+                "duration": 3120,
+                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TwmHJ9ym3cA",
+                "duration": 4843,
+                "title": "A Glitch in Quantum Reality: The Illusion of Time | Space Documentary 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JeLJuRYbs-I",
+                "duration": 1722,
+                "title": "I-Witness: ‘Unearthed,' a documentary by Kara David | Full episode (with English subtitles"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tUXGG54jpFQ",
+                "duration": 4406,
+                "title": "The Most Mind Blowing James Webb Discoveries of 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RtGCDyfru-A",
+                "duration": 2546,
+                "title": "Our immune system - Miracle weapon against cancer? | DW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nszho9pq57w",
+                "duration": 2736,
+                "title": "The Most Terrifying Predictions For The End Of Earth"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXB8aLFePu8",
+                "duration": 3571,
+                "title": "The Single Observation That Shattered 2,000 Years Of Science"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VpXP7z_pvr8",
+                "duration": 1021,
+                "title": "The Final Generation of Human Workers FULL EPISODE | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=omUUQrvoYfw",
+                "duration": 5154,
+                "title": "Where Is Everything In The Universe Going? | Space Documentary 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CJPdSC1pD4o",
+                "duration": 4139,
+                "title": "\"This Universe EXISTED before The Big Bang\" | Full-Length Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1B1Ctljd2uY",
+                "duration": 2665,
+                "title": "Mystery Mummies of New Guinea (Full Episode) | DOCUMENTARY SPECIAL | National Geographic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fsx7XMhhEtc",
+                "duration": 604,
+                "title": "Building the Future of Hydration: The HNS Science Documentary | Episode 1"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qib1E6j0AE8",
+                "duration": 608,
+                "title": "Baltic Sea - Breathing Through the Dead Zones (Full Episode) | Nature animal documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o6mRLwyDFDY",
+                "duration": 2577,
+                "title": "The Artemis Program: Return to the Moon | Free Documentary Space"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bnvDdsKOWFk",
+                "duration": 4807,
+                "title": "Is Time Travel Possible In Our Universe | Space Documentary 2025"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6tgLfzunLE",
+                "duration": 4395,
+                "title": "NOMADIC SURVIVAL - Savanna’s Most Brutal Conflict (Full Episode) | Nature animal documenta"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QpBcAu7eFnU",
+                "duration": 1555,
+                "title": "The new medical innovations that could change everything - The Engineers, BBC World Servic"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pAouFljMuLg",
+                "duration": 1077,
+                "title": "Kepler-442b: The Perfect World FULL EPISODE | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t1RlxBJY-Dk",
+                "duration": 2665,
+                "title": "Inside Saguaro National Park (Full Episode) | America's National Parks: Hidden Gems | Nat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r6u_O4120r4",
+                "duration": 501,
+                "title": "Dinosaur Documentary Full Episode #DinosaurDocumentary #Dinosaurs #PrehistoricLife #Ancien"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cJmUEgSAIwc",
+                "duration": 2296,
+                "title": "Polar Bear Survival (Full Episode) | OceanXplorers | Nat Geo Animals"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7OQqKJl4GCk",
+                "duration": 1059,
+                "title": "Proxima Centauri b: Humanity's First Colony FULL EPISODE | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rb1GSGaCT18",
+                "duration": 3002,
+                "title": "Fascinating Documentary about Forces of Nature (Full Documentary) (HD)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FDtCJVlxbww",
+                "duration": 5321,
+                "title": "Exploring the Miracle on the Hudson (Full Episode) | DOCUMENTARY SPECIAL | National Geogra"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jqZZuziiYIE",
+                "duration": 4342,
+                "title": "Connected volcanoes will DOOM California in 2026 | Documentary for sleep"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vvYlta7PHzw",
+                "duration": 5271,
+                "title": "UFO Encounters the Government Couldn't Explain | Secret Access | Full Special"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xBXUxYQjfTg",
+                "duration": 880,
+                "title": "Humanity Begins Colonizing the Solar System | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9BkWS4YUm9o",
+                "duration": 2611,
+                "title": "A Murder Uncovered By A Group Of Children | Forensic Investigators | Season 1 Episode 5"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yCCvL5PKEgQ",
+                "duration": 1334,
+                "title": "Engineered Humans: The Next Evolution FULL EPISODE | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uoEffocWP4A",
+                "duration": 3402,
+                "title": "What Happens If You Zoom All The Way Out?"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f4FUzVvAkA8",
+                "duration": 2712,
+                "title": "America’s Deadliest Bridge Disaster | Massive Engineering Mistakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YzLra9Yp4FI",
+                "duration": 1662,
+                "title": "Inside Antarctica's Doomsday Glacier | Full Episode | Resolve to Solve with Miles O’Brien"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I6pO75MGhOw",
+                "duration": 2566,
+                "title": "The secret to concentration - How to increase your attention span | DW Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N--aL8zZD1Y",
+                "duration": 2552,
+                "title": "Unlocking the Stargates (S20, E12) | Ancient Aliens | Full Episode"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6fXtYh_JBm0",
                 "duration": 2790,
-                "title": "Emperor Penguin Societies (Full Episode) | Secrets of the Penguins | National Geographic"
+                "title": "9/11 Interview with George W. Bush (Full Episode) | Documentary Special | National Geograp"
             },
             {
-                "url": "https://www.youtube.com/watch?v=eUoHpgvWcYk",
-                "duration": 1302,
-                "title": "Forensic Files | The Killing Room | FULL EPISODE | HD | True Crime Procedure Investigation"
+                "url": "https://www.youtube.com/watch?v=RCehjcdvm1Y",
+                "duration": 729,
+                "title": "Space and Time Might Be an Illusion | NOVA | PBS"
             },
             {
-                "url": "https://www.youtube.com/watch?v=D6_e6yKH26Q",
+                "url": "https://www.youtube.com/watch?v=9MWX5lENwbg",
+                "duration": 1810,
+                "title": "Nature’s Games: The Tricks Animals And Plants Use To Survive | SLICE SCIENCE | FULL DOC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jt8G-Vn_9DM",
                 "duration": 2665,
-                "title": "Clan of the North (Full Episode) | Kingdom of the Polar Bears"
+                "title": "Examining a New Breed of Storms (Full Episode) | Storm Rising | National Geographic"
             },
             {
-                "url": "https://www.youtube.com/watch?v=W0lwmWSuzM8",
-                "duration": 2531,
-                "title": "Strange Creatures (S1, E3) | The UnXplained | Full Episode"
+                "url": "https://www.youtube.com/watch?v=RfXseNSoBeg",
+                "duration": 4335,
+                "title": "Extreme Weather | Science for Kids | Full Episodes | The Magic School Bus"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1pQ0KyY7xsQ",
-                "duration": 1302,
-                "title": "Forensic Files | Slippery Motives | FULL EPISODE | HD | True Crime Procedure Investigation"
+                "url": "https://www.youtube.com/watch?v=ph90Yycorgg",
+                "duration": 3407,
+                "title": "PBS News Hour full episode, Sept. 2, 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p2NnOBFRf8w",
+                "duration": 3705,
+                "title": "The Scientific Accuracy of Walking With Beasts - Episode 1: New Dawn"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l0Cwi_TuZnA",
+                "duration": 1442,
+                "title": "DWARF PLANETS EXPOSED: The SHOCKING Truth About Pluto! | Dwarf Planets | Full Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dDliUnsHs2I",
+                "duration": 3070,
+                "title": "Reptiles | 60 Minutes Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WEB5HrMpbao",
+                "duration": 1503,
+                "title": "The Extraterrestrial Secret to Immortality | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FoTgMIlx6Jc",
+                "duration": 2679,
+                "title": "The Deadly Mall Roof Cave-In! | Massive Engineering Mistakes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MWPA_-GhQwk",
+                "duration": 1228,
+                "title": "GOKU VS SAITAMA 2 | FULL EPISODE (ENGLISH)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rzOBeLPQyiY",
+                "duration": 5377,
+                "title": "Roswell: Aliens, UFOs, Secret Weapons or a Government Cover-Up? | Documentary - EM"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HeUR9V416TI",
+                "duration": 709,
+                "title": "Clash of the Thundermans (2026) Full Movie Recap"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9yS4CPzfbqk",
+                "duration": 1351,
+                "title": "S1E11: Tag Sale, You're It! | Full Episode | The Venture Bros. | adult swim"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GAqSSISFRQI",
+                "duration": 1522,
+                "title": "Reptilian Legends & Extraterrestrial Encounters | Ancient Aliens"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oDrwYLUDNXU",
+                "duration": 1686,
+                "title": "Aizu: Unbreakable Spirit of Noguchi Hideyo - Japanology Plus"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bF9d_OiaZE8",
+                "duration": 2965,
+                "title": "How Tectonic Forces Are Pulling Asia Apart From Within | SLICE EARTH | FULL DOC"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lemQ8O0KvOU",
+                "duration": 2873,
+                "title": "Uncovering Ancient Secrets Of The Past! Could History Be Rewritten? | Full Sci-Fi Document"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3gWM3zWZpKc",
+                "duration": 1261,
+                "title": "Beautiful Mermaid Turns a Lost Man Into a Triton to Help Save Her Captured Sisters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jpQ6OS3J-14",
+                "duration": 722,
+                "title": "Fright of Passage | Full Episode | Nerds and Monsters | Scholastic After School"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zF-Iz7dVja0",
+                "duration": 2597,
+                "title": "Every Single Person Matters | The Ark | Full Episode | S01E08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pZi-KZ93qSQ",
+                "duration": 5227,
+                "title": "A Deadly Deep Space Sample Comes Alive! Will Humanity Survive? | Full Action Sci-Fi Movie"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s17TVVfv2IU",
+                "duration": 1808,
+                "title": "When it Rained for 2 Million Years"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EA81FspvRw4",
+                "duration": 722,
+                "title": "Monster and Commander | Full Episode | Nerds and Monsters | Scholastic After School"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xKm1IT51edI",
+                "duration": 2761,
+                "title": "‘The Big Bang Theory’ but Science Has Entered Every Chat"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-CHcWEs95U",
+                "duration": 1495,
+                "title": "Mr Bean Meets A GENIUS At The Science Museum! 🤖 | Mr Bean Animated Season 1 | Funny Clips"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vdzAZOgFnaA",
+                "duration": 310,
+                "title": "The Story of Electricity Full Episode | History of Electricity #electricity #history"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tGlpQ7oM-7U",
+                "duration": 691,
+                "title": "Ace Gets Braced | Full Episode | Get Ace | Scholastic After School"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=79RsFnoRHGk",
+                "duration": 3174,
+                "title": "One Kingdom, Two Lions, A Brotherhood Under Pressure | Wildlife Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CQXGh_5gTpc",
+                "duration": 520,
+                "title": "The one and only Dolly Parton: A tribute"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X7wDWpbBjZM",
+                "duration": 1320,
+                "title": "😱💥 Monster In The Monastery | Season 4, Episode 11 | Full Episode | LEGO NINJAGO: Dragons"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tnh05wgiCUM",
+                "duration": 1581,
+                "title": "Could Leo Have Actually Survived The Titanic Floating Door Scene? | MythBusters"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VCBFFRXw32A",
+                "duration": 519,
+                "title": "ARK-7 | Episode 1 — AI Sci-Fi Series | #specialforaaiff"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4O7yOM6eEzU",
+                "duration": 1312,
+                "title": "Kepler-442b: The Perfect World Beyond Earth | FULL EPISODE | Science Fiction Documentary"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cl1QLTjQxko",
+                "duration": 2089,
+                "title": "Zee FAILS At Babysitting 😂 Oddbods Full Episodes"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GNsMuwpgiag",
+                "duration": 645,
+                "title": "The Many Moons of Quack the Duck | Peep and the Big Wide World"
             }
         ],
         "search_query": "science documentary full episode",
-        "last_refreshed": 1787678702
+        "last_refreshed": 1788720392
     }
 }
