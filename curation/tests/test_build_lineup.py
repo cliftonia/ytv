@@ -74,6 +74,23 @@ class TestChannelFrom(unittest.TestCase):
         self.assertIsNone(channel["rotation"])
         self.assertNotIn("id", channel["streams"][0])
 
+    def test_a_file_channel_plays_its_urls_as_is_and_rotates_by_clock(self):
+        # The url IS the playable: minting an id from it (or dropping it for lacking one)
+        # would send the app looking for a resolve that can never succeed. And it must
+        # rotate - the whole point of the kind is a film joined partway through.
+        path = self.write("file_movies.json", {
+            "network_name": "Movies", "channel_number": 91,
+            "streams": [{"url": "http://192.168.4.58:4244/Movies/A%20Film%20(2024).mkv",
+                         "duration": 5412, "title": "A Film"}]})
+        channel = build_lineup.channel_from(path)
+        self.assertEqual("file", channel["kind"])
+        self.assertEqual("clock", channel["rotation"])
+        stream = channel["streams"][0]
+        self.assertEqual("http://192.168.4.58:4244/Movies/A%20Film%20(2024).mkv",
+                         stream["url"])
+        self.assertEqual(5412, stream["duration"])
+        self.assertNotIn("id", stream)
+
     def test_a_youtube_stream_with_an_unreadable_url_is_dropped(self):
         # Keeping it would hand a non-watch url to the resolver, which cannot do anything with it.
         path = self.write("ytch_x.json", {

@@ -1,0 +1,29 @@
+# YTV media: the Movies and Series folders out of Nextcloud's data directory, served as plain
+# HTTP for the televisions. Port 4244, ufw-limited to the LAN and tailscale0 - there is no auth
+# on this, so the two path prefixes below are the entire exposure. Adding another prefix for a
+# new media folder is fine; pointing file_server at the files root is not.
+#
+# Caddy because it was already installed on the box and speaks Range requests out of the box -
+# both players issue bounded byte ranges for everything (see ChunkedDataSource/ChunkedProxy in
+# the app), and a static server without Range support makes Media3 read the whole file as one
+# request.
+#
+# The files are owned by http (Nextcloud's user) and this runs as http too: read-only serving
+# of exactly the directories Nextcloud already owns. Nothing here lets Caddy write.
+
+:4244 {
+	root * /mnt/hdd/nextcloud-data/data/hermanb/files
+
+	@movies path /Movies/*
+	@series path /Series/*
+	handle @movies {
+		file_server
+	}
+	handle @series {
+		file_server
+	}
+	# Everything else - the files root, Music, directory listings - does not exist here.
+	handle {
+		respond 404
+	}
+}

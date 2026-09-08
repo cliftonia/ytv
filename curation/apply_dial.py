@@ -122,7 +122,7 @@ def main():
 
     # 5. Live channels.
     for number, slug, name, streams in DIAL.LIVE:
-        p = confs.path_for(slug, live=True)
+        p = confs.path_for(slug, kind="live")
         wanted_files.add(os.path.basename(p))
         if os.path.exists(p):
             conf = confs.load(p)
@@ -148,6 +148,34 @@ def main():
             do("create  %-18s ch %d (live)" % (slug, number), lambda p=p, c=conf: confs.save(p, c))
         else:
             actions.append("MISSING %-18s ch %d has no conf and no urls declared" % (slug, number))
+
+    # 5b. File channels. This step owns the conf's identity - number, name and which media
+    #     folder feeds it - and never its stream list. scan_media.py rebuilds that from what
+    #     is actually on disk; inventing streams here would publish urls to files that may
+    #     not exist, which is exactly the dead-number-on-the-dial failure the stream rules
+    #     in build_lineup exist to prevent.
+    for number, slug, name, media_dir in DIAL.FILES:
+        p = confs.path_for(slug, kind="file")
+        wanted_files.add(os.path.basename(p))
+        if os.path.exists(p):
+            conf = confs.load(p)
+            station = conf.setdefault("station_conf", {})
+            changes = []
+            for key, want in (("channel_number", number), ("network_name", name),
+                              ("network_long_name", name), ("media_dir", media_dir)):
+                if station.get(key) != want:
+                    station[key] = want
+                    changes.append(key)
+            if changes:
+                do("file    %-18s ch %d (%s)" % (slug, number, ", ".join(changes)),
+                   lambda p=p, c=conf: confs.save(p, c))
+        else:
+            conf = {"station_conf": {
+                "network_name": name, "network_long_name": name, "network_type": "files",
+                "channel_number": number, "media_dir": media_dir, "streams": [],
+            }}
+            do("create  %-18s ch %d (empty until scan_media.py runs)" % (slug, number),
+               lambda p=p, c=conf: confs.save(p, c))
 
     # 6. Anything left over. Named rather than deleted: a conf this does not know about is either
     #    something to add to dial.py or something to remove from it, and guessing which would

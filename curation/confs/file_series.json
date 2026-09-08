@@ -1,0 +1,41 @@
+{
+    "station_conf": {
+        "network_name": "Series",
+        "network_long_name": "Series",
+        "network_type": "files",
+        "channel_number": 92,
+        "media_dir": "Series",
+        "streams": [
+            {
+                "url": "http://192.168.4.58:4244/Series/Pioneer%20One/S01E01%20-%20Earthfall%20%28Pilot%29.mp4",
+                "duration": 1896,
+                "title": "Pioneer One S01E01 - Earthfall (Pilot)"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Series/Pioneer%20One/S01E02%20-%20The%20Man%20from%20Mars.mp4",
+                "duration": 2322,
+                "title": "Pioneer One S01E02 - The Man from Mars"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Series/Pioneer%20One/S01E03%20-%20Alone%20in%20the%20Night.mp4",
+                "duration": 1906,
+                "title": "Pioneer One S01E03 - Alone in the Night"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Series/Pioneer%20One/S01E04%20-%20Triangular%20Diplomacy.mp4",
+                "duration": 2057,
+                "title": "Pioneer One S01E04 - Triangular Diplomacy"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Series/Pioneer%20One/S01E05%20-%20Sea%20Change.mp4",
+                "duration": 2416,
+                "title": "Pioneer One S01E05 - Sea Change"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Series/Pioneer%20One/S01E06%20-%20War%20of%20the%20World.mp4",
+                "duration": 2675,
+                "title": "Pioneer One S01E06 - War of the World"
+            }
+        ]
+    }
+}

@@ -53,6 +53,9 @@ def channel_from(path):
         return None
 
     is_youtube = os.path.basename(path).startswith("ytch_")
+    # File channels (file_*.json) carry urls served by the homelab media server: nothing to
+    # extract an id from and nothing to resolve - the url IS the playable.
+    is_file = os.path.basename(path).startswith("file_")
     streams = []
     for stream in station.get("streams", []):
         url = stream.get("url")
@@ -82,11 +85,13 @@ def channel_from(path):
     return {
         "number": int(number),
         "name": name,
-        "kind": "youtube" if is_youtube else "live",
+        "kind": "youtube" if is_youtube else ("file" if is_file else "live"),
         # Clock rotation is what makes the dial feel like television: the clip is joined partway
-        # through, at the offset the wall clock implies. Live feeds have no rotation - they are
+        # through, at the offset the wall clock implies. File channels rotate the same way - the
+        # film is always "on" somewhere in its runtime. Live feeds have no rotation - they are
         # already whatever they are at this moment.
-        "rotation": station.get("stream_rotation") if is_youtube else None,
+        "rotation": (station.get("stream_rotation") if is_youtube
+                     else "clock" if is_file else None),
         "streams": streams,
     }
 

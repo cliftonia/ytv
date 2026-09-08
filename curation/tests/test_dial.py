@@ -19,7 +19,8 @@ class TestDial(unittest.TestCase):
         # Two channels on one number means one is unreachable from the remote, and which one wins
         # depends on sort order - the kind of fault that surfaces months later as "that channel
         # just vanished".
-        numbers = [c[0] for c in dial.YOUTUBE] + [c[0] for c in dial.LIVE]
+        numbers = ([c[0] for c in dial.YOUTUBE] + [c[0] for c in dial.FILES]
+                   + [c[0] for c in dial.LIVE])
         duplicates = sorted({n for n in numbers if numbers.count(n) > 1})
         self.assertEqual([], duplicates, "duplicate channel numbers: %s" % duplicates)
 
@@ -52,9 +53,22 @@ class TestDial(unittest.TestCase):
 
     def test_names_are_unique(self):
         # Duplicated names are indistinguishable in the picker.
-        names = [c[2] for c in dial.YOUTUBE] + [c[2] for c in dial.LIVE]
+        names = ([c[2] for c in dial.YOUTUBE] + [c[2] for c in dial.FILES]
+                 + [c[2] for c in dial.LIVE])
         duplicates = sorted({n for n in names if names.count(n) > 1})
         self.assertEqual([], duplicates, "duplicate channel names: %s" % duplicates)
+
+    def test_the_file_block_sits_between_the_other_two(self):
+        # 91-99 on purpose: after the clip channels and before the live ones, so neither block
+        # ever has to move. A file channel above 101 would renumber the news block under it.
+        highest_youtube = max(c[0] for c in dial.YOUTUBE)
+        lowest_live = min(c[0] for c in dial.LIVE)
+        for number, slug, name, media_dir in dial.FILES:
+            self.assertGreater(number, highest_youtube,
+                               "%s must sit above the youtube block" % slug)
+            self.assertLess(number, lowest_live,
+                            "%s must sit below the live block" % slug)
+            self.assertTrue(media_dir.strip(), "%s names no media dir to scan" % slug)
 
     def test_extras_reference_real_channels(self):
         # A playlist or extra query attached to a slug that no longer exists does nothing, and
