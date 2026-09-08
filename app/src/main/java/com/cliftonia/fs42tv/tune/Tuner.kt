@@ -4,6 +4,7 @@ import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
+import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.Unplayable
 import com.cliftonia.fs42tv.schedule.ClockRotation
@@ -64,8 +65,13 @@ object Tuner {
         // It is reported as Unplayable rather than NeedsResolving: there is no id to send the
         // server, and its resolve endpoint rejects anything that isn't an 11-character id, so
         // asking it would be a network round trip that exists only to fail.
+        //
+        // A file stream IS its url: a media file on the homelab's static server, already muxed,
+        // so audioUrl stays null and there is nothing to resolve. It must sit ahead of the
+        // null-id check, because file streams carry no id by design.
         val playable: Playable = when {
             channel.kind == "live" -> Hls(stream.url)
+            channel.kind == "file" -> Progressive(stream.url, audioUrl = null)
             stream.id == null ->
                 Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
             else -> StreamResolver.resolve(stream, cache, ladder, nowSeconds, refused)
@@ -91,6 +97,7 @@ object Tuner {
         val stream = channel.streams.getOrNull(index) ?: return null
         val playable: Playable = when {
             channel.kind == "live" -> Hls(stream.url)
+            channel.kind == "file" -> Progressive(stream.url, audioUrl = null)
             stream.id == null ->
                 Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
             else -> NeedsResolving(stream.id)

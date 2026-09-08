@@ -54,6 +54,23 @@ object TestDial {
             },
         )
 
+    /**
+     * A file channel of [durations]: media files on the homelab's static server.
+     *
+     * Clock-rotated exactly like a youtube channel - the film is joined partway through -
+     * but the stream url IS the playable: no id, nothing to resolve, already muxed so no
+     * separate audio track. A fixture that gave one of these an id would pin a dial that
+     * build_lineup never publishes.
+     */
+    fun fileChannel(vararg durations: Int, number: Int = 91, name: String = "Movies") =
+        Channel(
+            number = number, name = name, kind = "file", rotation = "clock",
+            streams = durations.mapIndexed { i, d ->
+                Stream(id = null, url = "http://192.168.4.58:4244/Movies/film$i.mp4",
+                       duration = d, title = "film $i")
+            },
+        )
+
     fun cacheOf(id: String, vararg tiers: Pair<String, Tier>) =
         UrlCache(urls = mapOf(id to tiers.toMap()))
 }

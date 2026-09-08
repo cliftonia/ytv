@@ -124,4 +124,35 @@ class TunerTest {
         assertNull(Tuner.tuneToIndex(ytChannel(100, 200), index = 2))
         assertNull(Tuner.tuneToIndex(ytChannel(100, 200), index = -1))
     }
+
+    @Test
+    fun `a file channel plays the on-air file directly, joined at the clock's offset`() {
+        // The url IS the playable: no resolve round trip exists for these, so handing one back
+        // as NeedsResolving would park the channel on a card forever. Already-muxed files
+        // mean audioUrl stays null - a non-null one would make Media3 merge a second source.
+        val tuned = Tuner.tune(TestDial.fileChannel(1200, 5400), cache = null,
+                               nowSeconds = 1500)
+        assertEquals("the second film started at 1200 and has been on for 300s",
+            1, tuned!!.streamIndex)
+        assertEquals(300.0, tuned.offsetSeconds, 0.001)
+        assertEquals(Progressive("http://192.168.4.58:4244/Movies/film1.mp4", null),
+            tuned.playable)
+    }
+
+    @Test
+    fun `a file stream's missing id is not an error`() {
+        // File streams carry no id BY DESIGN; this used to be the null-id branch's whole job,
+        // so a regression ordering here turns the entire file block Unplayable at once.
+        val tuned = Tuner.tune(TestDial.fileChannel(600), cache = null, nowSeconds = 10)
+        assertEquals(Progressive("http://192.168.4.58:4244/Movies/film0.mp4", null),
+            tuned!!.playable)
+    }
+
+    @Test
+    fun `tuning a file channel to an index starts the file from zero`() {
+        val tuned = Tuner.tuneToIndex(TestDial.fileChannel(1200, 5400), index = 0)
+        assertEquals(0.0, tuned!!.offsetSeconds, 0.001)
+        assertEquals(Progressive("http://192.168.4.58:4244/Movies/film0.mp4", null),
+            tuned.playable)
+    }
 }

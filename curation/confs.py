@@ -24,8 +24,14 @@ def default_dir():
     return CONFS
 
 
-def path_for(slug, live=False):
-    return os.path.join(CONFS, "%s.json" % (slug if live else "ytch_%s" % slug))
+# The filename prefix is the channel's identity: build_lineup decides kind from it, so a
+# conf renamed across prefixes changes what the app does with its streams (resolve a video
+# id vs play the url as-is vs clock-rotate a media file).
+PREFIXES = {"youtube": "ytch_", "file": "file_", "live": ""}
+
+
+def path_for(slug, kind="youtube"):
+    return os.path.join(CONFS, "%s%s.json" % (PREFIXES[kind], slug))
 
 
 def youtube_paths(confs_dir):
@@ -35,6 +41,11 @@ def youtube_paths(confs_dir):
     whether a stream needs a video id.
     """
     return sorted(glob.glob(os.path.join(confs_dir, "ytch_*.json")))
+
+
+def file_paths(confs_dir):
+    """Every file channel conf, in a stable order - scan_media.py's whole input set."""
+    return sorted(glob.glob(os.path.join(confs_dir, "file_*.json")))
 
 
 def slug_for(path):

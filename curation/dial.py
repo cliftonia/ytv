@@ -5,15 +5,16 @@ This is the file to edit when the lineup changes. `apply_dial.py` reconciles the
 renaming, merging, creating and renumbering as needed - so the shape of the dial lives in one
 readable place rather than being an emergent property of 130 separate files.
 
-Two blocks, deliberately:
+Three blocks, deliberately:
 
   1-90     YouTube. Clip channels, clock-rotated, refreshed nightly.
+  91-99    Files. Media on the homelab server, clock-rotated, scanned by scan_media.py.
   101+     Live. Broadcast HLS feeds, playing whatever is actually on.
 
-The gap at 91-100 is not an accident. It means "the YouTube dial ends here" is a place on the
-remote rather than a number you have to remember, and it leaves room to add clip channels without
-pushing the news block around - which matters, because the news channels are the ones anyone
-reaches for directly.
+The 91-99 block and the gap at 100 are not an accident. The gap means "the clip channels end
+here" is a place on the remote rather than a number you have to remember, the file block sits
+between the two so adding clip channels pushes nothing around, and both protect the news
+channels - which are the ones anyone reaches for directly.
 """
 
 # (number, slug, name, search query)
@@ -298,4 +299,19 @@ LIVE = [
     (116, "iptv_sky_racing_1", "Sky Racing 1", None),
     (117, "iptv_sky_racing_2", "Sky Racing 2", None),
     (118, "iptv_sky_thoroughbred_central", "Sky Thoroughbred Central", None),
+]
+
+# (number, slug, name, media_dir) - video files on the homelab server, not YouTube.
+#
+# Every stream is a url on the media server (port 4244, see tools/media-server/) rather than
+# an id to resolve, and the channel clock-rotates like any clip channel, so a film is joined
+# partway through at the offset the wall clock implies. scan_media.py owns the stream lists -
+# it re-probes media_dir under MEDIA_ROOT and rewrites them; refresh_channels never touches
+# these confs, because there is nothing to search.
+#
+# The urls are on 192.168.4.58, so these channels only play where the LAN (or tailnet) reaches.
+# The car answers neither address; these two go to a card there, same as any dead stream.
+FILES = [
+    (91, "movies", "Movies", "Movies"),
+    (92, "series", "Series", "Series"),
 ]

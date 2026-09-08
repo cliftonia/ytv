@@ -1,0 +1,31 @@
+{
+    "station_conf": {
+        "network_name": "Movies",
+        "network_long_name": "Movies",
+        "network_type": "files",
+        "channel_number": 91,
+        "media_dir": "Movies",
+        "streams": [
+            {
+                "url": "http://192.168.4.58:4244/Movies/Big%20Buck%20Bunny%20%282008%29.mov",
+                "duration": 596,
+                "title": "Big Buck Bunny (2008)"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/Night%20of%20the%20Living%20Dead%20%281968%29.mp4",
+                "duration": 5802,
+                "title": "Night of the Living Dead (1968)"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/Sintel%20%282010%29.mkv",
+                "duration": 888,
+                "title": "Sintel (2010)"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/The%20Mandalorian%20and%20Grogu%20%282026%29%202160p%20HDR10%2B.mp4",
+                "duration": 7918,
+                "title": "The Mandalorian and Grogu (2026)"
+            }
+        ]
+    }
+}

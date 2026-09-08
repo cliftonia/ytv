@@ -1,0 +1,22 @@
+# Runs the YTV media server (tools/media-server/ytv-media.caddy) as its own instance rather
+# than an import into a system Caddyfile: the box's other web services move often enough (see
+# ~/CHANGELOG.md on the server) that sharing a config file with them is how a media channel
+# disappears during an unrelated change.
+[Unit]
+Description=YTV media server: static video files for the televisions on :4244
+Documentation=https://github.com/cliftonia/ytv
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=http
+# The HDD mounts late on a cold boot; refusing to start before it is there beats serving 404s
+# that look exactly like "the files are gone" from the couch. Restart=on-failure + the default
+# 100ms..30s systemd backoff covers the race.
+ExecStartPre=/usr/bin/test -d /mnt/hdd/nextcloud-data/data/hermanb/files
+ExecStart=/usr/bin/caddy run --config /etc/caddy/ytv-media.caddy --adapter caddyfile
+ExecReload=/usr/bin/caddy reload --config /etc/caddy/ytv-media.caddy --adapter caddyfile
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
