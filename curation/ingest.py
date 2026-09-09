@@ -31,9 +31,9 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STAGING = "/tmp/ytv-ingest"
 
 # DHT cache saga, landed: the verify phase (hermanb) uses aria2's default per-user cache.
-# The download phase (http) cannot write its own passwd home (/srv/http), and two concurrent
-# aria2 runs writing one shared /tmp file tear it on write - so each download run gets a
-# private throwaway cache. Payload comes via tracker anyway; dht merely helps sparse swarms.
+# The download phase runs as http, whose passwd home (/srv/http) is locked on purpose, so it
+# gets HOME=/tmp/ytv-home instead - writable, persistent, and immune to the concurrent-write
+# tearing any shared --dht-file-path invites.
 PUBLIC_TRACKERS = (
     "--bt-tracker=udp://tracker.opentrackr.org:1337/announce,"
     "udp://open.tracker.cl:1337/announce,"
@@ -343,9 +343,8 @@ def main():
     src = meta_path
     script = """
 sudo -u http mkdir -p {t}
-sudo -u http -s /bin/bash -c "aria2c --seed-time=0 --summary-interval=5 \\
-    {trackers} \\
-    --dht-file-path=/tmp/ytv-dht-http.$$.dat \\
+sudo -u http HOME=/tmp/ytv-home -s /bin/bash -c "mkdir -p \\$HOME && aria2c \\
+    --seed-time=0 --summary-interval=5 {trackers} \\
     --console-log-level=warn --show-console-readout=false --dir={t}{sel} {src}"
 """.format(t=quote_shell(target), sel=select, src=quote_shell(src),
            trackers=PUBLIC_TRACKERS)
