@@ -104,6 +104,17 @@ class TestBroadcastOrder(ScanCase):
             "Pioneer One S02E01 - New Season",
         ], titles)
 
+    def test_a_dot_style_scene_release_inside_a_show_dir_titles_and_sorts(self):
+        # The shape files actually arrive in: a Show dir, a dotted stem, a scene group
+        # suffix - and no episode-name detail at all, which must NOT repeat the show name
+        # (that was the "Cowboy Bebop S01E01 - Cowboy Bebop S01E01" bug).
+        self.video("Series/Cowboy Bebop/Cowboy.Bebop.S01E02.1080p.BluRay.x264-V0ldemort.mkv")
+        self.video("Series/Cowboy Bebop/Cowboy.Bebop.S01E01.1080p.BluRay.x264-V0ldemort.mkv")
+        self.video("Series/Black Lagoon/Black.Lagoon.S02E01.720p.BluRay.x264-DON.mkv")
+        self.assertEqual(
+            ["Black Lagoon S02E01", "Cowboy Bebop S01E01", "Cowboy Bebop S01E02"],
+            [s["title"] for s in self.collect("Series")])
+
     def test_files_outside_a_show_directory_sort_after_the_runs(self):
         # A loose special is still content; it just cannot sit inside a season run.
         self.video(os.path.join("Series", "Christmas Special.mp4"))
@@ -130,6 +141,28 @@ class TestNonContent(ScanCase):
         streams = self.collect("Movies", durations={"Broken.mp4": None, "Fine.mp4": 500})
         self.assertEqual(["Fine"], [s["title"] for s in streams])
         self.assertEqual(500, streams[0]["duration"])
+
+
+class TestRemoteUrls(ScanCase):
+
+    def test_remote_urls_are_probed_and_keep_authored_order(self):
+        with mock.patch.object(scan_media, "probe_duration", lambda u: 4321):
+            streams = scan_media.collect_remote([
+                "https://archive.org/download/x/The_Red_House_1947.mp4",
+                "https://example.org/film.mp4|Detour (1945)",
+            ])
+        self.assertEqual(["The Red House 1947", "Detour (1945)"],
+                         [s["title"] for s in streams])
+        self.assertEqual(4321, streams[0]["duration"])
+        self.assertTrue(all(s["url"].startswith("https://") for s in streams))
+
+    def test_a_remote_with_no_readable_duration_is_skipped_loudly(self):
+        # Same rule as local files: a guessed duration mis-schedules everything after it
+        # in the cycle, so the stream drops and the operator is told.
+        with mock.patch.object(scan_media, "probe_duration", lambda u: None), \
+                mock.patch.object(sys, "stderr", io.StringIO()) as err:
+            self.assertEqual([], scan_media.collect_remote(["https://example.org/x.mp4"]))
+        self.assertIn("no readable duration", err.getvalue())
 
 
 class TestMain(ScanCase):
@@ -160,7 +193,7 @@ class TestMain(ScanCase):
         self.video("Movies/A Film.mp4")
         status, out, _ = self.main("--dry")
         self.assertEqual(0, status)
-        self.assertIn("movies: 1 file", out)
+        self.assertIn("movies: 1 stream", out)
         station = confs.load(os.path.join(self.confs_dir, "file_movies.json"))["station_conf"]
         self.assertEqual([], station["streams"])
 
@@ -180,6 +213,27 @@ class TestMain(ScanCase):
         os.rename(os.path.join(self.root, "Movies"), os.path.join(self.root, "Gone"))
         _, _, err = self.main()
         self.assertIn("is not a directory", err)
+
+    def test_a_remote_only_channel_scans_without_any_media_dir(self):
+        os.makedirs(os.path.join(self.root, "Movies"))  # the sibling conf from setUp
+        confs.save(os.path.join(self.confs_dir, "file_cinema_stream.json"),
+                   {"station_conf": {"network_name": "Cinema Stream", "channel_number": 93,
+                                     "media_dir": "",
+                                     "remote_urls": ["https://example.org/a.mp4|A Stream"],
+                                     "streams": []}})
+        status, out, err = self.main()
+        self.assertEqual(0, status)
+        self.assertNotIn("not a directory", err)
+        station = confs.load(os.path.join(self.confs_dir, "file_cinema_stream.json"))[
+            "station_conf"]
+        self.assertEqual("A Stream", station["streams"][0]["title"])
+
+    def test_an_empty_conf_is_named_not_silently_passed(self):
+        confs.save(os.path.join(self.confs_dir, "file_bare.json"),
+                   {"station_conf": {"network_name": "Bare", "channel_number": 94,
+                                     "streams": []}})
+        _, _, err = self.main()
+        self.assertIn("nothing to scan", err)
 
 
 if __name__ == "__main__":

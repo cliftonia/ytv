@@ -184,7 +184,7 @@ class TestFileChannels(ApplyDialCase):
     def test_a_new_file_channel_is_created_empty_with_its_media_dir(self):
         # Empty, because the streams belong to scan_media.py: urls invented here would point
         # at files nobody has probed.
-        self.dial.FILES = ((91, "movies", "Movies", "Movies"),)
+        self.dial.FILES = ((91, "movies", "Movies", "Movies", ()),)
         _, out = self.run_apply()
         self.assertIn("create  movies", out)
         station = self.read("file_movies.json")
@@ -192,10 +192,24 @@ class TestFileChannels(ApplyDialCase):
         self.assertEqual("Movies", station["media_dir"])
         self.assertEqual([], station["streams"])
 
+    def test_seeded_remote_urls_land_on_creation_and_then_survive(self):
+        # The conf owns remote_urls after creation: a curator adds urls by editing the conf,
+        # and a re-apply must not prune them back to the seeds.
+        seeds = ("https://archive.org/download/detour_1945/detour_4k.mp4|Detour (1945)",)
+        self.dial.FILES = ((93, "cinema_stream", "Cinema Stream", "", seeds),)
+        self.run_apply()
+        station = self.read("file_cinema_stream.json")
+        self.assertEqual(list(seeds), station["remote_urls"])
+
+        station["remote_urls"].append("https://example.org/x.mp4|X")
+        self.write("file_cinema_stream.json", station)
+        _, out = self.run_apply()
+        self.assertEqual(2, len(self.read("file_cinema_stream.json")["remote_urls"]))
+
     def test_an_existing_file_channel_keeps_its_streams_through_identity_repairs(self):
         # apply_dial renumbering a file channel must not drop what the scanner probed:
         # a wiped stream list turns the channel into a dead number on the dial.
-        self.dial.FILES = ((92, "movies", "Movies", "Movies"),)
+        self.dial.FILES = ((92, "movies", "Movies", "Movies", ()),)
         streams = [{"url": "http://192.168.4.58:4244/Movies/a.mp4", "duration": 90,
                     "title": "a"}]
         self.write("file_movies.json", {"network_name": "Movies", "channel_number": 91,
@@ -206,7 +220,7 @@ class TestFileChannels(ApplyDialCase):
         self.assertEqual(streams, station["streams"])
 
     def test_a_file_channel_conf_on_disk_is_not_reported_orphan(self):
-        self.dial.FILES = ((91, "movies", "Movies", "Movies"),)
+        self.dial.FILES = ((91, "movies", "Movies", "Movies", ()),)
         self.write("file_movies.json", {"network_name": "Movies", "channel_number": 91,
                                         "media_dir": "Movies", "streams": []})
         _, out = self.run_apply()

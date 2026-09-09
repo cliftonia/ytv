@@ -154,7 +154,7 @@ def main():
     #     is actually on disk; inventing streams here would publish urls to files that may
     #     not exist, which is exactly the dead-number-on-the-dial failure the stream rules
     #     in build_lineup exist to prevent.
-    for number, slug, name, media_dir in DIAL.FILES:
+    for number, slug, name, media_dir, seeds in DIAL.FILES:
         p = confs.path_for(slug, kind="file")
         wanted_files.add(os.path.basename(p))
         if os.path.exists(p):
@@ -166,13 +166,19 @@ def main():
                 if station.get(key) != want:
                     station[key] = want
                     changes.append(key)
+            # Seeds plant remote_urls on first creation only. The conf owns the list after
+            # that, and an apply must never prune urls a curator added by hand.
+            if seeds and "remote_urls" not in station:
+                station["remote_urls"] = list(seeds)
+                changes.append("remote_urls")
             if changes:
                 do("file    %-18s ch %d (%s)" % (slug, number, ", ".join(changes)),
                    lambda p=p, c=conf: confs.save(p, c))
         else:
             conf = {"station_conf": {
                 "network_name": name, "network_long_name": name, "network_type": "files",
-                "channel_number": number, "media_dir": media_dir, "streams": [],
+                "channel_number": number, "media_dir": media_dir,
+                "remote_urls": list(seeds), "streams": [],
             }}
             do("create  %-18s ch %d (empty until scan_media.py runs)" % (slug, number),
                lambda p=p, c=conf: confs.save(p, c))
