@@ -137,6 +137,12 @@ class TestStallFallback(unittest.TestCase):
         line = "[#eaffaa 1.4GiB/2.0GiB(70%) CN:5 SD:0 DL:10MiB]"
         self.assertEqual("1.4GiB", ingest.SUMMARY.search(line).group(1))
 
+    def test_summary_regex_reads_the_zero_metadata_phase(self):
+        # A dead swarm produces exactly this line every five seconds; a regex that misses
+        # it means the stall watchdog never fires and the CLI idles forever.
+        match = ingest.SUMMARY.search("[#d9f05a 0B/0B(0%) CN:0 SD:0 DL:0B]")
+        self.assertEqual(("0B", "0B", "0"), match.groups())
+
     def test_ia_base_extracted_only_from_item_download_urls(self):
         self.assertEqual(
             "https://archive.org/download/ElephantsDream/",
