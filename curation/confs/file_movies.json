@@ -12,6 +12,36 @@
                 "title": "Big Buck Bunny (2008)"
             },
             {
+                "url": "http://192.168.4.58:4244/Movies/ElephantsDream/ed_1024.avi",
+                "duration": 654,
+                "title": "ed 1024"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/ElephantsDream/ed_1024.mp4",
+                "duration": 654,
+                "title": "ed 1024"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/ElephantsDream/ed_1024_512kb.mp4",
+                "duration": 654,
+                "title": "ed 1024 512kb"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/ElephantsDream/ed_hd.avi",
+                "duration": 654,
+                "title": "ed hd"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/ElephantsDream/ed_hd.mp4",
+                "duration": 654,
+                "title": "ed hd"
+            },
+            {
+                "url": "http://192.168.4.58:4244/Movies/ElephantsDream/ed_hd_512kb.mp4",
+                "duration": 654,
+                "title": "ed hd 512kb"
+            },
+            {
                 "url": "http://192.168.4.58:4244/Movies/Night%20of%20the%20Living%20Dead%20%281968%29.mp4",
                 "duration": 5802,
                 "title": "Night of the Living Dead (1968)"

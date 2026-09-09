@@ -24,11 +24,32 @@ set -euo pipefail
 HOST=hermanb@100.74.3.68
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
+echo "==> generating caddy paths from the channel confs"
+# The serve list follows the dial, not a hand-edit: every file_ conf's media_dir becomes one
+# allowed path prefix on :4244. A channel folder nobody declared stays unreachable.
+python3 - "$REPO/curation/confs" "$REPO/tools/media-server/ytv-media.caddy" <<'EOF' > /tmp/ytv-media.gen
+import glob, json, os, sys
+dirs = []
+for p in sorted(glob.glob(os.path.join(sys.argv[1], "file_*.json"))):
+    d = json.load(open(p)).get("station_conf", {}).get("media_dir", "").strip()
+    if d and d not in dirs:
+        dirs.append(d)
+if not dirs:
+    dirs = ["Movies", "Series"]  # the service must adapt even when no confs are in hand
+if any('"' in d for d in dirs):
+    sys.exit("a media dir contains a quote; refusing to generate an invalid Caddyfile")
+paths = " ".join('"/%s/*"' % d for d in dirs)
+tmpl = open(sys.argv[2]).read()
+block = '\t@media path %s\n\thandle @media {\n\t\tfile_server\n\t}\n' % paths
+print(tmpl.replace("@@PATHS@@", block), end="")
+EOF
+cp /tmp/ytv-media.gen /tmp/ytv-media.caddy
+
 echo "==> caddy config, unit, ufw, rescan, Nextcloud reindex (see remote-steps.sh)"
 # The remote default shell is fish, which mangles multi-line quoted commands - so the steps
 # live in a file and are run through bash -s instead of inlined here.
 rsync -aq --delete --exclude __pycache__ "$REPO/curation/" "$HOST:ytv-curation/"
-scp -q "$REPO/tools/media-server/ytv-media.caddy" "$REPO/tools/media-server/ytv-media.service" \
+scp -q /tmp/ytv-media.caddy "$REPO/tools/media-server/ytv-media.service" \
     "$REPO/tools/media-server/remote-steps.sh" "$HOST:/tmp/"
 ssh "$HOST" 'bash -s' < "$REPO/tools/media-server/remote-steps.sh"
 
