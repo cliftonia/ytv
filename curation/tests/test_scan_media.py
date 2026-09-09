@@ -145,8 +145,11 @@ class TestNonContent(ScanCase):
 
 class TestRemoteUrls(ScanCase):
 
+    def probe(self, url):
+        return (4321, "h264", 1920, 1080)
+
     def test_remote_urls_are_probed_and_keep_authored_order(self):
-        with mock.patch.object(scan_media, "probe_duration", lambda u: 4321):
+        with mock.patch.object(scan_media, "probe_stream", self.probe):
             streams = scan_media.collect_remote([
                 "https://archive.org/download/x/The_Red_House_1947.mp4",
                 "https://example.org/film.mp4|Detour (1945)",
@@ -156,13 +159,29 @@ class TestRemoteUrls(ScanCase):
         self.assertEqual(4321, streams[0]["duration"])
         self.assertTrue(all(s["url"].startswith("https://") for s in streams))
 
-    def test_a_remote_with_no_readable_duration_is_skipped_loudly(self):
+    def test_a_remote_with_no_readable_stream_is_skipped_loudly(self):
         # Same rule as local files: a guessed duration mis-schedules everything after it
         # in the cycle, so the stream drops and the operator is told.
-        with mock.patch.object(scan_media, "probe_duration", lambda u: None), \
+        with mock.patch.object(scan_media, "probe_stream", lambda u: None), \
                 mock.patch.object(sys, "stderr", io.StringIO()) as err:
             self.assertEqual([], scan_media.collect_remote(["https://example.org/x.mp4"]))
-        self.assertIn("no readable duration", err.getvalue())
+        self.assertIn("no readable stream", err.getvalue())
+
+    def test_a_remote_beyond_tv_hardware_is_refused_loudly(self):
+        # detour_4k.mp4 is h264 at 3840x2560: past the televisions' h264 hardware (UHD tops
+        # at 2160 lines), and under vo=mediacodec_embed there is no software path - mpv would
+        # play its audio over the previous channel's frozen picture.
+        oversized = lambda u: (3600, "h264", 3840, 2560)
+        with mock.patch.object(scan_media, "probe_stream", oversized), \
+                mock.patch.object(sys, "stderr", io.StringIO()) as err:
+            self.assertEqual([], scan_media.collect_remote(["https://example.org/big.mp4"]))
+        self.assertIn("beyond the televisions", err.getvalue())
+
+    def test_at_uhd_limit_is_accepted(self):
+        with mock.patch.object(scan_media, "probe_stream",
+                               lambda u: (3600, "hevc", 3840, 2160)):
+            streams = scan_media.collect_remote(["https://example.org/uhd.mp4"])
+        self.assertEqual(1, len(streams))
 
 
 class TestMain(ScanCase):
@@ -183,6 +202,8 @@ class TestMain(ScanCase):
         out, err = io.StringIO(), io.StringIO()
         with mock.patch.object(sys, "argv", argv), \
                 mock.patch.object(scan_media, "probe_duration", lambda p: 100), \
+                mock.patch.object(scan_media, "probe_stream",
+                                  lambda u: (100, "h264", 1920, 1080)), \
                 mock.patch.object(scan_media.subprocess, "run") as run, \
                 contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
             run.return_value.returncode = 0  # the ffprobe -version presence check

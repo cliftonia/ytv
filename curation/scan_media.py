@@ -21,6 +21,7 @@ Not refresh_channels.py: there is nothing to search. The dial only changes when 
 and the operator knows when that is - they put them there.
 """
 import argparse
+import json
 import os
 import re
 import subprocess
@@ -150,6 +151,36 @@ def collect(root, media_dir, base):
     return [stream for stream, _ in entries]
 
 
+def probe_stream(url):
+    """(duration, codec, width, height) for a remote video, or None.
+
+    One ffprobe call; the television path has no software fallback (vo=mediacodec_embed),
+    so what curation accepts is what hardware must decode.
+    """
+    try:
+        out = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries",
+             "format=duration:stream=codec_type,codec_name,width,height",
+             "-of", "json", url],
+            capture_output=True, text=True, timeout=90)
+        data = json.loads(out.stdout or "{}")
+        video = next((s for s in data.get("streams", []) if s.get("codec_type") == "video"),
+                     {})
+        return (int(round(float(data["format"]["duration"]))), video.get("codec_name"),
+                int(video.get("width") or 0), int(video.get("height") or 0))
+    except (ValueError, KeyError, OSError, subprocess.TimeoutExpired):
+        return None
+
+
+# What the televisions can actually decode as hardware. The ceiling is UHD (3840x2160):
+# anything taller/wider (a "4K" scan like detour_4k.mp4's 3840x2560 is the classic case)
+# leaves mpv playing audio over the PREVIOUS channel's frozen picture - the worst lie the
+# dial can tell. vp9/av1 decode exists on these boxes but is not yet measured at 4K, so
+# only h264/hevc are admitted until someone watches one.
+PLAYABLE_CODECS = {"h264", "hevc"}
+MAX_W, MAX_H = 3840, 2160
+
+
 def collect_remote(urls):
     """Streams for a conf's remote_urls: plain http(s) video files hosted elsewhere.
 
@@ -169,10 +200,17 @@ def collect_remote(urls):
         url, override = url.strip(), override.strip()
         if not url:
             continue
-        duration = probe_duration(url)
-        if not duration or duration <= 0:
-            print("warning: %s has no readable duration - left off the dial" % url,
+        probed = probe_stream(url)
+        if not probed:
+            print("warning: %s has no readable stream - left off the dial" % url,
                   file=sys.stderr)
+            continue
+        duration, codec, width, height = probed
+        if codec not in PLAYABLE_CODECS or width > MAX_W or height > MAX_H:
+            # See PLAYABLE_CODECS: this is the audio-over-a-stale-picture failure, caught
+            # here instead of on the sofa.
+            print("warning: %s is %s %dx%d, beyond the televisions' hardware - left off "
+                  "the dial" % (url, codec, width, height), file=sys.stderr)
             continue
         stem = unquote(os.path.splitext(os.path.basename(urlparse(url).path))[0])
         streams.append({"url": url, "duration": duration,
