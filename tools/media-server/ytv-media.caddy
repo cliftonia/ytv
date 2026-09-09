@@ -1,7 +1,8 @@
-# YTV media: the Movies and Series folders out of Nextcloud's data directory, served as plain
-# HTTP for the televisions. Port 4244, ufw-limited to the LAN and tailscale0 - there is no auth
-# on this, so the two path prefixes below are the entire exposure. Adding another prefix for a
-# new media folder is fine; pointing file_server at the files root is not.
+# YTV media: the file channels' media folders out of Nextcloud's data directory, served as
+# plain HTTP for the televisions. Port 4244, ufw-limited to the LAN and tailscale0 - there is
+# no auth on this, so the path list below IS the entire exposure. It is generated from the
+# file_*.json confs' media_dir fields at deploy time (deploy.sh replaces @@PATHS@@): adding a
+# channel adds exactly one more folder's reach, and Nothing Else.
 #
 # Caddy because it was already installed on the box and speaks Range requests out of the box -
 # both players issue bounded byte ranges for everything (see ChunkedDataSource/ChunkedProxy in
@@ -14,14 +15,7 @@
 :4244 {
 	root * /mnt/hdd/nextcloud-data/data/hermanb/files
 
-	@movies path /Movies/*
-	@series path /Series/*
-	handle @movies {
-		file_server
-	}
-	handle @series {
-		file_server
-	}
+@@PATHS@@
 	# Everything else - the files root, Music, directory listings - does not exist here.
 	handle {
 		respond 404
