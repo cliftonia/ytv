@@ -6,19 +6,25 @@
         "channel_number": 93,
         "media_dir": "",
         "remote_urls": [
-            "https://archive.org/download/detour_1945/detour_4k.mp4|Detour (1945)",
-            "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4|The Stranger (1946)"
+            "https://archive.org/download/his_girl_friday/his_girl_friday.mp4|His Girl Friday (1940)",
+            "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4|The Stranger (1946)",
+            "https://archive.org/download/house_on_haunted_hill_ipod/house_on_haunted_hill.mp4|House on Haunted Hill (1959)"
         ],
         "streams": [
             {
-                "url": "https://archive.org/download/detour_1945/detour_4k.mp4",
-                "duration": 4145,
-                "title": "Detour (1945)"
+                "url": "https://archive.org/download/his_girl_friday/his_girl_friday.mp4",
+                "duration": 5505,
+                "title": "His Girl Friday (1940)"
             },
             {
                 "url": "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4",
                 "duration": 5643,
                 "title": "The Stranger (1946)"
+            },
+            {
+                "url": "https://archive.org/download/house_on_haunted_hill_ipod/house_on_haunted_hill.mp4",
+                "duration": 4483,
+                "title": "House on Haunted Hill (1959)"
             }
         ]
     }

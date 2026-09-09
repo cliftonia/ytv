@@ -324,8 +324,11 @@ FILES = [
     # Public-domain features straight off archive.org's CDN: nothing lands on the server and
     # archive.org has been dependable for decades. Grows by appending urls to the conf.
     (93, "cinema_stream", "Cinema Stream", "", (
-        "https://archive.org/download/detour_1945/detour_4k.mp4|Detour (1945)",
+        "https://archive.org/download/his_girl_friday/his_girl_friday.mp4"
+        "|His Girl Friday (1940)",
         "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4"
         "|The Stranger (1946)",
+        "https://archive.org/download/house_on_haunted_hill_ipod/house_on_haunted_hill.mp4"
+        "|House on Haunted Hill (1959)",
     )),
 ]
