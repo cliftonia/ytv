@@ -30,11 +30,10 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Scratch for metadata fetches; nothing here survives the run.
 STAGING = "/tmp/ytv-ingest"
 
-# The /tmp dht-file-path experiment corrupted on write and left every run deaf; let aria2
-# use its ordinary per-user cache (~/.cache/aria2/dht.dat), which demonstrably loads and
-# talks. For hash-only magnets (no &tr= anywhere), also add a handful of long-lived public
-# trackers - DHT alone takes minutes on a healthy day and forever on a sparse one, and for
-# the torrent the only thing that matters is who answers first.
+# DHT cache saga, landed: the verify phase (hermanb) uses aria2's default per-user cache.
+# The download phase (http) cannot write its own passwd home (/srv/http), and two concurrent
+# aria2 runs writing one shared /tmp file tear it on write - so each download run gets a
+# private throwaway cache. Payload comes via tracker anyway; dht merely helps sparse swarms.
 PUBLIC_TRACKERS = (
     "--bt-tracker=udp://tracker.opentrackr.org:1337/announce,"
     "udp://open.tracker.cl:1337/announce,"
@@ -346,6 +345,7 @@ def main():
 sudo -u http mkdir -p {t}
 sudo -u http -s /bin/bash -c "aria2c --seed-time=0 --summary-interval=5 \\
     {trackers} \\
+    --dht-file-path=/tmp/ytv-dht-http.$$.dat \\
     --console-log-level=warn --show-console-readout=false --dir={t}{sel} {src}"
 """.format(t=quote_shell(target), sel=select, src=quote_shell(src),
            trackers=PUBLIC_TRACKERS)
