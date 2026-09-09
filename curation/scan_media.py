@@ -25,7 +25,7 @@ import os
 import re
 import subprocess
 import sys
-import urllib.parse
+from urllib.parse import quote, unquote, urlparse
 
 import confs
 
@@ -58,7 +58,11 @@ RELEASE_TAGS = re.compile(
 
 
 def humanise(stem):
-    """A title a banner can show, from a filename that was never meant to be one."""
+    """A title a banner can show, from a filename that was never meant to be one.
+
+    Returns "" when nothing but tags and separators survived - callers pick the fallback,
+    because the right one differs: a film falls back to its whole name, an episode to no
+    detail at all (otherwise the show name lands in the title twice)."""
     if " " not in stem:
         # Dot-style release name. The group suffix ("-VODO", "-RARBG") only exists in this
         # style, so it is stripped here and never from a space-separated name, where the
@@ -66,7 +70,7 @@ def humanise(stem):
         stem = re.sub(r"-[A-Za-z0-9]{2,12}$", "", stem)
         stem = re.sub(r"[._]+", " ", stem)
     stem = RELEASE_TAGS.sub("", stem)
-    return re.sub(r"\s{2,}", " ", stem).strip(" -.") or stem
+    return re.sub(r"\s{2,}", " ", stem).strip(" -.")
 
 
 def parse_episode(path, media_root):
@@ -84,8 +88,8 @@ def parse_episode(path, media_root):
     match = SEASON_EPISODE.search(stem)
     if not match:
         return None
-    title = humanise(stem[match.end():]) or humanise(stem)
-    return (humanise(parts[1]), int(match.group(1)), int(match.group(2)), title)
+    detail = humanise(stem[match.end():])
+    return (humanise(parts[1]) or parts[1], int(match.group(1)), int(match.group(2)), detail)
 
 
 def probe_duration(path):
@@ -130,18 +134,50 @@ def collect(root, media_dir, base):
                   file=sys.stderr)
             continue
         rel = os.path.relpath(path, root)
-        url = "%s/%s" % (base.rstrip("/"), urllib.parse.quote(rel.replace(os.sep, "/")))
+        url = "%s/%s" % (base.rstrip("/"), quote(rel.replace(os.sep, "/")))
         episode = parse_episode(path, os.path.dirname(media_dir))
         if episode:
             show, season, number, detail = episode
-            title = "%s S%02dE%02d - %s" % (show, season, number, detail)
+            title = "%s S%02dE%02d%s" % (show, season, number,
+                                         " - " + detail if detail else "")
             key = (0, show.lower(), season, number, rel.lower())
         else:
-            title = humanise(os.path.splitext(os.path.basename(path))[0])
+            title = humanise(os.path.splitext(os.path.basename(path))[0]) \
+                or os.path.splitext(os.path.basename(path))[0]
             key = (1, rel.lower(), 0, 0, rel.lower())
         entries.append(({"url": url, "duration": duration, "title": title}, key))
     entries.sort(key=lambda pair: pair[1])
     return [stream for stream, _ in entries]
+
+
+def collect_remote(urls):
+    """Streams for a conf's remote_urls: plain http(s) video files hosted elsewhere.
+
+    Streams, not downloads: the dial needs only what ffprobe reads over the wire (the
+    duration, via range requests), and the players fetch the same urls themselves at play
+    time. Nothing of the file ever lives locally - which is exactly why these seeds must be
+    dependable hosts, because the host's uptime IS the channel's uptime.
+
+    Entries are "url" or "url|Title". Authored order IS broadcast order - there is no
+    filesystem to inherit one from. Seeds must be https (or a host the app already trusts):
+    the app's network config permits cleartext to exactly the two server IPs, so a plain http
+    seed anywhere else is refused before a packet leaves the device.
+    """
+    streams = []
+    for entry in urls:
+        url, _, override = entry.partition("|")
+        url, override = url.strip(), override.strip()
+        if not url:
+            continue
+        duration = probe_duration(url)
+        if not duration or duration <= 0:
+            print("warning: %s has no readable duration - left off the dial" % url,
+                  file=sys.stderr)
+            continue
+        stem = unquote(os.path.splitext(os.path.basename(urlparse(url).path))[0])
+        streams.append({"url": url, "duration": duration,
+                        "title": override or humanise(stem) or stem})
+    return streams
 
 
 def main():
@@ -167,15 +203,26 @@ def main():
             continue
         conf = confs.load(path)
         station = conf.get("station_conf", {})
-        media_dir = os.path.join(args.root, station.get("media_dir", ""))
-        if not os.path.isdir(media_dir):
-            print("%s: %s is not a directory - nothing scanned" % (slug, media_dir),
-                  file=sys.stderr)
+        declared_dir = station.get("media_dir", "")
+        media_dir = os.path.join(args.root, declared_dir) if declared_dir else None
+        streams = []
+        if media_dir:
+            if os.path.isdir(media_dir):
+                streams = collect(args.root, media_dir, args.base)
+            else:
+                # A declared folder that is gone reads as an error, because the silent
+                # version publishes an empty channel - the HDD stayed unmounted once before.
+                print("%s: %s is not a directory - nothing scanned" % (slug, media_dir),
+                      file=sys.stderr)
+                continue
+        streams += collect_remote(station.get("remote_urls", []))
+        if not media_dir and not station.get("remote_urls"):
+            print("%s: declares neither a media dir nor remote urls - nothing to scan"
+                  % slug, file=sys.stderr)
             continue
-        streams = collect(args.root, media_dir, args.base)
         old = station.get("streams", [])
-        print("%s: %d file%s (%s)" % (slug, len(streams), "" if len(streams) == 1 else "s",
-                                      "was %d" % len(old)))
+        print("%s: %d stream%s (%s)" % (slug, len(streams), "" if len(streams) == 1 else "s",
+                                        "was %d" % len(old)))
         if not args.dry and streams != old:
             station["streams"] = streams
             confs.save(path, conf)

@@ -301,7 +301,7 @@ LIVE = [
     (118, "iptv_sky_thoroughbred_central", "Sky Thoroughbred Central", None),
 ]
 
-# (number, slug, name, media_dir) - video files on the homelab server, not YouTube.
+# (number, slug, name, media_dir, seeds) - video files on the homelab server, not YouTube.
 #
 # Every stream is a url on the media server (port 4244, see tools/media-server/) rather than
 # an id to resolve, and the channel clock-rotates like any clip channel, so a film is joined
@@ -309,9 +309,23 @@ LIVE = [
 # it re-probes media_dir under MEDIA_ROOT and rewrites them; refresh_channels never touches
 # these confs, because there is nothing to search.
 #
-# The urls are on 192.168.4.58, so these channels only play where the LAN (or tailnet) reaches.
-# The car answers neither address; these two go to a card there, same as any dead stream.
+# media_dir may be "" for a channel fed only by remote sources: seeds then seed the conf's
+# remote_urls at creation ("https://...|(Title)" lines - lawful, dependable hosts ONLY; the
+# host's uptime is the channel's uptime, and the app refuses non-whitelisted cleartext, so
+# use https). The conf is the source of truth after creation: apply_dial never overwrites
+# remote_urls on an existing conf.
+#
+# The media-server urls are on 192.168.4.58, so those streams only play where the LAN (or
+# tailnet) reaches. The car answers neither address; those channels go to a card there, same
+# as any dead stream.
 FILES = [
-    (91, "movies", "Movies", "Movies"),
-    (92, "series", "Series", "Series"),
+    (91, "movies", "Movies", "Movies", ()),
+    (92, "series", "Series", "Series", ()),
+    # Public-domain features straight off archive.org's CDN: nothing lands on the server and
+    # archive.org has been dependable for decades. Grows by appending urls to the conf.
+    (93, "cinema_stream", "Cinema Stream", "", (
+        "https://archive.org/download/detour_1945/detour_4k.mp4|Detour (1945)",
+        "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4"
+        "|The Stranger (1946)",
+    )),
 ]

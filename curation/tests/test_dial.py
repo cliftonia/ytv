@@ -63,12 +63,27 @@ class TestDial(unittest.TestCase):
         # ever has to move. A file channel above 101 would renumber the news block under it.
         highest_youtube = max(c[0] for c in dial.YOUTUBE)
         lowest_live = min(c[0] for c in dial.LIVE)
-        for number, slug, name, media_dir in dial.FILES:
+        for number, slug, name, media_dir, seeds in dial.FILES:
             self.assertGreater(number, highest_youtube,
                                "%s must sit above the youtube block" % slug)
             self.assertLess(number, lowest_live,
                             "%s must sit below the live block" % slug)
-            self.assertTrue(media_dir.strip(), "%s names no media dir to scan" % slug)
+            self.assertTrue(media_dir.strip() or seeds,
+                            "%s names neither a media dir nor remote seeds" % slug)
+
+    def test_remote_seeds_are_https_with_a_title_override(self):
+        # Cleartext http anywhere but the two media-server IPs is refused by the app's network
+        # config before a packet leaves the device - a plaintext seed is a dead channel that
+        # looks exactly like a dead host, so it fails here instead of on the television.
+        for number, slug, name, media_dir, seeds in dial.FILES:
+            for seed in seeds:
+                url, _, title = seed.partition("|")
+                self.assertTrue(url.startswith("https://") or "192.168.4.58" in url
+                                or "100.74.3.68" in url,
+                                "%s seeds a cleartext-unreachable url: %s" % (slug, url))
+                self.assertTrue(title.strip(),
+                                "%s seed %s carries no '|Title' - the banner would show a "
+                                "humanised filename" % (slug, url))
 
     def test_extras_reference_real_channels(self):
         # A playlist or extra query attached to a slug that no longer exists does nothing, and

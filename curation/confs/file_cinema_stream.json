@@ -1,0 +1,25 @@
+{
+    "station_conf": {
+        "network_name": "Cinema Stream",
+        "network_long_name": "Cinema Stream",
+        "network_type": "files",
+        "channel_number": 93,
+        "media_dir": "",
+        "remote_urls": [
+            "https://archive.org/download/detour_1945/detour_4k.mp4|Detour (1945)",
+            "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4|The Stranger (1946)"
+        ],
+        "streams": [
+            {
+                "url": "https://archive.org/download/detour_1945/detour_4k.mp4",
+                "duration": 4145,
+                "title": "Detour (1945)"
+            },
+            {
+                "url": "https://archive.org/download/the_stranger_1946/the_stranger_1946.mp4",
+                "duration": 5643,
+                "title": "The Stranger (1946)"
+            }
+        ]
+    }
+}
