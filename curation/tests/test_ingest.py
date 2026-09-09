@@ -56,6 +56,14 @@ class TestMagnetValidation(unittest.TestCase):
         self.assertTrue(ingest.TORRENT_URL.match(
             "https://archive.org/download/ElephantsDream/ElephantsDream_archive.torrent"))
 
+    def test_canonicalization_to_what_aria2_accepts(self):
+        # The user may paste magnet://, but aria2 1.37 rejects that spelling outright;
+        # accepting at the prompt and refusing at the daemon cost one live run.
+        self.assertEqual("magnet:?xt=urn:btih:bea4e221",
+                         ingest.canonical_magnet("magnet://?xt=urn:btih:bea4e221"))
+        self.assertEqual("magnet:?xt=urn:btih:bea4e221",
+                         ingest.canonical_magnet("magnet:?xt=urn:btih:bea4e221"))
+
 
 class TestBdecodeAndSummary(unittest.TestCase):
 
