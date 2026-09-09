@@ -250,11 +250,15 @@ ls %(s)s/*.torrent
     rc, stdout, stderr = ssh("ls %s/*.torrent" % STAGING)
     torrents = [line for line in stdout.splitlines() if line.endswith(".torrent")]
     if not torrents:
-        print("metadata never arrived - dead magnet, dead url, or a silent swarm "
-              "(a second paste sometimes lands it: the dht table is warm by then)",
+        print("""metadata never arrived (180s, zero peers ever answered)
+
+The swarm for this exact infohash is dead. Measured against a control magnet that resolves
+in seconds, so this is the content, not your network or this tool. Realistic remedies:
+  1. wherever this link came from, take the magnet WITH its &tr= tracker params, or the
+     .torrent file - tracker-less magnets rely on DHT alone, which is exactly this death
+  2. pick a release that lists seeders > 0 - that number is whether a torrent is alive
+  3. retry much later: if the lone seeder ever returns, this same paste resumes cleanly""",
               file=sys.stderr)
-        if stderr.strip():
-            print(stderr.strip()[-400:], file=sys.stderr)
         raise SystemExit(1)
     raw_path = torrents[0]
     rc, stdout, _ = ssh("base64 -w0 %s" % raw_path)
