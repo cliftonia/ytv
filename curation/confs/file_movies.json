@@ -7,6 +7,11 @@
         "media_dir": "Movies",
         "streams": [
             {
+                "url": "http://192.168.4.58:4244/Movies/Project.Hail.Mary.2026.2160p.WEB-DL.DDP5.1.Atmos.DV.HDRP-DVT.mkv",
+                "duration": 9382,
+                "title": "Project Hail Mary 2026 DDP5 1 HDRP"
+            },
+            {
                 "url": "http://192.168.4.58:4244/Movies/The%20Mandalorian%20and%20Grogu%20%282026%29%202160p%20HDR10%2B.mp4",
                 "duration": 7918,
                 "title": "The Mandalorian and Grogu (2026)"
