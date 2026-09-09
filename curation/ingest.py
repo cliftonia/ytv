@@ -231,17 +231,23 @@ def fetch_metadata(uri):
     """Verify the link and get the .torrent on the server. Prints the summary, returns name."""
     uri = canonical_magnet(uri)
     print("fetching metadata (the swarm answers for it, not the tracker)...")
-    rc, stdout, stderr = ssh("""
+    print("(dead air here = a dead or tracker-less swarm; live summaries appear as they come)")
+    # Streamed: a silent 180s reads as a hang; periodic aria2 lines prove the box is
+    # listening. verify runs as hermanb - http's whole job starts at the download.
+    script = """
 rm -rf %(s)s && mkdir -p %(s)s
 if [[ "%(u)s" == magnet:* ]]; then
     timeout 180 aria2c --bt-metadata-only=true --bt-save-metadata=true --seed-time=0 \
-        --dir=%(s)s --summary-interval=0 --dht-file-path=/tmp/ytv-dht-verify.dat \
+        --dir=%(s)s --summary-interval=10 --dht-file-path=/tmp/ytv-dht-verify.dat \
         --console-log-level=notice "%(u)s" || true
 else
     curl -fSL --retry 2 -o %(s)s/source.torrent "%(u)s"
 fi
 ls %(s)s/*.torrent
-""" % {"s": STAGING, "u": uri})
+""" % {"s": STAGING, "u": uri}
+    # The streamed pass prints progress; the metadata test itself needs the capture pass.
+    ssh(script, stream=True)
+    rc, stdout, stderr = ssh("ls %s/*.torrent" % STAGING)
     torrents = [line for line in stdout.splitlines() if line.endswith(".torrent")]
     if not torrents:
         print("metadata never arrived - dead magnet, dead url, or a silent swarm "
