@@ -39,6 +39,13 @@ class TestMagnetValidation(unittest.TestCase):
         self.assertTrue(ingest.MAGNET.match(
             "magnet:?xt=urn:btih:MFRGG2DFMZTWQ2LKMFRGG2DFMZTWQ2LK"))
 
+    def test_the_double_slash_client_dialect_is_accepted(self):
+        # uTorrent/qBittorrent and half the web emit magnet:// - it cost a real paste.
+        self.assertTrue(ingest.MAGNET.match(
+            "magnet://?xt=urn:btih:bea4e2218c9a596be84f3208b980d863a821f116"))
+        self.assertTrue(ingest.MAGNET.match(
+            "magnet://?dn=Name&xt=urn:btih:c12fe1c06bba254a9dc9f519b335aa7c1367a88a"))
+
     def test_a_magnet_without_a_hash_is_not_a_start(self):
         # aria2 would sit on it forever; refusing here keeps "dead link" a 1-second answer.
         self.assertFalse(ingest.MAGNET.match("magnet:?xt=urn:sha1:abc"))

@@ -30,9 +30,11 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Scratch for metadata fetches; nothing here survives the run.
 STAGING = "/tmp/ytv-ingest"
 
-# btih v1: 40 hex chars, or 32 from base32. Anything else is not a magnet we can start.
+# btih v1: 40 hex chars, or 32 from base32. The "magnet://?..." double-slash is a client
+# dialect as common as the canonical "magnet:?..." - both start the same download. Params
+# before xt= are fine; a missing xt=urn:btih is not a magnet aria2 can begin.
 MAGNET = re.compile(
-    r"^magnet:\?\S*xt=urn:btih:([0-9a-fA-F]{40}|[A-Za-z2-7]{32})\b", re.I)
+    r"^magnet:(?://)?\?\S*?xt=urn:btih:([0-9a-fA-F]{40}|[A-Za-z2-7]{32})\b", re.I)
 TORRENT_URL = re.compile(r"^https?://\S+\.torrent(\?\S*)?$", re.I)
 
 
