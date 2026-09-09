@@ -38,6 +38,13 @@ MAGNET = re.compile(
 TORRENT_URL = re.compile(r"^https?://\S+\.torrent(\?\S*)?$", re.I)
 
 
+def canonical_magnet(uri):
+    """The client's spelling to aria2's. aria2 1.37 refuses magnet:// outright
+    ("Unrecognized URI or unsupported protocol"), so the tolerant regex accepts it and this
+    is what actually reaches the daemon."""
+    return re.sub(r"^magnet://", "magnet:", uri)
+
+
 # --- the pure parts -----------------------------------------------------------------------
 
 def bdecode(data, at=0):
@@ -220,6 +227,7 @@ def quote_path_segment(segment):
 
 def fetch_metadata(uri):
     """Verify the link and get the .torrent on the server. Prints the summary, returns name."""
+    uri = canonical_magnet(uri)
     print("fetching metadata (the swarm answers for it, not the tracker)...")
     rc, stdout, stderr = ssh("""
 rm -rf %(s)s && mkdir -p %(s)s
@@ -233,7 +241,9 @@ ls %(s)s/*.torrent
 """ % {"s": STAGING, "u": uri})
     torrents = [line for line in stdout.splitlines() if line.endswith(".torrent")]
     if not torrents:
-        print("metadata never arrived - dead magnet, dead url, or a silent swarm", file=sys.stderr)
+        print("metadata never arrived - dead magnet, dead url, or a silent swarm "
+              "(a second paste sometimes lands it: the dht table is warm by then)",
+              file=sys.stderr)
         if stderr.strip():
             print(stderr.strip()[-400:], file=sys.stderr)
         raise SystemExit(1)
@@ -304,7 +314,7 @@ def main():
     print("\ndownloading into %s (ctrl-C is safe; the same link resumes it)" % target)
     # Magnets fetch metadata again in the download run (seconds on a healthy swarm);
     # a .torrent url already landed as source.torrent in the verify step.
-    src = uri if uri.startswith("magnet:") else "%s/source.torrent" % STAGING
+    src = canonical_magnet(uri) if MAGNET.match(uri) else "%s/source.torrent" % STAGING
     script = """
 sudo -u http mkdir -p {t}
 sudo -u http -s /bin/bash -c "aria2c --seed-time=0 --summary-interval=5 \\
