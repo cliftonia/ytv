@@ -154,8 +154,10 @@ def ssh(script, *, stream=False):
     return out.returncode, out.stdout, out.stderr
 
 
-# aria2's periodic summary, e.g. [#eaffaa 1.4GiB/1.4GiB(98%) CN:0 SD:0 DL:0B]
-SUMMARY = re.compile(r"\[#\w+ ([\d.]+[GMTKiB]+?iB)/[\d.]+[GMTKiB]+?iB\(\d+%\)")
+# aria2's periodic summary, e.g. [#eaffaa 1.4GiB/1.4GiB(98%) CN:0 SD:0 DL:0B] - and the
+# metadata phase's [#d9f05a 0B/0B(0%) ...], which must parse too or the watchdog sleeps
+# through a dead swarm forever.
+SUMMARY = re.compile(r"\[#\w+ ([\d.]+(?:[GMKTP]i)?B)/([\d.]+(?:[GMKTP]i)?B)\((\d+)%\)")
 STALL_SECONDS = 90
 
 
@@ -233,7 +235,8 @@ def fetch_metadata(uri):
 rm -rf %(s)s && mkdir -p %(s)s
 if [[ "%(u)s" == magnet:* ]]; then
     timeout 180 aria2c --bt-metadata-only=true --bt-save-metadata=true --seed-time=0 \
-        --dir=%(s)s --summary-interval=0 --console-log-level=notice "%(u)s" || true
+        --dir=%(s)s --summary-interval=0 --dht-file-path=/tmp/ytv-dht-verify.dat \
+        --console-log-level=notice "%(u)s" || true
 else
     curl -fSL --retry 2 -o %(s)s/source.torrent "%(u)s"
 fi
@@ -271,7 +274,7 @@ def main():
         print("that is neither a magnet link nor a .torrent url", file=sys.stderr)
         return 2
 
-    summary, _ = fetch_metadata(uri)
+    summary, meta_path = fetch_metadata(uri)
     name, total, files = summary
     describe(summary)
     if input("\nlook right? [y/N] ").strip().lower() != "y":
@@ -312,12 +315,15 @@ def main():
 
     target = "%s/%s" % (FILES_ROOT, folder)
     print("\ndownloading into %s (ctrl-C is safe; the same link resumes it)" % target)
-    # Magnets fetch metadata again in the download run (seconds on a healthy swarm);
-    # a .torrent url already landed as source.torrent in the verify step.
-    src = canonical_magnet(uri) if MAGNET.match(uri) else "%s/source.torrent" % STAGING
+    # Both shapes download from the verified .torrent on disk: the memory-phase metadata
+    # re-fetch for magnets was a dead wait against the same cold swarm. The two dht caches are
+    # deliberately per-uid (/tmp, one owner each) because verify runs as hermanb and the
+    # download as http - a shared file would belong to whichever ran first.
+    src = meta_path
     script = """
 sudo -u http mkdir -p {t}
 sudo -u http -s /bin/bash -c "aria2c --seed-time=0 --summary-interval=5 \\
+    --dht-file-path=/tmp/ytv-dht-http.dat \\
     --console-log-level=warn --show-console-readout=false --dir={t}{sel} {src}"
 """.format(t=quote_shell(target), sel=select, src=quote_shell(src))
     outcome = run_download(script)
