@@ -39,11 +39,27 @@ if not dirs:
 if any('"' in d for d in dirs):
     sys.exit("a media dir contains a quote; refusing to generate an invalid Caddyfile")
 paths = " ".join('"/%s/*"' % d for d in dirs)
-tmpl = open(sys.argv[2]).read()
-block = '\t@media path %s\n\thandle @media {\n\t\tfile_server\n\t}\n' % paths
-print(tmpl.replace("@@PATHS@@", block), end="")
+tmpl = open(sys.argv[2]).read().split("\n")
+block = '\t@media path %s\n\thandle @media {\n\t\tfile_server\n\t}' % paths
+# Substitute the placeholder LINE only - never str.replace over the whole file. 2026-09-09 the
+# token was also in the header comment and str.replace put a second matcher block outside
+# the site block; Caddy refused the file and the unit sat in start-limit-hit for a week.
+slots = [i for i, line in enumerate(tmpl) if line.strip() == "@@PATHS@@"]
+if len(slots) != 1:
+    sys.exit("template must contain exactly one @@PATHS@@ line, found %d" % len(slots))
+tmpl[slots[0]] = block
+out = "\n".join(tmpl)
+if "@@PATHS@@" in out:
+    sys.exit("template carries @@PATHS@@ outside the placeholder line; refusing to generate")
+print(out, end="")
 EOF
 cp /tmp/ytv-media.gen /tmp/ytv-media.caddy
+# Prove the generated file parses before anything leaves this machine (caddy is on the Mac
+# via brew, and on the box); the remote step validates again before overwriting the live one.
+if command -v caddy >/dev/null; then
+  caddy validate --config /tmp/ytv-media.caddy --adapter caddyfile >/dev/null 2>&1 \
+    || { echo "generated caddyfile is invalid:" >&2; caddy validate --config /tmp/ytv-media.caddy --adapter caddyfile 2>&1 | tail -3 >&2; exit 1; }
+fi
 
 echo "==> caddy config, unit, ufw, rescan, Nextcloud reindex (see remote-steps.sh)"
 # The remote default shell is fish, which mangles multi-line quoted commands - so the steps
