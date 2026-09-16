@@ -2,6 +2,11 @@ set -euo pipefail
 MODE="${1:-all}"
 
 if [ "$MODE" = all ]; then
+echo "-- validating the generated config before it replaces the live one"
+# A file Caddy refuses must never overwrite a working one: the unit would crash-loop into
+# start-limit-hit and the televisions would lose every file channel (2026-09-09..16).
+caddy validate --config /tmp/ytv-media.caddy --adapter caddyfile >/dev/null 2>&1 \
+    || { caddy validate --config /tmp/ytv-media.caddy --adapter caddyfile 2>&1 | tail -3; exit 1; }
 echo "-- installing config and unit"
 sudo install -m 644 /tmp/ytv-media.caddy /etc/caddy/ytv-media.caddy
 sudo install -m 644 /tmp/ytv-media.service /etc/systemd/system/ytv-media.service
