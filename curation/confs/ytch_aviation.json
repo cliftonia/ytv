@@ -24,7 +24,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8QBX3Q4ShZI",
                 "duration": 2787,
-                "title": "After 9/11: The Untold Story of the Engineers Who Entered Ground Zero | TIME"
+                "title": "After 9/11: The Untold Story of the Engineers Who Entered Ground Zero | TIME",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=TiI2AWZI9yg",
@@ -59,7 +61,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q17ti1y7NNY",
                 "duration": 2847,
-                "title": "Airbus A330 Mega Maintenance: Inside One of the Most Complex Aircraft Overhauls | FD Engin"
+                "title": "Airbus A330 Mega Maintenance: Inside One of the Most Complex Aircraft Overhauls | FD Engin",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=NrtQgPFz_X0",
@@ -159,12 +163,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=M4TbzpOICtY",
                 "duration": 547,
-                "title": "The 2026 Aircraft Carrier So Advanced It Looks From the Future"
+                "title": "The 2026 Aircraft Carrier So Advanced It Looks From the Future",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=NCB_L6iZBQM",
                 "duration": 5050,
-                "title": "40 Aircraft So WEIRD They Look Fake - But Are REAL!"
+                "title": "40 Aircraft So WEIRD They Look Fake - But Are REAL!",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=CsstSTTQfdA",
@@ -194,7 +202,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NpqU3eSeS1c",
                 "duration": 388,
-                "title": "The Invention Of Airplanes | History of Aeroplane Invention | Aviation History with Dr. Bi"
+                "title": "The Invention Of Airplanes | History of Aeroplane Invention | Aviation History with Dr. Bi",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZT9wZxrrhEI",
@@ -214,7 +224,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=A5uJHmRveGw",
                 "duration": 898,
-                "title": "Flying Fortress B-17 Assembly | WWII Industrial Documentary."
+                "title": "Flying Fortress B-17 Assembly | WWII Industrial Documentary.",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Memdhj72pTY",
@@ -234,12 +246,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=phPcQtRI_2s",
                 "duration": 707,
-                "title": "The Ghost of Seattle Boeings Abandoned Dream That Could Have Changed Aviation Fo"
+                "title": "The Ghost of Seattle Boeings Abandoned Dream That Could Have Changed Aviation Fo",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=URYN-wCyYjA",
                 "duration": 1118,
-                "title": "Did Piper Accidentally Build the Perfect Single-Engine Airplane?"
+                "title": "Did Piper Accidentally Build the Perfect Single-Engine Airplane?",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=EnaGnxslhoA",
@@ -265,11 +281,6 @@
                 "url": "https://www.youtube.com/watch?v=NKfE8OSQ5sY",
                 "duration": 1217,
                 "title": "How Massive Aircraft Engines Are Mass Produced Inside Complex Assembly Factory"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hRsRnvmpuLw",
-                "duration": 271,
-                "title": "English Electric Lightning 2026 – Finally Unveiled! The Return of a British Icon ⚡🇬🇧"
             },
             {
                 "url": "https://www.youtube.com/watch?v=epiLxdn4s4w",
@@ -339,12 +350,25 @@
             {
                 "url": "https://www.youtube.com/watch?v=JFhPn1gEDj0",
                 "duration": 302,
-                "title": "X-planes (archive.org) - Declassified Archive Footage | Part 1"
+                "title": "X-planes (archive.org) - Declassified Archive Footage | Part 1",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=TIOQXdds2ZY",
                 "duration": 2666,
-                "title": "This Accident Changed Aviation Forever | The Terrifying Story Of Delta Flight 191"
+                "title": "This Accident Changed Aviation Forever | The Terrifying Story Of Delta Flight 191",
+                "skip": [
+                    [
+                        440.0,
+                        545.7
+                    ],
+                    [
+                        2632.4,
+                        2657.6
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=SID4y2YRFRE",
@@ -379,7 +403,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nT2RRSJyBJo",
                 "duration": 660,
-                "title": "Inside Boeing's $400M 777X: How America Built the World's Largest Aircraft Factory"
+                "title": "Inside Boeing's $400M 777X: How America Built the World's Largest Aircraft Factory",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=yxnW9VLxIag",
@@ -404,7 +430,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=u4fo6jMe_hU",
                 "duration": 979,
-                "title": "How Heat Seeking Missiles Find Their Targets"
+                "title": "How Heat Seeking Missiles Find Their Targets",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=vVGiGholAlo",
@@ -434,7 +462,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nKF4Sc_NMek",
                 "duration": 458,
-                "title": "The World’s Largest Electric Airplane Just Flew — What Happens Next?"
+                "title": "The World’s Largest Electric Airplane Just Flew — What Happens Next?",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=gbRZoM8mnPA",

@@ -9,7 +9,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Qjna7PROMZ8",
                 "duration": 3482,
-                "title": "Cultural Nihilism and the Rise of The Grifter"
+                "title": "Cultural Nihilism and the Rise of The Grifter",
+                "skip": [
+                    [
+                        3478.8,
+                        3481.0
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=nC1vdV1SGyc",
@@ -34,7 +41,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=G8o5eWIAOAo",
                 "duration": 1117,
-                "title": "the death of sustainable fashion (video essay)"
+                "title": "the death of sustainable fashion (video essay)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=HuIklxc1bSI",
@@ -79,12 +88,25 @@
             {
                 "url": "https://www.youtube.com/watch?v=yuKXxHgZpdI",
                 "duration": 1885,
-                "title": "Finally a video essay that's not written by AI!"
+                "title": "Finally a video essay that's not written by AI!",
+                "skip": [
+                    [
+                        507.1,
+                        625.7
+                    ],
+                    [
+                        1842.4,
+                        1856.5
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=itSlOoKo1t0",
                 "duration": 983,
-                "title": "Video Essay Creep"
+                "title": "Video Essay Creep",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6QohuOWXfKk",
@@ -204,7 +226,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yvxLN6HoR3E",
                 "duration": 630,
-                "title": "Equinox and the Trap of Centrism | Batman: The Brave and the Bold"
+                "title": "Equinox and the Trap of Centrism | Batman: The Brave and the Bold",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=bzSliqJ5Q9Q",
@@ -289,7 +313,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Qd2ZqNm2gwM",
                 "duration": 793,
-                "title": "The Knicks' Title Is Just the Start [Video Essay]"
+                "title": "The Knicks' Title Is Just the Start [Video Essay]",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=p4ml1XPtOXQ",
@@ -352,11 +378,6 @@
                 "title": "you're wrong about k-pop: a video essay"
             },
             {
-                "url": "https://www.youtube.com/watch?v=R1lcb_7gj5k",
-                "duration": 425,
-                "title": "Caravaggio: Master Of Light"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=UOOwMffD6ak",
                 "duration": 472,
                 "title": "Why Dybbuk is Objectively Bad Boss Design (Mewgenics Video Essay)"
@@ -384,7 +405,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CAFMXrMl23c",
                 "duration": 927,
-                "title": "Ip Man 4: How to Write Racism | Video Essay"
+                "title": "Ip Man 4: How to Write Racism | Video Essay",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=GNL1_tNTqpw",
@@ -424,7 +447,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0jyyxfuLSog",
                 "duration": 767,
-                "title": "Why Didn't They Get Back Together? || SATC Video Essay"
+                "title": "Why Didn't They Get Back Together? || SATC Video Essay",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Xmo2TWomtW8",
@@ -469,7 +494,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BeLc21XmxE4",
                 "duration": 1425,
-                "title": "Frank Ocean's Endless: A Deep Dive (Video Essay)"
+                "title": "Frank Ocean's Endless: A Deep Dive (Video Essay)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6eNjHz4Q3hQ",
@@ -489,12 +516,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z2fl4OX6tm0",
                 "duration": 511,
-                "title": "Diablo 3 Is S-Tier Brain Rot For Adults"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YyQSkR5-ZA4",
-                "duration": 556,
-                "title": "IBPS PO Mains 2026 Descriptive | Essay Practice Set | Complete Guidance by Yashi Ma’am"
+                "title": "Diablo 3 Is S-Tier Brain Rot For Adults",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=a4LdOTy0keQ",

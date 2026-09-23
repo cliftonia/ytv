@@ -54,7 +54,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4qfsmE11Ejo",
                 "duration": 3839,
-                "title": "Modular Monoliths and Other Facepalms - Kevlin Henney - NDC London 2026"
+                "title": "Modular Monoliths and Other Facepalms - Kevlin Henney - NDC London 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=3wQdfYFhxmE",
@@ -79,7 +81,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=N6KaG7lyoqo",
                 "duration": 1623,
-                "title": "On Interaction Effects in Greybox Fuzzing, International Conference on Software Engineerin"
+                "title": "On Interaction Effects in Greybox Fuzzing, International Conference on Software Engineerin",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=shZgedW15vg",
@@ -162,11 +166,6 @@
                 "title": "Hana Chockler, \"Using causality for debugging and explainability\", VeTSS Annual Conference"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1zseVB-uVtg",
-                "duration": 869,
-                "title": "Inside KubeCon + CloudNativeCon India 2026 🇮🇳 | Conference Vlog | Behind the Scenes"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=AhOThZvc9oU",
                 "duration": 2923,
                 "title": "PlatformCon 2026 - Kickoff"
@@ -184,12 +183,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=fav_i2Zh79s",
                 "duration": 3353,
-                "title": "Agentic AI in the Enterprise 2026"
+                "title": "Agentic AI in the Enterprise 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=OF4Id8085s0",
                 "duration": 3017,
-                "title": "Mastering the unordered_map in C++ - Kevin B. Carpenter - ACCU 2026"
+                "title": "Mastering the unordered_map in C++ - Kevin B. Carpenter - ACCU 2026",
+                "skip": [
+                    [
+                        0.0,
+                        7.9
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6xVxSQo3tj0",
@@ -225,11 +233,6 @@
                 "url": "https://www.youtube.com/watch?v=XVCYcoMLNiQ",
                 "duration": 868,
                 "title": "Artificial Intelligence in Graphic Design for Web Development | IISA 2026 Conference Prese"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZTZd14TlfCg",
-                "duration": 1587,
-                "title": "Anti-Aging in projects - Neos Conference 2026"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tQnkO-QpBQo",
@@ -309,7 +312,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-XDIGgnDRek",
                 "duration": 935,
-                "title": "Source LDPath At The PathVision 2026: The NHS Pathology Strategy South Conference"
+                "title": "Source LDPath At The PathVision 2026: The NHS Pathology Strategy South Conference",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=-JR6GQxvJPg",
@@ -319,7 +324,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DnZqK8dLuV8",
                 "duration": 2953,
-                "title": "2026 Swiss Conference Day 3 Keynote:  Roberto Rocco and Gabriella Bettonte,  E4 Engineerin"
+                "title": "2026 Swiss Conference Day 3 Keynote:  Roberto Rocco and Gabriella Bettonte,  E4 Engineerin",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=SgIiQS6RO60",
@@ -404,12 +411,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZKErROWtHKI",
                 "duration": 723,
-                "title": "Dr. Rahul Azmeera | Keynote Speaker | ICAITS-26 | International AI Conference 2026"
+                "title": "Dr. Rahul Azmeera | Keynote Speaker | ICAITS-26 | International AI Conference 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=PEJakKxVh1c",
                 "duration": 1818,
-                "title": "Building Secure Environments for CLI Code Agents [PyCon DE & PyData 2026]"
+                "title": "Building Secure Environments for CLI Code Agents [PyCon DE & PyData 2026]",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Srhue-FR0Aw",
@@ -474,7 +485,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=y2WrMNw9WXM",
                 "duration": 1310,
-                "title": "Presentation 010 | FERC Software Conference 2026"
+                "title": "Presentation 010 | FERC Software Conference 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=vu9ltgrb77M",
@@ -494,12 +507,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=t5ZbcKX0qD8",
                 "duration": 792,
-                "title": "How to make an internal conference worth our time - Anna Kvashchuk - NDC Copenhagen 2026"
+                "title": "How to make an internal conference worth our time - Anna Kvashchuk - NDC Copenhagen 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=uwCW6YJ51Xo",
                 "duration": 3573,
-                "title": "DAIS 2026: Speaking at a Conference"
+                "title": "DAIS 2026: Speaking at a Conference",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ORwq_xMHO1M",

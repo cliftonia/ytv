@@ -119,7 +119,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JmPRRZd1KrM",
                 "duration": 3716,
-                "title": "Before Life, Before Oceans - The Birth of Planet Earth | Space Documentary"
+                "title": "Before Life, Before Oceans - The Birth of Planet Earth | Space Documentary",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
@@ -164,7 +166,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FwpPrG7_fXw",
                 "duration": 4971,
-                "title": "The Most Unusual Planets in the Universe | Space Documentary 2024"
+                "title": "The Most Unusual Planets in the Universe | Space Documentary 2024",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=K9O6H-Cgbq0",
@@ -204,12 +208,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=k6NMWF73SsY",
                 "duration": 3079,
-                "title": "The Worst Planet Ever Discovered Near Solar System - Sleep Documentaries 2026"
+                "title": "The Worst Planet Ever Discovered Near Solar System - Sleep Documentaries 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=bXB8aLFePu8",
                 "duration": 3571,
-                "title": "The Single Observation That Shattered 2,000 Years Of Science"
+                "title": "The Single Observation That Shattered 2,000 Years Of Science",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=NEHssvf9goQ",
@@ -264,12 +272,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=HPA4z4K_DX0",
                 "duration": 3250,
-                "title": "Space Is Way Scarier Than You Think | Space Documentary 2026"
+                "title": "Space Is Way Scarier Than You Think | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=tf4C-OJc5ew",
                 "duration": 3725,
-                "title": "Could Humans Live on Mars? | Space Documentary"
+                "title": "Could Humans Live on Mars? | Space Documentary",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=omUUQrvoYfw",
@@ -294,7 +306,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=gFrS1lfvH7M",
                 "duration": 1680,
-                "title": "NASA Releases 12 New Jaw-Dropping Space Images For The First Time"
+                "title": "NASA Releases 12 New Jaw-Dropping Space Images For The First Time",
+                "skip": [
+                    [
+                        781.7,
+                        913.1
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=JIvmUkmwZh0",
@@ -304,12 +323,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=isdLel273rQ",
                 "duration": 681,
-                "title": "The Paradox of an Infinite Universe"
+                "title": "The Paradox of an Infinite Universe",
+                "skip": [
+                    [
+                        574.2,
+                        667.0
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=wHNC-RhmHZY",
                 "duration": 1862,
-                "title": "James Webb's New Images of Neptune Have Left Scientists Confused"
+                "title": "James Webb's New Images of Neptune Have Left Scientists Confused",
+                "skip": [
+                    [
+                        1824.2,
+                        1854.7
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=PjBg1fgXn-c",
@@ -324,7 +357,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5PU-9tXFrJQ",
                 "duration": 3856,
-                "title": "The Universe's Biggest Stars ☀️⭐️ How the Universe Works | Science Channel"
+                "title": "The Universe's Biggest Stars ☀️⭐️ How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=R_y3lB0lNmo",
@@ -349,7 +384,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=s4-uI7jFq6I",
                 "duration": 5126,
-                "title": "Searching For Aliens and Our Place in the Universe | How the Universe Works | Science Chan"
+                "title": "Searching For Aliens and Our Place in the Universe | How the Universe Works | Science Chan",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Cb0n1Gq2cvk",
@@ -404,22 +441,30 @@
             {
                 "url": "https://www.youtube.com/watch?v=yBWhJyeprb4",
                 "duration": 4485,
-                "title": "Where Did Our Universe Really Come From? | For Sleep, No AI Documentary"
+                "title": "Where Did Our Universe Really Come From? | For Sleep, No AI Documentary",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=UORB714Njvg",
                 "duration": 2025,
-                "title": "This Star Is So Dangerous, NASA Watches It 24/7 — Here’s Why"
+                "title": "This Star Is So Dangerous, NASA Watches It 24/7 — Here’s Why",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=k7ii_KM7obc",
                 "duration": 436,
-                "title": "What If We Could See 10 Billion Galaxies at Once? |Roman Space Telescope"
+                "title": "What If We Could See 10 Billion Galaxies at Once? |Roman Space Telescope",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=FD-zTrRWoM8",
                 "duration": 3876,
-                "title": "New Exoplanet Discoveries - Could They Be Better than Earth? | What If"
+                "title": "New Exoplanet Discoveries - Could They Be Better than Earth? | What If",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=g-gkcwYkdDA",

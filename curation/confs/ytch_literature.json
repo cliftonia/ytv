@@ -64,7 +64,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OTvm5LfhDzg",
                 "duration": 375,
-                "title": "3 Books That Will Change Your Life"
+                "title": "3 Books That Will Change Your Life",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vtkv3-endYc",
@@ -174,7 +176,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lMGEUN1UwAY",
                 "duration": 268,
-                "title": "Why Jane Eyre Still Feels Shockingly Modern | The Relationship Lesson Jane Eyre Knew Befor"
+                "title": "Why Jane Eyre Still Feels Shockingly Modern | The Relationship Lesson Jane Eyre Knew Befor",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=W9GUhKHshyQ",
@@ -217,11 +221,6 @@
                 "title": "To Kill a Mockingbird Summary - Schooling Online Full Lesson"
             },
             {
-                "url": "https://www.youtube.com/watch?v=p9UOLUZzpTc",
-                "duration": 3093,
-                "title": "Audio Reading: The Essays of Montaigne - 10,000 Words"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=lUjoFzT0VNI",
                 "duration": 956,
                 "title": "Becoming Who You Really Are - The Philosophy of Friedrich Nietzsche"
@@ -234,7 +233,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6IegDENuxU4",
                 "duration": 1361,
-                "title": "How To Learn & Study Chess Openings"
+                "title": "How To Learn & Study Chess Openings",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=8lgg-pVjOok",
@@ -249,7 +250,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mGgWaPGpGz4",
                 "duration": 433,
-                "title": "Book of Amos Summary: A Complete Animated Overview"
+                "title": "Book of Amos Summary: A Complete Animated Overview",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=cOpdCPqi3cw",
@@ -260,11 +263,6 @@
                 "url": "https://www.youtube.com/watch?v=gzZbtMFP-_I",
                 "duration": 301,
                 "title": "Chicken Licken | Fairy Tales | Gigglebox"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rI4kwwjqb14",
-                "duration": 1246,
-                "title": "Dracula in Easy German: Classic Horror Story for Language Learners (A2/B1)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=MC8Z4cUc6YA",
@@ -309,7 +307,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=LaffA9EyUgo",
                 "duration": 556,
-                "title": "What Is Kafkaesque? - The 'Philosophy' of Franz Kafka"
+                "title": "What Is Kafkaesque? - The 'Philosophy' of Franz Kafka",
+                "skip": [
+                    [
+                        534.9,
+                        555.6
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=_47JL0sLoFE",
@@ -344,12 +349,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=WxB1gB6K-2A",
                 "duration": 371,
-                "title": "David Tennant is Catherine Tate's new English teacher! | Comic Relief - BBC"
+                "title": "David Tennant is Catherine Tate's new English teacher! | Comic Relief - BBC",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=yIli3qcn0Lo",
                 "duration": 507,
-                "title": "Magic Box | Bedtime Stories for Kids in English | Fairy Tales"
+                "title": "Magic Box | Bedtime Stories for Kids in English | Fairy Tales",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=zoIfur6JPSk",
@@ -364,12 +373,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=tD201OQwsFI",
                 "duration": 780,
-                "title": "Animal Farm Summary - George Orwell - Schooling Online"
+                "title": "Animal Farm Summary - George Orwell - Schooling Online",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=1WyBEQ5Od2M",
                 "duration": 469,
-                "title": "'Never Play Music Right Next to the Zoo' read by John Lithgow"
+                "title": "'Never Play Music Right Next to the Zoo' read by John Lithgow",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=eetwPz7PHvY",
@@ -387,14 +400,11 @@
                 "title": "The Great Impostor: The Man Who Stole 10 Lives & Cheated Death | The Story of Ferdinand De"
             },
             {
-                "url": "https://www.youtube.com/watch?v=54Cs5qap3M0",
-                "duration": 692,
-                "title": "Life & Biography of Henry Fielding Master Cadre English 2026 Lecturer 11"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=33FnNwXc2WU",
                 "duration": 3517,
-                "title": "The King that Killed Batman"
+                "title": "The King that Killed Batman",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=g_CaPgFTs7U",
@@ -459,12 +469,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=eIrnRa8tH1Q",
                 "duration": 590,
-                "title": "Beginner's Guide to Reading The Classics"
+                "title": "Beginner's Guide to Reading The Classics",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=YICYHIpBN98",
                 "duration": 486,
-                "title": "Harvard Classics VS The Great Books Of The Western World | And... How Much Did I Pay?"
+                "title": "Harvard Classics VS The Great Books Of The Western World | And... How Much Did I Pay?",
+                "skip": [
+                    [
+                        442.0,
+                        456.7
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6CDNcSGaITU",

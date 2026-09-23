@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ULjOfKcZl4o",
                 "duration": 913,
-                "title": "Detroit Lions vs Buffalo Bills Game Highlights | 2026 NFL Season Week 2"
+                "title": "Detroit Lions vs Buffalo Bills Game Highlights | 2026 NFL Season Week 2",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=RYh8_uw45Fw",
@@ -29,7 +31,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9R8P93W2iKE",
                 "duration": 979,
-                "title": "Dallas Cowboys vs New York Giants Game Highlights | NFL 2026 Season Week 1"
+                "title": "Dallas Cowboys vs New York Giants Game Highlights | NFL 2026 Season Week 1",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=d6wKdU-5kME",
@@ -49,7 +53,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=C9sL5j_iUiE",
                 "duration": 900,
-                "title": "San Francisco 49ers vs Los Angeles Rams Game Highlights | 2026 Week 1 Melbourne Game"
+                "title": "San Francisco 49ers vs Los Angeles Rams Game Highlights | 2026 Week 1 Melbourne Game",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=X3AZfHgZXFE",
@@ -64,7 +70,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=T5D7UViL1L0",
                 "duration": 997,
-                "title": "Cleveland Browns vs Jacksonville Jaguars Game Highlights | NFL 2026 Week 1"
+                "title": "Cleveland Browns vs Jacksonville Jaguars Game Highlights | NFL 2026 Week 1",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=vt9DKUJ_Q-Y",
@@ -94,7 +102,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=UKqM7fT42uk",
                 "duration": 863,
-                "title": "Arizona Cardinals vs. Los Angeles Chargers Game Highlights | NFL 2026 Season Week 1"
+                "title": "Arizona Cardinals vs. Los Angeles Chargers Game Highlights | NFL 2026 Season Week 1",
+                "skip": [
+                    [
+                        0.0,
+                        25.4
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=gXmzn5ZBsHU",
@@ -129,7 +144,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Lfc90lkStbg",
                 "duration": 1911,
-                "title": "The Most Beautiful Football Match of 2026 ( by FC Barcelona ) ► Lamine Yamal Hitting Prime"
+                "title": "The Most Beautiful Football Match of 2026 ( by FC Barcelona ) ► Lamine Yamal Hitting Prime",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=hZdivetYkiA",
@@ -194,7 +211,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0C0PjkMyEss",
                 "duration": 297,
-                "title": "Brazil v Argentina - Highlights - FIFA World Cup 2026 CONMEBOL Qualifier"
+                "title": "Brazil v Argentina - Highlights - FIFA World Cup 2026 CONMEBOL Qualifier",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=i4gQmruf4Eo",
@@ -209,7 +228,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yK3qL3wc7Sc",
                 "duration": 1497,
-                "title": "Brazil vs. Egypt | Full Game Highlights | ESPN FC"
+                "title": "Brazil vs. Egypt | Full Game Highlights | ESPN FC",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=EfSf0FATxJs",
@@ -239,12 +260,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=2LhSg77bzM4",
                 "duration": 1350,
-                "title": "Charlotte 49ers vs. Ole Miss Rebels | Full Game Highlights | ESPN College Football"
+                "title": "Charlotte 49ers vs. Ole Miss Rebels | Full Game Highlights | ESPN College Football",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=fFsPNbYdiHI",
                 "duration": 1109,
-                "title": "Arkansas Razorbacks vs. Utah Utes | Full Game Highlights | ESPN College Football"
+                "title": "Arkansas Razorbacks vs. Utah Utes | Full Game Highlights | ESPN College Football",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=0HSijlB29QU",
@@ -274,7 +299,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Xj_L9Yd7iH8",
                 "duration": 874,
-                "title": "Arizona Wildcats vs No. 15 BYU Cougars Highlights 🏈 FOX College Football"
+                "title": "Arizona Wildcats vs No. 15 BYU Cougars Highlights 🏈 FOX College Football",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=-HhPHwSE260",
@@ -354,7 +381,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=71cLq8X6G6I",
                 "duration": 496,
-                "title": "Fremantle v Geelong Cats Highlights | Semi Final, 2026 | AFL"
+                "title": "Fremantle v Geelong Cats Highlights | Semi Final, 2026 | AFL",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=8vGOnKNBPJ4",
@@ -379,7 +408,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lu8XZmb9LPA",
                 "duration": 709,
-                "title": "Western Kentucky Hilltoppers vs. Georgia Bulldogs | Full Game Highlights | ESPN College Fo"
+                "title": "Western Kentucky Hilltoppers vs. Georgia Bulldogs | Full Game Highlights | ESPN College Fo",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=YtKHmIvpSTA",
@@ -394,12 +425,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Km5J40UGbhM",
                 "duration": 1074,
-                "title": "East Carolina Pirates vs. Alabama Crimson Tide | Full Game Highlights | ESPN College Footb"
+                "title": "East Carolina Pirates vs. Alabama Crimson Tide | Full Game Highlights | ESPN College Footb",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6aKOVUC3g-Q",
                 "duration": 271,
-                "title": "🔴Manchester United vs Manchester City (0-1) Extended HIGHLIGHTS | EPL 2026/27"
+                "title": "🔴Manchester United vs Manchester City (0-1) Extended HIGHLIGHTS | EPL 2026/27",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=FEkd9Q6JoBc",
@@ -409,12 +444,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=lpDZwAxVkc4",
                 "duration": 1404,
-                "title": "United States vs Paraguay Extended Highlights 🌎🏆 2026 FIFA World Cup™"
+                "title": "United States vs Paraguay Extended Highlights 🌎🏆 2026 FIFA World Cup™",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=y1NZ--JmycU",
                 "duration": 1501,
-                "title": "Argentina vs. Iceland | Full Game Highlights | ESPN FC"
+                "title": "Argentina vs. Iceland | Full Game Highlights | ESPN FC",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=qi64gKWEWow",
@@ -444,7 +483,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vpcukTVSD8Q",
                 "duration": 1122,
-                "title": "Brazil vs Norway Highlights 🌎🏆 2026 FIFA World Cup™ | Round of 16"
+                "title": "Brazil vs Norway Highlights 🌎🏆 2026 FIFA World Cup™ | Round of 16",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=L1SLA0ixeWo",
@@ -489,7 +530,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GGDU-47Ols8",
                 "duration": 1313,
-                "title": "Match Highlights | Semi Final 1 | India (W) v Bangladesh (W) | DP World Women's Asia Cup 2"
+                "title": "Match Highlights | Semi Final 1 | India (W) v Bangladesh (W) | DP World Women's Asia Cup 2",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=lyuBo3S0zZQ",
@@ -504,7 +547,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=y-4saPWrPt0",
                 "duration": 860,
-                "title": "England vs Argentina Highlights 🌎🏆 2026 FIFA World Cup™ | Semifinals"
+                "title": "England vs Argentina Highlights 🌎🏆 2026 FIFA World Cup™ | Semifinals",
+                "skip": [],
+                "skip_checked": 1790193353
             }
         ],
         "search_query": "football match highlights",
