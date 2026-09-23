@@ -173,6 +173,13 @@ class TestParts(unittest.TestCase):
         previous = self.dial_with(mixed(2, prime=30, late=30))
         self.assertEqual([], check_lineup.problems(self.dial_with(mixed(2, prime=30)), previous))
 
+    def test_retiring_a_mix_is_not_a_collapse_of_the_channel(self):
+        # 40 all-day + 60 prime back to 40 all-day is 100 -> 40, below half - but the 60 were
+        # prime clips and prime is no longer asked for.
+        previous = self.dial_with(mixed(2, untagged=40, prime=60))
+        self.assertEqual([], check_lineup.problems(self.dial_with(mixed(2, untagged=40)),
+                                                   previous))
+
     def test_a_declared_part_coming_back_empty_is_a_collapse(self):
         # What refresh_channels asks: it knows which parts the conf still declares.
         before = mixed(1, prime=30)["streams"]
