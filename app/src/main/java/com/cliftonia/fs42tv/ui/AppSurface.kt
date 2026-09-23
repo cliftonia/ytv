@@ -46,6 +46,15 @@ fun AppSurface(
             titleLine = director.bannerTitleLine.value,
             generation = director.bannerGeneration.value,
             nextLine = director.bannerNextLine.value,
+            // Clear of the corner logo's 28% plus its margin, only when that logo can appear.
+            titleWidthFraction =
+                if (director.extras.features.isOn(Features.Flag.LOGO)) 0.64f else 0.95f,
+        )
+        // Below the card and the overlays, which must always win; out of the way of a stall's
+        // pill, which uses the same corner, and of the blank between channels.
+        StationBugOverlay(
+            state = director.extras.bug.value,
+            suppressed = director.buffering.value || director.tuning.value,
         )
         // One card, two sources: a live playback failure, or last run's crash. The crash wins
         // while it is showing, since a channel that is currently failing will say so again in

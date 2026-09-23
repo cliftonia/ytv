@@ -62,6 +62,11 @@ fun ChannelOsd(
      * nothing, which is the banner exactly as the box draws it.
      */
     nextLine: String = "",
+    /**
+     * How much of the width the title lines may use. The corner logo takes the top-right when
+     * the LOGO row is on, so the caller narrows this then; the default is the box's own layout.
+     */
+    titleWidthFraction: Float = 0.95f,
 ) {
     var visible by remember { mutableStateOf(false) }
     LaunchedEffect(generation) {
@@ -78,7 +83,7 @@ fun ChannelOsd(
         // figure: a hardcoded guess only holds at the density it was picked for. Real TVs
         // overscan, so the title is kept clear of the rightmost 5%, on top of the 30.dp left
         // inset already spent getting to the text.
-        val titleMaxWidth = maxWidth * 0.95f - 30.dp
+        val titleMaxWidth = maxWidth * titleWidthFraction - 30.dp
 
         Column(modifier = Modifier.padding(start = 30.dp, top = 25.dp)) {
             OsdText(text = channelLine, fontSize = 27.5.sp)

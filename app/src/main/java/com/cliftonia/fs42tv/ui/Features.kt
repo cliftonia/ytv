@@ -34,6 +34,9 @@ class Features(
 
         /** YouTube clips turned down to YouTube's reference loudness, never up. */
         LEVEL_VOLUME("LEVEL VOLUME", "feature.levelvolume"),
+
+        /** A corner station bug for a few seconds after each tune and each new programme. */
+        LOGO("LOGO", "feature.logo"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,
