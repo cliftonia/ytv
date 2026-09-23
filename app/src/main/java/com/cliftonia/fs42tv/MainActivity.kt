@@ -372,8 +372,6 @@ class MainActivity : ComponentActivity() {
             crashNotice.value = ""
             CrashLog.clear(filesDir)
         }
-        val nav = navigator ?: return super.onKeyDown(keyCode, event)
-
         // Belt and braces alongside the focus handoff in the guide: once an overlay is up, the
         // focused row already consumes D-pad up/down/centre, but this guard is what actually
         // guarantees the channel-change keys are inert rather than relying on focus routing
@@ -383,6 +381,8 @@ class MainActivity : ComponentActivity() {
             return super.onKeyDown(keyCode, event)
         }
 
+        // No early return without a dial: Left must still reach settings to switch SOURCE back.
+        val nav = navigator
         return when (keyCode) {
             // Left, because it is the only D-pad direction the dial does not already use and
             // cannot be pressed by accident while surfing, which is up and down.
@@ -397,11 +397,11 @@ class MainActivity : ComponentActivity() {
                 true
             }
             KeyEvent.KEYCODE_DPAD_UP, KeyEvent.KEYCODE_CHANNEL_UP -> {
-                tune.surfTo(nav.up())
+                nav?.let { tune.surfTo(it.up()) }
                 true
             }
             KeyEvent.KEYCODE_DPAD_DOWN, KeyEvent.KEYCODE_CHANNEL_DOWN -> {
-                tune.surfTo(nav.down())
+                nav?.let { tune.surfTo(it.down()) }
                 true
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_GUIDE -> {

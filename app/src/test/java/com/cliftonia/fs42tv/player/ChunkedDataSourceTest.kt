@@ -28,6 +28,12 @@ private class FakeUpstream(
      * clean chunk boundary. Null means every open delivers its full resolved length.
      */
     private val truncateFirstOpenAfter: Int? = null,
+    /**
+     * A server that ignores Range and answers 200 with the whole body, as Pluto's stitcher does.
+     * `DefaultHttpDataSource` then skips to the requested position itself and reports the length
+     * it was ASKED for, not what the body holds - so the open claims more than will ever arrive.
+     */
+    private val ignoresRange: Boolean = false,
 ) : DataSource {
 
     val openSpecs = mutableListOf<DataSpec>()
@@ -48,6 +54,10 @@ private class FakeUpstream(
             minOf(dataSpec.position + dataSpec.length, resource.size.toLong())
         }
         openRemaining = requestedEnd - dataSpec.position
+        if (ignoresRange) {
+            openRemaining = resource.size - dataSpec.position
+            return if (dataSpec.length == C.LENGTH_UNSET.toLong()) openRemaining else dataSpec.length
+        }
         return openRemaining
     }
 
@@ -229,6 +239,22 @@ class ChunkedDataSourceTest {
         assertEquals("the connection died after 5 bytes, not after the full 8-byte window - " +
             "the recovery request must resume from what was actually consumed, not from where " +
             "the abandoned chunk would have ended", 5L, upstream.openSpecs[1].position)
+    }
+
+    @Test
+    fun `a server that ignores Range ends the stream instead of being asked again forever`() {
+        // Pluto's stitcher answers `Range: bytes=0-8388607` with a plain 200 and the whole
+        // 3920-byte playlist. Treating the end of that body as the end of a chunk re-requested
+        // the same playlist at the next position, got it again, and never returned end-of-input:
+        // every Pluto channel hung on Media3.
+        val resource = resourceOf(20)
+        val upstream = FakeUpstream(resource, includeContentRange = false, ignoresRange = true)
+        val chunked = ChunkedDataSource(upstream, chunkSize = 64)
+
+        chunked.open(specAt(0, C.LENGTH_UNSET.toLong()))
+        assertArrayEquals(resource, readAll(chunked))
+        assertEquals("the whole body arrived in one response; there is nothing to ask for again",
+            1, upstream.openSpecs.size)
     }
 
     @Test
