@@ -23,13 +23,19 @@ class RecoveryWatch(
     private val cardUp: () -> Boolean,
     /** Puts [reason] on the stand-by card. */
     private val showCard: (String) -> Unit,
-    /** Re-tunes the channel the viewer is on. */
+    /** Re-tunes the channel the viewer is on - the watchdog's retry. */
     private val retune: (String) -> Unit,
+    /** Re-tunes the channel whose playback failed - the error path's retry. */
+    private val retuneAfterError: (String) -> Unit,
 ) {
 
     private var cancelGrace: (() -> Unit)? = null
     private var cancelWatchdog: (() -> Unit)? = null
+    private var cancelRetry: (() -> Unit)? = null
     private var watchdogRetuned = false
+
+    /** Errors since the last picture or channel change; decides how soon the next retry runs. */
+    private var errorsInStreak = 0
 
     /** A deliberate channel change: whatever the last channel was failing at is moot. */
     fun tuneStarted() {
@@ -52,6 +58,23 @@ class RecoveryWatch(
             }
         }
         if (cancelWatchdog == null) armWatchdog()
+        errorsInStreak++
+        cancelRetry?.invoke()
+        cancelRetry = null
+        // Never under an overlay: the guide superseded the dial on purpose, and a retune there
+        // changes the channel under the open list. Closing it re-tunes an unfinished tune anyway
+        // - see ScreenDirector.recoverIfAbandoned.
+        if (deferred()) return
+        val reason = "playback error $code"
+        val delay = retryDelayMillis(errorsInStreak)
+        if (delay == 0L) {
+            retuneAfterError(reason)
+        } else {
+            cancelRetry = schedule(delay) {
+                cancelRetry = null
+                if (!halted() && stillTuning() && !deferred()) retuneAfterError(reason)
+            }
+        }
     }
 
     /** A picture: the streak is over, and both timers stand down. */
@@ -62,7 +85,10 @@ class RecoveryWatch(
         cancelGrace = null
         cancelWatchdog?.invoke()
         cancelWatchdog = null
+        cancelRetry?.invoke()
+        cancelRetry = null
         watchdogRetuned = false
+        errorsInStreak = 0
     }
 
     /**
@@ -94,6 +120,26 @@ class RecoveryWatch(
     }
 
     companion object {
+        /**
+         * How long to wait before retrying after the [errorCount]th error of a streak.
+         *
+         * The first few retry at once, because they are usually progress rather than repetition:
+         * a 403 falls to the next rung, then the next clip, each a genuinely different url. After
+         * that the same thing is failing again, and at once was a storm - a dead live or file url
+         * fails before mpv even opens it, in a few hundred milliseconds, and it was re-tuned to
+         * the identical url several times a second for as long as the channel stayed on. Backing
+         * off keeps trying (a feed that comes back is picked up) without hammering anything.
+         */
+        fun retryDelayMillis(errorCount: Int): Long = when {
+            errorCount <= IMMEDIATE_RETRIES -> 0L
+            errorCount == IMMEDIATE_RETRIES + 1 -> 5_000L
+            errorCount == IMMEDIATE_RETRIES + 2 -> 15_000L
+            else -> 30_000L
+        }
+
+        /** hd refused, sd refused, the next clip - the most a streak needs to make progress. */
+        const val IMMEDIATE_RETRIES = 3
+
         /**
          * How long a playback error is given to fix itself before the stand-by card appears.
          *

@@ -124,6 +124,7 @@ class ScreenDirector(private val deps: Deps) {
                 deps.tune().tune(it)
             }
         },
+        retuneAfterError = { reason -> deps.tune().retuneCurrent(reason) },
     )
 
     private val captions = CaptionLoader(
@@ -257,11 +258,11 @@ class ScreenDirector(private val deps: Deps) {
             //
             // The card is only delayed, never skipped: if the retune has not produced a
             // picture by the time the grace period is up, this is a real fault and says so.
-            // Armed once per streak of errors - see RecoveryWatch.error.
+            // Armed once per streak of errors, and the retune itself is the watch's to time -
+            // at once for the first few, backing off after; see RecoveryWatch.error.
             tuning.value = true
             updateProgrammeVolume()
             watch.error(code)
-            deps.tune().retuneCurrent("playback error $code")
         }
         // The card comes down when a picture actually appears, not when a tune is merely
         // dispatched - a tune that fails again would otherwise clear it and leave black.
@@ -351,7 +352,22 @@ class ScreenDirector(private val deps: Deps) {
         if (!tuning.value || deps.halted()) return
         val channel = deps.tune().onAir?.channel ?: deps.fallbackChannel() ?: return
         Log.i("fs42", "re-tuning ${channel.number} ${channel.name}: overlay closed over an unfinished tune")
+        // A fresh start for the watch too: the watchdog armed before the overlay opened would
+        // otherwise fire moments after this retune and retune again on top of it.
+        watch.tuneStarted()
         deps.tune().tune(channel)
+    }
+
+    /**
+     * The first tune after the dial loads, which does not go through [startBlank] - there is no
+     * outgoing channel to stop and no banner to announce. Without this it ran with [tuning]
+     * false and no watchdog: a first picture that never came was a black screen with no card,
+     * and an overlay opened and closed over it found nothing to recover.
+     */
+    fun launchTuneStarted() {
+        tuning.value = true
+        updateProgrammeVolume()
+        watch.tuneStarted()
     }
 
     private fun loadCaptionsForCurrentClip() {
