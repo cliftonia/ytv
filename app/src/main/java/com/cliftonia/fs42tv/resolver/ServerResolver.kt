@@ -29,27 +29,54 @@ class ServerResolver(
      * the app is running. Without it here, captions worked only when this server was unreachable.
      */
     private val fetch: (String, Int) -> String,
+    /**
+     * A monotonic millisecond clock, for the age of the last health reading. Not the resolve's
+     * `nowSeconds`: that is wall-clock time, pinned for measurement runs and corrected over NTP
+     * after boot, and a reading aged by it could look fresh forever or stale instantly.
+     */
+    private val nowMillis: () -> Long = { System.nanoTime() / 1_000_000 },
 ) : ClipResolver {
 
     /**
-     * Whether the server answered its health check recently, and when that was last asked.
-     *
-     * Cached because the question is asked on every tune and the answer changes rarely. Without
-     * this, a set out of range would pay a connection timeout per channel change - turning an
-     * accelerator into the very delay it exists to remove.
+     * The last health reading: the verdict and when it was taken, swapped as ONE immutable
+     * object. They used to be two separate volatile fields written by whichever executor probed,
+     * so a reader could pair one probe's verdict with another's timestamp.
      */
-    @Volatile private var healthyUntil: Long = 0
-    @Volatile private var healthy: Boolean = false
+    private class Reading(val healthy: Boolean, val atMillis: Long)
 
-    fun isAvailable(nowMillis: Long): Boolean {
-        if (nowMillis < healthyUntil) return healthy
+    @Volatile private var reading: Reading? = null
+
+    /**
+     * The last known answer to "is it worth asking", never a network call.
+     *
+     * The probe used to run right here, on whichever thread asked - the tune executor, every
+     * thirty seconds - and in the car, where neither address answers, that was 400ms per address
+     * of dead time in front of a channel change the viewer was waiting on. The probing now
+     * happens in the background ([AcceleratorProbe]); an answer that is missing or older than
+     * [FRESH_FOR_MILLIS] counts as "no", because a guess of "yes" costs a resolve timeout.
+     */
+    fun isAvailable(): Boolean {
+        val last = reading ?: return false
+        return last.healthy && nowMillis() - last.atMillis < FRESH_FOR_MILLIS
+    }
+
+    /**
+     * Ask the server's health endpoint and remember the answer. Blocking, up to
+     * [HEALTH_TIMEOUT_MILLIS] - background threads only. Synchronized so two callers cannot
+     * probe at once and land their answers out of order.
+     */
+    @Synchronized
+    fun probe(): Boolean {
         val body = runCatching { fetch("$baseUrl/health", HEALTH_TIMEOUT_MILLIS) }.getOrNull()
         // The server reports its own extractor as well as its liveness, and says ok:false when
         // extraction is broken. A server that cannot extract is worse than none, because the
         // television would wait for it and then resolve anyway.
-        healthy = body != null && Health.isUsable(body)
-        healthyUntil = nowMillis + (if (healthy) HEALTHY_FOR_MILLIS else UNHEALTHY_FOR_MILLIS)
-        Log.i("fs42", "resolve server ${if (healthy) "available" else "unavailable"}")
+        val healthy = body != null && Health.isUsable(body)
+        val was = reading?.healthy
+        reading = Reading(healthy, nowMillis())
+        if (was != healthy) {
+            Log.i("fs42", "resolve server $baseUrl ${if (healthy) "available" else "unavailable"}")
+        }
         return healthy
     }
 
@@ -59,14 +86,14 @@ class ServerResolver(
         ladder: List<String>,
         refused: Set<String>,
     ): ClipResolver.Resolved? {
-        if (!isAvailable(nowSeconds * 1000)) return null
+        if (!isAvailable()) return null
         val body = runCatching {
             fetch("$baseUrl/resolve?v=$videoId", RESOLVE_TIMEOUT_MILLIS)
         }.getOrNull() ?: run {
-            // One failure retires the server until the next health check rather than for this
+            // One failure retires the server until the next health probe rather than for this
             // clip alone. A server that has stopped answering will not answer the next clip
             // either, and paying the timeout ninety more times is the worst possible outcome.
-            healthyUntil = 0
+            reading = Reading(false, nowMillis())
             return null
         }
         return ServerTiers.parse(body, ladder, refused, videoId, nowSeconds)
@@ -78,7 +105,7 @@ class ServerResolver(
          * repository fetch uses and for the same reason: the default is to wait forever, and
          * forever is what an idle hotspot delivers.
          */
-        fun overHttp(baseUrl: String): ServerResolver = ServerResolver(baseUrl) { url, timeout ->
+        fun overHttp(baseUrl: String): ServerResolver = ServerResolver(baseUrl, { url, timeout ->
             (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
                 connectTimeout = timeout
                 readTimeout = timeout
@@ -88,7 +115,7 @@ class ServerResolver(
                     disconnect()
                 }
             }
-        }
+        })
 
         /**
          * Short on purpose. This is the question "is it worth asking", and a set that has to wait
@@ -99,13 +126,11 @@ class ServerResolver(
         /** Generous by comparison: a cold lookup on the server still beats resolving here. */
         const val RESOLVE_TIMEOUT_MILLIS = 4_000
 
-        const val HEALTHY_FOR_MILLIS = 60_000L
-
         /**
-         * Rechecked sooner than a healthy one, not later. Coming home should make the dial fast
-         * again within a minute, and the check costs one refused connection.
+         * How long a healthy reading is believed. Twice the healthy re-probe interval in
+         * [AcceleratorProbe], so one late round does not retire a server that is fine.
          */
-        const val UNHEALTHY_FOR_MILLIS = 30_000L
+        const val FRESH_FOR_MILLIS = 120_000L
     }
 
 }

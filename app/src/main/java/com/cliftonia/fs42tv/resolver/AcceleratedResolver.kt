@@ -19,9 +19,8 @@ class AcceleratedResolver(
     /**
      * In preference order, asked in turn until one is healthy. Two addresses for one server:
      * the LAN one answers in single-digit milliseconds when the television is at home, and the
-     * tailnet one is the same machine for anything that can reach the tailnet. Each failure is
-     * remembered by the resolver's own health cache, so the car pays the probes once per health
-     * window, not per tune.
+     * tailnet one is the same machine for anything that can reach the tailnet. Their health is
+     * read, never probed, on this path - see [probe].
      */
     private val servers: List<ServerResolver>,
     private val device: ClipResolver,
@@ -31,6 +30,10 @@ class AcceleratedResolver(
      * once.
      */
     private val decoders: () -> DecoderSupport = { AndroidDecoders.support() },
+    /**
+     * Keeps the servers' health current in the background. Null in tests that probe by hand.
+     */
+    private val probe: AcceleratorProbe? = null,
 ) : ClipResolver {
 
     /**
@@ -62,11 +65,14 @@ class AcceleratedResolver(
             Log.d("fs42", "every rung of $videoId is refused; not resolving")
             return null
         }
-        // Asked first and answered from a cached health check, so an unreachable server costs
-        // nothing per tune. Without the caching this would pay a connection timeout on every
-        // channel change - an accelerator that makes the dial slower.
+        // Asked first and answered from the last background probe, so an unreachable server
+        // costs nothing per tune. Probing here paid a connection timeout per address every
+        // thirty seconds, in front of the channel change - an accelerator that made the car's
+        // dial slower.
+        var anyAvailable = false
         for (server in servers) {
-            if (!server.isAvailable(nowSeconds * 1000)) continue
+            if (!server.isAvailable()) continue
+            anyAvailable = true
             server.resolveDetailed(videoId, nowSeconds, decodableLadder(ladder), refused)?.let {
                 PlaybackDiagnostics.recordSource("server")
                 return it
@@ -77,8 +83,17 @@ class AcceleratedResolver(
             Log.d("fs42", "server had nothing for $videoId; resolving here")
             break
         }
+        // Nothing usable: ask for a fresh look in the background, without waiting for it. This
+        // is what makes the dial fast again soon after coming home - the next tune but one
+        // finds the server - while the probe's own backoff keeps the car from probing idly.
+        if (!anyAvailable) probe?.nudge()
         PlaybackDiagnostics.recordSource("device")
         return device.resolveDetailed(videoId, nowSeconds, ladder, refused)
+    }
+
+    /** Stops the background probing; the activity calls it on destroy. */
+    fun close() {
+        probe?.stop()
     }
 
     companion object {
@@ -103,11 +118,12 @@ class AcceleratedResolver(
 
         /**
          * The resolver the dial runs on. Cheap to call on the main thread: nothing here touches
-         * the network or the codec list until the first resolve.
+         * the network or the codec list - the first health probe is queued on its own thread.
          */
-        fun forDial(): AcceleratedResolver = AcceleratedResolver(
-            servers = RESOLVE_SERVERS.map(ServerResolver::overHttp),
-            device = DeviceResolver(),
-        )
+        fun forDial(): AcceleratedResolver {
+            val servers = RESOLVE_SERVERS.map(ServerResolver::overHttp)
+            val probe = AcceleratorProbe.onOwnThread(servers).also { it.start() }
+            return AcceleratedResolver(servers = servers, device = DeviceResolver(), probe = probe)
+        }
     }
 }
