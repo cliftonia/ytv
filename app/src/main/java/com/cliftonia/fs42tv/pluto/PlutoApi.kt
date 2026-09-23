@@ -31,7 +31,7 @@ data class Programme(val title: String, val startMillis: Long, val stopMillis: L
  * A channel's next six hours, and its logo.
  *
  * Immutable and cached whole: the guide is asked for once per programme at most, and everything
- * drawn - the banner's NOW and NEXT, the guide row, the corner logo - is read from this.
+ * drawn - the banner's NOW, the guide row's NOW and NEXT - is read from this.
  */
 data class PlutoSchedule(val programmes: List<Programme>, val logoUrl: String?) {
 

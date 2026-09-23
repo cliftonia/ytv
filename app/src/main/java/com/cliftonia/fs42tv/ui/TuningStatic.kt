@@ -19,8 +19,8 @@ import kotlin.random.Random
 import kotlinx.coroutines.delay
 
 /**
- * Snow over the tuning blank - the STATIC row's picture half. Drawn exactly where [TuningBlank]
- * is and exactly as long, so switched off the blank is what it always was.
+ * Snow over the tuning blank - the TUNING SCREEN row's STATIC, and silent. Drawn exactly where
+ * [TuningBlank] is and exactly as long, so the other choices are the same blank in another colour.
  *
  * The cost is deliberately fixed and small: [FRAME_COUNT] frames of 160x90 made once per process
  * (see [SnowFrames]), and each tick is one scaled bitmap draw with nearest-neighbour filtering -

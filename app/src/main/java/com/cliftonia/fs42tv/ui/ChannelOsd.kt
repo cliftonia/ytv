@@ -36,6 +36,19 @@ fun TuningBlank(visible: Boolean) {
 }
 
 /**
+ * The TUNING SCREEN row's BLUE: the flat blue a VCR or an old set showed with no signal. Same
+ * place and lifetime as [TuningBlank], and silent like every tuning screen.
+ */
+@Composable
+fun TuningBlue(visible: Boolean) {
+    if (!visible) return
+    Box(modifier = Modifier.fillMaxSize().background(NO_SIGNAL_BLUE))
+}
+
+/** The no-signal blue of a late-80s VCR: saturated, a touch darker than pure blue. */
+private val NO_SIGNAL_BLUE = Color(0xFF0A1EC8)
+
+/**
  * The single OSD block, shown on each tune and then gone.
  *
  * This mirrors the box exactly (`field_player.py:158-185`): one ASS overlay,
@@ -58,13 +71,8 @@ fun ChannelOsd(
     generation: Int,
     holdMillis: Long = 8000,
     /**
-     * An optional third line beneath the title - Pluto's NEXT, from the guide. Empty draws
-     * nothing, which is the banner exactly as the box draws it.
-     */
-    nextLine: String = "",
-    /**
-     * How much of the width the title lines may use. The corner logo takes the top-right when
-     * the LOGO row is on, so the caller narrows this then; the default is the box's own layout.
+     * How much of the width the title line may use. What comes NEXT is deliberately not here:
+     * the banner says what is on, and next belongs to the guide, where you are choosing.
      */
     titleWidthFraction: Float = 0.95f,
 ) {
@@ -92,17 +100,6 @@ fun ChannelOsd(
                     text = titleLine,
                     fontSize = 11.sp,
                     maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.widthIn(max = titleMaxWidth),
-                )
-            }
-            if (nextLine.isNotEmpty()) {
-                // Same size as the title and one line only: it is the less important of the two,
-                // and a wrapped NEXT would push the banner down over the picture for nothing.
-                OsdText(
-                    text = nextLine,
-                    fontSize = 11.sp,
-                    maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.widthIn(max = titleMaxWidth),
                 )
