@@ -64,6 +64,20 @@ class TestChannelFrom(unittest.TestCase):
         self.assertEqual("clock", channel["rotation"])
         self.assertEqual("dQw4w9WgXcQ", channel["streams"][0]["id"])
 
+    def test_a_sequenced_channel_is_marked_ordered(self):
+        # The half-hour schedule tops gaps up with any clip that fits - which would play episode
+        # seven between episodes two and three. `ordered` is how the app knows not to.
+        station = {"network_name": "X", "channel_number": 5, "stream_rotation": "clock",
+                   "streams": [{"url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                                "duration": 212, "title": "A song"}]}
+        self.assertTrue(build_lineup.channel_from(self.write("ytch_anime.json", station))["ordered"])
+        self.assertNotIn("ordered", build_lineup.channel_from(self.write("ytch_x.json", station)))
+
+    def test_the_series_file_channel_is_ordered(self):
+        station = {"network_name": "Series", "channel_number": 92,
+                   "streams": [{"url": "http://h/S01E01.mp4", "duration": 1800, "title": "E1"}]}
+        self.assertTrue(build_lineup.channel_from(self.write("file_series.json", station))["ordered"])
+
     def test_a_live_channel_carries_no_id(self):
         # If it did, the app would try to resolve an m3u8 as a YouTube video.
         path = self.write("iptv_x.json", {
