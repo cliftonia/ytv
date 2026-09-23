@@ -233,6 +233,8 @@ class MainActivity : ComponentActivity() {
             onDial = { channels, requestedAt ->
                 val nav = DialNavigator(channels, remembered.takeIf { it > 0 })
                 navigator = nav
+                // Posted BEFORE the tune, which paints through the same queue after it.
+                runOnUiThread { director.launchTuneStarted() }
                 tune.tuneFirst(nav.current, requestedAt)
             },
             elapsedMillis = { SystemClock.elapsedRealtime() },
