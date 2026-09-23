@@ -1,0 +1,173 @@
+name: canary
+
+# A daily check that YouTube still resolves on the device's own code path, raising an issue when it
+# has stopped.
+#
+# Why this exists: the televisions resolve clips with NewPipeExtractor baked into the apk. When
+# YouTube changes something, every channel goes quiet at once, and the first anyone knew used to
+# be a black dial on the sofa. The README's "When the dial goes quiet" section is the manual
+# version of this check (DeviceResolverLiveCheck); this runs the unattended one
+# (app/src/test/.../resolver/ResolverCanary.kt, skipped unless YTV_CANARY=1) every morning.
+#
+# FALSE ALARMS: GitHub's runners are datacentre IPs, and YouTube treats those differently from a
+# home connection - bot checks, "sign in to confirm", throttling - so a runner can fail to resolve
+# clips a television would play fine. One bad morning is therefore NOT an alert. The issue opens
+# only after TWO CONSECUTIVE scheduled runs fail. The streak is a single number kept in the Actions
+# cache (the simplest state that survives between runs without a commit or a token that can write
+# code): restored from the newest `canary-streak-*` entry, saved under this run's id. If the cache
+# is ever evicted (7 days unused, which a daily job never is) the streak restarts at zero - the
+# safe direction, one day late rather than one false alarm early.
+#
+# Manual runs (workflow_dispatch) are for checking by hand after a fix: a pass resets the streak
+# and closes the issue; a failure is shown but not counted, so a burst of retries cannot turn one
+# bad day into an alert.
+
+on:
+  schedule:
+    # 06:17 in Brisbane (UTC+10, no daylight saving): after the 03:00 lineup rebuild, so the clips
+    # sampled are the ones the televisions will be asked to play today. Off the hour because
+    # scheduled jobs on the hour are the ones GitHub delays.
+    - cron: "17 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: canary
+  cancel-in-progress: false
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the gradle wrapper is the real one
+        uses: gradle/actions/wrapper-validation@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Pick today's clips
+        # The first clip of every fifteenth YouTube channel in the published lineup - six clips
+        # spread across the dial. Ids are validated here AND again in the test: channels.json is
+        # data, and nothing read from it is ever pasted into a script.
+        id: pick
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, re
+          valid = re.compile(r"^[A-Za-z0-9_-]{11}$")
+          with open("channels.json") as f:
+              channels = [c for c in json.load(f)["channels"] if c.get("kind") == "youtube"]
+          ids = []
+          for channel in channels[::15]:
+              for stream in channel.get("streams", []):
+                  vid = stream.get("id") or ""
+                  if valid.match(vid):
+                      ids.append(vid)
+                      break
+          print("ids=" + ",".join(ids[:6]))
+          PY
+
+      - name: Resolve them as a television would
+        id: canary
+        continue-on-error: true
+        env:
+          YTV_CANARY: "1"
+          YTV_CANARY_IDS: ${{ steps.pick.outputs.ids }}
+        run: |
+          set +e
+          ./gradlew :app:testReleaseUnitTest --tests '*ResolverCanary*' --rerun --info > canary.log 2>&1
+          status=$?
+          grep -E 'canary' canary.log | grep -v 'Gradle Test Executor'
+          tail -n 20 canary.log
+          exit $status
+
+      - name: Recall the streak
+        uses: actions/cache/restore@v4
+        with:
+          path: .canary
+          key: canary-streak-${{ github.run_id }}
+          restore-keys: canary-streak-
+
+      - name: Count consecutive failing mornings
+        id: streak
+        env:
+          OUTCOME: ${{ steps.canary.outcome }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          mkdir -p .canary
+          previous="$(cat .canary/streak 2>/dev/null || echo 0)"
+          case "$previous" in ''|*[!0-9]*) previous=0 ;; esac
+          if [ "$OUTCOME" = "success" ]; then
+            streak=0
+          elif [ "$EVENT" = "schedule" ]; then
+            streak=$((previous + 1))
+          else
+            streak=$previous
+          fi
+          echo "$streak" > .canary/streak
+          echo "streak=$streak" >> "$GITHUB_OUTPUT"
+          echo "canary $OUTCOME on $EVENT; consecutive failing scheduled runs: $streak"
+          if [ "$OUTCOME" != "success" ] && [ "$streak" -lt 2 ]; then
+            echo "::warning::YouTube canary failed ($streak in a row). Not alerting until two scheduled runs fail - runner IPs are sometimes refused where a television is not."
+          fi
+
+      - name: Remember the streak
+        if: always() && steps.streak.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .canary
+          key: canary-streak-${{ github.run_id }}
+
+      - name: Open or update the issue
+        if: steps.streak.outputs.streak >= 2
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          STREAK: ${{ steps.streak.outputs.streak }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="YouTube playback canary failing"
+          existing="$(gh issue list --state open --limit 50 --json number,title \
+            --jq '.[] | select(.title == "YouTube playback canary failing") | .number' | head -n 1)"
+          {
+            echo "The on-device resolve canary has failed on $STREAK consecutive scheduled runs."
+            echo
+            echo "Run: $RUN_URL"
+            echo
+            echo "What it means: NewPipeExtractor, which the televisions use whenever the"
+            echo "accelerator is unreachable (always, in the car), could not resolve most of"
+            echo "today's sampled clips. Try the README's \"When the dial goes quiet\" check from a"
+            echo "home connection before bumping the extractor - GitHub runner IPs are sometimes"
+            echo "refused by YouTube where a television is not."
+          } > body.md
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file body.md
+          else
+            gh issue create --title "$title" --body-file body.md
+          fi
+
+      - name: Close the issue once it passes again
+        if: steps.canary.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          existing="$(gh issue list --state open --limit 50 --json number,title \
+            --jq '.[] | select(.title == "YouTube playback canary failing") | .number' | head -n 1)"
+          if [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "Resolving again: $RUN_URL"
+          fi
+
+      - name: Fail the run when it is an alert
+        # Red in the Actions tab only once it is a real alert; a single bad morning is a warning.
+        if: steps.streak.outputs.streak >= 2
+        run: exit 1
