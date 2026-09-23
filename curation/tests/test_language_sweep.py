@@ -9,6 +9,7 @@ sweep to what a conf actually contains: a url and nothing else.
 """
 import contextlib
 import io
+import json
 import os
 import shutil
 import sys
@@ -26,13 +27,14 @@ class TestSweep(unittest.TestCase):
 
     def setUp(self):
         self.dir = tempfile.mkdtemp()
-        self.real_foreign_ids = language_sweep.foreign_ids
-        # The accelerator's verdict, without the accelerator: one video id it has seen declare
-        # Hindi. Everything under test is what the sweep does with that answer.
-        language_sweep.foreign_ids = lambda server, timeout=30: {self.FOREIGN_ID: "hi"}
+        # The accelerator's verdict as the home server publishes it: one video id it has seen
+        # declare a language other than English. Everything under test is what the sweep does
+        # with that answer.
+        self.verdicts = os.path.join(self.dir, "foreign.json")
+        with open(self.verdicts, "w") as handle:
+            json.dump({"generated": 1790000000, "foreign": [self.FOREIGN_ID]}, handle)
 
     def tearDown(self):
-        language_sweep.foreign_ids = self.real_foreign_ids
         shutil.rmtree(self.dir, ignore_errors=True)
 
     def clip(self, video):
@@ -49,7 +51,7 @@ class TestSweep(unittest.TestCase):
 
     def run_main(self, *args):
         argv = sys.argv
-        sys.argv = ["language_sweep.py", "--confs", self.dir] + list(args)
+        sys.argv = ["language_sweep.py", "--confs", self.dir, "--verdicts", self.verdicts] + list(args)
         out = io.StringIO()
         try:
             with contextlib.redirect_stdout(out):
@@ -89,6 +91,79 @@ class TestSweep(unittest.TestCase):
         self.assertEqual(0, status)
         self.assertEqual(1, len(confs.load(path)["station_conf"]["streams"]))
         self.assertIn("(dry run)", out)
+
+    def test_no_verdict_file_means_no_information(self):
+        # Not "nothing is foreign": a missing file must leave the dial exactly as it was and say
+        # so, just as an unreachable server used to.
+        os.remove(self.verdicts)
+        path = self.write([self.clip(self.FOREIGN_ID)])
+        status, out = self.run_main()
+        self.assertEqual(0, status)
+        self.assertEqual(1, len(confs.load(path)["station_conf"]["streams"]))
+        self.assertIn("no language data available", out)
+
+    def test_an_unreadable_verdict_file_is_no_information_too(self):
+        with open(self.verdicts, "w") as handle:
+            handle.write("{ half a file")
+        path = self.write([self.clip(self.FOREIGN_ID)])
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            status, out = self.run_main()
+        self.assertEqual(0, status)
+        self.assertEqual(1, len(confs.load(path)["station_conf"]["streams"]))
+        self.assertIn("no language data available", out)
+        self.assertIn("foreign.json", err.getvalue())
+
+    def test_the_server_is_only_asked_when_told_to(self):
+        asked = []
+        real = language_sweep.foreign_ids
+        language_sweep.foreign_ids = lambda server, timeout=30: asked.append(server) or {}
+        try:
+            self.write([self.clip("BBBBBBBBBBB")])
+            self.run_main()
+            self.assertEqual([], asked)
+            self.run_main("--from-server")
+            self.assertEqual([language_sweep.SERVER], asked)
+        finally:
+            language_sweep.foreign_ids = real
+
+
+class TestVerdictFile(unittest.TestCase):
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.path = os.path.join(self.dir, "foreign.json")
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def write(self, body):
+        with open(self.path, "w") as handle:
+            json.dump(body, handle)
+
+    def test_reads_the_ids(self):
+        self.write({"generated": 1, "foreign": ["AAAAAAAAAAA", "BBBBBBBBBBB"]})
+        self.assertEqual({"AAAAAAAAAAA", "BBBBBBBBBBB"},
+                         set(language_sweep.foreign_from_file(self.path)))
+
+    def test_an_empty_list_is_an_answer_not_silence(self):
+        # The server looked and found nothing foreign: that is information, unlike no file.
+        self.write({"generated": 1, "foreign": []})
+        self.assertEqual({}, language_sweep.foreign_from_file(self.path))
+
+    def test_missing_is_none(self):
+        self.assertIsNone(language_sweep.foreign_from_file(self.path))
+
+    def test_the_wrong_shape_is_none(self):
+        for body in ([], {"generated": 1}, {"foreign": "AAAAAAAAAAA"}, {"foreign": [1, 2]}):
+            self.write(body)
+            with contextlib.redirect_stderr(io.StringIO()):
+                self.assertIsNone(language_sweep.foreign_from_file(self.path), body)
+
+    def test_the_committed_file_if_present_is_well_formed(self):
+        if not os.path.exists(language_sweep.VERDICTS):
+            self.skipTest("no foreign.json committed yet")
+        self.assertIsNotNone(language_sweep.foreign_from_file(language_sweep.VERDICTS))
 
 
 if __name__ == "__main__":

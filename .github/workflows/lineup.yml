@@ -79,8 +79,10 @@ jobs:
         working-directory: curation
         # Reads a verdict rather than computing one. The declared language needs a full
         # extraction per clip, which is over an hour across the dial - so the accelerator does
-        # that work continuously and this only asks what it found. Unreachable is not a failure:
-        # it means no information, and the title rules carry on doing what they always did.
+        # that work continuously, and the home server commits what it found as
+        # curation/foreign.json (tools/publish_foreign.sh). The runner cannot reach the tailnet,
+        # so the file is the only way the verdict gets here. No file is not a failure: it means
+        # no information, and the title rules carry on doing what they always did.
         continue-on-error: true
         run: python3 language_sweep.py
 
