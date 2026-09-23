@@ -86,7 +86,8 @@ class HalfHourScheduleAmendedRulesTest {
 
     private fun partKey(g: Gen, sp: Span): Pair<String, Long> {
         val ls = local(sp.start, g.zone)
-        return partAt(ls) to partStartLocal(ls)
+        val whole = ScheduleProbe.wholeDay(g.durations, g.parts)
+        return partAt(ls, whole) to partStartLocal(ls, whole)
     }
 
     private fun partEndLocal(g: Gen, sp: Span): Long {
@@ -128,7 +129,7 @@ class HalfHourScheduleAmendedRulesTest {
                 if (partKey(g, previous) != partKey(g, sp)) continue
                 val gap = spans.subList(prevAt + 1, i)
                 val used = gap.map { it.index }.toSet()
-                val pool = pool(d, g.parts, partAt(local(sp.start, g.zone)))
+                val pool = pool(d, g.parts, partKey(g, sp).first)
                 val candidates = pool.filter { it !in used && it != previous.index && it != next.index }
                     .filter { !g.ordered || d[it] < SHORT }
                 val fits = candidates.filter { d[it] <= sp.length }
@@ -198,10 +199,11 @@ class HalfHourScheduleAmendedRulesTest {
             val date = LocalDate.of(2021, 1, 1).plusDays(Random(seed).nextLong(0, 3000))
             val spans = walk(s, dayStart(date, g.zone), dayStart(date.plusDays(4), g.zone), g.toString())
             spans.filter { it.kind == 'T' }.forEach { assertTrue("$g: $it is an episode used as a filler", d[it.index] < SHORT) }
-            for (part in keys) {
+            val whole = ScheduleProbe.wholeDay(g.durations, g.parts)
+            for (part in if (whole) listOf("all") else keys) {
                 val programmes = pool(d, g.parts, part).filter { d[it] >= SHORT }
                 if (programmes.isEmpty()) continue
-                val inPart = spans.filter { it.kind == 'P' && partAt(local(it.start, g.zone)) == part }
+                val inPart = spans.filter { it.kind == 'P' && partAt(local(it.start, g.zone), whole) == part }
                 for ((a, b) in inPart.zipWithNext()) {
                     if (b.offsetAtStart > 0) {
                         assertEquals("$g $part: continuation $a -> $b", a.index, b.index)
@@ -310,7 +312,9 @@ class HalfHourScheduleAmendedRulesTest {
         )
         for ((n, d) in lineups.withIndex()) {
             for (ordered in listOf(false, true)) {
-                val s = HalfHourSchedule(n + 1, d, d.map { emptyList() }, ZoneOffset.UTC, ordered)
+                // Tagged "prime": prime is then its own cycle, which is what this walks. (Untagged,
+                // the day is one all-day cycle since the design fix, and prime is not a seam.)
+                val s = HalfHourSchedule(n + 1, d, d.map { listOf("prime") }, ZoneOffset.UTC, ordered)
                 val programmes = d.indices.filter { d[it] >= SHORT }
                 var last: Span? = null
                 val endDay = 22_000L // 2030

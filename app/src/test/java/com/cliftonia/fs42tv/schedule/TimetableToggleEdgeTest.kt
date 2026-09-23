@@ -194,10 +194,12 @@ class TimetableToggleEdgeTest {
         // goes 01:59:59 EST -> 03:00:00 EDT, so the schedule moves on at 03:00 EDT. The tuner
         // retunes at endsAt; it must not sit on the old programme past the schedule's change.
         // Late packs A 23:00, B 00:00, c 01:00, A 01:30-02:30 (content to 02:20 on the wall).
+        // Tagged "late" so late is its own cycle and packs as described (untagged, the day has
+        // been one all-day cycle since the design fix).
         val ch = Channel(1, "One", "youtube", "clock", listOf(
-            Stream(id = "a".padEnd(11, 'x'), url = "u", duration = 3000),
-            Stream(id = "b".padEnd(11, 'x'), url = "u", duration = 3000),
-            Stream(id = "c".padEnd(11, 'x'), url = "u", duration = 1500),
+            Stream(id = "a".padEnd(11, 'x'), url = "u", duration = 3000, parts = listOf("late")),
+            Stream(id = "b".padEnd(11, 'x'), url = "u", duration = 3000, parts = listOf("late")),
+            Stream(id = "c".padEnd(11, 'x'), url = "u", duration = 1500, parts = listOf("late")),
         ))
         val tt = timetable(Flags(halfHour = true, zone = ZoneId.of("America/New_York")))
         val oneForty = 1_772_952_000L // 2026-03-08 01:40 EST

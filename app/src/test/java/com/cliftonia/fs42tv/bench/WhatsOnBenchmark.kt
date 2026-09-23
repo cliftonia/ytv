@@ -116,4 +116,31 @@ class WhatsOnBenchmark {
             .format(warmTune, warmGuide, warmGuide2100))
         println("WHATSON half-hour: retained heap for all schedules %.2f MB".format(retainedMb))
     }
+
+    /** How much of a week each clock channel spends on the up-next card - the owner's ~2% target. */
+    @Test
+    fun `card airtime`() {
+        val channels = dial()
+        val table = halfHour()
+        val from = System.currentTimeMillis() / 1000
+        val week = 7 * 86_400L
+        val shares = channels.map { c ->
+            var t = from
+            var card = 0L
+            while (t < from + week) {
+                val on = table.at(c, t) ?: break
+                val end = when (on) {
+                    is Timetable.OnAir.Card -> on.until.also { card += minOf(it, from + week) - t }
+                    is Timetable.OnAir.Clip -> on.endsAt ?: break
+                }
+                t = maxOf(end, t + 1)
+            }
+            c to 100.0 * card / week
+        }.sortedByDescending { it.second }
+        println("WHATSON cards: mean %.2f%% of airtime over %d channels, %d over 20%%".format(
+            shares.map { it.second }.average(), shares.size, shares.count { it.second > 20 }))
+        shares.take(8).forEach { (c, pct) ->
+            println("WHATSON cards:   %5.1f%% %d %s%s".format(pct, c.number, c.name, if (c.ordered) " [ordered]" else ""))
+        }
+    }
 }

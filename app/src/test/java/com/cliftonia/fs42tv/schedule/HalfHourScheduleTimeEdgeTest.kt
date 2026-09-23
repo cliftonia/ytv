@@ -94,7 +94,9 @@ class HalfHourScheduleTimeEdgeTest {
                 // off the half hour - so one span can run straight across; otherwise they meet.
                 // Restored for the part boundaries: nothing but a programme longer than a whole part
                 // (none here) runs across 06, 12, 18 or 23, so there the spans must meet.
-                if (time != "00:00") assertTrue("$zone $time: a span runs across a part boundary: $before", before != after)
+                // The mixed channel is untagged, so since the design fix its day is one part
+                // from 23:00 to 23:00: 23:00 is its only seam, and must still be met there.
+                if (time == "23:00") assertTrue("$zone $time: a span runs across a part boundary: $before", before != after)
                 if (before != after) {
                     assertEquals("$zone $time: the span before ends where the next begins", before.end, after.start)
                 }

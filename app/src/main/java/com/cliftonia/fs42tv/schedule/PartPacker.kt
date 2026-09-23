@@ -64,10 +64,25 @@ internal class PartPacker(
     private val allByMinute: List<IntArray> = byMinute(pool)
     private val shortsByMinute: List<IntArray> = byMinute(shorts)
 
+    /** Each group's minute, descending: where a gap of a given size starts looking. */
+    private val allMinutes = IntArray(allByMinute.size) { durations[allByMinute[it][0]] / 60 }
+    private val shortsMinutes = IntArray(shortsByMinute.size) { durations[shortsByMinute[it][0]] / 60 }
+
+    /** The programme-length clips of the pool: the fillers worth steering away from due ones. */
+    private val poolLong = pool.filter { durations[it] >= SHORT }.toIntArray()
+
+    // Scratch, reused pack to pack (the packer is synchronized): see [markDue] and [fill].
+    private val dueScratch = BooleanArray(durations.size)
+    private val usedScratch = ArrayList<Int>(8)
+    private var nonDueLong = 0
+
     /** The shortest filler there is: a gap shorter than this fills with nothing. */
     private val shortest: Int = (if (ordered) shorts else pool).minOfOrNull { durations[it] } ?: Int.MAX_VALUE
 
     /** The part-day that opens with [start], laid out. */
+    // Synchronized: a packer is shared by the tune, prefetch and UI threads, and a pack uses
+    // [dueToday] as scratch.
+    @Synchronized
     fun layout(start: Start): List<Item> {
         val items = ArrayList<Item>()
         pack(start, items)
@@ -78,14 +93,51 @@ internal class PartPacker(
      * Where the part-day after one opening with [start] opens - the cycle detection's step, and
      * cheap: with [items] null nothing is built, only positions are counted.
      */
+    @Synchronized
     fun next(start: Start): Start = pack(start, null)
+
+    /**
+     * Clips that may air as programmes in the part-day being packed: every programme from its
+     * opening until the part is full at their lengths. A filler avoids them where the pool has
+     * others, so a programme-length clip is not seen as a filler and again as itself the same
+     * night. Rebuilt per part-day, so its contents - and the choice - stay a function of the
+     * opening alone.
+     */
+    private var dueToday: BooleanArray? = null
+
+    /** The opening [dueToday] is still to be worked out for, when a fill first asks. */
+    private var dueFrom: Start? = null
+
+    private fun markDue(start: Start) {
+        val due = dueScratch
+        java.util.Arrays.fill(due, false)
+        var budget = partLength.toLong()
+        if (start.carry >= 0) {
+            due[programmes[start.carry]] = true
+            budget -= durations[programmes[start.carry]] - start.carried
+        }
+        var k = start.next
+        var seen = 0
+        while (budget > 0 && seen < programmes.size) {
+            due[programmes[k]] = true
+            budget -= durations[programmes[k]]
+            k = (k + 1) % programmes.size
+            seen++
+        }
+        dueToday = due
+        nonDueLong = poolLong.count { !due[it] }
+    }
 
     private fun pack(start: Start, items: MutableList<Item>?): Start {
         val n = programmes.size
+        dueToday = null
+        dueFrom = null
         if (n == 0) {
             region(items, 0, -1, -1)
             return start
         }
+        // Worked out on the first fill that needs it: most packs - the cycle detection's - never do.
+        if (!ordered) dueFrom = start
         var pos = 0
         var next = start.next
         // The last programme placed, so the deferred tail never fills with what just aired.
@@ -148,6 +200,9 @@ internal class PartPacker(
                 next = (next + 1) % programmes.size
             }
         }
+        // Counting positions only (cycle detection): a gap of ten minutes or less ends on the
+        // boundary however it is filled, so there is nothing to compute.
+        if (items == null && boundary - pos <= CARD_CAP) return boundary to next
         val exclude = if (ordered) -1 else programmes[next]
         pos = fill(items, pos, boundary, previous, exclude)
         val remaining = boundary - pos
@@ -170,6 +225,8 @@ internal class PartPacker(
      * ever slot by slot: every half hour of it is the same shape.
      */
     private fun region(items: MutableList<Item>?, from: Int, previous: Int, exclude: Int) {
+        // Nothing in a deferred tail moves the next part-day's opening.
+        if (items == null) return
         var pos = from
         if (programmes.isNotEmpty()) pos = fill(items, pos, partLength, previous, exclude)
         while (pos < partLength) {
@@ -190,13 +247,51 @@ internal class PartPacker(
      * channel of 100 eight-minute clips cost 10ms to build.
      */
     private fun fill(items: MutableList<Item>?, from: Int, to: Int, a: Int, b: Int): Int {
+        // Where a gap's fill ends is always plain largest first's - so where every programme
+        // starts, and the cycle, never depend on the preference below, and the cycle detection
+        // (items null) needs nothing else.
+        val plain = fillPass(null, from, to, a, b, null, null)
+        if (items == null) return plain
+        // Laying the day out: which clips fill it. Prefer clips not due as programmes today -
+        // then any, each once per gap - when that fills the gap to exactly the same point.
+        // "When the pool allows" means exactly that: taking a not-due clip first must not leave
+        // more of the gap empty (unguarded, it cost airtime: 3.2% -> 3.7% of the real lineup).
+        dueFrom?.let {
+            dueFrom = null
+            markDue(it)
+        }
+        val avoid = dueToday
+        if (avoid != null && nonDueLong > 0) {
+            usedScratch.clear()
+            val preferred = fillPass(null, fillPass(null, from, to, a, b, avoid, usedScratch), to, a, b, null, usedScratch)
+            if (preferred == plain) {
+                usedScratch.clear()
+                return fillPass(items, fillPass(items, from, to, a, b, avoid, usedScratch), to, a, b, null, usedScratch)
+            }
+        }
+        return fillPass(items, from, to, a, b, null, null)
+    }
+
+    private fun fillPass(
+        items: MutableList<Item>?,
+        from: Int,
+        to: Int,
+        a: Int,
+        b: Int,
+        avoid: BooleanArray?,
+        used: MutableList<Int>?,
+    ): Int {
         var pos = from
         val groups = if (ordered) shortsByMinute else allByMinute
-        if (groups.isEmpty()) return pos
+        if (groups.isEmpty() || to - pos < shortest) return pos
+        val minutes = if (ordered) shortsMinutes else allMinutes
         val seed = HalfHourSchedule.mix(
             HalfHourSchedule.mix(channelNumber.toLong() * 31 + part.ordinal) xor
                 (a.toLong() shl 32) xor from.toLong())
-        for (group in groups) {
+        // Straight to the first group that could fit: groups are longest first, and most gaps
+        // are shorter than most clips.
+        for (g in firstGroupWithin(minutes, (to - pos) / 60) until groups.size) {
+            val group = groups[g]
             if (to - pos < shortest) break
             val size = group.size
             // Every clip in a group is within a minute of the others; skip a group that cannot fit.
@@ -206,9 +301,10 @@ internal class PartPacker(
             for (j in 0 until size) {
                 if (to - pos < groupShortest) break
                 val index = group[(first + j) % size]
-                if (index == a || index == b) continue
+                if (index == a || index == b || avoid?.get(index) == true) continue
                 val length = durations[index]
-                if (pos + length <= to) {
+                if (pos + length <= to && (used == null || index !in used)) {
+                    used?.add(index)
                     items?.add(Item(Kind.TOP_UP, index, pos, pos + length))
                     pos += length
                 }
@@ -232,6 +328,17 @@ internal class PartPacker(
             }
         }
         return out
+    }
+
+    /** The first index of [minutes] (descending) at or below [minute]. */
+    private fun firstGroupWithin(minutes: IntArray, minute: Int): Int {
+        var low = 0
+        var high = minutes.size
+        while (low < high) {
+            val mid = (low + high) ushr 1
+            if (minutes[mid] > minute) low = mid + 1 else high = mid
+        }
+        return low
     }
 
     private fun byMinute(indices: List<Int>): List<IntArray> =

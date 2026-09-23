@@ -34,8 +34,18 @@ internal object ScheduleProbe {
 
     fun local(t: Long, zone: ZoneId): Long = t + zone.rules.getOffset(Instant.ofEpochSecond(t)).totalSeconds
 
+    val KEYS = listOf("breakfast", "afternoon", "prime", "late")
+
+    /**
+     * A channel with no playable stream tagged with any part runs one all-day part, 23:00 to
+     * 23:00 ("all"), instead of four - the owner's design fix after the first review.
+     */
+    fun wholeDay(durations: List<Int>, parts: List<List<String>>): Boolean =
+        durations.indices.none { durations[it] > 0 && parts.getOrElse(it) { emptyList() }.any { k -> k in KEYS } }
+
     /** The part key a LOCAL wall-clock second falls in. */
-    fun partAt(localSeconds: Long): String {
+    fun partAt(localSeconds: Long, whole: Boolean = false): String {
+        if (whole) return "all"
         val hour = Math.floorMod(localSeconds, 86_400L) / 3600
         return when {
             hour >= 23 || hour < 6 -> "late"
@@ -46,9 +56,10 @@ internal object ScheduleProbe {
     }
 
     /** Local-second start of the part containing [localSeconds] (a 23:00 for late). */
-    fun partStartLocal(localSeconds: Long): Long {
+    fun partStartLocal(localSeconds: Long, whole: Boolean = false): Long {
         val dayStart = Math.floorDiv(localSeconds, 86_400L) * 86_400L
         val hour = (localSeconds - dayStart) / 3600
+        if (whole) return if (hour >= 23) dayStart + 23 * 3600 else dayStart - 3600
         return when {
             hour >= 23 -> dayStart + 23 * 3600
             hour < 6 -> dayStart - 3600
@@ -62,6 +73,7 @@ internal object ScheduleProbe {
         "late" -> 14
         "breakfast" -> 12
         "afternoon" -> 12
+        "all" -> 48
         else -> 10
     }
 
