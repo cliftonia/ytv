@@ -181,6 +181,7 @@ class MainActivity : ComponentActivity() {
             director = director,
             navigator = { navigator },
             executor = executor,
+            speculativeExecutor = prefetchExecutor,
             runOnUi = { block -> runOnUiThread(block) },
             halted = { destroyed },
             stoppedNow = { stopped },
