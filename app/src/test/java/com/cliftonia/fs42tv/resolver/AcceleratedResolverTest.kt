@@ -30,14 +30,23 @@ class AcceleratedResolverTest {
         }
     }
 
-    /** A server whose every response is scripted, and which counts what it was asked. */
-    private fun server(health: String?, resolve: String?): Pair<ServerResolver, MutableList<String>> {
+    /**
+     * A server whose every response is scripted, and which counts what it was asked. Probed once
+     * up front, as the background probe would have by the time anyone tunes; [probed] false
+     * leaves it with no reading at all, which is how a launch looks before the first probe lands.
+     */
+    private fun server(
+        health: String?,
+        resolve: String?,
+        probed: Boolean = true,
+    ): Pair<ServerResolver, MutableList<String>> {
         val asked = mutableListOf<String>()
-        val s = ServerResolver("http://server") { url, _ ->
+        val s = ServerResolver("http://server", { url, _ ->
             asked.add(url)
             val body = if (url.contains("/health")) health else resolve
             body ?: error("unreachable")
-        }
+        })
+        if (probed) s.probe()
         return s to asked
     }
 
@@ -89,15 +98,48 @@ class AcceleratedResolverTest {
     }
 
     @Test
-    fun `health is asked once, not once per tune`() {
-        // Without caching, a set out of range pays a connection timeout on every channel change -
-        // an accelerator that makes the dial slower than it was.
+    fun `the tune path never probes health itself`() {
+        // Probing inline paid a connection timeout per address every thirty seconds in front of
+        // a channel change - in the car, where nothing answers, an accelerator that made the
+        // dial slower. An unknown server is simply skipped.
         val device = FakeDevice(resolved)
-        val (s, asked) = server(healthy, tiers)
+        val (s, asked) = server(healthy, tiers, probed = false)
         val accelerated = AcceleratedResolver(listOf(s), device)
         repeat(5) { accelerated.resolveDetailed("abc12345678", 100, listOf("hd")) }
-        assertEquals("health should be checked once for the whole burst",
-            1, asked.count { it.contains("/health") })
+        assertTrue("no health check on the tune path", asked.none { it.contains("/health") })
+        assertEquals(5, device.calls)
+    }
+
+    @Test
+    fun `a stale healthy reading is not trusted`() {
+        var now = 0L
+        val device = FakeDevice(resolved)
+        val s = ServerResolver("http://server", { url, _ ->
+            if (url.contains("/health")) healthy else tiers
+        }, nowMillis = { now })
+        s.probe()
+        assertTrue(s.isAvailable())
+        now += ServerResolver.FRESH_FOR_MILLIS
+        AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd"))
+        assertEquals("a reading that old could describe a network the set has left", 1, device.calls)
+    }
+
+    @Test
+    fun `a failed resolve retires the server until the next probe`() {
+        val device = FakeDevice(resolved)
+        val (s, _) = server(healthy, resolve = null)
+        AcceleratedResolver(listOf(s), device).resolveDetailed("abc12345678", 100, listOf("hd"))
+        assertTrue("one timeout is enough", !s.isAvailable())
+    }
+
+    @Test
+    fun `no usable server nudges a background probe`() {
+        val (s, _) = server(health = null, resolve = null)
+        val scheduled = mutableListOf<() -> Unit>()
+        val probe = AcceleratorProbe(listOf(s), { _, block -> scheduled.add(block) }, { 0L })
+        AcceleratedResolver(listOf(s), FakeDevice(resolved), probe = probe)
+            .resolveDetailed("abc12345678", 100, listOf("hd"))
+        assertEquals("queued, not run on the tune path", 1, scheduled.size)
     }
 
     @Test
@@ -137,6 +179,6 @@ class AcceleratedResolverTest {
             .resolveDetailed("abc12345678", 100, listOf("hd", "sd"), refused)
         assertNull(got)
         assertEquals(0, device.calls)
-        assertTrue("not even a health check", asked.isEmpty())
+        assertTrue("the server is not asked", asked.none { it.contains("/resolve") })
     }
 }
