@@ -16,11 +16,20 @@ Partial by nature. Measured over a real search, 8 clips in 14 declared a languag
 nothing, so this REPLACES nothing: it removes what it is sure about, and filters.english_speech
 still handles everything that stays silent.
 
-  python3 language_sweep.py --dry     say what would go
-  python3 language_sweep.py           remove it
+Where the verdict comes from. The nightly runs on a GitHub runner, and the accelerator is on the
+tailnet - which the runner cannot reach, so every nightly sweep so far printed "could not reach"
+and removed nothing. The verdict now travels the other way: tools/publish_foreign.sh runs on the
+home server, asks the accelerator locally, and commits curation/foreign.json; this reads that
+file. Asking the server directly is still possible from a machine on the tailnet, but only when
+told to (--from-server), so a missing file is never quietly papered over by a network call.
+
+  python3 language_sweep.py --dry                 say what would go
+  python3 language_sweep.py                       remove it, going by foreign.json
+  python3 language_sweep.py --from-server         ask the accelerator instead (tailnet only)
 """
 import argparse
 import json
+import os
 import sys
 import urllib.request
 
@@ -28,6 +37,33 @@ import build_lineup
 import confs
 
 SERVER = "http://100.74.3.68:4243"
+
+# {"generated": <unix>, "foreign": [video ids]}, written by tools/publish_foreign.sh.
+VERDICTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "foreign.json")
+
+
+def foreign_from_file(path):
+    """Ids the committed verdict file lists as not English, as {id: ""}, or None when there is no
+    usable file.
+
+    Same contract as foreign_ids(): None is "no information" and the caller leaves the dial
+    alone, while an empty list is a real answer. A file of the wrong shape is None and says so -
+    guessing at a half-written file could remove clips on the strength of garbage.
+    """
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as handle:
+            body = json.load(handle)
+        ids = body["foreign"]
+        if not isinstance(ids, list) or not all(isinstance(i, str) for i in ids):
+            raise ValueError("'foreign' is not a list of video ids")
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print("could not read %s: %s" % (path, exc), file=sys.stderr)
+        return None
+    # A map rather than a set, so the report below reads the same whichever source answered. The
+    # file carries ids only - the language is on the server if anyone needs it.
+    return {identifier: "" for identifier in ids}
 
 
 def foreign_ids(server, timeout=30):
@@ -50,17 +86,24 @@ def foreign_ids(server, timeout=30):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry", action="store_true")
+    parser.add_argument("--verdicts", default=VERDICTS,
+                        help="the committed verdict file (default: %(default)s)")
+    parser.add_argument("--from-server", action="store_true",
+                        help="ask the accelerator directly instead of reading --verdicts")
     parser.add_argument("--server", default=SERVER)
     parser.add_argument("--confs", default=confs.default_dir())
     args = parser.parse_args()
 
-    foreign = foreign_ids(args.server)
+    if args.from_server:
+        foreign, source = foreign_ids(args.server), "the accelerator"
+    else:
+        foreign, source = foreign_from_file(args.verdicts), os.path.basename(args.verdicts)
     if foreign is None:
         # Not a failure of the dial, so not a failure of the run: the nightly should carry on and
         # publish, with the title rules doing what they always did.
         print("no language data available; leaving the dial alone")
         return 0
-    print("the accelerator reports %d clips in another language" % len(foreign))
+    print("%s reports %d clips in another language" % (source, len(foreign)))
 
     removed = 0
     for path in confs.youtube_paths(args.confs):
@@ -79,7 +122,7 @@ def main():
         for stream in streams:
             identifier = build_lineup.video_id(stream.get("url"))
             if identifier in foreign:
-                print("  [%s] %-22s %s" % (foreign[identifier],
+                print("  [%s] %-22s %s" % (foreign[identifier] or "--",
                                            station.get("network_name", "?")[:22],
                                            (stream.get("title") or "")[:52]))
         removed += len(streams) - len(keep)
