@@ -43,6 +43,14 @@ class ScreenExtras(private val deps: Deps) {
 
     val features: Features get() = deps.features
 
+    /**
+     * Something is in front of the blank - the guide, settings - or the app is out of sight.
+     * Written with every hiss sync, which runs on each of those transitions (including onStop and
+     * onResume), and read by the snow: animating 22 times a second behind a stopped activity -
+     * a dead channel still "tuning" in the background - is battery and heat for nobody.
+     */
+    val screenCovered = mutableStateOf(false)
+
     private val hiss = Hiss(deps.handler)
     private val hissGate = HissGate()
     private val hissCap = Runnable { applyHiss(hissGate.timedOut()) }
@@ -53,6 +61,7 @@ class ScreenExtras(private val deps: Deps) {
      * is exactly that rule's complement. Main thread only.
      */
     fun syncHiss(tuning: Boolean, covered: Boolean) {
+        screenCovered.value = covered
         val enabled = deps.features.isOn(Features.Flag.STATIC)
         applyHiss(hissGate.update(HissGate.wanted(enabled, tuning, covered)))
     }
@@ -124,6 +133,8 @@ class ScreenExtras(private val deps: Deps) {
         if (!deps.features.isOn(Features.Flag.PLUTO_GUIDE)) return
         val id = PlutoIds.of(channel) ?: return
         deps.plutoGuide.request(id) { schedule ->
+            // On the prefetch thread; the activity may have gone while the guide was fetched.
+            if (deps.halted()) return@request
             val url = schedule.logoUrl ?: return@request
             deps.logos.get(url) { image ->
                 deps.runOnUi {

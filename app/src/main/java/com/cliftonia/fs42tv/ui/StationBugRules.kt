@@ -70,14 +70,21 @@ class ImageCache<T : Any>(
             waiting[url]?.let { it += onReady; return }
             waiting[url] = mutableListOf(onReady)
         }
-        executor.execute {
-            val loaded = runCatching { load(url) }.getOrNull()
-            val waiters = synchronized(this) {
-                if (loaded != null) held[url] = loaded else if (failed.size < MAX_FAILED) failed += url
-                waiting.remove(url).orEmpty()
+        // runCatching, because this is called from the Pluto fetch's callback ON the prefetch
+        // thread, which the activity shuts down on destroy: execute() then throws
+        // RejectedExecutionException, and uncaught there it takes the process down (ChunkedProxy
+        // learned the same). Nobody is listening by then, so the entry simply goes.
+        runCatching {
+            executor.execute {
+                val loaded = runCatching { load(url) }.getOrNull()
+                val waiters = synchronized(this) {
+                    if (loaded != null) held[url] = loaded
+                    else if (failed.size < MAX_FAILED) failed += url
+                    waiting.remove(url).orEmpty()
+                }
+                if (loaded != null) waiters.forEach { runCatching { it(loaded) } }
             }
-            if (loaded != null) waiters.forEach { it(loaded) }
-        }
+        }.onFailure { synchronized(this) { waiting.remove(url) } }
     }
 
     private companion object {

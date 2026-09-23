@@ -28,7 +28,7 @@ fun AppSurface(
     Box(modifier = Modifier.fillMaxSize()) {
         // Snow in place of the black when the STATIC row is on - same place, same lifetime.
         if (director.extras.features.isOn(Features.Flag.STATIC)) {
-            TuningStatic(director.tuning.value, animate = !guide.visible.value && !settingsVisible)
+            TuningStatic(director.tuning.value, animate = !director.extras.screenCovered.value)
         } else {
             TuningBlank(director.tuning.value)
         }

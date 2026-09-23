@@ -25,20 +25,28 @@ class PlutoGuideTest {
     private fun fixture(): String = javaClass.classLoader!!
         .getResourceAsStream("pluto-channel-sample.json")!!.bufferedReader().readText()
 
-    private class Fixture(body: () -> String) {
+    private class Fixture(
+        body: () -> String,
+        executor: Executor? = null,
+        sleeper: ((Long) -> Unit)? = null,
+    ) {
         val crank = Crank()
         var now = Instant.parse("2026-09-23T03:00:00Z").toEpochMilli()
+        var elapsed = 1_000L
         var enabled = true
         val fetched = mutableListOf<String>()
         val slept = mutableListOf<Long>()
         val guide = PlutoGuide(
             fetch = { url -> fetched += url; body() },
-            executor = crank,
+            executor = executor ?: crank,
             nowMillis = { now },
             enabled = { enabled },
-            sleep = { slept += it; now += it },
+            elapsedMillis = { elapsed },
+            sleep = sleeper ?: { slept += it; now += it; elapsed += it },
         )
     }
+
+    private fun idOf(url: String) = url.substringAfter("/channels/").substringBefore('?')
 
     private val id = "68487fb3f212bedacf5a53e3"
 
@@ -82,7 +90,7 @@ class PlutoGuideTest {
 
     @Test
     fun `a failure is remembered for a while rather than retried on every focus`() {
-        val f = Fixture { throw java.io.IOException("timed out") }
+        val f = Fixture(body = { throw java.io.IOException("timed out") })
         var ready = 0
         f.guide.request(id) { ready++ }
         f.crank.runAll()
@@ -113,6 +121,62 @@ class PlutoGuideTest {
         (1..40).forEach { f.guide.request("%024d".format(it)) {} }
         f.crank.runAll()
         assertEquals(PlutoGuide.MAX_QUEUED, f.fetched.size)
+    }
+
+    @Test
+    fun `a full queue drops the oldest, so the channel surfed to is still asked about`() {
+        val f = Fixture(::fixture)
+        (1..PlutoGuide.MAX_QUEUED).forEach { f.guide.request("%024d".format(it)) {} }
+        var landed = 0
+        val target = "f".repeat(24)
+        f.guide.request(target) { landed++ }
+        f.crank.runAll()
+        assertEquals(1, landed)
+        assertTrue(f.fetched.map(::idOf).contains(target))
+        assertTrue("the oldest made way", !f.fetched.map(::idOf).contains("%024d".format(1)))
+        assertEquals(PlutoGuide.MAX_QUEUED, f.fetched.size)
+    }
+
+    @Test
+    fun `a wall clock stepped backwards cannot park the thread`() {
+        // Spacing runs on the monotonic clock; the wall clock jumping a day back changes nothing.
+        val f = Fixture(::fixture)
+        f.guide.request("a".repeat(24)) {}
+        f.crank.runAll()
+        f.now -= 86_400_000L
+        f.guide.request("b".repeat(24)) {}
+        f.crank.runAll()
+        assertTrue(f.slept.all { it <= PlutoGuide.MIN_GAP_MILLIS })
+    }
+
+    @Test
+    fun `a shut-down thread refuses the fetch without throwing`() {
+        // shutdownNow() in onDestroy - also on BACK and the SOURCE row's recreate.
+        val dead = java.util.concurrent.Executors.newSingleThreadExecutor().apply { shutdownNow() }
+        val f = Fixture(::fixture, executor = dead)
+        f.guide.request(id) {}
+        f.guide.request(id) {}
+        assertTrue(f.fetched.isEmpty())
+    }
+
+    @Test
+    fun `an interrupted spacing sleep ends the fetch quietly`() {
+        var interrupt = false
+        val f = Fixture(::fixture, sleeper = { if (interrupt) throw InterruptedException() })
+        f.guide.request("a".repeat(24)) {}
+        f.crank.runAll()
+        interrupt = true
+        var called = false
+        f.guide.request("b".repeat(24)) { called = true }
+        f.crank.runAll()
+        assertTrue("the interrupt is kept for the executor", Thread.interrupted())
+        assertEquals(1, f.fetched.size)
+        assertTrue(!called)
+        // Not remembered as a failure: asked again later, it fetches.
+        interrupt = false
+        f.guide.request("b".repeat(24)) { called = true }
+        f.crank.runAll()
+        assertTrue(called)
     }
 
     @Test
