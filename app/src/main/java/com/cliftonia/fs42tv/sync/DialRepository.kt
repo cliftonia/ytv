@@ -22,8 +22,10 @@ data class SyncResult(val dial: Dial)
 class DialRepository(
     private val fetch: (String) -> String,
     private val cacheDir: File,
+    /** One per [LineupSource], so switching dial never overwrites the other's last good copy. */
+    private val cacheFile: String = LineupSource.YOUTUBE.cacheFile,
 ) {
-    private val dialFile get() = File(cacheDir, "channels.json")
+    private val dialFile get() = File(cacheDir, cacheFile)
 
     /**
      * Fetch the lineup from [dialUrl] and cache it. Throws if it cannot be reached.

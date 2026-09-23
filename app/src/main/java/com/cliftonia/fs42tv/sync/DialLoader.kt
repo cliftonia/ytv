@@ -5,20 +5,6 @@ import java.io.File
 import java.util.concurrent.Executor
 
 /**
- * Where the lineup lives.
- *
- * A file in a public git repository, not an endpoint on a machine at home. The dial is rebuilt
- * nightly by a workflow and committed, so the television picks up new content by fetching one
- * file over the open internet - which is the whole point, because one of these televisions lives
- * in a car and is rarely on the house network.
- *
- * `raw.githubusercontent.com` rather than the api: no rate limit worth worrying about, no token,
- * and it serves the file at whatever the branch currently points to.
- */
-private const val LINEUP_URL =
-    "https://raw.githubusercontent.com/cliftonia/ytv/main/channels.json"
-
-/**
  * How long a launch with no lineup waits before asking again. Long enough not to hammer a
  * hotspot that is still coming up, short enough that the dial appears within a minute of the
  * network doing so.
@@ -36,6 +22,8 @@ private const val RETRY_MILLIS = 30_000L
  * the dial without a relaunch.
  */
 class DialLoader(
+    /** Which dial to fetch; see [LineupSource]. */
+    private val source: LineupSource,
     private val cacheDir: File,
     private val executor: Executor,
     private val runOnUi: (() -> Unit) -> Unit,
@@ -74,8 +62,9 @@ class DialLoader(
                     }
                 },
                 cacheDir = cacheDir,
+                cacheFile = source.cacheFile,
             )
-            val synced = runCatching { repo.sync(LINEUP_URL) }
+            val synced = runCatching { repo.sync(source.url) }
                 .onFailure { Log.w("fs42", "lineup sync failed", it) }
                 .getOrNull()
             val dial = synced?.dial ?: repo.cachedDial()
