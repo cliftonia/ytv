@@ -508,6 +508,11 @@
             }
         ],
         "search_query": "full documentary",
-        "last_refreshed": 1789154558
+        "last_refreshed": 1789154558,
+        "part_queries": {
+            "breakfast": "half hour documentary full episode",
+            "prime": "feature length documentary full film",
+            "late": "unexplained mysteries documentary full"
+        }
     }
 }

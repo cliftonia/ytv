@@ -64,6 +64,20 @@ class TestChannelFrom(unittest.TestCase):
         self.assertEqual("clock", channel["rotation"])
         self.assertEqual("dQw4w9WgXcQ", channel["streams"][0]["id"])
 
+    def test_a_sequenced_channel_is_marked_ordered(self):
+        # The half-hour schedule tops gaps up with any clip that fits - which would play episode
+        # seven between episodes two and three. `ordered` is how the app knows not to.
+        station = {"network_name": "X", "channel_number": 5, "stream_rotation": "clock",
+                   "streams": [{"url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                                "duration": 212, "title": "A song"}]}
+        self.assertTrue(build_lineup.channel_from(self.write("ytch_anime.json", station))["ordered"])
+        self.assertNotIn("ordered", build_lineup.channel_from(self.write("ytch_x.json", station)))
+
+    def test_the_series_file_channel_is_ordered(self):
+        station = {"network_name": "Series", "channel_number": 92,
+                   "streams": [{"url": "http://h/S01E01.mp4", "duration": 1800, "title": "E1"}]}
+        self.assertTrue(build_lineup.channel_from(self.write("file_series.json", station))["ordered"])
+
     def test_a_live_channel_carries_no_id(self):
         # If it did, the app would try to resolve an m3u8 as a YouTube video.
         path = self.write("iptv_x.json", {
@@ -178,6 +192,32 @@ class TestChannelFrom(unittest.TestCase):
             "streams": [{"url": "http://h/a.mkv", "duration": 600, "title": "a",
                          "skip": [[1.0, 5.0]]}]})
         self.assertNotIn("skip", build_lineup.channel_from(path)["streams"][0])
+
+    def test_a_youtube_stream_carries_its_parts_only_when_it_has_some(self):
+        # Untagged clips are the all-day pool, and absent is how the contract says so: an empty
+        # list on every one of nine thousand streams would say the same thing over mobile data.
+        # Published in the day's order and only the parts the app knows, so a hand-edited conf
+        # can neither churn the file by reordering nor publish a part nothing ever draws from.
+        path = self.write("ytch_x.json", {
+            "network_name": "X", "channel_number": 5, "stream_rotation": "clock",
+            "streams": [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa", "duration": 300,
+                         "title": "a", "parts": ["late", "brunch", "prime"]},
+                        {"url": "https://www.youtube.com/watch?v=bbbbbbbbbbb", "duration": 300,
+                         "title": "b", "parts": []},
+                        {"url": "https://www.youtube.com/watch?v=ccccccccccc", "duration": 300,
+                         "title": "c"}]})
+        tagged, empty, untagged = build_lineup.channel_from(path)["streams"]
+        self.assertEqual(["prime", "late"], tagged["parts"])
+        self.assertNotIn("parts", empty)
+        self.assertNotIn("parts", untagged)
+
+    def test_a_live_or_file_stream_never_carries_parts(self):
+        # The contract gives parts to YouTube streams only; files and live feeds are unmixed.
+        path = self.write("file_x.json", {
+            "network_name": "X", "channel_number": 91,
+            "streams": [{"url": "http://h/a.mkv", "duration": 600, "title": "a",
+                         "parts": ["prime"]}]})
+        self.assertNotIn("parts", build_lineup.channel_from(path)["streams"][0])
 
     def test_a_web_channel_is_not_published(self):
         # WeatherStar and friends were rendered by a browser on a machine that no longer exists.
@@ -311,6 +351,17 @@ class TestPublishedLineup(unittest.TestCase):
                     self.assertGreaterEqual(stop - start, 1)
                     end = stop
                 self.assertLessEqual(end, stream["duration"])
+
+    def test_published_parts_are_known_parts_of_the_day(self):
+        import confs
+        for channel in self.dial["channels"]:
+            for stream in channel["streams"]:
+                parts = stream.get("parts")
+                if parts is None:
+                    continue
+                self.assertEqual("youtube", channel["kind"])
+                self.assertTrue(parts, "%s publishes an empty parts list" % channel["name"])
+                self.assertEqual([p for p in confs.DAY_PARTS if p in parts], parts)
 
 
 if __name__ == "__main__":

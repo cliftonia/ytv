@@ -73,10 +73,8 @@ def refresh(path, target):
         search.collect("https://www.youtube.com/playlist?list=" + playlist, lo, hi, seen, keys,
                        streams, target, exclude=exclude)
 
-    attempts = search.queries_for(query, slug, station.get("extra_queries"),
-                                  datetime.date.today().year)
-
-    for attempt in attempts:
+    year = datetime.date.today().year
+    for attempt in search.queries_for(query, slug, station.get("extra_queries"), year):
         if len(streams) >= target:
             break
         # Ask for several times the target. The duration window and the commentary filter both
@@ -85,27 +83,78 @@ def refresh(path, target):
         search.collect("ytsearch%d:%s" % (target * search.SEARCH_DEPTH, attempt), lo, hi,
                        seen, keys, streams, target, exclude=exclude)
 
-    before = len(station.get("streams", []))
+    # Nothing from the channel's own query is "search returned nothing" whatever the parts would
+    # find: every part without a query of its own plays these clips, so the parts alone are not a
+    # channel. Checked before the parts are searched, so a broken night spends no more requests.
     if not streams:
         # Writing an empty list would take the channel off the dial entirely. Leaving yesterday's
         # content is strictly better than that, and the next rotation will try again.
         return keep(path, conf, name, "search returned nothing")
+
+    # Time-of-day mixes (dial.PARTS, copied into the conf by apply_dial). Searched AFTER the
+    # channel's own query and through the same `seen` and `keys`, so a clip lands on the channel
+    # once and whichever query found it first owns it: a clip the main query already has stays in
+    # the all-day pool rather than being narrowed to one part of the day.
+    part_queries = station.get("part_queries") or {}
+    for part in confs.DAY_PARTS:
+        if part_queries.get(part):
+            streams.extend(search_part(part, part_queries[part], slug, year, lo, hi, seen, keys,
+                                       max(1, target // PART_SHARE), exclude))
+
+    old = station.get("streams", [])
+    # The publish gate's own rules (check_lineup.py, run by lineup.yml), applied here first:
+    # the whole channel, then each time-of-day pool as though it were a channel. Without this one
+    # query having a bad night wrote a conf the gate then refused - and since the gate refuses the
+    # WHOLE dial, every nightly after it failed on that one channel until someone intervened.
+    # Yesterday's list passes the gate by definition, so any one pool collapsing keeps all of it:
+    # splicing yesterday's part into today's list would not, because the two were deduped against
+    # different searches and could share clips or lose them.
+    # A part taken out of dial.PARTS is not counted against either: its clips are meant to go.
+    fell = ["%s fell from %d to %d" % (pool, was, now)
+            for pool, was, now in check_lineup.shrunk_pools(old, streams, parts=part_queries)]
+    before = check_lineup.comparable_size(old, streams, parts=part_queries)
     if check_lineup.collapsed(before, len(streams)):
-        # The publish gate's own rule (check_lineup.py, run by lineup.yml), applied here first.
-        # Without it one query having a bad night wrote a conf the gate then refused - and since
-        # the gate refuses the WHOLE dial, every nightly after it failed on that one channel until
-        # someone intervened. Yesterday's list passes the gate by definition.
-        return keep(path, conf, name, "fell from %d to %d" % (before, len(streams)))
+        fell.insert(0, "fell from %d to %d" % (before, len(streams)))
+    if fell:
+        return keep(path, conf, name, "; ".join(fell))
 
     # Clips the search found again keep their SponsorBlock answer; only the new ones are left for
     # sponsor.py to look up, so a refresh does not undo a month of lookups for the same clips.
-    sponsor.carry(station.get("streams", []), streams)
+    sponsor.carry(old, streams)
     station["streams"] = streams
     station["last_refreshed"] = int(time.time())
     station.pop("refresh_misses", None)
     confs.save(path, conf)
     print("  %-26s %3d clips" % (name, len(streams)), flush=True)
     return name, len(streams), False
+
+
+# A time-of-day part is filled to the channel's target divided by this. Half a channel is plenty
+# for a part - prime is five hours a night, and fifty clips of it is days before a repeat - and a
+# channel mixed for all four parts is then at most three channels' worth of clips rather than five,
+# in a file two televisions fetch over mobile data.
+PART_SHARE = 2
+
+
+def search_part(part, query, slug, year, lo, hi, seen, keys, want, exclude):
+    """One part of the day's clips for a channel, each tagged `parts: [part]`.
+
+    The same order of attempts as the channel's own query (this year, then unqualified, then
+    "full" - search.queries_for) and the same duration window, filters and exclude list: a part is
+    a narrower view of the channel, not a different channel. `seen` and `keys` are the channel's
+    own, shared with every other search this refresh makes. `parts` is a list because the lineup
+    contract allows a clip in several parts; refresh only ever finds a clip for one.
+    """
+    found = []
+    for attempt in search.queries_for(query, slug, None, year):
+        if len(found) >= want:
+            break
+        search.collect("ytsearch%d:%s" % (want * search.SEARCH_DEPTH, attempt), lo, hi,
+                       seen, keys, found, want, exclude=exclude)
+    for stream in found:
+        stream["parts"] = [part]
+    print("    %-24s %-10s %3d clips" % (slug, part, len(found)), flush=True)
+    return found
 
 
 # How many consecutive nights a channel may keep yesterday's clips before its cursor advances
