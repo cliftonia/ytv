@@ -74,28 +74,46 @@ def _pool_order(pool):
     return (1 if pool == ALL_DAY else 2, 0, pool)
 
 
+def retired_parts(before, after, parts=None):
+    """The parts tagged in `before` that `after` let go of on purpose.
+
+    `parts` is the parts the channel still declares, when the caller knows them - refresh_channels
+    does, from the conf, and a declared part that comes back with nothing is a collapse to zero,
+    never a retirement. The gate does not know them, so for the gate a part missing from `after`
+    altogether was taken out of dial.PARTS. That is safe only because refresh refuses the empty
+    case itself: zero in a lineup cannot be a search that failed for a part still asked for.
+    """
+    was, now = pool_sizes(before), pool_sizes(after)
+    return {part for part in was
+            if part != ALL_DAY and part not in now and (parts is None or part not in parts)}
+
+
+def comparable_size(before, after, parts=None):
+    """How many of `before`'s clips a channel's size today should be measured against.
+
+    All of them, less the clips that were only in retired parts: a channel of 100 all-day clips
+    and 150 part clips whose mix is taken out of the dial goes back to 100, and that is the
+    curator's decision rather than a collapse.
+    """
+    gone = retired_parts(before, after, parts)
+    return sum(1 for s in before if not (s.get("parts") and set(s["parts"]) <= gone))
+
+
 def shrunk_pools(before, after, parts=None):
     """[(pool, was, now)] for each time-of-day pool that collapsed between two stream lists.
 
     Each part is a channel for this purpose: prime is what the viewer gets for five hours of an
-    evening, and prime falling from forty clips to three passes every whole-channel count.
-
-    `parts` is the parts the channel still declares, when the caller knows them - refresh_channels
-    does, from the conf, and a declared part that comes back with nothing is a collapse to zero.
-    The gate does not know them, so for the gate a part missing from `after` altogether was retired
-    from dial.PARTS and is not compared. That is safe only because refresh refuses the empty case
-    itself: zero in a lineup cannot be a search that failed for a part still asked for.
+    evening, and prime falling from forty clips to three passes every whole-channel count. Retired
+    parts (see retired_parts) are not compared.
     """
     was, now = pool_sizes(before), pool_sizes(after)
+    gone = retired_parts(before, after, parts)
     found = []
     for pool in sorted(was, key=_pool_order):
-        if pool == ALL_DAY:
-            # Every part retired at once leaves no tags, and then every clip is all-day.
-            current = now.get(ALL_DAY, len(after))
-        elif pool in now or (parts is not None and pool in parts):
-            current = now.get(pool, 0)
-        else:
+        if pool in gone:
             continue
+        # Every part retired at once leaves no tags, and then every clip is all-day.
+        current = now.get(pool, len(after) if pool == ALL_DAY else 0)
         if collapsed(was[pool], current):
             found.append((pool, was[pool], current))
     return found
@@ -139,7 +157,11 @@ def problems(dial, previous):
 
     before_channels = previous.get("channels", [])
     if before_channels:
-        was = {c["number"]: len(c["streams"]) for c in before_channels}
+        streams_now = {c["number"]: c["streams"] for c in channels}
+        # Measured against what the channel still carries: clips only in a retired time-of-day
+        # part (comparable_size) are not a loss.
+        was = {c["number"]: comparable_size(c["streams"], streams_now.get(c["number"], []))
+               for c in before_channels}
         now = {c["number"]: len(c["streams"]) for c in channels}
         for number, before in was.items():
             after = now.get(number, 0)
@@ -149,7 +171,6 @@ def problems(dial, previous):
             if number not in now:
                 found.append("ch %d disappeared" % number)
         # The same rule again inside each channel, one time-of-day pool at a time.
-        streams_now = {c["number"]: c["streams"] for c in channels}
         for c in before_channels:
             if c["number"] not in streams_now:
                 continue
