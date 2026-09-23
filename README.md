@@ -48,6 +48,20 @@ Pluto dial is 219 themed English channels - no single-show loops, no news - hand
 iptv-org nightly for current stream urls. A channel Pluto retires drops off on its own; a new one
 appears only when added to the allowlist.
 
+## Sponsor skips
+
+YouTube clips skip their sponsor reads, self-promotion and "like and subscribe" stretches, going
+by [SponsorBlock](https://sponsor.ajay.app). Intros and outros are left alone. The nightly job
+(`curation/sponsor.py`) asks by hash prefix, so SponsorBlock never learns which videos are on the
+dial, and caches each answer in the confs as `skip` + `skip_checked` - re-checked after 30 days,
+at most 1000 requests a night. `channels.json` carries `skip` on a stream only when there is
+something to skip; `duration` stays the raw length. If SponsorBlock is unreachable nothing
+fails - the clips just play in full.
+
+Sponsor segment data comes from [SponsorBlock](https://sponsor.ajay.app) and is used under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); this project is
+non-commercial.
+
 ## Media channels: local files, streamed links, and torrent ingest
 
 Beyond the YouTube dial sits a block of `file` channels (numbers 91-99) that schedule ordinary
@@ -107,6 +121,7 @@ Rules of the road, learned by experiment:
 | `curation/confs/` | One file per channel: number, name, search query, current clips |
 | `curation/refresh_channels.py` | Re-searches channels and writes their confs back |
 | `curation/build_lineup.py` | Turns the confs into `channels.json` |
+| `curation/sponsor.py` | Looks clips up in SponsorBlock and caches what to skip in the confs |
 | `curation/pluto_lineup.json` | The hand-picked Pluto TV channels |
 | `curation/build_pluto.py` | Matches that list against iptv-org and writes `pluto.json` |
 | `curation/scan_media.py` | Rebuilds file-channel streams from the media folders + remote urls |
