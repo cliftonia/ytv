@@ -51,4 +51,15 @@ object StreamResolver {
 
     /** The key used to remember one refused tier of one clip. */
     fun refusedKey(videoId: String, tier: String): String = "$videoId/$tier"
+
+    /**
+     * Whether every rung of [ladder] is already refused for [videoId] - in which case every
+     * resolver must answer null, because each skips refused rungs, and asking one only pays for
+     * that answer: 2.4s of extraction on the device, a round trip to the server.
+     *
+     * An empty ladder is not "all refused": there is nothing to have refused, and treating it as
+     * condemnation would skip every clip on the dial.
+     */
+    fun allRefused(videoId: String, ladder: List<String>, refused: Set<String>): Boolean =
+        ladder.isNotEmpty() && ladder.all { refusedKey(videoId, it) in refused }
 }

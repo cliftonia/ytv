@@ -125,4 +125,18 @@ class AcceleratedResolverTest {
         assertEquals("the device must not have been consulted", 0, device.calls)
         assertTrue(asked.any { it.contains("/resolve") })
     }
+
+    @Test
+    fun `a clip with every rung refused asks neither the server nor the device`() {
+        // Both skip refused rungs, so both could only answer null - after a round trip or 2.4s
+        // of extraction. Condemned clips were paying that on every retune.
+        val device = FakeDevice(resolved)
+        val (s, asked) = server(healthy, tiers)
+        val refused = setOf("abc12345678/hd", "abc12345678/sd")
+        val got = AcceleratedResolver(listOf(s), device)
+            .resolveDetailed("abc12345678", 100, listOf("hd", "sd"), refused)
+        assertNull(got)
+        assertEquals(0, device.calls)
+        assertTrue("not even a health check", asked.isEmpty())
+    }
 }

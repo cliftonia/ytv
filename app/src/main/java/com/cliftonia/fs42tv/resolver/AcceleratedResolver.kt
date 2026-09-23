@@ -56,6 +56,12 @@ class AcceleratedResolver(
         ladder: List<String>,
         refused: Set<String>,
     ): ClipResolver.Resolved? {
+        // Both halves skip refused rungs, so with every rung refused both must return null -
+        // after a server round trip or seconds of extraction. Known before asking either.
+        if (StreamResolver.allRefused(videoId, ladder, refused)) {
+            Log.d("fs42", "every rung of $videoId is refused; not resolving")
+            return null
+        }
         // Asked first and answered from a cached health check, so an unreachable server costs
         // nothing per tune. Without the caching this would pay a connection timeout on every
         // channel change - an accelerator that makes the dial slower.

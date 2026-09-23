@@ -244,7 +244,7 @@ class ScreenDirector(private val deps: Deps) {
                     if (tier != null) {
                         Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
                     } else {
-                        Log.w("fs42", "all tiers refused for $id; asking the server")
+                        Log.w("fs42", "all tiers refused for $id; skipping the clip")
                     }
                 }
             }
