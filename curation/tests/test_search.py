@@ -50,6 +50,25 @@ class TestQueriesFor(unittest.TestCase):
                          search.queries_for("jazz", "jazz", [], 2026))
 
 
+class TestYtdlpTitleCap(unittest.TestCase):
+    """yt-dlp is asked to cut titles; the cut must not reach an episode number."""
+
+    def test_titles_are_printed_long_enough_to_keep_their_episode_number(self):
+        # `%(title).90s` cut "<long show name> | Classic TV Series | Season 1 Episode 12" before
+        # the number, and title_key then merged the whole series into one clip.
+        from unittest import mock
+        seen = {}
+
+        def fake_run(cmd, **kwargs):
+            seen["cmd"] = cmd
+            return mock.Mock(returncode=0, stdout="", stderr="")
+        with mock.patch.object(search.subprocess, "run", fake_run):
+            search.ytdlp("ytsearch1:x")
+        template = seen["cmd"][seen["cmd"].index("--print") + 1]
+        cap = int(template.split("%(title).")[1].split("s")[0])
+        self.assertGreaterEqual(cap, 200)
+
+
 class TestCollect(unittest.TestCase):
     """The sift, with yt-dlp replaced by a list of rows."""
 
@@ -118,6 +137,13 @@ class TestCollect(unittest.TestCase):
         out = []
         search.collect("x", 60, 420, set(), set(), out, 10, exclude=["nrl"])
         self.assertEqual(["Final highlights"], [s["title"] for s in out])
+
+    def test_long_titled_episodes_of_one_series_both_survive(self):
+        prefix = "The Adventures of Sherlock Holmes | Classic Detective TV Series | "
+        self.rows(("aaaaaaaaaaa", 1400, prefix + "Episode 1"),
+                  ("bbbbbbbbbbb", 1400, prefix + "Episode 2"))
+        out = []
+        self.assertEqual(2, search.collect("x", 1200, 9000, set(), set(), out, 10))
 
     def test_no_exclude_list_excludes_nothing(self):
         self.rows(("aaaaaaaaaaa", 200, "NRL highlights"))

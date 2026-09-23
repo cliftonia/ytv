@@ -252,6 +252,11 @@ def title_key(title):
 
     The duplicate-year case it was protecting against is rare and harmless; losing whole series
     was neither.
+
+    The whole title, uncut. The key used to stop at 60 characters, which merged episodes the same
+    way dropping digits had, only by length: an uploader who leads with a long show name
+    ("... | Classic Detective TV Series | Episode 12") had the number past the cut, and every
+    episode keyed the same.
     """
     low = re.sub(r"[^a-z0-9 ]", " ", (title or "").lower())
-    return " ".join(low.split())[:60]
+    return " ".join(low.split())
