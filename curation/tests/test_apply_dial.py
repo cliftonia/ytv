@@ -31,6 +31,7 @@ class Dial(object):
     PLAYLISTS = {}
     EXTRA_QUERIES = {}
     EXCLUDE = {}
+    PARTS = {}
     YOUTUBE = ()
     LIVE = ()
     FILES = ()
@@ -151,6 +152,50 @@ class TestExclude(ApplyDialCase):
         self.dial.EXCLUDE = {"blues": ["karaoke"]}
         self.run_apply()
         self.assertEqual(["karaoke"], self.read("ytch_blues.json")["exclude"])
+
+
+class TestParts(ApplyDialCase):
+    """A channel's time-of-day queries travel into its conf as `part_queries`.
+
+    Named apart from a stream's `parts` tags so a conf never has one word meaning two things.
+    """
+
+    BLUES = TestExclude.BLUES
+    PARTS = {"late": "slow blues ballad live", "breakfast": "upbeat blues live"}
+
+    def test_parts_land_on_an_existing_conf(self):
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        self.dial.PARTS = {"blues": dict(self.PARTS)}
+        self.write("ytch_blues.json", dict(self.BLUES))
+        _, out = self.run_apply()
+        self.assertIn("part queries", out)
+        self.assertEqual(self.PARTS, self.read("ytch_blues.json")["part_queries"])
+
+    def test_parts_removed_from_the_dial_leave_the_conf_but_its_clips_stay(self):
+        # The tagged clips are content, and content is refresh_channels' business: the next
+        # refresh rebuilds the list without the retired parts. Stripping tags here would make
+        # this script a content editor, which it has never been.
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        streams = [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa", "duration": 200,
+                    "title": "a", "parts": ["late"]}]
+        self.write("ytch_blues.json", dict(self.BLUES, part_queries=self.PARTS, streams=streams))
+        self.run_apply()
+        station = self.read("ytch_blues.json")
+        self.assertNotIn("part_queries", station)
+        self.assertEqual(streams, station["streams"])
+
+    def test_a_new_channel_is_created_with_its_parts(self):
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        self.dial.PARTS = {"blues": dict(self.PARTS)}
+        self.run_apply()
+        self.assertEqual(self.PARTS, self.read("ytch_blues.json")["part_queries"])
+
+    def test_unchanged_parts_are_not_an_action(self):
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        self.dial.PARTS = {"blues": dict(self.PARTS)}
+        self.write("ytch_blues.json", dict(self.BLUES, part_queries=dict(self.PARTS)))
+        _, out = self.run_apply()
+        self.assertIn("0 actions", out)
 
 
 class TestCreationAndRemoval(ApplyDialCase):

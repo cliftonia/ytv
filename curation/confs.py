@@ -30,6 +30,19 @@ def default_dir():
 PREFIXES = {"youtube": "ytch_", "file": "file_", "live": ""}
 
 
+# The four parts of the day a channel may be mixed for, in the order the day runs, with the local
+# hours the app gives each: breakfast 06-12, afternoon 12-18, prime 18-23, late 23-06. The names
+# are the lineup contract - a stream publishes `parts: ["prime", "late"]` and the app draws each
+# half-hour slot from the streams tagged with the part it falls in - so they live here, beside
+# the rest of the conf format, rather than in any one script. The order is also the order they
+# are searched and published in, which is what keeps a rebuild byte-for-byte stable.
+#
+# In a conf the two sides of this are named apart on purpose: `part_queries` on the station is
+# what to search for each part (copied from dial.PARTS), `parts` on a stream is which parts the
+# clip was found for.
+DAY_PARTS = ("breakfast", "afternoon", "prime", "late")
+
+
 def path_for(slug, kind="youtube"):
     return os.path.join(CONFS, "%s%s.json" % (PREFIXES[kind], slug))
 

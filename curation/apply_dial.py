@@ -27,6 +27,17 @@ import confs
 import dial as DIAL
 
 
+def part_queries(slug):
+    """dial.PARTS for one channel, in the order the day runs, or None when it has no mix.
+
+    Reordered rather than copied so the conf's key order - and so its diff - does not depend on
+    the order somebody happened to type the parts into dial.py.
+    """
+    declared = DIAL.PARTS.get(slug) or {}
+    ordered = {part: declared[part] for part in confs.DAY_PARTS if declared.get(part)}
+    return ordered or None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry", action="store_true")
@@ -76,12 +87,15 @@ def main():
             playlists = DIAL.PLAYLISTS.get(slug)
             extra = DIAL.EXTRA_QUERIES.get(slug)
             exclude = DIAL.EXCLUDE.get(slug)
+            parts = part_queries(slug)
             if station.get("playlists") != playlists:
                 changes.append("playlists")
             if station.get("extra_queries") != extra:
                 changes.append("extra queries")
             if station.get("exclude") != exclude:
                 changes.append("exclude")
+            if station.get("part_queries") != parts:
+                changes.append("part queries")
             # Defaults BEFORE the early exit. They used to sit after it, so a conf whose name,
             # number and query already matched could never acquire a missing `stream_rotation` -
             # and a youtube channel without it is published with `rotation: null`, which makes the
@@ -113,6 +127,13 @@ def main():
                 station["exclude"] = exclude
             else:
                 station.pop("exclude", None)
+            # Time-of-day mixes (dial.PARTS), the same shape again. Only the queries: clips a
+            # retired part already tagged stay until the next refresh rebuilds the list without
+            # them - the stream list is refresh_channels' to write, never this script's.
+            if parts:
+                station["part_queries"] = parts
+            else:
+                station.pop("part_queries", None)
             do("update  %-18s %s" % (slug, ", ".join(changes)),
                lambda p=p, c=conf: confs.save(p, c))
         else:
@@ -127,6 +148,8 @@ def main():
                 station["extra_queries"] = DIAL.EXTRA_QUERIES[slug]
             if DIAL.EXCLUDE.get(slug):
                 station["exclude"] = DIAL.EXCLUDE[slug]
+            if part_queries(slug):
+                station["part_queries"] = part_queries(slug)
             conf = {"station_conf": station}
             do("create  %-18s ch %d (empty until the next refresh)" % (slug, number),
                lambda p=p, c=conf: confs.save(p, c))
