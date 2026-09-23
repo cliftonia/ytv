@@ -140,4 +140,40 @@ class TimetableTest {
         val next = halfHour().upNext(ch, slot + 10)!!
         assertEquals(slot + 1800, next.second)
     }
+
+    // --- amended rules: the cut, joins from the beginning, substitutes -----------------------
+
+    @Test
+    fun `a clip the schedule cuts at its part's end says when`() {
+        val ch = channel(
+            clip("f", 21600).copy(parts = listOf("prime")), clip("g", 1700).copy(parts = listOf("prime")))
+        val table = halfHour()
+        val day = 1_790_121_600L
+        val d = (0L until 4L).first {
+            (table.at(ch, day + it * 86_400 + 18 * 3600) as? OnAir.Clip)?.let { c ->
+                c.index == 0 && c.offsetSeconds == 0.0 } == true
+        }
+        val playing = table.at(ch, day + d * 86_400 + 22 * 3600) as OnAir.Clip
+        assertEquals(day + d * 86_400 + 23 * 3600, playing.cutAt)
+        assertNull("off the schedule nothing is cut", Timetable.PLAIN.at(ch, 5_000) .let { (it as OnAir.Clip).cutAt })
+    }
+
+    @Test
+    fun `a clip joined from its beginning starts past a sponsor read at zero`() {
+        val s = clip("a", 600, listOf(0.0, 30.0))
+        assertEquals(30.0, skipsOn.startOffset(s), 0.0)
+        assertEquals(0.0, Timetable.PLAIN.startOffset(s), 0.0)
+    }
+
+    @Test
+    fun `substitutes on the schedule come from the part's pool and end before the dead clip's slot`() {
+        val ch = channel(clip("a", 1500), clip("b", 1500), clip("c", 250), clip("d", 900))
+        val table = halfHour()
+        val dead = table.at(ch, slot + 10) as OnAir.Clip
+        val subs = table.substitutes(ch, slot + 10, dead.index, dead.endsAt, avoid = 2)
+        assertTrue("never the dead clip or the one to avoid: $subs", subs.none { it == dead.index || it == 2 })
+        assertTrue("each ends before $dead does: $subs",
+            subs.all { table.watchDuration(ch.streams[it]) <= dead.endsAt!! - (slot + 10) })
+        assertEquals("continuous keeps list order", listOf(2, 3, 0), Timetable.PLAIN.substitutes(ch, 0, 1, null, null))
+    }
 }

@@ -90,7 +90,11 @@ class HalfHourScheduleTimeEdgeTest {
                 val t = epoch("2026-06-15", time, zone)
                 val before = span(s.at(t - 1)!!, t - 1)
                 val after = span(s.at(t)!!, t)
-                assertEquals("$zone $time: the span before ends where the next begins", before.end, after.start)
+                // Midnight is inside late, and since the amended gap rule a programme may start
+                // off the half hour - so one span can run straight across; otherwise they meet.
+                if (before != after) {
+                    assertEquals("$zone $time: the span before ends where the next begins", before.end, after.start)
+                }
                 walk(s, t - 6 * 3600, t + 6 * 3600, "$zone around $time")
             }
         }
@@ -204,10 +208,16 @@ class HalfHourScheduleTimeEdgeTest {
         val s = mixed(newYork)
         val firstOneAm = epoch("2026-11-01", "01:00", newYork) // EDT, the first 01:00
         val secondOneAm = firstOneAm + 3600 // EST, the second 01:00
-        val first = s.at(firstOneAm)
-        val second = s.at(secondOneAm)
+        // Compared at the instant, not by span: a span meeting the transition is clamped to it so
+        // the walk stays contiguous, so the repeated hour's spans start later than the first's.
+        fun atInstant(r: OnAir?) = when (r) {
+            is OnAir.Programme -> Triple('P', r.index, r.offsetSeconds)
+            is OnAir.TopUp -> Triple('T', r.index, r.offsetSeconds)
+            is OnAir.Card -> Triple('C', r.nextIndex, 0.0)
+            null -> null
+        }
         assertEquals("slots follow the wall clock: the same wall time, the same thing",
-            span(first!!, firstOneAm).copy(start = 0, end = 0), span(second!!, secondOneAm).copy(start = 0, end = 0))
+            atInstant(s.at(firstOneAm)), atInstant(s.at(secondOneAm)))
         walk(s, firstOneAm - 3600, secondOneAm + 7200, "NY fall back")
     }
 
@@ -219,8 +229,13 @@ class HalfHourScheduleTimeEdgeTest {
             val s = mixed(zone)
             val from = epoch("2026-09-23", "00:00", zone)
             val spans = walk(s, from, from + 2 * 86_400, zone.id)
-            for (sp in spans.filter { it.kind == 'P' && it.offsetAtStart == 0.0 }) {
-                assertEquals("$zone $sp local :00/:30", 0L, Math.floorMod(local(sp.start, zone), SLOT))
+            for ((i, sp) in spans.withIndex()) {
+                if (sp.kind != 'P' || sp.offsetAtStart != 0.0) continue
+                if (Math.floorMod(local(sp.start, zone), SLOT) != 0L) {
+                    // Off the half hour only straight after a clip (the amended gap rule).
+                    assertTrue("$zone $sp off :00/:30 after ${spans[i - 1]}", spans[i - 1].kind != 'C')
+                    continue
+                }
                 assertEquals("$zone $sp in UTC", utcRemainder, Math.floorMod(sp.start, SLOT))
             }
         }
@@ -307,8 +322,10 @@ class HalfHourScheduleTimeEdgeTest {
                 val r = s.at(t)
                 if (r is OnAir.Programme && r.offsetSeconds == 0.0) {
                     val wall = LocalDateTime.ofEpochSecond(t, 0, zone.rules.getOffset(java.time.Instant.ofEpochSecond(t)))
-                    assertTrue("$zone $date: programme joined from 0 at $wall - not on a half hour",
-                        wall.second == 0 && wall.minute % 30 == 0)
+                    // Off the half hour only straight after a clip (the amended gap rule).
+                    val before = s.at(t - 1)
+                    assertTrue("$zone $date: programme joined from 0 at $wall - not on a half hour, after $before",
+                        (wall.second == 0 && wall.minute % 30 == 0) || before !is OnAir.Card)
                 }
                 t += 60
             }
