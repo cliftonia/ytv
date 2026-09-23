@@ -34,8 +34,13 @@ class DeviceResolver(
     /**
      * What this device can decode. Injected so the policy can be tested without an Android
      * runtime, and defaulted so nothing else has to know it exists.
+     *
+     * A provider rather than a value, for the reason [AcceleratedResolver] takes one: a default
+     * VALUE is evaluated at construction, and the activity constructs this in onCreate - so the
+     * MediaCodecList walk ran on the main thread before the first frame of the app was drawn.
+     * Asked per resolve instead, on the executor; [AndroidDecoders] caches, so it walks once.
      */
-    private val decoders: DecoderSupport = AndroidDecoders.support(),
+    private val decoders: () -> DecoderSupport = { AndroidDecoders.support() },
 ) : ClipResolver {
 
     override fun resolveDetailed(
@@ -123,7 +128,7 @@ class DeviceResolver(
             // takes the 2160p rendition of everything - which above 1080p is always VP9, because
             // YouTube publishes no H.264 up there - and a 32-bit panel either draws nothing or
             // takes the app down with it inside mediacodec.
-            .filter { decoders.canPlay(it.codec, heightOf(it)) }
+            .filter { decoders().canPlay(it.codec, heightOf(it)) }
             .maxWithOrNull(
                 TierBands.preference(
                     height = { stream: VideoStream -> heightOf(stream) },

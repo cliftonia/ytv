@@ -74,4 +74,34 @@ class AcceleratedResolver(
         PlaybackDiagnostics.recordSource("device")
         return device.resolveDetailed(videoId, nowSeconds, ladder, refused)
     }
+
+    companion object {
+        /**
+         * The resolve accelerator's two addresses, in preference order - one machine, two
+         * networks.
+         *
+         * The LAN address first: at home it answers in single-digit milliseconds, and the LAN is
+         * where both televisions actually live. The tailnet address is the same box for anything
+         * that can reach the tailnet. Optional by construction - the television in the car
+         * reaches neither and must not care. Hard-wired rather than configurable because there
+         * is exactly one of these and a setting would only be another thing to get wrong.
+         *
+         * If these move, `network_security_config.xml` moves with them: its cleartext whitelist
+         * once still named a wiped box, and Android refused every health check before a packet
+         * left the device.
+         */
+        val RESOLVE_SERVERS = listOf(
+            "http://192.168.4.58:4243",
+            "http://100.74.3.68:4243",
+        )
+
+        /**
+         * The resolver the dial runs on. Cheap to call on the main thread: nothing here touches
+         * the network or the codec list until the first resolve.
+         */
+        fun forDial(): AcceleratedResolver = AcceleratedResolver(
+            servers = RESOLVE_SERVERS.map(ServerResolver::overHttp),
+            device = DeviceResolver(),
+        )
+    }
 }

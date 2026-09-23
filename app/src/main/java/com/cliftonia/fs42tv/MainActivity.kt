@@ -15,9 +15,7 @@ import com.cliftonia.fs42tv.player.MpvChannelPlayer
 import com.cliftonia.fs42tv.player.PlayerEngine
 import com.cliftonia.fs42tv.resolver.AcceleratedResolver
 import com.cliftonia.fs42tv.resolver.ClipResolver
-import com.cliftonia.fs42tv.resolver.DeviceResolver
 import com.cliftonia.fs42tv.resolver.RefusalLedger
-import com.cliftonia.fs42tv.resolver.ServerResolver
 import com.cliftonia.fs42tv.sync.DialLoader
 import com.cliftonia.fs42tv.sync.LineupSource
 import com.cliftonia.fs42tv.tune.DialNavigator
@@ -30,20 +28,6 @@ import com.cliftonia.fs42tv.ui.SettingsCatalog
 import com.cliftonia.fs42tv.update.UpdateFlow
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-
-/**
- * The resolve accelerator's two addresses, in preference order - one machine, two networks.
- *
- * The LAN address first: at home it answers in single-digit milliseconds, and the LAN is where
- * both televisions actually live. The tailnet address is the same box for anything that can
- * reach the tailnet. Optional by construction - the television in the car reaches neither and
- * must not care; see [AcceleratedResolver]. Hard-wired rather than configurable because there
- * is exactly one of these and a setting would only be another thing to get wrong.
- */
-private val RESOLVE_SERVERS = listOf(
-    "http://192.168.4.58:4243",
-    "http://100.74.3.68:4243",
-)
 
 /** The repository whose releases carry the apk, for the self-update check. */
 private const val RELEASES_REPO = "cliftonia/ytv"
@@ -184,10 +168,7 @@ class MainActivity : ComponentActivity() {
             halted = { destroyed },
             runOnUi = { block -> runOnUiThread(block) },
         )
-        resolver = AcceleratedResolver(
-            servers = RESOLVE_SERVERS.map(ServerResolver::overHttp),
-            device = DeviceResolver(),
-        )
+        resolver = AcceleratedResolver.forDial()
 
         readSettings()
 
