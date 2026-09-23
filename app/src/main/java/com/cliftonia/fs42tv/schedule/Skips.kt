@@ -24,7 +24,8 @@ object Skips {
     /** The ranges of [stream], sanitised: clamped to the clip, sorted, merged, empties dropped. */
     fun ranges(stream: Stream): List<SkipRange> {
         if (stream.skip.isEmpty()) return emptyList()
-        val length = stream.duration.toDouble()
+        // A negative length is a malformed lineup: nothing to skip, and nothing to throw about.
+        val length = maxOf(stream.duration, 0).toDouble()
         val clean = stream.skip.mapNotNull { pair ->
             if (pair.size < 2) return@mapNotNull null
             val start = pair[0].coerceIn(0.0, length)
@@ -67,8 +68,16 @@ object Skips {
     fun mediaTime(ranges: List<SkipRange>, watchSeconds: Double): Double {
         var media = watchSeconds
         for (range in ranges) {
-            if (range.start <= media) media += range.end - range.start else break
+            // From the range's end, not by adding its length: the sum can land one ulp short of
+            // the end - inside the range the join was meant to be past.
+            // Under a microsecond past a range's start is its end exactly: no player position is
+            // that fine, and the float noise could otherwise carry a join past the clip's end.
+            if (range.start > media) break
+            val into = media - range.start
+            media = if (into < SNAP_SECONDS) range.end else range.end + into
         }
         return media
     }
+
+    private const val SNAP_SECONDS = 1e-6
 }

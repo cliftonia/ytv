@@ -1,8 +1,8 @@
 package com.cliftonia.fs42tv.schedule
 
+import com.cliftonia.fs42tv.schedule.PartPacker.Kind
 import java.time.Instant
 import java.time.ZoneId
-import java.util.concurrent.ConcurrentHashMap
 
 /**
  * The four parts of a broadcast day, in local time, as slot ranges of a day that starts at 23:00
@@ -22,45 +22,45 @@ enum class DayPart(val key: String, val firstSlot: Int, val slots: Int) {
     PRIME("prime", 38, 10);
 
     companion object {
-        fun of(broadcastSlot: Int): DayPart = values().last { broadcastSlot >= it.firstSlot }
+        private val ALL = values()
+        fun of(broadcastSlot: Int): DayPart = ALL.last { broadcastSlot >= it.firstSlot }
     }
 }
 
 /**
- * One clock channel's day on the half hour: programmes starting at :00 and :30, the gap at the
- * end of each filled with short clips, and an "up next" card for whatever will not fit.
+ * One clock channel's day on the half hour: programmes from the :00 and :30, the gaps filled with
+ * other clips, and an "up next" card for a short remainder. How a part-day is laid out is
+ * [PartPacker]'s; this is the day around it - the parts, the cycle, and the clock.
  *
  * A pure function of (channel, lineup, instant). Every television must reach the same answer from
  * the same cached lineup, offline, with no coordination - which is what the continuous rotation
  * already gives the dial, and what this has to keep giving it. So nothing here reads a clock, a
  * random source, or anything the device knows that the lineup does not: the instant and the zone
- * come in as arguments, and every choice that looks random is a hash of (channel, slot).
+ * come in as arguments, and every choice that looks random is a fixed hash.
  *
- * How a day is built (see docs/superpowers/specs/2026-09-23-schedule-and-skips-design.md):
  * - Each [DayPart] draws from the streams tagged with it, or from every stream when none are.
- * - Its pool is laid out as a CYCLE of part-days, counted only in that part's slots: prime picks
- *   up tomorrow exactly where it stopped tonight, instead of joining whatever afternoon left.
- * - Programmes (five minutes of watched time or more) take whole slots in list order - so the
- *   curation's episode order survives. One that would cross the end of its part waits for the
- *   part's next day; one longer than the whole part runs on into it.
- * - A gap is filled with shorts (under five minutes), largest first to the minute, the order
- *   within a minute seeded by (channel, slot). What remains is a card.
+ * - Its pool is laid out as a CYCLE of part-days, counted only in that part's days: prime picks up
+ *   tomorrow exactly where it stopped tonight, instead of joining whatever afternoon left.
+ * - The cycle is anchored at [ANCHOR_DAY], far enough back that every date a television will see
+ *   - the epoch included - is inside the repeating part, so episode order runs straight across.
  *
  * [durations] are WATCHED seconds, in stream order - sponsor skips already taken out.
  */
 class HalfHourSchedule(
     private val channelNumber: Int,
-    private val durations: List<Int>,
+    durations: List<Int>,
     private val parts: List<List<String>>,
     private val zone: ZoneId,
+    /** Episodes must air in list order: gaps are filled with the next episodes, never others. */
+    private val ordered: Boolean = false,
 ) {
 
     /** What is on at an instant. All times are epoch seconds. */
     sealed class OnAir {
         /**
-         * A programme, [offsetSeconds] into its WATCHED time. [slotStart] to [slotEnd] is the
-         * block of slots it occupies in this part; [endsAt] is when its content runs out and the
-         * top-ups begin.
+         * A programme, [offsetSeconds] into its WATCHED time, joined at [slotStart]. [endsAt] is
+         * when the schedule moves on; [slotEnd] the boundary its gap runs to. [cut] means the part
+         * ends before its content does: at [endsAt] it stops, and carries on another day.
          */
         data class Programme(
             val index: Int,
@@ -68,42 +68,23 @@ class HalfHourSchedule(
             val slotStart: Long,
             val slotEnd: Long,
             val endsAt: Long,
+            val cut: Boolean = false,
         ) : OnAir()
 
-        /** A short clip in the gap after a programme. */
+        /** A clip filling the gap after a programme, played whole. */
         data class TopUp(val index: Int, val offsetSeconds: Double, val start: Long, val end: Long) : OnAir()
 
         /** The card, from [start] [until] a slot boundary; [nextIndex] comes on at [nextAt]. */
         data class Card(val nextIndex: Int, val nextAt: Long, val start: Long, val until: Long) : OnAir()
     }
 
-    private enum class Kind { PROGRAMME, TOP_UP, CARD }
-
-    /** One entry of a laid-out part-day; positions are seconds from the part-day's start. */
-    private class Item(
-        val kind: Kind,
-        val index: Int,
-        val start: Int,
-        val end: Int,
-        val watchBase: Int = 0,
-        val blockEnd: Int = end,
-    )
-
     /**
-     * Where a part-day opens: the next programme (a position in the cycle's programmes) and,
-     * when a programme longer than the part is running on, which one and how many slots it has
-     * already had.
+     * Clamped: a lineup can carry any Int, and a clip longer than a week is garbage - but an
+     * Int.MAX_VALUE one once asked for a slot table the size of the heap.
      */
-    private data class Start(val next: Int, val carry: Int, val carried: Int)
+    private val watched = IntArray(durations.size) { durations[it].coerceIn(0, MAX_DURATION) }
 
-    private class Block(val pos: Int, val startSlot: Int, val slots: Int, val baseSlots: Int)
-
-    private class Placement(val blocks: List<Block>, val after: Start)
-
-    private val cycles: Map<DayPart, PartCycle?> = DayPart.values().associateWith { cycleFor(it) }
-
-    /** The last part-day laid out per part: lookups cluster, and a guide asks once per channel. */
-    private val laidOut = ConcurrentHashMap<DayPart, Pair<Long, List<Item>>>()
+    private val cycles: Map<DayPart, Cycle?> = DayPart.values().associateWith { cycleFor(it) }
 
     /** What is on at [epochSeconds], or null when the channel has nothing that can be. */
     fun at(epochSeconds: Long): OnAir? {
@@ -114,16 +95,17 @@ class HalfHourSchedule(
                 index = item.index,
                 offsetSeconds = (item.watchBase + here.pos - item.start).toDouble(),
                 slotStart = here.utc(item.start),
-                slotEnd = here.utc(item.blockEnd),
+                slotEnd = here.utc(minOf(ceilToSlot(item.end), here.partLength)),
                 endsAt = here.utc(item.end),
+                cut = item.cut,
             )
             Kind.TOP_UP -> OnAir.TopUp(
                 item.index, (here.pos - item.start).toDouble(), here.utc(item.start), here.utc(item.end),
             )
             Kind.CARD -> {
                 val until = here.utc(item.end)
-                // The next PROGRAMME, which is what a card is for. With none anywhere near - a
-                // channel of nothing but shorts - whatever opens the next slot.
+                // The next PROGRAMME to start, which is what a card is for. With none anywhere
+                // near - a channel of nothing but shorts - whatever opens the next slot.
                 val next = upNext(epochSeconds)
                     ?: locate(until)?.item?.takeIf { it.kind != Kind.CARD }?.let { it.index to until }
                 OnAir.Card(next?.first ?: -1, next?.second ?: until, here.utc(item.start), until)
@@ -134,7 +116,7 @@ class HalfHourSchedule(
     /**
      * The next programme to START after whatever is on at [epochSeconds], and when - or null
      * within [UP_NEXT_PROBES] items. Walks forward item by item through the real day, so across a
-     * part boundary it names what really comes on, not the same part's next programme.
+     * part boundary it names what really comes on. A carried continuation is not a start.
      */
     fun upNext(epochSeconds: Long): Pair<Int, Long>? {
         val first = locate(epochSeconds) ?: return null
@@ -142,188 +124,136 @@ class HalfHourSchedule(
         repeat(UP_NEXT_PROBES) {
             val here = locate(probe) ?: return null
             val item = here.item
-            if (item.kind == Kind.PROGRAMME && here.pos == item.start) return item.index to probe
+            if (item.kind == Kind.PROGRAMME && here.pos == item.start && item.watchBase == 0) {
+                return item.index to probe
+            }
             probe = maxOf(here.utc(item.end), probe + 1)
         }
         return null
     }
 
-    /** An instant placed in its part-day: the item on air and how to turn positions into time. */
-    private class Located(val item: Item, val pos: Int, val t: Long, val local: Long, val partStart: Long) {
-        /** Epoch seconds for part-day position [p], relative to the instant asked about. */
-        fun utc(p: Int): Long = t + (partStart + p - local)
+    /** The pool the part on air at [epochSeconds] draws from, in list order - for substitutes. */
+    fun poolAt(epochSeconds: Long): List<Int> {
+        val t = epochSeconds.coerceIn(MIN_INSTANT, MAX_INSTANT)
+        val local = t + zone.rules.getOffset(Instant.ofEpochSecond(t)).totalSeconds
+        val shifted = Math.floorDiv(local, SLOT.toLong()) + DAY_SHIFT
+        return cycles[DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())]?.pool.orEmpty()
     }
 
-    private fun locate(t: Long): Located? {
-        // Local wall-clock seconds: the slots are the device's half hours, DST and all.
-        val local = t + zone.rules.getOffset(Instant.ofEpochSecond(t)).totalSeconds
+    /**
+     * An instant placed in its part-day: the item on air, and how to turn part-day positions back
+     * into real time.
+     *
+     * Positions are wall-clock seconds, so the conversion uses the offset in force at the instant
+     * asked about - clamped to the stretch between the zone's transitions around it. Across a
+     * DST change the wall clock jumps or repeats; clamping is what keeps the answers contiguous in
+     * real time, with a span that meets the jump ending exactly at it.
+     */
+    private class Located(
+        val item: PartPacker.Item,
+        val pos: Int,
+        val partLength: Int,
+        private val partStartMinusOffset: Long,
+        private val segmentStart: Long,
+        private val segmentEnd: Long,
+    ) {
+        fun utc(p: Int): Long = (partStartMinusOffset + p).coerceIn(segmentStart, segmentEnd)
+    }
+
+    private fun locate(epochSeconds: Long): Located? {
+        val t = epochSeconds.coerceIn(MIN_INSTANT, MAX_INSTANT)
+        val instant = Instant.ofEpochSecond(t)
+        val rules = zone.rules
+        val offset = rules.getOffset(instant).totalSeconds
+        val local = t + offset
         val shifted = Math.floorDiv(local, SLOT.toLong()) + DAY_SHIFT
         val day = Math.floorDiv(shifted, SLOTS_PER_DAY.toLong())
         val part = DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())
         val cycle = cycles[part] ?: return null
-        val firstSlot = day * SLOTS_PER_DAY - DAY_SHIFT + part.firstSlot
-        val partStart = firstSlot * SLOT
+        val partStart = (day * SLOTS_PER_DAY - DAY_SHIFT + part.firstSlot) * SLOT
         val pos = (local - partStart).toInt()
-        val items = layout(part, cycle, day, firstSlot)
-        val item = items.firstOrNull { pos < it.end } ?: return null
-        return Located(item, pos, t, local, partStart)
+        val items = cycle.itemsOn(day)
+        val item = items[items.binarySearchBy(pos)]
+        val segmentStart = if (rules.isFixedOffset) Long.MIN_VALUE
+        else rules.previousTransition(instant.plusSeconds(1))?.instant?.epochSecond ?: Long.MIN_VALUE
+        val segmentEnd = if (rules.isFixedOffset) Long.MAX_VALUE
+        else rules.nextTransition(instant)?.instant?.epochSecond ?: Long.MAX_VALUE
+        return Located(item, pos, part.slots * SLOT, partStart - offset, segmentStart, segmentEnd)
     }
 
-    private fun layout(part: DayPart, cycle: PartCycle, day: Long, firstSlot: Long): List<Item> {
-        laidOut[part]?.let { (cachedDay, items) -> if (cachedDay == day) return items }
-        val items = ArrayList<Item>()
-        val placement = cycle.place(cycle.stateOn(day))
-        var slot = 0
-        for (block in placement.blocks) {
-            val index = cycle.programmes[block.pos]
-            val start = block.startSlot * SLOT
-            val blockEnd = (block.startSlot + block.slots) * SLOT
-            val base = block.baseSlots * SLOT
-            val contentEnd = minOf(blockEnd, start + durations[index] - base)
-            items += Item(Kind.PROGRAMME, index, start, contentEnd, base, blockEnd)
-            if (contentEnd < blockEnd) {
-                fill(items, cycle, contentEnd, blockEnd, firstSlot + block.startSlot + block.slots - 1)
-            }
-            slot = block.startSlot + block.slots
+    /** The item covering [pos]: items are contiguous from 0, so the last one starting at or before. */
+    private fun List<PartPacker.Item>.binarySearchBy(pos: Int): Int {
+        var low = 0
+        var high = size - 1
+        while (low < high) {
+            val mid = (low + high + 1) ushr 1
+            if (this[mid].start <= pos) low = mid else high = mid - 1
         }
-        // Deferred: the rest of the part is top-ups and cards, slot by slot.
-        while (slot < part.slots) {
-            fill(items, cycle, slot * SLOT, (slot + 1) * SLOT, firstSlot + slot)
-            slot++
-        }
-        val merged = mergeCards(items)
-        laidOut[part] = day to merged
-        return merged
+        return low
     }
 
-    /** Shorts that fit [from]..[to], largest first, then a card for what is left. */
-    private fun fill(items: MutableList<Item>, cycle: PartCycle, from: Int, to: Int, slotIndex: Long) {
-        var at = from
-        for (index in cycle.shortsFor(slotIndex)) {
-            val length = durations[index]
-            if (at + length <= to) {
-                items += Item(Kind.TOP_UP, index, at, at + length)
-                at += length
-            }
-        }
-        if (at < to) items += Item(Kind.CARD, -1, at, to)
-    }
-
-    /**
-     * Adjacent cards become one. A deferred hour with nothing to top it up is one card to the end
-     * of the part, not a card that ends and re-tunes into an identical card every half hour.
-     */
-    private fun mergeCards(items: List<Item>): List<Item> {
-        val out = ArrayList<Item>(items.size)
-        for (item in items) {
-            val last = out.lastOrNull()
-            if (item.kind == Kind.CARD && last?.kind == Kind.CARD) {
-                out[out.size - 1] = Item(Kind.CARD, -1, last.start, item.end)
-            } else {
-                out += item
-            }
-        }
-        return out
-    }
-
-    private fun cycleFor(part: DayPart): PartCycle? {
-        val playable = durations.indices.filter { durations[it] > 0 }
+    private fun cycleFor(part: DayPart): Cycle? {
+        val playable = watched.indices.filter { watched[it] > 0 }
         val tagged = playable.filter { part.key in parts.getOrElse(it) { emptyList() } }
         val pool = tagged.ifEmpty { playable }
         if (pool.isEmpty()) return null
-        return PartCycle(
-            part = part,
-            programmes = pool.filter { durations[it] >= SHORT },
-            shorts = pool.filter { durations[it] < SHORT },
-        )
+        val programmes = pool.filter { watched[it] >= SHORT }.toIntArray()
+        return Cycle(PartPacker(channelNumber, part, watched, programmes, pool, ordered), pool)
     }
 
-    /** One part's pool laid out as a repeating sequence of part-days. */
-    private inner class PartCycle(
-        val part: DayPart,
-        val programmes: List<Int>,
-        val shorts: List<Int>,
-    ) {
-        private val slotsOf = IntArray(programmes.size) { (durations[programmes[it]] + SLOT - 1) / SLOT }
-
-        // Part-day openings from the epoch until one repeats. The sequence is a pure function of
-        // its opening, so from the first repeat on it is periodic - and a lookup years from the
-        // epoch is an index into that period, not a replay of every day in between.
-        private val starts = ArrayList<Start>()
+    /**
+     * One part's part-days, from [ANCHOR_DAY] until an opening repeats. Each part-day is a pure
+     * function of its opening, so from the first repeat on the sequence is periodic, and every
+     * part-day of it is packed once, here, and kept: a lookup is an index and a binary search.
+     */
+    private class Cycle(packer: PartPacker, val pool: List<Int>) {
+        private val days = ArrayList<List<PartPacker.Item>>()
         private val loopStart: Int
 
         init {
-            val seen = HashMap<Start, Int>()
-            var start = Start(0, -1, 0)
+            val seen = HashMap<PartPacker.Start, Int>()
+            var start = PartPacker.Start(0, -1, 0)
             while (start !in seen) {
-                seen[start] = starts.size
-                starts += start
-                if (programmes.isEmpty()) break
-                start = place(start).after
+                seen[start] = days.size
+                val packed = packer.pack(start)
+                days += packed.items
+                start = packed.after
             }
             loopStart = seen.getValue(start)
         }
 
-        fun stateOn(day: Long): Start {
-            if (day >= 0 && day < loopStart) return starts[day.toInt()]
-            val period = (starts.size - loopStart).toLong()
-            return starts[loopStart + Math.floorMod(day - loopStart, period).toInt()]
-        }
-
-        fun place(start: Start): Placement {
-            val blocks = ArrayList<Block>()
-            if (programmes.isEmpty()) return Placement(blocks, start)
-            var slot = 0
-            if (start.carry >= 0) {
-                val remaining = slotsOf[start.carry] - start.carried
-                if (remaining > part.slots) {
-                    blocks += Block(start.carry, 0, part.slots, start.carried)
-                    return Placement(blocks, Start(start.next, start.carry, start.carried + part.slots))
-                }
-                blocks += Block(start.carry, 0, remaining, start.carried)
-                slot = remaining
-            }
-            var next = start.next
-            while (slot < part.slots) {
-                val k = slotsOf[next]
-                when {
-                    slot + k <= part.slots -> {
-                        blocks += Block(next, slot, k, 0)
-                        slot += k
-                        next = (next + 1) % programmes.size
-                    }
-                    // Longer than the whole part: it may cross, but only from the part's start,
-                    // where it gets as much of the part as it can.
-                    k > part.slots && slot == 0 -> {
-                        blocks += Block(next, 0, part.slots, 0)
-                        return Placement(blocks, Start((next + 1) % programmes.size, next, part.slots))
-                    }
-                    // Would cross the end of the part: deferred to the part's next day.
-                    else -> break
-                }
-            }
-            return Placement(blocks, Start(next, -1, 0))
-        }
-
-        /** Shorts for the gap in [slotIndex]: largest first to the minute, then by seed. */
-        fun shortsFor(slotIndex: Long): List<Int> {
-            if (shorts.size < 2) return shorts
-            val seed = mix(mix(channelNumber.toLong()) xor slotIndex)
-            return shorts.sortedWith(
-                compareByDescending<Int> { durations[it] / 60 }.thenBy { mix(seed + it) },
-            )
+        fun itemsOn(day: Long): List<PartPacker.Item> {
+            val sinceAnchor = day - ANCHOR_DAY
+            if (sinceAnchor >= 0 && sinceAnchor < loopStart) return days[sinceAnchor.toInt()]
+            val period = (days.size - loopStart).toLong()
+            return days[loopStart + Math.floorMod(sinceAnchor - loopStart, period).toInt()]
         }
     }
+
+    private fun ceilToSlot(pos: Int): Int = ((pos + SLOT - 1) / SLOT) * SLOT
 
     companion object {
         const val SLOT = 1800
         const val SLOTS_PER_DAY = 48
 
-        /** Five minutes of watched time: a programme at or above, a top-up below. */
+        /** Five minutes of watched time: a programme at or above, a top-up-only short below. */
         const val SHORT = 300
+
+        /** A week: longer is garbage, and is treated as a week. */
+        const val MAX_DURATION = 7 * 86_400
 
         /** 23:00 is slot 46 of a calendar day; shifting by two starts the broadcast day there. */
         private const val DAY_SHIFT = 2
+
+        /**
+         * Broadcast day 1 January 1870. Cycles count from here rather than from the epoch, so the
+         * epoch, and every date either side a television will see, runs on one straight sequence.
+         */
+        const val ANCHOR_DAY = -36_525L
+
+        /** Instants are clamped to about +-10,000 years: a garbage clock is a date, not a crash. */
+        private const val MAX_INSTANT = 315_537_897_599L
+        private const val MIN_INSTANT = -377_705_116_800L
 
         /** Items walked looking for the next programme: two full days of the busiest channel. */
         private const val UP_NEXT_PROBES = 200

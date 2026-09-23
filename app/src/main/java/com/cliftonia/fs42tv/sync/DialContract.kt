@@ -31,6 +31,11 @@ data class Channel(
     val kind: String,
     val rotation: String? = null,
     val streams: List<Stream> = emptyList(),
+    /**
+     * Episodes must air in list order - sitcoms, anime, cartoons, the Series files. On the
+     * half-hour schedule their gaps are filled with the next episodes, never with others.
+     */
+    val ordered: Boolean = false,
 )
 
 @Serializable

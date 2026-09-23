@@ -109,6 +109,16 @@ class DialContractTest {
     }
 
     @Test
+    fun `a channel says whether its episodes are ordered, and is not when it does not say`() {
+        val json = """{"generated":1,"channels":[
+            {"number":1,"name":"X","kind":"youtube","rotation":"clock","ordered":true,"streams":[]},
+            {"number":2,"name":"Y","kind":"youtube","rotation":"clock","streams":[]}]}"""
+        val channels = DialContract.parseDial(json).channels
+        assertTrue(channels[0].ordered)
+        assertTrue(!channels[1].ordered)
+    }
+
+    @Test
     fun `sync caches what it fetched`() {
         val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
         val repo = DialRepository(fetch = { fixture("channels-sample.json") }, cacheDir = dir)
