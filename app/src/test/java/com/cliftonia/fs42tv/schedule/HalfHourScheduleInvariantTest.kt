@@ -86,11 +86,12 @@ class HalfHourScheduleInvariantTest {
     /** Every per-span invariant of the spec, for spans walked in a fixed-offset zone. */
     private fun checkSpans(g: Gen, s: HalfHourSchedule, spans: List<Span>, rnd: Random, cardNamesAStart: Boolean = false) {
         val d = g.durations
+        val whole = ScheduleProbe.wholeDay(g.durations, g.parts)
         for ((i, sp) in spans.withIndex()) {
             val ls = local(sp.start, g.zone)
             val le = local(sp.end, g.zone)
-            val part = partAt(ls)
-            val partEnd = partStartLocal(ls) + partSlots(part) * SLOT
+            val part = partAt(ls, whole)
+            val partEnd = partStartLocal(ls, whole) + partSlots(part) * SLOT
             val pool = pool(d, g.parts, part)
             val ctx = "$g span $sp in $part"
             // Interior: the same thing, offset advancing with the clock.
@@ -199,11 +200,12 @@ class HalfHourScheduleInvariantTest {
 
     /** Programmes in a part, day after day, follow the pool's list order; carries continue. */
     private fun checkEpisodeOrder(g: Gen, spans: List<Span>) {
-        for (part in listOf("breakfast", "afternoon", "prime", "late")) {
+        val whole = ScheduleProbe.wholeDay(g.durations, g.parts)
+        for (part in if (whole) listOf("all") else ScheduleProbe.KEYS) {
             val pool = pool(g.durations, g.parts, part)
             val programmes = pool.filter { g.durations[it] >= SHORT }
             if (programmes.isEmpty()) continue
-            val inPart = spans.filter { it.kind == 'P' && partAt(local(it.start, g.zone)) == part }
+            val inPart = spans.filter { it.kind == 'P' && partAt(local(it.start, g.zone), whole) == part }
             for ((a, b) in inPart.zipWithNext()) {
                 if (b.offsetAtStart > 0) {
                     assertEquals("$g $part: a carried programme continues the one before: $a -> $b", a.index, b.index)
@@ -293,10 +295,11 @@ class HalfHourScheduleInvariantTest {
      */
     @Test
     fun `lookups agree with a straight-line replay of every part-day since the anchor`() {
-        val firstSlots = mapOf("late" to 0, "breakfast" to 14, "afternoon" to 26, "prime" to 38)
         for (seed in 2000..2030) {
             val g = gen(seed, maxClips = 120, zone = ZoneOffset.UTC)
             val s = g.build()
+            val firstSlots = if (ScheduleProbe.wholeDay(g.durations, g.parts)) mapOf("all" to 0)
+            else mapOf("late" to 0, "breakfast" to 14, "afternoon" to 26, "prime" to 38)
             for ((part, firstSlot) in firstSlots) {
                 val programmes = pool(g.durations, g.parts, part).filter { g.durations[it] >= SHORT }
                 if (programmes.isEmpty()) continue

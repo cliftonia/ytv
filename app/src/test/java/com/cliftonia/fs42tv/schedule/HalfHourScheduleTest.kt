@@ -89,8 +89,9 @@ class HalfHourScheduleTest {
     @Test
     fun `a programme longer than half an hour runs across slots, and a long gap is not a card`() {
         // 4000s ends 1400s short of 13:30. The 240 fills 240 of it; 1160s is more than ten
-        // minutes, so no card - the next programme (the same one, here) starts at once.
-        val s = schedule(4000, 240)
+        // minutes, so no card - the next programme (the same one, here) starts at once. Tagged
+        // afternoon, so the afternoon is its own part and opens at 12:00.
+        val s = schedule(4000, 240, parts = listOf(listOf("afternoon"), listOf("afternoon")))
         val start = at("12:00")
         val first = programme(s.at(start))
         assertEquals(OnAir.Programme(0, 0.0, start, start + 5400, start + 4000), first)
@@ -226,9 +227,10 @@ class HalfHourScheduleTest {
 
     /**
      * Every second of a day, looked up cold, against the same day laid out in one pass by an
-     * independent and deliberately naive packer, under the amended gap rule. Every clip is in a
-     * different minute, so largest first leaves nothing to the seed and the replay can predict
-     * every filler.
+     * independent and deliberately naive packer. The channel is untagged, so its day is one
+     * part from 23:00 to 23:00. Fillers: first clips not due as programmes that day, then any -
+     * each once per gap. Every clip is in a different minute, so largest first leaves nothing to
+     * the seed and the replay can predict every filler.
      */
     @Test
     fun `lookups at every second of a day agree with a straight-line replay`() {
@@ -238,23 +240,27 @@ class HalfHourScheduleTest {
         val s = HalfHourSchedule(7, watch, watch.map { emptyList() }, utc)
 
         data class Expect(val kind: String, val index: Int, val offset: Int)
-        val expected = ArrayList<Expect>(86_400)
+        val expected = ArrayList<Expect>(2 * 86_400)
         fun ceilSlot(p: Int) = (p + 1799) / 1800 * 1800
+        // The whole day is 86,400s and the four programmes 9,600s: every one is due every day.
+        val due = programmes.toSet()
         fun fill(from: Int, to: Int, a: Int, b: Int): Int {
             var t = from
-            for (i in bySize) if (i != a && i != b && t + watch[i] <= to) {
-                repeat(watch[i]) { expected += Expect("topup", i, it) }
-                t += watch[i]
+            val used = HashSet<Int>()
+            for (pass in 0..1) for (i in bySize) {
+                if (i == a || i == b || i in used || (pass == 0 && i in due)) continue
+                if (t + watch[i] <= to) {
+                    repeat(watch[i]) { expected += Expect("topup", i, it) }
+                    t += watch[i]
+                    used += i
+                }
             }
             return t
         }
         fun card(n: Int) = repeat(n) { expected += Expect("card", -1, 0) }
-        val segments = listOf("00:00" to 14, "06:00" to 12, "12:00" to 12, "18:00" to 10, "23:00" to 14)
-        for ((startTime, partSlots) in segments) {
-            // Late began at 23:00 yesterday; replay from there and keep only today's part.
-            val opensAt = if (startTime == "00:00") at("23:00", plusDays = -1) else at(startTime)
-            val before = expected.size
-            val length = partSlots * 1800
+        // Yesterday's 23:00 part-day, then today's: today is the stretch between.
+        for (opensAt in listOf(at("23:00", plusDays = -1), at("23:00"))) {
+            val length = 48 * 1800
             var pos = 0
             var next = programmes.indexOf(programme(s.at(opensAt)).index)
             var last = -1
@@ -284,10 +290,8 @@ class HalfHourScheduleTest {
                 card(boundary - filled)
                 pos = boundary
             }
-            if (startTime == "00:00") repeat(3600) { expected.removeAt(before) }
-            if (startTime == "23:00") while (expected.size > 86_400) expected.removeAt(expected.size - 1)
         }
-        assertEquals(86_400, expected.size)
+        val today = expected.subList(3600, 3600 + 86_400)
         val midnight = at("00:00")
         for (second in 0 until 86_400) {
             val actual = when (val got = s.at(midnight + second)) {
@@ -296,8 +300,20 @@ class HalfHourScheduleTest {
                 is OnAir.Card -> Expect("card", -1, 0)
                 null -> null
             }
-            assertEquals("at second $second", expected[second], actual)
+            assertEquals("at second $second", today[second], actual)
         }
+    }
+
+    @Test
+    fun `an untagged ordered channel plays strictly in list order through the whole day, days on end`() {
+        // No part tags: one all-day sequence, so 06, 12, 18 and midnight are ordinary half hours.
+        val watch = listOf(1320, 1500, 2700, 1400, 900, 120, 90)
+        val s = HalfHourSchedule(3, watch, watch.map { emptyList() }, utc, ordered = true)
+        val spans = ScheduleProbe.walk(s, at("00:00"), at("00:00", plusDays = 5))
+        val shown = spans.filter { it.kind == 'P' && it.offsetAtStart == 0.0 }.map { it.index }
+        assertTrue(shown.size > 100)
+        shown.zipWithNext().forEach { (a, b) -> assertEquals("list order $shown", (a + 1) % 5, b) }
+        assertTrue("fillers are shorts", spans.filter { it.kind == 'T' }.all { watch[it.index] < 300 })
     }
 
     // --- degenerate channels -----------------------------------------------------------------
@@ -404,5 +420,23 @@ class HalfHourScheduleTest {
         assertEquals(at("23:00", d), cut.endsAt)
         val resumed = programme(s.at(at("18:10", d + 1)))
         assertTrue("its last hour ends on its own, not cut", !resumed.cut)
+    }
+
+    @Test
+    fun `a filler is not a clip airing as a programme the same part-day, when the pool has others`() {
+        // Prime-tagged 1000s and 700s clips, alternating: after a 1000s programme 800s are left,
+        // and a 700s clip fills them. About half the pool is not due in any one prime, so the
+        // filler should never be a clip that also airs as a programme that night.
+        val watch = List(40) { if (it % 2 == 0) 1000 else 700 }
+        val s = HalfHourSchedule(7, watch, watch.map { listOf("prime") }, utc)
+        var fillers = 0
+        for (d in 0L until 6L) {
+            val spans = ScheduleProbe.walk(s, at("18:00", d), at("23:00", d))
+            val programmes = spans.filter { it.kind == 'P' }.map { it.index }.toSet()
+            val filled = spans.filter { it.kind == 'T' }.map { it.index }
+            fillers += filled.size
+            assertTrue("day $d: fillers $filled also air as programmes", filled.none { it in programmes })
+        }
+        assertTrue(fillers > 0)
     }
 }

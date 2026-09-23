@@ -98,8 +98,8 @@ class HalfHourScheduleDegenerateTest {
         // Nothing fits a gap after a programme; only a part's deferred tail - no programme to
         // come before the part ends - is filled, as one stretch, with another of them.
         for (t in spans.filter { it.kind == 'T' }) {
-            val partEnd = ScheduleProbe.partStartLocal(t.start) +
-                ScheduleProbe.partSlots(ScheduleProbe.partAt(t.start)) * SLOT
+            // Untagged: one all-day part, 23:00 to 23:00.
+            val partEnd = ScheduleProbe.partStartLocal(t.start, whole = true) + 48 * SLOT
             assertTrue("$t is not in a deferred tail",
                 spans.none { it.kind == 'P' && it.offsetAtStart == 0.0 && it.start in t.end until partEnd })
         }

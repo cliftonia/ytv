@@ -120,8 +120,10 @@ class Timetable(
      * Continuous: the next clips in list order, as it always was. On the half-hour schedule the
      * substitute must not wreck what comes after it: it is drawn from the same part's pool and
      * must end by [endsAt], starting after [dead] in list order; [avoid] is the substitute that
-     * just finished, so a long dead programme is not covered by one short clip on repeat. With
-     * nothing that fits, whatever the schedule has at [endsAt], early.
+     * just finished, so a long dead programme is not covered by one short clip on repeat. An
+     * ordered channel offers only its shorts: any episode but the next would air out of order,
+     * and the next is what the schedule has at [endsAt] anyway. With nothing that fits, whatever
+     * the schedule has at [endsAt], early.
      */
     fun substitutes(channel: Channel, nowSeconds: Long, dead: Int, endsAt: Long?, avoid: Int?): List<Int> {
         val count = channel.streams.size
@@ -130,8 +132,23 @@ class Timetable(
         val room = endsAt - nowSeconds
         val pool = scheduleFor(channel, skipsOn()).poolAt(nowSeconds)
         val rotated = pool.filter { it > dead } + pool.filter { it < dead }
-        val fits = rotated.filter { it != avoid && watchDuration(channel.streams[it]).let { w -> w in 1..room } }
+        val fits = rotated.filter { i ->
+            val w = watchDuration(channel.streams[i])
+            i != avoid && w in 1..room && (!channel.ordered || w < HalfHourSchedule.SHORT)
+        }
         return fits.ifEmpty { listOfNotNull(at(channel, endsAt)?.index?.takeIf { it != dead }) }
+    }
+
+    /**
+     * When a substitute for a dead clip, started at [nowSeconds], stops being on air. When it is
+     * the schedule's own next item started early, that item's scheduled end - so its natural end
+     * is recognised as that showing finishing, not replayed; otherwise when its content runs out.
+     */
+    fun substituteEndsAt(channel: Channel, nowSeconds: Long, substitute: Int, deadEndsAt: Long?): Long? {
+        deadEndsAt ?: return null
+        val next = at(channel, deadEndsAt) as? OnAir.Clip
+        if (next?.index == substitute) return next.endsAt
+        return nowSeconds + watchDuration(channel.streams[substitute])
     }
 
     /**
@@ -157,22 +174,28 @@ class Timetable(
 
     private fun scheduleFor(channel: Channel, skips: Boolean): HalfHourSchedule {
         val zone = zone()
-        schedules[channel.number]?.let { cached ->
+        fun fits(cached: Cached?): Boolean {
+            cached ?: return false
             // Identity first - the same parsed lineup, the common case - then equality, so a
             // reloaded but identical lineup keeps its cycle and a changed one rebuilds it.
             val sameLineup = cached.streams === channel.streams || cached.streams == channel.streams
-            if (sameLineup && cached.skips == skips && cached.ordered == channel.ordered &&
-                cached.zone == zone) return cached.schedule
+            return sameLineup && cached.skips == skips && cached.ordered == channel.ordered && cached.zone == zone
         }
-        val built = HalfHourSchedule(
-            channelNumber = channel.number,
-            durations = channel.streams.map { if (skips) Skips.watchDuration(it) else it.duration },
-            parts = channel.streams.map { it.parts },
-            zone = zone,
-            ordered = channel.ordered,
-        )
-        schedules[channel.number] = Cached(channel.streams, skips, channel.ordered, zone, built)
-        return built
+        schedules[channel.number]?.let { if (fits(it)) return it.schedule }
+        // compute, not get-then-put: the prewarm, the tuner and the guide can all ask for the same
+        // channel at once, and one build is enough.
+        return schedules.compute(channel.number) { _, cached ->
+            if (fits(cached)) cached else Cached(
+                channel.streams, skips, channel.ordered, zone,
+                HalfHourSchedule(
+                    channelNumber = channel.number,
+                    durations = channel.streams.map { if (skips) Skips.watchDuration(it) else it.duration },
+                    parts = channel.streams.map { it.parts },
+                    zone = zone,
+                    ordered = channel.ordered,
+                ),
+            )
+        }!!.schedule
     }
 
     companion object {

@@ -19,11 +19,20 @@ enum class DayPart(val key: String, val firstSlot: Int, val slots: Int) {
     AFTERNOON("afternoon", 26, 12),
 
     /** 18:00-23:00. */
-    PRIME("prime", 38, 10);
+    PRIME("prime", 38, 10),
+
+    /**
+     * The whole broadcast day, 23:00-23:00, for a channel with no part tags at all: one sequence
+     * through the day rather than four parts each running their own copy of the same list -
+     * which showed episode 5 at breakfast and episode 2 after lunch. Its one seam is 23:00, the
+     * broadcast day's own; midnight and 06, 12 and 18 are ordinary half hours of it.
+     */
+    ALL_DAY("all", 0, 48);
 
     companion object {
-        private val ALL = values()
-        fun of(broadcastSlot: Int): DayPart = ALL.last { broadcastSlot >= it.firstSlot }
+        /** The four parts a tagged channel's day is divided into. */
+        val PARTS = listOf(LATE, BREAKFAST, AFTERNOON, PRIME)
+        fun of(broadcastSlot: Int): DayPart = PARTS.last { broadcastSlot >= it.firstSlot }
     }
 }
 
@@ -84,14 +93,23 @@ class HalfHourSchedule(
      */
     private val watched = IntArray(durations.size) { durations[it].coerceIn(0, MAX_DURATION) }
 
+    /** No playable stream is tagged with any part: the day is one part - see [DayPart.ALL_DAY]. */
+    private val wholeDay = watched.indices.none { i ->
+        watched[i] > 0 && parts.getOrElse(i) { emptyList() }.any { key -> DayPart.PARTS.any { it.key == key } }
+    }
+
+    private val partsInUse = if (wholeDay) listOf(DayPart.ALL_DAY) else DayPart.PARTS
+
+    private fun partOf(broadcastSlot: Int): DayPart = if (wholeDay) DayPart.ALL_DAY else DayPart.of(broadcastSlot)
+
     /** Each part's pool, in list order: cheap, so built up front. */
-    private val pools: Map<DayPart, List<Int>> = DayPart.values().associateWith { poolFor(it) }
+    private val pools: Map<DayPart, List<Int>> = partsInUse.associateWith { poolFor(it) }
 
     /**
      * Each part's cycle, built the first time that part is asked about: the guide at 8pm needs
      * prime and nothing else, and most channels are never asked about most parts.
      */
-    private val cycles: Map<DayPart, Lazy<Cycle?>> = DayPart.values().associateWith { lazy { cycleFor(it) } }
+    private val cycles: Map<DayPart, Lazy<Cycle?>> = partsInUse.associateWith { lazy { cycleFor(it) } }
 
     /** What is on at [epochSeconds], or null when the channel has nothing that can be. */
     fun at(epochSeconds: Long): OnAir? {
@@ -144,7 +162,7 @@ class HalfHourSchedule(
         val t = epochSeconds.coerceIn(MIN_INSTANT, MAX_INSTANT)
         val local = t + segmentAt(t).offset
         val shifted = Math.floorDiv(local, SLOT.toLong()) + DAY_SHIFT
-        return pools[DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())].orEmpty()
+        return pools[partOf(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())].orEmpty()
     }
 
     /**
@@ -202,7 +220,7 @@ class HalfHourSchedule(
         val local = t + offset
         val shifted = Math.floorDiv(local, SLOT.toLong()) + DAY_SHIFT
         val day = Math.floorDiv(shifted, SLOTS_PER_DAY.toLong())
-        val part = DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())
+        val part = partOf(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())
         val cycle = cycles.getValue(part).value ?: return null
         val partStart = (day * SLOTS_PER_DAY - DAY_SHIFT + part.firstSlot) * SLOT
         val pos = (local - partStart).toInt()

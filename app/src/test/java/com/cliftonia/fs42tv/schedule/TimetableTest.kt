@@ -171,9 +171,27 @@ class TimetableTest {
         val table = halfHour()
         val dead = table.at(ch, slot + 10) as OnAir.Clip
         val subs = table.substitutes(ch, slot + 10, dead.index, dead.endsAt, avoid = 2)
-        assertTrue("never the dead clip or the one to avoid: $subs", subs.none { it == dead.index || it == 2 })
+        // With nothing that fits, the fallback is what the schedule has next - whatever it is.
+        val fallback = table.at(ch, dead.endsAt!!)?.index
+        assertTrue("never the dead clip: $subs", subs.none { it == dead.index })
+        assertTrue("never the one to avoid, bar the fallback: $subs", subs.none { it == 2 && it != fallback })
         assertTrue("each ends before $dead does: $subs",
-            subs.all { table.watchDuration(ch.streams[it]) <= dead.endsAt!! - (slot + 10) })
+            subs.all { it == fallback || table.watchDuration(ch.streams[it]) <= dead.endsAt!! - (slot + 10) })
         assertEquals("continuous keeps list order", listOf(2, 3, 0), Timetable.PLAIN.substitutes(ch, 0, 1, null, null))
+    }
+
+    @Test
+    fun `a substitute that is the schedule's next item keeps that item's scheduled end`() {
+        val ch = channel(clip("a", 1500), clip("b", 1500), clip("s", 240))
+        val table = halfHour()
+        val dead = table.at(ch, slot + 10) as OnAir.Clip
+        val next = table.at(ch, dead.endsAt!!) as OnAir.Clip
+        assertEquals("the next item started early still ends when the schedule says",
+            next.endsAt, table.substituteEndsAt(ch, slot + 10, next.index, dead.endsAt))
+        val other = (0..2).first { it != next.index && it != dead.index }
+        assertEquals("anything else ends when its content does",
+            slot + 10 + table.watchDuration(ch.streams[other]),
+            table.substituteEndsAt(ch, slot + 10, other, dead.endsAt))
+        assertNull("off the schedule nothing has an end", Timetable.PLAIN.substituteEndsAt(ch, 10, 1, null))
     }
 }
