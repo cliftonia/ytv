@@ -404,12 +404,13 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
             .onFailure { Log.w("fs42", "sub-add failed: $it") }
     }
 
+    /** Returns mpv's playlist entry id for the new load, or null when it cannot be learned. */
     fun playAt(
         url: String,
         startSeconds: Double,
         audioFile: String? = null,
         subFile: String? = null,
-    ) {
+    ): Long? {
         awaitingFirstFrame = true
         // Per-FILE options, so they apply to this load and are gone by the next one. `audio-file`
         // set as a property would persist, and the following clip - which has its own audio, or
@@ -430,17 +431,23 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         }
         // Newer mpv takes an insertion INDEX before the per-file options; without it the options
         // string is parsed as that index and the command is rejected outright.
-        MPVLib.command("loadfile", url, "replace", "0", options)
+        //
+        // commandNode rather than command, for its result: mpv answers loadfile with the new
+        // entry's `playlist_entry_id`, which is what lets an end-file event be matched to the
+        // load it belongs to exactly rather than by counting - and it comes back with the call
+        // that was being made anyway, no second round trip into the core.
+        val result = MPVLib.commandNode("loadfile", url, "replace", "0", options)
+        return runCatching { result?.get("playlist_entry_id")?.asInt() }.getOrNull()
+            ?: entryIdFromPlaylist()
     }
 
     /**
-     * mpv's playlist entry id for the file just loaded, or null if it cannot be read.
-     *
-     * `loadfile ... replace` leaves the new file as the only entry, and the command is
-     * synchronous, so entry 0 is it. The id is what lets an end-file event be matched to the load
-     * it belongs to exactly, rather than by counting.
+     * The fallback when loadfile's result carried no id. `loadfile ... replace` leaves the new
+     * file as the only entry and the command is synchronous, so entry 0 is it. A blocking
+     * property read on the UI thread - it should be timed on the TCL if the log shows this path
+     * being taken at all.
      */
-    fun currentEntryId(): Long? =
+    private fun entryIdFromPlaylist(): Long? =
         runCatching { MPVLib.getPropertyString("playlist/0/id")?.toLongOrNull() }.getOrNull()
 
 }
