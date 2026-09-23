@@ -7,7 +7,7 @@ import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.StreamResolver
 import com.cliftonia.fs42tv.resolver.Unplayable
-import com.cliftonia.fs42tv.schedule.ClockRotation
+import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.Stream
 import com.cliftonia.fs42tv.sync.UrlCache
@@ -40,6 +40,8 @@ object Tuner {
          * published beside it, instead of a `/resolve` round trip that runs yt-dlp for seconds.
          */
         refused: Set<String> = emptySet(),
+        /** The Settings rows that change what is on - see [Timetable]. Plain for callers without. */
+        timetable: Timetable = Timetable.PLAIN,
     ): Tuned? {
         val streams = channel.streams
         if (streams.isEmpty()) return null
@@ -48,7 +50,7 @@ object Tuner {
         // carry a placeholder duration of 600 per stream, so computing a position from it
         // would seek an arbitrary distance into a live window.
         val point = if (channel.rotation == "clock") {
-            ClockRotation.playPointFor(streams.map { it.duration }, nowSeconds) ?: return null
+            timetable.playPoint(channel, nowSeconds) ?: return null
         } else {
             null
         }

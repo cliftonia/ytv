@@ -86,4 +86,14 @@ class GuideRowsTest {
             .first().second.ifEmpty { null } ?: GuideRows.titleOn(fast, now))
         assertEquals("s2", GuideRows.titleOn(slow, now))
     }
+
+    @Test
+    fun `with sponsor skips on, the guide agrees with the tuner about what is on`() {
+        val sponsored = clip("first", 100).copy(skip = listOf(listOf(0.0, 50.0)))
+        val ch = channel(1, "X", sponsored, clip("second", 100))
+        val skipsOn = com.cliftonia.fs42tv.schedule.Timetable(skipsOn = { true })
+        assertEquals("second", GuideRows.titleOn(ch, 60, skipsOn))
+        assertEquals("first", GuideRows.titleOn(ch, 60))
+        assertEquals("second", ChannelLabels.bannerLinesFor(ch, 60, skipsOn).second)
+    }
 }

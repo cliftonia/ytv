@@ -9,6 +9,7 @@ import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.RefusalLedger
 import com.cliftonia.fs42tv.resolver.Unplayable
+import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.UrlCache
 import java.util.concurrent.Executor
@@ -63,6 +64,8 @@ class TuneController(private val deps: Deps) {
         val screen: Screen,
         /** Persists the channel to resume on next launch; only ever called for a genuine success. */
         val rememberChannel: (Int) -> Unit,
+        /** What is on a clock channel, with the Settings rows applied. */
+        val timetable: Timetable = Timetable.PLAIN,
     )
 
     /**
@@ -121,6 +124,7 @@ class TuneController(private val deps: Deps) {
         ladder = deps.ladder,
         nowSeconds = deps.nowSeconds,
         halted = deps.halted,
+        timetable = deps.timetable,
     )
 
     /** The current generation, for callers whose own async work must notice being superseded. */
@@ -217,7 +221,8 @@ class TuneController(private val deps: Deps) {
      */
     fun resolveForAudio(channel: Channel): Tuned? {
         val now = deps.nowSeconds()
-        val tuned = Tuner.tune(channel, deps.urls, now, deps.ladder(), deps.ledger.refusedSnapshot())
+        val tuned = Tuner.tune(channel, deps.urls, now, deps.ladder(), deps.ledger.refusedSnapshot(),
+            deps.timetable)
             ?: return null
         val playable = tuned.playable as? NeedsResolving ?: return tuned
         val resolved = deps.ledger.recall(playable.videoId, now)
@@ -244,7 +249,8 @@ class TuneController(private val deps: Deps) {
 
         val now = deps.nowSeconds()
         lastTuneRequestedAt = requestedAtMillis
-        var tuned = Tuner.tune(channel, deps.urls, now, deps.ladder(), deps.ledger.refusedSnapshot())
+        var tuned = Tuner.tune(channel, deps.urls, now, deps.ladder(), deps.ledger.refusedSnapshot(),
+            deps.timetable)
 
         // If the rotation hands back the clip that just finished, take the next one instead.
         // Read and cleared unconditionally, honoured only when the channel matches - see

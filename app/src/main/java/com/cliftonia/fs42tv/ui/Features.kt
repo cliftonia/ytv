@@ -37,6 +37,13 @@ class Features(
 
         /** A corner station bug for a few seconds after each tune and each new programme. */
         LOGO("LOGO", "feature.logo"),
+
+        /**
+         * Sponsor reads, self-promotion and "like and subscribe" jumped over, from SponsorBlock's
+         * community data. OFF ignores the lineup's `skip` field everywhere - the clock walks raw
+         * durations again, exactly as before the field existed.
+         */
+        SKIP_SPONSORS("SKIP SPONSORS", "feature.skipsponsors"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,

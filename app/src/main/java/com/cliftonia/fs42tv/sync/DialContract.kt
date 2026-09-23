@@ -9,6 +9,13 @@ data class Stream(
     val url: String,
     val duration: Int,
     val title: String = "",
+    /**
+     * Stretches of the file to jump over - sponsor reads, self-promotion, "like and subscribe" -
+     * as `[startSeconds, endSeconds]` pairs from SponsorBlock, looked up by the nightly job.
+     * Absent on every clip SponsorBlock knows nothing about. [duration] stays the raw length;
+     * what is actually watched is worked out in `schedule/Skips`.
+     */
+    val skip: List<List<Double>> = emptyList(),
 )
 
 @Serializable

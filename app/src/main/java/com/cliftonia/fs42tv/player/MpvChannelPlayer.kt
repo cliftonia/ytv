@@ -345,6 +345,29 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         return runCatching { MPVLib.getPropertyString("time-pos")?.toDoubleOrNull() }.getOrNull()
     }
 
+    /**
+     * A RELATIVE seek forward, from mpv's own position - not `absolute`.
+     *
+     * With `hr-seek=no` (load-bearing, see HANDOVER) mpv lands on a keyframe, and which keyframe
+     * depends on the direction it believes it is seeking: a relative seek with a positive amount
+     * asks the demuxer for the keyframe AT OR AFTER the target, so the playhead comes down past
+     * the sponsor read rather than a few seconds back inside it. Should a keyframe ever land
+     * short anyway, [SkipWatch] seeks each range once and plays the remainder through - never a
+     * loop.
+     *
+     * Guarded like every other property access here: after release the native handle is null,
+     * and libmpv answers that with `exit(1)`.
+     */
+    override fun seekTo(seconds: Double) {
+        if (released || !guard.hasPicture) return
+        val position = positionSeconds() ?: return
+        val by = seconds - position
+        if (by <= 0.0) return
+        runCatching {
+            MPVLib.command("seek", String.format(java.util.Locale.US, "%.3f", by), "relative")
+        }.onFailure { Log.w("fs42", "skip seek failed: $it") }
+    }
+
     override fun stop() {
         // Deliberately NOT mpv's `stop` command.
         //

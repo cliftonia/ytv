@@ -82,6 +82,22 @@ class DialContractTest {
     }
 
     @Test
+    fun `a stream's sponsor skips are read when published and empty when not`() {
+        // The nightly job publishes `skip` on clips SponsorBlock knows about and leaves it off
+        // every other one. Absent must mean "play it all", never a parse failure: the field
+        // reached the lineup before any installed app knew what it was.
+        val json = """{"generated":1,"channels":[{"number":1,"name":"X","kind":"youtube",
+            "rotation":"clock","streams":[
+              {"id":"abc123def45","url":"u","duration":812,"title":"t",
+               "skip":[[31.2,74.9],[790.0,812.0]]},
+              {"id":"zzz123def45","url":"u2","duration":300,"title":"t2"}]}]}"""
+        val streams = DialContract.parseDial(json).channels.single().streams
+        assertEquals(listOf(listOf(31.2, 74.9), listOf(790.0, 812.0)), streams[0].skip)
+        assertEquals(812, streams[0].duration)
+        assertTrue(streams[1].skip.isEmpty())
+    }
+
+    @Test
     fun `sync caches what it fetched`() {
         val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
         val repo = DialRepository(fetch = { fixture("channels-sample.json") }, cacheDir = dir)

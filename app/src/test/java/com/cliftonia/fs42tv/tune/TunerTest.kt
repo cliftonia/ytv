@@ -155,4 +155,24 @@ class TunerTest {
         assertEquals(Progressive("http://192.168.4.58:4244/Movies/film0.mp4", null),
             tuned.playable)
     }
+
+    @Test
+    fun `with sponsor skips on, the rotation walks watched time and joins past the skip`() {
+        // Clip 0 is 100s with a 40s sponsor read at 10-50: 60s watched. At t=70 the clock is
+        // 10s into clip 1 - on a raw clock it would still be clip 0 at 70s.
+        val skipped = TestDial.ytChannel(100, 200).let { ch ->
+            ch.copy(streams = listOf(ch.streams[0].copy(skip = listOf(listOf(10.0, 50.0))),
+                ch.streams[1]))
+        }
+        val skipsOn = com.cliftonia.fs42tv.schedule.Timetable(skipsOn = { true })
+        val later = Tuner.tune(skipped, null, nowSeconds = 70, timetable = skipsOn)!!
+        assertEquals(1, later.streamIndex)
+        assertEquals(10.0, later.offsetSeconds, 0.001)
+        // 20s of watched time into clip 0 is file second 60: ten before the read, ten after it.
+        val early = Tuner.tune(skipped, null, nowSeconds = 20, timetable = skipsOn)!!
+        assertEquals(0, early.streamIndex)
+        assertEquals(60.0, early.offsetSeconds, 0.001)
+        // Without the timetable, exactly the rotation from before the field existed.
+        assertEquals(0, Tuner.tune(skipped, null, nowSeconds = 70)!!.streamIndex)
+    }
 }
