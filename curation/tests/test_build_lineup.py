@@ -179,6 +179,32 @@ class TestChannelFrom(unittest.TestCase):
                          "skip": [[1.0, 5.0]]}]})
         self.assertNotIn("skip", build_lineup.channel_from(path)["streams"][0])
 
+    def test_a_youtube_stream_carries_its_parts_only_when_it_has_some(self):
+        # Untagged clips are the all-day pool, and absent is how the contract says so: an empty
+        # list on every one of nine thousand streams would say the same thing over mobile data.
+        # Published in the day's order and only the parts the app knows, so a hand-edited conf
+        # can neither churn the file by reordering nor publish a part nothing ever draws from.
+        path = self.write("ytch_x.json", {
+            "network_name": "X", "channel_number": 5, "stream_rotation": "clock",
+            "streams": [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa", "duration": 300,
+                         "title": "a", "parts": ["late", "brunch", "prime"]},
+                        {"url": "https://www.youtube.com/watch?v=bbbbbbbbbbb", "duration": 300,
+                         "title": "b", "parts": []},
+                        {"url": "https://www.youtube.com/watch?v=ccccccccccc", "duration": 300,
+                         "title": "c"}]})
+        tagged, empty, untagged = build_lineup.channel_from(path)["streams"]
+        self.assertEqual(["prime", "late"], tagged["parts"])
+        self.assertNotIn("parts", empty)
+        self.assertNotIn("parts", untagged)
+
+    def test_a_live_or_file_stream_never_carries_parts(self):
+        # The contract gives parts to YouTube streams only; files and live feeds are unmixed.
+        path = self.write("file_x.json", {
+            "network_name": "X", "channel_number": 91,
+            "streams": [{"url": "http://h/a.mkv", "duration": 600, "title": "a",
+                         "parts": ["prime"]}]})
+        self.assertNotIn("parts", build_lineup.channel_from(path)["streams"][0])
+
     def test_a_web_channel_is_not_published(self):
         # WeatherStar and friends were rendered by a browser on a machine that no longer exists.
         path = self.write("weatherstar.json", {
@@ -311,6 +337,17 @@ class TestPublishedLineup(unittest.TestCase):
                     self.assertGreaterEqual(stop - start, 1)
                     end = stop
                 self.assertLessEqual(end, stream["duration"])
+
+    def test_published_parts_are_known_parts_of_the_day(self):
+        import confs
+        for channel in self.dial["channels"]:
+            for stream in channel["streams"]:
+                parts = stream.get("parts")
+                if parts is None:
+                    continue
+                self.assertEqual("youtube", channel["kind"])
+                self.assertTrue(parts, "%s publishes an empty parts list" % channel["name"])
+                self.assertEqual([p for p in confs.DAY_PARTS if p in parts], parts)
 
 
 if __name__ == "__main__":
