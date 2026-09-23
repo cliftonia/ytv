@@ -23,6 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check the gradle wrapper is the real one
+        # gradle/wrapper/gradle-wrapper.jar is a committed binary that every ./gradlew below
+        # executes, in a job that goes on to hold the signing key. Checking its checksum against
+        # Gradle's published list is the cheap guard against a swapped jar; it runs before the
+        # first ./gradlew, which is the Test step, not the Build.
+        uses: gradle/actions/wrapper-validation@v4
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -48,6 +55,12 @@ jobs:
             echo "code=$(date -u '+%y%j%H%M')" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Test
+        # Before the keystore is written to disk: the tests run the whole app's test code (and
+        # every dependency it pulls), and none of it needs the signing key sitting in
+        # $RUNNER_TEMP while it does. A failing suite then also never gets as far as the key.
+        run: ./gradlew :app:testDebugUnitTest
+
       - name: Restore the signing keystore
         # Absent on a fork, or before the secrets have been set. The build still runs and still
         # produces an apk; it simply is not one the televisions can install as an update, and
@@ -63,9 +76,6 @@ jobs:
             echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/ytv-release.jks"
             echo "present=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Test
-        run: ./gradlew :app:testDebugUnitTest
 
       - name: Build
         env:
