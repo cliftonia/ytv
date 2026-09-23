@@ -230,7 +230,7 @@ class MainActivity : ComponentActivity() {
                 val nav = DialNavigator(channels, remembered.takeIf { it > 0 })
                 navigator = nav
                 // Every clock channel's schedule built now, so the first guide open is instant.
-                threads.prefetch.execute { if (!destroyed) extras.timetable.prewarm(channels) }
+                threads.inBackground("prewarm") { if (!destroyed) extras.timetable.prewarm(channels) }
                 // Posted BEFORE the tune, which paints through the same queue after it.
                 runOnUiThread { director.launchTuneStarted() }
                 tune.tuneFirst(nav.current, requestedAt)

@@ -30,6 +30,21 @@ class AppThreads {
      */
     val caption: ExecutorService = Executors.newSingleThreadExecutor()
 
+    /**
+     * Run [block] on its own low-priority daemon thread: work nobody waits for, like building the
+     * schedules ahead of the first guide open. Not the prefetch thread, where it would hold up
+     * the first neighbour resolves; not an executor, so there is nothing to have been shut down
+     * under it - and a failure is logged, never thrown into whoever started it.
+     */
+    fun inBackground(name: String, block: () -> Unit) {
+        Thread({
+            runCatching(block).onFailure { android.util.Log.w("fs42", "$name failed: $it") }
+        }, name).apply {
+            isDaemon = true
+            priority = Thread.MIN_PRIORITY
+        }.start()
+    }
+
     /** On destroy: nothing queued may outlive the activity. */
     fun shutdown() {
         tune.shutdownNow()
