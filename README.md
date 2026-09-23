@@ -37,6 +37,17 @@ single display mode, because there is no refresh rate for it to switch to and no
 modes: one mode gets mpv, several get ExoPlayer with frame-rate switching. The television in the
 lounge reports one; the Chromecast reports nineteen.
 
+## Pluto TV: the second dial
+
+Settings → **SOURCE** switches the whole dial between YOUTUBE (`channels.json`) and PLUTO TV
+(`pluto.json`); OK relaunches into the other one, and each remembers its own last channel. The
+Pluto dial is 219 themed English channels - no single-show loops, no news - hand-picked from
+[iptv-org](https://github.com/iptv-org/iptv)'s UK and US playlists and grouped by genre.
+
+`curation/pluto_lineup.json` is the allowlist; `curation/build_pluto.py` matches it against
+iptv-org nightly for current stream urls. A channel Pluto retires drops off on its own; a new one
+appears only when added to the allowlist.
+
 ## Media channels: local files, streamed links, and torrent ingest
 
 Beyond the YouTube dial sits a block of `file` channels (numbers 91-99) that schedule ordinary
@@ -96,10 +107,13 @@ Rules of the road, learned by experiment:
 | `curation/confs/` | One file per channel: number, name, search query, current clips |
 | `curation/refresh_channels.py` | Re-searches channels and writes their confs back |
 | `curation/build_lineup.py` | Turns the confs into `channels.json` |
+| `curation/pluto_lineup.json` | The hand-picked Pluto TV channels |
+| `curation/build_pluto.py` | Matches that list against iptv-org and writes `pluto.json` |
 | `curation/scan_media.py` | Rebuilds file-channel streams from the media folders + remote urls |
 | `curation/ingest.py` | Interactive magnet/.torrent → channel ingest on the server |
 | `tools/media-server/` | Caddy static file service for the media folders + deploy script |
 | `channels.json` | The published dial, committed nightly |
+| `pluto.json` | The Pluto TV dial, committed nightly |
 | `tools/deploy.sh` | Build and install to televisions on the local network |
 
 ## Building
