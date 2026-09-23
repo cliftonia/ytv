@@ -30,6 +30,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 
+import check_lineup
 import confs
 import filters
 import search
@@ -85,8 +86,8 @@ def refresh(path, target):
         # Writing an empty list would take the channel off the dial entirely. Leaving yesterday's
         # content is strictly better than that, and the next rotation will try again.
         return keep(path, conf, name, "search returned nothing")
-    if collapsed(before, len(streams)):
-        # The same rule as the publish gate in lineup.yml (check_lineup.py), applied here first.
+    if check_lineup.collapsed(before, len(streams)):
+        # The publish gate's own rule (check_lineup.py, run by lineup.yml), applied here first.
         # Without it one query having a bad night wrote a conf the gate then refused - and since
         # the gate refuses the WHOLE dial, every nightly after it failed on that one channel until
         # someone intervened. Yesterday's list passes the gate by definition.
@@ -103,17 +104,6 @@ def refresh(path, target):
 # How many consecutive nights a channel may keep yesterday's clips before its cursor advances
 # anyway. See keep().
 MAX_MISSES = 3
-
-# The publish gate's collapse rule, mirrored: below this many clips a channel is not compared.
-COLLAPSE_FLOOR = 20
-
-
-def collapsed(before, after):
-    """True when a refresh would shrink a channel the way the publish gate refuses: a channel of
-    COLLAPSE_FLOOR+ clips coming back with fewer than half. Must stay identical to the gate's
-    `before >= 20 and after < before // 2`, or the two disagree about what is publishable."""
-    return before >= COLLAPSE_FLOOR and after < before // 2
-
 
 def keep(path, conf, name, why):
     """Leave yesterday's clips in place and report the channel as kept.
