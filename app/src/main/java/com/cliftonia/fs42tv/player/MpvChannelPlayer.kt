@@ -387,7 +387,9 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     }
 
     override fun setVolume(volume: Float) {
-        MPVLib.setPropertyInt("volume", (volume * 100).toInt())
+        // Cube-rooted: mpv's volume is cubic and [volume] is linear. 0 and 1 map to 0 and 100
+        // exactly as before; see VolumeScale for what anything between would otherwise do.
+        MPVLib.setPropertyInt("volume", VolumeScale.mpvPercent(volume))
     }
 
     override fun release() {

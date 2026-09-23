@@ -53,9 +53,14 @@ class DeviceResolver(
         // - the expensive part - could only ever end in null. See StreamResolver.allRefused.
         if (StreamResolver.allRefused(videoId, ladder, refused)) return null
         ensureInitialised()
-        val info = runCatching {
-            StreamInfo.getInfo(ServiceList.YouTube, "https://www.youtube.com/watch?v=$videoId")
-        }.getOrElse {
+        // The capture sees the player response the extractor downloads for this call and pulls
+        // YouTube's loudness figure out of it - free, from bytes already in hand. See Loudness.
+        val (attempt, loudnessDb) = LoudnessCapture.capture {
+            runCatching {
+                StreamInfo.getInfo(ServiceList.YouTube, "https://www.youtube.com/watch?v=$videoId")
+            }
+        }
+        val info = attempt.getOrElse {
             Log.w("fs42", "resolve failed for $videoId: $it")
             return null
         }
@@ -85,8 +90,9 @@ class DeviceResolver(
             )
             PlaybackDiagnostics.record(name, video.resolution, video.codec)
             Log.i("fs42", "resolved $videoId at $name (${video.resolution} ${video.codec}), " +
-                "expires in ${expires - nowSeconds}s")
-            return ClipResolver.Resolved(Progressive(videoUrl, audioUrl, caption), expires, name)
+                "expires in ${expires - nowSeconds}s, loudness ${loudnessDb ?: "unknown"}dB")
+            return ClipResolver.Resolved(
+                Progressive(videoUrl, audioUrl, caption, loudnessDb), expires, name)
         }
         Log.w("fs42", "no tier of $ladder available for $videoId")
         return null
