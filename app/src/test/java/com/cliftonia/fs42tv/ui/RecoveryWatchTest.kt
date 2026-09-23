@@ -41,6 +41,7 @@ class RecoveryWatchTest {
         var overlay = false
         var card = ""
         val retunes = mutableListOf<String>()
+        val errorRetunes = mutableListOf<String>()
         val watch = RecoveryWatch(
             schedule = clock::schedule,
             halted = { false },
@@ -49,6 +50,7 @@ class RecoveryWatchTest {
             cardUp = { card.isNotEmpty() },
             showCard = { card = it },
             retune = { retunes.add(it) },
+            retuneAfterError = { errorRetunes.add(it) },
         )
     }
 
@@ -144,5 +146,65 @@ class RecoveryWatchTest {
         f.card = "CHANNEL 7 UNAVAILABLE"
         f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS * 2)
         assertEquals("CHANNEL 7 UNAVAILABLE", f.card)
+    }
+
+    @Test
+    fun `a url that fails at once is not retried several times a second forever`() {
+        // A dead live url fails before mpv opens it, in a few hundred milliseconds. Each retry
+        // tunes the identical url; retrying each at once was a storm for as long as the
+        // channel stayed on.
+        val f = Fixture()
+        f.watch.tuneStarted()
+        repeat(40) {
+            f.watch.error("MPV_ERROR")
+            f.clock.advance(250)
+        }
+        assertEquals("only the first few are immediate", RecoveryWatch.IMMEDIATE_RETRIES,
+            f.errorRetunes.size)
+        assertEquals("and the card still went up", "MPV_ERROR", f.card)
+    }
+
+    @Test
+    fun `retries back off, then keep going`() {
+        val f = Fixture()
+        f.watch.tuneStarted()
+        repeat(RecoveryWatch.IMMEDIATE_RETRIES) { f.watch.error("MPV_ERROR") }
+        f.watch.error("MPV_ERROR")
+        f.clock.advance(4_999)
+        assertEquals(3, f.errorRetunes.size)
+        f.clock.advance(1)
+        assertEquals("the fourth waits five seconds", 4, f.errorRetunes.size)
+        assertEquals(15_000L, RecoveryWatch.retryDelayMillis(5))
+        assertEquals(30_000L, RecoveryWatch.retryDelayMillis(50))
+    }
+
+    @Test
+    fun `a picture ends the streak, so the next failure retries at once`() {
+        val f = Fixture()
+        repeat(5) { f.watch.error("MPV_ERROR") }
+        f.tuning = false
+        f.watch.firstFrame()
+        f.tuning = true
+        val before = f.errorRetunes.size
+        f.watch.error("MPV_ERROR")
+        assertEquals(before + 1, f.errorRetunes.size)
+    }
+
+    @Test
+    fun `an error under an overlay does not retune`() {
+        val f = Fixture()
+        f.overlay = true
+        f.watch.error("MPV_ERROR")
+        f.clock.advance(60_000)
+        assertTrue(f.errorRetunes.isEmpty())
+    }
+
+    @Test
+    fun `a pending backed-off retry is dropped by a channel change`() {
+        val f = Fixture()
+        repeat(4) { f.watch.error("MPV_ERROR") }
+        f.watch.tuneStarted()
+        f.clock.advance(5_000)
+        assertEquals(3, f.errorRetunes.size)
     }
 }
