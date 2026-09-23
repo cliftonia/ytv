@@ -175,6 +175,8 @@ class TestEmptySearchKeepsYesterday(unittest.TestCase):
         station = confs.load(path)["station_conf"]
         self.assertEqual(yesterday, station["streams"])
         self.assertEqual(1234, station["last_refreshed"])
+        # Counted, though, so a query that is broken for good eventually yields its slot.
+        self.assertEqual(1, station["refresh_misses"])
 
     def test_a_successful_search_is_not_kept_and_advances_the_cursor(self):
         def fake_collect(target, lo, hi, seen, keys, out, want):
@@ -188,6 +190,145 @@ class TestEmptySearchKeepsYesterday(unittest.TestCase):
         self.assertFalse(kept)
         self.assertEqual(1, count)
         self.assertGreater(confs.load(path)["station_conf"]["last_refreshed"], 1234)
+
+
+def clips(n, prefix="A"):
+    """`n` distinct stream entries, shaped like a conf's."""
+    return [{"url": "https://www.youtube.com/watch?v=%s%010d" % (prefix, i),
+             "duration": 300, "title": "%s clip %d" % (prefix, i)} for i in range(n)]
+
+
+class TestCollapseKeepsYesterday(unittest.TestCase):
+    """A search that comes back with a fraction of yesterday's clips is not published.
+
+    The lineup workflow's publish gate refuses the WHOLE dial when any channel of 20+ clips falls
+    below half. Before refresh() applied the same rule itself, one query having a bad night
+    produced a conf the gate then refused, and every nightly after it failed on the same
+    channel until someone intervened.
+    """
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.real_collect = refresh.search.collect
+
+    def tearDown(self):
+        refresh.search.collect = self.real_collect
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def write(self, streams, stamp=1234, misses=None):
+        path = os.path.join(self.dir, "ytch_x.json")
+        station = {"network_name": "x", "channel_number": 1, "search_query": "x",
+                   "streams": streams, "last_refreshed": stamp}
+        if misses is not None:
+            station["refresh_misses"] = misses
+        with io.open(path, "w", encoding="utf-8") as handle:
+            json.dump({"station_conf": station}, handle)
+        return path
+
+    def search_finds(self, n):
+        fresh = clips(n, prefix="B")
+
+        def fake_collect(target, lo, hi, seen, keys, out, want):
+            if not out:
+                out.extend(fresh)
+            return len(fresh)
+        refresh.search.collect = fake_collect
+
+    def refresh_path(self, path):
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            result = refresh.refresh(path, 100)
+        return result, out.getvalue()
+
+    def test_a_collapse_keeps_yesterdays_list_and_says_so(self):
+        yesterday = clips(40)
+        path = self.write(yesterday)
+        self.search_finds(19)
+        (name, count, kept), out = self.refresh_path(path)
+        self.assertTrue(kept)
+        self.assertEqual(40, count)
+        self.assertIn("fell from 40 to 19", out)
+        station = confs.load(path)["station_conf"]
+        self.assertEqual(yesterday, station["streams"])
+        self.assertEqual(1234, station["last_refreshed"])
+
+    def test_exactly_half_is_published(self):
+        # The gate's own comparison is `after < before // 2`; refresh() must agree with it
+        # exactly, or it keeps lists the gate would have passed (or publishes ones it refuses).
+        path = self.write(clips(40))
+        self.search_finds(20)
+        (_, count, kept), _ = self.refresh_path(path)
+        self.assertFalse(kept)
+        self.assertEqual(20, count)
+
+    def test_a_small_channel_is_not_held_to_the_rule(self):
+        # Below 20 clips the gate does not compare, so neither does this.
+        path = self.write(clips(19))
+        self.search_finds(3)
+        (_, count, kept), _ = self.refresh_path(path)
+        self.assertFalse(kept)
+        self.assertEqual(3, count)
+
+
+class TestMissesStillAdvanceTheCursor(unittest.TestCase):
+    """A channel that keeps yesterday's clips night after night must not hog the rotation.
+
+    Kept channels do not stamp `last_refreshed`, so they stay at the front of the queue. That is
+    right for one bad night - try again tomorrow - and wrong for a query that is simply broken:
+    it would take a slot every night forever and starve the rest of the dial. After MAX_MISSES
+    consecutive kept nights the cursor advances anyway and the channel waits its turn.
+    """
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.real_collect = refresh.search.collect
+        refresh.search.collect = lambda *args: 0
+
+    def tearDown(self):
+        refresh.search.collect = self.real_collect
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def write(self, misses=None):
+        path = os.path.join(self.dir, "ytch_x.json")
+        station = {"network_name": "x", "channel_number": 1, "search_query": "x",
+                   "streams": clips(5), "last_refreshed": 1234}
+        if misses is not None:
+            station["refresh_misses"] = misses
+        with io.open(path, "w", encoding="utf-8") as handle:
+            json.dump({"station_conf": station}, handle)
+        return path
+
+    def night(self, path):
+        with contextlib.redirect_stdout(io.StringIO()):
+            return refresh.refresh(path, 10)
+
+    def test_misses_are_counted_without_moving_the_cursor(self):
+        path = self.write()
+        self.night(path)
+        station = confs.load(path)["station_conf"]
+        self.assertEqual(1, station["refresh_misses"])
+        self.assertEqual(1234, station["last_refreshed"])
+
+    def test_the_last_allowed_miss_advances_the_cursor_and_resets_the_count(self):
+        path = self.write()
+        for _ in range(refresh.MAX_MISSES):
+            _, _, kept = self.night(path)
+            self.assertTrue(kept)
+        station = confs.load(path)["station_conf"]
+        self.assertGreater(station["last_refreshed"], 1234)
+        self.assertNotIn("refresh_misses", station)
+        self.assertEqual(clips(5), station["streams"])
+
+    def test_a_successful_refresh_clears_the_count(self):
+        path = self.write(misses=2)
+
+        def fake_collect(target, lo, hi, seen, keys, out, want):
+            if not out:
+                out.extend(clips(3, prefix="B"))
+            return 3
+        refresh.search.collect = fake_collect
+        self.night(path)
+        self.assertNotIn("refresh_misses", confs.load(path)["station_conf"])
 
 
 class TestChannelSelection(unittest.TestCase):

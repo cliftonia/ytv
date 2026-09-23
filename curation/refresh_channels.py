@@ -19,9 +19,10 @@ the same instant and the "least recently refreshed" eight were simply the first 
 alphabetically. The same eight channels refreshed every night for weeks and the other 82 never
 did - and the run went green each time, because nothing checks WHICH channels moved.
 
-The cursor has to survive cloning, so it lives in the committed json. At 8 a night the whole dial
-turns over in a fortnight, which is slow enough that a channel does not feel like it resets and
-fast enough that nothing on it is ever months old.
+The cursor has to survive cloning, so it lives in the committed json (`last_refreshed`, plus a
+`refresh_misses` count for channels whose search keeps failing - keep() documents both). At 8 a
+night the whole dial turns over in a fortnight, which is slow enough that a channel does not feel
+like it resets and fast enough that nothing on it is ever months old.
 """
 import argparse
 import datetime
@@ -41,9 +42,10 @@ TARGET = 100
 def refresh(path, target):
     """Refill one channel. Returns (name, clip count, kept).
 
-    `kept` is True only when the search came back empty and yesterday's clips were left in
-    place. One kept channel is a query having a bad night; most of a slice kept is yt-dlp
-    having one, and main() is the only place that can see the difference.
+    `kept` is True when yesterday's clips were left in place - the search came back empty, or
+    with so few that the publish gate would refuse it (see keep()). One kept channel is a query
+    having a bad night; most of a slice kept is yt-dlp having one, and main() is the only place
+    that can see the difference.
     """
     conf = confs.load(path)
     station = conf["station_conf"]
@@ -78,20 +80,71 @@ def refresh(path, target):
         search.collect("ytsearch%d:%s" % (target * search.SEARCH_DEPTH, attempt), lo, hi,
                        seen, keys, streams, target)
 
+    before = len(station.get("streams", []))
     if not streams:
         # Writing an empty list would take the channel off the dial entirely. Leaving yesterday's
-        # content is strictly better than that, and the next rotation will try again. Nothing is
-        # saved here, so `last_refreshed` deliberately does not advance: a channel that found
-        # nothing has not been refreshed, and stamping it would push it to the back of the
-        # rotation for a fortnight on the strength of a failed search.
-        print("  %-26s search returned nothing, keeping what was there" % name, flush=True)
-        return name, len(station.get("streams", [])), True
+        # content is strictly better than that, and the next rotation will try again.
+        return keep(path, conf, name, "search returned nothing")
+    if collapsed(before, len(streams)):
+        # The same rule as the publish gate in lineup.yml (check_lineup.py), applied here first.
+        # Without it one query having a bad night wrote a conf the gate then refused - and since
+        # the gate refuses the WHOLE dial, every nightly after it failed on that one channel until
+        # someone intervened. Yesterday's list passes the gate by definition.
+        return keep(path, conf, name, "fell from %d to %d" % (before, len(streams)))
 
     station["streams"] = streams
     station["last_refreshed"] = int(time.time())
+    station.pop("refresh_misses", None)
     confs.save(path, conf)
     print("  %-26s %3d clips" % (name, len(streams)), flush=True)
     return name, len(streams), False
+
+
+# How many consecutive nights a channel may keep yesterday's clips before its cursor advances
+# anyway. See keep().
+MAX_MISSES = 3
+
+# The publish gate's collapse rule, mirrored: below this many clips a channel is not compared.
+COLLAPSE_FLOOR = 20
+
+
+def collapsed(before, after):
+    """True when a refresh would shrink a channel the way the publish gate refuses: a channel of
+    COLLAPSE_FLOOR+ clips coming back with fewer than half. Must stay identical to the gate's
+    `before >= 20 and after < before // 2`, or the two disagree about what is publishable."""
+    return before >= COLLAPSE_FLOOR and after < before // 2
+
+
+def keep(path, conf, name, why):
+    """Leave yesterday's clips in place and report the channel as kept.
+
+    The rotation cursor is two fields in the conf:
+
+      last_refreshed  epoch of the last time this channel's turn was USED UP. The nightly slice is
+                      the N smallest values, so a channel whose stamp does not move is first in
+                      line again tomorrow.
+      refresh_misses  consecutive nights this channel's turn ended in keep(). Absent means zero;
+                      a real refresh removes it.
+
+    A kept channel normally does NOT advance `last_refreshed`: it has not been refreshed, and
+    stamping it would send it to the back of the queue for a fortnight on the strength of one
+    failed search. But a query that is broken for good would then take a slot every night forever
+    and starve the rest of the dial. So misses are counted, and the MAX_MISSES-th in a row stamps
+    the cursor anyway and resets the count - the channel keeps its old clips and waits its turn
+    like everyone else. Either way the conf is saved, because the count has to survive the CI
+    checkout just as the stamp does.
+    """
+    station = conf["station_conf"]
+    misses = station.get("refresh_misses", 0) + 1
+    if misses >= MAX_MISSES:
+        station["last_refreshed"] = int(time.time())
+        station.pop("refresh_misses", None)
+        why += "; %d nights running, moving it to the back of the rotation" % misses
+    else:
+        station["refresh_misses"] = misses
+    confs.save(path, conf)
+    print("  %-26s %s, keeping what was there" % (name, why), flush=True)
+    return name, len(station.get("streams", [])), True
 
 
 def main():
