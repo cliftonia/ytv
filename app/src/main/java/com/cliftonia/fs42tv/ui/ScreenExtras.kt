@@ -3,6 +3,8 @@ package com.cliftonia.fs42tv.ui
 import android.content.SharedPreferences
 import android.os.Handler
 import android.os.Looper
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.graphics.ImageBitmap
 import com.cliftonia.fs42tv.pluto.PlutoApi
 import com.cliftonia.fs42tv.pluto.PlutoGuide
 import com.cliftonia.fs42tv.pluto.PlutoIds
@@ -11,6 +13,7 @@ import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.sync.Channel
+import com.cliftonia.fs42tv.tune.Tuned
 import java.time.ZoneId
 import java.util.concurrent.Executor
 
@@ -34,6 +37,8 @@ class ScreenExtras(private val deps: Deps) {
         val nowMillis: () -> Long,
         /** Main looper: the hiss's fade steps and its cap. */
         val handler: Handler,
+        /** Downloads the corner logos for Pluto channels. */
+        val logos: ImageCache<ImageBitmap>,
     )
 
     val features: Features get() = deps.features
@@ -93,6 +98,49 @@ class ScreenExtras(private val deps: Deps) {
     fun programmeGain(): Float =
         if (deps.features.isOn(Features.Flag.LEVEL_VOLUME)) Loudness.gain(clipLoudnessDb) else 1f
 
+    /** The corner logo on screen, or null. Compose state, written on the UI thread only. */
+    val bug = mutableStateOf<BugState?>(null)
+    private val bugTrigger = BugTrigger()
+    private var bugGeneration = 0
+
+    /** A channel change or the launch tune began - the next first frame is a new arrival. */
+    fun tuneStarted() = bugTrigger.tuneStarted()
+
+    /**
+     * A picture arrived. Puts the corner logo up when [BugTrigger] says this is an arrival and
+     * the LOGO row is on - the trigger is fed either way, so switching LOGO on mid-programme
+     * does not treat the clip already playing as new.
+     */
+    fun firstFrame(onAir: Tuned?) {
+        val tuned = onAir ?: return
+        val channel = tuned.channel
+        val arrival = bugTrigger.firstFrame(
+            channel.number, tuned.streamIndex, clock = channel.rotation == "clock")
+        if (!arrival || !deps.features.isOn(Features.Flag.LOGO)) return
+        val generation = ++bugGeneration
+        bug.value = BugState(StationBug.label(channel), channel.number.toString(), null, generation)
+        // Pluto's own logo when its guide has one. Through the guide, so with PLUTO GUIDE off
+        // there is no Pluto traffic at all and the bug stays text.
+        if (!deps.features.isOn(Features.Flag.PLUTO_GUIDE)) return
+        val id = PlutoIds.of(channel) ?: return
+        deps.plutoGuide.request(id) { schedule ->
+            val url = schedule.logoUrl ?: return@request
+            deps.logos.get(url) { image ->
+                deps.runOnUi {
+                    val showing = bug.value
+                    if (!deps.halted() && showing?.generation == generation) {
+                        bug.value = showing.copy(logo = image)
+                    }
+                }
+            }
+        }
+    }
+
+    /** LOGO switched off: take the bug down now rather than letting it run out. */
+    fun hideBug() {
+        bug.value = null
+    }
+
     /** On destroy: nothing of the extras may outlive the activity. */
     fun release() {
         deps.handler.removeCallbacks(hissCap)
@@ -148,6 +196,7 @@ class ScreenExtras(private val deps: Deps) {
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
+            // The prefetch thread for the logos too: small, rare, and never ahead of a tune.
             return ScreenExtras(Deps(
                 features = features,
                 plutoGuide = PlutoGuide(
@@ -160,6 +209,7 @@ class ScreenExtras(private val deps: Deps) {
                 halted = halted,
                 nowMillis = now,
                 handler = Handler(Looper.getMainLooper()),
+                logos = ImageCache(load = ::loadLogo, executor = prefetchExecutor),
             ))
         }
 

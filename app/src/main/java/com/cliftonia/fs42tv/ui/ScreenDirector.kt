@@ -201,6 +201,7 @@ class ScreenDirector(private val deps: Deps) {
         standByReason.value = ""
         buffering.value = false
         tuning.value = true
+        deps.extras.tuneStarted()
         updateProgrammeVolume()
         // The title comes from the clock rotation right here, not from the tune that follows.
         // Waiting for the tune meant the banner showed a bare channel name whenever the tune
@@ -307,6 +308,7 @@ class ScreenDirector(private val deps: Deps) {
             buffering.value = false
             tuning.value = false
             updateProgrammeVolume()
+            deps.extras.firstFrame(deps.tune().onAir)
         }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
@@ -389,6 +391,7 @@ class ScreenDirector(private val deps: Deps) {
             Features.Flag.STATIC -> syncHiss()
             // Re-derived now, so OFF restores full volume on the clip already playing.
             Features.Flag.LEVEL_VOLUME -> updateProgrammeVolume()
+            Features.Flag.LOGO -> if (!on) deps.extras.hideBug()
         }
     }
 
@@ -418,6 +421,7 @@ class ScreenDirector(private val deps: Deps) {
      */
     fun launchTuneStarted() {
         tuning.value = true
+        deps.extras.tuneStarted()
         updateProgrammeVolume()
         watch.tuneStarted()
     }
