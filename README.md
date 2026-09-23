@@ -62,6 +62,20 @@ Sponsor segment data comes from [SponsorBlock](https://sponsor.ajay.app) and is 
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); this project is
 non-commercial.
 
+## Time-of-day mixes
+
+A handful of channels change with the clock: lighter comedy at breakfast and the uncensored
+specials late, Saturday-morning cartoons in the morning, night markets on Food at prime time. The
+day has four parts, local time: **breakfast** 06-12, **afternoon** 12-18, **prime** 18-23,
+**late** 23-06. A channel opts in with a search per part in `PARTS` in `curation/dial.py` (any
+part may be left out); `apply_dial.py` copies them into the conf and the nightly refresh fills
+each part to half the channel's target, tagging those clips. `channels.json` carries
+`parts: ["prime"]` on a tagged stream; untagged streams are the all-day pool, which is also what a
+part with no search of its own plays. The publish gate holds every part to the same
+no-collapse rule as a whole channel, and warns (without refusing) about channels with too few
+clips under five minutes to top up the half-hour schedule. A new mix arrives with the channel's
+next turn in the rotation - within a fortnight.
+
 ## Media channels: local files, streamed links, and torrent ingest
 
 Beyond the YouTube dial sits a block of `file` channels (numbers 91-99) that schedule ordinary
