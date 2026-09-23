@@ -315,8 +315,13 @@ class HalfHourSchedule(
         /** Five minutes of watched time: a programme at or above, a top-up-only short below. */
         const val SHORT = 300
 
-        /** A week: longer is garbage, and is treated as a week. */
-        const val MAX_DURATION = 7 * 86_400
+        /**
+         * Twelve hours: longer is garbage (the longest real clip on the dial is under six), and is
+         * scheduled as twelve. Bounded this tightly because it bounds the part-day openings a cycle
+         * can take before it repeats: 400 clips of twelve hours stay well inside [MAX_OPENINGS], so
+         * no lineup that can exist ever meets the cap and its once-per-cap break in episode order.
+         */
+        const val MAX_DURATION = 12 * 3_600
 
         /** 23:00 is slot 46 of a calendar day; shifting by two starts the broadcast day there. */
         private const val DAY_SHIFT = 2

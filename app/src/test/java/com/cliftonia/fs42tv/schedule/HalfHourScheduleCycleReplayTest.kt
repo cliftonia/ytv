@@ -202,18 +202,22 @@ class HalfHourScheduleCycleReplayTest {
     }
 
     @Test
-    fun `untagged ordered episodes run strictly in order across DST nights - none lost, none repeated`() {
+    fun `untagged ordered episodes on DST nights break order only at the clock change`() {
         // The wall clock skips an hour in spring and repeats one in autumn; slots follow it, so
-        // whatever the schedule put in the missing hour never airs. On an ordered channel that is
-        // an episode skipped - the spec's "never out of order" and "slots follow the wall clock"
-        // pull against each other here.
-        orderedAcross(listOf(
+        // whatever the schedule put in the missing hour never airs, and the repeated hour airs
+        // twice. On an ordered channel that is one episode skipped or replayed per clock change.
+        // ACCEPTED (owner's decision, 23 Sep 2026): both televisions are in Brisbane, which has no
+        // daylight saving, and keeping slots on the wall clock is what makes every set agree. So
+        // this pins the damage rather than forbidding it: at most two out-of-order steps per
+        // four-day walk, all within the hour of the change. Strict order on every non-DST night
+        // is held by the test above.
+        orderedAcross(tolerance = 2, zones = listOf(
             ZoneId.of("America/New_York") to "2026-03-07", ZoneId.of("America/New_York") to "2026-10-31",
             ZoneId.of("Australia/Sydney") to "2026-04-04", ZoneId.of("Australia/Sydney") to "2026-10-03",
         ))
     }
 
-    private fun orderedAcross(zones: List<Pair<ZoneId, String>>) {
+    private fun orderedAcross(zones: List<Pair<ZoneId, String>>, tolerance: Int = 0) {
         val rnd = Random(9)
         for ((zone, date) in zones) repeat(8) { c ->
             val d = List(rnd.nextInt(3, 40)) { if (rnd.nextInt(4) == 0) rnd.nextInt(1, 300) else rnd.nextInt(300, 5400) }
@@ -223,10 +227,17 @@ class HalfHourScheduleCycleReplayTest {
             val spans = walk(s, from, from + 4 * 86_400, "$zone $date #$c")
             val programmes = d.indices.filter { d[it] >= SHORT }
             val shown = spans.filter { it.kind == 'P' }
-            for ((a, b) in shown.zipWithNext()) {
-                if (b.offsetAtStart > 0 && a.index == b.index) continue
-                assertEquals("$zone $date #$c $d: out of order $a -> $b",
-                    programmes[(programmes.indexOf(a.index) + 1) % programmes.size], b.index)
+            val broken = shown.zipWithNext().filter { (a, b) ->
+                !(b.offsetAtStart > 0 && a.index == b.index) &&
+                    programmes[(programmes.indexOf(a.index) + 1) % programmes.size] != b.index
+            }
+            assertTrue("$zone $date #$c $d: out of order ${broken.take(3)}", broken.size <= tolerance)
+            if (tolerance > 0) {
+                val change = zone.rules.nextTransition(java.time.Instant.ofEpochSecond(from)).instant.epochSecond
+                broken.forEach { (_, b) ->
+                    assertTrue("$zone $date #$c: order broke away from the clock change at $b",
+                        kotlin.math.abs(b.start - change) <= 3 * 3_600)
+                }
             }
             spans.filter { it.kind == 'T' }.forEach { assertTrue("$zone #$c: episode as filler $it", d[it.index] < SHORT) }
         }
