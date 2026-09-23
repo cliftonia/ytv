@@ -23,6 +23,22 @@ class ServerTiersTest {
     """.trimIndent()
 
     @Test
+    fun `the server's loudness figure rides along to the playable`() {
+        // The accelerator reads it from YouTube's player reply (yt-dlp's json never carries it),
+        // so without this LEVEL VOLUME did nothing for every clip the server resolved - most of
+        // them, at home.
+        val withLoudness = body.replace("\"warm\":true,", "\"warm\":true,\"loudness_db\":-8.77,")
+        val got = ServerTiers.parse(withLoudness, listOf("hd"), emptySet(), "abc12345678", 100)
+        assertEquals(-8.77, (got?.playable as Progressive).loudnessDb!!, 0.001)
+    }
+
+    @Test
+    fun `no loudness figure means no gain, not a guess`() {
+        val got = ServerTiers.parse(body, listOf("hd"), emptySet(), "abc12345678", 100)
+        assertEquals(null, (got?.playable as Progressive).loudnessDb)
+    }
+
+    @Test
     fun `the first rung of the ladder wins`() {
         val got = ServerTiers.parse(body, listOf("hd", "sd"), emptySet(), "abc12345678", 100)
         assertEquals("https://v/hd", got?.playable?.videoUrl)

@@ -64,7 +64,9 @@ object ServerTiers {
             // The same margin the device applies to its own resolves, so a url is retired at the
             // same moment whichever path produced it.
             if (expires - SAFETY_MARGIN_SECONDS <= nowSeconds) continue
-            return ClipResolver.Resolved(Progressive(video, audio, caption), expires, name)
+            // Top-level beside the tiers: loudness belongs to the clip, not to a rendition.
+            val loudness = field(body, "loudness_db")?.toDoubleOrNull()
+            return ClipResolver.Resolved(Progressive(video, audio, caption, loudness), expires, name)
         }
         return null
     }
