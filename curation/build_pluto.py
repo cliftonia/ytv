@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +32,9 @@ PLAYLISTS = [
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_pluto.m3u",
 ]
 
-# The order blocks of channels appear in on the dial, the way a cable lineup groups them.
+# The order blocks of channels appear in on the dial, the way a cable lineup groups them. The
+# numbers in the allowlist were assigned from this order once; a new channel should take a free
+# number near its genre's block, but nothing here re-sorts anything.
 GENRE_ORDER = [
     "Movies", "Drama & Series", "Classic TV", "Comedy", "Crime", "Reality", "Documentary",
     "Kids", "Anime", "Music", "Sports", "Motoring", "Food & Home", "Outdoors",
@@ -43,13 +46,31 @@ LIVE_DURATION = 600
 PLUTO_ID = re.compile(r"plu-([0-9a-f]+)\.m3u8")
 
 
+# The only hosts a Pluto stream url may point at. iptv-org is a third-party, community-edited
+# playlist, and whatever url it names goes straight onto every television's dial - so matching
+# the `plu-<id>.m3u8` shape is not enough: that path on any other host would be published as-is.
+# jmp2.uk is the redirector iptv-org uses for every Pluto entry today; pluto.tv (and its
+# subdomains) is Pluto itself, should the list ever point there directly.
+TRUSTED_HOSTS = ("jmp2.uk",)
+TRUSTED_DOMAINS = ("pluto.tv",)
+
+
+def trusted_host(url):
+    """True when the url's host is one we will hand to a television. Exact host or a real
+    subdomain only: `fakepluto.tv` and `jmp2.uk.evil.com` both end in the right letters."""
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    if host in TRUSTED_HOSTS:
+        return True
+    return any(host == d or host.endswith("." + d) for d in TRUSTED_DOMAINS)
+
+
 def parse_m3u(text):
-    """Pluto id -> stream url, for every Pluto stream in an m3u playlist."""
+    """Pluto id -> stream url, for every Pluto stream on a trusted host in an m3u playlist."""
     streams = {}
     for line in text.splitlines():
         line = line.strip()
         match = PLUTO_ID.search(line)
-        if match and not line.startswith("#"):
+        if match and not line.startswith("#") and trusted_host(line):
             streams[match.group(1)] = line
     return streams
 
@@ -64,20 +85,38 @@ def build(allow, streams):
         else:
             missing.append(entry["name"])
 
-    def order(item):
-        genre = item[0]["genre"]
-        rank = GENRE_ORDER.index(genre) if genre in GENRE_ORDER else len(GENRE_ORDER)
-        return rank, item[0]["name"].lower()
-
+    # Each channel's number is the allowlist's, never its position. The app remembers the
+    # viewer's channel by number, so numbering by sorted position meant one retired channel
+    # quietly renumbered everything after it. Now a retirement leaves a gap on the dial instead.
+    # The numbers were assigned once (Sep 2026) from the old genre-then-name order, so nobody's
+    # remembered channel moved; a newly allowlisted channel takes any free number.
     channels = []
-    for number, (entry, url) in enumerate(sorted(found, key=order), start=1):
+    for entry, url in sorted(found, key=lambda item: item[0]["number"]):
         channels.append({
-            "number": number,
+            "number": entry["number"],
             "name": entry["name"],
             "kind": "live",
             "streams": [{"url": url, "duration": LIVE_DURATION, "title": entry["name"]}],
         })
     return channels, missing
+
+
+def numbering_problem(allow):
+    """Why the allowlist's numbers cannot be published, or None. Two channels on one number
+    would leave one unreachable (which one wins being an accident of ordering), and a channel
+    without one has no place on the dial - both are editing mistakes, caught here rather than
+    shipped to the televisions."""
+    seen = {}
+    for entry in allow:
+        number = entry.get("number")
+        # bool is an int in Python; `"number": true` is a typo, not channel 1.
+        if not isinstance(number, int) or isinstance(number, bool) or number < 1:
+            return ('%s has no channel number - give it a free positive "number" in '
+                    "pluto_lineup.json" % entry.get("name", entry.get("id")))
+        if number in seen:
+            return "channel number %d is used by both %s and %s" % (number, seen[number], entry["name"])
+        seen[number] = entry["name"]
+    return None
 
 
 def refusal(resolved, wanted):
@@ -107,6 +146,11 @@ def main():
     args = parser.parse_args()
 
     allow = load_allowlist()
+    problem = numbering_problem(allow)
+    if problem:
+        print("REFUSING TO PUBLISH: %s" % problem, file=sys.stderr)
+        return 1
+
     streams = {}
     for url in PLAYLISTS:
         try:
