@@ -347,6 +347,7 @@ class TuneController(private val deps: Deps) {
                         playable = sub,
                         offsetSeconds = deps.timetable.startOffset(channel.streams[idx]),
                         cutAt = null,
+                        endsAt = deps.timetable.substituteEndsAt(channel, now, idx, tuned.endsAt),
                     )
                     playable = sub
                 }
