@@ -40,6 +40,7 @@ fun AppSurface(
             channelLine = director.bannerChannelLine.value,
             titleLine = director.bannerTitleLine.value,
             generation = director.bannerGeneration.value,
+            nextLine = director.bannerNextLine.value,
         )
         // One card, two sources: a live playback failure, or last run's crash. The crash wins
         // while it is showing, since a channel that is currently failing will say so again in
@@ -55,6 +56,7 @@ fun AppSurface(
                 startIndex = guide.startIndex.value,
                 onPick = guide::pick,
                 onDismiss = guide::dismiss,
+                onSettled = guide::settled,
             )
         }
     }

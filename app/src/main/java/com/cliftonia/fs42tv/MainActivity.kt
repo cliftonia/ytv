@@ -22,6 +22,7 @@ import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.ui.AppSurface
 import com.cliftonia.fs42tv.ui.GuidePicker
 import com.cliftonia.fs42tv.ui.ScreenDirector
+import com.cliftonia.fs42tv.ui.ScreenExtras
 import com.cliftonia.fs42tv.ui.SettingRow
 import com.cliftonia.fs42tv.ui.SettingsCatalog
 import com.cliftonia.fs42tv.update.UpdateFlow
@@ -142,6 +143,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var updateFlow: UpdateFlow
     private lateinit var settingsCatalog: SettingsCatalog
     private lateinit var composeView: ComposeView
+    private lateinit var extras: ScreenExtras
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -171,6 +173,7 @@ class MainActivity : ComponentActivity() {
 
         readSettings()
 
+        extras = ScreenExtras.create(prefs, prefetchExecutor, { runOnUiThread(it) }, { destroyed })
         director = createScreenDirector()
         tune = createTuneController()
         director.captionsOn = prefs.getBoolean(SettingsCatalog.CAPTIONS_KEY, false)
@@ -188,6 +191,7 @@ class MainActivity : ComponentActivity() {
             nowSeconds = ::nowSeconds,
             elapsedMillis = { SystemClock.elapsedRealtime() },
             focus = ::grantOverlayFocus,
+            extras = extras,
         ))
 
         composeView = ComposeView(this).apply {
@@ -308,6 +312,7 @@ class MainActivity : ComponentActivity() {
             prefs.edit().putBoolean(SettingsCatalog.CAPTIONS_KEY, it).apply()
         },
         captionExecutor = captionExecutor,
+        extras = extras,
     ))
 
     private fun createTuneController() = TuneController(TuneController.Deps(
@@ -346,6 +351,8 @@ class MainActivity : ComponentActivity() {
         },
         updateStatus = { updateFlow.status.value },
         refresh = { settingsRows.value = settingsCatalog.rows() },
+        features = extras.features,
+        featureToggled = director::featureToggled,
     ))
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

@@ -48,14 +48,20 @@ class SettingsCatalog(private val context: Context, private val deps: Deps) {
         val updateStatus: () -> String,
         /** Rebuilds and republishes the rows, so a change is visible the moment OK lands. */
         val refresh: () -> Unit,
+        /** The extras' switches - one row each, all ON by default. See [Features]. */
+        val features: Features,
+        /** Acts on what is on screen now when a switch flips; see [Features.rows]. */
+        val featureToggled: (Features.Flag, Boolean) -> Unit,
     )
 
-    fun rows(): List<SettingRow> {
+    fun rows(): List<SettingRow> = controls() + deps.features.rows(deps.featureToggled, deps.refresh) +
+        readings()
+
+    /** Everything above the extras' switches. */
+    private fun controls(): List<SettingRow> {
         val engine = com.cliftonia.fs42tv.player.PlayerEngine.parse(
             deps.prefs.getString(ENGINE_KEY, null))
             ?: com.cliftonia.fs42tv.player.PlayerEngine.default(deps.displayModeCount())
-        val channels = deps.channels()
-        val clips = channels.sumOf { it.streams.size }
         val crash = ExitReason.lastAbnormal(context) ?: CrashLog.summary(context.filesDir)
         return listOfNotNull(
             crash?.let {
@@ -166,6 +172,19 @@ class SettingsCatalog(private val context: Context, private val deps: Deps) {
                     deps.refresh()
                 },
             ),
+        )
+    }
+
+    /**
+     * The update check and the read-only diagnostics, below the extras' switches.
+     *
+     * The switches sit ABOVE the update check rather than at the bottom of the list: they are
+     * controls, and controls come before readings - see the comment on the separator.
+     */
+    private fun readings(): List<SettingRow> {
+        val channels = deps.channels()
+        val clips = channels.sumOf { it.streams.size }
+        return listOf(
             SettingRow(
                 label = "CHECK FOR UPDATE",
                 value = deps.updateStatus().ifEmpty { "CHECK NOW" },
