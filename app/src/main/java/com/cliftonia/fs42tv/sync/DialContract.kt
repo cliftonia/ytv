@@ -16,6 +16,12 @@ data class Stream(
      * what is actually watched is worked out in `schedule/Skips`.
      */
     val skip: List<List<Double>> = emptyList(),
+    /**
+     * The parts of the day this clip belongs to - "breakfast", "afternoon", "prime", "late" -
+     * for channels curated with time-of-day mixes. Absent on every clip of every other channel,
+     * which then draws from all its clips at every hour. See `schedule/HalfHourSchedule`.
+     */
+    val parts: List<String> = emptyList(),
 )
 
 @Serializable

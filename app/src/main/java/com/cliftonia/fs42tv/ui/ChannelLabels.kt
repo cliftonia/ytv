@@ -86,12 +86,12 @@ object ChannelLabels {
         // Settings rows say. Anything else keeps the raw rotation over its placeholder durations
         // - the recorded behaviour for live feeds, see ChannelLabelsTest.
         val point = if (channel.rotation == "clock") {
-            timetable.playPoint(channel, nowSeconds)
+            timetable.at(channel, nowSeconds)?.index
         } else {
-            ClockRotation.playPointFor(channel.streams.map { it.duration }, nowSeconds)
+            ClockRotation.playPointFor(channel.streams.map { it.duration }, nowSeconds)?.index
         }
         val title = point
-            ?.let { channel.streams.getOrNull(it.index)?.title }
+            ?.let { channel.streams.getOrNull(it)?.title }
             .orEmpty()
             .trim()
         return line to title
