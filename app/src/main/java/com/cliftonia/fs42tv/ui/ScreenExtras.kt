@@ -213,6 +213,8 @@ class ScreenExtras(private val deps: Deps) {
             prefetchExecutor: Executor,
             runOnUi: (() -> Unit) -> Unit,
             halted: () -> Boolean,
+            /** The device's 12/24-hour setting, read each time a time is printed. */
+            use24Hour: () -> Boolean,
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
@@ -232,6 +234,9 @@ class ScreenExtras(private val deps: Deps) {
                 logos = ImageCache(load = ::loadLogo, executor = prefetchExecutor),
                 timetable = Timetable(
                     skipsOn = { features.isOn(Features.Flag.SKIP_SPONSORS) },
+                    halfHourOn = { features.isOn(Features.Flag.SCHEDULE) },
+                    zone = { ZoneId.systemDefault() },
+                    use24Hour = use24Hour,
                 ),
             ))
         }

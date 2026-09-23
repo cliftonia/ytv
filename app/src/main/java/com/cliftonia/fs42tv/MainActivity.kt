@@ -20,14 +20,13 @@ import com.cliftonia.fs42tv.sync.LineupSource
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.ui.AppSurface
+import com.cliftonia.fs42tv.ui.GuideMusic
 import com.cliftonia.fs42tv.ui.GuidePicker
 import com.cliftonia.fs42tv.ui.ScreenDirector
 import com.cliftonia.fs42tv.ui.ScreenExtras
 import com.cliftonia.fs42tv.ui.SettingRow
 import com.cliftonia.fs42tv.ui.SettingsCatalog
 import com.cliftonia.fs42tv.update.UpdateFlow
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
 
 /** The repository whose releases carry the apk, for the self-update check. */
 private const val RELEASES_REPO = "cliftonia/ytv"
@@ -97,24 +96,8 @@ class MainActivity : ComponentActivity() {
     private fun nowSeconds(): Long =
         if (fixedNowSeconds > 0) fixedNowSeconds else System.currentTimeMillis() / 1000
 
-    // Single-threaded so a rapid burst of channel presses queues in order rather than racing
-    // each other over the shared navigator and player.
-    private val executor: ExecutorService = Executors.newSingleThreadExecutor()
-
-    /**
-     * A second thread, for resolving channels nobody has asked for yet. Separate from
-     * [executor] on purpose: that one serves the channel the viewer is actually waiting for,
-     * and a speculative resolve queued ahead of a real keypress would make surfing slower.
-     */
-    private val prefetchExecutor: ExecutorService = Executors.newSingleThreadExecutor()
-
-    /**
-     * A third thread, for downloading the subtitle file of the clip that just started. Its own
-     * thread for the same reason [prefetchExecutor] has one, in both directions: on [executor]
-     * it would delay the next channel change, and on [prefetchExecutor] the captions for the
-     * programme being watched would queue behind neighbours nobody asked for.
-     */
-    private val captionExecutor: ExecutorService = Executors.newSingleThreadExecutor()
+    /** The tune, prefetch and caption threads - see [AppThreads] for why three. */
+    private val threads = AppThreads()
 
     /** Drives the stand-by card when playback stalls mid-clip. */
     private val stallHandler by lazy { android.os.Handler(mainLooper) }
@@ -144,6 +127,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var settingsCatalog: SettingsCatalog
     private lateinit var composeView: ComposeView
     private lateinit var extras: ScreenExtras
+    private lateinit var music: GuideMusic
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -173,18 +157,25 @@ class MainActivity : ComponentActivity() {
 
         readSettings()
 
-        extras = ScreenExtras.create(prefs, prefetchExecutor, { runOnUiThread(it) }, { destroyed })
+        extras = ScreenExtras.create(prefs, threads.prefetch, { runOnUiThread(it) }, { destroyed },
+            use24Hour = { android.text.format.DateFormat.is24HourFormat(this) })
+        music = GuideMusic(GuideMusic.Deps(
+            context = this,
+            resolveForAudio = { tune.resolveForAudio(it) },
+            speculativeExecutor = threads.prefetch,
+            runOnUi = { block -> runOnUiThread(block) },
+            halted = { destroyed },
+            stoppedNow = { stopped },
+        ))
         director = createScreenDirector()
         tune = createTuneController()
-        director.captionsOn = prefs.getBoolean(SettingsCatalog.CAPTIONS_KEY, false)
+        director.captions.on = prefs.getBoolean(SettingsCatalog.CAPTIONS_KEY, false)
         settingsCatalog = createSettingsCatalog()
         guide = GuidePicker(GuidePicker.Deps(
-            context = this,
             tune = tune,
             director = director,
             navigator = { navigator },
-            executor = executor,
-            speculativeExecutor = prefetchExecutor,
+            executor = threads.tune,
             runOnUi = { block -> runOnUiThread(block) },
             halted = { destroyed },
             stoppedNow = { stopped },
@@ -192,6 +183,7 @@ class MainActivity : ComponentActivity() {
             elapsedMillis = { SystemClock.elapsedRealtime() },
             focus = ::grantOverlayFocus,
             extras = extras,
+            music = music,
         ))
 
         composeView = ComposeView(this).apply {
@@ -228,7 +220,7 @@ class MainActivity : ComponentActivity() {
         DialLoader(
             source = source,
             cacheDir = cacheDir,
-            executor = executor,
+            executor = threads.tune,
             runOnUi = { block -> runOnUiThread(block) },
             halted = { destroyed },
             loaded = { navigator != null },
@@ -311,13 +303,15 @@ class MainActivity : ComponentActivity() {
         persistCaptionsOn = {
             prefs.edit().putBoolean(SettingsCatalog.CAPTIONS_KEY, it).apply()
         },
-        captionExecutor = captionExecutor,
+        captionExecutor = threads.caption,
         extras = extras,
+        music = music,
+        channels = { navigator?.channels.orEmpty() },
     ))
 
     private fun createTuneController() = TuneController(TuneController.Deps(
-        executor = executor,
-        prefetchExecutor = prefetchExecutor,
+        executor = threads.tune,
+        prefetchExecutor = threads.prefetch,
         resolver = resolver,
         ledger = ledger,
         urls = null,
@@ -341,8 +335,8 @@ class MainActivity : ComponentActivity() {
         ladder = { ladder },
         setLadder = { ladder = it },
         clearResolved = ledger::clearResolved,
-        captionsOn = { director.captionsOn },
-        toggleCaptions = director::toggleCaptions,
+        captionsOn = { director.captions.on },
+        toggleCaptions = director.captions::toggle,
         applyAudioHold = { millis ->
             (deck.player as? MpvChannelPlayer)?.setAudioHoldMillis(millis)
                 ?: run { com.cliftonia.fs42tv.player.audioHoldMillis = millis }
@@ -484,9 +478,7 @@ class MainActivity : ComponentActivity() {
         destroyed = true
         stallHandler.removeCallbacksAndMessages(null)
         recoveryHandler.removeCallbacksAndMessages(null)
-        executor.shutdownNow()
-        prefetchExecutor.shutdownNow()
-        captionExecutor.shutdownNow()
+        threads.shutdown()
         resolver.close()
         guide.releaseMusic()
         extras.release()

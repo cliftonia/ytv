@@ -25,7 +25,13 @@ class Features(
      * One entry per feature. [label] is the Settings row, so it is written the way the owner will
      * look for it on screen; [key] is the remembered preference and must never be reused.
      */
-    enum class Flag(val label: String, val key: String) {
+    enum class Flag(
+        val label: String,
+        val key: String,
+        /** What the row says when on and off - ON/OFF unless the choice has better words. */
+        val onValue: String = "ON",
+        val offValue: String = "OFF",
+    ) {
         /** Now/next programme titles on Pluto channels, from Pluto's own guide. */
         PLUTO_GUIDE("PLUTO GUIDE", "feature.plutoguide"),
 
@@ -44,6 +50,12 @@ class Features(
          * durations again, exactly as before the field existed.
          */
         SKIP_SPONSORS("SKIP SPONSORS", "feature.skipsponsors"),
+
+        /**
+         * Clock channels on the half hour - programmes at :00 and :30, short clips in the gaps, an
+         * "up next" card for the rest. CONTINUOUS is the rotation exactly as it was before.
+         */
+        SCHEDULE("SCHEDULE", "feature.schedule", onValue = "HALF-HOUR", offValue = "CONTINUOUS"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,
@@ -66,7 +78,7 @@ class Features(
         Flag.values().map { flag ->
             SettingRow(
                 label = flag.label,
-                value = if (isOn(flag)) "ON" else "OFF",
+                value = if (isOn(flag)) flag.onValue else flag.offValue,
                 action = {
                     val next = !isOn(flag)
                     on[flag] = next

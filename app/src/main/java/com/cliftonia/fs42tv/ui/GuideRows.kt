@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv.ui
 
+import com.cliftonia.fs42tv.schedule.ScheduleLines
 import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 
@@ -45,7 +46,9 @@ object GuideRows {
         // whichever feed the fake schedule landed on - while the player always plays the first.
         // The guide confidently listed a programme that was not on.
         if (channel.rotation != "clock") return channel.streams.firstOrNull()?.title
-        return timetable.playPoint(channel, nowSeconds)
+        // On the half-hour schedule the row carries real times: "NOW 7:30 ... · NEXT 8:00 ...".
+        ScheduleLines.guideRow(channel, timetable, nowSeconds)?.let { return it }
+        return timetable.at(channel, nowSeconds)
             ?.let { channel.streams.getOrNull(it.index)?.title }
     }
 }

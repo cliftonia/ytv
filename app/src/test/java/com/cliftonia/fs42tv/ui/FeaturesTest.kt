@@ -32,7 +32,21 @@ class FeaturesTest {
     fun `each flag has its own row, labelled as the owner will look for it`() {
         val rows = Store().features().rows(onToggled = { _, _ -> }, refresh = {})
         assertEquals(Features.Flag.values().map { it.label }, rows.map { it.label })
-        assertTrue(rows.all { it.value == "ON" && it.action != null })
+        assertTrue(rows.all { row ->
+            row.value == Features.Flag.values().first { it.label == row.label }.onValue &&
+                row.action != null
+        })
+    }
+
+    @Test
+    fun `the schedule row reads as the choice it is, not as ON and OFF`() {
+        val features = Store().features()
+        val row = { features.rows(onToggled = { _, _ -> }, refresh = {})
+            .first { it.label == "SCHEDULE" } }
+        assertEquals("HALF-HOUR", row().value)
+        row().action!!.invoke()
+        assertEquals("CONTINUOUS", row().value)
+        assertFalse(features.isOn(Features.Flag.SCHEDULE))
     }
 
     @Test

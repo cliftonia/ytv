@@ -98,6 +98,17 @@ class DialContractTest {
     }
 
     @Test
+    fun `a stream's parts of the day are read when published and empty when not`() {
+        val json = """{"generated":1,"channels":[{"number":1,"name":"X","kind":"youtube",
+            "rotation":"clock","streams":[
+              {"id":"abc123def45","url":"u","duration":812,"parts":["prime","late"]},
+              {"id":"zzz123def45","url":"u2","duration":300}]}]}"""
+        val streams = DialContract.parseDial(json).channels.single().streams
+        assertEquals(listOf("prime", "late"), streams[0].parts)
+        assertTrue(streams[1].parts.isEmpty())
+    }
+
+    @Test
     fun `sync caches what it fetched`() {
         val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
         val repo = DialRepository(fetch = { fixture("channels-sample.json") }, cacheDir = dir)

@@ -175,4 +175,47 @@ class TunerTest {
         // Without the timetable, exactly the rotation from before the field existed.
         assertEquals(0, Tuner.tune(skipped, null, nowSeconds = 70)!!.streamIndex)
     }
+
+    // --- the half-hour schedule ----------------------------------------------------------------
+
+    private val slot = 1_790_191_800L
+
+    private val halfHour = com.cliftonia.fs42tv.schedule.Timetable(
+        skipsOn = { false }, halfHourOn = { true }, zone = { java.time.ZoneOffset.UTC })
+
+    @Test
+    fun `on the schedule, a card is tuned as the programme it announces, with nothing to join`() {
+        val tuned = Tuner.tune(ytChannel(1700, 1700), null, nowSeconds = slot + 1750,
+            timetable = halfHour)!!
+        val card = tuned.card!!
+        assertEquals(slot + 1800, card.until)
+        assertEquals(card.index, tuned.streamIndex)
+        assertEquals(tuned.stream, TestDial.ytChannel(1700, 1700).streams[card.index])
+        assertEquals(0.0, tuned.offsetSeconds, 0.0)
+    }
+
+    @Test
+    fun `on the schedule, a clip knows when its time runs out`() {
+        val tuned = Tuner.tune(ytChannel(1500, 240), null, nowSeconds = slot + 100,
+            timetable = halfHour)!!
+        assertEquals(0, tuned.streamIndex)
+        assertEquals(100.0, tuned.offsetSeconds, 0.0)
+        assertEquals(slot + 1500, tuned.endsAt)
+        assertNull(tuned.card)
+    }
+
+    @Test
+    fun `what follows a finished clip is the schedule's next item, or the list's next clip`() {
+        val onSchedule = Tuner.tune(ytChannel(1500, 240), null, nowSeconds = slot + 1495,
+            timetable = halfHour)!!
+        val next = Tuner.following(onSchedule, null, timetable = halfHour)!!
+        assertEquals("the top-up at the programme's scheduled end", 1, next.streamIndex)
+        assertEquals(0.0, next.offsetSeconds, 0.0)
+
+        val continuous = Tuner.tune(ytChannel(100, 200, 300), null, nowSeconds = 99)!!
+        assertEquals(1, Tuner.following(continuous, null)!!.streamIndex)
+        val single = Tuner.tune(ytChannel(100), null, nowSeconds = 99)!!
+        assertEquals("one clip has nothing else to follow it", 0,
+            Tuner.following(single, null)!!.streamIndex)
+    }
 }

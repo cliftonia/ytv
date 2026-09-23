@@ -58,7 +58,8 @@ class SponsorSkipper(
     fun start(tuned: Tuned?) {
         stop()
         val playing = tuned ?: return
-        if (playing.channel.rotation != "clock") return
+        // A card plays nothing; its stream is the programme it announces, not one on screen.
+        if (playing.channel.rotation != "clock" || playing.card != null) return
         val ranges = timetable.skipRanges(playing.stream)
         if (ranges.isEmpty()) return
         watch = SkipWatch(ranges, playing.stream.duration.toDouble())

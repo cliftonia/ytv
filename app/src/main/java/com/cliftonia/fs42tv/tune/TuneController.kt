@@ -85,6 +85,11 @@ class TuneController(private val deps: Deps) {
         val paint: (Tuned, Playable, Long, Boolean, Int) -> Unit,
         /** A definitive failure: nothing on this channel can play right now, and the card says so. */
         val channelUnavailable: (Channel) -> Unit,
+        /**
+         * The half-hour schedule has an "up next" card on this channel, not a clip: put it up in
+         * place of a picture. [Tuned.card] says until when, and what it announces.
+         */
+        val card: (Tuned) -> Unit,
     )
 
     // Bumped on every keypress. A tune captures the current value when queued and abandons
@@ -103,18 +108,23 @@ class TuneController(private val deps: Deps) {
         private set
 
     /**
-     * The channel and clip index that just reported ending, or null.
+     * The channel, clip index and scheduled end of the clip that just reported ending, or null.
      *
      * The channel number rides along with the index because an end-of-clip retune can be
      * superseded by a channel change: the marker must only steer the tune of the channel whose
-     * clip actually ended, not whatever channel the viewer surfed to next.
+     * clip actually ended, not whatever channel the viewer surfed to next. The scheduled end
+     * (half-hour schedule only) tells one SHOWING from the next: a programme that fills its slot
+     * airs again at the next boundary with the same index, and that is a new showing to join.
      */
-    @Volatile private var justEnded: Pair<Int, Int>? = null
+    private class Ended(val channel: Int, val index: Int, val endsAt: Long?)
 
-    // How the last tune spent its time. Written on the executor, read when the first frame lands.
-    @Volatile private var lastResolveMillis: Long = 0
-    @Volatile private var lastResolveWasCached: Boolean = false
+    @Volatile private var justEnded: Ended? = null
+
+    // When the last tune was asked for. Written on the executor, read when the first frame lands.
     @Volatile private var lastTuneRequestedAt: Long = 0
+
+    /** Resolving the scheduled clip, and walking past dead ones. See [ClipFinder]. */
+    private val finder = ClipFinder(deps)
 
     private val prefetch = NeighbourPrefetch(
         executor = deps.prefetchExecutor,
@@ -195,7 +205,7 @@ class TuneController(private val deps: Deps) {
      * track it repeats.
      */
     fun clipEnded() {
-        justEnded = onAir?.let { it.channel.number to it.streamIndex }
+        justEnded = onAir?.let { Ended(it.channel.number, it.streamIndex, it.endsAt) }
         retuneCurrent("clip ended")
     }
 
@@ -207,9 +217,9 @@ class TuneController(private val deps: Deps) {
     fun noteFirstFrame() {
         if (lastTuneRequestedAt > 0) {
             PlaybackDiagnostics.recordTune(
-                resolveMillis = lastResolveMillis,
+                resolveMillis = finder.lastResolveMillis,
                 firstFrameMillis = deps.elapsedMillis() - lastTuneRequestedAt,
-                fromCache = lastResolveWasCached,
+                fromCache = finder.lastResolveWasCached,
             )
         }
     }
@@ -252,22 +262,29 @@ class TuneController(private val deps: Deps) {
         var tuned = Tuner.tune(channel, deps.urls, now, deps.ladder(), deps.ledger.refusedSnapshot(),
             deps.timetable)
 
-        // If the rotation hands back the clip that just finished, take the next one instead.
-        // Read and cleared unconditionally, honoured only when the channel matches - see
-        // [justEnded]'s comment.
-        val je = justEnded
+        // If the timetable hands back the clip that just finished, take what follows it instead
+        // - see Tuner.following. Read and cleared unconditionally, honoured only when the
+        // channel matches - see [justEnded]'s comment.
+        val ended = justEnded?.takeIf { it.channel == channel.number }
         justEnded = null
-        val ended = if (je?.first == channel.number) je.second else -1
-        if (ended >= 0 && tuned != null && tuned.streamIndex == ended &&
-            channel.streams.size > 1) {
-            Log.i("fs42", "rotation still on the finished clip $ended; taking the next")
-            val next = (ended + 1) % channel.streams.size
-            tuned = Tuner.tuneToIndex(channel, next)
+        if (ended != null && tuned != null && tuned.card == null &&
+            tuned.streamIndex == ended.index && tuned.endsAt == ended.endsAt) {
+            Log.i("fs42", "timetable still on the finished clip ${ended.index}; taking what follows")
+            tuned = Tuner.following(tuned, deps.urls, deps.ladder(), deps.ledger.refusedSnapshot(),
+                deps.timetable)
         }
 
         if (tuned == null) {
             Log.w("fs42", "channel ${channel.number} ${channel.name}: nothing on air")
             postChannelUnavailable(channel, requestGeneration)
+            return
+        }
+
+        // A card resolves nothing and plays nothing: there is no picture to wait for.
+        if (tuned.card != null) {
+            Log.i("fs42", "channel ${channel.number} ${channel.name}: up next card until " +
+                "${tuned.card.until}, announcing clip ${tuned.streamIndex}")
+            postCard(tuned, requestGeneration)
             return
         }
 
@@ -289,7 +306,7 @@ class TuneController(private val deps: Deps) {
                 Log.i("fs42", "every rung of $videoId is refused; skipping it unresolved")
                 null
             } else {
-                resolveToPlay(videoId, now)
+                finder.resolveToPlay(videoId, now)
             }
             if (resolved != null) {
                 playable = resolved
@@ -309,7 +326,7 @@ class TuneController(private val deps: Deps) {
                 // what it CAN show.
                 Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
                     "$videoId; trying the next clips")
-                val substitute = resolveNextPlayable(channel, tuned.streamIndex, now)
+                val substitute = finder.resolveNextPlayable(channel, tuned.streamIndex, now)
                 if (substitute != null) {
                     val (idx, sub) = substitute
                     // The whole Tuned is rebuilt, not just the playable: the banner, onAir
@@ -395,64 +412,6 @@ class TuneController(private val deps: Deps) {
         }
     }
 
-    /** The scheduled clip's url - from the cache when it holds one, extracted otherwise. */
-    private fun resolveToPlay(videoId: String, now: Long): Progressive? {
-        val resolveStarted = deps.elapsedMillis()
-        val remembered = deps.ledger.recallToPlay(videoId, now)
-        lastResolveWasCached = remembered != null
-        if (remembered != null) {
-            Log.d("fs42", "resolve hit from cache for $videoId")
-            lastResolveMillis = deps.elapsedMillis() - resolveStarted
-            return remembered
-        }
-        Log.d("fs42", "resolve miss; extracting $videoId")
-        val resolved = deps.resolver.resolveDetailed(
-            videoId, now, deps.ladder(), deps.ledger.refusedSnapshot())
-        lastResolveMillis = deps.elapsedMillis() - resolveStarted
-        resolved?.let { deps.ledger.rememberPlayed(videoId, it) }
-        return resolved?.playable
-    }
-
-    /**
-     * Walk forward through a channel's clips until one resolves.
-     *
-     * Bounded, and deliberately not the whole list: each attempt is a full extraction of several
-     * seconds, so trying a hundred would leave the viewer staring at black for minutes while the
-     * app worked - far worse than admitting defeat and putting a card up. A handful covers the
-     * ordinary case, which is one or two dead clips in a row, and a channel where even that many
-     * consecutive clips are dead has a real problem worth showing.
-     */
-    private fun resolveNextPlayable(
-        channel: Channel,
-        failedIndex: Int,
-        now: Long,
-    ): Pair<Int, Playable>? {
-        for (step in 1..SKIP_DEAD_CLIPS) {
-            if (deps.halted()) return null
-            // The wrapped index is what gets returned, because the caller rebuilds the Tuned
-            // around it and channel.streams is indexed by the wrapped value, not the raw sum.
-            val idx = (failedIndex + step) % channel.streams.size
-            val next = channel.streams.getOrNull(idx) ?: return null
-            val id = next.id ?: continue
-            if (deps.ledger.isDead(id)) continue
-            deps.ledger.recallToPlay(id, now)?.let {
-                Log.i("fs42", "skipped to clip $idx (cached)")
-                return idx to it
-            }
-            val resolved = deps.resolver.resolveDetailed(
-                id, now, deps.ladder(), deps.ledger.refusedSnapshot())
-            if (resolved != null) {
-                deps.ledger.rememberPlayed(id, resolved)
-                Log.i("fs42", "skipped to clip $idx after $step dead clip(s)")
-                return idx to resolved.playable
-            }
-            // Remember it so the next tune of this channel does not pay for it again.
-            deps.ledger.markDead(id)
-        }
-        Log.w("fs42", "channel ${channel.number}: $SKIP_DEAD_CLIPS consecutive clips unplayable")
-        return null
-    }
-
     /**
      * Raise the stand-by card for a channel that definitively failed to tune.
      *
@@ -471,6 +430,28 @@ class TuneController(private val deps: Deps) {
     }
 
     /**
+     * Put a card up, claiming the air the way a painted clip does - behind the same two
+     * generation checks, so a card for a channel the viewer already left can never land.
+     *
+     * The card claims [onAir] because it IS what is on: the recovery re-tune, the banner, the
+     * resume pref and the guide's seed all read onAir, and leaving it on the previous channel
+     * would point every one of them at a channel the viewer has left. Its own channel joins the
+     * prefetch, which for a card resolves the programme it announces - so when the card ends
+     * the programme starts from a cache hit.
+     */
+    private fun postCard(tuned: Tuned, requestGeneration: Int) {
+        if (deps.halted()) return
+        deps.runOnUi {
+            if (deps.halted() || requestGeneration != generation.get()) return@runOnUi
+            onAir = tuned
+            deps.rememberChannel(tuned.channel.number)
+            prefetch.resolveAhead(listOf(tuned.channel)) { generation.get() == requestGeneration }
+            prefetchNeighbours(tuned.channel, requestGeneration)
+            deps.screen.card(tuned)
+        }
+    }
+
+    /**
      * With the picture up on [from], get the channels either side of it ready - for as long as
      * [tuneGeneration] is still the current one. Any keypress, retune or overlay moves the
      * generation on, and the tune that follows queues its own neighbours.
@@ -480,16 +461,5 @@ class TuneController(private val deps: Deps) {
         prefetch.resolveAhead(listOfNotNull(nav.peekUp(from), nav.peekDown(from))) {
             generation.get() == tuneGeneration
         }
-    }
-
-    private companion object {
-        /**
-         * How many clips past the scheduled one a tune will try before admitting defeat.
-         *
-         * Each attempt is a full extraction of several seconds, so the bound is what keeps a
-         * channel full of dead clips from looking like a hung television. See
-         * [resolveNextPlayable].
-         */
-        const val SKIP_DEAD_CLIPS = 3
     }
 }
