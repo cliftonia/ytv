@@ -39,7 +39,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NqK1gyTYt8M",
                 "duration": 4112,
-                "title": "Brian Simpson | Live From The Mothership (Full Comedy Special)"
+                "title": "Brian Simpson | Live From The Mothership (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=DBKcgpgJOAo",
@@ -154,12 +156,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=XwFN2LOCrOw",
                 "duration": 2971,
-                "title": "Don Friesen: Ask Your Mom | FULL COMEDY SPECIAL"
+                "title": "Don Friesen: Ask Your Mom | FULL COMEDY SPECIAL",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=4ycfTfDZ1tU",
                 "duration": 2955,
-                "title": "Tom Cashman - The Formula for Happiness (Full Comedy Special) 2026"
+                "title": "Tom Cashman - The Formula for Happiness (Full Comedy Special) 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=NB9lsn5xPsk",
@@ -209,7 +215,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=uYqWsDhWkkA",
                 "duration": 3451,
-                "title": "Kelsey Cook | Mark Your Territory (Full Comedy Special)"
+                "title": "Kelsey Cook | Mark Your Territory (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=qzsHolR05hg",
@@ -219,7 +227,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=XBrdMrbmz1c",
                 "duration": 3625,
-                "title": "Ryan Long - Problem Solved  (FULL STANDUP SPECIAL)"
+                "title": "Ryan Long - Problem Solved  (FULL STANDUP SPECIAL)",
+                "skip": [
+                    [
+                        3586.5,
+                        3589.5
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=wM0CZoGkMOs",
@@ -234,7 +249,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
                 "duration": 2885,
-                "title": "Shane Gillis Live In Austin | Stand Up Comedy"
+                "title": "Shane Gillis Live In Austin | Stand Up Comedy",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=UPvzkc0bQ-Y",
@@ -264,7 +281,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8rHf7NfxFQs",
                 "duration": 3478,
-                "title": "Jerrel Beamon: Ohio Kid (2026) | Full Comedy Special"
+                "title": "Jerrel Beamon: Ohio Kid (2026) | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=LOFvDCflKig",
@@ -289,7 +308,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dQgMDlDJMig",
                 "duration": 4287,
-                "title": "Andrew Santino: Homefield Advantage (Full Show) | Hilarious Stand-Up Special"
+                "title": "Andrew Santino: Homefield Advantage (Full Show) | Hilarious Stand-Up Special",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=rb05fiUz6cU",
@@ -344,7 +365,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=n3fzRcHgHfs",
                 "duration": 3780,
-                "title": "The Stuttering Comedian | Drew Lynch | Full Comedy Special"
+                "title": "The Stuttering Comedian | Drew Lynch | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=1Lik3hSyhrY",
@@ -494,7 +517,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=o1Zddj5RByM",
                 "duration": 3194,
-                "title": "Ed Regine: We're All Idiots | Full Stand Up Comedy Special 2026"
+                "title": "Ed Regine: We're All Idiots | Full Stand Up Comedy Special 2026",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=TtRYQIqvDrE",

@@ -64,7 +64,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=p66iWmoLp-4",
                 "duration": 1812,
-                "title": "ABANDONED Artist's Mansion Left Deep in the Woods"
+                "title": "ABANDONED Artist's Mansion Left Deep in the Woods",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=eNqGwq6rw04",
@@ -139,7 +141,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TJFNuWoME9s",
                 "duration": 1086,
-                "title": "I Discovered a Mysterious Gold Rush Camp With a Dark Past"
+                "title": "I Discovered a Mysterious Gold Rush Camp With a Dark Past",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=yUK5cksKbUc",
@@ -184,7 +188,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=svd8KEmlbnc",
                 "duration": 976,
-                "title": "EXPLORING THE ABANDONED & DANGEROUS CANTON CENTER MALL - CANTON OHIO"
+                "title": "EXPLORING THE ABANDONED & DANGEROUS CANTON CENTER MALL - CANTON OHIO",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=2b8TB3mR5iA",
@@ -279,7 +285,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ijj577kTlSo",
                 "duration": 2209,
-                "title": "ABANDONED Texas Mega Mansion That NOBODY Wants to Buy"
+                "title": "ABANDONED Texas Mega Mansion That NOBODY Wants to Buy",
+                "skip": [
+                    [
+                        206.7,
+                        247.6
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=_0N1PgWk3VU",
@@ -309,7 +322,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cV5UEMtny7Y",
                 "duration": 1311,
-                "title": "$10,000,000 ABANDONED Billionaire's Glass Mansion"
+                "title": "$10,000,000 ABANDONED Billionaire's Glass Mansion",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=KihLdgSO8uY",
@@ -329,7 +344,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=tPHWNQ5GM9o",
                 "duration": 3043,
-                "title": "The Boys Explore the Most DANGEROUS Mineshaft..."
+                "title": "The Boys Explore the Most DANGEROUS Mineshaft...",
+                "skip": [
+                    [
+                        25.8,
+                        108.3
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=JYNkZtxZpVI",
@@ -429,7 +451,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VMSPF9YZHWE",
                 "duration": 3103,
-                "title": "The Abandoned 1990s Movie Theater — Retro Films, Posters & Toys Left Inside"
+                "title": "The Abandoned 1990s Movie Theater — Retro Films, Posters & Toys Left Inside",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=fkiSNoOnOlw",
@@ -474,7 +498,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=gupFdMesp5k",
                 "duration": 1400,
-                "title": "We Returned to the Abandoned Kingswood Activity Centre…"
+                "title": "We Returned to the Abandoned Kingswood Activity Centre…",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=iWcamYEYvWY",

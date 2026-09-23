@@ -112,11 +112,6 @@
                 "title": "Pet Shop Boys - It's A Sin | Glastonbury 2022"
             },
             {
-                "url": "https://www.youtube.com/watch?v=1QS8-d_r1Jc",
-                "duration": 387,
-                "title": "The 6 Tips You Need To Start Playing Electronic Music Live"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=gCYcHz2k5x0",
                 "duration": 192,
                 "title": "Martin Garrix - Animals (Official Video)"
@@ -129,12 +124,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=1y6smkh6c-0",
                 "duration": 335,
-                "title": "Swedish House Mafia ft. John Martin - Don't You Worry Child (Official Video)"
+                "title": "Swedish House Mafia ft. John Martin - Don't You Worry Child (Official Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=TxvpctgU_s8",
                 "duration": 188,
-                "title": "Armin van Buuren feat. Sharon den Adel - In And Out Of Love (Official Music Video)"
+                "title": "Armin van Buuren feat. Sharon den Adel - In And Out Of Love (Official Music Video)",
+                "skip": [
+                    [
+                        0.0,
+                        5.3
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ebXbLfLACGM",
@@ -177,11 +181,6 @@
                 "title": "Coldplay - Viva La Vida (Live In São Paulo)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=vZ_NpLWuL00",
-                "duration": 220,
-                "title": "Manali Trance | Yo Yo Honey Singh & Neha Kakkar | The Shaukeens | Lisa Haydon | Akshay Kum"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=5RDSkR8_AQ0",
                 "duration": 249,
                 "title": "50 Cent - Ayo Technology (Official Music Video) ft. Justin Timberlake"
@@ -189,7 +188,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9Sc-ir2UwGU",
                 "duration": 223,
-                "title": "Kygo - Firestone ft. Conrad Sewell (Official Video)"
+                "title": "Kygo - Firestone ft. Conrad Sewell (Official Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=93ASUImTedo",
@@ -224,7 +225,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=I41CX0RdmPQ",
                 "duration": 147,
-                "title": "DVBBS & Borgeous - TSUNAMI (Music Video)"
+                "title": "DVBBS & Borgeous - TSUNAMI (Music Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=KBtk5FUeJbk",
@@ -234,7 +237,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cHHLHGNpCSA",
                 "duration": 231,
-                "title": "Avicii - Waiting For Love"
+                "title": "Avicii - Waiting For Love",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=2P_Opp4a6iY",
@@ -260,11 +265,6 @@
                 "url": "https://www.youtube.com/watch?v=LDU_Txk06tM",
                 "duration": 193,
                 "title": "Noisestorm - Crab Rave [Monstercat Release]"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=98KPL3VhWrE",
-                "duration": 169,
-                "title": "Electronic Music Live Set from Berlin Park"
             },
             {
                 "url": "https://www.youtube.com/watch?v=DkeiKbqa02g",
@@ -309,7 +309,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YLlZSBtZbAE",
                 "duration": 135,
-                "title": "A Very Special Digital Circus Song ( TADC Animated Music Video )"
+                "title": "A Very Special Digital Circus Song ( TADC Animated Music Video )",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=KQ6zr6kCPj8",
@@ -325,11 +327,6 @@
                 "url": "https://www.youtube.com/watch?v=16y1AkoZkmQ",
                 "duration": 270,
                 "title": "Boney M. - Rasputin (Sopot Festival 1979)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=P0P4vvQU0cs",
-                "duration": 217,
-                "title": "Carla Morrison - Disfruto Live Performance 2021 (U2: The Virtual Road)"
             },
             {
                 "url": "https://www.youtube.com/watch?v=UtF6Jej8yb4",
@@ -349,7 +346,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Up4WjdabA2c",
                 "duration": 278,
-                "title": "Electric Light Orchestra - Last Train to London (Official Video)"
+                "title": "Electric Light Orchestra - Last Train to London (Official Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=JPJjwHAIny4",
@@ -359,12 +358,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qrO4YZeyl0I",
                 "duration": 309,
-                "title": "Lady Gaga - Bad Romance (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NqpnbSFprB4",
-                "duration": 177,
-                "title": "Oliver Tree - Hurt [Official Music Video]"
+                "title": "Lady Gaga - Bad Romance (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Bznxx12Ptl0",
@@ -375,16 +371,6 @@
                 "url": "https://www.youtube.com/watch?v=nmnjL26OBcY",
                 "duration": 273,
                 "title": "The Black Eyed Peas - Rock That Body (Official Music Video)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0ov13nAw698",
-                "duration": 413,
-                "title": "Electronic Music DJ and Live Sax Set"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qIX5FdzZ_Kw",
-                "duration": 189,
-                "title": "Electronic Music Live Set from Berlin Metro"
             },
             {
                 "url": "https://www.youtube.com/watch?v=fqzhtvLWefA",
@@ -399,7 +385,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ft4jcPSLJfY",
                 "duration": 211,
-                "title": "David Guetta, Bebe Rexha & J Balvin - Say My Name (Official Video)"
+                "title": "David Guetta, Bebe Rexha & J Balvin - Say My Name (Official Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Io0fBr1XBUA",
@@ -464,12 +452,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=hN5X4kGhAtU",
                 "duration": 312,
-                "title": "Empire Of The Sun - We Are The People (Official Music Video)"
+                "title": "Empire Of The Sun - We Are The People (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=kTlv5_Bs8aw",
                 "duration": 274,
-                "title": "BTS (방탄소년단) 'MIC Drop (Steve Aoki Remix)' Official MV"
+                "title": "BTS (방탄소년단) 'MIC Drop (Steve Aoki Remix)' Official MV",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=EPo5wWmKEaI",
