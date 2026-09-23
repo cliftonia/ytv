@@ -22,6 +22,7 @@ import sys
 import time
 
 import confs
+import dial
 
 # `https://www.youtube.com/watch?v=dQw4w9WgXcQ` and nothing else. The app splits live channels
 # from clips by whether a stream carries an id, so a url this fails to read would be played as
@@ -70,6 +71,10 @@ def published_parts(parts):
     """
     ordered = [part for part in confs.DAY_PARTS if part in (parts or ())]
     return ordered or None
+
+
+# File channels whose files are episodes in filename order. Films are not.
+ORDERED_FILES = ("series",)
 
 
 def channel_from(path):
@@ -123,6 +128,13 @@ def channel_from(path):
                 entry["parts"] = parts
         streams.append(entry)
 
+    # Episodes of something, played in list order (dial.SEQUENCED, sorted by sequence.py; and the
+    # Series file channel, whose files are named S01E01...). The half-hour schedule fills gaps
+    # with any clip that fits; on these channels that would play episodes out of order, so the app
+    # fills them only with short clips and the next episodes in line.
+    slug = re.sub(r"^(ytch|file)_|\.json$", "", os.path.basename(path))
+    ordered = (is_youtube and slug in dial.SEQUENCED) or (is_file and slug in ORDERED_FILES)
+
     if not streams:
         # A channel with nothing on it is a dead number on the dial: it tunes to black and the
         # viewer has to press twice to get past it.
@@ -139,6 +151,7 @@ def channel_from(path):
         "rotation": (station.get("stream_rotation") if is_youtube
                      else "clock" if is_file else None),
         "streams": streams,
+        **({"ordered": True} if ordered else {}),
     }
 
 
