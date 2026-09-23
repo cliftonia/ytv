@@ -120,8 +120,10 @@ class ScreenDirector(private val deps: Deps) {
         player = deps.player,
         timetable = deps.extras.timetable,
         ended = {
-            // Silenced first, as a natural end is: the tail being skipped must not play on under
-            // the resolve of whatever is next.
+            // Covered and silenced first. A natural end leaves the player at the end of the file;
+            // this one leaves the skipped tail playing, and on mpv `stop` only mutes - the tail
+            // would stay on screen until the next clip loaded.
+            raiseBlank()
             deps.player()?.stop()
             deps.tune().clipEnded()
         },
@@ -194,6 +196,7 @@ class ScreenDirector(private val deps: Deps) {
         deps.player()?.stop()
         deps.player()?.setPaused(true)
         skipper.stop()
+        upNext.stopCut()
         watch.firstFrame()
         deps.stallHandler.removeCallbacksAndMessages(null)
         standByReason.value = ""
@@ -210,14 +213,27 @@ class ScreenDirector(private val deps: Deps) {
      * change - the blank, the watchdog, and the arrival that puts the station bug up.
      */
     private fun cardEnded(channel: Channel) {
+        // A timer can outlive the activity; nothing may be queued onto its shut-down executors.
+        if (deps.halted()) return
         // The card is already down (UpNextBreak.endNow), so leaveCard would see nothing to do -
         // but the player under it is still paused, and mpv would load the programme paused.
         if (!deps.stoppedNow()) deps.player()?.setPaused(false)
+        raiseBlank()
+        deps.tune().tune(channel)
+    }
+
+    /** The blank, the silence and the watchdog of a channel change, for a scheduled one. */
+    private fun raiseBlank() {
         tuning.value = true
         deps.extras.tuneStarted()
         updateProgrammeVolume()
         watch.tuneStarted()
-        deps.tune().tune(channel)
+    }
+
+    /** On destroy: stop every timer this owns, so none fires into a dead activity. */
+    fun release() {
+        upNext.release()
+        skipper.stop()
     }
 
     /** Anything else taking the screen takes the card down, and un-pauses the player under it. */
@@ -238,6 +254,7 @@ class ScreenDirector(private val deps: Deps) {
         // blank covers the gap between the shutter and the first frame of the new channel.
         deps.player()?.stop()
         skipper.stop()
+        upNext.stopCut()
         // Surfing away cancels a card as it cancels anything else.
         leaveCard()
         // A deliberate channel change supersedes any error still waiting to be announced: the
@@ -264,6 +281,7 @@ class ScreenDirector(private val deps: Deps) {
         // position must never be checked against them.
         skipper.stop()
         leaveCard()
+        upNext.watchCut(tuned.takeIf { played })
         deps.player()?.play(playable, tuned.offsetSeconds, requestedAtMillis)
         // Only when the level gain actually changed - with LEVEL VOLUME off it never does, and
         // this call is not made at all.
