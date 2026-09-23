@@ -508,6 +508,10 @@
             }
         ],
         "search_query": "classic cartoon full episode",
-        "last_refreshed": 1790023411
+        "last_refreshed": 1790023411,
+        "part_queries": {
+            "breakfast": "saturday morning cartoons full episode",
+            "afternoon": "after school cartoon full episode 1980s"
+        }
     }
 }

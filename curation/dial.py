@@ -223,6 +223,61 @@ EXCLUDE = {
     "rugby_union": ["nrl", "state of origin", "rugby league", "league"],
 }
 
+# Time-of-day mixes: a search per part of the day, for channels that ought to feel different at
+# breakfast than at midnight. The parts are confs.DAY_PARTS - breakfast 06-12, afternoon 12-18,
+# prime 18-23, late 23-06, local time on the television.
+#
+# refresh_channels runs these AFTER the channel's own query and tags what each one finds with its
+# part. The app's half-hour schedule then draws each slot from the clips tagged for the part it
+# falls in, and the untagged clips from the main query are the all-day pool. A part left out here
+# simply plays that pool, so a channel only needs a query for the part of the day where it should
+# change - Cartoons has no opinion about prime time.
+#
+# The duration window, the commentary filter, the language rules and EXCLUDE apply to part clips
+# exactly as they do to the rest - the window is per channel, not per part - so a "shorter pieces
+# by day" query on a long-form channel still finds nothing under its twenty-minute floor. Each
+# part is filled to half the channel's target, and a clip lands on a channel once: whichever query
+# found it first owns it.
+#
+# Deliberately a first handful, where the difference is obvious from the sofa. More can be added
+# the same way; a new mix arrives with the channel's next turn in the nightly rotation, and the
+# publish gate holds each part to the same no-collapse rule as a whole channel from then on.
+PARTS = {
+    # Clean, short sets over breakfast; the big club gala at prime time; the specials with the
+    # language warnings once the house is asleep.
+    "comedy": {
+        "breakfast": "Dry Bar Comedy clean stand up",
+        "prime":     "Live at the Apollo full episode",
+        "late":      "uncensored stand up comedy special full",
+    },
+    # Half-hour pieces by day and the feature-length film in the evening. Late is the unexplained,
+    # which is what documentary television has always put on after eleven.
+    "documentaries": {
+        "breakfast": "half hour documentary full episode",
+        "prime":     "feature length documentary full film",
+        "late":      "unexplained mysteries documentary full",
+    },
+    # Saturday-morning cartoons in the morning and after-school cartoons in the afternoon, which
+    # is when they were on; the evening keeps the all-day classics.
+    "cartoons": {
+        "breakfast": "saturday morning cartoons full episode",
+        "afternoon": "after school cartoon full episode 1980s",
+    },
+    # The meal the clock says: markets opening, lunch counters, then the night markets.
+    "food": {
+        "breakfast": "breakfast street food tour",
+        "afternoon": "lunch street food market tour",
+        "prime":     "night market street food tour",
+    },
+    # Swing to wake up to; ballads after eleven. Jazz sits in the song window (under seven
+    # minutes), so these are single performances, not the hour-long cafe mixes the obvious
+    # "morning jazz" search returns - those would all fail the window.
+    "jazz": {
+        "breakfast": "upbeat swing jazz live performance",
+        "late":      "slow jazz ballad live performance",
+    },
+}
+
 # Channels whose clips are episodes of something, and should therefore play in order.
 #
 # `sequence.py` sorts these after every refresh. The app needs no part in it: ClockRotation

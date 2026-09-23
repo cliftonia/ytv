@@ -508,6 +508,11 @@
             }
         ],
         "search_query": "street food tour",
-        "last_refreshed": 1789239231
+        "last_refreshed": 1789239231,
+        "part_queries": {
+            "breakfast": "breakfast street food tour",
+            "afternoon": "lunch street food market tour",
+            "prime": "night market street food tour"
+        }
     }
 }
