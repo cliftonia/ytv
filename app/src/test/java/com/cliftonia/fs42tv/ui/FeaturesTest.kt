@@ -16,10 +16,48 @@ class FeaturesTest {
 
     private class Store {
         val saved = mutableMapOf<String, Boolean>()
+        val text = mutableMapOf<String, String>()
         fun features() = Features(
             read = { key, default -> saved[key] ?: default },
             write = { key, value -> saved[key] = value },
+            readText = { key -> text[key] },
+            writeText = { key, value -> text[key] = value },
         )
+    }
+
+    private fun Features.tuningRow() =
+        rows(onToggled = { _, _ -> }, refresh = {}).first { it.label == "TUNING SCREEN" }
+
+    @Test
+    fun `the tuning screen starts as static and cycles static, blue, none`() {
+        val features = Store().features()
+        assertEquals("STATIC", features.tuningRow().value)
+        features.tuningRow().action!!.invoke()
+        assertEquals(Features.TuningScreen.BLUE, features.tuningScreen)
+        features.tuningRow().action!!.invoke()
+        assertEquals("NONE", features.tuningRow().value)
+        features.tuningRow().action!!.invoke()
+        assertEquals(Features.TuningScreen.STATIC, features.tuningScreen)
+    }
+
+    @Test
+    fun `the tuning screen choice survives a relaunch`() {
+        val store = Store()
+        store.features().tuningRow().action!!.invoke()
+        assertEquals(Features.TuningScreen.BLUE, store.features().tuningScreen)
+    }
+
+    @Test
+    fun `a television that had switched STATIC off keeps a plain black screen`() {
+        // The old ON/OFF row's preference: someone who turned the snow off chose "none".
+        val store = Store().apply { saved["feature.static"] = false }
+        assertEquals(Features.TuningScreen.NONE, store.features().tuningScreen)
+    }
+
+    @Test
+    fun `the tuning screen row sits where STATIC was, after PLUTO GUIDE`() {
+        val labels = Store().features().rows(onToggled = { _, _ -> }, refresh = {}).map { it.label }
+        assertEquals(labels.indexOf("PLUTO GUIDE") + 1, labels.indexOf("TUNING SCREEN"))
     }
 
     @Test
@@ -31,6 +69,7 @@ class FeaturesTest {
     @Test
     fun `each flag has its own row, labelled as the owner will look for it`() {
         val rows = Store().features().rows(onToggled = { _, _ -> }, refresh = {})
+            .filter { it.label != "TUNING SCREEN" }
         assertEquals(Features.Flag.values().map { it.label }, rows.map { it.label })
         assertTrue(rows.all { row ->
             row.value == Features.Flag.values().first { it.label == row.label }.onValue &&

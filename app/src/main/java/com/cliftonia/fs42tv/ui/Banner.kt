@@ -23,12 +23,6 @@ class Banner(
     val channelLine = mutableStateOf("")
     val titleLine = mutableStateOf("")
 
-    /**
-     * A third line, empty unless something has more to say - Pluto's NEXT, or the half-hour
-     * schedule's. Empty is the banner exactly as it was before the line existed.
-     */
-    val nextLine = mutableStateOf("")
-
     // Separate from the tune generation on purpose: that counter is bumped once per keypress,
     // to coalesce a burst of presses, and can advance even when a tune ultimately fails. Using
     // it as the banner's LaunchedEffect key would replay the auto-hide timer on a failed
@@ -95,7 +89,7 @@ class Banner(
     }
 
     /**
-     * Swap the title for NOW and NEXT when there are any for [channel]: the half-hour schedule's
+     * Swap the title for what is on NOW when there is a line for [channel]: the half-hour schedule's
      * real times for a clock channel, or Pluto's guide for a Pluto one. [playingIndex] is the
      * clip actually on air, when one is - see [ScheduleLines.banner].
      *
@@ -110,7 +104,6 @@ class Banner(
         val lines = scheduled ?: extras.bannerLines(channel) {
             if (channelNumber == channel.number) applyProgrammeLines(channel, playingIndex)
         }
-        nextLine.value = lines?.second.orEmpty()
         if (lines != null) titleLine.value = lines.first
     }
 }
