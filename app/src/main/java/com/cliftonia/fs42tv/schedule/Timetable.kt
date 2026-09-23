@@ -154,11 +154,15 @@ class Timetable(
     /**
      * Build every clock channel's schedule now, off the UI thread, so the first guide open does
      * not pay for a hundred of them at once. A no-op off the half-hour schedule.
+     *
+     * Asks each one what is on at [nowSeconds] rather than only constructing it: the part cycles
+     * are lazy and a day is packed when first asked for, so constructing alone left the real
+     * work - cycle detection and today's layout - to the guide's first pass, on the UI thread.
      */
-    fun prewarm(channels: List<Channel>) {
+    fun prewarm(channels: List<Channel>, nowSeconds: Long) {
         if (!halfHourOn()) return
         val skips = skipsOn()
-        channels.filter { halfHour(it) }.forEach { scheduleFor(it, skips) }
+        channels.filter { halfHour(it) }.forEach { scheduleFor(it, skips).at(nowSeconds) }
     }
 
     private class Cached(
