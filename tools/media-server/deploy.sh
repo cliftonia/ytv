@@ -69,8 +69,11 @@ scp -q /tmp/ytv-media.caddy "$REPO/tools/media-server/ytv-media.service" \
     "$REPO/tools/media-server/remote-steps.sh" "$HOST:/tmp/"
 ssh "$HOST" 'bash -s' < "$REPO/tools/media-server/remote-steps.sh"
 
-scp -q "$HOST:ytv-curation/confs/file_movies.json" "$HOST:ytv-curation/confs/file_series.json" \
-    "$REPO/curation/confs/"
+# Every file_ conf, not a hand-kept list: the scan rewrites all of them (Cinema Stream's remote
+# urls and any channel ingest.py created), and naming only movies/series left the others'
+# rescans stranded on the server - the checkout kept publishing stale streams for them. The
+# glob is quoted so the REMOTE side expands it (scp's sftp mode globs server-side itself).
+scp -q "$HOST:ytv-curation/confs/file_*.json" "$REPO/curation/confs/"
 
 echo "==> health check over tailnet"
 # A directory URL is a deliberate 404 (browse is off), so the check has to ask for a real
@@ -89,4 +92,5 @@ else
 fi
 
 echo
-echo "next: cd $REPO/curation && python3 build_lineup.py && git add -A && git commit"
+echo "next: cd $REPO/curation && python3 build_lineup.py && python3 check_lineup.py \\"
+echo "      && git add -- ../channels.json confs && git commit"
