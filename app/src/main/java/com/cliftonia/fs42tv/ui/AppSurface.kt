@@ -26,7 +26,12 @@ fun AppSurface(
     onCloseSettings: () -> Unit,
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
-        TuningBlank(director.tuning.value)
+        // Snow in place of the black when the STATIC row is on - same place, same lifetime.
+        if (director.extras.features.isOn(Features.Flag.STATIC)) {
+            TuningStatic(director.tuning.value, animate = !guide.visible.value && !settingsVisible)
+        } else {
+            TuningBlank(director.tuning.value)
+        }
         // Hidden whenever something is up in front of the programme: subtitles for a channel
         // nobody is currently looking at are noise.
         CaptionLine(

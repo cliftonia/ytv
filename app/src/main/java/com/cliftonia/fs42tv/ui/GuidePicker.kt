@@ -88,6 +88,9 @@ class GuidePicker(private val deps: Deps) {
         startIndex.value = seed
         visible.value = true
         deps.focus(true)
+        // The guide covers the blank, so any channel-change hiss stops here - not only when the
+        // music starts, which a dial without a music channel never does.
+        deps.director.syncHiss()
         fillTitles(nav)
         startMusic(nav)
     }
