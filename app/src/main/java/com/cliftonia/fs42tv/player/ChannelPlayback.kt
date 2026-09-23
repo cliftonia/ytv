@@ -68,7 +68,10 @@ interface ChannelPlayback {
      */
     fun setPaused(paused: Boolean)
 
-    /** 0f while tuning or while the guide music plays, 1f otherwise. */
+    /**
+     * A LINEAR gain: 0f while tuning or while the guide music plays, otherwise 1f - or less, when
+     * the LEVEL VOLUME row turns a loud clip down. Each engine maps it to its own scale.
+     */
     fun setVolume(volume: Float)
 
     /** Release everything. The instance is dead afterwards. */
