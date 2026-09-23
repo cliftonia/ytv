@@ -44,15 +44,15 @@ class ScheduleLinesTest {
     fun `a guide row says what is on since when, and what is next at what time`() {
         val now = titleAt(slot)
         val next = titleAt(slot + 1800)
-        assertEquals("NOW 7:30 $now · NEXT 8:00 $next",
+        assertEquals("7:30 $now · NEXT 8:00 $next",
             ScheduleLines.guideRow(channel, table(), slot + 600))
-        assertEquals("NOW 19:30 $now · NEXT 20:00 $next",
+        assertEquals("19:30 $now · NEXT 20:00 $next",
             ScheduleLines.guideRow(channel, table(h24 = true), slot + 600))
     }
 
     @Test
     fun `a top-up is on since it started, and the next programme is still next`() {
-        assertEquals("NOW 7:55 Short One · NEXT 8:00 ${titleAt(slot + 1800)}",
+        assertEquals("7:55 Short One · NEXT 8:00 ${titleAt(slot + 1800)}",
             ScheduleLines.guideRow(channel, table(), slot + 1510))
     }
 
@@ -67,7 +67,7 @@ class ScheduleLinesTest {
     @Test
     fun `the banner splits NOW and NEXT over two lines`() {
         val (now, next) = ScheduleLines.banner(channel, table(), slot + 60, playingIndex = null)!!
-        assertEquals("NOW 7:30 ${titleAt(slot)}", now)
+        assertEquals("7:30 ${titleAt(slot)}", now)
         assertEquals("NEXT 8:00 ${titleAt(slot + 1800)}", next)
     }
 
@@ -78,7 +78,7 @@ class ScheduleLinesTest {
         val scheduled = (table().at(channel, slot + 60) as Timetable.OnAir.Clip).index
         val other = 1 - scheduled
         val (now, _) = ScheduleLines.banner(channel, table(), slot + 60, playingIndex = other)!!
-        assertEquals("NOW ${channel.streams[other].title}", now)
+        assertEquals("${channel.streams[other].title}", now)
     }
 
     @Test

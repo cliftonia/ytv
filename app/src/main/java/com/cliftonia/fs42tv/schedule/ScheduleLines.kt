@@ -8,7 +8,8 @@ import java.util.Locale
 
 /**
  * The words the guide and the banner draw for a clock channel on the half-hour schedule: what is
- * on and since when, and what is next and at what time - "NOW 7:30 Grand Designs · NEXT 8:00 ...".
+ * on and since when, and what is next and at what time - "7:30 Grand Designs · NEXT 8:00 ...". No NOW: what is on is
+ * obvious; only NEXT needs its label.
  *
  * Null everywhere off the half-hour schedule, so every caller falls through to the lines it drew
  * before the schedule existed - and Pluto's NOW/NEXT, which comes from Pluto's own guide, is
@@ -50,9 +51,9 @@ object ScheduleLines {
             is Timetable.OnAir.Clip -> {
                 val startsAt = onAir.startsAt
                 val now = if ((playingIndex == null || playingIndex == onAir.index) && startsAt != null) {
-                    "NOW ${time(startsAt)} ${title(onAir.index)}"
+                    "${time(startsAt)} ${title(onAir.index)}"
                 } else {
-                    "NOW ${title(playingIndex ?: onAir.index)}"
+                    title(playingIndex ?: onAir.index)
                 }
                 val next = timetable.upNext(channel, nowSeconds)
                     ?.let { (index, at) -> "NEXT ${time(at)} ${title(index)}" }

@@ -19,14 +19,14 @@ object PlutoLines {
     private val CLOCK = DateTimeFormatter.ofPattern("h:mm a", Locale.ENGLISH)
 
     /**
-     * ("NOW <title>", "NEXT <time> <title>"), or null when nothing is on air - in which case the
+     * ("<title>", "NEXT <time> <title>"), or null when nothing is on air - in which case the
      * banner keeps the lines it already had, exactly as without the guide. The second line is
      * empty when the six-hour window holds nothing after the programme on air.
      */
     fun banner(schedule: PlutoSchedule, nowMillis: Long, zone: ZoneId): Pair<String, String>? {
         val now = schedule.onAt(nowMillis) ?: return null
         val next = schedule.nextAfter(nowMillis)
-        return "NOW ${now.title}" to (next?.let { "NEXT ${clock(it.startMillis, zone)} ${it.title}" } ?: "")
+        return now.title to (next?.let { "NEXT ${clock(it.startMillis, zone)} ${it.title}" } ?: "")
     }
 
     /**
