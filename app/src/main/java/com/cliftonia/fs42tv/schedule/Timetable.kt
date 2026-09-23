@@ -45,6 +45,12 @@ class Timetable(
             val offsetSeconds: Double,
             val startsAt: Long? = null,
             val endsAt: Long? = null,
+            /**
+             * Set when the schedule stops this clip before its content ends - a programme longer
+             * than its part, cut at the part's end. Nothing else would stop it: the player plays
+             * to the end of the file, so the dial must retune at this instant itself.
+             */
+            val cutAt: Long? = null,
         ) : OnAir()
 
         /** The "up next" card, [start] to [until]; [index] comes on at [nextAt]. */
@@ -85,8 +91,10 @@ class Timetable(
         }
         return when (val slot = scheduleFor(channel, skips).at(nowSeconds)) {
             null -> null
-            is HalfHourSchedule.OnAir.Programme ->
-                OnAir.Clip(slot.index, file(slot.index, slot.offsetSeconds), slot.slotStart, slot.endsAt)
+            is HalfHourSchedule.OnAir.Programme -> OnAir.Clip(
+                slot.index, file(slot.index, slot.offsetSeconds), slot.slotStart, slot.endsAt,
+                cutAt = slot.endsAt.takeIf { slot.cut },
+            )
             is HalfHourSchedule.OnAir.TopUp ->
                 OnAir.Clip(slot.index, file(slot.index, slot.offsetSeconds), slot.start, slot.end)
             // A card always names something: a pool that can put a card up can put a clip up.
@@ -102,9 +110,44 @@ class Timetable(
     fun upNext(channel: Channel, nowSeconds: Long): Pair<Int, Long>? =
         if (halfHour(channel)) scheduleFor(channel, skipsOn()).upNext(nowSeconds) else null
 
+    /** Where [stream] is joined from its beginning: past a sponsor read at 0:00, when skipping. */
+    fun startOffset(stream: Stream): Double = Skips.mediaTime(skipRanges(stream), 0.0)
+
+    /**
+     * Clips to try, in order, in place of [dead] - scheduled on [channel] at [nowSeconds] until
+     * [endsAt] - when it will not resolve.
+     *
+     * Continuous: the next clips in list order, as it always was. On the half-hour schedule the
+     * substitute must not wreck what comes after it: it is drawn from the same part's pool and
+     * must end by [endsAt], starting after [dead] in list order; [avoid] is the substitute that
+     * just finished, so a long dead programme is not covered by one short clip on repeat. With
+     * nothing that fits, whatever the schedule has at [endsAt], early.
+     */
+    fun substitutes(channel: Channel, nowSeconds: Long, dead: Int, endsAt: Long?, avoid: Int?): List<Int> {
+        val count = channel.streams.size
+        if (count == 0) return emptyList()
+        if (!halfHour(channel) || endsAt == null) return (1 until count).map { (dead + it) % count }
+        val room = endsAt - nowSeconds
+        val pool = scheduleFor(channel, skipsOn()).poolAt(nowSeconds)
+        val rotated = pool.filter { it > dead } + pool.filter { it < dead }
+        val fits = rotated.filter { it != avoid && watchDuration(channel.streams[it]).let { w -> w in 1..room } }
+        return fits.ifEmpty { listOfNotNull(at(channel, endsAt)?.index?.takeIf { it != dead }) }
+    }
+
+    /**
+     * Build every clock channel's schedule now, off the UI thread, so the first guide open does
+     * not pay for a hundred of them at once. A no-op off the half-hour schedule.
+     */
+    fun prewarm(channels: List<Channel>) {
+        if (!halfHourOn()) return
+        val skips = skipsOn()
+        channels.filter { halfHour(it) }.forEach { scheduleFor(it, skips) }
+    }
+
     private class Cached(
         val streams: List<Stream>,
         val skips: Boolean,
+        val ordered: Boolean,
         val zone: ZoneId,
         val schedule: HalfHourSchedule,
     )
@@ -118,15 +161,17 @@ class Timetable(
             // Identity first - the same parsed lineup, the common case - then equality, so a
             // reloaded but identical lineup keeps its cycle and a changed one rebuilds it.
             val sameLineup = cached.streams === channel.streams || cached.streams == channel.streams
-            if (sameLineup && cached.skips == skips && cached.zone == zone) return cached.schedule
+            if (sameLineup && cached.skips == skips && cached.ordered == channel.ordered &&
+                cached.zone == zone) return cached.schedule
         }
         val built = HalfHourSchedule(
             channelNumber = channel.number,
             durations = channel.streams.map { if (skips) Skips.watchDuration(it) else it.duration },
             parts = channel.streams.map { it.parts },
             zone = zone,
+            ordered = channel.ordered,
         )
-        schedules[channel.number] = Cached(channel.streams, skips, zone, built)
+        schedules[channel.number] = Cached(channel.streams, skips, channel.ordered, zone, built)
         return built
     }
 

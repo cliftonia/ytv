@@ -51,11 +51,17 @@ class HalfHourScheduleDegenerateTest {
     }
 
     @Test
-    fun `one programme - it airs every slot it can, and the rest is cards`() {
+    fun `one programme - back to back, with a card only for a short gap or a part's end`() {
+        // Amended gap rule: 1600s left after it is too long for a card, and nothing else fills
+        // it, so it starts again at once. A card is ten minutes or less - or the tail of a part,
+        // which it may not cross.
         val spans = spansOfDay(schedule(2000))
         assertTrue(spans.all { it.kind == 'P' || it.kind == 'C' })
         spans.filter { it.kind == 'P' }.forEach { assertEquals(2000L, it.length) }
-        spans.filter { it.kind == 'C' }.forEach { assertTrue("$it", it.length == 1600L || it.length > 1600) }
+        spans.filter { it.kind == 'C' }.forEach {
+            val partEnd = Math.floorMod(it.end, 86_400L) in listOf(6L * 3600, 12L * 3600, 18L * 3600, 23L * 3600)
+            assertTrue("$it", it.length <= 600 || partEnd)
+        }
     }
 
     @Test
@@ -89,8 +95,19 @@ class HalfHourScheduleDegenerateTest {
     @Test
     fun `all programmes longer than a slot - every one ends in a card, no top-ups`() {
         val spans = spansOfDay(schedule(1801, 2500, 3599, 3601, 5000))
-        assertTrue(spans.none { it.kind == 'T' })
-        spans.filter { it.kind == 'P' }.forEach { assertEquals(0L, Math.floorMod(it.start, SLOT)) }
+        // Nothing fits a gap after a programme; only a part's deferred tail - no programme to
+        // come before the part ends - is filled, as one stretch, with another of them.
+        for (t in spans.filter { it.kind == 'T' }) {
+            val partEnd = ScheduleProbe.partStartLocal(t.start) +
+                ScheduleProbe.partSlots(ScheduleProbe.partAt(t.start)) * SLOT
+            assertTrue("$t is not in a deferred tail",
+                spans.none { it.kind == 'P' && it.offsetAtStart == 0.0 && it.start in t.end until partEnd })
+        }
+        // Nothing fits a gap under 1801s, and every gap here is over ten minutes: the next
+        // programme follows at once (the amended rule) - on a boundary or straight after another.
+        for ((a, b) in spans.zipWithNext()) {
+            if (b.kind == 'P') assertTrue("$b", Math.floorMod(b.start, SLOT) == 0L || a.kind == 'P')
+        }
     }
 
     @Test
@@ -103,11 +120,12 @@ class HalfHourScheduleDegenerateTest {
     @Test
     fun `exactly 300s is a programme, 299s is a short`() {
         val spans = spansOfDay(schedule(300, 299))
-        // Each slot: the 300s programme, the 299s short, a card of 1201s.
-        assertEquals(48 * 3, spans.size)
-        assertTrue(spans.filter { it.kind == 'P' }.all { it.index == 0 })
+        // Each slot: 300 + 299 leaves 1201s - too long for a card, so the programme again at once
+        // (the amended rule): 300, 299, 300, 299, 300, 299, then a 3s card.
+        assertTrue(spans.filter { it.kind == 'P' }.all { it.index == 0 && it.length == 300L })
         assertTrue(spans.filter { it.kind == 'T' }.all { it.index == 1 })
-        assertTrue(spans.filter { it.kind == 'C' }.all { it.length == 1201L })
+        assertTrue(spans.filter { it.kind == 'C' }.all { it.length == 3L })
+        assertEquals(48 * 7, spans.size)
     }
 
     @Test

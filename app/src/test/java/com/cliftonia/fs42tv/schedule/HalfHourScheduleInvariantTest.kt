@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.schedule
 
 import com.cliftonia.fs42tv.schedule.HalfHourSchedule.OnAir
+import com.cliftonia.fs42tv.schedule.PartPacker.Companion.CARD_CAP
 import com.cliftonia.fs42tv.schedule.ScheduleProbe.SHORT
 import com.cliftonia.fs42tv.schedule.ScheduleProbe.SLOT
 import com.cliftonia.fs42tv.schedule.ScheduleProbe.Span
@@ -26,6 +27,13 @@ import kotlin.random.Random
  * Property tests: hundreds of seeded pseudo-random channels, each walked span by span across
  * whole days, with every invariant the spec states checked on every span. Seeds are fixed, so a
  * failure names a reproducible channel.
+ *
+ * Updated for the amended gap rule (owner's decision after measuring 14.6% card airtime): a gap
+ * is filled from ANY clip of the pool on an unordered channel (ordered: the next episodes, then
+ * shorts); a remainder over ten minutes is not a card - the next programme starts straight away,
+ * off the boundary. So a programme starts on :00/:30 OR right after a clip, a top-up need not be
+ * short, and a card longer than ten minutes only fills a deferred tail. The replay-from-the-epoch
+ * test became a replay from the cycle's anchor, checking episode order part-day to part-day.
  */
 class HalfHourScheduleInvariantTest {
 
@@ -36,9 +44,10 @@ class HalfHourScheduleInvariantTest {
         val durations: List<Int>,
         val parts: List<List<String>>,
         val zone: ZoneId,
+        val ordered: Boolean = false,
     ) {
-        fun build() = HalfHourSchedule(number, durations, parts, zone)
-        override fun toString() = "Gen(seed=$seed, n=${durations.size}, zone=$zone)"
+        fun build() = HalfHourSchedule(number, durations, parts, zone, ordered)
+        override fun toString() = "Gen(seed=$seed, n=${durations.size}, zone=$zone, ordered=$ordered)"
     }
 
     private val zones: List<ZoneId> = listOf(
@@ -67,7 +76,8 @@ class HalfHourScheduleInvariantTest {
                 else -> (keys + "brunch").filter { rnd.nextInt(5) == 0 }
             }
         }
-        return Gen(seed, rnd.nextInt(1, 1000), durations, parts, zone ?: zones.random(rnd))
+        return Gen(seed, rnd.nextInt(1, 1000), durations, parts, zone ?: zones.random(rnd),
+            ordered = seed % 3 == 0)
     }
 
     private fun dayStart(date: LocalDate, zone: ZoneId): Long =
@@ -93,7 +103,18 @@ class HalfHourScheduleInvariantTest {
                     val dur = d[sp.index]
                     assertTrue("$ctx: a programme is 5 minutes or more", dur >= SHORT)
                     assertTrue("$ctx: from its part's pool", sp.index in pool)
-                    assertEquals("$ctx: starts on :00/:30 local", 0L, Math.floorMod(ls, SLOT))
+                    if (Math.floorMod(ls, SLOT) != 0L) {
+                        // Off the boundary only straight after a clip: a chained episode that fits
+                        // the gap, or the next programme when the gap left would exceed a card.
+                        // The walk's first span has nothing before it to check against.
+                        val prev = spans.getOrNull(i - 1)
+                        assertTrue("$ctx: starts off :00/:30 but not straight after a clip ($prev)",
+                            prev == null || (prev.kind != 'C' && prev.end == sp.start))
+                        val boundary = (Math.floorDiv(ls, SLOT) + 1) * SLOT
+                        val chained = g.ordered && le <= boundary
+                        assertTrue("$ctx: starts off the boundary with only ${boundary - ls}s to it",
+                            chained || boundary - ls > CARD_CAP)
+                    }
                     assertTrue("$ctx: offset at start is 0 or a carried whole slot count",
                         sp.offsetAtStart >= 0 && sp.offsetAtStart % SLOT == 0.0)
                     assertTrue("$ctx: never plays past its watch duration $dur",
@@ -106,15 +127,33 @@ class HalfHourScheduleInvariantTest {
                 }
                 'T' -> {
                     val dur = d[sp.index]
-                    assertTrue("$ctx: a top-up is a short", dur < SHORT)
+                    if (g.ordered) assertTrue("$ctx: an ordered channel tops up with shorts only", dur < SHORT)
+                    val prevProgramme = spans.subList(0, i).lastOrNull { it.kind == 'P' }
+                    if (prevProgramme != null && Math.floorDiv(local(prevProgramme.end - 1, g.zone), SLOT) ==
+                        Math.floorDiv(ls, SLOT)) {
+                        assertTrue("$ctx: never the programme it follows", sp.index != prevProgramme.index)
+                    }
                     assertTrue("$ctx: from its part's pool", sp.index in pool)
                     assertEquals("$ctx: plays whole, from 0", dur.toLong(), sp.length)
                     assertEquals("$ctx: from 0", 0.0, sp.offsetAtStart, 0.0)
-                    assertEquals("$ctx: never overruns its slot",
-                        Math.floorDiv(ls, SLOT), Math.floorDiv(le - 1, SLOT))
+                    // A deferred tail - no programme to come before the part ends - is filled as
+                    // one stretch, so there a filler may run across a half hour. Nowhere else.
+                    val deferredTail = spans.none { it.kind == 'P' && it.offsetAtStart == 0.0 &&
+                        local(it.start, g.zone) in le until partEnd } && partEnd <= local(spans.last().end, g.zone)
+                    if (!deferredTail) {
+                        assertEquals("$ctx: never overruns its slot",
+                            Math.floorDiv(ls, SLOT), Math.floorDiv(le - 1, SLOT))
+                    }
                 }
                 'C' -> {
                     assertTrue("$ctx: a card has length", sp.length > 0)
+                    if (sp.length > CARD_CAP && le < partEnd) {
+                        // Only a deferred tail holds a long card: no programme starts after it
+                        // before the part ends.
+                        val later = spans.filter { it.kind == 'P' && it.offsetAtStart == 0.0 &&
+                            local(it.start, g.zone) in le until partEnd }
+                        assertTrue("$ctx: a card over ten minutes, and programme $later after it", later.isEmpty())
+                    }
                     assertEquals("$ctx: a card ends on a slot boundary", 0L, Math.floorMod(le, SLOT))
                     val shorts = pool.filter { d[it] < SHORT }
                     if (shorts.isNotEmpty()) {
@@ -222,7 +261,7 @@ class HalfHourScheduleInvariantTest {
             val forward = instants.map { a.at(it) }
             // A second instance: parts lists copied into fresh collections, questions shuffled,
             // with a warm-up that fills its caches with unrelated days first.
-            val b = HalfHourSchedule(g.number, ArrayList(g.durations), g.parts.map { ArrayList(it) }, g.zone)
+            val b = HalfHourSchedule(g.number, ArrayList(g.durations), g.parts.map { ArrayList(it) }, g.zone, g.ordered)
             repeat(50) { b.at(base + rnd.nextLong(-400L * 86_400, 400L * 86_400)) }
             val order = instants.indices.shuffled(rnd)
             val shuffled = arrayOfNulls<OnAir>(instants.size)
@@ -245,77 +284,41 @@ class HalfHourScheduleInvariantTest {
         assertEquals(first, s.at(probe))
     }
 
-    // --- a straight-line replay from the epoch --------------------------------------------------
+    // --- a straight-line replay from the anchor ------------------------------------------------
 
-    private data class St(val next: Int, val carry: Int, val carried: Int)
-    private data class Blk(val pos: Int, val startSlot: Int, val slots: Int, val baseSlots: Int)
-
-    /** The spec's packing, replayed day by day from broadcast day 0 with no shortcuts. */
-    private fun place(k: IntArray, partSlots: Int, st: St): Pair<List<Blk>, St> {
-        val blocks = ArrayList<Blk>()
-        var slot = 0
-        if (st.carry >= 0) {
-            val remaining = k[st.carry] - st.carried
-            if (remaining > partSlots) {
-                return listOf(Blk(st.carry, 0, partSlots, st.carried)) to St(st.next, st.carry, st.carried + partSlots)
-            }
-            blocks += Blk(st.carry, 0, remaining, st.carried)
-            slot = remaining
-        }
-        var next = st.next
-        while (slot < partSlots) {
-            if (slot + k[next] <= partSlots) {
-                blocks += Blk(next, slot, k[next], 0)
-                slot += k[next]
-                next = (next + 1) % k.size
-            } else if (k[next] > partSlots && slot == 0) {
-                blocks += Blk(next, 0, partSlots, 0)
-                return blocks to St((next + 1) % k.size, next, partSlots)
-            } else {
-                break
-            }
-        }
-        return blocks to St(next, -1, 0)
-    }
-
+    /**
+     * Every part-day from the cycle's anchor, walked in order: the first opens with the first
+     * programme, and each continues the list order exactly where the one before stopped - through
+     * the pre-period and into the repeating cycle, and again on either side of today.
+     */
     @Test
-    fun `lookups agree with a straight-line replay of every part-day since the epoch`() {
+    fun `lookups agree with a straight-line replay of every part-day since the anchor`() {
         val firstSlots = mapOf("late" to 0, "breakfast" to 14, "afternoon" to 26, "prime" to 38)
-        for (seed in 2000..2040) {
+        for (seed in 2000..2030) {
             val g = gen(seed, maxClips = 120, zone = ZoneOffset.UTC)
             val s = g.build()
-            val rnd = Random(seed)
-            val checkDays = setOf(0L, 1L, 2L, 3L, 20_000L + rnd.nextInt(800), 47_000L + rnd.nextInt(100))
             for ((part, firstSlot) in firstSlots) {
                 val programmes = pool(g.durations, g.parts, part).filter { g.durations[it] >= SHORT }
                 if (programmes.isEmpty()) continue
-                val k = IntArray(programmes.size) { (g.durations[programmes[it]] + 1799) / 1800 }
-                var st = St(0, -1, 0)
-                for (day in 0L..checkDays.max()) {
-                    val (blocks, after) = place(k, partSlots(part), st)
-                    if (day in checkDays) {
-                        val partStart = (day * 48 - 2 + firstSlot) * SLOT
-                        val covered = HashSet<Int>()
-                        for (b in blocks) {
-                            val at = partStart + b.startSlot * SLOT
-                            val r = s.at(at)
-                            val ctx = "$g $part day $day block $b"
-                            assertTrue("$ctx: expected a programme, got $r", r is OnAir.Programme)
-                            r as OnAir.Programme
-                            assertEquals(ctx, programmes[b.pos], r.index)
-                            assertEquals(ctx, (b.baseSlots * SLOT).toDouble(), r.offsetSeconds, 0.0)
-                            assertEquals(ctx, at, r.slotStart)
-                            assertEquals(ctx, at + b.slots * SLOT, r.slotEnd)
-                            for (x in b.startSlot until b.startSlot + b.slots) covered += x
-                        }
-                        for (x in 0 until partSlots(part)) {
-                            if (x in covered) continue
-                            val r = s.at(partStart + x * SLOT)
-                            assertFalse("$g $part day $day slot $x: replay has no programme here, got $r",
-                                r is OnAir.Programme)
+                fun spansOn(day: Long): List<Span> {
+                    val start = (day * 48 - 2 + firstSlot) * SLOT
+                    return walk(s, start, start + partSlots(part) * SLOT, "$g $part day $day")
+                        .filter { it.kind == 'P' }
+                }
+                val anchor = HalfHourSchedule.ANCHOR_DAY
+                val first = spansOn(anchor).first()
+                assertEquals("$g $part: the anchor day opens with the first programme", programmes[0], first.index)
+                assertEquals(0.0, first.offsetAtStart, 0.0)
+                for (from in listOf(anchor, -3L, 20_500L)) {
+                    val run = (from until from + 12).flatMap { spansOn(it) }
+                    for ((x, y) in run.zipWithNext()) {
+                        if (y.offsetAtStart > 0) {
+                            assertEquals("$g $part from $from: carried $x -> $y", x.index, y.index)
+                        } else {
+                            val expected = programmes[(programmes.indexOf(x.index) + 1) % programmes.size]
+                            assertEquals("$g $part from $from: order $x -> $y", expected, y.index)
                         }
                     }
-                    st = after
                 }
             }
         }

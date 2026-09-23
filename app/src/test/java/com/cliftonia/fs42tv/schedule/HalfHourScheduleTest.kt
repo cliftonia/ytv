@@ -87,8 +87,9 @@ class HalfHourScheduleTest {
     // --- spanning ----------------------------------------------------------------------------
 
     @Test
-    fun `a programme longer than half an hour spans whole slots`() {
-        // 4000s is three slots. The afternoon's twelve slots hold four of them exactly.
+    fun `a programme longer than half an hour runs across slots, and a long gap is not a card`() {
+        // 4000s ends 1400s short of 13:30. The 240 fills 240 of it; 1160s is more than ten
+        // minutes, so no card - the next programme (the same one, here) starts at once.
         val s = schedule(4000, 240)
         val start = at("12:00")
         val first = programme(s.at(start))
@@ -96,10 +97,28 @@ class HalfHourScheduleTest {
         assertEquals("still the same programme a slot later, from the same start",
             OnAir.Programme(0, 1800.0, start, start + 5400, start + 4000), s.at(start + 1800))
         assertEquals(OnAir.TopUp(1, 0.0, start + 4000, start + 4240), s.at(start + 4000))
-        val card = s.at(start + 4240) as OnAir.Card
-        assertEquals(start + 5400, card.until)
-        assertEquals(OnAir.Programme(0, 0.0, start + 5400, start + 10800, start + 9400),
-            s.at(start + 5400))
+        assertEquals(OnAir.Programme(0, 0.0, start + 4240, start + 9000, start + 8240),
+            s.at(start + 4240))
+    }
+
+    @Test
+    fun `a gap of ten minutes or less is a card, and the next programme waits for the boundary`() {
+        // 1300s leaves 500s: nothing else fits (1300 is the programme itself), so a 500s card.
+        val s = schedule(1300)
+        val slot = at("19:30")
+        val card = s.at(slot + 1300) as OnAir.Card
+        assertEquals(slot + 1800, card.until)
+        assertEquals(OnAir.Programme(0, 0.0, slot + 1800, slot + 3600, slot + 3100), s.at(slot + 1800))
+    }
+
+    @Test
+    fun `an unordered channel fills a gap from any clip, never the one just shown or the one due`() {
+        // Four clips, three of them programmes: whatever airs, what fills its gap is another clip.
+        val s = schedule(1200, 590, 1250, 100)
+        val slot = at("19:00")
+        val p = programme(s.at(slot))
+        val filler = s.at(p.endsAt) as OnAir.TopUp
+        assertTrue("$filler must not repeat the programme", filler.index != p.index)
     }
 
     // --- parts -------------------------------------------------------------------------------
@@ -136,8 +155,9 @@ class HalfHourScheduleTest {
         }
         shown.zipWithNext().forEach { (a, b) -> assertEquals((a + 1) % 3, b) }
         // Breakfast has no tagged streams, so it draws from all four.
-        val breakfast = (0 until 12)
-            .mapNotNull { (s.at(at("06:00") + it * 1800L) as? OnAir.Programme)?.index }.toSet()
+        val breakfast = (0L until 4L).flatMap { d ->
+            (0 until 12).mapNotNull { (s.at(at("06:00", d) + it * 1800L) as? OnAir.Programme)?.index }
+        }.toSet()
         assertTrue("breakfast should draw on the whole channel, got $breakfast", 3 in breakfast)
     }
 
@@ -206,72 +226,77 @@ class HalfHourScheduleTest {
 
     /**
      * Every second of a day, looked up cold, against the same day laid out in one pass by an
-     * independent and deliberately naive packer. Shorts are in different minutes, so largest
-     * first leaves nothing to the seed and the replay can predict every top-up.
+     * independent and deliberately naive packer, under the amended gap rule. Every clip is in a
+     * different minute, so largest first leaves nothing to the seed and the replay can predict
+     * every filler.
      */
     @Test
     fun `lookups at every second of a day agree with a straight-line replay`() {
         val watch = listOf(1500, 2400, 1700, 4000, 270, 150, 60)
         val programmes = listOf(0, 1, 2, 3)
-        val shorts = listOf(4, 5, 6)
+        val bySize = watch.indices.sortedByDescending { watch[it] }
         val s = HalfHourSchedule(7, watch, watch.map { emptyList() }, utc)
 
         data class Expect(val kind: String, val index: Int, val offset: Int)
         val expected = ArrayList<Expect>(86_400)
-        fun fill(from: Int, to: Int) {
+        fun ceilSlot(p: Int) = (p + 1799) / 1800 * 1800
+        fun fill(from: Int, to: Int, a: Int, b: Int): Int {
             var t = from
-            for (i in shorts) if (t + watch[i] <= to) {
+            for (i in bySize) if (i != a && i != b && t + watch[i] <= to) {
                 repeat(watch[i]) { expected += Expect("topup", i, it) }
                 t += watch[i]
             }
-            repeat(to - t) { expected += Expect("card", -1, 0) }
+            return t
         }
-        // The calendar day runs 00:00-06:00 late, then breakfast, afternoon, prime, and 23:00
-        // late again - each part-day laid out in one pass from the programme it opens with.
-        val segments = listOf("00:00" to 12, "06:00" to 12, "12:00" to 12, "18:00" to 10, "23:00" to 2)
-        for ((startTime, slots) in segments) {
+        fun card(n: Int) = repeat(n) { expected += Expect("card", -1, 0) }
+        val segments = listOf("00:00" to 14, "06:00" to 12, "12:00" to 12, "18:00" to 10, "23:00" to 14)
+        for ((startTime, partSlots) in segments) {
             // Late began at 23:00 yesterday; replay from there and keep only today's part.
             val opensAt = if (startTime == "00:00") at("23:00", plusDays = -1) else at(startTime)
-            var slot = 0
-            var pos = programmes.indexOf(programme(s.at(opensAt)).index)
-            val partSlots = if (startTime == "00:00" || startTime == "23:00") 14 else slots
             val before = expected.size
-            while (slot < partSlots) {
-                val w = watch[programmes[pos]]
-                val k = (w + 1799) / 1800
-                if (slot + k > partSlots) break
-                repeat(w) { expected += Expect("programme", programmes[pos], it) }
-                fill(slot * 1800 + w, (slot + k) * 1800)
-                slot += k
-                pos = (pos + 1) % programmes.size
+            val length = partSlots * 1800
+            var pos = 0
+            var next = programmes.indexOf(programme(s.at(opensAt)).index)
+            var last = -1
+            while (true) {
+                val w = watch[programmes[next]]
+                if (pos + w > length) break
+                repeat(w) { expected += Expect("programme", programmes[next], it) }
+                pos += w
+                last = programmes[next]
+                next = (next + 1) % programmes.size
+                val boundary = minOf(ceilSlot(pos), length)
+                if (boundary == pos) continue
+                pos = fill(pos, boundary, last, programmes[next])
+                val left = boundary - pos
+                if (left in 1..600) {
+                    card(left)
+                    pos = boundary
+                } else if (left == 0) {
+                    pos = boundary
+                }
             }
-            while (slot < partSlots) {
-                fill(slot * 1800, (slot + 1) * 1800)
-                slot++
+            // The deferred tail: one stretch first, then slot by slot.
+            pos = fill(pos, length, last, programmes[next])
+            while (pos < length) {
+                val boundary = minOf(ceilSlot(pos + 1), length)
+                val filled = fill(pos, boundary, last, programmes[next])
+                card(boundary - filled)
+                pos = boundary
             }
-            if (startTime == "00:00") {
-                // Drop 23:00-00:00 of yesterday.
-                val dropped = expected.subList(before, before + 3600).toList()
-                repeat(3600) { expected.removeAt(before) }
-                assertEquals(3600, dropped.size)
-            }
-            if (startTime == "23:00") {
-                // Only 23:00-24:00 of this part-day is today.
-                while (expected.size > 86_400) expected.removeAt(expected.size - 1)
-            }
+            if (startTime == "00:00") repeat(3600) { expected.removeAt(before) }
+            if (startTime == "23:00") while (expected.size > 86_400) expected.removeAt(expected.size - 1)
         }
         assertEquals(86_400, expected.size)
         val midnight = at("00:00")
         for (second in 0 until 86_400) {
-            val want = expected[second]
-            val got = s.at(midnight + second)
-            val actual = when (got) {
+            val actual = when (val got = s.at(midnight + second)) {
                 is OnAir.Programme -> Expect("programme", got.index, got.offsetSeconds.toInt())
                 is OnAir.TopUp -> Expect("topup", got.index, got.offsetSeconds.toInt())
                 is OnAir.Card -> Expect("card", -1, 0)
                 null -> null
             }
-            assertEquals("at second $second", want, actual)
+            assertEquals("at second $second", expected[second], actual)
         }
     }
 
@@ -322,11 +347,13 @@ class HalfHourScheduleTest {
             while (t < from + 26 * 3600) {
                 val result = s.at(t)
                 assertNotNull(result)
-                if (result is OnAir.Programme) {
+                if (result is OnAir.Programme && result.offsetSeconds == (t - result.slotStart).toDouble()) {
                     val local = ZonedDateTime.ofInstant(java.time.Instant.ofEpochSecond(t), york)
                     val startsLocal = local.minusSeconds(t - result.slotStart)
-                    assertTrue("a programme starts on :00 or :30 local, got $startsLocal",
-                        startsLocal.minute % 30 == 0 && startsLocal.second == 0)
+                    // Off the half hour only straight after a clip - never after a card.
+                    val onBoundary = startsLocal.minute % 30 == 0 && startsLocal.second == 0
+                    assertTrue("a programme starts on :00 or :30 local, or straight after a clip: $startsLocal",
+                        onBoundary || s.at(result.slotStart - 1) !is OnAir.Card)
                 }
                 t += 30
             }
@@ -339,5 +366,43 @@ class HalfHourScheduleTest {
         val s = schedule(1500, 1500, 240, zone = brisbane)
         val slot = at("19:30", zone = brisbane)
         assertEquals(slot, programme(s.at(slot + 100)).slotStart)
+    }
+
+    // --- ordered channels ----------------------------------------------------------------------
+
+    /** Four episodes that chain into each other's gaps, and one short. */
+    private val episodes = intArrayOf(1200, 500, 1300, 400, 100)
+
+    @Test
+    fun `an ordered channel fills a gap with the next episodes, in order, then shorts`() {
+        val s = HalfHourSchedule(7, episodes.toList(), episodes.map { emptyList() }, utc, ordered = true)
+        val spans = ScheduleProbe.walk(s, at("18:00"), at("23:00"))
+        val shown = spans.filter { it.kind == 'P' }.map { it.index }
+        shown.zipWithNext().forEach { (a, b) -> assertEquals("episode order $shown", (a + 1) % 4, b) }
+        assertTrue("never an episode as filler", spans.filter { it.kind == 'T' }.all { it.index == 4 })
+        assertTrue("an episode chained into a gap starts off the half hour",
+            spans.any { it.kind == 'P' && Math.floorMod(it.start, 1800L) != 0L })
+    }
+
+    @Test
+    fun `the same clips unordered fill gaps with other episodes as top-ups`() {
+        val s = HalfHourSchedule(7, episodes.toList(), episodes.map { emptyList() }, utc)
+        val spans = ScheduleProbe.walk(s, at("18:00"), at("23:00"))
+        assertTrue("an unordered channel may fill with any clip",
+            spans.any { it.kind == 'T' && it.index < 4 })
+    }
+
+    @Test
+    fun `a programme longer than its part is marked cut where the part ends`() {
+        val s = schedule(21600, 1700, parts = listOf(prime, prime))
+        val d = (0L until 4L).first {
+            val p = s.at(at("18:00", it)) as? OnAir.Programme
+            p?.index == 0 && p.offsetSeconds == 0.0
+        }
+        val cut = programme(s.at(at("22:00", d)))
+        assertTrue(cut.cut)
+        assertEquals(at("23:00", d), cut.endsAt)
+        val resumed = programme(s.at(at("18:10", d + 1)))
+        assertTrue("its last hour ends on its own, not cut", !resumed.cut)
     }
 }
