@@ -25,6 +25,12 @@ class GuidePicker(private val deps: Deps) {
         val navigator: () -> DialNavigator?,
         /** Shares the tune executor deliberately: guide work must queue behind real tunes. */
         val executor: Executor,
+        /**
+         * The prefetch thread, for the guide music's resolve. Speculative work, and never on
+         * [executor]: a resolve is 2.4s on the device, and queued there it sat in front of the
+         * tune of the channel the viewer picked a moment after opening the guide.
+         */
+        val speculativeExecutor: Executor,
         val runOnUi: (() -> Unit) -> Unit,
         val halted: () -> Boolean,
         /** True between onStop and onStart - guide music must not start over the launcher. */
@@ -185,8 +191,10 @@ class GuidePicker(private val deps: Deps) {
     private fun startMusic(nav: DialNavigator) {
         val channel = PickerMusic.choose(nav.channels) ?: return
         deps.director.updateProgrammeVolume()
-        deps.executor.execute {
-            if (deps.halted()) return@execute
+        deps.speculativeExecutor.execute {
+            // Checked before the resolve as well as after: a guide closed while this waited
+            // behind a prefetch has no use for music, and the resolve is the expensive part.
+            if (deps.halted() || !visible.value) return@execute
             val tuned = deps.tune.resolveForAudio(channel) ?: return@execute
             // Only the audio track is wanted, so the audio URL is handed over as the source
             // and the video URL is dropped entirely - no second decode, no second video fetch.
@@ -211,6 +219,14 @@ class GuidePicker(private val deps: Deps) {
                 val music = musicPlayer
                     ?: androidx.media3.exoplayer.ExoPlayer.Builder(deps.context)
                         .build().also { musicPlayer = it }
+                // Video off, whatever the source. A progressive clip is already cut down to its
+                // audio url above, but an HLS music channel is one muxed A/V stream - and left
+                // alone this player would claim a second hardware video decoder for a picture
+                // nobody sees, which on this television shows up as frame drops on the channel
+                // underneath. Disabling the track type means it is never selected at all.
+                music.trackSelectionParameters = music.trackSelectionParameters.buildUpon()
+                    .setTrackTypeDisabled(androidx.media3.common.C.TRACK_TYPE_VIDEO, true)
+                    .build()
                 Log.i("fs42", "guide music: ${channel.name}")
                 music.setMediaSource(source, (tuned.offsetSeconds * 1000).toLong())
                 music.prepare()
