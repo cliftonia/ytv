@@ -96,6 +96,30 @@ def channel_from(path):
     }
 
 
+def generated_for(channels, previous, now):
+    """The `generated` stamp: the previous one when the channels are unchanged, else `now`.
+
+    A fresh stamp on every build meant channels.json differed every night whether or not a single
+    clip had moved, so the workflow's "no changes" branch was unreachable and every run
+    committed. Keeping the stamp while the content is identical makes the file byte-for-byte the
+    same, and the stamp still means what it says: when this lineup last changed. The app parses
+    the field (DialContract.Dial, defaulting to 0) and reads it nowhere, so a stable value costs
+    nothing on the televisions.
+    """
+    if previous and previous.get("channels") == channels and previous.get("generated"):
+        return previous["generated"]
+    return now
+
+
+def read_previous(path):
+    """The lineup already at `path`, or None when there is none or it does not parse."""
+    try:
+        with io.open(path, encoding="utf-8") as handle:
+            return json.load(handle)
+    except (OSError, ValueError):
+        return None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--confs", default=confs.default_dir())
@@ -123,8 +147,9 @@ def main():
         print("error: duplicate channel numbers: %s" % duplicates, file=sys.stderr)
         return 1
 
-    dial = {"generated": int(time.time()), "channels": channels}
     out = os.path.abspath(args.out)
+    dial = {"generated": generated_for(channels, read_previous(out), int(time.time())),
+            "channels": channels}
     with io.open(out, "w", encoding="utf-8") as handle:
         json.dump(dial, handle, ensure_ascii=False, separators=(",", ":"))
 
