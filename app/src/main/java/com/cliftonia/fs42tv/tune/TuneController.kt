@@ -113,6 +113,16 @@ class TuneController(private val deps: Deps) {
     @Volatile private var lastResolveWasCached: Boolean = false
     @Volatile private var lastTuneRequestedAt: Long = 0
 
+    private val prefetch = NeighbourPrefetch(
+        executor = deps.prefetchExecutor,
+        resolver = deps.resolver,
+        ledger = deps.ledger,
+        urls = deps.urls,
+        ladder = deps.ladder,
+        nowSeconds = deps.nowSeconds,
+        halted = deps.halted,
+    )
+
     /** The current generation, for callers whose own async work must notice being superseded. */
     fun generationNow(): Int = generation.get()
 
@@ -266,54 +276,48 @@ class TuneController(private val deps: Deps) {
 
         if (playable is NeedsResolving) {
             val videoId = playable.videoId
-            val resolveStarted = deps.elapsedMillis()
-            val remembered = deps.ledger.recallToPlay(videoId, now)
-            if (remembered != null) {
-                Log.d("fs42", "resolve hit from cache for $videoId")
-                playable = remembered
-                lastResolveMillis = deps.elapsedMillis() - resolveStarted
-                lastResolveWasCached = true
+            // Every rung refused means every resolver answers null - so do not ask. A full
+            // extraction just to learn that cost 2.4s of black on every retune of a condemned
+            // clip before the skip below ran anyway.
+            val resolved = if (deps.ledger.allRungsRefused(videoId, deps.ladder())) {
+                Log.i("fs42", "every rung of $videoId is refused; skipping it unresolved")
+                null
             } else {
-                Log.d("fs42", "resolve miss; extracting $videoId")
-                lastResolveWasCached = false
-                val resolved = deps.resolver.resolveDetailed(
-                    videoId, now, deps.ladder(), deps.ledger.refusedSnapshot())
-                lastResolveMillis = deps.elapsedMillis() - resolveStarted
-                if (resolved != null) {
-                    deps.ledger.rememberPlayed(videoId, resolved)
-                    playable = resolved.playable
-                } else {
-                    // Try the NEXT clips in the rotation rather than giving up on the channel.
-                    //
-                    // "Leaving the current picture up" was never what happened. Arriving here
-                    // from a channel change, the previous picture has already been torn down and
-                    // the black tuning card raised - and that card is only ever cleared by a
-                    // first frame, which is now never coming. So the channel sat black and silent
-                    // with no error and no retry until the clock rolled past the clip, which on a
-                    // documentary channel is ninety minutes. It read as a dead remote.
-                    //
-                    // Dead clips are ordinary: the lineup is built nightly and videos are removed,
-                    // made private or geo-blocked between then and airtime, and a finished
-                    // livestream offers no progressive rendition at all. A television skips to
-                    // what it CAN show.
-                    Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
-                        "$videoId; trying the next clips")
-                    val substitute = resolveNextPlayable(channel, tuned.streamIndex, now)
-                    if (substitute != null) {
-                        val (idx, sub) = substitute
-                        // The whole Tuned is rebuilt, not just the playable: the banner, onAir
-                        // and the end-of-clip marker all read the identity out of it, and leaving
-                        // the dead clip's identity there labelled the substitute as a programme
-                        // it is not. Offset zero because a clip that was never scheduled to be on
-                        // now has nothing meaningful to seek to.
-                        tuned = tuned.copy(
-                            streamIndex = idx,
-                            stream = channel.streams[idx],
-                            playable = sub,
-                            offsetSeconds = 0.0,
-                        )
-                        playable = sub
-                    }
+                resolveToPlay(videoId, now)
+            }
+            if (resolved != null) {
+                playable = resolved
+            } else {
+                // Try the NEXT clips in the rotation rather than giving up on the channel.
+                //
+                // "Leaving the current picture up" was never what happened. Arriving here
+                // from a channel change, the previous picture has already been torn down and
+                // the black tuning card raised - and that card is only ever cleared by a
+                // first frame, which is now never coming. So the channel sat black and silent
+                // with no error and no retry until the clock rolled past the clip, which on a
+                // documentary channel is ninety minutes. It read as a dead remote.
+                //
+                // Dead clips are ordinary: the lineup is built nightly and videos are removed,
+                // made private or geo-blocked between then and airtime, and a finished
+                // livestream offers no progressive rendition at all. A television skips to
+                // what it CAN show.
+                Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
+                    "$videoId; trying the next clips")
+                val substitute = resolveNextPlayable(channel, tuned.streamIndex, now)
+                if (substitute != null) {
+                    val (idx, sub) = substitute
+                    // The whole Tuned is rebuilt, not just the playable: the banner, onAir
+                    // and the end-of-clip marker all read the identity out of it, and leaving
+                    // the dead clip's identity there labelled the substitute as a programme
+                    // it is not. Offset zero because a clip that was never scheduled to be on
+                    // now has nothing meaningful to seek to.
+                    tuned = tuned.copy(
+                        streamIndex = idx,
+                        stream = channel.streams[idx],
+                        playable = sub,
+                        offsetSeconds = 0.0,
+                    )
+                    playable = sub
                 }
             }
         }
@@ -385,6 +389,24 @@ class TuneController(private val deps: Deps) {
         }
     }
 
+    /** The scheduled clip's url - from the cache when it holds one, extracted otherwise. */
+    private fun resolveToPlay(videoId: String, now: Long): Progressive? {
+        val resolveStarted = deps.elapsedMillis()
+        val remembered = deps.ledger.recallToPlay(videoId, now)
+        lastResolveWasCached = remembered != null
+        if (remembered != null) {
+            Log.d("fs42", "resolve hit from cache for $videoId")
+            lastResolveMillis = deps.elapsedMillis() - resolveStarted
+            return remembered
+        }
+        Log.d("fs42", "resolve miss; extracting $videoId")
+        val resolved = deps.resolver.resolveDetailed(
+            videoId, now, deps.ladder(), deps.ledger.refusedSnapshot())
+        lastResolveMillis = deps.elapsedMillis() - resolveStarted
+        resolved?.let { deps.ledger.rememberPlayed(videoId, it) }
+        return resolved?.playable
+    }
+
     /**
      * Walk forward through a channel's clips until one resolves.
      *
@@ -442,41 +464,10 @@ class TuneController(private val deps: Deps) {
         }
     }
 
-    /**
-     * Resolve what is on the channels either side, so pressing up or down is instant.
-     *
-     * This is what replaced the server's `urls.json`. That file carried signed urls for about
-     * half the dial and made those tunes immediate; it could not survive the server going away,
-     * because googlevideo signs urls for about six hours and a nightly file would be dead by
-     * morning. So the work moved here, to the moment it is actually predictive: the viewer is
-     * watching something, and the overwhelmingly likely next press is one channel up or down.
-     *
-     * On its own thread, so it can never delay a real tune - a prefetch in progress when the
-     * viewer presses a button is simply abandoned mid-flight and its result discarded or, if it
-     * finishes anyway, kept in the cache where the next press will find it.
-     *
-     * Costs one metadata extraction per neighbour and downloads no media at all.
-     */
+    /** With the picture up on [from], get the channels either side of it ready. */
     private fun prefetchNeighbours(from: Channel) {
         val nav = deps.navigator() ?: return
-        val around = listOfNotNull(nav.peekUp(from), nav.peekDown(from))
-        for (channel in around) {
-            deps.prefetchExecutor.execute {
-                if (deps.halted()) return@execute
-                val now = deps.nowSeconds()
-                val tuned = Tuner.tune(
-                    channel, deps.urls, now, deps.ladder(), deps.ledger.refusedSnapshot())
-                    ?: return@execute
-                val id = (tuned.playable as? NeedsResolving)?.videoId ?: return@execute
-                if (deps.ledger.isDead(id) || deps.ledger.recall(id, now) != null) return@execute
-                val resolved = deps.resolver.resolveDetailed(
-                    id, now, deps.ladder(), deps.ledger.refusedSnapshot())
-                if (resolved != null && !deps.halted()) {
-                    deps.ledger.remember(id, resolved)
-                    Log.d("fs42", "prefetched channel ${channel.number} ${channel.name}")
-                }
-            }
-        }
+        prefetch.resolveAhead(listOfNotNull(nav.peekUp(from), nav.peekDown(from)))
     }
 
     private companion object {

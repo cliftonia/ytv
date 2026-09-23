@@ -74,6 +74,14 @@ class RefusalLedger(
         return tier
     }
 
+    /**
+     * Whether every rung of [ladder] is refused for [id] - the state [condemn] leaves a clip in
+     * when it returns null. No resolver can produce a url for it until a refusal expires or the
+     * ladder changes, so a tune should move straight on to the next clip.
+     */
+    fun allRungsRefused(id: String, ladder: List<String>): Boolean =
+        StreamResolver.allRefused(id, ladder, refusedSnapshot())
+
     /** Whether [id] has been condemned outright, so a tune should not even try it. */
     fun isDead(id: String): Boolean = id in deadIds
 
