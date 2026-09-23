@@ -90,11 +90,23 @@ class TestDial(unittest.TestCase):
         # does it silently - the channel simply stays thin and nobody connects the two.
         slugs = {c[1] for c in dial.YOUTUBE}
         for name, mapping in (("PLAYLISTS", dial.PLAYLISTS),
-                              ("EXTRA_QUERIES", dial.EXTRA_QUERIES)):
+                              ("EXTRA_QUERIES", dial.EXTRA_QUERIES),
+                              ("EXCLUDE", dial.EXCLUDE)):
             for slug in mapping:
                 self.assertIn(slug, slugs, "%s names %r, which is not a channel" % (name, slug))
         for slug in dial.SEQUENCED:
             self.assertIn(slug, slugs, "SEQUENCED names %r, which is not a channel" % slug)
+
+    def test_exclude_terms_are_non_empty_strings(self):
+        # An empty string is a substring of every title: one stray "" would empty the channel.
+        for slug, terms in dial.EXCLUDE.items():
+            for term in terms:
+                self.assertTrue(isinstance(term, str) and term.strip(),
+                                "%s excludes %r, which would match every title" % (slug, term))
+
+    def test_rugby_union_keeps_league_off_the_channel(self):
+        for term in ("nrl", "state of origin", "rugby league", "league"):
+            self.assertIn(term, dial.EXCLUDE["rugby_union"])
 
     def test_absorbed_channels_point_at_something_that_exists(self):
         slugs = {c[1] for c in dial.YOUTUBE}

@@ -30,6 +30,7 @@ class Dial(object):
     DROPPED = {}
     PLAYLISTS = {}
     EXTRA_QUERIES = {}
+    EXCLUDE = {}
     YOUTUBE = ()
     LIVE = ()
     FILES = ()
@@ -122,6 +123,34 @@ class TestDefaults(ApplyDialCase):
         station = self.read("ytch_blues.json")
         self.assertEqual(7, station["channel_number"])
         self.assertEqual(streams, station["streams"])
+
+
+class TestExclude(ApplyDialCase):
+    """A channel's exclude list travels into its conf, where refresh_channels reads it."""
+
+    BLUES = {"network_name": "Blues", "network_long_name": "Blues", "channel_number": 5,
+             "search_query": "blues music", "network_type": "streaming",
+             "stream_rotation": "clock", "streams": []}
+
+    def test_an_exclude_list_lands_on_an_existing_conf(self):
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        self.dial.EXCLUDE = {"blues": ["karaoke"]}
+        self.write("ytch_blues.json", dict(self.BLUES))
+        _, out = self.run_apply()
+        self.assertIn("exclude", out)
+        self.assertEqual(["karaoke"], self.read("ytch_blues.json")["exclude"])
+
+    def test_an_exclude_list_removed_from_the_dial_leaves_the_conf(self):
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        self.write("ytch_blues.json", dict(self.BLUES, exclude=["karaoke"]))
+        self.run_apply()
+        self.assertNotIn("exclude", self.read("ytch_blues.json"))
+
+    def test_a_new_channel_is_created_with_its_exclude_list(self):
+        self.dial.YOUTUBE = ((5, "blues", "Blues", "blues music"),)
+        self.dial.EXCLUDE = {"blues": ["karaoke"]}
+        self.run_apply()
+        self.assertEqual(["karaoke"], self.read("ytch_blues.json")["exclude"])
 
 
 class TestCreationAndRemoval(ApplyDialCase):

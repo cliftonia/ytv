@@ -98,6 +98,32 @@ class TestCollect(unittest.TestCase):
         out = []
         self.assertEqual(0, search.collect("x", 60, 420, seen, set(), out, 10))
 
+    def test_an_excluded_term_keeps_a_clip_out_whatever_its_case(self):
+        # "rugby union match highlights" returns NRL and State of Origin by the dozen - YouTube
+        # reads "rugby" and stops. The channel's exclude list is the only thing that knows better.
+        self.rows(("aaaaaaaaaaa", 200, "NRL 2026 | Storm v Panthers | Match Highlights"),
+                  ("bbbbbbbbbbb", 200, "STATE OF ORIGIN Game II highlights"),
+                  ("ccccccccccc", 200, "Wallabies v All Blacks | Bledisloe Cup highlights"))
+        out = []
+        added = search.collect("x", 60, 420, set(), set(), out, 10,
+                               exclude=["nrl", "State of Origin"])
+        self.assertEqual(1, added)
+        self.assertEqual(["Wallabies v All Blacks | Bledisloe Cup highlights"],
+                         [s["title"] for s in out])
+
+    def test_an_excluded_clip_does_not_claim_its_title_key(self):
+        # Rejected before dedupe, so a clean upload of the same title later is still taken.
+        self.rows(("aaaaaaaaaaa", 200, "Final highlights nrl"),
+                  ("bbbbbbbbbbb", 200, "Final highlights"))
+        out = []
+        search.collect("x", 60, 420, set(), set(), out, 10, exclude=["nrl"])
+        self.assertEqual(["Final highlights"], [s["title"] for s in out])
+
+    def test_no_exclude_list_excludes_nothing(self):
+        self.rows(("aaaaaaaaaaa", 200, "NRL highlights"))
+        out = []
+        self.assertEqual(1, search.collect("x", 60, 420, set(), set(), out, 10))
+
 
 if __name__ == "__main__":
     unittest.main()
