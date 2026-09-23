@@ -1,10 +1,7 @@
 package com.cliftonia.fs42tv.ui
 
 import android.content.SharedPreferences
-import android.os.Handler
-import android.os.Looper
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.graphics.ImageBitmap
 import com.cliftonia.fs42tv.pluto.PlutoApi
 import com.cliftonia.fs42tv.pluto.PlutoGuide
 import com.cliftonia.fs42tv.pluto.PlutoIds
@@ -14,7 +11,6 @@ import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
-import com.cliftonia.fs42tv.tune.Tuned
 import java.time.ZoneId
 import java.util.concurrent.Executor
 
@@ -36,10 +32,6 @@ class ScreenExtras(private val deps: Deps) {
         val runOnUi: (() -> Unit) -> Unit,
         val halted: () -> Boolean,
         val nowMillis: () -> Long,
-        /** Main looper: the hiss's fade steps and its cap. */
-        val handler: Handler,
-        /** Downloads the corner logos for Pluto channels. */
-        val logos: ImageCache<ImageBitmap>,
         /** What is on a clock channel, with SKIP SPONSORS applied. */
         val timetable: Timetable,
     )
@@ -54,40 +46,15 @@ class ScreenExtras(private val deps: Deps) {
 
     /**
      * Something is in front of the blank - the guide, settings - or the app is out of sight.
-     * Written with every hiss sync, which runs on each of those transitions (including onStop and
+     * Written by [syncCovered], which runs on each of those transitions (including onStop and
      * onResume), and read by the snow: animating 22 times a second behind a stopped activity -
      * a dead channel still "tuning" in the background - is battery and heat for nobody.
      */
     val screenCovered = mutableStateOf(false)
 
-    private val hiss = Hiss(deps.handler)
-    private val hissGate = HissGate()
-    private val hissCap = Runnable { applyHiss(hissGate.timedOut()) }
-
-    /**
-     * Start or fade the channel-change hiss. Called by the director wherever it re-derives the
-     * programme volume, with the same two facts that rule uses - see [HissGate] for why the hiss
-     * is exactly that rule's complement. Main thread only.
-     */
-    fun syncHiss(tuning: Boolean, covered: Boolean) {
+    /** Re-derived by the director on every transition that can hide the blank. Main thread only. */
+    fun syncCovered(covered: Boolean) {
         screenCovered.value = covered
-        val enabled = deps.features.isOn(Features.Flag.STATIC)
-        applyHiss(hissGate.update(HissGate.wanted(enabled, tuning, covered)))
-    }
-
-    private fun applyHiss(action: HissGate.Action) {
-        when (action) {
-            HissGate.Action.START -> {
-                hiss.start()
-                deps.handler.removeCallbacks(hissCap)
-                deps.handler.postDelayed(hissCap, HISS_CAP_MILLIS)
-            }
-            HissGate.Action.FADE -> {
-                deps.handler.removeCallbacks(hissCap)
-                hiss.fadeOut()
-            }
-            HissGate.Action.NONE -> Unit
-        }
     }
 
     /**
@@ -115,57 +82,6 @@ class ScreenExtras(private val deps: Deps) {
     /** The programme's gain when nothing silences it: unity unless LEVEL VOLUME has a figure. */
     fun programmeGain(): Float =
         if (deps.features.isOn(Features.Flag.LEVEL_VOLUME)) Loudness.gain(clipLoudnessDb) else 1f
-
-    /** The corner logo on screen, or null. Compose state, written on the UI thread only. */
-    val bug = mutableStateOf<BugState?>(null)
-    private val bugTrigger = BugTrigger()
-    private var bugGeneration = 0
-
-    /** A channel change or the launch tune began - the next first frame is a new arrival. */
-    fun tuneStarted() = bugTrigger.tuneStarted()
-
-    /**
-     * A picture arrived. Puts the corner logo up when [BugTrigger] says this is an arrival and
-     * the LOGO row is on - the trigger is fed either way, so switching LOGO on mid-programme
-     * does not treat the clip already playing as new.
-     */
-    fun firstFrame(onAir: Tuned?) {
-        val tuned = onAir ?: return
-        val channel = tuned.channel
-        val arrival = bugTrigger.firstFrame(
-            channel.number, tuned.streamIndex, clock = channel.rotation == "clock")
-        if (!arrival || !deps.features.isOn(Features.Flag.LOGO)) return
-        val generation = ++bugGeneration
-        bug.value = BugState(StationBug.label(channel), channel.number.toString(), null, generation)
-        // Pluto's own logo when its guide has one. Through the guide, so with PLUTO GUIDE off
-        // there is no Pluto traffic at all and the bug stays text.
-        if (!deps.features.isOn(Features.Flag.PLUTO_GUIDE)) return
-        val id = PlutoIds.of(channel) ?: return
-        deps.plutoGuide.request(id) { schedule ->
-            // On the prefetch thread; the activity may have gone while the guide was fetched.
-            if (deps.halted()) return@request
-            val url = schedule.logoUrl ?: return@request
-            deps.logos.get(url) { image ->
-                deps.runOnUi {
-                    val showing = bug.value
-                    if (!deps.halted() && showing?.generation == generation) {
-                        bug.value = showing.copy(logo = image)
-                    }
-                }
-            }
-        }
-    }
-
-    /** LOGO switched off: take the bug down now rather than letting it run out. */
-    fun hideBug() {
-        bug.value = null
-    }
-
-    /** On destroy: nothing of the extras may outlive the activity. */
-    fun release() {
-        deps.handler.removeCallbacks(hissCap)
-        hiss.release()
-    }
 
     /**
      * NOW and NEXT for [channel]'s banner, or null to leave the banner as it was.
@@ -218,7 +134,6 @@ class ScreenExtras(private val deps: Deps) {
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
-            // The prefetch thread for the logos too: small, rare, and never ahead of a tune.
             return ScreenExtras(Deps(
                 features = features,
                 plutoGuide = PlutoGuide(
@@ -230,8 +145,6 @@ class ScreenExtras(private val deps: Deps) {
                 runOnUi = runOnUi,
                 halted = halted,
                 nowMillis = now,
-                handler = Handler(Looper.getMainLooper()),
-                logos = ImageCache(load = ::loadLogo, executor = prefetchExecutor),
                 timetable = Timetable(
                     skipsOn = { features.isOn(Features.Flag.SKIP_SPONSORS) },
                     halfHourOn = { features.isOn(Features.Flag.SCHEDULE) },
@@ -241,10 +154,5 @@ class ScreenExtras(private val deps: Deps) {
             ))
         }
 
-        /**
-         * The longest a hiss runs. A normal tune lands in one to three seconds; anything longer is
-         * a channel in trouble, and it stays quiet from here until that tune ends.
-         */
-        const val HISS_CAP_MILLIS = 5_000L
     }
 }

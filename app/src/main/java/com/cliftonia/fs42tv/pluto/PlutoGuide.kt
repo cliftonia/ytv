@@ -22,7 +22,7 @@ import java.util.concurrent.Executor
  * - Run on [executor] - the prefetch thread. On the Pluto dial nothing needs resolving (every
  *   channel is a live HLS url), so that thread is otherwise idle there. The YouTube dial is NOT
  *   free of Pluto ids: two of its live news channels are jmp2.uk `plu-` feeds (110 Euronews and
- *   115 CBS News in Sep 2026), and their banner, guide row and corner logo use this too. That is
+ *   115 CBS News in Sep 2026), and their banner and guide row use this too. That is
  *   intended - they are Pluto channels with a real Pluto schedule - and cheap: one ~10KB request
  *   per programme for a channel actually being looked at, each costing a neighbour resolve queued
  *   behind it on the same thread at most one fetch (4s timeouts) plus a sleep never longer than

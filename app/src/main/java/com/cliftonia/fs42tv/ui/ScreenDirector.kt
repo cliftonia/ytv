@@ -155,22 +155,20 @@ class ScreenDirector(private val deps: Deps) {
         // The card too: under it the outgoing file may still be loaded, and it must stay silent.
         deps.player()?.setVolume(if (tuning.value || deps.pickerOpen() || upNext.showing) 0f
             else deps.extras.programmeGain())
-        syncHiss()
+        syncCovered()
     }
 
     /** The switchable extras, for the overlay stack. */
     val extras: ScreenExtras get() = deps.extras
 
     /**
-     * Re-derive the channel-change hiss from the same facts as the volume, plus the overlays and
-     * the app being out of sight - public because opening settings and leaving the app change
-     * those without changing the volume.
+     * Re-derive whether anything is in front of the tuning screen - the overlays, or the app out
+     * of sight - so the snow stops animating behind them. Public because opening settings and
+     * leaving the app change that without changing the volume.
      */
-    fun syncHiss() {
-        deps.extras.syncHiss(
-            tuning = tuning.value,
-            covered = deps.pickerOpen() || deps.overlayOpen() || deps.stoppedNow() || deps.halted(),
-        )
+    fun syncCovered() {
+        deps.extras.syncCovered(
+            deps.pickerOpen() || deps.overlayOpen() || deps.stoppedNow() || deps.halted())
     }
 
     /** The screen's half of every tune, handed to [TuneController]. */
@@ -210,7 +208,7 @@ class ScreenDirector(private val deps: Deps) {
 
     /**
      * The card's time is up: tune its channel for what the schedule has next, as a channel
-     * change - the blank, the watchdog, and the arrival that puts the station bug up.
+     * change - the blank and the watchdog.
      */
     private fun cardEnded(channel: Channel) {
         // A timer can outlive the activity; nothing may be queued onto its shut-down executors.
@@ -225,7 +223,6 @@ class ScreenDirector(private val deps: Deps) {
     /** The blank, the silence and the watchdog of a channel change, for a scheduled one. */
     private fun raiseBlank() {
         tuning.value = true
-        deps.extras.tuneStarted()
         updateProgrammeVolume()
         watch.tuneStarted()
     }
@@ -265,7 +262,6 @@ class ScreenDirector(private val deps: Deps) {
         standByReason.value = ""
         buffering.value = false
         tuning.value = true
-        deps.extras.tuneStarted()
         updateProgrammeVolume()
         banner.announce(target)
     }
@@ -360,7 +356,6 @@ class ScreenDirector(private val deps: Deps) {
             buffering.value = false
             tuning.value = false
             updateProgrammeVolume()
-            deps.extras.firstFrame(deps.tune().onAir)
             skipper.start(deps.tune().onAir)
         }
 
@@ -396,11 +391,8 @@ class ScreenDirector(private val deps: Deps) {
         when (flag) {
             // Nothing to undo: the next banner and the next guide open read the flag.
             Features.Flag.PLUTO_GUIDE -> Unit
-            // Off silences a hiss at once; the snow gives way to black on the next tune.
-            Features.Flag.STATIC -> syncHiss()
             // Re-derived now, so OFF restores full volume on the clip already playing.
             Features.Flag.LEVEL_VOLUME -> updateProgrammeVolume()
-            Features.Flag.LOGO -> if (!on) deps.extras.hideBug()
             // Applied to the clip already playing: OFF stops the watcher at once, ON starts it
             // for a clip that has ranges. The clock's arithmetic changes with the next tune.
             Features.Flag.SKIP_SPONSORS ->
@@ -416,7 +408,7 @@ class ScreenDirector(private val deps: Deps) {
      * guide music is the guide's; see MainActivity.onStop.
      */
     fun appStopped() {
-        syncHiss()
+        syncCovered()
         deps.player()?.setPaused(true)
         skipper.stop()
     }
@@ -456,7 +448,6 @@ class ScreenDirector(private val deps: Deps) {
      */
     fun launchTuneStarted() {
         tuning.value = true
-        deps.extras.tuneStarted()
         updateProgrammeVolume()
         watch.tuneStarted()
     }
