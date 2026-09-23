@@ -298,6 +298,7 @@ class MainActivity : ComponentActivity() {
         runOnUi = { block -> runOnUiThread(block) },
         stallHandler = stallHandler,
         recoveryHandler = recoveryHandler,
+        overlayOpen = { guide.visible.value || settingsVisible.value },
         condemn = { id -> ledger.condemn(id, ladder) },
         rebuildEngine = { deck.rebuild() },
         recallResolved = ledger::recall,
