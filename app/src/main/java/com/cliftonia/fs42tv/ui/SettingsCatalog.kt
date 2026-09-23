@@ -7,6 +7,7 @@ import com.cliftonia.fs42tv.BuildConfig
 import com.cliftonia.fs42tv.CrashLog
 import com.cliftonia.fs42tv.ExitReason
 import com.cliftonia.fs42tv.sync.Channel
+import com.cliftonia.fs42tv.sync.LineupSource
 import com.cliftonia.fs42tv.player.AudioSync
 import com.cliftonia.fs42tv.player.FrameCadence
 import com.cliftonia.fs42tv.player.MpvLog
@@ -30,6 +31,9 @@ class SettingsCatalog(private val context: Context, private val deps: Deps) {
         val prefs: SharedPreferences,
         val displayModeCount: () -> Int,
         val channels: () -> List<Channel>,
+        /** The dial showing now. Switching saves the next one and relaunches to load it. */
+        val source: LineupSource,
+        val relaunch: () -> Unit,
         /** The current quality ladder, and the way to change it for the NEXT tune. */
         val ladder: () -> List<String>,
         val setLadder: (List<String>) -> Unit,
@@ -66,6 +70,21 @@ class SettingsCatalog(private val context: Context, private val deps: Deps) {
                     },
                 )
             },
+            SettingRow(
+                label = "SOURCE",
+                value = deps.source.label,
+                // Relaunches rather than swapping the dial under a running engine. The launch
+                // path already handles no network, the cached fallback and the first tune, and
+                // this is chosen rarely enough that a second of black is no cost.
+                action = {
+                    val next = deps.source.next()
+                    // commit, not apply: the relaunch tears the activity down straight away, and
+                    // the new one must read the new source rather than race an asynchronous write.
+                    deps.prefs.edit().putString(LineupSource.KEY, next.name.lowercase()).commit()
+                    Log.i("fs42", "source set to $next; relaunching")
+                    deps.relaunch()
+                },
+            ),
             SettingRow(
                 label = "VIDEO ENGINE",
                 value = engine.name,
@@ -214,7 +233,7 @@ class SettingsCatalog(private val context: Context, private val deps: Deps) {
      * ago means the nightly workflow has been failing and nobody noticed.
      */
     private fun lineupAge(): String {
-        val file = java.io.File(context.cacheDir, "channels.json")
+        val file = java.io.File(context.cacheDir, deps.source.cacheFile)
         if (!file.exists()) return "NOT FETCHED"
         val days = (System.currentTimeMillis() - file.lastModified()) / 86_400_000L
         return when {
