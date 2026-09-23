@@ -55,11 +55,19 @@ class ChunkedDataSource(
 
     private var opened = false
 
+    /**
+     * The server ignored Range and sent the whole resource in one plain 200 - Pluto's stitcher
+     * does. Its end is then the end of the resource, not of a chunk: asking again at the next
+     * position just fetches the same body once more, forever.
+     */
+    private var wholeBody = false
+
     override fun open(dataSpec: DataSpec): Long {
         spec = dataSpec
         position = dataSpec.position
         remaining = dataSpec.length
         opened = true
+        wholeBody = false
         openChunk()
 
         // Report the TRUE remaining length, not "unknown". The first bounded response carries
@@ -67,7 +75,8 @@ class ChunkedDataSource(
         // without it ExoPlayer treats the stream as unbounded, which costs seeking and changes
         // how it buffers. Chunking must be invisible to everything above this class.
         if (remaining == C.LENGTH_UNSET.toLong()) {
-            totalLength()?.let { remaining = it - position }
+            val total = totalLength()
+            if (total != null) remaining = total - position else wholeBody = true
         }
         return remaining
     }
@@ -127,7 +136,7 @@ class ChunkedDataSource(
         if (read == C.RESULT_END_OF_INPUT) {
             // The chunk ended early. If the resource itself is finished this is genuinely the
             // end; otherwise the next window will carry on.
-            if (remaining == 0L) return C.RESULT_END_OF_INPUT
+            if (remaining == 0L || wholeBody) return C.RESULT_END_OF_INPUT
             chunkRemaining = 0L
             return read(buffer, offset, length)
         }
