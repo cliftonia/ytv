@@ -57,7 +57,11 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
          */
         fun onShutdown()
         fun onFirstFrame()
-        fun onEndFile(reason: String)
+        /**
+         * [reason] is "error" or "eof"; [entryId] is mpv's playlist entry id for the file that
+         * ended, when the event carried one - see [MpvLoadGuard.parseEndFile].
+         */
+        fun onEndFile(reason: String, entryId: Long?)
         fun onBuffering(buffering: Boolean)
     }
 
@@ -91,8 +95,9 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
                 MPVLib.MpvEvent.MPV_EVENT_SHUTDOWN -> events?.onShutdown()
 
                 MPVLib.MpvEvent.MPV_EVENT_END_FILE -> {
-                    val reason = runCatching { node.toJson() }.getOrDefault("")
-                    events?.onEndFile(if (reason.contains("error")) "error" else "eof")
+                    val (reason, entryId) =
+                        MpvLoadGuard.parseEndFile(runCatching { node.toJson() }.getOrDefault(""))
+                    events?.onEndFile(reason, entryId)
                 }
             }
         }
@@ -427,5 +432,15 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // string is parsed as that index and the command is rejected outright.
         MPVLib.command("loadfile", url, "replace", "0", options)
     }
+
+    /**
+     * mpv's playlist entry id for the file just loaded, or null if it cannot be read.
+     *
+     * `loadfile ... replace` leaves the new file as the only entry, and the command is
+     * synchronous, so entry 0 is it. The id is what lets an end-file event be matched to the load
+     * it belongs to exactly, rather than by counting.
+     */
+    fun currentEntryId(): Long? =
+        runCatching { MPVLib.getPropertyString("playlist/0/id")?.toLongOrNull() }.getOrNull()
 
 }
