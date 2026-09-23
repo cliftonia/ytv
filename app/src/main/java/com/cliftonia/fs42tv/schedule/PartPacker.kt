@@ -57,8 +57,6 @@ internal class PartPacker(
      */
     data class Start(val next: Int, val carry: Int, val carried: Int)
 
-    class Packed(val items: List<Item>, val after: Start)
-
     private val partLength = part.slots * SLOT
     private val shorts: List<Int> = pool.filter { durations[it] < SHORT }
 
@@ -66,12 +64,27 @@ internal class PartPacker(
     private val allByMinute: List<IntArray> = byMinute(pool)
     private val shortsByMinute: List<IntArray> = byMinute(shorts)
 
-    fun pack(start: Start): Packed {
+    /** The shortest filler there is: a gap shorter than this fills with nothing. */
+    private val shortest: Int = (if (ordered) shorts else pool).minOfOrNull { durations[it] } ?: Int.MAX_VALUE
+
+    /** The part-day that opens with [start], laid out. */
+    fun layout(start: Start): List<Item> {
         val items = ArrayList<Item>()
+        pack(start, items)
+        return mergeCards(items)
+    }
+
+    /**
+     * Where the part-day after one opening with [start] opens - the cycle detection's step, and
+     * cheap: with [items] null nothing is built, only positions are counted.
+     */
+    fun next(start: Start): Start = pack(start, null)
+
+    private fun pack(start: Start, items: MutableList<Item>?): Start {
         val n = programmes.size
         if (n == 0) {
             region(items, 0, -1, -1)
-            return Packed(mergeCards(items), start)
+            return start
         }
         var pos = 0
         var next = start.next
@@ -81,10 +94,10 @@ internal class PartPacker(
             val index = programmes[start.carry]
             val remaining = durations[index] - start.carried
             if (remaining > partLength) {
-                items += Item(Kind.PROGRAMME, index, 0, partLength, start.carried, cut = true)
-                return Packed(items, Start(next, start.carry, start.carried + partLength))
+                items?.add(Item(Kind.PROGRAMME, index, 0, partLength, start.carried, cut = true))
+                return Start(next, start.carry, start.carried + partLength)
             }
-            items += Item(Kind.PROGRAMME, index, 0, remaining, start.carried)
+            items?.add(Item(Kind.PROGRAMME, index, 0, remaining, start.carried))
             pos = remaining
             last = index
             val after = gap(items, pos, index, next)
@@ -96,7 +109,7 @@ internal class PartPacker(
             val length = durations[index]
             when {
                 pos + length <= partLength -> {
-                    items += Item(Kind.PROGRAMME, index, pos, pos + length)
+                    items?.add(Item(Kind.PROGRAMME, index, pos, pos + length))
                     pos += length
                     last = index
                     next = (next + 1) % n
@@ -105,22 +118,22 @@ internal class PartPacker(
                     next = after.second
                 }
                 length > partLength && pos == 0 -> {
-                    items += Item(Kind.PROGRAMME, index, 0, partLength, 0, cut = true)
-                    return Packed(items, Start((next + 1) % n, next, partLength))
+                    items?.add(Item(Kind.PROGRAMME, index, 0, partLength, 0, cut = true))
+                    return Start((next + 1) % n, next, partLength)
                 }
                 // Would cross the end of the part: deferred to the part's next day.
                 else -> break
             }
         }
         region(items, pos, last, programmes[next])
-        return Packed(mergeCards(items), Start(next, -1, 0))
+        return Start(next, -1, 0)
     }
 
     /**
      * The gap after [previous], which ended at [from]: chain (ordered), fill, then card or not.
      * Returns where the next programme may start and the next programme's position.
      */
-    private fun gap(items: MutableList<Item>, from: Int, previous: Int, nextPos: Int): Pair<Int, Int> {
+    private fun gap(items: MutableList<Item>?, from: Int, previous: Int, nextPos: Int): Pair<Int, Int> {
         val boundary = minOf(ceilToSlot(from), partLength)
         if (boundary == from) return from to nextPos
         var pos = from
@@ -130,7 +143,7 @@ internal class PartPacker(
             while (true) {
                 val index = programmes[next]
                 if (pos + durations[index] > boundary) break
-                items += Item(Kind.PROGRAMME, index, pos, pos + durations[index])
+                items?.add(Item(Kind.PROGRAMME, index, pos, pos + durations[index]))
                 pos += durations[index]
                 next = (next + 1) % programmes.size
             }
@@ -141,7 +154,7 @@ internal class PartPacker(
         return when {
             remaining == 0 -> boundary to next
             remaining <= CARD_CAP -> {
-                items += Item(Kind.CARD, -1, pos, boundary)
+                items?.add(Item(Kind.CARD, -1, pos, boundary))
                 boundary to next
             }
             // Too long for a card: the next programme starts now, off the boundary.
@@ -156,19 +169,27 @@ internal class PartPacker(
      * slot by slot, each slot's remainder a card. A channel with no programmes at all is only
      * ever slot by slot: every half hour of it is the same shape.
      */
-    private fun region(items: MutableList<Item>, from: Int, previous: Int, exclude: Int) {
+    private fun region(items: MutableList<Item>?, from: Int, previous: Int, exclude: Int) {
         var pos = from
         if (programmes.isNotEmpty()) pos = fill(items, pos, partLength, previous, exclude)
         while (pos < partLength) {
             val boundary = minOf(ceilToSlot(pos + 1), partLength)
             val filled = fill(items, pos, boundary, previous, exclude)
-            if (filled < boundary) items += Item(Kind.CARD, -1, filled, boundary)
+            if (filled < boundary) items?.add(Item(Kind.CARD, -1, filled, boundary))
             pos = boundary
         }
     }
 
-    /** One greedy pass, largest first to the minute, never [a] or [b]; returns where it stopped. */
-    private fun fill(items: MutableList<Item>, from: Int, to: Int, a: Int, b: Int): Int {
+    /**
+     * One greedy pass, largest first to the minute, never [a] or [b]; returns where it stopped.
+     *
+     * Within a minute the clips are taken in a ROTATION starting at a seeded point, not a seeded
+     * sort: the same variety - which clip of a minute leads differs gap to gap - for no
+     * allocation, and a pass stops the moment nothing left in the group could fit. The cycle
+     * detection runs this for every gap of every part-day of a cycle; a sort per gap made one
+     * channel of 100 eight-minute clips cost 10ms to build.
+     */
+    private fun fill(items: MutableList<Item>?, from: Int, to: Int, a: Int, b: Int): Int {
         var pos = from
         val groups = if (ordered) shortsByMinute else allByMinute
         if (groups.isEmpty()) return pos
@@ -176,17 +197,19 @@ internal class PartPacker(
             HalfHourSchedule.mix(channelNumber.toLong() * 31 + part.ordinal) xor
                 (a.toLong() shl 32) xor from.toLong())
         for (group in groups) {
-            val room = to - pos
-            if (room <= 0) break
+            if (to - pos < shortest) break
+            val size = group.size
             // Every clip in a group is within a minute of the others; skip a group that cannot fit.
-            if (durations[group[group.size - 1]] > room) continue
-            val order = if (group.size == 1) group.toList()
-            else group.sortedBy { HalfHourSchedule.mix(seed + it) }
-            for (index in order) {
+            val groupShortest = durations[group[size - 1]]
+            if (groupShortest > to - pos) continue
+            val first = Math.floorMod(seed, size.toLong()).toInt()
+            for (j in 0 until size) {
+                if (to - pos < groupShortest) break
+                val index = group[(first + j) % size]
                 if (index == a || index == b) continue
                 val length = durations[index]
                 if (pos + length <= to) {
-                    items += Item(Kind.TOP_UP, index, pos, pos + length)
+                    items?.add(Item(Kind.TOP_UP, index, pos, pos + length))
                     pos += length
                 }
             }
