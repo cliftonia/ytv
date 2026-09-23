@@ -508,6 +508,10 @@
             }
         ],
         "search_query": "jazz live performance",
-        "last_refreshed": 1789326603
+        "last_refreshed": 1789326603,
+        "part_queries": {
+            "breakfast": "upbeat swing jazz live performance",
+            "late": "slow jazz ballad live performance"
+        }
     }
 }
