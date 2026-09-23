@@ -351,6 +351,161 @@ class TestMissesStillAdvanceTheCursor(unittest.TestCase):
         self.assertNotIn("refresh_misses", confs.load(path)["station_conf"])
 
 
+class TestTimeOfDayParts(unittest.TestCase):
+    """A channel with `part_queries` searches once more per part and tags what each finds.
+
+    The untagged clips from the channel's own query are the all-day pool; each part's clips carry
+    `parts: [part]`. The app draws a half-hour slot from the clips tagged for the part of the day
+    it falls in, so a part is effectively a channel of its own - and is guarded like one.
+    """
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.real_collect = refresh.search.collect
+        self.wants = {}
+
+    def tearDown(self):
+        refresh.search.collect = self.real_collect
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def write(self, streams=(), parts=None, stamp=1234):
+        path = os.path.join(self.dir, "ytch_x.json")
+        station = {"network_name": "x", "channel_number": 1, "search_query": "x",
+                   "streams": list(streams), "last_refreshed": stamp}
+        if parts:
+            station["part_queries"] = parts
+        with io.open(path, "w", encoding="utf-8") as handle:
+            json.dump({"station_conf": station}, handle)
+        return path
+
+    def searching(self, results):
+        """Stand in for yt-dlp: `results` is {query: [clips]}, deduped through `seen` as the
+        real collect() does, so a clip two queries both find lands once."""
+        def fake_collect(target, lo, hi, seen, keys, out, want, exclude=()):
+            query = target.split(":", 1)[1]
+            self.wants.setdefault(query, want)
+            added = 0
+            for clip in results.get(query, []):
+                if len(out) >= want:
+                    break
+                if clip["url"] in seen:
+                    continue
+                seen.add(clip["url"])
+                out.append(dict(clip))
+                added += 1
+            return added
+        refresh.search.collect = fake_collect
+
+    def refresh_path(self, path, target=100):
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            result = refresh.refresh(path, target)
+        return result, out.getvalue()
+
+    def test_each_part_is_searched_and_tagged_after_the_all_day_pool(self):
+        path = self.write(parts={"breakfast": "morning x", "late": "night x"})
+        self.searching({"x": clips(30), "morning x": clips(25, "M"), "night x": clips(20, "N")})
+        (_, count, kept), _ = self.refresh_path(path)
+        self.assertFalse(kept)
+        self.assertEqual(75, count)
+        streams = confs.load(path)["station_conf"]["streams"]
+        self.assertEqual(clips(30), streams[:30])
+        self.assertEqual([["breakfast"]] * 25, [s["parts"] for s in streams[30:55]])
+        self.assertEqual([["late"]] * 20, [s["parts"] for s in streams[55:]])
+
+    def test_a_part_fills_to_half_the_channels_target(self):
+        # Half, so a mixed channel of four parts is at most three times the size of one without:
+        # enough for a part's hours not to repeat for days, without every mix tripling a file
+        # two televisions fetch over mobile data.
+        path = self.write(parts={"prime": "evening x"})
+        self.searching({"x": clips(100), "evening x": clips(80, "E")})
+        (_, count, _), _ = self.refresh_path(path)
+        self.assertEqual(150, count)
+        self.assertEqual(50, self.wants["evening x"])
+
+    def test_a_clip_is_on_the_channel_once_and_the_all_day_pool_keeps_it(self):
+        # Whichever query found it first owns it. The channel's own query runs first, so a clip
+        # it already has stays in the all-day pool rather than being narrowed to one part.
+        shared = clips(5, "S")
+        path = self.write(parts={"late": "night x"})
+        self.searching({"x": shared + clips(20), "night x": shared + clips(10, "N")})
+        self.refresh_path(path)
+        streams = confs.load(path)["station_conf"]["streams"]
+        urls = [s["url"] for s in streams]
+        self.assertEqual(len(urls), len(set(urls)))
+        self.assertEqual(shared, streams[:5])
+        self.assertEqual(10, sum(1 for s in streams if s.get("parts") == ["late"]))
+
+    def test_a_channel_without_parts_is_searched_exactly_as_before(self):
+        path = self.write()
+        self.searching({"x": clips(30)})
+        self.refresh_path(path)
+        self.assertEqual(clips(30), confs.load(path)["station_conf"]["streams"])
+        self.assertTrue(set(self.wants) <= {"x 2026", "x", "x full"}, self.wants)
+
+    def test_a_collapsed_part_keeps_yesterdays_whole_list(self):
+        # One pool falling below half refuses the lot, like a channel. Keeping yesterday's list
+        # whole - rather than today's list with yesterday's part spliced in - is what guarantees
+        # the result passes the gate: the two lists were deduped against different searches.
+        yesterday = clips(30) + [dict(c, parts=["prime"]) for c in clips(40, "P")]
+        path = self.write(yesterday, parts={"prime": "evening x"})
+        self.searching({"x": clips(30, "B"), "evening x": clips(3, "E")})
+        (_, count, kept), out = self.refresh_path(path)
+        self.assertTrue(kept)
+        self.assertEqual(70, count)
+        self.assertIn("prime fell from 40 to 3", out)
+        station = confs.load(path)["station_conf"]
+        self.assertEqual(yesterday, station["streams"])
+        self.assertEqual(1234, station["last_refreshed"])
+        self.assertEqual(1, station["refresh_misses"])
+
+    def test_a_part_that_found_nothing_is_a_collapse_not_a_retirement(self):
+        yesterday = clips(30) + [dict(c, parts=["prime"]) for c in clips(40, "P")]
+        path = self.write(yesterday, parts={"prime": "evening x"})
+        self.searching({"x": clips(30, "B")})
+        (_, _, kept), out = self.refresh_path(path)
+        self.assertTrue(kept)
+        self.assertIn("prime fell from 40 to 0", out)
+
+    def test_a_collapsed_all_day_pool_keeps_yesterday_too(self):
+        yesterday = clips(40) + [dict(c, parts=["prime"]) for c in clips(40, "P")]
+        path = self.write(yesterday, parts={"prime": "evening x"})
+        self.searching({"x": clips(10, "B"), "evening x": clips(50, "E")})
+        (_, _, kept), out = self.refresh_path(path)
+        self.assertTrue(kept)
+        self.assertIn("all-day fell from 40 to 10", out)
+
+    def test_a_part_retired_from_the_dial_is_not_held_against_the_refresh(self):
+        # dial.PARTS dropped "late"; apply_dial took it out of part_queries; yesterday's late
+        # clips are stale tags that this refresh is meant to let go of.
+        yesterday = clips(30) + [dict(c, parts=["late"]) for c in clips(40, "L")]
+        path = self.write(yesterday)
+        self.searching({"x": clips(30, "B")})
+        (_, count, kept), _ = self.refresh_path(path)
+        self.assertFalse(kept)
+        self.assertEqual(30, count)
+
+    def test_the_channels_own_query_finding_nothing_keeps_yesterday_whatever_the_parts_found(self):
+        # The parts alone are not a channel: every part without a query of its own plays the
+        # all-day pool, and a channel whose main search broke should wait for tomorrow.
+        path = self.write(clips(5), parts={"prime": "evening x"})
+        self.searching({"evening x": clips(30, "E")})
+        (_, count, kept), out = self.refresh_path(path)
+        self.assertTrue(kept)
+        self.assertEqual(5, count)
+        self.assertIn("search returned nothing", out)
+
+    def test_a_part_clip_found_again_keeps_its_sponsor_lookup(self):
+        again = dict(clips(1, "E")[0], parts=["prime"], skip=[[1.0, 9.0]], skip_checked=77)
+        path = self.write(clips(10) + [again], parts={"prime": "evening x"})
+        self.searching({"x": clips(10), "evening x": clips(1, "E")})
+        self.refresh_path(path)
+        found = confs.load(path)["station_conf"]["streams"][-1]
+        self.assertEqual(["prime"], found["parts"])
+        self.assertEqual([[1.0, 9.0]], found["skip"])
+        self.assertEqual(77, found["skip_checked"])
+
+
 class TestExcludeReachesTheSearch(unittest.TestCase):
 
     def setUp(self):
