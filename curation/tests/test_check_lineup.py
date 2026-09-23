@@ -97,6 +97,17 @@ class TestAgainstPrevious(unittest.TestCase):
         found = check_lineup.problems(healthy(), previous)
         self.assertEqual(["ch 95 disappeared"], found)
 
+    def test_sponsor_skips_arriving_do_not_trip_the_gate(self):
+        # The first nights after sponsor.py lands add `skip` to thousands of streams at once. The
+        # gate counts clips, never watch time, so that must read as an unchanged dial - were it
+        # ever to count watch time, a channel of ad-heavy clips would look like a collapse.
+        previous = healthy(clips=40)
+        dial = healthy(clips=40)
+        for c in dial["channels"]:
+            for stream in c["streams"]:
+                stream["skip"] = [[0.0, 30.0], [200.0, 270.0]]
+        self.assertEqual([], check_lineup.problems(dial, previous))
+
     def test_collapse_rule(self):
         self.assertTrue(check_lineup.collapsed(40, 19))
         self.assertFalse(check_lineup.collapsed(40, 20))

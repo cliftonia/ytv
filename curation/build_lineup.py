@@ -34,6 +34,32 @@ def video_id(url):
     return match.group(1) if match else None
 
 
+# The least watch time a clip may be left with once its sponsor skips are taken out. Below this
+# the skips are not published and the clip plays in full.
+MIN_WATCH_SECONDS = 30
+
+
+def published_skip(skip, duration):
+    """The `skip` ranges to publish for a YouTube stream, or None to publish none.
+
+    sponsor.py writes them into the confs already merged, clamped and sorted, so this only
+    decides whether they go out. An empty list is a cached "SponsorBlock had nothing" - conf
+    bookkeeping that would add nine thousand `[]`s to a file two televisions fetch over mobile
+    data - and the app treats a missing field as no skips anyway (the contract tolerates unknown
+    and absent fields). `duration` is left as the raw length; the app derives the watch time.
+
+    A clip skipped down to almost nothing is a near-phantom for the same reason a zero-duration
+    clip is (the rotation walks watch time), so its skips are withheld rather than the clip
+    dropped: it plays in full, exactly as if SponsorBlock had no information, and the gate's clip
+    counts do not move.
+    """
+    if not skip:
+        return None
+    if duration - sum(end - start for start, end in skip) < MIN_WATCH_SECONDS:
+        return None
+    return skip
+
+
 def channel_from(path):
     """One channel in the app's contract, or None if this conf cannot become one."""
     conf = confs.load(path)
@@ -75,6 +101,9 @@ def channel_from(path):
                 # would be handed to the player as a live stream. Drop it rather than ship it.
                 continue
             entry["id"] = identifier
+            skip = published_skip(stream.get("skip"), duration)
+            if skip:
+                entry["skip"] = skip
         streams.append(entry)
 
     if not streams:
