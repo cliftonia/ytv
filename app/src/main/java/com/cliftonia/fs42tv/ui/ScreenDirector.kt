@@ -156,7 +156,9 @@ class ScreenDirector(private val deps: Deps) {
      * exactly the split second the new one took to arrive.
      */
     fun updateProgrammeVolume() {
-        deps.player()?.setVolume(if (tuning.value || deps.pickerOpen()) 0f else 1f)
+        // Never above the level gain, never unmuting a blank: the gain only replaces the 1f.
+        deps.player()?.setVolume(
+            if (tuning.value || deps.pickerOpen()) 0f else deps.extras.programmeGain())
         syncHiss()
     }
 
@@ -219,6 +221,9 @@ class ScreenDirector(private val deps: Deps) {
         generation: Int,
     ) {
         deps.player()?.play(playable, tuned.offsetSeconds, requestedAtMillis)
+        // Only when the level gain actually changed - with LEVEL VOLUME off it never does, and
+        // this call is not made at all.
+        if (deps.extras.clipPainted(playable)) updateProgrammeVolume()
         // A tune that lands while the app is in the background must not leave the player
         // running: onStop already paused whatever was playing, and this tune would otherwise
         // stream and decode to a screen nobody is watching.
@@ -382,6 +387,8 @@ class ScreenDirector(private val deps: Deps) {
             Features.Flag.PLUTO_GUIDE -> Unit
             // Off silences a hiss at once; the snow gives way to black on the next tune.
             Features.Flag.STATIC -> syncHiss()
+            // Re-derived now, so OFF restores full volume on the clip already playing.
+            Features.Flag.LEVEL_VOLUME -> updateProgrammeVolume()
         }
     }
 

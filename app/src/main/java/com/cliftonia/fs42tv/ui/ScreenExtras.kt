@@ -7,6 +7,9 @@ import com.cliftonia.fs42tv.pluto.PlutoApi
 import com.cliftonia.fs42tv.pluto.PlutoGuide
 import com.cliftonia.fs42tv.pluto.PlutoIds
 import com.cliftonia.fs42tv.pluto.PlutoLines
+import com.cliftonia.fs42tv.resolver.Loudness
+import com.cliftonia.fs42tv.resolver.Playable
+import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.sync.Channel
 import java.time.ZoneId
 import java.util.concurrent.Executor
@@ -63,6 +66,32 @@ class ScreenExtras(private val deps: Deps) {
             HissGate.Action.NONE -> Unit
         }
     }
+
+    /**
+     * The loudness figure of the clip last handed to the player; null for anything that is not a
+     * resolved YouTube clip - live feeds, files, Pluto - which the gain reads as unity. Main
+     * thread only, like the paint that writes it.
+     */
+    private var clipLoudnessDb: Double? = null
+
+    /**
+     * A clip was handed to the player. True when the level gain for it differs from the one in
+     * force, so the director re-derives the volume at once rather than at the first frame -
+     * which on a roll-over is after the new clip's audio has started.
+     */
+    fun clipPainted(playable: Playable): Boolean {
+        val before = programmeGain()
+        clipLoudnessDb = (playable as? Progressive)?.loudnessDb
+        val after = programmeGain()
+        if (after != 1f) {
+            android.util.Log.i("fs42", "level: clip at ${clipLoudnessDb}dB -> gain $after")
+        }
+        return after != before
+    }
+
+    /** The programme's gain when nothing silences it: unity unless LEVEL VOLUME has a figure. */
+    fun programmeGain(): Float =
+        if (deps.features.isOn(Features.Flag.LEVEL_VOLUME)) Loudness.gain(clipLoudnessDb) else 1f
 
     /** On destroy: nothing of the extras may outlive the activity. */
     fun release() {

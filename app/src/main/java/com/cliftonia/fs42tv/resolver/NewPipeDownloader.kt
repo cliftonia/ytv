@@ -54,6 +54,9 @@ class NewPipeDownloader : Downloader() {
             val text = (if (code >= HttpURLConnection.HTTP_BAD_REQUEST) connection.errorStream
                         else connection.inputStream)
                 ?.bufferedReader()?.use { it.readText() }.orEmpty()
+            // Hands the player response to a resolve that wants its loudness figure; a no-op
+            // unless one is listening on this thread. See LoudnessCapture.
+            if (code < HttpURLConnection.HTTP_BAD_REQUEST) LoudnessCapture.offer(request.url(), text)
             return Response(code, connection.responseMessage, connection.headerFields, text,
                             connection.url.toString())
         } catch (e: ReCaptchaException) {

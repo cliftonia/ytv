@@ -15,6 +15,12 @@ data class Progressive(
     val videoUrl: String,
     val audioUrl: String?,
     val captionUrl: String? = null,
+    /**
+     * YouTube's `audioConfig.loudnessDb` for the clip, when the resolve saw one - the LEVEL
+     * VOLUME row's input; see [Loudness]. Null for server resolves, files and anything else that
+     * never passed through a player response, which the gain reads as unity.
+     */
+    val loudnessDb: Double? = null,
 ) : Playable
 
 /** A live HLS feed, played as-is. */

@@ -31,6 +31,9 @@ class Features(
 
         /** Snow and a soft hiss over the blank between channels, instead of plain black. */
         STATIC("STATIC", "feature.static"),
+
+        /** YouTube clips turned down to YouTube's reference loudness, never up. */
+        LEVEL_VOLUME("LEVEL VOLUME", "feature.levelvolume"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,
