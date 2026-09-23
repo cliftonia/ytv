@@ -238,24 +238,35 @@ def quote_path_segment(segment):
     return _q(segment)
 
 
+def build_metadata_script(uri):
+    """The remote script that fetches a link's metadata, built here so tests can read it.
+
+    The link is pasted by a human from wherever torrents come from, and the regexes that
+    admit it allow any non-space characters after the hash - so `"; cmd; "` or `$(cmd)` inside
+    a magnet would run on the server as hermanb if it went in double-quoted. quote_shell()
+    single-quotes it whole, which bash never expands. `[[ 'x' == magnet:* ]]` still matches:
+    only the pattern side must stay unquoted.
+    """
+    return """
+rm -rf %(s)s && mkdir -p %(s)s
+if [[ %(u)s == magnet:* ]]; then
+    timeout 240 aria2c --bt-metadata-only=true --bt-save-metadata=true --seed-time=0 \
+        --dir=%(s)s --summary-interval=10 --console-log-level=notice \
+        --show-console-readout=true %(trackers)s %(u)s || true
+else
+    curl -fSL --retry 2 -o %(s)s/source.torrent %(u)s
+fi
+ls %(s)s/*.torrent
+""" % {"s": STAGING, "u": quote_shell(canonical_magnet(uri)), "trackers": PUBLIC_TRACKERS}
+
+
 def fetch_metadata(uri):
     """Verify the link and get the .torrent on the server. Prints the summary, returns name."""
-    uri = canonical_magnet(uri)
     print("fetching metadata (the swarm answers for it, not the tracker)...")
     print("(dead air here = a dead or tracker-less swarm; live summaries appear as they come)")
     # Streamed: a silent 180s reads as a hang; periodic aria2 lines prove the box is
     # listening. verify runs as hermanb - http's whole job starts at the download.
-    script = """
-rm -rf %(s)s && mkdir -p %(s)s
-if [[ "%(u)s" == magnet:* ]]; then
-    timeout 240 aria2c --bt-metadata-only=true --bt-save-metadata=true --seed-time=0 \
-        --dir=%(s)s --summary-interval=10 --console-log-level=notice \
-        --show-console-readout=true %(trackers)s "%(u)s" || true
-else
-    curl -fSL --retry 2 -o %(s)s/source.torrent "%(u)s"
-fi
-ls %(s)s/*.torrent
-""" % {"s": STAGING, "u": uri, "trackers": PUBLIC_TRACKERS}
+    script = build_metadata_script(uri)
     # The streamed pass prints progress; the metadata test itself needs the capture pass.
     ssh(script, stream=True)
     rc, stdout, stderr = ssh("ls %s/*.torrent" % STAGING)
@@ -388,17 +399,44 @@ sudo -u http HOME=/tmp/ytv-home -s /bin/bash -c "mkdir -p \\$HOME && aria2c \\
     print("\n== publish")
     subprocess.run([sys.executable, os.path.join(REPO_ROOT, "curation", "build_lineup.py")],
                    check=False)
-    for cmd in (["git", "add", "-A"],
-                ["git", "commit", "-m", "ingest: %s" % name],
-                ["git", "pull", "--rebase", "origin", "main"],
-                ["git", "push", "origin", "main"]):
+    channel_name = new_channel[2] if new_channel else folder.split("/")[0]
+    for cmd in publish_commands(channel_name, dial_changed=bool(new_channel)):
         rc = subprocess.run(cmd, cwd=REPO_ROOT).returncode
         if rc != 0:
-            print("publish step failed: %s - finish by hand (see HANDOVER.md)" % cmd,
-                  file=sys.stderr)
+            print("publish step failed: %s - nothing was pushed; finish by hand (see "
+                  "HANDOVER.md)" % cmd, file=sys.stderr)
             return 1
     print("\non the dial. The televisions pick it up next launch.")
     return 0
+
+
+# What the ingest publish touches, and nothing else. `git add -A` from the repo root staged
+# whatever else happened to be lying in the checkout - a scratch file, a half-edited script, an
+# untracked note - straight onto the branch two televisions read.
+PUBLISH_PATHS = ["channels.json", "curation/confs"]
+
+
+def publish_commands(channel_name, dial_changed):
+    """The local git steps that publish an ingest, in order.
+
+    The commit message names the CHANNEL, never the torrent or file: the repository is public, and
+    a download's name in its history is a permanent, searchable record of it. The channel name is
+    already on the dial for anyone to see.
+
+    The publish gate runs after the rebase (so it judges what will actually be pushed) and
+    against origin/main (what the televisions have now). A refusal stops before the push with
+    the commit left local - the same gate the nightly workflow runs, so an ingest cannot publish
+    a lineup the nightly would have refused.
+    """
+    paths = PUBLISH_PATHS + (["curation/dial.py"] if dial_changed else [])
+    return [
+        ["git", "add", "--"] + paths,
+        ["git", "commit", "-m", "ingest: new file on %s" % channel_name],
+        ["git", "pull", "--rebase", "origin", "main"],
+        [sys.executable, os.path.join(REPO_ROOT, "curation", "check_lineup.py"),
+         "--against", "origin/main"],
+        ["git", "push", "origin", "main"],
+    ]
 
 
 def quote_shell(path):
