@@ -19,11 +19,19 @@ https://jmp2.uk/plu-aaa111.m3u8
 https://jmp2.uk/plu-bbb222.m3u8
 #EXTINF:-1 tvg-id="",Not a pluto stream
 https://example.com/other.m3u8
+#EXTINF:-1 tvg-id="",Pluto-shaped path on a stranger's host
+https://evil.example.com/plu-ccc333.m3u8
+#EXTINF:-1 tvg-id="",Pluto's own cdn
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/plu-ddd444.m3u8
+#EXTINF:-1 tvg-id="",A host that merely ends in the letters
+https://notpluto.tv.evil.com/plu-eee555.m3u8
+#EXTINF:-1 tvg-id="",Suffix without the dot
+https://fakepluto.tv/plu-fff666.m3u8
 """
 
 
-def entry(pid, name, genre, alt=None):
-    e = {"id": pid, "name": name, "genre": genre}
+def entry(pid, name, genre, alt=None, number=1):
+    e = {"number": number, "id": pid, "name": name, "genre": genre}
     if alt:
         e["alt"] = alt
     return e
@@ -31,10 +39,20 @@ def entry(pid, name, genre, alt=None):
 
 class TestParse(unittest.TestCase):
 
-    def test_reads_pluto_ids_and_urls(self):
+    def test_reads_pluto_ids_and_urls_from_trusted_hosts_only(self):
         self.assertEqual({"aaa111": "https://jmp2.uk/plu-aaa111.m3u8",
-                          "bbb222": "https://jmp2.uk/plu-bbb222.m3u8"},
+                          "bbb222": "https://jmp2.uk/plu-bbb222.m3u8",
+                          "ddd444": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/"
+                                    "channel/plu-ddd444.m3u8"},
                          build_pluto.parse_m3u(PLAYLIST))
+
+    def test_trusted_hosts(self):
+        self.assertTrue(build_pluto.trusted_host("https://jmp2.uk/plu-a.m3u8"))
+        self.assertTrue(build_pluto.trusted_host("https://pluto.tv/plu-a.m3u8"))
+        self.assertTrue(build_pluto.trusted_host("https://x.pluto.tv/plu-a.m3u8"))
+        self.assertFalse(build_pluto.trusted_host("https://fakepluto.tv/plu-a.m3u8"))
+        self.assertFalse(build_pluto.trusted_host("https://jmp2.uk.evil.com/plu-a.m3u8"))
+        self.assertFalse(build_pluto.trusted_host("not a url"))
 
 
 class TestBuild(unittest.TestCase):
@@ -59,19 +77,21 @@ class TestBuild(unittest.TestCase):
         self.assertEqual(["Retired"], missing)
         self.assertEqual(["Pluto TV Action"], [c["name"] for c in channels])
 
-    def test_numbers_by_genre_then_name(self):
+    def test_numbers_come_from_the_allowlist_in_dial_order(self):
         streams = {"a": "u-a", "b": "u-b", "c": "u-c"}
         channels, _ = build_pluto.build(
-            [entry("a", "Zulu Kids", "Kids"), entry("b", "Beta Movies", "Movies"),
-             entry("c", "Alpha Movies", "Movies")], streams)
+            [entry("a", "Zulu Kids", "Kids", number=3), entry("b", "Beta Movies", "Movies", number=2),
+             entry("c", "Alpha Movies", "Movies", number=1)], streams)
         self.assertEqual([(1, "Alpha Movies"), (2, "Beta Movies"), (3, "Zulu Kids")],
                          [(c["number"], c["name"]) for c in channels])
 
-    def test_an_unknown_genre_sorts_last(self):
-        streams = {"a": "u-a", "b": "u-b"}
-        channels, _ = build_pluto.build(
-            [entry("a", "Aardvark", "Something New"), entry("b", "Zebra", "Kids")], streams)
-        self.assertEqual(["Zebra", "Aardvark"], [c["name"] for c in channels])
+    def test_a_retired_channel_leaves_a_gap_and_nothing_else_moves(self):
+        streams = {"a": "u-a", "c": "u-c"}
+        channels, missing = build_pluto.build(
+            [entry("a", "Alpha", "Movies", number=1), entry("b", "Beta", "Movies", number=2),
+             entry("c", "Gamma", "Movies", number=3)], streams)
+        self.assertEqual(["Beta"], missing)
+        self.assertEqual([(1, "Alpha"), (3, "Gamma")], [(c["number"], c["name"]) for c in channels])
 
     def test_every_channel_is_a_live_feed_the_app_plays_as_is(self):
         channels, _ = build_pluto.build([entry("aaa111", "Pluto TV Action", "Movies")], self.streams)
@@ -80,6 +100,31 @@ class TestBuild(unittest.TestCase):
         self.assertNotIn("rotation", channel)
         self.assertEqual([{"url": "https://jmp2.uk/plu-aaa111.m3u8", "duration": 600,
                            "title": "Pluto TV Action"}], channel["streams"])
+
+
+class TestNumbers(unittest.TestCase):
+
+    def test_well_numbered_allowlist_passes(self):
+        self.assertIsNone(build_pluto.numbering_problem(
+            [entry("a", "A", "Kids", number=1), entry("b", "B", "Kids", number=5)]))
+
+    def test_duplicate_numbers_are_refused(self):
+        problem = build_pluto.numbering_problem(
+            [entry("a", "A", "Kids", number=4), entry("b", "B", "Kids", number=4)])
+        self.assertIn("4", problem)
+        self.assertIn("A", problem)
+        self.assertIn("B", problem)
+
+    def test_a_missing_number_is_refused_by_name(self):
+        e = entry("b", "Brand New", "Kids")
+        del e["number"]
+        problem = build_pluto.numbering_problem([entry("a", "A", "Kids", number=1), e])
+        self.assertIn("Brand New", problem)
+        self.assertIn("number", problem)
+
+    def test_a_non_positive_or_non_integer_number_is_refused(self):
+        for bad in (0, -1, "7", 2.5, True):
+            self.assertIsNotNone(build_pluto.numbering_problem([entry("a", "A", "Kids", number=bad)]), bad)
 
 
 class TestGuard(unittest.TestCase):
@@ -104,6 +149,19 @@ class TestAllowlist(unittest.TestCase):
         self.assertEqual(len(allow), len({e["name"].lower() for e in allow}), "duplicate names")
         for e in allow:
             self.assertIn(e["genre"], build_pluto.GENRE_ORDER, e["name"])
+        self.assertIsNone(build_pluto.numbering_problem(allow))
+
+    def test_the_committed_numbers_follow_genre_then_name(self):
+        """Numbers were assigned once, from the dial order build_pluto used to compute (genre
+        block, then name). New channels may take any free number, but the original 219 must never
+        move - a viewer's remembered channel is a number."""
+        allow = sorted(build_pluto.load_allowlist(), key=lambda e: e["number"])
+
+        def rank(e):
+            return build_pluto.GENRE_ORDER.index(e["genre"]), e["name"].lower()
+
+        original = [e for e in allow if e["number"] <= 219]
+        self.assertEqual(sorted(original, key=rank), original)
 
 
 if __name__ == "__main__":
