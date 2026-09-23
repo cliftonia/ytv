@@ -25,7 +25,8 @@ class AcceleratorProbe(
     private val servers: List<ServerResolver>,
     /** Runs [block] after [delayMillis] on the probing thread. */
     private val schedule: (delayMillis: Long, block: () -> Unit) -> Unit,
-    private val nowMillis: () -> Long = { System.nanoTime() / 1_000_000 },
+    /** elapsedRealtime, for the reason [ServerResolver]'s clock is. */
+    private val nowMillis: () -> Long = { android.os.SystemClock.elapsedRealtime() },
     /** Releases whatever [schedule] runs on. */
     private val onStop: () -> Unit = {},
 ) {

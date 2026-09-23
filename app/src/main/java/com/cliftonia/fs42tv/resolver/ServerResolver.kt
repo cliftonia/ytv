@@ -32,9 +32,11 @@ class ServerResolver(
     /**
      * A monotonic millisecond clock, for the age of the last health reading. Not the resolve's
      * `nowSeconds`: that is wall-clock time, pinned for measurement runs and corrected over NTP
-     * after boot, and a reading aged by it could look fresh forever or stale instantly.
+     * after boot, and a reading aged by it could look fresh forever or stale instantly. And
+     * elapsedRealtime rather than nanoTime, like the ledger: nanoTime stops in deep sleep on
+     * some devices, so a reading taken before the set slept could come back looking current.
      */
-    private val nowMillis: () -> Long = { System.nanoTime() / 1_000_000 },
+    private val nowMillis: () -> Long = { android.os.SystemClock.elapsedRealtime() },
 ) : ClipResolver {
 
     /**
