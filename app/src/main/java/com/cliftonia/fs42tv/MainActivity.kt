@@ -19,6 +19,7 @@ import com.cliftonia.fs42tv.resolver.DeviceResolver
 import com.cliftonia.fs42tv.resolver.RefusalLedger
 import com.cliftonia.fs42tv.resolver.ServerResolver
 import com.cliftonia.fs42tv.sync.DialLoader
+import com.cliftonia.fs42tv.sync.LineupSource
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.ui.AppSurface
@@ -48,7 +49,6 @@ private val RESOLVE_SERVERS = listOf(
 private const val RELEASES_REPO = "cliftonia/ytv"
 
 private const val PREFS_NAME = "fs42"
-private const val CHANNEL_KEY = "channel"
 
 private const val NO_REMEMBERED_CHANNEL = -1
 
@@ -150,6 +150,7 @@ class MainActivity : ComponentActivity() {
     )
 
     private lateinit var prefs: SharedPreferences
+    private lateinit var source: LineupSource
     private lateinit var resolver: ClipResolver
     private lateinit var tune: TuneController
     private lateinit var director: ScreenDirector
@@ -165,6 +166,7 @@ class MainActivity : ComponentActivity() {
         // on a television with no adb is otherwise unreadable.
         CrashLog.install(filesDir)
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        source = LineupSource.parse(prefs.getString(LineupSource.KEY, null))
         // Android's account first, ours second. A native crash leaves nothing in CrashLog -
         // that is precisely the gap ExitReason fills - and when both have something to say,
         // Android's is the one that names what actually happened. Reported once, ever.
@@ -237,8 +239,9 @@ class MainActivity : ComponentActivity() {
 
         updateFlow.check()
 
-        val remembered = prefs.getInt(CHANNEL_KEY, NO_REMEMBERED_CHANNEL)
+        val remembered = prefs.getInt(source.channelKey, NO_REMEMBERED_CHANNEL)
         DialLoader(
+            source = source,
             cacheDir = cacheDir,
             executor = executor,
             runOnUi = { block -> runOnUiThread(block) },
@@ -335,7 +338,7 @@ class MainActivity : ComponentActivity() {
         elapsedMillis = { SystemClock.elapsedRealtime() },
         halted = { destroyed },
         runOnUi = { block -> runOnUiThread(block) },
-        rememberChannel = { number -> prefs.edit().putInt(CHANNEL_KEY, number).apply() },
+        rememberChannel = { number -> prefs.edit().putInt(source.channelKey, number).apply() },
         screen = director.screen(),
     ))
 
@@ -343,6 +346,8 @@ class MainActivity : ComponentActivity() {
         prefs = prefs,
         displayModeCount = { displayModeCount },
         channels = { navigator?.channels.orEmpty() },
+        source = source,
+        relaunch = ::recreate,
         ladder = { ladder },
         setLadder = { ladder = it },
         clearResolved = ledger::clearResolved,

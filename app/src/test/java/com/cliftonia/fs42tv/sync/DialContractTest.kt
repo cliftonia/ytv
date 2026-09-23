@@ -43,6 +43,28 @@ class DialContractTest {
     }
 
     @Test
+    fun `the pluto dial is all live feeds the app plays as-is`() {
+        val dial = DialContract.parseDial(fixture("pluto-sample.json"))
+        assertTrue(dial.channels.isNotEmpty())
+        dial.channels.forEach {
+            assertEquals("a pluto channel that is not live would be sent to the youtube resolver",
+                "live", it.kind)
+            assertNull(it.streams.single().id)
+        }
+    }
+
+    @Test
+    fun `each dial caches to its own file`() {
+        // Switching source must never overwrite the other dial's last good copy: a television
+        // switched while offline falls back to that copy, and there is nothing else to fall on.
+        val dir = java.nio.file.Files.createTempDirectory("fs42").toFile()
+        DialRepository(fetch = { fixture("pluto-sample.json") }, cacheDir = dir, cacheFile = "pluto.json")
+            .sync("http://example/pluto.json")
+        assertTrue(java.io.File(dir, "pluto.json").exists())
+        assertTrue("the youtube cache must be left alone", !java.io.File(dir, "channels.json").exists())
+    }
+
+    @Test
     fun `non-latin titles survive parsing`() {
         val dial = DialContract.parseDial(fixture("channels-sample.json"))
         val titles = dial.channels.flatMap { it.streams }.map { it.title }

@@ -1,0 +1,64 @@
+{
+ "channels": [
+  {
+   "number": 1,
+   "name": "50 Cent Action",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-68487fb3f212bedacf5a53e3.m3u8",
+     "duration": 600,
+     "title": "50 Cent Action"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "name": "70s Cinema",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5f4d878d3d19b30007d2e782.m3u8",
+     "duration": 600,
+     "title": "70s Cinema"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "name": "BET Cinema",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-58af4c093a41ca9d4ecabe96.m3u8",
+     "duration": 600,
+     "title": "BET Cinema"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "name": "BET Comedy Movies",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-68c32d88f56983aba40052bd.m3u8",
+     "duration": 600,
+     "title": "BET Comedy Movies"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "name": "British Screen Classics",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-65031534d545e9000881ed10.m3u8",
+     "duration": 600,
+     "title": "British Screen Classics"
+    }
+   ]
+  }
+ ]
+}
