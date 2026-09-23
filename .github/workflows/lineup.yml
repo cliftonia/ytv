@@ -56,9 +56,9 @@ jobs:
         # Newest release every night, deliberately unpinned. YouTube changes what it serves
         # without notice and yt-dlp is usually fixed within hours; pinning would mean the dial
         # quietly stops refreshing until someone notices and bumps a version.
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install --upgrade yt-dlp
+        # (No `pip install --upgrade pip` first: one more package pulled fresh from the network on
+        # every run, buying nothing - setup-python's pip installs yt-dlp fine.)
+        run: python -m pip install --upgrade yt-dlp
 
       - name: Refresh a slice of the dial
         working-directory: curation
@@ -118,21 +118,34 @@ jobs:
         run: python3 curation/check_lineup.py
 
       - name: Commit
+        # The only step that holds a token, and it runs after freshly downloaded yt-dlp code has
+        # had the whole workspace to itself. persist-credentials: false keeps the token out of
+        # .git/config while that code runs; what it could still do is leave something behind in
+        # .git for THIS step's git to execute with the token in hand. So: hooks come from
+        # /dev/null (never .git/hooks), fsmonitor is off (it runs a configured command on every
+        # status/diff), and a hook file that a clean checkout never has fails the run loudly
+        # rather than being silently ignored - it would mean something in the job wrote one.
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "lineup"
-          git config user.email "lineup@users.noreply.github.com"
-          git remote set-url origin \
+          if find .git/hooks -type f ! -name '*.sample' 2>/dev/null | grep -q .; then
+            echo "unexpected files in .git/hooks - refusing to commit:" >&2
+            find .git/hooks -type f ! -name '*.sample' >&2
+            exit 1
+          fi
+          git_() { git -c core.hooksPath=/dev/null -c core.fsmonitor=false "$@"; }
+          git_ config user.name "lineup"
+          git_ config user.email "lineup@users.noreply.github.com"
+          git_ remote set-url origin \
             "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git add channels.json pluto.json curation/confs
+          git_ add channels.json pluto.json curation/confs
           # Nothing to commit is a normal outcome: a refresh can legitimately find the same clips
           # it found last time, and that must not fail the run.
-          if git diff --cached --quiet; then
+          if git_ diff --cached --quiet; then
             echo "no changes"
             exit 0
           fi
-          git commit -m "chore: refresh the dial
+          git_ commit -m "chore: refresh the dial
 
           - Update \`channels.json\`, \`pluto.json\` and the confs behind it"
-          git push
+          git_ push
