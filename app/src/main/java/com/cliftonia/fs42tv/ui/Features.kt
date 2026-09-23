@@ -28,6 +28,9 @@ class Features(
     enum class Flag(val label: String, val key: String) {
         /** Now/next programme titles on Pluto channels, from Pluto's own guide. */
         PLUTO_GUIDE("PLUTO GUIDE", "feature.plutoguide"),
+
+        /** Snow and a soft hiss over the blank between channels, instead of plain black. */
+        STATIC("STATIC", "feature.static"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,

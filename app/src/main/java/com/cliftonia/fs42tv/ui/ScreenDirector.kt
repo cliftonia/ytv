@@ -157,6 +157,22 @@ class ScreenDirector(private val deps: Deps) {
      */
     fun updateProgrammeVolume() {
         deps.player()?.setVolume(if (tuning.value || deps.pickerOpen()) 0f else 1f)
+        syncHiss()
+    }
+
+    /** The switchable extras, for the overlay stack. */
+    val extras: ScreenExtras get() = deps.extras
+
+    /**
+     * Re-derive the channel-change hiss from the same facts as the volume, plus the overlays and
+     * the app being out of sight - public because opening settings and leaving the app change
+     * those without changing the volume.
+     */
+    fun syncHiss() {
+        deps.extras.syncHiss(
+            tuning = tuning.value,
+            covered = deps.pickerOpen() || deps.overlayOpen() || deps.stoppedNow() || deps.halted(),
+        )
     }
 
     /** The screen's half of every tune, handed to [TuneController]. */
@@ -364,6 +380,8 @@ class ScreenDirector(private val deps: Deps) {
         when (flag) {
             // Nothing to undo: the next banner and the next guide open read the flag.
             Features.Flag.PLUTO_GUIDE -> Unit
+            // Off silences a hiss at once; the snow gives way to black on the next tune.
+            Features.Flag.STATIC -> syncHiss()
         }
     }
 
