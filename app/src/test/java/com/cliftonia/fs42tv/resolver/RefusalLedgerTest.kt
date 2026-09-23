@@ -118,4 +118,22 @@ class RefusalLedgerTest {
         assertNull("caching it would replay the refused url on the next tune",
             ledger.recall("abcdefghijk", nowSeconds = 0))
     }
+
+    @Test
+    fun `a clip is known unresolvable once every rung of the ladder is refused`() {
+        val ledger = ledger()
+        val ladder = listOf("hd", "sd")
+        ledger.condemn("abcdefghijk", ladder)
+        assertFalse("sd is still worth asking for", ledger.allRungsRefused("abcdefghijk", ladder))
+        ledger.condemn("abcdefghijk", ladder)
+        assertTrue(ledger.allRungsRefused("abcdefghijk", ladder))
+        assertFalse("a raised ceiling offers a rung nobody refused",
+            ledger.allRungsRefused("abcdefghijk", listOf("4k", "hd", "sd")))
+    }
+
+    @Test
+    fun `an empty ladder never condemns a clip`() {
+        // Nothing refused is not everything refused; the other reading skips the whole dial.
+        assertFalse(StreamResolver.allRefused("abcdefghijk", emptyList(), emptySet()))
+    }
 }

@@ -40,9 +40,14 @@ class TuneControllerTest {
                 Progressive("https://v/$id", "https://a/$id"), expiresAtSeconds = 900_000, "hd")
         },
     ) : ClipResolver {
+        val asked = mutableListOf<String>()
+
         override fun resolveDetailed(
             videoId: String, nowSeconds: Long, ladder: List<String>, refused: Set<String>,
-        ): ClipResolver.Resolved? = answer(videoId)
+        ): ClipResolver.Resolved? {
+            asked.add(videoId)
+            return answer(videoId)
+        }
     }
 
     private class Fixture {
@@ -56,11 +61,12 @@ class TuneControllerTest {
         val remembered = mutableListOf<Int>()
         var navigator: DialNavigator? = null
 
+        val ledger = RefusalLedger(nowElapsedSeconds = { 0 })
         val tune = TuneController(TuneController.Deps(
             executor = work,
             prefetchExecutor = prefetch,
             resolver = resolver,
-            ledger = RefusalLedger(nowElapsedSeconds = { 0 }),
+            ledger = ledger,
             urls = null,
             ladder = { listOf("hd", "sd") },
             navigator = { navigator },
@@ -215,5 +221,19 @@ class TuneControllerTest {
         f.settle()
         assertEquals(2, f.tune.onAir?.channel?.number)
         assertEquals("the surf must be the last thing painted", 2, f.painted.last().first)
+    }
+
+    @Test
+    fun `a clip with every rung refused is skipped without extracting it`() {
+        // condemn() returning null means every rung is refused, so any resolve must come back
+        // null - 2.4s of black on the device before the skip ran anyway.
+        val f = Fixture()
+        f.ledger.condemn("deaddeaddea", listOf("hd", "sd"))
+        f.ledger.condemn("deaddeaddea", listOf("hd", "sd"))
+        f.tune.surfTo(channel(4, "deaddeaddea", "liveliveliv"))
+        f.settle()
+        assertEquals("liveliveliv", f.tune.onAir?.stream?.id)
+        assertTrue("the condemned clip is never sent to a resolver",
+            "deaddeaddea" !in f.resolver.asked)
     }
 }

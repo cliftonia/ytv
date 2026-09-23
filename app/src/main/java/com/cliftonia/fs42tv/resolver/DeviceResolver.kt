@@ -49,6 +49,9 @@ class DeviceResolver(
         ladder: List<String>,
         refused: Set<String>,
     ): ClipResolver.Resolved? {
+        // The ladder loop below skips refused rungs, so with all of them refused the extraction
+        // - the expensive part - could only ever end in null. See StreamResolver.allRefused.
+        if (StreamResolver.allRefused(videoId, ladder, refused)) return null
         ensureInitialised()
         val info = runCatching {
             StreamInfo.getInfo(ServiceList.YouTube, "https://www.youtube.com/watch?v=$videoId")
