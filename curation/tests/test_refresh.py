@@ -191,6 +191,26 @@ class TestEmptySearchKeepsYesterday(unittest.TestCase):
         self.assertEqual(1, count)
         self.assertGreater(confs.load(path)["station_conf"]["last_refreshed"], 1234)
 
+    def test_a_clip_found_again_keeps_its_sponsor_lookup(self):
+        # Search results know nothing of SponsorBlock; without carrying the answer over, every
+        # refresh would send the clips it found again back to the lookup queue.
+        found = [{"url": "https://www.youtube.com/watch?v=BBBBBBBBBBB",
+                  "duration": 300, "title": "Same clip"},
+                 {"url": "https://www.youtube.com/watch?v=CCCCCCCCCCC",
+                  "duration": 300, "title": "New clip"}]
+
+        def fake_collect(target, lo, hi, seen, keys, out, want, exclude=()):
+            if not out:
+                out.extend(dict(s) for s in found)
+            return len(found)
+        path = self.write(1234, [dict(found[0], skip=[[1.0, 9.0]], skip_checked=77)])
+        refresh.search.collect = fake_collect
+        self.refresh_path(path)
+        same, new = confs.load(path)["station_conf"]["streams"]
+        self.assertEqual([[1.0, 9.0]], same["skip"])
+        self.assertEqual(77, same["skip_checked"])
+        self.assertNotIn("skip_checked", new)
+
 
 def clips(n, prefix="A"):
     """`n` distinct stream entries, shaped like a conf's."""

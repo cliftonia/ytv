@@ -138,6 +138,47 @@ class TestChannelFrom(unittest.TestCase):
                           {"network_name": "X", "channel_number": 5, "streams": []})
         self.assertIsNone(build_lineup.channel_from(path))
 
+    def test_a_youtube_stream_carries_its_skips_only_when_there_are_some(self):
+        # An empty list is a cached "SponsorBlock had nothing", which is conf bookkeeping; the
+        # televisions fetch channels.json over mobile data and do not need nine thousand `[]`s.
+        # skip_checked is bookkeeping too and never leaves the conf. duration stays raw: the app
+        # derives the watch time from the two.
+        path = self.write("ytch_x.json", {
+            "network_name": "X", "channel_number": 5, "stream_rotation": "clock",
+            "streams": [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa", "duration": 812,
+                         "title": "ad", "skip": [[31.2, 74.9]], "skip_checked": 1},
+                        {"url": "https://www.youtube.com/watch?v=bbbbbbbbbbb", "duration": 300,
+                         "title": "clean", "skip": [], "skip_checked": 1},
+                        {"url": "https://www.youtube.com/watch?v=ccccccccccc", "duration": 300,
+                         "title": "never asked"}]})
+        first, clean, unasked = build_lineup.channel_from(path)["streams"]
+        self.assertEqual([[31.2, 74.9]], first["skip"])
+        self.assertEqual(812, first["duration"])
+        self.assertNotIn("skip_checked", first)
+        self.assertNotIn("skip", clean)
+        self.assertNotIn("skip", unasked)
+
+    def test_skips_that_would_leave_almost_nothing_to_watch_are_not_published(self):
+        # The rotation divides by the watch time, so a clip skipped down to a few seconds is a
+        # near-phantom (see the zero-duration rule). It plays in full instead - the same outcome
+        # as SponsorBlock having no information - rather than dropping out and moving the gate's
+        # clip counts.
+        path = self.write("ytch_x.json", {
+            "network_name": "X", "channel_number": 5, "stream_rotation": "clock",
+            "streams": [{"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa", "duration": 300,
+                         "title": "all ad", "skip": [[0.0, 280.0]], "skip_checked": 1}]})
+        stream = build_lineup.channel_from(path)["streams"][0]
+        self.assertNotIn("skip", stream)
+        self.assertEqual(300, stream["duration"])
+
+    def test_a_live_or_file_stream_never_carries_skips(self):
+        # SponsorBlock timings belong to a YouTube video; on anything else they are nonsense.
+        path = self.write("file_x.json", {
+            "network_name": "X", "channel_number": 91,
+            "streams": [{"url": "http://h/a.mkv", "duration": 600, "title": "a",
+                         "skip": [[1.0, 5.0]]}]})
+        self.assertNotIn("skip", build_lineup.channel_from(path)["streams"][0])
+
     def test_a_web_channel_is_not_published(self):
         # WeatherStar and friends were rendered by a browser on a machine that no longer exists.
         path = self.write("weatherstar.json", {
@@ -252,6 +293,24 @@ class TestPublishedLineup(unittest.TestCase):
         for channel in self.dial["channels"]:
             self.assertGreater(sum(s["duration"] for s in channel["streams"]), 0,
                                "%s has no playable duration" % channel["name"])
+
+    def test_published_skips_are_sorted_disjoint_ranges_inside_the_clip(self):
+        # The app steps over skip ranges in order to map watch time to media time; an unsorted,
+        # overlapping or out-of-bounds list would send it seeking somewhere the clip is not.
+        for channel in self.dial["channels"]:
+            for stream in channel["streams"]:
+                skip = stream.get("skip")
+                if skip is None:
+                    continue
+                self.assertEqual("youtube", channel["kind"])
+                self.assertTrue(skip, "%s publishes an empty skip list" % channel["name"])
+                end = 0
+                for start, stop in skip:
+                    self.assertGreaterEqual(start, end, "%s: unsorted or overlapping skips %r"
+                                            % (channel["name"], skip))
+                    self.assertGreaterEqual(stop - start, 1)
+                    end = stop
+                self.assertLessEqual(end, stream["duration"])
 
 
 if __name__ == "__main__":

@@ -34,6 +34,7 @@ import check_lineup
 import confs
 import filters
 import search
+import sponsor
 
 # How many clips a channel should end up with. The CLI default, not a property of searching, so
 # it stays here with the argument that overrides it.
@@ -96,6 +97,9 @@ def refresh(path, target):
         # someone intervened. Yesterday's list passes the gate by definition.
         return keep(path, conf, name, "fell from %d to %d" % (before, len(streams)))
 
+    # Clips the search found again keep their SponsorBlock answer; only the new ones are left for
+    # sponsor.py to look up, so a refresh does not undo a month of lookups for the same clips.
+    sponsor.carry(station.get("streams", []), streams)
     station["streams"] = streams
     station["last_refreshed"] = int(time.time())
     station.pop("refresh_misses", None)
