@@ -41,6 +41,8 @@ class ScreenDirector(private val deps: Deps) {
         /** Two handlers on the main looper - see [recoveryHandler] for why they cannot be one. */
         val stallHandler: Handler,
         val recoveryHandler: Handler,
+        /** The guide or settings is open - the watchdog must not retune under an overlay. */
+        val overlayOpen: () -> Boolean,
         /** The ledger's verdict on a rejected url: the tier condemned, or null for the whole clip. */
         val condemn: (String) -> String?,
         /** Tears the engine down and builds a fresh one; only mpv ever needs it. */
@@ -98,6 +100,32 @@ class ScreenDirector(private val deps: Deps) {
      */
     @Volatile var captionsOn: Boolean = false
 
+    /**
+     * The error grace and the no-picture watchdog. Its timers run on [Deps.recoveryHandler] but
+     * cancel only their own runnables: the dial loader's retry shares that handler, and a
+     * blanket clear would take the retry with it.
+     */
+    private val watch = RecoveryWatch(
+        schedule = { delay, block ->
+            val runnable = Runnable(block)
+            deps.recoveryHandler.postDelayed(runnable, delay)
+            ({ deps.recoveryHandler.removeCallbacks(runnable) })
+        },
+        halted = deps.halted,
+        stillTuning = { tuning.value },
+        deferred = { deps.overlayOpen() || deps.stoppedNow() },
+        cardUp = { standByReason.value.isNotEmpty() },
+        showCard = { standByReason.value = it },
+        retune = { reason ->
+            // Where the viewer wants to be, not what last painted: a tune that never painted
+            // leaves onAir on the channel before it.
+            (deps.fallbackChannel() ?: deps.tune().onAir?.channel)?.let {
+                Log.i("fs42", "re-tuning ${it.number} ${it.name}: $reason")
+                deps.tune().tune(it)
+            }
+        },
+    )
+
     private val captions = CaptionLoader(
         executor = deps.captionExecutor,
         runOnUi = deps.runOnUi,
@@ -136,8 +164,9 @@ class ScreenDirector(private val deps: Deps) {
         // blank covers the gap between the shutter and the first frame of the new channel.
         deps.player()?.stop()
         // A deliberate channel change supersedes any error still waiting to be announced: the
-        // card would name a channel the viewer has already left.
-        deps.recoveryHandler.removeCallbacksAndMessages(null)
+        // card would name a channel the viewer has already left. It also starts the watchdog on
+        // the new channel's first frame.
+        watch.tuneStarted()
         deps.stallHandler.removeCallbacksAndMessages(null)
         standByReason.value = ""
         buffering.value = false
@@ -228,18 +257,17 @@ class ScreenDirector(private val deps: Deps) {
             //
             // The card is only delayed, never skipped: if the retune has not produced a
             // picture by the time the grace period is up, this is a real fault and says so.
+            // Armed once per streak of errors - see RecoveryWatch.error.
             tuning.value = true
             updateProgrammeVolume()
-            deps.recoveryHandler.removeCallbacksAndMessages(null)
-            deps.recoveryHandler.postDelayed(
-                { if (!deps.halted()) standByReason.value = code }, RECOVERY_GRACE_MILLIS)
+            watch.error(code)
             deps.tune().retuneCurrent("playback error $code")
         }
         // The card comes down when a picture actually appears, not when a tune is merely
         // dispatched - a tune that fails again would otherwise clear it and leave black.
         player.onFirstFrame = {
             deps.tune().noteFirstFrame()
-            deps.recoveryHandler.removeCallbacksAndMessages(null)
+            watch.firstFrame()
             standByReason.value = ""
             buffering.value = false
             tuning.value = false
@@ -344,15 +372,5 @@ class ScreenDirector(private val deps: Deps) {
     private companion object {
         /** Long enough not to flash on the brief stalls that clear themselves. */
         const val STALL_CARD_MILLIS = 2_500L
-
-        /**
-         * How long a playback error is given to fix itself before the stand-by card appears.
-         *
-         * A 403 on a signed URL recovers by dropping the dead id, asking the server for a
-         * fresh one and tuning again. Measured end to end that is about 1.5s; 4s covers the
-         * slow end with room, while still being short enough that a channel which is genuinely
-         * dead says so rather than sitting blank.
-         */
-        const val RECOVERY_GRACE_MILLIS = 4_000L
     }
 }

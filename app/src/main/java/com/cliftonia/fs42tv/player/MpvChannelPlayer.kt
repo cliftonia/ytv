@@ -36,12 +36,6 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
          */
         private const val END_SLACK_SECONDS = 20.0
 
-        /**
-         * How long after the newest load a mismatched first frame is still treated as stale.
-         * Longer than any burst of surfing, far shorter than a viewer would stare at black.
-         */
-        private const val RESYNC_MILLIS = 2_500L
-
         /** Error code meaning "this player is finished" rather than "this clip failed". */
         const val ENGINE_DIED = "MPV_SHUTDOWN"
 
@@ -79,39 +73,14 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
     private var requestedAtMillis = 0L
 
     /**
-     * Set once a picture is up, so a load in progress is never reported as a stall.
-     *
-     * `@Volatile` because mpv delivers events on its own native thread while `play` and `stop` are
-     * called from the UI thread. Without it neither side is guaranteed to see the other's write.
+     * Which of mpv's events belong to the clip the dial asked for: the end-of-file latch, the
+     * load counters, the first-frame rule and the "was there a picture" flag. All of it lives in
+     * [MpvLoadGuard], which a JVM test can reach and this class cannot - and which synchronizes,
+     * because mpv delivers events on its own native thread while `play` and `stop` run on the UI
+     * thread. A stale read here once acted on the OUTGOING clip's end-file and re-tuned the
+     * channel six times in fifty milliseconds.
      */
-    @Volatile private var hasPicture = false
-
-    /**
-     * Guards against reporting the same clip's end twice while the next tune is in flight.
-     *
-     * `@Volatile` for the same reason, and it matters more here: a stale read means an end-file
-     * event for the OUTGOING clip is acted on, which re-tunes the channel while a load is already
-     * in flight - the tight loop measured at six re-tunes in fifty milliseconds. A plain boolean
-     * closed the window that was reproduced but not the race underneath it.
-     */
-    @Volatile private var ended = false
-
-    // How many loads have been ASKED for versus how many mpv has finished opening. When the
-    // accelerator paints two surfs sixteen milliseconds apart, mpv still briefly opens the
-    // superseded file - and its events must not be mistaken for the current one's. Seen < asked
-    // means the event in hand belongs to a file that has already been replaced.
-    private val loadsAsked = java.util.concurrent.atomic.AtomicInteger(0)
-    private val loadsSeen = java.util.concurrent.atomic.AtomicInteger(0)
-
-    /**
-     * When the newest load was asked for. The counters above can skew - a load that dies
-     * before opening consumes an ask without ever producing a file-loaded - and unrepaired
-     * skew would swallow every future first frame, which is a permanently black dial. The
-     * repair is time: mpv processes loads serially and quickly, so a first frame arriving
-     * with no NEW ask in the last couple of seconds belongs to the newest file no matter
-     * what the counters say, and they are resynced to it.
-     */
-    @Volatile private var lastAskMillis = 0L
+    private val guard = MpvLoadGuard()
 
     /**
      * True once [release] has run. Nothing may touch the mpv core afterwards.
@@ -134,7 +103,9 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         mpv.useDirectVideoOutput()
         mpv.events = object : MpvView.Events {
             override fun onFileLoaded() {
-                loadsSeen.incrementAndGet()
+                // Counted before the released check, like the load it answers: the counters
+                // must balance even for an event that arrives as the engine is torn down.
+                guard.loaded()
                 if (released) return
                 // Ask mpv what it actually did with the subtitle, rather than assuming the
                 // option took. `sid` is the selected track and `sub-text` is what is on screen
@@ -177,11 +148,6 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 // apart, or a latency mpv cannot see) holds still, while drift (a resampler
                 // running against the wrong clock) grows. One sample cannot tell them apart.
                 probeSync()
-                // Only now do end-file events refer to the clip the dial actually asked for.
-                // Anything before this belongs to the outgoing file that `loadfile ... replace`
-                // displaced, and acting on it re-tunes the channel in a tight loop - six times in
-                // fifty milliseconds, measured.
-                ended = false
             }
 
             override fun onShutdown() {
@@ -197,23 +163,13 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
             }
 
             override fun onFirstFrame() {
-                if (released || hasPicture) return
-                // The first frame of a REPLACED file must not drop the blank: with tunes
-                // painted milliseconds apart, mpv shows a beat of the superseded channel before
-                // the wanted one loads, and clearing the cover here put another channel's
-                // picture on screen until the right file took over. The cover waits for the
-                // file most recently asked for.
-                if (loadsSeen.get() < loadsAsked.get()) {
-                    if (SystemClock.elapsedRealtime() - lastAskMillis < RESYNC_MILLIS) {
-                        Log.i("fs42", "first frame of a replaced file; keeping the blank up")
-                        return
-                    }
-                    // Nothing newer was asked for in seconds: the pipeline has drained and
-                    // this frame IS the newest file - the counters skewed on a dead load.
-                    Log.i("fs42", "accepting first frame after load-count skew")
-                    loadsSeen.set(loadsAsked.get())
+                if (released) return
+                // The first frame of a REPLACED file must not drop the blank - see
+                // MpvLoadGuard.firstFrame. The cover waits for the file most recently asked for.
+                if (!guard.firstFrame(SystemClock.elapsedRealtime())) {
+                    Log.i("fs42", "first frame of a replaced file; keeping the blank up")
+                    return
                 }
-                hasPicture = true
                 val requested = requestedAtMillis
                 if (requested > 0) {
                     Log.i("fs42", "first frame ${SystemClock.elapsedRealtime() - requested} ms")
@@ -222,55 +178,44 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 main.post { this@MpvChannelPlayer.onFirstFrame?.invoke() }
             }
 
-            override fun onEndFile(reason: String) {
+            override fun onEndFile(reason: String, entryId: Long?) {
+                if (released) return
                 // mpv reports the end of a file for BOTH a clip finishing and a load failing, and
                 // the dial's response differs completely: one moves to whatever is on next, the
-                // other must drop a dead URL first or it will resolve straight back to it.
-                if (ended) return
-                ended = true
-                // An "error" end in the last seconds of a clip is a ROLL-OVER, not a fault.
-                // These files are separately-muxed video and audio, and whichever track is
-                // shorter ends the file "in error" moments before the published duration - so
-                // routing it to the error path raised the blank, armed the stand-by grace, and
-                // whenever the re-tune's resolve outran the four seconds, flashed TECHNICAL
-                // DIFFICULTIES at the viewer on every single programme boundary. The dial's
-                // correct response to both endings is identical: play whatever is on next.
-                // A genuine dead url still reports as an error, because it fails at the START.
-                val nearEnd = runCatching {
-                    val position = MPVLib.getPropertyDouble("time-pos")
-                    val duration = MPVLib.getPropertyDouble("duration")
-                    position != null && duration != null && duration > 0 &&
-                        duration - position < END_SLACK_SECONDS
-                }.getOrDefault(false)
-                if (reason == "error" && hasPicture && !nearEnd) {
-                    Log.w("fs42", "playback failed: MPV_END_FILE_ERROR")
-                    main.post { onPlaybackError?.invoke("MPV_ERROR") }
-                } else if (reason == "error" && !hasPicture) {
-                    // Never showed a frame: a dead url or an unplayable stream.
-                    Log.w("fs42", "playback failed: MPV_END_FILE_ERROR (no picture)")
-                    main.post { onPlaybackError?.invoke("MPV_ERROR") }
-                } else if (!hasPicture) {
-                    // A non-error end from a file that never showed a frame is the ghost of a
-                    // REPLACED file, not a clip finishing: `loadfile replace` ends the outgoing
-                    // file, the `ended` guard above swallows that - but the guard is cleared
-                    // when the NEXT file loads, and with the accelerator painting surfs sixteen
-                    // milliseconds apart, file A's end can arrive after the guard was already
-                    // cleared for file B. Mistaking it for B ending skipped to the next clip,
-                    // so the viewer saw one programme for a beat before it jumped. A genuine
-                    // roll-over has always shown a picture first.
-                    Log.i("fs42", "ignoring end of a replaced file that never showed a frame")
-                } else {
-                    if (reason == "error") {
-                        Log.i("fs42", "clip ended in error near its tail; treating as roll-over")
+                // other must drop a dead URL first or it will resolve straight back to it. Which
+                // is which - and whether it is this clip's at all - is MpvLoadGuard's decision.
+                val verdict = guard.endFile(reason, entryId, SystemClock.elapsedRealtime()) {
+                    runCatching {
+                        val position = MPVLib.getPropertyDouble("time-pos")
+                        val duration = MPVLib.getPropertyDouble("duration")
+                        position != null && duration != null && duration > 0 &&
+                            duration - position < END_SLACK_SECONDS
+                    }.getOrDefault(false)
+                }
+                when (verdict) {
+                    MpvLoadGuard.End.FAILED -> {
+                        // The same code whether the file opened or not: ScreenDirector reads any
+                        // MPV_ code as "the url was refused", drops the rung and re-tunes, which
+                        // is exactly right for a load that died at open.
+                        val picture = if (guard.hasPicture) "" else " (no picture)"
+                        Log.w("fs42", "playback failed: MPV_END_FILE_ERROR$picture")
+                        main.post { onPlaybackError?.invoke("MPV_ERROR") }
                     }
-                    main.post { onClipEnded?.invoke() }
+                    MpvLoadGuard.End.FINISHED -> {
+                        if (reason == "error") {
+                            Log.i("fs42", "clip ended in error near its tail; treating as roll-over")
+                        }
+                        main.post { onClipEnded?.invoke() }
+                    }
+                    MpvLoadGuard.End.IGNORE ->
+                        Log.d("fs42", "ignoring end-file ($reason) of a replaced or settled load")
                 }
             }
 
             override fun onBuffering(buffering: Boolean) {
                 // Before the first picture this is loading, not a stall - the same line the
                 // Media3 path draws, and the reason a stand-by card does not cover every tune.
-                if (!hasPicture) return
+                if (!guard.hasPicture) return
                 main.post { this@MpvChannelPlayer.onBuffering?.invoke(buffering) }
             }
         }
@@ -335,17 +280,12 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
             Log.w("fs42", unplayableReason(playable).orEmpty())
             return
         }
-        hasPicture = false
-        loadsAsked.incrementAndGet()
-        lastAskMillis = SystemClock.elapsedRealtime()
-        // Stays TRUE across the load. `loadfile ... replace` makes mpv end the outgoing file,
-        // and that end-file is indistinguishable from the new clip finishing - clearing the guard
-        // here meant every channel change was immediately read as "clip ended" and re-tuned, over
-        // and over. onFileLoaded clears it once the new file is really the current one.
-        ended = true
+        // Before the load, so the end-file latch is already up when mpv ends the outgoing file.
+        guard.asked(SystemClock.elapsedRealtime())
         this.requestedAtMillis = requestedAtMillis
         wantedCaption = load.subFile
         mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile)
+        guard.entryIdIs(mpv.currentEntryId())
     }
 
     /**
@@ -419,7 +359,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // channel change, with TuningBlank drawn over the video surface by the Compose overlay.
         // Muting here is the part that actually matters, so the outgoing channel's audio does not
         // play under an incoming channel's banner.
-        ended = true
+        guard.stopped()
         setVolume(0f)
     }
 
