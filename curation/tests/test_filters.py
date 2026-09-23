@@ -37,6 +37,16 @@ class TestTitleKey(unittest.TestCase):
             filters.title_key("Queen - Bohemian Rhapsody (Official Video)"),
             filters.title_key("Queen — Bohemian Rhapsody [Official Video]"))
 
+    def test_long_titles_differing_only_past_sixty_characters_stay_apart(self):
+        # The key used to be cut at 60 characters, so a series whose uploader puts a long show
+        # name first ("The Complete Adventures of ... | Classic TV Series | Season 1 Episode 1")
+        # had every episode collapse into one - the same failure as dropping digits, arriving by
+        # length instead.
+        prefix = "The Adventures of Sherlock Holmes | Classic Detective TV Series | "
+        self.assertGreater(len(prefix), 60)
+        self.assertNotEqual(filters.title_key(prefix + "Episode 1"),
+                            filters.title_key(prefix + "Episode 2"))
+
     def test_an_empty_or_missing_title_does_not_raise(self):
         self.assertEqual("", filters.title_key(""))
         self.assertEqual("", filters.title_key(None))

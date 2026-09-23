@@ -22,6 +22,16 @@ class TestParse(unittest.TestCase):
         self.assertEqual(22, episode)
         self.assertIn("burns", show)
 
+    def test_an_episode_past_the_old_ninety_character_cut_still_parses(self):
+        # Titles used to arrive cut at 90 characters; now they arrive whole (up to 200), so
+        # the number can sit far along a title and must still be found.
+        title = ("The Adventures of Sherlock Holmes | Classic Detective TV Series Restored "
+                 "in HD From the Original Film | S1E12 The Red-Headed League")
+        self.assertGreater(title.index("S1E12"), 90)
+        show, season, episode = sequence.parse(title)
+        self.assertEqual(("1", 12), (season, episode))
+        self.assertIn("sherlock", show)
+
     def test_season_and_episode_split_by_a_hyphen(self):
         _, season, episode = sequence.parse('I Married Joan S1-15 "Uncle Edgar" 01/21/1953')
         self.assertEqual("1", season)

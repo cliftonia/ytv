@@ -18,12 +18,19 @@ import filters
 SEARCH_DEPTH = 3
 
 
+# The longest title yt-dlp is asked to print. A cap at all only to bound a pathological title in
+# channels.json, which televisions fetch over mobile data; YouTube itself stops at 100 characters,
+# so 200 never cuts a real one. It used to be 90, which cut long-named series before their
+# episode number - title_key then merged the episodes and sequence.parse had nothing to sort by.
+TITLE_CAP = 200
+
+
 def ytdlp(target, timeout=300):
     """Flat-list a search or playlist. Returns (id, duration, title) rows."""
     try:
         out = subprocess.run(
             ["yt-dlp", target, "--flat-playlist", "--no-warnings",
-             "--print", "%(id)s\t%(duration)s\t%(title).90s"],
+             "--print", "%%(id)s\t%%(duration)s\t%%(title).%ds" % TITLE_CAP],
             capture_output=True, text=True, timeout=timeout)
     except Exception as exc:
         print("    [warn] %s: %s" % (target[:60], exc), flush=True)
