@@ -246,7 +246,7 @@ class TuneController(private val deps: Deps) {
             channel.streams.size > 1) {
             Log.i("fs42", "rotation still on the finished clip $ended; taking the next")
             val next = (ended + 1) % channel.streams.size
-            tuned = Tuner.tuneToIndex(channel, next, deps.ledger.refusedSnapshot())
+            tuned = Tuner.tuneToIndex(channel, next)
         }
 
         if (tuned == null) {
