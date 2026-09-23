@@ -508,6 +508,12 @@
             }
         ],
         "search_query": "rugby union match highlights",
-        "last_refreshed": 1789588160
+        "last_refreshed": 1789588160,
+        "exclude": [
+            "nrl",
+            "state of origin",
+            "rugby league",
+            "league"
+        ]
     }
 }

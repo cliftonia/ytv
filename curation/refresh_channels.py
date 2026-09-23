@@ -59,6 +59,9 @@ def refresh(path, target):
 
     lo, hi = filters.window(slug)
     streams, seen, keys = [], set(), set()
+    # Title terms that never belong on this channel (dial.EXCLUDE, copied into the conf by
+    # apply_dial). Applied to playlists as well as searches: a curated list can drift too.
+    exclude = station.get("exclude") or ()
 
     # Curated playlists pinned to this channel are the best material it has; they go in first and
     # search only fills whatever is left over. Several are allowed because some subjects have no
@@ -67,7 +70,7 @@ def refresh(path, target):
         if len(streams) >= target:
             break
         search.collect("https://www.youtube.com/playlist?list=" + playlist, lo, hi, seen, keys,
-                       streams, target)
+                       streams, target, exclude=exclude)
 
     attempts = search.queries_for(query, slug, station.get("extra_queries"),
                                   datetime.date.today().year)
@@ -79,7 +82,7 @@ def refresh(path, target):
         # reject as they go, so searching exactly `target` results can only ever come back short -
         # which is how a music channel once ended up with seventeen clips on it.
         search.collect("ytsearch%d:%s" % (target * search.SEARCH_DEPTH, attempt), lo, hi,
-                       seen, keys, streams, target)
+                       seen, keys, streams, target, exclude=exclude)
 
     before = len(station.get("streams", []))
     if not streams:
@@ -104,6 +107,7 @@ def refresh(path, target):
 # How many consecutive nights a channel may keep yesterday's clips before its cursor advances
 # anyway. See keep().
 MAX_MISSES = 3
+
 
 def keep(path, conf, name, why):
     """Leave yesterday's clips in place and report the channel as kept.
