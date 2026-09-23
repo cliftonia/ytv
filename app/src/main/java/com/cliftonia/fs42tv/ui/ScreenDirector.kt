@@ -71,27 +71,8 @@ class ScreenDirector(private val deps: Deps) {
      */
     val buffering = mutableStateOf(false)
 
-    // Compose state backing the tune banner. Written only on the UI thread, and only on a
-    // genuine success: a failed re-tune must not touch these, since bumping bannerGeneration
-    // would replay the LaunchedEffect in ChannelOsd and pop a banner back up for a channel
-    // that never changed.
-    val bannerChannelLine = mutableStateOf("")
-    val bannerTitleLine = mutableStateOf("")
-
-    /**
-     * A third banner line, empty unless an extra has something to add - Pluto's NEXT. Empty is
-     * the banner exactly as it was before the line existed.
-     */
-    val bannerNextLine = mutableStateOf("")
-
-    /** Which channel the banner lines describe, so a late guide answer cannot land on another. */
-    private var bannerChannelNumber = -1
-
-    // Separate from the tune generation on purpose: that counter is bumped once per keypress,
-    // to coalesce a burst of presses, and can advance even when a tune ultimately fails. Using
-    // it as the banner's LaunchedEffect key would replay the auto-hide timer on a failed
-    // re-tune even though nothing on screen changed. This one only advances alongside onAir.
-    val bannerGeneration = mutableStateOf(0)
+    /** The tune banner's lines and the rules for what they say. See [Banner]. */
+    val banner = Banner(deps.extras, deps.nowSeconds)
 
     /**
      * The cues of the clip currently playing, as the overlay draws them.
@@ -136,6 +117,19 @@ class ScreenDirector(private val deps: Deps) {
             }
         },
         retuneAfterError = { reason -> deps.tune().retuneCurrent(reason) },
+    )
+
+    /** SKIP SPONSORS during playback; a range reaching the end ends the clip the usual way. */
+    private val skipper = SponsorSkipper(
+        handler = Handler(android.os.Looper.getMainLooper()),
+        player = deps.player,
+        timetable = deps.extras.timetable,
+        ended = {
+            // Silenced first, as a natural end is: the tail being skipped must not play on under
+            // the resolve of whatever is next.
+            deps.player()?.stop()
+            deps.tune().clipEnded()
+        },
     )
 
     private val captions = CaptionLoader(
@@ -193,6 +187,7 @@ class ScreenDirector(private val deps: Deps) {
         // picture right after choosing a new one. stop() ends that render immediately, and the
         // blank covers the gap between the shutter and the first frame of the new channel.
         deps.player()?.stop()
+        skipper.stop()
         // A deliberate channel change supersedes any error still waiting to be announced: the
         // card would name a channel the viewer has already left. It also starts the watchdog on
         // the new channel's first frame.
@@ -203,15 +198,7 @@ class ScreenDirector(private val deps: Deps) {
         tuning.value = true
         deps.extras.tuneStarted()
         updateProgrammeVolume()
-        // The title comes from the clock rotation right here, not from the tune that follows.
-        // Waiting for the tune meant the banner showed a bare channel name whenever the tune
-        // was superseded - which is every press but the last when surfing quickly. What is on
-        // a channel is knowable without tuning to it.
-        val (line, title) = ChannelLabels.bannerLinesFor(target, deps.nowSeconds())
-        bannerChannelLine.value = line
-        bannerTitleLine.value = title
-        applyProgrammeLines(target)
-        bannerGeneration.value += 1
+        banner.announce(target)
     }
 
     private fun paint(
@@ -221,6 +208,9 @@ class ScreenDirector(private val deps: Deps) {
         played: Boolean,
         generation: Int,
     ) {
+        // Before the load: the watcher is reading the OUTGOING clip's ranges, and the new file's
+        // position must never be checked against them.
+        skipper.stop()
         deps.player()?.play(playable, tuned.offsetSeconds, requestedAtMillis)
         // Only when the level gain actually changed - with LEVEL VOLUME off it never does, and
         // this call is not made at all.
@@ -233,18 +223,8 @@ class ScreenDirector(private val deps: Deps) {
         // dialogue cannot be left sitting over the incoming one.
         captionCues.value = emptyList()
         if (captionsOn) captions.load(playable, generation)
-        // Only a genuine success touches the banner, and it reads the current onAir rather
-        // than this tune's outcome directly - a failed tune leaves onAir on whatever last
-        // actually played, exactly as the picture itself does.
-        if (played) {
-            deps.tune().onAir?.let { nowOnAir ->
-                val (channelLine, titleLine) = ChannelLabels.bannerLines(nowOnAir)
-                bannerChannelLine.value = channelLine
-                bannerTitleLine.value = titleLine
-                applyProgrammeLines(nowOnAir.channel)
-            }
-            bannerGeneration.value += 1
-        }
+        // Only a genuine success touches the banner.
+        if (played) banner.painted(deps.tune().onAir)
     }
 
     /**
@@ -255,8 +235,12 @@ class ScreenDirector(private val deps: Deps) {
      * listening reports no first frame - the stand-by card would then never come down again.
      */
     fun wirePlayer(player: ChannelPlayback) {
-        player.onClipEnded = { deps.tune().clipEnded() }
+        player.onClipEnded = {
+            skipper.stop()
+            deps.tune().clipEnded()
+        }
         player.onPlaybackError = { code ->
+            skipper.stop()
             if (code.startsWith(MpvChannelPlayer.ENGINE_DIED) && !deps.halted()) {
                 // The engine, not the clip. Rebuild first, then let the normal recovery below
                 // re-tune into the new instance.
@@ -309,6 +293,7 @@ class ScreenDirector(private val deps: Deps) {
             tuning.value = false
             updateProgrammeVolume()
             deps.extras.firstFrame(deps.tune().onAir)
+            skipper.start(deps.tune().onAir)
         }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
@@ -331,38 +316,8 @@ class ScreenDirector(private val deps: Deps) {
         }
     }
 
-    /**
-     * Put the channel banner back up, recomputed rather than replayed.
-     *
-     * The stored lines were written when the channel was tuned, and a clip that has rolled
-     * over since would name the programme before this one - which is worse than no banner,
-     * because it is confidently wrong. Falls back to the stored lines only when nothing is on
-     * air, which is a channel between clips rather than a mistake.
-     */
-    fun showBanner() {
-        // The channel on air is described from what is ACTUALLY playing, not recomputed from
-        // the clock: after an early roll-over or a dead-clip substitution the rotation names a
-        // programme the player is not showing, and an info button that answers with a guess
-        // when the truth is in hand is worse than none.
-        val onAir = deps.tune().onAir
-        if (onAir != null) {
-            val (line, title) = ChannelLabels.bannerLines(onAir)
-            bannerChannelLine.value = line
-            if (title.isNotEmpty()) bannerTitleLine.value = title
-            applyProgrammeLines(onAir.channel)
-        } else {
-            val channel = deps.fallbackChannel()
-            if (channel != null) {
-                val (line, title) = ChannelLabels.bannerLinesFor(channel, deps.nowSeconds())
-                bannerChannelLine.value = line
-                if (title.isNotEmpty()) bannerTitleLine.value = title
-                applyProgrammeLines(channel)
-            }
-        }
-        // The generation is what replays the auto-hide timer in ChannelOsd, so bumping it is
-        // what actually shows the banner - exactly what pressing OK on the current channel does.
-        bannerGeneration.value += 1
-    }
+    /** Put the channel banner back up, recomputed rather than replayed - see [Banner.show]. */
+    fun showBanner() = banner.show(deps.tune().onAir, deps.fallbackChannel())
 
     /**
      * The captions flag, applied to the clip already playing.
@@ -392,7 +347,28 @@ class ScreenDirector(private val deps: Deps) {
             // Re-derived now, so OFF restores full volume on the clip already playing.
             Features.Flag.LEVEL_VOLUME -> updateProgrammeVolume()
             Features.Flag.LOGO -> if (!on) deps.extras.hideBug()
+            // Applied to the clip already playing: OFF stops the watcher at once, ON starts it
+            // for a clip that has ranges. The clock's arithmetic changes with the next tune.
+            Features.Flag.SKIP_SPONSORS ->
+                if (on && !tuning.value) skipper.start(deps.tune().onAir) else skipper.stop()
         }
+    }
+
+    /**
+     * The app left the screen (onStop): hold the programme and everything timed against it. The
+     * guide music is the guide's; see MainActivity.onStop.
+     */
+    fun appStopped() {
+        syncHiss()
+        deps.player()?.setPaused(true)
+        skipper.stop()
+    }
+
+    /** Back on screen: resume the picture, re-derive the volume, and watch for skips again. */
+    fun appResumed() {
+        deps.player()?.setPaused(false)
+        updateProgrammeVolume()
+        if (!tuning.value) skipper.start(deps.tune().onAir)
     }
 
     /**
@@ -424,23 +400,6 @@ class ScreenDirector(private val deps: Deps) {
         deps.extras.tuneStarted()
         updateProgrammeVolume()
         watch.tuneStarted()
-    }
-
-    /**
-     * Swap the banner's title for Pluto's NOW and NEXT when the guide has them for [channel].
-     *
-     * A cache miss leaves the lines as they are and asks; the answer re-enters here on the UI
-     * thread, and is dropped if the banner has moved to another channel meanwhile. It does NOT
-     * bump the banner generation - that would restart the auto-hide timer for a banner that
-     * merely gained a line, or pop up one that had already gone.
-     */
-    private fun applyProgrammeLines(channel: Channel) {
-        bannerChannelNumber = channel.number
-        val lines = deps.extras.bannerLines(channel) {
-            if (bannerChannelNumber == channel.number) applyProgrammeLines(channel)
-        }
-        bannerNextLine.value = lines?.second.orEmpty()
-        if (lines != null) bannerTitleLine.value = lines.first
     }
 
     private fun loadCaptionsForCurrentClip() {

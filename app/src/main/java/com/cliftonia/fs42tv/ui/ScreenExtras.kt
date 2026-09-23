@@ -12,6 +12,7 @@ import com.cliftonia.fs42tv.pluto.PlutoLines
 import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
+import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.Tuned
 import java.time.ZoneId
@@ -39,9 +40,17 @@ class ScreenExtras(private val deps: Deps) {
         val handler: Handler,
         /** Downloads the corner logos for Pluto channels. */
         val logos: ImageCache<ImageBitmap>,
+        /** What is on a clock channel, with SKIP SPONSORS applied. */
+        val timetable: Timetable,
     )
 
     val features: Features get() = deps.features
+
+    /**
+     * The timetable every clock-channel question goes through - the tuner, the guide, the banner
+     * - built on these switches, so one row flipped changes all of them together.
+     */
+    val timetable: Timetable get() = deps.timetable
 
     /**
      * Something is in front of the blank - the guide, settings - or the app is out of sight.
@@ -221,6 +230,9 @@ class ScreenExtras(private val deps: Deps) {
                 nowMillis = now,
                 handler = Handler(Looper.getMainLooper()),
                 logos = ImageCache(load = ::loadLogo, executor = prefetchExecutor),
+                timetable = Timetable(
+                    skipsOn = { features.isOn(Features.Flag.SKIP_SPONSORS) },
+                ),
             ))
         }
 
