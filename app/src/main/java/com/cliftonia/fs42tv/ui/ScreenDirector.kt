@@ -51,6 +51,8 @@ class ScreenDirector(private val deps: Deps) {
         val recallResolved: (String, Long) -> Progressive?,
         val persistCaptionsOn: (Boolean) -> Unit,
         val captionExecutor: Executor,
+        /** The switchable extras - Pluto's guide and friends. See [ScreenExtras]. */
+        val extras: ScreenExtras,
     )
 
     // True from choosing a channel until its first frame arrives, so the previous channel is
@@ -75,6 +77,15 @@ class ScreenDirector(private val deps: Deps) {
     // that never changed.
     val bannerChannelLine = mutableStateOf("")
     val bannerTitleLine = mutableStateOf("")
+
+    /**
+     * A third banner line, empty unless an extra has something to add - Pluto's NEXT. Empty is
+     * the banner exactly as it was before the line existed.
+     */
+    val bannerNextLine = mutableStateOf("")
+
+    /** Which channel the banner lines describe, so a late guide answer cannot land on another. */
+    private var bannerChannelNumber = -1
 
     // Separate from the tune generation on purpose: that counter is bumped once per keypress,
     // to coalesce a burst of presses, and can advance even when a tune ultimately fails. Using
@@ -180,6 +191,7 @@ class ScreenDirector(private val deps: Deps) {
         val (line, title) = ChannelLabels.bannerLinesFor(target, deps.nowSeconds())
         bannerChannelLine.value = line
         bannerTitleLine.value = title
+        applyProgrammeLines(target)
         bannerGeneration.value += 1
     }
 
@@ -207,6 +219,7 @@ class ScreenDirector(private val deps: Deps) {
                 val (channelLine, titleLine) = ChannelLabels.bannerLines(nowOnAir)
                 bannerChannelLine.value = channelLine
                 bannerTitleLine.value = titleLine
+                applyProgrammeLines(nowOnAir.channel)
             }
             bannerGeneration.value += 1
         }
@@ -313,12 +326,14 @@ class ScreenDirector(private val deps: Deps) {
             val (line, title) = ChannelLabels.bannerLines(onAir)
             bannerChannelLine.value = line
             if (title.isNotEmpty()) bannerTitleLine.value = title
+            applyProgrammeLines(onAir.channel)
         } else {
             val channel = deps.fallbackChannel()
             if (channel != null) {
                 val (line, title) = ChannelLabels.bannerLinesFor(channel, deps.nowSeconds())
                 bannerChannelLine.value = line
                 if (title.isNotEmpty()) bannerTitleLine.value = title
+                applyProgrammeLines(channel)
             }
         }
         // The generation is what replays the auto-hide timer in ChannelOsd, so bumping it is
@@ -338,6 +353,18 @@ class ScreenDirector(private val deps: Deps) {
         deps.persistCaptionsOn(captionsOn)
         if (captionsOn) loadCaptionsForCurrentClip() else captionCues.value = emptyList()
         Log.i("fs42", "captions ${if (captionsOn) "on" else "off"}")
+    }
+
+    /**
+     * A Settings switch flipped: act on what is on screen now, so OFF is visible at once.
+     * Exhaustive on purpose - a new flag must decide what switching it does here.
+     */
+    fun featureToggled(flag: Features.Flag, on: Boolean) {
+        Log.i("fs42", "feature ${flag.label} ${if (on) "on" else "off"}")
+        when (flag) {
+            // Nothing to undo: the next banner and the next guide open read the flag.
+            Features.Flag.PLUTO_GUIDE -> Unit
+        }
     }
 
     /**
@@ -368,6 +395,23 @@ class ScreenDirector(private val deps: Deps) {
         tuning.value = true
         updateProgrammeVolume()
         watch.tuneStarted()
+    }
+
+    /**
+     * Swap the banner's title for Pluto's NOW and NEXT when the guide has them for [channel].
+     *
+     * A cache miss leaves the lines as they are and asks; the answer re-enters here on the UI
+     * thread, and is dropped if the banner has moved to another channel meanwhile. It does NOT
+     * bump the banner generation - that would restart the auto-hide timer for a banner that
+     * merely gained a line, or pop up one that had already gone.
+     */
+    private fun applyProgrammeLines(channel: Channel) {
+        bannerChannelNumber = channel.number
+        val lines = deps.extras.bannerLines(channel) {
+            if (bannerChannelNumber == channel.number) applyProgrammeLines(channel)
+        }
+        bannerNextLine.value = lines?.second.orEmpty()
+        if (lines != null) bannerTitleLine.value = lines.first
     }
 
     private fun loadCaptionsForCurrentClip() {

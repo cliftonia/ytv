@@ -39,6 +39,8 @@ class GuidePicker(private val deps: Deps) {
         val elapsedMillis: () -> Long,
         /** Grants or blocks the ComposeView's descendant focus, and pulls focus when granting. */
         val focus: (Boolean) -> Unit,
+        /** Pluto's what-is-on, for the rows the viewer is actually looking at. */
+        val extras: ScreenExtras,
     )
 
     // Captured once, at the moment the picker opens, rather than derived live from the
@@ -142,6 +144,31 @@ class GuidePicker(private val deps: Deps) {
         close()
     }
 
+    /**
+     * The highlight has come to rest on [index]: fill in Pluto's NOW and NEXT for the rows on
+     * screen around it.
+     *
+     * Only those rows, and only once the highlight stops - the picker debounces - so holding DOWN
+     * through the dial asks for nothing until it lets go. A row whose answer arrives after the
+     * guide has closed, or after the list was rebuilt under it, is dropped.
+     */
+    fun settled(index: Int) {
+        val channels = deps.navigator()?.channels ?: return
+        for (i in (index - SETTLED_ROWS_ABOVE)..(index + SETTLED_ROWS_BELOW)) {
+            val channel = channels.getOrNull(i) ?: continue
+            val cached = deps.extras.guideRow(channel) { line -> setRow(i, channel, line) }
+            if (cached != null) setRow(i, channel, cached)
+        }
+    }
+
+    private fun setRow(index: Int, channel: com.cliftonia.fs42tv.sync.Channel, line: String) {
+        if (!visible.value) return
+        val current = rows.value
+        val row = ChannelLabels.listRow(channel, line)
+        if (current.getOrNull(index) == null || current[index] == row) return
+        rows.value = current.toMutableList().also { it[index] = row }
+    }
+
     /** Released on stop and destroy; see [stopMusic] for why released rather than paused. */
     fun releaseMusic() {
         musicPlayer?.release()
@@ -176,6 +203,13 @@ class GuidePicker(private val deps: Deps) {
             deps.runOnUi {
                 if (deps.halted() || !visible.value) return@runOnUi
                 Log.d("fs42", "guide titles for ${filled.size} channels in ${took}ms")
+                // Pluto lines already in hand go in with the rest - cache only, never a request
+                // per channel. The rows around the highlight ask for theirs in [settled].
+                channels.forEachIndexed { i, channel ->
+                    deps.extras.guideRow(channel, null)?.let {
+                        filled[i] = ChannelLabels.listRow(channel, it)
+                    }
+                }
                 rows.value = filled
             }
         }
@@ -244,5 +278,11 @@ class GuidePicker(private val deps: Deps) {
         // milliseconds of music, against a picture that stays smooth.
         releaseMusic()
         deps.director.updateProgrammeVolume()
+    }
+
+    private companion object {
+        /** About half a screen of rows either side of the highlight, which sits mid-list. */
+        const val SETTLED_ROWS_ABOVE = 4
+        const val SETTLED_ROWS_BELOW = 4
     }
 }
