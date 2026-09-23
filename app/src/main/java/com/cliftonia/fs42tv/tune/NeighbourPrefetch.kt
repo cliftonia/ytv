@@ -35,11 +35,25 @@ class NeighbourPrefetch(
     private val halted: () -> Boolean,
 ) {
 
-    /** Queue a resolve of what is on air now on each of [channels]. */
-    fun resolveAhead(channels: List<Channel>) {
+    /**
+     * Queue a resolve of what is on air now on each of [channels], each abandoned unstarted
+     * once [stillWanted] says the viewer has moved on.
+     *
+     * The check is what keeps a prediction from outliving what it predicted. Every channel that
+     * paints queues two resolves, and this thread works through them one extraction at a time -
+     * 2.4s each on the device - so a steady run of presses left it resolving the neighbours of
+     * channels the viewer left long ago, while the neighbours of the channel they are actually
+     * on waited at the back of the queue. The resolve already in progress cannot be stopped,
+     * but everything behind it can be skipped for free.
+     */
+    fun resolveAhead(channels: List<Channel>, stillWanted: () -> Boolean) {
         for (channel in channels) {
             executor.execute {
                 if (halted()) return@execute
+                if (!stillWanted()) {
+                    Log.d("fs42", "prefetch of ${channel.number} is stale; skipping")
+                    return@execute
+                }
                 val now = nowSeconds()
                 val tuned = Tuner.tune(channel, urls, now, ladder(), ledger.refusedSnapshot())
                     ?: return@execute
