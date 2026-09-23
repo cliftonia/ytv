@@ -14,7 +14,6 @@ import com.cliftonia.fs42tv.player.FrameCadence
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
 import com.cliftonia.fs42tv.player.PlayerEngine
 import com.cliftonia.fs42tv.resolver.AcceleratedResolver
-import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.RefusalLedger
 import com.cliftonia.fs42tv.sync.DialLoader
 import com.cliftonia.fs42tv.sync.LineupSource
@@ -135,7 +134,7 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var prefs: SharedPreferences
     private lateinit var source: LineupSource
-    private lateinit var resolver: ClipResolver
+    private lateinit var resolver: AcceleratedResolver
     private lateinit var tune: TuneController
     private lateinit var director: ScreenDirector
     private lateinit var guide: GuidePicker
@@ -476,6 +475,7 @@ class MainActivity : ComponentActivity() {
         executor.shutdownNow()
         prefetchExecutor.shutdownNow()
         captionExecutor.shutdownNow()
+        resolver.close()
         guide.releaseMusic()
         deck.release()
     }
