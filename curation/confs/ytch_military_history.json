@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9eNQzWzE51k",
                 "duration": 5134,
-                "title": "The Future of Warfare Revealed | Special | Full Episode"
+                "title": "The Future of Warfare Revealed | Special | Full Episode",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=TOMQf84HYeQ",
@@ -24,7 +26,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=49G-o9exiIA",
                 "duration": 7715,
-                "title": "Rommel: How the 'Desert Fox' Won and Lost North Africa | Free Documentary History"
+                "title": "Rommel: How the 'Desert Fox' Won and Lost North Africa | Free Documentary History",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",
@@ -69,7 +73,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KNQuS8GoD0o",
                 "duration": 8617,
-                "title": "The ENTIRE History Of The Vietnam War | 1862 - 1975 (Documentary)"
+                "title": "The ENTIRE History Of The Vietnam War | 1862 - 1975 (Documentary)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=x5iz3uZA6Co",
@@ -99,7 +105,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fMpYozsIyX0",
                 "duration": 3344,
-                "title": "Black Americans and the Revolutionary War | Full Documentary"
+                "title": "Black Americans and the Revolutionary War | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=uOhGVGwFelY",
@@ -114,7 +122,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8KyNBFGU7MI",
                 "duration": 7913,
-                "title": "WORLD WAR 2 Full Movie (1930s - 1945) - A Complete Overview"
+                "title": "WORLD WAR 2 Full Movie (1930s - 1945) - A Complete Overview",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=MtVP6dyrGss",
@@ -125,11 +135,6 @@
                 "url": "https://www.youtube.com/watch?v=RHvh2ly1-18",
                 "duration": 2981,
                 "title": "THE PACIFIC WAR - Japan versus the US | Full Documentary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gA9cprYRFPw",
-                "duration": 7730,
-                "title": "Russians at War | Rare Frontline Access Documentary"
             },
             {
                 "url": "https://www.youtube.com/watch?v=-dAB72gsIiE",
@@ -159,7 +164,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=CoZexC7M4hM",
                 "duration": 2887,
-                "title": "The Korean War 1950-53 (4K Documentary)"
+                "title": "The Korean War 1950-53 (4K Documentary)",
+                "skip": [
+                    [
+                        2735.1,
+                        2840.6
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=TMcnIqgmAaw",
@@ -214,7 +226,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0UJYYkK4d8s",
                 "duration": 6019,
-                "title": "June 6, 1944 – The Light of Dawn | History - D-Day - World War II Documentary"
+                "title": "June 6, 1944 – The Light of Dawn | History - D-Day - World War II Documentary",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=25_JXHe4l04",
@@ -309,7 +323,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-RUa0uglz-4",
                 "duration": 2643,
-                "title": "America's Birth: Colonies to Revolutionary War (S1, E1) | America: The Story of Us | Full"
+                "title": "America's Birth: Colonies to Revolutionary War (S1, E1) | America: The Story of Us | Full",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=OLMF4XleCL8",
@@ -384,7 +400,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5EQ6UrfQfFk",
                 "duration": 2686,
-                "title": "How Hitler Built a War Economy on Debt and Plunder | FULL DOCUMENTARY"
+                "title": "How Hitler Built a War Economy on Debt and Plunder | FULL DOCUMENTARY",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=XBr4zkf9pas",
@@ -409,7 +427,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZcG4h3zqB1Y",
                 "duration": 1564,
-                "title": "The Entire History of Ireland"
+                "title": "The Entire History of Ireland",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=5vfL2NzVtaQ",
@@ -479,7 +499,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KwVV2muPm-Q",
                 "duration": 1273,
-                "title": "The largest ambush in military history — Trasimene (217 BC)"
+                "title": "The largest ambush in military history — Trasimene (217 BC)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Fysk0WmrqWU",

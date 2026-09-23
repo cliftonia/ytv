@@ -19,27 +19,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=5rhQGVR3HgI",
                 "duration": 1685,
-                "title": "Surviving Somalia's Extreme Street Food!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nGYzO2kdCJs",
-                "duration": 1984,
-                "title": "ISTANBUL TURKEY 2026 4K MARKET TOUR | Eminönü Market, Spice Bazaar, Street Food & Shopping"
+                "title": "Surviving Somalia's Extreme Street Food!!",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=wBCaiXxhbsY",
                 "duration": 1226,
-                "title": "The ULTIMATE Thailand Street Food Tour!"
+                "title": "The ULTIMATE Thailand Street Food Tour!",
+                "skip": [
+                    [
+                        398.0,
+                        448.0
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=_tI4yUbDYmw",
                 "duration": 2245,
                 "title": "Timor-Leste Street Food - 24 Hours in Asia's Least Visited Country!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r-zRHk9n5GM",
-                "duration": 1545,
-                "title": "AMSTERDAM'S Hottest Summer Street Food Festival!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ddWFEuAMn9s",
@@ -60,11 +59,6 @@
                 "url": "https://www.youtube.com/watch?v=HJoGLvmmAPs",
                 "duration": 1520,
                 "title": "Mexican Street Food - The Most INSANE Tacos You’ve Never Heard Of!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0GjoFljAW98",
-                "duration": 1375,
-                "title": "DELICIOUS Dutch Street Food Tour in Utrecht"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RuMcfFI2Ruk",
@@ -119,7 +113,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hrX8Uzy8GfE",
                 "duration": 1517,
-                "title": "Korean Street Food After Dark!! (Jeju Fire and Ash)"
+                "title": "Korean Street Food After Dark!! (Jeju Fire and Ash)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=WMkg42p4FMU",
@@ -169,7 +165,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=R4x9QJBfhXg",
                 "duration": 3311,
-                "title": "China Street Food Heaven!! 14-Hour CHINESE FOOD TOUR in Xi’an, China!!"
+                "title": "China Street Food Heaven!! 14-Hour CHINESE FOOD TOUR in Xi’an, China!!",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=DAE421ww_hg",
@@ -274,7 +272,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ALDM6qHzw6k",
                 "duration": 2681,
-                "title": "24 Hours Surviving on Bangladesh Street Food 🇧🇩"
+                "title": "24 Hours Surviving on Bangladesh Street Food 🇧🇩",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=9LjvaIifKjU",
@@ -289,12 +289,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Pp-LoOfD5eA",
                 "duration": 2148,
-                "title": "The ULTIMATE MANILA STREET FOOD TOUR in the Philippines! 🇵🇭 Ongpin to Quiapo"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=poqLRXnH6uQ",
-                "duration": 1442,
-                "title": "The King of the Moroccan Barbecue 🇲🇦 Meknes Street Food Tour"
+                "title": "The ULTIMATE MANILA STREET FOOD TOUR in the Philippines! 🇵🇭 Ongpin to Quiapo",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=wE1SiIhYXJk",
@@ -305,11 +302,6 @@
                 "url": "https://www.youtube.com/watch?v=4ehNo4zhwkQ",
                 "duration": 1639,
                 "title": "$100 Thailand Street Food Challenge!! Budget Bombshell!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pAn7vXZldNw",
-                "duration": 832,
-                "title": "Inside a Rush Hour Sandwich Stall Making Cheese-Loaded Street Food"
             },
             {
                 "url": "https://www.youtube.com/watch?v=t2TGvr7DA6g",
@@ -324,7 +316,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=HVAA3Xm2JQk",
                 "duration": 985,
-                "title": "Istanbul, Turkey 🇹🇷 Amazing Turkish Street Food | 4K Walking Tour, Shocking Prices"
+                "title": "Istanbul, Turkey 🇹🇷 Amazing Turkish Street Food | 4K Walking Tour, Shocking Prices",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZLdu1SkH5r8",
@@ -369,12 +363,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=4ovFSdcJ-4Q",
                 "duration": 593,
-                "title": "Taiwan Michelin Guide 2025 | Street Food | Restaurant"
+                "title": "Taiwan Michelin Guide 2025 | Street Food | Restaurant",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=5tX8PweGoQA",
                 "duration": 3570,
-                "title": "PHILIPPINES 🇵🇭 THIS IS MANILA’S BIGGEST MARKET! | DIVISORIA Streets, Food & 168 Mall Tour"
+                "title": "PHILIPPINES 🇵🇭 THIS IS MANILA’S BIGGEST MARKET! | DIVISORIA Streets, Food & 168 Mall Tour",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=OSbw1OTny18",
@@ -390,11 +388,6 @@
                 "url": "https://www.youtube.com/watch?v=I-S2-qe4EuQ",
                 "duration": 2725,
                 "title": "I Visited SPICY Island Paradise!! (Taste Buds Shocked)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dMl-VaTLUX0",
-                "duration": 1699,
-                "title": "$1 Quiapo Filipino Street Food Tour! How CHEAP is Quiapo?"
             },
             {
                 "url": "https://www.youtube.com/watch?v=GMbXj3rbG0o",
@@ -447,16 +440,6 @@
                 "title": "Tokyo Street Food in a Local Neighborhood Most Tourists Miss"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aIe-aaXKxbE",
-                "duration": 2351,
-                "title": "Manali Street Food Tour | Manali Mall Road Food | Manali Sightseeing | Manali Breakfast |"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=97cAwA4zt6M",
-                "duration": 918,
-                "title": "The Hidden Spot of Marrakech Everyone Misses 🇲🇦 Moroccan Street Food"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ArHC_18gF1Q",
                 "duration": 3713,
                 "title": "CHEAPEST STREET FOOD OF ISLAMABAD, PAKISTAN | ULTIMATE STREET FOOD PAKISTAN VIDEO COMPILAT"
@@ -492,19 +475,11 @@
                 "title": "Street Food Tour of Bali - INSANELY DELICIOUS Indonesian Food in Bali, Indonesia!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Y4gzCsioUCg",
-                "duration": 3220,
-                "title": "ULTIMATE!! Muscat Street Food Tour 🔥 Mishkak & Oman Burger 🍢 | Strait of Hormuz Viewpoint"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=qxtYUBRSzkQ",
                 "duration": 2161,
-                "title": "Belizean Street Food in Placencia, Belize!! 🇧🇿"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fdsL88mGaQE",
-                "duration": 5261,
-                "title": "Amazing Cambodian Street Food 2026 🇰🇭 | Evening Walking Tour at Riverside, Phnom Penh 4K U"
+                "title": "Belizean Street Food in Placencia, Belize!! 🇧🇿",
+                "skip": [],
+                "skip_checked": 1790193353
             }
         ],
         "search_query": "street food tour",

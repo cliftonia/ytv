@@ -19,7 +19,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mQ3KzIc7qTQ",
                 "duration": 955,
-                "title": "Trump is Constantly Falling Asleep, Mitch McConnell Seems Good & Guillermo on Dancing with"
+                "title": "Trump is Constantly Falling Asleep, Mitch McConnell Seems Good & Guillermo on Dancing with",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZLXL1L0TfsI",
@@ -129,7 +131,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=K3-p0yA2haw",
                 "duration": 855,
-                "title": "Ryan Gosling Is No Stranger to Aliens; Reenacts His First TV Gig and Talks Project Hail Ma"
+                "title": "Ryan Gosling Is No Stranger to Aliens; Reenacts His First TV Gig and Talks Project Hail Ma",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=38rvtcwhuw4",
@@ -164,7 +168,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LZnx9caKOpw",
                 "duration": 868,
-                "title": "Trump Brutally Flops at White House Correspondents’ Dinner, Epstein Story Wins Award: A Cl"
+                "title": "Trump Brutally Flops at White House Correspondents’ Dinner, Epstein Story Wins Award: A Cl",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=h0wPG052710",
@@ -184,7 +190,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VvPn_SfCr24",
                 "duration": 2183,
-                "title": "Kristen Stewart Reveals the \"Douchiest\" Thing About Her, Reminisces on Seth's Lesbian Make"
+                "title": "Kristen Stewart Reveals the \"Douchiest\" Thing About Her, Reminisces on Seth's Lesbian Make",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=AYzremZTgHk",
@@ -224,7 +232,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=95vOu4LxaQk",
                 "duration": 493,
-                "title": "Diane Morgan: Philomena Cunk Would Love To Interview Elon Musk"
+                "title": "Diane Morgan: Philomena Cunk Would Love To Interview Elon Musk",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=X7WgAaYMchg",
@@ -244,7 +254,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LxZgLmWtdp8",
                 "duration": 699,
-                "title": "Stephen Colbert Reveals Final Late Show Date, Addresses Rumors About His Future Plans (Ext"
+                "title": "Stephen Colbert Reveals Final Late Show Date, Addresses Rumors About His Future Plans (Ext",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=zW9oaA138lE",
@@ -274,7 +286,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=O5-4j67YNek",
                 "duration": 572,
-                "title": "Trump Says Netanyahu \"Won't Have Any Choice\" on Ceasefire Deal"
+                "title": "Trump Says Netanyahu \"Won't Have Any Choice\" on Ceasefire Deal",
+                "skip": [
+                    [
+                        180.6,
+                        244.8
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=NY5dkk2rvuM",
@@ -354,7 +373,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=b9ZZFXCRM_U",
                 "duration": 732,
-                "title": "BACKFIRE! Kimmel's Dem intv gets *5 TIMES* audience in blow to 'dumb' Trump censorship plo"
+                "title": "BACKFIRE! Kimmel's Dem intv gets *5 TIMES* audience in blow to 'dumb' Trump censorship plo",
+                "skip": [
+                    [
+                        691.9,
+                        731.7
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6mhbIZ83pMk",
@@ -409,7 +435,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tahHeW6Wq2k",
                 "duration": 450,
-                "title": "Midterm Anal-a-Zone: AI Deepfakes Run Wild in Political Ads | The Daily Show"
+                "title": "Midterm Anal-a-Zone: AI Deepfakes Run Wild in Political Ads | The Daily Show",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=C-sitwuRdlM",
@@ -439,7 +467,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UVs8MfQPJOc",
                 "duration": 518,
-                "title": "Luke Evans Needs Oxygen Tanks Backstage to Survive His Tight Rocky Horror Corset"
+                "title": "Luke Evans Needs Oxygen Tanks Backstage to Survive His Tight Rocky Horror Corset",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=1ynbQ0xW2Bo",
@@ -484,7 +514,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NkWE1QnXk-4",
                 "duration": 776,
-                "title": "Emily Blunt & John Krasinski: Extended Interview | The Graham Norton Show"
+                "title": "Emily Blunt & John Krasinski: Extended Interview | The Graham Norton Show",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=N8xOmH-dvGw",

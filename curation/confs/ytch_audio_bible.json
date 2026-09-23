@@ -24,7 +24,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9Upld1qJJcw",
                 "duration": 317,
-                "title": "Whatever Was Stolen - Remix (Official Lyrics Video) - English Audio Bible"
+                "title": "Whatever Was Stolen - Remix (Official Lyrics Video) - English Audio Bible",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=sAfS93-8w6c",
@@ -34,12 +36,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=p01sAk95JBk",
                 "duration": 348,
-                "title": "Victory is Mine (Official Video) - English Audio Bible"
+                "title": "Victory is Mine (Official Video) - English Audio Bible",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=1edKaFVh404",
                 "duration": 244,
-                "title": "Search My Heart (Official Video) - English Audio Bible"
+                "title": "Search My Heart (Official Video) - English Audio Bible",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ta5M0v3zApo",
@@ -129,7 +135,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=AzmYV8GNAIM",
                 "duration": 488,
-                "title": "Book of Proverbs Summary: A Complete Animated Overview"
+                "title": "Book of Proverbs Summary: A Complete Animated Overview",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=1pvdYE6tvoY",
@@ -174,7 +182,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mGgWaPGpGz4",
                 "duration": 433,
-                "title": "Book of Amos Summary: A Complete Animated Overview"
+                "title": "Book of Amos Summary: A Complete Animated Overview",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=D7lXXpVyjZI",
@@ -189,7 +199,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=j9phNEaPrv8",
                 "duration": 539,
-                "title": "Book of Psalms Summary: A Complete Animated Overview"
+                "title": "Book of Psalms Summary: A Complete Animated Overview",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=9ECwLgDuh5c",
@@ -219,7 +231,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=KhIjNfUCKUQ",
                 "duration": 1511,
-                "title": "The Book of Revelation Timeline (how the world ends)"
+                "title": "The Book of Revelation Timeline (how the world ends)",
+                "skip": [
+                    [
+                        431.0,
+                        471.9
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=8mLVRpEWOx8",
@@ -234,7 +253,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wnNlMW03Wr0",
                 "duration": 514,
-                "title": "The Story of Samson's Hair | Bible Stories for Kids"
+                "title": "The Story of Samson's Hair | Bible Stories for Kids",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=aKBz16wl-1Q",
@@ -249,7 +270,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pPxIQuw0O_k",
                 "duration": 3550,
-                "title": "Healing Scriptures and Prayers for Restoration | 1 Hour Soaking Instrumental"
+                "title": "Healing Scriptures and Prayers for Restoration | 1 Hour Soaking Instrumental",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=lrsQ1tc-2wk",
@@ -304,7 +327,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Imx5kjTZlOg",
                 "duration": 445,
-                "title": "The Story of Abraham and Isaac | Bible Stories for Kids"
+                "title": "The Story of Abraham and Isaac | Bible Stories for Kids",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=yiHf8klCCc4",
@@ -329,7 +354,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UJf1PJd3-ME",
                 "duration": 456,
-                "title": "How Does It All End? (Revelation for Kids) | Bible Stories for Kids"
+                "title": "How Does It All End? (Revelation for Kids) | Bible Stories for Kids",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=Sg6nyFBxX4w",
@@ -354,7 +381,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=eywIAaKaHUU",
                 "duration": 442,
-                "title": "The Story of Daniel and the Lions' Den | Bible Stories for Kids"
+                "title": "The Story of Daniel and the Lions' Den | Bible Stories for Kids",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=8HRfOui_WnY",
@@ -379,7 +408,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IUAbxVHbM1U",
                 "duration": 632,
-                "title": "Deuteronomy 17 - 19 | Justice & Leadership | NRSV Catholic Audio Bible Reading #dailybible"
+                "title": "Deuteronomy 17 - 19 | Justice & Leadership | NRSV Catholic Audio Bible Reading #dailybible",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=qoA5P1Cri0M",
@@ -399,7 +430,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1k5kEdp_UWo",
                 "duration": 5042,
-                "title": "The Complete Story of the book of 1st Peter (Why You’re Suffering)"
+                "title": "The Complete Story of the book of 1st Peter (Why You’re Suffering)",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=CLqkVpGvw_A",
@@ -454,7 +487,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jmSeNMjs-hg",
                 "duration": 4190,
-                "title": "Why is Galatians 5 the Most Important Chapter in the Bible?"
+                "title": "Why is Galatians 5 the Most Important Chapter in the Bible?",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=s2a86V6Cq6k",
@@ -474,7 +509,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TWTt3MLk_hI",
                 "duration": 864,
-                "title": "The Book of Joel Audio Bible (1 Hour) | Gentle Rain & Calming Scripture for Sleep"
+                "title": "The Book of Joel Audio Bible (1 Hour) | Gentle Rain & Calming Scripture for Sleep",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=6UoCmakZmys",

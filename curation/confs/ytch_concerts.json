@@ -14,7 +14,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5AVYDHTOixU",
                 "duration": 1396,
-                "title": "De La Soul: Tiny Desk Concert"
+                "title": "De La Soul: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=u_vnA6nlDvs",
@@ -44,7 +46,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=M34D3Ktovfw",
                 "duration": 1406,
-                "title": "Noah Kahan: Tiny Desk Concert"
+                "title": "Noah Kahan: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=L_BHC2l30pY",
@@ -69,7 +73,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vR6_ZVKEhJ4",
                 "duration": 1395,
-                "title": "Ne-Yo: Tiny Desk Concert"
+                "title": "Ne-Yo: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=q-NDZ31pXmM",
@@ -89,12 +95,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=cMIJsoaxRjk",
                 "duration": 1541,
-                "title": "Justin Timberlake: Tiny Desk Concert"
+                "title": "Justin Timberlake: Tiny Desk Concert",
+                "skip": [
+                    [
+                        1531.6,
+                        1540.1
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=fEqGjypP5qY",
                 "duration": 1389,
-                "title": "Shaboozey: Tiny Desk Concert"
+                "title": "Shaboozey: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=CymCVrKpLzw",
@@ -114,7 +129,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sKHswNFsRww",
                 "duration": 1266,
-                "title": "The Philharmonik, 2024 Tiny Desk Contest Winner: Tiny Desk Concert"
+                "title": "The Philharmonik, 2024 Tiny Desk Contest Winner: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=oxo-loXdcH0",
@@ -134,12 +151,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=GVDJ8O3lPBA",
                 "duration": 1538,
-                "title": "Tash Sultana: Tiny Desk Concert"
+                "title": "Tash Sultana: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=gsaZRcL-OTQ",
                 "duration": 1323,
-                "title": "JID: Tiny Desk Concert"
+                "title": "JID: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=wdeWKd9rjt4",
@@ -159,7 +180,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DzS1ak7vQ-M",
                 "duration": 1435,
-                "title": "Miguel: Tiny Desk Concert"
+                "title": "Miguel: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=uwUt1fVLb3E",
@@ -174,7 +197,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BoQctt3WEy8",
                 "duration": 1235,
-                "title": "Brandi Carlile: Tiny Desk Concert"
+                "title": "Brandi Carlile: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=eo0UxS6lnjA",
@@ -209,17 +234,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Cg6E3lppn0I",
                 "duration": 1233,
-                "title": "Vince Gill: Tiny Desk Concert"
+                "title": "Vince Gill: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=tUApO77uUUk",
                 "duration": 1793,
-                "title": "Cypress Hill: Tiny Desk Concert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kaJ-FQ0_ksg",
-                "duration": 1449,
-                "title": "Aterciopelados: Tiny Desk Concert"
+                "title": "Cypress Hill: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=o4I-Y8XiBIs",
@@ -244,7 +268,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KsCV94MQs34",
                 "duration": 1351,
-                "title": "Floetry: Tiny Desk Concert"
+                "title": "Floetry: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ajNYTJcF6rE",
@@ -257,11 +283,6 @@
                 "title": "The Lumineers: NPR Music Tiny Desk Concert"
             },
             {
-                "url": "https://www.youtube.com/watch?v=CbotsXwCbNE",
-                "duration": 1259,
-                "title": "Rawayana: Tiny Desk Concert"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Xcv0O44zfeU",
                 "duration": 1311,
                 "title": "Kokoroko: Tiny Desk Concert"
@@ -270,11 +291,6 @@
                 "url": "https://www.youtube.com/watch?v=klL7nY1HzaY",
                 "duration": 1347,
                 "title": "Durand Bernarr: Tiny Desk Concert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=X1bx9_TL20A",
-                "duration": 1219,
-                "title": "The Cast of Buena Vista Social Club: Tiny Desk Concert"
             },
             {
                 "url": "https://www.youtube.com/watch?v=mbRycM-xgxo",
@@ -312,11 +328,6 @@
                 "title": "Chappell Roan: Tiny Desk Concert"
             },
             {
-                "url": "https://www.youtube.com/watch?v=aKWV7b3j5P0",
-                "duration": 1404,
-                "title": "Carla Morrison: Tiny Desk Concert"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=W9r2i8EjFVw",
                 "duration": 1423,
                 "title": "Kierra Sheard: Tiny Desk Concert"
@@ -350,11 +361,6 @@
                 "url": "https://www.youtube.com/watch?v=BEoGvTlJMyY",
                 "duration": 1571,
                 "title": "Sabrina Carpenter: Tiny Desk Concert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ouuPSxE1hK4",
-                "duration": 2022,
-                "title": "Bad Bunny: Tiny Desk Concert"
             },
             {
                 "url": "https://www.youtube.com/watch?v=XKwDFDDr_VA",
@@ -402,11 +408,6 @@
                 "title": "Odeal: Tiny Desk Concert"
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZfbX3MAnJUM",
-                "duration": 1310,
-                "title": "Danny Ocean: Tiny Desk Concert"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=bWdZP2Qj6wA",
                 "duration": 1421,
                 "title": "Los Hacheros: NPR Music Tiny Desk Concert"
@@ -415,11 +416,6 @@
                 "url": "https://www.youtube.com/watch?v=QKzobTCIRDw",
                 "duration": 1429,
                 "title": "Tank And The Bangas: NPR Music Tiny Desk Concert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=M74ypT_XdM4",
-                "duration": 1685,
-                "title": "SEVENTEEN: Tiny Desk Concert"
             },
             {
                 "url": "https://www.youtube.com/watch?v=GYJ03MIPoIk",
@@ -439,12 +435,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bzAI4F_ks5s",
                 "duration": 1554,
-                "title": "Living Colour: Tiny Desk Concert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6tCjflXY9CM",
-                "duration": 1297,
-                "title": "Amaia: Tiny Desk Concert"
+                "title": "Living Colour: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=mV5U5gWJSU4",
@@ -490,11 +483,6 @@
                 "url": "https://www.youtube.com/watch?v=nHVLEst0-5g",
                 "duration": 1278,
                 "title": "Daniel Norgren: NPR Music Tiny Desk Concert"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jFUhTmOSdGQ",
-                "duration": 1374,
-                "title": "Milton Nascimento & esperanza spalding: Tiny Desk (Home) Concert"
             },
             {
                 "url": "https://www.youtube.com/watch?v=H4uzympZPx0",

@@ -64,7 +64,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OfjvS80Gm-k",
                 "duration": 2037,
-                "title": "a decade of wearing vintage and historical clothing daily"
+                "title": "a decade of wearing vintage and historical clothing daily",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=pDGZ2OgV0hE",
@@ -114,7 +116,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=EgPBziX3ymQ",
                 "duration": 394,
-                "title": "What is \"vintage\" clothing?"
+                "title": "What is \"vintage\" clothing?",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=MCxx-ffyExM",
@@ -174,7 +178,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=StuHfIp5ao8",
                 "duration": 276,
-                "title": "Fashion History - 1920s fashion and The Roaring Twenties - How Jazz Influenced Fashion in"
+                "title": "Fashion History - 1920s fashion and The Roaring Twenties - How Jazz Influenced Fashion in",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=7uX-F2oLk1U",
@@ -269,7 +275,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0XdJomqqD84",
                 "duration": 287,
-                "title": "American Pickers: Vintage Levi's Jeans Collection is 90-Years-Old (Season 17) | History"
+                "title": "American Pickers: Vintage Levi's Jeans Collection is 90-Years-Old (Season 17) | History",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=DaamyZ-7rRo",
@@ -384,7 +392,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ymvzi8S4YVI",
                 "duration": 706,
-                "title": "Vintage Fashion Treasures That Leave Experts & Owners Astonished | Antiques Roadshow UK"
+                "title": "Vintage Fashion Treasures That Leave Experts & Owners Astonished | Antiques Roadshow UK",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=yfj0-ptpo7Q",
@@ -394,12 +404,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=R6yxKA6wwvE",
                 "duration": 601,
-                "title": "100 Years of Classic Menswear - and what we can learn from each decade"
+                "title": "100 Years of Classic Menswear - and what we can learn from each decade",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ABRaUlJBcsY",
                 "duration": 1655,
-                "title": "VINTAGE Preppy vs NEW Preppy"
+                "title": "VINTAGE Preppy vs NEW Preppy",
+                "skip": [
+                    [
+                        1122.1,
+                        1136.5
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=ACrD7WaKXDc",
@@ -414,7 +433,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=G4ve24fT6cQ",
                 "duration": 270,
-                "title": "Inside the Levi's Vault - The Methodology of Levi's Vintage Clothing"
+                "title": "Inside the Levi's Vault - The Methodology of Levi's Vintage Clothing",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=tVxvJ1wdaAE",
@@ -424,7 +445,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pqQo0AccOsc",
                 "duration": 485,
-                "title": "Forties Fashions - Everyday Women's Clothing in 1940s USA [COLORIZED]"
+                "title": "Forties Fashions - Everyday Women's Clothing in 1940s USA [COLORIZED]",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=cNsCZCzOJns",
@@ -484,7 +507,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=65XgYthn2kY",
                 "duration": 586,
-                "title": "Fashion History Myths Are Kinda Sexist"
+                "title": "Fashion History Myths Are Kinda Sexist",
+                "skip": [
+                    [
+                        144.8,
+                        268.9
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=-Su2YFxwE4s",
