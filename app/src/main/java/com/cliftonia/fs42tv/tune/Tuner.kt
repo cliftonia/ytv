@@ -26,6 +26,11 @@ data class Tuned(
     val card: Timetable.OnAir.Card? = null,
     /** When this clip's scheduled time runs out - half-hour schedule only. */
     val endsAt: Long? = null,
+    /**
+     * When the schedule cuts this clip short - a programme longer than its part, stopped at the
+     * part's end. The player would play on to the end of the file, so the dial retunes here.
+     */
+    val cutAt: Long? = null,
 )
 
 /**
@@ -76,6 +81,7 @@ object Tuner {
             offsetSeconds = clip?.offsetSeconds ?: 0.0,
             card = onAir as? Timetable.OnAir.Card,
             endsAt = clip?.endsAt,
+            cutAt = clip?.cutAt,
         )
     }
 
@@ -99,7 +105,7 @@ object Tuner {
         val channel = ended.channel
         ended.endsAt?.let { return tune(channel, cache, it, ladder, refused, timetable) }
         if (channel.streams.size < 2) return ended
-        return tuneToIndex(channel, (ended.streamIndex + 1) % channel.streams.size)
+        return tuneToIndex(channel, (ended.streamIndex + 1) % channel.streams.size, timetable)
     }
 
     /**
@@ -108,11 +114,13 @@ object Tuner {
      * For the one case where the schedule is wrong rather than the app: a clip whose published
      * duration is longer than what actually plays ends while the rotation still believes it is on
      * air, so re-tuning would land straight back on it. There is nothing meaningful to seek to in
-     * a programme that was never scheduled to be on now, so it starts at zero.
+     * a programme that was never scheduled to be on now, so it starts from its beginning - past
+     * a sponsor read at 0:00 when skipping, as a join from the clock would be.
      */
-    fun tuneToIndex(channel: Channel, index: Int): Tuned? {
+    fun tuneToIndex(channel: Channel, index: Int, timetable: Timetable = Timetable.PLAIN): Tuned? {
         val stream = channel.streams.getOrNull(index) ?: return null
-        return Tuned(channel, index, stream, playableFor(channel, stream, ::NeedsResolving), 0.0)
+        return Tuned(channel, index, stream, playableFor(channel, stream, ::NeedsResolving),
+            timetable.startOffset(stream))
     }
 
     /**

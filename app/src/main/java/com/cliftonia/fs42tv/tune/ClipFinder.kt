@@ -50,14 +50,13 @@ internal class ClipFinder(private val deps: TuneController.Deps) {
      */
     fun resolveNextPlayable(
         channel: Channel,
-        failedIndex: Int,
+        /** Which clips to try, in order - see Timetable.substitutes. */
+        candidates: List<Int>,
         now: Long,
     ): Pair<Int, Playable>? {
-        for (step in 1..SKIP_DEAD_CLIPS) {
+        for ((position, idx) in candidates.take(SKIP_DEAD_CLIPS).withIndex()) {
+            val step = position + 1
             if (deps.halted()) return null
-            // The wrapped index is what gets returned, because the caller rebuilds the Tuned
-            // around it and channel.streams is indexed by the wrapped value, not the raw sum.
-            val idx = (failedIndex + step) % channel.streams.size
             val next = channel.streams.getOrNull(idx) ?: return null
             val id = next.id ?: continue
             if (deps.ledger.isDead(id)) continue

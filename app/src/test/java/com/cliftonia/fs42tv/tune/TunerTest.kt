@@ -218,4 +218,15 @@ class TunerTest {
         assertEquals("one clip has nothing else to follow it", 0,
             Tuner.following(single, null)!!.streamIndex)
     }
+
+    @Test
+    fun `tuning a clip from its beginning joins past a sponsor read at zero`() {
+        val skipped = TestDial.ytChannel(100, 200).let { ch ->
+            ch.copy(streams = listOf(ch.streams[0], ch.streams[1].copy(skip = listOf(listOf(0.0, 15.0)))))
+        }
+        val skipsOn = com.cliftonia.fs42tv.schedule.Timetable(skipsOn = { true })
+        assertEquals(15.0, Tuner.tuneToIndex(skipped, 1, skipsOn)!!.offsetSeconds, 0.0)
+        val ended = Tuner.tune(skipped, null, nowSeconds = 50, timetable = skipsOn)!!
+        assertEquals(15.0, Tuner.following(ended, null, timetable = skipsOn)!!.offsetSeconds, 0.0)
+    }
 }

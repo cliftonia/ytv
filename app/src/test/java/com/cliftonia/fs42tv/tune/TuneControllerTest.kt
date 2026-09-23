@@ -53,6 +53,7 @@ class TuneControllerTest {
 
     private class Fixture(val timetable: Timetable = Timetable.PLAIN) {
         var now = 50L
+        var halted = false
         val cards = mutableListOf<Int>()
         val work = Crank()
         val ui = Crank()
@@ -75,7 +76,7 @@ class TuneControllerTest {
             navigator = { navigator },
             nowSeconds = { now },
             elapsedMillis = { 1_000 },
-            halted = { false },
+            halted = { halted },
             runOnUi = { block -> ui.execute { block() } },
             rememberChannel = { remembered.add(it) },
             screen = TuneController.Screen(
@@ -347,5 +348,14 @@ class TuneControllerTest {
         f.settle()
         assertEquals(slot + 3600, f.tune.onAir!!.endsAt)
         assertEquals(1.0, f.tune.onAir!!.offsetSeconds, 0.0)
+    }
+
+    @Test
+    fun `nothing is queued once the activity is gone`() {
+        // A card's timer can outlive a recreate(); its tune must not reach a shut-down executor.
+        val f = Fixture()
+        f.halted = true
+        f.tune.tune(channel(3, "aaaaaaaaaaa"))
+        assertTrue(f.work.queue.isEmpty())
     }
 }

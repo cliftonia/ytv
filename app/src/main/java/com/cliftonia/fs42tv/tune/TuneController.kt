@@ -187,8 +187,12 @@ class TuneController(private val deps: Deps) {
         tune(channel)
     }
 
-    /** Tune [channel] on a fresh generation, superseding anything in flight. */
+    /**
+     * Tune [channel] on a fresh generation, superseding anything in flight. Nothing after the
+     * activity is destroyed: a late timer would queue onto an executor already shut down.
+     */
     fun tune(channel: Channel) {
+        if (deps.halted()) return
         val gen = generation.incrementAndGet()
         val at = deps.elapsedMillis()
         deps.executor.execute { tuneTo(channel, gen, at) }
@@ -326,19 +330,23 @@ class TuneController(private val deps: Deps) {
                 // what it CAN show.
                 Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
                     "$videoId; trying the next clips")
-                val substitute = finder.resolveNextPlayable(channel, tuned.streamIndex, now)
+                val candidates = deps.timetable.substitutes(
+                    channel, now, tuned.streamIndex, tuned.endsAt, avoid = ended?.index)
+                val substitute = finder.resolveNextPlayable(channel, candidates, now)
                 if (substitute != null) {
                     val (idx, sub) = substitute
                     // The whole Tuned is rebuilt, not just the playable: the banner, onAir
                     // and the end-of-clip marker all read the identity out of it, and leaving
                     // the dead clip's identity there labelled the substitute as a programme
-                    // it is not. Offset zero because a clip that was never scheduled to be on
-                    // now has nothing meaningful to seek to.
+                    // it is not. From its beginning because a clip that was never scheduled to be
+                    // on now has nothing meaningful to seek to; no cut, since it is not the
+                    // programme the schedule cuts.
                     tuned = tuned.copy(
                         streamIndex = idx,
                         stream = channel.streams[idx],
                         playable = sub,
-                        offsetSeconds = 0.0,
+                        offsetSeconds = deps.timetable.startOffset(channel.streams[idx]),
+                        cutAt = null,
                     )
                     playable = sub
                 }

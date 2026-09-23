@@ -40,6 +40,39 @@ class UpNextBreak(
 
     private val timeUp = Runnable { endNow() }
 
+    /** The channel whose programme the schedule cuts short, while that cut is pending. */
+    private var cutChannel: Channel? = null
+
+    private val cutNow = Runnable {
+        val channel = cutChannel ?: return@Runnable
+        cutChannel = null
+        Log.i("fs42", "the part ends here; the schedule moves on")
+        ended(channel)
+    }
+
+    /**
+     * [tuned] just started playing: if the schedule cuts it short - a programme longer than its
+     * part, stopped at the part's end - move on at that instant. Nothing else would: the player
+     * plays to the end of the file, hours past the part.
+     */
+    fun watchCut(tuned: Tuned?) {
+        stopCut()
+        val at = tuned?.cutAt ?: return
+        cutChannel = tuned.channel
+        handler.postDelayed(cutNow, maxOf(at * 1000 - System.currentTimeMillis(), MIN_DELAY_MILLIS))
+    }
+
+    fun stopCut() {
+        handler.removeCallbacks(cutNow)
+        cutChannel = null
+    }
+
+    /** On destroy: no timer may fire into a dead activity's shut-down executors. */
+    fun release() {
+        cancel()
+        stopCut()
+    }
+
     /** Put [tuned]'s card up until its scheduled end. */
     fun show(tuned: Tuned) {
         val card = tuned.card ?: return
