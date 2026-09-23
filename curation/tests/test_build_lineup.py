@@ -6,6 +6,7 @@ played: present means "resolve this YouTube id", absent means "this is a live HL
 as-is". Getting that backwards does not fail loudly - it hands a watch page to a video player and
 shows a black screen.
 """
+import contextlib
 import io
 import json
 import os
@@ -149,6 +150,61 @@ class TestChannelFrom(unittest.TestCase):
         with io.open(path, "w", encoding="utf-8") as handle:
             json.dump({"something_else": True}, handle)
         self.assertIsNone(build_lineup.channel_from(path))
+
+
+class TestGenerated(unittest.TestCase):
+    """`generated` must not change unless the lineup did.
+
+    A fresh timestamp on every build meant channels.json differed every night whatever else
+    happened, so the workflow's "no changes" branch could never run and every night committed.
+    """
+
+    CHANNELS = [{"number": 1, "name": "a", "kind": "live", "rotation": None,
+                 "streams": [{"url": "u", "duration": 600, "title": "t"}]}]
+
+    def test_an_unchanged_lineup_keeps_its_stamp(self):
+        previous = {"generated": 1234, "channels": self.CHANNELS}
+        self.assertEqual(1234, build_lineup.generated_for(self.CHANNELS, previous, now=9999))
+
+    def test_a_changed_lineup_is_stamped_now(self):
+        previous = {"generated": 1234, "channels": []}
+        self.assertEqual(9999, build_lineup.generated_for(self.CHANNELS, previous, now=9999))
+
+    def test_no_previous_lineup_is_stamped_now(self):
+        self.assertEqual(9999, build_lineup.generated_for(self.CHANNELS, None, now=9999))
+        self.assertEqual(9999, build_lineup.generated_for(self.CHANNELS, {}, now=9999))
+
+    def test_a_previous_lineup_without_a_stamp_is_stamped_now(self):
+        previous = {"channels": self.CHANNELS}
+        self.assertEqual(9999, build_lineup.generated_for(self.CHANNELS, previous, now=9999))
+
+    def test_two_builds_of_the_same_confs_are_byte_identical(self):
+        confs_dir = tempfile.mkdtemp()
+        self.addCleanup(shutil.rmtree, confs_dir, True)
+        with io.open(os.path.join(confs_dir, "news.json"), "w", encoding="utf-8") as handle:
+            json.dump({"station_conf": {"network_name": "News", "channel_number": 101,
+                                        "streams": [{"url": "https://x/a.m3u8", "duration": 600,
+                                                     "title": "News"}]}}, handle)
+        out = os.path.join(confs_dir, "channels.json")
+
+        def build():
+            argv = sys.argv
+            sys.argv = ["build_lineup.py", "--confs", confs_dir, "--out", out]
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(0, build_lineup.main())
+            finally:
+                sys.argv = argv
+            with open(out, "rb") as handle:
+                return handle.read()
+
+        first = build()
+        real_time = build_lineup.time.time
+        build_lineup.time.time = lambda: real_time() + 86400
+        try:
+            self.assertEqual(first, build())
+        finally:
+            build_lineup.time.time = real_time
 
 
 class TestPublishedLineup(unittest.TestCase):
