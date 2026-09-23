@@ -92,6 +92,9 @@ class HalfHourScheduleTimeEdgeTest {
                 val after = span(s.at(t)!!, t)
                 // Midnight is inside late, and since the amended gap rule a programme may start
                 // off the half hour - so one span can run straight across; otherwise they meet.
+                // Restored for the part boundaries: nothing but a programme longer than a whole part
+                // (none here) runs across 06, 12, 18 or 23, so there the spans must meet.
+                if (time != "00:00") assertTrue("$zone $time: a span runs across a part boundary: $before", before != after)
                 if (before != after) {
                     assertEquals("$zone $time: the span before ends where the next begins", before.end, after.start)
                 }
