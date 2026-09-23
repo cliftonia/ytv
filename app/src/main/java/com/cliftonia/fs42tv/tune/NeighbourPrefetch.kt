@@ -4,6 +4,7 @@ import android.util.Log
 import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.RefusalLedger
+import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.UrlCache
 import java.util.concurrent.Executor
@@ -33,6 +34,8 @@ class NeighbourPrefetch(
     private val ladder: () -> List<String>,
     private val nowSeconds: () -> Long,
     private val halted: () -> Boolean,
+    /** So the prefetch resolves the clip the tuner will actually ask for. */
+    private val timetable: Timetable,
 ) {
 
     /**
@@ -55,7 +58,7 @@ class NeighbourPrefetch(
                     return@execute
                 }
                 val now = nowSeconds()
-                val tuned = Tuner.tune(channel, urls, now, ladder(), ledger.refusedSnapshot())
+                val tuned = Tuner.tune(channel, urls, now, ladder(), ledger.refusedSnapshot(), timetable)
                     ?: return@execute
                 val id = (tuned.playable as? NeedsResolving)?.videoId ?: return@execute
                 if (ledger.isDead(id) || ledger.recall(id, now) != null) return@execute

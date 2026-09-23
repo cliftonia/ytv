@@ -56,6 +56,13 @@ interface ChannelPlayback {
      */
     fun positionSeconds(): Double?
 
+    /**
+     * Jump to [seconds] from the start of the file, within the clip already playing - the sponsor
+     * skip, and nothing else. Joining a clip is never a seek: [play] takes its start position as
+     * part of the load, for the reason it gives. Must be a no-op when nothing is playing.
+     */
+    fun seekTo(seconds: Double)
+
     /** Stop rendering immediately, so the previous channel is not left under a new banner. */
     fun stop()
 

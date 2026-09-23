@@ -178,6 +178,10 @@ class ChannelPlayer(
                     Log.i("fs42", "first frame ${SystemClock.elapsedRealtime() - requested} ms")
                     requestedAtMillis = 0L
                 }
+                // Once per load. A seek - the sponsor skip - resets the renderer and fires this
+                // again, and a second report would log a bogus tune time, restart the station
+                // bug's arrival and restart the skip watcher on the clip it is already watching.
+                if (hasPicture) return
                 hasPicture = true
                 // Frame rate read HERE, not at onVideoSizeChanged: the format is not populated
                 // that early and reported -1.0fps every time, which made the one diagnostic that
@@ -251,6 +255,16 @@ class ChannelPlayer(
     }
 
     override fun stop() = exo.stop()
+
+    /**
+     * ExoPlayer seeks exactly by default, so this lands on [seconds] itself. The seek puts the
+     * player through STATE_BUFFERING, which is reported like any other mid-clip stall - the pill
+     * after its delay if the refill is slow, nothing if it is not.
+     */
+    override fun seekTo(seconds: Double) {
+        if (exo.playbackState == Player.STATE_IDLE) return
+        exo.seekTo((seconds * 1000).toLong())
+    }
 
     override fun setPaused(paused: Boolean) { exo.playWhenReady = !paused }
 

@@ -329,6 +329,7 @@ class MainActivity : ComponentActivity() {
         runOnUi = { block -> runOnUiThread(block) },
         rememberChannel = { number -> prefs.edit().putInt(source.channelKey, number).apply() },
         screen = director.screen(),
+        timetable = extras.timetable,
     ))
 
     private fun createSettingsCatalog() = SettingsCatalog(this, SettingsCatalog.Deps(
@@ -451,8 +452,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         // Volume is re-derived rather than assumed: the guide may have been open when they left.
-        deck.player?.setPaused(false)
-        director.updateProgrammeVolume()
+        director.appResumed()
         updateFlow.check()
     }
 
@@ -475,8 +475,7 @@ class MainActivity : ComponentActivity() {
     override fun onStop() {
         super.onStop()
         stopped = true
-        director.syncHiss()
-        deck.player?.setPaused(true)
+        director.appStopped()
         guide.releaseMusic()
     }
 

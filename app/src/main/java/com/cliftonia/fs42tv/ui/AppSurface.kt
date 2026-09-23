@@ -42,10 +42,10 @@ fun AppSurface(
         UpdatePrompt(update.ready.value)
         BufferingPill(director.buffering.value)
         ChannelOsd(
-            channelLine = director.bannerChannelLine.value,
-            titleLine = director.bannerTitleLine.value,
-            generation = director.bannerGeneration.value,
-            nextLine = director.bannerNextLine.value,
+            channelLine = director.banner.channelLine.value,
+            titleLine = director.banner.titleLine.value,
+            generation = director.banner.generation.value,
+            nextLine = director.banner.nextLine.value,
             // Clear of the corner logo's 28% plus its margin, only when that logo can appear.
             titleWidthFraction =
                 if (director.extras.features.isOn(Features.Flag.LOGO)) 0.64f else 0.95f,

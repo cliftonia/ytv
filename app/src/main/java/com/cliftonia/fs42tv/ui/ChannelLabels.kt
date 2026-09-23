@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.ui
 
 import com.cliftonia.fs42tv.schedule.ClockRotation
+import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.Tuned
 
@@ -75,10 +76,21 @@ object ChannelLabels {
      * the banner carry a programme title the instant a button is pressed rather than after the
      * network has answered.
      */
-    fun bannerLinesFor(channel: Channel, nowSeconds: Long): Pair<String, String> {
+    fun bannerLinesFor(
+        channel: Channel,
+        nowSeconds: Long,
+        timetable: Timetable = Timetable.PLAIN,
+    ): Pair<String, String> {
         val line = "%02d %s".format(channel.number, channel.name.uppercase())
-        val title = ClockRotation
-            .playPointFor(channel.streams.map { it.duration }, nowSeconds)
+        // A clock channel asks the timetable, so the banner agrees with the tuner whatever the
+        // Settings rows say. Anything else keeps the raw rotation over its placeholder durations
+        // - the recorded behaviour for live feeds, see ChannelLabelsTest.
+        val point = if (channel.rotation == "clock") {
+            timetable.playPoint(channel, nowSeconds)
+        } else {
+            ClockRotation.playPointFor(channel.streams.map { it.duration }, nowSeconds)
+        }
+        val title = point
             ?.let { channel.streams.getOrNull(it.index)?.title }
             .orEmpty()
             .trim()
