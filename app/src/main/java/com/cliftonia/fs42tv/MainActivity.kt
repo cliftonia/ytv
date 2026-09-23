@@ -430,6 +430,7 @@ class MainActivity : ComponentActivity() {
         settingsRows.value = settingsCatalog.rows()
         settingsVisible.value = true
         grantOverlayFocus(true)
+        director.syncHiss()
     }
 
     private fun closeSettings() {
@@ -438,6 +439,7 @@ class MainActivity : ComponentActivity() {
         // openSettings superseded the dial, so the same abandoned-tune check the guide's
         // dismissal makes applies here.
         director.recoverIfAbandoned()
+        director.syncHiss()
     }
 
     /**
@@ -473,6 +475,7 @@ class MainActivity : ComponentActivity() {
     override fun onStop() {
         super.onStop()
         stopped = true
+        director.syncHiss()
         deck.player?.setPaused(true)
         guide.releaseMusic()
     }
@@ -487,6 +490,7 @@ class MainActivity : ComponentActivity() {
         captionExecutor.shutdownNow()
         resolver.close()
         guide.releaseMusic()
+        extras.release()
         deck.release()
     }
 }

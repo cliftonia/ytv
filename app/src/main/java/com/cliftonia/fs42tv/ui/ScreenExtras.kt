@@ -1,6 +1,8 @@
 package com.cliftonia.fs42tv.ui
 
 import android.content.SharedPreferences
+import android.os.Handler
+import android.os.Looper
 import com.cliftonia.fs42tv.pluto.PlutoApi
 import com.cliftonia.fs42tv.pluto.PlutoGuide
 import com.cliftonia.fs42tv.pluto.PlutoIds
@@ -27,9 +29,46 @@ class ScreenExtras(private val deps: Deps) {
         val runOnUi: (() -> Unit) -> Unit,
         val halted: () -> Boolean,
         val nowMillis: () -> Long,
+        /** Main looper: the hiss's fade steps and its cap. */
+        val handler: Handler,
     )
 
     val features: Features get() = deps.features
+
+    private val hiss = Hiss(deps.handler)
+    private val hissGate = HissGate()
+    private val hissCap = Runnable { applyHiss(hissGate.timedOut()) }
+
+    /**
+     * Start or fade the channel-change hiss. Called by the director wherever it re-derives the
+     * programme volume, with the same two facts that rule uses - see [HissGate] for why the hiss
+     * is exactly that rule's complement. Main thread only.
+     */
+    fun syncHiss(tuning: Boolean, covered: Boolean) {
+        val enabled = deps.features.isOn(Features.Flag.STATIC)
+        applyHiss(hissGate.update(HissGate.wanted(enabled, tuning, covered)))
+    }
+
+    private fun applyHiss(action: HissGate.Action) {
+        when (action) {
+            HissGate.Action.START -> {
+                hiss.start()
+                deps.handler.removeCallbacks(hissCap)
+                deps.handler.postDelayed(hissCap, HISS_CAP_MILLIS)
+            }
+            HissGate.Action.FADE -> {
+                deps.handler.removeCallbacks(hissCap)
+                hiss.fadeOut()
+            }
+            HissGate.Action.NONE -> Unit
+        }
+    }
+
+    /** On destroy: nothing of the extras may outlive the activity. */
+    fun release() {
+        deps.handler.removeCallbacks(hissCap)
+        hiss.release()
+    }
 
     /**
      * NOW and NEXT for [channel]'s banner, or null to leave the banner as it was.
@@ -91,7 +130,14 @@ class ScreenExtras(private val deps: Deps) {
                 runOnUi = runOnUi,
                 halted = halted,
                 nowMillis = now,
+                handler = Handler(Looper.getMainLooper()),
             ))
         }
+
+        /**
+         * The longest a hiss runs. A normal tune lands in one to three seconds; anything longer is
+         * a channel in trouble, and it stays quiet from here until that tune ends.
+         */
+        const val HISS_CAP_MILLIS = 5_000L
     }
 }
