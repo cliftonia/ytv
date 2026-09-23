@@ -92,6 +92,14 @@ jobs:
         working-directory: curation
         run: python3 build_lineup.py
 
+      - name: Rebuild pluto.json
+        # The second dial. Its only input from outside is iptv-org's playlists, and a failure to
+        # reach them must not cost the YouTube dial its nightly refresh - so this may fail. When
+        # it does it writes nothing, and the committed pluto.json carries on as it was.
+        working-directory: curation
+        continue-on-error: true
+        run: python3 build_pluto.py
+
       - name: Test
         # After the rebuild, because the suite checks the real channels.json as well as the code -
         # a duplicate channel number or a live stream carrying a video id is only visible once the
@@ -172,7 +180,7 @@ jobs:
           git config user.email "lineup@users.noreply.github.com"
           git remote set-url origin \
             "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git add channels.json curation/confs
+          git add channels.json pluto.json curation/confs
           # Nothing to commit is a normal outcome: a refresh can legitimately find the same clips
           # it found last time, and that must not fail the run.
           if git diff --cached --quiet; then
@@ -181,5 +189,5 @@ jobs:
           fi
           git commit -m "chore: refresh the dial
 
-          - Update \`channels.json\` and the confs behind it"
+          - Update \`channels.json\`, \`pluto.json\` and the confs behind it"
           git push
