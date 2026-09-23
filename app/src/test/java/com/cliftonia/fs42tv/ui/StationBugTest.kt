@@ -100,6 +100,18 @@ class StationBugTest {
     }
 
     @Test
+    fun `a shut-down thread refuses the download without throwing`() {
+        // The logo is asked for from the Pluto fetch's callback, on the prefetch thread - which
+        // the activity shuts down on destroy. execute() then throws; it must not escape.
+        val dead = java.util.concurrent.Executors.newSingleThreadExecutor().apply { shutdownNow() }
+        var loads = 0
+        val cache = ImageCache(load = { loads++; it }, executor = dead)
+        cache.get("a") {}
+        cache.get("a") {}
+        assertEquals(0, loads)
+    }
+
+    @Test
     fun `a logo that failed is not asked for again and again`() {
         val crank = Crank()
         var loads = 0

@@ -29,6 +29,8 @@ import kotlinx.coroutines.delay
  *
  * [animate] false holds one frame: under the guide or settings the snow is barely visible through
  * the backdrop, and redrawing it 22 times a second there would be spending the SoC on nothing.
+ * The same holds while the app is stopped: a dead channel stays "tuning" through its retries in
+ * the background, and the Compose frame clock does not stop this loop by itself.
  */
 @Composable
 fun TuningStatic(visible: Boolean, animate: Boolean) {
