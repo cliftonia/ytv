@@ -97,6 +97,21 @@ class TestDial(unittest.TestCase):
         for slug in dial.SEQUENCED:
             self.assertIn(slug, slugs, "SEQUENCED names %r, which is not a channel" % slug)
 
+    def test_parts_name_real_channels_real_parts_and_real_queries(self):
+        # A mix for a slug that is not on the dial does nothing, silently; a part name the app
+        # does not know is published and then never drawn from; an empty query would search for
+        # everything. Any of the four parts may be left out - that part plays the all-day pool.
+        import confs
+        slugs = {c[1] for c in dial.YOUTUBE}
+        for slug, queries in dial.PARTS.items():
+            self.assertIn(slug, slugs, "PARTS names %r, which is not a channel" % slug)
+            self.assertTrue(queries, "PARTS[%r] declares no part at all" % slug)
+            for part, query in queries.items():
+                self.assertIn(part, confs.DAY_PARTS,
+                              "PARTS[%r] names %r, which is not a part of the day" % (slug, part))
+                self.assertTrue(isinstance(query, str) and query.strip(),
+                                "PARTS[%r][%r] is an empty query" % (slug, part))
+
     def test_exclude_terms_are_non_empty_strings(self):
         # An empty string is a substring of every title: one stray "" would empty the channel.
         for slug, terms in dial.EXCLUDE.items():

@@ -514,6 +514,11 @@
             "Melbourne Comedy Festival gala full",
             "Just for Laughs full special"
         ],
-        "last_refreshed": 1790107157
+        "last_refreshed": 1790107157,
+        "part_queries": {
+            "breakfast": "Dry Bar Comedy clean stand up",
+            "prime": "Live at the Apollo full episode",
+            "late": "uncensored stand up comedy special full"
+        }
     }
 }
