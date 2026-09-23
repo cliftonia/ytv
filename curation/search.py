@@ -44,12 +44,29 @@ def ytdlp(target, timeout=300):
     return rows
 
 
-def collect(target, lo, hi, seen, keys, out, want):
+def excluded(title, exclude):
+    """True when the title contains any of the channel's exclude terms, ignoring case.
+
+    Substring rather than word match on purpose: the terms are phrases a curator wrote for one
+    channel ("state of origin"), and "NRL2026" in a hashtag should go too.
+    """
+    lowered = title.lower()
+    return any(term.lower() in lowered for term in exclude or ())
+
+
+def collect(target, lo, hi, seen, keys, out, want, exclude=()):
+    """Add clips from one search or playlist to `out`, up to `want`. Returns how many.
+
+    `exclude` is the channel's own list of title terms that never belong on it (dial.EXCLUDE) -
+    the per-channel counterpart to filters.usable(), for the cases where YouTube's idea of the
+    query is a different sport. Checked before the dedupe sets, so a rejected clip does not use
+    up the title key a clean upload of the same thing might need.
+    """
     added = 0
     for vid, seconds, title in ytdlp(target):
         if len(out) >= want:
             break
-        if not (lo <= seconds <= hi) or not filters.usable(title):
+        if not (lo <= seconds <= hi) or not filters.usable(title) or excluded(title, exclude):
             continue
         url = "https://www.youtube.com/watch?v=%s" % vid
         key = filters.title_key(title)

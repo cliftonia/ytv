@@ -75,10 +75,13 @@ def main():
                 changes.append("query")
             playlists = DIAL.PLAYLISTS.get(slug)
             extra = DIAL.EXTRA_QUERIES.get(slug)
+            exclude = DIAL.EXCLUDE.get(slug)
             if station.get("playlists") != playlists:
                 changes.append("playlists")
             if station.get("extra_queries") != extra:
                 changes.append("extra queries")
+            if station.get("exclude") != exclude:
+                changes.append("exclude")
             # Defaults BEFORE the early exit. They used to sit after it, so a conf whose name,
             # number and query already matched could never acquire a missing `stream_rotation` -
             # and a youtube channel without it is published with `rotation: null`, which makes the
@@ -104,6 +107,12 @@ def main():
                 station["extra_queries"] = extra
             else:
                 station.pop("extra_queries", None)
+            # Same shape as extra_queries: the conf carries it because refresh_channels reads
+            # confs, not dial.py.
+            if exclude:
+                station["exclude"] = exclude
+            else:
+                station.pop("exclude", None)
             do("update  %-18s %s" % (slug, ", ".join(changes)),
                lambda p=p, c=conf: confs.save(p, c))
         else:
@@ -116,6 +125,8 @@ def main():
                 station["playlists"] = DIAL.PLAYLISTS[slug]
             if DIAL.EXTRA_QUERIES.get(slug):
                 station["extra_queries"] = DIAL.EXTRA_QUERIES[slug]
+            if DIAL.EXCLUDE.get(slug):
+                station["exclude"] = DIAL.EXCLUDE[slug]
             conf = {"station_conf": station}
             do("create  %-18s ch %d (empty until the next refresh)" % (slug, number),
                lambda p=p, c=conf: confs.save(p, c))

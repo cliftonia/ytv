@@ -210,6 +210,19 @@ EXTRA_QUERIES = {
     ],
 }
 
+# Title terms that keep a clip OFF a channel, matched case-insensitively as substrings.
+#
+# For when YouTube reads the query as a different subject. "rugby union match highlights" came
+# back 57 of 100 rugby league - NRL rounds and State of Origin - because both codes are "rugby"
+# to a search engine, and league has the bigger upload volume in Australia. Rugby League already
+# has its own channel (6); on Union it is simply the wrong sport. Bare "league" is broad: union's
+# competitions are mostly Cups, Championships and Premierships, but it does also drop Major League
+# Rugby (the US union competition) - accepted, as league is the far bigger leak. Check the same
+# trade before copying a term to another channel.
+EXCLUDE = {
+    "rugby_union": ["nrl", "state of origin", "rugby league", "league"],
+}
+
 # Channels whose clips are episodes of something, and should therefore play in order.
 #
 # `sequence.py` sorts these after every refresh. The app needs no part in it: ClockRotation

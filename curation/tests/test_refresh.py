@@ -168,7 +168,7 @@ class TestEmptySearchKeepsYesterday(unittest.TestCase):
         yesterday = [{"url": "https://www.youtube.com/watch?v=AAAAAAAAAAA",
                       "duration": 300, "title": "Yesterday's clip"}]
         path = self.write(1234, yesterday)
-        refresh.search.collect = lambda *args: 0
+        refresh.search.collect = lambda *args, **kwargs: 0
         name, count, kept = self.refresh_path(path)
         self.assertTrue(kept)
         self.assertEqual(1, count)
@@ -179,7 +179,7 @@ class TestEmptySearchKeepsYesterday(unittest.TestCase):
         self.assertEqual(1, station["refresh_misses"])
 
     def test_a_successful_search_is_not_kept_and_advances_the_cursor(self):
-        def fake_collect(target, lo, hi, seen, keys, out, want):
+        def fake_collect(target, lo, hi, seen, keys, out, want, exclude=()):
             if not out:
                 out.append({"url": "https://www.youtube.com/watch?v=BBBBBBBBBBB",
                             "duration": 300, "title": "Fresh clip"})
@@ -228,7 +228,7 @@ class TestCollapseKeepsYesterday(unittest.TestCase):
     def search_finds(self, n):
         fresh = clips(n, prefix="B")
 
-        def fake_collect(target, lo, hi, seen, keys, out, want):
+        def fake_collect(target, lo, hi, seen, keys, out, want, exclude=()):
             if not out:
                 out.extend(fresh)
             return len(fresh)
@@ -282,7 +282,7 @@ class TestMissesStillAdvanceTheCursor(unittest.TestCase):
     def setUp(self):
         self.dir = tempfile.mkdtemp()
         self.real_collect = refresh.search.collect
-        refresh.search.collect = lambda *args: 0
+        refresh.search.collect = lambda *args, **kwargs: 0
 
     def tearDown(self):
         refresh.search.collect = self.real_collect
@@ -322,13 +322,41 @@ class TestMissesStillAdvanceTheCursor(unittest.TestCase):
     def test_a_successful_refresh_clears_the_count(self):
         path = self.write(misses=2)
 
-        def fake_collect(target, lo, hi, seen, keys, out, want):
+        def fake_collect(target, lo, hi, seen, keys, out, want, exclude=()):
             if not out:
                 out.extend(clips(3, prefix="B"))
             return 3
         refresh.search.collect = fake_collect
         self.night(path)
         self.assertNotIn("refresh_misses", confs.load(path)["station_conf"])
+
+
+class TestExcludeReachesTheSearch(unittest.TestCase):
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.real_collect = refresh.search.collect
+
+    def tearDown(self):
+        refresh.search.collect = self.real_collect
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def test_the_confs_exclude_list_is_handed_to_every_collect(self):
+        path = os.path.join(self.dir, "ytch_x.json")
+        with io.open(path, "w", encoding="utf-8") as handle:
+            json.dump({"station_conf": {"network_name": "x", "channel_number": 1,
+                                        "search_query": "x", "streams": [],
+                                        "exclude": ["nrl"]}}, handle)
+        handed = []
+
+        def fake_collect(target, lo, hi, seen, keys, out, want, exclude=()):
+            handed.append(exclude)
+            return 0
+        refresh.search.collect = fake_collect
+        with contextlib.redirect_stdout(io.StringIO()):
+            refresh.refresh(path, 10)
+        self.assertTrue(handed)
+        self.assertTrue(all(e == ["nrl"] for e in handed))
 
 
 class TestChannelSelection(unittest.TestCase):
