@@ -84,7 +84,14 @@ class HalfHourSchedule(
      */
     private val watched = IntArray(durations.size) { durations[it].coerceIn(0, MAX_DURATION) }
 
-    private val cycles: Map<DayPart, Cycle?> = DayPart.values().associateWith { cycleFor(it) }
+    /** Each part's pool, in list order: cheap, so built up front. */
+    private val pools: Map<DayPart, List<Int>> = DayPart.values().associateWith { poolFor(it) }
+
+    /**
+     * Each part's cycle, built the first time that part is asked about: the guide at 8pm needs
+     * prime and nothing else, and most channels are never asked about most parts.
+     */
+    private val cycles: Map<DayPart, Lazy<Cycle?>> = DayPart.values().associateWith { lazy { cycleFor(it) } }
 
     /** What is on at [epochSeconds], or null when the channel has nothing that can be. */
     fun at(epochSeconds: Long): OnAir? {
@@ -135,9 +142,9 @@ class HalfHourSchedule(
     /** The pool the part on air at [epochSeconds] draws from, in list order - for substitutes. */
     fun poolAt(epochSeconds: Long): List<Int> {
         val t = epochSeconds.coerceIn(MIN_INSTANT, MAX_INSTANT)
-        val local = t + zone.rules.getOffset(Instant.ofEpochSecond(t)).totalSeconds
+        val local = t + segmentAt(t).offset
         val shifted = Math.floorDiv(local, SLOT.toLong()) + DAY_SHIFT
-        return cycles[DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())]?.pool.orEmpty()
+        return pools[DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())].orEmpty()
     }
 
     /**
@@ -160,25 +167,48 @@ class HalfHourSchedule(
         fun utc(p: Int): Long = (partStartMinusOffset + p).coerceIn(segmentStart, segmentEnd)
     }
 
-    private fun locate(epochSeconds: Long): Located? {
-        val t = epochSeconds.coerceIn(MIN_INSTANT, MAX_INSTANT)
+    /** A stretch of real time between the zone's transitions, with the one offset it runs at. */
+    private class Segment(val start: Long, val end: Long, val offset: Int)
+
+    /**
+     * The last stretch looked up. Almost every question lands in it - the whole dial is asked
+     * about one evening - and finding the transitions either side of an instant is most of the
+     * cost of a warm lookup in a zone with any DST history at all (Brisbane's ended in 1992).
+     */
+    @Volatile private var lastSegment: Segment? = null
+
+    private fun segmentAt(t: Long): Segment {
+        lastSegment?.let { if (t >= it.start && t < it.end) return it }
         val instant = Instant.ofEpochSecond(t)
         val rules = zone.rules
         val offset = rules.getOffset(instant).totalSeconds
+        val segment = if (rules.isFixedOffset) {
+            Segment(Long.MIN_VALUE, Long.MAX_VALUE, offset)
+        } else {
+            Segment(
+                rules.previousTransition(instant.plusSeconds(1))?.instant?.epochSecond ?: Long.MIN_VALUE,
+                rules.nextTransition(instant)?.instant?.epochSecond ?: Long.MAX_VALUE,
+                offset,
+            )
+        }
+        lastSegment = segment
+        return segment
+    }
+
+    private fun locate(epochSeconds: Long): Located? {
+        val t = epochSeconds.coerceIn(MIN_INSTANT, MAX_INSTANT)
+        val segment = segmentAt(t)
+        val offset = segment.offset
         val local = t + offset
         val shifted = Math.floorDiv(local, SLOT.toLong()) + DAY_SHIFT
         val day = Math.floorDiv(shifted, SLOTS_PER_DAY.toLong())
         val part = DayPart.of(Math.floorMod(shifted, SLOTS_PER_DAY.toLong()).toInt())
-        val cycle = cycles[part] ?: return null
+        val cycle = cycles.getValue(part).value ?: return null
         val partStart = (day * SLOTS_PER_DAY - DAY_SHIFT + part.firstSlot) * SLOT
         val pos = (local - partStart).toInt()
         val items = cycle.itemsOn(day)
         val item = items[items.binarySearchBy(pos)]
-        val segmentStart = if (rules.isFixedOffset) Long.MIN_VALUE
-        else rules.previousTransition(instant.plusSeconds(1))?.instant?.epochSecond ?: Long.MIN_VALUE
-        val segmentEnd = if (rules.isFixedOffset) Long.MAX_VALUE
-        else rules.nextTransition(instant)?.instant?.epochSecond ?: Long.MAX_VALUE
-        return Located(item, pos, part.slots * SLOT, partStart - offset, segmentStart, segmentEnd)
+        return Located(item, pos, part.slots * SLOT, partStart - offset, segment.start, segment.end)
     }
 
     /** The item covering [pos]: items are contiguous from 0, so the last one starting at or before. */
@@ -192,41 +222,69 @@ class HalfHourSchedule(
         return low
     }
 
-    private fun cycleFor(part: DayPart): Cycle? {
+    private fun poolFor(part: DayPart): List<Int> {
         val playable = watched.indices.filter { watched[it] > 0 }
         val tagged = playable.filter { part.key in parts.getOrElse(it) { emptyList() } }
-        val pool = tagged.ifEmpty { playable }
+        return tagged.ifEmpty { playable }
+    }
+
+    private fun cycleFor(part: DayPart): Cycle? {
+        val pool = pools.getValue(part)
         if (pool.isEmpty()) return null
         val programmes = pool.filter { watched[it] >= SHORT }.toIntArray()
-        return Cycle(PartPacker(channelNumber, part, watched, programmes, pool, ordered), pool)
+        return Cycle(PartPacker(channelNumber, part, watched, programmes, pool, ordered))
     }
 
     /**
      * One part's part-days, from [ANCHOR_DAY] until an opening repeats. Each part-day is a pure
-     * function of its opening, so from the first repeat on the sequence is periodic, and every
-     * part-day of it is packed once, here, and kept: a lookup is an index and a binary search.
+     * function of its opening, so from the first repeat on the sequence is periodic, and a lookup
+     * years away is an index into it, not a replay.
+     *
+     * Only the OPENINGS are kept - three ints a day - and a day is laid out when asked for, into
+     * a small cache: real use is today, and yesterday or tomorrow around midnight and NEXT.
+     * Keeping every laid-out day of every cycle was 13.6MB for the dial, on a television whose
+     * whole Java heap normally sits near 6MB.
+     *
+     * A cycle that has not closed within [MAX_OPENINGS] part-days - only garbage lineups get near
+     * it - is treated as repeating from its first day with that period. Deterministic, like the
+     * rest; the cost is one break in episode order every [MAX_OPENINGS] part-days.
      */
-    private class Cycle(packer: PartPacker, val pool: List<Int>) {
-        private val days = ArrayList<List<PartPacker.Item>>()
+    private class Cycle(private val packer: PartPacker) {
+        private val openings = ArrayList<PartPacker.Start>()
         private val loopStart: Int
 
         init {
             val seen = HashMap<PartPacker.Start, Int>()
             var start = PartPacker.Start(0, -1, 0)
-            while (start !in seen) {
-                seen[start] = days.size
-                val packed = packer.pack(start)
-                days += packed.items
-                start = packed.after
+            while (start !in seen && openings.size < MAX_OPENINGS) {
+                seen[start] = openings.size
+                openings += start
+                start = packer.next(start)
             }
-            loopStart = seen.getValue(start)
+            loopStart = seen[start] ?: 0
+        }
+
+        /** Laid-out days by opening index, least recently used first. */
+        private val laidOut = object : LinkedHashMap<Int, List<PartPacker.Item>>(8, 0.75f, true) {
+            override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Int, List<PartPacker.Item>>) =
+                size > LAID_OUT_DAYS
         }
 
         fun itemsOn(day: Long): List<PartPacker.Item> {
+            val opening = openingIndex(day)
+            synchronized(laidOut) {
+                laidOut[opening]?.let { return it }
+            }
+            val items = packer.layout(openings[opening])
+            synchronized(laidOut) { laidOut[opening] = items }
+            return items
+        }
+
+        private fun openingIndex(day: Long): Int {
             val sinceAnchor = day - ANCHOR_DAY
-            if (sinceAnchor >= 0 && sinceAnchor < loopStart) return days[sinceAnchor.toInt()]
-            val period = (days.size - loopStart).toLong()
-            return days[loopStart + Math.floorMod(sinceAnchor - loopStart, period).toInt()]
+            if (sinceAnchor >= 0 && sinceAnchor < loopStart) return sinceAnchor.toInt()
+            val period = (openings.size - loopStart).toLong()
+            return loopStart + Math.floorMod(sinceAnchor - loopStart, period).toInt()
         }
     }
 
@@ -254,6 +312,12 @@ class HalfHourSchedule(
         /** Instants are clamped to about +-10,000 years: a garbage clock is a date, not a crash. */
         private const val MAX_INSTANT = 315_537_897_599L
         private const val MIN_INSTANT = -377_705_116_800L
+
+        /** Part-day openings kept per part before a cycle is forced closed - see [Cycle]. */
+        private const val MAX_OPENINGS = 4096
+
+        /** Laid-out part-days cached per part: today, and either side of midnight and NEXT. */
+        private const val LAID_OUT_DAYS = 4
 
         /** Items walked looking for the next programme: two full days of the busiest channel. */
         private const val UP_NEXT_PROBES = 200
