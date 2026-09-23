@@ -23,6 +23,12 @@ private const val RETRY_MILLIS = 30_000L
  * delivered on top of the cached one - swapping the dial under a viewer who is already watching
  * would re-tune them to whatever the new file says is on.
  *
+ * Only a FRESH cache goes first. The lineup is rebuilt nightly - a slice of the dial per night,
+ * dead clips pruned - so a copy much older than a day is increasingly wrong, and a television
+ * that is switched on once a week would otherwise always show last week's dial. Past
+ * [CACHE_FRESH_MILLIS] the network is asked first, with a short connect timeout so a dead hotspot
+ * costs seconds rather than half a minute, and the old copy is the fallback.
+ *
  * The retry loop exists because its absence was a bricked television: first launch on a dead
  * hotspot (or after the cache was cleared) logged one line and returned, leaving a permanently
  * black screen with a dead remote and the sync exception discarded - even adb could not say
@@ -49,8 +55,13 @@ class DialLoader(
      */
     private val onDial: (List<Channel>, requestedAtMillis: Long) -> Unit,
     private val elapsedMillis: () -> Long,
-    /** Fetches a url's body; throws when it cannot. Injected so the loader is testable. */
-    private val fetch: (String) -> String = ::fetchOverHttp,
+    /**
+     * Fetches a url's body within a connect timeout; throws when it cannot. Injected so the
+     * loader is testable.
+     */
+    private val fetch: (url: String, connectTimeoutMillis: Int) -> String = ::fetchOverHttp,
+    /** Wall-clock time, compared with the cache file's modification time. */
+    private val nowMillis: () -> Long = System::currentTimeMillis,
     /**
      * Runs the background refresh after a cache-first delivery. Its own short-lived thread by
      * default: not [executor], where a fetch that hangs for thirty seconds would hold up every
@@ -62,15 +73,17 @@ class DialLoader(
     fun load() {
         val requestedAt = elapsedMillis()
         executor.execute {
-            val repo =
-                DialRepository(fetch = fetch, cacheDir = cacheDir, cacheFile = source.cacheFile)
+            val repo = repository(CONNECT_TIMEOUT_MILLIS)
             val cached = repo.cachedDial()?.channels
-            if (!cached.isNullOrEmpty()) {
+            val fresh = isFresh(File(cacheDir, source.cacheFile))
+            if (!cached.isNullOrEmpty() && fresh) {
                 onDial(cached, requestedAt)
                 refresh(Runnable { refreshForNextLaunch(repo) })
                 return@execute
             }
-            val synced = runCatching { repo.sync(source.url) }
+            // A stale cache still beats a card, but not before the network has had a quick try.
+            val fetching = if (cached.isNullOrEmpty()) repo else repository(STALE_CONNECT_MILLIS)
+            val synced = runCatching { fetching.sync(source.url) }
                 .onFailure { Log.w("fs42", "lineup sync failed", it) }
                 .getOrNull()
             val dial = synced?.dial ?: repo.cachedDial()
@@ -92,6 +105,23 @@ class DialLoader(
         }
     }
 
+    private fun repository(connectTimeoutMillis: Int) = DialRepository(
+        fetch = { url -> fetch(url, connectTimeoutMillis) },
+        cacheDir = cacheDir,
+        cacheFile = source.cacheFile,
+    )
+
+    /**
+     * Young enough to tune from before asking the network. A modification time in the future
+     * is not fresh: the box has no battery and boots with a wrong wall clock until NTP lands,
+     * and "written tomorrow" is a reading of that, not of the file.
+     */
+    private fun isFresh(file: File): Boolean {
+        if (!file.exists()) return false
+        val age = nowMillis() - file.lastModified()
+        return age in 0 until CACHE_FRESH_MILLIS
+    }
+
     /** Fetch the lineup into the cache file and nothing else; see the class comment for why. */
     private fun refreshForNextLaunch(repo: DialRepository) {
         if (halted()) return
@@ -107,9 +137,9 @@ class DialLoader(
  * meant no channel ever tuned again and every keypress queued silently behind it - a television
  * that looks bricked with nothing on screen to say why.
  */
-private fun fetchOverHttp(url: String): String =
+private fun fetchOverHttp(url: String, connectTimeoutMillis: Int): String =
     (java.net.URL(url).openConnection() as java.net.HttpURLConnection).run {
-        connectTimeout = CONNECT_TIMEOUT_MILLIS
+        connectTimeout = connectTimeoutMillis
         readTimeout = READ_TIMEOUT_MILLIS
         try {
             inputStream.bufferedReader().use { it.readText() }
@@ -119,4 +149,13 @@ private fun fetchOverHttp(url: String): String =
     }
 
 private const val CONNECT_TIMEOUT_MILLIS = 10_000
+
+/** A stale cache is in hand, so the network gets a short chance rather than the full ten. */
+private const val STALE_CONNECT_MILLIS = 5_000
+
+/**
+ * A day and a quarter: the nightly build plus room for it running late, so a set switched on
+ * every evening always tunes from its cache.
+ */
+private const val CACHE_FRESH_MILLIS = 30L * 60 * 60 * 1000
 private const val READ_TIMEOUT_MILLIS = 20_000

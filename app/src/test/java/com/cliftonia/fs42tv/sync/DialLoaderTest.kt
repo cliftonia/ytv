@@ -22,6 +22,9 @@ class DialLoaderTest {
     private inner class Fixture(dir: File = tmp.newFolder()) {
         var network: () -> String = { error("offline") }
         val fetched = mutableListOf<String>()
+        val timeouts = mutableListOf<Int>()
+        /** Null reads the real clock, which is what a freshly written cache file is dated by. */
+        var now: Long? = null
         val delivered = mutableListOf<Int>()
         var cards = 0
         val retries = mutableListOf<Pair<Long, () -> Unit>>()
@@ -39,7 +42,8 @@ class DialLoaderTest {
             onNoDial = { cards++ },
             onDial = { channels, _ -> delivered.add(channels.size) },
             elapsedMillis = { 0 },
-            fetch = { url -> fetched.add(url); network() },
+            fetch = { url, timeout -> fetched.add(url); timeouts.add(timeout); network() },
+            nowMillis = { now ?: System.currentTimeMillis() },
             refresh = { refreshes.add(it) },
         )
     }
@@ -117,5 +121,40 @@ class DialLoaderTest {
         assertEquals(good, f.cacheFile.readText())
         assertEquals(0, f.cards)
         assertTrue(f.retries.isEmpty())
+    }
+
+    @Test
+    fun `a stale cache asks the network first, briefly, and delivers the fresh dial`() {
+        val f = Fixture()
+        f.cacheFile.writeText(fixture("channels-sample.json"))
+        f.now = f.cacheFile.lastModified() + 31L * 60 * 60 * 1000
+        f.network = { fixture("pluto-sample.json") }
+        f.loader.load()
+        assertEquals(1, f.fetched.size)
+        assertTrue("a short connect timeout, with the old copy in hand", f.timeouts.single() < 10_000)
+        assertEquals(1, f.delivered.size)
+        assertEquals(fixture("pluto-sample.json"), f.cacheFile.readText())
+        assertTrue(f.refreshes.isEmpty())
+    }
+
+    @Test
+    fun `a stale cache still tunes when the network is down`() {
+        val f = Fixture()
+        f.cacheFile.writeText(fixture("channels-sample.json"))
+        f.now = f.cacheFile.lastModified() + 31L * 60 * 60 * 1000
+        f.loader.load()
+        assertEquals(1, f.delivered.size)
+        assertEquals(0, f.cards)
+    }
+
+    @Test
+    fun `a cache dated in the future is not trusted as fresh`() {
+        // No battery: the wall clock is wrong until NTP lands after boot.
+        val f = Fixture()
+        f.cacheFile.writeText(fixture("channels-sample.json"))
+        f.now = f.cacheFile.lastModified() - 60_000
+        f.loader.load()
+        assertEquals("the network was asked first", 1, f.fetched.size)
+        assertEquals(1, f.delivered.size)
     }
 }
