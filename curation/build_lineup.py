@@ -60,6 +60,18 @@ def published_skip(skip, duration):
     return skip
 
 
+def published_parts(parts):
+    """The `parts` to publish for a YouTube stream, or None for the all-day pool.
+
+    Untagged is how the contract says "all day", so an empty list is left off exactly as an empty
+    `skip` is. Filtered to the parts the app knows and put in the day's order (confs.DAY_PARTS):
+    a part name nothing draws from would be a clip that is never on, and the order of a list a
+    conf happened to hold must not be able to churn a file that is only rewritten when it changes.
+    """
+    ordered = [part for part in confs.DAY_PARTS if part in (parts or ())]
+    return ordered or None
+
+
 def channel_from(path):
     """One channel in the app's contract, or None if this conf cannot become one."""
     conf = confs.load(path)
@@ -104,6 +116,11 @@ def channel_from(path):
             skip = published_skip(stream.get("skip"), duration)
             if skip:
                 entry["skip"] = skip
+            # Time-of-day mixes (dial.PARTS): which parts of the day refresh_channels found the
+            # clip for. The app draws each half-hour slot from the clips tagged for its part.
+            parts = published_parts(stream.get("parts"))
+            if parts:
+                entry["parts"] = parts
         streams.append(entry)
 
     if not streams:
