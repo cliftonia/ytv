@@ -236,4 +236,31 @@ class TuneControllerTest {
         assertTrue("the condemned clip is never sent to a resolver",
             "deaddeaddea" !in f.resolver.asked)
     }
+
+    @Test
+    fun `a painted channel prefetches its neighbours`() {
+        val f = Fixture()
+        val dial = listOf(channel(1, "aaaaaaaaaaa"), channel(2, "bbbbbbbbbbb"), channel(3, "ccccccccccc"))
+        f.navigator = DialNavigator(dial, 2)
+        f.tune.surfTo(dial[1])
+        f.settle()
+        f.prefetch.turn()
+        assertTrue(f.resolver.asked.containsAll(listOf("aaaaaaaaaaa", "ccccccccccc")))
+    }
+
+    @Test
+    fun `a prefetch queued before the viewer moved on is skipped`() {
+        // Two resolves are queued per channel passed through; without the check the prefetch
+        // thread spent seconds on the neighbours of channels already left behind.
+        val f = Fixture()
+        val dial = listOf(channel(1, "aaaaaaaaaaa"), channel(2, "bbbbbbbbbbb"), channel(3, "ccccccccccc"))
+        f.navigator = DialNavigator(dial, 2)
+        f.tune.surfTo(dial[1])
+        f.settle()                  // channel 2 painted; its neighbours are queued
+        f.tune.surfTo(dial[2])      // the viewer moves on before the prefetch thread gets there
+        f.work.turn()
+        f.prefetch.turn()
+        assertTrue("channel 1 was channel 2's neighbour, and nobody is on channel 2 any more",
+            "aaaaaaaaaaa" !in f.resolver.asked)
+    }
 }

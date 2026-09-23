@@ -379,7 +379,7 @@ class TuneController(private val deps: Deps) {
                     // With the picture up, get the neighbours ready. Surfing is overwhelmingly
                     // up and down one at a time, and the next press is usually a second or two
                     // away - exactly long enough to have resolved where it is going.
-                    prefetchNeighbours(channel)
+                    prefetchNeighbours(channel, requestGeneration)
                 }
                 deps.screen.paint(
                     finalTuned, finalPlayable, requestedAtMillis, playedSuccessfully,
@@ -464,10 +464,16 @@ class TuneController(private val deps: Deps) {
         }
     }
 
-    /** With the picture up on [from], get the channels either side of it ready. */
-    private fun prefetchNeighbours(from: Channel) {
+    /**
+     * With the picture up on [from], get the channels either side of it ready - for as long as
+     * [tuneGeneration] is still the current one. Any keypress, retune or overlay moves the
+     * generation on, and the tune that follows queues its own neighbours.
+     */
+    private fun prefetchNeighbours(from: Channel, tuneGeneration: Int) {
         val nav = deps.navigator() ?: return
-        prefetch.resolveAhead(listOfNotNull(nav.peekUp(from), nav.peekDown(from)))
+        prefetch.resolveAhead(listOfNotNull(nav.peekUp(from), nav.peekDown(from))) {
+            generation.get() == tuneGeneration
+        }
     }
 
     private companion object {
