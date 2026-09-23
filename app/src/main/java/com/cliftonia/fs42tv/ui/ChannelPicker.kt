@@ -94,6 +94,9 @@ private val PickerSubtitleFontSize = 13.sp
  */
 private val PickerRowFontSize = 20.sp
 
+/** How long the highlight must rest before the rows around it ask for Pluto's guide. */
+private const val SETTLE_MILLIS = 350L
+
 /** Rows scrolled above the on-air row when the picker opens, so it lands with context rather than pinned to the very top edge. */
 private const val ON_AIR_LEAD_ROWS = 3
 
@@ -118,6 +121,11 @@ fun ChannelPicker(
     startIndex: Int,
     onPick: (Int) -> Unit,
     onDismiss: () -> Unit,
+    /**
+     * The highlight has rested on a row for a moment. Debounced here so a held DOWN reports
+     * only where it stopped; the caller uses it to fetch Pluto's guide for the rows in view.
+     */
+    onSettled: (Int) -> Unit = {},
 ) {
     BackHandler(onBack = onDismiss)
 
@@ -129,6 +137,13 @@ fun ChannelPicker(
     var selected by remember { mutableStateOf(onAirIndex) }
 
     LaunchedEffect(Unit) { focusRequester.requestFocus() }
+
+    // Keyed on the selection, so every press cancels the previous wait: only a highlight that has
+    // stood still for SETTLE_MILLIS gets reported.
+    LaunchedEffect(selected) {
+        kotlinx.coroutines.delay(SETTLE_MILLIS)
+        onSettled(selected)
+    }
 
     // The highlight stays put and the LIST moves under it.
     //

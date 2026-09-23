@@ -57,6 +57,11 @@ fun ChannelOsd(
     titleLine: String,
     generation: Int,
     holdMillis: Long = 8000,
+    /**
+     * An optional third line beneath the title - Pluto's NEXT, from the guide. Empty draws
+     * nothing, which is the banner exactly as the box draws it.
+     */
+    nextLine: String = "",
 ) {
     var visible by remember { mutableStateOf(false) }
     LaunchedEffect(generation) {
@@ -82,6 +87,17 @@ fun ChannelOsd(
                     text = titleLine,
                     fontSize = 11.sp,
                     maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = titleMaxWidth),
+                )
+            }
+            if (nextLine.isNotEmpty()) {
+                // Same size as the title and one line only: it is the less important of the two,
+                // and a wrapped NEXT would push the banner down over the picture for nothing.
+                OsdText(
+                    text = nextLine,
+                    fontSize = 11.sp,
+                    maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.widthIn(max = titleMaxWidth),
                 )
