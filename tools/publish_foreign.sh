@@ -15,22 +15,17 @@
 # nothing, and the committed file carries on as it was: a video's language does not change, so
 # yesterday's verdicts stay true.
 #
-# ONE-TIME SETUP on the server, as hermanb (login shell is fish - run these through `bash`):
+# SETUP on the server (done 23 Sep 2026), as hermanb:
 #
-#   1. A deploy key that may push to github.com/cliftonia/ytv, used by this checkout only:
-#        ssh-keygen -t ed25519 -N '' -f ~/.ssh/ytv_foreign -C ytv-foreign
-#      add ~/.ssh/ytv_foreign.pub at GitHub -> ytv -> Settings -> Deploy keys, "Allow write
-#      access" ticked.
-#   2. A dedicated clone, separate from ~/ytv-curation (deploy.sh rsyncs over that one):
-#        GIT_SSH_COMMAND='ssh -i ~/.ssh/ytv_foreign -o IdentitiesOnly=yes' \
-#          git clone git@github.com:cliftonia/ytv.git ~/ytv-foreign
-#        git -C ~/ytv-foreign config core.sshCommand 'ssh -i ~/.ssh/ytv_foreign -o IdentitiesOnly=yes'
-#        git -C ~/ytv-foreign config user.name  "ytv-server"
-#        git -C ~/ytv-foreign config user.email "ytv-server@users.noreply.github.com"
-#   3. Try it once by hand:  bash ~/ytv-foreign/tools/publish_foreign.sh
-#   4. crontab -e, and add (01:30 local: clear of the 03:00 Brisbane nightly, which pushes
-#      without rebasing and would lose a race with this push):
-#        30 1 * * * /bin/bash $HOME/ytv-foreign/tools/publish_foreign.sh >> $HOME/ytv-foreign.log 2>&1
+#   - Clone: ~/ytv-foreign, separate from ~/ytv-curation (deploy.sh rsyncs over that one). It
+#     pushes with the box's existing GitHub key (~/.ssh/config: github.com -> id_ed25519_github),
+#     git identity ytv-server <ytv-server@users.noreply.github.com>. A repo-scoped deploy key
+#     would be narrower; swap it in via `git config core.sshCommand` if that matters.
+#   - Schedule: the box has no cron, so a systemd USER timer (linger is on, so it runs with
+#     nobody logged in): ~/.config/systemd/user/ytv-foreign.{service,timer}, daily 01:30 local -
+#     clear of the 03:00 Brisbane nightly, which pushes without rebasing and would lose a race
+#     with this push. Logs: `journalctl --user -u ytv-foreign`. Run now:
+#     `systemctl --user start ytv-foreign`.
 #
 # The script runs from the clone it lives in, pulls first, and so updates itself with the repo.
 #
