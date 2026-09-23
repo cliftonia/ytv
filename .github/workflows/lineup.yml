@@ -90,6 +90,20 @@ jobs:
         working-directory: curation
         run: python3 sequence.py
 
+      - name: Look up sponsor segments
+        # SponsorBlock's crowd-sourced ad reads, self-promotion and "like and subscribe" stretches,
+        # cached on each stream in the confs (skip + skip_checked) so every clip is asked about
+        # once and re-checked monthly. After the language sweep, so no request is spent on a clip
+        # that is about to be removed; before the rebuild, so tonight's answers reach tonight's
+        # channels.json. The script caps itself (requests and wall clock) and exits 0 whatever
+        # SponsorBlock does; continue-on-error and the timeout are there in case something it did
+        # not foresee goes wrong. This step can NEVER block the dial: without it, every clip simply
+        # plays in full, as before it existed.
+        working-directory: curation
+        continue-on-error: true
+        timeout-minutes: 15
+        run: python3 sponsor.py
+
       - name: Rebuild channels.json
         working-directory: curation
         run: python3 build_lineup.py
