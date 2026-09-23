@@ -181,7 +181,7 @@ PLAYABLE_CODECS = {"h264", "hevc"}
 MAX_W, MAX_H = 3840, 2160
 
 
-def collect_remote(urls):
+def collect_remote(urls, previous=None):
     """Streams for a conf's remote_urls: plain http(s) video files hosted elsewhere.
 
     Streams, not downloads: the dial needs only what ffprobe reads over the wire (the
@@ -193,7 +193,15 @@ def collect_remote(urls):
     filesystem to inherit one from. Seeds must be https (or a host the app already trusts):
     the app's network config permits cleartext to exactly the two server IPs, so a plain http
     seed anywhere else is refused before a packet leaves the device.
+
+    `previous` is the conf's current streams. A url whose probe FAILS keeps its previous entry
+    (same duration, same title) rather than dropping: archive.org refuses a range request
+    transiently often enough that every other scan lost a film off the dial until the next one.
+    The duration of a file at a fixed url does not change, so the old entry is still the truth.
+    A url never seen before has nothing to keep and drops as it always did - and a probe that
+    SUCCEEDS but fails the hardware gate is not transient, so that entry goes regardless.
     """
+    before = {s.get("url"): s for s in previous or []}
     streams = []
     for entry in urls:
         url, _, override = entry.partition("|")
@@ -202,8 +210,13 @@ def collect_remote(urls):
             continue
         probed = probe_stream(url)
         if not probed:
-            print("warning: %s has no readable stream - left off the dial" % url,
-                  file=sys.stderr)
+            if url in before:
+                print("warning: %s did not answer the probe - keeping the previous entry"
+                      % url, file=sys.stderr)
+                streams.append(before[url])
+            else:
+                print("warning: %s has no readable stream - left off the dial" % url,
+                      file=sys.stderr)
             continue
         duration, codec, width, height = probed
         if codec not in PLAYABLE_CODECS or width > MAX_W or height > MAX_H:
@@ -253,12 +266,12 @@ def main():
                 print("%s: %s is not a directory - nothing scanned" % (slug, media_dir),
                       file=sys.stderr)
                 continue
-        streams += collect_remote(station.get("remote_urls", []))
+        old = station.get("streams", [])
+        streams += collect_remote(station.get("remote_urls", []), old)
         if not media_dir and not station.get("remote_urls"):
             print("%s: declares neither a media dir nor remote urls - nothing to scan"
                   % slug, file=sys.stderr)
             continue
-        old = station.get("streams", [])
         print("%s: %d stream%s (%s)" % (slug, len(streams), "" if len(streams) == 1 else "s",
                                         "was %d" % len(old)))
         if not args.dry and streams != old:
