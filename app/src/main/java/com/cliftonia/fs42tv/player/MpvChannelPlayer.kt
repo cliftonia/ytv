@@ -284,8 +284,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         guard.asked(SystemClock.elapsedRealtime())
         this.requestedAtMillis = requestedAtMillis
         wantedCaption = load.subFile
-        mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile)
-        guard.entryIdIs(mpv.currentEntryId())
+        guard.entryIdIs(mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile))
     }
 
     /**
