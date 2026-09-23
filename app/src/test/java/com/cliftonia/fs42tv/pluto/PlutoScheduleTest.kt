@@ -126,13 +126,13 @@ class PlutoScheduleTest {
         val schedule = PlutoApi.parse(fixture("pluto-channel-sample.json"))!!
         val lines = PlutoLines.banner(schedule, at("2026-09-23T03:00:00Z"), brisbane)
         // 03:55:52Z is 1:55 PM in Brisbane (UTC+10, no daylight saving).
-        assertEquals("NOW Transporter 3" to "NEXT 1:55 PM Carjacked", lines)
+        assertEquals("Transporter 3" to "NEXT 1:55 PM Carjacked", lines)
     }
 
     @Test
     fun `the guide row fits both on one line`() {
         val schedule = PlutoApi.parse(fixture("pluto-channel-sample.json"))!!
-        assertEquals("NOW Transporter 3 | NEXT 1:55 PM Carjacked",
+        assertEquals("Transporter 3 | NEXT 1:55 PM Carjacked",
             PlutoLines.guideRow(schedule, at("2026-09-23T03:00:00Z"), brisbane))
     }
 
@@ -140,6 +140,6 @@ class PlutoScheduleTest {
     fun `the last programme in the window has no next line`() {
         val schedule = PlutoApi.parse(fixture("pluto-channel-sample.json"))!!
         val lines = PlutoLines.banner(schedule, at("2026-09-23T09:00:00Z"), brisbane)
-        assertEquals("NOW Hunter Killer" to "", lines)
+        assertEquals("Hunter Killer" to "", lines)
     }
 }
