@@ -1,11 +1,8 @@
 package com.cliftonia.fs42tv.ui
 
-import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.mutableStateOf
-import com.cliftonia.fs42tv.player.Media3Sources
-import com.cliftonia.fs42tv.resolver.Hls
-import com.cliftonia.fs42tv.resolver.Progressive
+import com.cliftonia.fs42tv.schedule.ScheduleLines
 import com.cliftonia.fs42tv.tune.DialNavigator
 import com.cliftonia.fs42tv.tune.TuneController
 import java.util.concurrent.Executor
@@ -13,24 +10,18 @@ import java.util.concurrent.Executor
 /**
  * The channel guide: the list, the music underneath it, and the rules for opening and closing.
  *
- * Owns its own states and the second ExoPlayer, so the activity's only involvement is focus -
- * which genuinely belongs to it, since focus lives on the activity's ComposeView.
+ * Owns its own states; the music is [GuideMusic]'s, shared with the "up next" card. The
+ * activity's only involvement is focus - which genuinely belongs to it, since focus lives on the
+ * activity's ComposeView.
  */
 class GuidePicker(private val deps: Deps) {
 
     class Deps(
-        val context: Context,
         val tune: TuneController,
         val director: ScreenDirector,
         val navigator: () -> DialNavigator?,
         /** Shares the tune executor deliberately: guide work must queue behind real tunes. */
         val executor: Executor,
-        /**
-         * The prefetch thread, for the guide music's resolve. Speculative work, and never on
-         * [executor]: a resolve is 2.4s on the device, and queued there it sat in front of the
-         * tune of the channel the viewer picked a moment after opening the guide.
-         */
-        val speculativeExecutor: Executor,
         val runOnUi: (() -> Unit) -> Unit,
         val halted: () -> Boolean,
         /** True between onStop and onStart - guide music must not start over the launcher. */
@@ -41,6 +32,8 @@ class GuidePicker(private val deps: Deps) {
         val focus: (Boolean) -> Unit,
         /** Pluto's what-is-on, for the rows the viewer is actually looking at. */
         val extras: ScreenExtras,
+        /** The music under the list - shared with the card, see [GuideMusic]. */
+        val music: GuideMusic,
     )
 
     // Captured once, at the moment the picker opens, rather than derived live from the
@@ -49,17 +42,6 @@ class GuidePicker(private val deps: Deps) {
     val visible = mutableStateOf(false)
     val rows = mutableStateOf<List<Pair<String, String>>>(emptyList())
     val startIndex = mutableStateOf(0)
-
-    /**
-     * Audio-only player for the music under the list.
-     *
-     * A separate ExoPlayer rather than the main one, because the channel being watched must
-     * keep playing underneath - the picker is translucent over it. Audio only, so the cost is
-     * one stream of about 128kbps rather than a second video decode. Created on first use and
-     * released aggressively: everything about it is best-effort, and atmosphere is never worth
-     * an error.
-     */
-    private var musicPlayer: androidx.media3.exoplayer.ExoPlayer? = null
 
     /**
      * Opens seeded on the channel actually on air - not [DialNavigator.currentIndex]: a failed
@@ -106,6 +88,8 @@ class GuidePicker(private val deps: Deps) {
         visible.value = false
         stopMusic()
         deps.focus(false)
+        // The guide opened over an "up next" card took the music over; hand it back.
+        deps.director.resumeBreakMusic()
     }
 
     /**
@@ -172,11 +156,8 @@ class GuidePicker(private val deps: Deps) {
         rows.value = current.toMutableList().also { it[index] = row }
     }
 
-    /** Released on stop and destroy; see [stopMusic] for why released rather than paused. */
-    fun releaseMusic() {
-        musicPlayer?.release()
-        musicPlayer = null
-    }
+    /** Released on stop and destroy; see [GuideMusic.release] for why released, not paused. */
+    fun releaseMusic() = deps.music.release()
 
     /**
      * Work out what is on each channel and fill the rows in behind the already-visible list.
@@ -192,14 +173,20 @@ class GuidePicker(private val deps: Deps) {
             // One instant for the whole dial - see GuideRows. Walking a hundred channels while
             // reading the clock per channel would let the list straddle a programme boundary
             // and show two different moments at once.
-            val filled = GuideRows.forChannels(channels, deps.nowSeconds(), deps.extras.timetable).toMutableList()
+            val now = deps.nowSeconds()
+            val timetable = deps.extras.timetable
+            val filled = GuideRows.forChannels(channels, now, timetable).toMutableList()
             // The on-air channel's row shows what is ACTUALLY playing. For every other channel
             // the clock's answer is the only one there is, but for this one the truth is in
             // hand, and it is the row the picker opens on - the first thing the viewer reads.
-            deps.tune.onAir?.let { onAir ->
+            // On the half-hour schedule the row keeps its times, naming the clip on air; a card
+            // has no clip on air, so the schedule's own "up next" line stands.
+            deps.tune.onAir?.takeIf { it.card == null }?.let { onAir ->
                 val i = channels.indexOfFirst { it.number == onAir.channel.number }
                 if (i >= 0) {
-                    filled[i] = ChannelLabels.listRow(channels[i], onAir.stream.title)
+                    val line = ScheduleLines.guideRow(channels[i], timetable, now, onAir.streamIndex)
+                        ?: onAir.stream.title
+                    filled[i] = ChannelLabels.listRow(channels[i], line)
                 }
             }
             val took = deps.elapsedMillis() - started
@@ -226,60 +213,13 @@ class GuidePicker(private val deps: Deps) {
      * playing, so closing the picker restores sound to a channel that never stopped.
      */
     private fun startMusic(nav: DialNavigator) {
-        val channel = PickerMusic.choose(nav.channels) ?: return
+        if (PickerMusic.choose(nav.channels) == null) return
         deps.director.updateProgrammeVolume()
-        deps.speculativeExecutor.execute {
-            // Checked before the resolve as well as after: a guide closed while this waited
-            // behind a prefetch has no use for music, and the resolve is the expensive part.
-            if (deps.halted() || !visible.value) return@execute
-            val tuned = deps.tune.resolveForAudio(channel) ?: return@execute
-            // Only the audio track is wanted, so the audio URL is handed over as the source
-            // and the video URL is dropped entirely - no second decode, no second video fetch.
-            val audioOnly = when (val playable = tuned.playable) {
-                is Progressive -> playable.audioUrl?.let { Progressive(it, null) }
-                is Hls -> playable
-                else -> null
-            } ?: return@execute
-            // Always Media3, whatever plays the video. The guide music is an audio-only
-            // stream under a translucent list; it has none of the frame-pacing problem that
-            // put mpv on the video path, and giving it a second engine would mean a second set
-            // of native libraries loaded to play 128kbps of bossa nova.
-            val source = Media3Sources.sourceFor(
-                Media3Sources.dataSourceFactory(), audioOnly) ?: return@execute
-
-            deps.runOnUi {
-                // The stopped check is what keeps bossa nova off the launcher: onStop releases
-                // the player, but a resolve already in flight lands here afterwards and would
-                // otherwise build a fresh ExoPlayer and play guide music behind the home
-                // screen (the picker deliberately survives HOME, so visible stays true).
-                if (deps.halted() || deps.stoppedNow() || !visible.value) return@runOnUi
-                val music = musicPlayer
-                    ?: androidx.media3.exoplayer.ExoPlayer.Builder(deps.context)
-                        .build().also { musicPlayer = it }
-                // Video off, whatever the source. A progressive clip is already cut down to its
-                // audio url above, but an HLS music channel is one muxed A/V stream - and left
-                // alone this player would claim a second hardware video decoder for a picture
-                // nobody sees, which on this television shows up as frame drops on the channel
-                // underneath. Disabling the track type means it is never selected at all.
-                music.trackSelectionParameters = music.trackSelectionParameters.buildUpon()
-                    .setTrackTypeDisabled(androidx.media3.common.C.TRACK_TYPE_VIDEO, true)
-                    .build()
-                Log.i("fs42", "guide music: ${channel.name}")
-                music.setMediaSource(source, (tuned.offsetSeconds * 1000).toLong())
-                music.prepare()
-                music.playWhenReady = true
-            }
-        }
+        deps.music.play(nav.channels) { visible.value }
     }
 
     private fun stopMusic() {
-        // RELEASE, not stop(). stop() halts playback but keeps the instance, and with it a
-        // hardware MediaCodec - a limited resource on this television, held idle alongside the
-        // video decoder for as long as the app runs. Frame drops appeared across every channel
-        // as soon as this player was introduced, which is what an extra codec instance looks
-        // like from the outside. Recreating it on the next open costs a few hundred
-        // milliseconds of music, against a picture that stays smooth.
-        releaseMusic()
+        deps.music.release()
         deps.director.updateProgrammeVolume()
     }
 

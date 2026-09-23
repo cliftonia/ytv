@@ -35,10 +35,13 @@ fun AppSurface(
         // Hidden whenever something is up in front of the programme: subtitles for a channel
         // nobody is currently looking at are noise.
         CaptionLine(
-            cues = director.captionCues.value,
+            cues = director.captions.cues.value,
             positionSeconds = positionSeconds,
             visible = !director.tuning.value && !guide.visible.value && !settingsVisible,
         )
+        // The half-hour schedule's card: over the blank and the captions like a picture, under
+        // the banner so a surf back or INFO still names the channel.
+        UpNextCard(director.upNext.state.value)
         UpdatePrompt(update.ready.value)
         BufferingPill(director.buffering.value)
         ChannelOsd(

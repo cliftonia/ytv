@@ -5,9 +5,7 @@ import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import com.cliftonia.fs42tv.player.ChannelPlayback
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
-import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
-import com.cliftonia.fs42tv.resolver.VttCues
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.tune.Tuned
@@ -53,6 +51,10 @@ class ScreenDirector(private val deps: Deps) {
         val captionExecutor: Executor,
         /** The switchable extras - Pluto's guide and friends. See [ScreenExtras]. */
         val extras: ScreenExtras,
+        /** The guide's music, which the "up next" card plays too. */
+        val music: GuideMusic,
+        /** The dial, for choosing that music. */
+        val channels: () -> List<Channel>,
     )
 
     // True from choosing a channel until its first frame arrives, so the previous channel is
@@ -73,24 +75,6 @@ class ScreenDirector(private val deps: Deps) {
 
     /** The tune banner's lines and the rules for what they say. See [Banner]. */
     val banner = Banner(deps.extras, deps.nowSeconds)
-
-    /**
-     * The cues of the clip currently playing, as the overlay draws them.
-     *
-     * The app parses and draws subtitles itself rather than handing the track to the player -
-     * see [CaptionLine] for why. Written only on the UI thread: cleared where the clip starts,
-     * filled by the loader once the file has come down.
-     */
-    val captionCues = mutableStateOf<List<VttCues.Cue>>(emptyList())
-
-    /**
-     * Whether the viewer wants English subtitles.
-     *
-     * Off by default. Most of the dial is in English and captions on a channel nobody needed
-     * them for is a worse default than absence. `@Volatile` because the toggle is flipped on
-     * the UI thread and read wherever a clip is painted.
-     */
-    @Volatile var captionsOn: Boolean = false
 
     /**
      * The error grace and the no-picture watchdog. Its timers run on [Deps.recoveryHandler] but
@@ -119,6 +103,17 @@ class ScreenDirector(private val deps: Deps) {
         retuneAfterError = { reason -> deps.tune().retuneCurrent(reason) },
     )
 
+    /** The half-hour schedule's "up next" card: up, timed, and gone. See [UpNextBreak]. */
+    val upNext = UpNextBreak(
+        handler = Handler(android.os.Looper.getMainLooper()),
+        music = deps.music,
+        channels = deps.channels,
+        timetable = deps.extras.timetable,
+        stoppedNow = deps.stoppedNow,
+        guideOpen = deps.pickerOpen,
+        ended = ::cardEnded,
+    )
+
     /** SKIP SPONSORS during playback; a range reaching the end ends the clip the usual way. */
     private val skipper = SponsorSkipper(
         handler = Handler(android.os.Looper.getMainLooper()),
@@ -132,12 +127,16 @@ class ScreenDirector(private val deps: Deps) {
         },
     )
 
-    private val captions = CaptionLoader(
+    /** The captions drawn over the programme, and the viewer's switch for them. */
+    val captions = CaptionState(
         executor = deps.captionExecutor,
         runOnUi = deps.runOnUi,
         generationNow = { deps.tune().generationNow() },
         halted = deps.halted,
-        show = { captionCues.value = it },
+        // Never a card's: its stream is the programme it announces, not one on screen.
+        onAirId = { deps.tune().onAir?.takeIf { it.card == null }?.stream?.id },
+        recallResolved = { id -> deps.recallResolved(id, deps.nowSeconds()) },
+        persistOn = deps.persistCaptionsOn,
     )
 
     /**
@@ -151,8 +150,9 @@ class ScreenDirector(private val deps: Deps) {
      */
     fun updateProgrammeVolume() {
         // Never above the level gain, never unmuting a blank: the gain only replaces the 1f.
-        deps.player()?.setVolume(
-            if (tuning.value || deps.pickerOpen()) 0f else deps.extras.programmeGain())
+        // The card too: under it the outgoing file may still be loaded, and it must stay silent.
+        deps.player()?.setVolume(if (tuning.value || deps.pickerOpen() || upNext.showing) 0f
+            else deps.extras.programmeGain())
         syncHiss()
     }
 
@@ -176,9 +176,59 @@ class ScreenDirector(private val deps: Deps) {
         startBlank = ::startBlank,
         paint = ::paint,
         channelUnavailable = { channel ->
+            leaveCard()
             standByReason.value = "CHANNEL ${channel.number} UNAVAILABLE"
         },
+        card = ::showCard,
     )
+
+    /**
+     * The schedule has a card on, not a clip. It IS what is on, so everything that waits for a
+     * picture stands down exactly as a first frame would stand it down - the blank, the watchdog,
+     * the error grace, the stall pill. RecoveryWatch must not read a card as a stuck tune.
+     *
+     * The outgoing clip is stopped at the source and paused: on mpv `stop` only mutes, and the
+     * file would otherwise decode on under the card, for up to hours on a deferred prime time.
+     */
+    private fun showCard(tuned: Tuned) {
+        deps.player()?.stop()
+        deps.player()?.setPaused(true)
+        skipper.stop()
+        watch.firstFrame()
+        deps.stallHandler.removeCallbacksAndMessages(null)
+        standByReason.value = ""
+        buffering.value = false
+        tuning.value = false
+        captions.clear()
+        banner.painted(tuned)
+        upNext.show(tuned)
+        updateProgrammeVolume()
+    }
+
+    /**
+     * The card's time is up: tune its channel for what the schedule has next, as a channel
+     * change - the blank, the watchdog, and the arrival that puts the station bug up.
+     */
+    private fun cardEnded(channel: Channel) {
+        // The card is already down (UpNextBreak.endNow), so leaveCard would see nothing to do -
+        // but the player under it is still paused, and mpv would load the programme paused.
+        if (!deps.stoppedNow()) deps.player()?.setPaused(false)
+        tuning.value = true
+        deps.extras.tuneStarted()
+        updateProgrammeVolume()
+        watch.tuneStarted()
+        deps.tune().tune(channel)
+    }
+
+    /** Anything else taking the screen takes the card down, and un-pauses the player under it. */
+    private fun leaveCard() {
+        if (!upNext.showing) return
+        upNext.cancel()
+        if (!deps.stoppedNow()) deps.player()?.setPaused(false)
+    }
+
+    /** The guide closed over a card: the card's music again. */
+    fun resumeBreakMusic() = upNext.resumeMusic()
 
     private fun startBlank(target: Channel) {
         // Stop the old channel at the SOURCE rather than covering it. A Compose overlay needs
@@ -188,6 +238,8 @@ class ScreenDirector(private val deps: Deps) {
         // blank covers the gap between the shutter and the first frame of the new channel.
         deps.player()?.stop()
         skipper.stop()
+        // Surfing away cancels a card as it cancels anything else.
+        leaveCard()
         // A deliberate channel change supersedes any error still waiting to be announced: the
         // card would name a channel the viewer has already left. It also starts the watchdog on
         // the new channel's first frame.
@@ -211,6 +263,7 @@ class ScreenDirector(private val deps: Deps) {
         // Before the load: the watcher is reading the OUTGOING clip's ranges, and the new file's
         // position must never be checked against them.
         skipper.stop()
+        leaveCard()
         deps.player()?.play(playable, tuned.offsetSeconds, requestedAtMillis)
         // Only when the level gain actually changed - with LEVEL VOLUME off it never does, and
         // this call is not made at all.
@@ -219,10 +272,7 @@ class ScreenDirector(private val deps: Deps) {
         // running: onStop already paused whatever was playing, and this tune would otherwise
         // stream and decode to a screen nobody is watching.
         if (deps.stoppedNow()) deps.player()?.setPaused(true)
-        // Cleared on the same thread that starts the clip, so the outgoing programme's
-        // dialogue cannot be left sitting over the incoming one.
-        captionCues.value = emptyList()
-        if (captionsOn) captions.load(playable, generation)
+        captions.clipStarting(playable, generation)
         // Only a genuine success touches the banner.
         if (played) banner.painted(deps.tune().onAir)
     }
@@ -320,20 +370,6 @@ class ScreenDirector(private val deps: Deps) {
     fun showBanner() = banner.show(deps.tune().onAir, deps.fallbackChannel())
 
     /**
-     * The captions flag, applied to the clip already playing.
-     *
-     * Every resolve carries its caption url whether or not captions are on, so turning them on
-     * is a fetch of the current clip's track out of the cache - no re-resolve. Off clears the
-     * overlay immediately.
-     */
-    fun toggleCaptions() {
-        captionsOn = !captionsOn
-        deps.persistCaptionsOn(captionsOn)
-        if (captionsOn) loadCaptionsForCurrentClip() else captionCues.value = emptyList()
-        Log.i("fs42", "captions ${if (captionsOn) "on" else "off"}")
-    }
-
-    /**
      * A Settings switch flipped: act on what is on screen now, so OFF is visible at once.
      * Exhaustive on purpose - a new flag must decide what switching it does here.
      */
@@ -351,6 +387,9 @@ class ScreenDirector(private val deps: Deps) {
             // for a clip that has ranges. The clock's arithmetic changes with the next tune.
             Features.Flag.SKIP_SPONSORS ->
                 if (on && !tuning.value) skipper.start(deps.tune().onAir) else skipper.stop()
+            // A card up now belongs to the schedule just left: end it, and let the tune decide.
+            // A clip playing carries on; the next roll-over asks the new schedule.
+            Features.Flag.SCHEDULE -> upNext.endNow()
         }
     }
 
@@ -366,9 +405,11 @@ class ScreenDirector(private val deps: Deps) {
 
     /** Back on screen: resume the picture, re-derive the volume, and watch for skips again. */
     fun appResumed() {
-        deps.player()?.setPaused(false)
+        // Not under a card: the file there was paused on purpose - see [showCard].
+        if (!upNext.showing) deps.player()?.setPaused(false)
         updateProgrammeVolume()
         if (!tuning.value) skipper.start(deps.tune().onAir)
+        upNext.resumeMusic()
     }
 
     /**
@@ -400,21 +441,6 @@ class ScreenDirector(private val deps: Deps) {
         deps.extras.tuneStarted()
         updateProgrammeVolume()
         watch.tuneStarted()
-    }
-
-    private fun loadCaptionsForCurrentClip() {
-        val id = deps.tune().onAir?.stream?.id ?: run {
-            Log.i("fs42", "captions: nothing on air to caption")
-            return
-        }
-        val playable = deps.recallResolved(id, deps.nowSeconds()) ?: run {
-            // Only reachable if the clip's urls expired while it was still playing, which the
-            // tune path handles by re-resolving anyway.
-            Log.i("fs42", "captions: $id is not in the resolved cache")
-            PlaybackDiagnostics.recordCaptions("NOT CACHED")
-            return
-        }
-        captions.load(playable, deps.tune().generationNow())
     }
 
     private companion object {

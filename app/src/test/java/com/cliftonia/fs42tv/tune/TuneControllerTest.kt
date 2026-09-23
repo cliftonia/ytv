@@ -4,6 +4,7 @@ import com.cliftonia.fs42tv.resolver.ClipResolver
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.RefusalLedger
+import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.sync.Stream
 import org.junit.Assert.assertEquals
@@ -50,7 +51,9 @@ class TuneControllerTest {
         }
     }
 
-    private class Fixture {
+    private class Fixture(val timetable: Timetable = Timetable.PLAIN) {
+        var now = 50L
+        val cards = mutableListOf<Int>()
         val work = Crank()
         val ui = Crank()
         val prefetch = Crank()
@@ -70,7 +73,7 @@ class TuneControllerTest {
             urls = null,
             ladder = { listOf("hd", "sd") },
             navigator = { navigator },
-            nowSeconds = { 50 },
+            nowSeconds = { now },
             elapsedMillis = { 1_000 },
             halted = { false },
             runOnUi = { block -> ui.execute { block() } },
@@ -79,7 +82,9 @@ class TuneControllerTest {
                 startBlank = { blanked.add(it.number) },
                 paint = { tuned, playable, _, _, _ -> painted.add(tuned.channel.number to playable) },
                 channelUnavailable = { unavailable.add(it.number) },
+                card = { cards.add(it.channel.number) },
             ),
+            timetable = timetable,
         ))
 
         /** Run everything that is queued, in the order the device would: work, then UI. */
@@ -262,5 +267,85 @@ class TuneControllerTest {
         f.prefetch.turn()
         assertTrue("channel 1 was channel 2's neighbour, and nobody is on channel 2 any more",
             "aaaaaaaaaaa" !in f.resolver.asked)
+    }
+
+    // --- the half-hour schedule ----------------------------------------------------------------
+
+    /** A UTC slot boundary, so the schedule's arithmetic is plain. */
+    private val slot = 1_790_191_800L
+
+    private val halfHour = Timetable(
+        skipsOn = { false }, halfHourOn = { true }, zone = { java.time.ZoneOffset.UTC })
+
+    private fun scheduled(number: Int, vararg durations: Int) = Channel(
+        number = number, name = "CH$number", kind = "youtube", rotation = "clock",
+        streams = durations.mapIndexed { i, d ->
+            val id = "s$number$i".padEnd(11, 'x')
+            Stream(id = id, url = "https://youtube.com/watch?v=$id", duration = d, title = "t$i")
+        },
+    )
+
+    @Test
+    fun `a card claims the air but hands nothing to the player`() {
+        // One 1700s programme a slot and nothing to top up with: the last 100s is a card.
+        val f = Fixture(halfHour)
+        f.now = slot + 1750
+        f.tune.surfTo(scheduled(5, 1700))
+        f.settle()
+        assertEquals(listOf(5), f.cards)
+        assertTrue("a card is not a clip; nothing may reach the player", f.painted.isEmpty())
+        assertTrue("and nothing is resolved on the tune thread", f.resolver.asked.isEmpty())
+        val onAir = f.tune.onAir!!
+        assertEquals(5, onAir.channel.number)
+        assertEquals(slot + 1800, onAir.card!!.until)
+        assertEquals(listOf(5), f.remembered)
+        // The prefetch resolves what the card announces, so the programme after it is instant.
+        f.prefetch.turn()
+        assertTrue(f.resolver.asked.contains(onAir.stream.id))
+    }
+
+    @Test
+    fun `a card superseded before it lands never claims the air`() {
+        val f = Fixture(halfHour)
+        f.now = slot + 1750
+        f.tune.surfTo(scheduled(5, 1700))
+        f.work.turn()
+        f.tune.surfTo(scheduled(6, 1700))
+        f.settle()
+        assertEquals("channel 5's card must not land after the viewer moved on", listOf(6), f.cards)
+        assertEquals(6, f.tune.onAir?.channel?.number)
+    }
+
+    @Test
+    fun `on the schedule, a programme that ends early moves on to what the schedule has next`() {
+        // Two 25-minute programmes and a 240s short. Clip 0 ends ten seconds early: the schedule
+        // still has it on, and what follows is the top-up - not clip 1, the next in the list.
+        val f = Fixture(halfHour)
+        f.now = slot + 1490
+        f.tune.surfTo(scheduled(5, 1500, 1500, 240))
+        f.settle()
+        val programme = f.tune.onAir!!.streamIndex
+        assertTrue(programme in 0..1)
+        f.tune.clipEnded()
+        f.settle()
+        assertEquals(2, f.tune.onAir?.streamIndex)
+        assertEquals("joined from the top-up's own start", 0.0, f.tune.onAir!!.offsetSeconds, 0.0)
+    }
+
+    @Test
+    fun `on the schedule, the same programme in the next slot is a new showing, not the old one`() {
+        // One programme that fills its slot exactly: it airs every half hour. When one showing
+        // ends and the next has begun, the index matches - but it is a different showing, and
+        // skipping past it would put the channel half an hour off its own schedule.
+        val f = Fixture(halfHour)
+        f.now = slot + 1795
+        f.tune.surfTo(scheduled(5, 1800))
+        f.settle()
+        assertEquals(slot + 1800, f.tune.onAir!!.endsAt)
+        f.now = slot + 1801
+        f.tune.clipEnded()
+        f.settle()
+        assertEquals(slot + 3600, f.tune.onAir!!.endsAt)
+        assertEquals(1.0, f.tune.onAir!!.offsetSeconds, 0.0)
     }
 }

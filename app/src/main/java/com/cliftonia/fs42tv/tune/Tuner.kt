@@ -19,6 +19,13 @@ data class Tuned(
     val stream: Stream,
     val playable: Playable,
     val offsetSeconds: Double,
+    /**
+     * Set when the half-hour schedule has an "up next" card on, not a clip. [streamIndex] and
+     * [stream] are then the programme the card announces, and nothing is handed to the player.
+     */
+    val card: Timetable.OnAir.Card? = null,
+    /** When this clip's scheduled time runs out - half-hour schedule only. */
+    val endsAt: Long? = null,
 )
 
 /**
@@ -49,20 +56,50 @@ object Tuner {
         // Only a clock-rotating channel has a schedule to join part-way through. Live feeds
         // carry a placeholder duration of 600 per stream, so computing a position from it
         // would seek an arbitrary distance into a live window.
-        val point = if (channel.rotation == "clock") {
-            timetable.playPoint(channel, nowSeconds) ?: return null
+        val onAir = if (channel.rotation == "clock") {
+            timetable.at(channel, nowSeconds) ?: return null
         } else {
             null
         }
 
-        val index = point?.index ?: 0
-        val offset = point?.offsetSeconds ?: 0.0
-        val stream = streams[index]
+        val index = onAir?.index ?: 0
+        val clip = onAir as? Timetable.OnAir.Clip
+        val stream = streams.getOrNull(index) ?: return null
 
+        // For a card, what it announces - resolvable ahead of time, which is how the programme
+        // after a card starts as fast as a cache hit.
         val playable = playableFor(channel, stream) { _ ->
             StreamResolver.resolve(stream, cache, ladder, nowSeconds, refused)
         }
-        return Tuned(channel, index, stream, playable, offset)
+        return Tuned(
+            channel, index, stream, playable,
+            offsetSeconds = clip?.offsetSeconds ?: 0.0,
+            card = onAir as? Timetable.OnAir.Card,
+            endsAt = clip?.endsAt,
+        )
+    }
+
+    /**
+     * What follows [ended], a clip that reported finishing while the timetable still has it on.
+     *
+     * The published duration comes from yt-dlp's metadata; what actually plays is the shorter
+     * of the separately-muxed tracks, so a clip routinely ends a little before its time. On the
+     * half-hour schedule the answer is whatever the schedule has at the clip's scheduled end -
+     * the top-up, the card or the next programme - joined from its start. On the continuous
+     * rotation it is the next clip in the list, from zero, as it always was; a channel of one
+     * clip has nothing else, and replays it.
+     */
+    fun following(
+        ended: Tuned,
+        cache: UrlCache?,
+        ladder: List<String> = ClipResolver.DEFAULT_LADDER,
+        refused: Set<String> = emptySet(),
+        timetable: Timetable = Timetable.PLAIN,
+    ): Tuned? {
+        val channel = ended.channel
+        ended.endsAt?.let { return tune(channel, cache, it, ladder, refused, timetable) }
+        if (channel.streams.size < 2) return ended
+        return tuneToIndex(channel, (ended.streamIndex + 1) % channel.streams.size)
     }
 
     /**

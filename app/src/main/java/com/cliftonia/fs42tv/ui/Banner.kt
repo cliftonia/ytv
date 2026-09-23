@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.ui
 
 import androidx.compose.runtime.mutableStateOf
+import com.cliftonia.fs42tv.schedule.ScheduleLines
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.Tuned
 
@@ -89,21 +90,24 @@ class Banner(
         val (line, title) = ChannelLabels.bannerLines(onAir)
         channelLine.value = line
         if (title.isNotEmpty() || !keepTitleWhenBlank) titleLine.value = title
-        applyProgrammeLines(onAir.channel, onAir.streamIndex)
+        // A card has no clip on air: its stream is the programme it announces.
+        applyProgrammeLines(onAir.channel, onAir.streamIndex.takeIf { onAir.card == null })
     }
 
     /**
-     * Swap the title for NOW and NEXT when an extra has them for [channel] - Pluto's guide.
+     * Swap the title for NOW and NEXT when there are any for [channel]: the half-hour schedule's
+     * real times for a clock channel, or Pluto's guide for a Pluto one. [playingIndex] is the
+     * clip actually on air, when one is - see [ScheduleLines.banner].
      *
-     * A cache miss leaves the lines as they are and asks; the answer re-enters here on the UI
-     * thread, and is dropped if the banner has moved to another channel meanwhile. It does NOT
-     * bump the generation - that would restart the auto-hide timer for a banner that merely
+     * A Pluto cache miss leaves the lines as they are and asks; the answer re-enters here on the
+     * UI thread, and is dropped if the banner has moved to another channel meanwhile. It does
+     * NOT bump the generation - that would restart the auto-hide timer for a banner that merely
      * gained a line, or pop up one that had already gone.
      */
-    @Suppress("UNUSED_PARAMETER")
     private fun applyProgrammeLines(channel: Channel, playingIndex: Int?) {
         channelNumber = channel.number
-        val lines = extras.bannerLines(channel) {
+        val scheduled = ScheduleLines.banner(channel, extras.timetable, nowSeconds(), playingIndex)
+        val lines = scheduled ?: extras.bannerLines(channel) {
             if (channelNumber == channel.number) applyProgrammeLines(channel, playingIndex)
         }
         nextLine.value = lines?.second.orEmpty()
