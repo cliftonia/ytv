@@ -170,6 +170,64 @@ class TestStallFallback(unittest.TestCase):
         self.assertIn(".part", script)
 
 
+class TestMetadataScript(unittest.TestCase):
+    """The pasted link is interpolated into bash that runs on the server."""
+
+    HOSTILE = 'magnet:?xt=urn:btih:%s&dn=x"; touch /tmp/pwned; echo "$(id)' % ("a" * 40)
+
+    def test_the_link_is_single_quoted_whole(self):
+        script = ingest.build_metadata_script(self.HOSTILE)
+        self.assertIn(ingest.quote_shell(self.HOSTILE), script)
+        # Every appearance is the quoted one; a bare or double-quoted copy would let $(...) and
+        # "; run on the server.
+        self.assertNotIn('"%s"' % self.HOSTILE, script)
+        self.assertEqual(script.count(self.HOSTILE.split('"')[0]),
+                         script.count(ingest.quote_shell(self.HOSTILE)))
+
+    def test_a_magnet_is_canonicalised_before_quoting(self):
+        script = ingest.build_metadata_script("magnet://?xt=urn:btih:" + "b" * 40)
+        self.assertIn("'magnet:?xt=urn:btih:%s'" % ("b" * 40), script)
+
+    def test_the_quoted_script_really_is_inert(self):
+        # The proof is bash itself: the magnet branch's test must see the whole link as one word.
+        import subprocess
+        quoted = ingest.quote_shell(self.HOSTILE)
+        out = subprocess.run(["bash", "-c", "printf '%%s' %s" % quoted],
+                             capture_output=True, text=True).stdout
+        self.assertEqual(self.HOSTILE, out)
+
+
+class TestPublishPlan(unittest.TestCase):
+    """What ingest runs locally to put the new file on the dial."""
+
+    def plan(self, channel="Movies", dial_changed=False):
+        return ingest.publish_commands(channel, dial_changed)
+
+    def test_the_commit_message_names_the_channel_and_nothing_downloaded(self):
+        # The repository is public: a torrent or file name in a commit message is a permanent,
+        # searchable record of what was downloaded. The channel name is already on the dial.
+        commit = next(c for c in self.plan("Cinema Stream") if c[:2] == ["git", "commit"])
+        self.assertEqual(["git", "commit", "-m", "ingest: new file on Cinema Stream"], commit)
+
+    def test_only_the_lineup_paths_are_staged(self):
+        adds = [c for c in self.plan() if c[:2] == ["git", "add"]]
+        self.assertEqual([["git", "add", "--", "channels.json", "curation/confs"]], adds)
+        self.assertNotIn("-A", adds[0])
+
+    def test_a_new_channel_also_stages_the_dial(self):
+        adds = [c for c in self.plan(dial_changed=True) if c[:2] == ["git", "add"]]
+        self.assertEqual([["git", "add", "--", "channels.json", "curation/confs",
+                           "curation/dial.py"]], adds)
+
+    def test_the_gate_runs_after_the_rebase_and_before_the_push(self):
+        plan = self.plan()
+        names = [" ".join(c[:2]) if c[0] == "git" else os.path.basename(c[1]) for c in plan]
+        self.assertEqual(["git add", "git commit", "git pull", "check_lineup.py", "git push"],
+                         names)
+        gate = plan[3]
+        self.assertEqual(["--against", "origin/main"], gate[2:])
+
+
 class TestDialSurgery(unittest.TestCase):
 
     DIAL = 'LIVE = []\n\nFILES = [\n    (91, "movies", "Movies", "Movies", ()),\n]\n'

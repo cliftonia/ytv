@@ -177,6 +177,38 @@ class TestRemoteUrls(ScanCase):
             self.assertEqual([], scan_media.collect_remote(["https://example.org/big.mp4"]))
         self.assertIn("beyond the televisions", err.getvalue())
 
+    def test_a_failed_probe_keeps_that_streams_previous_entry(self):
+        # archive.org fails a probe transiently now and then; the rerun lands it. Dropping the
+        # film on a transient failure took it off the dial until someone noticed and rescanned.
+        previous = [{"url": "https://archive.org/download/x/a.mp4", "duration": 5000,
+                     "title": "A Film"}]
+        with mock.patch.object(scan_media, "probe_stream", lambda u: None), \
+                mock.patch.object(sys, "stderr", io.StringIO()) as err:
+            streams = scan_media.collect_remote(
+                ["https://archive.org/download/x/a.mp4|A Film", "https://example.org/new.mp4"],
+                previous)
+        self.assertEqual(previous, streams)
+        self.assertIn("keeping the previous entry", err.getvalue())
+        # A url that was never on the dial has nothing to keep and still drops, loudly.
+        self.assertIn("new.mp4 has no readable stream", err.getvalue())
+
+    def test_a_kept_entry_stays_in_authored_order(self):
+        previous = [{"url": "https://x.org/b.mp4", "duration": 7, "title": "B"}]
+        probe = lambda u: None if u.endswith("b.mp4") else (100, "h264", 1920, 1080)
+        with mock.patch.object(scan_media, "probe_stream", probe), \
+                mock.patch.object(sys, "stderr", io.StringIO()):
+            streams = scan_media.collect_remote(
+                ["https://x.org/a.mp4", "https://x.org/b.mp4", "https://x.org/c.mp4"], previous)
+        self.assertEqual(["a", "B", "c"], [s["title"] for s in streams])
+
+    def test_a_hardware_refusal_is_not_papered_over_by_a_previous_entry(self):
+        # Only a failed probe is transient. A probe that succeeded and says the file is past the
+        # hardware is the truth, and the old entry must go.
+        previous = [{"url": "https://x.org/big.mp4", "duration": 7, "title": "Big"}]
+        with mock.patch.object(scan_media, "probe_stream", lambda u: (7, "h264", 3840, 2560)), \
+                mock.patch.object(sys, "stderr", io.StringIO()):
+            self.assertEqual([], scan_media.collect_remote(["https://x.org/big.mp4"], previous))
+
     def test_at_uhd_limit_is_accepted(self):
         with mock.patch.object(scan_media, "probe_stream",
                                lambda u: (3600, "hevc", 3840, 2160)):
