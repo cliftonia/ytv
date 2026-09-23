@@ -57,26 +57,9 @@ object Tuner {
         val offset = point?.offsetSeconds ?: 0.0
         val stream = streams[index]
 
-        // The server publishes an explicit discriminator; trust it rather than inferring from
-        // a null id, so a youtube clip with a missing id never reaches an HLS parser.
-        // StreamResolver has its own null-id fallback to Hls, meant for genuinely live streams;
-        // delegating to it for a non-live stream with a missing id would let that fallback
-        // override the discriminator above, so that malformed case is short-circuited here.
-        // It is reported as Unplayable rather than NeedsResolving: there is no id to send the
-        // server, and its resolve endpoint rejects anything that isn't an 11-character id, so
-        // asking it would be a network round trip that exists only to fail.
-        //
-        // A file stream IS its url: a media file on the homelab's static server, already muxed,
-        // so audioUrl stays null and there is nothing to resolve. It must sit ahead of the
-        // null-id check, because file streams carry no id by design.
-        val playable: Playable = when {
-            channel.kind == "live" -> Hls(stream.url)
-            channel.kind == "file" -> Progressive(stream.url, audioUrl = null)
-            stream.id == null ->
-                Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
-            else -> StreamResolver.resolve(stream, cache, ladder, nowSeconds, refused)
+        val playable = playableFor(channel, stream) { _ ->
+            StreamResolver.resolve(stream, cache, ladder, nowSeconds, refused)
         }
-
         return Tuned(channel, index, stream, playable, offset)
     }
 
@@ -88,20 +71,37 @@ object Tuner {
      * air, so re-tuning would land straight back on it. There is nothing meaningful to seek to in
      * a programme that was never scheduled to be on now, so it starts at zero.
      */
-    fun tuneToIndex(
-        channel: Channel,
-        index: Int,
-        refused: Set<String> = emptySet(),
-        ladder: List<String> = ClipResolver.DEFAULT_LADDER,
-    ): Tuned? {
+    fun tuneToIndex(channel: Channel, index: Int): Tuned? {
         val stream = channel.streams.getOrNull(index) ?: return null
-        val playable: Playable = when {
-            channel.kind == "live" -> Hls(stream.url)
-            channel.kind == "file" -> Progressive(stream.url, audioUrl = null)
-            stream.id == null ->
-                Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
-            else -> NeedsResolving(stream.id)
-        }
-        return Tuned(channel, index, stream, playable, 0.0)
+        return Tuned(channel, index, stream, playableFor(channel, stream, ::NeedsResolving), 0.0)
+    }
+
+    /**
+     * What to hand the player for [stream], given the channel's kind; [clip] decides only the
+     * youtube case, which is the one place [tune] and [tuneToIndex] differ.
+     *
+     * The server publishes an explicit discriminator; trust it rather than inferring from a null
+     * id, so a youtube clip with a missing id never reaches an HLS parser. StreamResolver has its
+     * own null-id fallback to Hls, meant for genuinely live streams; delegating to it for a
+     * non-live stream with a missing id would let that fallback override the discriminator
+     * above, so that malformed case is short-circuited here. It is reported as Unplayable rather
+     * than NeedsResolving: there is no id to send the server, and its resolve endpoint rejects
+     * anything that isn't an 11-character id, so asking it would be a network round trip that
+     * exists only to fail.
+     *
+     * A file stream IS its url: a media file on the homelab's static server, already muxed, so
+     * audioUrl stays null and there is nothing to resolve. It must sit ahead of the null-id
+     * check, because file streams carry no id by design.
+     */
+    private inline fun playableFor(
+        channel: Channel,
+        stream: Stream,
+        clip: (id: String) -> Playable,
+    ): Playable = when {
+        channel.kind == "live" -> Hls(stream.url)
+        channel.kind == "file" -> Progressive(stream.url, audioUrl = null)
+        stream.id == null ->
+            Unplayable("${channel.name}: a ${channel.kind} stream has no video id to resolve")
+        else -> clip(stream.id)
     }
 }
