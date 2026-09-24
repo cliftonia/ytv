@@ -93,7 +93,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WRUZc23hv0Y",
                 "duration": 1651,
-                "title": "A Secret She Thought No One Would Ever Discover | True Crime Documentary"
+                "title": "A Secret She Thought No One Would Ever Discover | True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=LwO6nFm_7g0",
@@ -113,7 +115,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jdFwXheHvsE",
                 "duration": 1881,
-                "title": "CAUTION!!! This Story Is Extremely Disturbing | True Crime Documentary"
+                "title": "CAUTION!!! This Story Is Extremely Disturbing | True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
@@ -138,7 +142,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OwksWJifxYk",
                 "duration": 2963,
-                "title": "UFO Experts Come Forward (Full Documentary) - IPN LIVE TOUR"
+                "title": "UFO Experts Come Forward (Full Documentary) - IPN LIVE TOUR",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=ESC3uoTQJus",
@@ -257,17 +263,23 @@
             {
                 "url": "https://www.youtube.com/watch?v=wJkXjNbsD-Y",
                 "duration": 7922,
-                "title": "Enoch – The Movie (2026) | 10 Heavens and the Origin of the Nephilim | Full Biblical Movie in 4K"
+                "title": "Enoch – The Movie (2026) | 10 Heavens and the Origin of the Nephilim | Full Biblical Movie in 4K",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=t0RwmQTY36Y",
                 "duration": 2556,
-                "title": "Deep Secret | Full Episode"
+                "title": "Deep Secret | Full Episode",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=ElsNJnMHRFE",
                 "duration": 2431,
-                "title": "Fugitive @ hotmail.com | Full Episode"
+                "title": "Fugitive @ hotmail.com | Full Episode",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=tK1HdMrG_gk",
@@ -324,12 +336,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=57Z8bUb1P94",
                 "duration": 6256,
-                "title": "The Cholesterol Code (2026) | Full Movie | Documentary | Health"
+                "title": "The Cholesterol Code (2026) | Full Movie | Documentary | Health",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=WwA_7QyqtGI",
                 "duration": 4495,
-                "title": "UNREAL AMAZON – Nature’s Most Dangerous Paradise (Full Documentary)"
+                "title": "UNREAL AMAZON – Nature’s Most Dangerous Paradise (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=zqHpDKeniKY",
@@ -339,7 +355,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6D-4kMrGgh0",
                 "duration": 2503,
-                "title": "The Gaslighting of Hannah Pettey | Full Episode"
+                "title": "The Gaslighting of Hannah Pettey | Full Episode",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
@@ -349,7 +367,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=r0tyaLfeUnY",
                 "duration": 5659,
-                "title": "After the First 48 New 2026❄️Last Yard ❄️American Documentary True Crime Full HD"
+                "title": "After the First 48 New 2026❄️Last Yard ❄️American Documentary True Crime Full HD",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=iVOzhuiZbgU",
@@ -374,7 +394,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=hALTeHQ_wh0",
                 "duration": 2801,
-                "title": "Rich Mass Killer Realizes She's Been Caught 8 Years Later"
+                "title": "Rich Mass Killer Realizes She's Been Caught 8 Years Later",
+                "skip": [
+                    [
+                        992.3,
+                        1090.0
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Grhi_n16lUU",
@@ -524,7 +551,9 @@
                 "title": "\"Lizzie Borden took an axe\" — or did she?",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Q2gqTMRmO_U",
@@ -641,7 +670,9 @@
                 "title": "Inside the Chilean Mine Rescue (Full Episode) | Witness to Disaster | National Geographic",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=xV_O_d6wN_8",
@@ -723,7 +754,14 @@
                 "title": "Wild Kratts FULL EPISODE! | Stuck on Sharks | PBS KIDS",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [
+                    [
+                        0.0,
+                        5.1
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=MCAPRAEG9wk",
@@ -855,7 +893,9 @@
                 "title": "Ocean Predators: Killers of the Deep (Full Episode) | World's Deadliest | Nat Geo Animals",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=i6bORQh_9LQ",
@@ -1051,7 +1091,9 @@
                 "title": "Tell Them of Us (full feature length WW1 drama)",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=g9Lp9MsOKEA",
@@ -1107,7 +1149,9 @@
                 "title": "Disneyland Handcrafted | Full Documentary",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=TSRn8BzpvLc",
@@ -1123,7 +1167,9 @@
                 "title": "The Last Ride - A Philadelphia Story | Feature Length Documentary - Dirt Bike Rell, Tu Stroke Prince",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z5mnzUfCVCY",
@@ -1179,7 +1225,9 @@
                 "title": "Hello Darlin' - Award-Winning British Crime Drama (Official Feature Film)",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=c8PgeWFmdY8",
@@ -1215,7 +1263,9 @@
                 "title": "Used People | FULL MOVIE | Shirley MacLaine, Kathy Bates, Jessica Tandy | Comedy Drama",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=8A9eKyvz-UU",
@@ -1241,7 +1291,9 @@
                 "title": "Following The Footsteps of Jesus //  Jesus Documentary Film",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=vWaoon6lZM0",
@@ -1257,7 +1309,9 @@
                 "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the Heinz Dynasty",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=OPz66iOiA6E",
@@ -1291,7 +1345,9 @@
                 "title": "The Gates | Horror, Thriller | Full Movie",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=AfGvYLf99fg",
@@ -1323,7 +1379,9 @@
                 "title": "Bowen's Heart | Full-Length Documentary",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=-E4gJWdsyAA",
@@ -1465,7 +1523,9 @@
                 "title": "2+ HOURS of Disturbing Unsolved Mysteries..",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Aa10i8Sl0oQ",
@@ -1611,7 +1671,9 @@
                 "title": "Unsolved Mysteries with Robert Stack - Season 4, Episode 15 - Full Episode",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=E6DN3vm_DSM",
@@ -1619,7 +1681,9 @@
                 "title": "Untold Stories of the ER - Season 9, Episode 18 - Cop-Shocker",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=1AQoyd8UXzU",
@@ -1635,7 +1699,9 @@
                 "title": "Have Aliens Been Visiting Earth for Millions of Years? | Ancient Aliens | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=HJUQLVjT9K4",
@@ -1695,7 +1761,14 @@
                 "title": "50 Unsolved Mysteries in ALL 50 States of America | Full Doc",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [
+                    [
+                        4051.0,
+                        4061.0
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=3crJsa0LT1M",
@@ -1735,7 +1808,9 @@
                 "title": "Dark Secrets of Vatican City - Forbidden History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=rdneevYAwfc",

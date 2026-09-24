@@ -39,7 +39,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KeLVMc3CTVk",
                 "duration": 1528,
-                "title": "Vintage Fashion Radical Values"
+                "title": "Vintage Fashion Radical Values",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=ho6OloxLh_0",
@@ -49,7 +51,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_AiJFhoEvqE",
                 "duration": 656,
-                "title": "Weird Fashion Trends Throughout History"
+                "title": "Weird Fashion Trends Throughout History",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=syGN9FqDwUM",
@@ -59,7 +63,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iqZLbQvk9_I",
                 "duration": 1105,
-                "title": "Explaining 1960s Fashion"
+                "title": "Explaining 1960s Fashion",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=OfjvS80Gm-k",
@@ -205,12 +211,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=ImGcuS706HA",
                 "duration": 633,
-                "title": "Yves Saint Laurent 1991: The Collection That Defied the Odds | Fashion History Analysis"
+                "title": "Yves Saint Laurent 1991: The Collection That Defied the Odds | Fashion History Analysis",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=WPeFvGME9_0",
                 "duration": 2712,
-                "title": "Fashion Culture | Paris Fashion: A Cultural History"
+                "title": "Fashion Culture | Paris Fashion: A Cultural History",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=RAj8Qkn6yn4",
@@ -225,12 +235,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=IlbAv-GhnMs",
                 "duration": 1042,
-                "title": "I Investigated Vintage Picking in the Deep South"
+                "title": "I Investigated Vintage Picking in the Deep South",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=8MCjT_3Khms",
                 "duration": 366,
-                "title": "Extravagant English Catwalk Show (1956) | Vintage Fashions"
+                "title": "Extravagant English Catwalk Show (1956) | Vintage Fashions",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=8BPxgu3XGTo",
@@ -240,22 +254,35 @@
             {
                 "url": "https://www.youtube.com/watch?v=a1CosehYHWc",
                 "duration": 854,
-                "title": "Paris, The City of Fashion (1950s) | Vintage Fashions"
+                "title": "Paris, The City of Fashion (1950s) | Vintage Fashions",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Gr6gsNg5s9U",
                 "duration": 1200,
-                "title": "SPEAKING of FASHION: Fashion and The Tiki Craze"
+                "title": "SPEAKING of FASHION: Fashion and The Tiki Craze",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=he7XlB8GZz4",
                 "duration": 1408,
-                "title": "What We Each Wear in a Week: 3 Daily Historical Fashion Wearers"
+                "title": "What We Each Wear in a Week: 3 Daily Historical Fashion Wearers",
+                "skip": [
+                    [
+                        467.0,
+                        533.0
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=xmaqrw6GJPM",
                 "duration": 459,
-                "title": "How to see vintage Levi's 501s | FASHION AS DESIGN"
+                "title": "How to see vintage Levi's 501s | FASHION AS DESIGN",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=mKBDvST_idg",
@@ -292,7 +319,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VY_yTQpkQeo",
                 "duration": 952,
-                "title": "The Instagrammers Who Wear 1940s Fashion Every Day / Vogue Patterns 1940 Catalogue"
+                "title": "The Instagrammers Who Wear 1940s Fashion Every Day / Vogue Patterns 1940 Catalogue",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=OEG_w5fudbY",
@@ -342,7 +371,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7rbatdzoA7c",
                 "duration": 2530,
-                "title": "Marella Agnelli & Valentino: The Making of a 1950s Fashion Icon"
+                "title": "Marella Agnelli & Valentino: The Making of a 1950s Fashion Icon",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=xOgzSOuRVWU",
@@ -357,7 +388,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dpxv6MvUr5M",
                 "duration": 845,
-                "title": "A Vintage Resellers Guide to Identifying Vintage Clothing - Ditch the Fast Fashion and Buy"
+                "title": "A Vintage Resellers Guide to Identifying Vintage Clothing - Ditch the Fast Fashion and Buy",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=c5QAagOJ5bA",
@@ -457,7 +490,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TDs-X-iOeSg",
                 "duration": 1281,
-                "title": "A day in 1882, getting dressed from dawn till night"
+                "title": "A day in 1882, getting dressed from dawn till night",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Tn5fzidDZTQ",
@@ -492,12 +527,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=OcOmKlBCWDs",
                 "duration": 1972,
-                "title": "1960s European vs American Fashion: A Tale of two Styles"
+                "title": "1960s European vs American Fashion: A Tale of two Styles",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=piP8GCOElzU",
                 "duration": 884,
-                "title": "Fashion Through History: Episode 4 – Elizabethans"
+                "title": "Fashion Through History: Episode 4 – Elizabethans",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=fuVU64m1sbw",
@@ -534,7 +573,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8lgB8cPuXIY",
                 "duration": 486,
-                "title": "1960s Style - What Women Wore in 1960s America"
+                "title": "1960s Style - What Women Wore in 1960s America",
+                "skip": [],
+                "skip_checked": 1790280952
             }
         ],
         "search_query": "vintage fashion history",

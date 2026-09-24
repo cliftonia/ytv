@@ -34,7 +34,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ll1-TXnloqs",
                 "duration": 1378,
-                "title": "Surfing Australia TV - Season 15 - Episode 1"
+                "title": "Surfing Australia TV - Season 15 - Episode 1",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=qckO8F6J93A",
@@ -49,7 +51,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zLOAnj6gDWQ",
                 "duration": 5028,
-                "title": "MasterChef Canada Season 8 Marathon | Episode 4 [4K]"
+                "title": "MasterChef Canada Season 8 Marathon | Episode 4 [4K]",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=iwtsMuHlTVE",
@@ -132,7 +136,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=n7r5JrS-C20",
                 "duration": 3489,
-                "title": "Chaos TV Returns for 2002 | Full Episode - Chaos TV - Ep 338 - 22/3/02"
+                "title": "Chaos TV Returns for 2002 | Full Episode - Chaos TV - Ep 338 - 22/3/02",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=hBJN8BOK4oI",
@@ -191,7 +197,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mEsiM7Mzqdk",
                 "duration": 498,
-                "title": "Bride Loves The Dress But Her Dad Says ABSOLUTELY Not | Say Yes To The Dress"
+                "title": "Bride Loves The Dress But Her Dad Says ABSOLUTELY Not | Say Yes To The Dress",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=T4nRlwkDRpg",
@@ -221,7 +229,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=3J6z-VhcPdE",
                 "duration": 4333,
-                "title": "Hidden Camera Investigations | 60 Minutes Full Episodes"
+                "title": "Hidden Camera Investigations | 60 Minutes Full Episodes",
+                "skip": [
+                    [
+                        1789.2,
+                        1791.6
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=5a12cT6ECac",
@@ -275,7 +290,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tjle7ArGJJ0",
                 "duration": 609,
-                "title": "Full SmackDown highlights: Sept. 11, 2026"
+                "title": "Full SmackDown highlights: Sept. 11, 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=PpGMpvjh_lQ",
@@ -290,7 +307,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cennGx1zQ-0",
                 "duration": 1782,
-                "title": "Full episode of : Hit scene ( Australian TV   March 1970 )"
+                "title": "Full episode of : Hit scene ( Australian TV   March 1970 )",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=bF7sIsnqdhY",
@@ -340,7 +359,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=L_-MmjYfUto",
                 "duration": 1910,
-                "title": "FINAL MATCH 🏆 No. 1 Aryna Sabalenka vs. No. 2 Elena Rybakina | Full Match Highlights | 202"
+                "title": "FINAL MATCH 🏆 No. 1 Aryna Sabalenka vs. No. 2 Elena Rybakina | Full Match Highlights | 202",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=RT0dv3MGLAI",
@@ -359,7 +380,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=tSAKzVP2IGk",
                 "duration": 1609,
-                "title": "Wild Kratts FULL EPISODE! | Stuck on Sharks | PBS KIDS"
+                "title": "Wild Kratts FULL EPISODE! | Stuck on Sharks | PBS KIDS",
+                "skip": [
+                    [
+                        0.0,
+                        5.1
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=SP0lMUqBrho",
@@ -420,12 +448,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=IL3ZlYowAJc",
                 "duration": 3311,
-                "title": "Elle McFeast: Roots tv episode. Australia"
+                "title": "Elle McFeast: Roots tv episode. Australia",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=qlat6xQCBSg",
                 "duration": 4511,
-                "title": "TV Patrol Livestream | January 15, 2026 Full Episode Replay"
+                "title": "TV Patrol Livestream | January 15, 2026 Full Episode Replay",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=I0lJXmJsGL4",
@@ -473,7 +505,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VQz0pD6sM18",
                 "duration": 1245,
-                "title": "COPS Classic: Police Respond During a Hurricane | Full Episode | COPS TV SHOW"
+                "title": "COPS Classic: Police Respond During a Hurricane | Full Episode | COPS TV SHOW",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=R2DU85qLfJQ",

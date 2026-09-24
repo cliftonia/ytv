@@ -26,7 +26,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=hc_9LJt_HHY",
                 "duration": 1417,
-                "title": "The Most UNHINGED Easter Eggs in Gaming History | Retro Gaming Documentary"
+                "title": "The Most UNHINGED Easter Eggs in Gaming History | Retro Gaming Documentary",
+                "skip": [
+                    [
+                        355.0,
+                        486.9
+                    ],
+                    [
+                        1140.6,
+                        1396.2
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=JWogqbP19Io",
@@ -38,7 +49,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=VvaK2x2V4zM",
                 "duration": 1048,
-                "title": "2026's Biggest Retro Convention! Midwest Gaming Classic"
+                "title": "2026's Biggest Retro Convention! Midwest Gaming Classic",
+                "skip": [
+                    [
+                        167.1,
+                        177.6
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z_1OIPhwKr0",
@@ -191,7 +209,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=gONKj7rVYmI",
                 "duration": 1148,
-                "title": "The NEW Way to Start a Successful Gaming Channel in 2026"
+                "title": "The NEW Way to Start a Successful Gaming Channel in 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=z76eNObdSt4",
@@ -201,7 +221,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4d9vj0IVXDk",
                 "duration": 778,
-                "title": "The Silicon Afterlife: Inside the Fight to Preserve Retro Gaming"
+                "title": "The Silicon Afterlife: Inside the Fight to Preserve Retro Gaming",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=L3AH0V7JvHI",
@@ -234,7 +256,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3hiDXrrADDM",
                 "duration": 1588,
-                "title": "The Insane Evolution of Handheld Gaming | Mini Documentary"
+                "title": "The Insane Evolution of Handheld Gaming | Mini Documentary",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=C_-9Rw5CJNE",
@@ -360,7 +384,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DUM2k46jF2c",
                 "duration": 944,
-                "title": "Inside the Ultimate Retro Computing & Gaming Lab – The Grand Tour of King's Lab"
+                "title": "Inside the Ultimate Retro Computing & Gaming Lab – The Grand Tour of King's Lab",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=UeRlns4y1-E",
@@ -422,7 +448,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1UrEFEFUFls",
                 "duration": 1120,
-                "title": "Kung Fu Chaos (Original Xbox) - Playthrough | Retro Gaming 2026"
+                "title": "Kung Fu Chaos (Original Xbox) - Playthrough | Retro Gaming 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=S3X8lp965Ok",
@@ -464,7 +492,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iTcY2Sh39KM",
                 "duration": 1208,
-                "title": "I Played 100 Years Of Nintendo!"
+                "title": "I Played 100 Years Of Nintendo!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=VP9AE3l_xG0",
@@ -538,7 +568,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=if5OCOSE8KA",
                 "duration": 1289,
-                "title": "A Look Around Sheffield Gaming Market - June 2026!"
+                "title": "A Look Around Sheffield Gaming Market - June 2026!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=8OFZWXVvcHo",
@@ -559,13 +591,6 @@
                 "url": "https://www.youtube.com/watch?v=il_x_6mNjLQ",
                 "duration": 1897,
                 "title": "The Easiest Emulation Setup on Windows"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G7ajzyrXeKs",
-                "duration": 535,
-                "title": "I Tested Every CLOUD GAMING APP - Which One Is Actually the Best?",
-                "skip": [],
-                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=VkxA2Vm251o",
@@ -593,14 +618,11 @@
                 "title": "Every Kingdom Is Hunting the King's Lost Son | BEASTLANDS | Full Movie 2026 | Fantasy Action | 4K"
             },
             {
-                "url": "https://www.youtube.com/watch?v=DkozalwDoyw",
-                "duration": 1338,
-                "title": "MY GAMING CONSOLE COLLECTION"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=MZURbDE64HQ",
                 "duration": 1268,
-                "title": "PSP Play Games And Movie Backups ARK 4 #psp #handheld #retrogaming"
+                "title": "PSP Play Games And Movie Backups ARK 4 #psp #handheld #retrogaming",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=dZTSAlH1NTY",

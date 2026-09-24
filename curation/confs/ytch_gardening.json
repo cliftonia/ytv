@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xEDze3MHaeo",
                 "duration": 374,
-                "title": "Couple Behind 'Gardening Gays' Shares Origin of Their Farm"
+                "title": "Couple Behind 'Gardening Gays' Shares Origin of Their Farm",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=K95DnzqJKi0",
@@ -26,7 +28,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=V_GoHrERGVY",
                 "duration": 1392,
-                "title": "Hydrangea Garden Tour 2026 / Northlawn Flower Farm & Gardens"
+                "title": "Hydrangea Garden Tour 2026 / Northlawn Flower Farm & Gardens",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=eWHunO7Vi5M",
@@ -46,7 +50,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=C4No4-DaVO8",
                 "duration": 840,
-                "title": "Creating the perfect planter for your home garden is easy! | Bauman's Farm and Garden"
+                "title": "Creating the perfect planter for your home garden is easy! | Bauman's Farm and Garden",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=DiybYJSTVp4",
@@ -85,7 +91,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mkEsLdNKlPM",
                 "duration": 1097,
-                "title": "30 ESSENTIAL Organic Farming Techniques For Small Farms & Market Gardens"
+                "title": "30 ESSENTIAL Organic Farming Techniques For Small Farms & Market Gardens",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=9hPYAMDq9_I",
@@ -95,12 +103,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=xFqecEtdGZ0",
                 "duration": 430,
-                "title": "Can we create the \"perfect\" farm? - Brent Loken"
+                "title": "Can we create the \"perfect\" farm? - Brent Loken",
+                "skip": [
+                    [
+                        403.1,
+                        429.1
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZmA8409tOI8",
                 "duration": 1819,
-                "title": "Simple Mountain Life | Rebuilding Our Garden and Starting Again"
+                "title": "Simple Mountain Life | Rebuilding Our Garden and Starting Again",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=dj6EIfDm9VQ",
@@ -117,7 +134,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-KjMZSmKBGY",
                 "duration": 1439,
-                "title": "New Plant Varieties and Combinations at Bauman’s Farm & Garden🌸"
+                "title": "New Plant Varieties and Combinations at Bauman’s Farm & Garden🌸",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=MQ8YUBK_q0U",
@@ -226,7 +245,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sJroXNjHAFI",
                 "duration": 2268,
-                "title": "Inside the Beautiful Gardens of a Historic Pennsylvania Farm | Garden Tour"
+                "title": "Inside the Beautiful Gardens of a Historic Pennsylvania Farm | Garden Tour",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Njucn01wv10",
@@ -236,7 +257,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2IMcONz7aK4",
                 "duration": 2034,
-                "title": "What's Growing in Our Huge Market Garden? | Waardenburg Family Farm"
+                "title": "What's Growing in Our Huge Market Garden? | Waardenburg Family Farm",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=6o08CNUOStI",
@@ -264,11 +287,6 @@
                 "title": "Terrace Farm Garden Tour | Home Gardening | Kitchen Farming",
                 "skip": [],
                 "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PqDxiMsJSr4",
-                "duration": 500,
-                "title": "Filipino-Owned Farm in Canada | Judy’s Tropical Garden"
             },
             {
                 "url": "https://www.youtube.com/watch?v=i_E5swyP-WQ",
@@ -323,7 +341,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8UzqvldrFvM",
                 "duration": 1244,
-                "title": "Build a farm, do some gardening, and harvest broccoli and cabbage to sell."
+                "title": "Build a farm, do some gardening, and harvest broccoli and cabbage to sell.",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=JmGKfNdhscY",
@@ -400,7 +420,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ANLKNoZ_b4c",
                 "duration": 386,
-                "title": "Can an Indoor Smart Garden Beat Outdoor Gardening? We Tested It | WSJ"
+                "title": "Can an Indoor Smart Garden Beat Outdoor Gardening? We Tested It | WSJ",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=oteTLZpiwlY",
@@ -425,7 +447,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SSSSPa0c53E",
                 "duration": 3810,
-                "title": "From Our Garden to the Farm Animals - Harvesting Fresh Food & Peaceful Farm Life"
+                "title": "From Our Garden to the Farm Animals - Harvesting Fresh Food & Peaceful Farm Life",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=wBnuGTMEsyU",
@@ -500,7 +524,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9INZha1NL9g",
                 "duration": 1278,
-                "title": "Peaceful Indian Village Life | Rural Life in India | Organic Farm & Garden Tour | Traditional Life"
+                "title": "Peaceful Indian Village Life | Rural Life in India | Organic Farm & Garden Tour | Traditional Life",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ld-rVefYAyI",

@@ -51,7 +51,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UEHhdHt9YvA",
                 "duration": 1784,
-                "title": "Restoration of Abandoned RONALDO’S LAMBORGHINI | Fully Restore an OLD Ronaldo’s Car"
+                "title": "Restoration of Abandoned RONALDO’S LAMBORGHINI | Fully Restore an OLD Ronaldo’s Car",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=s-ATAEtzjDU",
@@ -66,7 +68,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tfIrqYqp1FI",
                 "duration": 846,
-                "title": "ASMR Car Restoration |Can I Save This Rusted Rolls Royce Silver Cloud III?"
+                "title": "ASMR Car Restoration |Can I Save This Rusted Rolls Royce Silver Cloud III?",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=WtZbHPHnGQY",
@@ -83,7 +87,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NozfEKOvm6c",
                 "duration": 1443,
-                "title": "ASMR Car Restoration | 1900 Lancia Aurelia B20 GT 2500 | POV Full Rebuild #asmrrestoration"
+                "title": "ASMR Car Restoration | 1900 Lancia Aurelia B20 GT 2500 | POV Full Rebuild #asmrrestoration",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=h-eKaJFd_EI",
@@ -167,7 +173,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Xf2ZsHBEyJQ",
                 "duration": 1204,
-                "title": "ASMR Car Restoration! Full Restoration of a British Leyland Mini 1000 from Total Disrepair"
+                "title": "ASMR Car Restoration! Full Restoration of a British Leyland Mini 1000 from Total Disrepair",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=5vhgH8F4D-I",
@@ -187,7 +195,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zpqzkyu72po",
                 "duration": 893,
-                "title": "ASMR Car Restoration | Restoring a Forgotten Mack Hauler Bought from an 80-Year-Old for $1"
+                "title": "ASMR Car Restoration | Restoring a Forgotten Mack Hauler Bought from an 80-Year-Old for $1",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=JqaaaMroUOg",
@@ -217,7 +227,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=T6RmndrjK7Y",
                 "duration": 2001,
-                "title": "ASMR Car Restoration! Full Restoration Lamborghini Countach 1985 from Burnt Condition to L"
+                "title": "ASMR Car Restoration! Full Restoration Lamborghini Countach 1985 from Burnt Condition to L",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=h9qUFgPWXMY",
@@ -273,7 +285,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7KcsDNaN9P0",
                 "duration": 610,
-                "title": "I Found This Forgotten 1968 Iso Grifo Completely Rusted Away..Full Restoration #CarRestora"
+                "title": "I Found This Forgotten 1968 Iso Grifo Completely Rusted Away..Full Restoration #CarRestora",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=loFGFiXpjKI",
@@ -325,7 +339,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q3zj0_y-fa4",
                 "duration": 399,
-                "title": "ASMR Car Restoration — $200 Cursed Percy Train Thomas Rescue   Deep Clean + Rebuild + Test"
+                "title": "ASMR Car Restoration — $200 Cursed Percy Train Thomas Rescue   Deep Clean + Rebuild + Test",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=cEHrNIfWn8U",
@@ -335,7 +351,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=E9DVbC2-B8o",
                 "duration": 696,
-                "title": "Restoring an 80s Legend: Driving the Ford Sierra Cosworth | Cotswold Classic Car Restorati"
+                "title": "Restoring an 80s Legend: Driving the Ford Sierra Cosworth | Cotswold Classic Car Restorati",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=99v3DZhhyAE",
@@ -427,7 +445,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=9dhQNv49Cx4",
                 "duration": 499,
-                "title": "Richard Hammond Delivers a $1M Porsche to Jeremy Clarkson"
+                "title": "Richard Hammond Delivers a $1M Porsche to Jeremy Clarkson",
+                "skip": [
+                    [
+                        219.4,
+                        280.3
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=RU93Gz-Qb_o",
@@ -467,7 +492,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NF2CkeKVir0",
                 "duration": 881,
-                "title": "ASMR Car Restoration! 1965 Shelby Cobra from Abandoned to Factory New"
+                "title": "ASMR Car Restoration! 1965 Shelby Cobra from Abandoned to Factory New",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=7I5ivEhXAaM",

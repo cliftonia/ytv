@@ -29,7 +29,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8F9KT12EIlo",
                 "duration": 1323,
-                "title": "Extreme Bushcraft Camping | Building a Survival Shelter in the Wilderness"
+                "title": "Extreme Bushcraft Camping | Building a Survival Shelter in the Wilderness",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=rOwsdU4CNy4",
@@ -81,7 +83,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JITuu4uzzqs",
                 "duration": 2551,
-                "title": "Extreme Winter Survival in Deep Snow | 3 Days of Solo Bushcraft Camping"
+                "title": "Extreme Winter Survival in Deep Snow | 3 Days of Solo Bushcraft Camping",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=e65rRpTwEeY",
@@ -93,12 +97,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=iys_pmJSp9M",
                 "duration": 1546,
-                "title": "3 Days in Arctic Survival Shelter - Solo Bushcraft Camping & Blacksmithing."
+                "title": "3 Days in Arctic Survival Shelter - Solo Bushcraft Camping & Blacksmithing.",
+                "skip": [
+                    [
+                        1535.5,
+                        1545.6
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=K_dA7tQqgto",
                 "duration": 1831,
-                "title": "3 DAYS OF SURVIVAL IN A WINTER BLIZZARD — BUSHCRAFT IN THE WILD"
+                "title": "3 DAYS OF SURVIVAL IN A WINTER BLIZZARD — BUSHCRAFT IN THE WILD",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=GDCZvSuzarg",
@@ -138,7 +151,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WJaQMfrWyCc",
                 "duration": 635,
-                "title": "20+ Camping, Survival, and Bushcraft HACKS learned from YEARS in the Wilderness!"
+                "title": "20+ Camping, Survival, and Bushcraft HACKS learned from YEARS in the Wilderness!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=YbKSPjDgfX0",
@@ -148,7 +163,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cToxCjPkkUI",
                 "duration": 4997,
-                "title": "100-Day Survival Challenge in the African Wilderness – Last Person Standing Wins $500,000"
+                "title": "100-Day Survival Challenge in the African Wilderness – Last Person Standing Wins $500,000",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=682dDcNcCNM",
@@ -163,7 +180,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=oNxUsPCUWvU",
                 "duration": 1216,
-                "title": "Winter Camping in Snow Storm with Survival Shelter & Bushcraft Cot."
+                "title": "Winter Camping in Snow Storm with Survival Shelter & Bushcraft Cot.",
+                "skip": [
+                    [
+                        1184.3,
+                        1186.5
+                    ],
+                    [
+                        1190.1,
+                        1194.8
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=1TojezQWmac",
@@ -212,7 +240,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=aSaX5wXH-6E",
                 "duration": 836,
-                "title": "Solo Survival Camping 🌧️ | Building a Bushcraft Shelter in the Wild"
+                "title": "Solo Survival Camping 🌧️ | Building a Bushcraft Shelter in the Wild",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=KD5xB-Yj2lI",
@@ -232,7 +262,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=D49yg7TbpD4",
                 "duration": 856,
-                "title": "BUSHCRAFT Camping in Heavy Rain; Survival in the Wild. Caught in Rain. Tarp Shelter"
+                "title": "BUSHCRAFT Camping in Heavy Rain; Survival in the Wild. Caught in Rain. Tarp Shelter",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=00idjNP5Od0",
@@ -252,7 +284,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=C9iRPqQ8cPU",
                 "duration": 1672,
-                "title": "Winter Bushcraft & Camping: FULL GEAR LOADOUT"
+                "title": "Winter Bushcraft & Camping: FULL GEAR LOADOUT",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=ER3d-8E7yvU",
@@ -267,12 +301,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=nrGDtP-6uKo",
                 "duration": 586,
-                "title": "10 Survival and Bushcraft HACKS you probably didn't know!"
+                "title": "10 Survival and Bushcraft HACKS you probably didn't know!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=p3QkwI4-cLg",
                 "duration": 5172,
-                "title": "5 Days Alone Amazon Jungle Survival | No Food, Water or Shelter"
+                "title": "5 Days Alone Amazon Jungle Survival | No Food, Water or Shelter",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Hs4faliGXLE",
@@ -299,7 +337,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=7YtPB1UrwWc",
                 "duration": 2716,
-                "title": "5 Days Solo Survival in Bear Cove | No Food, Water, Shelter or Fire"
+                "title": "5 Days Solo Survival in Bear Cove | No Food, Water, Shelter or Fire",
+                "skip": [
+                    [
+                        129.3,
+                        280.9
+                    ],
+                    [
+                        2472.2,
+                        2503.7
+                    ],
+                    [
+                        2694.2,
+                        2703.9
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=nurErrXE-CQ",
@@ -428,7 +481,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=C9bWaoc2lX4",
                 "duration": 1698,
-                "title": "2 Days Camping by a Wild Lake | Bushcraft & Mushroom Foraging"
+                "title": "2 Days Camping by a Wild Lake | Bushcraft & Mushroom Foraging",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=q6IgJultFIw",

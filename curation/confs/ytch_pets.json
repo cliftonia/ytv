@@ -76,11 +76,6 @@
                 "title": "Why Did These Mongooses Help a Wild Dog Covered in Thousands of Ticks?”"
             },
             {
-                "url": "https://www.youtube.com/watch?v=nv9eH6H1JIU",
-                "duration": 1287,
-                "title": "A Safe Tent for Fati & Her Mother—Then Wild Animals Appear!"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Xrk2S4ZzwxQ",
                 "duration": 538,
                 "title": "Meet the Billionaire That Built The World’s Largest Animal Rescue (Anant Ambani)"
@@ -274,7 +269,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=YKqW9JgpRLE",
                 "duration": 1882,
-                "title": "Super Panda Rescues Rabbit Momo | Super Panda Rescue Team | Firefighter Story | BabyBus Ca"
+                "title": "Super Panda Rescues Rabbit Momo | Super Panda Rescue Team | Firefighter Story | BabyBus Ca",
+                "skip": [
+                    [
+                        2.1,
+                        9.0
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=t2cPZdpttVI",
@@ -313,7 +315,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=j3gtqDcG4yY",
                 "duration": 592,
-                "title": "Woody to the Rescue! 🤠🐴⭐ | Pixar's Toy Story | ‪‪@disneykids"
+                "title": "Woody to the Rescue! 🤠🐴⭐ | Pixar's Toy Story | ‪‪@disneykids",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=7h5-f9gDgLA",
@@ -350,12 +354,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=IJUAdPaANWw",
                 "duration": 2263,
-                "title": "Angry Bull's Rampage! Cow Family Rescue | Super Cow Saves the Day!"
+                "title": "Angry Bull's Rampage! Cow Family Rescue | Super Cow Saves the Day!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=NBvUjQYxEMM",
                 "duration": 250,
-                "title": "Roaring Lion Rescue Mission 🦁 The Creature Cases | Netflix Jr"
+                "title": "Roaring Lion Rescue Mission 🦁 The Creature Cases | Netflix Jr",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z4mtaEWCwnI",
@@ -448,7 +456,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=AZzANbxArds",
                 "duration": 588,
-                "title": "Barbie Doll Family Morning Routine & Animal Shelter Story"
+                "title": "Barbie Doll Family Morning Routine & Animal Shelter Story",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=UWkrNmzccTQ",
@@ -458,7 +468,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9eCqLzBWivM",
                 "duration": 5012,
-                "title": "2026 Action Movie:A thug massacres a village an avenger ambushes him and takes him down in"
+                "title": "2026 Action Movie:A thug massacres a village an avenger ambushes him and takes him down in",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=uohBIITgOY0",
@@ -493,7 +505,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=oNxUsPCUWvU",
                 "duration": 1216,
-                "title": "Winter Camping in Snow Storm with Survival Shelter & Bushcraft Cot."
+                "title": "Winter Camping in Snow Storm with Survival Shelter & Bushcraft Cot.",
+                "skip": [
+                    [
+                        1184.3,
+                        1186.5
+                    ],
+                    [
+                        1190.1,
+                        1194.8
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=NnKuhU5CLsU",
