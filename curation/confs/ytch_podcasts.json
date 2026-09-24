@@ -100,7 +100,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=bZrH9kLQvHA",
                 "duration": 4524,
-                "title": "Taylor Frankie Paul, Another Restraining Order? D4VD and Keffe D sued for Wrongful Death."
+                "title": "Taylor Frankie Paul, Another Restraining Order? D4VD and Keffe D sued for Wrongful Death.",
+                "skip": [
+                    [
+                        141.5,
+                        235.0
+                    ],
+                    [
+                        1423.9,
+                        1515.9
+                    ],
+                    [
+                        2188.2,
+                        2285.6
+                    ],
+                    [
+                        4490.8,
+                        4523.5
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=4K9RDZg4y7o",
@@ -156,12 +175,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=HXkC1NtUcgE",
                 "duration": 3318,
-                "title": "I’m moving in with Hailey Bieber"
+                "title": "I’m moving in with Hailey Bieber",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Nh2Mhynhh9c",
                 "duration": 4092,
-                "title": "The Horrors Of The Fox Hollow Farm Serial Killer"
+                "title": "The Horrors Of The Fox Hollow Farm Serial Killer",
+                "skip": [
+                    [
+                        565.4,
+                        682.7
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=gZ-UED-LOUw",
@@ -171,7 +199,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",
                 "duration": 5179,
-                "title": "The Missed Warnings That Led to 9/11 | Road to 9/11 | Full Special"
+                "title": "The Missed Warnings That Led to 9/11 | Road to 9/11 | Full Special",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=1mGo9KXT8Ps",
@@ -188,7 +218,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zxXBpdFeYF4",
                 "duration": 2953,
-                "title": "Gray Divorce (after 50) & Adult Children: The Fallout for the Family, with Oprah and Leadi"
+                "title": "Gray Divorce (after 50) & Adult Children: The Fallout for the Family, with Oprah and Leadi",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=flupGAB_iHs",
@@ -213,7 +245,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=qkwISstQQVw",
                 "duration": 7969,
-                "title": "The Rick Rubin Interview"
+                "title": "The Rick Rubin Interview",
+                "skip": [
+                    [
+                        705.0,
+                        724.0
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Q1Bebf3Y2rk",
@@ -230,7 +269,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=F-MEegYIWaM",
                 "duration": 4491,
-                "title": "Dr. Joe Dispenza: WATCH THIS To Rewire Your Brain & ATTRACT Anything You Want"
+                "title": "Dr. Joe Dispenza: WATCH THIS To Rewire Your Brain & ATTRACT Anything You Want",
+                "skip": [
+                    [
+                        27.7,
+                        87.6
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=e5Oqk_Y-Jm4",
@@ -305,7 +351,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iLPIu0ypefk",
                 "duration": 2697,
-                "title": "Trump stressing you out? Dan Harris on how ACTION absorbs anxiety to DEFEND DEMOCRACY"
+                "title": "Trump stressing you out? Dan Harris on how ACTION absorbs anxiety to DEFEND DEMOCRACY",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=aiRWFMtfu94",
@@ -396,7 +444,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=RoldOz5YyAw",
                 "duration": 3694,
-                "title": "Why The Movies Don't Feel The Same Anymore"
+                "title": "Why The Movies Don't Feel The Same Anymore",
+                "skip": [
+                    [
+                        302.1,
+                        308.1
+                    ],
+                    [
+                        3576.0,
+                        3693.0
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=VfHA7KPkZ30",
@@ -505,7 +564,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pVO8dsQQAKA",
                 "duration": 4118,
-                "title": "Ep 121: Pop The Balloon Or Find Love | With Arlette Amuli"
+                "title": "Ep 121: Pop The Balloon Or Find Love | With Arlette Amuli",
+                "skip": [],
+                "skip_checked": 1790280952
             }
         ],
         "search_query": "long form interview podcast",
