@@ -29,7 +29,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UySJY1ZaRDM",
                 "duration": 3119,
-                "title": "The True Scale of the Cosmos | Beyond Our Earth | Free Documentary Space"
+                "title": "The True Scale of the Cosmos | Beyond Our Earth | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=34dB_Dlv_1U",
@@ -64,7 +66,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=uE2j0CxDN0k",
                 "duration": 4655,
-                "title": "Physics Still Has No Idea What Space Is Made Of | Quantum Physics Documentary 2026"
+                "title": "Physics Still Has No Idea What Space Is Made Of | Quantum Physics Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=4wQSwNvVI5I",
@@ -94,7 +98,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yfc41xYITPE",
                 "duration": 3069,
-                "title": "EXTREME HEAT! | How the Universe Works | Science Channel"
+                "title": "EXTREME HEAT! | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=foSSrf5LiMg",
@@ -136,7 +142,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=s4qCmgn5PU4",
                 "duration": 4733,
-                "title": "The Closest Black Hole to Earth Is Closer Than We Thought | Space Documentary 2026"
+                "title": "The Closest Black Hole to Earth Is Closer Than We Thought | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=_fcsdmZuA7Y",
@@ -151,7 +159,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=feLUycJF318",
                 "duration": 4705,
-                "title": "A Journey to the Edge of the Unexplored | Space Documentary 2025"
+                "title": "A Journey to the Edge of the Unexplored | Space Documentary 2025",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=GdeCxgNp11o",
@@ -178,7 +188,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=o6mRLwyDFDY",
                 "duration": 2577,
-                "title": "The Artemis Program: Return to the Moon | Free Documentary Space"
+                "title": "The Artemis Program: Return to the Moon | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=bXXBvHoWQo8",
@@ -222,7 +234,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=NEHssvf9goQ",
                 "duration": 3020,
-                "title": "The Most Bizarre Exoplanets We've Ever Found"
+                "title": "The Most Bizarre Exoplanets We've Ever Found",
+                "skip": [
+                    [
+                        2973.0,
+                        3019.4
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Mz86UFPMC20",
@@ -247,7 +266,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tUXGG54jpFQ",
                 "duration": 4406,
-                "title": "The Most Mind Blowing James Webb Discoveries of 2026"
+                "title": "The Most Mind Blowing James Webb Discoveries of 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=8ZHyKBr13no",
@@ -267,7 +288,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iqJjTeYv5-M",
                 "duration": 3509,
-                "title": "Everything You Want to Know About Planets | How the Universe Works | Science Channel"
+                "title": "Everything You Want to Know About Planets | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=HPA4z4K_DX0",
@@ -391,7 +414,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Cb0n1Gq2cvk",
                 "duration": 3785,
-                "title": "Newest James Webb Telescope Discovery Just Revealed The True Scale of the Universe!"
+                "title": "Newest James Webb Telescope Discovery Just Revealed The True Scale of the Universe!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=hh7wfElw4g0",
@@ -529,7 +554,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0rHUDWjR5gg",
                 "duration": 732,
-                "title": "Introduction to Astronomy: Crash Course Astronomy #1"
+                "title": "Introduction to Astronomy: Crash Course Astronomy #1",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=H7iWCrXbmqY",

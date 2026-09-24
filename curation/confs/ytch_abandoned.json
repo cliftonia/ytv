@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bnKLBXsw4qo",
                 "duration": 4173,
-                "title": "8 Most Disturbing Encounters Urban Explorers Had in Abandoned Buildings"
+                "title": "8 Most Disturbing Encounters Urban Explorers Had in Abandoned Buildings",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Uysh7FlV3-s",
@@ -84,11 +86,6 @@
                 "title": "6 Times Urban Explorers Had Horrifying Encounters in Abandoned Places"
             },
             {
-                "url": "https://www.youtube.com/watch?v=po28Wd-ebPQ",
-                "duration": 1884,
-                "title": "NEVER seen before! You won't believe what we discover in this abandoned house"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=CE06MVV0vAM",
                 "duration": 2225,
                 "title": "Main Street America - The ABANDONED Neighborhood of 12 Custom MANSIONS"
@@ -101,7 +98,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SzstmH-pnvA",
                 "duration": 2173,
-                "title": "ABANDONED Mansion With Passports, Money And IDs Left Behind"
+                "title": "ABANDONED Mansion With Passports, Money And IDs Left Behind",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=27ufxzXOjqM",
@@ -173,17 +172,53 @@
             {
                 "url": "https://www.youtube.com/watch?v=ejB4ho3UlEE",
                 "duration": 1426,
-                "title": "A Night Exploring Abandoned Buildings in East St. Louis!"
+                "title": "A Night Exploring Abandoned Buildings in East St. Louis!",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=sgkw8IItWIA",
                 "duration": 1808,
-                "title": "The Abandoned Casino Ghost Ship (Money still inside) Stuck in Florida's Sea"
+                "title": "The Abandoned Casino Ghost Ship (Money still inside) Stuck in Florida's Sea",
+                "skip": [
+                    [
+                        740.0,
+                        889.4
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=0xEFA6ubdRI",
                 "duration": 3959,
-                "title": "Exploring the Most Haunted City in America w/ Wendigoon"
+                "title": "Exploring the Most Haunted City in America w/ Wendigoon",
+                "skip": [
+                    [
+                        539.6,
+                        617.0
+                    ],
+                    [
+                        844.3,
+                        864.1
+                    ],
+                    [
+                        1578.9,
+                        1631.3
+                    ],
+                    [
+                        2114.1,
+                        2133.3
+                    ],
+                    [
+                        3733.5,
+                        3807.0
+                    ],
+                    [
+                        3927.1,
+                        3944.8
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=svd8KEmlbnc",
@@ -230,7 +265,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=12f7B4Nwjqs",
                 "duration": 608,
-                "title": "10 Abandoned Places in Arizona \"DON'T GO ALONE\""
+                "title": "10 Abandoned Places in Arizona \"DON'T GO ALONE\"",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=rf8IJ9jhFJ4",
@@ -250,7 +287,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7ZihkcZudQc",
                 "duration": 1441,
-                "title": "Heartbreaking ABANDONED House With EVERYTHING Left | 2 Cars In Garage"
+                "title": "Heartbreaking ABANDONED House With EVERYTHING Left | 2 Cars In Garage",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=RexcREMkQpU",
@@ -302,12 +341,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z6pMGfOZSVQ",
                 "duration": 3308,
-                "title": "Someone is Trying to Hurt Explorers at This Abandoned Mansion | Homemade Traps Everywhere"
+                "title": "Someone is Trying to Hurt Explorers at This Abandoned Mansion | Homemade Traps Everywhere",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=El-IS_GufIc",
                 "duration": 2577,
-                "title": "Exploring Scotland's District Asylums: Abandoned Scotland 2"
+                "title": "Exploring Scotland's District Asylums: Abandoned Scotland 2",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=wv0ZI35FkiY",
@@ -334,7 +377,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mGAyX3Mp6pg",
                 "duration": 3157,
-                "title": "4 Disturbing Urban Exploration Stories (URBEX)"
+                "title": "4 Disturbing Urban Exploration Stories (URBEX)",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=IhpoIsjDv18",
@@ -391,7 +436,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JYOz6Fzha-Y",
                 "duration": 1180,
-                "title": "ABANDONED Murder Mansion (EVERYTHING Left Behind Inside)"
+                "title": "ABANDONED Murder Mansion (EVERYTHING Left Behind Inside)",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=eRFp4tIIzlE",
@@ -473,7 +520,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DJ5P-4q1RkE",
                 "duration": 2068,
-                "title": "Exploring a Toxic Abandoned Indoor Waterpark | Stuck in Time Since 2020..."
+                "title": "Exploring a Toxic Abandoned Indoor Waterpark | Stuck in Time Since 2020...",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=9ZrWe20wAD0",
@@ -493,7 +542,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=dzQE86uZWzE",
                 "duration": 3168,
-                "title": "Investigating the Mall No One Has Entered in 13 Years…"
+                "title": "Investigating the Mall No One Has Entered in 13 Years…",
+                "skip": [
+                    [
+                        455.7,
+                        539.7
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=gupFdMesp5k",

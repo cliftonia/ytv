@@ -36,12 +36,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=gIbSEScdV2o",
                 "duration": 1000,
-                "title": "Trump Makes 9/11 About Himself, A.I. Ready to Kill Us & Jimmy to Interview James Talarico"
+                "title": "Trump Makes 9/11 About Himself, A.I. Ready to Kill Us & Jimmy to Interview James Talarico",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=pbMPgtqJ42M",
                 "duration": 586,
-                "title": "The FCC keeps another Talarico interview off late night"
+                "title": "The FCC keeps another Talarico interview off late night",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Bsx_YubufG0",
@@ -66,7 +70,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Cx1eVNg2I_4",
                 "duration": 1350,
-                "title": "Stephen Colbert Teases Future Career Plans, Almost Injured an Audience Member with a Segwa"
+                "title": "Stephen Colbert Teases Future Career Plans, Almost Injured an Audience Member with a Segwa",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZaZkn7ihS9o",
@@ -86,7 +92,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lHRtVIVq26g",
                 "duration": 875,
-                "title": "Cillian Murphy Reveals What Peaky Blinders Fans Yell at Him, Talks Bringing Series to the"
+                "title": "Cillian Murphy Reveals What Peaky Blinders Fans Yell at Him, Talks Bringing Series to the",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=UvbB9uUuXzI",
@@ -101,7 +109,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=PmZjaYdS3fA",
                 "duration": 1303,
-                "title": "Jimmy Kimmel’s Full Interview with Kanye West"
+                "title": "Jimmy Kimmel’s Full Interview with Kanye West",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=a7BSGdyjAL4",
@@ -148,7 +158,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NIE26AHB5gA",
                 "duration": 456,
-                "title": "Steven Seagal full interview with Jimmy Kimmel (2012)"
+                "title": "Steven Seagal full interview with Jimmy Kimmel (2012)",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=M26OySv2lP0",
@@ -207,7 +219,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=BBGRcYmbewM",
                 "duration": 1185,
-                "title": "Trump Says He Changed the Grass Growing Around Washington, D.C."
+                "title": "Trump Says He Changed the Grass Growing Around Washington, D.C.",
+                "skip": [
+                    [
+                        234.5,
+                        271.2
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=YG5fvuXl1yk",
@@ -261,7 +280,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zW9oaA138lE",
                 "duration": 878,
-                "title": "Trump Roasted by King Charles, Lindsey Graham Wants YOU to Pay for Trump's Ballroom: A Clo"
+                "title": "Trump Roasted by King Charles, Lindsey Graham Wants YOU to Pay for Trump's Ballroom: A Clo",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=n6dpzerZw8U",
@@ -276,7 +297,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=BmKWlHuf0gY",
                 "duration": 955,
-                "title": "Trump Claims Communists Want to \"Blow Up\" Mount Rushmore"
+                "title": "Trump Claims Communists Want to \"Blow Up\" Mount Rushmore",
+                "skip": [
+                    [
+                        204.3,
+                        236.5
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=QwrXCWApQxw",
@@ -318,7 +346,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cQyaYUBzG7g",
                 "duration": 835,
-                "title": "Jake Johnson Was a Subway Busking Clown in NYC Before Becoming an Actor"
+                "title": "Jake Johnson Was a Subway Busking Clown in NYC Before Becoming an Actor",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=avdi1FxlX3Y",
@@ -348,7 +378,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9wD80NHJaI4",
                 "duration": 667,
-                "title": "Shane Gillis and Steve Gerben Talk SNL, Being Terrible Car Salesmen and Filming Tires Seas"
+                "title": "Shane Gillis and Steve Gerben Talk SNL, Being Terrible Car Salesmen and Filming Tires Seas",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=GL_Rljo5LIs",
@@ -415,7 +447,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Rdu_8IeY9I4",
                 "duration": 325,
-                "title": "Michael McIntyre’s BIG SHOW interview 2026"
+                "title": "Michael McIntyre’s BIG SHOW interview 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=KUJHbbXJLQU",
@@ -425,7 +459,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XRIjAXVIIhY",
                 "duration": 1133,
-                "title": "John Mulaney Tells Seth About His Eventful Year"
+                "title": "John Mulaney Tells Seth About His Eventful Year",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vh-qgOX8MhQ",
@@ -484,7 +520,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=oh7DPSP65JA",
                 "duration": 507,
-                "title": "Why CBS Didn't Broadcast Stephen Colbert's Interview With James Talarico"
+                "title": "Why CBS Didn't Broadcast Stephen Colbert's Interview With James Talarico",
+                "skip": [
+                    [
+                        15.0,
+                        94.9
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=TA6DgOvyP0w",
@@ -504,7 +547,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=X9PAAlnvz7U",
                 "duration": 1084,
-                "title": "Sotheby's to Offer One of the Largest and Most Complete T. Rex Fossils for $30M"
+                "title": "Sotheby's to Offer One of the Largest and Most Complete T. Rex Fossils for $30M",
+                "skip": [
+                    [
+                        165.3,
+                        199.3
+                    ]
+                ],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ojj68i8A0bc",
