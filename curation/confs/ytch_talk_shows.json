@@ -50,7 +50,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Bsx_YubufG0",
                 "duration": 825,
-                "title": "Trump Bribes Americans For Votes, Brags About Crowd Size to Empty Seats & Our Talarico FCC"
+                "title": "Trump Bribes Americans For Votes, Brags About Crowd Size to Empty Seats & Our Talarico FCC",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=TpFj3Q8vrfQ",
@@ -60,7 +62,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=o_qH0xDluOM",
                 "duration": 903,
-                "title": "Jimmy Kimmel Recaps Trump’s Crazy Summer, Our Country Still Being a Mess & Our 4,000th Sho"
+                "title": "Jimmy Kimmel Recaps Trump’s Crazy Summer, Our Country Still Being a Mess & Our 4,000th Sho",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=3dZ2sYvpjCg",
@@ -126,7 +130,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nkX_-8rXGH4",
                 "duration": 397,
-                "title": "Seth Meyers Surprises His Kids with a Late Night Interview"
+                "title": "Seth Meyers Surprises His Kids with a Late Night Interview",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=vwUCTIqsURo",
@@ -175,7 +181,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GFeHygcGwSc",
                 "duration": 483,
-                "title": "Zendaya & Tom Holland Are The Perfect Couple | Extended Interview | The Graham Norton Show"
+                "title": "Zendaya & Tom Holland Are The Perfect Couple | Extended Interview | The Graham Norton Show",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=LZnx9caKOpw",
@@ -246,7 +254,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YxrypZaTONA",
                 "duration": 751,
-                "title": "Stavros Halkias Would Own a Diner If He Wasn’t in Show Business (Extended)"
+                "title": "Stavros Halkias Would Own a Diner If He Wasn’t in Show Business (Extended)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=95vOu4LxaQk",
@@ -395,7 +405,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VibolxIvAA8",
                 "duration": 1289,
-                "title": "A Closer Look Back: RFK Jr.'s Obsession with Sperm Counts, Eating Roadkill and Health Care"
+                "title": "A Closer Look Back: RFK Jr.'s Obsession with Sperm Counts, Eating Roadkill and Health Care",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=APau0E48cpo",
@@ -571,12 +583,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=N8xOmH-dvGw",
                 "duration": 1242,
-                "title": "Colin Kaepernick Continues \"The Perilous Fight\" 10 Years After Taking a Knee | The Daily S"
+                "title": "Colin Kaepernick Continues \"The Perilous Fight\" 10 Years After Taking a Knee | The Daily S",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ikpl_QCIsKQ",
                 "duration": 720,
-                "title": "Lena Dunham Confronts Seth, Reminisces on Writing Girls at 23"
+                "title": "Lena Dunham Confronts Seth, Reminisces on Writing Girls at 23",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pTbALzICA6c",
@@ -586,7 +602,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=8dW5crX2CtI",
                 "duration": 902,
-                "title": "Trump Promotes Unprecedented White House UFC Fight"
+                "title": "Trump Promotes Unprecedented White House UFC Fight",
+                "skip": [
+                    [
+                        148.8,
+                        187.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             }
         ],
         "search_query": "late night talk show full interview",

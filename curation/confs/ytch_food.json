@@ -24,7 +24,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Zkq6qYNyIaA",
                 "duration": 2844,
-                "title": "🇹🇷 Istanbul Turkey 2026 Viral Turkish Street Foods Tour | Shocking Prices, 4K Walking Tour Sep. 2026"
+                "title": "🇹🇷 Istanbul Turkey 2026 Viral Turkish Street Foods Tour | Shocking Prices, 4K Walking Tour Sep. 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z-piKcC9Y20",
@@ -112,7 +114,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=el9PBqQg6zA",
                 "duration": 1123,
-                "title": "Crazy Food Tour in Rabat 🇲🇦 Unique Street Food of Morocco"
+                "title": "Crazy Food Tour in Rabat 🇲🇦 Unique Street Food of Morocco",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ddWFEuAMn9s",
@@ -191,7 +195,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=AQB1NGTQUTY",
                 "duration": 4222,
-                "title": "AWESOME! 18 SUPER FAMOUS BANGKOK STREET FOOD YOU MUST TRY AT LEAST ONCE | THAILAND STREET FOOD"
+                "title": "AWESOME! 18 SUPER FAMOUS BANGKOK STREET FOOD YOU MUST TRY AT LEAST ONCE | THAILAND STREET FOOD",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=CoUkhgfHzOA",
@@ -231,7 +237,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8bzcL10M6wY",
                 "duration": 2545,
-                "title": "MANILA PHILIPPINES Walking & Street Food Tour - QUIAPO MARKET 🇵🇭 Manila City 2026"
+                "title": "MANILA PHILIPPINES Walking & Street Food Tour - QUIAPO MARKET 🇵🇭 Manila City 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=GMbXj3rbG0o",
@@ -253,7 +261,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=L2LF3ZuXI-c",
                 "duration": 1326,
-                "title": "Tokyo Street Food in a Local Neighborhood Most Tourists Miss"
+                "title": "Tokyo Street Food in a Local Neighborhood Most Tourists Miss",
+                "skip": [
+                    [
+                        48.5,
+                        57.1
+                    ],
+                    [
+                        145.7,
+                        241.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=9LjvaIifKjU",
@@ -341,11 +360,6 @@
                 "url": "https://www.youtube.com/watch?v=u4VKdjbZJ5I",
                 "duration": 1362,
                 "title": "Manila After Midnight!! Filipino Street Food After Dark!!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e6Ma50govSo",
-                "duration": 3928,
-                "title": "Amazing Cambodian Street Food Tour 2026!! Walk Explore In Phnom Penh Traditional Market Fresh Food"
             },
             {
                 "url": "https://www.youtube.com/watch?v=FWe16Fmnh3k",
@@ -444,13 +458,6 @@
                 "title": "$100 Thailand Street Food Challenge!! Budget Bombshell!!"
             },
             {
-                "url": "https://www.youtube.com/watch?v=SVbUJikqoNc",
-                "duration": 1044,
-                "title": "Noida Sector 76 Street Food Tour Part 1 | Chowmein, Dora  Pancakes & more |  Veggie Paaji",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=iVsn8X5K7pw",
                 "duration": 2884,
                 "title": "Ultimate MALAYSIAN STREET FOOD in Penang!! 🇲🇾 5 MUST-EAT Foods in Penang, Malaysia!!",
@@ -482,7 +489,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=feuv2_fmRC4",
                 "duration": 1541,
-                "title": "$100 Japanese Street Food Challenge in Kyoto!!"
+                "title": "$100 Japanese Street Food Challenge in Kyoto!!",
+                "skip": [
+                    [
+                        469.6,
+                        550.4
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=cs8gno6z0qk",
@@ -521,7 +535,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FZorlwgnW0Q",
                 "duration": 3783,
-                "title": "CAMBODIA’S EVENING FOOD PARADISE 🇰🇭  Phnom Penh Riverside Street Food Tour 2026"
+                "title": "CAMBODIA’S EVENING FOOD PARADISE 🇰🇭  Phnom Penh Riverside Street Food Tour 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=PJTLqfLWME8",
@@ -559,7 +575,9 @@
                 "title": "Amazing Vietnamese Breakfast Street Food Tour",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pqIpLMgJckc",
@@ -623,7 +641,14 @@
                 "title": "EPIC Bangkok 24 Hour Food Tour | Breakfast, Lunch and Dinner in Thailand",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [
+                    [
+                        173.1,
+                        235.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=p7Bp3aOHfg8",
@@ -631,7 +656,9 @@
                 "title": "Most Popular Vietnamese Street Food Collection 2026!  Breakfast Saigon Edition",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=h7rRb1IajsE",
@@ -837,7 +864,9 @@
                 "title": "PAKISTAN’S CRAZIEST Desi Breakfast Culture! 😱 Saag Paratha & Roadside Nashta | Street Food Pakistan",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=CvZr8SDa6Mo",
@@ -855,7 +884,9 @@
                 "title": "Ultimate Pakistani Street Food Tour | INSANE Roadside Breakfast Collection | Huge Combo Street Food",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=tVsU861RfY0",
@@ -965,7 +996,9 @@
                 "title": "Hong Kong Street Food :The Quick Lunch Boxes of Chopped Roasted Goose ,Chicken & Pork | Kennedy Town",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ahEesHYyyvk",
@@ -973,7 +1006,9 @@
                 "title": "Exploring Mumbai's Busiest Street Food Market | Street Eats | Bon Appétit",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=CYRNoOQKpk8",
@@ -1041,7 +1076,14 @@
                 "title": "Paris Street Food!! 10 CHEAP EATS You Can't Miss!!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [
+                    [
+                        439.9,
+                        451.9
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=sY-sBjokoyU",
@@ -1093,7 +1135,9 @@
                 "title": "Market tour in Vietnam and then cooking lunch. #vietnammarket #vegatables #travelingforfood",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=XPSLug5FlDE",
@@ -1159,7 +1203,9 @@
                 "title": "Reading Terminal Market FOOD TOUR - Huge PASTRAMI SANDWICH + Amish Breakfast in Philadelphia!!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=gBHUT6b0jzY",
@@ -1201,7 +1247,9 @@
                 "title": "Exploring Kuala Lumpur’s Street Food | Lunch Rush to Evening Market | Malaysia 🇲🇾",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=OkSXxuooRNE",
@@ -1269,7 +1317,9 @@
                 "title": "Golden Rice Lunch Boxes With Next Level Fried Chicken Night Market Feast",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=OzVyCA6SZIo",
@@ -1375,7 +1425,9 @@
                 "title": "Athens11: LUNCH in the CENTRAL MARKET!!!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=CJFq3SLFubw",
@@ -1391,7 +1443,9 @@
                 "title": "Food Tour at BRIDGETOWNE NIGHT MARKET | Mercato Centrale Street Food | Pasig City",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=S2C8KgCT3QI",
@@ -1473,7 +1527,9 @@
                 "title": "🐵 [HD #CEBU 🇵🇭 ]      COLON NIGHT MARKET IS BACK! 🌙 Cebu City Night Market & Food Hub 2026",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=hH4mrvxKEzk",
@@ -1543,7 +1599,9 @@
                 "title": "CEBU NIGHT MARKET Street Food Tour | BUDGET Dining at Cebu City Philippines",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=sELiQ3wgR18",
@@ -1645,7 +1703,9 @@
                 "title": "Amazing Cambodia Food Vlog @ Night & Morning - Cambodia Market Street Food",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=5TgX1_ZBaR0",
@@ -1653,7 +1713,9 @@
                 "title": "Pattaya 🇹🇭: Jomtien Night Market 2026 | Real Vibe & Street Food Prices (POV Walk)",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=i_TySfeR5FY",
@@ -1753,7 +1815,9 @@
                 "title": "Wonderful Cambodia Street Food 2026 - Evening Walking Tour​Chaktomuk Night Market, Phnom Penh #1305",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=bTt2dvrGGH8",
@@ -1779,7 +1843,9 @@
                 "title": "RICHMOND NIGHTMARKET 2026",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=OXIhbBLdFhw",

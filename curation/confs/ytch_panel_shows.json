@@ -44,7 +44,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-SFDO5wublc",
                 "duration": 1752,
-                "title": "QI FULL EPISODE! 'Death' Episode 5 D Sean Lock, Jeremy Hardy & Clive Anderson"
+                "title": "QI FULL EPISODE! 'Death' Episode 5 D Sean Lock, Jeremy Hardy & Clive Anderson",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=G8h98p3rmVc",
@@ -56,7 +58,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lEMbQDCjhYY",
                 "duration": 1765,
-                "title": "QI FULL EPISODE! 'Differences' Episode 7, Series D Jo Brand, Julian Clary & Dara Ó Briain"
+                "title": "QI FULL EPISODE! 'Differences' Episode 7, Series D Jo Brand, Julian Clary & Dara Ó Briain",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=wfb5dXOcJpo",
@@ -98,7 +102,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=t-KrESaN4rw",
                 "duration": 1735,
-                "title": "QI Series E Episode 2: Electricity with Jo Brand, Rich Hall & Sean Lock"
+                "title": "QI Series E Episode 2: Electricity with Jo Brand, Rich Hall & Sean Lock",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=y-EfThPWtNE",
@@ -118,7 +124,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=x6UJEmT5rfU",
                 "duration": 1735,
-                "title": "QI FULL EPISODE! 'Everything' Series E Episode 6 With Jeremy Clarkson & Vic Reeves and Oth"
+                "title": "QI FULL EPISODE! 'Everything' Series E Episode 6 With Jeremy Clarkson & Vic Reeves and Oth",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=TAbdHRns4qg",
@@ -240,7 +248,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=j2o3TDH1Xr4",
                 "duration": 2602,
-                "title": "QI SERIES R, Episode 12! Full Episode With Sandi Toksvig, Holly Walsh, Alan Davies and Oth"
+                "title": "QI SERIES R, Episode 12! Full Episode With Sandi Toksvig, Holly Walsh, Alan Davies and Oth",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=tT58meUXWFY",
@@ -310,7 +320,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ETBG1behPo4",
                 "duration": 2665,
-                "title": "QI Series S Episode 10 FULL EPISODE | With Jen Brister, Jimmy Carr & Chris McCausland"
+                "title": "QI Series S Episode 10 FULL EPISODE | With Jen Brister, Jimmy Carr & Chris McCausland",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ex8GUX53RAo",
@@ -356,7 +368,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yhvghiblOug",
                 "duration": 1120,
-                "title": "QI MISTAKES! Historical Blunders And Things Gone WRONG!"
+                "title": "QI MISTAKES! Historical Blunders And Things Gone WRONG!",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=NIi1GZBtIpU",
@@ -412,7 +426,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=1DFgvoNOKf0",
                 "duration": 295,
-                "title": "What's The Difference Between \"Um\" And \"Err\"? | QI"
+                "title": "What's The Difference Between \"Um\" And \"Err\"? | QI",
+                "skip": [
+                    [
+                        269.8,
+                        294.3
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=H08HGJUiZ_I",
@@ -427,7 +448,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vZl_pbGh_4E",
                 "duration": 2137,
-                "title": "QI vs DICTATORS! Funny and Interesting Historical Rounds!"
+                "title": "QI vs DICTATORS! Funny and Interesting Historical Rounds!",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=0N5b3BwDtUw",
@@ -508,7 +531,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Lx0YCzhVdKM",
                 "duration": 261,
-                "title": "What's The Point In Half A Vasectomy? | QI"
+                "title": "What's The Point In Half A Vasectomy? | QI",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Y2GmMmKLFh8",
@@ -525,7 +550,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=8oRXWJ5xWzc",
                 "duration": 401,
-                "title": "Behind-The-Scenes Unbroadcastable Banter | QI"
+                "title": "Behind-The-Scenes Unbroadcastable Banter | QI",
+                "skip": [
+                    [
+                        376.0,
+                        400.4
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=u_v8sW-lSI0",

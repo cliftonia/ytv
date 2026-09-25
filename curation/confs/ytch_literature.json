@@ -34,7 +34,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=anhjYj1n2j4",
                 "duration": 538,
-                "title": "The Last Lesson | The Story That Will Change the Way You Think #audiobook #alphonsedaudet"
+                "title": "The Last Lesson | The Story That Will Change the Way You Think #audiobook #alphonsedaudet",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=4_l8be-B6yQ",
@@ -83,7 +85,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SEvkvmOxSss",
                 "duration": 2619,
-                "title": "As a Man Thinketh - James Allen | Full Audiobook (Unabridged)"
+                "title": "As a Man Thinketh - James Allen | Full Audiobook (Unabridged)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=AxFdeZER8Eg",
@@ -100,7 +104,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mz6o8b2bFd0",
                 "duration": 379,
-                "title": "'The King of Kindergarten' read by Terry Crews"
+                "title": "'The King of Kindergarten' read by Terry Crews",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=PDgu25Dsv34",
@@ -145,7 +151,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-CCWmJtsvBQ",
                 "duration": 833,
-                "title": "The Emperor's New Clothes - A Lesson in Honesty Over Conformity"
+                "title": "The Emperor's New Clothes - A Lesson in Honesty Over Conformity",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=xaIop7lmqhY",
@@ -160,7 +168,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=YaDvRdLMkHs",
                 "duration": 534,
-                "title": "Existentialism: Crash Course Philosophy #16"
+                "title": "Existentialism: Crash Course Philosophy #16",
+                "skip": [
+                    [
+                        3.4,
+                        9.0
+                    ],
+                    [
+                        488.6,
+                        505.8
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=afLeOefHKG4",
@@ -230,7 +249,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qrDqDT0GBSw",
                 "duration": 1245,
-                "title": "Lesson 1: The Fundamentals of Success | Napoleon Hill’s Law of Success"
+                "title": "Lesson 1: The Fundamentals of Success | Napoleon Hill’s Law of Success",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=c0KYU2j0TM4",
@@ -284,7 +305,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qzoIAJYPQwo",
                 "duration": 2576,
-                "title": "Seth Godin – Leadership vs. Management - What it means to make a difference"
+                "title": "Seth Godin – Leadership vs. Management - What it means to make a difference",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=yHKKtxliYaY",
@@ -311,17 +334,32 @@
             {
                 "url": "https://www.youtube.com/watch?v=zNBdKrqM1HA",
                 "duration": 1929,
-                "title": "Online Course Creation with AI Notes & Budget Studio Setup for Teachers!"
+                "title": "Online Course Creation with AI Notes & Budget Studio Setup for Teachers!",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=lUjoFzT0VNI",
                 "duration": 956,
-                "title": "Becoming Who You Really Are - The Philosophy of Friedrich Nietzsche"
+                "title": "Becoming Who You Really Are - The Philosophy of Friedrich Nietzsche",
+                "skip": [
+                    [
+                        0.0,
+                        11.9
+                    ],
+                    [
+                        825.5,
+                        936.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=95ovIJ3dsNk",
                 "duration": 963,
-                "title": "How childhood trauma affects health across a lifetime | Nadine Burke Harris | TED"
+                "title": "How childhood trauma affects health across a lifetime | Nadine Burke Harris | TED",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=r-9L2-aVR4I",
@@ -375,7 +413,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=uLN6IdRtDhg",
                 "duration": 3755,
-                "title": "Advanced Vocabulary in 60 Minutes (Precise words you need to know!)"
+                "title": "Advanced Vocabulary in 60 Minutes (Precise words you need to know!)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=EW0t4rwhGOQ",
@@ -385,7 +425,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7eud-rKWcBM",
                 "duration": 1652,
-                "title": "The Death and Resurrection of Christ | Billy Graham Classic Sermon"
+                "title": "The Death and Resurrection of Christ | Billy Graham Classic Sermon",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=E9Bmp_Ce8zI",
@@ -495,7 +537,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lyu7v7nWzfo",
                 "duration": 1021,
-                "title": "Your Brain Hallucinates Your Conscious Reality | Anil Seth | TED"
+                "title": "Your Brain Hallucinates Your Conscious Reality | Anil Seth | TED",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=gzZbtMFP-_I",
@@ -522,12 +566,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Qs8bhga1Ikk",
                 "duration": 401,
-                "title": "A Midsummer Night’s Dream - Play Summary"
+                "title": "A Midsummer Night’s Dream - Play Summary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pPnfiqIM66c",
                 "duration": 482,
-                "title": "The Earth Princess | Bedtime Stories for Kids in English | Fairy Tales"
+                "title": "The Earth Princess | Bedtime Stories for Kids in English | Fairy Tales",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pFy3Wnmchd8",

@@ -24,7 +24,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=AkMsMDk_brU",
                 "duration": 319,
-                "title": "How the Fed Steers Interest Rates to Guide the Entire Economy | WSJ"
+                "title": "How the Fed Steers Interest Rates to Guide the Entire Economy | WSJ",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=8H4yp8Fbi-Y",
@@ -56,12 +58,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=5lqrrW1ondY",
                 "duration": 487,
-                "title": "The Secret Geography & Economic Blueprint That Built America (Full Documentary)"
+                "title": "The Secret Geography & Economic Blueprint That Built America (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=xguam0TKMw8",
                 "duration": 2623,
-                "title": "Principles for Dealing with the Changing World Order by Ray Dalio"
+                "title": "Principles for Dealing with the Changing World Order by Ray Dalio",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=zjK7PWmRRyg",
@@ -139,7 +145,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ERhIqBNF4ds",
                 "duration": 673,
-                "title": "How Are Americans Affording $550,000 Homes?"
+                "title": "How Are Americans Affording $550,000 Homes?",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=547wJMKyYxg",
@@ -197,11 +205,6 @@
                 "title": "The Economics of Owning a Casino"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Co01h1B8iiE",
-                "duration": 432,
-                "title": "The Hidden Engine of India’s Economy"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=8RAYvVXun5I",
                 "duration": 277,
                 "title": "The Real Economics Behind Airbnb"
@@ -209,7 +212,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WPA-KpldDVc",
                 "duration": 267,
-                "title": "El Nino - What is it?"
+                "title": "El Nino - What is it?",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=6GjpET_ylOY",
@@ -224,7 +229,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=W3GuoKFXWJk",
                 "duration": 379,
-                "title": "The Dubai Myth: How It Really Became the Capital of Global Wealth"
+                "title": "The Dubai Myth: How It Really Became the Capital of Global Wealth",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=DBnpciftD6U",
@@ -252,16 +259,11 @@
                 "title": "City of the Future: Singapore – Full Episode | National Geographic"
             },
             {
-                "url": "https://www.youtube.com/watch?v=dfPl3dhbAvE",
-                "duration": 892,
-                "title": "Rich country with Poor people| Reality of GDP growth| India uncovered| Rich vs poor",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=YzeTKAaPtdM",
                 "duration": 911,
-                "title": "The Economics of Owning a Porsche"
+                "title": "The Economics of Owning a Porsche",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=LpnB3mhjVkw",
@@ -302,7 +304,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=toSTWVPVd14",
                 "duration": 561,
-                "title": "Is Russia planning to attack a Nato country? | BBC News"
+                "title": "Is Russia planning to attack a Nato country? | BBC News",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=li5fILnzh10",
@@ -361,11 +365,6 @@
                 "title": "Anthropic CEO reacts to 'AI could kill us all' warning"
             },
             {
-                "url": "https://www.youtube.com/watch?v=GS5kycaqieY",
-                "duration": 1425,
-                "title": "PM Modi's speech at the inauguration of SEMICON India 2026"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=RFXGDJjApLk",
                 "duration": 266,
                 "title": "Why Your Flight Was Never Really On Time"
@@ -383,7 +382,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=8d5d_HXGeMA",
                 "duration": 1158,
-                "title": "How Ocean Shipping Works (And Why It's Broken)"
+                "title": "How Ocean Shipping Works (And Why It's Broken)",
+                "skip": [
+                    [
+                        0.0,
+                        13.5
+                    ],
+                    [
+                        1068.9,
+                        1157.2
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=m5yrQMnc_jQ",
@@ -408,7 +418,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bO7FQsCcbD8",
                 "duration": 784,
-                "title": "The Constitution, the Articles, and Federalism: Crash Course US History #8"
+                "title": "The Constitution, the Articles, and Federalism: Crash Course US History #8",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=1QeUcfqkUzc",
@@ -461,7 +473,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vOV9YXJLkbo",
                 "duration": 828,
-                "title": "U.S. Air Force officer shot down in Iran says it's a \"modern-day miracle\" he survived | 60 Minutes"
+                "title": "U.S. Air Force officer shot down in Iran says it's a \"modern-day miracle\" he survived | 60 Minutes",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=BDqvzFY72mg",
@@ -507,7 +521,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=G2b0JOgLpeg",
                 "duration": 1184,
-                "title": "Has Inequality Ever Been Worse?"
+                "title": "Has Inequality Ever Been Worse?",
+                "skip": [
+                    [
+                        125.3,
+                        190.1
+                    ],
+                    [
+                        1160.6,
+                        1183.4
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=IlbPO9Vmuuo",
@@ -534,7 +559,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fq6jDxJk1LM",
                 "duration": 3972,
-                "title": "The Business Strategies Behind Chick-fil-A, Costco, Starbucks and More | WSJ The Economics Of"
+                "title": "The Business Strategies Behind Chick-fil-A, Costco, Starbucks and More | WSJ The Economics Of",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=9RbL8lTsITY",

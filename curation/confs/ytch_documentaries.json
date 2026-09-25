@@ -122,7 +122,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
                 "duration": 8434,
-                "title": "Win or Die (FULL EPISODE) | Deadliest Battles for Survival | Animal documentary"
+                "title": "Win or Die (FULL EPISODE) | Deadliest Battles for Survival | Animal documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
@@ -326,7 +328,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=yvDlnXOQjuI",
                 "duration": 2922,
-                "title": "Al Nahyans - Trillionaire Family That Built UAE | 2026 Documentary"
+                "title": "Al Nahyans - Trillionaire Family That Built UAE | 2026 Documentary",
+                "skip": [
+                    [
+                        2274.7,
+                        2348.3
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=PoUAIroIc8E",
@@ -441,7 +450,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XKtgbzOEY80",
                 "duration": 7479,
-                "title": "Scary Attacks | 48 Hours Full Episodes"
+                "title": "Scary Attacks | 48 Hours Full Episodes",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=FlDjlrmfbX4",
@@ -451,12 +462,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=dgDqYKeu7tg",
                 "duration": 2522,
-                "title": "The Sneak Attack on Katlyn Lyon | Full Episode"
+                "title": "The Sneak Attack on Katlyn Lyon | Full Episode",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=nvpkLoslDys",
                 "duration": 2883,
-                "title": "World's Most Dangerous Roads | Kenya: Dust, Death, Diesel | Free Documentary"
+                "title": "World's Most Dangerous Roads | Kenya: Dust, Death, Diesel | Free Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=xqYacf5ZIa0",
@@ -501,12 +516,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=9QhqHP5nagI",
                 "duration": 7495,
-                "title": "Murder Mysteries | \"48 Hours\" Full Episodes"
+                "title": "Murder Mysteries | \"48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=DHZDZXjAoPo",
                 "duration": 2899,
-                "title": "Texas True Crime: Pure Evil | Full Documentary"
+                "title": "Texas True Crime: Pure Evil | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=eTEdKrJ1DhI",
@@ -843,7 +862,9 @@
                 "title": "Space Dogs Adventures to the Moon | Full Movie | Family Dog Action Adventure Movie | Family Central",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=W1TM9rhYu-E",
@@ -851,7 +872,9 @@
                 "title": "Mr Bean's Home Movie | Mr Bean | Cartoons for Kids | WildBrain Kids",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=_bk-37Xz2FE",
@@ -903,7 +926,9 @@
                 "title": "Mickey Mouse Clubhouse Halloween Mickey's Treat Full Episode 🎃 | S1 E17 | @disneyjr",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=DYSTZz_dNLs",
@@ -919,7 +944,9 @@
                 "title": "Most Dangerous Ways To School | NEPAL | Free Documentary",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=p6GQtEtnRFI",
@@ -935,7 +962,9 @@
                 "title": "ABC World News Tonight with David Muir Full Broadcast - Sept. 15, 2026",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=KNhO1Umj1so",
@@ -1027,7 +1056,9 @@
                 "title": "NEW Bigfoot Documentary 2026 | Squatchwatcher Ranch on the Olympia Peninsula | Full Feature Movie",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=RhDdAONYZeQ",
@@ -1051,7 +1082,9 @@
                 "title": "Toxic Nation Full Feature Length Film",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=gdLzZrxCZm8",
@@ -1177,7 +1210,26 @@
                 "title": "BLACK PROJECT: Disclosure, the Truth About UFOs & Secret Programs [FULL FILM]",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [
+                    [
+                        1020.0,
+                        1107.7
+                    ],
+                    [
+                        2869.6,
+                        2948.5
+                    ],
+                    [
+                        4458.5,
+                        4525.9
+                    ],
+                    [
+                        5520.8,
+                        5627.7
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pUz79Sm-IAw",
@@ -1255,7 +1307,9 @@
                 "title": "Star Trek - Horizon: Full Film",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=q-omFQLccQM",
@@ -1329,7 +1383,9 @@
                 "title": "DragonBone Continent 4K Action Feature movie  | Opening: Epic Fantasy Masterpiece of Power Struggles",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=_UxqbHLti_o",
@@ -1413,7 +1469,9 @@
                 "title": "10 Unsolved Mysteries You Have Never Heard of in 2026",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vl6ELX5P4Cc",
@@ -1439,7 +1497,9 @@
                 "title": "Unsolved Mysteries with Robert Stack - Season 5, Episode 20 - Updated Full Episode",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=y3nXCmTOVfM",
@@ -1465,7 +1525,9 @@
                 "title": "Unsolved Mysteries with Robert Stack - Season 5, Episode 8 - Full Episode",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=R8zHrCvm6Ww",
@@ -1515,7 +1577,9 @@
                 "title": "Mysterious Disappearances | \"48 Hours\" Full Episodes",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=z1oo773O5mI",
@@ -1583,7 +1647,9 @@
                 "title": "UNREAL EARTH | 25 Mysterious Landforms That Don’t Look Real | 4K Documentary",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wt9k4V1OoSU",
@@ -1591,7 +1657,14 @@
                 "title": "Missing in Alaska: Vicious Arctic Mermaid Attacks - Full Episode (S1, E8) | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [
+                    [
+                        879.5,
+                        881.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=rp7P1K7f0_s",
@@ -1727,7 +1800,9 @@
                 "title": "Mysteries of the Bermuda Triangle | Decoding the Past (S1, E22) | Full Episode | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=jZZhk5n6ltQ",

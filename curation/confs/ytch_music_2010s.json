@@ -145,7 +145,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kTHNpusq654",
                 "duration": 284,
-                "title": "Katy Perry - Hot N Cold (Official Music Video)"
+                "title": "Katy Perry - Hot N Cold (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=SR6iYWJxHqs",
@@ -220,7 +222,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sjSG6z_13-Q",
                 "duration": 230,
-                "title": "Miley Cyrus - Can't Be Tamed"
+                "title": "Miley Cyrus - Can't Be Tamed",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=4GuqB1BQVr4",
@@ -242,7 +246,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2k-BxdNKtzE",
                 "duration": 192,
-                "title": "Big Time Rush - City Is Ours (Official Video)"
+                "title": "Big Time Rush - City Is Ours (Official Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pa14VNsdSYM",
@@ -311,7 +317,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UfcvO2t8Ntg",
                 "duration": 206,
-                "title": "Selena Gomez & The Scene - Round & Round"
+                "title": "Selena Gomez & The Scene - Round & Round",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ho32Oh6b4jc",
@@ -328,7 +336,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8UFIYGkROII",
                 "duration": 238,
-                "title": "Soulja Boy Tell'em - Crank That (Soulja Boy) (Official Music Video)"
+                "title": "Soulja Boy Tell'em - Crank That (Soulja Boy) (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=8Xl2hqjAbvQ",
@@ -410,7 +420,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UyG1FG3H6rY",
                 "duration": 212,
-                "title": "Jason Derulo - In My Head [Official Music Video]"
+                "title": "Jason Derulo - In My Head [Official Music Video]",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=7N74i_rAfFE",
@@ -473,12 +485,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=CHVhwcOg6y8",
                 "duration": 244,
-                "title": "Justin Bieber - One Time (Official Music Video)"
+                "title": "Justin Bieber - One Time (Official Music Video)",
+                "skip": [
+                    [
+                        241.7,
+                        243.7
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=7qzhngp7jh8",
                 "duration": 247,
-                "title": "Brad Paisley - Remind Me (Official Video) ft. Carrie Underwood"
+                "title": "Brad Paisley - Remind Me (Official Video) ft. Carrie Underwood",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=HpixdTlYlKU",
@@ -503,7 +524,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WTJSt4wP2ME",
                 "duration": 225,
-                "title": "K'NAAN - Wavin' Flag (Coca-Cola Celebration Mix)"
+                "title": "K'NAAN - Wavin' Flag (Coca-Cola Celebration Mix)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=JwQZQygg3Lk",

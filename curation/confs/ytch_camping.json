@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=v4UFIJXZzig",
                 "duration": 3371,
-                "title": "Solo Survival Camp | Heavy Snow, Freezing Rain & Blizzard | No Tent, No Sleeping Bag, Just"
+                "title": "Solo Survival Camp | Heavy Snow, Freezing Rain & Blizzard | No Tent, No Sleeping Bag, Just",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=3Qf4ABaXmFM",
@@ -53,7 +55,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CvL_xqlpbxw",
                 "duration": 3221,
-                "title": "Solo Bushcraft Camping in the Rain"
+                "title": "Solo Bushcraft Camping in the Rain",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=UmLVL5_k9qY",
@@ -136,12 +140,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=rRlqhJnIUqQ",
                 "duration": 3746,
-                "title": "Alone in the Deep Jungle: Bushcraft Skills, Wild Chicken Tracking & Building a Hidden Clif"
+                "title": "Alone in the Deep Jungle: Bushcraft Skills, Wild Chicken Tracking & Building a Hidden Clif",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=wMHLxYDEUEA",
                 "duration": 1957,
-                "title": "Solo Bushcraft: 3 Days Camping Inside a Massive Cave Shelter"
+                "title": "Solo Bushcraft: 3 Days Camping Inside a Massive Cave Shelter",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=G83NKJCd4VY",
@@ -158,7 +166,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YbKSPjDgfX0",
                 "duration": 1330,
-                "title": "No Food Survival Camping - Foraging  Wild Edibles & Building Shelter (Axe Only Bushcraft C"
+                "title": "No Food Survival Camping - Foraging  Wild Edibles & Building Shelter (Axe Only Bushcraft C",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=cToxCjPkkUI",
@@ -213,7 +223,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=AxycEdeBe_E",
                 "duration": 3365,
-                "title": "Camping in 16 Winter Bushcraft Shelters"
+                "title": "Camping in 16 Winter Bushcraft Shelters",
+                "skip": [
+                    [
+                        3336.7,
+                        3346.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=RGx_JSOHaO0",
@@ -269,7 +286,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=00idjNP5Od0",
                 "duration": 1043,
-                "title": "I Attempted to Build a Survival Shelter with Zero Experience"
+                "title": "I Attempted to Build a Survival Shelter with Zero Experience",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=iK0pHbqy-0s",
@@ -372,7 +391,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=i0n2ggRGUbk",
                 "duration": 1233,
-                "title": "3 Days Camping in Cling Wrap Cabin - Crazy Bushcraft Shelter & DIY Greenhouse"
+                "title": "3 Days Camping in Cling Wrap Cabin - Crazy Bushcraft Shelter & DIY Greenhouse",
+                "skip": [
+                    [
+                        1140.8,
+                        1156.0
+                    ],
+                    [
+                        1202.1,
+                        1213.6
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Up9emI5G9ik",
@@ -404,7 +434,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=T_xt21f6l48",
                 "duration": 1148,
-                "title": "Bushcraft Survival Shelter - No Tent No Sleeping Bag Winter Camping"
+                "title": "Bushcraft Survival Shelter - No Tent No Sleeping Bag Winter Camping",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=nfd-VM4yG-k",
@@ -476,7 +508,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WXWHp2AluQQ",
                 "duration": 1596,
-                "title": "🌧️⚡ SOLO CAMPING in Heavy Rain & Thunderstorm in the Wild Forest | Hot Tent, Wood Stove &"
+                "title": "🌧️⚡ SOLO CAMPING in Heavy Rain & Thunderstorm in the Wild Forest | Hot Tent, Wood Stove &",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=C9bWaoc2lX4",
@@ -488,7 +522,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=q6IgJultFIw",
                 "duration": 2846,
-                "title": "4 Days Solo Survival | Limited Gear"
+                "title": "4 Days Solo Survival | Limited Gear",
+                "skip": [
+                    [
+                        151.6,
+                        225.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=JE6PtW4grWE",
@@ -503,7 +544,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=2OdYv8YKSaI",
                 "duration": 4382,
-                "title": "6 Days Jungle Survival Camping with NO Food - US Marine Corps Jungle Survival School"
+                "title": "6 Days Jungle Survival Camping with NO Food - US Marine Corps Jungle Survival School",
+                "skip": [
+                    [
+                        4372.0,
+                        4381.9
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=KFALdxRBBtI",
@@ -535,7 +583,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tBfy2Dw76nM",
                 "duration": 2336,
-                "title": "Wild Camping in FREEZING Scottish Wilderness Bushcraft Survival Solo Trip in Scotland"
+                "title": "Wild Camping in FREEZING Scottish Wilderness Bushcraft Survival Solo Trip in Scotland",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Os_nNanqeEA",
@@ -565,7 +615,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=z8l9Vozl44s",
                 "duration": 443,
-                "title": "UK Knife Law, Wild Camping and Bushcraft - Just saying BUSHCRAFT does not make it legal to"
+                "title": "UK Knife Law, Wild Camping and Bushcraft - Just saying BUSHCRAFT does not make it legal to",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=5g90BuYaBJA",

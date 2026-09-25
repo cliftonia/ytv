@@ -19,7 +19,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=giESeFi9I4U",
                 "duration": 844,
-                "title": "Inside Lucy Hale’s Whimsical L.A. Home | Open Door | Architectural Digest"
+                "title": "Inside Lucy Hale’s Whimsical L.A. Home | Open Door | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=n50DZvVAulM",
@@ -84,7 +86,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5Z4G78WTJpE",
                 "duration": 2119,
-                "title": "Inside a Rare 1780 Virginia Dogtrot Log Cabin"
+                "title": "Inside a Rare 1780 Virginia Dogtrot Log Cabin",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=eTVWqdSDihU",
@@ -150,12 +154,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=fpqxB3f35yw",
                 "duration": 455,
-                "title": "Former Mr South Africa Inside KZN's Luxury Beachfront Eco Estate"
+                "title": "Former Mr South Africa Inside KZN's Luxury Beachfront Eco Estate",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=1yzXF5zCArM",
                 "duration": 2656,
-                "title": "Gothic architecture - When cathedrals reached up to the heavens | DW Documentary"
+                "title": "Gothic architecture - When cathedrals reached up to the heavens | DW Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=0At6PE7imYw",
@@ -187,7 +195,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6UdSI7YOufM",
                 "duration": 1720,
-                "title": "Plague Architecture: What Homes Were Like During the Black Death – Historical Documentary"
+                "title": "Plague Architecture: What Homes Were Like During the Black Death – Historical Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=wzMlQGPGDQg",
@@ -211,7 +221,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=RjJO-fCWR54",
                 "duration": 664,
-                "title": "The Problem With Colorful Houses"
+                "title": "The Problem With Colorful Houses",
+                "skip": [
+                    [
+                        601.5,
+                        663.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=DI9VQ9tRs4s",
@@ -238,7 +255,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qkX_sdZXmFE",
                 "duration": 4107,
-                "title": "The Strangest Places Unlike Anywhere Else on Earth | 4K Travel Documentary"
+                "title": "The Strangest Places Unlike Anywhere Else on Earth | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=lPt-7Oc8_BA",
@@ -295,7 +314,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sf7uStVfvpY",
                 "duration": 1532,
-                "title": "Architecture School"
+                "title": "Architecture School",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=jcgK4qIgZuc",
@@ -509,12 +530,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Cpstwe24eLk",
                 "duration": 708,
-                "title": "Inside Kelly Ripa & Mark Consuelos’s Sophisticated NYC Townhouse | Open Door | Architectur"
+                "title": "Inside Kelly Ripa & Mark Consuelos’s Sophisticated NYC Townhouse | Open Door | Architectur",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=EobMnSpjfTU",
                 "duration": 742,
-                "title": "Inside Troye Sivan’s Midcentury Melbourne Oasis | Open Door | Architectural Digest"
+                "title": "Inside Troye Sivan’s Midcentury Melbourne Oasis | Open Door | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Df_zb2qkpTo",
@@ -531,7 +556,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=q5OMBYKNXW8",
                 "duration": 994,
-                "title": "Inside Frank Lloyd Wright’s Hidden Woodland Utopia | Unique Spaces | Architectural Digest"
+                "title": "Inside Frank Lloyd Wright’s Hidden Woodland Utopia | Unique Spaces | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=YSXP6tMsRMM",

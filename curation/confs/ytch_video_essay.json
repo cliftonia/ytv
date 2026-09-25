@@ -85,7 +85,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=FC1aIGJAEYA",
                 "duration": 1009,
-                "title": "What's Replacing Video Essays?"
+                "title": "What's Replacing Video Essays?",
+                "skip": [
+                    [
+                        249.1,
+                        310.0
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=yuKXxHgZpdI",
@@ -207,7 +214,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=zkmhyn5RMyw",
                 "duration": 1724,
-                "title": "Minecraft but it's a video essay about Minecraft ARGs and horror"
+                "title": "Minecraft but it's a video essay about Minecraft ARGs and horror",
+                "skip": [
+                    [
+                        1098.2,
+                        1111.8
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=DxxMPCeTYtY",
@@ -246,7 +260,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=y-gzUMmy_GE",
                 "duration": 1839,
-                "title": "Beauty has a new face and it's terrifying"
+                "title": "Beauty has a new face and it's terrifying",
+                "skip": [
+                    [
+                        426.8,
+                        542.4
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=gnG0gBLnYDQ",
@@ -313,7 +334,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3FOzD4Sfgag",
                 "duration": 480,
-                "title": "Edgar Wright - How to Do Visual Comedy"
+                "title": "Edgar Wright - How to Do Visual Comedy",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=m-G9VftuqI8",
@@ -352,7 +375,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=tlYDCuJ-c8s",
                 "duration": 1123,
-                "title": "Why The Wire is one of the Most Brilliant TV Shows Ever"
+                "title": "Why The Wire is one of the Most Brilliant TV Shows Ever",
+                "skip": [
+                    [
+                        54.9,
+                        61.7
+                    ],
+                    [
+                        1072.1,
+                        1123.0
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=o9aVjBHEEbU",
@@ -372,7 +406,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=a3Yr1jI08U0",
                 "duration": 482,
-                "title": "Resident Evil (2026) Full Movie Recap"
+                "title": "Resident Evil (2026) Full Movie Recap",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=4G6Ltrz5fv8",
@@ -387,7 +423,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=bn0gmu_m-os",
                 "duration": 2378,
-                "title": "you're wrong about k-pop: a video essay"
+                "title": "you're wrong about k-pop: a video essay",
+                "skip": [
+                    [
+                        2304.9,
+                        2377.3
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=UOOwMffD6ak",
@@ -455,7 +498,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=O9k-0LGZp-E",
                 "duration": 1344,
-                "title": "The END of Underground Rap's Most Disturbing Predator | Xavier Wulf"
+                "title": "The END of Underground Rap's Most Disturbing Predator | Xavier Wulf",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=gLOxQxMnEz8",
@@ -474,7 +519,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Xmo2TWomtW8",
                 "duration": 917,
-                "title": "NAVI Might GENUINELY Miss The Major.. - StarLadder Fall 2026"
+                "title": "NAVI Might GENUINELY Miss The Major.. - StarLadder Fall 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ygRyqvKs1vQ",
@@ -501,7 +548,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WilfG267lws",
                 "duration": 671,
-                "title": "Why Everyone Underrated Naomi Scott in Smile 2 | Video Essay"
+                "title": "Why Everyone Underrated Naomi Scott in Smile 2 | Video Essay",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=IqWtsIWTGl8",
@@ -552,7 +601,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=701CeXABtq8",
                 "duration": 338,
-                "title": "Can analog hobbies actually fix your digital overload? │Animated video essay"
+                "title": "Can analog hobbies actually fix your digital overload? │Animated video essay",
+                "skip": [],
+                "skip_checked": 1790367139
             }
         ],
         "search_query": "video essay",

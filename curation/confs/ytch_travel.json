@@ -47,7 +47,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IwKoPlt1tUs",
                 "duration": 3185,
-                "title": "BOSNIA: The Country Europe Pretends Doesn't Exist | 4K Travel Documentary"
+                "title": "BOSNIA: The Country Europe Pretends Doesn't Exist | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=yRV7W5tb6R4",
@@ -128,7 +130,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6hJVIxX5KJA",
                 "duration": 3332,
-                "title": "MADAGASCAR: The Last Untouched Wilderness | 4K Travel Documentary"
+                "title": "MADAGASCAR: The Last Untouched Wilderness | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=hSAGUVe_Xd0",
@@ -169,7 +173,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=is9_YCqgp3Q",
                 "duration": 1470,
-                "title": "Uzbekistan 2026: Living in the World’s Cheapest Country | Travel Documentary"
+                "title": "Uzbekistan 2026: Living in the World’s Cheapest Country | Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=W8-Q32VR2ng",
@@ -186,7 +192,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RyFt1O5FOuY",
                 "duration": 3600,
-                "title": "18 September 2026 | Rome in Heavy Rain ☔ Trevi Fountain, Pantheon & Piazza Navona"
+                "title": "18 September 2026 | Rome in Heavy Rain ☔ Trevi Fountain, Pantheon & Piazza Navona",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=VigMoZAUypI",
@@ -218,7 +226,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=M-914uAcwy8",
                 "duration": 2827,
-                "title": "Wonders of Australia | The Most Amazing Places in Australia | Travel Documentary 4K"
+                "title": "Wonders of Australia | The Most Amazing Places in Australia | Travel Documentary 4K",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=62no_qL09nY",
@@ -247,7 +257,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=-5_bFuIzxxo",
                 "duration": 755,
-                "title": "JAPAN HAS CHANGED | 9 New Things Tourists Must Know in 2026"
+                "title": "JAPAN HAS CHANGED | 9 New Things Tourists Must Know in 2026",
+                "skip": [
+                    [
+                        576.2,
+                        649.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=YeUXGtCnKDE",
@@ -284,7 +301,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ebZwyWG3JgA",
                 "duration": 2054,
-                "title": "Montenegro: Europe’s Biggest Surprise | 4K Travel Documentary"
+                "title": "Montenegro: Europe’s Biggest Surprise | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=3TcK7c7sX9g",
@@ -363,7 +382,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=b6ZvuNbruF4",
                 "duration": 1599,
-                "title": "NORTH DAKOTA — America's Most Underrated Beauty | Travel Documentary"
+                "title": "NORTH DAKOTA — America's Most Underrated Beauty | Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=zoTi2chgYrg",
@@ -417,7 +438,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KzfeiYSA5G4",
                 "duration": 3916,
-                "title": "30 Most Extreme Corners of Planet Earth | 4K Travel Documentary"
+                "title": "30 Most Extreme Corners of Planet Earth | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=YezZztmANnE",
@@ -451,7 +474,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VnjUYFo0yPg",
                 "duration": 2324,
-                "title": "The Year of Abundance | Across Italy with James Wong | Full Documentary"
+                "title": "The Year of Abundance | Across Italy with James Wong | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=NSZgA4yIiIc",
@@ -466,7 +491,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Sm-q8lwl5sU",
                 "duration": 3633,
-                "title": "Impossible Places | Mysterious Geological Wonders That Defy Science | 4K Travel Documentar"
+                "title": "Impossible Places | Mysterious Geological Wonders That Defy Science | 4K Travel Documentar",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=_VIGyAjZOMc",
@@ -510,7 +537,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=aY6sjNUPhD4",
                 "duration": 2871,
-                "title": "UNSEEN LOUISIANA - Secret Places Only Locals Know About | 4K Travel Documentary"
+                "title": "UNSEEN LOUISIANA - Secret Places Only Locals Know About | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=8r30XUrrAac",
