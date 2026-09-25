@@ -82,7 +82,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1U8P07aMVzU",
                 "duration": 654,
-                "title": "If I Started a Gaming Channel in 2026, I'd Do This"
+                "title": "If I Started a Gaming Channel in 2026, I'd Do This",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=o3xTR4uVvyY",
@@ -152,7 +154,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=h_H3Y58OKDM",
                 "duration": 545,
-                "title": "Gaming on Plasma TV in 2026"
+                "title": "Gaming on Plasma TV in 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=hxBuFfSbkno",
@@ -179,7 +183,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fgvEhSuKZV0",
                 "duration": 541,
-                "title": "Evolution of Gaming Consoles: From Pong to Virtual Reality (1972-2026)"
+                "title": "Evolution of Gaming Consoles: From Pong to Virtual Reality (1972-2026)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=dvp03kNew04",
@@ -204,7 +210,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CSGEquNJNHg",
                 "duration": 1863,
-                "title": "What I Bought From The Retro Gaming Market - March 2026 - MJG"
+                "title": "What I Bought From The Retro Gaming Market - March 2026 - MJG",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=gONKj7rVYmI",
@@ -284,7 +292,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=NnZzvvqTEwk",
                 "duration": 1932,
-                "title": "Dude, Just Get a Steam Deck"
+                "title": "Dude, Just Get a Steam Deck",
+                "skip": [
+                    [
+                        1913.0,
+                        1915.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=N_coSHiqi_Q",
@@ -317,7 +332,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XSR7MIHJqdc",
                 "duration": 2028,
-                "title": "Is Facebook Marketplace Worth the Risk for Retro Game Collectors? | Ep. 4"
+                "title": "Is Facebook Marketplace Worth the Risk for Retro Game Collectors? | Ep. 4",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=YrgQDETGO00",
@@ -332,12 +349,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=veqrusWhWfk",
                 "duration": 436,
-                "title": "What to Look for in a CRT TV - Budget to Best"
+                "title": "What to Look for in a CRT TV - Budget to Best",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=urT7ZZyp4IU",
                 "duration": 2866,
-                "title": "Explaining the Ultimate Minecraft Iceberg"
+                "title": "Explaining the Ultimate Minecraft Iceberg",
+                "skip": [
+                    [
+                        1618.4,
+                        1652.0
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=A0WX-jsir94",
@@ -499,7 +525,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VP9AE3l_xG0",
                 "duration": 1639,
-                "title": "My Gaming History and Humble Beginnings (Gaming Documentary) (4K)"
+                "title": "My Gaming History and Humble Beginnings (Gaming Documentary) (4K)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=5M3RlpozAyU",
@@ -526,7 +554,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=B1ZR3NPRVw0",
                 "duration": 808,
-                "title": "PSP Gaming in 2025 is AMAZING"
+                "title": "PSP Gaming in 2025 is AMAZING",
+                "skip": [
+                    [
+                        459.2,
+                        485.4
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=M1rMe9Do8Yg",
@@ -541,7 +576,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YvT8DChscxs",
                 "duration": 908,
-                "title": "Why Modern Video Gaming Needs a 1983-Style Crash"
+                "title": "Why Modern Video Gaming Needs a 1983-Style Crash",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=-ABB63fE-Fs",
@@ -632,7 +669,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=h-4qop-IgG8",
                 "duration": 1971,
-                "title": "GameEx - Retro Gaming & Multimedia Frontend - Beginners Guide 2026 #gameex #emulator #frontend"
+                "title": "GameEx - Retro Gaming & Multimedia Frontend - Beginners Guide 2026 #gameex #emulator #frontend",
+                "skip": [],
+                "skip_checked": 1790367139
             }
         ],
         "search_query": "retro gaming documentary",
