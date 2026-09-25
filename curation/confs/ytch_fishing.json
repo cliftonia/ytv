@@ -72,7 +72,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IaM4x75JkHU",
                 "duration": 322,
-                "title": "🎣 Ultimate Guide: How to Book a Fishing Charter in Cabo San Lucas"
+                "title": "🎣 Ultimate Guide: How to Book a Fishing Charter in Cabo San Lucas",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=AIRm9TbYXcc",
@@ -126,7 +128,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=hS4Mso8gvNU",
                 "duration": 1998,
-                "title": "6 Days Fishing, Camping & Exploring Spain with my Son"
+                "title": "6 Days Fishing, Camping & Exploring Spain with my Son",
+                "skip": [
+                    [
+                        1961.8,
+                        1977.3
+                    ],
+                    [
+                        1979.2,
+                        1981.2
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=9NHAlTTYCw8",
@@ -212,7 +225,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=KqGEgrqSYyU",
                 "duration": 3151,
-                "title": "9 Days Fishing & Foraging in Hawaii - Lobster Diving + Spearfishing Catch & Cook"
+                "title": "9 Days Fishing & Foraging in Hawaii - Lobster Diving + Spearfishing Catch & Cook",
+                "skip": [
+                    [
+                        3124.1,
+                        3150.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=0yeHYb7EFx0",
@@ -249,7 +269,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=4OCJ0Bt66ms",
                 "duration": 2813,
-                "title": "1 Week Fishing, Camping, & Hiking Adventure ( I Flew a Family of 10 to Alaska)"
+                "title": "1 Week Fishing, Camping, & Hiking Adventure ( I Flew a Family of 10 to Alaska)",
+                "skip": [
+                    [
+                        2792.7,
+                        2812.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=8hvbcAvkuJs",
@@ -367,7 +394,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZWdqpXLx7eo",
                 "duration": 769,
-                "title": "I Tried Pier Fishing with No Experience"
+                "title": "I Tried Pier Fishing with No Experience",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=rdcTMjED_00",
@@ -379,7 +408,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=uMhxwog_dl4",
                 "duration": 603,
-                "title": "Sacramento River Bank Fishing Spots for (Stripers, Salmon, Shad)"
+                "title": "Sacramento River Bank Fishing Spots for (Stripers, Salmon, Shad)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=RUl3RR461a0",
@@ -391,17 +422,23 @@
             {
                 "url": "https://www.youtube.com/watch?v=ee8q8Fg80SM",
                 "duration": 1259,
-                "title": "72 HOURS Fishing for MONSTERS in Mexico! | Baja, California"
+                "title": "72 HOURS Fishing for MONSTERS in Mexico! | Baja, California",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=qmKifBEn2BM",
                 "duration": 628,
-                "title": "El Niño is just getting started..."
+                "title": "El Niño is just getting started...",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=1laC6Ig5tG0",
                 "duration": 1180,
-                "title": "Sault Ste. Marie Pink Salmon Frenzy | Fisherman’s Digest"
+                "title": "Sault Ste. Marie Pink Salmon Frenzy | Fisherman’s Digest",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=aa1SB5lbMwE",
@@ -421,12 +458,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=I6mtK3NDHv4",
                 "duration": 2042,
-                "title": "Kodiak Bear Destroys Canoe & Kills 3 Anglers on August 6th, 2026"
+                "title": "Kodiak Bear Destroys Canoe & Kills 3 Anglers on August 6th, 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vl7YOcQUZz4",
                 "duration": 545,
-                "title": "Luxury Ha Long Bay Cruise 2 Days 1 Night 2026 - FOR FIRST TIMER IN VIETNAM"
+                "title": "Luxury Ha Long Bay Cruise 2 Days 1 Night 2026 - FOR FIRST TIMER IN VIETNAM",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=B6cHRFU3lvc",
@@ -441,7 +482,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Fq8OHFViFA4",
                 "duration": 1633,
-                "title": "The CRAZIEST 24hr Fishing Trip You Will See REMOTE AUSTRALIAN ISLAND"
+                "title": "The CRAZIEST 24hr Fishing Trip You Will See REMOTE AUSTRALIAN ISLAND",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=vTVNvlSR1yQ",
@@ -515,12 +558,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=3yxaeXRzfEQ",
                 "duration": 896,
-                "title": "GRANDER | A 1,223lb Black Marlin, Cairns Australia"
+                "title": "GRANDER | A 1,223lb Black Marlin, Cairns Australia",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=jxhjdi5In4I",
                 "duration": 1322,
-                "title": "MULLET RUN MADNESS: TARPON, SNOOK & JACKS"
+                "title": "MULLET RUN MADNESS: TARPON, SNOOK & JACKS",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=FQRkcX4alRU",

@@ -9,12 +9,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=-RWdevA0gWI",
                 "duration": 4902,
-                "title": "Software Abstraction in the Age of AI-Generated Code - Andrei Alexandrescu - ACCU 2026"
+                "title": "Software Abstraction in the Age of AI-Generated Code - Andrei Alexandrescu - ACCU 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=w4rG5GY9IlA",
                 "duration": 747,
-                "title": "Learning Software Engineering During the Era of AI | Raymond Fu | TEDxCSTU"
+                "title": "Learning Software Engineering During the Era of AI | Raymond Fu | TEDxCSTU",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=5wks1W-auKY",
@@ -75,7 +79,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=EDwtofkScdI",
                 "duration": 3475,
-                "title": "Immutable Patterns of System Design; From Monolith to Agentic AI - James Eastham - NDC Lon"
+                "title": "Immutable Patterns of System Design; From Monolith to Agentic AI - James Eastham - NDC Lon",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=EO3_qN_Ynsk",
@@ -134,7 +140,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=c_WOv_G5C1I",
                 "duration": 1101,
-                "title": "The Future of Software Engineering: Cognition’s Russell Kaplan"
+                "title": "The Future of Software Engineering: Cognition’s Russell Kaplan",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=aujP8wuMTMI",
@@ -164,7 +172,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vgOzZBAfMpA",
                 "duration": 3487,
-                "title": "Resilient by Design - Chris Ayers - NDC London 2026"
+                "title": "Resilient by Design - Chris Ayers - NDC London 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=lFVG31ge0Oc",
@@ -184,7 +194,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FBgNiI9Y5xw",
                 "duration": 2215,
-                "title": "Keynote - Neos Conference 2026"
+                "title": "Keynote - Neos Conference 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=fav_i2Zh79s",
@@ -225,17 +237,28 @@
             {
                 "url": "https://www.youtube.com/watch?v=fPHBFlAibmY",
                 "duration": 1797,
-                "title": "Agent Memory: Building Stateful AI Agents (Ben Labaschin) - Applied AI Conference 2026"
+                "title": "Agent Memory: Building Stateful AI Agents (Ben Labaschin) - Applied AI Conference 2026",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=WAUnmQt2Z7Y",
                 "duration": 288,
-                "title": "AI CEO vs Engineer (2026)."
+                "title": "AI CEO vs Engineer (2026).",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ek32ZH3AI3k",
                 "duration": 2713,
-                "title": "Is AI Destroying Software Development?"
+                "title": "Is AI Destroying Software Development?",
+                "skip": [
+                    [
+                        0.0,
+                        12.5
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=XVCYcoMLNiQ",
@@ -294,7 +317,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BT5crw9u25Q",
                 "duration": 1746,
-                "title": "Open-TAI Conference June 2026 – The Map: Charting the Path to Trustworthy AI"
+                "title": "Open-TAI Conference June 2026 – The Map: Charting the Path to Trustworthy AI",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=f9vOqgihqWM",
@@ -490,7 +515,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xqyu_uCChZw",
                 "duration": 376,
-                "title": "Swiss PGDay 2026 in Rapperswil: A PostgreSQL Conference Vlog with Pavlo Golub | CYBERTEC"
+                "title": "Swiss PGDay 2026 in Rapperswil: A PostgreSQL Conference Vlog with Pavlo Golub | CYBERTEC",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=hfADSpkhM90",
@@ -517,7 +544,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WjoHW2-1rMU",
                 "duration": 719,
-                "title": "My First IEEE Conference Presentation | AI for Cybersecurity (SoutheastCon 2026)"
+                "title": "My First IEEE Conference Presentation | AI for Cybersecurity (SoutheastCon 2026)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=T9_QmaV8g2A",

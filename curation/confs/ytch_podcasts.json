@@ -80,7 +80,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=w6Qg-fQmqhM",
                 "duration": 1644,
-                "title": "20 Rules of Podcasting: How To Go From Zero Subscribers to Millions"
+                "title": "20 Rules of Podcasting: How To Go From Zero Subscribers to Millions",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=OLJiWPm2i7Y",
@@ -134,7 +136,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tnoMGevqWAM",
                 "duration": 3324,
-                "title": "EXTENDED INTERVIEW: Dolly Parton on Plastic Surgery and Her 47-Year Marriage | 60 Minutes"
+                "title": "EXTENDED INTERVIEW: Dolly Parton on Plastic Surgery and Her 47-Year Marriage | 60 Minutes",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=XZOJa-At410",
@@ -165,7 +169,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=y_woFP79F0Q",
                 "duration": 7066,
-                "title": "Living with Confidence & Going All In - Matthew McConaughey (4K)"
+                "title": "Living with Confidence & Going All In - Matthew McConaughey (4K)",
+                "skip": [
+                    [
+                        1149.9,
+                        1231.8
+                    ],
+                    [
+                        2305.9,
+                        2379.8
+                    ],
+                    [
+                        3566.8,
+                        3631.4
+                    ],
+                    [
+                        4569.3,
+                        4637.3
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=3I482TBLEzc",
@@ -194,7 +217,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=gZ-UED-LOUw",
                 "duration": 5846,
-                "title": "Andrew Tate Most Real Conversation Yet (UNCENSORED) 2025"
+                "title": "Andrew Tate Most Real Conversation Yet (UNCENSORED) 2025",
+                "skip": [
+                    [
+                        981.0,
+                        1057.7
+                    ],
+                    [
+                        2672.0,
+                        2741.0
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",
@@ -281,7 +315,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=e5Oqk_Y-Jm4",
                 "duration": 3626,
-                "title": "Tom Cruise on Mission: Impossible and a lifetime of learning from movies | BFI in Conversa"
+                "title": "Tom Cruise on Mission: Impossible and a lifetime of learning from movies | BFI in Conversa",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=vOXFKYGkPvI",
@@ -341,7 +377,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Oc60-GSu3Hw",
                 "duration": 2979,
-                "title": "Is Texas Still a Democracy? with Beto O’Rourke"
+                "title": "Is Texas Still a Democracy? with Beto O’Rourke",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=dXlAhD4hOyE",
@@ -407,7 +445,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nbzYO_e9xnw",
                 "duration": 5470,
-                "title": "AOC in Conversation with David Axelrod"
+                "title": "AOC in Conversation with David Axelrod",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Fj20vnD01do",
@@ -517,12 +557,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=_rGipsgBfQY",
                 "duration": 5692,
-                "title": "Eckhart Tolle Reveals the Secret to Fulfillment Through Stillness and Action"
+                "title": "Eckhart Tolle Reveals the Secret to Fulfillment Through Stillness and Action",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=zijHGP_pOhE",
                 "duration": 5417,
-                "title": "Charlie Kirk Takes on Army of Libs at California's UCR"
+                "title": "Charlie Kirk Takes on Army of Libs at California's UCR",
+                "skip": [
+                    [
+                        552.3,
+                        594.6
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",

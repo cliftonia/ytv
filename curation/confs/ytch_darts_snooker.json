@@ -31,7 +31,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=olakRnb5L6E",
                 "duration": 1547,
-                "title": "RETURNING TO GLORY 👑 | 2026 Czech Darts Open | Finals Night Highlights"
+                "title": "RETURNING TO GLORY 👑 | 2026 Czech Darts Open | Finals Night Highlights",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=PwIJoajobn8",
@@ -43,7 +45,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ryoykH5qm7Q",
                 "duration": 2216,
-                "title": "WGP RACE HEATS UP! 🔥 | 2026 Flanders Darts Trophy | Day One Evening Highlights"
+                "title": "WGP RACE HEATS UP! 🔥 | 2026 Flanders Darts Trophy | Day One Evening Highlights",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=z6ZAMeS58vc",
@@ -79,7 +83,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vI1mhUr9oY8",
                 "duration": 1926,
-                "title": "THE SEEDS ARRIVE! 👏 | 2026 Hungarian Darts Trophy | Day Two Afternoon Highlights"
+                "title": "THE SEEDS ARRIVE! 👏 | 2026 Hungarian Darts Trophy | Day Two Afternoon Highlights",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=2j3UL8LUk6w",
@@ -119,7 +125,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8l4LX7Kf5Wg",
                 "duration": 2315,
-                "title": "CHAMPION CROWNED 🏆 | Finals Night Highlights | 2026 Winmau World Masters"
+                "title": "CHAMPION CROWNED 🏆 | Finals Night Highlights | 2026 Winmau World Masters",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=XDzap9DY3tM",
@@ -141,7 +149,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8Mmzvx-fk5Q",
                 "duration": 922,
-                "title": "Luke Littler vs Niko Springer European Tour 12 - 1/16"
+                "title": "Luke Littler vs Niko Springer European Tour 12 - 1/16",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ABiJzfzJwck",
@@ -188,7 +198,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8PpRtRnWjAg",
                 "duration": 562,
-                "title": "Times Snooker Players Went TOO FAR.."
+                "title": "Times Snooker Players Went TOO FAR..",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=EKSUikXlECE",
@@ -252,12 +264,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=b56jzhbmkS8",
                 "duration": 906,
-                "title": "Round 1 Highlights | 2026 BMW PGA Championship"
+                "title": "Round 1 Highlights | 2026 BMW PGA Championship",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=rvMDl0Og00E",
                 "duration": 1646,
-                "title": "DRAMATIC DECIDER IN FULL! 😍 | Marco Fu vs Liam Davies | Halo World Championship Qualifying"
+                "title": "DRAMATIC DECIDER IN FULL! 😍 | Marco Fu vs Liam Davies | Halo World Championship Qualifying",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=pbODrxTXpzI",
@@ -274,7 +290,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wmFeBC9Ha-M",
                 "duration": 1527,
-                "title": "STATEMENT DISPLAYS 🔥 | Day Six Highlights | 2026 Betfred World Matchplay"
+                "title": "STATEMENT DISPLAYS 🔥 | Day Six Highlights | 2026 Betfred World Matchplay",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=WFABYcDw1n4",
@@ -316,7 +334,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-9oD1L5tZoo",
                 "duration": 369,
-                "title": "PETER WRIGHT VS ARNO MERK HIGHLIGHTS 2026 WORLD DARTS CHAMPIONSHIP"
+                "title": "PETER WRIGHT VS ARNO MERK HIGHLIGHTS 2026 WORLD DARTS CHAMPIONSHIP",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=6-IZvhIxEOk",
@@ -419,7 +439,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=bn_89FcrHak",
                 "duration": 3782,
-                "title": "Jimmy White & Stephen Relive Their Battles While Playing Snooker"
+                "title": "Jimmy White & Stephen Relive Their Battles While Playing Snooker",
+                "skip": [
+                    [
+                        15.0,
+                        18.8
+                    ],
+                    [
+                        1123.0,
+                        1183.0
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=i8h9mHOZKXo",

@@ -50,7 +50,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FrLequ6dUdM",
                 "duration": 250,
-                "title": "TLC - No Scrubs (Official HD Video)"
+                "title": "TLC - No Scrubs (Official HD Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=Nop8WphBjqg",
@@ -107,7 +109,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LOZuxwVk7TU",
                 "duration": 212,
-                "title": "Britney Spears - Toxic (Official HD Video)"
+                "title": "Britney Spears - Toxic (Official HD Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=C-u5WLJ9Yk4",
@@ -139,7 +143,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=agNvdSIIkXA",
                 "duration": 226,
-                "title": "Cassie - Long Way 2 Go (Official Music Video)"
+                "title": "Cassie - Long Way 2 Go (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=kIDWgqDBNXA",
@@ -229,7 +235,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kTHNpusq654",
                 "duration": 284,
-                "title": "Katy Perry - Hot N Cold (Official Music Video)"
+                "title": "Katy Perry - Hot N Cold (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=X9fLbfzCqWw",
@@ -266,7 +274,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GQMlWwIXg3M",
                 "duration": 205,
-                "title": "*NSYNC - It's Gonna Be Me (Official Video)"
+                "title": "*NSYNC - It's Gonna Be Me (Official Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=p_RqWocthcc",
@@ -283,7 +293,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=CHVhwcOg6y8",
                 "duration": 244,
-                "title": "Justin Bieber - One Time (Official Music Video)"
+                "title": "Justin Bieber - One Time (Official Music Video)",
+                "skip": [
+                    [
+                        241.7,
+                        243.7
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=eNII9PDlFJ0",
@@ -298,7 +315,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8UFIYGkROII",
                 "duration": 238,
-                "title": "Soulja Boy Tell'em - Crank That (Soulja Boy) (Official Music Video)"
+                "title": "Soulja Boy Tell'em - Crank That (Soulja Boy) (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=-e_IuYgvdf8",
@@ -337,7 +356,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yKNxeF4KMsY",
                 "duration": 273,
-                "title": "Coldplay - Yellow (Official Video)"
+                "title": "Coldplay - Yellow (Official Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=RiSfTyrvJlg",
@@ -374,7 +395,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_HKH7Emy1SY",
                 "duration": 238,
-                "title": "Ciara - Like A Boy (Official Video)"
+                "title": "Ciara - Like A Boy (Official Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=nmjdaBaZe8Y",
@@ -384,7 +407,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hpspGHeLOPE",
                 "duration": 246,
-                "title": "Christina Aguilera - What A Girl Wants (Official Video)"
+                "title": "Christina Aguilera - What A Girl Wants (Official Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=qTA0RuZoIxM",
@@ -406,7 +431,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CduA0TULnow",
                 "duration": 253,
-                "title": "Britney Spears - Oops!...I Did It Again (Official HD Video)"
+                "title": "Britney Spears - Oops!...I Did It Again (Official HD Video)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ek2PDE1cAyY",

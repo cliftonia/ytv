@@ -67,7 +67,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6mRlhwR7oSI",
                 "duration": 3442,
-                "title": "The Deep Wilderness Bigfoot Search | Expedition Bigfoot S2 | Discovery Channel India"
+                "title": "The Deep Wilderness Bigfoot Search | Expedition Bigfoot S2 | Discovery Channel India",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=KIcwyLQVQVg",
@@ -116,7 +118,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SY9wE9lQR7o",
                 "duration": 4882,
-                "title": "TITANIC 2026: What's Still Inside the Wreck? (New Dive Expedition)"
+                "title": "TITANIC 2026: What's Still Inside the Wreck? (New Dive Expedition)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=xOWzRCPTLAc",
@@ -133,7 +137,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=s5TONXq9Fr8",
                 "duration": 1257,
-                "title": "What Happened To The Cast of Expedition Bigfoot Is Heartbreaking..."
+                "title": "What Happened To The Cast of Expedition Bigfoot Is Heartbreaking...",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=UkgOSWxNQEE",
@@ -158,7 +164,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Kq6YPrlF30E",
                 "duration": 1156,
-                "title": "Arctic: A Film About Ice (Students on Ice Arctic Expedition 2026!)"
+                "title": "Arctic: A Film About Ice (Students on Ice Arctic Expedition 2026!)",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=rmuz3xFGBhw",
@@ -199,7 +207,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Wt9k4V1OoSU",
                 "duration": 2521,
-                "title": "Missing in Alaska: Vicious Arctic Mermaid Attacks - Full Episode (S1, E8) | History"
+                "title": "Missing in Alaska: Vicious Arctic Mermaid Attacks - Full Episode (S1, E8) | History",
+                "skip": [
+                    [
+                        879.5,
+                        881.1
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
@@ -255,12 +270,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=PNIpzRQ96Oo",
                 "duration": 830,
-                "title": "Antarctica Expedition Lines Don’t Tell You This, Until You’re On Board!"
+                "title": "Antarctica Expedition Lines Don’t Tell You This, Until You’re On Board!",
+                "skip": [
+                    [
+                        663.9,
+                        718.3
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=hQMqqnt5USs",
                 "duration": 3504,
-                "title": "Josh Gates Goes Treasure Hunting Around the World! 🔍🌎  Expedition Unknown | Discovery"
+                "title": "Josh Gates Goes Treasure Hunting Around the World! 🔍🌎  Expedition Unknown | Discovery",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=BTXRYdppMh8",
@@ -344,7 +368,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SXzu-VMzSIc",
                 "duration": 3063,
-                "title": "The Secret Buried in the Dragon’s Bones Could Destroy the Realm |Full Fantasy Movie#MedievalFantasy"
+                "title": "The Secret Buried in the Dragon’s Bones Could Destroy the Realm |Full Fantasy Movie#MedievalFantasy",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=YMbXT39k6l4",
@@ -393,7 +419,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zCwlY0dTUsc",
                 "duration": 974,
-                "title": "World War II: Hell Ships & Lost Prisoners ⚓🪖 | Expedition Unknown | Discovery"
+                "title": "World War II: Hell Ships & Lost Prisoners ⚓🪖 | Expedition Unknown | Discovery",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=1SheNUm9KpM",
@@ -403,7 +431,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qX4xZSIkaeE",
                 "duration": 388,
-                "title": "Chip Coffey Senses Something Terrifying! | Expedition Unknown After The Search S5 E1"
+                "title": "Chip Coffey Senses Something Terrifying! | Expedition Unknown After The Search S5 E1",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=vFEz5tRXYaw",
@@ -477,7 +507,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_aE5nKjq30E",
                 "duration": 4455,
-                "title": "The Most Terrifying Haunted Locations Investigated | Expedition X S4 | Discovery Channel India"
+                "title": "The Most Terrifying Haunted Locations Investigated | Expedition X S4 | Discovery Channel India",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=PtWVap908IE",
@@ -514,7 +546,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zqqP0ND19zo",
                 "duration": 4828,
-                "title": "Cave of the Jungle 2026 Full HD English Movie | A Lost Expedition Awakens a Deadly Ancient Predator"
+                "title": "Cave of the Jungle 2026 Full HD English Movie | A Lost Expedition Awakens a Deadly Ancient Predator",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=rW8UYHE_nhs",
