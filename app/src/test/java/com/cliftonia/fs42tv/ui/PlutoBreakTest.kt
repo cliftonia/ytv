@@ -55,6 +55,7 @@ class PlutoBreakTest {
         var musicWanted: (() -> Boolean)? = null
         var volumeChanges = 0
         var pictures = 0
+        var uncovers = 0
     }
 
     private fun subject(world: World) = PlutoBreak(PlutoBreak.Deps(
@@ -67,6 +68,7 @@ class PlutoBreakTest {
                 },
                 schedule = world.clock.schedule,
                 changed = changed,
+                nowMillis = { world.clock.now },
             )
         },
         runOnUi = { it() },
@@ -79,6 +81,7 @@ class PlutoBreakTest {
         nowTitle = { _, _ -> world.title },
         volumeChanged = { world.volumeChanges++ },
         picture = { world.pictures++ },
+        uncovered = { world.uncovers++ },
     ))
 
     /** Play [t] and let the poller see [reads] bumper windows. */
@@ -266,5 +269,41 @@ class PlutoBreakTest {
         world.halted = true
         world.clock.advance(BreakPoller.POLL_MILLIS)
         assertFalse(subject.inBreak)
+    }
+
+    @Test
+    fun `the card coming down hands the picture back - a stall under it gets its pill`() {
+        val world = World()
+        val subject = subject(world)
+        world.intoBreak(subject)
+        assertEquals(0, world.uncovers)
+        world.playlist = show
+        world.clock.advance(BreakPoller.POLL_MILLIS)
+        assertEquals(1, world.uncovers)
+    }
+
+    @Test
+    fun `a break the network went quiet on ends - sound back, music gone, card down`() {
+        val world = World()
+        val subject = subject(world)
+        world.intoBreak(subject)
+        world.playlist = "<html>502</html>"
+        world.clock.advance(BreakPoller.POLL_MILLIS * 6)
+        assertFalse(subject.inBreak)
+        assertFalse(subject.muting)
+        assertNull(subject.state.value)
+        assertEquals(1, world.musicReleases)
+    }
+
+    @Test
+    fun `a channel stuck on bumper gets five minutes of card, then the bumper, not a flapping card`() {
+        val world = World()
+        val subject = subject(world)
+        world.intoBreak(subject)
+        world.clock.advance(com.cliftonia.fs42tv.pluto.BreakDetector.MAX_BREAK_MILLIS)
+        assertFalse(subject.inBreak)
+        world.clock.advance(BreakPoller.POLL_MILLIS * 60)
+        assertFalse(subject.inBreak)
+        assertEquals(1, world.musicPlays)
     }
 }

@@ -32,6 +32,9 @@ class BreakDetectorTest {
         }
     }
 
+    /** The clock only matters to the ceiling; everywhere else every read is at time zero. */
+    private fun BreakDetector.feed(body: String?) = feed(body, 0L)
+
     private val allBumper = playlist(bumperA, bumperB, bumperA)
     private val allProgramme = playlist(programme, programme, live)
 
@@ -128,5 +131,52 @@ class BreakDetectorTest {
         // Back into bumper: two reads again before the card returns.
         assertEquals(PROGRAMME, detector.feed(allBumper))
         assertEquals(IN_BREAK, detector.feed(allBumper))
+    }
+
+    @Test
+    fun `six reads in a row that say nothing end a break`() {
+        val detector = BreakDetector()
+        detector.feed(allBumper)
+        detector.feed(allBumper)
+        repeat(BreakDetector.MAX_UNKNOWN_READS - 1) { assertEquals(IN_BREAK, detector.feed(null)) }
+        assertEquals(PROGRAMME, detector.feed(null))
+        // A fresh two-read confirmation, not one bumper read, brings the card back.
+        assertEquals(PROGRAMME, detector.feed(allBumper))
+        assertEquals(IN_BREAK, detector.feed(allBumper))
+    }
+
+    @Test
+    fun `a bumper read between unknown reads restarts their count`() {
+        val detector = BreakDetector()
+        detector.feed(allBumper)
+        detector.feed(allBumper)
+        repeat(BreakDetector.MAX_UNKNOWN_READS - 1) { detector.feed(null) }
+        detector.feed(allBumper)
+        repeat(BreakDetector.MAX_UNKNOWN_READS - 1) { assertEquals(IN_BREAK, detector.feed(null)) }
+    }
+
+    @Test
+    fun `a break ends when it has run five minutes, however bumper the window`() {
+        val detector = BreakDetector()
+        detector.feed(allBumper, 0L)
+        detector.feed(allBumper, 5_000L)
+        assertEquals(IN_BREAK, detector.feed(allBumper, 5_000L + BreakDetector.MAX_BREAK_MILLIS - 1))
+        assertEquals(PROGRAMME, detector.feed(allBumper, 5_000L + BreakDetector.MAX_BREAK_MILLIS))
+    }
+
+    @Test
+    fun `a channel stuck on bumper past the ceiling gets no second card until the programme is seen`() {
+        val detector = BreakDetector()
+        var now = 0L
+        fun read(body: String): BreakDetector.State = detector.feed(body, now).also { now += 5_000L }
+        read(allBumper)
+        read(allBumper)
+        while (detector.state == IN_BREAK) read(allBumper)
+        // Stuck: an hour more of bumper never flaps the card back up.
+        repeat(720) { assertEquals(PROGRAMME, read(allBumper)) }
+        // The programme, then a real break later: two reads, as ever.
+        assertEquals(PROGRAMME, read(allProgramme))
+        assertEquals(PROGRAMME, read(allBumper))
+        assertEquals(IN_BREAK, read(allBumper))
     }
 }
