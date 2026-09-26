@@ -24,8 +24,16 @@ data class Progressive(
     val loudnessDb: Double? = null,
 ) : Playable
 
-/** A live HLS feed, played as-is. */
-data class Hls(val url: String) : Playable
+/**
+ * A live HLS feed. [url] is its identity everywhere - what Media3 plays, what a Pluto session's
+ * failure is traced by, what the break poller is keyed on.
+ *
+ * [mediaUrl] and [audioUrl] are for mpv only: one media playlist chosen out of the master at [url]
+ * and, when that variant is video-only, its separate audio rendition (see pluto/HlsMaster - mpv
+ * opens a master by probing every variant, 7-11s against ~3s for one playlist). Null: play [url].
+ * All three carry a Pluto session's token when they are Pluto's - never log them.
+ */
+data class Hls(val url: String, val mediaUrl: String? = null, val audioUrl: String? = null) : Playable
 
 /** Nothing usable is cached; the caller must resolve this id on the device before it can play. */
 data class NeedsResolving(val videoId: String) : Playable

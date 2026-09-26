@@ -101,6 +101,19 @@ class BreakPollerTest {
     }
 
     @Test
+    fun `handed the playlist the player opened, the poller reads it with no master fetch`() {
+        val chosen = "https://stitcher.example/channel/abc/720p.m3u8"
+        val s = subject(mapOf(master to listOf(masterBody), chosen to listOf(show, null, show), variant to listOf(show)))
+        s.poller.start(master, chosen)
+        s.clock.advance(BreakPoller.FIRST_READ_MILLIS)
+        assertEquals(listOf(chosen), s.fetched)
+        // A failed read of it forgets it, and the master is asked again as before.
+        s.clock.advance(BreakPoller.POLL_MILLIS)
+        s.clock.advance(BreakPoller.POLL_MILLIS)
+        assertEquals(listOf(chosen, chosen, master, variant), s.fetched)
+    }
+
+    @Test
     fun `two bumper reads raise the break and the first programme read ends it`() {
         val s = subject(mapOf(master to listOf(masterBody), variant to listOf(show, bumper, bumper, bumper, show)))
         s.poller.start(master)

@@ -15,9 +15,11 @@ import java.util.concurrent.TimeUnit
  * (see [OnScreen]), and the closer it lands to mpv's own read of the window, the surer that is.
  *
  * Measured Sep 2026: re-reading the same session's master and variant every five seconds while a
- * player streams does not disturb the stream (four minutes, no player errors). The master is read
- * once per tune and its lowest variant kept; a failed variant read forgets it, so the next read
- * asks the master again - a stitcher that moved the variant is followed rather than read wrong
+ * player streams does not disturb the stream (four minutes, no player errors). Under mpv the tune
+ * has already chosen the variant mpv opens ([MasterPicker]); [start] is handed it, so the poller
+ * reads the very playlist on screen with no master fetch at all. Otherwise the master is read once
+ * per tune and its lowest variant kept. Either way a failed variant read forgets it, so the next
+ * read asks the master again - a stitcher that moved the variant is followed rather than read wrong
  * forever. A failure of any kind is an unknown read, which counts only toward a break's ceiling.
  *
  * Threading: [start] and [stop] from the UI thread; every fetch on [schedule]'s thread, which must
@@ -63,10 +65,13 @@ class BreakPoller(
     /** Whether [run] is still the one wanted - false once stopped or replaced. */
     fun isCurrent(run: Run): Boolean = current === run && !run.stopped
 
-    /** Poll [masterUrl] from scratch - a new detector, a new variant - replacing any other run. */
-    fun start(masterUrl: String): Run {
+    /**
+     * Poll [masterUrl] from scratch - a new detector - replacing any other run. [variant] is the
+     * media playlist the player itself opened, when the tune chose one; else the master's lowest.
+     */
+    fun start(masterUrl: String, variant: String? = null): Run {
         stop()
-        val run = Run(masterUrl)
+        val run = Run(masterUrl).also { it.variant = variant }
         current = run
         next(run, FIRST_READ_MILLIS)
         return run

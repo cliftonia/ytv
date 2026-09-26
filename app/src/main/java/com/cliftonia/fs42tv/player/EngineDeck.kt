@@ -17,7 +17,7 @@ import android.widget.FrameLayout
  */
 class EngineDeck(
     private val context: Context,
-    private val engine: PlayerEngine,
+    val engine: PlayerEngine,
     private val modeCount: Int,
     overlay: View,
     /** Re-applied to every fresh engine, so a rebuilt one reports first frames too. */

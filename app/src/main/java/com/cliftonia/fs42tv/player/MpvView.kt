@@ -416,13 +416,13 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         // set as a property would persist, and the following clip - which has its own audio, or
         // none - would inherit the last one's track.
         //
-        // Safe to build by concatenation only because both urls are the proxy's own
-        // `http://127.0.0.1:<port>/<id>`, which carries no comma or equals sign. mpv parses this
-        // string as a comma-separated key=value list, so a raw googlevideo url with either would
-        // be cut in half. If the proxy is ever bypassed this has to be revisited.
+        // mpv parses this string as a comma-separated key=value list, so a url with a comma in it
+        // would be cut in half. YouTube's audio is the proxy's own `http://127.0.0.1:<port>/<id>`
+        // and has none; a Pluto audio rendition is a direct url, so it goes through
+        // MpvSource.perFileValue, which length-escapes it only if it needs to.
         val options = buildString {
             append("start=").append(startSeconds.toInt())
-            if (audioFile != null) append(",audio-file=").append(audioFile)
+            if (audioFile != null) append(",audio-file=").append(MpvSource.perFileValue(audioFile))
             // The subtitle is NOT set here. It is added with `sub-add` once the file is
             // loaded - see addSubtitle - because a per-file option is applied while mpv is still
             // opening the file, gives no indication of whether it worked, and cannot be checked
