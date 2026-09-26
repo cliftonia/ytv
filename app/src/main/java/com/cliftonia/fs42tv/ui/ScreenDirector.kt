@@ -114,6 +114,18 @@ class ScreenDirector(private val deps: Deps) {
         ended = ::cardEnded,
     )
 
+    /**
+     * Pluto's ad breaks: the card over the logo bumper, with the music. See [PlutoBreak]. The
+     * card is a picture, like the up-next card: the watchdog and the stall pill stand down for it.
+     */
+    val plutoBreak = PlutoBreak.create(deps.extras, deps.music, deps.channels, deps.runOnUi,
+        deps.halted, guideOpen = deps.pickerOpen, overlayOpen = deps.overlayOpen,
+        stoppedNow = deps.stoppedNow, volumeChanged = ::updateProgrammeVolume, picture = {
+            watch.firstFrame()
+            deps.stallHandler.removeCallbacksAndMessages(null)
+            buffering.value = false
+        })
+
     /** SKIP SPONSORS during playback; a range reaching the end ends the clip the usual way. */
     private val skipper = SponsorSkipper(
         handler = Handler(android.os.Looper.getMainLooper()),
@@ -167,8 +179,9 @@ class ScreenDirector(private val deps: Deps) {
     fun updateProgrammeVolume() {
         // Never above the level gain, never unmuting a blank: the gain only replaces the 1f.
         // The card too: under it the outgoing file may still be loaded, and it must stay silent.
-        deps.player()?.setVolume(if (tuning.value || deps.pickerOpen() || upNext.showing) 0f
-            else deps.extras.programmeGain())
+        // And a Pluto break, hidden under an overlay or not: its audio is the bumper's jingle.
+        deps.player()?.setVolume(if (tuning.value || deps.pickerOpen() || upNext.showing ||
+            plutoBreak.muting) 0f else deps.extras.programmeGain())
         syncCovered()
     }
 
@@ -183,6 +196,8 @@ class ScreenDirector(private val deps: Deps) {
     fun syncCovered() {
         deps.extras.syncCovered(
             deps.pickerOpen() || deps.overlayOpen() || deps.stoppedNow() || deps.halted())
+        // The same transitions hide a break card under the guide or settings, and restore it.
+        plutoBreak.refresh()
     }
 
     /** The screen's half of every tune, handed to [TuneController]. */
@@ -208,6 +223,7 @@ class ScreenDirector(private val deps: Deps) {
         deps.player()?.stop()
         deps.player()?.setPaused(true)
         skipper.stop()
+        plutoBreak.leave()
         upNext.stopCut()
         watch.firstFrame()
         deps.stallHandler.removeCallbacksAndMessages(null)
@@ -236,6 +252,7 @@ class ScreenDirector(private val deps: Deps) {
 
     /** The blank, the silence and the watchdog of a channel change, for a scheduled one. */
     private fun raiseBlank() {
+        plutoBreak.leave()
         tuning.value = true
         updateProgrammeVolume()
         watch.tuneStarted()
@@ -245,6 +262,7 @@ class ScreenDirector(private val deps: Deps) {
     fun release() {
         upNext.release()
         skipper.stop()
+        plutoBreak.release()
     }
 
     /** Anything else taking the screen takes the card down, and un-pauses the player under it. */
@@ -254,8 +272,11 @@ class ScreenDirector(private val deps: Deps) {
         if (!deps.stoppedNow()) deps.player()?.setPaused(false)
     }
 
-    /** The guide closed over a card: the card's music again. */
-    fun resumeBreakMusic() = upNext.resumeMusic()
+    /** The guide closed over a card - either kind: the card's music again. */
+    fun resumeBreakMusic() {
+        upNext.resumeMusic()
+        plutoBreak.resumeMusic()
+    }
 
     private fun startBlank(target: Channel) {
         // Stop the old channel at the SOURCE rather than covering it. A Compose overlay needs
@@ -266,8 +287,9 @@ class ScreenDirector(private val deps: Deps) {
         deps.player()?.stop()
         skipper.stop()
         upNext.stopCut()
-        // Surfing away cancels a card as it cancels anything else.
+        // Surfing away cancels a card as it cancels anything else - either kind.
         leaveCard()
+        plutoBreak.leave()
         // A deliberate channel change supersedes any error still waiting to be announced: the
         // card would name a channel the viewer has already left. It also starts the watchdog on
         // the new channel's first frame.
@@ -329,28 +351,10 @@ class ScreenDirector(private val deps: Deps) {
                 // re-tune below asks it again. A no-op for anything else.
                 deps.extras.plutoFailed(deps.tune().onAir?.playable)
             }
-            // A rejected URL is the one error worth reacting to specifically: re-tuning
-            // without forgetting it would resolve to the same dead link and fail the same way.
-            // Engine-agnostic on purpose. Media3 names the fault precisely; mpv reports only
-            // that the file ended in error, and its commonest cause by far is exactly this - a
-            // signed URL the CDN refused. Matching only Media3's spellings meant an mpv 403
-            // re-tuned to the very same dead URL, forever. Being wrong in the other direction
-            // costs one server resolve.
-            if (code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
-                code.startsWith("MPV_")) {
-                deps.tune().onAir?.stream?.id?.let { id ->
-                    // Refuse the TIER, not the clip - condemning the whole id forces a
-                    // /resolve, which runs yt-dlp at seven to twelve measured seconds, and
-                    // nearly every clip carries a lower rung in a file the app already holds.
-                    // Which rung, and what to forget, is the ledger's decision.
-                    val tier = deps.condemn(id)
-                    if (tier != null) {
-                        Log.w("fs42", "tier $tier refused for $id; falling to the next rung")
-                    } else {
-                        Log.w("fs42", "all tiers refused for $id; skipping the clip")
-                    }
-                }
-            }
+            // A rejected url must be forgotten, or the re-tune resolves the same dead link.
+            RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)
+            // The picture is gone; so is any break card over it.
+            plutoBreak.leave()
 
             // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused
             // with 403 while still inside its stated expiry, and the recovery below - drop the
@@ -376,6 +380,7 @@ class ScreenDirector(private val deps: Deps) {
             tuning.value = false
             updateProgrammeVolume()
             skipper.start(deps.tune().onAir)
+            plutoBreak.playing(deps.tune().onAir)
         }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
@@ -390,7 +395,8 @@ class ScreenDirector(private val deps: Deps) {
             deps.stallHandler.removeCallbacksAndMessages(null)
             if (stalled) {
                 deps.stallHandler.postDelayed({
-                    if (!deps.halted()) buffering.value = true
+                    // Not over a break card: the card is the picture, whatever the bumper does.
+                    if (!deps.halted() && !plutoBreak.showing) buffering.value = true
                 }, STALL_CARD_MILLIS)
             } else {
                 buffering.value = false
@@ -422,6 +428,10 @@ class ScreenDirector(private val deps: Deps) {
             // Read per tune: the channel playing carries on, and the next tune - a surf, or
             // the re-tune after any error - takes the route now chosen.
             Features.Flag.PLUTO_ROUTE -> Unit
+            // OFF takes a card up now down, restores the sound and stops reading; ON starts
+            // reading the channel playing.
+            Features.Flag.BREAK_CARD ->
+                if (on && !tuning.value) plutoBreak.playing(deps.tune().onAir) else plutoBreak.leave()
         }
     }
 
@@ -433,6 +443,8 @@ class ScreenDirector(private val deps: Deps) {
         syncCovered()
         deps.player()?.setPaused(true)
         skipper.stop()
+        // Nobody is watching: no reads. Back on screen, the break is seen afresh.
+        plutoBreak.leave()
     }
 
     /** Back on screen: resume the picture, re-derive the volume, and watch for skips again. */
@@ -440,7 +452,10 @@ class ScreenDirector(private val deps: Deps) {
         // Not under a card: the file there was paused on purpose - see [showCard].
         if (!upNext.showing) deps.player()?.setPaused(false)
         updateProgrammeVolume()
-        if (!tuning.value) skipper.start(deps.tune().onAir)
+        if (!tuning.value) {
+            skipper.start(deps.tune().onAir)
+            plutoBreak.playing(deps.tune().onAir)
+        }
         upNext.resumeMusic()
     }
 
