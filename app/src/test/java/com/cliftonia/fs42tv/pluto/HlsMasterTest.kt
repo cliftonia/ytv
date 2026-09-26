@@ -77,8 +77,14 @@ class HlsMasterTest {
     }
 
     @Test
+    fun `a variant that needs separate audio plays the master while that path is off`() {
+        assertEquals(false, HlsMaster.SEPARATE_AUDIO)
+        assertNull(HlsMaster.choose(separate, base, maxHeight = 1080))
+    }
+
+    @Test
     fun `a separate audio group brings its DEFAULT rendition`() {
-        val pick = HlsMaster.choose(separate, base, maxHeight = 1080)!!
+        val pick = HlsMaster.choose(separate, base, maxHeight = 1080, separateAudio = true)!!
         assertEquals(at("video/720p.m3u8?jwt=J"), pick.videoUrl)
         assertEquals(at("audio/audio/English/audio.m3u8?jwt=J"), pick.audioUrl)
     }
@@ -87,7 +93,7 @@ class HlsMasterTest {
     fun `without a DEFAULT, the group's first rendition`() {
         val noDefault = separate.replace("DEFAULT=YES", "DEFAULT=NO")
         assertEquals(at("audio/audio/Spanish/audio.m3u8?jwt=J"),
-            HlsMaster.choose(noDefault, base, 1080)!!.audioUrl)
+            HlsMaster.choose(noDefault, base, 1080, separateAudio = true)!!.audioUrl)
     }
 
     @Test
@@ -96,6 +102,18 @@ class HlsMasterTest {
             "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"aac\",NAME=\"English\",DEFAULT=YES\n" +
             "#EXT-X-STREAM-INF:BANDWIDTH=2000000,CODECS=\"avc1.4d401f,mp4a.40.2\",AUDIO=\"aac\"\nv.m3u8\n"
         val pick = HlsMaster.choose(inBand, base, 1080)!!
+        assertEquals(at("v.m3u8"), pick.videoUrl)
+        assertNull(pick.audioUrl)
+    }
+
+    @Test
+    fun `the DEFAULT rendition without a URI is muxed audio, whatever an alternate carries`() {
+        val defaultMuxed = "#EXTM3U\n" +
+            "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"a\",NAME=\"English\",DEFAULT=YES\n" +
+            "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"a\",NAME=\"English(Audio-Description)\",DEFAULT=NO," +
+            "URI=\"audio/English(Audio-Description)/a.m3u8\"\n" +
+            "#EXT-X-STREAM-INF:BANDWIDTH=2000000,CODECS=\"avc1.4d401f,mp4a.40.2\",AUDIO=\"a\"\nv.m3u8\n"
+        val pick = HlsMaster.choose(defaultMuxed, base, 1080, separateAudio = true)!!
         assertEquals(at("v.m3u8"), pick.videoUrl)
         assertNull(pick.audioUrl)
     }
@@ -118,7 +136,7 @@ class HlsMasterTest {
         val absolute = "#EXTM3U\n" +
             "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"a\",DEFAULT=YES,URI=\"https://aud.example/a.m3u8?x=1\"\n" +
             "#EXT-X-STREAM-INF:BANDWIDTH=2000000,AUDIO=\"a\"\nhttps://vid.example/v.m3u8?y=2\n"
-        val pick = HlsMaster.choose(absolute, base, 1080)!!
+        val pick = HlsMaster.choose(absolute, base, 1080, separateAudio = true)!!
         assertEquals("https://vid.example/v.m3u8?y=2", pick.videoUrl)
         assertEquals("https://aud.example/a.m3u8?x=1", pick.audioUrl)
     }
