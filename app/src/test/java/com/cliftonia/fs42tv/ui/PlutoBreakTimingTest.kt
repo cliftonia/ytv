@@ -236,4 +236,48 @@ class PlutoBreakTimingTest {
         }
         assertTrue("card at $upAt", upAt != null && upAt in 115_000L..120_000L)
     }
+
+    @Test
+    fun `a reload of the same stream re-anchors - the old tune's timing is gone`() {
+        val stage = Stage(minuteBreak)
+        val subject = stage.subject()
+        stage.until(60_000)
+        subject.loading(tuned)
+        stage.until(61_500)
+        subject.playing(tuned)
+        // The watchdog re-tunes the same url at 90s; the new first frame is slow, at 94s. The new
+        // window is 13..17, so mpv starts at segment 15 (t0 + 75s): the break's start is on
+        // screen at 94s + 25s = 119s - not at the old tune's 116.5s.
+        stage.until(90_000)
+        subject.loading(tuned)
+        stage.until(94_000)
+        subject.playing(tuned)
+        stage.until(118_999)
+        assertFalse(subject.showing)
+        stage.until(119_000)
+        assertTrue(subject.showing)
+    }
+
+    @Test
+    fun `a stall open when the stream reloads does not freeze the new tune's clock`() {
+        val stage = Stage(minuteBreak)
+        val subject = stage.subject()
+        stage.until(60_000)
+        subject.loading(tuned)
+        stage.until(61_500)
+        subject.playing(tuned)
+        stage.until(80_000)
+        subject.buffering(true)
+        // The stream ended in the stall and was reloaded; no "recovered" ever came.
+        stage.until(90_000)
+        subject.loading(tuned)
+        stage.until(91_500)
+        subject.playing(tuned)
+        stage.until(116_499)
+        assertFalse(subject.showing)
+        stage.until(116_500)
+        assertTrue(subject.showing)
+        stage.until(176_500)
+        assertFalse(subject.showing)
+    }
 }

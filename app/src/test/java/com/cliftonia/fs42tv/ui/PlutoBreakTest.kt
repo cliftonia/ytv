@@ -312,4 +312,31 @@ class PlutoBreakTest {
         assertFalse(subject.inBreak)
         assertEquals(1, world.musicPlays)
     }
+
+    @Test
+    fun `back from the home screen on mpv, a Pluto channel is re-tuned - once, and not from a dialog`() {
+        val world = World()
+        val subject = subject(world)
+        // Paused by a dialog, never stopped: carry on.
+        assertFalse(subject.retuneOnResume(tuned()))
+        subject.appStopped()
+        assertTrue(subject.retuneOnResume(tuned()))
+        // Consumed: the next resume is an ordinary one.
+        assertFalse(subject.retuneOnResume(tuned()))
+    }
+
+    @Test
+    fun `no resume re-tune for a non-Pluto channel, under an overlay, or with the row off`() {
+        val world = World()
+        val subject = subject(world)
+        subject.appStopped()
+        assertFalse(subject.retuneOnResume(tuned(news)))
+        subject.appStopped()
+        world.guideOpen = true
+        assertFalse(subject.retuneOnResume(tuned()))
+        world.guideOpen = false
+        world.enabled = false
+        subject.appStopped()
+        assertFalse(subject.retuneOnResume(tuned()))
+    }
 }

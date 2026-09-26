@@ -46,6 +46,8 @@ class BreakPoller(
         internal val detector = BreakDetector()
         internal val timeline = BreakTimeline()
         internal var silentReads = 0
+        /** When the latest variant read was sent - the anchor's clock. See [BreakView.firstReadAt]. */
+        internal var requestedAt: Long? = null
         internal var lastStart: Long? = null
         internal var lastEnd: Long? = null
         @Volatile internal var variant: String? = null
@@ -87,15 +89,17 @@ class BreakPoller(
 
     private fun tick(run: Run) {
         if (!isCurrent(run)) return
+        run.requestedAt = null
         val body = fetchPlaylist(run)
         val readAt = wallMillis()
+        val requestedAt = run.requestedAt ?: readAt
         val before = run.detector.state
         val window = HlsWindow.parse(body)
         val longEnough = window != null && window.segments.all { it.bumper } &&
             window.segments.sumOf { it.durationMillis } >= BreakView.MIN_BREAK_MILLIS
         val after = run.detector.feed(body, nowMillis(), longEnough)
         if (window != null) {
-            run.timeline.feed(window, readAt)
+            run.timeline.feed(window, readAt, requestedAt)
             run.silentReads = 0
         } else {
             run.silentReads++
@@ -129,6 +133,7 @@ class BreakPoller(
             val master = fetch(run.masterUrl)
             HlsVariants.mediaPlaylist(master.body, master.url)
         }.getOrNull()?.also { run.variant = it } ?: return null
+        run.requestedAt = wallMillis()
         return runCatching { fetch(variant).body }
             .onFailure { run.variant = null }
             .getOrNull()

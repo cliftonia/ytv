@@ -71,9 +71,19 @@ data class BreakView(
     val targetDurationMillis: Long,
     /** The instants of the first window read after the tune, in order - the mpv anchor. */
     val firstWindowStarts: List<Long>,
-    /** Wall-clock milliseconds of that first read, and of the latest. */
+    /**
+     * Wall-clock milliseconds the first read's playlist was ASKED for - not answered: the anchor
+     * compares it with the load, and the answer's wait (TLS, a redirect) is not the window's age.
+     */
     val firstReadAt: Long,
+    /** Wall-clock milliseconds the latest read was answered - the edge estimate's clock. */
     val readAt: Long,
+    /**
+     * How far behind the edge a player that starts three segments back sits: those three
+     * segments' own lengths. Pluto's target is a ceiling (6), its segments ~5.005s, so three
+     * targets would be ~3s wrong all the time.
+     */
+    val liveOffsetMillis: Long = 3 * targetDurationMillis,
     /** Six reads in a row said nothing: whatever the timeline says, nobody can vouch for it. */
     val blind: Boolean = false,
     /** The two-read detector's verdict, for when there are no timestamps. */
@@ -143,10 +153,12 @@ class BreakTimeline {
     private var firstWindowStarts: List<Long>? = null
     private var firstReadAt = 0L
     private var readAt = 0L
+    private var liveOffset = 0L
 
-    fun feed(window: HlsWindow, readAt: Long) {
+    fun feed(window: HlsWindow, readAt: Long, requestedAt: Long = readAt) {
         target = window.targetDurationMillis
         this.readAt = readAt
+        liveOffset = window.segments.takeLast(3).sumOf { it.durationMillis }
         window.segments.forEach { s ->
             val start = s.programDateTime ?: known[s.seq]?.start
             known[s.seq] = Known(start, s.durationMillis, s.bumper)
@@ -155,7 +167,7 @@ class BreakTimeline {
         lastWindow = window.segments.map { it.seq }
         if (firstWindowSeqs == null) {
             firstWindowSeqs = lastWindow
-            firstReadAt = readAt
+            firstReadAt = requestedAt
         }
         if (firstWindowStarts == null) {
             val starts = firstWindowSeqs.orEmpty().map { known[it]?.start }
@@ -214,6 +226,7 @@ class BreakTimeline {
             firstWindowStarts = firstWindowStarts.orEmpty(),
             firstReadAt = firstReadAt,
             readAt = readAt,
+            liveOffsetMillis = liveOffset,
         )
     }
 

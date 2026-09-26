@@ -70,6 +70,20 @@ class ScreenExtras(private val deps: Deps) {
         }
     }
 
+    /**
+     * A Pluto channel that fell back to its legacy url for want of a session - a television just
+     * woken - plays Pluto's bumper without an error, so nothing else would ever re-tune it. Once,
+     * when a session can be had, and only if the viewer is still on that channel and [idle] - no
+     * tune in flight, nothing open over it: a re-tune under the guide changes the channel under
+     * the list.
+     */
+    fun retuneWhenPlutoSessionReady(tune: () -> com.cliftonia.fs42tv.tune.TuneController, idle: () -> Boolean) {
+        onPlutoSessionReady { channel ->
+            val still = tune().onAir?.takeIf { it.card == null }?.channel?.number == channel.number
+            if (still && idle()) tune().retuneCurrent("a pluto session is available")
+        }
+    }
+
     val features: Features get() = deps.features
 
     /**
