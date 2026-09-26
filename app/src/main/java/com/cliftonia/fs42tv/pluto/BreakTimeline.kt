@@ -134,6 +134,12 @@ class BreakTimeline {
     private val known = TreeMap<Long, Known>()
     private var target = 0L
     private var lastWindow: List<Long> = emptyList()
+    /**
+     * The first window read after the tune - the one mpv read too - by sequence number. During a
+     * long programme a window can carry no PDT at all (Pluto stamps the changes), so its instants
+     * may only be known later, counted back from the next PDT; until then nothing is pruned.
+     */
+    private var firstWindowSeqs: List<Long>? = null
     private var firstWindowStarts: List<Long>? = null
     private var firstReadAt = 0L
     private var readAt = 0L
@@ -145,16 +151,18 @@ class BreakTimeline {
             val start = s.programDateTime ?: known[s.seq]?.start
             known[s.seq] = Known(start, s.durationMillis, s.bumper)
         }
-        while (known.size > KEEP) known.pollFirstEntry()
         propagate()
         lastWindow = window.segments.map { it.seq }
-        if (firstWindowStarts == null) {
-            val starts = lastWindow.map { known[it]?.start }
-            if (starts.all { it != null }) {
-                firstWindowStarts = starts.filterNotNull()
-                firstReadAt = readAt
-            }
+        if (firstWindowSeqs == null) {
+            firstWindowSeqs = lastWindow
+            firstReadAt = readAt
         }
+        if (firstWindowStarts == null) {
+            val starts = firstWindowSeqs.orEmpty().map { known[it]?.start }
+            if (starts.all { it != null }) firstWindowStarts = starts.filterNotNull()
+        }
+        val keep = if (firstWindowStarts == null) KEEP_UNANCHORED else KEEP
+        while (known.size > keep) known.pollFirstEntry()
     }
 
     /** Instants forward from each known one, then backward to the segments before it. */
@@ -212,5 +220,8 @@ class BreakTimeline {
     private companion object {
         /** Far more than a window (five segments), a little more than a long break's worth. */
         const val KEEP = 96
+
+        /** An hour and a half of 5s segments, held while the mpv anchor waits for a PDT. */
+        const val KEEP_UNANCHORED = 1_080
     }
 }

@@ -60,17 +60,23 @@ class PlutoBreakTest {
 
     private fun subject(world: World) = PlutoBreak(PlutoBreak.Deps(
         enabled = { world.enabled },
-        poller = { changed ->
+        poller = { read ->
             BreakPoller(
                 fetch = { url ->
                     world.fetched += url
                     BreakPoller.Fetched(url, if (url == master) masterBody else world.playlist)
                 },
                 schedule = world.clock.schedule,
-                changed = changed,
+                read = read,
                 nowMillis = { world.clock.now },
+                wallMillis = { world.clock.now },
             )
         },
+        later = world.clock.schedule,
+        wallMillis = { world.clock.now },
+        elapsedMillis = { world.clock.now },
+        exactInstant = { null },
+        joinsThirdFromLast = { true },
         runOnUi = { it() },
         halted = { world.halted },
         guideOpen = { world.guideOpen },

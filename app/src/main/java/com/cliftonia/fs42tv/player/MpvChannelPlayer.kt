@@ -345,6 +345,9 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         return runCatching { MPVLib.getPropertyString("time-pos")?.toDoubleOrNull() }.getOrNull()
     }
 
+    /** No PDT from libmpv, but its demuxer is ffmpeg's, left at `live_start_index` -3 (MpvView). */
+    override val joinsLiveAtThirdFromLast: Boolean get() = true
+
     /**
      * A RELATIVE seek forward, from mpv's own position - not `absolute`.
      *

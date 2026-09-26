@@ -54,6 +54,7 @@ class BreakPollerTest {
         val poller: BreakPoller,
         val fetched: MutableList<String>,
         val changes: MutableList<BreakDetector.State>,
+        val views: MutableList<BreakView>,
     )
 
     /** [answers] per url: each fetch takes the next answer (null throws), the last repeats. */
@@ -61,6 +62,7 @@ class BreakPollerTest {
         val clock = Clock()
         val fetched = mutableListOf<String>()
         val changes = mutableListOf<BreakDetector.State>()
+        val views = mutableListOf<BreakView>()
         val served = mutableMapOf<String, Int>()
         val poller = BreakPoller(
             fetch = { url ->
@@ -71,21 +73,28 @@ class BreakPollerTest {
                 BreakPoller.Fetched(url, list[minOf(i, list.lastIndex)] ?: throw java.io.IOException("down"))
             },
             schedule = clock.schedule,
-            changed = { _, state -> changes += state },
+            read = { _, view ->
+                views += view
+                // The two-read detector's transitions, as the old callback reported them.
+                val state = if (view.fallbackInBreak) IN_BREAK else PROGRAMME
+                if (state != (changes.lastOrNull() ?: PROGRAMME)) changes += state
+            },
             nowMillis = { clock.now },
+            wallMillis = { 1_000_000L + clock.now },
         )
-        return Subject(clock, poller, fetched, changes)
+        return Subject(clock, poller, fetched, changes, views)
     }
 
     @Test
-    fun `nothing is read before the first read's delay, then every five seconds`() {
+    fun `the first read is at the tune, then one every four seconds`() {
         val s = subject(mapOf(master to listOf(masterBody), variant to listOf(show)))
         s.poller.start(master)
-        s.clock.advance(BreakPoller.FIRST_READ_MILLIS - 1)
         assertTrue(s.fetched.isEmpty())
-        s.clock.advance(1)
+        s.clock.advance(0)
         assertEquals(listOf(master, variant), s.fetched)
-        s.clock.advance(BreakPoller.POLL_MILLIS)
+        s.clock.advance(BreakPoller.POLL_MILLIS - 1)
+        assertEquals(2, s.fetched.size)
+        s.clock.advance(1)
         s.clock.advance(BreakPoller.POLL_MILLIS)
         // The master once per tune; the variant each time.
         assertEquals(listOf(master, variant, variant, variant), s.fetched)
@@ -151,7 +160,7 @@ class BreakPollerTest {
                 BreakPoller.Fetched(url, if (url == master) masterBody else bumper)
             },
             schedule = clock.schedule,
-            changed = { _, state -> changes += state },
+            read = { _, view -> if (view.fallbackInBreak) changes += IN_BREAK },
         )
         poller.start(master)
         clock.advance(BreakPoller.FIRST_READ_MILLIS + BreakPoller.POLL_MILLIS * 3)
@@ -204,5 +213,37 @@ class BreakPollerTest {
         assertEquals(listOf(IN_BREAK), s.changes)
         s.clock.advance(BreakPoller.POLL_MILLIS)
         assertEquals(listOf(IN_BREAK, PROGRAMME), s.changes)
+    }
+
+    private val timed = "#EXTM3U\n#EXT-X-TARGETDURATION:5\n#EXT-X-MEDIA-SEQUENCE:40\n" +
+        "#EXT-X-DISCONTINUITY\n#EXT-X-PROGRAM-DATE-TIME:2026-09-26T04:46:22.400Z\n" +
+        "#EXTINF:5.0,\n/clip/6123_King_Kong/720p/a.ts\n" +
+        "#EXT-X-DISCONTINUITY\n#EXT-X-PROGRAM-DATE-TIME:2026-09-26T04:46:27.400Z\n" +
+        "#EXTINF:5.0,\n/clip/x_ptv_7424_ad_bumper_animation_dots_normal_30_1/720p/b.ts\n" +
+        "#EXTINF:5.0,\n/clip/x_ptv_7424_ad_bumper_animation_dots_normal_30_1/720p/c.ts\n"
+
+    @Test
+    fun `every read hands over the timeline, stamped with the wall clock it was read at`() {
+        val s = subject(mapOf(master to listOf(masterBody), variant to listOf(timed)))
+        s.poller.start(master)
+        s.clock.advance(BreakPoller.POLL_MILLIS)
+        assertEquals(2, s.views.size)
+        val view = s.views.last()
+        assertTrue(view.timed)
+        assertEquals(java.time.Instant.parse("2026-09-26T04:46:27.400Z").toEpochMilli(), view.start)
+        assertEquals(1_000_000L + BreakPoller.POLL_MILLIS, view.readAt)
+        assertEquals(1_000_000L, view.firstReadAt)
+        assertEquals(3, view.firstWindowStarts.size)
+    }
+
+    @Test
+    fun `six silent reads in a row make the view blind, and one good read clears it`() {
+        val s = subject(mapOf(master to listOf(masterBody), variant to listOf(timed, null, null, null, null, null, null, timed)))
+        s.poller.start(master)
+        s.clock.advance(BreakPoller.POLL_MILLIS * 6)
+        assertTrue(s.views.last().blind)
+        assertFalse(s.views[s.views.size - 2].blind)
+        s.clock.advance(BreakPoller.POLL_MILLIS)
+        assertFalse(s.views.last().blind)
     }
 }

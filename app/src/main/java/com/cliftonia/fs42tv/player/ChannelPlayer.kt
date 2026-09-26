@@ -254,6 +254,19 @@ class ChannelPlayer(
         return if (millis == C.TIME_UNSET) null else millis / 1000.0
     }
 
+    /**
+     * Exact for a live HLS stream with PROGRAM-DATE-TIME: Media3 starts the window at the
+     * playlist's PDT, and the position is measured within that window.
+     */
+    override fun programDateTimeMillis(): Long? = runCatching {
+        val timeline = exo.currentTimeline
+        if (timeline.isEmpty) return@runCatching null
+        val window = timeline.getWindow(exo.currentMediaItemIndex, androidx.media3.common.Timeline.Window())
+        val position = exo.currentPosition
+        if (!window.isLive() || window.windowStartTimeMs == C.TIME_UNSET || position == C.TIME_UNSET) null
+        else window.windowStartTimeMs + position
+    }.getOrNull()
+
     override fun stop() = exo.stop()
 
     /**

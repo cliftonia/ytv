@@ -25,7 +25,30 @@ data class BreakCardState(
     val channelLine: String,
     /** "BACK TO: Enter the Dragon", or empty when Pluto's guide has nothing cached. */
     val backTo: String,
+    /** The frame: a pulse while the break's end is unknown, then a countdown to it. */
+    val border: BreakBorder = BreakBorder.Pulse,
 )
+
+/**
+ * The card's frame - the owner's choice, "pulse, then real countdown". While the playlist has not
+ * yet shown where the break ends, the frame marches slowly; once it has, the frame drains to
+ * nothing exactly as the programme comes back.
+ */
+sealed interface BreakBorder {
+
+    object Pulse : BreakBorder
+
+    /** Draining from [fromMillis] to [untilMillis], both on elapsedRealtime. */
+    data class Countdown(val fromMillis: Long, val untilMillis: Long) : BreakBorder {
+
+        /** How much of the frame is left at [nowMillis]: 1 at the start, 0 at the end. */
+        fun remaining(nowMillis: Long): Float {
+            val span = untilMillis - fromMillis
+            if (span <= 0) return 0f
+            return ((untilMillis - nowMillis).toFloat() / span).coerceIn(0f, 1f)
+        }
+    }
+}
 
 /**
  * The card over a Pluto ad break: WE'LL BE RIGHT BACK, what the channel comes back to, and the
@@ -64,5 +87,6 @@ fun BreakCard(state: BreakCardState?) {
             }
             OsdText(text = state.channelLine, fontSize = 11.sp)
         }
+        BreakFrame(state.border)
     }
 }

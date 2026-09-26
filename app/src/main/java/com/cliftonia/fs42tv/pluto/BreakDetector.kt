@@ -61,8 +61,13 @@ class BreakDetector {
     /**
      * Feed the next media-playlist body (null: the read failed), read at [nowMillis] on any
      * monotonic clock, and get the state after it.
+     *
+     * [longEnough]: the window alone holds at least [BreakView.MIN_BREAK_MILLIS] of bumper, so it
+     * cannot be a one-segment bumper at a programme change - the thing the second read exists to
+     * rule out - and one read is enough. Tuning in mid-break then shows the card with the first
+     * picture instead of a read later.
      */
-    fun feed(body: String?, nowMillis: Long): State {
+    fun feed(body: String?, nowMillis: Long, longEnough: Boolean = false): State {
         when (classify(body)) {
             Read.BUMPER -> {
                 unknownReads = 0
@@ -71,7 +76,7 @@ class BreakDetector {
                         stuck = true
                         end(End.TIME_CEILING)
                     }
-                } else if (!stuck && ++bumperReads >= CONFIRM_READS) {
+                } else if (!stuck && (++bumperReads >= CONFIRM_READS || longEnough)) {
                     state = State.IN_BREAK
                     breakSince = nowMillis
                 }

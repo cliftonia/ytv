@@ -122,8 +122,8 @@ class ScreenDirector(private val deps: Deps) {
      * card is a picture, like the up-next card: the watchdog and the stall pill stand down for it,
      * and a stall still going when it comes down gets its pill then.
      */
-    val plutoBreak: PlutoBreak = PlutoBreak.create(deps.extras, deps.music, deps.channels, deps.runOnUi,
-        deps.halted, guideOpen = deps.pickerOpen, overlayOpen = deps.overlayOpen,
+    val plutoBreak: PlutoBreak = PlutoBreak.create(deps.extras, deps.music, deps.channels,
+        deps.player, deps.runOnUi, deps.halted, guideOpen = deps.pickerOpen, overlayOpen = deps.overlayOpen,
         stoppedNow = deps.stoppedNow, volumeChanged = ::updateProgrammeVolume,
         picture = { watch.firstFrame(); stall.cover() },
         uncovered = { if (!tuning.value) stall.uncover() })
@@ -319,6 +319,8 @@ class ScreenDirector(private val deps: Deps) {
         leaveCard()
         upNext.watchCut(tuned.takeIf { played })
         deps.player()?.play(playable, tuned.offsetSeconds, requestedAtMillis)
+        // A Pluto channel's playlist is read at the load itself: the mpv clock's anchor.
+        plutoBreak.loading(tuned.copy(playable = playable))
         // Only when the level gain actually changed - with LEVEL VOLUME off it never does, and
         // this call is not made at all.
         if (deps.extras.clipPainted(playable)) updateProgrammeVolume()
@@ -389,7 +391,11 @@ class ScreenDirector(private val deps: Deps) {
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
         // no end of media, just a stopped picture. The pill is ALL that happens; see [StallPill].
-        player.onBuffering = stall::buffering
+        // A stall also holds the break card's clock: the picture does not move on during one.
+        player.onBuffering = { stalled ->
+            stall.buffering(stalled)
+            plutoBreak.buffering(stalled)
+        }
     }
 
     /** Put the channel banner back up, recomputed rather than replayed - see [Banner.show]. */

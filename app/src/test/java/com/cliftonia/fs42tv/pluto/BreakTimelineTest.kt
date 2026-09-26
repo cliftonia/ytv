@@ -134,4 +134,22 @@ class BreakTimelineTest {
             p(), b(pdt = "2026-09-26T04:00:15Z"), b()))!!, 0L)
         assertEquals(at("2026-09-26T04:00:15Z"), timeline.view().start)
     }
+
+    @Test
+    fun `the first window's instants arrive with the next PDT, however long the programme ran`() {
+        val timeline = BreakTimeline()
+        timeline.feed(HlsWindow.parse(window(100, p(), p(), p(), p(), p()))!!, readAt = 7L)
+        assertTrue(timeline.view().firstWindowStarts.isEmpty())
+        // Minutes of programme with no PDT, read every few seconds...
+        (101L..160L).forEach { first ->
+            timeline.feed(HlsWindow.parse(window(first, p(), p(), p(), p(), p()))!!, readAt = first)
+        }
+        // ...then the break's stamp, from which everything counts back.
+        timeline.feed(HlsWindow.parse(window(161, p(), p(), p(), b(pdt = "2026-09-26T05:00:00Z"), b()))!!, 200L)
+        val view = timeline.view()
+        val stamp = at("2026-09-26T05:00:00Z")
+        assertEquals((100L..104L).map { stamp - (164 - it) * 5_000L }, view.firstWindowStarts)
+        assertEquals(7L, view.firstReadAt)
+        assertEquals(stamp, view.start)
+    }
 }
