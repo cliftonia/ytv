@@ -62,7 +62,7 @@ object MpvSource {
         // is why it was never throttled and never slow. Proxying it would add a hop for
         // nothing. A media playlist chosen out of the master opens in a third of the time the
         // master does; its separate audio rendition, if any, rides as an external track - the
-        // same arrangement as YouTube's, and for the same failure reasons.
+        // same arrangement as YouTube's - though HlsMaster.SEPARATE_AUDIO keeps that off for now.
         is Hls -> MpvLoad(playable.mediaUrl ?: playable.url, playable.mediaUrl?.let { playable.audioUrl })
 
         is NeedsResolving, is Unplayable -> null

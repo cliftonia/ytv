@@ -14,8 +14,15 @@ import com.cliftonia.fs42tv.resolver.TierBands
  * Policy: the highest BANDWIDTH whose RESOLUTION fits the QUALITY setting's height ceiling
  * ([heightCap]); among variants that do not state a resolution, the highest at or under
  * [DEFAULT_MAX_BANDWIDTH]; when nothing fits, the smallest. SUBTITLES are ignored - the app draws
- * its own captions. A variant naming an AUDIO group gets that group's DEFAULT rendition (else its
- * first); a group whose renditions carry no URI means the audio is muxed into the variant.
+ * its own captions. A variant naming an AUDIO group plays that group's DEFAULT rendition (else its
+ * first) - chosen FIRST, then its URI read: a chosen rendition without a URI is audio muxed into
+ * the variant, whatever an alternate in the group carries.
+ *
+ * SEPARATE AUDIO IS OFF ([SEPARATE_AUDIO]): a pick that needs its audio from a rendition playlist
+ * is null, and the channel plays its master. The path (mpv `audio-file` beside the variant, see
+ * MpvSource) is kept, tested, for later: an external audio-file on a LIVE HLS rendition can go
+ * silent with no error at all, and a second demuxer has its own clock across Pluto's
+ * discontinuities - a mute or drifting channel is worse than a slow start.
  *
  * Null - play the master exactly as before - whenever the pick might play silent: an AUDIO group
  * named but not declared, or a CODECS list naming only video with no audio rendition beside it.
@@ -34,6 +41,9 @@ object HlsMaster {
      * segments cost the start more than its picture gives back on a live channel.
      */
     const val DEFAULT_MAX_BANDWIDTH = 3_500_000L
+
+    /** Whether a separate audio rendition may be played beside the variant. See the class comment. */
+    const val SEPARATE_AUDIO = false
 
     private class Variant(val uri: String, val attrs: Map<String, String>) {
         val bandwidth = attrs["BANDWIDTH"]?.toLongOrNull()
@@ -59,7 +69,7 @@ object HlsMaster {
         ladder.firstOrNull()?.let(TierBands::bandFor)?.last ?: 1080
 
     /** What mpv should open for master [body], fetched from [url] (after redirects), or null. */
-    fun choose(body: String, url: String, maxHeight: Int): Pick? {
+    fun choose(body: String, url: String, maxHeight: Int, separateAudio: Boolean = SEPARATE_AUDIO): Pick? {
         if (!isMaster(body)) return null
         val lines = body.lineSequence().map { it.trim() }.filter { it.isNotEmpty() }.toList()
         val variants = lines.mapIndexedNotNull { i, line ->
@@ -72,9 +82,10 @@ object HlsMaster {
             val renditions = lines.filter { it.startsWith("#EXT-X-MEDIA:") }.map(::attributes)
                 .filter { it["TYPE"] == "AUDIO" && it["GROUP-ID"] == group }
             if (renditions.isEmpty()) return null
-            val withUri = renditions.filter { it["URI"] != null }
-            (withUri.firstOrNull { it["DEFAULT"] == "YES" } ?: withUri.firstOrNull())?.get("URI")
+            val rendition = renditions.firstOrNull { it["DEFAULT"] == "YES" } ?: renditions.first()
+            rendition["URI"]
         }
+        if (audio != null && !separateAudio) return null
         if (audio == null && videoOnly(chosen)) return null
         val videoUrl = absolute(url, chosen.uri) ?: return null
         val audioUrl = audio?.let { absolute(url, it) ?: return null }

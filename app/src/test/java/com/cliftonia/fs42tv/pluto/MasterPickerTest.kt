@@ -3,6 +3,7 @@ package com.cliftonia.fs42tv.pluto
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.Progressive
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertSame
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -20,6 +21,10 @@ class MasterPickerTest {
         "#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1280x720,CODECS=\"avc1.4d401f\",AUDIO=\"audio\"\n" +
         "720p.m3u8?jwt=J\n"
 
+    private val muxed = "#EXTM3U\n" +
+        "#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1280x720,CODECS=\"avc1.4d401f,mp4a.40.2\"\n" +
+        "720p.m3u8?jwt=J\n"
+
     private class Fixture(
         var answer: () -> BreakPoller.Fetched,
         var ladder: List<String>? = listOf("hd", "sd"),
@@ -34,14 +39,21 @@ class MasterPickerTest {
     }
 
     @Test
-    fun `mpv gets the chosen playlist and its audio, the master url stays the identity`() {
-        val f = Fixture({ BreakPoller.Fetched(landed, body) })
+    fun `mpv gets the chosen playlist, the master url stays the identity`() {
+        val f = Fixture({ BreakPoller.Fetched(landed, muxed) })
         val out = f.picker.forMpv(Hls(master)) as Hls
         assertEquals(master, out.url)
         // Relative to where the redirect landed, not to the jmp2 url asked for.
         assertEquals("https://cfd.example/stitch/abc/720p.m3u8?jwt=J", out.mediaUrl)
-        assertEquals("https://cfd.example/stitch/abc/audio/en.m3u8?jwt=J", out.audioUrl)
+        assertNull(out.audioUrl)
         assertEquals(listOf(master), f.fetched)
+    }
+
+    @Test
+    fun `a variant that needs separate audio leaves the master to mpv, for now`() {
+        val f = Fixture({ BreakPoller.Fetched(landed, body) })
+        val hls = Hls(master)
+        assertSame(hls, f.picker.forMpv(hls))
     }
 
     @Test
