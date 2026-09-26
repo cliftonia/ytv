@@ -51,6 +51,8 @@ class PlutoBreak(private val deps: Deps) {
         val volumeChanged: () -> Unit,
         /** The card is up: stand down the stall pill and anything else waiting on a picture. */
         val picture: () -> Unit,
+        /** The card came down: whatever it stood down may resume - a stall still going. */
+        val uncovered: () -> Unit = {},
         /** On destroy, after polling stops: the poller's thread. */
         val shutdown: () -> Unit = {},
     )
@@ -141,6 +143,7 @@ class PlutoBreak(private val deps: Deps) {
     private fun endBreak() {
         inBreak = false
         refresh()
+        deps.uncovered()
         // Under the guide the music is the guide's, and it keeps it.
         if (!deps.guideOpen()) deps.releaseMusic()
         deps.volumeChanged()
@@ -167,6 +170,7 @@ class PlutoBreak(private val deps: Deps) {
             stoppedNow: () -> Boolean,
             volumeChanged: () -> Unit,
             picture: () -> Unit,
+            uncovered: () -> Unit,
         ): PlutoBreak {
             // Its own daemon thread, not the prefetch thread: a read can take its full five
             // seconds of timeouts, and neighbour resolves and the guide's fetches queue there.
@@ -188,6 +192,7 @@ class PlutoBreak(private val deps: Deps) {
                 nowTitle = { channel, onUpdate -> extras.bannerLines(channel, onUpdate)?.first },
                 volumeChanged = volumeChanged,
                 picture = picture,
+                uncovered = uncovered,
                 shutdown = { executor.shutdownNow() },
             ))
         }
