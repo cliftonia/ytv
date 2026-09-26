@@ -65,12 +65,37 @@ class StallRecoveryTest {
     fun `a reload that never shows a picture is still a stall`() {
         val f = Fixture()
         f.recovery.buffering(true)
-        f.advance(StallRecovery.STALL_LIMIT_MILLIS * StallRecovery.MAX_RECOVERIES)
+        f.advance(StallRecovery.STALL_LIMIT_MILLIS +
+            StallRecovery.RELOAD_WATCH_MILLIS * (StallRecovery.MAX_RECOVERIES - 1))
         assertEquals(StallRecovery.MAX_RECOVERIES, f.recovered.size)
-        f.advance(StallRecovery.STALL_LIMIT_MILLIS)
+        f.advance(StallRecovery.RELOAD_WATCH_MILLIS)
         assertEquals(1, f.gaveUp.size)
         f.advance(60_000)
         assertEquals("handed over once, not again and again", 1, f.gaveUp.size)
+    }
+
+    @Test
+    fun `a reload is given a tune's time to paint, not a stall's`() {
+        val f = Fixture()
+        f.recovery.buffering(true)
+        f.advance(StallRecovery.STALL_LIMIT_MILLIS)
+        assertEquals(1, f.recovered.size)
+        // A slow resolve and load: still no picture at 6s, and that is not another stall yet.
+        f.advance(StallRecovery.STALL_LIMIT_MILLIS)
+        assertEquals(1, f.recovered.size)
+        f.recovery.buffering(false)
+        f.advance(60_000)
+        assertEquals(1, f.recovered.size)
+    }
+
+    @Test
+    fun `after handing over, the next stall is reloaded again, not handed straight back`() {
+        val f = Fixture()
+        repeat(StallRecovery.MAX_RECOVERIES + 1) { f.stallOut() }
+        assertEquals(1, f.gaveUp.size)
+        f.stallOut()
+        assertEquals(StallRecovery.MAX_RECOVERIES + 1, f.recovered.size)
+        assertEquals(1, f.gaveUp.size)
     }
 
     @Test

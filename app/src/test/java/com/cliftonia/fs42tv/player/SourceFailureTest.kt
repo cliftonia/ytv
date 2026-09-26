@@ -34,6 +34,12 @@ class SourceFailureTest {
     }
 
     @Test
+    fun `a relative uri in a message loses its session parameters`() {
+        assertEquals("Unexpected 1042180/playlist.m3u8 for audio/a.m3u8",
+            SourceFailure.scrub("Unexpected 1042180/playlist.m3u8?jwt=eyJ.x&sid=S for audio/a.m3u8?deviceId=d"))
+    }
+
+    @Test
     fun `no request found still says why`() {
         assertEquals("source failed: UnknownHostException(Unable to resolve host \"x.example\")",
             SourceFailure.describe(null, listOf("UnknownHostException" to "Unable to resolve host \"x.example\"")))
