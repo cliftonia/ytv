@@ -36,7 +36,23 @@ data class Channel(
      * half-hour schedule their gaps are filled with the next episodes, never with others.
      */
     val ordered: Boolean = false,
+    /**
+     * Which Pluto channel this is, and which country's playlist it was found in - published by
+     * `curation/build_pluto.py` for every channel on the Pluto dial, absent everywhere else. The
+     * app plays it through Pluto's own session route; the stream url stays as the fallback.
+     */
+    val pluto: PlutoRef? = null,
 )
+
+/**
+ * A Pluto channel id and its home region, "uk" or "us".
+ *
+ * The region matters because some channels only show programmes to a session from their own
+ * country - to anyone else they loop Pluto's logo bumper. Nullable so an entry without one still
+ * parses: it simply gets the television's own session.
+ */
+@Serializable
+data class PlutoRef(val id: String, val region: String? = null)
 
 @Serializable
 data class Dial(val generated: Long = 0, val channels: List<Channel> = emptyList())
