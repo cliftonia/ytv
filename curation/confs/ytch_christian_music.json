@@ -52,7 +52,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zOCbWOw0PPE",
                 "duration": 264,
-                "title": "Alleluia | Elevation Worship & Chandler Moore"
+                "title": "Alleluia | Elevation Worship & Chandler Moore",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=xhyi3H7beEA",
@@ -62,7 +64,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=E5Ka4dd0MCc",
                 "duration": 313,
-                "title": "I Got Saved | Elevation Worship (feat. Chris Brown)"
+                "title": "I Got Saved | Elevation Worship (feat. Chris Brown)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=edZVnKxKEUU",
@@ -82,7 +86,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nQWFzMvCfLE",
                 "duration": 343,
-                "title": "What A Beautiful Name - Hillsong Worship"
+                "title": "What A Beautiful Name - Hillsong Worship",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=dQl4izxPeNU",
@@ -160,7 +166,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=c_0ViKckkjQ",
                 "duration": 417,
-                "title": "Same God (Live from Passion 2023) | Elevation Worship & Passion Music"
+                "title": "Same God (Live from Passion 2023) | Elevation Worship & Passion Music",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=anz_4BZ1-2s",
@@ -187,7 +195,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=FtUNQpu2b7Q",
                 "duration": 405,
-                "title": "This I Believe (The Creed) - Hillsong Worship"
+                "title": "This I Believe (The Creed) - Hillsong Worship",
+                "skip": [
+                    [
+                        394.7,
+                        403.9
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=_r_O6COF7GI",
@@ -266,7 +281,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TmQwYDRotqQ",
                 "duration": 381,
-                "title": "Jesus Is My Healer | feat. Jessie Harris | Gateway Worship"
+                "title": "Jesus Is My Healer | feat. Jessie Harris | Gateway Worship",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=QaEx2A7p9Dk",
@@ -324,7 +341,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=W33suWk_lyM",
                 "duration": 298,
-                "title": "JESUS NEVER FAILS - THE ASIDORS 2023 COVERS | Christian Worship Songs | A Family Singers"
+                "title": "JESUS NEVER FAILS - THE ASIDORS 2023 COVERS | Christian Worship Songs | A Family Singers",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=hrfERHvJdG4",
@@ -427,7 +446,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XKOoeTbjSeI",
                 "duration": 307,
-                "title": "Come Thou Fount (Official Music Video) | Celtic Worship"
+                "title": "Come Thou Fount (Official Music Video) | Celtic Worship",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=60k_gMGRnRk",

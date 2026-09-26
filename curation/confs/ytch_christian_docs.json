@@ -122,7 +122,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=klkEKMTe3OY",
                 "duration": 3662,
-                "title": "Priscilla Shirer | The Importance of Finding Your Identity in Christ"
+                "title": "Priscilla Shirer | The Importance of Finding Your Identity in Christ",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=YCClVC2H3rc",
@@ -149,12 +151,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=XPtG9a90ZI4",
                 "duration": 3045,
-                "title": "The Holy Grail: Hunt For The Sacred Cup Of Christ | Myth Hunters"
+                "title": "The Holy Grail: Hunt For The Sacred Cup Of Christ | Myth Hunters",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=W33suWk_lyM",
                 "duration": 298,
-                "title": "JESUS NEVER FAILS - THE ASIDORS 2023 COVERS | Christian Worship Songs | A Family Singers"
+                "title": "JESUS NEVER FAILS - THE ASIDORS 2023 COVERS | Christian Worship Songs | A Family Singers",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=cgf_plLmpeM",
@@ -243,7 +249,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XZG5GHmTg1g",
                 "duration": 2490,
-                "title": "Sunday School Songs! | Good News Guys! | Christian Videos for Kids!"
+                "title": "Sunday School Songs! | Good News Guys! | Christian Videos for Kids!",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=HExdi7ytt6A",
@@ -340,7 +348,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ouiaBGFg1iI",
                 "duration": 1869,
-                "title": "A 9/11 Survivor Finally Shares the Story She Kept Private for 25 Years"
+                "title": "A 9/11 Survivor Finally Shares the Story She Kept Private for 25 Years",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=1qI6vzK4iIg",
@@ -357,7 +367,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XVqazNBzSF0",
                 "duration": 356,
-                "title": "Aradhana Sthuthi Aaradhana| Latest Telugu Christian Worship Song Official|Pastor. Ravinder"
+                "title": "Aradhana Sthuthi Aaradhana| Latest Telugu Christian Worship Song Official|Pastor. Ravinder",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=iTEr5hquQTM",
@@ -374,7 +386,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rMF42U1ow2I",
                 "duration": 2480,
-                "title": "STRONG WINE | part 1 | Full Gospel Movie 2026 | APVR Drama Ministry | Christian Movie part"
+                "title": "STRONG WINE | part 1 | Full Gospel Movie 2026 | APVR Drama Ministry | Christian Movie part",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=rNSFaW5jL9w",
@@ -403,12 +417,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=seWlkGCqcrc",
                 "duration": 2610,
-                "title": "Powerful testimony of Ex-Muslim Samer Mohammed | Palestinian who became Christian | Messen"
+                "title": "Powerful testimony of Ex-Muslim Samer Mohammed | Palestinian who became Christian | Messen",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Aj-o0eGj920",
                 "duration": 1492,
-                "title": "Christian Preacher Converts to Islam! - \"I Tried to Make Muslims Christian\""
+                "title": "Christian Preacher Converts to Islam! - \"I Tried to Make Muslims Christian\"",
+                "skip": [
+                    [
+                        495.2,
+                        516.3
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=1uxKbAWWlGI",
@@ -418,7 +441,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5LiPfEMdqrw",
                 "duration": 363,
-                "title": "Gujarati Christian Song ..."
+                "title": "Gujarati Christian Song ...",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=YzW3Dhk0EPc",
@@ -459,12 +484,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=KbCA07-Dpj8",
                 "duration": 2746,
-                "title": "THE BILLIONAIRE AND THE POOR BRIDE (FULL MOVIE) | A Powerful Love Story"
+                "title": "THE BILLIONAIRE AND THE POOR BRIDE (FULL MOVIE) | A Powerful Love Story",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=snzT23DjKHs",
                 "duration": 614,
-                "title": "yuda stuti gotrapu simhama | yesanna telugu christian songs | Hosanna ministries songs yes"
+                "title": "yuda stuti gotrapu simhama | yesanna telugu christian songs | Hosanna ministries songs yes",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=IwHEmDa761w",

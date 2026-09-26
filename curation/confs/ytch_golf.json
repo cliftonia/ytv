@@ -9,12 +9,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=86XNrqD_vww",
                 "duration": 877,
-                "title": "Round 1 Highlights | 2026 FedEx Open de France"
+                "title": "Round 1 Highlights | 2026 FedEx Open de France",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=SwVHCOFT7Wc",
                 "duration": 677,
-                "title": "PGA Tour Highlights | Final Round | Biltmore Championship | 2026"
+                "title": "PGA Tour Highlights | Final Round | Biltmore Championship | 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=1DctWHQ56gU",
@@ -250,12 +254,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Oq_wNVk6LeU",
                 "duration": 1192,
-                "title": "The Open Championship 2026 | Final Round, Extended Highlights | Golf Channel"
+                "title": "The Open Championship 2026 | Final Round, Extended Highlights | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=LrVd_vhj33c",
                 "duration": 587,
-                "title": "PGA Tour Highlights: 2026 Zurich Classic of New Orleans, Round 1 | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 Zurich Classic of New Orleans, Round 1 | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=NUe-mXclXDA",
@@ -373,7 +381,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pJzE2XB5g0I",
                 "duration": 528,
-                "title": "PGA Tour Highlights: 2026 Zurich Classic of New Orleans, Round 4 | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 Zurich Classic of New Orleans, Round 4 | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=wNkFdHzCRvk",
@@ -480,7 +490,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bCcNxzoSVM8",
                 "duration": 606,
-                "title": "NCAA Golf Highlights: Division 1 Men's Individual National Championship | Golf Channel"
+                "title": "NCAA Golf Highlights: Division 1 Men's Individual National Championship | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=0Va-IznLYgE",
@@ -490,7 +502,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=7Dwp8WPrL_Q",
                 "duration": 848,
-                "title": "Round 2 Highlights | MPO | 2026 Green Mountain Championship"
+                "title": "Round 2 Highlights | MPO | 2026 Green Mountain Championship",
+                "skip": [
+                    [
+                        241.4,
+                        270.8
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=12rI2xU-H94",
@@ -500,7 +519,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XtLLPoGglYs",
                 "duration": 470,
-                "title": "PGA Tour Highlights: 2026 Valero Texas Open, Round Two | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 Valero Texas Open, Round Two | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ddP4jhHzpds",
@@ -591,7 +612,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xKr9A8agHHs",
                 "duration": 514,
-                "title": "LPGA Highlights: 2026 KPMG Women's PGA Championship, Round 3 | Golf Channel"
+                "title": "LPGA Highlights: 2026 KPMG Women's PGA Championship, Round 3 | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             }
         ],
         "search_query": "golf tournament highlights",

@@ -21,7 +21,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2UR-HBCJr4I",
                 "duration": 5065,
-                "title": "When the Allies First Faced the 12th SS in Normandy (WW2 Documentary Uncensored)"
+                "title": "When the Allies First Faced the 12th SS in Normandy (WW2 Documentary Uncensored)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=TOMQf84HYeQ",
@@ -68,7 +70,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=O17bAkBtOcQ",
                 "duration": 3064,
-                "title": "The Disaster at Tinian From the Japanese Perspective: 8,000 Japanese Dead in Only 9 Days"
+                "title": "The Disaster at Tinian From the Japanese Perspective: 8,000 Japanese Dead in Only 9 Days",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=KNQuS8GoD0o",
@@ -136,7 +140,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=N4WPtBOFVAs",
                 "duration": 7734,
-                "title": "Traumatic First-Hand Accounts From The War In Afghanistan"
+                "title": "Traumatic First-Hand Accounts From The War In Afghanistan",
+                "skip": [
+                    [
+                        3000.8,
+                        3062.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=40RQ8ML6gtg",
@@ -180,7 +191,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=il8HkG1MtEE",
                 "duration": 4413,
-                "title": "Recep Tayyip Erdoğan and the History of Modern Turkey [DOCUMENTARY]"
+                "title": "Recep Tayyip Erdoğan and the History of Modern Turkey [DOCUMENTARY]",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
@@ -227,7 +240,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=kaUemcqIQ-k",
                 "duration": 6798,
-                "title": "United States of Secrets, Part One (full documentary) | FRONTLINE"
+                "title": "United States of Secrets, Part One (full documentary) | FRONTLINE",
+                "skip": [
+                    [
+                        6745.1,
+                        6752.3
+                    ],
+                    [
+                        6760.6,
+                        6768.6
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZPuY5KhwRRg",
@@ -244,7 +268,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=nF7OQt_L3ak",
                 "duration": 3209,
-                "title": "82 Days In Hell: The Bloody Story Of The Battle Of Okinawa"
+                "title": "82 Days In Hell: The Bloody Story Of The Battle Of Okinawa",
+                "skip": [
+                    [
+                        169.8,
+                        233.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=LQN09dzXWEY",
@@ -295,7 +326,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WKartru6lyA",
                 "duration": 2795,
-                "title": "Inside the IRA's War Against Britain | Full Documentary"
+                "title": "Inside the IRA's War Against Britain | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=SPMBwSH3e58",
@@ -322,7 +355,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=25_JXHe4l04",
                 "duration": 5175,
-                "title": "9/11: Escape From the Towers | Full Episode"
+                "title": "9/11: Escape From the Towers | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=3G9m_idRHM8",
@@ -382,7 +417,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=U93SlUdE034",
                 "duration": 3126,
-                "title": "The Battle For Pegasus Bridge: How 181 Men Opened The Way For D-Day"
+                "title": "The Battle For Pegasus Bridge: How 181 Men Opened The Way For D-Day",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Tnsa_rII7NM",
@@ -425,7 +462,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OLMF4XleCL8",
                 "duration": 5654,
-                "title": "General George S. Patton: A Military Legend | Full Documentary | Biography"
+                "title": "General George S. Patton: A Military Legend | Full Documentary | Biography",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=8XrgxLRVcQs",
@@ -466,7 +505,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pbk6XqNpAsc",
                 "duration": 2540,
-                "title": "U.S. Army Basic Combat Training at Fort Jackson | Full Documentary"
+                "title": "U.S. Army Basic Combat Training at Fort Jackson | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=QAAbcNl4Lb8",
@@ -476,7 +517,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8tVW8pBc8rQ",
                 "duration": 2230,
-                "title": "The REAL Reason Rawlings Killed 3 Former Ghana Presidents (Full Documentary)"
+                "title": "The REAL Reason Rawlings Killed 3 Former Ghana Presidents (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=LA-sBbMopEM",
@@ -491,17 +534,28 @@
             {
                 "url": "https://www.youtube.com/watch?v=_m-ddzNlMto",
                 "duration": 3011,
-                "title": "WWII in the Pacific - Episode 2: Island Warfare (History, Pacific War, Documentary, USA vs Japan)"
+                "title": "WWII in the Pacific - Episode 2: Island Warfare (History, Pacific War, Documentary, USA vs Japan)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=H3bCn48G3Ew",
                 "duration": 6894,
-                "title": "The ENTIRE History of World War I (Full Documentary)"
+                "title": "The ENTIRE History of World War I (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=a_x3hl12tq4",
                 "duration": 2187,
-                "title": "The Failed US Invasion of Canada 1812 (Documentary)"
+                "title": "The Failed US Invasion of Canada 1812 (Documentary)",
+                "skip": [
+                    [
+                        1381.7,
+                        1400.1
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=T7GulvL1AbY",

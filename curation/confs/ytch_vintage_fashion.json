@@ -14,7 +14,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=nRmsX685pQY",
                 "duration": 1967,
-                "title": "The (ancient) History of Modern Fashion Trends"
+                "title": "The (ancient) History of Modern Fashion Trends",
+                "skip": [
+                    [
+                        202.0,
+                        314.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=f76dBH5kKoA",
@@ -60,7 +67,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=syGN9FqDwUM",
                 "duration": 1513,
-                "title": "Why is French Fashion is \"the best\"? The History of Haute Couture"
+                "title": "Why is French Fashion is \"the best\"? The History of Haute Couture",
+                "skip": [
+                    [
+                        123.1,
+                        241.2
+                    ],
+                    [
+                        1498.8,
+                        1505.5
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=iqZLbQvk9_I",
@@ -79,7 +97,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pDGZ2OgV0hE",
                 "duration": 929,
-                "title": "The ULTIMATE GUIDE to THRIFTING VINTAGE (+How to make modern clothes LOOK vintage!)"
+                "title": "The ULTIMATE GUIDE to THRIFTING VINTAGE (+How to make modern clothes LOOK vintage!)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=dnFkJ4TA43w",
@@ -236,7 +256,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3Bet2YiPcbA",
                 "duration": 797,
-                "title": "Plus Size Fashion Through the Decades: Uncovering Survival Bias"
+                "title": "Plus Size Fashion Through the Decades: Uncovering Survival Bias",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=IlbAv-GhnMs",
@@ -370,7 +392,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3oWPMLiHbFQ",
                 "duration": 328,
-                "title": "Inside New York's Most Exclusive Vintage Shop"
+                "title": "Inside New York's Most Exclusive Vintage Shop",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=fn--IVarumw",
@@ -535,7 +559,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6d_Zd26VDsg",
                 "duration": 380,
-                "title": "What is Heritage Fashion? | SON OF A STAG"
+                "title": "What is Heritage Fashion? | SON OF A STAG",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=_gXXekvmUfQ",
@@ -559,7 +585,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=fuVU64m1sbw",
                 "duration": 1456,
-                "title": "How to Identify Quality in Clothing (A Rant)"
+                "title": "How to Identify Quality in Clothing (A Rant)",
+                "skip": [
+                    [
+                        72.2,
+                        139.4
+                    ],
+                    [
+                        1403.4,
+                        1415.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=65XgYthn2kY",

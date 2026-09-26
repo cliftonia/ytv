@@ -36,7 +36,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dzGzR5NQtZ8",
                 "duration": 2852,
-                "title": "Ragna Crimson Full DUB Episode 1 | Season 1 | The Day the Reaper Was Born | HIDIVE"
+                "title": "Ragna Crimson Full DUB Episode 1 | Season 1 | The Day the Reaper Was Born | HIDIVE",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=x2TkEePukIQ",
@@ -53,7 +55,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8dafTL-FrJ0",
                 "duration": 1545,
-                "title": "THE LAST ORDER | Anime Full Screen English Dubbed | Episode 1 2026"
+                "title": "THE LAST ORDER | Anime Full Screen English Dubbed | Episode 1 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=pjbIiCNIlok",
@@ -90,7 +94,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-_1woFZB0ic",
                 "duration": 1385,
-                "title": "📛【Leaked version | EP210】BTTH | EN | FULL | Chinese Animation"
+                "title": "📛【Leaked version | EP210】BTTH | EN | FULL | Chinese Animation",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=MaKT6EqWGLM",
@@ -141,7 +147,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CXsebXvLvkU",
                 "duration": 2851,
-                "title": "The Rising of the Shield Hero Episode 1 English Dub | The Shield Hero"
+                "title": "The Rising of the Shield Hero Episode 1 English Dub | The Shield Hero",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=l4NiLn3LIoM",
@@ -193,7 +201,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8FiC6DLIzqQ",
                 "duration": 1432,
-                "title": "Tokyo Revengers Episode 1 English Dub | Reborn"
+                "title": "Tokyo Revengers Episode 1 English Dub | Reborn",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=o_kSDQGYPmM",
@@ -277,7 +287,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VW91W9Co6xs",
                 "duration": 2696,
-                "title": "Full Episode 1 | Asintado English Dubbed"
+                "title": "Full Episode 1 | Asintado English Dubbed",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=-M13If_5CI4",
@@ -314,7 +326,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=HB-y2Ndv1qY",
                 "duration": 1955,
-                "title": "No Entrance! | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Nostalgic Cartoon"
+                "title": "No Entrance! | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Nostalgic Cartoon",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=hNBDtBfv6wE",
@@ -324,7 +338,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dCHKSnF1uJU",
                 "duration": 5187,
-                "title": "NEZHA _ Rise of the Demon Slayer _ Animated Full Movie_English Dubbed _HD"
+                "title": "NEZHA _ Rise of the Demon Slayer _ Animated Full Movie_English Dubbed _HD",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=LrOaj4vpgcU",
@@ -351,7 +367,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SLahFiAo6bY",
                 "duration": 4091,
-                "title": "Kena: Bridge of Spirits - Full Movie (ALL CUTSCENES w/ SUBTITLES) [1080p 60FPS HD]"
+                "title": "Kena: Bridge of Spirits - Full Movie (ALL CUTSCENES w/ SUBTITLES) [1080p 60FPS HD]",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=SN79jviA93Q",
@@ -368,7 +386,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=Gx702PquLl8",
                 "duration": 513,
-                "title": "Baki Dou vs Musashi Miyamoto HD DUBBED!! 😱😈😇🤯💪💯🍿👌"
+                "title": "Baki Dou vs Musashi Miyamoto HD DUBBED!! 😱😈😇🤯💪💯🍿👌",
+                "skip": [
+                    [
+                        9.0,
+                        14.8
+                    ],
+                    [
+                        491.5,
+                        507.2
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=KlnOb7OeyTk",

@@ -55,7 +55,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Bh5bJrrJ6xs",
                 "duration": 2241,
-                "title": "Marc Benioff & Sam Altman | Dreamforce 2026"
+                "title": "Marc Benioff & Sam Altman | Dreamforce 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=4qfsmE11Ejo",
@@ -157,7 +159,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=v4F1gFy-hqg",
                 "duration": 1106,
-                "title": "\"Software Fundamentals Matter More Than Ever\" — Matt Pocock"
+                "title": "\"Software Fundamentals Matter More Than Ever\" — Matt Pocock",
+                "skip": [
+                    [
+                        5.2,
+                        14.7
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=1h8UU_OVRTE",
@@ -189,7 +198,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XIsRGP1lZ8g",
                 "duration": 2935,
-                "title": "MBS Xojo Conference 2026 - MBS Plugins Update"
+                "title": "MBS Xojo Conference 2026 - MBS Plugins Update",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=FBgNiI9Y5xw",
@@ -225,7 +236,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xYU7zaaRjmE",
                 "duration": 747,
-                "title": "The Vibe Coding Era: Why AI Won’t Replace Software Engineers"
+                "title": "The Vibe Coding Era: Why AI Won’t Replace Software Engineers",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=tS0uI6-CMDk",
@@ -263,12 +276,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=XVCYcoMLNiQ",
                 "duration": 868,
-                "title": "Artificial Intelligence in Graphic Design for Web Development | IISA 2026 Conference Prese"
+                "title": "Artificial Intelligence in Graphic Design for Web Development | IISA 2026 Conference Prese",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=tQnkO-QpBQo",
                 "duration": 273,
-                "title": "How to Get Hired as a Software Engineer in 2026 (Junior Developers)"
+                "title": "How to Get Hired as a Software Engineer in 2026 (Junior Developers)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=3oW9frPQLCM",
@@ -385,12 +402,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=jmEhOCgsyZY",
                 "duration": 1592,
-                "title": "Becoming a Distinguished Engineer :  A Personal Journey | WSO2 Technology Conference 2026"
+                "title": "Becoming a Distinguished Engineer :  A Personal Journey | WSO2 Technology Conference 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=4zNu-4ZJKIE",
                 "duration": 2905,
-                "title": "Evaluating LLM (AI) in Biorefinery Engineering - ChemEngConnect 2026 Conference"
+                "title": "Evaluating LLM (AI) in Biorefinery Engineering - ChemEngConnect 2026 Conference",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=W7Ki3aXgmZU",
@@ -407,7 +428,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=f12YV69VSfk",
                 "duration": 2174,
-                "title": "Agents onboarded Internal Develop Platform - OpenChoreo | CNCF Sydney Talks 2026 #5"
+                "title": "Agents onboarded Internal Develop Platform - OpenChoreo | CNCF Sydney Talks 2026 #5",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=gPise3NY1gI",
@@ -473,7 +496,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1_FGhuDe3To",
                 "duration": 2415,
-                "title": "MBS Xojo Conference 2026 - Development of a tourist information system"
+                "title": "MBS Xojo Conference 2026 - Development of a tourist information system",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=kExhVOfdPMg",
@@ -551,7 +576,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=T9_QmaV8g2A",
                 "duration": 2280,
-                "title": "2026 Swiss Conference: Berkin Kartal, NVIDIA"
+                "title": "2026 Swiss Conference: Berkin Kartal, NVIDIA",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=t5ZbcKX0qD8",
@@ -570,7 +597,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ORwq_xMHO1M",
                 "duration": 720,
-                "title": "RON Databricks Conference Presentation Submission 2026"
+                "title": "RON Databricks Conference Presentation Submission 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             }
         ],
         "search_query": "software engineering conference talk",

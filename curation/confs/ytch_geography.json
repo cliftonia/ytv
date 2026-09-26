@@ -113,7 +113,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Pe5IDeVG_AE",
                 "duration": 598,
-                "title": "The 7-Foot Terror of Cambodia’s Jungle! | Expedition X | Full Episode | Discovery Channel"
+                "title": "The 7-Foot Terror of Cambodia’s Jungle! | Expedition X | Full Episode | Discovery Channel",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=SY9wE9lQR7o",
@@ -144,7 +146,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UkgOSWxNQEE",
                 "duration": 3314,
-                "title": "Spring Expedition 2026: Climbing Mera Peak & Annapurna I @Saila_mingma"
+                "title": "Spring Expedition 2026: Climbing Mera Peak & Annapurna I @Saila_mingma",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=vTsTyOD07es",
@@ -183,7 +187,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YtAL8y2lACs",
                 "duration": 2840,
-                "title": "Storming Antarctica (Full Episode) | Continent 7: Antarctica"
+                "title": "Storming Antarctica (Full Episode) | Continent 7: Antarctica",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=CDFdulYbH5c",
@@ -294,7 +300,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=aFiDDerAF1c",
                 "duration": 1156,
-                "title": "Expedition X BANNED Episode Surfaces After Years Of Being Hidden..."
+                "title": "Expedition X BANNED Episode Surfaces After Years Of Being Hidden...",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=TjPxmxDZogg",
@@ -304,7 +312,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=doel6jh4ow8",
                 "duration": 598,
-                "title": "Russell Gets A Terrifying Surprise While Tracking Bigfoot | Expedition Bigfoot"
+                "title": "Russell Gets A Terrifying Surprise While Tracking Bigfoot | Expedition Bigfoot",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=f7-RQZavU3U",
@@ -331,7 +341,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=GvGPynxumXM",
                 "duration": 612,
-                "title": "Back From The Dead | THE REVENANT (2015) Movie CLIP 4K"
+                "title": "Back From The Dead | THE REVENANT (2015) Movie CLIP 4K",
+                "skip": [
+                    [
+                        599.3,
+                        612.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=DgDBXHFz4XM",
@@ -399,7 +416,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IBjIzG9ddqU",
                 "duration": 1938,
-                "title": "The Most Terrifying Ghost Encounters Ever Investigated | Expedition X S3 | Discovery Channel India"
+                "title": "The Most Terrifying Ghost Encounters Ever Investigated | Expedition X S3 | Discovery Channel India",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=OSpM_HasHKs",
@@ -467,7 +486,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=l2HFPJuXYCc",
                 "duration": 336,
-                "title": "THE LAST TITAN | Epic Giant Monster Adventure Movie | Full Cinematic Movie 2026"
+                "title": "THE LAST TITAN | Epic Giant Monster Adventure Movie | Full Cinematic Movie 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=2Hg-nQEwmTg",
@@ -477,7 +498,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RaXWNXbOJ1E",
                 "duration": 541,
-                "title": "Searching for GOLD! Josh Gates Explores Rommel’s Secret Caves | Expedition Unknown"
+                "title": "Searching for GOLD! Josh Gates Explores Rommel’s Secret Caves | Expedition Unknown",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=tWjxIKh2PMQ",

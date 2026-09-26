@@ -52,7 +52,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Mgm2w3gaprw",
                 "duration": 1894,
-                "title": "Night Bluefin Tuna Jigging & Day Yellowtail Flylining on Tomahawk San Diego"
+                "title": "Night Bluefin Tuna Jigging & Day Yellowtail Flylining on Tomahawk San Diego",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=6dQ8YORk2LQ",
@@ -79,12 +81,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=AIRm9TbYXcc",
                 "duration": 3816,
-                "title": "5 Days Living on a Fishing Boat in ALASKA"
+                "title": "5 Days Living on a Fishing Boat in ALASKA",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=LBfQ0cDAHUY",
                 "duration": 2254,
-                "title": "Full Day Offshore Fishing The Legend from San Diego, California, September 12, 2026."
+                "title": "Full Day Offshore Fishing The Legend from San Diego, California, September 12, 2026.",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=5nyUdJ2NCcw",
@@ -109,7 +115,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0zJqT2LMFFQ",
                 "duration": 1446,
-                "title": "Boca Grande Was Beautiful… But Why Was Nobody There?"
+                "title": "Boca Grande Was Beautiful… But Why Was Nobody There?",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Cfi-INElWo4",
@@ -161,7 +169,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7fvaSuTt9Qg",
                 "duration": 2191,
-                "title": "5 Day Float Trip Through Alaska's Wilderness | Remote Camping & Fishing"
+                "title": "5 Day Float Trip Through Alaska's Wilderness | Remote Camping & Fishing",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=AUGTDFr9_jQ",
@@ -171,7 +181,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DriKTHfJ2RA",
                 "duration": 5281,
-                "title": "Into The Mind Of A Fishing Guide Part 2 | Buoy 10 Salmon Fishing Short Film"
+                "title": "Into The Mind Of A Fishing Guide Part 2 | Buoy 10 Salmon Fishing Short Film",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vo1YRxxAx2g",
@@ -249,12 +261,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=xaMXKZdQGPI",
                 "duration": 243,
-                "title": "6 still missing, 4 rescued after charter boat sinks in B.C.'s Georgia Strait"
+                "title": "6 still missing, 4 rescued after charter boat sinks in B.C.'s Georgia Strait",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=iombNAZ8hNc",
                 "duration": 613,
-                "title": "Bassmaster EQ: Lake Norfork Pre Practice Report!"
+                "title": "Bassmaster EQ: Lake Norfork Pre Practice Report!",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=dE1fxwN_lQc",
@@ -264,7 +280,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1KhK4-jqJTE",
                 "duration": 3513,
-                "title": "4 Days at sea.. Filled the Boat! (Deep Sea Catch Clean Cook)"
+                "title": "4 Days at sea.. Filled the Boat! (Deep Sea Catch Clean Cook)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=4OCJ0Bt66ms",
@@ -281,7 +299,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=8hvbcAvkuJs",
                 "duration": 3021,
-                "title": "Camping on Frozen Ocean - 6 Days Fishing for King Crab & Hunting Ptarmigan"
+                "title": "Camping on Frozen Ocean - 6 Days Fishing for King Crab & Hunting Ptarmigan",
+                "skip": [
+                    [
+                        3010.8,
+                        3020.9
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=q12RNXnIrdQ",
@@ -330,12 +355,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=YDfBENtoz2o",
                 "duration": 906,
-                "title": "12 OAHU Scams, Rip Offs, Tourist Traps & Mistakes (Watch Before You Go To Hawaii in 2023) !"
+                "title": "12 OAHU Scams, Rip Offs, Tourist Traps & Mistakes (Watch Before You Go To Hawaii in 2023) !",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZKKhu_UP0Ak",
                 "duration": 633,
-                "title": "8 Days Aboard EXCEL | Fishing on the World’s Largest Long-Range Sport Boat"
+                "title": "8 Days Aboard EXCEL | Fishing on the World’s Largest Long-Range Sport Boat",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Gahw-MvsZrg",
@@ -379,7 +408,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xR0OwUh7Mu8",
                 "duration": 2651,
-                "title": "3 Days Camping & Fishing in Tropical Jungle of Palau"
+                "title": "3 Days Camping & Fishing in Tropical Jungle of Palau",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=LVTfa11y-vg",
@@ -448,7 +479,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mZIvtS9tLbc",
                 "duration": 607,
-                "title": "Lake Erie Perch: Spots and Techniques"
+                "title": "Lake Erie Perch: Spots and Techniques",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=rhhBPNUXYis",
@@ -477,7 +510,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-FpD6P5v3Og",
                 "duration": 597,
-                "title": "2026 Royal Caribbean Alaska Cruise Intro & Guide"
+                "title": "2026 Royal Caribbean Alaska Cruise Intro & Guide",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Fq8OHFViFA4",
@@ -494,7 +529,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GUmVZ6X3aE8",
                 "duration": 580,
-                "title": "El Niño Just Changed SoCal Fishing…"
+                "title": "El Niño Just Changed SoCal Fishing…",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=jHCLJHEc8dQ",
@@ -538,7 +575,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Oat5Vw7hrhQ",
                 "duration": 626,
-                "title": "Eagle Lake 2026 Summer Crappie Fishing"
+                "title": "Eagle Lake 2026 Summer Crappie Fishing",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=z-YDL_0OM98",
@@ -553,7 +592,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WPQ5_E2gnHY",
                 "duration": 405,
-                "title": "Sacramento River Salmon Spooled Our Line"
+                "title": "Sacramento River Salmon Spooled Our Line",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=3yxaeXRzfEQ",
@@ -572,7 +613,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FQRkcX4alRU",
                 "duration": 4035,
-                "title": "Fishing boat challenge and other outdoor activities for kids"
+                "title": "Fishing boat challenge and other outdoor activities for kids",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ohiAdiOvClo",
