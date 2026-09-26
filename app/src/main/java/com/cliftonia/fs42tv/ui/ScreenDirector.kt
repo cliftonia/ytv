@@ -129,6 +129,20 @@ class ScreenDirector(private val deps: Deps) {
         },
     )
 
+    init {
+        // A Pluto channel that fell back to its legacy url for want of a session - a television
+        // just woken - plays Pluto's bumper without an error, so nothing else would ever re-tune
+        // it. Once, when a session can be had, and only if the viewer is still there with
+        // nothing open over it: a re-tune under the guide changes the channel under the list.
+        deps.extras.onPlutoSessionReady { channel ->
+            val still = deps.tune().onAir?.takeIf { it.card == null }?.channel?.number == channel.number
+            if (still && !tuning.value && !deps.overlayOpen() && !deps.pickerOpen() &&
+                !deps.stoppedNow()) {
+                deps.tune().retuneCurrent("a pluto session is available")
+            }
+        }
+    }
+
     /** The captions drawn over the programme, and the viewer's switch for them. */
     val captions = CaptionState(
         executor = deps.captionExecutor,
