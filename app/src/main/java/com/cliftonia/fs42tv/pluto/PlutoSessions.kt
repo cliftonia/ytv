@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.pluto
 
 import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicReference
 
 /**
  * The Pluto sessions this television holds, and which one a stream plays on.
@@ -15,26 +16,42 @@ import java.util.concurrent.ConcurrentHashMap
  *    programme under the guide. The home server hands out one session per caller per region, so
  *    the player beside the dial can never share a region session either.
  *
- * Each is kept until [REFRESH_MARGIN_MILLIS] before it expires, and fetched under its own lock, so
- * two callers wanting the same session at once share one fetch rather than racing two - which
- * would leave one of them holding a token its twin had already retired. Blocking throughout:
- * callers are the tune and prefetch threads, never the UI thread.
+ * Each is kept until [REFRESH_MARGIN_MILLIS] before it expires. A fetch runs under its slot's own
+ * fetch lock, so two callers wanting the same session at once share one fetch rather than racing
+ * two - which would leave one of them holding a token its twin had already retired. [invalidate]
+ * takes NO lock: it is called from the player's error callback on the main thread, and a lock
+ * held across a fetch would have stalled the main thread for as long as Pluto took to answer.
+ * [forDial] and [beside] block; callers are the tune and prefetch threads, never the UI thread.
  */
 class PlutoSessions(
     /** A fresh anonymous session from Pluto's boot service; may throw. */
     boot: () -> PlutoSession?,
-    /** The home server's session for a region; null or a throw when no server answered. */
+    /**
+     * The home server's session for a region. Null means the server answered without one; a
+     * throw means it could not be reached, which retires the server for every region at once.
+     */
     private val server: (region: String) -> PlutoSession?,
     /** Wall-clock milliseconds: expiries are stated in wall-clock time. */
     private val nowMillis: () -> Long,
+    /**
+     * Whether a failure is the network not being there YET - a television just woken, whose
+     * DNS and Wi-Fi come back seconds later - rather than a server that is not there at all.
+     */
+    private val transient: (Throwable) -> Boolean = PlutoBoot::isTransient,
 ) {
 
     /** A session for the dial, and whether the home server supplied it - for the diagnostics. */
     class Choice(val session: PlutoSession, val fromServer: Boolean)
 
-    private val dialLocal = Slot(boot, BOOT_MISS_RETRY_MILLIS)
-    private val besideLocal = Slot(boot, BOOT_MISS_RETRY_MILLIS)
+    private val dialLocal = Slot(boot) { BOOT_MISS_RETRY_MILLIS }
+    private val besideLocal = Slot(boot) { BOOT_MISS_RETRY_MILLIS }
     private val regions = ConcurrentHashMap<String, Slot>()
+
+    /**
+     * Until when the home server is not asked for ANY region. One unreachable server is
+     * unreachable for both regions, and paying its timeout once per region doubled the wait.
+     */
+    @Volatile private var serverDownUntil = 0L
 
     /**
      * The session a dial channel from [region] plays on: that region's, when the server answers,
@@ -43,8 +60,10 @@ class PlutoSessions(
      */
     fun forDial(region: String?): Choice? {
         if (region != null) {
-            val slot = regions.getOrPut(region) { Slot({ server(region) }, SERVER_MISS_RETRY_MILLIS) }
-            slot.get()?.let { return Choice(it, fromServer = true) }
+            val slot = regions.getOrPut(region) { Slot({ server(region) }, ::serverMiss) }
+            val session = slot.cached()
+                ?: if (nowMillis() >= serverDownUntil) slot.get() else slot.stillValid()
+            session?.let { return Choice(it, fromServer = true) }
         }
         return dialLocal.get()?.let { Choice(it, fromServer = false) }
     }
@@ -55,7 +74,7 @@ class PlutoSessions(
     /**
      * [session] was refused by the stitcher, or a stream on it would not open: forget it, so the
      * next ask builds a new one. A no-op when it has already been replaced, so two failures
-     * reported for one bad token cannot throw away its healthy successor.
+     * reported for one bad token cannot throw away its healthy successor. Never blocks.
      */
     fun invalidate(session: PlutoSession) {
         dialLocal.forget(session)
@@ -63,38 +82,60 @@ class PlutoSessions(
         regions.values.forEach { it.forget(session) }
     }
 
+    /** How long a region fetch that failed is left alone - and the server with it, if it threw. */
+    private fun serverMiss(failure: Throwable?): Long {
+        if (failure == null) return SERVER_MISS_RETRY_MILLIS
+        val wait = if (transient(failure)) NETWORK_MISS_RETRY_MILLIS else SERVER_MISS_RETRY_MILLIS
+        serverDownUntil = nowMillis() + wait
+        return wait
+    }
+
     private inner class Slot(
         private val fetch: () -> PlutoSession?,
-        /** How long a failed fetch is remembered, so a missing server is not asked every tune. */
-        private val missRetryMillis: Long,
+        /** How long to leave a failed fetch alone, given what it threw (null: nothing thrown). */
+        private val missFor: (Throwable?) -> Long,
     ) {
-        private var held: PlutoSession? = null
-        private var retryAt = 0L
+        private val held = AtomicReference<PlutoSession?>(null)
+        @Volatile private var retryAt = 0L
+        private val fetchLock = Any()
 
-        @Synchronized
+        /** The held session while it is comfortably inside its life, without waiting on a fetch. */
+        fun cached(): PlutoSession? =
+            held.get()?.takeIf { nowMillis() < it.expiresAtMillis - REFRESH_MARGIN_MILLIS }
+
+        /** The held session while it has not actually expired, however close it is. */
+        fun stillValid(): PlutoSession? = held.get()?.takeIf { nowMillis() < it.expiresAtMillis }
+
         fun get(): PlutoSession? {
-            val now = nowMillis()
-            val current = held
-            if (current != null && now < current.expiresAtMillis - REFRESH_MARGIN_MILLIS) return current
-            // Past its prime but still valid is better than nothing when the refresh cannot happen.
-            val usable = current?.takeIf { now < it.expiresAtMillis }
-            if (now < retryAt) return usable
-            val fresh = runCatching { fetch() }.getOrNull()
-            if (fresh == null) {
-                retryAt = now + missRetryMillis
-                return usable
+            cached()?.let { return it }
+            synchronized(fetchLock) {
+                // Again inside the lock: a caller that waited here was waiting for this fetch.
+                cached()?.let { return it }
+                val now = nowMillis()
+                // Past its prime but still valid is better than nothing when refresh cannot happen.
+                val usable = stillValid()
+                if (now < retryAt) return usable
+                var failure: Throwable? = null
+                val fresh = try {
+                    fetch()
+                } catch (e: Exception) {
+                    failure = e
+                    null
+                }
+                if (fresh == null) {
+                    retryAt = now + missFor(failure)
+                    return usable
+                }
+                held.set(fresh)
+                retryAt = 0L
+                return fresh
             }
-            held = fresh
-            retryAt = 0L
-            return fresh
         }
 
-        @Synchronized
+        /** Lock-free on purpose - see the class comment. Identity, not equality. */
         fun forget(session: PlutoSession) {
-            if (held !== session) return
-            held = null
             // A rebuild asked for now is asked for NOW, whatever an earlier miss said.
-            retryAt = 0L
+            if (held.compareAndSet(session, null)) retryAt = 0L
         }
     }
 
@@ -104,6 +145,14 @@ class PlutoSessions(
 
         /** A server that did not answer is asked again after this - long enough to spare the car. */
         const val SERVER_MISS_RETRY_MILLIS = 10 * 60_000L
+
+        /**
+         * A network not up yet - DNS failing, "network unreachable", a refused connection - is
+         * looked at again this soon. A television woken from standby has no DNS for its first
+         * seconds, and retiring the server for ten minutes over that parked the region channels
+         * on this television's session for the whole first evening's viewing.
+         */
+        const val NETWORK_MISS_RETRY_MILLIS = 30_000L
 
         /** Pluto's boot failing usually means no network at all; look again soon. */
         const val BOOT_MISS_RETRY_MILLIS = 30_000L

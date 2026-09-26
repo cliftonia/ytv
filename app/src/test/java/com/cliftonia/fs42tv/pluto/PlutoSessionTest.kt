@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.pluto
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -82,5 +83,46 @@ class PlutoSessionTest {
     @Test
     fun `the server url names the region`() {
         assertEquals("http://h:4246/pluto/session?region=uk", PlutoBoot.serverUrl("http://h:4246", "uk"))
+    }
+
+    @Test
+    fun `the second server address is tried only when the first cannot be connected to`() {
+        val asked = mutableListOf<String>()
+        val session = PlutoBoot.fetchFromServer("uk") { url ->
+            asked += url
+            if (url.startsWith(PlutoBoot.SERVERS[0])) throw PlutoBoot.Unreachable(java.net.ConnectException("refused"))
+            server
+        }
+        assertEquals("GB", session!!.region)
+        assertEquals(PlutoBoot.SERVERS.map { "$it/pluto/session?region=uk" }, asked)
+    }
+
+    @Test
+    fun `a bad answer is not asked again of the same box on its other address`() {
+        val asked = mutableListOf<String>()
+        val session = PlutoBoot.fetchFromServer("uk") { url ->
+            asked += url
+            throw java.io.IOException("pluto session HTTP 502")
+        }
+        assertNull(session)
+        assertEquals(1, asked.size)
+    }
+
+    @Test
+    fun `neither address connecting is reported as unreachable`() {
+        val thrown = runCatching {
+            PlutoBoot.fetchFromServer("uk") { throw PlutoBoot.Unreachable(java.net.NoRouteToHostException()) }
+        }.exceptionOrNull()
+        assertTrue(thrown is PlutoBoot.Unreachable)
+    }
+
+    @Test
+    fun `a network not up yet is transient, a silent address is not`() {
+        assertTrue(PlutoBoot.isTransient(PlutoBoot.Unreachable(java.net.UnknownHostException())))
+        assertTrue(PlutoBoot.isTransient(PlutoBoot.Unreachable(java.net.ConnectException())))
+        assertTrue(PlutoBoot.isTransient(PlutoBoot.Unreachable(java.net.NoRouteToHostException())))
+        assertTrue(PlutoBoot.isTransient(java.net.SocketException("Network is unreachable")))
+        assertFalse(PlutoBoot.isTransient(PlutoBoot.Unreachable(java.net.SocketTimeoutException())))
+        assertFalse(PlutoBoot.isTransient(java.io.IOException("pluto session HTTP 500")))
     }
 }
