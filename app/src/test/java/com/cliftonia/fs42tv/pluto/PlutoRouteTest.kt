@@ -25,6 +25,10 @@ class PlutoRouteTest {
         var direct = true
         var boots = 0
         var serverUp = true
+        var bootUp = true
+        /** Blocks [PlutoRoute] asked to run later, with their delays; [runLater] runs them. */
+        val pending = ArrayDeque<Pair<Long, () -> Unit>>()
+        val ready = mutableListOf<Int>()
         val serverAsks = mutableListOf<String>()
         val reports = mutableListOf<String>()
         private var serial = 0
@@ -33,11 +37,19 @@ class PlutoRouteTest {
             "https://s.pluto.tv", "sid=${serial++}", "jwt", region, now + 3 * 3_600_000L)
 
         val sessions = PlutoSessions(
-            boot = { boots++; session("AU") },
+            boot = { boots++; if (bootUp) session("AU") else null },
             server = { region -> serverAsks += region; if (serverUp) session(region.uppercase()) else null },
             nowMillis = { now },
         )
-        val route = PlutoRoute(sessions, direct = { direct }, nowMillis = { now }, report = { reports += it })
+        val route = PlutoRoute(sessions, direct = { direct }, nowMillis = { now }, report = { reports += it },
+            later = { delay, block -> pending.addLast(delay to block) },
+        ).also { it.onSessionReady = { channel -> ready += channel.number } }
+
+        fun runLater() {
+            val (delay, block) = pending.removeFirst()
+            now += delay
+            block()
+        }
     }
 
     private fun channel(id: String, region: String? = null, published: Boolean = true) = Channel(
@@ -61,12 +73,25 @@ class PlutoRouteTest {
     }
 
     @Test
-    fun `without the published field the id comes from the jmp2 url and this TV's session`() {
+    fun `a published channel without a region plays on this TV's session`() {
         val f = Fixture()
-        val ch = channel(homeful, published = false)
+        val ch = channel(homeful)
         assertTrue(url(f.route.forDial(ch, legacy(ch))).contains("/channel/$homeful/master.m3u8"))
         assertTrue("no region, no server", f.serverAsks.isEmpty())
         assertEquals("PLUTO AU - THIS TV", f.reports.last())
+    }
+
+    @Test
+    fun `a jmp2 channel without the published field keeps its url exactly as before`() {
+        // Euronews and CBS News on the YouTube dial are Pluto streams by their urls, but nobody
+        // has watched them on this route; a silent bumper loop there would look healthy.
+        val f = Fixture()
+        val ch = channel(homeful, published = false)
+        val before = legacy(ch)
+        assertSame(before, f.route.forDial(ch, before))
+        assertSame(before, f.route.forBeside(ch, before))
+        assertEquals(0, f.boots)
+        assertTrue(f.reports.isEmpty())
     }
 
     @Test
@@ -174,5 +199,40 @@ class PlutoRouteTest {
         f.route.playbackFailed(null)
         assertEquals(played, f.route.forDial(ch, legacy(ch)))
         assertEquals(1, f.boots)
+    }
+
+    @Test
+    fun `a channel that fell back for want of a session is re-tuned once one can be had`() {
+        // A television just woken has no network for its first seconds. The legacy url then
+        // plays Pluto's bumper without any error, so nothing else would ever re-tune it.
+        val f = Fixture()
+        f.bootUp = false
+        val ch = channel(homeful)
+        assertEquals("no session: the legacy url", legacy(ch), f.route.forDial(ch, legacy(ch)))
+        f.runLater()
+        assertTrue("still no network: nothing to say yet", f.ready.isEmpty())
+        f.bootUp = true
+        f.runLater()
+        assertEquals(listOf(11), f.ready)
+        assertTrue("said once, and the looking stops", f.pending.isEmpty())
+        assertTrue(url(f.route.forDial(ch, legacy(ch))).contains("/channel/$homeful/"))
+    }
+
+    @Test
+    fun `the looking stops after a while, and when the channel tunes direct anyway`() {
+        val f = Fixture()
+        f.bootUp = false
+        val ch = channel(homeful)
+        f.route.forDial(ch, legacy(ch))
+        repeat(PlutoRoute.SESSION_CHECKS) { f.runLater() }
+        assertTrue(f.pending.isEmpty())
+        assertTrue(f.ready.isEmpty())
+
+        f.route.forDial(ch, legacy(ch))
+        f.now += PlutoRoute.SESSION_CHECK_MILLIS
+        f.bootUp = true
+        f.route.forDial(ch, legacy(ch))
+        f.runLater()
+        assertTrue("a direct tune in the meantime ends the wait", f.ready.isEmpty())
     }
 }

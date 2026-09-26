@@ -60,6 +60,16 @@ class ScreenExtras(private val deps: Deps) {
     /** The dial's player failed on [playable]; see [PlutoRoute.playbackFailed]. */
     fun plutoFailed(playable: Playable?) = deps.plutoRoute.playbackFailed(playable)
 
+    /**
+     * [listener] runs on the UI thread when a Pluto channel that fell back for want of a session
+     * could now have one - see [PlutoRoute.onSessionReady].
+     */
+    fun onPlutoSessionReady(listener: (Channel) -> Unit) {
+        deps.plutoRoute.onSessionReady = { channel ->
+            deps.runOnUi { if (!deps.halted()) listener(channel) }
+        }
+    }
+
     val features: Features get() = deps.features
 
     /**
@@ -178,12 +188,19 @@ class ScreenExtras(private val deps: Deps) {
                 plutoRoute = PlutoRoute(
                     sessions = PlutoSessions(
                         boot = { PlutoBoot.fetchBoot(now()) },
-                        server = PlutoBoot::fetchFromServer,
+                        server = { region -> PlutoBoot.fetchFromServer(region) },
                         nowMillis = now,
                     ),
                     direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },
                     nowMillis = now,
                     report = PlaybackDiagnostics::recordSource,
+                    // Timed on the main looper, run on the prefetch thread: the check may fetch.
+                    // Never onto an executor already shut down by onDestroy.
+                    later = { delay, block ->
+                        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+                            if (!halted()) runCatching { prefetchExecutor.execute(block) }
+                        }, delay)
+                    },
                 ),
             ))
         }
