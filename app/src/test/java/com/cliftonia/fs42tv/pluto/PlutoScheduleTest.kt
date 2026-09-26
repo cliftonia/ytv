@@ -51,6 +51,14 @@ class PlutoScheduleTest {
     }
 
     @Test
+    fun `a published pluto id wins over the one in the url`() {
+        val channel = Channel(1, "Hallmark", "live",
+            streams = listOf(Stream(url = "https://jmp2.uk/plu-68487fb3f212bedacf5a53e3.m3u8", duration = 600)),
+            pluto = com.cliftonia.fs42tv.sync.PlutoRef("628e685ba3811100070551a8", "us"))
+        assertEquals("628e685ba3811100070551a8", PlutoIds.of(channel))
+    }
+
+    @Test
     fun `the request asks for six hours from now, whole seconds`() {
         val url = PlutoApi.url("68487fb3f212bedacf5a53e3", at("2026-09-23T02:30:00.456Z"))
         assertEquals("https://api.pluto.tv/v2/channels/68487fb3f212bedacf5a53e3" +
