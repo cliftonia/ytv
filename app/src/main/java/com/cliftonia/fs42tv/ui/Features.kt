@@ -76,6 +76,13 @@ class Features(
          * LEGACY plays the jmp2 url exactly as before, from the next tune.
          */
         PLUTO_ROUTE("PLUTO ROUTE", "feature.plutoroute", onValue = "DIRECT", offValue = "LEGACY"),
+
+        /**
+         * A "we'll be right back" card over Pluto's logo bumper during an ad break, with the
+         * guide's music (see `ui/PlutoBreak`). OFF reads no playlists and shows the bumper, as
+         * before.
+         */
+        BREAK_CARD("BREAK CARD", "feature.breakcard"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,

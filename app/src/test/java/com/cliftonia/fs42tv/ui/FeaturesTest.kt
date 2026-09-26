@@ -101,6 +101,19 @@ class FeaturesTest {
     }
 
     @Test
+    fun `the break card row starts ON, flips OFF, remembered, and tells the screen`() {
+        val store = Store()
+        val toggled = mutableListOf<Pair<Features.Flag, Boolean>>()
+        val row = { store.features().rows(onToggled = { f, on -> toggled += f to on }, refresh = {})
+            .first { it.label == "BREAK CARD" } }
+        assertEquals("ON", row().value)
+        row().action!!.invoke()
+        assertEquals("OFF", row().value)
+        assertEquals(false, store.saved["feature.breakcard"])
+        assertEquals(listOf(Features.Flag.BREAK_CARD to false), toggled)
+    }
+
+    @Test
     fun `OK on a row flips that flag alone and remembers it`() {
         val store = Store()
         val features = store.features()
