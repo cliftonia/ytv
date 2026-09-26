@@ -124,20 +124,47 @@ class PlutoBreak(private val deps: Deps) {
     }
 
     /**
-     * [tuned] was just handed to the player: poll it, if it is a Pluto channel and the row is on.
-     * The same url already being polled carries on - a resume, a second first frame - so a break
-     * already seen is not forgotten by it.
+     * [tuned] was just handed to the player: poll it afresh, if it is a Pluto channel and the row
+     * is on. Always a new run, even on the same url - a watchdog retune, an abandoned tune
+     * recovered, a reload after the stream ended - because the player has started again from a
+     * new point in the window: the old anchor, playing time and any stall open under it are
+     * about a stream that no longer exists, and kept they put the card up early or froze it.
      */
-    fun loading(tuned: Tuned?) = poll(tuned, anchored = true)
+    fun loading(tuned: Tuned?) = poll(tuned, anchored = true, fresh = true)
 
-    private fun poll(tuned: Tuned?, anchored: Boolean) {
+    /** Between onStop and onResume - a resume from a dialog that only paused is not a return. */
+    private var wasStopped = false
+
+    /** The app left the screen: nobody is watching, so no reads; the break is seen afresh after. */
+    fun appStopped() {
+        leave()
+        wasStopped = true
+    }
+
+    /**
+     * Called on every resume: whether it should re-tune [tuned] rather than carry on - back from
+     * the home screen (not from a dialog that only paused), nothing open over the dial, the row
+     * on, a Pluto channel, and an engine timed from its load (mpv). A paused mpv resumes an
+     * unknown distance behind the edge - or back at the window's start after half a minute -
+     * and a live channel's re-tune is cheap and anchors afresh.
+     */
+    fun retuneOnResume(tuned: Tuned?): Boolean {
+        val returning = wasStopped
+        wasStopped = false
+        return returning && !deps.overlayOpen() && deps.enabled() && tuned != null &&
+            tuned.card == null && tuned.channel.pluto != null && tuned.playable is Hls &&
+            deps.joinsThirdFromLast()
+    }
+
+    private fun poll(tuned: Tuned?, anchored: Boolean, fresh: Boolean) {
         val url = (tuned?.playable as? Hls)?.url
         if (tuned == null || url == null || !deps.enabled() || tuned.card != null ||
             tuned.channel.pluto == null || deps.stoppedNow()) {
             leave()
             return
         }
-        if (poller.pollingUrl == url && this.tuned?.channel?.number == tuned.channel.number) return
+        // Only a second first frame on the stream already polled keeps what the poll has seen.
+        if (!fresh && poller.pollingUrl == url && this.tuned?.channel?.number == tuned.channel.number) return
         leave()
         this.tuned = tuned
         loadedAt = deps.wallMillis()
@@ -147,7 +174,7 @@ class PlutoBreak(private val deps: Deps) {
 
     /** [tuned] has a picture: the card may act, and mpv's playing time starts now. */
     fun playing(tuned: Tuned?) {
-        poll(tuned, anchored = false)
+        poll(tuned, anchored = false, fresh = false)
         if (this.tuned == null) return
         if (pictureAt == null) pictureAt = deps.elapsedMillis()
         reschedule()

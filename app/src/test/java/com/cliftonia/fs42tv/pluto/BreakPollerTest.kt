@@ -246,4 +246,26 @@ class BreakPollerTest {
         s.clock.advance(BreakPoller.POLL_MILLIS)
         assertFalse(s.views.last().blind)
     }
+
+    @Test
+    fun `the first read is stamped when the variant is asked for, not when it answers`() {
+        val clock = Clock()
+        var wall = 1_000_000L
+        val views = mutableListOf<BreakView>()
+        val poller = BreakPoller(
+            fetch = { url ->
+                // A slow master (DNS, TLS, a redirect), then a variant that takes half a second.
+                wall += if (url == master) 3_000L else 500L
+                BreakPoller.Fetched(url, if (url == master) masterBody else timed)
+            },
+            schedule = clock.schedule,
+            read = { _, view -> views += view },
+            nowMillis = { clock.now },
+            wallMillis = { wall },
+        )
+        poller.start(master)
+        clock.advance(0)
+        assertEquals(1_003_000L, views.single().firstReadAt)
+        assertEquals(1_003_500L, views.single().readAt)
+    }
 }

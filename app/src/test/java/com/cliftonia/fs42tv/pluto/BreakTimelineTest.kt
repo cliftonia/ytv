@@ -152,4 +152,15 @@ class BreakTimelineTest {
         assertEquals(7L, view.firstReadAt)
         assertEquals(stamp, view.start)
     }
+
+    @Test
+    fun `the live offset is the last three segments' EXTINF, and the anchor stamp is the request`() {
+        val timeline = BreakTimeline()
+        timeline.feed(HlsWindow.parse(window(100, p(pdt = "2026-09-26T04:46:22.400Z"), p(), p(5.005),
+            p(5.005), p(5.005)))!!, readAt = 900L, requestedAt = 400L)
+        val view = timeline.view()
+        assertEquals(15_015L, view.liveOffsetMillis)
+        assertEquals(400L, view.firstReadAt)
+        assertEquals(900L, view.readAt)
+    }
 }

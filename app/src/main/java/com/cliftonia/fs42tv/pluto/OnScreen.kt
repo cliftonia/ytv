@@ -17,8 +17,9 @@ package com.cliftonia.fs42tv.pluto
  *    there the instant moves with the time spent playing - wall time since the first frame, less
  *    the time stalled. Not mpv's own time-pos: Pluto's segments restart their timestamps at every
  *    discontinuity, which is exactly where a break begins and ends.
- *  - EDGE: three target durations behind the latest window's edge, moving with the wall clock -
- *    where both engines start by default. Right to within a segment; used when nothing better is.
+ *  - EDGE: three segments behind the latest window's edge (their EXTINF lengths), moving with
+ *    the wall clock - where both engines start by default. Right to within a segment; used when
+ *    nothing better is.
  *
  * Pure: every clock is a parameter.
  */
@@ -45,19 +46,21 @@ object OnScreen {
     }
 
     /**
-     * The instant mpv's first frame showed. When the first read landed after the load, the
-     * window may have slid since mpv read its own: one segment per target duration elapsed,
-     * rounded - exact when the reads are close, as they are when the poller starts at the tune.
+     * The instant mpv's first frame showed. When the first read was asked for after the load,
+     * the window may have slid since mpv read its own: one segment per WHOLE target duration
+     * elapsed, floored. Floored because mpv spent the same master fetch before its own variant
+     * read as the poller did, so a late stamp overstates the gap; a rounded half-second of
+     * network wait was a whole segment - five seconds - wrong in both directions.
      */
     fun mpvAnchor(view: BreakView, loadedAt: Long): Long? {
         val starts = view.firstWindowStarts
         if (starts.size < LIVE_START_FROM_END || view.targetDurationMillis <= 0) return null
         val late = (view.firstReadAt - loadedAt).coerceAtLeast(0L)
-        val slid = ((late + view.targetDurationMillis / 2) / view.targetDurationMillis).toInt()
+        val slid = (late / view.targetDurationMillis).toInt()
         return starts.getOrNull(starts.size - LIVE_START_FROM_END - slid)
     }
 
     fun edge(view: BreakView, wallNow: Long): Long? = view.edgeEnd?.let {
-        it + (wallNow - view.readAt) - LIVE_START_FROM_END * view.targetDurationMillis
+        it + (wallNow - view.readAt) - view.liveOffsetMillis
     }
 }
