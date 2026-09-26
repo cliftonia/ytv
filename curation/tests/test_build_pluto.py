@@ -102,6 +102,46 @@ class TestBuild(unittest.TestCase):
                            "title": "Pluto TV Action"}], channel["streams"])
 
 
+class TestPlutoRef(unittest.TestCase):
+    """Each channel names the Pluto id it actually uses and which country's playlist carried it.
+
+    The app plays Pluto channels through Pluto's own session route, and some channels only show
+    their programmes to a session from their home country - so the region is the playlist the id
+    was found in, not a guess. The jmp2 url stays as the fallback the app plays when no session
+    can be had."""
+
+    UK = "#EXTM3U\nhttps://jmp2.uk/plu-aaa111.m3u8\nhttps://jmp2.uk/plu-bbb222.m3u8\n"
+    US = "#EXTM3U\nhttps://jmp2.uk/plu-aaa111.m3u8\nhttps://jmp2.uk/plu-ccc333.m3u8\n"
+
+    def test_gather_keeps_the_first_playlist_an_id_appears_in(self):
+        streams, regions = build_pluto.gather([("uk", self.UK), ("us", self.US)])
+        self.assertEqual({"aaa111": "uk", "bbb222": "uk", "ccc333": "us"}, regions)
+        self.assertEqual("https://jmp2.uk/plu-ccc333.m3u8", streams["ccc333"])
+
+    def test_the_uk_id_is_published_with_its_region(self):
+        streams, regions = build_pluto.gather([("uk", self.UK), ("us", self.US)])
+        channels, _ = build_pluto.build([entry("bbb222", "Kids", "Kids")], streams, regions)
+        self.assertEqual({"id": "bbb222", "region": "uk"}, channels[0]["pluto"])
+
+    def test_the_alt_id_is_published_when_it_is_the_one_used(self):
+        streams, regions = build_pluto.gather([("uk", self.UK), ("us", self.US)])
+        channels, _ = build_pluto.build(
+            [entry("gone999", "Drama", "Movies", alt="ccc333")], streams, regions)
+        self.assertEqual({"id": "ccc333", "region": "us"}, channels[0]["pluto"])
+        self.assertEqual("https://jmp2.uk/plu-ccc333.m3u8", channels[0]["streams"][0]["url"],
+                         "the jmp2 url stays: it is what the app falls back to")
+
+    def test_the_field_comes_last_so_the_rest_of_each_channel_is_unchanged(self):
+        streams, regions = build_pluto.gather([("uk", self.UK)])
+        channels, _ = build_pluto.build([entry("aaa111", "Action", "Movies")], streams, regions)
+        self.assertEqual(["number", "name", "kind", "streams", "pluto"], list(channels[0]))
+
+    def test_the_playlists_are_uk_then_us(self):
+        self.assertEqual(["uk", "us"], [region for region, _ in build_pluto.PLAYLISTS])
+        self.assertTrue(build_pluto.PLAYLISTS[0][1].endswith("/uk_pluto.m3u"))
+        self.assertTrue(build_pluto.PLAYLISTS[1][1].endswith("/us_pluto.m3u"))
+
+
 class TestNumbers(unittest.TestCase):
 
     def test_well_numbered_allowlist_passes(self):
