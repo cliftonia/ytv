@@ -144,16 +144,10 @@ class ScreenDirector(private val deps: Deps) {
     )
 
     init {
-        // A Pluto channel that fell back to its legacy url for want of a session - a television
-        // just woken - plays Pluto's bumper without an error, so nothing else would ever re-tune
-        // it. Once, when a session can be had, and only if the viewer is still there with
-        // nothing open over it: a re-tune under the guide changes the channel under the list.
-        deps.extras.onPlutoSessionReady { channel ->
-            val still = deps.tune().onAir?.takeIf { it.card == null }?.channel?.number == channel.number
-            if (still && !tuning.value && !deps.overlayOpen() && !deps.pickerOpen() &&
-                !deps.stoppedNow()) {
-                deps.tune().retuneCurrent("a pluto session is available")
-            }
+        // A Pluto channel on its legacy url for want of a session: re-tuned once one can be had,
+        // if the viewer is still there with nothing open over it. See ScreenExtras.
+        deps.extras.retuneWhenPlutoSessionReady(deps.tune) {
+            !tuning.value && !deps.overlayOpen() && !deps.pickerOpen() && !deps.stoppedNow()
         }
     }
 
@@ -438,7 +432,7 @@ class ScreenDirector(private val deps: Deps) {
         deps.player()?.setPaused(true)
         skipper.stop()
         // Nobody is watching: no reads. Back on screen, the break is seen afresh.
-        plutoBreak.leave()
+        plutoBreak.appStopped()
     }
 
     /** Back on screen: resume the picture, re-derive the volume, and watch for skips again. */
@@ -446,9 +440,14 @@ class ScreenDirector(private val deps: Deps) {
         // Not under a card: the file there was paused on purpose - see [showCard].
         if (!upNext.showing) deps.player()?.setPaused(false)
         updateProgrammeVolume()
-        if (!tuning.value) {
-            skipper.start(deps.tune().onAir)
-            plutoBreak.playing(deps.tune().onAir)
+        val onAir = deps.tune().onAir
+        if (plutoBreak.retuneOnResume(onAir) && !tuning.value && onAir != null) {
+            // A Pluto channel under mpv: a fresh load re-anchors the break card - see there.
+            raiseBlank()
+            deps.tune().tune(onAir.channel)
+        } else if (!tuning.value) {
+            skipper.start(onAir)
+            plutoBreak.playing(onAir)
         }
         upNext.resumeMusic()
     }

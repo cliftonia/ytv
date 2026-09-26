@@ -92,4 +92,17 @@ class OnScreenTest {
         assertEquals(BreakView.Decision(false, null), view().at(110_000L))
         assertTrue(view(start = 0L, end = null, edgeEnd = 20_000L).at(10_000L).inBreak)
     }
+
+    @Test
+    fun `the anchor counts only whole target durations of lateness`() {
+        // 4.9s is under a segment's worth: mpv spent the same master fetch before its own read.
+        assertEquals(110_000L, OnScreen.mpvAnchor(view(readAt = 5_900L), loadedAt = 1_000L))
+        assertEquals(105_000L, OnScreen.mpvAnchor(view(readAt = 6_000L), loadedAt = 1_000L))
+    }
+
+    @Test
+    fun `the edge estimate stands back by the last three segments' own lengths`() {
+        val v = view(readAt = 1_000L).copy(liveOffsetMillis = 15_015L)
+        assertEquals(125_000L - 15_015L, OnScreen.edge(v, wallNow = 1_000L))
+    }
 }
