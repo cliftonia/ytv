@@ -19,7 +19,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2E0dWHCnic8",
                 "duration": 892,
-                "title": "The Economy of Sweden"
+                "title": "The Economy of Sweden",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=AkMsMDk_brU",
@@ -48,7 +50,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WpiJdsC5wJA",
                 "duration": 754,
-                "title": "The Economics of Owning an Airport"
+                "title": "The Economics of Owning an Airport",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=TkRmrPQDPFw",
@@ -96,7 +100,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=geoe-6NBy10",
                 "duration": 611,
-                "title": "Imports, Exports, and Exchange Rates: Crash Course Economics #15"
+                "title": "Imports, Exports, and Exchange Rates: Crash Course Economics #15",
+                "skip": [
+                    [
+                        582.1,
+                        597.2
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=jfW8OWm4Myc",
@@ -251,7 +262,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2mHsTKvAuZc",
                 "duration": 3292,
-                "title": "The Secret History of the Credit Card (full documentary) | FRONTLINE"
+                "title": "The Secret History of the Credit Card (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
@@ -333,7 +346,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bZCoFyFENyA",
                 "duration": 612,
-                "title": "I Thought I Understood Inflation"
+                "title": "I Thought I Understood Inflation",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=xhxo2oXRiio",
@@ -403,7 +418,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lkOQNPIsO-Q",
                 "duration": 3198,
-                "title": "The Retirement Gamble (full documentary) | FRONTLINE"
+                "title": "The Retirement Gamble (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=NVH7JewfgJg",
@@ -432,7 +449,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kmvyDoqedgc",
                 "duration": 730,
-                "title": "Saudi Arabia short of options against Iran-aligned Houthis | DW News"
+                "title": "Saudi Arabia short of options against Iran-aligned Houthis | DW News",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=xFqecEtdGZ0",
@@ -576,7 +595,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZZ25uZtey34",
                 "duration": 3275,
-                "title": "Before the Great Recession, “The Warning” (full documentary)"
+                "title": "Before the Great Recession, “The Warning” (full documentary)",
+                "skip": [],
+                "skip_checked": 1790451053
             }
         ],
         "search_query": "economics documentary explainer",

@@ -14,7 +14,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JmdsxY8RnRA",
                 "duration": 5018,
-                "title": "Snapped [2026] 🩵Debra Dillard🩵| 48 Hours Documentary True Crime."
+                "title": "Snapped [2026] 🩵Debra Dillard🩵| 48 Hours Documentary True Crime.",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=FFVJL7Z5RjU",
@@ -73,12 +75,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZZ25uZtey34",
                 "duration": 3275,
-                "title": "Before the Great Recession, “The Warning” (full documentary)"
+                "title": "Before the Great Recession, “The Warning” (full documentary)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=a2BLqQn_0M0",
                 "duration": 2281,
-                "title": "The Rise and Ruin of the Coca-Cola Family | Full Documentary"
+                "title": "The Rise and Ruin of the Coca-Cola Family | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=oskRmMRvguM",
@@ -163,22 +169,30 @@
             {
                 "url": "https://www.youtube.com/watch?v=Jm5jBRdf-eE",
                 "duration": 7644,
-                "title": "Stranger Danger | “48 Hours\" Full Episodes"
+                "title": "Stranger Danger | “48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=_xxpvYNJPrQ",
                 "duration": 2482,
-                "title": "Sade Robinson and The Secret Beach | Full Episode"
+                "title": "Sade Robinson and The Secret Beach | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=A42Bt-0DAiY",
                 "duration": 1769,
-                "title": "A Betrayal So Cold-Blooded It’s Chilling: He Framed His Wife to Hide a Sinister Secret..."
+                "title": "A Betrayal So Cold-Blooded It’s Chilling: He Framed His Wife to Hide a Sinister Secret...",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=JF8EFyGaGDM",
                 "duration": 3517,
-                "title": "9/11: The Saudi Connection - BBC World Service Documentaries"
+                "title": "9/11: The Saudi Connection - BBC World Service Documentaries",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=C6gcwTz_85s",
@@ -291,7 +305,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5z_9D5G3GmE",
                 "duration": 4998,
-                "title": "Trump’s Inner Circle & Use of Military Power | The War Cabinet (full documentary) | FRONTLINE (PBS)"
+                "title": "Trump’s Inner Circle & Use of Military Power | The War Cabinet (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=DDjscFUWFik",
@@ -303,7 +319,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-f4DofcZ-Xs",
                 "duration": 2456,
-                "title": "Fateful Connection | Full Episode"
+                "title": "Fateful Connection | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=yTvJCJ2FHlo",
@@ -371,7 +389,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
                 "duration": 4930,
-                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode"
+                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=r0tyaLfeUnY",
@@ -440,7 +460,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
                 "duration": 2683,
-                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation"
+                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=28sQyweAPRs",
@@ -595,7 +617,18 @@
                 "title": "PBS News Hour full episode, Sept. 21, 2026",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [
+                    [
+                        40.7,
+                        154.0
+                    ],
+                    [
+                        3310.2,
+                        3407.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=XmtXC_n6X6Q",
@@ -621,7 +654,9 @@
                 "title": "Our Planet | Fresh Water | FULL EPISODE | Netflix",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=bZ3vT5mnCq0",
@@ -637,7 +672,9 @@
                 "title": "Full Episode: TODAY Show - Sept. 22",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=GfO-3Oir-qM",
@@ -663,7 +700,9 @@
                 "title": "Full Episode: TODAY Show - Sept. 21",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=kZd6eS6AafM",
@@ -723,7 +762,9 @@
                 "title": "\"Don't You Look Delicious!\" & Other Twisted Crimes",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=D6_e6yKH26Q",
@@ -739,7 +780,9 @@
                 "title": "George Builds an Igloo! __ Curious George __ 40 Minute Compilation __Kids Movies __ Videos for Kids",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=WBAP525WY30",
@@ -765,7 +808,9 @@
                 "title": "Watch TODAY with Jenna & Sheinelle Full Episode - September 21",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=tSAKzVP2IGk",
@@ -788,7 +833,9 @@
                 "title": "Unhinged -- Reddit Stories -- FULL EPISODE",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=hHpOge37s4k",
@@ -972,7 +1019,9 @@
                 "title": "Extended Interview: Air Force officer shot down in Iran on surviving behind enemy lines",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=88Qo_JbOVU4",
@@ -1116,7 +1165,9 @@
                 "title": "VOID CORE | FULL MOVIE 2026 (Sci-Fi Action Film)",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=PuYmagcHPok",
@@ -1245,7 +1296,9 @@
                 "title": "UNIDENTIFIED FLYING OBJECTS 1956 Full Movie | The First UFO Documentary Predicts 2026 Disclosure? 👽🛸",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=kVfyhEG9sOE",
@@ -1453,7 +1506,9 @@
                 "title": "TOGETHER | FULL FEATURE DOCUMENTARY FILM | Closer than ever to Man City!",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZFdj7uVbzGk",
@@ -1489,7 +1544,9 @@
                 "title": "4 Cold Cases That Were Solved With INSANE Twists In 2024",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=YPuzJS5U4xA",
@@ -1507,7 +1564,9 @@
                 "title": "Unsolved Mysteries with Robert Stack - Season 12 Episode 8 - Updated Full Episode",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=zTWjBau53FQ",
@@ -1543,7 +1602,9 @@
                 "title": "7 Cold Cases That Were SOLVED With Insane Twists | Documentary",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=7M361bdj56s",
@@ -1597,7 +1658,9 @@
                 "title": "The UnXplained: Hidden Devils & Demons Surround Us | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Tob2h29tsCk",
@@ -1639,7 +1702,9 @@
                 "title": "Unsolved Alien Mysteries: from Alaska's Pyramid to the Freemasons | Ancient Aliens",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=pAEvsJTq-80",
@@ -1828,7 +1893,14 @@
                 "title": "Skinwalker Ranch  - The Full Story | Documentary",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [
+                    [
+                        70.4,
+                        102.5
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=wn1JgMo_rGw",
