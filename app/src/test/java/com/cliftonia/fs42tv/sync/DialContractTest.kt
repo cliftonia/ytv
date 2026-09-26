@@ -167,4 +167,25 @@ class DialContractTest {
         assertTrue("the last good lineup must survive an empty publish",
             empty.cachedDial()!!.channels.isNotEmpty())
     }
+
+    @Test
+    fun `a pluto channel names the id and region its session route plays`() {
+        // Unknown fields inside the new object are tolerated like everywhere else: the server
+        // must be able to grow it without breaking a television that updates by sideloading.
+        val dial = DialContract.parseDial("""{"channels":[{"number":11,"name":"Hallmark",
+            "kind":"live","streams":[{"url":"https://jmp2.uk/plu-628e685ba3811100070551a8.m3u8",
+            "duration":600}],"pluto":{"id":"628e685ba3811100070551a8","region":"us",
+            "someday":true}}]}""")
+        assertEquals(PlutoRef("628e685ba3811100070551a8", "us"), dial.channels.single().pluto)
+    }
+
+    @Test
+    fun `a channel without the field has no pluto reference`() {
+        // Every YouTube channel, and every Pluto dial published before the field existed.
+        val dial = DialContract.parseDial(fixture("pluto-sample.json"))
+        assertTrue(dial.channels.all { it.pluto == null })
+        val bare = DialContract.parseDial(
+            """{"channels":[{"number":1,"name":"x","kind":"live","pluto":{"id":"abc"}}]}""")
+        assertEquals(PlutoRef("abc", null), bare.channels.single().pluto)
+    }
 }
