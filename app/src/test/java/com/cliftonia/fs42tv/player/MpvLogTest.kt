@@ -72,4 +72,13 @@ class MpvLogTest {
         MpvLog.record("mpv", 0, "e".repeat(200))
         assertEquals(90, MpvLog.lastReason()!!.length)
     }
+
+    @Test
+    fun `a pluto session token never reaches the buffer`() {
+        MpvLog.record("ffmpeg", 0, "Failed to open https://s.pluto.tv/v2/stitch/hls/channel/abc/" +
+            "master.m3u8?sid=1&jwt=eyJhbGciOi.eyJzZXNz.sig-_x&masterJWTPassthrough=true")
+        assertEquals("[ffmpeg] Failed to open https://s.pluto.tv/v2/stitch/hls/channel/abc/" +
+            "master.m3u8?sid=1&jwt=...&masterJWTPassthrough=true", MpvLog.recent().single())
+        assertEquals("a token at the end of a line", "open u?jwt=... failed", MpvLog.redact("open u?jwt=eyJ.a.b failed"))
+    }
 }

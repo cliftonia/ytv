@@ -23,7 +23,7 @@ object MpvLog {
 
     /** Called from mpv's own thread, so every access is synchronised. */
     fun record(prefix: String?, level: Int, text: String?) {
-        val message = text?.trim().orEmpty()
+        val message = redact(text?.trim().orEmpty())
         if (message.isEmpty()) return
         synchronized(lines) {
             lines.addLast("[$prefix] $message")
@@ -47,4 +47,14 @@ object MpvLog {
     fun recent(): List<String> = synchronized(lines) { lines.toList() }
 
     fun clear() = synchronized(lines) { lines.clear() }
+
+    /**
+     * [text] with any Pluto session token cut out. mpv names the url it failed to open, and a
+     * direct Pluto url carries the session's JWT - which would otherwise sit in logcat and on the
+     * MPV SAID row, readable by anyone with the remote. Plain dots, not an ellipsis: the OSD
+     * font is not guaranteed to have one.
+     */
+    fun redact(text: String): String = JWT.replace(text, "jwt=...")
+
+    private val JWT = Regex("""jwt=[^&\s"']*""")
 }
