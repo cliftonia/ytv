@@ -21,7 +21,13 @@ object PlutoIds {
 
     fun idFrom(url: String): String? = ID.find(url)?.groupValues?.get(1)
 
-    fun of(channel: Channel): String? = channel.streams.firstOrNull()?.url?.let(::idFrom)
+    /**
+     * The published `pluto.id` when the lineup carries one - it names the id curation actually
+     * chose, UK or US - and otherwise the id inside the jmp2 url, which is how a dial published
+     * before the field, and the Pluto-fed news channels on the YouTube dial, are recognised.
+     */
+    fun of(channel: Channel): String? =
+        channel.pluto?.id ?: channel.streams.firstOrNull()?.url?.let(::idFrom)
 }
 
 /** One programme on a Pluto channel. Epoch milliseconds, so comparisons need no parsing. */
