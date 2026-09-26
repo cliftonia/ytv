@@ -108,6 +108,9 @@ class BreakDetector {
 
         private val BUMPER = Regex("ad_?bumper", RegexOption.IGNORE_CASE)
 
+        /** Whether segment [uri] is Pluto's logo bumper. */
+        fun isBumper(uri: String): Boolean = BUMPER.containsMatchIn(uri)
+
         /** The segment urls of a media playlist - every non-blank line that is not a tag. */
         fun segments(body: String): List<String> =
             body.lineSequence().map { it.trim() }.filter { it.isNotEmpty() && !it.startsWith("#") }.toList()
@@ -120,7 +123,7 @@ class BreakDetector {
             if (body == null || !body.contains("#EXTINF")) return null
             val segments = segments(body)
             if (segments.isEmpty()) return null
-            return if (segments.all { BUMPER.containsMatchIn(it) }) Read.BUMPER else Read.PROGRAMME
+            return if (segments.all(::isBumper)) Read.BUMPER else Read.PROGRAMME
         }
     }
 }
