@@ -158,7 +158,8 @@ class MainActivity : ComponentActivity() {
         readSettings()
 
         extras = ScreenExtras.create(prefs, threads.prefetch, { runOnUiThread(it) }, { destroyed },
-            use24Hour = { android.text.format.DateFormat.is24HourFormat(this) })
+            use24Hour = { android.text.format.DateFormat.is24HourFormat(this) },
+            mpvLadder = { ladder.takeIf { ::deck.isInitialized && deck.engine == PlayerEngine.MPV } })
         music = GuideMusic(GuideMusic.Deps(
             context = this,
             resolveForAudio = { tune.resolveForAudio(it)?.let(extras::besideTuned) },

@@ -60,9 +60,20 @@ object MpvSource {
 
         // Live HLS is left alone: it is already a series of bounded segment requests, which
         // is why it was never throttled and never slow. Proxying it would add a hop for
-        // nothing.
-        is Hls -> MpvLoad(playable.url)
+        // nothing. A media playlist chosen out of the master opens in a third of the time the
+        // master does; its separate audio rendition, if any, rides as an external track - the
+        // same arrangement as YouTube's, and for the same failure reasons.
+        is Hls -> MpvLoad(playable.mediaUrl ?: playable.url, playable.mediaUrl?.let { playable.audioUrl })
 
         is NeedsResolving, is Unplayable -> null
     }
+
+    /**
+     * [value] made safe as one value in loadfile's per-file option list, which mpv splits on
+     * commas. The proxy's urls never carry one and pass untouched; a direct url (a Pluto audio
+     * rendition) that does is wrapped in mpv's `%bytes%` length escape - BYTES, like [MpvEdl].
+     */
+    fun perFileValue(value: String): String =
+        if (!value.contains(',')) value
+        else "%${value.toByteArray(Charsets.UTF_8).size}%$value"
 }

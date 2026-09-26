@@ -163,6 +163,19 @@ class PlutoRouteTest {
     }
 
     @Test
+    fun `a failure on the playlist mpv was given instead of the master is still the session's`() {
+        // MasterPicker hands mpv one media playlist out of the master; the master url stays the
+        // playable's identity, so the dial's onAir still traces an error to this session.
+        val f = Fixture()
+        val ch = channel(homeful)
+        val first = f.route.forDial(ch, legacy(ch)) as Hls
+        f.route.playbackFailed(first.copy(mediaUrl = "https://s.pluto.tv/720p.m3u8", audioUrl = "https://s.pluto.tv/a.m3u8"))
+        val second = f.route.forDial(ch, legacy(ch))
+        assertEquals(2, f.boots)
+        assertNotEquals(sid(url(first)), sid(url(second)))
+    }
+
+    @Test
     fun `failing again on the rebuilt session puts that channel on the legacy url for a while`() {
         val f = Fixture()
         val ch = channel(homeful)

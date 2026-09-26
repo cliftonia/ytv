@@ -2,6 +2,8 @@ package com.cliftonia.fs42tv.ui
 
 import android.content.SharedPreferences
 import androidx.compose.runtime.mutableStateOf
+import com.cliftonia.fs42tv.pluto.BreakPoller
+import com.cliftonia.fs42tv.pluto.MasterPicker
 import com.cliftonia.fs42tv.pluto.PlutoApi
 import com.cliftonia.fs42tv.pluto.PlutoBoot
 import com.cliftonia.fs42tv.pluto.PlutoGuide
@@ -41,13 +43,21 @@ class ScreenExtras(private val deps: Deps) {
         val timetable: Timetable,
         /** Pluto channels through Pluto's own route, behind PLUTO ROUTE. */
         val plutoRoute: PlutoRoute,
+        /** Under mpv, one playlist out of a Pluto master instead of the master - a 3s start, not 9. */
+        val masterPicker: MasterPicker? = null,
     )
 
     /**
      * What the dial plays for a live channel - Pluto's own route or the published url. Blocking;
      * the tune thread only - it is TuneController.Deps.livePlayable.
      */
-    fun livePlayable(tuned: Tuned): Playable = deps.plutoRoute.forDial(tuned.channel, tuned.playable)
+    fun livePlayable(tuned: Tuned): Playable {
+        val routed = deps.plutoRoute.forDial(tuned.channel, tuned.playable)
+        // Pluto-dial channels only, either route; the YouTube dial's news feeds are left as they
+        // were, like the route itself leaves them.
+        val picker = deps.masterPicker
+        return if (tuned.channel.pluto == null || picker == null) routed else picker.forMpv(routed)
+    }
 
     /**
      * The guide music's version of the same, on a Pluto session of its own so it can never end
@@ -179,6 +189,8 @@ class ScreenExtras(private val deps: Deps) {
             halted: () -> Boolean,
             /** The device's 12/24-hour setting, read each time a time is printed. */
             use24Hour: () -> Boolean,
+            /** The QUALITY ladder while mpv plays the dial, else null - see [MasterPicker]. */
+            mpvLadder: () -> List<String>? = { null },
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
@@ -216,6 +228,8 @@ class ScreenExtras(private val deps: Deps) {
                         }, delay)
                     },
                 ),
+                masterPicker = MasterPicker(BreakPoller::httpFetch, mpvLadder,
+                    android.os.SystemClock::elapsedRealtime),
             ))
         }
 
