@@ -179,4 +179,12 @@ class BreakDetectorTest {
         assertEquals(PROGRAMME, read(allBumper))
         assertEquals(IN_BREAK, read(allBumper))
     }
+
+    @Test
+    fun `a window long enough to be sure is a break on one read - but not after the ceiling`() {
+        val detector = BreakDetector()
+        assertEquals(IN_BREAK, detector.feed(allBumper, 0L, longEnough = true))
+        detector.feed(allBumper, BreakDetector.MAX_BREAK_MILLIS, longEnough = true)
+        assertEquals(PROGRAMME, detector.feed(allBumper, BreakDetector.MAX_BREAK_MILLIS + 5_000L, longEnough = true))
+    }
 }

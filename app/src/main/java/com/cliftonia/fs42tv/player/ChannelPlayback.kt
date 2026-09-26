@@ -57,6 +57,20 @@ interface ChannelPlayback {
     fun positionSeconds(): Double?
 
     /**
+     * The HLS PROGRAM-DATE-TIME of the frame on screen, epoch milliseconds, when the engine knows
+     * it exactly - null otherwise. What the Pluto break card times itself against; see
+     * `pluto/OnScreen`. UI thread, cheap, never throws.
+     */
+    fun programDateTimeMillis(): Long? = null
+
+    /**
+     * Whether a live HLS stream starts at the third-from-last segment of the window (ffmpeg's
+     * `live_start_index` default) - how the break card anchors an engine that has no
+     * [programDateTimeMillis].
+     */
+    val joinsLiveAtThirdFromLast: Boolean get() = false
+
+    /**
      * Jump to [seconds] from the start of the file, within the clip already playing - the sponsor
      * skip, and nothing else. Joining a clip is never a seek: [play] takes its start position as
      * part of the load, for the reason it gives. Must be a no-op when nothing is playing.
