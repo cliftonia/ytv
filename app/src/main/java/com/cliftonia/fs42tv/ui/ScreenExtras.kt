@@ -3,14 +3,19 @@ package com.cliftonia.fs42tv.ui
 import android.content.SharedPreferences
 import androidx.compose.runtime.mutableStateOf
 import com.cliftonia.fs42tv.pluto.PlutoApi
+import com.cliftonia.fs42tv.pluto.PlutoBoot
 import com.cliftonia.fs42tv.pluto.PlutoGuide
 import com.cliftonia.fs42tv.pluto.PlutoIds
 import com.cliftonia.fs42tv.pluto.PlutoLines
+import com.cliftonia.fs42tv.pluto.PlutoRoute
+import com.cliftonia.fs42tv.pluto.PlutoSessions
 import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
+import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
+import com.cliftonia.fs42tv.tune.Tuned
 import java.time.ZoneId
 import java.util.concurrent.Executor
 
@@ -34,7 +39,26 @@ class ScreenExtras(private val deps: Deps) {
         val nowMillis: () -> Long,
         /** What is on a clock channel, with SKIP SPONSORS applied. */
         val timetable: Timetable,
+        /** Pluto channels through Pluto's own route, behind PLUTO ROUTE. */
+        val plutoRoute: PlutoRoute,
     )
+
+    /**
+     * What the dial plays for a live channel - Pluto's own route or the published url. Blocking;
+     * the tune thread only - it is TuneController.Deps.livePlayable.
+     */
+    fun livePlayable(tuned: Tuned): Playable = deps.plutoRoute.forDial(tuned.channel, tuned.playable)
+
+    /**
+     * The guide music's version of the same, on a Pluto session of its own so it can never end
+     * the programme playing under the guide. Blocking; the prefetch thread only.
+     */
+    fun besideTuned(tuned: Tuned): Tuned =
+        if (tuned.channel.kind != "live") tuned
+        else tuned.copy(playable = deps.plutoRoute.forBeside(tuned.channel, tuned.playable))
+
+    /** The dial's player failed on [playable]; see [PlutoRoute.playbackFailed]. */
+    fun plutoFailed(playable: Playable?) = deps.plutoRoute.playbackFailed(playable)
 
     val features: Features get() = deps.features
 
@@ -150,6 +174,16 @@ class ScreenExtras(private val deps: Deps) {
                     halfHourOn = { features.isOn(Features.Flag.SCHEDULE) },
                     zone = { ZoneId.systemDefault() },
                     use24Hour = use24Hour,
+                ),
+                plutoRoute = PlutoRoute(
+                    sessions = PlutoSessions(
+                        boot = { PlutoBoot.fetchBoot(now()) },
+                        server = PlutoBoot::fetchFromServer,
+                        nowMillis = now,
+                    ),
+                    direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },
+                    nowMillis = now,
+                    report = PlaybackDiagnostics::recordSource,
                 ),
             ))
         }

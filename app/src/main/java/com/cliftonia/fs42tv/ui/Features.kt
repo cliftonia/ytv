@@ -69,6 +69,13 @@ class Features(
          * "up next" card for the rest. CONTINUOUS is the rotation exactly as it was before.
          */
         SCHEDULE("SCHEDULE", "feature.schedule", onValue = "HALF-HOUR", offValue = "CONTINUOUS"),
+
+        /**
+         * Pluto channels through Pluto's own stitcher on a session (see `pluto/PlutoRoute`),
+         * instead of the published jmp2 url, which for many channels loops Pluto's logo bumper.
+         * LEGACY plays the jmp2 url exactly as before, from the next tune.
+         */
+        PLUTO_ROUTE("PLUTO ROUTE", "feature.plutoroute", onValue = "DIRECT", offValue = "LEGACY"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,

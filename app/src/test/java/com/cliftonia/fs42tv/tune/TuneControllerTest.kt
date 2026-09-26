@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.tune
 
 import com.cliftonia.fs42tv.resolver.ClipResolver
+import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.RefusalLedger
@@ -64,6 +65,9 @@ class TuneControllerTest {
         val unavailable = mutableListOf<Int>()
         val remembered = mutableListOf<Int>()
         var navigator: DialNavigator? = null
+        /** Stands in for the Pluto route; null keeps the published playable, as LEGACY does. */
+        var live: ((Tuned) -> Playable)? = null
+        val liveAsked = mutableListOf<Int>()
 
         val ledger = RefusalLedger(nowElapsedSeconds = { 0 })
         val tune = TuneController(TuneController.Deps(
@@ -86,6 +90,10 @@ class TuneControllerTest {
                 card = { cards.add(it.channel.number) },
             ),
             timetable = timetable,
+            livePlayable = { tuned ->
+                liveAsked.add(tuned.channel.number)
+                live?.invoke(tuned) ?: tuned.playable
+            },
         ))
 
         /** Run everything that is queued, in the order the device would: work, then UI. */
@@ -357,5 +365,55 @@ class TuneControllerTest {
         f.halted = true
         f.tune.tune(channel(3, "aaaaaaaaaaa"))
         assertTrue(f.work.queue.isEmpty())
+    }
+
+    private fun live(number: Int) = Channel(
+        number = number, name = "LIVE$number", kind = "live",
+        streams = listOf(Stream(url = "https://jmp2.uk/plu-628e685ba3811100070551a8.m3u8", duration = 600)),
+    )
+
+    @Test
+    fun `a live channel plays what the live route decides, on the tune thread`() {
+        // Pluto's own route needs a session fetched over the network, so the url is decided on
+        // the executor - never the UI thread - and what is painted, and what claims the air, is
+        // that url rather than the published one.
+        val f = Fixture()
+        f.live = { Hls("https://s.pluto.tv/direct") }
+        f.tune.surfTo(live(7))
+        f.work.turn()
+        assertEquals("decided on the executor, before the UI ran", listOf(7), f.liveAsked)
+        f.ui.turn()
+        assertEquals(Hls("https://s.pluto.tv/direct"), f.painted.single().second)
+        assertEquals(Hls("https://s.pluto.tv/direct"), f.tune.onAir?.playable)
+    }
+
+    @Test
+    fun `with the route leaving it alone a live channel plays its published url exactly as before`() {
+        val f = Fixture()
+        f.tune.surfTo(live(7))
+        f.settle()
+        assertEquals(Hls("https://jmp2.uk/plu-628e685ba3811100070551a8.m3u8"), f.painted.single().second)
+    }
+
+    @Test
+    fun `only live channels are routed`() {
+        val f = Fixture()
+        f.tune.surfTo(channel(3, "aaaaaaaaaaa"))
+        f.settle()
+        assertTrue(f.liveAsked.isEmpty())
+    }
+
+    @Test
+    fun `a live tune superseded while its session was fetched does not paint`() {
+        // A session fetch can take seconds; a keypress in the meantime must win as ever.
+        val f = Fixture()
+        f.live = { tuned ->
+            f.tune.surfTo(channel(3, "aaaaaaaaaaa"))
+            tuned.playable
+        }
+        f.tune.surfTo(live(7))
+        f.settle()
+        assertTrue(f.painted.none { it.first == 7 })
+        assertEquals(3, f.tune.onAir?.channel?.number)
     }
 }

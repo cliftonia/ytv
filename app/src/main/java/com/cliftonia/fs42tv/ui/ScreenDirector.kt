@@ -309,6 +309,11 @@ class ScreenDirector(private val deps: Deps) {
                 // The engine, not the clip. Rebuild first, then let the normal recovery below
                 // re-tune into the new instance.
                 deps.rebuildEngine()
+            } else {
+                // A Pluto stream on its own route that would not open or was refused: the route
+                // rebuilds its session, or retires the channel to the legacy url, before the
+                // re-tune below asks it again. A no-op for anything else.
+                deps.extras.plutoFailed(deps.tune().onAir?.playable)
             }
             // A rejected URL is the one error worth reacting to specifically: re-tuning
             // without forgetting it would resolve to the same dead link and fail the same way.
@@ -400,6 +405,9 @@ class ScreenDirector(private val deps: Deps) {
             // A card up now belongs to the schedule just left: end it, and let the tune decide.
             // A clip playing carries on; the next roll-over asks the new schedule.
             Features.Flag.SCHEDULE -> upNext.endNow()
+            // Read per tune: the channel playing carries on, and the next tune - a surf, or
+            // the re-tune after any error - takes the route now chosen.
+            Features.Flag.PLUTO_ROUTE -> Unit
         }
     }
 

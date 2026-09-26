@@ -66,6 +66,12 @@ class TuneController(private val deps: Deps) {
         val rememberChannel: (Int) -> Unit,
         /** What is on a clock channel, with the Settings rows applied. */
         val timetable: Timetable = Timetable.PLAIN,
+        /**
+         * What a live channel actually plays - Pluto's own route on a session, when PLUTO ROUTE
+         * is DIRECT (see `pluto/PlutoRoute`). Blocking, since a session may be fetched, so it is
+         * asked here on [executor]. The default is the published url, as before the route.
+         */
+        val livePlayable: (Tuned) -> Playable = { it.playable },
     )
 
     /**
@@ -292,6 +298,9 @@ class TuneController(private val deps: Deps) {
             return
         }
 
+        // Into the Tuned, not just the local: onAir must name the url actually playing, since a
+        // failure of that url is how the route learns its session went bad.
+        if (channel.kind == "live") tuned = tuned.copy(playable = deps.livePlayable(tuned))
         var playable: Playable = tuned.playable
 
         // A cached URL that the CDN already refused is worse than no cached URL at all: it will
