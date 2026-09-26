@@ -200,7 +200,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Vsu-Ubczc8Y",
                 "duration": 817,
-                "title": "Trump Speaks at Senator Lindsey Graham’s Funeral"
+                "title": "Trump Speaks at Senator Lindsey Graham’s Funeral",
+                "skip": [
+                    [
+                        120.9,
+                        170.0
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=L6fSd9gidHk",
@@ -244,7 +251,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=D1rDqfTdTRc",
                 "duration": 1355,
-                "title": "Extended Interview: 2026 Mark Twain Prize recipient Bill Maher"
+                "title": "Extended Interview: 2026 Mark Twain Prize recipient Bill Maher",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=hcdVvgxAQCk",
@@ -346,7 +355,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rrvHrTJ0boU",
                 "duration": 448,
-                "title": "Remembering Dolly Parton | Late Night Throwback"
+                "title": "Remembering Dolly Parton | Late Night Throwback",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=zvqLw8scMB4",
@@ -363,7 +374,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=avdi1FxlX3Y",
                 "duration": 388,
-                "title": "Bill Hader Reminisces on His SNL Wedding with Seth, Reveals Stefon's Origin | Late Night T"
+                "title": "Bill Hader Reminisces on His SNL Wedding with Seth, Reveals Stefon's Origin | Late Night T",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=8O7rGk_C10c",
@@ -373,7 +386,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=X3n5Pk8fkLg",
                 "duration": 718,
-                "title": "Seth and Rihanna Go Day Drinking"
+                "title": "Seth and Rihanna Go Day Drinking",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=uSSN-MhBkDo",
@@ -395,7 +410,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GL_Rljo5LIs",
                 "duration": 753,
-                "title": "Matthew Rhys and Keri Russell's Relationship Was Exposed on The Americans Set by the NYPD"
+                "title": "Matthew Rhys and Keri Russell's Relationship Was Exposed on The Americans Set by the NYPD",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=daA22MxJhi0",
@@ -412,7 +429,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=APau0E48cpo",
                 "duration": 946,
-                "title": "Larry David Reacts to His Daughter's Impression of Him"
+                "title": "Larry David Reacts to His Daughter's Impression of Him",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=b9ZZFXCRM_U",
@@ -429,12 +448,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=6mhbIZ83pMk",
                 "duration": 729,
-                "title": "Trump Wants to Switch Places with Cristiano Ronaldo for an \"Easier Life\""
+                "title": "Trump Wants to Switch Places with Cristiano Ronaldo for an \"Easier Life\"",
+                "skip": [
+                    [
+                        195.0,
+                        235.4
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=oO8w6XcXJUs",
                 "duration": 1281,
-                "title": "Elon Musk (Full Interview) | Real Time with Bill Maher (HBO)"
+                "title": "Elon Musk (Full Interview) | Real Time with Bill Maher (HBO)",
+                "skip": [
+                    [
+                        1267.7,
+                        1270.7
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=kSEMaPOOrU8",
@@ -478,7 +511,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Vh-qgOX8MhQ",
                 "duration": 1334,
-                "title": "A Closer Look Back: Elon Musk's Disastrous DOGE Failure, Feud with Trump and Tesla Losses"
+                "title": "A Closer Look Back: Elon Musk's Disastrous DOGE Failure, Feud with Trump and Tesla Losses",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=tahHeW6Wq2k",
@@ -510,7 +545,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GLq-fAxFUfQ",
                 "duration": 1000,
-                "title": "Seth and Sabrina Carpenter Go Day Drinking"
+                "title": "Seth and Sabrina Carpenter Go Day Drinking",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=UVs8MfQPJOc",

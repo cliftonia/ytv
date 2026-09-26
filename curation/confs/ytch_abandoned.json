@@ -118,7 +118,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dFcHpfdhInM",
                 "duration": 1422,
-                "title": "Once Home to 950 - Now a GUARDED Houston GHOST TOWN Slowly Vanishing in the Trees"
+                "title": "Once Home to 950 - Now a GUARDED Houston GHOST TOWN Slowly Vanishing in the Trees",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=R1mM4l2_lT8",
@@ -165,7 +167,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8uTnhqpGaTI",
                 "duration": 2420,
-                "title": "5 Urban Explorers Who Had Terrifying Encounters in Abandoned Places"
+                "title": "5 Urban Explorers Who Had Terrifying Encounters in Abandoned Places",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=hgan5SaBSNg",
@@ -280,12 +284,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=rf8IJ9jhFJ4",
                 "duration": 2214,
-                "title": "Abandoned Birmingham City Hospital: Inside Days After Closure (Part 2)"
+                "title": "Abandoned Birmingham City Hospital: Inside Days After Closure (Part 2)",
+                "skip": [
+                    [
+                        71.5,
+                        127.6
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZCeh3aStdbQ",
                 "duration": 3106,
-                "title": "ABANDONED French Castle of a US Billionaire - Ferrari Left Behind"
+                "title": "ABANDONED French Castle of a US Billionaire - Ferrari Left Behind",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=xt3NMkJs1EM",
@@ -329,7 +342,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JtW6OdoG-_0",
                 "duration": 2284,
-                "title": "Terrifying Night Exploring East Cleveland Abandoned Hough Bakery"
+                "title": "Terrifying Night Exploring East Cleveland Abandoned Hough Bakery",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=ijj577kTlSo",
@@ -426,7 +441,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=R_WiBMDhKx0",
                 "duration": 1968,
-                "title": "These Abandoned Locations Can Kill You..."
+                "title": "These Abandoned Locations Can Kill You...",
+                "skip": [
+                    [
+                        223.5,
+                        277.2
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=A42KZUqRK-k",
@@ -441,7 +463,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jopmxDp3_NU",
                 "duration": 1907,
-                "title": "They Never Returned | ABANDONED House With PORSCHE 911 And EVERYTHING Left Behind"
+                "title": "They Never Returned | ABANDONED House With PORSCHE 911 And EVERYTHING Left Behind",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=JYOz6Fzha-Y",
@@ -492,7 +516,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5CK_62b7tcs",
                 "duration": 1465,
-                "title": "Disturbing Encounters In Abandoned Locations"
+                "title": "Disturbing Encounters In Abandoned Locations",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=mLMPsBFwFXU",
@@ -502,7 +528,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Wx4phJcqhJM",
                 "duration": 1381,
-                "title": "5 Most Terrifying Encounters in Abandoned Church"
+                "title": "5 Most Terrifying Encounters in Abandoned Church",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=MFNHsgR1jG8",
@@ -519,7 +547,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fkiSNoOnOlw",
                 "duration": 4068,
-                "title": "Locals Refuse To Enter This Haunted Asylum After Dark"
+                "title": "Locals Refuse To Enter This Haunted Asylum After Dark",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=KQmlzT-OfmI",
@@ -546,7 +576,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZKQsm73-7tM",
                 "duration": 3957,
-                "title": "We Were Warned Not to Go Here: Laurelton State ASYLUM  *Full Exclusive ABANDONED Documenta"
+                "title": "We Were Warned Not to Go Here: Laurelton State ASYLUM  *Full Exclusive ABANDONED Documenta",
+                "skip": [
+                    [
+                        722.0,
+                        731.2
+                    ],
+                    [
+                        1020.5,
+                        1088.5
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=11TNckmDkvc",

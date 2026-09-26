@@ -40,7 +40,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=MCAPRAEG9wk",
                 "duration": 7028,
-                "title": "Unhinged -- Reddit Stories -- FULL EPISODE"
+                "title": "Unhinged -- Reddit Stories -- FULL EPISODE",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Jm-6iviCl3k",
@@ -75,7 +77,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=E9UU5N0k0XY",
                 "duration": 4682,
-                "title": "It’s Not Too Late: How to Transform Your Life at Any Moment"
+                "title": "It’s Not Too Late: How to Transform Your Life at Any Moment",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=w6Qg-fQmqhM",
@@ -143,7 +147,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XZOJa-At410",
                 "duration": 2276,
-                "title": "WYATT FLORES x Dusty Boots Podcast - Bucking Bin Chicken Tour 2026"
+                "title": "WYATT FLORES x Dusty Boots Podcast - Bucking Bin Chicken Tour 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=aW3WLYnNQmg",
@@ -269,12 +275,30 @@
             {
                 "url": "https://www.youtube.com/watch?v=V360AygOv7A",
                 "duration": 3494,
-                "title": "Financial Literacy for Dummies (Like Me) with JL Collins"
+                "title": "Financial Literacy for Dummies (Like Me) with JL Collins",
+                "skip": [
+                    [
+                        2640.9,
+                        2700.6
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=KPh0LOCWT5A",
                 "duration": 3191,
-                "title": "Neil deGrasse Tyson and Richard Dawkins Discuss Science, Religion & Evolution"
+                "title": "Neil deGrasse Tyson and Richard Dawkins Discuss Science, Religion & Evolution",
+                "skip": [
+                    [
+                        834.1,
+                        958.7
+                    ],
+                    [
+                        1939.3,
+                        1963.5
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=qkwISstQQVw",
@@ -337,7 +361,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ouiaBGFg1iI",
                 "duration": 1869,
-                "title": "A 9/11 Survivor Finally Shares the Story She Kept Private for 25 Years"
+                "title": "A 9/11 Survivor Finally Shares the Story She Kept Private for 25 Years",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=eeU1fNZ2pZA",
@@ -362,7 +388,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zjVU8n_pGzw",
                 "duration": 2487,
-                "title": "Ariana Grande | New Album \"Eternal Sunshine\", Wicked, Glinda [Part 1]"
+                "title": "Ariana Grande | New Album \"Eternal Sunshine\", Wicked, Glinda [Part 1]",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=fCnnVSYDJL8",
@@ -384,7 +412,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dXlAhD4hOyE",
                 "duration": 3106,
-                "title": "Dave Grohl loves BBQ | Dish Podcast | Waitrose"
+                "title": "Dave Grohl loves BBQ | Dish Podcast | Waitrose",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=iLPIu0ypefk",
@@ -435,12 +465,57 @@
             {
                 "url": "https://www.youtube.com/watch?v=LG7bGMZLBxw",
                 "duration": 7593,
-                "title": "The Right Financial Decision Starts With Understanding the Problem | September 7, 2026"
+                "title": "The Right Financial Decision Starts With Understanding the Problem | September 7, 2026",
+                "skip": [
+                    [
+                        522.4,
+                        615.4
+                    ],
+                    [
+                        1190.2,
+                        1275.3
+                    ],
+                    [
+                        1846.4,
+                        1964.8
+                    ],
+                    [
+                        2519.4,
+                        2614.1
+                    ],
+                    [
+                        3111.8,
+                        3209.7
+                    ],
+                    [
+                        3786.5,
+                        3900.9
+                    ],
+                    [
+                        4447.7,
+                        4584.8
+                    ],
+                    [
+                        5639.9,
+                        5720.6
+                    ],
+                    [
+                        6302.1,
+                        6351.5
+                    ],
+                    [
+                        6929.6,
+                        7027.3
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=tI9NX47aGmo",
                 "duration": 3338,
-                "title": "2 Guys 1 Cup: Semi Finals, 2026"
+                "title": "2 Guys 1 Cup: Semi Finals, 2026",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=nbzYO_e9xnw",
@@ -452,7 +527,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Fj20vnD01do",
                 "duration": 6661,
-                "title": "Voodoo Assassinations, WitchTok Psychosis, and My HAUNTED DOLL Collection | HORRORble Podc"
+                "title": "Voodoo Assassinations, WitchTok Psychosis, and My HAUNTED DOLL Collection | HORRORble Podc",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=9ikgA3exrbk",
@@ -527,7 +604,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=As7abwNhG7Y",
                 "duration": 2294,
-                "title": "Shorts Genius Shares Everything She Knows (Jenny Hoyos Interview)"
+                "title": "Shorts Genius Shares Everything She Knows (Jenny Hoyos Interview)",
+                "skip": [
+                    [
+                        702.2,
+                        774.8
+                    ],
+                    [
+                        1734.7,
+                        1756.8
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=-dv_2h61a2o",

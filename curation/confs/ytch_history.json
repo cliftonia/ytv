@@ -70,7 +70,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
                 "duration": 2683,
-                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation"
+                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
@@ -89,7 +91,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
                 "duration": 4930,
-                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode"
+                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=rU6DORQU--k",
@@ -114,7 +118,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wG83zTHJL9U",
                 "duration": 7610,
-                "title": "Jaw-Dropping Trials | “48 Hours\" Full Episodes"
+                "title": "Jaw-Dropping Trials | “48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=eTEdKrJ1DhI",
@@ -153,7 +159,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hcPcoMD84mA",
                 "duration": 2665,
-                "title": "Did Aliens Build Ancient Power Plants? | Ancient Aliens"
+                "title": "Did Aliens Build Ancient Power Plants? | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=jHtNTBO4vFI",
@@ -163,7 +171,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ndHNOgutm4E",
                 "duration": 2537,
-                "title": "The UFO Superhighway (S20, E8) | Ancient Aliens | Full Episode"
+                "title": "The UFO Superhighway (S20, E8) | Ancient Aliens | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=1ZyUCAoMIpQ",
@@ -270,7 +280,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kNuwCiuDz4E",
                 "duration": 6613,
-                "title": "The ENTIRE History of Israel (Documentary)"
+                "title": "The ENTIRE History of Israel (Documentary)",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=RPhOFP-tcyU",
@@ -313,7 +325,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Jm5jBRdf-eE",
                 "duration": 7644,
-                "title": "Stranger Danger | “48 Hours\" Full Episodes"
+                "title": "Stranger Danger | “48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
@@ -395,7 +409,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-f4DofcZ-Xs",
                 "duration": 2456,
-                "title": "Fateful Connection | Full Episode"
+                "title": "Fateful Connection | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=XZIPsgHJO1k",
@@ -405,7 +421,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q31pWFHVmBc",
                 "duration": 2511,
-                "title": "Closing the Cold Case of Robin Lawrence | Full Episode"
+                "title": "Closing the Cold Case of Robin Lawrence | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=bNw5WQQegfA",
@@ -514,7 +532,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ayw5FGAbLUg",
                 "duration": 2478,
-                "title": "The Root Beer Float Murder | Full Episode"
+                "title": "The Root Beer Float Murder | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=4rwVw0N9OW4",
@@ -524,12 +544,25 @@
             {
                 "url": "https://www.youtube.com/watch?v=xa6M7n_swNw",
                 "duration": 1561,
-                "title": "The 9/11 Files: The CIA’s Secret Mission Gone Wrong | Ep 1"
+                "title": "The 9/11 Files: The CIA’s Secret Mission Gone Wrong | Ep 1",
+                "skip": [
+                    [
+                        643.8,
+                        725.5
+                    ],
+                    [
+                        1529.4,
+                        1560.8
+                    ]
+                ],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=o8mJyAvKWiY",
                 "duration": 7559,
-                "title": "Murderous Demise | \"48 Hours\" Full Episodes"
+                "title": "Murderous Demise | \"48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=htzhEVDYKKI",
@@ -585,7 +618,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-YhuOv57ou8",
                 "duration": 2583,
-                "title": "Military Encounters with the Unknown | Ancient Aliens"
+                "title": "Military Encounters with the Unknown | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790451053
             }
         ],
         "search_query": "history documentary full episode",
