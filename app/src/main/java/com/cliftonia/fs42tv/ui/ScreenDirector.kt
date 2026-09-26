@@ -85,11 +85,7 @@ class ScreenDirector(private val deps: Deps) {
      * blanket clear would take the retry with it.
      */
     private val watch = RecoveryWatch(
-        schedule = { delay, block ->
-            val runnable = Runnable(block)
-            deps.recoveryHandler.postDelayed(runnable, delay)
-            ({ deps.recoveryHandler.removeCallbacks(runnable) })
-        },
+        schedule = cancellable(deps.recoveryHandler),
         halted = deps.halted,
         stillTuning = { tuning.value },
         deferred = { deps.overlayOpen() || deps.stoppedNow() },
@@ -127,6 +123,16 @@ class ScreenDirector(private val deps: Deps) {
         stoppedNow = deps.stoppedNow, volumeChanged = ::updateProgrammeVolume,
         picture = { watch.firstFrame(); stall.cover() },
         uncovered = { if (!tuning.value) stall.uncover() })
+
+    /** mpv lost on a live Pluto stream - ffmpeg at a discontinuity - reloaded. See [StallRecovery]. */
+    private val stallRecovery = StallRecovery(
+        schedule = cancellable(deps.recoveryHandler),
+        nowMillis = android.os.SystemClock::elapsedRealtime,
+        channel = { deps.tune().onAir?.takeIf { !tuning.value && StallRecovery.eligible(
+            deps.player()?.joinsLiveAtThirdFromLast == true, it) }?.channel?.number },
+        deferred = { deps.overlayOpen() || deps.stoppedNow() },
+        recover = { reason -> plutoBreak.holdAcrossReload(); deps.tune().retuneCurrent(reason) },
+        giveUp = { reason -> Log.w("fs42", "mpv: $reason"); playbackFailed(StallRecovery.STALLED) })
 
     /** SKIP SPONSORS during playback; a range reaching the end ends the clip the usual way. */
     private val skipper = SponsorSkipper(
@@ -292,6 +298,7 @@ class ScreenDirector(private val deps: Deps) {
         // the new channel's first frame.
         watch.tuneStarted()
         stall.clear()
+        stallRecovery.clear()
         standByReason.value = ""
         tuning.value = true
         // The break card too - after the blank is up, for the reason in [raiseBlank].
@@ -339,37 +346,7 @@ class ScreenDirector(private val deps: Deps) {
             skipper.stop()
             deps.tune().clipEnded()
         }
-        player.onPlaybackError = { code ->
-            skipper.stop()
-            if (code.startsWith(MpvChannelPlayer.ENGINE_DIED) && !deps.halted()) {
-                // The engine, not the clip. Rebuild first, then let the normal recovery below
-                // re-tune into the new instance.
-                deps.rebuildEngine()
-            } else {
-                // A Pluto stream on its own route that would not open or was refused: the route
-                // rebuilds its session, or retires the channel to the legacy url, before the
-                // re-tune below asks it again. A no-op for anything else.
-                deps.extras.plutoFailed(deps.tune().onAir?.playable)
-            }
-            // A rejected url must be forgotten, or the re-tune resolves the same dead link.
-            RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)
-
-            // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused
-            // with 403 while still inside its stated expiry, and the recovery below - drop the
-            // dead id, ask the server for a fresh one, tune again - puts a picture back in
-            // about a second. Announcing that as a fault showed the viewer an error code for
-            // something the app had already fixed.
-            //
-            // The card is only delayed, never skipped: if the retune has not produced a
-            // picture by the time the grace period is up, this is a real fault and says so.
-            // Armed once per streak of errors, and the retune itself is the watch's to time -
-            // at once for the first few, backing off after; see RecoveryWatch.error.
-            tuning.value = true
-            // The picture is gone; so is any break card over it - once the blank is up.
-            plutoBreak.leave()
-            updateProgrammeVolume()
-            watch.error(code)
-        }
+        player.onPlaybackError = ::playbackFailed
         // The card comes down when a picture actually appears, not when a tune is merely
         // dispatched - a tune that fails again would otherwise clear it and leave black.
         player.onFirstFrame = {
@@ -377,6 +354,7 @@ class ScreenDirector(private val deps: Deps) {
             watch.firstFrame()
             standByReason.value = ""
             stall.firstFrame()
+            stallRecovery.buffering(false)
             tuning.value = false
             updateProgrammeVolume()
             skipper.start(deps.tune().onAir)
@@ -384,12 +362,48 @@ class ScreenDirector(private val deps: Deps) {
         }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
-        // no end of media, just a stopped picture. The pill is ALL that happens; see [StallPill].
+        // no end of media, just a stopped picture. The pill is ALL that happens - see [StallPill] -
+        // but for mpv on a live Pluto stream, which [StallRecovery] reloads.
         // A stall also holds the break card's clock: the picture does not move on during one.
         player.onBuffering = { stalled ->
             stall.buffering(stalled)
+            stallRecovery.buffering(stalled)
             plutoBreak.buffering(stalled)
         }
+    }
+
+    /** The player failed on what it was given - or mpv stalled past [StallRecovery]'s reloads. */
+    private fun playbackFailed(code: String) {
+        stallRecovery.clear()
+        skipper.stop()
+        if (code.startsWith(MpvChannelPlayer.ENGINE_DIED) && !deps.halted()) {
+            // The engine, not the clip. Rebuild first, then let the normal recovery below
+            // re-tune into the new instance.
+            deps.rebuildEngine()
+        } else {
+            // A Pluto stream on its own route that would not open or was refused: the route
+            // rebuilds its session, or retires the channel to the legacy url, before the
+            // re-tune below asks it again. A no-op for anything else.
+            deps.extras.plutoFailed(deps.tune().onAir?.playable)
+        }
+        // A rejected url must be forgotten, or the re-tune resolves the same dead link.
+        RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)
+
+        // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused
+        // with 403 while still inside its stated expiry, and the recovery below - drop the
+        // dead id, ask the server for a fresh one, tune again - puts a picture back in
+        // about a second. Announcing that as a fault showed the viewer an error code for
+        // something the app had already fixed.
+        //
+        // The card is only delayed, never skipped: if the retune has not produced a
+        // picture by the time the grace period is up, this is a real fault and says so.
+        // Armed once per streak of errors, and the retune itself is the watch's to time -
+        // at once for the first few, backing off after; see RecoveryWatch.error.
+        tuning.value = true
+        // The picture is gone; so is any break card over it - once the blank is up.
+        plutoBreak.leave()
+        updateProgrammeVolume()
+        watch.error(code)
     }
 
     /** Put the channel banner back up, recomputed rather than replayed - see [Banner.show]. */

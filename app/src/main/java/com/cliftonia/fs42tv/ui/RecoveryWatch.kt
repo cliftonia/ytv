@@ -163,3 +163,13 @@ class RecoveryWatch(
         const val NO_PICTURE = "NO PICTURE"
     }
 }
+
+/**
+ * A schedule on [handler] whose cancel removes only its own runnable - the dial loader's retry
+ * shares the recovery handler, and a blanket clear would take the retry with it.
+ */
+fun cancellable(handler: android.os.Handler): (Long, () -> Unit) -> (() -> Unit) = { delay, block ->
+    val runnable = Runnable(block)
+    handler.postDelayed(runnable, delay)
+    ({ handler.removeCallbacks(runnable) })
+}

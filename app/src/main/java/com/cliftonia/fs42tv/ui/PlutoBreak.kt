@@ -132,6 +132,19 @@ class PlutoBreak(private val deps: Deps) {
      */
     fun loading(tuned: Tuned?) = poll(tuned, anchored = true, fresh = true)
 
+    /** Set by [holdAcrossReload]; spent by the next load, or by anything else leaving. */
+    private var holdCard = false
+
+    /**
+     * The next load is a reload of the channel on air - StallRecovery's, mpv lost at a
+     * discontinuity, which is typically the bumper's own. If a break is on, the card and the
+     * programme's silence stay up across it, rather than a flash of Pluto's logo at full volume
+     * between two cards; the reload's own reads and first frame then decide as always.
+     */
+    fun holdAcrossReload() {
+        holdCard = inBreak
+    }
+
     /** Between onStop and onResume - a resume from a dialog that only paused is not a return. */
     private var wasStopped = false
 
@@ -166,7 +179,7 @@ class PlutoBreak(private val deps: Deps) {
         }
         // Only a second first frame on the stream already polled keeps what the poll has seen.
         if (!fresh && poller.pollingUrl == url && this.tuned?.channel?.number == tuned.channel.number) return
-        leave()
+        leave(keepCard = holdCard && this.tuned?.channel?.number == tuned.channel.number)
         this.tuned = tuned
         loadedAt = deps.wallMillis()
         this.anchored = anchored
@@ -196,7 +209,8 @@ class PlutoBreak(private val deps: Deps) {
     }
 
     /** Anything else took the screen: stop polling, and take the card and its music down. */
-    fun leave() {
+    fun leave(keepCard: Boolean = false) {
+        holdCard = false
         poller.stop()
         cancelTimer?.invoke()
         cancelTimer = null
@@ -205,7 +219,7 @@ class PlutoBreak(private val deps: Deps) {
         pictureAt = null
         stalledMillis = 0L
         stalledSince = null
-        if (inBreak) endBreak()
+        if (inBreak && !keepCard) endBreak()
     }
 
     /** An overlay opened or closed: hide or restore the card. Cheap; called on every change. */
