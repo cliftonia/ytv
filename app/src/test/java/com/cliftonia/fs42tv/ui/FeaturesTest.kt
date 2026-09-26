@@ -89,6 +89,18 @@ class FeaturesTest {
     }
 
     @Test
+    fun `the pluto route row starts DIRECT and flips to LEGACY, remembered`() {
+        val store = Store()
+        val row = { store.features().rows(onToggled = { _, _ -> }, refresh = {})
+            .first { it.label == "PLUTO ROUTE" } }
+        assertEquals("DIRECT", row().value)
+        row().action!!.invoke()
+        assertEquals("LEGACY", row().value)
+        assertEquals(false, store.saved["feature.plutoroute"])
+        assertFalse(store.features().isOn(Features.Flag.PLUTO_ROUTE))
+    }
+
+    @Test
     fun `OK on a row flips that flag alone and remembers it`() {
         val store = Store()
         val features = store.features()

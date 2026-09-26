@@ -161,7 +161,7 @@ class MainActivity : ComponentActivity() {
             use24Hour = { android.text.format.DateFormat.is24HourFormat(this) })
         music = GuideMusic(GuideMusic.Deps(
             context = this,
-            resolveForAudio = { tune.resolveForAudio(it) },
+            resolveForAudio = { tune.resolveForAudio(it)?.let(extras::besideTuned) },
             speculativeExecutor = threads.prefetch,
             runOnUi = { block -> runOnUiThread(block) },
             halted = { destroyed },
@@ -328,6 +328,7 @@ class MainActivity : ComponentActivity() {
         rememberChannel = { number -> prefs.edit().putInt(source.channelKey, number).apply() },
         screen = director.screen(),
         timetable = extras.timetable,
+        livePlayable = extras::livePlayable,
     ))
 
     private fun createSettingsCatalog() = SettingsCatalog(this, SettingsCatalog.Deps(
