@@ -158,6 +158,7 @@ class ChannelPlayer(
                 // Logged at warning with the error name, because "black screen" on its own is
                 // indistinguishable from a dozen other faults - this is the line that says which.
                 Log.w("fs42", "playback failed: ${error.errorCodeName}", error)
+                Log.w("fs42", describeSource(error))
                 onPlaybackError?.invoke(error.errorCodeName)
             }
 
