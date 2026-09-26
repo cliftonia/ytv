@@ -26,10 +26,12 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ALLOWLIST = os.path.join(HERE, "pluto_lineup.json")
 
-# UK first: a channel in both lists is keyed by its UK id, with the US one as `alt`.
+# UK first: a channel in both lists is keyed by its UK id, with the US one as `alt`. The region
+# travels with each id into pluto.json because the app asks for a Pluto session FROM that country:
+# some channels show only Pluto's logo bumper to a session from anywhere else.
 PLAYLISTS = [
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_pluto.m3u",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_pluto.m3u",
+    ("uk", "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_pluto.m3u"),
+    ("us", "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_pluto.m3u"),
 ]
 
 # The order blocks of channels appear in on the dial, the way a cable lineup groups them. The
@@ -75,13 +77,33 @@ def parse_m3u(text):
     return streams
 
 
-def build(allow, streams):
-    """The dial's channels, and the names of allowlisted channels no playlist carries any more."""
+def gather(playlists):
+    """Pluto id -> url and Pluto id -> region, from (region, m3u text) pairs in PLAYLISTS order.
+    An id in more than one playlist belongs to the first, exactly as its url always has."""
+    streams, regions = {}, {}
+    for region, text in playlists:
+        for pid, url in parse_m3u(text).items():
+            if pid not in streams:
+                streams[pid] = url
+                regions[pid] = region
+    return streams, regions
+
+
+def build(allow, streams, regions=None):
+    """The dial's channels, and the names of allowlisted channels no playlist carries any more.
+
+    With [regions], each channel also names the Pluto id it uses and the playlist that carried it,
+    as `"pluto": {"id", "region"}` - the app's key to Pluto's own stream route. The jmp2 url stays
+    in `streams`: it is what the app plays when it cannot get a session, and what an app that
+    predates the field plays always."""
     found, missing = [], []
     for entry in allow:
-        url = streams.get(entry["id"]) or streams.get(entry.get("alt", ""))
+        # The same choice as ever - the UK id when a playlist carries it, else the US `alt` - made
+        # explicit, because the id chosen is now published as well as its url.
+        pid = entry["id"] if entry["id"] in streams else entry.get("alt", "")
+        url = streams.get(pid)
         if url:
-            found.append((entry, url))
+            found.append((entry, url, pid))
         else:
             missing.append(entry["name"])
 
@@ -91,13 +113,17 @@ def build(allow, streams):
     # The numbers were assigned once (Sep 2026) from the old genre-then-name order, so nobody's
     # remembered channel moved; a newly allowlisted channel takes any free number.
     channels = []
-    for entry, url in sorted(found, key=lambda item: item[0]["number"]):
-        channels.append({
+    for entry, url, pid in sorted(found, key=lambda item: item[0]["number"]):
+        channel = {
             "number": entry["number"],
             "name": entry["name"],
             "kind": "live",
             "streams": [{"url": url, "duration": LIVE_DURATION, "title": entry["name"]}],
-        })
+        }
+        # Last, so every line above it in pluto.json is byte-for-byte what it was before.
+        if regions and pid in regions:
+            channel["pluto"] = {"id": pid, "region": regions[pid]}
+        channels.append(channel)
     return channels, missing
 
 
@@ -151,15 +177,16 @@ def main():
         print("REFUSING TO PUBLISH: %s" % problem, file=sys.stderr)
         return 1
 
-    streams = {}
-    for url in PLAYLISTS:
+    fetched = []
+    for region, url in PLAYLISTS:
         try:
-            streams.update({k: v for k, v in parse_m3u(fetch(url)).items() if k not in streams})
+            fetched.append((region, fetch(url)))
         except Exception as e:
             print("could not fetch %s: %s - leaving pluto.json as it is" % (url, e), file=sys.stderr)
             return 1
 
-    channels, missing = build(allow, streams)
+    streams, regions = gather(fetched)
+    channels, missing = build(allow, streams, regions)
     for name in missing:
         print("retired: %s" % name)
     problem = refusal(len(channels), len(allow))
