@@ -112,6 +112,37 @@ class PlutoBreakTest {
     }
 
     @Test
+    fun `a stall reload under a break keeps the card and the silence until the reload says otherwise`() {
+        val world = World()
+        val subject = subject(world)
+        world.intoBreak(subject)
+        subject.holdAcrossReload()
+        subject.loading(tuned())
+        assertTrue("no logo flash, no unmute", subject.inBreak && subject.muting && subject.showing)
+        assertEquals(0, world.musicReleases)
+        // The reload's picture, and its reads say the programme is back: down as always.
+        world.playlist = show
+        subject.playing(tuned())
+        world.clock.advance(BreakPoller.FIRST_READ_MILLIS)
+        world.clock.advance(BreakPoller.POLL_MILLIS)
+        assertFalse(subject.muting)
+        assertNull(subject.state.value)
+    }
+
+    @Test
+    fun `the hold is for a reload of the same channel only, and only once`() {
+        val world = World()
+        val subject = subject(world)
+        world.intoBreak(subject)
+        subject.holdAcrossReload()
+        subject.loading(tuned(news))
+        assertFalse(subject.muting)
+        world.intoBreak(subject)
+        subject.loading(tuned())
+        assertFalse("an ordinary reload ends the break as before", subject.muting)
+    }
+
+    @Test
     fun `one bumper read is not a card`() {
         val world = World()
         val subject = subject(world)
