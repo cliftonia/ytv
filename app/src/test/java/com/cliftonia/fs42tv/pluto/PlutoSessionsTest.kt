@@ -195,4 +195,82 @@ class PlutoSessionsTest {
         assertEquals(1, f.boots)
         assertSame(fromA, fromB)
     }
+
+    @Test
+    fun `invalidating never waits on a fetch in flight`() {
+        // invalidate runs on the main thread, from the player's error callback. A lock shared
+        // with a fetch held the main thread for as long as Pluto took to answer.
+        val f = Fixture()
+        val stale = f.sessions.forDial(null)!!.session
+        f.sessions.invalidate(stale)
+        val entered = CountDownLatch(1)
+        val release = CountDownLatch(1)
+        f.bootAnswer = {
+            entered.countDown()
+            release.await(5, TimeUnit.SECONDS)
+            Fixture.session("AU", PlutoBoot.LOCAL_LIFETIME_MILLIS)
+        }
+        val fetching = Thread { f.sessions.forDial(null) }.apply { start() }
+        assertTrue(entered.await(5, TimeUnit.SECONDS))
+        val invalidating = Thread { f.sessions.invalidate(stale) }.apply { start() }
+        invalidating.join(1_000)
+        val blocked = invalidating.isAlive
+        release.countDown()
+        fetching.join(5_000)
+        assertFalse("invalidate must return while the fetch is still running", blocked)
+    }
+
+    @Test
+    fun `a network not up yet retires the server for half a minute, not ten`() {
+        // A television woken from standby: no DNS, network unreachable - for seconds.
+        val f = Fixture()
+        f.serverAnswers = { throw PlutoBoot.Unreachable(java.net.UnknownHostException("pluto")) }
+        f.sessions.forDial("uk")
+        f.now = 29_000
+        f.sessions.forDial("uk")
+        assertEquals(1, f.serverAsks.size)
+        f.serverAnswers = { region -> Fixture.session("R-$region", f.now + 4 * hour) }
+        f.now = 31_000
+        assertTrue(f.sessions.forDial("uk")!!.fromServer)
+        assertEquals(2, f.serverAsks.size)
+    }
+
+    @Test
+    fun `a server that times out stays retired for ten minutes`() {
+        // The car: an address with nothing behind it answers with silence, and will keep doing so.
+        val f = Fixture()
+        f.serverAnswers = { throw PlutoBoot.Unreachable(java.net.SocketTimeoutException("connect timed out")) }
+        f.sessions.forDial("uk")
+        f.now = 9 * minute
+        f.sessions.forDial("uk")
+        assertEquals(1, f.serverAsks.size)
+    }
+
+    @Test
+    fun `an unreachable server is unreachable for every region at once`() {
+        val f = Fixture()
+        f.serverAnswers = { throw PlutoBoot.Unreachable(java.net.SocketTimeoutException("connect timed out")) }
+        f.sessions.forDial("uk")
+        f.sessions.forDial("us")
+        assertEquals("one timeout paid, not one per region", listOf("uk"), f.serverAsks)
+    }
+
+    @Test
+    fun `a server that answered without a session for one region is still asked for another`() {
+        val f = Fixture()
+        f.serverAnswers = { region -> if (region == "uk") null else Fixture.session("R-$region", f.now + hour) }
+        assertFalse(f.sessions.forDial("uk")!!.fromServer)
+        assertTrue(f.sessions.forDial("us")!!.fromServer)
+    }
+
+    @Test
+    fun `while the server is away a region session still valid keeps playing`() {
+        val f = Fixture()
+        f.serverAnswers = { Fixture.session("GB", f.now + hour) }
+        val uk = f.sessions.forDial("uk")!!.session
+        f.serverAnswers = { throw PlutoBoot.Unreachable(java.net.SocketTimeoutException("connect timed out")) }
+        f.sessions.forDial("us")
+        f.now = 40 * minute
+        assertSame(uk, f.sessions.forDial("uk")!!.session)
+    }
 }

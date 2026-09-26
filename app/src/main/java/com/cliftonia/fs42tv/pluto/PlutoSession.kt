@@ -119,34 +119,75 @@ object PlutoBoot {
         return parsed.scheme == "https" && (host == "pluto.tv" || host.endsWith(".pluto.tv"))
     }
 
-    /** A fresh anonymous session from Pluto itself. Blocking; throws when Pluto cannot be asked. */
-    fun fetchBoot(nowMillis: Long): PlutoSession? =
-        parseBoot(httpGet(bootUrl(java.util.UUID.randomUUID().toString()), BOOT_TIMEOUT_MILLIS), nowMillis)
+    /**
+     * The connection itself could not be made - nothing was said, as opposed to a slow or
+     * unhelpful answer. Only this moves [fetchFromServer] on to the next address.
+     */
+    class Unreachable(cause: Throwable) : java.io.IOException(cause)
 
     /**
-     * The home server's session for [region], trying each address in turn; null when none
-     * answered with one. Blocking. Short connect timeouts: in the car neither address exists,
-     * and [PlutoSessions] remembers the miss so this is paid once in a while, not per tune.
+     * Whether [failure] is a network that is not up YET: no DNS, "network unreachable", no
+     * route, a refused connection - what a television just woken from standby sees for its first
+     * seconds, all fast. A connect TIMEOUT is not: that is an address with nothing behind it,
+     * which is the car, and it stays that way.
      */
-    fun fetchFromServer(region: String): PlutoSession? {
-        for (base in SERVERS) {
-            val body = runCatching { httpGet(serverUrl(base, region), SERVER_CONNECT_MILLIS) }
-                .getOrNull() ?: continue
-            parseServer(body)?.let { return it }
+    fun isTransient(failure: Throwable): Boolean {
+        val cause = if (failure is Unreachable) failure.cause ?: failure else failure
+        return when (cause) {
+            is java.net.UnknownHostException -> true
+            // ConnectException and NoRouteToHostException are SocketExceptions, as is ENETUNREACH.
+            is java.net.SocketException -> true
+            else -> false
         }
-        return null
     }
 
-    private fun httpGet(url: String, connectMillis: Int): String {
+    /** A fresh anonymous session from Pluto itself. Blocking; throws when Pluto cannot be asked. */
+    fun fetchBoot(nowMillis: Long): PlutoSession? = parseBoot(
+        httpGet(bootUrl(java.util.UUID.randomUUID().toString()), BOOT_CONNECT_MILLIS, BOOT_READ_MILLIS),
+        nowMillis)
+
+    /**
+     * The home server's session for [region]; null when it answered without one. Blocking, and
+     * on the tune thread, so it is kept short: the second address is the SAME machine, so it is
+     * only tried when the first could not even be connected to - a slow or refusing answer would
+     * be no better from the other network. Throws [Unreachable] when neither address connected,
+     * which [PlutoSessions] takes as the server being away for every region at once.
+     */
+    fun fetchFromServer(
+        region: String,
+        get: (String) -> String = { httpGet(it, SERVER_CONNECT_MILLIS, SERVER_READ_MILLIS) },
+    ): PlutoSession? {
+        var unreachable: Unreachable? = null
+        for (base in SERVERS) {
+            val body = try {
+                get(serverUrl(base, region))
+            } catch (e: Unreachable) {
+                unreachable = e
+                continue
+            } catch (e: java.io.IOException) {
+                return null
+            }
+            return parseServer(body)
+        }
+        throw unreachable ?: Unreachable(java.io.IOException("no pluto session server"))
+    }
+
+    private fun httpGet(url: String, connectMillis: Int, readMillis: Int): String {
         val connection = (URL(url).openConnection() as HttpURLConnection).apply {
             connectTimeout = connectMillis
-            readTimeout = READ_TIMEOUT_MILLIS
+            readTimeout = readMillis
             setRequestProperty("Accept", "application/json")
             // A desktop Chrome, as the web player is: the boot service's answer depends on who
             // it believes is asking. Harmless to the home server.
             setRequestProperty("User-Agent", DESKTOP_CHROME)
         }
         try {
+            // Connected explicitly, so a failure to connect is told apart from a bad answer.
+            try {
+                connection.connect()
+            } catch (e: java.io.IOException) {
+                throw Unreachable(e)
+            }
             val code = connection.responseCode
             if (code != HttpURLConnection.HTTP_OK) throw java.io.IOException("pluto session HTTP $code")
             // Capped like the guide fetch, so a misbehaving endpoint cannot fill the heap of a
@@ -173,14 +214,21 @@ object PlutoBoot {
     private const val DESKTOP_CHROME = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
-    /** Pluto over the internet: a tune waits on this, but only once per three hours. */
-    private const val BOOT_TIMEOUT_MILLIS = 4_000
+    /**
+     * Pluto over the internet. A tune - and every surf queued behind it - waits on this, though
+     * only once per three hours, so it is held to seven seconds at the very worst.
+     */
+    private const val BOOT_CONNECT_MILLIS = 3_000
+    private const val BOOT_READ_MILLIS = 4_000
 
     /** A machine on the LAN or the tailnet answers in well under this, or is not there. */
     private const val SERVER_CONNECT_MILLIS = 1_000
 
-    /** The server may itself be asking Pluto on our behalf, so the read gets longer. */
-    private const val READ_TIMEOUT_MILLIS = 5_000
+    /**
+     * The server answered well inside a second when measured (26 Sep 2026); two seconds is a
+     * server in trouble, and the channel is better off on this television's own session.
+     */
+    private const val SERVER_READ_MILLIS = 2_000
 
     private const val MAX_BYTES = 256 * 1024
 
