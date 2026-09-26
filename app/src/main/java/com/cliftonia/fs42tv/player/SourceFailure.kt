@@ -24,10 +24,13 @@ object SourceFailure {
         return "${m.groupValues[1]}://${m.groupValues[2]}${m.groupValues[3]}"
     }
 
-    /** [text] with every url in it cut back to host and path. */
+    /** Session parameters as a relative uri in a message carries them - no scheme to find. */
+    private val SESSION_PARAM = Regex("""[?&](jwt|sid|deviceId)=[^&\s"']*""")
+
+    /** [text] with every url in it cut back to host and path, and no session parameter left. */
     fun scrub(text: String): String = URL.replace(text) { m ->
         "${m.groupValues[1]}://${m.groupValues[2]}${m.groupValues[3]}"
-    }
+    }.replace(SESSION_PARAM, "")
 
     /**
      * "source failed on https://host/path: A(msg) <- B(msg) <- ...". [request] is the failing

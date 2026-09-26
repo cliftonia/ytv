@@ -208,6 +208,7 @@ class ScreenDirector(private val deps: Deps) {
         paint = ::paint,
         channelUnavailable = { channel ->
             leaveCard()
+            plutoBreak.leave()
             standByReason.value = "CHANNEL ${channel.number} UNAVAILABLE"
         },
         card = ::showCard,
@@ -384,7 +385,8 @@ class ScreenDirector(private val deps: Deps) {
             // A Pluto stream on its own route that would not open or was refused: the route
             // rebuilds its session, or retires the channel to the legacy url, before the
             // re-tune below asks it again. A no-op for anything else.
-            deps.extras.plutoFailed(deps.tune().onAir?.playable)
+            // Not for a demuxer stall: that is ffmpeg, not a refused token.
+            if (code != StallRecovery.STALLED) deps.extras.plutoFailed(deps.tune().onAir?.playable)
         }
         // A rejected url must be forgotten, or the re-tune resolves the same dead link.
         RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)

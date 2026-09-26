@@ -87,13 +87,19 @@ class StallRecovery(
         while (recoveries.isNotEmpty() && now - recoveries.first() >= WINDOW_MILLIS) recoveries.removeFirst()
         stalled = false
         if (recoveries.size >= MAX_RECOVERIES) {
+            // A fresh count after the hand-over: the error path's own retune is a new start, and
+            // a count left full would send the very next stall straight back to it.
+            recoveries.clear()
+            countedChannel = null
             giveUp("stalled again after $MAX_RECOVERIES reloads in ${WINDOW_MILLIS / 1000}s")
             return
         }
         recoveries.addLast(now)
-        // Watched like the stall it replaces: a reload that never shows a picture is still stuck.
+        // Watched like the stall it replaces - a reload that never shows a picture is still stuck -
+        // but timed as a TUNE: a reload is a resolve, a master read and a load, and on a slow line
+        // a 6s watch superseded each reload before it could paint, three in ~24s, then gave up.
         stalled = true
-        arm(STALL_LIMIT_MILLIS)
+        arm(RELOAD_WATCH_MILLIS)
         recover("a stall of ${STALL_LIMIT_MILLIS / 1000}s on a live stream (reload ${recoveries.size} of $MAX_RECOVERIES)")
     }
 
@@ -103,6 +109,9 @@ class StallRecovery(
          * short of the viewer reaching for the remote.
          */
         const val STALL_LIMIT_MILLIS = 6_000L
+
+        /** How long a reload has to show a picture: the no-picture watchdog's own time for a tune. */
+        const val RELOAD_WATCH_MILLIS = RecoveryWatch.WATCHDOG_MILLIS
 
         const val MAX_RECOVERIES = 3
         const val WINDOW_MILLIS = 2 * 60_000L
