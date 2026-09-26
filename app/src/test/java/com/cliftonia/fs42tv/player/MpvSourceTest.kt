@@ -61,6 +61,32 @@ class MpvSourceTest {
     }
 
     @Test
+    fun `a chosen media playlist is opened instead of its master, with its audio beside it`() {
+        // mpv opens a master by probing every variant (7-11s for Pluto); one playlist takes ~3s.
+        val load = MpvSource.loadFor(Hls("https://x/master.m3u8", "https://x/720p.m3u8", "https://x/en.m3u8")) {
+            error("a live feed must never reach the proxy")
+        }!!
+        assertEquals("https://x/720p.m3u8", load.url)
+        assertEquals("https://x/en.m3u8", load.audioFile)
+    }
+
+    @Test
+    fun `an audio url without a chosen playlist is never attached to the master`() {
+        // The master already carries its audio; a second track would double it.
+        val load = MpvSource.loadFor(Hls("https://x/master.m3u8", null, "https://x/en.m3u8"), proxied)!!
+        assertEquals("https://x/master.m3u8", load.url)
+        assertNull(load.audioFile)
+    }
+
+    @Test
+    fun `a per-file value is escaped only when a comma would cut it`() {
+        assertEquals("http://127.0.0.1:9/p/1", MpvSource.perFileValue("http://127.0.0.1:9/p/1"))
+        assertEquals("https://a/x?q=1&r=2", MpvSource.perFileValue("https://a/x?q=1&r=2"))
+        // Bytes, not characters: mpv reads exactly this many bytes as the value.
+        assertEquals("%14%https://a/é,b", MpvSource.perFileValue("https://a/é,b"))
+    }
+
+    @Test
     fun `there is nothing to load for a clip that still needs resolving`() {
         assertNull(MpvSource.loadFor(NeedsResolving("abc12345678"), proxied))
     }

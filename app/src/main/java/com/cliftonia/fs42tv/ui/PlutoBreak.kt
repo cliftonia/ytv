@@ -157,7 +157,8 @@ class PlutoBreak(private val deps: Deps) {
     }
 
     private fun poll(tuned: Tuned?, anchored: Boolean, fresh: Boolean) {
-        val url = (tuned?.playable as? Hls)?.url
+        val hls = tuned?.playable as? Hls
+        val url = hls?.url
         if (tuned == null || url == null || !deps.enabled() || tuned.card != null ||
             tuned.channel.pluto == null || deps.stoppedNow()) {
             leave()
@@ -169,7 +170,9 @@ class PlutoBreak(private val deps: Deps) {
         this.tuned = tuned
         loadedAt = deps.wallMillis()
         this.anchored = anchored
-        poller.start(url)
+        // The playlist mpv was handed, when the tune chose one: one fetch fewer per tune, and the
+        // anchor is read off exactly the window mpv started in.
+        poller.start(url, hls?.mediaUrl)
     }
 
     /** [tuned] has a picture: the card may act, and mpv's playing time starts now. */
