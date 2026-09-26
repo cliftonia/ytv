@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
  * player streams does not disturb the stream (four minutes, no player errors). The master is read
  * once per tune and its lowest variant kept; a failed variant read forgets it, so the next read
  * asks the master again - a stitcher that moved the variant is followed rather than read wrong
- * forever. A failure of any kind is an unknown read, which the detector ignores.
+ * forever. A failure of any kind is an unknown read, which counts only toward a break's ceiling.
  *
  * Threading: [start] and [stop] from the UI thread; every fetch on [schedule]'s thread, which must
  * never be the UI or the tune thread - a read may take its full timeouts. [changed] runs on that
@@ -29,6 +29,8 @@ class BreakPoller(
     private val schedule: (delayMillis: Long, block: () -> Unit) -> (() -> Unit),
     /** The detector's state changed on [Run]; on the polling thread. */
     private val changed: (Run, BreakDetector.State) -> Unit,
+    /** Monotonic milliseconds, for the break's time ceiling - never the wall clock, which steps. */
+    private val nowMillis: () -> Long = { System.nanoTime() / 1_000_000 },
 ) {
 
     class Fetched(val url: String, val body: String)
@@ -76,9 +78,15 @@ class BreakPoller(
     private fun tick(run: Run) {
         if (!isCurrent(run)) return
         val before = run.detector.state
-        val after = run.detector.feed(read(run))
+        val after = run.detector.feed(read(run), nowMillis())
         if (!isCurrent(run)) return
-        if (after != before) changed(run, after)
+        if (after != before) {
+            // Never the url: a direct-route one carries the session's token.
+            if (after == BreakDetector.State.PROGRAMME) {
+                android.util.Log.i("fs42", "pluto break ended: ${run.detector.lastEnd}")
+            }
+            changed(run, after)
+        }
         next(run, POLL_MILLIS)
     }
 

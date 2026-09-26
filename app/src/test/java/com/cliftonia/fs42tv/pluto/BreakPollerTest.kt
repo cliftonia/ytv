@@ -72,6 +72,7 @@ class BreakPollerTest {
             },
             schedule = clock.schedule,
             changed = { _, state -> changes += state },
+            nowMillis = { clock.now },
         )
         return Subject(clock, poller, fetched, changes)
     }
@@ -180,5 +181,28 @@ class BreakPollerTest {
         val run = s.poller.start(master)
         assertFalse(s.poller.isCurrent(run))
         assertTrue(s.fetched.isEmpty())
+    }
+
+    @Test
+    fun `a channel stuck on bumper has its card taken down at the ceiling, on the poller's clock`() {
+        val s = subject(mapOf(master to listOf(masterBody), variant to listOf(bumper)))
+        s.poller.start(master)
+        s.clock.advance(BreakPoller.FIRST_READ_MILLIS + BreakPoller.POLL_MILLIS)
+        assertEquals(listOf(IN_BREAK), s.changes)
+        s.clock.advance(BreakDetector.MAX_BREAK_MILLIS)
+        assertEquals(listOf(IN_BREAK, PROGRAMME), s.changes)
+        s.clock.advance(BreakDetector.MAX_BREAK_MILLIS * 4)
+        assertEquals(listOf(IN_BREAK, PROGRAMME), s.changes)
+    }
+
+    @Test
+    fun `a network lost mid-break ends it after six silent reads`() {
+        val s = subject(mapOf(master to listOf(masterBody), variant to listOf(bumper, bumper, null)))
+        s.poller.start(master)
+        s.clock.advance(BreakPoller.FIRST_READ_MILLIS + BreakPoller.POLL_MILLIS)
+        s.clock.advance(BreakPoller.POLL_MILLIS * (BreakDetector.MAX_UNKNOWN_READS - 1))
+        assertEquals(listOf(IN_BREAK), s.changes)
+        s.clock.advance(BreakPoller.POLL_MILLIS)
+        assertEquals(listOf(IN_BREAK, PROGRAMME), s.changes)
     }
 }

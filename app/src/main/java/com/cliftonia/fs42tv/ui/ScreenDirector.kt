@@ -65,13 +65,16 @@ class ScreenDirector(private val deps: Deps) {
     // TV; the card says the app knows and is retrying.
     val standByReason = mutableStateOf("")
 
-    /**
-     * A mid-clip stall, shown as a small pill over the FROZEN picture rather than the full
-     * stand-by card. The card is for faults; a stall is weather. Covering the programme with
-     * TECHNICAL DIFFICULTIES while ExoPlayer was quietly refilling its buffer made every slow
-     * patch of Wi-Fi look like a breakdown.
-     */
-    val buffering = mutableStateOf(false)
+    /** The mid-clip stall pill - see [StallPill]. Never over a break card. */
+    private val stall: StallPill = StallPill(
+        post = { delay, block -> deps.stallHandler.postDelayed(block, delay) },
+        cancel = { deps.stallHandler.removeCallbacksAndMessages(null) },
+        halted = deps.halted,
+        covered = { plutoBreak.showing },
+    )
+
+    /** Whether the stall pill is drawn. */
+    val buffering: androidx.compose.runtime.State<Boolean> get() = stall.showing
 
     /** The tune banner's lines and the rules for what they say. See [Banner]. */
     val banner = Banner(deps.extras, deps.nowSeconds)
@@ -116,15 +119,14 @@ class ScreenDirector(private val deps: Deps) {
 
     /**
      * Pluto's ad breaks: the card over the logo bumper, with the music. See [PlutoBreak]. The
-     * card is a picture, like the up-next card: the watchdog and the stall pill stand down for it.
+     * card is a picture, like the up-next card: the watchdog and the stall pill stand down for it,
+     * and a stall still going when it comes down gets its pill then.
      */
-    val plutoBreak = PlutoBreak.create(deps.extras, deps.music, deps.channels, deps.runOnUi,
+    val plutoBreak: PlutoBreak = PlutoBreak.create(deps.extras, deps.music, deps.channels, deps.runOnUi,
         deps.halted, guideOpen = deps.pickerOpen, overlayOpen = deps.overlayOpen,
-        stoppedNow = deps.stoppedNow, volumeChanged = ::updateProgrammeVolume, picture = {
-            watch.firstFrame()
-            deps.stallHandler.removeCallbacksAndMessages(null)
-            buffering.value = false
-        })
+        stoppedNow = deps.stoppedNow, volumeChanged = ::updateProgrammeVolume,
+        picture = { watch.firstFrame(); stall.cover() },
+        uncovered = { if (!tuning.value) stall.uncover() })
 
     /** SKIP SPONSORS during playback; a range reaching the end ends the clip the usual way. */
     private val skipper = SponsorSkipper(
@@ -223,12 +225,12 @@ class ScreenDirector(private val deps: Deps) {
         deps.player()?.stop()
         deps.player()?.setPaused(true)
         skipper.stop()
+        // After the pause: the volume it re-derives on the way out is a paused file's.
         plutoBreak.leave()
         upNext.stopCut()
         watch.firstFrame()
-        deps.stallHandler.removeCallbacksAndMessages(null)
+        stall.clear()
         standByReason.value = ""
-        buffering.value = false
         tuning.value = false
         captions.clear()
         banner.painted(tuned)
@@ -252,8 +254,10 @@ class ScreenDirector(private val deps: Deps) {
 
     /** The blank, the silence and the watchdog of a channel change, for a scheduled one. */
     private fun raiseBlank() {
-        plutoBreak.leave()
         tuning.value = true
+        // After the blank is up, so the volume it re-derives stays down: on mpv the outgoing
+        // file is only muted by stop(), and a moment at full gain is heard.
+        plutoBreak.leave()
         updateProgrammeVolume()
         watch.tuneStarted()
     }
@@ -289,15 +293,15 @@ class ScreenDirector(private val deps: Deps) {
         upNext.stopCut()
         // Surfing away cancels a card as it cancels anything else - either kind.
         leaveCard()
-        plutoBreak.leave()
         // A deliberate channel change supersedes any error still waiting to be announced: the
         // card would name a channel the viewer has already left. It also starts the watchdog on
         // the new channel's first frame.
         watch.tuneStarted()
-        deps.stallHandler.removeCallbacksAndMessages(null)
+        stall.clear()
         standByReason.value = ""
-        buffering.value = false
         tuning.value = true
+        // The break card too - after the blank is up, for the reason in [raiseBlank].
+        plutoBreak.leave()
         updateProgrammeVolume()
         banner.announce(target)
     }
@@ -353,8 +357,6 @@ class ScreenDirector(private val deps: Deps) {
             }
             // A rejected url must be forgotten, or the re-tune resolves the same dead link.
             RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)
-            // The picture is gone; so is any break card over it.
-            plutoBreak.leave()
 
             // Do NOT put the stand-by card up yet. A signed googlevideo URL can be refused
             // with 403 while still inside its stated expiry, and the recovery below - drop the
@@ -367,6 +369,8 @@ class ScreenDirector(private val deps: Deps) {
             // Armed once per streak of errors, and the retune itself is the watch's to time -
             // at once for the first few, backing off after; see RecoveryWatch.error.
             tuning.value = true
+            // The picture is gone; so is any break card over it - once the blank is up.
+            plutoBreak.leave()
             updateProgrammeVolume()
             watch.error(code)
         }
@@ -376,7 +380,7 @@ class ScreenDirector(private val deps: Deps) {
             deps.tune().noteFirstFrame()
             watch.firstFrame()
             standByReason.value = ""
-            buffering.value = false
+            stall.firstFrame()
             tuning.value = false
             updateProgrammeVolume()
             skipper.start(deps.tune().onAir)
@@ -384,24 +388,8 @@ class ScreenDirector(private val deps: Deps) {
         }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
-        // no end of media, just a stopped picture.
-        //
-        // The card is ALL that happens. Re-tuning on a stall was tried and made things far
-        // worse: it discards whatever has buffered and restarts the deep seek, so on a
-        // connection that cannot sustain the bitrate it produced a permanent cycle of six
-        // seconds of picture and twelve of nothing. ExoPlayer keeps filling during a stall and
-        // resumes by itself; interrupting that is the one thing that stops it recovering.
-        player.onBuffering = { stalled ->
-            deps.stallHandler.removeCallbacksAndMessages(null)
-            if (stalled) {
-                deps.stallHandler.postDelayed({
-                    // Not over a break card: the card is the picture, whatever the bumper does.
-                    if (!deps.halted() && !plutoBreak.showing) buffering.value = true
-                }, STALL_CARD_MILLIS)
-            } else {
-                buffering.value = false
-            }
-        }
+        // no end of media, just a stopped picture. The pill is ALL that happens; see [StallPill].
+        player.onBuffering = stall::buffering
     }
 
     /** Put the channel banner back up, recomputed rather than replayed - see [Banner.show]. */
@@ -487,10 +475,5 @@ class ScreenDirector(private val deps: Deps) {
         tuning.value = true
         updateProgrammeVolume()
         watch.tuneStarted()
-    }
-
-    private companion object {
-        /** Long enough not to flash on the brief stalls that clear themselves. */
-        const val STALL_CARD_MILLIS = 2_500L
     }
 }
