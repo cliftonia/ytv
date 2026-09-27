@@ -8,6 +8,7 @@ import `is`.xyz.mpv.BaseMPVView
 import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import `is`.xyz.mpv.MPVLib
 import `is`.xyz.mpv.MPVNode
+import java.util.concurrent.atomic.AtomicLong
 
 /**
  * libmpv on a SurfaceView, configured for this dial.
@@ -62,8 +63,11 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
          * A PLAYBACK_RESTART while a first frame is awaited. [startedEntryId] is the entry the
          * most recent START_FILE named - mpv delivers events in order, so that is the file this
          * restart belongs to - or null when the event carried no id.
+         *
+         * Returns whether the frame was accepted as the awaited load's. Only then does this view
+         * stop reporting restarts; a rejected (stale) frame leaves the next one reportable.
          */
-        fun onFirstFrame(startedEntryId: Long?)
+        fun onFirstFrame(startedEntryId: Long?): Boolean
         /**
          * [reason] is "error" or "eof"; [entryId] is mpv's playlist entry id for the file that
          * ended, when the event carried one - see [MpvLoadGuard.parseEndFile].
@@ -72,13 +76,23 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         fun onBuffering(buffering: Boolean)
     }
 
-    // Same two threads as awaitingFirstFrame, and release() relies on the null being seen.
+    // Same two threads as awaitingLoad, and release() relies on the null being seen.
     @Volatile var events: Events? = null
 
-    /** True between a load and its first presented frame, so mid-clip restarts are not reported. */
-    // mpv delivers events on its own native thread while playAt/release run on the UI
-    // thread; @Volatile for the same reason every equivalent flag in MpvChannelPlayer has it.
-    @Volatile private var awaitingFirstFrame = false
+    /**
+     * Which load (its [loads] number) is still waiting for its first presented frame, or 0 when
+     * none is - so mid-clip restarts after a seek are not reported.
+     *
+     * Cleared only when the guard ACCEPTS a frame. It used to be cleared before asking, so a
+     * rejected stale frame used up the only report the wanted file would ever get: its own
+     * PLAYBACK_RESTART then found nothing awaited and the blank stayed up until the watchdog.
+     *
+     * A number rather than a flag, and cleared by compare-and-set, because mpv delivers events
+     * on its own native thread while playAt runs on the UI thread: a plain `= false` after an
+     * accepted frame could land just after the NEXT load set it, and swallow that load's frame.
+     */
+    private val awaitingLoad = AtomicLong(0)
+    private val loads = AtomicLong(0)
 
     /**
      * The playlist entry the latest START_FILE named. Only ever touched on mpv's event thread,
@@ -100,11 +114,12 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
                 // PLAYBACK_RESTART fires once decoding has produced output and playback is
                 // actually running - after a load and after any seek. Guarded so only the first
                 // per clip counts as "the picture appeared".
-                MPVLib.MpvEvent.MPV_EVENT_PLAYBACK_RESTART ->
-                    if (awaitingFirstFrame) {
-                        awaitingFirstFrame = false
-                        events?.onFirstFrame(startedEntryId)
+                MPVLib.MpvEvent.MPV_EVENT_PLAYBACK_RESTART -> {
+                    val awaited = awaitingLoad.get()
+                    if (awaited != 0L && events?.onFirstFrame(startedEntryId) == true) {
+                        awaitingLoad.compareAndSet(awaited, 0L)
                     }
+                }
 
                 // mpv reports the end of a file for a clip finishing AND for a load failing, and
                 // the dial's response differs completely: one moves to whatever is on next, the
@@ -430,7 +445,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         audioFile: String? = null,
         subFile: String? = null,
     ): Long? {
-        awaitingFirstFrame = true
+        awaitingLoad.set(loads.incrementAndGet())
         // Per-FILE options, so they apply to this load and are gone by the next one. `audio-file`
         // set as a property would persist, and the following clip - which has its own audio, or
         // none - would inherit the last one's track.
