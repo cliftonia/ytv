@@ -70,8 +70,11 @@ class TuneController(private val deps: Deps) {
          * What a live channel actually plays - Pluto's own route on a session, when PLUTO ROUTE
          * is DIRECT (see `pluto/PlutoRoute`). Blocking, since a session may be fetched, so it is
          * asked here on [executor]. The default is the published url, as before the route.
+         *
+         * `stillWanted` is this tune's generation check, for the implementation to ask between
+         * its blocking steps; null back means it found the tune superseded and stopped.
          */
-        val livePlayable: (Tuned) -> Playable = { it.playable },
+        val livePlayable: (Tuned, stillWanted: () -> Boolean) -> Playable? = { it, _ -> it.playable },
     )
 
     /**
@@ -300,7 +303,13 @@ class TuneController(private val deps: Deps) {
 
         // Into the Tuned, not just the local: onAir must name the url actually playing, since a
         // failure of that url is how the route learns its session went bad.
-        if (channel.kind == "live") tuned = tuned.copy(playable = deps.livePlayable(tuned))
+        if (channel.kind == "live") {
+            val live = deps.livePlayable(tuned) { requestGeneration == generation.get() } ?: run {
+                Log.d("fs42", "channel ${channel.number} ${channel.name}: superseded while routing; abandoning")
+                return
+            }
+            tuned = tuned.copy(playable = live)
+        }
         var playable: Playable = tuned.playable
 
         // A cached URL that the CDN already refused is worse than no cached URL at all: it will
