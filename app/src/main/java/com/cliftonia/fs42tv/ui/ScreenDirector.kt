@@ -79,12 +79,8 @@ class ScreenDirector(private val deps: Deps) {
     /** The tune banner's lines and the rules for what they say. See [Banner]. */
     val banner = Banner(deps.extras, deps.nowSeconds)
 
-    /**
-     * The error grace and the no-picture watchdog. Its timers run on [Deps.recoveryHandler] but
-     * cancel only their own runnables: the dial loader's retry shares that handler, and a
-     * blanket clear would take the retry with it.
-     */
-    private val watch = RecoveryWatch.forDirector(deps, tuning, standByReason)
+    /** The error grace and the no-picture watchdog, with mpv's engine-rebuild backstop. */
+    private val watch = deps.recoveryWatch(tuning, standByReason)
 
     /** The half-hour schedule's "up next" card: up, timed, and gone. See [UpNextBreak]. */
     val upNext = UpNextBreak(
