@@ -37,7 +37,14 @@ class AdCatalogTest {
         assertNull(AdCatalog.parse(null))
         assertNull(AdCatalog.parse(""))
         assertNull(AdCatalog.parse("404: Not Found"))
-        assertNull(AdCatalog.parse("""{"reels": [{"id": "x"}]}"""))
+    }
+
+    @Test
+    fun `a reel missing a field is dropped on its own - the rest of the file still plays`() {
+        val catalog = AdCatalog.parse("""{"reels": [{"id": "x"},
+            {"id": "a", "url": "https://archive.org/download/a/a.mp4", "duration": 600, "cuts": [5]}]}""")!!
+        assertEquals(2, catalog.reels.size)
+        assertEquals(listOf("a"), catalog.usableReels.map { it.id })
     }
 
     @Test

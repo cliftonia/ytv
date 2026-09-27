@@ -14,14 +14,16 @@ import kotlinx.serialization.json.Json
  */
 @Serializable
 data class AdReel(
-    val id: String,
+    // Every field defaulted: a reel missing one parses as unusable and is dropped by [usable],
+    // rather than failing the whole file and every other reel with it.
+    val id: String = "",
     val title: String = "",
     /** "70s", "80s" or "90s" - for the log; the app does not choose by it. */
     val era: String = "",
     /** https://archive.org/download/<id>/<file>.mp4 - public, token-free, safe to log. */
-    val url: String,
+    val url: String = "",
     /** Seconds. */
-    val duration: Double,
+    val duration: Double = 0.0,
     /** Seconds from the start of the file at which a commercial starts, in any order. */
     val cuts: List<Double> = emptyList(),
 ) {

@@ -162,7 +162,8 @@ class PlutoBreak(private val deps: Deps) {
      */
     fun loading(tuned: Tuned?) {
         poll(tuned, anchored = true, fresh = true)
-        // Whatever was loaded replaced any reel left paused on the player.
+        // Whatever was loaded replaced any reel left on the player: its events are the new file's.
+        ads?.stop()
         leftOnAd = false
     }
 
@@ -271,8 +272,9 @@ class PlutoBreak(private val deps: Deps) {
         stalledMillis = 0L
         stalledSince = null
         // A reel on the player is the caller's to replace: every path here is followed by a load
-        // (a surf, the blank, an error's retune) - or it is the app leaving, see [appStopped].
-        ads?.stop()
+        // (a surf, the blank, an error's retune) - or it is the app leaving, see [appStopped] - and
+        // until that load the reel's events stay the reel's ([BreakAds.Stage.RETIRING]).
+        ads?.retire()
         continuedFrom = null
         if (inBreak && !keepCard) endBreak()
     }

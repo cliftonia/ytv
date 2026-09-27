@@ -159,7 +159,11 @@ class PlutoBreakAdsTest {
         assertTrue(stage.retunes.isEmpty())
         stage.until(176_000)
         assertEquals(listOf(176_000L), stage.retunes)
-        assertFalse(subject.inBreak || subject.adsOnPlayer)
+        assertFalse(subject.inBreak)
+        // The reel is still the player's file until the tune's load replaces it.
+        assertTrue(subject.adsOnPlayer)
+        subject.loading(tuned)
+        assertFalse(subject.adsOnPlayer)
         stage.until(400_000)
         assertEquals("once", 1, stage.retunes.size)
     }
@@ -262,9 +266,62 @@ class PlutoBreakAdsTest {
         stage.until(116_500)
         subject.ads!!.firstFrame()
         subject.leave()
-        assertFalse(subject.adsOnPlayer)
         stage.until(400_000)
         assertTrue(stage.retunes.isEmpty())
+    }
+
+    @Test
+    fun `returned under an overlay with no tune, the paused reel's events stay the reel's until a load`() {
+        val stage = Stage(minuteBreak)
+        val subject = stage.subject()
+        stage.tunedIn(subject)
+        stage.until(116_500)
+        val ads = subject.ads!!
+        ads.firstFrame()
+        stage.overlay = true
+        stage.until(176_000)
+        assertEquals("the return: the blank, no tune under the overlay", 1, stage.retunes.size)
+        // The director reads these as handled: no playbackFailed (no Pluto blame, no error card),
+        // no channel roll-over, no blank dropped, no Pluto stall reload.
+        assertTrue(ads.failed("SOURCE_HTTP_404"))
+        assertTrue(ads.ended())
+        assertTrue(ads.firstFrame())
+        assertTrue(ads.buffering(true))
+        assertTrue(subject.adsOnPlayer)
+        assertFalse(subject.showing || subject.muting)
+        assertEquals("nothing parked or replayed", 0, stage.parks)
+        assertEquals(1, stage.plays.size)
+        // The overlay closes and the channel is tuned: its load takes the player back.
+        subject.loading(tuned)
+        assertFalse(ads.failed("SOURCE_HTTP_404") || ads.firstFrame() || ads.ended())
+    }
+
+    @Test
+    fun `home while a reel loads - back, its late first frame does not drop the blank or play it aloud`() {
+        val stage = Stage(minuteBreak)
+        val subject = stage.subject()
+        stage.tunedIn(subject)
+        stage.until(116_500)
+        assertTrue(subject.ads!!.loading)
+        subject.appStopped()
+        assertTrue(subject.retuneOnResume(tuned))
+        // The resume's tune is in flight; the reel's frame lands first. Swallowed, not a picture.
+        assertTrue(subject.ads!!.firstFrame())
+        assertFalse(subject.ads!!.picture)
+        subject.loading(tuned)
+        assertFalse(subject.adsOnPlayer)
+    }
+
+    @Test
+    fun `a reel error in the gap before the load is the reel's, and the engine dying is not`() {
+        val stage = Stage(minuteBreak)
+        val subject = stage.subject()
+        stage.tunedIn(subject)
+        stage.until(116_500)
+        subject.ads!!.firstFrame()
+        stage.until(176_000)
+        assertTrue(subject.ads!!.failed("SOURCE_HTTP_403"))
+        assertFalse(subject.ads!!.failed(com.cliftonia.fs42tv.player.MpvChannelPlayer.ENGINE_DIED))
     }
 
     @Test
