@@ -20,7 +20,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=O-zpOMYRi0w",
                 "duration": 201,
-                "title": "Iggy Azalea - Fancy ft. Charli XCX"
+                "title": "Iggy Azalea - Fancy ft. Charli XCX",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=2ggzxInyzVE",
@@ -52,7 +54,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=kn6-c223DUU",
                 "duration": 192,
-                "title": "B.o.B - Airplanes (feat. Hayley Williams of Paramore) [Official Video]"
+                "title": "B.o.B - Airplanes (feat. Hayley Williams of Paramore) [Official Video]",
+                "skip": [
+                    [
+                        179.0,
+                        191.8
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iP6XpLQM2Cs",
@@ -86,7 +95,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=PIh2xe4jnpk",
                 "duration": 226,
-                "title": "MAGIC! - Rude (Official Video)"
+                "title": "MAGIC! - Rude (Official Video)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iWOyfLBYtuU",
@@ -120,7 +131,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OrTyD7rjBpw",
                 "duration": 236,
-                "title": "The Black Eyed Peas - Just Can't Get Enough (Official Music Video)"
+                "title": "The Black Eyed Peas - Just Can't Get Enough (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=CFWX0hWCbng",
@@ -171,7 +184,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=n-D1EB74Ckg",
                 "duration": 290,
-                "title": "Selena Gomez - Come & Get It"
+                "title": "Selena Gomez - Come & Get It",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Bm5iA4Zupek",
@@ -193,7 +208,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0NKUpo_xKyQ",
                 "duration": 214,
-                "title": "Ellie Goulding - Lights (Official Video)"
+                "title": "Ellie Goulding - Lights (Official Video)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=xdYFuCp3m9k",
@@ -229,7 +246,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rYEDA3JcQqw",
                 "duration": 234,
-                "title": "Adele - Rolling in the Deep (Official Music Video)"
+                "title": "Adele - Rolling in the Deep (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=KQ6zr6kCPj8",
@@ -239,7 +258,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Lt2wjJlP2N4",
                 "duration": 241,
-                "title": "T-Pain - Bartender (Official HD Video) ft. Akon"
+                "title": "T-Pain - Bartender (Official HD Video) ft. Akon",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=_Z5-P9v3F8w",
@@ -437,7 +458,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6tpl9LtkRRw",
                 "duration": 273,
-                "title": "Ne-Yo - One In A Million [Official Video]"
+                "title": "Ne-Yo - One In A Million [Official Video]",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=8Xl2hqjAbvQ",
@@ -488,7 +511,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LXUSaVw3Mvk",
                 "duration": 232,
-                "title": "Justin Bieber - One Less Lonely Girl"
+                "title": "Justin Bieber - One Less Lonely Girl",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=qMxX-QOV9tI",
@@ -568,23 +593,11 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=HpyZEzrDf4c",
-                "duration": 215,
-                "title": "Cobra Starship: You Make Me Feel... ft. Sabi [OFFICIAL VIDEO]",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=8UFIYGkROII",
                 "duration": 238,
                 "title": "Soulja Boy Tell'em - Crank That (Soulja Boy) (Official Music Video)",
                 "skip": [],
                 "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=svebHG7qEXc",
-                "duration": 322,
-                "title": "Abra ft. Chito Miranda - Diwata (Official Music Video)"
             }
         ],
         "last_refreshed": 1790451049

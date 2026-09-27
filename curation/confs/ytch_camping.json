@@ -76,7 +76,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Vi4s1pZGt5E",
                 "duration": 1906,
-                "title": "4 Days in the Wild with My Dog Bushcraft Camping"
+                "title": "4 Days in the Wild with My Dog Bushcraft Camping",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=h6W2FfD58tI",
@@ -134,7 +136,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0lhe5fOZm7E",
                 "duration": 1565,
-                "title": "Bushcraft Camping in Snow | Building a Survival Shelter Alone"
+                "title": "Bushcraft Camping in Snow | Building a Survival Shelter Alone",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=rxJQXa3jfsA",
@@ -163,7 +167,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=G83NKJCd4VY",
                 "duration": 1320,
-                "title": "Survival Camping in 12 ft (4 m) of Snow During a Blizzard"
+                "title": "Survival Camping in 12 ft (4 m) of Snow During a Blizzard",
+                "skip": [
+                    [
+                        1294.9,
+                        1302.2
+                    ],
+                    [
+                        1303.5,
+                        1319.5
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=WJaQMfrWyCc",
@@ -227,7 +242,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zn4OeXba7jo",
                 "duration": 1034,
-                "title": "20 Beginner Bushcraft Mistakes"
+                "title": "20 Beginner Bushcraft Mistakes",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=AxycEdeBe_E",
@@ -280,7 +297,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3UkJU-CXOUM",
                 "duration": 1164,
-                "title": "2 Days SOLO Bushcraft | CATCH & COOK at my Survival Shelter | Hot Stone Cooking"
+                "title": "2 Days SOLO Bushcraft | CATCH & COOK at my Survival Shelter | Hot Stone Cooking",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=60TZIwEpjzo",
@@ -311,7 +330,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=c1ik9CGLeCI",
                 "duration": 1799,
-                "title": "Winter Camping in Extreme Cold and Heavy Snow | Solo Survival Challenge"
+                "title": "Winter Camping in Extreme Cold and Heavy Snow | Solo Survival Challenge",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=C9iRPqQ8cPU",
@@ -580,7 +601,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=BKo_BJwe3MM",
                 "duration": 476,
-                "title": "Wilderness Survival Kit: 10 Essentials You NEED"
+                "title": "Wilderness Survival Kit: 10 Essentials You NEED",
+                "skip": [
+                    [
+                        429.1,
+                        472.6
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=2OdYv8YKSaI",

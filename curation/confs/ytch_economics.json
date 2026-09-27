@@ -76,7 +76,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zjK7PWmRRyg",
                 "duration": 1026,
-                "title": "The Industrial Revolution: Crash Course European History #24"
+                "title": "The Industrial Revolution: Crash Course European History #24",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=rH1Y66IwKvc",
@@ -112,7 +114,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jfW8OWm4Myc",
                 "duration": 1556,
-                "title": "Will the Houthis tank the global economy? | BBC News"
+                "title": "Will the Houthis tank the global economy? | BBC News",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=_BW5zNjL9Tg",
@@ -141,7 +145,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wOI8RuhW7q0",
                 "duration": 739,
-                "title": "How Wealth Inequality Spiraled Out of Control | Robert Reich"
+                "title": "How Wealth Inequality Spiraled Out of Control | Robert Reich",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=FCqgrtFvVfE",
@@ -230,7 +236,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6GjpET_ylOY",
                 "duration": 496,
-                "title": "“NETANYAHU RATTLED?” Venice-Winning “NAZA” Documentary Sparks Fury Over Gaza Civilian Death Claims"
+                "title": "“NETANYAHU RATTLED?” Venice-Winning “NAZA” Documentary Sparks Fury Over Gaza Civilian Death Claims",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=1UxA6JzoT-4",
@@ -257,7 +265,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=uQX8UwV87Os",
                 "duration": 1946,
-                "title": "Japan: History, Geography, Economy & Culture"
+                "title": "Japan: History, Geography, Economy & Culture",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=2mHsTKvAuZc",
@@ -281,7 +291,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LpnB3mhjVkw",
                 "duration": 619,
-                "title": "Republican revolt against Trump grows ahead of the midterms"
+                "title": "Republican revolt against Trump grows ahead of the midterms",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Mi8a1uKBYmE",
@@ -293,7 +305,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Aq4EV2X0-4A",
                 "duration": 292,
-                "title": "HOW INTERNATIONAL BANKS MOVE TRILLIONS"
+                "title": "HOW INTERNATIONAL BANKS MOVE TRILLIONS",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZwUIV0WGll4",
@@ -305,7 +319,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=9RJpIqD8MGg",
                 "duration": 1060,
-                "title": "Escaping the Rat Race: What School Failed to Teach You About Money."
+                "title": "Escaping the Rat Race: What School Failed to Teach You About Money.",
+                "skip": [
+                    [
+                        955.8,
+                        978.6
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=k9tDmpn9Aho",
@@ -324,7 +345,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=li5fILnzh10",
                 "duration": 675,
-                "title": "The Economics of Owning a Airport Lounges"
+                "title": "The Economics of Owning a Airport Lounges",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=l7a4v5QCvcY",
@@ -358,7 +381,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dsAe1F73kv0",
                 "duration": 314,
-                "title": "The Real Economics Behind Luxury Brands"
+                "title": "The Real Economics Behind Luxury Brands",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iuYlGRnC7J8",
@@ -387,7 +412,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=c5plwQBUEYA",
                 "duration": 1336,
-                "title": "The Economics of Printing Money"
+                "title": "The Economics of Printing Money",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=MKO1icFVtDc",
@@ -475,7 +502,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=cnZT9QMiJx4",
                 "duration": 932,
-                "title": "The Most Disturbing Scientific Anomalies We Can’t Find An Explanation For (Pt. 2)"
+                "title": "The Most Disturbing Scientific Anomalies We Can’t Find An Explanation For (Pt. 2)",
+                "skip": [
+                    [
+                        925.3,
+                        931.5
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=yZvFH7B6gKI",
@@ -535,7 +569,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yoZiTCz_wYA",
                 "duration": 2546,
-                "title": "Globalization: Winners and losers in world trade (1/2) | DW Documentary"
+                "title": "Globalization: Winners and losers in world trade (1/2) | DW Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=G2b0JOgLpeg",
@@ -556,7 +592,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=IlbPO9Vmuuo",
                 "duration": 749,
-                "title": "What's Wrong With Germany?"
+                "title": "What's Wrong With Germany?",
+                "skip": [
+                    [
+                        587.8,
+                        597.4
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=6F7h1VJGp8w",
@@ -585,7 +628,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9RbL8lTsITY",
                 "duration": 3198,
-                "title": "The Power of the Fed (full documentary) | FRONTLINE"
+                "title": "The Power of the Fed (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=x4F5gIWS_Is",

@@ -19,7 +19,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vzS7cEuInRY",
                 "duration": 3544,
-                "title": "DESTRUCTION From the Cosmos! | How the Universe Works | Science Channel"
+                "title": "DESTRUCTION From the Cosmos! | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=T663g9hY2o4",
@@ -44,7 +46,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
                 "duration": 3234,
-                "title": "Rain Bombs | Full Documentary | NOVA | PBS"
+                "title": "Rain Bombs | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        114.0,
+                        134.0
+                    ],
+                    [
+                        3147.9,
+                        3153.1
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
@@ -138,7 +151,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yBJL3bpH6LI",
                 "duration": 2083,
-                "title": "The World in 1000 Years FULL EPISODE | Science Fiction Documentary"
+                "title": "The World in 1000 Years FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
@@ -148,7 +163,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JeLJuRYbs-I",
                 "duration": 1722,
-                "title": "I-Witness: ‘Unearthed,' a documentary by Kara David | Full episode (with English subtitles"
+                "title": "I-Witness: ‘Unearthed,' a documentary by Kara David | Full episode (with English subtitles",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Nszho9pq57w",
@@ -160,7 +177,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
                 "duration": 4813,
-                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026"
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Jt8G-Vn_9DM",
@@ -249,7 +268,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qib1E6j0AE8",
                 "duration": 608,
-                "title": "Baltic Sea - Breathing Through the Dead Zones (Full Episode) | Nature animal documentary"
+                "title": "Baltic Sea - Breathing Through the Dead Zones (Full Episode) | Nature animal documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=pAouFljMuLg",
@@ -278,7 +299,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ehJy5fnpqWg",
                 "duration": 2670,
-                "title": "Clotilda: The Return Home (Full Episode) | DOCUMENTARY SPECIAL | National Geographic"
+                "title": "Clotilda: The Return Home (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=6fXtYh_JBm0",
@@ -340,7 +363,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sN88eITYyX8",
                 "duration": 1389,
-                "title": "Nature's Most Extraordinary Moments | Battle for Survival | FULL EPISODE | Wildlife Docume"
+                "title": "Nature's Most Extraordinary Moments | Battle for Survival | FULL EPISODE | Wildlife Docume",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=8qfGeA2YlVI",
@@ -357,7 +382,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cnYqz-NCREQ",
                 "duration": 1808,
-                "title": "Into the Deep Sea of Alaska’s Ocean | FULL EPISODE | Wildlife Documentary"
+                "title": "Into the Deep Sea of Alaska’s Ocean | FULL EPISODE | Wildlife Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=VLGFsrEw440",
@@ -367,7 +394,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BG-gQs2opzA",
                 "duration": 2657,
-                "title": "A Desperate Place (Full Episode) | Hurricane Katrina: Race Against Time | National Geograp"
+                "title": "A Desperate Place (Full Episode) | Hurricane Katrina: Race Against Time | National Geograp",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iih7fm7ZDbo",
@@ -396,7 +425,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pTbFBiAyLh8",
                 "duration": 2599,
-                "title": "Ultimate Predators: Saber-Tooth vs Mammoth (Full Episode) | Nature Animal Documentary"
+                "title": "Ultimate Predators: Saber-Tooth vs Mammoth (Full Episode) | Nature Animal Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=I6pO75MGhOw",
@@ -497,7 +528,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tUdKGXcEbQQ",
                 "duration": 2530,
-                "title": "Do Humans Have Senses We Don't Know About? | The UnXplained (S2, E2) | Full Episode"
+                "title": "Do Humans Have Senses We Don't Know About? | The UnXplained (S2, E2) | Full Episode",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=h8jjJI1jewg",
@@ -524,7 +557,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LfjnZVG2m-s",
                 "duration": 878,
-                "title": "The Day Privacy Disappeared FULL EPISODE | Science Fiction Documentary"
+                "title": "The Day Privacy Disappeared FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=VG_yEfw4Qh8",
