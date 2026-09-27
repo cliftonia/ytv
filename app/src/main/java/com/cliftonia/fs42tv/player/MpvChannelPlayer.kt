@@ -162,8 +162,8 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 main.post { onPlaybackError?.invoke(code) }
             }
 
-            override fun onFirstFrame(startedEntryId: Long?) {
-                if (released) return
+            override fun onFirstFrame(startedEntryId: Long?): Boolean {
+                if (released) return false
                 // The first frame of a REPLACED file must not drop the blank - see
                 // MpvLoadGuard.firstFrame. The cover waits for the file most recently asked for,
                 // matched by mpv's playlist entry id whenever it can be read. The property read
@@ -172,7 +172,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 val playing = startedEntryId ?: mpv.playingEntryId()
                 if (!guard.firstFrame(SystemClock.elapsedRealtime(), playing)) {
                     Log.i("fs42", "first frame of a replaced file; keeping the blank up")
-                    return
+                    return false
                 }
                 val requested = requestedAtMillis
                 if (requested > 0) {
@@ -180,6 +180,7 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                     requestedAtMillis = 0L
                 }
                 main.post { this@MpvChannelPlayer.onFirstFrame?.invoke() }
+                return true
             }
 
             override fun onEndFile(reason: String, entryId: Long?) {
