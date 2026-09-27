@@ -13,7 +13,8 @@ HOW. Two Mullvad WireGuard tunnels, each in its own network namespace (pluto-us,
 set up by pluto-ns.sh), so nothing else on this box is routed through them. In each namespace
 runs this script as `--boot`, answering one question - "a fresh session, please" - by calling
 boot.pluto.tv from inside the tunnel. On the host runs this script as `--front`, the only part
-the televisions reach: GET /pluto/session?region=us|uk forwards to the right namespace.
+the televisions reach: GET /pluto/session?region=us|uk forwards to the right namespace, and
+`&fresh=1` replaces that television's cached session - asked when a stream on it would not play.
 
 ONE SESSION PER TELEVISION. Pluto allows one stream per session (Channels DVR users found this
 in 2025; FastChannels keeps a pool for it). So the front caches a session per (caller, region)
@@ -119,11 +120,17 @@ class SessionCache:
         self._held = {}
         self._lock = threading.Lock()
 
-    def get(self, caller, region):
+    def get(self, caller, region, fresh=False):
+        """The caller's session for region; fresh=True replaces it whatever its age.
+
+        fresh is how a television rebuilds a session a stream would not play on. Without it the
+        rebuild handed back the very token that had just failed, so the television's own
+        invalidate-and-refetch was a no-op for every region channel.
+        """
         key = (caller, region)
         with self._lock:
             held = self._held.get(key)
-            if held and held["expiresAt"] - self._margin > self._now():
+            if held and not fresh and held["expiresAt"] - self._margin > self._now():
                 return held
         fresh = self._fetch(region)
         with self._lock:
@@ -133,6 +140,11 @@ class SessionCache:
             for k in [k for k, v in self._held.items() if v["expiresAt"] < cutoff]:
                 del self._held[k]
         return fresh
+
+
+def wants_fresh(query):
+    """Whether a /pluto/session query asks for a new session rather than the cached one."""
+    return (urllib.parse.parse_qs(query).get("fresh") or [""])[0] == "1"
 
 
 def serve_front(bind, upstreams):
@@ -156,7 +168,8 @@ def serve_front(bind, upstreams):
             if region not in upstreams:
                 return _reply(self, 400, {"error": "region must be one of %s" % sorted(upstreams)})
             try:
-                _reply(self, 200, cache.get(self.client_address[0], region))
+                _reply(self, 200, cache.get(self.client_address[0], region,
+                                            fresh=wants_fresh(url.query)))
             except Exception as e:
                 # The television falls back to its own Australian session on anything but 200.
                 _reply(self, 502, {"error": "%s session unavailable: %s" % (region, type(e).__name__)})

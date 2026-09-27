@@ -61,6 +61,18 @@ class MpvLoadGuard(
     private var currentEntryId: Long? = null
 
     /**
+     * The entry mpv last opened, so an older entry's end can be told apart as "opened and then
+     * replaced" (already counted by [loaded]) or "replaced before it ever opened" (settled at its
+     * end). [openedIdKnown] is false when the last open named no id; nothing opened yet counts
+     * as known - every end then is of an entry that never opened.
+     */
+    private var lastOpenedEntryId: Long? = null
+    private var openedIdKnown = true
+
+    /** The newest entry whose unopened end was counted; mpv's entry ids only grow. */
+    private var lastSettledEntryId = Long.MIN_VALUE
+
+    /**
      * Guards against reporting the same clip's end twice while the next tune is in flight.
      *
      * Stays TRUE across a load. `loadfile ... replace` makes mpv end the outgoing file, and that
@@ -106,10 +118,15 @@ class MpvLoadGuard(
         currentEntryId = id
     }
 
-    /** mpv finished opening a file. */
+    /**
+     * mpv finished opening a file - playlist entry [entryId], when the START_FILE before it
+     * named one.
+     */
     @Synchronized
-    fun loaded() {
+    fun loaded(entryId: Long? = null) {
         seen++
+        lastOpenedEntryId = entryId
+        openedIdKnown = entryId != null
         // Only now do end-file events refer to the clip the dial actually asked for. Anything
         // before this belongs to the outgoing file that `loadfile ... replace` displaced.
         ended = false
@@ -134,11 +151,23 @@ class MpvLoadGuard(
      * The first frame of a REPLACED file must not: with tunes painted milliseconds apart, mpv
      * shows a beat of the superseded channel before the wanted one loads, and clearing the cover
      * then put another channel's picture on screen until the right file took over.
+     *
+     * [playingEntryId] is the playlist entry mpv says produced the frame. When it and the entry
+     * asked for are both known they are the WHOLE answer: the counters below are a heuristic,
+     * and a heuristic that can skew is exactly what blackened the TCL's dial for good under fast
+     * surfing - a load replaced before mpv opened it ends with "stop" and no FILE_LOADED, so
+     * the counters stayed one short, and since single-variant loading Pluto's first frames
+     * arrive well inside [resyncMillis], so every one after that was taken for a ghost. An
+     * accepted id also repairs the counters, so a later id-less frame starts from the truth.
      */
     @Synchronized
-    fun firstFrame(nowMillis: Long): Boolean {
+    fun firstFrame(nowMillis: Long, playingEntryId: Long? = null): Boolean {
         if (hasPicture) return false
-        if (seen + failedUnopened < asked) {
+        val current = currentEntryId
+        if (playingEntryId != null && current != null) {
+            if (playingEntryId != current) return false
+            resync()
+        } else if (seen + failedUnopened < asked) {
             if (nowMillis - lastAskMillis < resyncMillis) return false
             // Nothing newer was asked for in seconds: the pipeline has drained and this frame IS
             // the newest file - the counters skewed on a load that never reported.
@@ -160,10 +189,7 @@ class MpvLoadGuard(
         // The exact answer, when both ids are known: an end of some other entry is the ghost of
         // a replaced file, whatever the latch says.
         if (entryId != null && current != null && entryId != current) {
-            // An older load that died before opening settles its ask, which keeps the counters
-            // honest for the first-frame guard. A "stop" is not counted: that is also how an
-            // OPENED file ends when replaced, and it was already counted when it opened.
-            if (reason == "error" && ended) failedUnopened++
+            settleUnopened(reason, entryId)
             return End.IGNORE
         }
         if (ended) return endWhileLoading(reason, entryId, current, nowMillis)
@@ -213,6 +239,40 @@ class MpvLoadGuard(
         return End.FAILED
     }
 
+    /**
+     * The guard's state in one log line, for a rejected first frame. The fast-surf black dial
+     * was diagnosed by reading code because the log said only "keeping the blank up" - not
+     * which rule said no, nor whether the counters had skewed.
+     */
+    @Synchronized
+    fun describe(nowMillis: Long, playingEntryId: Long?): String =
+        "mpv guard: asked=$asked seen=$seen failedUnopened=$failedUnopened " +
+            "sinceAsk=${nowMillis - lastAskMillis}ms current=$currentEntryId playing=$playingEntryId"
+
+    /**
+     * An older entry ended: if it never opened, its ask is settled here, WHATEVER the reason.
+     *
+     * Counting only "error" was the fast-surf black dial: a load replaced before mpv opened it
+     * ends with "stop" and no FILE_LOADED, so it was never counted anywhere and the counters sat
+     * one short for the life of the process. What must not be counted is an OPENED file's end -
+     * `loadfile replace` ends that with "stop" too, and it was already counted when it opened -
+     * hence the last opened id. mpv ends one file before starting the next, so the last one
+     * opened is the only one whose end can still be in flight. Ids only grow, which is what
+     * keeps a repeated end from counting twice; and never past [asked], because over-settled
+     * counters would wave a stale frame through.
+     */
+    private fun settleUnopened(reason: String, entryId: Long) {
+        val neverOpened = if (openedIdKnown) {
+            entryId != lastOpenedEntryId
+        } else {
+            // No id for what opened last: the old rule - only an error is surely unopened.
+            reason == "error" && ended
+        }
+        if (!neverOpened || entryId <= lastSettledEntryId) return
+        lastSettledEntryId = entryId
+        if (seen + failedUnopened < asked) failedUnopened++
+    }
+
     private fun resync() {
         seen = asked
         failedUnopened = 0
@@ -230,8 +290,11 @@ class MpvLoadGuard(
          */
         fun parseEndFile(json: String): Pair<String, Long?> {
             val reason = if (json.contains("error")) "error" else "eof"
-            val id = ENTRY_ID.find(json)?.groupValues?.get(1)?.toLongOrNull()
-            return reason to id
+            return reason to parseEntryId(json)
         }
+
+        /** The playlist entry id out of any event node that carries one (START_FILE, END_FILE). */
+        fun parseEntryId(json: String): Long? =
+            ENTRY_ID.find(json)?.groupValues?.get(1)?.toLongOrNull()
     }
 }

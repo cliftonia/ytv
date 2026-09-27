@@ -133,9 +133,7 @@ class PlutoRoute(
      * for [FALLBACK_MILLIS]. The re-tune that follows every playback error does the rest.
      */
     fun playbackFailed(playable: Playable?) {
-        val pick = lastDial ?: return
-        if ((playable as? Hls)?.url != pick.url) return
-        lastDial = null
+        val pick = takePick(playable) ?: return
         val now = nowMillis()
         val rebuilt = rebuiltAt[pick.channelId]
         if (rebuilt != null && now - rebuilt < REBUILD_WINDOW_MILLIS) {
@@ -147,6 +145,27 @@ class PlutoRoute(
             sessions.invalidate(pick.session)
             Log.w("fs42", "pluto: ${pick.channelId} failed; rebuilding the ${pick.session.region} session")
         }
+    }
+
+    /**
+     * The dial gave up on [playable] with NO PICTURE: rebuild its session, but do NOT count it
+     * toward the legacy fallback. A silent tune is not evidence of a refused token - the
+     * fast-surf black dial was the player's own first-frame guard - and a half-hour on the
+     * legacy url for that would trade Pluto's route for a bumper loop over a player bug. A fresh
+     * token is cheap and rules the session out for the next tune.
+     */
+    fun noPicture(playable: Playable?) {
+        val pick = takePick(playable) ?: return
+        sessions.invalidate(pick.session)
+        Log.w("fs42", "pluto: ${pick.channelId} showed no picture; rebuilding the ${pick.session.region} session")
+    }
+
+    /** The last direct pick, if [playable] is it - taken, so one stream is judged only once. */
+    private fun takePick(playable: Playable?): Pick? {
+        val pick = lastDial ?: return null
+        if ((playable as? Hls)?.url != pick.url) return null
+        lastDial = null
+        return pick
     }
 
     private fun legacyBecause(channel: Channel, why: String, legacy: Playable): Playable {
