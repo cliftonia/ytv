@@ -19,7 +19,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xFrGuyw1V8s",
                 "duration": 233,
-                "title": "ABBA - Dancing Queen (Official Music Video)"
+                "title": "ABBA - Dancing Queen (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZhIsAZO5gl0",
@@ -62,7 +64,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WGU_4-5RaxU",
                 "duration": 223,
-                "title": "Blondie - Heart Of Glass"
+                "title": "Blondie - Heart Of Glass",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=1vrEljMfXYo",
@@ -74,7 +78,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2oX2FSv4Rys",
                 "duration": 193,
-                "title": "Rod Stewart - Have You Ever Seen The Rain (Official Video)"
+                "title": "Rod Stewart - Have You Ever Seen The Rain (Official Video)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=kijpcUv-b8M",
@@ -91,7 +97,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7oKPYe53h78",
                 "duration": 248,
-                "title": "Grease - You're The One That I Want [HQ+Lyrics]"
+                "title": "Grease - You're The One That I Want [HQ+Lyrics]",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=I_2D8Eo15wE",
@@ -156,7 +164,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=YxvBPH4sArQ",
                 "duration": 412,
-                "title": "Bee Gees Stayin Alive (Extended Remaster)"
+                "title": "Bee Gees Stayin Alive (Extended Remaster)",
+                "skip": [
+                    [
+                        404.5,
+                        411.7
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z6qnRS36EgE",
@@ -207,7 +222,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wvUQcnfwUUM",
                 "duration": 215,
-                "title": "Mungo Jerry - In The Summertime ORIGINAL 1970"
+                "title": "Mungo Jerry - In The Summertime ORIGINAL 1970",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=-ihs-vT9T3Q",
@@ -231,7 +248,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ixbcvKCl4Jc",
                 "duration": 227,
-                "title": "Elvis Presley - My Way (Aloha From Hawaii, Live in Honolulu, 1973)"
+                "title": "Elvis Presley - My Way (Aloha From Hawaii, Live in Honolulu, 1973)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Aae_RHRptRg",
@@ -279,7 +298,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VOgFZfRVaww",
                 "duration": 195,
-                "title": "Imagine - John Lennon & The Plastic Ono Band (w The Flux Fiddlers) (Ultimate Mix 2018) - 4K REMASTER"
+                "title": "Imagine - John Lennon & The Plastic Ono Band (w The Flux Fiddlers) (Ultimate Mix 2018) - 4K REMASTER",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=QtxlCsVKkvY",
@@ -385,7 +406,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5BmEGm-mraE",
                 "duration": 142,
-                "title": "Creedence Clearwater Revival: Bad Moon Rising"
+                "title": "Creedence Clearwater Revival: Bad Moon Rising",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=_JoZS6LgqYI",
@@ -453,7 +476,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=U_aYibUx1B8",
                 "duration": 226,
-                "title": "Fleetwood Mac - Rhiannon [with lyrics]"
+                "title": "Fleetwood Mac - Rhiannon [with lyrics]",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iFx-5PGLgb4",
@@ -532,12 +557,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=WF477pY2eFQ",
                 "duration": 189,
-                "title": "JUST ANOTHER WOMAN IN LOVE.... ANNE MURRAY"
+                "title": "JUST ANOTHER WOMAN IN LOVE.... ANNE MURRAY",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=wK63eUyk-iM",
                 "duration": 187,
-                "title": "Grease  -  Greased Lightning  [ With Lyrics ]"
+                "title": "Grease  -  Greased Lightning  [ With Lyrics ]",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=wyQUCYl-ocs",

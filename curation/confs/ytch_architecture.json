@@ -26,7 +26,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=n50DZvVAulM",
                 "duration": 596,
-                "title": "Inside Adam Levine & Behati Prinsloo's Serene L.A. Home | Open Door | Architectural Digest"
+                "title": "Inside Adam Levine & Behati Prinsloo's Serene L.A. Home | Open Door | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=H4ZEsgXHxjc",
@@ -58,7 +60,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=9ibFnyEobo4",
                 "duration": 3221,
-                "title": "Inside Calabasas’ MOST EXPENSIVE Mega Mansion"
+                "title": "Inside Calabasas’ MOST EXPENSIVE Mega Mansion",
+                "skip": [
+                    [
+                        620.9,
+                        657.8
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=p_8Z0cLWcn0",
@@ -85,7 +94,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8ezQ7oT_Qtc",
                 "duration": 342,
-                "title": "Batman's Mansion: The Story Of Mentmore Towers"
+                "title": "Batman's Mansion: The Story Of Mentmore Towers",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=5Z4G78WTJpE",
@@ -104,7 +115,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=saWpvmX6kiQ",
                 "duration": 2841,
-                "title": "From Ordinary House to Ultra-Luxury Mansion |The Sovereign Residence by Fine Urban"
+                "title": "From Ordinary House to Ultra-Luxury Mansion |The Sovereign Residence by Fine Urban",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=QbeVH4um3Ok",
@@ -283,12 +296,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=eD3q66sD3wQ",
                 "duration": 1625,
-                "title": "Thomas Jefferson: The Architect of Dreams | Sleep History Documentary"
+                "title": "Thomas Jefferson: The Architect of Dreams | Sleep History Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=t2ap-VT9y4U",
                 "duration": 3260,
-                "title": "An Architectural Masterpiece Made for LoveRaw Documentary | Parts 1–15"
+                "title": "An Architectural Masterpiece Made for LoveRaw Documentary | Parts 1–15",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=M4vSIa3pxvM",
@@ -361,7 +378,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_68Thn-LZ8o",
                 "duration": 276,
-                "title": "Minds Architecture String Art documentary"
+                "title": "Minds Architecture String Art documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=qWl6yjyWPT8",
@@ -459,7 +478,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CwSyG77yRCw",
                 "duration": 3391,
-                "title": "Inside China's 8D City: Chongqing Architecture & History | 4K Travel Documentary"
+                "title": "Inside China's 8D City: Chongqing Architecture & History | 4K Travel Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=YoAST-bbNw0",
@@ -495,7 +516,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3tNXrn10tmM",
                 "duration": 498,
-                "title": "Villa Tesoro by StayVista | Luxury Architecture Film | 4K"
+                "title": "Villa Tesoro by StayVista | Luxury Architecture Film | 4K",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",

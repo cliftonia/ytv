@@ -16,7 +16,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fM63f2lVl0k",
                 "duration": 2785,
-                "title": "Sal Calanni MENTAL SPILLNESS (Full Comedy Special)"
+                "title": "Sal Calanni MENTAL SPILLNESS (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=8Kf0YSmxtlM",
@@ -75,7 +77,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TSi5zOfEaQE",
                 "duration": 4174,
-                "title": "Chris D'Elia: Grow Or Die (STANDUP COMEDY SPECIAL)"
+                "title": "Chris D'Elia: Grow Or Die (STANDUP COMEDY SPECIAL)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=oyoQiJtoHUM",
@@ -118,12 +122,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=sB9eWtzTOq0",
                 "duration": 3980,
-                "title": "Gianmarco Soresi: Thief of Joy | Full Comedy Special"
+                "title": "Gianmarco Soresi: Thief of Joy | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=im8bJSwOI_E",
                 "duration": 2784,
-                "title": "If You Don't Think I'm Canadian Then You're Racist | Son Tran FULL SPECIAL"
+                "title": "If You Don't Think I'm Canadian Then You're Racist | Son Tran FULL SPECIAL",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=MBUoyy2xq5c",
@@ -165,7 +173,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hEMJQakG6x8",
                 "duration": 1875,
-                "title": "Netflix Is A Joke Full Crowd Work Special | Lucas Zelnick Stand Up Comedy Crowd Work"
+                "title": "Netflix Is A Joke Full Crowd Work Special | Lucas Zelnick Stand Up Comedy Crowd Work",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=XwFN2LOCrOw",
@@ -220,7 +230,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Zqv-yKgUbCA",
                 "duration": 3810,
-                "title": "Charlie Berens: Neighborly (FULL SPECIAL 2025)"
+                "title": "Charlie Berens: Neighborly (FULL SPECIAL 2025)",
+                "skip": [
+                    [
+                        920.0,
+                        942.5
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=aomFW-GijxY",
@@ -283,7 +300,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=v69-181zzk8",
                 "duration": 3169,
-                "title": "Mark Normand | Out To Lunch (Full Comedy Special)"
+                "title": "Mark Normand | Out To Lunch (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=c-iW-bLBiEU",
@@ -389,7 +408,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0E54LoeEdUc",
                 "duration": 4339,
-                "title": "Mario Adrion: My Struggle | Full Comedy Special"
+                "title": "Mario Adrion: My Struggle | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=7pXMgk7ukrU",

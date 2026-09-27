@@ -96,7 +96,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vt9DKUJ_Q-Y",
                 "duration": 841,
-                "title": "New York Jets vs Tennessee Titans Game Highlights | NFL 2026 Week 1"
+                "title": "New York Jets vs Tennessee Titans Game Highlights | NFL 2026 Week 1",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=JYbZ9ArrCAM",
@@ -236,7 +238,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ffs0YHm2jks",
                 "duration": 617,
-                "title": "Rodri Presentation 🔥 Barcelona vs Al Ahly 2-1 All Goals & Highlights 2026"
+                "title": "Rodri Presentation 🔥 Barcelona vs Al Ahly 2-1 All Goals & Highlights 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=jBN4Wp4CJpI",
@@ -283,7 +287,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=1-G_ZhydOd4",
                 "duration": 742,
-                "title": "Chelsea v. Hull City | PREMIER LEAGUE HIGHLIGHTS | 9/12/2026 | NBC Sports"
+                "title": "Chelsea v. Hull City | PREMIER LEAGUE HIGHLIGHTS | 9/12/2026 | NBC Sports",
+                "skip": [
+                    [
+                        730.8,
+                        741.9
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=h-BXJf4NXos",
@@ -549,12 +560,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Goq2wyepVoY",
                 "duration": 500,
-                "title": "Miami Hurricanes vs. Stanford Cardinal Game Highlights | 2026 ACC Football"
+                "title": "Miami Hurricanes vs. Stanford Cardinal Game Highlights | 2026 ACC Football",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=EeklPopazZM",
                 "duration": 1586,
-                "title": "Baylor Bears vs. Auburn Tigers | Full Game Highlights | ESPN College Football"
+                "title": "Baylor Bears vs. Auburn Tigers | Full Game Highlights | ESPN College Football",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=a-R0qhattTY",
@@ -571,7 +586,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=L1SLA0ixeWo",
                 "duration": 1507,
-                "title": "France vs England Highlights 🌎🏆 2026 FIFA World Cup™ | Bronze Final"
+                "title": "France vs England Highlights 🌎🏆 2026 FIFA World Cup™ | Bronze Final",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=1gMiT5r-K7Q",

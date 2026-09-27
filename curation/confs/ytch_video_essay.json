@@ -26,7 +26,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=APOqxQExnuw",
                 "duration": 4684,
-                "title": "The internet is getting worse, and this is why | Video Essay"
+                "title": "The internet is getting worse, and this is why | Video Essay",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=bKCayy8RgIA",
@@ -158,12 +160,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=WI02gZJUkyA",
                 "duration": 3685,
-                "title": "The Homoeroticism of Female Rivalry - (video essay)"
+                "title": "The Homoeroticism of Female Rivalry - (video essay)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=A778TAHB9hw",
                 "duration": 2128,
-                "title": "How to Write Video Essays"
+                "title": "How to Write Video Essays",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=4GoMzPlDT5k",
@@ -173,7 +179,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=i_j7wjcgzEw",
                 "duration": 890,
-                "title": "The Neo-Noir Genre in Movies | Video Essay"
+                "title": "The Neo-Noir Genre in Movies | Video Essay",
+                "skip": [
+                    [
+                        112.2,
+                        116.8
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=SbMo3clQwbs",
@@ -193,7 +206,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pN30Zs1RKWY",
                 "duration": 669,
-                "title": "A Video Essay On Terrible Video Essays"
+                "title": "A Video Essay On Terrible Video Essays",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=4qc-KOw-OzA",
@@ -320,7 +335,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Srn86Hc34ds",
                 "duration": 771,
-                "title": "The Disturbing Rise of Dark Patterns"
+                "title": "The Disturbing Rise of Dark Patterns",
+                "skip": [
+                    [
+                        258.1,
+                        317.1
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=9jlPBPv8CVY",
@@ -448,7 +470,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4G6Ltrz5fv8",
                 "duration": 2583,
-                "title": "Mary Shelley Literally Wrote Two Frankensteins: A Comparative Analysis | Video Essay"
+                "title": "Mary Shelley Literally Wrote Two Frankensteins: A Comparative Analysis | Video Essay",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Olt57docm10",
@@ -489,12 +513,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=BpMTaDeAL5Y",
                 "duration": 2013,
-                "title": "Kids Don't Cut Themselves On Trees Anymore"
+                "title": "Kids Don't Cut Themselves On Trees Anymore",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=rNl__l0Fd5E",
                 "duration": 825,
-                "title": "Did Aidan See it Coming? || SATC Video Essay"
+                "title": "Did Aidan See it Coming? || SATC Video Essay",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=CAFMXrMl23c",
@@ -506,7 +534,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=GNL1_tNTqpw",
                 "duration": 1028,
-                "title": "English Essay: How to Write about ANY Essay Topic"
+                "title": "English Essay: How to Write about ANY Essay Topic",
+                "skip": [
+                    [
+                        95.3,
+                        101.9
+                    ],
+                    [
+                        575.4,
+                        582.5
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=xSNn43p8Oo0",
@@ -525,7 +564,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=ccMWgU5hl4U",
                 "duration": 770,
-                "title": "when two guys wrote a crazyyy movie...and it broke hollywood"
+                "title": "when two guys wrote a crazyyy movie...and it broke hollywood",
+                "skip": [
+                    [
+                        68.8,
+                        77.2
+                    ],
+                    [
+                        699.7,
+                        761.9
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=XpHfjAIlfLc",
@@ -616,7 +666,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZBLqQZ4JAPU",
                 "duration": 2048,
-                "title": "5 Things We Normalize and Overconsume Without Question"
+                "title": "5 Things We Normalize and Overconsume Without Question",
+                "skip": [
+                    [
+                        2039.5,
+                        2045.0
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=1KAdvYW1aFI",

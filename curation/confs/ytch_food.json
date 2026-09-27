@@ -74,7 +74,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FwokZX4Aj8Y",
                 "duration": 4039,
-                "title": "$2 CHEAPEST BUT MOST DELICIOUS MALAYSIAN STREET FOOD MARKET 2026 | OPEN FOR FEW HOURS ONCE A WEEK"
+                "title": "$2 CHEAPEST BUT MOST DELICIOUS MALAYSIAN STREET FOOD MARKET 2026 | OPEN FOR FEW HOURS ONCE A WEEK",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=cpD5d1SL7e4",
@@ -96,7 +98,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lMSoj7wsf3A",
                 "duration": 2597,
-                "title": "WORLD’S MOST UNDERRATED STREET FOOD? Philippines’ MOST INSANE Filipino Street Food Tour in Manila!"
+                "title": "WORLD’S MOST UNDERRATED STREET FOOD? Philippines’ MOST INSANE Filipino Street Food Tour in Manila!",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=WNMMW2mHhhc",
@@ -154,12 +158,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=3zLvByt52go",
                 "duration": 3125,
-                "title": "Japanese Street Food in Osaka!! 🇯🇵 KING OF TUNA + 5 Foods You Have to Try in Osaka, Japan!"
+                "title": "Japanese Street Food in Osaka!! 🇯🇵 KING OF TUNA + 5 Foods You Have to Try in Osaka, Japan!",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=nwToqbn51fQ",
                 "duration": 3107,
-                "title": "Philippines Street Food!! 14 Hour FILIPINO STREET FOOD Tour in Cagayan de Oro (CDO)!! 🇵🇭"
+                "title": "Philippines Street Food!! 14 Hour FILIPINO STREET FOOD Tour in Cagayan de Oro (CDO)!! 🇵🇭",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=5rhQGVR3HgI",
@@ -222,7 +230,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SdhVP-C1vA4",
                 "duration": 2145,
-                "title": "Philippines Street Food Tour in Balibago, Angeles City, Pampanga 🇵🇭 | AMAZING Filipino Food 2026!"
+                "title": "Philippines Street Food Tour in Balibago, Angeles City, Pampanga 🇵🇭 | AMAZING Filipino Food 2026!",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=LutSVy8rWLo",
@@ -242,7 +252,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cmwQNIgrddo",
                 "duration": 1441,
-                "title": "I Tried India’s Most Disgusting Street Food"
+                "title": "I Tried India’s Most Disgusting Street Food",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=MY3Qy6vAbZQ",
@@ -342,7 +354,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=MzRe9Kv4S3s",
                 "duration": 1842,
-                "title": "[4K] HAPPY HOUR MALATE MANILA FOOD BAZAAR 2026 | Trending Street Food in Malate Manila!"
+                "title": "[4K] HAPPY HOUR MALATE MANILA FOOD BAZAAR 2026 | Trending Street Food in Malate Manila!",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=XuYovtYG_yY",
@@ -380,7 +394,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=u4VKdjbZJ5I",
                 "duration": 1362,
-                "title": "Manila After Midnight!! Filipino Street Food After Dark!!"
+                "title": "Manila After Midnight!! Filipino Street Food After Dark!!",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=FWe16Fmnh3k",
@@ -395,7 +411,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=msa0AFSkB40",
                 "duration": 4248,
-                "title": "Taiwan Street Food Marathon!! From $1 to $1000!!"
+                "title": "Taiwan Street Food Marathon!! From $1 to $1000!!",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=i7pqQwLSXdA",
@@ -434,7 +452,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=9gk20_u6Cjg",
                 "duration": 2464,
-                "title": "I Ate Kurdish Street Food in Kurdistan!! (7000 Years of History)"
+                "title": "I Ate Kurdish Street Food in Kurdistan!! (7000 Years of History)",
+                "skip": [
+                    [
+                        327.8,
+                        400.7
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=KCF7OeGD1b4",
@@ -471,12 +496,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=pIwCc7RuaQU",
                 "duration": 2739,
-                "title": "Ultimate EGYPTIAN Street Food Tour!! They WARNED Me About Cairo!! 🇪🇬"
+                "title": "Ultimate EGYPTIAN Street Food Tour!! They WARNED Me About Cairo!! 🇪🇬",
+                "skip": [
+                    [
+                        554.9,
+                        562.2
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=4ehNo4zhwkQ",
                 "duration": 1639,
-                "title": "$100 Thailand Street Food Challenge!! Budget Bombshell!!"
+                "title": "$100 Thailand Street Food Challenge!! Budget Bombshell!!",
+                "skip": [
+                    [
+                        593.3,
+                        647.7
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iVsn8X5K7pw",
@@ -592,7 +631,9 @@
                 "title": "Hanoi Old Quarter Morning Street Food Tour 🇻🇳 | Breakfast, Street Life & Autumn Walk at 8AM",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=jyfYJVj00KE",
@@ -641,16 +682,6 @@
                 ],
                 "skip": [],
                 "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wmd0s-7TRU4",
-                "duration": 2207,
-                "title": "Berhampore (Bengal) Village, Bazar & Veg Breakfast Street Food Tour I Chop, Fuluri, Kachori, Moodi",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=iMVSuRm3zko",
@@ -706,25 +737,9 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=3w7-nD6N_H4",
-                "duration": 1971,
-                "title": "The Ultimate Prayagraj Breakfast Tour! 150+ Year Old Legacy Food 😍 (Netram, Hari Ram & More)",
-                "parts": [
-                    "breakfast"
-                ]
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=DKgB619ulDk",
                 "duration": 1812,
                 "title": "🇵🇰 10¢ Qorma & 1¢ Roti | Authentic Pakistani Street Food Breakfast | Homemade Curries 🇮🇳",
-                "parts": [
-                    "breakfast"
-                ]
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QygHDYamIag",
-                "duration": 790,
-                "title": "India’s Highest Selling Food in PURI DHAM - Rabi Bhai Tiffin | 3AM Breakfast Only ₹30/-",
                 "parts": [
                     "breakfast"
                 ]
@@ -939,7 +954,9 @@
                 "title": "Inside Valencia LOCAL Breakfast Spots 🇪🇸 Spanish Food",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=2QSZf7vsSUg",
@@ -1062,7 +1079,9 @@
                 "title": "Ultimate Tanzanian Food Tour | $10 Street Food Challenge in Dar Es Salaam 🇹🇿",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=wtTZQivkNQI",
@@ -1070,7 +1089,9 @@
                 "title": "NEPALI STREET FOODS Across Kathmandu!! NEWARI Bara, Village CURRY, MOMO and More in Nepal!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Feu-DN-UleE",
@@ -1122,7 +1143,9 @@
                 "title": "Wonderful Cambodian Street Food Tour 2026 - Delicious Cambodian Lunch, Satisfying Delicacies",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Jrp49gUjK6Q",
@@ -1130,7 +1153,9 @@
                 "title": "Street Food in Côte d’Ivoire!! 🇨🇮 Insane VERTICAL BBQ in Abidjan (West Africa)!!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=kJ90asUCVko",
@@ -1174,7 +1199,9 @@
                 "title": "Oudong Street Food & Market Food - Cambodian lunch, snacks, & more",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=eow_yUR1zik",
@@ -1272,7 +1299,9 @@
                 "title": "Pike Place Market - AMERICA'S #1 CHOWDER + Must-Eat Market Tour in Seattle | American Food!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=n07NvytPlm8",
@@ -1314,7 +1343,9 @@
                 "title": "Largest Korean STREET FOOD, Fashion, Thrift & FAKE MARKET in Busan - Nampodong 남포동",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=l7bzsUTGOVs",
@@ -1442,7 +1473,9 @@
                 "title": "China’s MASSIVE Night Market | 1,000+ Food Stalls & Incredible Street Food",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=sRcCnBhvD0Q",
@@ -1504,7 +1537,9 @@
                 "title": "Impian Emas Night Market Johor Bahru Malaysia 🇲🇾 | Thursday Pasar Malam Street Food Tour 2026",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=HPLhzjMdFhE",
@@ -1532,7 +1567,9 @@
                 "title": "COLON Night Market Food Trip! Must Try New Street Food & CEBU Local Favorites 😱",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=sUnCUumgYvo",

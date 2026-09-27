@@ -14,7 +14,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ua0GGB4rTms",
                 "duration": 3329,
-                "title": "Australian Survivor: Redemption Episode 5 Recap! | #SurvivorAU | The CUP TV 🍵"
+                "title": "Australian Survivor: Redemption Episode 5 Recap! | #SurvivorAU | The CUP TV 🍵",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=N8X2t3Sa1fM",
@@ -291,7 +293,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Aulhdx6Zx7w",
                 "duration": 817,
-                "title": "Brokers are offering felons a path to Trump pardons — at a steep price with no guarantees"
+                "title": "Brokers are offering felons a path to Trump pardons — at a steep price with no guarantees",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=MnGUBhN7r3o",
@@ -347,7 +351,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-hnTi8yV-vY",
                 "duration": 2710,
-                "title": "Extreme Prep Edition (Full Episode) | Doomsday Preppers"
+                "title": "Extreme Prep Edition (Full Episode) | Doomsday Preppers",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=iMCmdEDNNKM",
@@ -378,7 +384,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RPR3OfX2tO0",
                 "duration": 851,
-                "title": "Inside the Abandoned Resorts of the Whitsunday Islands | 60 Minutes Australia"
+                "title": "Inside the Abandoned Resorts of the Whitsunday Islands | 60 Minutes Australia",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=YTCNU9fQAtc",
@@ -461,7 +469,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6Ol40by1fCs",
                 "duration": 1314,
-                "title": "Full Episode: Twin Brother Warrant Drama | Cops TV Show"
+                "title": "Full Episode: Twin Brother Warrant Drama | Cops TV Show",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=46qYZYQwjEs",
@@ -473,7 +483,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=oQhfvN6LEbA",
                 "duration": 1235,
-                "title": "COPS Classic: STURGIS SPECIAL | Full Episode | COPS TV Show"
+                "title": "COPS Classic: STURGIS SPECIAL | Full Episode | COPS TV Show",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=tOHUwwP6LLs",
@@ -513,7 +525,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=KX2HzjI0XO4",
                 "duration": 1596,
-                "title": "Wild Kratts FULL EPISODE | 🕷🕸Secrets of the Spider's Web 🕸🕷 | PBS KIDS"
+                "title": "Wild Kratts FULL EPISODE | 🕷🕸Secrets of the Spider's Web 🕸🕷 | PBS KIDS",
+                "skip": [
+                    [
+                        0.0,
+                        4.9
+                    ],
+                    [
+                        1590.1,
+                        1595.4
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Zzf72YcftdU",
@@ -613,7 +636,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8_N93vx9y64",
                 "duration": 1816,
-                "title": "Almost full episode of : Hit scene ( Australian TV May  24th 1969 )"
+                "title": "Almost full episode of : Hit scene ( Australian TV May  24th 1969 )",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=kE2qMhpR7w0",
@@ -623,7 +648,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sDRUb9cJ5ns",
                 "duration": 1290,
-                "title": "Episode 46: CHRISTIAN MILES, Apple TV / Fox Sports after US win over Australia in the FIFA"
+                "title": "Episode 46: CHRISTIAN MILES, Apple TV / Fox Sports after US win over Australia in the FIFA",
+                "skip": [],
+                "skip_checked": 1790538994
             }
         ],
         "search_query": "australian television full episode",

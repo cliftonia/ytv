@@ -69,7 +69,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=aGK7KBdw0l8",
                 "duration": 691,
-                "title": "Justin Gaethje vs Melvin Guillard | Undefeated MMA MONSTER Faced a UFC Knockout Machine"
+                "title": "Justin Gaethje vs Melvin Guillard | Undefeated MMA MONSTER Faced a UFC Knockout Machine",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ht9emLnMNrQ",
@@ -91,7 +93,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9fMmIw0LakY",
                 "duration": 723,
-                "title": "HE PUT HIM TO SLEEP | Jean Silva vs Bryce Mitchell | Full Fight"
+                "title": "HE PUT HIM TO SLEEP | Jean Silva vs Bryce Mitchell | Full Fight",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=atllNTadjSA",
@@ -242,7 +246,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=z4e8VupwS2w",
                 "duration": 986,
-                "title": "Eddie Alvarez vs Justin Gaethje | FULL FIGHT | UFC Classics"
+                "title": "Eddie Alvarez vs Justin Gaethje | FULL FIGHT | UFC Classics",
+                "skip": [
+                    [
+                        909.2,
+                        911.0
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=5DDB4hnyBcw",
@@ -257,7 +268,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=InHMy4Z1U8o",
                 "duration": 1645,
-                "title": "Anderson Silva vs Nick Diaz | FULL FIGHT | UFC Classics"
+                "title": "Anderson Silva vs Nick Diaz | FULL FIGHT | UFC Classics",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=solphxML3FQ",
@@ -347,7 +360,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=J19ORjYOehE",
                 "duration": 1610,
-                "title": "Israel Adesanya vs Kelvin Gastelum | FULL FIGHT | 2025 Hall of Fame Inductee"
+                "title": "Israel Adesanya vs Kelvin Gastelum | FULL FIGHT | 2025 Hall of Fame Inductee",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=x1YVBfP4TTs",
@@ -402,7 +417,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BWPUMjbonC0",
                 "duration": 666,
-                "title": "Ryan Garcia vs Conor Benn | Full Fight & KO Highlights"
+                "title": "Ryan Garcia vs Conor Benn | Full Fight & KO Highlights",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=qpmEocyVEu0",
@@ -523,7 +540,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=QctDPlAvcTM",
                 "duration": 377,
-                "title": "Dricus Du Plessis vs Kamaru Usman | UFC Oklahoma City"
+                "title": "Dricus Du Plessis vs Kamaru Usman | UFC Oklahoma City",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=KxB-AQQgB2c",
@@ -585,7 +604,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pjKuaHI8vDM",
                 "duration": 739,
-                "title": "Insane Highlights From Dana White's Contender Series Episode 2"
+                "title": "Insane Highlights From Dana White's Contender Series Episode 2",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=x3eEW-5NbDE",
