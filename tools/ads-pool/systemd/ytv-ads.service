@@ -1,0 +1,9 @@
+[Unit]
+Description=Publish the YTV retro Australian ad reel pool (ads.json) to GitHub
+After=network-online.target
+
+[Service]
+Type=oneshot
+# Until tools/ads-pool is on main this is a copy; afterwards %h/ytv-foreign/tools/ads-pool/publish_ads.sh
+ExecStart=/usr/bin/bash %h/ytv-ads-tools/publish_ads.sh
+Nice=10
