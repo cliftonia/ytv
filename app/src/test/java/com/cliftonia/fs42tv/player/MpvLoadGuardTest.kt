@@ -305,6 +305,20 @@ class MpvLoadGuardTest {
     }
 
     @Test
+    fun `the rejection names the counters for the log`() {
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(4)
+        assertEquals(
+            "mpv guard: asked=1 seen=0 failedUnopened=0 sinceAsk=250ms current=4 playing=3",
+            guard.describe(1_250, 3))
+        guard.entryIdIs(null)
+        assertEquals("unknown ids read as null",
+            "mpv guard: asked=1 seen=0 failedUnopened=0 sinceAsk=250ms current=null playing=null",
+            guard.describe(1_250, null))
+    }
+
+    @Test
     fun `the end-file node yields its reason and entry id`() {
         val (reason, id) = MpvLoadGuard.parseEndFile(
             """{"event":"end-file","reason":"error","playlist_entry_id":12,"file_error":"loading failed"}""")

@@ -240,6 +240,16 @@ class MpvLoadGuard(
     }
 
     /**
+     * The guard's state in one log line, for a rejected first frame. The fast-surf black dial
+     * was diagnosed by reading code because the log said only "keeping the blank up" - not
+     * which rule said no, nor whether the counters had skewed.
+     */
+    @Synchronized
+    fun describe(nowMillis: Long, playingEntryId: Long?): String =
+        "mpv guard: asked=$asked seen=$seen failedUnopened=$failedUnopened " +
+            "sinceAsk=${nowMillis - lastAskMillis}ms current=$currentEntryId playing=$playingEntryId"
+
+    /**
      * An older entry ended: if it never opened, its ask is settled here, WHATEVER the reason.
      *
      * Counting only "error" was the fast-surf black dial: a load replaced before mpv opened it
