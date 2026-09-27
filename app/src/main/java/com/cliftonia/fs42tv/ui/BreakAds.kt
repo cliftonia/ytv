@@ -56,12 +56,20 @@ class BreakAds(private val deps: Deps) {
         SHOWING,
         /** The reel failed: the card for the rest of this break, the player parked under it. */
         FAILED,
+        /**
+         * The break is over (or something else took the screen) but the reel is still the file on
+         * the player until the next load replaces it - seconds for a tune, indefinitely under an
+         * overlay, where no tune is issued. Its frames, errors, ends and stalls are still the
+         * reel's and are swallowed: routed to the channel's handlers they would blame the Pluto
+         * session for a dead archive url, or drop the blank and play a commercial out loud.
+         */
+        RETIRING,
     }
 
     var stage = Stage.IDLE
         private set
 
-    /** The player is on a reel, or parked after one: Pluto is not playing, and the return is a tune. */
+    /** The player is on a reel, parked after one, or retiring one: Pluto is not playing. */
     val onPlayer: Boolean get() = stage != Stage.IDLE
 
     /** Commercials are what the viewer sees: no card, no silence, no music. */
@@ -125,19 +133,20 @@ class BreakAds(private val deps: Deps) {
     fun failed(code: String): Boolean {
         if (!onPlayer) return false
         if (code.startsWith(MpvChannelPlayer.ENGINE_DIED)) {
+            // Even while retiring: a rebuild is the only way back to a player at all.
             // The engine is gone, not the reel: the error path rebuilds it and tunes the channel.
             Log.w("fs42", "break ads: the engine died under a reel; handing it to the error path")
             stop()
             return false
         }
-        if (stage != Stage.FAILED) fallBack("the reel failed: $code")
+        if (stage == Stage.LOADING || stage == Stage.SHOWING) fallBack("the reel failed: $code")
         return true
     }
 
     /** The reel ran out. True when it was ours: the next reel, or the card. */
     fun ended(): Boolean {
         if (!onPlayer) return false
-        if (stage == Stage.FAILED) return true
+        if (stage == Stage.FAILED || stage == Stage.RETIRING) return true
         cancel()
         if (reels >= MAX_REELS || !load()) fallBack("the reel ran out")
         return true
@@ -153,7 +162,16 @@ class BreakAds(private val deps: Deps) {
         return true
     }
 
-    /** The break is over, or something else took the screen: nothing of ours is pending. */
+    /**
+     * The break is over, or something else took the screen: nothing of ours is pending, but the
+     * reel is still on the player until a load replaces it - see [Stage.RETIRING].
+     */
+    fun retire() {
+        cancel()
+        if (stage != Stage.IDLE) stage = Stage.RETIRING
+    }
+
+    /** Something else was loaded onto the player: the reel is gone, and its events with it. */
     fun stop() {
         cancel()
         stage = Stage.IDLE

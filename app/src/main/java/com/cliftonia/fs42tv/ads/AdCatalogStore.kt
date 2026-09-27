@@ -75,7 +75,14 @@ class AdCatalogStore(
             // that exists for exactly when the network has nothing good to say.
             val catalog = AdCatalog.parse(body) ?: error("ads.json did not parse")
             file.parentFile?.mkdirs()
-            file.writeText(body)
+            // Whole or not at all: a write cut short (power off, a full disk) must not leave half
+            // a file that parses as nothing where the last good copy was.
+            val partial = File(file.path + ".tmp")
+            partial.writeText(body)
+            if (!partial.renameTo(file)) {
+                partial.delete()
+                error("could not replace ${file.name}")
+            }
             memory = catalog
             writtenAt = now
             Log.i("fs42", "ads: ${catalog.usableReels.size} of ${catalog.reels.size} reels usable")
