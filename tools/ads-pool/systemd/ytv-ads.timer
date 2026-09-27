@@ -1,0 +1,9 @@
+[Unit]
+Description=Nightly YTV ad reel pool (02:15, clear of 01:30 foreign verdicts and the 03:00 lineup job)
+
+[Timer]
+OnCalendar=*-*-* 02:15:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
