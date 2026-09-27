@@ -170,8 +170,10 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 // is only the fallback, and sits after the released check: libmpv answers a read
                 // on a destroyed core with exit(1).
                 val playing = startedEntryId ?: mpv.playingEntryId()
-                if (!guard.firstFrame(SystemClock.elapsedRealtime(), playing)) {
+                val now = SystemClock.elapsedRealtime()
+                if (!guard.firstFrame(now, playing)) {
                     Log.i("fs42", "first frame of a replaced file; keeping the blank up")
+                    Log.i("fs42", guard.describe(now, playing))
                     return false
                 }
                 val requested = requestedAtMillis
