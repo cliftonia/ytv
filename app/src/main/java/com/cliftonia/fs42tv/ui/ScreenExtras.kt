@@ -51,12 +51,17 @@ class ScreenExtras(private val deps: Deps) {
      * What the dial plays for a live channel - Pluto's own route or the published url. Blocking;
      * the tune thread only - it is TuneController.Deps.livePlayable.
      */
-    fun livePlayable(tuned: Tuned): Playable {
+    fun livePlayable(tuned: Tuned, stillWanted: () -> Boolean): Playable? {
         val routed = deps.plutoRoute.forDial(tuned.channel, tuned.playable)
         // Pluto-dial channels only, either route; the YouTube dial's news feeds are left as they
         // were, like the route itself leaves them.
         val picker = deps.masterPicker
-        return if (tuned.channel.pluto == null || picker == null) routed else picker.forMpv(routed)
+        if (tuned.channel.pluto == null || picker == null) return routed
+        // Asked again between the two blocking steps: a session fetch can take seconds, and a
+        // master read after it seconds more, on the one tune thread the superseding tune is
+        // queued behind. Under fast surfing every stale read delayed the channel actually wanted.
+        if (!stillWanted()) return null
+        return picker.forMpv(routed)
     }
 
     /**
