@@ -70,6 +70,9 @@ class ScreenExtras(private val deps: Deps) {
     /** The dial's player failed on [playable]; see [PlutoRoute.playbackFailed]. */
     fun plutoFailed(playable: Playable?) = deps.plutoRoute.playbackFailed(playable)
 
+    /** The dial gave up on [playable] for want of a picture; see [PlutoRoute.noPicture]. */
+    fun plutoNoPicture(playable: Playable?) = deps.plutoRoute.noPicture(playable)
+
     /**
      * [listener] runs on the UI thread when a Pluto channel that fell back for want of a session
      * could now have one - see [PlutoRoute.onSessionReady].

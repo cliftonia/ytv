@@ -176,6 +176,34 @@ class PlutoRouteTest {
     }
 
     @Test
+    fun `no picture on a direct stream rebuilds its session without counting toward legacy`() {
+        // NO PICTURE is not proof the token was refused - it was once the player's own guard -
+        // so it earns a fresh session, never a half-hour on the legacy url.
+        val f = Fixture()
+        val ch = channel(homeful)
+        val first = f.route.forDial(ch, legacy(ch))
+        f.route.noPicture(first)
+        val second = f.route.forDial(ch, legacy(ch))
+        assertEquals(2, f.boots)
+        assertNotEquals(sid(url(first)), sid(url(second)))
+        f.route.noPicture(second)
+        f.route.playbackFailed(f.route.forDial(ch, legacy(ch)))
+        assertTrue("a real failure after two NO PICTUREs is still only a first failure",
+            url(f.route.forDial(ch, legacy(ch))).contains("/channel/$homeful/"))
+    }
+
+    @Test
+    fun `no picture on anything but the last direct stream is ignored`() {
+        val f = Fixture()
+        val ch = channel(homeful)
+        f.route.forDial(ch, legacy(ch))
+        f.route.noPicture(Hls("https://example.com/other.m3u8"))
+        f.route.noPicture(null)
+        f.route.forDial(ch, legacy(ch))
+        assertEquals(1, f.boots)
+    }
+
+    @Test
     fun `failing again on the rebuilt session puts that channel on the legacy url for a while`() {
         val f = Fixture()
         val ch = channel(homeful)
