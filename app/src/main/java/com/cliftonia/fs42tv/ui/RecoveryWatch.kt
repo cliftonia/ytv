@@ -161,6 +161,32 @@ class RecoveryWatch(
         const val WATCHDOG_MILLIS = 12_000L
 
         const val NO_PICTURE = "NO PICTURE"
+
+        /**
+         * The director's watch: timers on [ScreenDirector.Deps.recoveryHandler], the card on
+         * [standBy], still tuning while [tuning] - in one call for the director, at its size limit.
+         */
+        fun forDirector(
+            deps: ScreenDirector.Deps,
+            tuning: androidx.compose.runtime.State<Boolean>,
+            standBy: androidx.compose.runtime.MutableState<String>,
+        ) = RecoveryWatch(
+            schedule = cancellable(deps.recoveryHandler),
+            halted = deps.halted,
+            stillTuning = { tuning.value },
+            deferred = { deps.overlayOpen() || deps.stoppedNow() },
+            cardUp = { standBy.value.isNotEmpty() },
+            showCard = { standBy.value = it },
+            retune = { reason ->
+                // Where the viewer wants to be, not what last painted: a tune that never painted
+                // leaves onAir on the channel before it.
+                (deps.fallbackChannel() ?: deps.tune().onAir?.channel)?.let {
+                    android.util.Log.i("fs42", "re-tuning ${it.number} ${it.name}: $reason")
+                    deps.tune().tune(it)
+                }
+            },
+            retuneAfterError = { reason -> deps.tune().retuneCurrent(reason) },
+        )
     }
 }
 

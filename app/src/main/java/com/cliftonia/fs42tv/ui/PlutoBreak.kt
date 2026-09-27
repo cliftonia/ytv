@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import com.cliftonia.fs42tv.player.ChannelPlayback
 import com.cliftonia.fs42tv.pluto.BreakPoller
+import com.cliftonia.fs42tv.pluto.BreakReturn
 import com.cliftonia.fs42tv.pluto.BreakView
 import com.cliftonia.fs42tv.pluto.OnScreen
 import com.cliftonia.fs42tv.resolver.Hls
@@ -33,6 +34,12 @@ import com.cliftonia.fs42tv.tune.Tuned
  *
  * Unlike the up-next card, the player keeps playing underneath: the bumper IS a picture, so the
  * watchdog has nothing to wait for, and the programme's return needs no tune at all.
+ *
+ * COMMERCIALS (the BREAK ADS row, [BreakAds]). When a reel can be had, the break's start hands the
+ * player a reel of vintage Australian commercials instead: the card shows only while it loads, or
+ * for the rest of the break if it fails. Pluto is then not playing at all, so the break's clock
+ * carries on from the last instant on screen by wall time ([OnScreen.continued]), and the return
+ * is a TUNE, timed so that it lands on the programme ([BreakReturn]) - [Deps.retune].
  *
  * Main thread only, except the poller's reads, which are posted back through [Deps.runOnUi] and
  * dropped if the run they belong to has since been stopped.
@@ -74,6 +81,13 @@ class PlutoBreak(private val deps: Deps) {
         val uncovered: () -> Unit = {},
         /** On destroy, after polling stops: the poller's thread. */
         val shutdown: () -> Unit = {},
+        /** The commercials, built around their change callback; null for none - the card only. */
+        val ads: (changed: () -> Unit) -> BreakAds? = { null },
+        /**
+         * Back to [Tuned]'s channel from a reel: the player is on the archive, so the programme's
+         * return is a tune - the blank, then the channel, as a channel change.
+         */
+        val retune: (Tuned) -> Unit = {},
     )
 
     /** What the overlay draws: null when no break, or when an overlay is over it. Compose state. */
@@ -83,7 +97,14 @@ class PlutoBreak(private val deps: Deps) {
     var inBreak = false
         private set
 
-    val muting: Boolean get() = inBreak
+    /** Silent while the card is up - not while commercials play: they are the sound now. */
+    val muting: Boolean get() = inBreak && ads?.picture != true
+
+    /** The break's commercials, when the row and a catalog allow. */
+    val ads: BreakAds? = deps.ads(::adsChanged)
+
+    /** The player is on a reel (or parked after one), not on Pluto: a surf or a return must tune. */
+    val adsOnPlayer: Boolean get() = ads?.onPlayer == true
 
     val showing: Boolean get() = state.value != null
 
@@ -114,6 +135,15 @@ class PlutoBreak(private val deps: Deps) {
 
     private var cancelTimer: (() -> Unit)? = null
 
+    /**
+     * The instant on screen when a reel took the player, and the monotonic time then: from here
+     * the break's clock runs on wall time ([OnScreen.continued]). Null while Pluto is playing.
+     */
+    private var continuedFrom: Pair<Long, Long>? = null
+
+    /** The app left with a reel on the player: coming back must tune the channel, on any engine. */
+    private var leftOnAd = false
+
     private val poller: BreakPoller = deps.poller { run, read ->
         deps.runOnUi {
             if (!deps.halted() && poller.isCurrent(run)) {
@@ -130,7 +160,11 @@ class PlutoBreak(private val deps: Deps) {
      * new point in the window: the old anchor, playing time and any stall open under it are
      * about a stream that no longer exists, and kept they put the card up early or froze it.
      */
-    fun loading(tuned: Tuned?) = poll(tuned, anchored = true, fresh = true)
+    fun loading(tuned: Tuned?) {
+        poll(tuned, anchored = true, fresh = true)
+        // Whatever was loaded replaced any reel left paused on the player.
+        leftOnAd = false
+    }
 
     /** Set by [holdAcrossReload]; spent by the next load, or by anything else leaving. */
     private var holdCard = false
@@ -150,7 +184,9 @@ class PlutoBreak(private val deps: Deps) {
 
     /** The app left the screen: nobody is watching, so no reads; the break is seen afresh after. */
     fun appStopped() {
+        val onAd = adsOnPlayer
         leave()
+        if (onAd) leftOnAd = true
         wasStopped = true
     }
 
@@ -160,13 +196,26 @@ class PlutoBreak(private val deps: Deps) {
      * on, a Pluto channel, and an engine timed from its load (mpv). A paused mpv resumes an
      * unknown distance behind the edge - or back at the window's start after half a minute -
      * and a live channel's re-tune is cheap and anchors afresh.
+     *
+     * And on any engine, overlay or not, when the app left with a break's reel on the player: the
+     * paused file under the dial is a commercial, not the channel, and must never simply resume.
      */
     fun retuneOnResume(tuned: Tuned?): Boolean {
         val returning = wasStopped
         wasStopped = false
-        return returning && !deps.overlayOpen() && deps.enabled() && tuned != null &&
-            tuned.card == null && tuned.channel.pluto != null && tuned.playable is Hls &&
-            deps.joinsThirdFromLast()
+        val live = tuned != null && tuned.card == null && tuned.channel.pluto != null && tuned.playable is Hls
+        if (returning && live && leftOnAd) return true
+        return returning && live && !deps.overlayOpen() && deps.enabled() && deps.joinsThirdFromLast()
+    }
+
+    /**
+     * BREAK CARD switched off - or BREAK ADS, with a reel on the player: stop, and if the player
+     * was on a reel, tune the channel back (the fresh load decides the break again, by the rows).
+     */
+    fun switchedOff() {
+        val back = tuned?.takeIf { adsOnPlayer }
+        leave()
+        back?.let(deps.retune)
     }
 
     private fun poll(tuned: Tuned?, anchored: Boolean, fresh: Boolean) {
@@ -186,6 +235,7 @@ class PlutoBreak(private val deps: Deps) {
         // The playlist mpv was handed, when the tune chose one: one fetch fewer per tune, and the
         // anchor is read off exactly the window mpv started in.
         poller.start(url, hls?.mediaUrl)
+        ads?.warm()
     }
 
     /** [tuned] has a picture: the card may act, and mpv's playing time starts now. */
@@ -198,6 +248,7 @@ class PlutoBreak(private val deps: Deps) {
 
     /** The player stalled or recovered: a stall does not move the picture on. */
     fun buffering(stalled: Boolean) {
+        if (continuedFrom != null) return
         val now = deps.elapsedMillis()
         val since = stalledSince
         if (stalled && since == null && pictureAt != null) stalledSince = now
@@ -219,13 +270,17 @@ class PlutoBreak(private val deps: Deps) {
         pictureAt = null
         stalledMillis = 0L
         stalledSince = null
+        // A reel on the player is the caller's to replace: every path here is followed by a load
+        // (a surf, the blank, an error's retune) - or it is the app leaving, see [appStopped].
+        ads?.stop()
+        continuedFrom = null
         if (inBreak && !keepCard) endBreak()
     }
 
     /** An overlay opened or closed: hide or restore the card. Cheap; called on every change. */
     fun refresh() {
         val on = tuned
-        val next = if (inBreak && on != null && !deps.overlayOpen()) card(on) else null
+        val next = if (inBreak && on != null && !deps.overlayOpen() && ads?.picture != true) card(on) else null
         if (state.value != next) state.value = next
     }
 
@@ -234,8 +289,8 @@ class PlutoBreak(private val deps: Deps) {
      * seen, after the guide closes over it, and when the app comes back into view.
      */
     fun resumeMusic() {
-        if (!inBreak || deps.guideOpen() || deps.stoppedNow()) return
-        deps.playMusic { inBreak && !deps.guideOpen() && !deps.stoppedNow() }
+        if (!inBreak || deps.guideOpen() || deps.stoppedNow() || adsOwnTheScreen()) return
+        deps.playMusic { inBreak && !deps.guideOpen() && !deps.stoppedNow() && !adsOwnTheScreen() }
     }
 
     /** On destroy: no read may start, and no verdict land, after this. */
@@ -253,6 +308,10 @@ class PlutoBreak(private val deps: Deps) {
         cancelTimer = null
         val v = view ?: return
         if (pictureAt == null || tuned == null) return
+        continuedFrom?.let { (at, since) ->
+            returnFromAds(v, OnScreen.continued(at, since, deps.elapsedMillis()))
+            return
+        }
         val onScreen = if (v.timed) onScreenNow(v) else null
         if (onScreen == null) {
             apply(v.fallbackInBreak && !v.blind, null)
@@ -260,7 +319,8 @@ class PlutoBreak(private val deps: Deps) {
         }
         val decision = v.at(onScreen)
         val end = v.end
-        apply(decision.inBreak, if (decision.inBreak && end != null) end - onScreen else null)
+        apply(decision.inBreak, if (decision.inBreak && end != null) end - onScreen else null,
+            v.start?.let { it to onScreen })
         decision.nextChangeAt?.let { at ->
             cancelTimer = deps.later((at - onScreen).coerceAtLeast(0L)) { reschedule() }
         }
@@ -275,8 +335,46 @@ class PlutoBreak(private val deps: Deps) {
             playing, deps.wallMillis())
     }
 
-    /** Up or down; [endsInMillis] of on-screen time until the break's end, when it is known. */
-    private fun apply(on: Boolean, endsInMillis: Long?) {
+    /**
+     * The player is on a reel: time the return to the programme (see [BreakReturn]), keeping the
+     * card's countdown right in case the reel has failed and the card is what is showing.
+     */
+    private fun returnFromAds(v: BreakView, onScreen: Long) {
+        val t = tuned ?: return
+        val joins = BreakReturn.joinOffsetMillis(v, deps.joinsThirdFromLast())
+        when (val verdict = BreakReturn.decide(v, onScreen, deps.wallMillis(), joins)) {
+            is BreakReturn.Verdict.Now -> {
+                Log.i("fs42", "break ads over on ${t.channel.number}: ${verdict.reason} - re-tuning")
+                // The director's blank leaves this break (and the reel) before the tune.
+                deps.retune(t)
+            }
+            is BreakReturn.Verdict.After -> {
+                apply(true, v.end?.let { it - onScreen })
+                cancelTimer = deps.later(verdict.millis) { reschedule() }
+            }
+        }
+    }
+
+    /** A reel is on screen or on its way: no card music, and (on screen) no card. */
+    private fun adsOwnTheScreen(): Boolean = ads?.picture == true || ads?.loading == true
+
+    /** The reel showed its picture, or failed: re-derive the card, the sound and the music. */
+    private fun adsChanged() {
+        refresh()
+        deps.volumeChanged()
+        if (ads?.picture == true) {
+            if (!deps.guideOpen()) deps.releaseMusic()
+        } else {
+            resumeMusic()
+        }
+    }
+
+    /**
+     * Up or down; [endsInMillis] of on-screen time until the break's end, when it is known.
+     * [startedAt] - the break's start and the instant on screen, on a timed playlist - lets a
+     * break coming up hand the player to the commercials; null never does.
+     */
+    private fun apply(on: Boolean, endsInMillis: Long?, startedAt: Pair<Long, Long>? = null) {
         val t = tuned ?: return
         if (on && endsInMillis != null) {
             val now = deps.elapsedMillis()
@@ -288,8 +386,13 @@ class PlutoBreak(private val deps: Deps) {
             }
         }
         if (on && !inBreak) {
-            Log.i("fs42", "pluto break on ${t.channel.number}: card up")
             inBreak = true
+            if (startedAt != null && ads?.start(t.channel.number, startedAt.first) == true) {
+                continuedFrom = startedAt.second to deps.elapsedMillis()
+                // Pluto is no longer what plays: its stall clock means nothing from here.
+                stalledSince = null
+            }
+            Log.i("fs42", "pluto break on ${t.channel.number}: ${if (adsOnPlayer) "commercials" else "card up"}")
             deps.picture()
             refresh()
             deps.volumeChanged()
@@ -337,21 +440,24 @@ class PlutoBreak(private val deps: Deps) {
             volumeChanged: () -> Unit,
             picture: () -> Unit,
             uncovered: () -> Unit,
+            /** Back to a channel from its break's reel - see [Deps.retune]. */
+            retune: (Tuned) -> Unit,
         ): PlutoBreak {
             // Its own daemon thread, not the prefetch thread: a read can take its full five
             // seconds of timeouts, and neighbour resolves and the guide's fetches queue there.
             val executor = BreakPoller.daemonExecutor()
             val main = android.os.Handler(android.os.Looper.getMainLooper())
+            val later: (Long, () -> Unit) -> (() -> Unit) = { delay, block ->
+                val runnable = Runnable { if (!halted()) block() }
+                main.postDelayed(runnable, delay)
+                ({ main.removeCallbacks(runnable) })
+            }
             return PlutoBreak(Deps(
                 enabled = { extras.features.isOn(Features.Flag.BREAK_CARD) },
                 poller = { read ->
                     BreakPoller(BreakPoller::httpFetch, BreakPoller.scheduleOn(executor), read)
                 },
-                later = { delay, block ->
-                    val runnable = Runnable { if (!halted()) block() }
-                    main.postDelayed(runnable, delay)
-                    ({ main.removeCallbacks(runnable) })
-                },
+                later = later,
                 wallMillis = System::currentTimeMillis,
                 elapsedMillis = android.os.SystemClock::elapsedRealtime,
                 exactInstant = { player()?.programDateTimeMillis() },
@@ -370,6 +476,8 @@ class PlutoBreak(private val deps: Deps) {
                 picture = picture,
                 uncovered = uncovered,
                 shutdown = { executor.shutdownNow() },
+                ads = { changed -> BreakAds.create(extras, player, later, changed) },
+                retune = retune,
             ))
         }
     }

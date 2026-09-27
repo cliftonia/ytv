@@ -96,4 +96,18 @@ class CaptionState(
         }
         loader.load(playable, generationNow())
     }
+
+    companion object {
+        /** The director's captions, in one call for the director, which is at its size limit. */
+        fun forDirector(deps: ScreenDirector.Deps) = CaptionState(
+            executor = deps.captionExecutor,
+            runOnUi = deps.runOnUi,
+            generationNow = { deps.tune().generationNow() },
+            halted = deps.halted,
+            // Never a card's: its stream is the programme it announces, not one on screen.
+            onAirId = { deps.tune().onAir?.takeIf { it.card == null }?.stream?.id },
+            recallResolved = { id -> deps.recallResolved(id, deps.nowSeconds()) },
+            persistOn = deps.persistCaptionsOn,
+        )
+    }
 }
