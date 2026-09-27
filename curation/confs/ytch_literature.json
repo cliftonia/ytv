@@ -14,7 +14,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3spyt2ivOfA",
                 "duration": 1081,
-                "title": "Module One Readings Lecture Two"
+                "title": "Module One Readings Lecture Two",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=b21TGbtKXGE",
@@ -41,7 +43,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4_l8be-B6yQ",
                 "duration": 1967,
-                "title": "Jane Eyre's Bertha Mason — On Madness, Confinement, & Silencing | Ghost Lectures"
+                "title": "Jane Eyre's Bertha Mason — On Madness, Confinement, & Silencing | Ghost Lectures",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=B1JiBMbC7to",
@@ -65,12 +69,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=NnnZ6y1HPqI",
                 "duration": 288,
-                "title": "Why should you read “Lord of the Flies” by William Golding? - Jill Dash"
+                "title": "Why should you read “Lord of the Flies” by William Golding? - Jill Dash",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vtkv3-endYc",
                 "duration": 286,
-                "title": "Why should you read “Crime and Punishment”? - Alex Gendler"
+                "title": "Why should you read “Crime and Punishment”? - Alex Gendler",
+                "skip": [
+                    [
+                        264.9,
+                        286.0
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=OTvm5LfhDzg",
@@ -120,7 +133,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bOMksnSaAJ4",
                 "duration": 2012,
-                "title": "Thomas Sowell -- Basic Economics"
+                "title": "Thomas Sowell -- Basic Economics",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=-Nhao4FoRSM",
@@ -268,7 +283,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=c0KYU2j0TM4",
                 "duration": 1145,
-                "title": "The power of introverts | Susan Cain | TED"
+                "title": "The power of introverts | Susan Cain | TED",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=CMyCF4qLco4",
@@ -309,7 +326,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4WmHHkNG7Wg",
                 "duration": 485,
-                "title": "Shakespeare's Sonnets - Sonnet LXIV: Ruin as a Lesson"
+                "title": "Shakespeare's Sonnets - Sonnet LXIV: Ruin as a Lesson",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=qzoIAJYPQwo",
@@ -341,13 +360,6 @@
                 "url": "https://www.youtube.com/watch?v=8fzPJUtstn4",
                 "duration": 443,
                 "title": "A Christmas Carol || 7 Minute Summary"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zNBdKrqM1HA",
-                "duration": 1929,
-                "title": "Online Course Creation with AI Notes & Budget Studio Setup for Teachers!",
-                "skip": [],
-                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=lUjoFzT0VNI",
@@ -406,7 +418,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zjK7PWmRRyg",
                 "duration": 1026,
-                "title": "The Industrial Revolution: Crash Course European History #24"
+                "title": "The Industrial Revolution: Crash Course European History #24",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=PgcNLTda4Js",
@@ -416,12 +430,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=xIm7driNcUI",
                 "duration": 1877,
-                "title": "StoryBots: Learn How to Read & Sound Out Words Compilation 🔤 Netflix Jr"
+                "title": "StoryBots: Learn How to Read & Sound Out Words Compilation 🔤 Netflix Jr",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=E7CwqNHn_Ns",
                 "duration": 531,
-                "title": "Taking Notes: Crash Course Study Skills #1"
+                "title": "Taking Notes: Crash Course Study Skills #1",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=uLN6IdRtDhg",
@@ -488,7 +506,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ou6i1UUfVWo",
                 "duration": 241,
-                "title": "Mina and the Very Thankful Day | A Lesson in Gratitude | Mina’s Farm Adventure"
+                "title": "Mina and the Very Thankful Day | A Lesson in Gratitude | Mina’s Farm Adventure",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=-qxtmahpBwM",
@@ -503,7 +523,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=g_CaPgFTs7U",
                 "duration": 445,
-                "title": "The Merchant of Venice - Play Summary"
+                "title": "The Merchant of Venice - Play Summary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=yEkDosanxGk",
@@ -515,7 +537,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qFL-7Cu3zFE",
                 "duration": 426,
-                "title": "The Elves and The Shoemaker | Fairy Tales | Gigglebox"
+                "title": "The Elves and The Shoemaker | Fairy Tales | Gigglebox",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=kBuKdHQYPps",
@@ -616,7 +640,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=8qRZcXIODNU",
                 "duration": 1074,
-                "title": "The French Revolution - OverSimplified (Part 1)"
+                "title": "The French Revolution - OverSimplified (Part 1)",
+                "skip": [
+                    [
+                        0.0,
+                        21.4
+                    ],
+                    [
+                        996.3,
+                        1060.1
+                    ]
+                ],
+                "skip_checked": 1790538994
             }
         ],
         "search_query": "literature lecture audiobook classic",

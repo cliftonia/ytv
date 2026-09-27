@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
                 "duration": 4813,
-                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026"
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=3uZr6UF61-w",
@@ -55,7 +57,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vzS7cEuInRY",
                 "duration": 3544,
-                "title": "DESTRUCTION From the Cosmos! | How the Universe Works | Science Channel"
+                "title": "DESTRUCTION From the Cosmos! | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
@@ -222,7 +226,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=5BNPeFHU7QQ",
                 "duration": 3236,
-                "title": "Decoding the Universe: Cosmos | Full Documentary | NOVA | PBS"
+                "title": "Decoding the Universe: Cosmos | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        108.9,
+                        130.4
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=9yDHZEwH1CY",
@@ -330,7 +341,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z6SHxAYpohE",
                 "duration": 4133,
-                "title": "The Biggest Mystery in the Universe - Space Documentary 2026"
+                "title": "The Biggest Mystery in the Universe - Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZkA8ppNE_nc",
@@ -451,7 +464,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WiKt9FO4jTA",
                 "duration": 3937,
-                "title": "TRAPPIST-1: The Seven-Planet System That Challenges Astronomy | Space Documentary 2026"
+                "title": "TRAPPIST-1: The Seven-Planet System That Challenges Astronomy | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=8Sl8m5-Tutk",
@@ -523,7 +538,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bnvDdsKOWFk",
                 "duration": 4807,
-                "title": "Is Time Travel Possible In Our Universe | Space Documentary 2025"
+                "title": "Is Time Travel Possible In Our Universe | Space Documentary 2025",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=6gLDC9_bLb4",
@@ -565,7 +582,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=E-xnFvlGgOk",
                 "duration": 2936,
-                "title": "The Real Scale of the Universe: 3D Size Comparison (2026)"
+                "title": "The Real Scale of the Universe: 3D Size Comparison (2026)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=tiGHASY-1f4",

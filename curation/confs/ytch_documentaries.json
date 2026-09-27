@@ -21,7 +21,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FFVJL7Z5RjU",
                 "duration": 8488,
-                "title": "ABC 20/20 [New] 2026 Full Episodes – One Last Call | ABC 20/20 Murder Documentary 2026 New"
+                "title": "ABC 20/20 [New] 2026 Full Episodes – One Last Call | ABC 20/20 Murder Documentary 2026 New",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
@@ -53,7 +55,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4bIgYWRod34",
                 "duration": 2508,
-                "title": "Coached to Kill | Full Episode"
+                "title": "Coached to Kill | Full Episode",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=H6gNfDl-Fss",
@@ -89,7 +93,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=oskRmMRvguM",
                 "duration": 5427,
-                "title": "Is God the Ultimate Observer? | Quantum Physics Documentary 2026"
+                "title": "Is God the Ultimate Observer? | Quantum Physics Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
@@ -111,7 +117,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cPzEhG0O2Yk",
                 "duration": 3198,
-                "title": "“Contaminated: The Carpet Industry’s Toxic Legacy”  (full documentary) | FRONTLINE (PBS)"
+                "title": "“Contaminated: The Carpet Industry’s Toxic Legacy”  (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZLciyiQnW9I",
@@ -135,17 +143,32 @@
             {
                 "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
                 "duration": 4813,
-                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026"
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
                 "duration": 3234,
-                "title": "Rain Bombs | Full Documentary | NOVA | PBS"
+                "title": "Rain Bombs | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        114.0,
+                        134.0
+                    ],
+                    [
+                        3147.9,
+                        3153.1
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=GI274lJkuaA",
                 "duration": 2892,
-                "title": "Texas True Crime: The Mattress Murders | Full Documentary"
+                "title": "Texas True Crime: The Mattress Murders | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=OwksWJifxYk",
@@ -207,17 +230,36 @@
             {
                 "url": "https://www.youtube.com/watch?v=jHtNTBO4vFI",
                 "duration": 3179,
-                "title": "The Rockefeller Dynasty - A Complete History | 2026 Documentary"
+                "title": "The Rockefeller Dynasty - A Complete History | 2026 Documentary",
+                "skip": [
+                    [
+                        950.6,
+                        968.5
+                    ],
+                    [
+                        1486.8,
+                        1571.7
+                    ],
+                    [
+                        3118.1,
+                        3173.4
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=xPZpb0yJbSg",
                 "duration": 2759,
-                "title": "Texas True Crime: The Riddler | Full Documentary"
+                "title": "Texas True Crime: The Riddler | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
                 "duration": 5048,
-                "title": "The Thinking Game | Full documentary | Tribeca Film Festival official selection"
+                "title": "The Thinking Game | Full documentary | Tribeca Film Festival official selection",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=DJxt5coVs7Y",
@@ -242,7 +284,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2iTMt2lfR9k",
                 "duration": 3198,
-                "title": "Crisis in Venezuela: An Uncertain Future (full documentary) | FRONTLINE (PBS)"
+                "title": "Crisis in Venezuela: An Uncertain Future (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
@@ -358,7 +402,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=PoUAIroIc8E",
                 "duration": 5441,
-                "title": "Journey Into Interstellar Space with Voyagers | Space Documentary 2026"
+                "title": "Journey Into Interstellar Space with Voyagers | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=57Z8bUb1P94",
@@ -408,7 +454,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=f1eKhZNCVSk",
                 "duration": 1773,
-                "title": "The Legend of Sleepy Hollow (2026) | Full Movie | Original English Horror AI Drama"
+                "title": "The Legend of Sleepy Hollow (2026) | Full Movie | Original English Horror AI Drama",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=nDjswZ2Yrpg",
@@ -503,7 +551,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iMaunecj84w",
                 "duration": 2604,
-                "title": "Chernobyl: Minute by Minute | Full Film"
+                "title": "Chernobyl: Minute by Minute | Full Film",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=yGbFo7IAUrg",
@@ -513,12 +563,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=7yDSoRPnoIs",
                 "duration": 5006,
-                "title": "Pablo Escobar’s Rise & Fall | The Godfather of Cocaine (full documentary) | FRONTLINE (PBS)"
+                "title": "Pablo Escobar’s Rise & Fall | The Godfather of Cocaine (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=i-53z35hLrM",
                 "duration": 1626,
-                "title": "Crazy Enough to Stay | Full Ukraine Documentary (2026)"
+                "title": "Crazy Enough to Stay | Full Ukraine Documentary (2026)",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=-x8atQu2I1I",
@@ -772,7 +826,9 @@
                 "title": "Clan of the North (Full Episode) | Kingdom of the Polar Bears",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=ph_MWX3SrT8",
@@ -843,7 +899,9 @@
                 "title": "The First 48: Bad Driver (S22, E6) | Full Episode",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=fhcqfoqvppc",
@@ -1446,7 +1504,9 @@
                 "title": "Good For Nothing | Western | Full Movie",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=LaRf4DBDH4w",
@@ -1686,7 +1746,9 @@
                 "title": "One Big Break Murder Mysteries | 48 Hours\" Full Episodes",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=J4y7aQq3z4o",
@@ -1753,7 +1815,22 @@
                 "title": "Vanished: Three Disappearances Nobody Can Explain",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [
+                    [
+                        0.0,
+                        4.0
+                    ],
+                    [
+                        51.5,
+                        211.1
+                    ],
+                    [
+                        2196.4,
+                        2566.8
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=25sBBCPeRvY",
@@ -1761,7 +1838,9 @@
                 "title": "Explaining Advanced Ancient Egyptian Technologies | Ancient Aliens | Compilation | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=D4eYcNowupQ",
@@ -1857,7 +1936,9 @@
                 "title": "The UnXplained: Dark Curses of the Occult (S2, E3) | Full Episode | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=nO01WEAFlYU",
@@ -1975,7 +2056,9 @@
                 "title": "Bible Secrets Revealed: The Real Jesus (S1, E4) | Full Episode | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=AXjPLJGVBxM",
