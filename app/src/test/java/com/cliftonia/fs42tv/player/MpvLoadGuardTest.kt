@@ -195,6 +195,34 @@ class MpvLoadGuardTest {
     }
 
     @Test
+    fun `without a playing id, a stop of an unopened entry still settles its ask`() {
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.asked(1_016)
+        guard.entryIdIs(2)
+        guard.endFile("eof", 1, 1_050, farFromEnd)
+        guard.loaded(2)
+        assertTrue(guard.firstFrame(1_400, playingEntryId = null))
+    }
+
+    @Test
+    fun `an unopened entry's end is never counted past the loads asked for`() {
+        // A duplicate or late end must not over-settle, or a stale frame would pass as current.
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.asked(1_016)
+        guard.entryIdIs(2)
+        guard.endFile("eof", 1, 1_050, farFromEnd)
+        guard.endFile("eof", 1, 1_060, farFromEnd)
+        guard.asked(1_100)
+        guard.entryIdIs(3)
+        guard.loaded(2)
+        assertFalse("entry 2 is not the newest", guard.firstFrame(1_200, playingEntryId = null))
+    }
+
+    @Test
     fun `a first frame of the entry asked for is accepted however fast and however skewed`() {
         val guard = MpvLoadGuard()
         guard.asked(1_000)
@@ -221,7 +249,7 @@ class MpvLoadGuardTest {
 
     @Test
     fun `a burst of unopened replacements then ten fast tunes all show a picture`() {
-        for (idsReadable in listOf(true)) {
+        for (idsReadable in listOf(true, false)) {
             val guard = MpvLoadGuard()
             var now = 1_000L
             var id = 0L
