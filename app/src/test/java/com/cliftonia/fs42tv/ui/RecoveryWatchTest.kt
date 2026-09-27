@@ -35,8 +35,9 @@ class RecoveryWatchTest {
         }
     }
 
-    private class Fixture {
+    private class Fixture(rebuildable: Boolean = false) {
         val clock = Clock()
+        val rebuilds = mutableListOf<String>()
         var tuning = true
         var overlay = false
         var card = ""
@@ -51,6 +52,9 @@ class RecoveryWatchTest {
             showCard = { card = it },
             retune = { retunes.add(it) },
             retuneAfterError = { errorRetunes.add(it) },
+            rebuildable = { rebuildable },
+            rebuildAndRetune = { rebuilds.add(it) },
+            nowMillis = { clock.now },
         )
     }
 
@@ -206,5 +210,48 @@ class RecoveryWatchTest {
         f.watch.tuneStarted()
         f.clock.advance(5_000)
         assertEquals(3, f.errorRetunes.size)
+    }
+
+    @Test
+    fun `on mpv a second silent strike rebuilds the engine before the card`() {
+        // The fast-surf black dial: a skewed load guard in the engine rejected every first frame
+        // for the life of the process, so the retune fared no better. A fresh engine is a fresh
+        // guard, and one more chance is cheaper than a card that stays until a force-stop.
+        val f = Fixture(rebuildable = true)
+        f.watch.tuneStarted()
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS)
+        assertEquals(1, f.retunes.size)
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS)
+        assertEquals(1, f.rebuilds.size)
+        assertEquals("no card while the rebuilt engine tries", "", f.card)
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS)
+        assertEquals("rebuilt once, then the honest answer", RecoveryWatch.NO_PICTURE, f.card)
+        assertEquals(1, f.rebuilds.size)
+    }
+
+    @Test
+    fun `an engine rebuild is spent at most once every two minutes`() {
+        // A channel that is genuinely dead must not tear the engine down on every visit.
+        val f = Fixture(rebuildable = true)
+        f.watch.tuneStarted()
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS * 3)
+        f.watch.tuneStarted()
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS * 2)
+        assertEquals("too soon for another", 1, f.rebuilds.size)
+        assertEquals(RecoveryWatch.NO_PICTURE, f.card)
+        f.clock.advance(RecoveryWatch.REBUILD_SPACING_MILLIS)
+        f.card = ""
+        f.watch.tuneStarted()
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS * 2)
+        assertEquals("two minutes on, the backstop is back", 2, f.rebuilds.size)
+    }
+
+    @Test
+    fun `without a rebuildable engine the second strike is the card, as before`() {
+        val f = Fixture(rebuildable = false)
+        f.watch.tuneStarted()
+        f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS * 2)
+        assertEquals(RecoveryWatch.NO_PICTURE, f.card)
+        assertTrue(f.rebuilds.isEmpty())
     }
 }

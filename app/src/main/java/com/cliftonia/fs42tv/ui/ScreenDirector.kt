@@ -79,28 +79,8 @@ class ScreenDirector(private val deps: Deps) {
     /** The tune banner's lines and the rules for what they say. See [Banner]. */
     val banner = Banner(deps.extras, deps.nowSeconds)
 
-    /**
-     * The error grace and the no-picture watchdog. Its timers run on [Deps.recoveryHandler] but
-     * cancel only their own runnables: the dial loader's retry shares that handler, and a
-     * blanket clear would take the retry with it.
-     */
-    private val watch = RecoveryWatch(
-        schedule = cancellable(deps.recoveryHandler),
-        halted = deps.halted,
-        stillTuning = { tuning.value },
-        deferred = { deps.overlayOpen() || deps.stoppedNow() },
-        cardUp = { standByReason.value.isNotEmpty() },
-        showCard = { standByReason.value = it },
-        retune = { reason ->
-            // Where the viewer wants to be, not what last painted: a tune that never painted
-            // leaves onAir on the channel before it.
-            (deps.fallbackChannel() ?: deps.tune().onAir?.channel)?.let {
-                Log.i("fs42", "re-tuning ${it.number} ${it.name}: $reason")
-                deps.tune().tune(it)
-            }
-        },
-        retuneAfterError = { reason -> deps.tune().retuneCurrent(reason) },
-    )
+    /** The error grace and the no-picture watchdog, with mpv's engine-rebuild backstop. */
+    private val watch = deps.recoveryWatch(tuning, standByReason)
 
     /** The half-hour schedule's "up next" card: up, timed, and gone. See [UpNextBreak]. */
     val upNext = UpNextBreak(
