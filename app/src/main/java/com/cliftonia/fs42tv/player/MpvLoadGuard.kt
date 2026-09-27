@@ -61,6 +61,18 @@ class MpvLoadGuard(
     private var currentEntryId: Long? = null
 
     /**
+     * The entry mpv last opened, so an older entry's end can be told apart as "opened and then
+     * replaced" (already counted by [loaded]) or "replaced before it ever opened" (settled at its
+     * end). [openedIdKnown] is false when the last open named no id; nothing opened yet counts
+     * as known - every end then is of an entry that never opened.
+     */
+    private var lastOpenedEntryId: Long? = null
+    private var openedIdKnown = true
+
+    /** The newest entry whose unopened end was counted; mpv's entry ids only grow. */
+    private var lastSettledEntryId = Long.MIN_VALUE
+
+    /**
      * Guards against reporting the same clip's end twice while the next tune is in flight.
      *
      * Stays TRUE across a load. `loadfile ... replace` makes mpv end the outgoing file, and that
@@ -111,8 +123,10 @@ class MpvLoadGuard(
      * named one.
      */
     @Synchronized
-    fun loaded(@Suppress("UNUSED_PARAMETER") entryId: Long? = null) {
+    fun loaded(entryId: Long? = null) {
         seen++
+        lastOpenedEntryId = entryId
+        openedIdKnown = entryId != null
         // Only now do end-file events refer to the clip the dial actually asked for. Anything
         // before this belongs to the outgoing file that `loadfile ... replace` displaced.
         ended = false
@@ -175,10 +189,7 @@ class MpvLoadGuard(
         // The exact answer, when both ids are known: an end of some other entry is the ghost of
         // a replaced file, whatever the latch says.
         if (entryId != null && current != null && entryId != current) {
-            // An older load that died before opening settles its ask, which keeps the counters
-            // honest for the first-frame guard. A "stop" is not counted: that is also how an
-            // OPENED file ends when replaced, and it was already counted when it opened.
-            if (reason == "error" && ended) failedUnopened++
+            settleUnopened(reason, entryId)
             return End.IGNORE
         }
         if (ended) return endWhileLoading(reason, entryId, current, nowMillis)
@@ -226,6 +237,30 @@ class MpvLoadGuard(
         if (seen + failedUnopened < asked) resync()
         currentSettled = true
         return End.FAILED
+    }
+
+    /**
+     * An older entry ended: if it never opened, its ask is settled here, WHATEVER the reason.
+     *
+     * Counting only "error" was the fast-surf black dial: a load replaced before mpv opened it
+     * ends with "stop" and no FILE_LOADED, so it was never counted anywhere and the counters sat
+     * one short for the life of the process. What must not be counted is an OPENED file's end -
+     * `loadfile replace` ends that with "stop" too, and it was already counted when it opened -
+     * hence the last opened id. mpv ends one file before starting the next, so the last one
+     * opened is the only one whose end can still be in flight. Ids only grow, which is what
+     * keeps a repeated end from counting twice; and never past [asked], because over-settled
+     * counters would wave a stale frame through.
+     */
+    private fun settleUnopened(reason: String, entryId: Long) {
+        val neverOpened = if (openedIdKnown) {
+            entryId != lastOpenedEntryId
+        } else {
+            // No id for what opened last: the old rule - only an error is surely unopened.
+            reason == "error" && ended
+        }
+        if (!neverOpened || entryId <= lastSettledEntryId) return
+        lastSettledEntryId = entryId
+        if (seen + failedUnopened < asked) failedUnopened++
     }
 
     private fun resync() {
