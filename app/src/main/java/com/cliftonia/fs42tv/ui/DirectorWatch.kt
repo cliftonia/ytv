@@ -32,7 +32,13 @@ internal fun ScreenDirector.Deps.recoveryWatch(
         stillTuning = { tuning.value },
         deferred = { overlayOpen() || stoppedNow() },
         cardUp = { standByReason.value.isNotEmpty() },
-        showCard = { standByReason.value = it },
+        showCard = { reason ->
+            // A silent direct Pluto stream gets a fresh session for whatever tunes next, without
+            // counting toward the legacy fallback - see PlutoRoute.noPicture. A no-op otherwise.
+            // onAir is the silent tune: it is committed when the tune paints, before any frame.
+            if (reason == RecoveryWatch.NO_PICTURE) extras.plutoNoPicture(tune().onAir?.playable)
+            standByReason.value = reason
+        },
         retune = retuneWanted,
         retuneAfterError = { reason -> tune().retuneCurrent(reason) },
         // Only mpv: Media3 keeps no per-process load bookkeeping that a rebuild would clear.
@@ -40,6 +46,8 @@ internal fun ScreenDirector.Deps.recoveryWatch(
         rebuildAndRetune = { reason ->
             Log.w("fs42", "watchdog: $reason")
             rebuildEngine()
+            // A fresh Pluto session too, so the retune into the new engine rules out the token.
+            extras.plutoNoPicture(tune().onAir?.playable)
             retuneWanted(reason)
         },
         nowMillis = android.os.SystemClock::elapsedRealtime,
