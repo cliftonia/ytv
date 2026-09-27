@@ -83,6 +83,13 @@ class Features(
          * before.
          */
         BREAK_CARD("BREAK CARD", "feature.breakcard"),
+
+        /**
+         * Vintage Australian commercials from the Internet Archive during a Pluto ad break, in
+         * place of the card (see `ui/BreakAds`); the card when they cannot be had. Needs BREAK
+         * CARD, which finds the breaks. OFF is the card exactly as before.
+         */
+        BREAK_ADS("BREAK ADS", "feature.breakads"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,
