@@ -84,23 +84,7 @@ class ScreenDirector(private val deps: Deps) {
      * cancel only their own runnables: the dial loader's retry shares that handler, and a
      * blanket clear would take the retry with it.
      */
-    private val watch = RecoveryWatch(
-        schedule = cancellable(deps.recoveryHandler),
-        halted = deps.halted,
-        stillTuning = { tuning.value },
-        deferred = { deps.overlayOpen() || deps.stoppedNow() },
-        cardUp = { standByReason.value.isNotEmpty() },
-        showCard = { standByReason.value = it },
-        retune = { reason ->
-            // Where the viewer wants to be, not what last painted: a tune that never painted
-            // leaves onAir on the channel before it.
-            (deps.fallbackChannel() ?: deps.tune().onAir?.channel)?.let {
-                Log.i("fs42", "re-tuning ${it.number} ${it.name}: $reason")
-                deps.tune().tune(it)
-            }
-        },
-        retuneAfterError = { reason -> deps.tune().retuneCurrent(reason) },
-    )
+    private val watch = RecoveryWatch.forDirector(deps, tuning, standByReason)
 
     /** The half-hour schedule's "up next" card: up, timed, and gone. See [UpNextBreak]. */
     val upNext = UpNextBreak(
@@ -122,13 +106,13 @@ class ScreenDirector(private val deps: Deps) {
         deps.player, deps.runOnUi, deps.halted, guideOpen = deps.pickerOpen, overlayOpen = deps.overlayOpen,
         stoppedNow = deps.stoppedNow, volumeChanged = ::updateProgrammeVolume,
         picture = { watch.firstFrame(); stall.cover() },
-        uncovered = { if (!tuning.value) stall.uncover() })
+        uncovered = { if (!tuning.value) stall.uncover() }, retune = { returnFromBreak(it.channel) })
 
     /** mpv lost on a live Pluto stream - ffmpeg at a discontinuity - reloaded. See [StallRecovery]. */
     private val stallRecovery = StallRecovery(
         schedule = cancellable(deps.recoveryHandler),
         nowMillis = android.os.SystemClock::elapsedRealtime,
-        channel = { deps.tune().onAir?.takeIf { !tuning.value && StallRecovery.eligible(
+        channel = { deps.tune().onAir?.takeIf { !tuning.value && !plutoBreak.adsOnPlayer && StallRecovery.eligible(
             deps.player()?.joinsLiveAtThirdFromLast == true, it) }?.channel?.number },
         deferred = { deps.overlayOpen() || deps.stoppedNow() },
         recover = { reason -> plutoBreak.holdAcrossReload(); deps.tune().retuneCurrent(reason) },
@@ -158,16 +142,7 @@ class ScreenDirector(private val deps: Deps) {
     }
 
     /** The captions drawn over the programme, and the viewer's switch for them. */
-    val captions = CaptionState(
-        executor = deps.captionExecutor,
-        runOnUi = deps.runOnUi,
-        generationNow = { deps.tune().generationNow() },
-        halted = deps.halted,
-        // Never a card's: its stream is the programme it announces, not one on screen.
-        onAirId = { deps.tune().onAir?.takeIf { it.card == null }?.stream?.id },
-        recallResolved = { id -> deps.recallResolved(id, deps.nowSeconds()) },
-        persistOn = deps.persistCaptionsOn,
-    )
+    val captions = CaptionState.forDirector(deps)
 
     /**
      * Set the channel's volume from the two things that can silence it, rather than from
@@ -343,14 +318,19 @@ class ScreenDirector(private val deps: Deps) {
      * listening reports no first frame - the stand-by card would then never come down again.
      */
     fun wirePlayer(player: ChannelPlayback) {
+        // A break's reel (BreakAds) owns all four while it is on the player: its end, error, frame
+        // and stalls are the commercials', never the channel's - no error card, no Pluto blame.
         player.onClipEnded = {
-            skipper.stop()
-            deps.tune().clipEnded()
+            if (plutoBreak.ads?.ended() != true) {
+                skipper.stop()
+                deps.tune().clipEnded()
+            }
         }
-        player.onPlaybackError = ::playbackFailed
+        player.onPlaybackError = { code -> if (plutoBreak.ads?.failed(code) != true) playbackFailed(code) }
         // The card comes down when a picture actually appears, not when a tune is merely
         // dispatched - a tune that fails again would otherwise clear it and leave black.
-        player.onFirstFrame = {
+        player.onFirstFrame = first@{
+            if (plutoBreak.ads?.firstFrame() == true) return@first stall.firstFrame()
             deps.tune().noteFirstFrame()
             watch.firstFrame()
             standByReason.value = ""
@@ -366,8 +346,9 @@ class ScreenDirector(private val deps: Deps) {
         // no end of media, just a stopped picture. The pill is ALL that happens - see [StallPill] -
         // but for mpv on a live Pluto stream, which [StallRecovery] reloads.
         // A stall also holds the break card's clock: the picture does not move on during one.
-        player.onBuffering = { stalled ->
+        player.onBuffering = stalled@{ stalled ->
             stall.buffering(stalled)
+            if (plutoBreak.ads?.buffering(stalled) == true) return@stalled
             stallRecovery.buffering(stalled)
             plutoBreak.buffering(stalled)
         }
@@ -435,7 +416,9 @@ class ScreenDirector(private val deps: Deps) {
             // OFF takes a card up now down, restores the sound and stops reading; ON starts
             // reading the channel playing.
             Features.Flag.BREAK_CARD ->
-                if (on && !tuning.value) plutoBreak.playing(deps.tune().onAir) else plutoBreak.leave()
+                if (on && !tuning.value) plutoBreak.playing(deps.tune().onAir) else plutoBreak.switchedOff()
+            // OFF with a reel on the player tunes the channel back; otherwise the next break reads it.
+            Features.Flag.BREAK_ADS -> if (!on && plutoBreak.adsOnPlayer) plutoBreak.switchedOff()
         }
     }
 
@@ -453,19 +436,35 @@ class ScreenDirector(private val deps: Deps) {
 
     /** Back on screen: resume the picture, re-derive the volume, and watch for skips again. */
     fun appResumed() {
-        // Not under a card: the file there was paused on purpose - see [showCard].
-        if (!upNext.showing) deps.player()?.setPaused(false)
-        updateProgrammeVolume()
         val onAir = deps.tune().onAir
         if (plutoBreak.retuneOnResume(onAir) && !tuning.value && onAir != null) {
-            // A Pluto channel under mpv: a fresh load re-anchors the break card - see there.
-            raiseBlank()
-            deps.tune().tune(onAir.channel)
-        } else if (!tuning.value) {
-            skipper.start(onAir)
-            plutoBreak.playing(onAir)
+            // A Pluto channel under mpv, or a break's reel paused on the player: a fresh load - see
+            // there. The blank before the un-pause, so a paused commercial is never heard.
+            returnFromBreak(onAir.channel)
+        } else {
+            // Not under a card: the file there was paused on purpose - see [showCard].
+            if (!upNext.showing) deps.player()?.setPaused(false)
+            updateProgrammeVolume()
+            if (!tuning.value) {
+                skipper.start(onAir)
+                plutoBreak.playing(onAir)
+            }
         }
         upNext.resumeMusic()
+    }
+
+    /**
+     * Tune [channel] afresh from a break's reel (or a resume): the blank, the player un-parked
+     * (silent under the blank), the tune. Under an overlay no tune - its close re-tunes one unfinished
+     * ([recoverIfAbandoned]), and a tune under the guide is what its supersede forbids.
+     */
+    private fun returnFromBreak(channel: Channel) {
+        raiseBlank()
+        // Stopped at the source like a surf (startBlank): the reel must not render or finish
+        // loading under the blank while the tune resolves.
+        deps.player()?.stop()
+        if (!deps.stoppedNow()) deps.player()?.setPaused(false)
+        if (!deps.overlayOpen()) deps.tune().tune(channel)
     }
 
     /**

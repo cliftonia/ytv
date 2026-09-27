@@ -2,6 +2,7 @@ package com.cliftonia.fs42tv.ui
 
 import android.content.SharedPreferences
 import androidx.compose.runtime.mutableStateOf
+import com.cliftonia.fs42tv.ads.AdCatalogStore
 import com.cliftonia.fs42tv.pluto.BreakPoller
 import com.cliftonia.fs42tv.pluto.MasterPicker
 import com.cliftonia.fs42tv.pluto.PlutoApi
@@ -45,6 +46,8 @@ class ScreenExtras(private val deps: Deps) {
         val plutoRoute: PlutoRoute,
         /** Under mpv, one playlist out of a Pluto master instead of the master - a 3s start, not 9. */
         val masterPicker: MasterPicker? = null,
+        /** The break commercials' reels (BREAK ADS), cached in the cache directory; null for none. */
+        val adCatalog: AdCatalogStore? = null,
     )
 
     /**
@@ -95,6 +98,9 @@ class ScreenExtras(private val deps: Deps) {
     }
 
     val features: Features get() = deps.features
+
+    /** `ads.json`, for [BreakAds]; null when this build of the screen has no cache directory. */
+    val adCatalog: AdCatalogStore? get() = deps.adCatalog
 
     /**
      * The timetable every clock-channel question goes through - the tuner, the guide, the banner
@@ -191,6 +197,8 @@ class ScreenExtras(private val deps: Deps) {
             use24Hour: () -> Boolean,
             /** The QUALITY ladder while mpv plays the dial, else null - see [MasterPicker]. */
             mpvLadder: () -> List<String>? = { null },
+            /** Where `ads.json` is kept, like the lineups; null for no break commercials. */
+            cacheDir: java.io.File? = null,
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
@@ -230,6 +238,9 @@ class ScreenExtras(private val deps: Deps) {
                 ),
                 masterPicker = MasterPicker(BreakPoller::httpFetch, mpvLadder,
                     android.os.SystemClock::elapsedRealtime),
+                adCatalog = cacheDir?.let {
+                    AdCatalogStore(java.io.File(it, AdCatalogStore.FILE_NAME), AdCatalogStore::httpFetch)
+                },
             ))
         }
 
