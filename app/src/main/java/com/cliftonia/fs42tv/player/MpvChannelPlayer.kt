@@ -102,10 +102,10 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         // surface is created and this is the call that changes both.
         mpv.useDirectVideoOutput()
         mpv.events = object : MpvView.Events {
-            override fun onFileLoaded() {
+            override fun onFileLoaded(entryId: Long?) {
                 // Counted before the released check, like the load it answers: the counters
                 // must balance even for an event that arrives as the engine is torn down.
-                guard.loaded()
+                guard.loaded(entryId)
                 if (released) return
                 // Ask mpv what it actually did with the subtitle, rather than assuming the
                 // option took. `sid` is the selected track and `sub-text` is what is on screen
@@ -162,11 +162,15 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                 main.post { onPlaybackError?.invoke(code) }
             }
 
-            override fun onFirstFrame() {
+            override fun onFirstFrame(startedEntryId: Long?) {
                 if (released) return
                 // The first frame of a REPLACED file must not drop the blank - see
-                // MpvLoadGuard.firstFrame. The cover waits for the file most recently asked for.
-                if (!guard.firstFrame(SystemClock.elapsedRealtime())) {
+                // MpvLoadGuard.firstFrame. The cover waits for the file most recently asked for,
+                // matched by mpv's playlist entry id whenever it can be read. The property read
+                // is only the fallback, and sits after the released check: libmpv answers a read
+                // on a destroyed core with exit(1).
+                val playing = startedEntryId ?: mpv.playingEntryId()
+                if (!guard.firstFrame(SystemClock.elapsedRealtime(), playing)) {
                     Log.i("fs42", "first frame of a replaced file; keeping the blank up")
                     return
                 }
