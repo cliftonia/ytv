@@ -68,6 +68,8 @@ class TuneControllerTest {
         /** Stands in for the Pluto route; null keeps the published playable, as LEGACY does. */
         var live: ((Tuned) -> Playable)? = null
         val liveAsked = mutableListOf<Int>()
+        /** Channels whose live url got past the route to the master read - see MasterPicker. */
+        val masterRead = mutableListOf<Int>()
 
         val ledger = RefusalLedger(nowElapsedSeconds = { 0 })
         val tune = TuneController(TuneController.Deps(
@@ -90,9 +92,10 @@ class TuneControllerTest {
                 card = { cards.add(it.channel.number) },
             ),
             timetable = timetable,
-            livePlayable = { tuned ->
+            livePlayable = { tuned, stillWanted ->
                 liveAsked.add(tuned.channel.number)
-                live?.invoke(tuned) ?: tuned.playable
+                val routed = live?.invoke(tuned) ?: tuned.playable
+                if (!stillWanted()) null else routed.also { masterRead.add(tuned.channel.number) }
             },
         ))
 
@@ -415,5 +418,21 @@ class TuneControllerTest {
         f.settle()
         assertTrue(f.painted.none { it.first == 7 })
         assertEquals(3, f.tune.onAir?.channel?.number)
+    }
+
+    @Test
+    fun `a live tune superseded during its route skips the master read`() {
+        // The master read can take seconds on the one tune thread, and the tune that superseded
+        // this one queues behind it: under fast surfing each stale read delayed the next channel.
+        val f = Fixture()
+        f.live = { tuned ->
+            if (tuned.channel.number == 7) f.tune.surfTo(live(8))
+            tuned.playable
+        }
+        f.tune.surfTo(live(7))
+        f.settle()
+        assertEquals(listOf(7, 8), f.liveAsked)
+        assertEquals("only the wanted tune reads its master", listOf(8), f.masterRead)
+        assertEquals(8, f.painted.single().first)
     }
 }
