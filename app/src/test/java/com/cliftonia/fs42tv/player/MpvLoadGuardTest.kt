@@ -179,6 +179,104 @@ class MpvLoadGuardTest {
     }
 
     @Test
+    fun `a load replaced before opening does not reject the next fast first frame`() {
+        // The fast-surf black dial on the TCL: X is replaced before mpv opened it, mpv ends it
+        // with "stop" (read as eof) and never reports FILE_LOADED, and the counters stayed one
+        // short for the life of the process. Pluto's first frames arrive well inside the
+        // resync window since single-variant loading, so every one was rejected after that.
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.asked(1_016)
+        guard.entryIdIs(2)
+        assertEquals(End.IGNORE, guard.endFile("eof", 1, 1_050, farFromEnd))
+        guard.loaded(2)
+        assertTrue(guard.firstFrame(1_400, playingEntryId = 2))
+    }
+
+    @Test
+    fun `a first frame of the entry asked for is accepted however fast and however skewed`() {
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.asked(1_016)           // X replaced; its end never arrives at all
+        guard.entryIdIs(2)
+        guard.loaded(2)
+        assertTrue(guard.firstFrame(1_300, playingEntryId = 2))
+    }
+
+    @Test
+    fun `a stale first frame of the entry just replaced is rejected`() {
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.loaded(1)
+        guard.asked(1_016)
+        guard.entryIdIs(2)
+        assertFalse(guard.firstFrame(1_100, playingEntryId = 1))
+        assertFalse("even after the resync window", guard.firstFrame(9_000, playingEntryId = 1))
+        guard.loaded(2)
+        assertTrue("and the wanted one still gets through", guard.firstFrame(9_100, playingEntryId = 2))
+    }
+
+    @Test
+    fun `a burst of unopened replacements then ten fast tunes all show a picture`() {
+        for (idsReadable in listOf(true)) {
+            val guard = MpvLoadGuard()
+            var now = 1_000L
+            var id = 0L
+            // Five tunes surfed past before mpv opened any of them, each ended with "stop".
+            repeat(5) {
+                guard.asked(now)
+                guard.entryIdIs(++id)
+                if (id > 1) guard.endFile("eof", id - 1, now + 5, farFromEnd)
+                now += 16
+            }
+            // Then ten ordinary tunes, each with a first frame well inside the resync window.
+            repeat(10) {
+                guard.asked(now)
+                guard.entryIdIs(++id)
+                guard.endFile("eof", id - 1, now + 5, farFromEnd)
+                guard.loaded(id)
+                val playing = if (idsReadable) id else null
+                assertTrue("tune $id (ids readable: $idsReadable)",
+                    guard.firstFrame(now + 400, playingEntryId = playing))
+                now += 5_000
+            }
+        }
+    }
+
+    @Test
+    fun `with no playing id the counters and time still decide`() {
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.asked(1_016)
+        guard.entryIdIs(2)
+        guard.loaded(1)              // the superseded file opens first
+        assertFalse(guard.firstFrame(1_200, playingEntryId = null))
+        assertTrue("seconds of quiet settle it", guard.firstFrame(4_000, playingEntryId = null))
+    }
+
+    @Test
+    fun `an opened file's stop is not counted twice`() {
+        // X opened and showed a picture; replacing it ends it with "stop". It was counted when it
+        // opened, so counting its end too would let a stale frame through the counters.
+        val guard = MpvLoadGuard()
+        guard.asked(1_000)
+        guard.entryIdIs(1)
+        guard.loaded(1)
+        assertTrue(guard.firstFrame(1_300))
+        guard.asked(5_000)
+        guard.entryIdIs(2)
+        guard.asked(5_016)
+        guard.entryIdIs(3)
+        guard.endFile("eof", 1, 5_020, farFromEnd)
+        guard.loaded(2)
+        assertFalse("entry 2 is not the newest", guard.firstFrame(5_100))
+    }
+
+    @Test
     fun `the end-file node yields its reason and entry id`() {
         val (reason, id) = MpvLoadGuard.parseEndFile(
             """{"event":"end-file","reason":"error","playlist_entry_id":12,"file_error":"loading failed"}""")
