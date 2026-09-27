@@ -27,7 +27,15 @@ class RecoveryWatch(
     private val retune: (String) -> Unit,
     /** Re-tunes the channel whose playback failed - the error path's retry. */
     private val retuneAfterError: (String) -> Unit,
+    /** Whether the engine can be rebuilt as a last resort - mpv only. */
+    private val rebuildable: () -> Boolean = { false },
+    /** Tears the engine down, builds a fresh one and re-tunes the channel the viewer is on. */
+    private val rebuildAndRetune: (String) -> Unit = {},
+    private val nowMillis: () -> Long = { 0L },
 ) {
+
+    /** When the engine was last rebuilt by the watchdog; see [REBUILD_SPACING_MILLIS]. */
+    private var lastRebuildMillis: Long? = null
 
     private var cancelGrace: (() -> Unit)? = null
     private var cancelWatchdog: (() -> Unit)? = null
@@ -111,15 +119,38 @@ class RecoveryWatch(
                     retune("no picture after ${WATCHDOG_MILLIS / 1000}s")
                     armWatchdog()
                 }
-                // Retried once already; the card is the honest answer now. It stays until a
-                // picture arrives or the viewer changes channel, like every other card.
+                // Retried once already and still silent. On mpv, one more chance with a FRESH
+                // engine before the card: the fast-surf black dial was a load guard skewed for
+                // the life of the process, rejecting every first frame, so the retune above fared
+                // no better and the card stayed until a force-stop. A new engine is a new guard.
+                // Spaced, so a channel that is genuinely dead does not rebuild on every visit.
+                rebuildDue() -> {
+                    lastRebuildMillis = nowMillis()
+                    rebuildAndRetune("no picture after a retune; rebuilding the engine")
+                    armWatchdog()
+                }
+                // The card is the honest answer now. It stays until a picture arrives or the
+                // viewer changes channel, like every other card.
                 !cardUp() -> showCard(NO_PICTURE)
                 else -> Unit
             }
         }
     }
 
+    private fun rebuildDue(): Boolean {
+        if (!rebuildable()) return false
+        val last = lastRebuildMillis ?: return true
+        return nowMillis() - last >= REBUILD_SPACING_MILLIS
+    }
+
     companion object {
+        /**
+         * The least time between two watchdog rebuilds of the engine. A rebuild is seconds of
+         * black and a torn-down decoder; worth it once for a stuck engine, not on every visit to
+         * a channel that is simply dead.
+         */
+        const val REBUILD_SPACING_MILLIS = 120_000L
+
         /**
          * How long to wait before retrying after the [errorCount]th error of a streak.
          *
