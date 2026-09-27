@@ -68,4 +68,16 @@ object OnScreen {
     fun edge(view: BreakView, wallNow: Long): Long? = view.edgeEnd?.let {
         it + (wallNow - view.readAt) - view.liveOffsetMillis
     }
+
+    /**
+     * CONTINUED - the instant the viewer WOULD be seeing, while the player is not on the stream
+     * at all: during a break's commercials (ui/BreakAds) the player plays an archive reel, so
+     * neither the engine's instant nor mpv's playing time means anything. The break's clock must
+     * still run - its end, its ceiling, the card's countdown if the reel fails - so it carries on
+     * from the last instant known on screen, [lastOnScreen] at monotonic [lastAtMillis], one for
+     * one with monotonic time: nothing stalls a picture that is not being played. Never backwards,
+     * whatever order the clocks are read in.
+     */
+    fun continued(lastOnScreen: Long, lastAtMillis: Long, nowMillis: Long): Long =
+        lastOnScreen + (nowMillis - lastAtMillis).coerceAtLeast(0L)
 }

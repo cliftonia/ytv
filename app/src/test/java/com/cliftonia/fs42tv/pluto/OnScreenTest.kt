@@ -105,4 +105,16 @@ class OnScreenTest {
         val v = view(readAt = 1_000L).copy(liveOffsetMillis = 15_015L)
         assertEquals(125_000L - 15_015L, OnScreen.edge(v, wallNow = 1_000L))
     }
+
+    @Test
+    fun `while a reel plays, the instant carries on from the last one on screen by monotonic time`() {
+        assertEquals(160_000L, OnScreen.continued(lastOnScreen = 100_000L, lastAtMillis = 5_000L, nowMillis = 65_000L))
+        // Stalls are the reel's, not the stream's: nothing holds this clock.
+        assertEquals(100_000L, OnScreen.continued(100_000L, 5_000L, 5_000L))
+    }
+
+    @Test
+    fun `the continued instant never runs backwards, whatever order the clocks are read in`() {
+        assertEquals(100_000L, OnScreen.continued(100_000L, lastAtMillis = 5_000L, nowMillis = 4_000L))
+    }
 }
