@@ -152,6 +152,32 @@ class BreakAdsTest {
     }
 
     @Test
+    fun `retired, the reel's events are swallowed and no timer fires, until a load stops it`() {
+        val world = World()
+        val ads = world.subject()
+        ads.start(7, 1L)
+        ads.retire()
+        assertEquals(BreakAds.Stage.RETIRING, ads.stage)
+        assertFalse(ads.picture || ads.loading)
+        world.clock.advance(BreakAds.LOAD_MILLIS * 2)
+        assertEquals(BreakAds.Stage.RETIRING, ads.stage)
+        assertTrue(ads.firstFrame() && ads.failed("x") && ads.ended() && ads.buffering(true))
+        assertEquals(BreakAds.Stage.RETIRING, ads.stage)
+        assertEquals("never parked, never a second reel", 0, world.parks)
+        assertEquals(1, world.played.size)
+        assertFalse("a new break waits for the load", ads.start(7, 2L))
+        ads.stop()
+        assertFalse(ads.onPlayer || ads.firstFrame())
+    }
+
+    @Test
+    fun `retiring from nothing stays nothing`() {
+        val ads = World().subject()
+        ads.retire()
+        assertEquals(BreakAds.Stage.IDLE, ads.stage)
+    }
+
+    @Test
     fun `stopped, nothing of the player is claimed and no timer fires`() {
         val world = World()
         val ads = world.subject()

@@ -460,6 +460,9 @@ class ScreenDirector(private val deps: Deps) {
      */
     private fun returnFromBreak(channel: Channel) {
         raiseBlank()
+        // Stopped at the source like a surf (startBlank): the reel must not render or finish
+        // loading under the blank while the tune resolves.
+        deps.player()?.stop()
         if (!deps.stoppedNow()) deps.player()?.setPaused(false)
         if (!deps.overlayOpen()) deps.tune().tune(channel)
     }

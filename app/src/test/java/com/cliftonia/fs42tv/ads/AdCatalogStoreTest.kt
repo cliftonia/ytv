@@ -44,6 +44,7 @@ class AdCatalogStoreTest {
         world.drain()
         assertEquals("a", store.current()!!.reels.single().id)
         assertTrue(world.file.readText().contains("\"a\""))
+        assertFalse("written whole, via a renamed temporary", File(world.dir, "ads.json.tmp").exists())
     }
 
     @Test
