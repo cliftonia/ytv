@@ -31,8 +31,9 @@ down() {
 if [ "$ACTION" = down ]; then down; exit 0; fi
 [ "$ACTION" = up ] || { echo "usage: $0 up|down us|uk" >&2; exit 2; }
 
+# Per-process temp name: us and uk start together at boot and would otherwise race on one file.
 if [ ! -s "$RELAYS" ] || [ -n "$(find "$RELAYS" -mmin +720)" ]; then
-    curl -fsS --max-time 30 https://api.mullvad.net/www/relays/wireguard/ -o "$RELAYS.tmp" && mv "$RELAYS.tmp" "$RELAYS"
+    curl -fsS --max-time 30 https://api.mullvad.net/www/relays/wireguard/ -o "$RELAYS.$$.tmp" && mv "$RELAYS.$$.tmp" "$RELAYS"
 fi
 ADDR=$(awk '$1=="cachyos-pluto"{print $2}' "$MV/addresses" | cut -d, -f1)
 [ -n "$ADDR" ] || { echo "no cachyos-pluto address in $MV/addresses" >&2; exit 1; }
