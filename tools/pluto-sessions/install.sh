@@ -27,6 +27,8 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/local/bin/pluto-ns.sh up %i
 ExecStop=/usr/local/bin/pluto-ns.sh down %i
+Restart=on-failure
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target
