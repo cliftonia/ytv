@@ -215,6 +215,7 @@ class ScreenExtras(private val deps: Deps) {
                     sessions = PlutoSessions(
                         boot = { PlutoBoot.fetchBoot(now()) },
                         server = { region -> PlutoBoot.fetchFromServer(region) },
+                        freshServer = { region -> PlutoBoot.fetchFromServer(region, fresh = true) },
                         nowMillis = now,
                     ),
                     direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },

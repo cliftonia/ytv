@@ -83,6 +83,8 @@ class PlutoSessionTest {
     @Test
     fun `the server url names the region`() {
         assertEquals("http://h:4246/pluto/session?region=uk", PlutoBoot.serverUrl("http://h:4246", "uk"))
+        assertEquals("http://h:4246/pluto/session?region=uk&fresh=1",
+            PlutoBoot.serverUrl("http://h:4246", "uk", fresh = true))
     }
 
     @Test
