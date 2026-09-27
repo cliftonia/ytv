@@ -46,7 +46,8 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
 
     /** What the dial needs to hear about. Set before use; cleared on destroy. */
     interface Events {
-        fun onFileLoaded()
+        /** [entryId] is the playlist entry that opened, when its START_FILE named one. */
+        fun onFileLoaded(entryId: Long?)
 
         /**
          * mpv terminated and cannot play anything again.
@@ -56,7 +57,13 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
          * does not cover a fatal. One dead URL would otherwise black out the dial permanently.
          */
         fun onShutdown()
-        fun onFirstFrame()
+
+        /**
+         * A PLAYBACK_RESTART while a first frame is awaited. [startedEntryId] is the entry the
+         * most recent START_FILE named - mpv delivers events in order, so that is the file this
+         * restart belongs to - or null when the event carried no id.
+         */
+        fun onFirstFrame(startedEntryId: Long?)
         /**
          * [reason] is "error" or "eof"; [entryId] is mpv's playlist entry id for the file that
          * ended, when the event carried one - see [MpvLoadGuard.parseEndFile].
@@ -73,10 +80,22 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
     // thread; @Volatile for the same reason every equivalent flag in MpvChannelPlayer has it.
     @Volatile private var awaitingFirstFrame = false
 
+    /**
+     * The playlist entry the latest START_FILE named. Only ever touched on mpv's event thread,
+     * and events arrive in order - START_FILE, FILE_LOADED, PLAYBACK_RESTART, END_FILE for one
+     * file before the next file's START_FILE - so it is exactly the file the next FILE_LOADED or
+     * PLAYBACK_RESTART is about. A property read at that moment would race the core, which may
+     * already have moved on to the load that replaced it.
+     */
+    private var startedEntryId: Long? = null
+
     private val observer = object : MPVLib.EventObserver {
         override fun event(eventId: Int, node: MPVNode) {
             when (eventId) {
-                MPVLib.MpvEvent.MPV_EVENT_FILE_LOADED -> events?.onFileLoaded()
+                MPVLib.MpvEvent.MPV_EVENT_START_FILE -> startedEntryId =
+                    MpvLoadGuard.parseEntryId(runCatching { node.toJson() }.getOrDefault(""))
+
+                MPVLib.MpvEvent.MPV_EVENT_FILE_LOADED -> events?.onFileLoaded(startedEntryId)
 
                 // PLAYBACK_RESTART fires once decoding has produced output and playback is
                 // actually running - after a load and after any seek. Guarded so only the first
@@ -84,7 +103,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
                 MPVLib.MpvEvent.MPV_EVENT_PLAYBACK_RESTART ->
                     if (awaitingFirstFrame) {
                         awaitingFirstFrame = false
-                        events?.onFirstFrame()
+                        events?.onFirstFrame(startedEntryId)
                     }
 
                 // mpv reports the end of a file for a clip finishing AND for a load failing, and
@@ -449,5 +468,18 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
      */
     private fun entryIdFromPlaylist(): Long? =
         runCatching { MPVLib.getPropertyString("playlist/0/id")?.toLongOrNull() }.getOrNull()
+
+    /**
+     * The playlist entry mpv is playing now, or null when there is none (`playlist-playing-pos`
+     * is -1 once the entry has been removed by a replace) or it cannot be read. The fallback
+     * for a PLAYBACK_RESTART whose START_FILE carried no id; racier than that, because the core
+     * may already be on the load that replaced it - a race that can only let one stale frame
+     * through, never hold a real one back.
+     */
+    fun playingEntryId(): Long? = runCatching {
+        val pos = MPVLib.getPropertyString("playlist-playing-pos")?.toIntOrNull()
+        if (pos == null || pos < 0) null
+        else MPVLib.getPropertyString("playlist/$pos/id")?.toLongOrNull()
+    }.getOrNull()
 
 }

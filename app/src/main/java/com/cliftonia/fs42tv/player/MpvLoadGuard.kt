@@ -106,9 +106,12 @@ class MpvLoadGuard(
         currentEntryId = id
     }
 
-    /** mpv finished opening a file. */
+    /**
+     * mpv finished opening a file - playlist entry [entryId], when the START_FILE before it
+     * named one.
+     */
     @Synchronized
-    fun loaded() {
+    fun loaded(@Suppress("UNUSED_PARAMETER") entryId: Long? = null) {
         seen++
         // Only now do end-file events refer to the clip the dial actually asked for. Anything
         // before this belongs to the outgoing file that `loadfile ... replace` displaced.
@@ -134,11 +137,23 @@ class MpvLoadGuard(
      * The first frame of a REPLACED file must not: with tunes painted milliseconds apart, mpv
      * shows a beat of the superseded channel before the wanted one loads, and clearing the cover
      * then put another channel's picture on screen until the right file took over.
+     *
+     * [playingEntryId] is the playlist entry mpv says produced the frame. When it and the entry
+     * asked for are both known they are the WHOLE answer: the counters below are a heuristic,
+     * and a heuristic that can skew is exactly what blackened the TCL's dial for good under fast
+     * surfing - a load replaced before mpv opened it ends with "stop" and no FILE_LOADED, so
+     * the counters stayed one short, and since single-variant loading Pluto's first frames
+     * arrive well inside [resyncMillis], so every one after that was taken for a ghost. An
+     * accepted id also repairs the counters, so a later id-less frame starts from the truth.
      */
     @Synchronized
-    fun firstFrame(nowMillis: Long): Boolean {
+    fun firstFrame(nowMillis: Long, playingEntryId: Long? = null): Boolean {
         if (hasPicture) return false
-        if (seen + failedUnopened < asked) {
+        val current = currentEntryId
+        if (playingEntryId != null && current != null) {
+            if (playingEntryId != current) return false
+            resync()
+        } else if (seen + failedUnopened < asked) {
             if (nowMillis - lastAskMillis < resyncMillis) return false
             // Nothing newer was asked for in seconds: the pipeline has drained and this frame IS
             // the newest file - the counters skewed on a load that never reported.
@@ -230,8 +245,11 @@ class MpvLoadGuard(
          */
         fun parseEndFile(json: String): Pair<String, Long?> {
             val reason = if (json.contains("error")) "error" else "eof"
-            val id = ENTRY_ID.find(json)?.groupValues?.get(1)?.toLongOrNull()
-            return reason to id
+            return reason to parseEntryId(json)
         }
+
+        /** The playlist entry id out of any event node that carries one (START_FILE, END_FILE). */
+        fun parseEntryId(json: String): Long? =
+            ENTRY_ID.find(json)?.groupValues?.get(1)?.toLongOrNull()
     }
 }
