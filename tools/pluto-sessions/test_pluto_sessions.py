@@ -57,6 +57,28 @@ class TestSessionCache(unittest.TestCase):
         clock.t += 3 * 3600 - 1700  # inside the half-hour refresh margin
         self.assertNotEqual(first["jwt"], cache.get("100.1.1.1", "us")["jwt"])
 
+    def test_a_fresh_ask_mints_a_new_session_for_that_television(self):
+        # The television asks fresh=1 when a stream on its session would not play. Handing the
+        # cached session back made its "rebuild" a no-op: the same token, the same failure.
+        clock = Clock()
+        cache, minted = cache_with(clock)
+        first = cache.get("100.1.1.1", "uk")
+        again = cache.get("100.1.1.1", "uk", fresh=True)
+        self.assertNotEqual(first["jwt"], again["jwt"])
+        self.assertIs(again, cache.get("100.1.1.1", "uk"), "and the new one is kept")
+        self.assertEqual(["uk", "uk"], minted)
+
+    def test_a_fresh_ask_leaves_other_televisions_alone(self):
+        cache, _ = cache_with(Clock())
+        other = cache.get("100.1.1.2", "uk")
+        cache.get("100.1.1.1", "uk", fresh=True)
+        self.assertIs(other, cache.get("100.1.1.2", "uk"))
+
+    def test_fresh_is_read_from_the_query(self):
+        self.assertTrue(pluto_sessions.wants_fresh("region=uk&fresh=1"))
+        self.assertFalse(pluto_sessions.wants_fresh("region=uk"))
+        self.assertFalse(pluto_sessions.wants_fresh("region=uk&fresh=0"))
+
 
 if __name__ == "__main__":
     unittest.main()

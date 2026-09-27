@@ -23,11 +23,13 @@ class PlutoSessionsTest {
         var now = 0L
         var boots = 0
         val serverAsks = mutableListOf<String>()
+        val freshAsks = mutableListOf<String>()
         var serverAnswers: (String) -> PlutoSession? = { region -> session("R-$region", now + 4 * 3_600_000L) }
         var bootAnswer: () -> PlutoSession? = { session("AU", now + PlutoBoot.LOCAL_LIFETIME_MILLIS) }
         val sessions = PlutoSessions(
             boot = { boots++; bootAnswer() },
             server = { region -> serverAsks += region; serverAnswers(region) },
+            freshServer = { region -> freshAsks += region; serverAnswers(region) },
             nowMillis = { now },
         )
 
@@ -36,6 +38,23 @@ class PlutoSessionsTest {
             fun session(region: String, expires: Long) =
                 PlutoSession("https://s.pluto.tv", "sid=${serial++}", "jwt", region, expires)
         }
+    }
+
+    @Test
+    fun `a region session that failed is rebuilt fresh by the server, not handed back`() {
+        // The home server caches one session per television; asking plainly after a failure
+        // returned the very token that had just failed, so the rebuild changed nothing.
+        val f = Fixture()
+        val first = f.sessions.forDial("uk")!!.session
+        f.sessions.invalidate(first)
+        val rebuilt = f.sessions.forDial("uk")!!.session
+        assertNotSame(first, rebuilt)
+        assertEquals(listOf("uk"), f.serverAsks)
+        assertEquals(listOf("uk"), f.freshAsks)
+        f.now = 3 * hour + 31 * minute
+        f.sessions.forDial("uk")
+        assertEquals("an ordinary refresh is not a fresh ask", listOf("uk", "uk"), f.serverAsks)
+        assertEquals(listOf("uk"), f.freshAsks)
     }
 
     @Test
@@ -147,7 +166,8 @@ class PlutoSessionsTest {
         val uk = f.sessions.forDial("uk")!!.session
         f.sessions.invalidate(uk)
         f.sessions.forDial("uk")
-        assertEquals(listOf("uk", "uk"), f.serverAsks)
+        assertEquals(listOf("uk"), f.serverAsks)
+        assertEquals("the second ask, fresh", listOf("uk"), f.freshAsks)
     }
 
     @Test

@@ -31,6 +31,13 @@ class PlutoSessions(
      * throw means it could not be reached, which retires the server for every region at once.
      */
     private val server: (region: String) -> PlutoSession?,
+    /**
+     * The same, asking the server for a NEW session rather than the one it cached for this
+     * television (`fresh=1`). Asked after [invalidate]: the server keeps one session per caller,
+     * so a plain ask after a failure handed back the very token that had just failed and the
+     * rebuild changed nothing for any region channel.
+     */
+    private val freshServer: (region: String) -> PlutoSession? = server,
     /** Wall-clock milliseconds: expiries are stated in wall-clock time. */
     private val nowMillis: () -> Long,
     /**
@@ -43,8 +50,9 @@ class PlutoSessions(
     /** A session for the dial, and whether the home server supplied it - for the diagnostics. */
     class Choice(val session: PlutoSession, val fromServer: Boolean)
 
-    private val dialLocal = Slot(boot) { BOOT_MISS_RETRY_MILLIS }
-    private val besideLocal = Slot(boot) { BOOT_MISS_RETRY_MILLIS }
+    // A boot is always a new session; only the home server needs telling.
+    private val dialLocal = Slot({ boot() }) { BOOT_MISS_RETRY_MILLIS }
+    private val besideLocal = Slot({ boot() }) { BOOT_MISS_RETRY_MILLIS }
     private val regions = ConcurrentHashMap<String, Slot>()
 
     /**
@@ -60,7 +68,9 @@ class PlutoSessions(
      */
     fun forDial(region: String?): Choice? {
         if (region != null) {
-            val slot = regions.getOrPut(region) { Slot({ server(region) }, ::serverMiss) }
+            val slot = regions.getOrPut(region) {
+                Slot({ fresh -> if (fresh) freshServer(region) else server(region) }, ::serverMiss)
+            }
             val session = slot.cached()
                 ?: if (nowMillis() >= serverDownUntil) slot.get() else slot.stillValid()
             session?.let { return Choice(it, fromServer = true) }
@@ -91,12 +101,14 @@ class PlutoSessions(
     }
 
     private inner class Slot(
-        private val fetch: () -> PlutoSession?,
+        /** Fetches a session; true when the last one was forgotten as bad - see [freshServer]. */
+        private val fetch: (fresh: Boolean) -> PlutoSession?,
         /** How long to leave a failed fetch alone, given what it threw (null: nothing thrown). */
         private val missFor: (Throwable?) -> Long,
     ) {
         private val held = AtomicReference<PlutoSession?>(null)
         @Volatile private var retryAt = 0L
+        @Volatile private var forgotten = false
         private val fetchLock = Any()
 
         /** The held session while it is comfortably inside its life, without waiting on a fetch. */
@@ -117,7 +129,7 @@ class PlutoSessions(
                 if (now < retryAt) return usable
                 var failure: Throwable? = null
                 val fresh = try {
-                    fetch()
+                    fetch(forgotten)
                 } catch (e: Exception) {
                     failure = e
                     null
@@ -128,6 +140,7 @@ class PlutoSessions(
                 }
                 held.set(fresh)
                 retryAt = 0L
+                forgotten = false
                 return fresh
             }
         }
@@ -135,7 +148,10 @@ class PlutoSessions(
         /** Lock-free on purpose - see the class comment. Identity, not equality. */
         fun forget(session: PlutoSession) {
             // A rebuild asked for now is asked for NOW, whatever an earlier miss said.
-            if (held.compareAndSet(session, null)) retryAt = 0L
+            if (held.compareAndSet(session, null)) {
+                forgotten = true
+                retryAt = 0L
+            }
         }
     }
 
