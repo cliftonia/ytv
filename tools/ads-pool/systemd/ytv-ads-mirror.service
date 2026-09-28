@@ -3,9 +3,8 @@ Description=Serve the mirrored YTV ad reels to the televisions on :4245 (serve_a
 After=network-online.target
 
 [Service]
-# Same tools directory as ytv-ads.service; once tools/ads-pool is on main,
-# %h/ytv-foreign/tools/ads-pool/serve_ads.py. The mirror itself is filled by ytv-ads (mirror_ads.py).
-ExecStart=/usr/bin/python3 %h/ytv-ads-tools/serve_ads.py --bind 0.0.0.0:4245 --dir %h/.cache/ytv-ads/mirror
+# Same tools directory as ytv-ads.service. The mirror itself is filled by ytv-ads (mirror_ads.py).
+ExecStart=/usr/bin/python3 %h/ytv-foreign/tools/ads-pool/serve_ads.py --bind 0.0.0.0:4245 --dir %h/.cache/ytv-ads/mirror
 Restart=on-failure
 RestartSec=10
 
