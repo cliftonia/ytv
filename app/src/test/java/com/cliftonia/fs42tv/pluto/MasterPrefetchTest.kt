@@ -29,6 +29,9 @@ class MasterPrefetchTest {
         var interrupted = 0
         val read = mutableListOf<String>()
         var kept = 0
+        var released = 0
+        val keeps = mutableListOf<Set<String>>()
+        private val session = PlutoSession("https://s.pluto.tv", "sid=1", "J", "AU", Long.MAX_VALUE)
 
         val prefetch = MasterPrefetch(
             schedule = { delay, block ->
@@ -37,7 +40,12 @@ class MasterPrefetchTest {
                 ({ waitCancelled++; waiting = null })
             },
             background = { block -> queued.addLast(block); ({ interrupted++ }) },
-            masterAhead = { channel -> channel.pluto?.let { "https://s.pluto.tv/${it.id}/master.m3u8?jwt=J" } },
+            ahead = { channel, keep ->
+                keeps += keep
+                channel.pluto?.let {
+                    SessionPool.Lease(session, "https://s.pluto.tv/${it.id}/master.m3u8?jwt=J") { released++ }
+                }
+            },
             prefetching = { prefetching },
             read = { url, stillWanted -> read += url; if (stillWanted()) { kept++; true } else false },
         )
@@ -64,6 +72,9 @@ class MasterPrefetchTest {
         f.finish()
         assertEquals(listOf("https://s.pluto.tv/id3/master.m3u8?jwt=J", "https://s.pluto.tv/id1/master.m3u8?jwt=J"), f.read)
         assertEquals(0, f.prefetch.running)
+        // Each on a lent session, given back; neither may re-point the screen's or the other's.
+        assertEquals(2, f.released)
+        assertEquals(setOf("id1", "id2", "id3"), f.keeps.first())
     }
 
     @Test
@@ -117,6 +128,7 @@ class MasterPrefetchTest {
         // Reads that could not be interrupted: they neither start nor keep anything.
         f.finish()
         assertEquals(0, f.kept)
+        assertEquals("no session is even borrowed", 0, f.keeps.size)
         assertEquals(0, f.prefetch.running)
     }
 

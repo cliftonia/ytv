@@ -32,6 +32,11 @@ class PlutoRoute(
     private val report: (String) -> Unit,
     /** Runs a block after a delay, OFF the UI thread - a session check may fetch. */
     private val later: (delayMillis: Long, block: () -> Unit) -> Unit = { _, _ -> },
+    /**
+     * Whether the dial's sessions rotate - see [SessionPool]: true while masters are read ahead
+     * (mpv); false keeps every tune on the dial's one session, as before the pool existed.
+     */
+    private val rotate: () -> Boolean = { false },
 ) {
 
     /**
@@ -73,7 +78,7 @@ class PlutoRoute(
             return legacyBecause(channel, "DIRECT FAILED", legacy)
         }
         legacyUntil.remove(ref.id)
-        val choice = sessions.forDial(ref.region) ?: run {
+        val choice = sessions.forChannel(ref.region, ref.id, rotate()) ?: run {
             awaitSession(channel)
             return legacyBecause(channel, "NO SESSION", legacy)
         }
@@ -100,17 +105,19 @@ class PlutoRoute(
     }
 
     /**
-     * The direct master a tune of [channel] would play now, for reading it ahead of a surf - or
-     * null when the tune would not play a direct master, or that cannot be told without fetching
-     * a session ([PlutoSessions.peekForDial]). Unlike [forDial] it changes nothing: no report, no
-     * wait for a session, no claim on the pick a failure is traced to. Never blocks.
+     * A session of its own to read [channel]'s direct master ahead of a surf on, with that
+     * master's url - or null when a tune would not play one (not a Pluto-dial channel, LEGACY, a
+     * channel sitting out on its legacy url) or no free session can be had cheaply. [keep] are the
+     * channel ids whose sessions must not be re-pointed - see [PlutoSessions.lease]. Unlike
+     * [forDial] no report, no wait for a session, no claim on the pick a failure is traced to.
+     * May fetch a free slot's session: the prefetch threads only. Release the lease when done.
      */
-    fun masterAhead(channel: Channel): String? {
+    fun readAhead(channel: Channel, keep: Set<String>): SessionPool.Lease? {
         val ref = channel.pluto ?: return null
         if (!direct()) return null
         val until = legacyUntil[ref.id]
         if (until != null && nowMillis() < until) return null
-        return sessions.peekForDial(ref.region)?.masterUrl(ref.id)
+        return sessions.lease(ref.region, ref.id, keep)
     }
 
     /**

@@ -13,6 +13,7 @@ import com.cliftonia.fs42tv.pluto.PlutoIds
 import com.cliftonia.fs42tv.pluto.PlutoLines
 import com.cliftonia.fs42tv.pluto.PlutoRoute
 import com.cliftonia.fs42tv.pluto.PlutoSessions
+import com.cliftonia.fs42tv.pluto.SessionPool
 import com.cliftonia.fs42tv.pluto.VariantCache
 import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
@@ -248,13 +249,18 @@ class ScreenExtras(private val deps: Deps) {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
             val elapsed = android.os.SystemClock::elapsedRealtime
+            val sessions = PlutoSessions(
+                boot = { PlutoBoot.fetchBoot(now()) },
+                server = { region -> PlutoBoot.fetchFromServer(region) },
+                freshServer = { region -> PlutoBoot.fetchFromServer(region, fresh = true) },
+                nowMillis = now,
+                // One channel per session: the screen's, and one each side for reading ahead.
+                poolSize = SessionPool.SIZE,
+                slotServer = { region, slot, fresh -> PlutoBoot.fetchFromServer(region, fresh, client = "dial$slot") },
+            )
+            val picker = MasterPicker(BreakPoller::httpFetch, mpvLadder, elapsed, VariantCache(elapsed, sessions::claimOf))
             val route = PlutoRoute(
-                sessions = PlutoSessions(
-                    boot = { PlutoBoot.fetchBoot(now()) },
-                    server = { region -> PlutoBoot.fetchFromServer(region) },
-                    freshServer = { region -> PlutoBoot.fetchFromServer(region, fresh = true) },
-                    nowMillis = now,
-                ),
+                sessions = sessions,
                 direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },
                 nowMillis = now,
                 report = PlaybackDiagnostics::recordSource,
@@ -265,8 +271,9 @@ class ScreenExtras(private val deps: Deps) {
                         if (!halted()) runCatching { prefetchExecutor.execute(block) }
                     }, delay)
                 },
+                // Sessions rotate only while their masters are read ahead - mpv, see SessionPool.
+                rotate = picker::prefetching,
             )
-            val picker = MasterPicker(BreakPoller::httpFetch, mpvLadder, elapsed, VariantCache(elapsed))
             return ScreenExtras(Deps(
                 features = features,
                 plutoGuide = PlutoGuide(
