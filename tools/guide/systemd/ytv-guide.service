@@ -1,0 +1,14 @@
+[Unit]
+Description=Publish the YTV LIVE TV FAST guide (fast_guide.json) to GitHub
+After=network-online.target
+# The programme details are looked up against the guide just published: the details job has no
+# timer of its own, it follows every successful guide run.
+OnSuccess=ytv-details.service
+
+[Service]
+Type=oneshot
+# Tubi's guide answers only inside the US: ask it through the fast-relay front (tools/fast-relay).
+Environment=YTV_TUBI_VIA=http://127.0.0.1:4247/hls?u=
+ExecStart=/usr/bin/bash %h/ytv-foreign/tools/guide/publish_guide.sh
+Nice=10
+TimeoutStartSec=30min
