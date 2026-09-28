@@ -30,6 +30,15 @@ each redirect hop is checked again - the namespace can reach the host on 10.103.
 on the LAN or tailnet may be asked for through this. Upstream connections are capped. Logs name
 the upstream host and file, never a query string: these urls carry tokens.
 
+KEPT ALIVE. The tunnel's exit is ~160ms away, and a fresh TCP and TLS handshake per request was
+most of a relayed channel's 7-9s start: its master, playlist and first segments each paid one.
+So upstream connections are HTTP/1.1 keep-alive, pooled ([Pool]) per scheme, host, port AND the
+address validated for that very request - a pooled connection is only ever reused for a request
+whose own check chose the same address, so pooling changes nothing about what may be reached. At
+most POOL_PER_HOST idle per host and POOL_TOTAL in all, each closed after POOL_IDLE_SECONDS; one
+whose response was not read to its end, or that the server said it would close, is never pooled.
+A pooled connection the server closed while idle is retried once on a fresh one.
+
 Stdlib only.
   fast_relay.py --bind 10.103.1.2:8481           (inside netns pluto-us)
 """
@@ -58,6 +67,13 @@ CHUNK = 64 * 1024
 # tunnel.
 MAX_UPSTREAM = 24
 SEMAPHORE_WAIT = 10
+# Idle upstream connections kept for reuse - see Pool. A CDN keeps an idle connection 60s or more;
+# 30s covers a playlist refresh cycle and a surf back, and lets go of a channel left behind.
+POOL_PER_HOST = 4
+POOL_TOTAL = 16
+POOL_IDLE_SECONDS = 30
+# A redirect's body is read and dropped so its connection can be reused; past this it is closed.
+MAX_REDIRECT_BODY = 64 * 1024
 PASS_HEADERS = ("Content-Type", "Content-Length", "Content-Range", "Accept-Ranges",
                 "Last-Modified", "ETag", "Cache-Control", "Expires")
 PLAYLIST_TYPE = "application/vnd.apple.mpegurl"
@@ -193,28 +209,143 @@ class _PinnedTLS(http.client.HTTPSConnection):
 _TLS = ssl.create_default_context()
 
 
-def open_upstream(url, headers, resolve=socket.getaddrinfo):
-    """(connection, response, final url) for [url], redirects followed and each hop validated."""
-    for _ in range(MAX_REDIRECTS + 1):
-        parts, address = validate(url, resolve)
-        port = parts.port or (443 if parts.scheme == "https" else 80)
-        if parts.scheme == "https":
-            conn = _PinnedTLS(parts.hostname, port, address, TIMEOUT, _TLS)
-        else:
-            conn = _Pinned(parts.hostname, port, address, TIMEOUT)
-        path = (parts.path or "/") + ("?" + parts.query if parts.query else "")
+class Pool:
+    """Idle keep-alive upstream connections, by (scheme, host, port, validated address).
+
+    Thread-safe. [take] hands back the most recently idle connection for a key, or None; [give]
+    keeps one for later, or closes it when the caps are reached. Anything idle past [idle_seconds]
+    is closed on the next take, give or sweep.
+    """
+
+    def __init__(self, per_host=POOL_PER_HOST, total=POOL_TOTAL, idle_seconds=POOL_IDLE_SECONDS,
+                 clock=time.monotonic):
+        self._per_host = per_host
+        self._total = total
+        self._idle_seconds = idle_seconds
+        self._clock = clock
+        self._lock = threading.Lock()
+        self._idle = {}
+
+    def take(self, key):
+        with self._lock:
+            self._sweep_locked()
+            idle = self._idle.get(key)
+            while idle:
+                conn, _ = idle.pop()
+                if not idle:
+                    del self._idle[key]
+                if conn.sock is not None:
+                    return conn
+                conn.close()
+        return None
+
+    def give(self, key, conn):
+        """Keep [conn] for [key]; False when it was closed instead."""
+        with self._lock:
+            self._sweep_locked()
+            count = sum(len(v) for v in self._idle.values())
+            idle = self._idle.get(key, [])
+            if conn.sock is None or len(idle) >= self._per_host or count >= self._total:
+                conn.close()
+                return False
+            idle.append((conn, self._clock()))
+            self._idle[key] = idle
+            return True
+
+    def sweep(self):
+        with self._lock:
+            self._sweep_locked()
+
+    def clear(self):
+        with self._lock:
+            for idle in self._idle.values():
+                for conn, _ in idle:
+                    conn.close()
+            self._idle.clear()
+
+    def __len__(self):
+        with self._lock:
+            return sum(len(v) for v in self._idle.values())
+
+    def _sweep_locked(self):
+        now = self._clock()
+        for key in list(self._idle):
+            kept = []
+            for conn, since in self._idle[key]:
+                if now - since >= self._idle_seconds:
+                    conn.close()
+                else:
+                    kept.append((conn, since))
+            if kept:
+                self._idle[key] = kept
+            else:
+                del self._idle[key]
+
+
+POOL = Pool()
+
+
+def _key(parts, address):
+    port = parts.port or (443 if parts.scheme == "https" else 80)
+    return (parts.scheme, parts.hostname.lower(), port, address)
+
+
+def _connect(parts, address):
+    port = parts.port or (443 if parts.scheme == "https" else 80)
+    if parts.scheme == "https":
+        return _PinnedTLS(parts.hostname, port, address, TIMEOUT, _TLS)
+    return _Pinned(parts.hostname, port, address, TIMEOUT)
+
+
+def _send(parts, address, path, headers, pool):
+    """(connection, response): on a pooled connection when one is idle for this very address -
+    retried once on a fresh one if the server had closed it - else on a new connection."""
+    conn = pool.take(_key(parts, address)) if pool is not None else None
+    if conn is not None:
         try:
             conn.request("GET", path, headers=headers)
-            response = conn.getresponse()
-        except BaseException:
+            return conn, conn.getresponse()
+        except (http.client.HTTPException, OSError):
+            # Closed by the server while idle: a GET is safe to send again, once, fresh.
             conn.close()
-            raise
+    conn = _connect(parts, address)
+    try:
+        conn.request("GET", path, headers=headers)
+        return conn, conn.getresponse()
+    except BaseException:
+        conn.close()
+        raise
+
+
+def finish(conn, response, key, pool=None):
+    """Done with [response]: its connection back to the pool when the body was read to its end
+    and the server will keep it open - else closed."""
+    pool = POOL if pool is None else pool
+    if key is not None and response is not None and response.isclosed() and not response.will_close:
+        pool.give(key, conn)
+    else:
+        conn.close()
+
+
+def open_upstream(url, headers, resolve=socket.getaddrinfo, pool=None):
+    """(connection, response, final url, pool key) for [url], redirects followed and each hop
+    validated. Hand the connection back with [finish] once the response is done with."""
+    pool = POOL if pool is None else pool
+    for _ in range(MAX_REDIRECTS + 1):
+        parts, address = validate(url, resolve)
+        path = (parts.path or "/") + ("?" + parts.query if parts.query else "")
+        conn, response = _send(parts, address, path, headers, pool)
+        key = _key(parts, address)
         location = response.getheader("Location")
         if response.status in (301, 302, 303, 307, 308) and location:
-            conn.close()
+            try:
+                response.read(MAX_REDIRECT_BODY)
+            except (http.client.HTTPException, OSError):
+                pass
+            finish(conn, response, key, pool)
             url = urllib.parse.urljoin(url, location)
             continue
-        return conn, response, url
+        return conn, response, url, key
     raise Refused("too many redirects")
 
 
@@ -277,13 +408,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
     def _relay(self, upstream, relay_base):
         self._started = False
         headers = {"User-Agent": USER_AGENT, "Accept": "*/*", "Accept-Encoding": "identity",
-                   "Connection": "close"}
+                   "Connection": "keep-alive"}
         range_header = self.headers.get("Range")
         is_m3u8 = urllib.parse.urlsplit(upstream).path.lower().endswith((".m3u8", ".m3u"))
         if range_header and not is_m3u8:
             headers["Range"] = range_header
         started = time.monotonic()
-        conn, response, final_url = open_upstream(upstream, headers)
+        conn, response, final_url, key = open_upstream(upstream, headers)
         try:
             head = response.read(64) if response.status == 200 else b""
             if response.status == 200 and looks_like_playlist(response.getheader("Content-Type"), head):
@@ -294,8 +425,12 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 self._stream(response, head)
                 if response.status >= 400:
                     log.warning("upstream %s answered %d", safe_label(final_url), response.status)
+        except BaseException:
+            key = None
+            raise
         finally:
-            conn.close()
+            # Only a response read to its end, with nothing raised, gives its connection back.
+            finish(conn, response, key)
 
     def _send_playlist(self, response, head, final_url, relay_base):
         body = head + response.read(MAX_PLAYLIST + 1 - len(head))
@@ -339,6 +474,12 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     host, port = args.bind.rsplit(":", 1)
     log.info("relaying on %s", args.bind)
+
+    def sweep():
+        while True:
+            time.sleep(POOL_IDLE_SECONDS)
+            POOL.sweep()
+    threading.Thread(target=sweep, name="pool-sweep", daemon=True).start()
     _Server((host, int(port)), Handler).serve_forever()
 
 
