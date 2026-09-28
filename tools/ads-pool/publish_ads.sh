@@ -38,7 +38,7 @@
 #   - Needs ffmpeg (/usr/bin/ffmpeg, already installed) and python3; no pip packages.
 #
 # Environment overrides: YTV_ADS_REPO (default ~/ytv-foreign), YTV_ADS_STATE (~/.cache/ytv-ads),
-# YTV_ADS_PER_RUN (15), YTV_ADS_PUSH (1; 0 writes ads.json into the state directory and commits nothing).
+# YTV_ADS_PER_RUN (15), YTV_ADS_MEASURE_PER_RUN (60), YTV_ADS_PUSH (1; 0 writes ads.json into the state directory and commits nothing).
 set -euo pipefail
 
 TOOLS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -46,6 +46,7 @@ REPO="${YTV_ADS_REPO:-$HOME/ytv-foreign}"
 STATE="${YTV_ADS_STATE:-$HOME/.cache/ytv-ads}"
 PER_RUN="${YTV_ADS_PER_RUN:-15}"
 PUSH="${YTV_ADS_PUSH:-1}"
+MEASURE_PER_RUN="${YTV_ADS_MEASURE_PER_RUN:-60}"
 OUT="ads.json"
 
 # Hooks off for every git call: the repo's opt-in pre-push hook builds and installs the Android
@@ -100,7 +101,8 @@ for line in "${TODO[@]}"; do
   sleep 3   # be polite to archive.org
 done
 
-# Reels cut before loudness was kept: measure them, audio only, within the same nightly budget.
+# Reels cut before loudness was kept: measure them, audio only, on a budget of their own - new
+# candidates are endless, and a reel already on the air matters more than one not yet cut.
 # A failure leaves the record as it was, to be tried again another night.
 mapfile -t UNMEASURED < <(python3 - "$STATE" <<'PY'
 import glob, json, os, sys
@@ -114,10 +116,11 @@ for path in sorted(glob.glob(os.path.join(sys.argv[1], "reels", "*.json"))):
 PY
 )
 [ "${#UNMEASURED[@]}" -gt 0 ] && echo "${#UNMEASURED[@]} reels to measure for loudness"
+measured=0
 for line in "${UNMEASURED[@]}"; do
-  [ "$done_count" -ge "$PER_RUN" ] && break
+  [ "$measured" -ge "$MEASURE_PER_RUN" ] && break
   IFS=$'\t' read -r path url <<<"$line"
-  done_count=$((done_count + 1))
+  measured=$((measured + 1))
   if lufs=$(python3 "$TOOLS/cut_reel.py" --loudness "$url"); then
     python3 - "$path" "$lufs" <<'PY'
 import json, os, sys
