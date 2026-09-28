@@ -41,6 +41,8 @@ class GuidePicker(private val deps: Deps) {
     // nothing should move these under it.
     val visible = mutableStateOf(false)
     val rows = mutableStateOf<List<Pair<String, String>>>(emptyList())
+    /** The LIVE TV block headings, one per row - see [ChannelLabels.headings]. Set with [rows]. */
+    val headings = mutableStateOf<List<String?>>(emptyList())
     val startIndex = mutableStateOf(0)
 
     /**
@@ -67,6 +69,8 @@ class GuidePicker(private val deps: Deps) {
         // seeing anything - the one moment a guide has to feel instant. The titles arrive a
         // beat later and fill in underneath: structure now, detail when it exists.
         rows.value = nav.channels.map { ChannelLabels.listRow(it) }
+        // Structure too, so it goes up with the names: one pass, no clock, nothing to wait on.
+        headings.value = ChannelLabels.headings(nav.channels)
         startIndex.value = seed
         visible.value = true
         deps.focus(true)
