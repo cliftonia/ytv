@@ -215,7 +215,7 @@ class TestRun(unittest.TestCase):
         daria = out["items"][out["titles"]["daria"]]
         self.assertEqual(("t", ["Glenn Eichler", "Susie Lewis"], 22), (daria["k"], daria["d"], daria["r"]))
         self.assertNotIn("i", daria, "OMDb had nothing for it")
-        self.assertEqual(2, len(out["titles"]), "the episode-only title is not published")
+        self.assertEqual(2, len([k for k in out["titles"] if ":" not in k]), "the episode-only title is not published")
 
     def test_a_second_run_asks_tmdb_nothing(self):
         cache = {}
@@ -252,7 +252,7 @@ class TestRun(unittest.TestCase):
             out = self.run_once(cache, http_for_karate_and_daria())
         finally:
             bd.TMDB_PER_RUN = saved
-        self.assertEqual(["daria"], list(out["titles"]), "the soonest airing goes first")
+        self.assertEqual(["daria"], [k for k in out["titles"] if ":" not in k], "the soonest airing goes first")
         self.assertEqual(1, len(cache["entries"]), "the other is not cached as a miss")
 
     def test_a_refused_tmdb_key_stops_lookups_without_failing_the_run(self):
@@ -337,7 +337,7 @@ class TestMain(unittest.TestCase):
     def test_writes_the_file_and_the_cache_and_skips_an_unchanged_rewrite(self):
         bd.fetch_json = http_for_karate_and_daria()
         self.assertEqual(0, bd.main(["--repo", self.repo]))
-        self.assertEqual(["daria"], list(self.read("details.json")["titles"]))
+        self.assertEqual(["daria"], [k for k in self.read("details.json")["titles"] if ":" not in k])
         self.assertIn("tv|daria|", self.read(bd.CACHE_NAME)["entries"])
         stamp = os.path.getmtime(os.path.join(self.repo, "details.json"))
         self.assertEqual(0, bd.main(["--repo", self.repo]))
@@ -391,3 +391,19 @@ class BlockSaysSeriesTest(unittest.TestCase):
     def test_guide_blocks_keys_by_service_and_id(self):
         lineup = [{"guide": "samsung", "guide_id": "S1", "block": "Series"}, {"name": "pluto one"}]
         self.assertEqual({"samsung:S1": "Series"}, ds.guide_blocks(lineup))
+
+
+class KindKeysTest(unittest.TestCase):
+    def test_a_title_aired_as_film_and_series_gets_one_key_each(self):
+        cache = {"entries": {
+            "tv|21 jump street|": {"at": T0, "k": "tv", "t": "21 Jump Street", "y": 1987},
+            "movie|21 jump street|": {"at": T0, "k": "movie", "t": "21 Jump Street", "y": 2012},
+            "tv|portlandia|": {"at": T0, "k": "tv", "t": "Portlandia", "y": 2011}}}
+        sightings = [ds.Sighting("21 Jump Street", T0, 60, "tv"), ds.Sighting("21 Jump Street", T0, 110, "movie"),
+                     ds.Sighting("Portlandia", T0, 30, "tv")]
+        out = bd.run(sightings, cache, T0, log=lambda *_: None)
+        items, titles = out["items"], out["titles"]
+        self.assertEqual(1987, items[titles["tv:21 jump street"]]["y"])
+        self.assertEqual(2012, items[titles["movie:21 jump street"]]["y"])
+        self.assertNotIn("21 jump street", titles, "a bare key would mislead one of the two")
+        self.assertIn("portlandia", titles, "one kind only: the bare key is safe")

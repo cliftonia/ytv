@@ -218,27 +218,41 @@ def prewarm(plans, entries, tmdb, now, budget, checkpoint=None, log=print):
             future.result()
 
 
+def published_key(title_key, kind):
+    """details.json's key for a title aired as [kind]: "tv:21 jump street", "movie:...", or the
+    bare title for an airing of no known kind. The app asks with its channel's kind, then bare."""
+    return "%s:%s" % (kind, title_key) if kind else title_key
+
+
 def run(sightings, cache, now, tmdb=None, omdb=None, log=print, checkpoint=None):
     """details.json's contents, updating [cache] ({"omdb": {...}, "entries": {...}}) on the way."""
+    # Grouped by title AND kind: "21 Jump Street" was the 1987 series on a Series - Crime channel
+    # and the 2012 film on a Pluto movie channel the same day, and one group of both kinds asked
+    # for "either" - which the film, far more voted, won for both. A kind-less airing is its own
+    # group. See [published_key] for how the app asks.
     by_key, soonest = {}, {}
     for s in sightings:
         k = key(s.raw)
         if k:
-            by_key.setdefault(k, []).append(s)
-            soonest[k] = min(soonest.get(k, s.start), s.start)
+            gk = (k, s.kind or "")
+            by_key.setdefault(gk, []).append(s)
+            soonest[gk] = min(soonest.get(gk, s.start), s.start)
     prefixes = recurring_prefixes(s.raw for s in sightings)
     entries = cache.setdefault("entries", {})
     budget = [TMDB_PER_RUN]
     if tmdb is not None:
         try:
-            prewarm([plan(by_key[k][0].raw, by_key[k], prefixes) for k in sorted(by_key, key=lambda k: (soonest[k], k))],
+            prewarm([plan(by_key[g][0].raw, by_key[g], prefixes) for g in sorted(by_key, key=lambda g: (soonest[g], g))],
                     entries, tmdb, now, budget, checkpoint, log)
         except dl.Unavailable as e:
             log("tmdb stopped: %s" % e)
             tmdb = None
     titles, index, found = {}, {}, []
-    for k in sorted(by_key, key=lambda k: (soonest[k], k)):
-        group = by_key[k]
+    kinds_of = {}
+    for k, kind in by_key:
+        kinds_of.setdefault(k, set()).add(kind)
+    for gk in sorted(by_key, key=lambda g: (soonest[g], g)):
+        group = by_key[gk]
         try:
             entry = resolve(plan(group[0].raw, group, prefixes), entries, tmdb, now, budget, log)
         except dl.Unavailable as e:
@@ -251,7 +265,12 @@ def run(sightings, cache, now, tmdb=None, omdb=None, log=print, checkpoint=None)
         if ident not in index:
             index[ident] = len(found)
             found.append(entry)
-        titles[k] = index[ident]
+        k, kind = gk
+        titles[published_key(k, kind)] = index[ident]
+        # The bare title too, for apps that ask without a kind - but only where it cannot mislead:
+        # one kind of airing, or this is the kind-less one.
+        if kind and len(kinds_of[k]) == 1:
+            titles[k] = index[ident]
     rated = rate(found, cache.setdefault("omdb", {}), omdb, now, log)
     items = [item(e) for e in found]
     log("details: %d titles airing, %d matched to %d items, %d tmdb calls, %d omdb calls"

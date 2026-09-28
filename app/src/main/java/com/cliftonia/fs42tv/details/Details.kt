@@ -37,9 +37,16 @@ class Details private constructor(
 
     val size: Int get() = byKey.size
 
-    /** What is known about the programme a guide calls [rawTitle], or null. */
-    fun forTitle(rawTitle: String?): Enrichment? =
-        TitleKey.of(rawTitle).takeIf { it.isNotEmpty() }?.let(byKey::get)
+    /**
+     * What is known about the programme a guide calls [rawTitle], or null. [kind] ("tv" or
+     * "movie", from the channel's block - see [kindOfBlock]) is asked first: the same title can be
+     * a series on one channel and a film on another ("21 Jump Street"), and the file keeps them
+     * apart as "tv:..." and "movie:...". The bare title only answers where it cannot mislead.
+     */
+    fun forTitle(rawTitle: String?, kind: String? = null): Enrichment? {
+        val key = TitleKey.of(rawTitle).takeIf { it.isNotEmpty() } ?: return null
+        return kind?.let { byKey["$it:$key"] } ?: byKey[key]
+    }
 
     @Serializable
     private class Wire(
@@ -66,6 +73,16 @@ class Details private constructor(
     )
 
     companion object {
+        private val SERIES_BLOCKS = setOf(
+            "Series", "Sitcoms (USA)", "Game Shows", "Cartoons & Kids", "Anime", "Documentaries")
+
+        /** The kind a LIVE TV channel of [block] airs, as `tools/details` keys it; null when unsure. */
+        fun kindOfBlock(block: String?): String? = when (block) {
+            in SERIES_BLOCKS -> "tv"
+            "Movies" -> "movie"
+            else -> null
+        }
+
         const val URL = "$REPO_RAW/details.json"
 
         private val json = Json { ignoreUnknownKeys = true; coerceInputValues = true }
