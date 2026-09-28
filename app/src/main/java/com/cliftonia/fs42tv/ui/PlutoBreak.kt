@@ -106,6 +106,9 @@ class PlutoBreak(private val deps: Deps) {
     /** The player is on a reel (or parked after one), not on Pluto: a surf or a return must tune. */
     val adsOnPlayer: Boolean get() = ads?.onPlayer == true
 
+    /** The commercials' own level while they are what is heard; null otherwise. */
+    val adsGain: Float? get() = ads?.takeIf { it.picture }?.gain
+
     val showing: Boolean get() = state.value != null
 
     /** The tune being polled. */

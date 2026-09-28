@@ -18,7 +18,8 @@
 #
 # Contract (the app reads exactly this):
 #   {"generated": <unix s>, "reels": [{"id", "title", "era": "70s"|"80s"|"90s", "url",
-#     "duration": <s>, "cuts": [<ascending s>, ...]}]}   - only reels with >= 5 cuts
+#     "duration": <s>, "cuts": [<ascending s>, ...], "loudness": <LUFS>}]}   - only reels with
+#     >= 5 cuts; "loudness" (EBU R128 integrated) is left out until the reel has been measured
 #
 # SETUP on the server (done 27 Sep 2026), as hermanb:
 #
@@ -99,6 +100,41 @@ for line in "${TODO[@]}"; do
   sleep 3   # be polite to archive.org
 done
 
+# Reels cut before loudness was kept: measure them, audio only, within the same nightly budget.
+# A failure leaves the record as it was, to be tried again another night.
+mapfile -t UNMEASURED < <(python3 - "$STATE" <<'PY'
+import glob, json, os, sys
+for path in sorted(glob.glob(os.path.join(sys.argv[1], "reels", "*.json"))):
+    try:
+        record = json.load(open(path))
+    except ValueError:
+        continue
+    if record.get("status") == "ok" and record.get("url") and "loudness" not in record:
+        print("%s\t%s" % (path, record["url"]))
+PY
+)
+[ "${#UNMEASURED[@]}" -gt 0 ] && echo "${#UNMEASURED[@]} reels to measure for loudness"
+for line in "${UNMEASURED[@]}"; do
+  [ "$done_count" -ge "$PER_RUN" ] && break
+  IFS=$'\t' read -r path url <<<"$line"
+  done_count=$((done_count + 1))
+  if lufs=$(python3 "$TOOLS/cut_reel.py" --loudness "$url"); then
+    python3 - "$path" "$lufs" <<'PY'
+import json, os, sys
+path, lufs = sys.argv[1], json.loads(sys.argv[2])
+record = json.load(open(path))
+record["loudness"] = lufs
+with open(path + ".tmp", "w") as handle:
+    json.dump(record, handle)
+os.replace(path + ".tmp", path)
+print("  %-60s loudness %s" % (record["id"][:60], lufs))
+PY
+  else
+    echo "  $(basename "$path" .json) loudness failed"
+  fi
+  sleep 3
+done
+
 # Rebuild the pool; an unchanged pool (ignoring the stamp) writes nothing.
 if [ "$PUSH" = "1" ]; then TARGET="$REPO/$OUT"; else TARGET="$STATE/$OUT"; fi
 python3 - "$STATE" "$TARGET" <<'PY'
@@ -115,7 +151,10 @@ for path in sorted(glob.glob(os.path.join(state, "reels", "*.json"))):
         continue
     if record.get("era") not in ("70s", "80s", "90s") or not record.get("url"):
         continue
-    reels.append({key: record[key] for key in ("id", "title", "era", "url", "duration", "cuts")})
+    reel = {key: record[key] for key in ("id", "title", "era", "url", "duration", "cuts")}
+    if record.get("loudness") is not None:
+        reel["loudness"] = round(record["loudness"], 1)
+    reels.append(reel)
 reels.sort(key=lambda r: (r["era"], r["id"]))
 
 try:

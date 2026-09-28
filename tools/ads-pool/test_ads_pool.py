@@ -37,6 +37,15 @@ class ParsingTest(unittest.TestCase):
         self.assertEqual(adcuts.parse_metadata_print(text, "lavfi.astats.Overall.RMS_level"),
                          [(0.0, -120.0)])
 
+    def test_loudness_from_the_ebur128_summary(self):
+        text = ("[Parsed_ebur128_0 @ 0x1] Summary:\n\n  Integrated loudness:\n    I:         -15.3 LUFS\n"
+                "    Threshold: -25.6 LUFS\n\n  Loudness range:\n    LRA:         6.1 LU\n")
+        self.assertEqual(adcuts.parse_loudness(text), -15.3)
+
+    def test_silent_or_missing_loudness_is_none(self):
+        self.assertIsNone(adcuts.parse_loudness("  Integrated loudness:\n    I:         -70.0 LUFS\n"))
+        self.assertIsNone(adcuts.parse_loudness("no summary"))
+
     def test_blackdetect_runs(self):
         text = ("[blackdetect @ 0x1] black_start:149 black_end:149.12 black_duration:0.12\n"
                 "noise\n[blackdetect @ 0x1] black_start:308.04 black_end:308.4 black_duration:0.36\n")

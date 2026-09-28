@@ -26,6 +26,11 @@ data class AdReel(
     val duration: Double = 0.0,
     /** Seconds from the start of the file at which a commercial starts, in any order. */
     val cuts: List<Double> = emptyList(),
+    /**
+     * The whole reel's integrated loudness in LUFS (EBU R128), measured on the server; null for a
+     * reel not yet measured, which then plays as it is.
+     */
+    val loudness: Double? = null,
 ) {
 
     /**
