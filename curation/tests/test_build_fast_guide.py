@@ -10,6 +10,7 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import build_fast_guide as fg
+import fast_guide_fetch as fetch
 
 # 2026-09-28 00:00:00 UTC
 T0 = 1790553600
@@ -84,6 +85,51 @@ class TestEncode(unittest.TestCase):
         self.assertEqual("Second", lookup(guide, "a:1", T0 + 700))
 
 
+DETAILED = b"""<?xml version="1.0" encoding="UTF-8"?>
+<tv>
+  <programme channel="US1" start="20260928000000 +0000" stop="20260928003000 +0000">
+    <title>Terry and June</title>
+    <desc>Terry experiences pangs of
+      jealousy.</desc>
+    <icon src="https://img.example/a.jpg" />
+  </programme>
+  <programme channel="US1" start="20260928010000 +0000" stop="20260928013000 +0000">
+    <title>Bare</title>
+    <icon src="http://insecure.example/b.jpg" />
+  </programme>
+</tv>
+"""
+
+
+class TestDescriptionsAndPictures(unittest.TestCase):
+
+    def test_desc_and_icon_ride_along_with_each_programme(self):
+        got = fg.programmes(DETAILED, {"US1"}, T0)["US1"]
+        self.assertEqual(("Terry and June", "Terry experiences pangs of jealousy.",
+                          "https://img.example/a.jpg"), got[0][2:])
+        self.assertEqual(("Bare", "", ""), got[1][2:], "no desc, and no plain-http picture")
+
+    def test_info_runs_alongside_the_channel_pairs_holes_included(self):
+        guide = fg.encode({"samsung:US1": fg.programmes(DETAILED, {"US1"}, T0)["US1"]}, T0)
+        flat, info = guide["channels"]["samsung:US1"], guide["info"]["samsung:US1"]
+        self.assertEqual(len(flat), len(info))
+        self.assertEqual("Terry experiences pangs of jealousy.", guide["descs"][info[0]])
+        self.assertEqual("https://img.example/a.jpg", guide["icons"][info[1]])
+        self.assertEqual([0, 0], info[2:4], "the hole between the two says nothing")
+        self.assertEqual([0, 0], info[-2:])
+
+    def test_title_only_programmes_add_no_tables(self):
+        guide = fg.encode({"a:1": [(T0, T0 + 60, "Same")]}, T0)
+        self.assertNotIn("info", guide)
+        self.assertNotIn("descs", guide)
+
+    def test_long_descriptions_are_cut_on_a_word(self):
+        cut = fg.trimmed("word " * 100, limit=40)
+        self.assertLessEqual(len(cut), 40)
+        self.assertTrue(cut.endswith("word…"))
+        self.assertEqual("short one", fg.trimmed("  short \n one "))
+
+
 class TestBuild(unittest.TestCase):
 
     LINEUP = [
@@ -146,7 +192,7 @@ class TestServiceGuides(unittest.TestCase):
         items = [(T0 - 7200, T0 - 3600, "Over"), (T0 - 60, T0 + 60, "On  now"), (T0 - 60, T0 + 60, "On now"),
                  (T0 + 3600, T0 + 3600, "Empty"), (T0 + 40 * 3600, T0 + 41 * 3600, "Too late"),
                  (None, T0 + 60, "No start")]
-        self.assertEqual([(T0 - 60, T0 + 60, "On now")], fg.windowed(items, T0))
+        self.assertEqual([(T0 - 60, T0 + 60, "On now", "", "")], fg.windowed(items, T0))
 
     def test_xumo_titles_come_from_the_page_assets_and_overlapping_pages_merge(self):
         page = {"channels": [{"channelId": 99991333, "schedule": [
@@ -155,10 +201,10 @@ class TestServiceGuides(unittest.TestCase):
                     {"assetId": "A", "start": "2026-09-28T00:00:00+0000", "end": "2026-09-28T01:00:00+0000"}]}],
                 "assets": {"A": {"title": "Film"}}}
         got = fg.xumo_programmes([page, page], {"99991333"}, T0)
-        self.assertEqual({"99991333": [(T0, T0 + 3600, "Film")]}, got)
+        self.assertEqual({"99991333": [(T0, T0 + 3600, "Film", "", "")]}, got)
 
     def test_xumo_segments_cover_the_window_from_the_one_on_air(self):
-        segments = fg.xumo_segments(T0 + 7 * 3600)
+        segments = fetch.xumo_segments(T0 + 7 * 3600)
         self.assertEqual(("20260928", 1), segments[0])
         self.assertEqual(("20260929", 2), segments[-1])
         self.assertEqual(6, len(segments))
@@ -166,7 +212,7 @@ class TestServiceGuides(unittest.TestCase):
     def test_tubi_rows(self):
         rows = [{"content_id": 400000012, "title": "ACCDN", "programs": [
             {"title": "Game", "start_time": "2026-09-28T00:00:00Z", "end_time": "2026-09-28T02:00:00Z"}]}]
-        self.assertEqual({"400000012": [(T0, T0 + 7200, "Game")]}, fg.tubi_programmes(rows, {"400000012"}, T0))
+        self.assertEqual({"400000012": [(T0, T0 + 7200, "Game", "", "")]}, fg.tubi_programmes(rows, {"400000012"}, T0))
         self.assertEqual({}, fg.tubi_programmes([{"content_id": 1, "programs": []}], {"1"}, T0))
 
     def test_rakuten_pages(self):
@@ -174,7 +220,7 @@ class TestServiceGuides(unittest.TestCase):
             {"title": "Native", "starts_at": "2026-09-28T01:00:00.000+01:00", "ends_at": "2026-09-28T02:30:00.000+01:00"}]},
                           {"id": "other", "live_programs": [
             {"title": "No", "starts_at": "2026-09-28T01:00:00.000+01:00", "ends_at": "2026-09-28T02:30:00.000+01:00"}]}]}]
-        self.assertEqual({"sci-fi-rakuten-tv": [(T0, T0 + 5400, "Native")]},
+        self.assertEqual({"sci-fi-rakuten-tv": [(T0, T0 + 5400, "Native", "", "")]},
                          fg.rakuten_programmes(pages, {"sci-fi-rakuten-tv"}, T0))
 
     def test_stirr_channels_in_every_time_form(self):
@@ -189,9 +235,80 @@ class TestServiceGuides(unittest.TestCase):
                                                "end": "0000-09-28 01:00:00", "start_time": -62143804800,
                                                "end_time": -62143801200}]}]}}
         got = fg.stirr_programmes(data, {"5294", "7041", "6424"}, T0)
-        self.assertEqual([(T0, T0 + 3600, "Match")], got["5294"])
-        self.assertEqual([(T0 + 14 * 60, T0 + 43 * 60, "Geared Up")], got["7041"])
-        self.assertEqual([(T0, T0 + 3600, "Karting")], got["6424"])
+        self.assertEqual([(T0, T0 + 3600, "Match")], [p[:3] for p in got["5294"]])
+        self.assertEqual([(T0 + 14 * 60, T0 + 43 * 60, "Geared Up")], [p[:3] for p in got["7041"]])
+        self.assertEqual([(T0, T0 + 3600, "Karting")], [p[:3] for p in got["6424"]])
+
+
+class TestServiceDetails(unittest.TestCase):
+    """Each service's description and picture, in the shapes their apis really return."""
+
+    def test_xumo_takes_the_largest_description_that_fits_whole(self):
+        page = {"channels": [{"channelId": 7, "schedule": [
+                    {"assetId": "EP1", "start": "2026-09-28T00:00:00+0000", "end": "2026-09-28T01:00:00+0000"},
+                    {"assetId": "EP2", "start": "2026-09-28T01:00:00+0000", "end": "2026-09-28T02:00:00+0000"},
+                    {"assetId": "EP3", "start": "2026-09-28T02:00:00+0000", "end": "2026-09-28T03:00:00+0000"}]}],
+                "assets": {"EP1": {"title": "Dateline NBC", "episodeTitle": "Twisted in Texas", "descriptions": {
+                               "tiny": "An alleged abuser's behavior devolves.",
+                               "small": "An alleged abuser and stalker moves on to worse behavior.",
+                               "medium": "word " * 60}},
+                           "EP2": {"title": "News", "descriptions": {"tiny": "The news."}},
+                           "EP3": {"title": "Bare"}}}
+        got = fg.xumo_programmes([page], {"7"}, T0)["7"]
+        self.assertEqual("An alleged abuser and stalker moves on to worse behavior.", got[0][3])
+        self.assertEqual(("News", "The news.", ""), got[1][2:])
+        self.assertEqual(("Bare", "", ""), got[2][2:])
+
+    def test_tubi_description_and_its_wide_picture(self):
+        rows = [{"content_id": 692051, "programs": [
+            {"title": "Game", "description": "Two teams.", "start_time": "2026-09-28T00:00:00Z",
+             "end_time": "2026-09-28T02:00:00Z",
+             "images": {"poster": ["https://tubi.example/p.jpg"], "landscape": ["https://tubi.example/l.jpg"]}},
+            {"title": "Plain", "start_time": "2026-09-28T02:00:00Z", "end_time": "2026-09-28T03:00:00Z"}]}]
+        got = fg.tubi_programmes(rows, {"692051"}, T0)["692051"]
+        self.assertEqual(("Game", "Two teams.", "https://tubi.example/l.jpg"), got[0][2:])
+        self.assertEqual(("Plain", "", ""), got[1][2:])
+
+    def test_rakuten_description_and_snapshot_when_there_is_one(self):
+        pages = [{"data": [{"id": "france-24-en", "live_programs": [
+            {"title": "Focus", "description": "Exclusive reports.", "starts_at": "2026-09-28T01:00:00.000+01:00",
+             "ends_at": "2026-09-28T01:30:00.000+01:00", "images": {"snapshot": None, "snapshot_webp": None}},
+            {"title": "News", "description": None, "starts_at": "2026-09-28T01:30:00.000+01:00",
+             "ends_at": "2026-09-28T02:00:00.000+01:00",
+             "images": {"snapshot": "https://images-0.rakuten.tv/storage/snapshot/shot/a.jpeg"}}]}]}]
+        got = fg.rakuten_programmes(pages, {"france-24-en"}, T0)["france-24-en"]
+        self.assertEqual(("Focus", "Exclusive reports.", ""), got[0][2:])
+        self.assertEqual(("News", "", "https://images-0.rakuten.tv/storage/snapshot/shot/a.jpeg"), got[1][2:])
+
+    def test_stirr_description_cut_to_the_pane(self):
+        data = {"data": {"channels": [{"channel_id": 3353, "programs": [
+            {"title": "Love Your Body", "description": "Come back into alignment. " * 20,
+             "start_time": T0, "end_time": T0 + 1678, "start": "2026-09-28 00:00:00", "end": "2026-09-28 00:27:58"}]}]}}
+        (item,) = fg.stirr_programmes(data, {"3353"}, T0)["3353"]
+        self.assertTrue(item[3].startswith("Come back into alignment."))
+        self.assertLessEqual(len(item[3]), fg.DESC_CHARS)
+        self.assertEqual("", item[4])
+
+    def test_picture_is_the_first_https_url_in_any_shape(self):
+        self.assertEqual("https://a/1.jpg", fg.picture("https://a/1.jpg"))
+        self.assertEqual("", fg.picture("http://a/1.jpg"))
+        self.assertEqual("", fg.picture(None))
+        self.assertEqual("https://a/2.jpg", fg.picture(["", "http://a/1.jpg", "https://a/2.jpg"]))
+        self.assertEqual("https://a/w.jpg", fg.picture({"poster": "https://a/p.jpg", "wide": ["https://a/w.jpg"]},
+                                                       ("wide",)))
+
+    def test_every_service_s_details_reach_the_tables(self):
+        lineup = [{"guide": "xumo", "guide_id": "7"}, {"guide": "stirr", "guide_id": "3353"},
+                  {"guide": "samsung", "guide_id": "US1"}]
+        guides = {"xumo": {"7": [(T0, T0 + 600, "News", "The news.", "")]},
+                  "stirr": {"3353": [(T0, T0 + 600, "Yoga", "Breathe.", "https://s/y.jpg")]},
+                  "samsung": DETAILED}
+        guide = fg.build(lineup, guides, T0)
+        for name, desc in (("xumo:7", "The news."), ("stirr:3353", "Breathe."),
+                           ("samsung:US1", "Terry experiences pangs of jealousy.")):
+            self.assertEqual(len(guide["channels"][name]), len(guide["info"][name]), name)
+            self.assertEqual(desc, guide["descs"][guide["info"][name][0]], name)
+        self.assertEqual("https://s/y.jpg", guide["icons"][guide["info"]["stirr:3353"][1]])
 
 
 if __name__ == "__main__":
