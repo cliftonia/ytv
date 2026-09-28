@@ -1,0 +1,10 @@
+[Unit]
+Description=Three-hourly YTV FAST guide, then the programme details (five past, UTC)
+
+[Timer]
+OnCalendar=*-*-* 00/3:05:00 UTC
+Persistent=true
+RandomizedDelaySec=2min
+
+[Install]
+WantedBy=timers.target

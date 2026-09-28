@@ -1,5 +1,5 @@
 [Unit]
-Description=Publish the YTV LIVE TV programme details (details.json) to GitHub
+Description=Publish the YTV LIVE TV programme details (details.json) to GitHub, after each guide run
 After=network-online.target
 
 [Service]

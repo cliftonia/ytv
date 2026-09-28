@@ -1,19 +1,14 @@
 name: fast guide
 
-# What is on the LIVE TV dial's FAST channels, every six hours, committed as fast_guide.json.
+# MANUAL ONLY. The FAST guide is published by the home server every three hours
+# (tools/guide/publish_guide.sh, systemd user timer ytv-guide), which can ask Tubi's US-only guide
+# through its US relay. This schedule never ran; it stays off so two publishers never fight over
+# fast_guide.json. Dispatch it by hand only while the server's job is down.
 #
-# The televisions read it from raw.githubusercontent.com like the lineups. The guides it is cut
-# from are whole-service XMLTV files - Samsung TV Plus, Plex and Roku from i.mjh.nz, 15-43 MB each
-# uncompressed - and the web guides Xumo, Tubi, Rakuten TV and Stirr publish for their own sites
-# (see curation/build_fast_guide.py); the file published is the dial's channels only, the next
-# thirty hours, start times and titles. Tubi's answers only inside the US, which a hosted runner
-# is. Six-hourly because it holds thirty hours: a run or two can fail and the televisions still
-# have a title for now. 18:00 UTC lands after the nightly lineup job (17:00), so a new live.json
-# gets its guide within the hour.
+# What is on the LIVE TV dial's FAST channels, committed as fast_guide.json - see
+# curation/build_fast_guide.py for the sources and the refusal rule.
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:
