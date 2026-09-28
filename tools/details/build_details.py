@@ -58,6 +58,10 @@ WINDOW_HOURS = 30
 IMG = "https://image.tmdb.org/t/p/"
 POSTER, BACKDROP = "w500", "w780"
 TMDB_PER_RUN = 2500
+# Lookups in flight at once: the first run asks about ~2,300 titles, one at a time ~70 minutes.
+LOOKUP_THREADS = 6
+# The cache is written after every this many new lookups, so a killed run keeps what it found.
+CHECKPOINT_EVERY = 100
 OMDB_PER_RUN = 900
 OMDB_PER_DAY = 900
 MISS_DAYS = 30
@@ -179,7 +183,42 @@ def item(entry):
     return out
 
 
-def run(sightings, cache, now, tmdb=None, omdb=None, log=print):
+def prewarm(plans, entries, tmdb, now, budget, checkpoint=None, log=print):
+    """Look up every plan's FIRST query the cache lacks, LOOKUP_THREADS at a time, within
+    [budget]; [resolve] then finds them cached. Later queries of a plan (a looser form of the
+    same title) are left to [resolve], one at a time, as before."""
+    import concurrent.futures
+    import threading
+    wanted, seen = [], set()
+    for queries in plans:
+        if queries and queries[0].cache_key not in seen and not fresh(entries.get(queries[0].cache_key), now):
+            seen.add(queries[0].cache_key)
+            wanted.append(queries[0])
+    wanted = wanted[:max(0, budget[0])]
+    budget[0] -= len(wanted)
+    lock, done = threading.Lock(), [0]
+
+    def one(query):
+        try:
+            entry = dl.lookup(tmdb, query.title, query.kind, query.year, now)
+        except dl.Unavailable:
+            raise
+        except LookupError as e:
+            log("tmdb: %s" % e)
+            return
+        with lock:
+            entries[query.cache_key] = entry
+            done[0] += 1
+            if checkpoint and done[0] % CHECKPOINT_EVERY == 0:
+                checkpoint()
+                log("details: %d of %d looked up" % (done[0], len(wanted)))
+
+    with concurrent.futures.ThreadPoolExecutor(LOOKUP_THREADS) as pool:
+        for future in [pool.submit(one, q) for q in wanted]:
+            future.result()
+
+
+def run(sightings, cache, now, tmdb=None, omdb=None, log=print, checkpoint=None):
     """details.json's contents, updating [cache] ({"omdb": {...}, "entries": {...}}) on the way."""
     by_key, soonest = {}, {}
     for s in sightings:
@@ -190,6 +229,13 @@ def run(sightings, cache, now, tmdb=None, omdb=None, log=print):
     prefixes = recurring_prefixes(s.raw for s in sightings)
     entries = cache.setdefault("entries", {})
     budget = [TMDB_PER_RUN]
+    if tmdb is not None:
+        try:
+            prewarm([plan(by_key[k][0].raw, by_key[k], prefixes) for k in sorted(by_key, key=lambda k: (soonest[k], k))],
+                    entries, tmdb, now, budget, checkpoint, log)
+        except dl.Unavailable as e:
+            log("tmdb stopped: %s" % e)
+            tmdb = None
     titles, index, found = {}, {}, []
     for k in sorted(by_key, key=lambda k: (soonest[k], k)):
         group = by_key[k]
@@ -284,7 +330,7 @@ def main(argv=None):
     sightings += ds.pluto_sightings(lineup, now, WINDOW_HOURS, fetch_json)
     tmdb = dl.Tmdb(tmdb_key, fetch_json) if tmdb_key else None
     omdb = dl.Omdb(omdb_key, fetch_json) if omdb_key else None
-    details = run(sightings, cache, now, tmdb, omdb)
+    details = run(sightings, cache, now, tmdb, omdb, checkpoint=lambda: save_cache(cache, cache_path))
     save_cache(cache, cache_path)
     previous = _previous(out_path)
     if previous and len(details["titles"]) < len(previous.get("titles") or {}) * MIN_SHARE:
