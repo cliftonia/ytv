@@ -11816,24 +11816,16 @@
    "also": [
     "uk_samsung",
     "us_roku"
+   ],
+   "merged": [
+    {
+     "name": "Real Crime Beta",
+     "source": "uk_rakuten"
+    }
    ]
   },
   {
    "number": 1348,
-   "name": "Real Crime Beta",
-   "block": "Documentaries",
-   "sub": "True Crime",
-   "source": "uk_rakuten",
-   "url": "https://lds-realcrimebeta-rakuten.amagi.tv/playlist.m3u8",
-   "route": "direct",
-   "guide": "none",
-   "guide_id": null,
-   "home_only": false,
-   "default": true,
-   "why": "name: \"real crime\""
-  },
-  {
-   "number": 1349,
    "name": "Reelz Famous & Infamous",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11850,7 +11842,7 @@
    ]
   },
   {
-   "number": 1350,
+   "number": 1349,
    "name": "Total Crime",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11866,7 +11858,7 @@
    "logo": "https://www.totalcrimetv.com/wp-content/uploads/2022/10/crimetime-logo-white.png"
   },
   {
-   "number": 1351,
+   "number": 1350,
    "name": "True Crime Now",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11882,7 +11874,7 @@
    "logo": "https://i.imgur.com/Y6Hix17.png"
   },
   {
-   "number": 1352,
+   "number": 1351,
    "name": "TV One Crime & Justice",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11899,7 +11891,7 @@
    ]
   },
   {
-   "number": 1353,
+   "number": 1352,
    "name": "Born to Kill",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11913,7 +11905,7 @@
    "why": "name is the show \"born to kill\" (true-crime documentary)"
   },
   {
-   "number": 1354,
+   "number": 1353,
    "name": "True Crime Network+",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11929,7 +11921,7 @@
    "logo": "https://www.truecrimenetworktv.com/sites/all/themes/jntheme/images/tcnetwork-logo-main.png"
   },
   {
-   "number": 1355,
+   "number": 1354,
    "name": "WBTV Chasing Criminals",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11943,7 +11935,7 @@
    "why": "name: \"criminals\""
   },
   {
-   "number": 1356,
+   "number": 1355,
    "name": "WBTV Crime scenes",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -11957,7 +11949,7 @@
    "why": "name: \"crime\" (series, filed under Crime)"
   },
   {
-   "number": 1357,
+   "number": 1356,
    "name": "WBTV Living With Evil",
    "block": "Documentaries",
    "sub": "True Crime",
@@ -13992,6 +13984,10 @@
    "why": "name: \"tennischannel\"",
    "merged": [
     {
+     "name": "T2 Tennis Channel",
+     "source": "us_firetv"
+    },
+    {
      "name": "Tennis Channel 2",
      "source": "us_samsung"
     }
@@ -14027,20 +14023,6 @@
    "also": [
     "uk_samsung"
    ]
-  },
-  {
-   "number": 1596,
-   "name": "T2 Tennis Channel",
-   "block": "Sports",
-   "sub": "Tennis & Golf",
-   "source": "us_firetv",
-   "url": "https://ttc-tennischannelus-firetv.amagi.tv/playlist.m3u8",
-   "route": "us",
-   "guide": "none",
-   "guide_id": null,
-   "home_only": true,
-   "default": true,
-   "why": "name: \"tennis\"; \"t2\""
   },
   {
    "number": 1600,
