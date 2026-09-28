@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.Row
@@ -60,6 +61,26 @@ private fun PickerRow(text: String, subtitle: String, selected: Boolean) {
 }
 
 
+/**
+ * A LIVE TV block heading - "MOVIES — ACTION" - drawn above the first channel of its run.
+ *
+ * Part of that channel's item rather than an item of its own, so the list stays one item per
+ * channel: the selection, the pick and the settle all keep indexing channels, and the D-pad never
+ * stops on a heading. The OSD's own green and face, full brightness to set it apart from the dim
+ * titles, at the titles' size so it reads as a label rather than a row; no outline, like the rows,
+ * since the backdrop already keeps it legible.
+ */
+@Composable
+private fun PickerHeading(text: String) {
+    OsdText(
+        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 14.dp, bottom = 2.dp),
+        text = text,
+        fontSize = PickerSubtitleFontSize,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+        outline = false,
+    )
+}
 
 /**
  * What-is-on text, at about half the luminance of the channel name beside it.
@@ -118,6 +139,8 @@ private const val ON_AIR_LEAD_ROWS = 3
 @Composable
 fun ChannelPicker(
     rows: List<Pair<String, String>>,
+    /** A heading to draw above each row, or null; empty for a dial with none. */
+    headings: List<String?> = emptyList(),
     startIndex: Int,
     onPick: (Int) -> Unit,
     onDismiss: () -> Unit,
@@ -172,7 +195,14 @@ fun ChannelPicker(
             listState.scrollToItem(selected)
         } else {
             val viewportCentre = (info.viewportStartOffset + info.viewportEndOffset) / 2f
-            val rowCentre = row.offset + row.size / 2f
+            // A headed item is its heading above the row: centre the ROW, the bottom
+            // plain-row-height of the item, or the highlight hops by half a heading at each one.
+            val plain = info.visibleItemsInfo.minOf { it.size }
+            val rowCentre = if (headings.getOrNull(selected) != null) {
+                row.offset + row.size - plain / 2f
+            } else {
+                row.offset + row.size / 2f
+            }
             listState.scrollBy(rowCentre - viewportCentre)
         }
     }
@@ -208,9 +238,18 @@ fun ChannelPicker(
                 itemsIndexed(
                     rows,
                     key = { index, _ -> index },
-                    contentType = { _, _ -> "channel" },
+                    // Two types, so a recycled plain row is never re-measured into a headed one.
+                    contentType = { index, _ -> if (headings.getOrNull(index) == null) "channel" else "headed" },
                 ) { index, row ->
-                    PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
+                    val heading = headings.getOrNull(index)
+                    if (heading == null) {
+                        PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
+                    } else {
+                        Column(modifier = Modifier.fillMaxWidth()) {
+                            PickerHeading(heading)
+                            PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
+                        }
+                    }
                 }
             }
         }

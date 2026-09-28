@@ -90,6 +90,13 @@ class Features(
          * CARD, which finds the breaks. OFF is the card exactly as before.
          */
         BREAK_ADS("BREAK ADS", "feature.breakads"),
+
+        /**
+         * The title on air on the LIVE TV dial's FAST channels, from the six-hourly
+         * `fast_guide.json` (see `sync/FastGuideStore`), where Pluto's NOW goes. OFF fetches
+         * nothing and leaves those channels with their names, as before.
+         */
+        FAST_GUIDE("FAST GUIDE", "feature.fastguide"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,
