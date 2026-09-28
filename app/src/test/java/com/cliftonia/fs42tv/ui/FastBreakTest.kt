@@ -29,7 +29,7 @@ class FastBreakTest {
     private val upstream = "https://cdn.samsungtvplus.example/v1/master/abc/playlist.m3u8"
     private val relay = FastRelay.url("http://192.168.4.58:4243", upstream)!!
 
-    private fun channel(route: String? = null, breaks: Boolean = true) = Channel(
+    private fun channel(route: String? = null, breaks: String = Channel.BREAKS_CUE) = Channel(
         number = 301, name = "Retro Crime", kind = "live",
         streams = listOf(Stream(url = upstream, duration = 600, route = route)),
         breaks = breaks,
@@ -211,19 +211,28 @@ class FastBreakTest {
     }
 
     @Test
-    fun `a channel that opts out is never polled, and its break is its own`() {
-        val stage = Stage()
-        val subject = stage.subject()
-        stage.tuneIn(subject, tuned(channel(breaks = false)))
-        stage.until(200_000)
-        assertTrue(stage.fetched.isEmpty())
-        assertFalse(subject.inBreak)
-        assertNull(subject.state.value)
+    fun `a live channel the lineup does not mark is never polled, whatever its cues say`() {
+        // A FAST channel left unmarked (a music one), an unknown mode, and a YouTube-dial live
+        // feed as the lineup publishes it today - ABC's own cues are its local ad insertion.
+        val abc = Channel(101, "ABC TV QLD", "live", streams = listOf(Stream(url = upstream, duration = 600)))
+        listOf(channel(breaks = ""), channel(breaks = "bumper"), abc).forEach { unmarked ->
+            val stage = Stage()
+            val subject = stage.subject()
+            stage.tuneIn(subject, tuned(unmarked))
+            stage.until(200_000)
+            assertTrue(unmarked.name, stage.fetched.isEmpty())
+            assertFalse(subject.inBreak)
+            assertNull(subject.state.value)
+            assertTrue(stage.plays.isEmpty())
+            // Nor does a return from the home screen re-tune it for a break's sake.
+            subject.appStopped()
+            assertFalse(subject.retuneOnResume(tuned(unmarked)))
+        }
     }
 
     @Test
-    fun `a Pluto feed off the Pluto dial, and a clip channel, are not FAST breaks`() {
-        val jmp2 = Channel(301, "CBS News", "live",
+    fun `a Pluto feed off the Pluto dial, and a clip channel, are not FAST breaks even marked`() {
+        val jmp2 = Channel(301, "CBS News", "live", breaks = Channel.BREAKS_CUE,
             streams = listOf(Stream(url = "https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8", duration = 600)))
         assertNull(BreakChannels.of(Tuned(jmp2, 0, jmp2.streams.first(), Hls(jmp2.streams.first().url), 0.0)))
         val clips = channel().copy(kind = "youtube")

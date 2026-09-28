@@ -49,37 +49,45 @@ data class Channel(
      */
     val pluto: PlutoRef? = null,
     /**
-     * Whether a FAST channel's ad breaks get the station's own commercials or card (see
-     * `fast/CueBreaks`). `false` opts a channel out - a music channel (Stingray) whose cues mark
-     * no break worth covering. Absent, or anything that is not a clear no, is on: see
-     * [LenientFlag].
+     * How this channel's ad breaks are found, when the station should cover them - OPT-IN. The one
+     * value today is `"cue"`: a FAST channel (Samsung TV Plus, Tubi, Xumo...) whose SCTE-35 cue
+     * tags mark breaks that fill with nothing for an Australian viewer (see `fast/CueBreaks`). The
+     * LIVE TV lineup builder writes it for FAST channels, music ones excepted. Absent, or anything
+     * else, is no cue polling at all: a broadcaster's own cues (ABC, Sky Racing, news) mark local
+     * ad insertion over real programme, never ours to cover. Pluto's channels need none - their
+     * bumper is found through [pluto]. Read by [LenientMode]; see [cueBreaks].
      */
-    @Serializable(with = LenientFlag::class)
-    val breaks: Boolean = true,
-)
+    @Serializable(with = LenientMode::class)
+    val breaks: String = "",
+) {
+    /** The lineup asked for this channel's cued breaks to be covered. */
+    val cueBreaks: Boolean get() = breaks == BREAKS_CUE
+
+    companion object {
+        const val BREAKS_CUE = "cue"
+    }
+}
 
 /**
- * A flag read the way a hand-edited lineup writes it: `false`, `"false"`, `"no"`, `"off"` and `0`
- * are off; everything else - true, null, a typo - is on. Never throws: one odd value must not
- * cost every channel on the dial its parse.
+ * A mode read the way a hand-edited lineup writes it: any JSON scalar, trimmed and lower-cased;
+ * empty for null, an object or an array. Never throws: one odd value must not cost every channel
+ * on the dial its parse - and an unknown value simply matches no mode, which is off.
  */
-object LenientFlag : kotlinx.serialization.KSerializer<Boolean> {
+object LenientMode : kotlinx.serialization.KSerializer<String> {
 
     override val descriptor = kotlinx.serialization.descriptors.PrimitiveSerialDescriptor(
-        "LenientFlag", kotlinx.serialization.descriptors.PrimitiveKind.BOOLEAN)
+        "LenientMode", kotlinx.serialization.descriptors.PrimitiveKind.STRING)
 
-    private val OFF = setOf("false", "no", "off", "0")
-
-    override fun deserialize(decoder: kotlinx.serialization.encoding.Decoder): Boolean {
+    override fun deserialize(decoder: kotlinx.serialization.encoding.Decoder): String {
         val element = (decoder as? kotlinx.serialization.json.JsonDecoder)?.decodeJsonElement()
-            ?: return runCatching { decoder.decodeBoolean() }.getOrDefault(true)
-        val primitive = element as? kotlinx.serialization.json.JsonPrimitive ?: return true
-        if (primitive is kotlinx.serialization.json.JsonNull) return true
-        return primitive.content.trim().lowercase() !in OFF
+            ?: return runCatching { decoder.decodeString() }.getOrDefault("").trim().lowercase()
+        val primitive = element as? kotlinx.serialization.json.JsonPrimitive ?: return ""
+        if (primitive is kotlinx.serialization.json.JsonNull) return ""
+        return primitive.content.trim().lowercase()
     }
 
-    override fun serialize(encoder: kotlinx.serialization.encoding.Encoder, value: Boolean) =
-        encoder.encodeBoolean(value)
+    override fun serialize(encoder: kotlinx.serialization.encoding.Encoder, value: String) =
+        encoder.encodeString(value)
 }
 
 /**
