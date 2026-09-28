@@ -395,7 +395,7 @@ MIXED_MOVIES = "Movies – Mixed"
 BLOCKS = [
     ("Movies", ["Action", "Comedy", "Romance", "Horror", "Thriller", "Sci-Fi", "Westerns", "Family",
                 "Classic", "Drama", MIXED_MOVIES]),
-    ("Series", ["Comedy", "Action", "Drama", "Crime", "Reality"]),
+    ("Series", ["Comedy", "Action", "Sci-Fi & Fantasy", "Drama", "Crime", "Reality"]),
     ("Sitcoms (USA)", ["Sitcoms"]),
     ("Game Shows", ["Game Shows"]),
     ("Cartoons & Kids", ["Cartoons", "Kids", "Preschool"]),
@@ -418,8 +418,8 @@ OFF_BY_DEFAULT = {"Relax", "Unsorted"}
 
 # A movie sub-genre, for a channel of series rather than films.
 SERIES_FOR = {
-    "Action": "Action", "Comedy": "Comedy", "Romance": "Drama", "Horror": "Action",
-    "Thriller": "Crime", "Sci-Fi": "Action", "Westerns": "Action", "Family": "Drama",
+    "Action": "Action", "Comedy": "Comedy", "Romance": "Drama", "Horror": "Sci-Fi & Fantasy",
+    "Thriller": "Crime", "Sci-Fi": "Sci-Fi & Fantasy", "Westerns": "Action", "Family": "Drama",
     "Classic": "Drama", "Drama": "Drama", "Decades": "Drama", "Martial Arts": "Action",
     "Black Cinema": "Drama", "Cult & B-Movies": "Action", "Indie & World": "Drama",
     MIXED_MOVIES: "Drama",
@@ -463,12 +463,15 @@ EXACT = {
 # ("Hunter" is in "Hunter x Hunter").
 SHOWS = [
     ("Series", "Action", "action series", [
-        "baywatch", "van helsing", "walking dead", "nikita", "the a team", "knight rider",
-        "bionic woman", "walker texas ranger", "doctor who", "star trek", "stargate", "snowpiercer",
-        "the librarians", "land of the lost", "z nation", "starhunter", "outer limits",
-        "twilight zone", "new twilight zone", "sea patrol", "leverage", "macgyver", "xena", "hercules",
-        "highlander", "airwolf", "the incredible hulk", "battlestar galactica", "relic hunter",
-        "the lost world"]),
+        "baywatch", "walking dead", "nikita", "the a team", "knight rider",
+        "bionic woman", "walker texas ranger", "sea patrol", "leverage", "macgyver", "airwolf",
+        "relic hunter"]),
+    ("Series", "Sci-Fi & Fantasy", "sci-fi or fantasy series", [
+        "doctor who", "star trek", "stargate", "snowpiercer", "the librarians", "land of the lost",
+        "z nation", "starhunter", "outer limits", "twilight zone", "new twilight zone", "xena",
+        "hercules", "highlander", "the incredible hulk", "battlestar galactica", "the lost world",
+        "van helsing", "ghost whisperer", "charmed", "smallville", "beauty and the beast",
+        "good witch"]),
     ("Series", "Action", "western series", [
         "rawhide", "wagon train", "tales of wells fargo", "laramie", "death valley days",
         "wanted dead or alive", "the lone ranger", "lone ranger", "have gun will travel",
@@ -487,11 +490,11 @@ SHOWS = [
         "miss marple", "a touch of frost", "colonel march of scotland yard", "black snow"]),
     ("Series", "Drama", "drama series", [
         "heartland", "degrassi", "designated survivor", "little house on the prairie", "lassie",
-        "7th heaven", "beauty and the beast", "touched by an angel", "dr quinn medicine woman",
-        "everwood", "hart of dixie", "edgemont", "good witch", "mcleod's daughters", "saving hope",
-        "nurse jackie", "mad men", "ghost whisperer", "charmed", "zatima", "tyler perry's the oval",
+        "7th heaven", "touched by an angel", "dr quinn medicine woman",
+        "everwood", "hart of dixie", "edgemont", "mcleod's daughters", "saving hope",
+        "nurse jackie", "mad men", "zatima", "tyler perry's the oval",
         "sheriff country", "twin peaks", "chicago fire", "a house divided", "the waltons", "dallas",
-        "melrose place", "one tree hill", "gilmore girls", "smallville", "heartbeat",
+        "melrose place", "one tree hill", "gilmore girls", "heartbeat",
         "when calls the heart", "highway to heaven", "lucky romance", "goddess of fire"]),
     ("Sitcoms (USA)", "Sitcoms", "American sitcom", [
         "the conners", "anger management", "are we there yet", "saved by the bell",
@@ -815,7 +818,7 @@ GENRE_WORDS = [
     ("Horror", r"horror|terror|scares|fright|monsters|shudder|alter|outersphere"),
     ("Thriller", r"thrillers?|thrillher|suspense|mystery|mysteries|crime|crimes|detectives?|sherlock|"
                  r"murder|mayhem"),
-    ("Sci-Fi", r"sci fi|scifi|fantastic|fantasy|dark matter"),
+    ("Sci-Fi", r"sci fi|scifi|fantastic|fantasy|supernatural|dark matter"),
     ("Westerns", r"westerns?|cowboy|western bound|grjngo|wild west"),
     ("Decades", r"\d0s|\d0's|throwback|rewind|replay"),
     ("Black Cinema", r"bet cinema|black cinema|ebony|bounce|shades of black|nolly|naija|urban"),
