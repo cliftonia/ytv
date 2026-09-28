@@ -1,12 +1,14 @@
-# FAST channels still without a guide
+# FAST channels off the dial for having no guide
 
-Generated from `live.json` after `fast-guides-more`: the LIVE TV dial's channels that show no programme title, for the owner to decide on. Nothing has been dropped.
+**These channels are now off the LIVE TV dial by rule.** The owner decided LIVE TV carries only channels that can show what is playing, so `curation/publish_live.py` leaves out every non-Pluto channel whose `guide` is none or absent, logging each by name (`no guide: <name>`) on every nightly publish. The rest close up within their sub-blocks by the usual numbering (blocks on round hundreds, sub-blocks on round tens). They stay in `live_draft.json`: a channel here returns by itself, numbered into its sub-block, once `build_live.py` or `guide_ids.json` gives it a guide.
+
+The list below was generated from `live.json` after `fast-guides-more`, before the rule; No. is the number each channel had then. After the rule the dial is 633 channels: Pluto's 216 and the 417 FAST channels with a guide.
 
 Before: 273 of 572 FAST channels had a guide (samsung, plex, roku, xumo). After: 417 of 572 (adding Tubi, Rakuten TV and Stirr, Xumo's own guide api, and hand-checked ids in `guide_ids.json`). Pluto's 216 channels have their own guide.
 
 A guide is only ever the channel's OWN service's: a same-named channel on another service (Fetch TV's Bondi Vet, Stirr's copy of a So Fast channel, epg.pw's unattributed listings) runs a different schedule, so none was borrowed.
 
-## No guide (155)
+## Off the dial: no guide (155)
 
 ### Movies
 
@@ -492,12 +494,12 @@ A guide is only ever the channel's OWN service's: a same-named channel on anothe
 
 ## Guide id, but nothing listed at the last build (3)
 
-These have a guide on their own service that currently lists nothing; they keep their id and show a title again if the service resumes listing them.
+These have a guide on their own service that currently lists nothing. The rule reads the channel's `guide`, not what the last build found, so they stay on the dial (numbers as now) and show a title again if the service resumes listing them.
 
 | No. | Channel | Guide |
 |---:|---|---|
-| 1346 | Unleashed by DOGTV | stirr:7017 |
-| 1479 | Motorvision | xumo:99991325 |
-| 1709 | Surfing+ | stirr:5887 |
+| 1336 | Unleashed by DOGTV | stirr:7017 |
+| 1446 | Motorvision | xumo:99991325 |
+| 1595 | Surfing+ | stirr:5887 |
 
-Tubi's 57 channels are not in this table: Tubi's guide answers only inside the US, so they get titles from the first GitHub Actions run (a US runner), not from a build elsewhere.
+Tubi's 57 channels are not in this table either, and stay on the dial: Tubi's guide answers only inside the US, so they get titles from the first GitHub Actions run (a US runner), not from a build elsewhere.
