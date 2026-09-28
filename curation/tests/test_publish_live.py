@@ -282,3 +282,13 @@ class TestCommittedLineup(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class OwnerOrderTest(unittest.TestCase):
+    def test_horror_and_thriller_end_movies_and_crime_ends_series(self):
+        blocks = [{"name": "Movies", "sub": [{"name": n} for n in ("Action", "Horror", "Thriller", "Drama", "Movies – Mixed")]},
+                  {"name": "Series", "sub": [{"name": n} for n in ("Comedy", "Crime", "Reality")]},
+                  {"name": "Music", "sub": [{"name": "80s"}]}]
+        got = [[s["name"] for s in b["sub"]] for b in publish_live.owner_order(blocks)]
+        self.assertEqual([["Action", "Drama", "Movies – Mixed", "Horror", "Thriller"],
+                          ["Comedy", "Reality", "Crime"], ["80s"]], got)
