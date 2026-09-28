@@ -91,6 +91,12 @@ class AcceleratedResolver(
         return device.resolveDetailed(videoId, nowSeconds, ladder, refused)
     }
 
+    /**
+     * The first server whose last health reading was good, or null - never a network call. The
+     * break commercials ask it where the home server's copy of a reel is (ads/AdMirror).
+     */
+    fun availableServer(): String? = servers.firstOrNull { it.isAvailable() }?.baseUrl
+
     /** Stops the background probing; the activity calls it on destroy. */
     fun close() {
         probe?.stop()
