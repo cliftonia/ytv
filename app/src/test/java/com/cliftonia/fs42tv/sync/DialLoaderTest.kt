@@ -30,6 +30,7 @@ class DialLoaderTest {
         val retries = mutableListOf<Pair<Long, () -> Unit>>()
         val refreshes = mutableListOf<Runnable>()
         val cacheFile = File(dir, LineupSource.YOUTUBE.cacheFile)
+        val stamps = mutableListOf<String>()
 
         val loader = DialLoader(
             source = LineupSource.YOUTUBE,
@@ -45,7 +46,40 @@ class DialLoaderTest {
             fetch = { url, timeout -> fetched.add(url); timeouts.add(timeout); network() },
             nowMillis = { now ?: System.currentTimeMillis() },
             refresh = { refreshes.add(it) },
+            onLineup = { stamps.add(it) },
         )
+    }
+
+    @Test
+    fun `the cached lineup's stamp, then a refreshed one's, are reported after the dial is up`() {
+        val f = Fixture()
+        f.cacheFile.writeText(fixture("channels-sample.json"))
+        f.loader.load()
+        assertTrue("hashed on the refresh thread, not before the first picture", f.stamps.isEmpty())
+        f.network = { fixture("pluto-sample.json") }
+        f.refreshes.single().run()
+        assertEquals(listOf(DialRepository.stampOf(fixture("channels-sample.json")),
+            DialRepository.stampOf(fixture("pluto-sample.json"))), f.stamps)
+    }
+
+    @Test
+    fun `a fetched lineup's stamp is reported, and a failed refresh reports nothing new`() {
+        val f = Fixture()
+        f.network = { fixture("channels-sample.json") }
+        f.loader.load()
+        assertEquals(listOf(DialRepository.stampOf(fixture("channels-sample.json"))), f.stamps)
+        val g = Fixture()
+        g.cacheFile.writeText(fixture("channels-sample.json"))
+        g.loader.load()
+        g.refreshes.single().run()               // offline
+        assertEquals(1, g.stamps.size)
+    }
+
+    @Test
+    fun `a stamp is the lineup's content`() {
+        val a = fixture("channels-sample.json")
+        assertEquals(DialRepository.stampOf(a), DialRepository.stampOf(a))
+        assertTrue(DialRepository.stampOf(a) != DialRepository.stampOf(a.replaceFirst("{", "{ ")))
     }
 
     @Test
