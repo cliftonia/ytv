@@ -125,6 +125,20 @@ class SessionPoolTest {
     }
 
     @Test
+    fun `a tune without rotation waits out a read ahead still on the dial's session`() {
+        val f = Fixture()
+        val lease = f.sessions.lease(null, "U", setOf("U"))!!
+        // The engine went to Media3 mid-read: this tune reads its master on slot 0 regardless.
+        val releaser = Thread { Thread.sleep(300); lease.release() }.apply { start() }
+        val started = System.nanoTime()
+        val tuned = f.tune("A", rotate = false)
+        val waitedMillis = (System.nanoTime() - started) / 1_000_000
+        releaser.join()
+        assertSame("the read ahead was on slot 0", lease.session, tuned)
+        assertTrue("waited $waitedMillis ms for the read to finish", waitedMillis >= 250)
+    }
+
+    @Test
     fun `without rotation every tune is on the dial's one session, as before`() {
         val f = Fixture()
         val a = f.tune("A", rotate = false)
