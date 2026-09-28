@@ -122,6 +122,13 @@ class TestGuideMatching(unittest.TestCase):
                          self.guides.match(fast("Hi-Yah!", "us_xumo", tvg_id="HiYAH.us@SD")))
         self.assertEqual(("xumo", None, "source"), self.guides.match(fast("Lassie", "us_xumo")))
 
+    def test_plex_lists_one_channel_per_region_and_that_is_no_tie(self):
+        g = guides(plex={"aaa-66bf": service_channel("RCM", "us", kinds={"film": 600}),
+                         "bbb-66bf": service_channel("RCM", "ca", kinds={"film": 600})})
+        evidence = g.evidence(draft_channel("RCM", "au_samsung"))
+        self.assertEqual({"film": 600}, evidence["kinds"])
+        self.assertEqual("Plex's RCM", evidence["via"])
+
     def test_a_shared_name_matches_nothing(self):
         g = guides(samsung={"US1": service_channel("Crime", "us"), "US2": service_channel("Crime", "us")})
         self.assertEqual(("none", None, None), g.match(fast("Crime")))
@@ -159,6 +166,16 @@ class TestMerge(unittest.TestCase):
                           ("Vevo Pop", ["Vevo Pop UK"])], merges)
         self.assertEqual([{"name": "AFV", "source": "us_plex"}], kept[1]["merged"])
 
+    def test_the_same_feed_under_another_name_merges(self):
+        key = build_live.merge_key
+        self.assertEqual(key("BBC Impossible"), key("Impossible Quiz Show"))
+        self.assertEqual(key("Born to Kill"), key("True Lives"))
+        self.assertEqual(key("WWE Superstar Central"), key("Wrestling Legends TV"))
+        pool = [draft_channel("Wrestling Legends TV", "pluto", guide="pluto", route="pluto"),
+                draft_channel("WWE Superstar Central", guide="samsung")]
+        self.assertEqual([("Wrestling Legends TV", ["WWE Superstar Central"])],
+                         build_live.merge_duplicates(pool)[1])
+
     def test_two_pluto_channels_are_never_merged(self):
         pool = [draft_channel("Tough Jobs", "pluto", guide="pluto", route="pluto"),
                 draft_channel("Pluto TV Tough Jobs", "pluto", guide="pluto", route="pluto")]
@@ -170,9 +187,7 @@ class TestMerge(unittest.TestCase):
 class TestClassify(unittest.TestCase):
 
     def classify(self, channel, evidence=None):
-        block, sub, why = build_live.classify(channel, evidence)
-        sub, why = build_live.settle_sub(channel, evidence, block, sub, why)
-        return block, sub, why
+        return build_live.place(channel, evidence)
 
     def test_single_show_channels_go_with_their_show(self):
         self.assertEqual(("Series", "Action"), self.classify(draft_channel("Baywatch"))[:2])
@@ -222,6 +237,104 @@ class TestClassify(unittest.TestCase):
         self.assertEqual(("Relax", "Relax"), self.classify(draft_channel("Fireplace Vibes"))[:2])
         self.assertEqual(("Music", "Other"), self.classify(draft_channel("XITE Reggae Vibes"))[:2])
 
+    def test_single_words_that_are_not_a_genre_place_nothing(self):
+        # "love", "heart", "wedo", "alter" and "fury" once chose Romance, Horror or Martial Arts.
+        self.assertEqual(("Movies", build_live.MIXED_MOVIES),
+                         self.classify(draft_channel("wedo movies", hint="Movies"))[:2])
+        self.assertEqual(("Series", "Drama"),
+                         self.classify(draft_channel("Love 2 Hate TV", hint="Drama & Series"))[:2])
+        self.assertNotEqual("Martial Arts", self.classify(draft_channel("Flicks of Fury", hint="Movies"))[1])
+        # A phrase that is a genre still is.
+        self.assertEqual(("Movies", "Romance"),
+                         self.classify(draft_channel("Lifetime Movies Love & Drama", hint="Movies"))[:2])
+
+    def test_pluto_genres_still_find_martial_arts_without_the_word(self):
+        kicks = {"titles": {}, "genres": {"Action & Adventure/Martial Arts": 630,
+                                          "Action & Adventure/Adventures": 150}, "groups": [],
+                 "kinds": {"film": 780}, "via": None}
+        self.assertEqual(("Movies", "Martial Arts"),
+                         self.classify(draft_channel("Flicks of Fury", "pluto", hint="Movies"), kicks)[:2])
+
+    def test_a_weak_word_yields_to_a_guide_of_several_shows(self):
+        sitcoms = {"titles": {"The Jeffersons": 240, "Webster": 150, "Sister, Sister": 120, "Soul!": 390},
+                   "genres": {}, "groups": [], "kinds": {"tv": 900}, "via": None}
+        self.assertEqual(("Sitcoms (USA)", "Sitcoms"),
+                         self.classify(draft_channel("BET Classics", "pluto", hint="Classic TV"), sitcoms)[:2])
+        scifi = {"titles": {"Snowpiercer": 300, "The Librarians": 200, "The 100": 100}, "genres": {},
+                 "groups": [], "kinds": {"tv": 600}, "via": None}
+        self.assertEqual(("Series", "Sci-Fi & Fantasy"),
+                         self.classify(draft_channel("Pluto TV Adventure", "pluto", hint="Movies"), scifi)[:2])
+
+    def test_a_weak_word_stands_against_one_shows_marathon(self):
+        marathon = {"titles": {"Beauty and the Beast": 500, "7th Heaven": 100}, "genres": {}, "groups": [],
+                    "kinds": {"tv": 600}, "via": None}
+        self.assertEqual(("Series", "Classic Drama"),
+                         self.classify(draft_channel("CW FOREVER", hint="Classic TV"), marathon)[:2])
+        # A decade's films stay a decade's, whatever genre twelve hours of them sample.
+        comedies = {"titles": {}, "genres": {"Comedy/Comedy": 500, "Drama/Drama": 100}, "groups": [],
+                    "kinds": {"film": 600}, "via": None}
+        self.assertEqual(("Movies", "Decades"),
+                         self.classify(draft_channel("80s Rewind", "pluto", hint="Classic TV"), comedies)[:2])
+
+    def test_westerns_and_the_walking_dead_have_their_own_series_blocks(self):
+        self.assertEqual(("Series", "Westerns"), self.classify(draft_channel("Death Valley Days"))[:2])
+        self.assertEqual(("Series", "Westerns"), self.classify(draft_channel("Wild West TV"))[:2])
+        self.assertEqual(("Series", "Sci-Fi & Fantasy"),
+                         self.classify(draft_channel("The Walking Dead Universe"))[:2])
+
+    def test_big_sub_blocks_split_by_name_show_and_guide(self):
+        self.assertEqual(("Series", "Judge & Talk"), self.classify(draft_channel("Judge Nosey", hint="Reality"))[:2])
+        self.assertEqual(("Series", "Dating Reality"),
+                         self.classify(draft_channel("WBTV Love and Marriage", hint="Drama & Series"))[:2])
+        self.assertEqual(("Series", "Competition Reality"), self.classify(draft_channel("Survivor"))[:2])
+        self.assertEqual(("Series", "K-Drama"),
+                         self.classify(draft_channel("K Stories by CJ ENM", hint="Drama & Series"))[:2])
+        self.assertEqual(("Series", "Classic Drama"),
+                         self.classify(draft_channel("Shout! TV"), {"titles": {}, "genres": {}, "kinds": {"tv": 60},
+                                                                  "groups": ["Western & Classic TV"], "via": None})[:2])
+        self.assertEqual(("Documentaries", "Cops & Courts"), self.classify(draft_channel("Live PD Presents"))[:2])
+        self.assertEqual(("Documentaries", "Forensics & Cold Cases"),
+                         self.classify(draft_channel("Forensic Files"))[:2])
+        self.assertEqual(("Documentaries", "Pets & Vets"), self.classify(draft_channel("Rovr Pets"))[:2])
+        self.assertEqual(("Food, Home & Travel", "Food Reality"), self.classify(draft_channel("Hell's Kitchen"))[:2])
+        self.assertEqual(("Food, Home & Travel", "Antiques"), self.classify(draft_channel("Antiques Roadshow UK"))[:2])
+        self.assertEqual(("Food, Home & Travel", "Crafts & Garden"),
+                         self.classify(draft_channel("Epic Gardening TV"))[:2])
+        pawn = {"titles": {"Auction Hunters": 300, "Shipping Wars": 200, "Beverly Hills Pawn": 100}, "genres": {},
+                "groups": [], "kinds": {"tv": 600}, "via": None}
+        block, sub, why = self.classify(draft_channel("Spike Pluto TV", "pluto", hint="Drama & Series"), pawn)
+        self.assertEqual(("Series", "Pawn & Deals"), (block, sub))
+        self.assertIn("pawn & deals", why)
+
+    def test_one_shows_marathon_does_not_split_a_sub_block(self):
+        teen = {"titles": {"Edgemont": 600}, "genres": {}, "groups": [], "kinds": {"tv": 600}, "via": None}
+        self.assertEqual(("Series", "Drama"),
+                         self.classify(draft_channel("Pluto TV Drama", "pluto", hint="Drama & Series"), teen)[:2])
+
+    def test_kids_channels_go_where_their_guide_says(self):
+        toons = {"titles": {"Hey Arnold!": 300, "The Angry Beavers": 300}, "genres": {}, "groups": [],
+                 "kinds": {"tv": 600}, "via": None}
+        self.assertEqual(("Cartoons & Kids", "Cartoons"),
+                         self.classify(draft_channel("90's Kids", "pluto", hint="Kids"), toons)[:2])
+
+    def test_music_decades_merge_and_concerts_split(self):
+        self.assertEqual("60s & 70s", self.classify(draft_channel("Stingray Jukebox Oldies"))[1])
+        self.assertEqual("90s & 2000s", self.classify(draft_channel("Stingray Y2K"))[1])
+        self.assertEqual("Concerts & Live", self.classify(draft_channel("Qello Concerts"))[1])
+
+    def test_off_format_channels_are_flagged_off(self):
+        block, sub, why = self.classify(draft_channel("SportsGrid"))
+        self.assertEqual((build_live.FLAGGED, build_live.FLAGGED), (block, sub))
+        self.assertIn("betting", why)
+        self.assertIn(build_live.FLAGGED, build_live.OFF_BY_DEFAULT)
+
+    def test_a_guide_of_films_with_no_group_is_a_film_channel(self):
+        films = {"titles": {}, "genres": {}, "groups": [], "kinds": {"film": 600}, "via": "Plex's RCM"}
+        self.assertEqual(("Movies", build_live.MIXED_MOVIES), self.classify(draft_channel("RCM"), films)[:2])
+        # A podcast of hour-long episodes has a group, and stays unsorted.
+        talk = dict(films, groups=["Lifestyle & Pop Culture"], via=None)
+        self.assertEqual("Unsorted", self.classify(draft_channel("The Diary Of A CEO"), talk)[0])
+
     def test_the_category_is_the_last_word_then_unsorted(self):
         self.assertEqual(("Documentaries", "Outdoors"),
                          self.classify(draft_channel("Equinox Nine", hint="Outdoors"))[:2])
@@ -261,11 +374,28 @@ class TestNumbers(unittest.TestCase):
         self.assertEqual(200, by_name["C0"])
         self.assertEqual(300, by_name["S1"])
 
-    def test_pluto_comes_first_within_a_sub_block(self):
-        channels = [self.channel("Aardvark", "Movies", "Action"),
-                    dict(self.channel("Zebra", "Movies", "Action", "pluto"), guide="pluto", route="pluto")]
+    def test_a_sub_block_runs_alphabetically_whatever_the_source(self):
+        channels = [dict(self.channel("Zebra", "Movies", "Action", "pluto"), guide="pluto", route="pluto"),
+                    self.channel("The Conners", "Movies", "Action"),
+                    self.channel("aardvark", "Movies", "Action", "us_tubi")]
         build_live.number(channels)
-        self.assertEqual([100, 101], [channels[1]["number"], channels[0]["number"]])
+        # "The" is ignored and case does not count: aardvark, (The) Conners, Zebra.
+        self.assertEqual([102, 101, 100], [c["number"] for c in channels])
+
+    def test_a_finer_sub_block_needs_three_channels_or_folds_back(self):
+        channels = ([self.channel("J%d" % i, "Series", "Judge & Talk") for i in range(2)]
+                    + [self.channel("P%d" % i, "Series", "Pawn & Deals") for i in range(3)]
+                    + [self.channel("W1", "Series", "Westerns")])
+        build_live.fold_finer_subs(channels)
+        self.assertEqual(["Reality", "Reality", "Pawn & Deals", "Pawn & Deals", "Pawn & Deals", "Action"],
+                         [c["sub"] for c in channels])
+        self.assertIn("too few Judge & Talk channels, so Reality", channels[0]["why"])
+
+    def test_every_finer_sub_block_is_on_the_dial(self):
+        for (block, finer), (parent_block, parent) in build_live.FINER_PARENT.items():
+            subs = dict(build_live.BLOCKS)[block]
+            self.assertIn(finer, subs)
+            self.assertIn(parent, subs)
 
     def test_extra_movie_subs_need_three_channels(self):
         channels = ([self.channel("K%d" % i, "Movies", "Martial Arts") for i in range(3)]

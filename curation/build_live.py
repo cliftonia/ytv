@@ -13,8 +13,10 @@ The steps, in order:
   3. merge near-duplicates the FAST pass missed ("Pointless" and "Pointless UK"), keeping Pluto,
      then a channel with a guide, then one that plays direct
   4. a block and sub-block for every channel, with a one-line `why`: a known show or a word in
-     the name first, then what the guide airs, then the Pluto genre or iptv-org category
-  5. numbers by block (each on a round hundred) and sub-block (each on a round ten), with gaps
+     the name first, then what the guide airs, then the Pluto genre or iptv-org category; then a
+     finer sub-block where a big one splits (REFINE), and off-format channels flagged off
+  5. numbers by block (each on a round hundred) and sub-block (each on a round ten), with gaps,
+     alphabetical within a sub-block
 
 Guides are matched only within one service: a Samsung channel gets Samsung's guide or none, never
 Plex's channel of the same name, whose schedule is not the same. What a guide airs is a hint about
@@ -166,6 +168,11 @@ def pluto_guide(reply):
 
 # ---- matching a channel to its own service's guide ----------------------------------------------
 
+def same_channel_id(service, cid):
+    """The part of a guide id that names the channel: Plex's ids are "<region>-<channel>"."""
+    return cid.rsplit("-", 1)[-1] if service == "plex" else cid
+
+
 class Guides:
     """Every guide this draft uses, and the lookups that tie a channel to one.
 
@@ -180,13 +187,17 @@ class Guides:
             if row.get("channel") and row.get("site") in ("plex.tv", "xumo.tv"):
                 self.site_ids.setdefault((row["site"], row["channel"]), row["site_id"])
         # (service, region, name) and (service, name) -> id; a name two channels share names
-        # neither, so a match is never a coin toss.
+        # neither, so a match is never a coin toss. Plex lists one channel once per region, as
+        # "<region>-<channel>": those copies are one channel, not a tie.
         self.by_name, self.any_region = {}, {}
         for service, channels in self.services.items():
             for cid, info in channels.items():
                 for index, key in ((self.by_name, (service, info["region"], norm_name(info["name"]))),
                                    (self.any_region, (service, norm_name(info["name"])))):
-                    index[key] = None if key in index and index[key] != cid else cid
+                    if key not in index:
+                        index[key] = cid
+                    elif index[key] is not None and same_channel_id(service, index[key]) != same_channel_id(service, cid):
+                        index[key] = None
 
     def match(self, fast):
         """(guide, guide_id, how) for a FAST candidate: its own service's guide channel, or
@@ -343,6 +354,15 @@ SAME_CHANNEL = {
     "Rally.TV FAST+": "Rally TV",
     # Tennis Channel 2 again, under Fire TV's name; and Little Dot's Real Crime on Rakuten's feed.
     "T2 Tennis Channel": "Tennis Channel 2", "Real Crime Beta": "Real Crime",
+    # The same feed under two names, by its stream or its schedule:
+    # - Xumo's "BBC Impossible" and Roku's "Impossible Quiz Show" are one Wurl channel,
+    #   bbc-impossible-1-us (bbc-impossible-1-us.xumo.wurl.tv and .roku.wurl.tv);
+    # - Samsung UK's "Born to Kill" and Rakuten's "True Lives" are one Amagi channel, amg00654c7,
+    #   playing the playlist amg00654-itvstudiosfast-truelives on both;
+    # - Samsung's "WWE Superstar Central" airs Pluto's "Wrestling Legends TV" schedule: the same
+    #   titles starting at the same minutes (02:17, 04:00, 04:50, 05:41, 06:33, 08:17 UTC).
+    "BBC Impossible": "Impossible Quiz Show", "Born to Kill": "True Lives",
+    "WWE Superstar Central": "Wrestling Legends TV",
 }
 
 
@@ -390,36 +410,53 @@ def merge_duplicates(channels):
 # ---- the dial's blocks --------------------------------------------------------------------------
 
 MIXED_MOVIES = "Movies – Mixed"
+FLAGGED = "Flagged"
 # (block, its sub-blocks) in dial order, as the owner set it. Sports is the last block that is on
-# by default; Relax and Unsorted follow it, listed but off.
+# by default; Relax, Unsorted and Flagged follow it, listed but off. Sub-blocks past the owner's
+# own (Westerns and Classic Drama in Series, say) split a big sub-block into ones you can surf;
+# see REFINE.
 BLOCKS = [
     ("Movies", ["Action", "Comedy", "Romance", "Horror", "Thriller", "Sci-Fi", "Westerns", "Family",
                 "Classic", "Drama", MIXED_MOVIES]),
-    ("Series", ["Comedy", "Action", "Sci-Fi & Fantasy", "Drama", "Crime", "Reality"]),
+    ("Series", ["Comedy", "Action", "Westerns", "Sci-Fi & Fantasy", "Drama", "Classic Drama",
+                "Family & Teen Drama", "K-Drama", "Crime", "Reality", "Competition Reality",
+                "Dating Reality", "Pawn & Deals", "Docu-Reality", "Judge & Talk"]),
     ("Sitcoms (USA)", ["Sitcoms"]),
     ("Game Shows", ["Game Shows"]),
     ("Cartoons & Kids", ["Cartoons", "Kids", "Preschool"]),
     ("Anime", ["Anime"]),
-    ("Food, Home & Travel", ["Food", "Home", "Travel"]),
-    ("Music", ["60s", "70s", "80s", "90s", "2000s", "Rock", "Country", "Hip-Hop/R&B", "Pop",
-               "Classical/Jazz", "Other"]),
-    ("Documentaries", ["General", "Nature", "History", "Science & Space", "Paranormal", "True Crime",
-                       "Motoring", "Outdoors"]),
+    ("Food, Home & Travel", ["Food", "Food Reality", "Home", "Antiques", "Crafts & Garden", "Travel"]),
+    ("Music", ["60s & 70s", "80s", "90s & 2000s", "Rock", "Country", "Hip-Hop/R&B", "Pop",
+               "Classical/Jazz", "Concerts & Live", "Other"]),
+    ("Documentaries", ["General", "Nature", "Pets & Vets", "History", "Science & Space", "Paranormal",
+                       "True Crime", "Forensics & Cold Cases", "Cops & Courts", "Motoring", "Outdoors"]),
     ("Sports", ["General", "Combat", "Soccer", "US Leagues", "Motorsport", "Tennis & Golf",
                 "Cue, Darts & Poker", "Action & Extreme", "Other Sports"]),
     ("Relax", ["Relax"]),
     ("Unsorted", ["Unsorted"]),
+    (FLAGGED, [FLAGGED]),
 ]
 # Movie sub-genres beyond the owner's ten. Each gets its own sub-block, after Drama, only when
-# MIN_EXTRA or more channels share it; fewer fold into Movies – Mixed.
+# MIN_EXTRA or more channels share it; fewer fold into Movies – Mixed. The finer sub-blocks REFINE
+# makes need MIN_EXTRA too, or fold back into the sub-block they came from.
 EXTRA_MOVIE_SUBS = ["Decades", "Martial Arts", "Black Cinema", "Cult & B-Movies", "Indie & World"]
 MIN_EXTRA = 3
-OFF_BY_DEFAULT = {"Relax", "Unsorted"}
+OFF_BY_DEFAULT = {"Relax", "Unsorted", FLAGGED}
+
+# Channels that are not what a retro cable dial carries, though they slipped past the FAST pass's
+# filters: news, shopping, religion, adult, betting or not in English. Listed, never deleted, and
+# off: norm_name -> why. Checked by hand, each with its evidence.
+OFF_FORMAT = {
+    "sportsgrid": "sports betting: Samsung's listing calls it \"the first 24-hour sports betting "
+                  "channel\" (odds and wagering news)",
+    "draftkings": "sports betting: the sportsbook's own network, \"built for today's passionate "
+                  "fans and bettors\" (Samsung's listing)",
+}
 
 # A movie sub-genre, for a channel of series rather than films.
 SERIES_FOR = {
     "Action": "Action", "Comedy": "Comedy", "Romance": "Drama", "Horror": "Sci-Fi & Fantasy",
-    "Thriller": "Crime", "Sci-Fi": "Sci-Fi & Fantasy", "Westerns": "Action", "Family": "Drama",
+    "Thriller": "Crime", "Sci-Fi": "Sci-Fi & Fantasy", "Westerns": "Westerns", "Family": "Drama",
     "Classic": "Drama", "Drama": "Drama", "Decades": "Drama", "Martial Arts": "Action",
     "Black Cinema": "Drama", "Cult & B-Movies": "Action", "Indie & World": "Drama",
     MIXED_MOVIES: "Drama",
@@ -444,17 +481,33 @@ EXACT = {
     "inter247": ("Sports", "Soccer", "Inter Milan's club channel"),
     "hardknocks": ("Sports", "Combat", "Hard Knocks Fighting Championship, Canadian MMA"),
     "wild": ("Documentaries", "Outdoors", "Wild TV is a hunting and fishing channel"),
-    "wildwest": ("Series", "Action", "western series (Death Valley Days and the like)"),
+    "wildwest": ("Series", "Westerns", "western series (Death Valley Days and the like)"),
     "wbtvfbi": ("Series", "Crime", "The F.B.I., the 1965 police drama"),
     "videogameheroes": ("Cartoons & Kids", "Cartoons", "video-game cartoons (Sonic X, Donkey Kong Country)"),
     "peopleareawesome": ("Sports", "Action & Extreme", "stunt and extreme-sport clips"),
-    "cirquedusoleil": ("Music", "Other", "Cirque du Soleil shows"),
+    "cirquedusoleil": ("Music", "Concerts & Live", "Cirque du Soleil shows"),
     "kidsmovieclub": ("Cartoons & Kids", "Kids", "kids' films"),
     "bravovault": ("Series", "Reality", "Bravo's reality shows"),
     "revry": ("Unsorted", "Unsorted", "LGBTQ+ films and series, no single genre"),
     "stingraymoviemusic": ("Music", "Other", "film soundtracks, a music channel"),
     "crimeflix": ("Movies", "Thriller", "crime films"),
     "revandroll": ("Cartoons & Kids", "Cartoons", "Rev & Roll, a cartoon (Samsung files it under Kids)"),
+    # Cartoons for grown-ups, not kids: Samsung files both under Comedy or Anime & Gaming.
+    "animationplus": ("Series", "Comedy", "adult cartoons (The Cyanide & Happiness Show, Skits From "
+                                          "My Cell); Samsung files it under Comedy"),
+    "bizaartv": ("Series", "Comedy", "cult and adult cartoons (The Goode Family, Speed Racer); "
+                                     "Samsung: \"mind-bending animation\""),
+    "dungeonsanddragonsadventures": ("Cartoons & Kids", "Cartoons",
+                                     "eOne's Dungeons & Dragons channel (the 1983 cartoon), a "
+                                     "sibling of its Transformers and Power Rangers feeds"),
+    "comedydynamics": ("Series", "Comedy", "stand-up specials: an hour or more each, so its guide "
+                                           "reads as films"),
+    "evolutionearth": ("Documentaries", "History", "ancient-history and prophecy documentaries "
+                                                   "(Roman Engineering, Omens of Doom), not nature"),
+    "feva": ("Unsorted", "Unsorted", "Nigerian general entertainment (films, documentaries, "
+                                     "gospel mixes), not a music channel"),
+    "foxsoul": ("Unsorted", "Unsorted", "Black culture talk and lifestyle (Samsung's listing), "
+                                        "with Sunday worship: no one genre"),
 }
 
 # Known shows, by the block they air in: (block, sub, what it is, shows). A show in a channel's
@@ -463,7 +516,7 @@ EXACT = {
 # ("Hunter" is in "Hunter x Hunter").
 SHOWS = [
     ("Series", "Action", "action series", [
-        "baywatch", "walking dead", "nikita", "the a team", "knight rider",
+        "baywatch", "nikita", "the a team", "knight rider",
         "bionic woman", "walker texas ranger", "sea patrol", "leverage", "macgyver", "airwolf",
         "relic hunter"]),
     ("Series", "Sci-Fi & Fantasy", "sci-fi or fantasy series", [
@@ -471,8 +524,8 @@ SHOWS = [
         "z nation", "starhunter", "outer limits", "twilight zone", "new twilight zone", "xena",
         "hercules", "highlander", "the incredible hulk", "battlestar galactica", "the lost world",
         "van helsing", "ghost whisperer", "charmed", "smallville", "beauty and the beast",
-        "good witch"]),
-    ("Series", "Action", "western series", [
+        "good witch", "walking dead", "the walking dead"]),
+    ("Series", "Westerns", "western series", [
         "rawhide", "wagon train", "tales of wells fargo", "laramie", "death valley days",
         "wanted dead or alive", "the lone ranger", "lone ranger", "have gun will travel",
         "tombstone territory", "bonanza", "gunsmoke", "the rifleman", "the big valley", "the virginian",
@@ -678,7 +731,8 @@ TITLE_ONLY = {"hunter", "power", "vera", "ransom", "arrow", "emergency", "the bo
               "nature", "password", "alice", "mom", "wings"}
 TITLE_SHOWS = [
     ("Series", "Crime", "crime series", ["hunter", "vera", "ransom", "the border"]),
-    ("Series", "Action", "action series", ["arrow", "the 100", "emergency"]),
+    ("Series", "Action", "action series", ["emergency"]),
+    ("Series", "Sci-Fi & Fantasy", "sci-fi or fantasy series", ["arrow", "the 100"]),
     ("Series", "Drama", "drama series", ["power"]),
     ("Sitcoms (USA)", "Sitcoms", "American sitcom", ["taxi", "martin", "the game", "alice", "mom", "wings"]),
     ("Game Shows", "Game Shows", "game show", ["divided", "baggage", "password"]),
@@ -712,17 +766,20 @@ SHOW_TITLES, SHOW_NAMES = _show_index()
 TITLE_TAIL = re.compile(r"^(new |the best of )?(.+?)( (season|series|s\d|uk|us|classics?)\b.*)?$")
 
 
+def title_keys(title):
+    """The show keys a guide title may be: itself, the part before a colon ("Timber Kings: Out on
+    a Limb" is an episode of Timber Kings), and that without a season or region tail."""
+    whole, head = show_key(title), show_key(title.split(":")[0])
+    match = TITLE_TAIL.match(head)
+    return [whole, head] + ([match.group(2)] if match else [])
+
+
 def show_of_title(title):
     """(block, sub, kind, show) for a guide title that is a known show, else None."""
-    key = show_key(title)
-    if key in SHOW_TITLES:
-        return SHOW_TITLES[key]
-    # "Timber Kings: Out on a Limb" is an episode of Timber Kings.
-    key = show_key(title.split(":")[0])
-    if key in SHOW_TITLES:
-        return SHOW_TITLES[key]
-    match = TITLE_TAIL.match(key)
-    return SHOW_TITLES.get(match.group(2)) if match else None
+    for key in title_keys(title):
+        if key in SHOW_TITLES:
+            return SHOW_TITLES[key]
+    return None
 
 
 def show_in_name(name):
@@ -739,7 +796,7 @@ def show_in_name(name):
 STRONG_WORDS = [
     ("Relax", "Relax", r"(?<!reggae )vibes|fireplace|aquarium|cityscapes|holidayscapes|the spa|"
                        r"green noise|music for focus|peaceful piano|zen|zenlife|myzen|wellbeing|"
-                       r"naturescape|dronetv|space live|slow tv"),
+                       r"naturescape|dronetv|space live|slow tv|omstars|yoga"),
     ("Anime", "Anime", r"anime|hidive|crunchyroll|retrocrush|naruto|yu gi oh|pok[eé]mon|"
                        r"hunter x hunter|jojo'?s"),
     ("Cartoons & Kids", "Preschool", r"babies|baby|blippi|caillou|pocoyo|teletubbies|super simple|"
@@ -782,9 +839,9 @@ MORE_STRONG_WORDS = [
                                     r"flipping|listing|crafts?|craftsy|diy|makers|design|attic|"
                                     r"antiques?|handyman|hammer|four in a bed|hotel inspector|"
                                     r"rustic retreats|thesorrygirls|bob ross|escape to the country|"
-                                    r"new life in the sun|made nation|how to"),
+                                    r"new life in the sun|made nation|how to|inside outside"),
     ("Food, Home & Travel", "Travel", r"travel|escapes?|voyages|tourism|heritage|luxury|downunder|"
-                                      r"trips?|journy|intravel|yachting|inside outside"),
+                                      r"trips?|journy|intravel|yachting"),
     ("Documentaries", "True Crime", r"true crime|forensic|cold case|first 48|dateline|killers?|evil|"
                                     r"medical examiner|dr g|detectives|jail|cops|live pd|court tv|"
                                     r"bounty hunter|investigation|criminals|crime and justice|"
@@ -804,38 +861,47 @@ MORE_STRONG_WORDS = [
                                  r"disaster|mayday|danger|dangertv|real heroes|backstage"),
     ("Series", "Reality", r"reality|real housewives|we tv|keeping up|got talent|idol|ninja warrior|"
                           r"masked singer|biggest loser|pawn|storage wars|bad girls|cheaters|"
-                          r"caught on tape|chaos on cam|challenge|repo|married|dating|weddings?|bride|"
+                          r"caught on tape|chaos on cam|challenge|repo|married|marriage|dating|weddings?|bride|"
                           r"judge|nosey|queens of reality|logo|perform|true lives|competition|deal masters|"
                           r"deal zone|lives|unscripted|4uv"),
 ]
 # Genre words that do not say films from series: the channel's guide, or else its Pluto genre or
-# iptv-org category, settles which. (movie sub-genre, words) in order, first match wins.
+# iptv-org category, settles which. (movie sub-genre, words) in order, first match wins. Each is a
+# genre on its own: "love", "heart", "alter" and "fury" were not ("Love Pets", "Series K Heart").
 GENRE_WORDS = [
-    ("Martial Arts", r"kung fu|hi yah|martial arts|fury"),
-    ("Action", r"action|adventure"),
+    ("Martial Arts", r"kung fu|hi yah|martial arts"),
+    ("Action", r"action"),
     ("Comedy", r"comedy|comedies|laughs?|lol|funny|jokes|gags|lampoon|stand up"),
-    ("Romance", r"romance|romantic|love|hallmark|heart|sparkle|wedo"),
-    ("Horror", r"horror|terror|scares|fright|monsters|shudder|alter|outersphere"),
+    ("Romance", r"romance|romantic|love (&|and) drama|hallmark|sparkle"),
+    ("Horror", r"horror|terror|scares|fright|monsters|shudder|outersphere"),
     ("Thriller", r"thrillers?|thrillher|suspense|mystery|mysteries|crime|crimes|detectives?|sherlock|"
                  r"murder|mayhem"),
     ("Sci-Fi", r"sci fi|scifi|fantastic|fantasy|supernatural|dark matter"),
     ("Westerns", r"westerns?|cowboy|western bound|grjngo|wild west"),
-    ("Decades", r"\d0s|\d0's|throwback|rewind|replay"),
     ("Black Cinema", r"bet cinema|black cinema|ebony|bounce|shades of black|nolly|naija|urban"),
-    ("Cult & B-Movies", r"cult|pulp|asylum|grindhouse|drive in"),
+    ("Cult & B-Movies", r"cult|pulp|asylum|grindhouse|drive in|el rey"),
     ("Indie & World", r"curzon|tribeca|gravitas|indie|independent|icon film"),
     ("Family", r"family|dove"),
-    ("Classic", r"classics?|retro|vault|gold|forever"),
     ("Drama", r"drama|dramas|stories|series|heartfelt|lifetime|k content"),
+]
+# Words that say when, or say little, not what: a guide of one kind of show, or Pluto's genres,
+# beat them ("BET Classics" airs The Jeffersons and Webster; "Pluto TV Adventure" airs Snowpiercer
+# and The 100). Only a name with no other genre word falls back on one.
+WEAK_GENRE_WORDS = [
+    ("Decades", r"\d0s|\d0's|throwback|rewind|replay"),
+    ("Classic", r"classics?|retro|vault|gold|forever"),
+    ("Action", r"adventure"),
 ]
 
 # Sub-block words inside a block the name or guide has already settled. First match wins.
+# One decade alone is too few channels to surf (the 60s had one, the 2000s two), so the 60s share
+# with the 70s and the 2000s with the 90s.
 MUSIC_SUBS = [
-    ("60s", r"60s|60's|sixties|oldies|jukebox"), ("70s", r"70s|70's|seventies"),
-    ("80s", r"80s|80's|eighties"), ("90s", r"90s|90's|90s00s|nineties"),
-    ("2000s", r"2000s|00s|2k|y2k"),
-    ("Other", r"karaoke|movie music|holiday|christmas|gospel|reggae|concerts?|qello|live music|"
-              r"cozy cafe|easy listening|playing for change|feva"),
+    ("60s & 70s", r"60s|60's|sixties|oldies|jukebox|70s|70's|seventies"),
+    ("80s", r"80s|80's|eighties"), ("90s & 2000s", r"90s|90's|90s00s|nineties|2000s|00s|2k|y2k"),
+    ("Concerts & Live", r"concerts?|qello|live music|playing for change|vinyl"),
+    ("Other", r"karaoke|movie music|holiday|christmas|gospel|reggae|"
+              r"cozy cafe|easy listening|feva"),
     ("Rock", r"rock|metal|alternative"), ("Country", r"country|cmt"),
     ("Hip-Hop/R&B", r"hip hop|r&b|rnb|rap|soul|urban|trace|jams|yo"),
     ("Classical/Jazz", r"classica|classical|jazz|djazz|piano"),
@@ -849,10 +915,101 @@ SPORTS_SUBS = [
     ("Motorsport", r"rally|rallytv|motogp|nascar|nhra|racing|racer|mtrspt 1|speed sport|monster jam|"
                    r"floracing|motorsports?"),
     ("Tennis & Golf", r"tennis|tennischannel|golf|golfpass|pga|t2|pickleball|pickleballtv"),
-    ("Cue, Darts & Poker", r"billiards?|snooker|darts|poker|pokergo|kozoom|itsf|sportszone"),
-    ("Action & Extreme", r"surf|surfing|surfer|red bull|xtrem|fuel|nautical|ocho|strongman|pbr|overtime"),
+    ("Cue, Darts & Poker", r"billiards?|snooker|darts|poker|pokergo|kozoom|itsf"),
+    ("Action & Extreme", r"surf|surfing|surfer|red bull|xtrem|fuel|nautical|ocho|strongman|pbr"),
     ("Other Sports", r"rugby|cricket|willow|chukker|horse|equus|shooting"),
 ]
+# Finer sub-blocks for sub-blocks too big to surf: (block, sub) -> [(finer sub, name words, shows,
+# channel groups or FAST categories)]. A channel moves to the first finer sub whose words are in its
+# name; else the one whose show IS its name; else the one REFINE_SHARE of its guide's airtime
+# belongs to; else the one its group or category names. Otherwise it stays where it was.
+REFINE_SHARE = 0.5
+# A guide settles a finer sub-block, or overrides a weak name word, only with this many different
+# known shows: twelve hours of one show's marathon is a sample of the rotation, not the channel.
+MIN_SHOWS = 2
+REFINE = {
+    ("Series", "Drama"): [
+        ("K-Drama", r"k drama|k content|k stories|series k|korean", [], ()),
+        ("Family & Teen Drama", r"family|feel good|hometown|heartfelt|generation|teen|byutv|dhar mann", [
+            "heartland", "when calls the heart", "touched by an angel", "dr quinn medicine woman",
+            "7th heaven", "everwood", "hart of dixie", "degrassi", "edgemont", "one tree hill",
+            "gilmore girls", "mcleod's daughters", "highway to heaven", "ruby and the well",
+            "holly hobbie"], ()),
+        ("Classic Drama", r"classic|forever|tv land|retro", [
+            "lassie", "little house on the prairie", "the waltons", "dallas", "melrose place",
+            "twin peaks", "heartbeat", "in the heat of the night"],
+         ("Classic TV", "Western & Classic TV")),
+    ],
+    ("Series", "Reality"): [
+        ("Judge & Talk", r"judge|nosey|court", [
+            "judge mathis", "people's court", "the people's court", "judge judy", "divorce court",
+            "cutlers court", "couples court with the cutlers", "the steve wilkos show",
+            "the jerry springer show", "maury"], ("Talk", "Talk Show")),
+        ("Dating Reality", r"dating|married|marriage|weddings?|bride|cheaters", [
+            "flavor of love", "double shot at love with dj pauly d and vinny", "married at first sight",
+            "90 day fiance", "love island", "the bachelor", "catfish", "cheaters", "ex isle",
+            "marriage boot camp reality stars", "don't tell the bride", "bridezillas",
+            "love after lockup"], ()),
+        ("Competition Reality", r"competition|got talent|idol|ninja warrior|masked singer|"
+                                r"biggest loser|challenge|wipeout|fear factor|robot wars|mr ?beast", [
+            "survivor", "america's got talent", "americas got talent", "american idol",
+            "american ninja warrior", "ninja warrior", "the masked singer", "the biggest loser",
+            "wipeout", "total wipeout", "total wipeout uk", "fear factor", "robot wars",
+            "forged in fire", "project runway", "project runway all stars", "skin wars fresh paint",
+            "steve austin's broken skull challenge", "rupaul's drag race", "bring it", "big brother",
+            "mr beast", "mrbeast", "back to school with mrbeast", "alone", "hell's kitchen"],
+         ("Reality Competition", "Competition Reality")),
+        ("Pawn & Deals", r"pawn|deals?|storage|repo|pickers|salvage", [
+            "pawn stars", "hardcore pawn", "beverly hills pawn", "storage wars", "auction hunters",
+            "shipping wars", "extreme salvage squad", "salvage kings", "flipping bangers",
+            "american pickers", "operation repo", "container wars"], ()),
+        ("Docu-Reality", r"lives|rescue|hoarders|intervention|undercover boss|vet", [
+            "hoarders", "intervention", "untold stories of the er", "bondi rescue", "bondi vet",
+            "undercover boss", "duck dynasty", "escaping polygamy", "kitchen nightmares",
+            "ramsay's kitchen nightmares"], ()),
+    ],
+    ("Food, Home & Travel", "Food"): [
+        ("Food Reality", r"chefs?|masterchef|come dine|kitchen nightmares|hell's kitchen|"
+                         r"gordon ramsay|top chef|great british menu", [
+            "buddy vs duff", "great british menu", "hell's kitchen", "kitchen nightmares",
+            "ramsay's kitchen nightmares", "come dine with me", "couples come dine with me",
+            "masterchef", "top chef", "chopped", "gordon ramsay", "fire masters"], ()),
+    ],
+    ("Food, Home & Travel", "Home"): [
+        ("Antiques", r"antiques?|roadshow|attic", ["antiques roadshow", "cash in the attic"], ()),
+        ("Crafts & Garden", r"crafts?|craftsy|diy|makers|how to|gardening|bob ross|thesorrygirls|"
+                            r"handyman", [
+            "the joy of painting with bob ross", "bob ross", "this old house makers"], ()),
+    ],
+    ("Documentaries", "Nature"): [
+        ("Pets & Vets", r"pets?|dogs?|dogtv|vets?|paws|cats?", [
+            "dog whisperer", "dog whisperer with cesar millan", "lucky dog", "the yorkshire vet",
+            "the yorkshire vet casebook", "er vets", "pet vet dream team", "vets saving pets",
+            "countdown the funniest pets", "animals unscripted", "bondi vet"], ()),
+    ],
+    ("Documentaries", "True Crime"): [
+        ("Cops & Courts", r"cops|jail|court|patrol|live pd|law (&|and) crime|bounty hunter|"
+                          r"criminals|police|troopers", [
+            "cops", "cops reloaded", "live pd", "live pd police patrol", "on patrol live",
+            "court cam", "court tv live", "bodycam by law and crime", "jail", "60 days in",
+            "alaska state troopers", "campus pd", "dog the bounty hunter", "takedown with chris hansen",
+            "sheriffs el dorado county", "women behind bars", "24 hours in police custody",
+            "interrogations by law and crime", "the interrogators", "the interrogators no shelter"], ()),
+        ("Forensics & Cold Cases", r"forensics?|cold case|medical examiner|dr g|detectives|unsolved|"
+                                   r"first 48|crime scenes?|investigation", [
+            "forensic files", "cold case files", "the first 48", "medical detectives",
+            "dr g medical examiner", "bloodline detectives", "unsolved mysteries", "buzzfeed unsolved",
+            "crime scene solvers", "forensic factor", "robbie coltrane's critical evidence",
+            "the fbi files", "conmen case files"], ()),
+    ],
+}
+# Each finer sub-block and the sub-block it folds back into when too small. Series – Westerns is
+# made by SHOWS and GENRE_WORDS, not REFINE, but folds the same way.
+FINER_PARENT = {(block, rule[0]): (block, sub) for (block, sub), rules in REFINE.items() for rule in rules}
+FINER_PARENT[("Series", "Westerns")] = ("Series", "Action")
+REFINE_SHOWS = {(block, sub, rule[0]): {show_key(show) for show in rule[2]}
+                for (block, sub), rules in REFINE.items() for rule in rules}
+
 # Pluto's programme genres (the part before the slash) -> a movie sub-genre.
 PLUTO_MOVIE_GENRES = {
     "Action & Adventure": "Action", "Comedy": "Comedy", "Romance": "Romance", "Horror": "Horror",
@@ -963,21 +1120,23 @@ def via(ev):
     return " via %s" % ev["via"] if ev and ev.get("via") else ""
 
 
-def guide_vote(ev):
-    """(block, sub, why) when most of a guide's airtime is known shows of one kind, else None."""
+def guide_vote(ev, share=GUIDE_SHARE, min_shows=1):
+    """(block, sub, why) when [share] or more of a guide's airtime is known shows of one kind -
+    [min_shows] different ones or more, where one show's marathon is too thin a sample."""
     if not ev or not ev.get("titles"):
         return None
-    votes, named = {}, {}
+    votes, named, shows = {}, {}, {}
     total = sum((ev.get("kinds") or {}).values()) or sum(ev["titles"].values())
     for title, minutes in ev["titles"].items():
         show = show_of_title(title)
         if show:
             votes[show[:3]] = votes.get(show[:3], 0) + minutes
             named.setdefault(show[:3], []).append((minutes, title))
+            shows.setdefault(show[:3], set()).add(show[3])
     if not votes or not total:
         return None
     (block, sub, kind), minutes = max(votes.items(), key=lambda kv: kv[1])
-    if minutes / total < GUIDE_SHARE:
+    if minutes / total < share or len(shows[(block, sub, kind)]) < min_shows:
         return None
     titles = [t for _, t in sorted(named[(block, sub, kind)], reverse=True)[:2]]
     return block, sub, "guide: mostly %s (%s)%s" % (", ".join(titles), kind, via(ev))
@@ -1032,6 +1191,8 @@ def classify(channel, ev):
     category. A sub of None here is settled by settle_sub."""
     name = channel["name"]
     text = words(name)
+    if norm_name(name) in OFF_FORMAT:
+        return FLAGGED, FLAGGED, "flagged off: " + OFF_FORMAT[norm_name(name)]
     if norm_name(name) in EXACT:
         return EXACT[norm_name(name)]
     show = show_in_name(name)
@@ -1041,7 +1202,7 @@ def classify(channel, ev):
     if found:
         return found[0], found[1], 'name: "%s"' % word
     if has_word(MOVIE_WORDS, text):
-        movie_sub, word = first_match(GENRE_WORDS, text)
+        movie_sub, word = first_match(GENRE_WORDS + WEAK_GENRE_WORDS, text)
         if movie_sub:
             return "Movies", movie_sub, 'name: films, "%s"' % word
         return "Movies", None, "name: films"
@@ -1051,12 +1212,18 @@ def classify(channel, ev):
     # The guide's shows decide, unless the name says a genre they contradict: "Pluto TV Horror"
     # stays horror through a Colonel March marathon, "Classic TV Drama" drama through Diagnosis
     # Murder. A guide of documentaries is not contradicted by a topic word: "Pluto TV Crime".
-    vote = guide_vote(ev)
     movie_sub, word = first_match(GENRE_WORDS, text)
+    weak_sub, weak_word = first_match(WEAK_GENRE_WORDS, text)
+    # A word that says only when ("80s", "Classics") yields to a guide of MIN_SHOWS known shows,
+    # half of one kind, and otherwise stands: a decade's films rotate genres, so Pluto's genres
+    # would only sample them.
+    vote = (guide_vote(ev, GENRE_SHARE, MIN_SHOWS) if weak_sub and not movie_sub else guide_vote(ev))
     if vote and (movie_sub is None or agrees(vote, movie_sub)):
         return vote
     if movie_sub:
         return as_form(channel, ev, text, movie_sub, 'name: "%s"' % word)
+    if weak_sub:
+        return as_form(channel, ev, text, weak_sub, 'name: "%s"' % weak_word)
     from_guide = guide_genres(channel, ev, text)
     if from_guide:
         return from_guide
@@ -1065,6 +1232,9 @@ def classify(channel, ev):
         return block, sub, "%s: %s" % ("Pluto dial genre" if channel["source"] == "pluto"
                                        else "FAST category", channel["hint"])
     groups = [g for g in (ev or {}).get("groups") or [] if g]
+    # A guide that is mostly films, with no channel group to say what kind: a film channel.
+    if not groups and shares((ev or {}).get("kinds") or {}).get("film", 0) >= GUIDE_SHARE:
+        return "Movies", None, "guide: films%s" % via(ev)
     if groups:
         return "Unsorted", "Unsorted", "service group: %s%s - no block for it" % (", ".join(groups), via(ev))
     return "Unsorted", "Unsorted", "nothing in the name, guide or category says what it is"
@@ -1113,6 +1283,64 @@ def settle_sub(channel, ev, block, sub, why):
     return sub, why
 
 
+def refine(channel, ev, block, sub, why):
+    """(sub, why) with a finer sub-block from REFINE, or the sub as it was. In Cartoons & Kids a
+    guide of one kind of show settles which of the three, over the word that chose the block."""
+    if block == "Cartoons & Kids":
+        vote = guide_vote(ev)
+        if vote and vote[0] == block and vote[1] != sub:
+            return vote[1], "%s; %s" % (why, vote[2])
+        return sub, why
+    rules = REFINE.get((block, sub))
+    if not rules:
+        return sub, why
+    found, word = first_match([(rule[0], rule[1]) for rule in rules if rule[1]], words(channel["name"]))
+    if found:
+        return found, why if word in why else '%s; "%s"' % (why, word)
+    name_key = show_key(channel["name"])
+    for rule in rules:
+        if name_key in REFINE_SHOWS[(block, sub, rule[0])]:
+            return rule[0], why
+    if ev and ev.get("titles"):
+        total = sum((ev.get("kinds") or {}).values()) or sum(ev["titles"].values())
+        votes, shows = collections.Counter(), collections.defaultdict(set)
+        for title, minutes in ev["titles"].items():
+            for rule in rules:
+                keys = REFINE_SHOWS[(block, sub, rule[0])]
+                matched = [k for k in title_keys(title) if k in keys]
+                if matched:
+                    votes[rule[0]] += minutes
+                    shows[rule[0]].add(matched[0])
+                    break
+        if votes:
+            finer, minutes = votes.most_common(1)[0]
+            if minutes / total >= REFINE_SHARE and len(shows[finer]) >= MIN_SHOWS:
+                return finer, "%s; guide: mostly %s shows" % (why, finer.lower())
+    labels = [channel["hint"]] + list((ev or {}).get("groups") or [])
+    for rule in rules:
+        if any(label in rule[3] for label in labels):
+            return rule[0], "%s; filed under %s" % (why, next(l for l in labels if l in rule[3]))
+    return sub, why
+
+
+def fold_finer_subs(channels):
+    """A finer sub-block with fewer than MIN_EXTRA channels folds back into the one it came from."""
+    counts = collections.Counter((c["block"], c["sub"]) for c in channels)
+    for c in channels:
+        parent = FINER_PARENT.get((c["block"], c["sub"]))
+        if parent and counts[(c["block"], c["sub"])] < MIN_EXTRA:
+            c["why"] += "; too few %s channels, so %s" % (c["sub"], parent[1])
+            c["sub"] = parent[1]
+
+
+def place(channel, ev):
+    """(block, sub, why) for one channel: classify, then settle_sub, then refine."""
+    block, sub, why = classify(channel, ev)
+    sub, why = settle_sub(channel, ev, block, sub, why)
+    sub, why = refine(channel, ev, block, sub, why)
+    return block, sub, why
+
+
 def fold_movie_subs(channels):
     """Movie sub-genres beyond the owner's ten stay only with MIN_EXTRA or more channels; fewer
     join Movies – Mixed. Returns the extra sub-blocks kept, in EXTRA_MOVIE_SUBS order."""
@@ -1141,6 +1369,14 @@ def sub_order(extra_movie_subs=()):
     return order
 
 
+def surf_order(channel):
+    """Where a channel sits in its sub-block: alphabetical, as the owner's picking list reads,
+    ignoring case and a leading "The" - so "The Conners" sits with the Cs. The source is not the
+    order: a Pluto channel and a Tubi one of the same kind are the same to a viewer surfing."""
+    name = channel["name"].lower()
+    return (re.sub(r"^the\s+", "", name), name)
+
+
 def number(channels, extra_movie_subs=()):
     """Give every channel its number; return the blocks as published.
 
@@ -1156,8 +1392,7 @@ def number(channels, extra_movie_subs=()):
                  "sub": []}
         position, last = next_hundred, next_hundred
         for sub in subs:
-            group = sorted((c for c in members if c["sub"] == sub),
-                           key=lambda c: (keep_rank(c), c["name"].lower()))
+            group = sorted((c for c in members if c["sub"] == sub), key=surf_order)
             if not group:
                 continue
             first = round_up(position, 10)
@@ -1212,7 +1447,8 @@ def summary(channels, blocks, merges):
                  ", ".join("%s %d" % (g, n) for g, n in guides.most_common())),
              "", "Guide = Pluto, Samsung, Plex or Roku guide matched on the channel's own service; "
              "Xumo channels are counted apart, their guide comes later. Home-only = plays only "
-             "through the home server's US tunnel. Relax and Unsorted are off by default.", "",
+             "through the home server's US tunnel. Relax, Unsorted and Flagged are off by default. "
+             "Within a sub-block channels run alphabetically.", "",
              "Every channel's `why` in live_draft.json says what placed it. Only Pluto's guide "
              "carries programme genres; the Samsung, Plex and Roku guides give titles and lengths, "
              "so for those channels a guide counts through known show titles, films against "
@@ -1240,6 +1476,11 @@ def summary(channels, blocks, merges):
         lines.append("- %s <- %s" % (kept, ", ".join(dropped)))
     unsorted = sorted(c["name"] for c in channels if c["block"] == "Unsorted")
     lines += ["", "## Unsorted (%d)" % len(unsorted), "", ", ".join(unsorted), ""]
+    flagged = [c for c in channels if c["block"] == FLAGGED]
+    lines += ["## Flagged (%d)" % len(flagged), "",
+              "Not what a retro cable dial carries (news, shopping, religion, adult, betting, not in "
+              "English): listed, and off.", ""]
+    lines += ["- %s: %s" % (c["name"], c["why"]) for c in flagged] + [""]
     return "\n".join(lines)
 
 
@@ -1248,10 +1489,8 @@ def build(dial, allowlist, candidates, guides):
     pool = pluto_channels(dial, allowlist) + fast_channels(candidates, guides)
     channels, merges = merge_duplicates(pool)
     for channel in channels:
-        ev = guides.evidence(channel)
-        block, sub, why = classify(channel, ev)
-        channel["sub"], channel["why"] = settle_sub(channel, ev, block, sub, why)
-        channel["block"] = block
+        channel["block"], channel["sub"], channel["why"] = place(channel, guides.evidence(channel))
+    fold_finer_subs(channels)
     extra = fold_movie_subs(channels)
     blocks = number(channels, extra)
     channels.sort(key=lambda c: c["number"])
