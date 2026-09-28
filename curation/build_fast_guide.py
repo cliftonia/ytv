@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Build fast_guide.json: what is on the LIVE TV dial's FAST channels for the next day and a bit.
 
-  python3 build_fast_guide.py [--cache DIR]      fetch the guides, write ../fast_guide.json
+  python3 build_fast_guide.py [--cache DIR] [--tubi-via PREFIX]   fetch the guides, write ../fast_guide.json
+
+--tubi-via (or $YTV_TUBI_VIA) asks Tubi through a US relay: `http://127.0.0.1:4247/hls?u=` on the
+home server, where tools/guide/publish_guide.sh runs this every three hours.
 
 Pluto channels have their own live path in the app (one request per channel actually looked at),
 but a FAST service has no per-channel guide a television could ask. What they do have is a whole
 guide per service - far too much for a 2.3 GB television to download and parse. So a job does it
-instead, every six hours, and publishes only what the dial can use:
+instead, every three hours, and publishes only what the dial can use:
 
   - only channels in live.json whose `guide` is one of SERVICES, matched on the `guide_id` the
     draft recorded - the service's own id, so no name matching happens here
@@ -22,7 +25,8 @@ Where each service's guide comes from - every one public, with no login (fast_gu
                         descriptions (it names no picture)
   tubi                  Tubi's own web guide api, asked for the dial's channels by id; a programme's
                         description and images. It answers only inside the US: from anywhere else
-                        every channel comes back empty
+                        every channel comes back empty - so the home server asks it through its
+                        US relay (--tubi-via)
   rakuten               Rakuten TV's own live-channel api for the UK, with each channel's programmes;
                         their description and snapshot
   stirr                 Stirr's own web guide api: every channel at once; descriptions, no pictures
@@ -359,14 +363,15 @@ def refusal(guide, lineup):
 
 # ---- fetching (see fast_guide_fetch.py) ------------------------------------------------------
 
-def load_all(lineup, cache, now):
-    """service -> its guide, for every service that loaded; one down costs only its channels."""
+def load_all(lineup, cache, now, tubi_via=None):
+    """service -> its guide, for every service that loaded; one down costs only its channels.
+    [tubi_via] is a relay prefix Tubi is asked through (see fast_guide_fetch.through)."""
     ids = wanted(lineup)
     loaders = {service: (lambda s=service: load_mjh(s, cache)) for service in MJH_SERVICES}
     loaders.update({
         "xumo": lambda: xumo_programmes(cached(cache, "xumo.json", lambda: fetch_xumo(now)),
                                         ids.get("xumo", {}), now),
-        "tubi": lambda: tubi_programmes(cached(cache, "tubi.json", lambda: fetch_tubi(ids.get("tubi", {}))),
+        "tubi": lambda: tubi_programmes(cached(cache, "tubi.json", lambda: fetch_tubi(ids.get("tubi", {}), tubi_via)),
                                         ids.get("tubi", {}), now),
         "rakuten": lambda: rakuten_programmes(cached(cache, "rakuten.json", lambda: fetch_rakuten(now)),
                                               ids.get("rakuten", {}), now),
@@ -387,12 +392,14 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--cache", help="keep the downloaded guides here, and reuse them")
     parser.add_argument("--out", default=OUT)
+    parser.add_argument("--tubi-via", default=os.environ.get("YTV_TUBI_VIA") or None,
+                        help="ask Tubi through this relay prefix, e.g. http://127.0.0.1:4247/hls?u=")
     args = parser.parse_args(sys.argv[1:] if argv is None else argv)
     with open(LINEUP) as f:
         lineup = json.load(f)["channels"]
 
     now = int(time.time())
-    guide = build(lineup, load_all(lineup, args.cache, now), now)
+    guide = build(lineup, load_all(lineup, args.cache, now, args.tubi_via), now)
     problem = refusal(guide, lineup)
     if problem:
         print("REFUSING TO PUBLISH: %s" % problem, file=sys.stderr)
