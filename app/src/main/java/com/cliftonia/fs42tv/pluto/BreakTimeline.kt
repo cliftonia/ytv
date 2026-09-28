@@ -88,6 +88,12 @@ data class BreakView(
     val blind: Boolean = false,
     /** The two-read detector's verdict, for when there are no timestamps. */
     val fallbackInBreak: Boolean = false,
+    /**
+     * The instants are counted from the first read's time, not stamped by the stream (a FAST
+     * playlist with no PROGRAM-DATE-TIME - see fast/CueTimeline): an engine's own PDT is on no
+     * clock of theirs, and must not be mixed with them.
+     */
+    val counted: Boolean = false,
 ) {
 
     /** Whether the viewer, seeing instant [onScreen], is in the break - and when that changes. */

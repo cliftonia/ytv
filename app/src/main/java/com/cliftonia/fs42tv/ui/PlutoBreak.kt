@@ -11,14 +11,21 @@ import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.Tuned
 
 /**
- * Pluto's ad breaks, turned into the station's own "we'll be right back" card.
+ * Pluto's ad breaks - and a FAST channel's - turned into the station's own "we'll be right back"
+ * card, or vintage commercials.
+ *
+ * ONE CONTROLLER, TWO WAYS OF FINDING THE BREAK ([BreakChannels]). Everything below - the timing
+ * on the stream's clock, the card, the reel, the return - is the same for both; only the poller's
+ * [com.cliftonia.fs42tv.pluto.BreakSource] differs: Pluto's logo bumper, or the SCTE-35 cue tags
+ * of Samsung TV Plus, Tubi, Xumo and the like (fast/CueBreaks), whose breaks fill with black or
+ * slates for anyone outside their own apps. The name stayed; Pluto was first.
  *
  * Pluto has no ads to sell to Australia, so every ~10-20 minutes a channel plays one to three
  * minutes of its logo bumper instead. [BreakPoller] reads the playlist and says when; this owns
  * what the viewer gets instead: the card, the guide's music under it, and the programme's own
  * audio down while it is up (the director's volume rule reads [muting]).
  *
- * Polling runs only while a Pluto-dial channel is on air - from the load ([loading], whose read
+ * Polling runs only while a covered channel is on air - from the load ([loading], whose read
  * anchors mpv's clock) until anything else happens to the screen: a surf, an error, a card, the
  * app leaving ([leave]). The card acts only once there is a picture ([playing]). While the guide
  * or settings is up the card is hidden, not ended - the poller keeps reading, and the card is
@@ -113,6 +120,11 @@ class PlutoBreak(private val deps: Deps) {
     /** The tune being polled. */
     private var tuned: Tuned? = null
 
+    /** How its breaks are found - Pluto's bumper or a FAST channel's cues. */
+    private var kind: BreakChannels? = null
+
+    private fun label() = if (kind == BreakChannels.FAST) "fast" else "pluto"
+
     /** The latest read's account of the break. */
     private var view: BreakView? = null
 
@@ -156,7 +168,7 @@ class PlutoBreak(private val deps: Deps) {
     }
 
     /**
-     * [tuned] was just handed to the player: poll it afresh, if it is a Pluto channel and the row
+     * [tuned] was just handed to the player: poll it afresh, if its breaks are covered and the row
      * is on. Always a new run, even on the same url - a watchdog retune, an abandoned tune
      * recovered, a reload after the stream ended - because the player has started again from a
      * new point in the window: the old anchor, playing time and any stall open under it are
@@ -196,7 +208,7 @@ class PlutoBreak(private val deps: Deps) {
     /**
      * Called on every resume: whether it should re-tune [tuned] rather than carry on - back from
      * the home screen (not from a dialog that only paused), nothing open over the dial, the row
-     * on, a Pluto channel, and an engine timed from its load (mpv). A paused mpv resumes an
+     * on, a covered channel, and an engine timed from its load (mpv). A paused mpv resumes an
      * unknown distance behind the edge - or back at the window's start after half a minute -
      * and a live channel's re-tune is cheap and anchors afresh.
      *
@@ -206,7 +218,7 @@ class PlutoBreak(private val deps: Deps) {
     fun retuneOnResume(tuned: Tuned?): Boolean {
         val returning = wasStopped
         wasStopped = false
-        val live = tuned != null && tuned.card == null && tuned.channel.pluto != null && tuned.playable is Hls
+        val live = tuned != null && BreakChannels.of(tuned) != null
         if (returning && live && leftOnAd) return true
         return returning && live && !deps.overlayOpen() && deps.enabled() && deps.joinsThirdFromLast()
     }
@@ -224,8 +236,8 @@ class PlutoBreak(private val deps: Deps) {
     private fun poll(tuned: Tuned?, anchored: Boolean, fresh: Boolean) {
         val hls = tuned?.playable as? Hls
         val url = hls?.url
-        if (tuned == null || url == null || !deps.enabled() || tuned.card != null ||
-            tuned.channel.pluto == null || deps.stoppedNow()) {
+        val kind = tuned?.let(BreakChannels::of)
+        if (tuned == null || url == null || !deps.enabled() || kind == null || deps.stoppedNow()) {
             leave()
             return
         }
@@ -237,7 +249,8 @@ class PlutoBreak(private val deps: Deps) {
         this.anchored = anchored
         // The playlist mpv was handed, when the tune chose one: one fetch fewer per tune, and the
         // anchor is read off exactly the window mpv started in.
-        poller.start(url, hls?.mediaUrl)
+        poller.start(url, hls.mediaUrl, kind.source())
+        this.kind = kind
         ads?.warm()
     }
 
@@ -335,7 +348,7 @@ class PlutoBreak(private val deps: Deps) {
         val playing = pictureAt?.let { at ->
             now - at - stalledMillis - (stalledSince?.let { now - it } ?: 0L)
         }
-        return OnScreen.now(deps.exactInstant(), anchored && deps.joinsThirdFromLast(), v, loadedAt,
+        return OnScreen.now(deps.exactInstant().takeUnless { v.counted }, anchored && deps.joinsThirdFromLast(), v, loadedAt,
             playing, deps.wallMillis())
     }
 
@@ -396,13 +409,13 @@ class PlutoBreak(private val deps: Deps) {
                 // Pluto is no longer what plays: its stall clock means nothing from here.
                 stalledSince = null
             }
-            Log.i("fs42", "pluto break on ${t.channel.number}: ${if (adsOnPlayer) "commercials" else "card up"}")
+            Log.i("fs42", "${label()} break on ${t.channel.number}: ${if (adsOnPlayer) "commercials" else "card up"}")
             deps.picture()
             refresh()
             deps.volumeChanged()
             resumeMusic()
         } else if (!on && inBreak) {
-            Log.i("fs42", "pluto break over on ${t.channel.number}")
+            Log.i("fs42", "${label()} break over on ${t.channel.number}")
             endBreak()
         }
     }
