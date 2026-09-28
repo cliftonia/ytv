@@ -48,7 +48,39 @@ data class Channel(
      * app plays it through Pluto's own session route; the stream url stays as the fallback.
      */
     val pluto: PlutoRef? = null,
+    /**
+     * Whether a FAST channel's ad breaks get the station's own commercials or card (see
+     * `fast/CueBreaks`). `false` opts a channel out - a music channel (Stingray) whose cues mark
+     * no break worth covering. Absent, or anything that is not a clear no, is on: see
+     * [LenientFlag].
+     */
+    @Serializable(with = LenientFlag::class)
+    val breaks: Boolean = true,
 )
+
+/**
+ * A flag read the way a hand-edited lineup writes it: `false`, `"false"`, `"no"`, `"off"` and `0`
+ * are off; everything else - true, null, a typo - is on. Never throws: one odd value must not
+ * cost every channel on the dial its parse.
+ */
+object LenientFlag : kotlinx.serialization.KSerializer<Boolean> {
+
+    override val descriptor = kotlinx.serialization.descriptors.PrimitiveSerialDescriptor(
+        "LenientFlag", kotlinx.serialization.descriptors.PrimitiveKind.BOOLEAN)
+
+    private val OFF = setOf("false", "no", "off", "0")
+
+    override fun deserialize(decoder: kotlinx.serialization.encoding.Decoder): Boolean {
+        val element = (decoder as? kotlinx.serialization.json.JsonDecoder)?.decodeJsonElement()
+            ?: return runCatching { decoder.decodeBoolean() }.getOrDefault(true)
+        val primitive = element as? kotlinx.serialization.json.JsonPrimitive ?: return true
+        if (primitive is kotlinx.serialization.json.JsonNull) return true
+        return primitive.content.trim().lowercase() !in OFF
+    }
+
+    override fun serialize(encoder: kotlinx.serialization.encoding.Encoder, value: Boolean) =
+        encoder.encodeBoolean(value)
+}
 
 /**
  * A Pluto channel id and its home region, "uk" or "us".
