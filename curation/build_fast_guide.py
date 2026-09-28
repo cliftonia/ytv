@@ -184,6 +184,7 @@ def load(service, cache):
     else:
         raw = fetch(MJH % MJH_SERVICES[service])
         if path:
+            os.makedirs(cache, exist_ok=True)
             with open(path, "wb") as f:
                 f.write(raw)
     return gzip.decompress(raw)
