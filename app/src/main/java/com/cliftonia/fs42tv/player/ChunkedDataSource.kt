@@ -62,7 +62,21 @@ class ChunkedDataSource(
      */
     private var wholeBody = false
 
+    /**
+     * This request goes to [upstream] whole, unchunked: it may come back gzipped, and a gzipped
+     * reply's `Content-Range` counts COMPRESSED bytes. Pluto's AES key is 16 bytes but arrives as
+     * 37 compressed, so the next window asked for bytes 16-36 of a gzip stream - "Not in GZIP
+     * format", and every direct Pluto channel failed under Media3. Only playlists and keys allow
+     * gzip; they are small, and bounded by nature, which is all the chunking is for.
+     */
+    private var passThrough = false
+
     override fun open(dataSpec: DataSpec): Long {
+        passThrough = dataSpec.isFlagSet(DataSpec.FLAG_ALLOW_GZIP)
+        if (passThrough) {
+            opened = true
+            return upstream.open(dataSpec)
+        }
         spec = dataSpec
         position = dataSpec.position
         remaining = dataSpec.length
@@ -121,6 +135,7 @@ class ChunkedDataSource(
     private var opens = 0
 
     override fun read(buffer: ByteArray, offset: Int, length: Int): Int {
+        if (passThrough) return upstream.read(buffer, offset, length)
         if (remaining == 0L) return C.RESULT_END_OF_INPUT
 
         if (chunkRemaining == 0L) {
