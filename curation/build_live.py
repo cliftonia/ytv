@@ -341,6 +341,8 @@ SAME_CHANNEL = {
     "TennisChannel 2": "Tennis Channel 2", "PFL MMA": "PFL", "BBC Top Gear": "Top Gear",
     "CraftsyTV": "Craftsy", "Stingray TikTok Radio": "TikTok Radio", "60 Days in Jail": "60 Days In",
     "Rally.TV FAST+": "Rally TV",
+    # Tennis Channel 2 again, under Fire TV's name; and Little Dot's Real Crime on Rakuten's feed.
+    "T2 Tennis Channel": "Tennis Channel 2", "Real Crime Beta": "Real Crime",
 }
 
 
