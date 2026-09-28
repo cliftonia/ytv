@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.sync
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
@@ -190,19 +191,17 @@ class DialContractTest {
     }
 
     @Test
-    fun `a channel's breaks opt-out is read leniently, and on unless it clearly says no`() {
-        fun breaks(value: String?): Boolean {
+    fun `cued breaks are opt-in - only "cue" turns them on, and nothing odd breaks the parse`() {
+        fun cue(value: String?): Boolean {
             val field = value?.let { ""","breaks":$it""" }.orEmpty()
             return DialContract.parseDial(
-                """{"channels":[{"number":1,"name":"x","kind":"live"$field}]}""").channels.single().breaks
+                """{"channels":[{"number":1,"name":"x","kind":"live"$field}]}""").channels.single().cueBreaks
         }
-        assertTrue("absent", breaks(null))
-        assertTrue(breaks("true"))
-        assertTrue(breaks("null"))
-        assertTrue("a typo is not a no", breaks("\"flase\""))
-        assertTrue("an object is not a no", breaks("{}"))
-        listOf("false", "\"false\"", "\"No\"", "\"off\"", "0", "\" FALSE \"").forEach {
-            assertEquals(it, false, breaks(it))
+        assertTrue(cue("\"cue\""))
+        assertTrue("as a hand edit writes it", cue("\" CUE \""))
+        assertFalse("absent", cue(null))
+        listOf("null", "true", "false", "1", "\"yes\"", "\"cues\"", "{}", "[\"cue\"]").forEach {
+            assertFalse(it, cue(it))
         }
     }
 }
