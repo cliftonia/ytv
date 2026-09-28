@@ -1,0 +1,88 @@
+{
+ "channels": [
+  {
+   "number": 100,
+   "name": "50 Cent Action",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-68487fb3f212bedacf5a53e3.m3u8",
+     "duration": 600,
+     "title": "50 Cent Action"
+    }
+   ],
+   "pluto": {
+    "id": "68487fb3f212bedacf5a53e3",
+    "region": "us"
+   },
+   "block": "Movies",
+   "sub": "Action"
+  },
+  {
+   "number": 113,
+   "name": "National Lampoon",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://pb-4l6m6c7pca5dy.akamaized.net/playlist.m3u8",
+     "duration": 600,
+     "title": "National Lampoon",
+     "route": "us"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Comedy",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "US1800015K5"
+  },
+  {
+   "number": 124,
+   "name": "Sparkle Movies",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://candlelightmedia-sparklemovies-1-gb.samsung.wurl.tv/playlist.m3u8",
+     "duration": 600,
+     "title": "Sparkle Movies"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Romance",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "GBAJ400042T1"
+  },
+  {
+   "number": 171,
+   "name": "Dove Channel",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://linear-896.frequency.stream/dist/xumo/896/hls/master/playlist.m3u8",
+     "duration": 600,
+     "title": "Dove Channel"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Family",
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "300#99991333"
+  },
+  {
+   "number": 1000,
+   "name": "Stingray Jukebox Oldies",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://lotus.stingray.com/manifest/ose-021ads-montreal/samsungtvplus/master.m3u8",
+     "duration": 600,
+     "title": "Stingray Jukebox Oldies"
+    }
+   ],
+   "block": "Music",
+   "sub": "60s"
+  }
+ ]
+}

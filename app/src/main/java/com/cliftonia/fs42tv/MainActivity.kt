@@ -111,6 +111,12 @@ class MainActivity : ComponentActivity() {
         // on a television with no adb is otherwise unreadable.
         CrashLog.install(filesDir)
         prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        // PLUTO TV became LIVE TV: the saved choice is rewritten once, and the retired dial's
+        // cache goes with it. Its remembered channel stays behind unread - LIVE has its own key.
+        LineupSource.migrated(prefs.getString(LineupSource.KEY, null))?.let {
+            prefs.edit().putString(LineupSource.KEY, it).apply()
+            java.io.File(cacheDir, "pluto.json").delete()
+        }
         source = LineupSource.parse(prefs.getString(LineupSource.KEY, null))
         // Android's account first, ours second. A native crash leaves nothing in CrashLog -
         // that is precisely the gap ExitReason fills - and when both have something to say,
