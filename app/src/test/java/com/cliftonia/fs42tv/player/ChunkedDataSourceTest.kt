@@ -136,6 +136,25 @@ class ChunkedDataSourceTest {
     }
 
     @Test
+    fun `a request that may come back gzipped goes upstream whole, unchunked`() {
+        // Pluto's AES key: 16 bytes, 37 gzipped, and a Content-Range counting the 37. Chunked,
+        // the second window asked for compressed bytes 16-36 - not a gzip stream at all.
+        val resource = resourceOf(20)
+        val upstream = FakeUpstream(resource)
+        val chunked = ChunkedDataSource(upstream, chunkSize = 8)
+        val key = DataSpec.Builder().setUri(TestUri("https://fake/key.key")).setPosition(0)
+            .setLength(C.LENGTH_UNSET.toLong()).setFlags(DataSpec.FLAG_ALLOW_GZIP).build()
+
+        chunked.open(key)
+        val body = readAll(chunked)
+        chunked.close()
+
+        assertEquals(1, upstream.openSpecs.size)
+        assertEquals("the caller's own request, untouched", C.LENGTH_UNSET.toLong(), upstream.openSpecs[0].length)
+        assertTrue(resource.contentEquals(body))
+    }
+
+    @Test
     fun `every upstream request is bounded, never open-ended`() {
         // This is the entire reason the class exists: an unbounded request is throttled
         // identically to no Range header at all. If any request upstream carries
