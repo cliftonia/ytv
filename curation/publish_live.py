@@ -110,6 +110,22 @@ def with_guides(channels):
     return kept, [c["name"] for c in channels if not has_guide(c)]
 
 
+# Sub-blocks the owner wants at the END of their block, in this order: the darker genres last, so
+# surfing up from a block's start meets comedy and action before horror.
+LAST_SUBS = {"Movies": ["Horror", "Thriller"], "Series": ["Crime"]}
+
+
+def owner_order(blocks):
+    """[blocks] with each block's LAST_SUBS moved to its end, everything else in draft order."""
+    out = []
+    for block in blocks:
+        last = LAST_SUBS.get(block["name"], [])
+        subs = [s for s in block["sub"] if s["name"] not in last]
+        subs += [s for name in last for s in block["sub"] if s["name"] == name]
+        out.append(dict(block, sub=subs))
+    return out
+
+
 def round_up(n, step):
     return -(-n // step) * step
 
@@ -188,7 +204,7 @@ def build(draft, off, on):
     chosen, unguided = with_guides(picked(draft["channels"], off, on))
     return [dict(lineup_record(number, c), _source=c["source"], _tvg=c.get("tvg_id"),
                  _also=c.get("also") or [])
-            for number, c in renumber(draft["blocks"], chosen)], unguided
+            for number, c in renumber(owner_order(draft["blocks"]), chosen)], unguided
 
 
 def public(channel):

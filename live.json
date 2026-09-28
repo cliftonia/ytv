@@ -266,200 +266,6 @@
   },
   {
    "number": 130,
-   "name": "Horror by ALTER",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/acac036c-181a-413a-a102-cd294c83320d/playlist.m3u8",
-     "duration": 600,
-     "title": "Horror by ALTER"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Horror",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "692051"
-  },
-  {
-   "number": 131,
-   "name": "OuterSphere",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d3o593mz1glx8d.cloudfront.net/OuterSphere_US.m3u8",
-     "duration": 600,
-     "title": "OuterSphere"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Horror",
-   "breaks": "cue",
-   "guide": "samsung",
-   "guide_id": "USBD1200007FE"
-  },
-  {
-   "number": 132,
-   "name": "Pluto TV Horror",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-612cda102f5f18000705e0bf.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Horror"
-    }
-   ],
-   "pluto": {
-    "id": "612cda102f5f18000705e0bf",
-    "region": "uk"
-   },
-   "block": "Movies",
-   "sub": "Horror"
-  },
-  {
-   "number": 133,
-   "name": "Pluto TV Terror",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5c6dc88fcd232425a6e0f06e.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Terror"
-    }
-   ],
-   "pluto": {
-    "id": "5c6dc88fcd232425a6e0f06e",
-    "region": "us"
-   },
-   "block": "Movies",
-   "sub": "Horror"
-  },
-  {
-   "number": 134,
-   "name": "Universal Monsters",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-65a9b20f0c7ff50008d3a3b6.m3u8",
-     "duration": 600,
-     "title": "Universal Monsters"
-    }
-   ],
-   "pluto": {
-    "id": "65a9b20f0c7ff50008d3a3b6",
-    "region": "us"
-   },
-   "block": "Movies",
-   "sub": "Horror"
-  },
-  {
-   "number": 140,
-   "name": "Crime ThrillHer",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1x6vwh5kyhcyb.cloudfront.net/v1/aenetworks_thrillher_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
-     "duration": 600,
-     "title": "Crime ThrillHer",
-     "route": "us"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Thriller",
-   "breaks": "cue",
-   "guide": "samsung",
-   "guide_id": "USBB52000236D"
-  },
-  {
-   "number": 141,
-   "name": "CrimeFlix",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://dgx2snzx175pa.cloudfront.net/scheduler/scheduleMaster/391.m3u8",
-     "duration": 600,
-     "title": "CrimeFlix"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Thriller",
-   "breaks": "cue",
-   "guide": "stirr",
-   "guide_id": "5273"
-  },
-  {
-   "number": 142,
-   "name": "Pluto TV Crime Movies",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5f4d8594eb979c0007706de7.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Crime Movies"
-    }
-   ],
-   "pluto": {
-    "id": "5f4d8594eb979c0007706de7",
-    "region": "us"
-   },
-   "block": "Movies",
-   "sub": "Thriller"
-  },
-  {
-   "number": 143,
-   "name": "Pluto TV Sherlock",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5dc2c00abfed110009d97243.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Sherlock"
-    }
-   ],
-   "pluto": {
-    "id": "5dc2c00abfed110009d97243",
-    "region": "uk"
-   },
-   "block": "Movies",
-   "sub": "Thriller"
-  },
-  {
-   "number": 144,
-   "name": "Pluto TV Thrillers",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5dbfedccc563080009b60f4a.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Thrillers"
-    }
-   ],
-   "pluto": {
-    "id": "5dbfedccc563080009b60f4a",
-    "region": "uk"
-   },
-   "block": "Movies",
-   "sub": "Thriller"
-  },
-  {
-   "number": 145,
-   "name": "Rakuten TV Thrillers UK",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://thriller-rakuten-tv-uk.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6482/master.m3u8",
-     "duration": 600,
-     "title": "Rakuten TV Thrillers UK"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Thriller",
-   "breaks": "cue",
-   "guide": "rakuten",
-   "guide_id": "thriller-rakuten-tv"
-  },
-  {
-   "number": 150,
    "name": "Pluto TV Fantastic",
    "kind": "live",
    "streams": [
@@ -477,7 +283,7 @@
    "sub": "Sci-Fi"
   },
   {
-   "number": 151,
+   "number": 131,
    "name": "Pluto TV Sci-Fi",
    "kind": "live",
    "streams": [
@@ -495,7 +301,7 @@
    "sub": "Sci-Fi"
   },
   {
-   "number": 152,
+   "number": 132,
    "name": "Rakuten TV Sci-Fi UK",
    "kind": "live",
    "streams": [
@@ -512,7 +318,7 @@
    "guide_id": "sci-fi-rakuten-tv"
   },
   {
-   "number": 160,
+   "number": 140,
    "name": "Classic Movie Westerns",
    "kind": "live",
    "streams": [
@@ -530,7 +336,7 @@
    "sub": "Westerns"
   },
   {
-   "number": 161,
+   "number": 141,
    "name": "FilmRise Westerns",
    "kind": "live",
    "streams": [
@@ -547,7 +353,7 @@
    "guide_id": "USBB32000196O"
   },
   {
-   "number": 162,
+   "number": 142,
    "name": "Grit Xtra",
    "kind": "live",
    "streams": [
@@ -564,7 +370,7 @@
    "guide_id": "684170"
   },
   {
-   "number": 163,
+   "number": 143,
    "name": "Grjngo Western Movies",
    "kind": "live",
    "streams": [
@@ -581,7 +387,7 @@
    "guide_id": "GBBD500007TG"
   },
   {
-   "number": 164,
+   "number": 144,
    "name": "Western Bound",
    "kind": "live",
    "streams": [
@@ -598,7 +404,7 @@
    "guide_id": "6595"
   },
   {
-   "number": 170,
+   "number": 150,
    "name": "Dove Channel",
    "kind": "live",
    "streams": [
@@ -615,7 +421,7 @@
    "guide_id": "99991333"
   },
   {
-   "number": 171,
+   "number": 151,
    "name": "Pluto TV Family Movie Club",
    "kind": "live",
    "streams": [
@@ -633,7 +439,7 @@
    "sub": "Family"
   },
   {
-   "number": 172,
+   "number": 152,
    "name": "Rakuten TV Family Movies UK",
    "kind": "live",
    "streams": [
@@ -651,7 +457,7 @@
    "guide_id": "family-rakuten-tv"
   },
   {
-   "number": 180,
+   "number": 160,
    "name": "British Screen Classics",
    "kind": "live",
    "streams": [
@@ -669,7 +475,7 @@
    "sub": "Classic"
   },
   {
-   "number": 181,
+   "number": 161,
    "name": "Classic Movies Channel",
    "kind": "live",
    "streams": [
@@ -687,7 +493,7 @@
    "sub": "Classic"
   },
   {
-   "number": 182,
+   "number": 162,
    "name": "WBTV Classic Cinema",
    "kind": "live",
    "streams": [
@@ -705,7 +511,7 @@
    "guide_id": "400000069"
   },
   {
-   "number": 190,
+   "number": 170,
    "name": "Lifetime Movie Favorites",
    "kind": "live",
    "streams": [
@@ -723,7 +529,7 @@
    "sub": "Drama"
   },
   {
-   "number": 191,
+   "number": 171,
    "name": "Lifetime Movies",
    "kind": "live",
    "streams": [
@@ -741,7 +547,7 @@
    "guide_id": "GB37000067A"
   },
   {
-   "number": 192,
+   "number": 172,
    "name": "Pluto TV Movies",
    "kind": "live",
    "streams": [
@@ -759,7 +565,7 @@
    "sub": "Drama"
   },
   {
-   "number": 193,
+   "number": 173,
    "name": "Rakuten TV Drama Movies UK",
    "kind": "live",
    "streams": [
@@ -776,7 +582,7 @@
    "guide_id": "drama-rakuten-tv"
   },
   {
-   "number": 200,
+   "number": 180,
    "name": "00s Replay",
    "kind": "live",
    "streams": [
@@ -794,7 +600,7 @@
    "sub": "Decades"
   },
   {
-   "number": 201,
+   "number": 181,
    "name": "70s Cinema",
    "kind": "live",
    "streams": [
@@ -812,7 +618,7 @@
    "sub": "Decades"
   },
   {
-   "number": 202,
+   "number": 182,
    "name": "80s Rewind",
    "kind": "live",
    "streams": [
@@ -830,7 +636,7 @@
    "sub": "Decades"
   },
   {
-   "number": 203,
+   "number": 183,
    "name": "90s Throwback",
    "kind": "live",
    "streams": [
@@ -848,7 +654,7 @@
    "sub": "Decades"
   },
   {
-   "number": 210,
+   "number": 190,
    "name": "Flicks of Fury",
    "kind": "live",
    "streams": [
@@ -866,7 +672,7 @@
    "sub": "Martial Arts"
   },
   {
-   "number": 211,
+   "number": 191,
    "name": "Hi-Yah!",
    "kind": "live",
    "streams": [
@@ -883,7 +689,7 @@
    "guide_id": "99991302"
   },
   {
-   "number": 220,
+   "number": 200,
    "name": "BET Cinema",
    "kind": "live",
    "streams": [
@@ -901,7 +707,7 @@
    "sub": "Black Cinema"
   },
   {
-   "number": 221,
+   "number": 201,
    "name": "Bounce XL",
    "kind": "live",
    "streams": [
@@ -919,7 +725,7 @@
    "sub": "Black Cinema"
   },
   {
-   "number": 222,
+   "number": 202,
    "name": "Maverick Black Cinema",
    "kind": "live",
    "streams": [
@@ -936,7 +742,7 @@
    "guide_id": "USAJ3000007MT"
   },
   {
-   "number": 223,
+   "number": 203,
    "name": "Nolly Africa HD",
    "kind": "live",
    "streams": [
@@ -954,7 +760,7 @@
    "guide_id": "GB2700017IP"
   },
   {
-   "number": 224,
+   "number": 204,
    "name": "Shades of Black",
    "kind": "live",
    "streams": [
@@ -972,7 +778,7 @@
    "guide_id": "USBC1000004G8"
   },
   {
-   "number": 230,
+   "number": 210,
    "name": "The Asylum",
    "kind": "live",
    "streams": [
@@ -990,7 +796,7 @@
    "guide_id": "USAJ17000014C"
   },
   {
-   "number": 231,
+   "number": 211,
    "name": "El Rey Rebel",
    "kind": "live",
    "streams": [
@@ -1008,7 +814,7 @@
    "sub": "Cult & B-Movies"
   },
   {
-   "number": 232,
+   "number": 212,
    "name": "Midnight Pulp",
    "kind": "live",
    "streams": [
@@ -1026,7 +832,7 @@
    "guide_id": "USBD700015LK"
   },
   {
-   "number": 233,
+   "number": 213,
    "name": "Pluto TV Cult Films",
    "kind": "live",
    "streams": [
@@ -1044,7 +850,7 @@
    "sub": "Cult & B-Movies"
   },
   {
-   "number": 240,
+   "number": 220,
    "name": "Curzon Cinema",
    "kind": "live",
    "streams": [
@@ -1062,7 +868,7 @@
    "sub": "Indie & World"
   },
   {
-   "number": 241,
+   "number": 221,
    "name": "Gravitas Movies",
    "kind": "live",
    "streams": [
@@ -1079,7 +885,7 @@
    "guide_id": "USBD700011RE"
   },
   {
-   "number": 242,
+   "number": 222,
    "name": "Icon Film Channel",
    "kind": "live",
    "streams": [
@@ -1096,7 +902,7 @@
    "guide_id": "GB12000052F"
   },
   {
-   "number": 250,
+   "number": 230,
    "name": "Great! Movies",
    "kind": "live",
    "streams": [
@@ -1113,7 +919,7 @@
    "guide_id": "GBBC900007Q5"
   },
   {
-   "number": 251,
+   "number": 231,
    "name": "Her Sphere",
    "kind": "live",
    "streams": [
@@ -1130,7 +936,7 @@
    "guide_id": "400000104"
   },
   {
-   "number": 252,
+   "number": 232,
    "name": "Miramax Channel",
    "kind": "live",
    "streams": [
@@ -1148,7 +954,7 @@
    "guide_id": "US18000163F"
   },
   {
-   "number": 253,
+   "number": 233,
    "name": "Moviesphere",
    "kind": "live",
    "streams": [
@@ -1166,7 +972,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 254,
+   "number": 234,
    "name": "MovieSphere by Lionsgate",
    "kind": "live",
    "streams": [
@@ -1184,7 +990,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 255,
+   "number": 235,
    "name": "OUTflix Movies",
    "kind": "live",
    "streams": [
@@ -1202,7 +1008,7 @@
    "guide_id": "US8000024G"
   },
   {
-   "number": 256,
+   "number": 236,
    "name": "Paramount Movie Channel",
    "kind": "live",
    "streams": [
@@ -1220,7 +1026,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 257,
+   "number": 237,
    "name": "Pluto TV Franchise Favorites",
    "kind": "live",
    "streams": [
@@ -1238,7 +1044,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 258,
+   "number": 238,
    "name": "Pluto TV Icons",
    "kind": "live",
    "streams": [
@@ -1256,7 +1062,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 259,
+   "number": 239,
    "name": "Pluto TV Reaction",
    "kind": "live",
    "streams": [
@@ -1274,7 +1080,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 260,
+   "number": 240,
    "name": "Pluto TV Spotlight",
    "kind": "live",
    "streams": [
@@ -1292,7 +1098,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 261,
+   "number": 241,
    "name": "Pluto TV Staff Picks",
    "kind": "live",
    "streams": [
@@ -1310,7 +1116,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 262,
+   "number": 242,
    "name": "Pluto TV Trending Now",
    "kind": "live",
    "streams": [
@@ -1328,7 +1134,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 263,
+   "number": 243,
    "name": "Popflix",
    "kind": "live",
    "streams": [
@@ -1345,7 +1151,7 @@
    "guide_id": "GBAJ400045P5"
   },
   {
-   "number": 264,
+   "number": 244,
    "name": "Rakuten Top Movies UK",
    "kind": "live",
    "streams": [
@@ -1362,7 +1168,7 @@
    "guide_id": "top-movies-rakuten-tv"
   },
   {
-   "number": 265,
+   "number": 245,
    "name": "WBTV At the Movies",
    "kind": "live",
    "streams": [
@@ -1380,7 +1186,7 @@
    "guide_id": "715950"
   },
   {
-   "number": 266,
+   "number": 246,
    "name": "wedo movies",
    "kind": "live",
    "streams": [
@@ -1396,6 +1202,200 @@
    "breaks": "cue",
    "guide": "samsung",
    "guide_id": "GBBA3300050RG"
+  },
+  {
+   "number": 250,
+   "name": "Horror by ALTER",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://aegis-cloudfront-1.tubi.video/acac036c-181a-413a-a102-cd294c83320d/playlist.m3u8",
+     "duration": 600,
+     "title": "Horror by ALTER"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Horror",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "692051"
+  },
+  {
+   "number": 251,
+   "name": "OuterSphere",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://d3o593mz1glx8d.cloudfront.net/OuterSphere_US.m3u8",
+     "duration": 600,
+     "title": "OuterSphere"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Horror",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USBD1200007FE"
+  },
+  {
+   "number": 252,
+   "name": "Pluto TV Horror",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-612cda102f5f18000705e0bf.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Horror"
+    }
+   ],
+   "pluto": {
+    "id": "612cda102f5f18000705e0bf",
+    "region": "uk"
+   },
+   "block": "Movies",
+   "sub": "Horror"
+  },
+  {
+   "number": 253,
+   "name": "Pluto TV Terror",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5c6dc88fcd232425a6e0f06e.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Terror"
+    }
+   ],
+   "pluto": {
+    "id": "5c6dc88fcd232425a6e0f06e",
+    "region": "us"
+   },
+   "block": "Movies",
+   "sub": "Horror"
+  },
+  {
+   "number": 254,
+   "name": "Universal Monsters",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-65a9b20f0c7ff50008d3a3b6.m3u8",
+     "duration": 600,
+     "title": "Universal Monsters"
+    }
+   ],
+   "pluto": {
+    "id": "65a9b20f0c7ff50008d3a3b6",
+    "region": "us"
+   },
+   "block": "Movies",
+   "sub": "Horror"
+  },
+  {
+   "number": 260,
+   "name": "Crime ThrillHer",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://d1x6vwh5kyhcyb.cloudfront.net/v1/aenetworks_thrillher_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+     "duration": 600,
+     "title": "Crime ThrillHer",
+     "route": "us"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Thriller",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USBB52000236D"
+  },
+  {
+   "number": 261,
+   "name": "CrimeFlix",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://dgx2snzx175pa.cloudfront.net/scheduler/scheduleMaster/391.m3u8",
+     "duration": 600,
+     "title": "CrimeFlix"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Thriller",
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "5273"
+  },
+  {
+   "number": 262,
+   "name": "Pluto TV Crime Movies",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5f4d8594eb979c0007706de7.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Crime Movies"
+    }
+   ],
+   "pluto": {
+    "id": "5f4d8594eb979c0007706de7",
+    "region": "us"
+   },
+   "block": "Movies",
+   "sub": "Thriller"
+  },
+  {
+   "number": 263,
+   "name": "Pluto TV Sherlock",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5dc2c00abfed110009d97243.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Sherlock"
+    }
+   ],
+   "pluto": {
+    "id": "5dc2c00abfed110009d97243",
+    "region": "uk"
+   },
+   "block": "Movies",
+   "sub": "Thriller"
+  },
+  {
+   "number": 264,
+   "name": "Pluto TV Thrillers",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5dbfedccc563080009b60f4a.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Thrillers"
+    }
+   ],
+   "pluto": {
+    "id": "5dbfedccc563080009b60f4a",
+    "region": "uk"
+   },
+   "block": "Movies",
+   "sub": "Thriller"
+  },
+  {
+   "number": 265,
+   "name": "Rakuten TV Thrillers UK",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://thriller-rakuten-tv-uk.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6482/master.m3u8",
+     "duration": 600,
+     "title": "Rakuten TV Thrillers UK"
+    }
+   ],
+   "block": "Movies",
+   "sub": "Thriller",
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "thriller-rakuten-tv"
   },
   {
    "number": 300,
@@ -2670,303 +2670,6 @@
   },
   {
    "number": 410,
-   "name": "21 Jump Street",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1oefjzrirx6fc.cloudfront.net/21_Jump_Street_SONO6.m3u8",
-     "duration": 600,
-     "title": "21 Jump Street",
-     "route": "us"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "samsung",
-   "guide_id": "USBB320000397"
-  },
-  {
-   "number": 411,
-   "name": "Acorn TV Mysteries",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d25ms2fshb3tcf.cloudfront.net/playlist.m3u8",
-     "duration": 600,
-     "title": "Acorn TV Mysteries",
-     "route": "us"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "samsung",
-   "guide_id": "US35000201T"
-  },
-  {
-   "number": 412,
-   "name": "Alfred Hitchcock Presents",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://xumo-xumoent-ch825-ku23q.fast.nbcuni.com/live/master.m3u8",
-     "duration": 600,
-     "title": "Alfred Hitchcock Presents"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "xumo",
-   "guide_id": "99951256"
-  },
-  {
-   "number": 413,
-   "name": "BritBox Mysteries",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-60f5d389985a0c0007357304.m3u8",
-     "duration": 600,
-     "title": "BritBox Mysteries"
-    }
-   ],
-   "pluto": {
-    "id": "60f5d389985a0c0007357304",
-    "region": "us"
-   },
-   "block": "Series",
-   "sub": "Crime"
-  },
-  {
-   "number": 414,
-   "name": "Classic TV Crime Drama",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-61325c4f982acd000723287e.m3u8",
-     "duration": 600,
-     "title": "Classic TV Crime Drama"
-    }
-   ],
-   "pluto": {
-    "id": "61325c4f982acd000723287e",
-    "region": "us"
-   },
-   "block": "Series",
-   "sub": "Crime"
-  },
-  {
-   "number": 415,
-   "name": "CW Gold",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1d726ny1vain2.cloudfront.net/playlist.m3u8",
-     "duration": 600,
-     "title": "CW Gold"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "samsung",
-   "guide_id": "US25000063S"
-  },
-  {
-   "number": 416,
-   "name": "ION",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-65453f30085df200085883d8.m3u8",
-     "duration": 600,
-     "title": "ION"
-    }
-   ],
-   "pluto": {
-    "id": "65453f30085df200085883d8",
-    "region": "us"
-   },
-   "block": "Series",
-   "sub": "Crime"
-  },
-  {
-   "number": 417,
-   "name": "ION Mystery",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/3b6afc3b-97f7-4f22-99f4-7bcff60fc39d/playlist.m3u8",
-     "duration": 600,
-     "title": "ION Mystery"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "684167"
-  },
-  {
-   "number": 418,
-   "name": "ION Plus",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/5305de41-1f84-4226-a67b-6690552c7663/playlist.m3u8",
-     "duration": 600,
-     "title": "ION Plus"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "684165"
-  },
-  {
-   "number": 419,
-   "name": "MHz Mysteries",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://mhz-samsung-linear-us.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "MHz Mysteries"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "samsung",
-   "guide_id": "USAJ22000130U"
-  },
-  {
-   "number": 420,
-   "name": "Midsomer Murders",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/d76934f9-bea8-4cc2-a812-c2e8a9c5d40a/playlist.m3u8",
-     "duration": 600,
-     "title": "Midsomer Murders"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "700415"
-  },
-  {
-   "number": 421,
-   "name": "Murder She Wrote",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://xumo-xumoent-vc-119-t7wx7.fast.nbcuni.com/live/master.m3u8",
-     "duration": 600,
-     "title": "Murder She Wrote"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "xumo",
-   "guide_id": "99951239"
-  },
-  {
-   "number": 422,
-   "name": "Nash Bridges",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/07f838db-e5bc-47c9-b2b8-6d7037b06b9b/playlist.m3u8",
-     "duration": 600,
-     "title": "Nash Bridges"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "400000105"
-  },
-  {
-   "number": 423,
-   "name": "Pluto TV Crime Drama",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-65a6a7a00c7ff50008cba07b.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Crime Drama"
-    }
-   ],
-   "pluto": {
-    "id": "65a6a7a00c7ff50008cba07b",
-    "region": "uk"
-   },
-   "block": "Series",
-   "sub": "Crime"
-  },
-  {
-   "number": 424,
-   "name": "Silent Witness and New Tricks",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/d37465d7-dfbc-45cd-98a2-8d47968b5fb5/playlist.m3u8",
-     "duration": 600,
-     "title": "Silent Witness and New Tricks"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "400000064"
-  },
-  {
-   "number": 425,
-   "name": "Universal Crime",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-6549341853fc9700083901ac.m3u8",
-     "duration": 600,
-     "title": "Universal Crime"
-    }
-   ],
-   "pluto": {
-    "id": "6549341853fc9700083901ac",
-    "region": "us"
-   },
-   "block": "Series",
-   "sub": "Crime"
-  },
-  {
-   "number": 426,
-   "name": "WBTV The FBI",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://live-manifest.production-public.tubi.io/live/0e9b3dc6-8b19-4854-b0d1-df85b9ffa282/playlist.m3u8",
-     "duration": 600,
-     "title": "WBTV The FBI",
-     "route": "us"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "400000066"
-  },
-  {
-   "number": 430,
    "name": "4UV",
    "kind": "live",
    "streams": [
@@ -2984,7 +2687,7 @@
    "guide_id": "USBD70000412"
   },
   {
-   "number": 431,
+   "number": 411,
    "name": "All Reality We TV",
    "kind": "live",
    "streams": [
@@ -3002,7 +2705,7 @@
    "guide_id": "USBD12000061R"
   },
   {
-   "number": 432,
+   "number": 412,
    "name": "Bad Girls Club",
    "kind": "live",
    "streams": [
@@ -3019,7 +2722,7 @@
    "guide_id": "99951467"
   },
   {
-   "number": 433,
+   "number": 413,
    "name": "Bravo Vault",
    "kind": "live",
    "streams": [
@@ -3037,7 +2740,7 @@
    "sub": "Reality"
   },
   {
-   "number": 434,
+   "number": 414,
    "name": "Caught on Tape",
    "kind": "live",
    "streams": [
@@ -3055,7 +2758,7 @@
    "guide_id": "US700007CV"
   },
   {
-   "number": 435,
+   "number": 415,
    "name": "Chaos on Cam",
    "kind": "live",
    "streams": [
@@ -3073,7 +2776,7 @@
    "guide_id": "GB4600003RY"
   },
   {
-   "number": 436,
+   "number": 416,
    "name": "Dance Moms",
    "kind": "live",
    "streams": [
@@ -3090,7 +2793,7 @@
    "guide_id": "400000086"
   },
   {
-   "number": 437,
+   "number": 417,
    "name": "E! Keeping Up",
    "kind": "live",
    "streams": [
@@ -3107,7 +2810,7 @@
    "guide_id": "99951465"
   },
   {
-   "number": 438,
+   "number": 418,
    "name": "LADbible",
    "kind": "live",
    "streams": [
@@ -3124,7 +2827,7 @@
    "guide_id": "GB2000007ID"
   },
   {
-   "number": 439,
+   "number": 419,
    "name": "Little Women LA",
    "kind": "live",
    "streams": [
@@ -3142,7 +2845,7 @@
    "guide_id": "USBD170000771"
   },
   {
-   "number": 440,
+   "number": 420,
    "name": "Logo Pluto TV",
    "kind": "live",
    "streams": [
@@ -3160,7 +2863,7 @@
    "sub": "Reality"
   },
   {
-   "number": 441,
+   "number": 421,
    "name": "MTV Pluto TV",
    "kind": "live",
    "streams": [
@@ -3178,7 +2881,7 @@
    "sub": "Reality"
   },
   {
-   "number": 442,
+   "number": 422,
    "name": "The Osbournes",
    "kind": "live",
    "streams": [
@@ -3195,7 +2898,7 @@
    "guide_id": "GB3600002EB"
   },
   {
-   "number": 443,
+   "number": 423,
    "name": "Perform",
    "kind": "live",
    "streams": [
@@ -3213,7 +2916,7 @@
    "guide_id": "USBB520002604"
   },
   {
-   "number": 444,
+   "number": 424,
    "name": "Pluto TV Reality",
    "kind": "live",
    "streams": [
@@ -3231,7 +2934,7 @@
    "sub": "Reality"
   },
   {
-   "number": 445,
+   "number": 425,
    "name": "Rakuten TV Reality UK",
    "kind": "live",
    "streams": [
@@ -3248,7 +2951,7 @@
    "guide_id": "reality-rakuten-tv"
   },
   {
-   "number": 446,
+   "number": 426,
    "name": "Real Housewives Vault",
    "kind": "live",
    "streams": [
@@ -3265,7 +2968,7 @@
    "guide_id": "99951243"
   },
   {
-   "number": 447,
+   "number": 427,
    "name": "VH1 Queens of Reality",
    "kind": "live",
    "streams": [
@@ -3283,7 +2986,7 @@
    "sub": "Reality"
   },
   {
-   "number": 448,
+   "number": 428,
    "name": "WBTV Family Unscripted",
    "kind": "live",
    "streams": [
@@ -3301,7 +3004,7 @@
    "guide_id": "715948"
   },
   {
-   "number": 450,
+   "number": 430,
    "name": "All Out Reality",
    "kind": "live",
    "streams": [
@@ -3319,7 +3022,7 @@
    "guide_id": "USBB4400016F9"
   },
   {
-   "number": 451,
+   "number": 431,
    "name": "Alone By History",
    "kind": "live",
    "streams": [
@@ -3336,7 +3039,7 @@
    "guide_id": "USBD27000156I"
   },
   {
-   "number": 452,
+   "number": 432,
    "name": "America's Got Talent",
    "kind": "live",
    "streams": [
@@ -3353,7 +3056,7 @@
    "guide_id": "GBBC2300002GG"
   },
   {
-   "number": 453,
+   "number": 433,
    "name": "American Idol",
    "kind": "live",
    "streams": [
@@ -3370,7 +3073,7 @@
    "guide_id": "GBBC2300001X5"
   },
   {
-   "number": 454,
+   "number": 434,
    "name": "American Ninja Warrior",
    "kind": "live",
    "streams": [
@@ -3387,7 +3090,7 @@
    "guide_id": "99951318"
   },
   {
-   "number": 455,
+   "number": 435,
    "name": "The Biggest Loser",
    "kind": "live",
    "streams": [
@@ -3404,7 +3107,7 @@
    "guide_id": "677790"
   },
   {
-   "number": 456,
+   "number": 436,
    "name": "Bring It!",
    "kind": "live",
    "streams": [
@@ -3422,7 +3125,7 @@
    "guide_id": "USBD17000040J"
   },
   {
-   "number": 457,
+   "number": 437,
    "name": "Challenge Accepted",
    "kind": "live",
    "streams": [
@@ -3440,7 +3143,7 @@
    "guide_id": "US2100006EH"
   },
   {
-   "number": 458,
+   "number": 438,
    "name": "Forged In Fire",
    "kind": "live",
    "streams": [
@@ -3458,7 +3161,7 @@
    "guide_id": "USBD2700014QW"
   },
   {
-   "number": 459,
+   "number": 439,
    "name": "The Masked Singer",
    "kind": "live",
    "streams": [
@@ -3475,7 +3178,7 @@
    "guide_id": "650666"
   },
   {
-   "number": 460,
+   "number": 440,
    "name": "Mr. Beast",
    "kind": "live",
    "streams": [
@@ -3492,7 +3195,7 @@
    "guide_id": "400000048"
   },
   {
-   "number": 461,
+   "number": 441,
    "name": "Pluto TV Competition",
    "kind": "live",
    "streams": [
@@ -3510,7 +3213,7 @@
    "sub": "Competition Reality"
   },
   {
-   "number": 462,
+   "number": 442,
    "name": "Robot Wars by Mech+",
    "kind": "live",
    "streams": [
@@ -3527,7 +3230,7 @@
    "guide_id": "GBBD500005ZG"
   },
   {
-   "number": 463,
+   "number": 443,
    "name": "Survivor",
    "kind": "live",
    "streams": [
@@ -3544,7 +3247,7 @@
    "guide_id": "GBBB3800007BN"
   },
   {
-   "number": 470,
+   "number": 450,
    "name": "All Weddings We TV",
    "kind": "live",
    "streams": [
@@ -3561,7 +3264,7 @@
    "guide_id": "99991625"
   },
   {
-   "number": 471,
+   "number": 451,
    "name": "Cheaters",
    "kind": "live",
    "streams": [
@@ -3579,7 +3282,7 @@
    "guide_id": "USBD3500031F3"
   },
   {
-   "number": 472,
+   "number": 452,
    "name": "Dating Disasters",
    "kind": "live",
    "streams": [
@@ -3597,7 +3300,7 @@
    "sub": "Dating Reality"
   },
   {
-   "number": 473,
+   "number": 453,
    "name": "Matched Married Meet",
    "kind": "live",
    "streams": [
@@ -3615,7 +3318,7 @@
    "guide_id": "USBC440000193"
   },
   {
-   "number": 474,
+   "number": 454,
    "name": "WBTV Love and Marriage",
    "kind": "live",
    "streams": [
@@ -3633,7 +3336,7 @@
    "guide_id": "715947"
   },
   {
-   "number": 480,
+   "number": 460,
    "name": "American Pickers by History",
    "kind": "live",
    "streams": [
@@ -3651,7 +3354,7 @@
    "guide_id": "USBD3500041ZF"
   },
   {
-   "number": 481,
+   "number": 461,
    "name": "Deal Masters",
    "kind": "live",
    "streams": [
@@ -3669,7 +3372,7 @@
    "guide_id": "GB12000037Y"
   },
   {
-   "number": 482,
+   "number": 462,
    "name": "Deal Zone",
    "kind": "live",
    "streams": [
@@ -3687,7 +3390,7 @@
    "guide_id": "USBB52000246M"
   },
   {
-   "number": 483,
+   "number": 463,
    "name": "Operation Repo",
    "kind": "live",
    "streams": [
@@ -3705,7 +3408,7 @@
    "guide_id": "USBC6000219D"
   },
   {
-   "number": 484,
+   "number": 464,
    "name": "Pawn Stars",
    "kind": "live",
    "streams": [
@@ -3723,7 +3426,7 @@
    "guide_id": "US300003S3"
   },
   {
-   "number": 485,
+   "number": 465,
    "name": "Spike Pluto TV",
    "kind": "live",
    "streams": [
@@ -3741,7 +3444,7 @@
    "sub": "Pawn & Deals"
   },
   {
-   "number": 486,
+   "number": 466,
    "name": "Storage Wars LA",
    "kind": "live",
    "streams": [
@@ -3759,7 +3462,7 @@
    "guide_id": "USBD1700006T2"
   },
   {
-   "number": 490,
+   "number": 470,
    "name": "Bondi Rescue",
    "kind": "live",
    "streams": [
@@ -3777,7 +3480,7 @@
    "guide_id": "US2900010UT"
   },
   {
-   "number": 491,
+   "number": 471,
    "name": "Duck Dynasty",
    "kind": "live",
    "streams": [
@@ -3794,7 +3497,7 @@
    "guide_id": "duck-dynasty"
   },
   {
-   "number": 492,
+   "number": 472,
    "name": "Hoarders",
    "kind": "live",
    "streams": [
@@ -3811,7 +3514,7 @@
    "guide_id": "GB3700005QK"
   },
   {
-   "number": 493,
+   "number": 473,
    "name": "Intervention",
    "kind": "live",
    "streams": [
@@ -3829,7 +3532,7 @@
    "guide_id": "GB2700002F7"
   },
   {
-   "number": 494,
+   "number": 474,
    "name": "Pluto TV Lives",
    "kind": "live",
    "streams": [
@@ -3847,7 +3550,7 @@
    "sub": "Docu-Reality"
   },
   {
-   "number": 495,
+   "number": 475,
    "name": "So… Real",
    "kind": "live",
    "streams": [
@@ -3864,7 +3567,7 @@
    "guide_id": "GBBD1100009M9"
   },
   {
-   "number": 496,
+   "number": 476,
    "name": "Untold Stories of the ER",
    "kind": "live",
    "streams": [
@@ -3881,7 +3584,7 @@
    "guide_id": "GB3700009AO"
   },
   {
-   "number": 497,
+   "number": 477,
    "name": "WBTV Unique Lives",
    "kind": "live",
    "streams": [
@@ -3899,7 +3602,7 @@
    "guide_id": "715942"
   },
   {
-   "number": 500,
+   "number": 480,
    "name": "Cutlers Court",
    "kind": "live",
    "streams": [
@@ -3917,7 +3620,7 @@
    "guide_id": "US700020AX"
   },
   {
-   "number": 501,
+   "number": 481,
    "name": "Divorce Court",
    "kind": "live",
    "streams": [
@@ -3935,7 +3638,7 @@
    "guide_id": "USBD300006A6"
   },
   {
-   "number": 502,
+   "number": 482,
    "name": "Judge Nosey",
    "kind": "live",
    "streams": [
@@ -3953,7 +3656,7 @@
    "sub": "Judge & Talk"
   },
   {
-   "number": 503,
+   "number": 483,
    "name": "Nosey",
    "kind": "live",
    "streams": [
@@ -3969,6 +3672,303 @@
    },
    "block": "Series",
    "sub": "Judge & Talk"
+  },
+  {
+   "number": 490,
+   "name": "21 Jump Street",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://d1oefjzrirx6fc.cloudfront.net/21_Jump_Street_SONO6.m3u8",
+     "duration": 600,
+     "title": "21 Jump Street",
+     "route": "us"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USBB320000397"
+  },
+  {
+   "number": 491,
+   "name": "Acorn TV Mysteries",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://d25ms2fshb3tcf.cloudfront.net/playlist.m3u8",
+     "duration": 600,
+     "title": "Acorn TV Mysteries",
+     "route": "us"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "US35000201T"
+  },
+  {
+   "number": 492,
+   "name": "Alfred Hitchcock Presents",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://xumo-xumoent-ch825-ku23q.fast.nbcuni.com/live/master.m3u8",
+     "duration": 600,
+     "title": "Alfred Hitchcock Presents"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951256"
+  },
+  {
+   "number": 493,
+   "name": "BritBox Mysteries",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-60f5d389985a0c0007357304.m3u8",
+     "duration": 600,
+     "title": "BritBox Mysteries"
+    }
+   ],
+   "pluto": {
+    "id": "60f5d389985a0c0007357304",
+    "region": "us"
+   },
+   "block": "Series",
+   "sub": "Crime"
+  },
+  {
+   "number": 494,
+   "name": "Classic TV Crime Drama",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-61325c4f982acd000723287e.m3u8",
+     "duration": 600,
+     "title": "Classic TV Crime Drama"
+    }
+   ],
+   "pluto": {
+    "id": "61325c4f982acd000723287e",
+    "region": "us"
+   },
+   "block": "Series",
+   "sub": "Crime"
+  },
+  {
+   "number": 495,
+   "name": "CW Gold",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://d1d726ny1vain2.cloudfront.net/playlist.m3u8",
+     "duration": 600,
+     "title": "CW Gold"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "US25000063S"
+  },
+  {
+   "number": 496,
+   "name": "ION",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-65453f30085df200085883d8.m3u8",
+     "duration": 600,
+     "title": "ION"
+    }
+   ],
+   "pluto": {
+    "id": "65453f30085df200085883d8",
+    "region": "us"
+   },
+   "block": "Series",
+   "sub": "Crime"
+  },
+  {
+   "number": 497,
+   "name": "ION Mystery",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://aegis-cloudfront-1.tubi.video/3b6afc3b-97f7-4f22-99f4-7bcff60fc39d/playlist.m3u8",
+     "duration": 600,
+     "title": "ION Mystery"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "684167"
+  },
+  {
+   "number": 498,
+   "name": "ION Plus",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://aegis-cloudfront-1.tubi.video/5305de41-1f84-4226-a67b-6690552c7663/playlist.m3u8",
+     "duration": 600,
+     "title": "ION Plus"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "684165"
+  },
+  {
+   "number": 499,
+   "name": "MHz Mysteries",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://mhz-samsung-linear-us.samsung.wurl.tv/playlist.m3u8",
+     "duration": 600,
+     "title": "MHz Mysteries"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USAJ22000130U"
+  },
+  {
+   "number": 500,
+   "name": "Midsomer Murders",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://aegis-cloudfront-1.tubi.video/d76934f9-bea8-4cc2-a812-c2e8a9c5d40a/playlist.m3u8",
+     "duration": 600,
+     "title": "Midsomer Murders"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "700415"
+  },
+  {
+   "number": 501,
+   "name": "Murder She Wrote",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://xumo-xumoent-vc-119-t7wx7.fast.nbcuni.com/live/master.m3u8",
+     "duration": 600,
+     "title": "Murder She Wrote"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951239"
+  },
+  {
+   "number": 502,
+   "name": "Nash Bridges",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://aegis-cloudfront-1.tubi.video/07f838db-e5bc-47c9-b2b8-6d7037b06b9b/playlist.m3u8",
+     "duration": 600,
+     "title": "Nash Bridges"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000105"
+  },
+  {
+   "number": 503,
+   "name": "Pluto TV Crime Drama",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-65a6a7a00c7ff50008cba07b.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Crime Drama"
+    }
+   ],
+   "pluto": {
+    "id": "65a6a7a00c7ff50008cba07b",
+    "region": "uk"
+   },
+   "block": "Series",
+   "sub": "Crime"
+  },
+  {
+   "number": 504,
+   "name": "Silent Witness and New Tricks",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://aegis-cloudfront-1.tubi.video/d37465d7-dfbc-45cd-98a2-8d47968b5fb5/playlist.m3u8",
+     "duration": 600,
+     "title": "Silent Witness and New Tricks"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000064"
+  },
+  {
+   "number": 505,
+   "name": "Universal Crime",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-6549341853fc9700083901ac.m3u8",
+     "duration": 600,
+     "title": "Universal Crime"
+    }
+   ],
+   "pluto": {
+    "id": "6549341853fc9700083901ac",
+    "region": "us"
+   },
+   "block": "Series",
+   "sub": "Crime"
+  },
+  {
+   "number": 506,
+   "name": "WBTV The FBI",
+   "kind": "live",
+   "streams": [
+    {
+     "url": "https://live-manifest.production-public.tubi.io/live/0e9b3dc6-8b19-4854-b0d1-df85b9ffa282/playlist.m3u8",
+     "duration": 600,
+     "title": "WBTV The FBI",
+     "route": "us"
+    }
+   ],
+   "block": "Series",
+   "sub": "Crime",
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000066"
   },
   {
    "number": 600,
