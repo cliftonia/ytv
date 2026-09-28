@@ -105,6 +105,13 @@ class Features(
          * nothing ahead but the masters, and every surf opens from the network, as before.
          */
         PREJOIN("PRE-JOIN", "feature.prejoin"),
+
+        /**
+         * The LIVE TV guide split in two: the channel list below, and above it what is on the
+         * highlighted channel - picture, title, description, ratings, cast - from the guides and
+         * the six-hourly `details.json` (see `ui/GuideDetails`). OFF is the plain list, as before.
+         */
+        GUIDE_DETAILS("GUIDE DETAILS", "feature.guidedetails"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,

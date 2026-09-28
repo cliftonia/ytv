@@ -38,5 +38,7 @@ fun ScreenDirector.featureToggled(flag: Features.Flag, on: Boolean) {
         Features.Flag.FAST_GUIDE -> Unit
         // Asked before every read and at every tune: a warm under way stops at its next step.
         Features.Flag.PREJOIN -> Unit
+        // Settings and the guide are never open together: the next guide open reads the flag.
+        Features.Flag.GUIDE_DETAILS -> Unit
     }
 }
