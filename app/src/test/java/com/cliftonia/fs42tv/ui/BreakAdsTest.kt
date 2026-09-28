@@ -26,11 +26,14 @@ class BreakAdsTest {
         var parks = 0
         var changes = 0
         var warms = 0
+        /** The home server's copy of a reel; null - away from home - by default. */
+        var mirror: (String) -> String? = { null }
 
         fun subject() = BreakAds(BreakAds.Deps(
             enabled = { enabled },
             catalog = { catalog },
             warm = { warms++ },
+            mirror = { mirror(it) },
             play = { reel, at -> played += reel to at },
             park = { parks++ },
             later = clock.schedule,
@@ -209,5 +212,94 @@ class BreakAdsTest {
             {"id":"a","title":"A","era":"80s","url":"https://archive.org/download/a/a.mp4","duration":900,"cuts":[0,30,60,90,120],"loudness":-15.3},
             {"id":"b","title":"B","era":"90s","url":"https://archive.org/download/b/b.mp4","duration":900,"cuts":[0,30,60,90,120]}]}""")!!
         assertEquals(listOf(-15.3, null), catalog.reels.map { it.loudness })
+    }
+
+    private fun World.atHome() = apply { mirror = { id -> "http://192.168.4.58:4245/ads/$id.mp4" } }
+
+    @Test
+    fun `at home a reel opens from the home server's copy, at the same cut and gain`() {
+        val away = World().also { it.subject().start(7, 1L) }.played.single()
+        val home = World().atHome()
+        val ads = home.subject()
+        ads.start(7, 1L)
+        val (reel, at) = home.played.single()
+        assertTrue(reel.videoUrl.startsWith("http://192.168.4.58:4245/ads/aus-"))
+        assertEquals("the same file, so the same cut", away.second, at, 0.0)
+        assertTrue(ads.firstFrame() && ads.picture)
+    }
+
+    @Test
+    fun `a copy that will not open is the archive's, same reel and cut - the card only if that fails too`() {
+        val world = World().atHome()
+        val ads = world.subject()
+        ads.start(7, 1L)
+        assertTrue(ads.failed("MPV_ERROR"))
+        assertEquals(2, world.played.size)
+        val (mirrored, archive) = world.played
+        val id = mirrored.first.videoUrl.substringAfterLast('/').removeSuffix(".mp4")
+        assertTrue(archive.first.videoUrl.startsWith("https://archive.org/download/$id/"))
+        assertEquals(mirrored.second, archive.second, 0.0)
+        assertTrue("still loading, the card up, nothing parked", ads.loading)
+        assertEquals(0, world.parks)
+        // The archive gets its full load time from here.
+        world.clock.advance(BreakAds.LOAD_MILLIS - 1)
+        assertTrue(ads.loading)
+        assertTrue(ads.failed("MPV_ERROR"))
+        assertEquals(BreakAds.Stage.FAILED, ads.stage)
+        assertEquals("never a third try", 2, world.played.size)
+        assertEquals(1, world.parks)
+    }
+
+    @Test
+    fun `a copy with no frame in the mirror's time is the archive's, then the card after its load time`() {
+        val world = World().atHome()
+        val ads = world.subject()
+        ads.start(7, 1L)
+        world.clock.advance(BreakAds.MIRROR_LOAD_MILLIS - 1)
+        assertEquals(1, world.played.size)
+        world.clock.advance(1)
+        assertEquals(2, world.played.size)
+        assertTrue(ads.loading)
+        world.clock.advance(BreakAds.LOAD_MILLIS - 1)
+        assertTrue(ads.loading)
+        world.clock.advance(1)
+        assertEquals(BreakAds.Stage.FAILED, ads.stage)
+    }
+
+    @Test
+    fun `a copy that showed and then failed is the card, as any reel is`() {
+        val world = World().atHome()
+        val ads = world.subject()
+        ads.start(7, 1L)
+        ads.firstFrame()
+        assertTrue(ads.failed("MPV_ERROR"))
+        assertEquals(BreakAds.Stage.FAILED, ads.stage)
+        assertEquals(1, world.played.size)
+    }
+
+    @Test
+    fun `the next reel of a break is the home server's copy again`() {
+        val world = World().atHome()
+        val ads = world.subject()
+        ads.start(7, 1L)
+        ads.failed("MPV_ERROR")
+        ads.firstFrame()
+        ads.ended()
+        assertEquals(3, world.played.size)
+        assertTrue(world.played[2].first.videoUrl.startsWith("http://192.168.4.58:4245/"))
+    }
+
+    @Test
+    fun `retired or stopped while the copy loads, nothing falls through to the archive`() {
+        val world = World().atHome()
+        val ads = world.subject()
+        ads.start(7, 1L)
+        ads.retire()
+        assertTrue(ads.failed("MPV_ERROR"))
+        world.clock.advance(BreakAds.LOAD_MILLIS * 2)
+        assertEquals(1, world.played.size)
+        ads.stop()
+        assertFalse(ads.failed("MPV_ERROR"))
+        assertEquals(1, world.played.size)
     }
 }
