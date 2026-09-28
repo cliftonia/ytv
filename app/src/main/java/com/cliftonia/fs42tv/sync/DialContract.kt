@@ -1,5 +1,6 @@
 package com.cliftonia.fs42tv.sync
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -48,6 +49,24 @@ data class Channel(
      * app plays it through Pluto's own session route; the stream url stays as the fallback.
      */
     val pluto: PlutoRef? = null,
+    /**
+     * The LIVE TV dial's genre block and sub-block ("Movies", "Action"), published by
+     * `curation/publish_live.py` - the guide's headings. Absent on the other dials, whose guide
+     * has none.
+     */
+    val block: String? = null,
+    val sub: String? = null,
+    /**
+     * How this channel's ad breaks are found: "cue" for a FAST feed whose breaks are marked in
+     * the stream. Carried through the lineup only; absent means as before.
+     */
+    val breaks: String? = null,
+    /**
+     * Which service's guide lists this channel - samsung, plex, roku or xumo - and its id there:
+     * the key into `fast_guide.json` (see `sync/FastGuide`). Absent for Pluto, which has its own.
+     */
+    val guide: String? = null,
+    @SerialName("guide_id") val guideId: String? = null,
 )
 
 /**
