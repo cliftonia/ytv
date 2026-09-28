@@ -100,6 +100,20 @@ class PlutoRoute(
     }
 
     /**
+     * The direct master a tune of [channel] would play now, for reading it ahead of a surf - or
+     * null when the tune would not play a direct master, or that cannot be told without fetching
+     * a session ([PlutoSessions.peekForDial]). Unlike [forDial] it changes nothing: no report, no
+     * wait for a session, no claim on the pick a failure is traced to. Never blocks.
+     */
+    fun masterAhead(channel: Channel): String? {
+        val ref = channel.pluto ?: return null
+        if (!direct()) return null
+        val until = legacyUntil[ref.id]
+        if (until != null && nowMillis() < until) return null
+        return sessions.peekForDial(ref.region)?.masterUrl(ref.id)
+    }
+
+    /**
      * [channel] fell back to its legacy url for want of a session - typically a television just
      * woken, whose network is not up for its first seconds. The legacy stream then plays
      * "healthily" - Pluto's bumper, on a loop - so no error will ever come to trigger a re-tune.
