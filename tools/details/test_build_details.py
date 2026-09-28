@@ -368,3 +368,13 @@ class TestCacheFile(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NoYearNeedsARoutTest(unittest.TestCase):
+    def test_a_shared_title_with_no_year_is_not_guessed(self):
+        results = [("movie", [
+            {"id": 1, "title": "Deep in the Heart", "release_date": "2015-01-01", "vote_count": 93},
+            {"id": 2, "title": "Deep in the Heart", "release_date": "2012-01-01", "vote_count": 18}])]
+        self.assertIsNone(dl.choose(results, "Deep in the Heart", None)[0])
+        # With the year the guide gives, there is no doubt.
+        self.assertEqual(2, dl.choose(results, "Deep in the Heart", 2012)[0][1]["id"])
