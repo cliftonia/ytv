@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import com.cliftonia.fs42tv.ads.AdCatalogStore
 import com.cliftonia.fs42tv.pluto.BreakPoller
 import com.cliftonia.fs42tv.pluto.MasterPicker
+import com.cliftonia.fs42tv.pluto.MasterPrefetch
 import com.cliftonia.fs42tv.pluto.PlutoApi
 import com.cliftonia.fs42tv.pluto.PlutoBoot
 import com.cliftonia.fs42tv.pluto.PlutoGuide
@@ -12,12 +13,14 @@ import com.cliftonia.fs42tv.pluto.PlutoIds
 import com.cliftonia.fs42tv.pluto.PlutoLines
 import com.cliftonia.fs42tv.pluto.PlutoRoute
 import com.cliftonia.fs42tv.pluto.PlutoSessions
+import com.cliftonia.fs42tv.pluto.VariantCache
 import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
+import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.tune.Tuned
 import java.time.ZoneId
 import java.util.concurrent.Executor
@@ -48,6 +51,8 @@ class ScreenExtras(private val deps: Deps) {
         val masterPicker: MasterPicker? = null,
         /** The break commercials' reels (BREAK ADS), cached in the cache directory; null for none. */
         val adCatalog: AdCatalogStore? = null,
+        /** Reads the Pluto neighbours' masters ahead of a surf, into [masterPicker]'s cache. */
+        val masterPrefetch: MasterPrefetch? = null,
     )
 
     /**
@@ -64,7 +69,29 @@ class ScreenExtras(private val deps: Deps) {
         // master read after it seconds more, on the one tune thread the superseding tune is
         // queued behind. Under fast surfing every stale read delayed the channel actually wanted.
         if (!stillWanted()) return null
-        return picker.forMpv(routed)
+        // A remembered pick only for the direct route: the route hands back a new playable for a
+        // direct master, whose url names its session, and the published one itself for LEGACY,
+        // whose jmp2 url does not. See VariantCache.
+        return picker.forMpv(routed, cacheable = routed !== tuned.playable)
+    }
+
+    /**
+     * A picture came up on [tune]'s channel: a few seconds on, read the Pluto neighbours on
+     * [dial] ahead of a surf - unless by then the tune has moved on, or [busy] (a tune under way,
+     * a break's commercials on the player, the app out of sight). See [MasterPrefetch].
+     */
+    fun plutoPictureUp(tune: TuneController, dial: List<Channel>, busy: () -> Boolean) {
+        val prefetch = deps.masterPrefetch ?: return
+        val onAir = tune.onAir ?: return
+        val generation = tune.generationNow()
+        prefetch.pictureUp(onAir.channel, dial) {
+            tune.generationNow() == generation && !busy() && !deps.halted()
+        }
+    }
+
+    /** The app left the screen: every read ahead cancelled, and nothing it brings back kept. */
+    fun appStopped() {
+        deps.masterPrefetch?.stop()
     }
 
     /**
@@ -75,11 +102,21 @@ class ScreenExtras(private val deps: Deps) {
         if (tuned.channel.kind != "live") tuned
         else tuned.copy(playable = deps.plutoRoute.forBeside(tuned.channel, tuned.playable))
 
-    /** The dial's player failed on [playable]; see [PlutoRoute.playbackFailed]. */
-    fun plutoFailed(playable: Playable?) = deps.plutoRoute.playbackFailed(playable)
+    /**
+     * The dial's player failed on [playable]: its remembered pick is forgotten, always, and when
+     * [session] is true its session is judged too - see [PlutoRoute.playbackFailed]. False for a
+     * demuxer stall, which is ffmpeg, not a refused token.
+     */
+    fun plutoFailed(playable: Playable?, session: Boolean = true) {
+        deps.masterPicker?.forget(playable)
+        if (session) deps.plutoRoute.playbackFailed(playable)
+    }
 
     /** The dial gave up on [playable] for want of a picture; see [PlutoRoute.noPicture]. */
-    fun plutoNoPicture(playable: Playable?) = deps.plutoRoute.noPicture(playable)
+    fun plutoNoPicture(playable: Playable?) {
+        deps.masterPicker?.forget(playable)
+        deps.plutoRoute.noPicture(playable)
+    }
 
     /**
      * [listener] runs on the UI thread when a Pluto channel that fell back for want of a session
@@ -210,6 +247,26 @@ class ScreenExtras(private val deps: Deps) {
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
+            val elapsed = android.os.SystemClock::elapsedRealtime
+            val route = PlutoRoute(
+                sessions = PlutoSessions(
+                    boot = { PlutoBoot.fetchBoot(now()) },
+                    server = { region -> PlutoBoot.fetchFromServer(region) },
+                    freshServer = { region -> PlutoBoot.fetchFromServer(region, fresh = true) },
+                    nowMillis = now,
+                ),
+                direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },
+                nowMillis = now,
+                report = PlaybackDiagnostics::recordSource,
+                // Timed on the main looper, run on the prefetch thread: the check may fetch.
+                // Never onto an executor already shut down by onDestroy.
+                later = { delay, block ->
+                    android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+                        if (!halted()) runCatching { prefetchExecutor.execute(block) }
+                    }, delay)
+                },
+            )
+            val picker = MasterPicker(BreakPoller::httpFetch, mpvLadder, elapsed, VariantCache(elapsed))
             return ScreenExtras(Deps(
                 features = features,
                 plutoGuide = PlutoGuide(
@@ -227,26 +284,9 @@ class ScreenExtras(private val deps: Deps) {
                     zone = { ZoneId.systemDefault() },
                     use24Hour = use24Hour,
                 ),
-                plutoRoute = PlutoRoute(
-                    sessions = PlutoSessions(
-                        boot = { PlutoBoot.fetchBoot(now()) },
-                        server = { region -> PlutoBoot.fetchFromServer(region) },
-                        freshServer = { region -> PlutoBoot.fetchFromServer(region, fresh = true) },
-                        nowMillis = now,
-                    ),
-                    direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },
-                    nowMillis = now,
-                    report = PlaybackDiagnostics::recordSource,
-                    // Timed on the main looper, run on the prefetch thread: the check may fetch.
-                    // Never onto an executor already shut down by onDestroy.
-                    later = { delay, block ->
-                        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-                            if (!halted()) runCatching { prefetchExecutor.execute(block) }
-                        }, delay)
-                    },
-                ),
-                masterPicker = MasterPicker(BreakPoller::httpFetch, mpvLadder,
-                    android.os.SystemClock::elapsedRealtime),
+                plutoRoute = route,
+                masterPicker = picker,
+                masterPrefetch = MasterPrefetch.onDevice(route, picker, halted),
                 adCatalog = cacheDir?.let {
                     AdCatalogStore(java.io.File(it, AdCatalogStore.FILE_NAME), AdCatalogStore::httpFetch)
                 },
