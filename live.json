@@ -7910,24 +7910,6 @@
   },
   {
    "number": 1336,
-   "name": "Unleashed by DOGTV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg26269-dogtv-amg26269c2-stirr-us-8504.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Unleashed by DOGTV",
-     "route": "us"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Pets & Vets",
-   "breaks": "cue",
-   "guide": "stirr",
-   "guide_id": "7017"
-  },
-  {
-   "number": 1337,
    "name": "WBTV Paws and Claws",
    "kind": "live",
    "streams": [
@@ -9476,23 +9458,6 @@
   },
   {
    "number": 1446,
-   "name": "Motorvision",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
-     "duration": 600,
-     "title": "Motorvision"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Motoring",
-   "breaks": "cue",
-   "guide": "xumo",
-   "guide_id": "99991325"
-  },
-  {
-   "number": 1447,
    "name": "Pluto TV Cars",
    "kind": "live",
    "streams": [
@@ -9510,7 +9475,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1448,
+   "number": 1447,
    "name": "Pluto TV PetrolHeads",
    "kind": "live",
    "streams": [
@@ -9528,7 +9493,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1449,
+   "number": 1448,
    "name": "POWERNATION",
    "kind": "live",
    "streams": [
@@ -9546,7 +9511,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1450,
+   "number": 1449,
    "name": "Rig TV",
    "kind": "live",
    "streams": [
@@ -9563,7 +9528,7 @@
    "guide_id": "99951338"
   },
   {
-   "number": 1451,
+   "number": 1450,
    "name": "Road Renegades",
    "kind": "live",
    "streams": [
@@ -9581,7 +9546,7 @@
    "guide_id": "US700002ZB"
   },
   {
-   "number": 1452,
+   "number": 1451,
    "name": "Torque",
    "kind": "live",
    "streams": [
@@ -9599,7 +9564,7 @@
    "guide_id": "USBB5200027Z5"
   },
   {
-   "number": 1453,
+   "number": 1452,
    "name": "U&Transport",
    "kind": "live",
    "streams": [
@@ -9617,7 +9582,7 @@
    "guide_id": "GBBD3100001A8"
   },
   {
-   "number": 1454,
+   "number": 1453,
    "name": "WBTV In The Garage",
    "kind": "live",
    "streams": [
@@ -9635,7 +9600,7 @@
    "guide_id": "400000073"
   },
   {
-   "number": 1455,
+   "number": 1454,
    "name": "Wheels & Steel",
    "kind": "live",
    "streams": [
@@ -11027,23 +10992,6 @@
    "breaks": "cue",
    "guide": "samsung",
    "guide_id": "USBB10000058A"
-  },
-  {
-   "number": 1595,
-   "name": "Surfing+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://dr4jwhk0sty71.cloudfront.net/scheduler/scheduleMaster/444.m3u8",
-     "duration": 600,
-     "title": "Surfing+"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Action & Extreme",
-   "breaks": "cue",
-   "guide": "stirr",
-   "guide_id": "5887"
   },
   {
    "number": 1600,
