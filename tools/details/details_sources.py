@@ -30,20 +30,45 @@ class Sighting:
         return "Sighting(%r, kind=%r, year=%r, series=%r)" % (self.raw, self.kind, self.year, self.series)
 
 
-def fast_sightings(guide, now, window_hours):
+# The dial's own blocks say film or series better than a slot's length: a one-hour "21 Jump
+# Street" on a Series - Crime channel is the 1987 show, not the 2012 film that TMDB rates higher,
+# and a double episode in a 90-minute slot is still an episode. Unlisted blocks (Music, Sports,
+# Food...) leave it to the slot.
+SERIES_BLOCKS = ("Series", "Sitcoms (USA)", "Game Shows", "Cartoons & Kids", "Anime", "Documentaries")
+MOVIE_BLOCKS = ("Movies",)
+
+
+def kind_of_block(block):
+    """The kind a channel of [block] airs, or None when its block does not say."""
+    if block in SERIES_BLOCKS:
+        return TV
+    if block in MOVIE_BLOCKS:
+        return MOVIE
+    return None
+
+
+def guide_blocks(lineup):
+    """"service:guide id" -> the block of the dial channel that guide is for."""
+    return {"%s:%s" % (c.get("guide"), c.get("guide_id")): c.get("block")
+            for c in lineup if c.get("guide") and c.get("guide_id")}
+
+
+def fast_sightings(guide, now, window_hours, blocks=None):
     """Every titled programme in a fast_guide.json that is on air at [now] or starts within the
-    window. A programme runs until the next pair's start, as the app reads it."""
+    window. A programme runs until the next pair's start, as the app reads it. [blocks] (from
+    [guide_blocks]) lets the channel's block settle film against series."""
     until = now + window_hours * 3600
     base, titles = guide.get("base", 0), guide.get("titles", [])
     out = []
-    for flat in guide.get("channels", {}).values():
+    for gkey, flat in guide.get("channels", {}).items():
+        block_kind = kind_of_block((blocks or {}).get(gkey))
         pairs = list(zip(flat[0::2], flat[1::2]))
         for (start, title), (stop, _) in zip(pairs, pairs[1:]):
             t0, t1 = base + start * 60, base + stop * 60
             raw = titles[title] if 0 < title < len(titles) else ""
             if raw and t1 > now and t0 < until:
                 minutes = stop - start
-                out.append(Sighting(raw, t0, minutes, kind_from_minutes(minutes)))
+                out.append(Sighting(raw, t0, minutes, block_kind or kind_from_minutes(minutes)))
     return out
 
 

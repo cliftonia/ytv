@@ -326,7 +326,7 @@ def main(argv=None):
     sightings = []
     if os.path.exists(guide_path):
         with open(guide_path) as f:
-            sightings += ds.fast_sightings(json.load(f), now, WINDOW_HOURS)
+            sightings += ds.fast_sightings(json.load(f), now, WINDOW_HOURS, ds.guide_blocks(lineup))
     sightings += ds.pluto_sightings(lineup, now, WINDOW_HOURS, fetch_json)
     tmdb = dl.Tmdb(tmdb_key, fetch_json) if tmdb_key else None
     omdb = dl.Omdb(omdb_key, fetch_json) if omdb_key else None

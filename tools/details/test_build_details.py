@@ -378,3 +378,16 @@ class NoYearNeedsARoutTest(unittest.TestCase):
         self.assertIsNone(dl.choose(results, "Deep in the Heart", None)[0])
         # With the year the guide gives, there is no doubt.
         self.assertEqual(2, dl.choose(results, "Deep in the Heart", 2012)[0][1]["id"])
+
+
+class BlockSaysSeriesTest(unittest.TestCase):
+    def test_a_series_channel_hour_is_an_episode_and_a_movies_channel_is_a_film(self):
+        guide = {"base": T0, "titles": ["", "21 Jump Street"],
+                 "channels": {"samsung:S1": [0, 1, 60, 0], "samsung:M1": [0, 1, 60, 0], "samsung:X": [0, 1, 60, 0]}}
+        blocks = {"samsung:S1": "Series", "samsung:M1": "Movies", "samsung:X": "Music"}
+        kinds = {s.kind for s in ds.fast_sightings(guide, T0, 30, blocks)}
+        self.assertEqual({ds.TV, ds.MOVIE, None}, kinds)
+
+    def test_guide_blocks_keys_by_service_and_id(self):
+        lineup = [{"guide": "samsung", "guide_id": "S1", "block": "Series"}, {"name": "pluto one"}]
+        self.assertEqual({"samsung:S1": "Series"}, ds.guide_blocks(lineup))
