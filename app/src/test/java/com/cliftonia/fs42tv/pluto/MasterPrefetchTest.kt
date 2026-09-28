@@ -55,7 +55,7 @@ class MasterPrefetchTest {
                 if (stillWanted()) { kept++; true } else false
             },
             readFast = { channel, _ -> fast += channel.number; true },
-            ready = { channel, url -> ready += channel.number to url },
+            ready = { channel, url, wanted -> if (wanted()) ready += channel.number to url },
         )
 
         fun fire() {

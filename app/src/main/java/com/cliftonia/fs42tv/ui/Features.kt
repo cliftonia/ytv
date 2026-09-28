@@ -97,6 +97,14 @@ class Features(
          * nothing and leaves those channels with their names, as before.
          */
         FAST_GUIDE("FAST GUIDE", "feature.fastguide"),
+
+        /**
+         * The LIVE TV channels either side of the one on screen kept warm for a minute after each
+         * channel change - their playlist and first segment in memory - so a surf onto one plays
+         * at once, at the quality already picked (see `prejoin/Prejoin`). mpv only. OFF reads
+         * nothing ahead but the masters, and every surf opens from the network, as before.
+         */
+        PREJOIN("PRE-JOIN", "feature.prejoin"),
     }
 
     // Read once, then served from memory: flags are consulted on the UI thread and the executors,

@@ -67,9 +67,10 @@ class MasterPrefetch(
     private val readFast: (Channel, stillWanted: () -> Boolean) -> Boolean = { _, _ -> false },
     /**
      * A neighbour's pick is remembered - read now, or already - on [masterUrl] (the lease's, for
-     * Pluto). The first round only: the pre-join warms that neighbour for a minute after the tune.
+     * Pluto) - while [stillWanted], the round's own terms. The first round only: the pre-join
+     * warms that neighbour for a minute after the tune.
      */
-    private val ready: (Channel, masterUrl: String?) -> Unit = { _, _ -> },
+    private val ready: (Channel, masterUrl: String?, stillWanted: () -> Boolean) -> Unit = { _, _, _ -> },
     private val delayMillis: Long = DELAY_MILLIS,
     private val maxInFlight: Int = MAX_IN_FLIGHT,
     private val refreshMillis: Long = REFRESH_MILLIS,
@@ -116,7 +117,7 @@ class MasterPrefetch(
             val keep = (either + channel).mapNotNull { it.pluto?.id }.toSet()
             // A refresh is for Pluto alone: a FAST pick is good for hours.
             val due = if (round == 0) either else either.filter { it.pluto != null }
-            due.forEach { launch(it, keep, began, refresh = round > 0) }
+            due.forEach { launch(it, keep, began, refresh = round > 0, stillWanted) }
             if (round < MAX_REFRESHES && due.any { it.pluto != null }) {
                 wait(channel, dial, stillWanted, began, refreshMillis, round + 1)
             }
@@ -128,21 +129,22 @@ class MasterPrefetch(
         waiting = null
     }
 
-    private fun launch(neighbour: Channel, keep: Set<String>, began: Int, refresh: Boolean) {
+    private fun launch(neighbour: Channel, keep: Set<String>, began: Int, refresh: Boolean, stillWanted: () -> Boolean) {
         if (inFlight.size >= maxInFlight) {
             Log.i("fs42", "master ahead for ${neighbour.number} skipped; $maxInFlight reads running")
             return
         }
         val id = Any()
         val current = { epoch.get() == began }
+        val wanted = { current() && stillWanted() }
         // Registered before it is handed over, so a read that finishes at once is not left behind
         // as a stale entry by the registration that follows it.
         inFlight[id] = {}
         val cancel = background {
             try {
                 if (!current()) return@background
-                if (neighbour.pluto != null) readOn(neighbour, keep, refresh, current)
-                else if (readFast(neighbour, current) && !refresh && current()) ready(neighbour, null)
+                if (neighbour.pluto != null) readOn(neighbour, keep, refresh, current, wanted)
+                else if (readFast(neighbour, current) && !refresh && wanted()) ready(neighbour, null, wanted)
             } finally {
                 inFlight.remove(id)
             }
@@ -151,7 +153,7 @@ class MasterPrefetch(
     }
 
     /** Borrow a session for [neighbour], read its master on it, and give the session back. */
-    private fun readOn(neighbour: Channel, keep: Set<String>, refresh: Boolean, current: () -> Boolean) {
+    private fun readOn(neighbour: Channel, keep: Set<String>, refresh: Boolean, current: () -> Boolean, wanted: () -> Boolean) {
         val lease = ahead(neighbour, keep) ?: return
         try {
             if (!current()) return
@@ -160,7 +162,7 @@ class MasterPrefetch(
             lease.release()
         }
         // Outside the lease: the pre-join reads media, never a master, and holds no slot busy.
-        if (!refresh && current()) ready(neighbour, lease.masterUrl)
+        if (!refresh && wanted()) ready(neighbour, lease.masterUrl, wanted)
     }
 
     companion object {
@@ -212,7 +214,7 @@ class MasterPrefetch(
             picker: MasterPicker,
             halted: () -> Boolean,
             fastMaster: (Channel) -> String?,
-            ready: (Channel, String?) -> Unit,
+            ready: (Channel, String?, () -> Boolean) -> Unit,
         ): MasterPrefetch {
             val pool = ThreadPoolExecutor(MAX_IN_FLIGHT, MAX_IN_FLIGHT, 30, TimeUnit.SECONDS,
                 LinkedBlockingQueue()) { runnable ->
