@@ -27,6 +27,8 @@ data class BreakCardState(
     val backTo: String,
     /** The frame: a pulse while the break's end is unknown, then a countdown to it. */
     val border: BreakBorder = BreakBorder.Pulse,
+    /** Commercials are on their way: plain black, as a station cuts to its break - no words yet. */
+    val blank: Boolean = false,
 )
 
 /**
@@ -65,6 +67,7 @@ fun BreakCard(state: BreakCardState?) {
         modifier = Modifier.fillMaxSize().background(Color.Black),
         contentAlignment = Alignment.CenterStart,
     ) {
+        if (state.blank) return@BoxWithConstraints
         val textWidth = maxWidth * 0.8f
         Column(
             modifier = Modifier.padding(start = 60.dp, top = 40.dp),
