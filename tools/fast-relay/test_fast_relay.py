@@ -371,3 +371,12 @@ class TestRelayEndToEnd(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StableAddressTest(unittest.TestCase):
+    def test_a_rotating_answer_picks_the_same_address(self):
+        def resolver(order):
+            return lambda host, port, family, kind: [(2, 1, 6, "", (a, port)) for a in order]
+        a = fast_relay.validate("https://cdn.example/x.m3u8", resolver(["13.35.1.9", "13.35.1.2", "13.35.1.5"]))[1]
+        b = fast_relay.validate("https://cdn.example/x.m3u8", resolver(["13.35.1.5", "13.35.1.9", "13.35.1.2"]))[1]
+        self.assertEqual(a, b)
