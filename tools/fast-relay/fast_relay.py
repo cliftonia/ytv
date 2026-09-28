@@ -122,8 +122,10 @@ def validate(url, resolve=socket.getaddrinfo):
         raise Refused("host does not resolve")
     if not all(_global(a) for a in addresses):
         raise Refused("private, loopback or link-local target")
-    # IPv4 first: the tunnel carries IPv4 (pluto-ns.sh gives it no IPv6 address).
-    addresses.sort(key=lambda a: ":" in a)
+    # IPv4 first: the tunnel carries IPv4 (pluto-ns.sh gives it no IPv6 address). Then in a fixed
+    # order, not the resolver's: CDNs (CloudFront) rotate their answer on every lookup, and a pick
+    # that moved with it found no pooled connection half the time. Every address is checked above.
+    addresses.sort(key=lambda a: (":" in a, a))
     return parts, addresses[0]
 
 
