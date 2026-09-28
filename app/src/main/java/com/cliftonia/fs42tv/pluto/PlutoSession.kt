@@ -71,9 +71,14 @@ object PlutoBoot {
             "&deviceModel=web&deviceMake=chrome&deviceType=web&clientModelNumber=1.0.0" +
             "&serverSideAds=false&drmCapabilities=&clientID=$clientId"
 
-    /** [fresh] asks for a new session instead of the one cached for this television. */
-    fun serverUrl(base: String, region: String, fresh: Boolean = false): String =
-        "$base/pluto/session?region=$region" + if (fresh) "&fresh=1" else ""
+    /**
+     * [fresh] asks for a new session instead of the one cached for this television. [client]
+     * names one of this television's further sessions - a slot of [SessionPool] past the first -
+     * which the server keeps apart from its main one; null is the main one, asked as always.
+     */
+    fun serverUrl(base: String, region: String, fresh: Boolean = false, client: String? = null): String =
+        "$base/pluto/session?region=$region" + (if (fresh) "&fresh=1" else "") +
+            (client?.let { "&client=$it" } ?: "")
 
     private val json = Json { ignoreUnknownKeys = true; isLenient = true }
 
@@ -158,12 +163,13 @@ object PlutoBoot {
     fun fetchFromServer(
         region: String,
         fresh: Boolean = false,
+        client: String? = null,
         get: (String) -> String = { httpGet(it, SERVER_CONNECT_MILLIS, SERVER_READ_MILLIS) },
     ): PlutoSession? {
         var unreachable: Unreachable? = null
         for (base in SERVERS) {
             val body = try {
-                get(serverUrl(base, region, fresh))
+                get(serverUrl(base, region, fresh, client))
             } catch (e: Unreachable) {
                 unreachable = e
                 continue

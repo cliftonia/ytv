@@ -65,14 +65,14 @@ class VariantCacheTest {
         p.picker.forMpv(Hls(master("NEW")), cacheable = true)
         assertEquals(2, p.fetched.size)
         val cache = VariantCache({ 0L })
-        cache.put(master("OLD"), "mpv@1080", choice)
+        cache.put(master("OLD"), "mpv@1080", choice, cache.claim(master("OLD")))
         assertNull(cache.get(master("NEW"), "mpv@1080"))
     }
 
     @Test
     fun `a pick made for another engine or ceiling is not found`() {
         val cache = VariantCache({ 0L })
-        cache.put(master("J"), "mpv@1080", choice)
+        cache.put(master("J"), "mpv@1080", choice, cache.claim(master("J")))
         assertNull(cache.get(master("J"), "mpv@480"))
         assertNull(cache.get(master("J"), "media3"))
         assertSame(choice, cache.get(master("J"), "mpv@1080"))
@@ -87,7 +87,7 @@ class VariantCacheTest {
     @Test
     fun `Media3 neither reads nor consults the cache`() {
         val p = Picking(ladder = null)
-        p.cache.put(master("J"), "mpv@1080", choice)
+        p.cache.put(master("J"), "mpv@1080", choice, p.cache.claim(master("J")))
         val hls = Hls(master("J"))
         assertSame(hls, p.picker.forMpv(hls, cacheable = true))
         assertFalse(p.picker.prefetching())
@@ -129,9 +129,9 @@ class VariantCacheTest {
     @Test
     fun `eviction takes the channel out under every engine and leaves the rest`() {
         val cache = VariantCache({ 0L })
-        cache.put(master("J"), "mpv@1080", choice)
-        cache.put(master("J"), "mpv@480", choice)
-        cache.put(master("J", channel = "other"), "mpv@1080", choice)
+        cache.put(master("J"), "mpv@1080", choice, cache.claim(master("J")))
+        cache.put(master("J"), "mpv@480", choice, cache.claim(master("J")))
+        cache.put(master("J", channel = "other"), "mpv@1080", choice, cache.claim(master("J", channel = "other")))
         cache.evict(master("J"))
         assertEquals(1, cache.size)
         assertSame(choice, cache.get(master("J", channel = "other"), "mpv@1080"))
@@ -140,11 +140,11 @@ class VariantCacheTest {
     @Test
     fun `the least recently used channel is the one let go`() {
         val cache = VariantCache({ 0L }, capacity = 3)
-        cache.put("a", "e", choice)
-        cache.put("b", "e", choice)
-        cache.put("c", "e", choice)
+        cache.put("a", "e", choice, cache.claim("a"))
+        cache.put("b", "e", choice, cache.claim("b"))
+        cache.put("c", "e", choice, cache.claim("c"))
         cache.get("a", "e")
-        cache.put("d", "e", choice)
+        cache.put("d", "e", choice, cache.claim("d"))
         assertNull(cache.get("b", "e"))
         assertSame(choice, cache.get("a", "e"))
         assertEquals(3, cache.size)

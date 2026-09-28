@@ -16,6 +16,12 @@ package com.cliftonia.fs42tv.pluto
  * ("mpv@1080"): a different ceiling picks a different variant, and Media3 never picks at all, so an
  * entry is never handed to anything but the engine it was chosen for.
  *
+ * AND HELD AGAINST ITS SESSION'S CLAIM. Pluto keeps one channel per session: reading another
+ * channel's master on it ends this one's media playlist (measured - see [SessionPool]). So an
+ * entry records the claim ([claimOf]) that stood when its master was read, and is good only while
+ * that very claim stands. Reading X then Y on one session retires X's entry; X claimed again later
+ * is a new claim, and the entry read before Y still does not match it.
+ *
  * Small and short-lived on purpose: [CAPACITY] channels, least recently used first out, each for
  * [TTL_MILLIS] - well inside [PlutoSessions.REFRESH_MARGIN_MILLIS], so no entry can outlive the
  * token its urls carry. An entry is dropped at once when its channel fails ([evict]), so a bad
@@ -31,6 +37,11 @@ package com.cliftonia.fs42tv.pluto
 class VariantCache(
     /** Monotonic milliseconds, for the age of an entry. */
     private val elapsedMillis: () -> Long,
+    /**
+     * The claim standing for a master url - [PlutoSessions.claimOf] - compared by identity; null
+     * when nothing stands, and then nothing is kept or found. The default tracks no sessions.
+     */
+    private val claimOf: (masterUrl: String) -> Any? = { UNTRACKED },
     private val ttlMillis: Long = TTL_MILLIS,
     private val capacity: Int = CAPACITY,
 ) {
@@ -38,7 +49,7 @@ class VariantCache(
     /** What mpv is handed instead of the master: the chosen playlist, and its audio if separate. */
     data class Choice(val mediaUrl: String, val audioUrl: String?)
 
-    private class Entry(val choice: Choice, val storedAt: Long)
+    private class Entry(val choice: Choice, val storedAt: Long, val claim: Any)
 
     private data class Key(val masterUrl: String, val engine: String)
 
@@ -51,7 +62,7 @@ class VariantCache(
     fun get(masterUrl: String, engine: String): Choice? = synchronized(entries) {
         val key = Key(masterUrl, engine)
         val entry = entries[key] ?: return null
-        if (elapsedMillis() - entry.storedAt >= ttlMillis) {
+        if (elapsedMillis() - entry.storedAt >= ttlMillis || claimOf(masterUrl) !== entry.claim) {
             entries.remove(key)
             return null
         }
@@ -61,8 +72,19 @@ class VariantCache(
     /** Whether [masterUrl] is already remembered, fresh, under [engine] - so a prefetch can skip it. */
     fun has(masterUrl: String, engine: String): Boolean = get(masterUrl, engine) != null
 
-    fun put(masterUrl: String, engine: String, choice: Choice) = synchronized(entries) {
-        entries[Key(masterUrl, engine)] = Entry(choice, elapsedMillis())
+    /**
+     * The claim standing for [masterUrl] now - taken BEFORE its master is read, and handed back
+     * to [put], so a read overtaken by another channel's on the same session keeps nothing.
+     */
+    fun claim(masterUrl: String): Any? = claimOf(masterUrl)
+
+    /** Remember [choice], read under [claim] - only while that claim still stands. */
+    fun put(masterUrl: String, engine: String, choice: Choice, claim: Any?) {
+        if (claim == null) return
+        synchronized(entries) {
+            if (claimOf(masterUrl) !== claim) return
+            entries[Key(masterUrl, engine)] = Entry(choice, elapsedMillis(), claim)
+        }
     }
 
     /**
@@ -79,7 +101,14 @@ class VariantCache(
         /** A surf's reach: the channels either side, and a few recently left to come back to. */
         const val CAPACITY = 8
 
-        /** Far inside a session's life; a pick older than this is read again. */
+        /**
+         * Far inside a session's life; a pick older than this is read again. Measured: a variant
+         * read ahead was still good after 90s idle; nothing longer was tested, so five minutes is
+         * the ceiling, not a target.
+         */
         const val TTL_MILLIS = 5 * 60_000L
+
+        /** The claim of a cache that tracks no sessions - every entry stands until its TTL. */
+        private val UNTRACKED = Any()
     }
 }

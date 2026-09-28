@@ -6,6 +6,7 @@ import com.cliftonia.fs42tv.pluto.PlutoGuide
 import com.cliftonia.fs42tv.pluto.PlutoRoute
 import com.cliftonia.fs42tv.pluto.PlutoSession
 import com.cliftonia.fs42tv.pluto.PlutoSessions
+import com.cliftonia.fs42tv.pluto.SessionPool
 import com.cliftonia.fs42tv.pluto.VariantCache
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.schedule.Timetable
@@ -17,6 +18,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
@@ -40,9 +42,10 @@ class PlutoVariantTuneTest {
             boot = { PlutoSession("https://s.pluto.tv", "sid=${serial++}", "jwt${serial}", "AU", now + 3 * 3_600_000L) },
             server = { null },
             nowMillis = { now },
+            poolSize = SessionPool.SIZE,
         )
-        val route = PlutoRoute(sessions, direct = { direct }, nowMillis = { now }, report = {})
-        val cache = VariantCache({ now })
+        val route = PlutoRoute(sessions, direct = { direct }, nowMillis = { now }, report = {}, rotate = { true })
+        val cache = VariantCache({ now }, sessions::claimOf)
         val picker = MasterPicker(
             fetch = { url -> reads += url; now += 700; BreakPoller.Fetched(url, muxed) },
             mpvLadder = { listOf("hd") },
@@ -68,6 +71,11 @@ class PlutoVariantTuneTest {
     )
 
     private val tuned = Tuned(channel, 0, channel.streams[0], Hls(channel.streams[0].url), 0.0)
+
+    private val up = channel.copy(number = 12, name = "Pluto up", pluto = PlutoRef("def"),
+        streams = listOf(Stream(url = "https://jmp2.uk/plu-def.m3u8", duration = 600)))
+
+    private val upTuned = Tuned(up, 0, up.streams[0], Hls(up.streams[0].url), 0.0)
 
     @Test
     fun `a surf back to a channel on the same session skips the master read`() {
@@ -128,20 +136,27 @@ class PlutoVariantTuneTest {
     }
 
     @Test
-    fun `a read ahead names the master the tune will play, and never fetches a session for it`() {
+    fun `a surf onto a neighbour read ahead plays with no read, on a session of its own`() {
         val f = Fixture(muxed)
-        var boots = 0
-        val sessions = PlutoSessions(
-            boot = { boots++; PlutoSession("https://s.pluto.tv", "sid=1", "J", "AU", f.now + 3_600_000L) },
-            server = { null },
-            nowMillis = { f.now },
-        )
-        val route = PlutoRoute(sessions, direct = { true }, nowMillis = { f.now }, report = {})
-        assertNull(route.masterAhead(channel))
-        assertEquals(0, boots)
-        val played = route.forDial(channel, tuned.playable) as Hls
-        assertEquals(played.url, route.masterAhead(channel))
-        assertNull(route.masterAhead(channel.copy(pluto = null)))
-        assertEquals(1, boots)
+        val onScreen = f.extras.livePlayable(tuned) { true } as Hls
+        val lease = f.route.readAhead(up, setOf("abc", "def"))!!
+        assertTrue(f.picker.prefetch(lease.masterUrl))
+        lease.release()
+        assertNotEquals("never the screen's session", onScreen.url.substringAfter("jwt="), lease.session.jwt)
+        val surfed = f.extras.livePlayable(upTuned) { true } as Hls
+        assertEquals(2, f.reads.size)
+        assertEquals(lease.masterUrl, surfed.url)
+        assertNotNull(surfed.mediaUrl)
+        // And back down: the channel left is still read on its own session.
+        assertEquals(onScreen, f.extras.livePlayable(tuned) { true })
+        assertEquals(2, f.reads.size)
+    }
+
+    @Test
+    fun `nothing is read ahead for a channel sitting out on the legacy route`() {
+        val f = Fixture(muxed)
+        f.direct = false
+        assertNull(f.route.readAhead(up, setOf("def")))
+        assertNull(f.route.readAhead(up.copy(pluto = null), emptySet()))
     }
 }
