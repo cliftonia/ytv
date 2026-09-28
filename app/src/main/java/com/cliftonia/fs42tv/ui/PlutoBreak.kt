@@ -421,6 +421,8 @@ class PlutoBreak(private val deps: Deps) {
             channelLine = ChannelLabels.bannerLines(on).first,
             backTo = title?.trim()?.takeIf { it.isNotEmpty() }?.let { "BACK TO: $it" }.orEmpty(),
             border = countdown ?: BreakBorder.Pulse,
+            // The card's words only when there are no commercials: a failed reel re-derives it.
+            blank = ads?.loading == true,
         )
     }
 

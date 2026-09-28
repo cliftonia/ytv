@@ -131,7 +131,7 @@ class PlutoBreakAdsTest {
     }
 
     @Test
-    fun `mpv - the reel takes the player as the break reaches the screen, under the card until its frame`() {
+    fun `mpv - the reel takes the player as the break reaches the screen, black until its frame`() {
         val stage = Stage(minuteBreak)
         val subject = stage.subject()
         stage.tunedIn(subject)
@@ -139,7 +139,8 @@ class PlutoBreakAdsTest {
         assertTrue(stage.plays.isEmpty())
         stage.until(116_500)
         assertEquals(1, stage.plays.size)
-        assertTrue("the card while the reel loads", subject.showing && subject.muting)
+        assertTrue("black while the reel loads", subject.showing && subject.muting)
+        assertTrue("no WE'LL BE RIGHT BACK before commercials", subject.state.value!!.blank)
         assertEquals("no card music for a reel on its way", 0, stage.musicPlays)
         subject.ads!!.firstFrame()
         assertFalse("the commercials, heard", subject.showing || subject.muting)
@@ -212,6 +213,7 @@ class PlutoBreakAdsTest {
         subject.ads!!.failed("SOURCE_HTTP_404")
         assertEquals(1, stage.parks)
         assertTrue(subject.showing && subject.muting)
+        assertFalse("the card's words once there are no commercials", subject.state.value!!.blank)
         assertEquals(1, stage.musicPlays)
         stage.until(170_000)
         assertTrue(subject.state.value?.border is BreakBorder.Countdown)
@@ -227,6 +229,7 @@ class PlutoBreakAdsTest {
         stage.tunedIn(subject)
         stage.until(116_500)
         assertTrue(subject.showing)
+        assertFalse(subject.state.value!!.blank)
         assertTrue(stage.plays.isEmpty())
         stage.until(176_500)
         assertFalse(subject.showing)
