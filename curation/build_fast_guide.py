@@ -13,7 +13,8 @@ publishes only what the dial can use:
   - only channels in live.json whose `guide` is samsung, plex, roku or xumo, matched on the
     `guide_id` the draft recorded - the service's own id, so no name matching happens here
   - only programmes on air now or starting in the next WINDOW_HOURS
-  - only start times and titles
+  - only start times and titles, and each programme's description and picture where the guide
+    has them (for the LIVE TV picker's details pane; trimmed, and shared through tables)
 
 Xumo publishes no XMLTV of its own. The workflow runs iptv-org's epg grabber for xumo.tv against
 the channel list `xumo-channels` writes, and hands its output in as --xumo; without it the Xumo
@@ -30,6 +31,14 @@ Each channel is a flat list of (start, title index) pairs, start in whole minute
 start. Title 0 is the empty title: "nothing listed", used for a gap and to close the last
 programme - so the list always ends on a 0, and a time after it has no answer rather than a
 stale one. Titles are shared across channels, since the same show airs on many.
+
+Optional, and only when some programme has one (older apps ignore them):
+
+   "descs": ["", "A description", ...], "icons": ["", "https://...", ...],
+   "info": {"samsung:US1800015K5": [desc, icon, desc, icon, ...], ...}
+
+`info` runs alongside `channels`: one (desc index, icon index) pair per (start, title) pair, 0 for
+none. Descriptions are cut to DESC_CHARS on a word; the picker shows three lines of them.
 
 Fetches i.mjh.nz only - never api.github.com, whose 60/h limit the home IP shares with the
 televisions' update check.
@@ -59,6 +68,9 @@ WINDOW_HOURS = 30
 # the committed file, whose titles are at worst a few hours stale, rather than publish nothing.
 MIN_SHARE = 0.25
 
+# The picker's details pane shows three lines of description; more is bytes nobody reads.
+DESC_CHARS = 240
+
 
 def key(service, guide_id):
     """How a channel is named in fast_guide.json, and how the app looks it up."""
@@ -83,9 +95,19 @@ def xmltv_seconds(text):
         return None
 
 
+def trimmed(text, limit=DESC_CHARS):
+    """[text] on one line, cut to [limit] characters at a word with an ellipsis."""
+    text = " ".join((text or "").split())
+    if len(text) <= limit:
+        return text
+    cut = text[:limit - 1].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    return cut + "\u2026"
+
+
 def programmes(data, ids, now, window_hours=WINDOW_HOURS):
-    """guide id -> [(start, stop, title)] for [ids] only, from an XMLTV guide's bytes: the
-    programmes still on air at [now] or starting before [now] + [window_hours], in start order.
+    """guide id -> [(start, stop, title, desc, icon)] for [ids] only, from an XMLTV guide's bytes:
+    the programmes still on air at [now] or starting before [now] + [window_hours], in start order.
+    desc and icon are "" where the guide has none.
 
     Streamed, and every element cleared once read: the biggest guide is over 40 MB of XML."""
     until = now + window_hours * 3600
@@ -100,7 +122,11 @@ def programmes(data, ids, now, window_hours=WINDOW_HOURS):
             start, stop = xmltv_seconds(element.get("start")), xmltv_seconds(element.get("stop"))
             title = " ".join((element.findtext("title") or "").split())
             if start is not None and stop is not None and stop > now and start < until and stop > start:
-                out.setdefault(cid, []).append((start, stop, title))
+                icon = element.find("icon")
+                icon = (icon.get("src") or "") if icon is not None else ""
+                desc = trimmed(element.findtext("desc"))
+                out.setdefault(cid, []).append((start, stop, title, desc,
+                                                icon if icon.startswith("https://") else ""))
         element.clear()
     for items in out.values():
         items.sort()
@@ -108,17 +134,27 @@ def programmes(data, ids, now, window_hours=WINDOW_HOURS):
 
 
 def encode(schedules, now):
-    """The compact form of {key: [(start, stop, title)]} - see the module docstring."""
+    """The compact form of {key: [(start, stop, title[, desc, icon])]} - see the module docstring."""
     base = now - now % 60
     titles, index = [""], {"": 0}
-    channels = {}
+    tables = {"descs": ([""], {"": 0}), "icons": ([""], {"": 0})}
+    channels, info = {}, {}
+
+    def shared(table, text):
+        values, at = tables[table]
+        if text not in at:
+            at[text] = len(values)
+            values.append(text)
+        return at[text]
 
     def minute(t):
         return (t - base) // 60
 
     for name in sorted(schedules):
-        flat, end = [], None
-        for start, stop, title in schedules[name]:
+        flat, extra, end = [], [], None
+        for item in schedules[name]:
+            start, stop, title = item[:3]
+            desc, icon = (tuple(item[3:5]) + ("", ""))[:2]
             s, e = minute(start), minute(stop)
             if end is not None and s < end:
                 s = end  # overlapping listings: the later one waits for the earlier to end
@@ -126,14 +162,21 @@ def encode(schedules, now):
                 continue
             if end is not None and s > end:
                 flat += [end, 0]  # a hole in the listings says nothing, never the last title
+                extra += [0, 0]
             if title not in index:
                 index[title] = len(titles)
                 titles.append(title)
             flat += [s, index[title]]
+            extra += [shared("descs", desc or ""), shared("icons", icon or "")]
             end = e
         if flat:
             channels[name] = flat + [end, 0]
-    return {"generated": now, "base": base, "titles": titles, "channels": channels}
+            if any(extra):
+                info[name] = extra + [0, 0]
+    out = {"generated": now, "base": base, "titles": titles, "channels": channels}
+    if info:
+        out.update(descs=tables["descs"][0], icons=tables["icons"][0], info=info)
+    return out
 
 
 def build(lineup, guides, now):
