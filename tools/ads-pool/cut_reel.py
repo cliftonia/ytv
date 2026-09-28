@@ -90,7 +90,8 @@ def detect(url, workdir):
     rms_file = os.path.join(workdir, "rms.txt")
     graph = ("[0:v]scale=160:120,blackdetect=d=0.03:pix_th=0.15:pic_th=0.90,"
              "select='gt(scene,0.25)',metadata=print:key=lavfi.scene_score:file=%s[v];"
-             "[0:a]aresample=16000,asetnsamples=640,astats=metadata=1:reset=1,"
+             "[0:a]asplit=2[as][al];[al]ebur128=framelog=quiet,anullsink;"
+             "[as]aresample=16000,asetnsamples=640,astats=metadata=1:reset=1,"
              "ametadata=print:key=lavfi.astats.Overall.RMS_level:file=%s[a]") % (scene_file, rms_file)
     command = ["ffmpeg", "-nostdin", "-hide_banner", "-nostats", "-loglevel", "info",
                "-user_agent", USER_AGENT, "-reconnect", "1", "-reconnect_streamed", "1",
@@ -107,6 +108,19 @@ def detect(url, workdir):
     with open(rms_file) as handle:
         rms = adcuts.parse_metadata_print(handle.read(), "lavfi.astats.Overall.RMS_level")
     return scenes, rms, adcuts.parse_blackdetect(done.stderr), done.stderr
+
+
+def measure_loudness(url):
+    """The whole file's integrated loudness (LUFS), audio only - for a reel cut before it was kept."""
+    command = ["ffmpeg", "-nostdin", "-hide_banner", "-nostats", "-loglevel", "info",
+               "-user_agent", USER_AGENT, "-reconnect", "1", "-reconnect_streamed", "1",
+               "-reconnect_delay_max", "30", "-rw_timeout", "60000000",
+               "-i", url, "-vn", "-map", "0:a:0", "-af", "ebur128=framelog=quiet", "-f", "null", "-"]
+    done = subprocess.run(command, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                          stderr=subprocess.PIPE, text=True, errors="replace", timeout=FFMPEG_TIMEOUT)
+    if done.returncode != 0:
+        raise RuntimeError("ffmpeg exit %d: %s" % (done.returncode, done.stderr.strip()[-400:]))
+    return adcuts.parse_loudness(done.stderr)
 
 
 def process(ident, title=None, era=None):
@@ -130,7 +144,8 @@ def process(ident, title=None, era=None):
         else:
             try:
                 with tempfile.TemporaryDirectory(prefix="ytv-ads-") as workdir:
-                    scenes, rms, blacks, _ = detect(record["url"], workdir)
+                    scenes, rms, blacks, stderr = detect(record["url"], workdir)
+                record["loudness"] = adcuts.parse_loudness(stderr)
             except NoStream:
                 scenes, rms, blacks = [], [], []
             if not rms:
@@ -150,10 +165,19 @@ def process(ident, title=None, era=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("identifier")
+    parser.add_argument("identifier", help="archive.org item, or with --loudness the reel's url")
+    parser.add_argument("--loudness", action="store_true",
+                        help="only measure the reel's integrated loudness and print it (LUFS, or null)")
     parser.add_argument("--title")
     parser.add_argument("--era", choices=("70s", "80s", "90s"))
     args = parser.parse_args()
+    if args.loudness:
+        try:
+            print(json.dumps(measure_loudness(args.identifier)))
+        except Exception as error:
+            print("cut_reel --loudness: %s" % error, file=sys.stderr)
+            return 1
+        return 0
     try:
         record = process(args.identifier, args.title, args.era)
     except Exception as error:  # network, ffmpeg, bad json: nothing learned, retry later
