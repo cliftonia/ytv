@@ -16,6 +16,7 @@ import com.cliftonia.fs42tv.pluto.PlutoRoute
 import com.cliftonia.fs42tv.pluto.PlutoSessions
 import com.cliftonia.fs42tv.pluto.SessionPool
 import com.cliftonia.fs42tv.pluto.VariantCache
+import com.cliftonia.fs42tv.prejoin.Prejoin
 import com.cliftonia.fs42tv.relay.FastRelay
 import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
@@ -63,6 +64,8 @@ class ScreenExtras(private val deps: Deps) {
         val relayServer: () -> String? = { null },
         /** What is on the LIVE TV dial's FAST channels, behind FAST GUIDE; null for none. */
         val fastGuide: FastGuideStore? = null,
+        /** Keeps the neighbours' joins warm, and hands a surf onto one its loopback copy. */
+        val prejoin: Prejoin? = null,
     )
 
     /**
@@ -70,6 +73,13 @@ class ScreenExtras(private val deps: Deps) {
      * the tune thread only - it is TuneController.Deps.livePlayable.
      */
     fun livePlayable(tuned: Tuned, stillWanted: () -> Boolean): Playable? {
+        val prejoin = deps.prejoin ?: return routeLive(tuned, stillWanted)
+        // Before any session is chosen: no neighbour is read from here on.
+        prejoin.tuning()
+        return prejoin.handOff(routeLive(tuned, stillWanted))
+    }
+
+    private fun routeLive(tuned: Tuned, stillWanted: () -> Boolean): Playable? {
         // A US-only feed goes through the home server's relay, or fails here when there is none.
         val relayed = FastRelay.route(tuned.stream, tuned.playable, deps.relayServer)
         val routed = deps.plutoRoute.forDial(tuned.channel, relayed)
@@ -98,6 +108,8 @@ class ScreenExtras(private val deps: Deps) {
     fun plutoPictureUp(tune: TuneController, dial: List<Channel>, busy: () -> Boolean) {
         val prefetch = deps.masterPrefetch ?: return
         val onAir = tune.onAir ?: return
+        // Off the LIVE TV dial there are no neighbours to keep warm: let go of what is held.
+        if (!MasterPrefetch.readable(onAir.channel)) deps.prejoin?.stop()
         val generation = tune.generationNow()
         prefetch.pictureUp(onAir.channel, dial) {
             tune.generationNow() == generation && !busy() && !deps.halted()
@@ -107,7 +119,16 @@ class ScreenExtras(private val deps: Deps) {
     /** The app left the screen: every read ahead cancelled, and nothing it brings back kept. */
     fun appStopped() {
         deps.masterPrefetch?.stop()
+        deps.prejoin?.stop()
     }
+
+    /** The app is going away: the pre-join's loopback server with it. */
+    fun release() {
+        deps.prejoin?.release()
+    }
+
+    /** The window a pre-joined load will join, for the break card - see [Prejoin.windowAt]. */
+    fun prejoinWindowAt(playable: Playable?): Long? = deps.prejoin?.windowAt(playable)
 
     /**
      * The guide music's version of the same, on a Pluto session of its own so it can never end
@@ -311,6 +332,11 @@ class ScreenExtras(private val deps: Deps) {
                 // Sessions rotate only while their masters are read ahead - mpv, see SessionPool.
                 rotate = picker::prefetching,
             )
+            val prejoin = Prejoin.onDevice(
+                pickOf = picker::remembered,
+                fastMaster = { channel -> FastRelay.liveUrl(channel, homeServer) },
+                enabled = { features.isOn(Features.Flag.PREJOIN) },
+            )
             return ScreenExtras(Deps(
                 features = features,
                 plutoGuide = PlutoGuide(
@@ -332,7 +358,8 @@ class ScreenExtras(private val deps: Deps) {
                 masterPicker = picker,
                 masterPrefetch = MasterPrefetch.onDevice(route, picker, halted,
                     fastMaster = { channel -> FastRelay.liveUrl(channel, homeServer) },
-                    ready = { _, _ -> }),
+                    ready = prejoin::neighbourReady),
+                prejoin = prejoin,
                 adCatalog = cacheDir?.let {
                     AdCatalogStore(java.io.File(it, AdCatalogStore.FILE_NAME), AdCatalogStore::httpFetch)
                 },

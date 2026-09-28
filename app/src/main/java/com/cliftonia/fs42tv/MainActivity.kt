@@ -420,6 +420,7 @@ class MainActivity : ComponentActivity() {
         stallHandler.removeCallbacksAndMessages(null)
         recoveryHandler.removeCallbacksAndMessages(null)
         director.release()
+        extras.release()
         threads.shutdown()
         resolver.close()
         guide.releaseMusic()
