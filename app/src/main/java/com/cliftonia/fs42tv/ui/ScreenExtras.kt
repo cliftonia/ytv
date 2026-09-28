@@ -23,6 +23,7 @@ import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.schedule.Timetable
 import com.cliftonia.fs42tv.sync.Channel
+import com.cliftonia.fs42tv.sync.FastGuideStore
 import com.cliftonia.fs42tv.tune.TuneController
 import com.cliftonia.fs42tv.tune.Tuned
 import java.time.ZoneId
@@ -60,6 +61,8 @@ class ScreenExtras(private val deps: Deps) {
         val masterPrefetch: MasterPrefetch? = null,
         /** The reachable resolve server's base url, or null - the US relay's host; see FastRelay. */
         val relayServer: () -> String? = { null },
+        /** What is on the LIVE TV dial's FAST channels, behind FAST GUIDE; null for none. */
+        val fastGuide: FastGuideStore? = null,
     )
 
     /**
@@ -211,8 +214,11 @@ class ScreenExtras(private val deps: Deps) {
      * Answers from the cache only. On a miss it asks Pluto, and [onUpdate] runs on the UI thread
      * once the answer is in - the caller re-reads then, which hits the cache. A failed fetch never
      * calls back, so the banner simply keeps the channel name.
+     *
+     * A FAST channel answers from `fast_guide.json` instead - NOW only, see [fastTitle].
      */
     fun bannerLines(channel: Channel, onUpdate: () -> Unit): Pair<String, String>? {
+        fastTitle(channel) { deps.runOnUi { if (!deps.halted()) onUpdate() } }?.let { return it to "" }
         if (!deps.features.isOn(Features.Flag.PLUTO_GUIDE)) return null
         val id = PlutoIds.of(channel) ?: return null
         val schedule = deps.plutoGuide.cached(id)
@@ -231,6 +237,10 @@ class ScreenExtras(private val deps: Deps) {
      * the UI thread.
      */
     fun guideRow(channel: Channel, onReady: ((String) -> Unit)?): String? {
+        val fast = fastTitle(channel, onReady?.let { ready ->
+            { fastTitle(channel, null)?.let { line -> deps.runOnUi { if (!deps.halted()) ready(line) } } }
+        })
+        if (fast != null) return fast
         if (!deps.features.isOn(Features.Flag.PLUTO_GUIDE)) return null
         val id = PlutoIds.of(channel) ?: return null
         val schedule = deps.plutoGuide.cached(id)
@@ -243,6 +253,15 @@ class ScreenExtras(private val deps: Deps) {
         }
         return schedule?.let { PlutoLines.guideRow(it, deps.nowMillis(), ZoneId.systemDefault()) }
     }
+
+    /**
+     * The title on air on a FAST channel of the LIVE TV dial, from `fast_guide.json` - shown
+     * exactly where Pluto's NOW title goes, and like it with no "NOW" in front. Null for every
+     * other channel, and with FAST GUIDE off. [onLoaded] runs on the prefetch thread when the
+     * first copy of the file lands, so a caller that asked too early can read again.
+     */
+    private fun fastTitle(channel: Channel, onLoaded: (() -> Unit)?): String? =
+        deps.fastGuide?.titleOn(channel, onLoaded)
 
     companion object {
         /** Construction in one line for the activity, which is at its size limit. */
@@ -313,6 +332,15 @@ class ScreenExtras(private val deps: Deps) {
                 },
                 adMirror = { id -> AdMirror.url(homeServer(), id) },
                 relayServer = homeServer,
+                fastGuide = cacheDir?.let {
+                    FastGuideStore(
+                        file = java.io.File(it, FastGuideStore.FILE_NAME),
+                        fetch = FastGuideStore::httpFetch,
+                        executor = prefetchExecutor,
+                        nowMillis = now,
+                        enabled = { features.isOn(Features.Flag.FAST_GUIDE) },
+                    )
+                },
             ))
         }
 
