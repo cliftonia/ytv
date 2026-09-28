@@ -33,7 +33,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=aFrggyVDlYY",
                 "duration": 1056,
-                "title": "Abandoned 1970 Dodge Coronet R/T 426 Hemi Restored to Plum Crazy | ASMR"
+                "title": "Abandoned 1970 Dodge Coronet R/T 426 Hemi Restored to Plum Crazy | ASMR",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=HjqOwbXsNKk",
@@ -111,7 +113,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=r2KqLG1eb8g",
                 "duration": 444,
-                "title": "ASMR Car Restoration | Restoring an Abandoned 1966 Lamborghini 400 GT"
+                "title": "ASMR Car Restoration | Restoring an Abandoned 1966 Lamborghini 400 GT",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=bv1v4DI4FDM",
@@ -166,7 +170,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nfKjf-eiDmk",
                 "duration": 351,
-                "title": "Lifting a Forgotten Flo-Inspired Car from the Deep Sea | Complete Restoration"
+                "title": "Lifting a Forgotten Flo-Inspired Car from the Deep Sea | Complete Restoration",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=hBNgCuBTyaU",
@@ -310,7 +316,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sW2siwt7Gy0",
                 "duration": 896,
-                "title": "ASMR Car Restoration | 1957 Mercedes-Benz 190SL Sitting for 65 Years | From Rust to Glory"
+                "title": "ASMR Car Restoration | 1957 Mercedes-Benz 190SL Sitting for 65 Years | From Rust to Glory",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=-zg7uWW13YA",
@@ -376,7 +384,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UVSGEpCbLYc",
                 "duration": 335,
-                "title": "Lifting a Forgotten Lizzie From the Deep Sea | Complete Restoration"
+                "title": "Lifting a Forgotten Lizzie From the Deep Sea | Complete Restoration",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=fZHcYpJf2Ig",
@@ -453,7 +463,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=_U5XcrifRjQ",
                 "duration": 1343,
-                "title": "How to Buy a Budget Friendly Project Car"
+                "title": "How to Buy a Budget Friendly Project Car",
+                "skip": [
+                    [
+                        404.4,
+                        412.3
+                    ],
+                    [
+                        1330.8,
+                        1342.7
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Pwy9fyCGd74",
@@ -472,7 +493,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=43BPDzTI0WI",
                 "duration": 846,
-                "title": "ASMR Car Restoration | Can We Save This Abandoned 1965 Jaguar E-Type?"
+                "title": "ASMR Car Restoration | Can We Save This Abandoned 1965 Jaguar E-Type?",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=_NCHIKGGF-k",
@@ -484,7 +507,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kDVW5aO8-6U",
                 "duration": 807,
-                "title": "1969 Dodge Super Bee Left to Rot for 50 Years - Full Barn Find Restoration"
+                "title": "1969 Dodge Super Bee Left to Rot for 50 Years - Full Barn Find Restoration",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=in5DPmoROQI",
@@ -529,12 +554,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=UunlXCaC4Gc",
                 "duration": 3583,
-                "title": "20 Classic Cars For Sale By Owner Today"
+                "title": "20 Classic Cars For Sale By Owner Today",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=GJIh__ARFjY",
                 "duration": 865,
-                "title": "ASMR Car Restoration | You Won’t Believe This Abandoned Ferrari F430 Spider Transformation"
+                "title": "ASMR Car Restoration | You Won’t Believe This Abandoned Ferrari F430 Spider Transformation",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=VGJyAkBvDmg",
@@ -544,7 +573,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sA-0xxO4QVw",
                 "duration": 1472,
-                "title": "Your Life at Every Level of Restoring 8 of the World’s Supercars With Your Dad"
+                "title": "Your Life at Every Level of Restoring 8 of the World’s Supercars With Your Dad",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=M2aP-Uc4lF4",
