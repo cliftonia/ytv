@@ -205,9 +205,15 @@ class TestClassify(unittest.TestCase):
         self.assertEqual(("Movies", "Horror"), self.classify(channel, marathon)[:2])
 
     def test_pluto_genres_place_a_name_that_says_nothing(self):
+        thrills = {"titles": {}, "genres": {"Thriller/Thriller": 500, "Drama/Crime Drama": 100}, "groups": [],
+                   "kinds": {"film": 600}, "via": None}
+        self.assertEqual(("Movies", "Thriller"), self.classify(draft_channel("Suspense Vault", "pluto"), thrills)[:2])
+
+    def test_plutos_rotating_picks_are_mixed_whatever_the_guide_samples(self):
         staff = {"titles": {}, "genres": {"Thriller/Thriller": 500, "Drama/Crime Drama": 100}, "groups": [],
                  "kinds": {"film": 600}, "via": None}
-        self.assertEqual(("Movies", "Thriller"), self.classify(draft_channel("Pluto TV Staff Picks", "pluto"), staff)[:2])
+        self.assertEqual(("Movies", "Movies – Mixed"),
+                         self.classify(draft_channel("Pluto TV Staff Picks", "pluto"), staff)[:2])
 
     def test_sub_blocks_from_the_name(self):
         self.assertEqual(("Music", "80s"), self.classify(draft_channel("Stingray Remember the 80s"))[:2])

@@ -9,11 +9,11 @@ Every channel's `why` in live_draft.json says what placed it. Only Pluto's guide
 | Block | Sub-block | Numbers | Total | Pluto | FAST | Guide | Xumo | No guide | Home-only |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
 | Movies | Action | 100-105 | 6 | 2 | 4 | 2 | 0 | 4 | 0 |
-| Movies | Comedy | 110-118 | 9 | 6 | 3 | 7 | 0 | 2 | 1 |
+| Movies | Comedy | 110-115 | 6 | 3 | 3 | 4 | 0 | 2 | 1 |
 | Movies | Romance | 120-127 | 8 | 2 | 6 | 6 | 0 | 2 | 2 |
-| Movies | Horror | 130-135 | 6 | 4 | 2 | 5 | 0 | 1 | 0 |
-| Movies | Thriller | 140-148 | 9 | 4 | 5 | 5 | 0 | 4 | 1 |
-| Movies | Sci-Fi | 150-154 | 5 | 3 | 2 | 3 | 0 | 2 | 0 |
+| Movies | Horror | 130-134 | 5 | 3 | 2 | 4 | 0 | 1 | 0 |
+| Movies | Thriller | 140-147 | 8 | 3 | 5 | 4 | 0 | 4 | 1 |
+| Movies | Sci-Fi | 150-153 | 4 | 2 | 2 | 2 | 0 | 2 | 0 |
 | Movies | Westerns | 160-166 | 7 | 1 | 6 | 2 | 0 | 5 | 0 |
 | Movies | Family | 170-172 | 3 | 1 | 2 | 1 | 1 | 1 | 1 |
 | Movies | Classic | 180-183 | 4 | 2 | 2 | 2 | 0 | 2 | 1 |
@@ -23,8 +23,8 @@ Every channel's `why` in live_draft.json says what placed it. Only Pluto's guide
 | Movies | Black Cinema | 220-225 | 6 | 2 | 4 | 5 | 0 | 1 | 2 |
 | Movies | Cult & B-Movies | 230-233 | 4 | 1 | 3 | 3 | 0 | 1 | 2 |
 | Movies | Indie & World | 240-243 | 4 | 1 | 3 | 3 | 1 | 0 | 1 |
-| Movies | Movies – Mixed | 250-261 | 12 | 4 | 8 | 7 | 0 | 5 | 3 |
-| Movies | **all** | 100-261 | 97 | 40 | 57 | 59 | 3 | 35 | 15 |
+| Movies | Movies – Mixed | 250-267 | 18 | 10 | 8 | 13 | 0 | 5 | 3 |
+| Movies | **all** | 100-267 | 97 | 40 | 57 | 59 | 3 | 35 | 15 |
 | Series | Comedy | 300-323 | 24 | 4 | 20 | 13 | 2 | 9 | 8 |
 | Series | Action | 330-349 | 20 | 8 | 12 | 10 | 5 | 5 | 2 |
 | Series | Drama | 360-399 | 40 | 13 | 27 | 26 | 3 | 11 | 14 |
