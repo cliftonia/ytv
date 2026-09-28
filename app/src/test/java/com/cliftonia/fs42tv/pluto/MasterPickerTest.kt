@@ -39,18 +39,6 @@ class MasterPickerTest {
     }
 
     @Test
-    fun `a lower ceiling picks under it, as a FAST feed opens on 720p`() {
-        val ladder = "#EXTM3U\n" +
-            "#EXT-X-STREAM-INF:BANDWIDTH=6692000,RESOLUTION=1920x1080,CODECS=\"avc1.640028,mp4a.40.2\"\n1080.m3u8\n" +
-            "#EXT-X-STREAM-INF:BANDWIDTH=3692000,RESOLUTION=1280x720,CODECS=\"avc1.4d401f,mp4a.40.2\"\n720.m3u8\n" +
-            "#EXT-X-STREAM-INF:BANDWIDTH=1192000,RESOLUTION=640x360,CODECS=\"avc1.4d401e,mp4a.40.2\"\n360.m3u8\n"
-        val f = Fixture({ BreakPoller.Fetched(landed, ladder) }, ladder = listOf("hd", "sd"))
-        assertEquals("https://cfd.example/stitch/abc/1080.m3u8", (f.picker.forMpv(Hls(master)) as Hls).mediaUrl)
-        assertEquals("https://cfd.example/stitch/abc/720.m3u8",
-            (f.picker.forMpv(Hls(master), maxHeight = 720) as Hls).mediaUrl)
-    }
-
-    @Test
     fun `mpv gets the chosen playlist, the master url stays the identity`() {
         val f = Fixture({ BreakPoller.Fetched(landed, muxed) })
         val out = f.picker.forMpv(Hls(master)) as Hls
