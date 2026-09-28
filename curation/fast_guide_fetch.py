@@ -115,13 +115,22 @@ def fetch_xumo(now):
         return [page for pages in pool.map(segment, xumo_segments(now)) for page in pages]
 
 
-def fetch_tubi(ids):
-    """Tubi's guide rows for [ids], whole: each programme with its description and images."""
+def through(via, url):
+    """[url] asked for through the relay at [via] - a prefix ending in `u=`, such as the home
+    server's US relay `http://127.0.0.1:4247/hls?u=` (tools/fast-relay) - or [url] itself when
+    [via] is empty. The relay passes a JSON reply through untouched, and the browser headers
+    fetch_json sends with it (its own User-Agent stands in for ours)."""
+    return via + urllib.parse.quote(url, safe="") if via else url
+
+
+def fetch_tubi(ids, via=None):
+    """Tubi's guide rows for [ids], whole: each programme with its description and images. Tubi
+    answers only inside the US; from anywhere else, [via] a US relay (see [through])."""
     rows = []
     ids = sorted(ids)
     for i in range(0, len(ids), TUBI_BATCH):
         batch = ",".join(ids[i:i + TUBI_BATCH])
-        rows += fetch_json(TUBI_EPG % urllib.parse.quote(batch, safe=",")).get("rows") or []
+        rows += fetch_json(through(via, TUBI_EPG % urllib.parse.quote(batch, safe=","))).get("rows") or []
     return rows
 
 

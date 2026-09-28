@@ -113,6 +113,20 @@ class FastGuideStoreTest {
     }
 
     @Test
+    fun `the dial coming up loads a stale guide before any channel asks, unless the row is off`() {
+        val f = Fixture(enabled = false)
+        f.file.writeText(guideText("Cached"))
+        f.file.setLastModified(f.now - FastGuideStore.LAUNCH_STALE_MILLIS - 1)
+        f.store.lineupSeen("A")
+        assertTrue(f.queued.isEmpty())
+        f.enabled = true
+        f.store.lineupSeen("A")
+        f.drain()
+        assertEquals(1, f.fetches)
+        assertEquals("Downloaded", f.store.titleOn(fast))
+    }
+
+    @Test
     fun `many asks while loading start one load`() {
         val f = Fixture()
         repeat(5) { f.store.titleOn(fast) }

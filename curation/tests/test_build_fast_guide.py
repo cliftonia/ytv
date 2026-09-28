@@ -7,6 +7,8 @@ lookup giving the programme actually on air, or nothing - never the last title o
 import os
 import sys
 import unittest
+import urllib.parse
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import build_fast_guide as fg
@@ -309,6 +311,51 @@ class TestServiceDetails(unittest.TestCase):
             self.assertEqual(len(guide["channels"][name]), len(guide["info"][name]), name)
             self.assertEqual(desc, guide["descs"][guide["info"][name][0]], name)
         self.assertEqual("https://s/y.jpg", guide["icons"][guide["info"]["stirr:3353"][1]])
+
+
+class TestTubiThroughTheRelay(unittest.TestCase):
+    """Tubi answers only inside the US: the home server asks it through its US relay."""
+
+    RELAY = "http://127.0.0.1:4247/hls?u="
+
+    def asked(self, via, ids=("692051", "400000012")):
+        urls = []
+
+        def fake(url, timeout=60):
+            urls.append(url)
+            return {"rows": [{"content_id": "692051"}]}
+        with mock.patch.object(fetch, "fetch_json", fake):
+            rows = fetch.fetch_tubi(set(ids), via)
+        return urls, rows
+
+    def test_without_a_relay_tubi_is_asked_directly(self):
+        urls, rows = self.asked(None)
+        self.assertEqual(["https://tubitv.com/oz/epg/programming?content_id=400000012,692051"], urls)
+        self.assertEqual([{"content_id": "692051"}], rows)
+
+    def test_through_the_relay_the_whole_url_is_its_u_parameter(self):
+        urls, _ = self.asked(self.RELAY)
+        self.assertTrue(urls[0].startswith(self.RELAY))
+        u = urllib.parse.parse_qs(urllib.parse.urlsplit(urls[0]).query)["u"][0]
+        self.assertEqual("https://tubitv.com/oz/epg/programming?content_id=400000012,692051", u)
+
+    def test_batches_each_go_through_the_relay(self):
+        ids = ["%06d" % i for i in range(fetch.TUBI_BATCH + 1)]
+        urls, rows = self.asked(self.RELAY, ids)
+        self.assertEqual(2, len(urls))
+        self.assertTrue(all(u.startswith(self.RELAY) for u in urls))
+        self.assertEqual(2, len(rows))
+
+    def test_the_builder_passes_its_option_and_environment_on(self):
+        seen = []
+        with mock.patch.object(fg, "fetch_tubi", lambda ids, via=None: seen.append(via) or []):
+            fg.load_all([{"guide": "tubi", "guide_id": "1"}], None, T0, self.RELAY)
+        self.assertEqual([self.RELAY], seen)
+        with mock.patch.dict(os.environ, {"YTV_TUBI_VIA": self.RELAY}), \
+                mock.patch.object(fg, "load_all", side_effect=RuntimeError("stop")) as load:
+            with self.assertRaises(RuntimeError):
+                fg.main(["--out", os.devnull])
+        self.assertEqual(self.RELAY, load.call_args[0][3])
 
 
 if __name__ == "__main__":
