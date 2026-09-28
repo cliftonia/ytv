@@ -97,8 +97,43 @@ object ChannelLabels {
         return line to title
     }
 
+    /**
+     * The guide's heading over each LIVE TV block and sub-block - "MOVIES — ACTION" - one entry
+     * per channel: the heading to draw above that row, or null for none.
+     *
+     * A heading goes above the first channel of each run with the same block and sub-block, so a
+     * dial without them - YouTube - has no headings at all. One pass, once per guide open: 800
+     * rows cost nothing, and the list itself stays one item per channel, so every index the picker
+     * and the tune pass around still means a channel.
+     */
+    fun headings(channels: List<Channel>): List<String?> {
+        var previous: String? = null
+        return channels.map { channel ->
+            val heading = heading(channel)
+            heading.takeIf { it != previous }.also { previous = heading }
+        }
+    }
+
+    /**
+     * "BLOCK — SUB", the block alone when the sub-block only repeats it ("Anime", "Sitcoms (USA)"
+     * over "Sitcoms"), and a sub-block that begins with its block's name loses it ("Movies – Mixed"
+     * reads MOVIES — MIXED). Null for a channel with no block.
+     */
+    fun heading(channel: Channel): String? {
+        val block = channel.block?.trim()?.takeIf { it.isNotEmpty() } ?: return null
+        var sub = channel.sub?.trim().orEmpty()
+        if (sub.startsWith(block, ignoreCase = true)) {
+            sub = sub.drop(block.length).trimStart(' ', '-', '–', '—', ':').trim()
+        }
+        val alone = sub.isEmpty() || block.startsWith(sub, ignoreCase = true)
+        return if (alone) block.uppercase() else "${block.uppercase()} — ${sub.uppercase()}"
+    }
+
     fun listRow(channel: Channel, nowPlaying: String? = null): Pair<String, String> {
-        val head = "CH %-4s%s".format("%02d".format(channel.number), channel.name.uppercase())
+        // Four wide, and one more than the digits past that: LIVE TV runs into the thousands,
+        // where a fixed four would glue "1625" to the name.
+        val number = "%02d".format(channel.number)
+        val head = "CH " + number.padEnd(maxOf(4, number.length + 1)) + channel.name.uppercase()
         val title = nowPlaying?.trim().orEmpty()
         return if (title.isEmpty()) head to "" else "$head:" to title
     }
