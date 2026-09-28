@@ -78,6 +78,24 @@ class PlutoSessions(
         return dialLocal.get()?.let { Choice(it, fromServer = false) }
     }
 
+    /**
+     * The session [forDial] would hand a channel from [region] right now, if it can be told
+     * without fetching anything; else null. For reading a neighbour's master ahead of a surf
+     * ([PlutoRoute.masterAhead]), which must never boot a session or wait on the home server -
+     * and a guess that turns out wrong only misses the cache. Never blocks.
+     */
+    fun peekForDial(region: String?): PlutoSession? {
+        if (region != null) {
+            val slot = regions[region]
+            slot?.cached()?.let { return it }
+            // While the server is down forDial takes a region session still valid, else the local
+            // one; otherwise it would ask the server, and what that answers cannot be known here.
+            if (nowMillis() >= serverDownUntil) return null
+            slot?.stillValid()?.let { return it }
+        }
+        return dialLocal.cached()
+    }
+
     /** A session for a player running at the same time as the dial - never the dial's own. */
     fun beside(): PlutoSession? = besideLocal.get()
 
