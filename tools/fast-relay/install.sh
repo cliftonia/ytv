@@ -33,6 +33,9 @@ User=$USER_NAME
 NetworkNamespacePath=/run/netns/pluto-us
 # 10.103.1.2 is the namespace's end of the veth (pluto-ns.sh); 8480 is pluto-boot@us.
 ExecStart=/usr/bin/python3 /usr/local/lib/fast-relay/fast_relay.py --bind 10.103.1.2:8481
+# Started means listening: the front forwards the moment this unit is up, and a restart otherwise
+# refused the televisions for the second python takes to bind.
+ExecStartPost=/bin/bash -c 'for i in \$(seq 50); do (exec 3<>/dev/tcp/10.103.1.2/8481) 2>/dev/null && exit 0; sleep 0.1; done'
 Restart=on-failure
 RestartSec=10
 
