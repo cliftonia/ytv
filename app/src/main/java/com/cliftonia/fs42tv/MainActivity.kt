@@ -26,6 +26,8 @@ import com.cliftonia.fs42tv.ui.ScreenDirector
 import com.cliftonia.fs42tv.ui.ScreenExtras
 import com.cliftonia.fs42tv.ui.SettingRow
 import com.cliftonia.fs42tv.ui.SettingsCatalog
+import com.cliftonia.fs42tv.ui.featureToggled
+import com.cliftonia.fs42tv.ui.wirePlayer
 import com.cliftonia.fs42tv.update.UpdateFlow
 
 /** The repository whose releases carry the apk, for the self-update check. */
