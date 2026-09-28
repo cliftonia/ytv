@@ -4,6 +4,7 @@ import com.cliftonia.fs42tv.relay.FastRelay
 import com.cliftonia.fs42tv.resolver.Hls
 import com.cliftonia.fs42tv.tune.Tuner
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
@@ -40,17 +41,17 @@ class LiveDialContractTest {
     fun `a pluto channel keeps its ref, so every pluto feature still finds it`() {
         val pluto = named("50 Cent Action")
         assertEquals("68487fb3f212bedacf5a53e3", pluto.pluto?.id)
-        assertNull("pluto finds its own breaks", pluto.breaks)
+        assertFalse("pluto finds its own breaks", pluto.cueBreaks)
         assertNull("pluto has its own guide", pluto.guide)
     }
 
     @Test
     fun `a fast channel carries cue breaks and its guide key, music carries neither cue`() {
         val fast = named("Sparkle Movies")
-        assertEquals("cue", fast.breaks)
+        assertTrue(fast.cueBreaks)
         assertEquals("samsung:GBAJ400042T1", FastGuide.keyOf(fast))
         assertNull(fast.pluto)
-        assertNull(named("Stingray Jukebox Oldies").breaks)
+        assertFalse(named("Stingray Jukebox Oldies").cueBreaks)
         assertEquals("xumo:300#99991333", FastGuide.keyOf(named("Dove Channel")))
     }
 
