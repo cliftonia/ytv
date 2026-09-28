@@ -42,7 +42,7 @@ class MasterPicker(
      * [cacheable] is true only for the direct route, whose master url names its session: a
      * remembered pick is used, and a fresh one remembered. False reads and remembers nothing.
      */
-    fun forMpv(playable: Playable, cacheable: Boolean = false, maxHeight: Int? = null): Playable {
+    fun forMpv(playable: Playable, cacheable: Boolean = false): Playable {
         val hls = playable as? Hls ?: return playable
         val ladder = mpvLadder() ?: return playable
         val engine = engineOf(ladder)
@@ -53,7 +53,7 @@ class MasterPicker(
         }
         // The claim the tune took on the session, from before the read - see VariantCache.put.
         val claim = if (cacheable) cache?.claim(hls.url) else null
-        val pick = read(hls.url, ladder, ahead = false, maxHeight) ?: return playable
+        val pick = read(hls.url, ladder, ahead = false) ?: return playable
         cache?.put(hls.url, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl), claim)
         return hls.copy(mediaUrl = pick.videoUrl, audioUrl = pick.audioUrl)
     }
@@ -89,7 +89,7 @@ class MasterPicker(
     }
 
     /** The master's pick under [ladder]'s ceiling, or null when mpv should open the master. */
-    private fun read(url: String, ladder: List<String>, ahead: Boolean, maxHeight: Int? = null): HlsMaster.Pick? {
+    private fun read(url: String, ladder: List<String>, ahead: Boolean): HlsMaster.Pick? {
         val tail = if (ahead) "; nothing kept" else "; mpv opens the master"
         val started = elapsedMillis()
         val fetched = try {
@@ -104,8 +104,7 @@ class MasterPicker(
             say("not a master (${took}ms)${if (ahead) tail else "; mpv opens the url as it is"}")
             return null
         }
-        val ceiling = HlsMaster.heightCap(ladder).let { cap -> maxHeight?.let { minOf(cap, it) } ?: cap }
-        val pick = HlsMaster.choose(fetched.body, fetched.url, ceiling) ?: run {
+        val pick = HlsMaster.choose(fetched.body, fetched.url, HlsMaster.heightCap(ladder)) ?: run {
             say("no safe variant (${took}ms)$tail")
             return null
         }
