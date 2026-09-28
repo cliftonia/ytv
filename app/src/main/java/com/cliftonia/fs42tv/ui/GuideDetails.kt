@@ -63,7 +63,9 @@ class GuideDetails(
                 }
             }
         }
-        val enrichment = title?.let { details?.get { update() }?.forTitle(it) }
+        val enrichment = title?.let {
+            details?.get { update() }?.forTitle(it, com.cliftonia.fs42tv.details.Details.kindOfBlock(channel.block))
+        }
         return PickerDetails.of(line, title, description, image, enrichment)
     }
 

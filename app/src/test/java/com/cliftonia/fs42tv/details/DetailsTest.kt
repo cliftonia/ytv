@@ -64,4 +64,14 @@ class DetailsTest {
     fun `an empty object is refused too`() {
         Details.parse("{}")
     }
+
+    @Test
+    fun `a series channel gets the series and a movie channel the film of one title`() {
+        val both = Details.parse("""{"generated":1,"img":"https://image.tmdb.org/t/p/",
+            "titles":{"tv:21 jump street":0,"movie:21 jump street":1},
+            "items":[{"k":"t","t":"21 Jump Street","y":1987},{"k":"m","t":"21 Jump Street","y":2012}]}""")!!
+        assertEquals(1987, both.forTitle("21 Jump Street", Details.kindOfBlock("Series"))?.year)
+        assertEquals(2012, both.forTitle("21 Jump Street", Details.kindOfBlock("Movies"))?.year)
+        assertEquals("no bare key, so no guess", null, both.forTitle("21 Jump Street", null))
+    }
 }
