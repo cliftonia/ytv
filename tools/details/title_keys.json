@@ -1,0 +1,20 @@
+{
+  "about": "Shared by tools/details/test_titles.py and the app's TitleKeyTest: the lookup key for each guide title, which both sides must compute identically.",
+  "cases": [
+    ["Mitch Albom's Have a Little Faith", "mitch alboms have a little faith"],
+    ["Movie: Fast Atlanta", "movie fast atlanta"],
+    ["Law & Order: Special Victims Unit", "law and order special victims unit"],
+    ["  Dr. G:  Medical Examiner ", "dr g medical examiner"],
+    ["My Secret,Terrius Ep.16 (English Dub)", "my secret terrius ep 16 english dub"],
+    ["What’s Your Name? - Kids Song - Finny The Shark And More", "whats your name kids song finny the shark and more"],
+    ["Pokémon: The Series", "pokemon the series"],
+    ["Amélie", "amelie"],
+    ["WALL·E", "wall e"],
+    ["S2 E3 Apocalyptic Visions", "s2 e3 apocalyptic visions"],
+    ["The Jim Rome Podcast(series, 2024)", "the jim rome podcast series 2024"],
+    ["KEY THE METAL IDOL (Dubbed)", "key the metal idol dubbed"],
+    ["Speed Racer [English-Language Version]", "speed racer english language version"],
+    ["日本の映画", ""],
+    ["", ""]
+  ]
+}
