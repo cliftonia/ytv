@@ -27,6 +27,13 @@ import com.cliftonia.fs42tv.resolver.Progressive
  * While a reel loads the card stays up and the programme stays silent, so the join is WE'LL BE
  * RIGHT BACK and then the commercials, never a flash of the logo or of black.
  *
+ * FROM THE HOME SERVER WHEN IT CAN. At home a reel is opened from the server's copy of the same
+ * file ([Deps.mirror], ads/AdMirror): about a second to a frame instead of the archive's nine. A
+ * copy that will not open - not mirrored yet, the reel server down - or shows no frame within
+ * [MIRROR_LOAD_MILLIS] is the archive's url for the SAME reel and cut, with the full
+ * [LOAD_MILLIS]; only the archive failing too is the card. Away from home it is the archive, as
+ * it always was.
+ *
  * Main thread only.
  */
 class BreakAds(private val deps: Deps) {
@@ -38,6 +45,8 @@ class BreakAds(private val deps: Deps) {
         val catalog: () -> AdCatalog?,
         /** Refresh the catalog off the UI thread if it is stale - cheap to call. */
         val warm: () -> Unit,
+        /** Where the home server keeps reel `id`, or null to open it from the archive. */
+        val mirror: (id: String) -> String? = { null },
         /** Hand the reel to the dial's player, at a second from the start of the file. */
         val play: (reel: Progressive, startAtSeconds: Double) -> Unit,
         /** A reel failed: stop it and hold the player still under the card. */
@@ -94,6 +103,12 @@ class BreakAds(private val deps: Deps) {
     private var reels = 0
     private var cancelTimer: (() -> Unit)? = null
 
+    /**
+     * The archive's url and cut for a reel loading from the mirror; null otherwise. Read only
+     * while LOADING, and set afresh by every [load].
+     */
+    private var archive: Pair<String, Double>? = null
+
     /** A Pluto channel was loaded: have the catalog ready by its first break. */
     fun warm() {
         if (deps.enabled()) deps.warm()
@@ -123,8 +138,31 @@ class BreakAds(private val deps: Deps) {
             "at ${pick.cutSeconds}s, reel $reels of this break, loudness ${pick.reel.loudness} LUFS - ${pick.reel.url}")
         stage = Stage.LOADING
         gain = Loudness.gain(pick.reel.loudness?.let { it - PROGRAMME_LUFS })
-        deps.play(Progressive(pick.reel.url, audioUrl = null), pick.cutSeconds)
-        arm(LOAD_MILLIS, "no picture after ${LOAD_MILLIS / 1000}s")
+        val mirrored = deps.mirror(pick.reel.id)
+        archive = mirrored?.let { pick.reel.url to pick.cutSeconds }
+        if (mirrored != null) {
+            Log.i("fs42", "break ads on $channel: from the home server - $mirrored")
+            open(mirrored, pick.cutSeconds, MIRROR_LOAD_MILLIS)
+        } else {
+            open(pick.reel.url, pick.cutSeconds, LOAD_MILLIS)
+        }
+        return true
+    }
+
+    private fun open(url: String, at: Double, loadMillis: Long) {
+        deps.play(Progressive(url, audioUrl = null), at)
+        arm(loadMillis, "no picture after ${loadMillis / 1000}s")
+    }
+
+    /**
+     * The mirror's copy would not load: the archive's, same reel, same cut, same gain. False when
+     * the reel was not from the mirror - the caller falls back to the card as before.
+     */
+    private fun fromArchive(reason: String): Boolean {
+        val (url, at) = archive ?: return false
+        archive = null
+        Log.i("fs42", "break ads on $channel: home server copy $reason - from the archive instead")
+        open(url, at, LOAD_MILLIS)
         return true
     }
 
@@ -133,6 +171,7 @@ class BreakAds(private val deps: Deps) {
         if (!onPlayer) return false
         if (stage == Stage.LOADING) {
             cancel()
+            archive = null
             stage = Stage.SHOWING
             deps.changed()
         }
@@ -149,6 +188,7 @@ class BreakAds(private val deps: Deps) {
             stop()
             return false
         }
+        if (stage == Stage.LOADING && fromArchive("failed: $code")) return true
         if (stage == Stage.LOADING || stage == Stage.SHOWING) fallBack("the reel failed: $code")
         return true
     }
@@ -199,6 +239,7 @@ class BreakAds(private val deps: Deps) {
         cancel()
         cancelTimer = deps.later(millis) {
             cancelTimer = null
+            if (stage == Stage.LOADING && fromArchive(reason)) return@later
             if (stage == Stage.LOADING || stage == Stage.SHOWING) fallBack(reason)
         }
     }
@@ -219,6 +260,13 @@ class BreakAds(private val deps: Deps) {
          * seconds on the Cinema Stream channel), short of the viewer wondering what the card is for.
          */
         const val LOAD_MILLIS = 10_000L
+
+        /**
+         * How long the home server's copy has to show a frame before the archive's is tried. On
+         * the LAN a join is about a second; four is a server that is not answering, and still
+         * leaves the archive its full [LOAD_MILLIS] - the worst case is fourteen seconds of card.
+         */
+        const val MIRROR_LOAD_MILLIS = 4_000L
 
         /** A stall this long mid-reel is the card: a break is too short to wait out a slow line. */
         const val STALL_MILLIS = 8_000L
@@ -244,6 +292,7 @@ class BreakAds(private val deps: Deps) {
                 enabled = { extras.features.isOn(Features.Flag.BREAK_ADS) },
                 catalog = store::current,
                 warm = store::refreshIfStale,
+                mirror = extras.adMirror,
                 play = { reel, at -> player()?.play(reel, at, android.os.SystemClock.elapsedRealtime()) },
                 // Stopped AND paused, as under the up-next card: on mpv stop() only mutes, and a
                 // reel that half-works would otherwise decode on under the card. The return's tune

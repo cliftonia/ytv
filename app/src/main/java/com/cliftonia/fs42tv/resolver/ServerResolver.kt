@@ -21,7 +21,7 @@ import android.util.Log
  * whole dial with it.
  */
 class ServerResolver(
-    private val baseUrl: String,
+    val baseUrl: String,
     /**
      * Whether to read the caption track out of the response.
      *
