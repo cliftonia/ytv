@@ -85,6 +85,9 @@ class PlutoSessionTest {
         assertEquals("http://h:4246/pluto/session?region=uk", PlutoBoot.serverUrl("http://h:4246", "uk"))
         assertEquals("http://h:4246/pluto/session?region=uk&fresh=1",
             PlutoBoot.serverUrl("http://h:4246", "uk", fresh = true))
+        // A further session of this television's, for reading the neighbours ahead.
+        assertEquals("http://h:4246/pluto/session?region=uk&fresh=1&client=dial2",
+            PlutoBoot.serverUrl("http://h:4246", "uk", fresh = true, client = "dial2"))
     }
 
     @Test

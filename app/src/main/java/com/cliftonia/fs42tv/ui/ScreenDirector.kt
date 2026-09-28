@@ -336,6 +336,9 @@ class ScreenDirector(private val deps: Deps) {
             updateProgrammeVolume()
             skipper.start(deps.tune().onAir)
             plutoBreak.playing(deps.tune().onAir)
+            // The Pluto neighbours' masters, read ahead of a surf - never under a reel. See MasterPrefetch.
+            deps.extras.plutoPictureUp(deps.tune(), deps.channels()) {
+                tuning.value || plutoBreak.adsOnPlayer || deps.stoppedNow() }
         }
 
         // A stall is the third way this player goes quiet, and the only silent one - no error,
@@ -362,8 +365,8 @@ class ScreenDirector(private val deps: Deps) {
             // A Pluto stream on its own route that would not open or was refused: the route
             // rebuilds its session, or retires the channel to the legacy url, before the
             // re-tune below asks it again. A no-op for anything else.
-            // Not for a demuxer stall: that is ffmpeg, not a refused token.
-            if (code != StallRecovery.STALLED) deps.extras.plutoFailed(deps.tune().onAir?.playable)
+            // A demuxer stall drops only the remembered pick: that is ffmpeg, not a refused token.
+            deps.extras.plutoFailed(deps.tune().onAir?.playable, session = code != StallRecovery.STALLED)
         }
         // A rejected url must be forgotten, or the re-tune resolves the same dead link.
         RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)
@@ -428,6 +431,7 @@ class ScreenDirector(private val deps: Deps) {
         skipper.stop()
         // Nobody is watching: no reads. Back on screen, the break is seen afresh.
         plutoBreak.appStopped()
+        deps.extras.appStopped()
     }
 
     /** Back on screen: resume the picture, re-derive the volume, and watch for skips again. */
