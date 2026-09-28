@@ -1,0 +1,107 @@
+name: fast guide
+
+# What is on the LIVE TV dial's FAST channels, every six hours, committed as fast_guide.json.
+#
+# The televisions read it from raw.githubusercontent.com like the lineups. The guides it is cut
+# from are whole-service XMLTV files - Samsung TV Plus, Plex and Roku from i.mjh.nz, 15-43 MB each
+# uncompressed - and Xumo's from iptv-org's epg grabber; the file published is the dial's channels
+# only, the next thirty hours, start times and titles. Six-hourly because it holds thirty hours:
+# a run or two can fail and the televisions still have a title for now. 18:00 UTC lands after the
+# nightly lineup job (17:00), so a new live.json gets its guide within the hour.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # The same group as the lineup job: both push to the branch the televisions read, and two pushes
+  # at once would have one of them fail. A run that has to wait costs nothing.
+  group: lineup
+  cancel-in-progress: false
+
+jobs:
+  guide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # No token in .git/config while third-party code runs (the grabber and its npm
+          # dependencies); the commit step sets its own remote, as in lineup.yml.
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Grab the Xumo guide
+        # Xumo publishes no XMLTV, so iptv-org's grabber asks its api for the dial's Xumo channels
+        # (the list comes from live.json). Pinned to the commit it was tried at: a new commit of a
+        # community repo is new code with this job's token one step away. Geo-blocked outside the
+        # US, which a hosted runner is not. May fail: without xumo.xml the Xumo channels are left
+        # out of the guide and the rest publishes as normal.
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          EPG_COMMIT: c5a88bcc6b09d75b32a0b22e6312db785cd9eb80
+        run: |
+          git init -q "$RUNNER_TEMP/epg"
+          cd "$RUNNER_TEMP/epg"
+          git fetch -q --depth 1 https://github.com/iptv-org/epg.git "$EPG_COMMIT"
+          git checkout -q FETCH_HEAD
+          # --ignore-scripts: the postinstall only preloads iptv-org's api data, which a grab of
+          # one site does not need.
+          npm ci --no-audit --no-fund --ignore-scripts
+          python3 "$GITHUB_WORKSPACE/curation/build_fast_guide.py" xumo-channels xumo.channels.xml
+          npx tsx scripts/commands/epg/grab.ts --channels=xumo.channels.xml --output="$RUNNER_TEMP/xumo.xml" \
+            --days=2 --maxConnections=4
+          grep -c "<programme" "$RUNNER_TEMP/xumo.xml"
+
+      - name: Build fast_guide.json
+        # Refuses (and writes nothing) when most guide channels come back empty - the guides changed
+        # shape, not the dial - so the committed file, at worst hours stale, stands.
+        working-directory: curation
+        env:
+          XUMO: ${{ runner.temp }}/xumo.xml
+        run: python3 build_fast_guide.py --xumo "$XUMO"
+
+      - name: Test
+        working-directory: curation
+        run: python3 -m unittest tests.test_build_fast_guide -v
+
+      - name: Commit
+        # As in lineup.yml: hooks from /dev/null, fsmonitor off, and a hook file a clean checkout
+        # never has fails the run. Rebased before the push, since the lineup job may have landed
+        # meanwhile; this job only ever touches fast_guide.json, so the rebase cannot conflict.
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if find .git/hooks -type f ! -name '*.sample' 2>/dev/null | grep -q .; then
+            echo "unexpected files in .git/hooks - refusing to commit:" >&2
+            find .git/hooks -type f ! -name '*.sample' >&2
+            exit 1
+          fi
+          git_() { git -c core.hooksPath=/dev/null -c core.fsmonitor=false "$@"; }
+          git_ config user.name "lineup"
+          git_ config user.email "lineup@users.noreply.github.com"
+          git_ remote set-url origin \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git_ add fast_guide.json
+          if git_ diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git_ commit -m "chore: refresh the FAST guide
+
+          - Update \`fast_guide.json\` the next thirty hours on the LIVE TV dial's FAST channels"
+          git_ pull --rebase -q origin "${GITHUB_REF_NAME}"
+          git_ push origin "HEAD:${GITHUB_REF_NAME}"
