@@ -115,7 +115,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=6Fx3sRW7gH4",
                 "duration": 1562,
-                "title": "The Arcade Console Scam: Why Cheap Hardware Failed / Retro Gaming Documentary"
+                "title": "The Arcade Console Scam: Why Cheap Hardware Failed / Retro Gaming Documentary",
+                "skip": [
+                    [
+                        129.3,
+                        146.2
+                    ],
+                    [
+                        433.8,
+                        521.0
+                    ],
+                    [
+                        1306.6,
+                        1541.0
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=RSLDX4lXliI",
@@ -472,7 +487,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rD_7mw3LItw",
                 "duration": 1572,
-                "title": "Game of Marbles | Grizzy & the Lemmings | 30' Compilation | 🐻🐹 Cartoon for Kids"
+                "title": "Game of Marbles | Grizzy & the Lemmings | 30' Compilation | 🐻🐹 Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=MgFsHhmbqOI",
@@ -717,7 +734,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dZTSAlH1NTY",
                 "duration": 4161,
-                "title": "Finals - 2026 Classic Tetris World Championship"
+                "title": "Finals - 2026 Classic Tetris World Championship",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=h-4qop-IgG8",

@@ -21,7 +21,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nC1vdV1SGyc",
                 "duration": 1501,
-                "title": "Obsession & The Modern Male Adolescent (Video Essay)"
+                "title": "Obsession & The Modern Male Adolescent (Video Essay)",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=APOqxQExnuw",
@@ -59,7 +61,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=HuIklxc1bSI",
                 "duration": 1506,
-                "title": "This is a video essay about video essays"
+                "title": "This is a video essay about video essays",
+                "skip": [
+                    [
+                        16.2,
+                        22.0
+                    ],
+                    [
+                        526.8,
+                        609.3
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=5FuxNr90T8o",
@@ -79,7 +92,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=fTl6jO43P2M",
                 "duration": 2065,
-                "title": "How to actually get smarter (again)"
+                "title": "How to actually get smarter (again)",
+                "skip": [
+                    [
+                        369.7,
+                        476.7
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=SqdtRnjK_qM",
@@ -174,7 +194,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4GoMzPlDT5k",
                 "duration": 3301,
-                "title": "Dead Internet Theory Came True"
+                "title": "Dead Internet Theory Came True",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=i_j7wjcgzEw",
@@ -266,7 +288,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OfLuBSS--qI",
                 "duration": 1825,
-                "title": "New Big Picture - VIDEO ESSAYS ARE STARTING TO SUCK"
+                "title": "New Big Picture - VIDEO ESSAYS ARE STARTING TO SUCK",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=TfGP15IKseI",
@@ -278,7 +302,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ELIiMGUPbR0",
                 "duration": 744,
-                "title": "This is Ruining Movies | a video essay"
+                "title": "This is Ruining Movies | a video essay",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=yvxLN6HoR3E",
@@ -377,7 +403,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=3Wn1uewM-aQ",
                 "duration": 717,
-                "title": "Spider-Man: Homecoming is a Bad SPIDER-MAN Movie (Video Essay)"
+                "title": "Spider-Man: Homecoming is a Bad SPIDER-MAN Movie (Video Essay)",
+                "skip": [
+                    [
+                        691.0,
+                        716.6
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=3FOzD4Sfgag",
@@ -496,7 +529,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UOOwMffD6ak",
                 "duration": 472,
-                "title": "Why Dybbuk is Objectively Bad Boss Design (Mewgenics Video Essay)"
+                "title": "Why Dybbuk is Objectively Bad Boss Design (Mewgenics Video Essay)",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=SqNEr7hMbO0",
@@ -613,7 +648,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ygRyqvKs1vQ",
                 "duration": 497,
-                "title": "Every Trans Videogame Essay"
+                "title": "Every Trans Videogame Essay",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=wtCtLN9Lcuk",
@@ -647,7 +684,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bKjK3KG0R7E",
                 "duration": 594,
-                "title": "How To Write The Perfect Macbeth GCSE Essay On The Theme Of “Supernatural” | 2026 GCSE Eng"
+                "title": "How To Write The Perfect Macbeth GCSE Essay On The Theme Of “Supernatural” | 2026 GCSE Eng",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=BeLc21XmxE4",

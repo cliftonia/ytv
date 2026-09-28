@@ -71,7 +71,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IZ_50y0ntvQ",
                 "duration": 1430,
-                "title": "Twilight Out of Focus Episode 1 English Dub"
+                "title": "Twilight Out of Focus Episode 1 English Dub",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=m-w8x-8F1UU",
@@ -91,7 +93,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=__Y3Cp0jZJE",
                 "duration": 3874,
-                "title": "[Full/ENG DUB] THE K2 EP.1 | #Kdrama #englishdub #jichangwook #limyoona"
+                "title": "[Full/ENG DUB] THE K2 EP.1 | #Kdrama #englishdub #jichangwook #limyoona",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=-_1woFZB0ic",
@@ -243,7 +247,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=20DPONdtcQQ",
                 "duration": 1353,
-                "title": "The Chronicles of Bone: The Monster's Bond"
+                "title": "The Chronicles of Bone: The Monster's Bond",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=sK8buRvSQcc",
@@ -321,7 +327,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rnis8lg1DbA",
                 "duration": 303,
-                "title": "George goes to Japan 🇯🇵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies"
+                "title": "George goes to Japan 🇯🇵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=uX27_hUXQv4",
@@ -331,7 +339,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DRVtlxpRGKc",
                 "duration": 1840,
-                "title": "The Bible (Full Movie 2026) | 4K Animated Bible Movie"
+                "title": "The Bible (Full Movie 2026) | 4K Animated Bible Movie",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=HB-y2Ndv1qY",
@@ -393,7 +403,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6mDlm55E3cY",
                 "duration": 1214,
-                "title": "SSS-Rank_ The Slum-Born Thunder God _ Full Movie 2026 _ All Episodes English Dub"
+                "title": "SSS-Rank_ The Slum-Born Thunder God _ Full Movie 2026 _ All Episodes English Dub",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Gx702PquLl8",
@@ -414,7 +426,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=KlnOb7OeyTk",
                 "duration": 791,
-                "title": "[ENG DUB] Suponjibobu Anime Ep #1: Bubble Bass Arc (Original Animation)"
+                "title": "[ENG DUB] Suponjibobu Anime Ep #1: Bubble Bass Arc (Original Animation)",
+                "skip": [
+                    [
+                        345.3,
+                        377.8
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Cm73ma6Ibcs",

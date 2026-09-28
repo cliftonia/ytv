@@ -45,7 +45,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LInLwSuiv_E",
                 "duration": 4191,
-                "title": "What really led to the war on Iran? | Featured Documentary"
+                "title": "What really led to the war on Iran? | Featured Documentary",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=L1D7At5QkGs",
@@ -158,7 +160,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=40RQ8ML6gtg",
                 "duration": 2071,
-                "title": "100-Year-Old Civil War Photo Found — And Experts Turn Pale When They Zoom In!"
+                "title": "100-Year-Old Civil War Photo Found — And Experts Turn Pale When They Zoom In!",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=PBLkMoqyoQU",
@@ -204,7 +208,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
                 "duration": 7802,
-                "title": "Antarctica (2026) The Forbidden Documentary That Shocked The Whole World"
+                "title": "Antarctica (2026) The Forbidden Documentary That Shocked The Whole World",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=g5WkOr565I4",
@@ -479,12 +485,25 @@
             {
                 "url": "https://www.youtube.com/watch?v=8XrgxLRVcQs",
                 "duration": 8078,
-                "title": "Inside America’s Military Machine | Modern Marvels"
+                "title": "Inside America’s Military Machine | Modern Marvels",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=6gkJ6LCnCA8",
                 "duration": 3651,
-                "title": "India and Pakistan - All Wars DOCUMENTARY"
+                "title": "India and Pakistan - All Wars DOCUMENTARY",
+                "skip": [
+                    [
+                        45.1,
+                        93.7
+                    ],
+                    [
+                        3619.4,
+                        3650.4
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=J2mrfbKBo3U",
@@ -630,7 +649,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
                 "duration": 5829,
-                "title": "Ghost in the Machine | Full Documentary"
+                "title": "Ghost in the Machine | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZcG4h3zqB1Y",
@@ -642,7 +663,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JN8FM1NCOSk",
                 "duration": 6583,
-                "title": "From Jesus to Christ: The First Christians, Part One (full documentary) | FRONTLINE"
+                "title": "From Jesus to Christ: The First Christians, Part One (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=8oxUZCKzPT8",

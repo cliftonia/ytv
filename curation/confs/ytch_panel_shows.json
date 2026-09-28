@@ -65,7 +65,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wfb5dXOcJpo",
                 "duration": 1760,
-                "title": "QI FULL EPISODE! 'Children in Need' Episode 8, Series D Rich Hall, Phill Jupitus & Jonathan Ross"
+                "title": "QI FULL EPISODE! 'Children in Need' Episode 8, Series D Rich Hall, Phill Jupitus & Jonathan Ross",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=vMG6jQRmZR4",
@@ -87,7 +89,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_ikkb-j1XGY",
                 "duration": 1747,
-                "title": "QI FULL EPISODE! 'Domesticity' Episode 12, Series D Jo Brand, Phill Jupitus & Jessica Stevenson"
+                "title": "QI FULL EPISODE! 'Domesticity' Episode 12, Series D Jo Brand, Phill Jupitus & Jessica Stevenson",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=m-Ifi2DC6Do",
@@ -99,7 +103,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JMWGMh0ziDw",
                 "duration": 1721,
-                "title": "QI Full Episode! 'Electricity' Series E, Ep 2 Featuring Sean Lock, Alan Davies, Jo Brand and Others!"
+                "title": "QI Full Episode! 'Electricity' Series E, Ep 2 Featuring Sean Lock, Alan Davies, Jo Brand and Others!",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=t-KrESaN4rw",
@@ -118,7 +124,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zl0811ffPZY",
                 "duration": 1721,
-                "title": "QI FULL EPISODE! 'Exploring' Series E, EP 4, Featuring Rich Hall, Sean Lock and Bill Bailey"
+                "title": "QI FULL EPISODE! 'Exploring' Series E, EP 4, Featuring Rich Hall, Sean Lock and Bill Bailey",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=oYdm9nNQHbg",
@@ -275,7 +283,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Hfav7_pUZhQ",
                 "duration": 2635,
-                "title": "QI SERIES R, Episode 7! Full Episode With Alan Davies, Sandi Toksvig and Others!"
+                "title": "QI SERIES R, Episode 7! Full Episode With Alan Davies, Sandi Toksvig and Others!",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=TSCaKQAMn5k",
@@ -389,7 +399,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YxHKw-R1FoE",
                 "duration": 2612,
-                "title": "QI Full Episode - Series S, EP 13 Featuring  Ed Gamble, Lou Sanders and Others"
+                "title": "QI Full Episode - Series S, EP 13 Featuring  Ed Gamble, Lou Sanders and Others",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=YP7TjLaMk1M",
@@ -513,7 +525,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=H08HGJUiZ_I",
                 "duration": 1809,
-                "title": "QI vs ALCOHOL! Funny and DRUNKEN Rounds!"
+                "title": "QI vs ALCOHOL! Funny and DRUNKEN Rounds!",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=WQGtMfCkOeA",
@@ -571,7 +585,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=0N5b3BwDtUw",
                 "duration": 2426,
-                "title": "Every Gyles Anecdote (So Far) | QI Compilation"
+                "title": "Every Gyles Anecdote (So Far) | QI Compilation",
+                "skip": [
+                    [
+                        2405.4,
+                        2425.7
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=JFYg-5pjN2I",

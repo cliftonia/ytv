@@ -110,7 +110,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tBl5wj-l73A",
                 "duration": 1026,
-                "title": "Ohio State Buckeyes vs. Texas Longhorns | Condensed Game | 2026 SEC Football"
+                "title": "Ohio State Buckeyes vs. Texas Longhorns | Condensed Game | 2026 SEC Football",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=DM2cJZlleFE",
@@ -168,7 +170,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=anUFo44tlcs",
                 "duration": 1337,
-                "title": "Alabama Crimson Tide vs. Kentucky Wildcats | Full Game Highlights | ESPN College Football"
+                "title": "Alabama Crimson Tide vs. Kentucky Wildcats | Full Game Highlights | ESPN College Football",
+                "skip": [
+                    [
+                        1321.6,
+                        1336.6
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Lfc90lkStbg",
@@ -192,7 +201,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jqgn-kY0rFA",
                 "duration": 1169,
-                "title": "Portugal vs Uzbekistan Extended Highlights 🌎🏆 2026 FIFA World Cup™"
+                "title": "Portugal vs Uzbekistan Extended Highlights 🌎🏆 2026 FIFA World Cup™",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=CyK5obQ6Y4U",
@@ -346,7 +357,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0lFANpZuXYU",
                 "duration": 387,
-                "title": "#6 Oregon vs. Oklahoma State Highlights | 2026 Monster Energy Big 12 Football"
+                "title": "#6 Oregon vs. Oklahoma State Highlights | 2026 Monster Energy Big 12 Football",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=-gB4l_coqbA",
@@ -356,7 +369,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=gmz-xkYG0GY",
                 "duration": 1189,
-                "title": "UTEP Miners vs. Oklahoma Sooners | Full Game Highlights | ESPN College Football"
+                "title": "UTEP Miners vs. Oklahoma Sooners | Full Game Highlights | ESPN College Football",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Xj_L9Yd7iH8",
@@ -418,7 +433,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=y2cLVmCeJ5I",
                 "duration": 299,
-                "title": "Las Vegas Raiders vs. Miami Dolphins Highlights | 2026 NFL Week 1"
+                "title": "Las Vegas Raiders vs. Miami Dolphins Highlights | 2026 NFL Week 1",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=9bQScqdKRKw",
@@ -574,7 +591,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=a-R0qhattTY",
                 "duration": 1623,
-                "title": "Colorado Buffaloes vs. Georgia Tech Yellow Jackets | Full Game Highlights | ESPN College F"
+                "title": "Colorado Buffaloes vs. Georgia Tech Yellow Jackets | Full Game Highlights | ESPN College F",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=vpcukTVSD8Q",
@@ -641,7 +660,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lyuBo3S0zZQ",
                 "duration": 1311,
-                "title": "Morocco vs. Norway | Full Game Highlights | ESPN FC"
+                "title": "Morocco vs. Norway | Full Game Highlights | ESPN FC",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=SjumRdNESKg",
