@@ -48,7 +48,7 @@ LIVE_DURATION = 600
 
 # Guides the nightly fast_guide.json is built from. Pluto has its own live path in the app, and
 # `none` has nothing to read.
-FAST_GUIDES = ("samsung", "plex", "roku", "xumo")
+FAST_GUIDES = ("samsung", "plex", "roku", "xumo", "tubi", "rakuten", "stirr")
 
 # Music never cuts to a break of its own, so a cue there would only ever be a false positive.
 NO_BREAK_BLOCKS = ("Music",)

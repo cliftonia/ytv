@@ -49,6 +49,7 @@ PLUTO_ALLOWLIST = os.path.join(HERE, "pluto_lineup.json")
 FAST_CANDIDATES = os.path.join(HERE, "fast_candidates.json")
 OUT_JSON = os.path.join(HERE, "live_draft.json")
 OUT_SUMMARY = os.path.join(HERE, "live_draft.md")
+GUIDE_IDS = os.path.join(HERE, "guide_ids.json")
 
 MJH = "https://i.mjh.nz/%s/%s"
 # service -> i.mjh.nz folder. all.xml.gz is the guide; .channels.json is the same service's own
@@ -60,10 +61,17 @@ PLUTO_GUIDE_HOURS = 12
 
 # FAST source -> (guide service, the region its channels are listed under there). Samsung's ids
 # begin with their country; Samsung publishes no Australian lineup, so au_samsung has no guide.
+# Tubi, Rakuten and Stirr publish guides (build_fast_guide.py reads them) but no channel list this
+# draft could name-match against from here - Tubi's answers only in the US - so their ids come
+# from guide_ids.json alone.
 SOURCE_GUIDES = {
     "us_samsung": ("samsung", "us"), "uk_samsung": ("samsung", "gb"),
     "us_plex": ("plex", "us"), "us_roku": ("roku", None), "us_xumo": ("xumo", None),
+    "us_tubi": ("tubi", None), "uk_rakuten": ("rakuten", None), "us_stirr": ("stirr", None),
 }
+
+# Guides a channel's own service publishes, and fast_guide.json carries.
+FAST_GUIDES = ("samsung", "plex", "roku", "xumo", "tubi", "rakuten", "stirr")
 
 
 # ---- guides -------------------------------------------------------------------------------------
@@ -168,6 +176,29 @@ def pluto_guide(reply):
 
 # ---- matching a channel to its own service's guide ----------------------------------------------
 
+def xumo_id(site_id):
+    """Xumo's channel id from iptv-org's `<offset>#<id>` site id. The offset is the grabber's page
+    in Xumo's channel list, which moves whenever Xumo adds a channel; the id does not."""
+    return site_id.rsplit("#", 1)[-1] if site_id else site_id
+
+
+def load_guide_ids(path=GUIDE_IDS):
+    """guide_ids.json without its doc string: source -> name -> {id, how, guide?}."""
+    with open(path) as f:
+        return {k: v for k, v in json.load(f).items() if not k.startswith("_")}
+
+
+def listed_guide(table, source, name):
+    """(guide, guide_id, how) for a channel guide_ids.json names, else None."""
+    entry = (table or {}).get(source, {}).get(name)
+    if not entry:
+        return None
+    service = entry.get("guide") or SOURCE_GUIDES.get(source, (None, None))[0]
+    if service not in FAST_GUIDES:
+        raise ValueError("guide_ids.json: %s %r has no guide service" % (source, name))
+    return service, entry["id"], entry["how"]
+
+
 def same_channel_id(service, cid):
     """The part of a guide id that names the channel: Plex's ids are "<region>-<channel>"."""
     return cid.rsplit("-", 1)[-1] if service == "plex" else cid
@@ -177,11 +208,13 @@ class Guides:
     """Every guide this draft uses, and the lookups that tie a channel to one.
 
     [services] is service -> service_channels(...); [pluto] is Pluto id -> pluto_guide(...);
-    [iptv] is iptv-org's guides.json, which knows many iptv-org channels' ids on Plex and Xumo."""
+    [iptv] is iptv-org's guides.json, which knows many iptv-org channels' ids on Plex and Xumo;
+    [table] is guide_ids.json, the ids checked by hand, which win over any match here."""
 
-    def __init__(self, services=None, pluto=None, iptv=()):
+    def __init__(self, services=None, pluto=None, iptv=(), table=None):
         self.services = services or {}
         self.pluto = pluto or {}
+        self.table = table or {}
         self.site_ids = {}
         for row in iptv:
             if row.get("channel") and row.get("site") in ("plex.tv", "xumo.tv"):
@@ -201,14 +234,18 @@ class Guides:
 
     def match(self, fast):
         """(guide, guide_id, how) for a FAST candidate: its own service's guide channel, or
-        ("none", None, None). Xumo's guide comes later from iptv-org's grabber, so a Xumo channel
-        is `xumo`, with iptv-org's Xumo id for it when there is one."""
+        ("none", None, None). guide_ids.json first. Xumo's guide is fetched later, by
+        build_fast_guide.py, so a Xumo channel is `xumo`, with iptv-org's Xumo id for it when
+        there is one."""
+        listed = listed_guide(self.table, fast["source"], fast["name"])
+        if listed:
+            return listed
         service, region = SOURCE_GUIDES.get(fast["source"], (None, None))
-        if service is None:
+        if service is None or service not in self.services and service != "xumo":
             return "none", None, None
         iptv_id = build_fast.channel_id(fast.get("tvg_id"))
         if service == "xumo":
-            site_id = self.site_ids.get(("xumo.tv", iptv_id)) if iptv_id else None
+            site_id = xumo_id(self.site_ids.get(("xumo.tv", iptv_id))) if iptv_id else None
             return "xumo", site_id, "tvg-id" if site_id else "source"
         channels = self.services.get(service, {})
         site_id = self.site_ids.get(("plex.tv", iptv_id)) if service == "plex" and iptv_id else None
@@ -302,7 +339,7 @@ def load_guides(pluto_ids, cache):
         listing = json.loads(cached(cache, service + ".channels.json", MJH % (folder, ".channels.json")))
         services[service] = service_channels(service, listing, parse_xmltv(xml))
     iptv = json.loads(cached(cache, "iptv_guides.json", IPTV_GUIDES))
-    return Guides(services, fetch_pluto_guides(pluto_ids, cache), iptv)
+    return Guides(services, fetch_pluto_guides(pluto_ids, cache), iptv, load_guide_ids())
 
 
 
@@ -380,7 +417,7 @@ def keep_rank(channel):
     plays direct from Australia, then the rest."""
     if channel["source"] == "pluto":
         return 0
-    if channel["guide"] in ("samsung", "plex", "roku"):
+    if channel["guide"] in FAST_GUIDES and channel["guide"] != "xumo":
         return 1
     return 2 if channel["route"] == "direct" else 3
 
@@ -1432,21 +1469,43 @@ def record(channel):
 
 
 def has_guide(channel):
-    """True when the channel has a guide the dial can read now (Xumo's comes later)."""
-    return channel["guide"] in ("pluto", "samsung", "plex", "roku")
+    """True when the channel has a guide the dial can read: Pluto's, or an id in a FAST guide."""
+    return channel["guide"] == "pluto" or (channel["guide"] in FAST_GUIDES and bool(channel.get("guide_id")))
+
+
+def rematch(channels, table):
+    """Apply guide_ids.json, and Xumo's offset-free ids, to an existing draft's channels in place,
+    leaving blocks and numbers alone: a new guide id is not a reason to renumber the dial.
+    Returns the names whose guide changed."""
+    changed = []
+    for channel in channels:
+        if channel["source"] == "pluto":
+            continue
+        listed = listed_guide(table, channel["source"], channel["name"])
+        if listed:
+            guide, gid, _ = listed
+        elif channel["guide"] == "xumo":
+            guide, gid = "xumo", xumo_id(channel.get("guide_id"))
+        else:
+            continue
+        if (guide, gid) != (channel["guide"], channel.get("guide_id")):
+            channel["guide"], channel["guide_id"] = guide, gid
+            changed.append(channel["name"])
+    return changed
 
 
 def summary(channels, blocks, merges):
     """The markdown the owner reads: counts per block and sub-block, then the merges."""
-    guides = collections.Counter(c["guide"] for c in channels)
+    guides = collections.Counter(c["guide"] if has_guide(c) else "none" for c in channels)
     lines = ["# LIVE TV dial - draft", "",
              "Generated by `build_live.py` from the Pluto dial and the live FAST candidates. "
              "%d channels: %d Pluto, %d FAST, %d merged away as duplicates. Guides: %s." % (
                  len(channels), sum(c["source"] == "pluto" for c in channels),
                  sum(c["source"] != "pluto" for c in channels), sum(len(m[1]) for m in merges),
                  ", ".join("%s %d" % (g, n) for g, n in guides.most_common())),
-             "", "Guide = Pluto, Samsung, Plex or Roku guide matched on the channel's own service; "
-             "Xumo channels are counted apart, their guide comes later. Home-only = plays only "
+             "", "Guide = a guide id on the channel's own service: Pluto, Samsung TV Plus, Plex, Roku, "
+             "Xumo, Tubi, Rakuten TV or Stirr (build_fast_guide.py reads all but Pluto, whose "
+             "guide the app asks itself). Home-only = plays only "
              "through the home server's US tunnel. Relax, Unsorted and Flagged are off by default. "
              "Within a sub-block channels run alphabetically.", "",
              "Every channel's `why` in live_draft.json says what placed it. Only Pluto's guide "
@@ -1455,20 +1514,19 @@ def summary(channels, blocks, merges):
              "series, and the service's own channel group. A channel with no guide of its own may "
              "be placed by what another service's same-named channel airs (`via`), but keeps "
              "`guide: none`.", "",
-             "| Block | Sub-block | Numbers | Total | Pluto | FAST | Guide | Xumo | No guide | Home-only |",
-             "|---|---|---|---:|---:|---:|---:|---:|---:|---:|"]
+             "| Block | Sub-block | Numbers | Total | Pluto | FAST | Guide | No guide | Home-only |",
+             "|---|---|---|---:|---:|---:|---:|---:|---:|"]
     for block in blocks:
         members = [c for c in channels if c["block"] == block["name"]]
         rows = [(s["name"], [c for c in members if c["sub"] == s["name"]]) for s in block["sub"]]
         rows.append(("**all**", members))
         for sub, group in rows:
             numbers = sorted(c["number"] for c in group)
-            lines.append("| %s | %s | %d-%d | %d | %d | %d | %d | %d | %d | %d |" % (
+            lines.append("| %s | %s | %d-%d | %d | %d | %d | %d | %d | %d |" % (
                 block["name"] + ("" if block["default"] else " (off)"), sub, numbers[0], numbers[-1],
                 len(group), sum(c["source"] == "pluto" for c in group),
                 sum(c["source"] != "pluto" for c in group), sum(has_guide(c) for c in group),
-                sum(c["guide"] == "xumo" for c in group), sum(c["guide"] == "none" for c in group),
-                sum(c["route"] == "us" for c in group)))
+                sum(not has_guide(c) for c in group), sum(c.get("route") == "us" for c in group)))
     lines += ["", "## Merged duplicates (%d)" % len(merges), "",
               "Kept first, then what it replaced. Pluto is kept over FAST, then a channel with its own "
               "guide, then one that plays direct.", ""]
@@ -1497,10 +1555,44 @@ def build(dial, allowlist, candidates, guides):
     return channels, blocks, merges
 
 
+def merges_from_summary(path):
+    """The merges the last full build listed in its summary, as [(kept, [dropped])]: the draft's
+    records keep only some of them, and never in the order they were made."""
+    merges, inside = [], False
+    with open(path) as f:
+        for line in f:
+            if line.startswith("## "):
+                inside = line.startswith("## Merged duplicates")
+            elif inside and line.startswith("- ") and " <- " in line:
+                kept, dropped = line[2:].rstrip("\n").split(" <- ", 1)
+                merges.append((kept, dropped.split(", ")))
+    return merges
+
+
+def rematch_draft():
+    """--rematch: the committed draft with guide_ids.json applied, and its summary redone."""
+    with open(OUT_JSON) as f:
+        draft = json.load(f)
+    changed = rematch(draft["channels"], load_guide_ids())
+    merges = merges_from_summary(OUT_SUMMARY)
+    with open(OUT_JSON, "w") as f:
+        json.dump(draft, f, indent=1, ensure_ascii=False)
+        f.write("\n")
+    with open(OUT_SUMMARY, "w") as f:
+        f.write(summary(draft["channels"], draft["blocks"], merges))
+    print("%d channels' guides changed" % len(changed))
+    return 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--cache", help="keep the fetched guides here, and reuse them on a rerun")
+    parser.add_argument("--rematch", action="store_true",
+                        help="only re-apply guide_ids.json to the committed draft: no fetching, no "
+                             "reclassifying, no renumbering")
     args = parser.parse_args(argv)
+    if args.rematch:
+        return rematch_draft()
     if args.cache:
         os.makedirs(args.cache, exist_ok=True)
 

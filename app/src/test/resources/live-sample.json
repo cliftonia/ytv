@@ -68,7 +68,7 @@
    "sub": "Family",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "300#99991333"
+   "guide_id": "99991333"
   },
   {
    "number": 1000,
@@ -82,7 +82,9 @@
     }
    ],
    "block": "Music",
-   "sub": "60s"
+   "sub": "60s",
+   "guide": "samsung",
+   "guide_id": "US4700006XL"
   }
  ]
 }

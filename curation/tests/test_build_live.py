@@ -4,6 +4,7 @@
 Nothing here touches the network: guides are small XMLTV strings, Pluto replies are dicts shaped
 like api.pluto.tv's, and the service listings are the same shape i.mjh.nz publishes.
 """
+import json
 import os
 import sys
 import unittest
@@ -118,7 +119,7 @@ class TestGuideMatching(unittest.TestCase):
     def test_plex_by_tvg_id_and_xumo_by_its_iptv_org_id(self):
         self.assertEqual(("plex", "6a16-60e737a4", "tvg-id"),
                          self.guides.match(fast("AfroLandTV", "us_plex", tvg_id="AfroLandTV.us@SD")))
-        self.assertEqual(("xumo", "0#9995106", "tvg-id"),
+        self.assertEqual(("xumo", "9995106", "tvg-id"),
                          self.guides.match(fast("Hi-Yah!", "us_xumo", tvg_id="HiYAH.us@SD")))
         self.assertEqual(("xumo", None, "source"), self.guides.match(fast("Lassie", "us_xumo")))
 
@@ -139,6 +140,73 @@ class TestGuideMatching(unittest.TestCase):
         self.assertEqual({"Creepshow": 60}, evidence["titles"])
         self.assertEqual("Plex's Scares by Shudder", evidence["via"])
         self.assertEqual("xumo", channel["guide"])
+
+
+class TestGuideIds(unittest.TestCase):
+    """guide_ids.json: ids checked by hand, each tied to its channel's own service."""
+
+    TABLE = {"us_tubi": {"ACCDN": {"id": "400000012", "how": "name"}},
+             "ca_stingray": {"Stingray Classica": {"guide": "samsung", "id": "US1", "how": "stream"},
+                             "Stingray Cozy Cafe": {"guide": "roku", "id": "abc", "how": "stream"}},
+             "us_xumo": {"Lassie": {"id": "99951259", "how": "name"}}}
+
+    def test_a_listed_channel_takes_its_listed_id_on_its_own_service(self):
+        g = build_live.Guides(table=self.TABLE)
+        self.assertEqual(("tubi", "400000012", "name"), g.match(fast("ACCDN", "us_tubi")))
+        self.assertEqual(("xumo", "99951259", "name"), g.match(fast("Lassie", "us_xumo")))
+
+    def test_a_listed_guide_may_name_the_service_the_stream_is_from(self):
+        g = build_live.Guides(table=self.TABLE)
+        self.assertEqual(("samsung", "US1", "stream"), g.match(fast("Stingray Classica", "ca_stingray")))
+        self.assertEqual(("roku", "abc", "stream"), g.match(fast("Stingray Cozy Cafe", "ca_stingray")))
+
+    def test_an_unlisted_channel_of_a_listless_service_has_no_guide(self):
+        g = build_live.Guides(table=self.TABLE)
+        self.assertEqual(("none", None, None), g.match(fast("Other", "us_tubi")))
+        self.assertEqual(("none", None, None), g.match(fast("Stingray Y2K", "ca_stingray")))
+
+    def test_an_entry_without_a_service_is_refused(self):
+        with self.assertRaises(ValueError):
+            build_live.listed_guide({"au_samsung": {"X": {"id": "1", "how": "?"}}}, "au_samsung", "X")
+
+    def test_xumo_ids_lose_the_grabbers_page_offset(self):
+        self.assertEqual("99991333", build_live.xumo_id("300#99991333"))
+        self.assertEqual("99991333", build_live.xumo_id("99991333"))
+        self.assertIsNone(build_live.xumo_id(None))
+
+    def test_rematch_changes_guides_only(self):
+        channels = [dict(draft_channel("ACCDN", "us_tubi"), number=5, block="Sports", sub="College"),
+                    dict(draft_channel("Dove", "us_xumo", guide="xumo"), guide_id="300#99991333"),
+                    dict(draft_channel("Plain", "us_sofast")),
+                    dict(draft_channel("Vevo Pop", "pluto", guide="pluto"), guide_id="p")]
+        changed = build_live.rematch(channels, self.TABLE)
+        self.assertEqual(["ACCDN", "Dove"], changed)
+        self.assertEqual(("tubi", "400000012", 5, "Sports"), tuple(channels[0][k] for k in ("guide", "guide_id", "number", "block")))
+        self.assertEqual("99991333", channels[1]["guide_id"])
+        self.assertEqual(("none", None), (channels[2]["guide"], channels[2]["guide_id"]))
+        self.assertEqual([], build_live.rematch(channels, self.TABLE))
+
+    def test_merges_are_read_back_from_the_summary(self):
+        import tempfile
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as f:
+            f.write("# x\n\n## Merged duplicates (2)\n\nKept first.\n\n- A <- B\n- C <- D, E\n\n## Unsorted (0)\n\n- F <- G\n")
+        try:
+            self.assertEqual([("A", ["B"]), ("C", ["D", "E"])], build_live.merges_from_summary(f.name))
+        finally:
+            os.unlink(f.name)
+
+    def test_the_committed_table_names_draft_channels_on_guide_services(self):
+        table = build_live.load_guide_ids()
+        with open(build_live.OUT_JSON) as f:
+            draft = {(c["source"], c["name"]): c for c in json.load(f)["channels"]}
+        for source, entries in table.items():
+            for name, entry in entries.items():
+                guide, gid, how = build_live.listed_guide(table, source, name)
+                self.assertIn(guide, build_live.FAST_GUIDES)
+                self.assertTrue(gid and how, name)
+                channel = draft.get((source, name))
+                self.assertIsNotNone(channel, "%s %s is not in the draft" % (source, name))
+                self.assertEqual((guide, gid), (channel["guide"], channel["guide_id"]), name)
 
 
 class TestMerge(unittest.TestCase):
