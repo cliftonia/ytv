@@ -501,75 +501,6 @@
   },
   {
    "number": 113,
-   "name": "Pluto TV Icons",
-   "block": "Movies",
-   "sub": "Comedy",
-   "source": "pluto",
-   "pluto": {
-    "id": "64b585f84ea480000838e446",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-64b585f84ea480000838e446.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Icons"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "64b585f84ea480000838e446",
-   "home_only": false,
-   "default": true,
-   "why": "guide genres: Comedy 100% (guide: films)"
-  },
-  {
-   "number": 114,
-   "name": "Pluto TV Spotlight",
-   "block": "Movies",
-   "sub": "Comedy",
-   "source": "pluto",
-   "pluto": {
-    "id": "5ba3fb9c4b078e0f37ad34e8",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5ba3fb9c4b078e0f37ad34e8.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Spotlight"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "5ba3fb9c4b078e0f37ad34e8",
-   "home_only": false,
-   "default": true,
-   "why": "guide genres: Comedy 83% (guide: films)"
-  },
-  {
-   "number": 115,
-   "name": "Pluto TV Trending Now",
-   "block": "Movies",
-   "sub": "Comedy",
-   "source": "pluto",
-   "pluto": {
-    "id": "673247127d5da5000817b4d6",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-673247127d5da5000817b4d6.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Trending Now"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "673247127d5da5000817b4d6",
-   "home_only": false,
-   "default": true,
-   "why": "guide genres: Comedy 68% (guide: films)"
-  },
-  {
-   "number": 116,
    "name": "National Lampoon",
    "block": "Movies",
    "sub": "Comedy",
@@ -583,7 +514,7 @@
    "why": "name: \"lampoon\" (guide: films)"
   },
   {
-   "number": 117,
+   "number": 114,
    "name": "LOL TV",
    "block": "Movies",
    "sub": "Comedy",
@@ -600,7 +531,7 @@
    ]
   },
   {
-   "number": 118,
+   "number": 115,
    "name": "Rakuten TV Comedy Movies UK",
    "block": "Movies",
    "sub": "Comedy",
@@ -751,29 +682,6 @@
   },
   {
    "number": 130,
-   "name": "Pluto TV Franchise Favorites",
-   "block": "Movies",
-   "sub": "Horror",
-   "source": "pluto",
-   "pluto": {
-    "id": "68fbf8101d26140175db8b58",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-68fbf8101d26140175db8b58.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Franchise Favorites"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "68fbf8101d26140175db8b58",
-   "home_only": false,
-   "default": true,
-   "why": "guide genres: Horror 81% (guide: films)"
-  },
-  {
-   "number": 131,
    "name": "Pluto TV Horror",
    "block": "Movies",
    "sub": "Horror",
@@ -796,7 +704,7 @@
    "why": "name: \"horror\" (Pluto dial genre Movies, some films on)"
   },
   {
-   "number": 132,
+   "number": 131,
    "name": "Pluto TV Terror",
    "block": "Movies",
    "sub": "Horror",
@@ -819,7 +727,7 @@
    "why": "name: \"terror\" (guide: films)"
   },
   {
-   "number": 133,
+   "number": 132,
    "name": "Universal Monsters",
    "block": "Movies",
    "sub": "Horror",
@@ -842,7 +750,7 @@
    "why": "name: \"monsters\" (guide: films)"
   },
   {
-   "number": 134,
+   "number": 133,
    "name": "OuterSphere",
    "block": "Movies",
    "sub": "Horror",
@@ -862,7 +770,7 @@
    ]
   },
   {
-   "number": 135,
+   "number": 134,
    "name": "Horror by ALTER",
    "block": "Movies",
    "sub": "Horror",
@@ -926,29 +834,6 @@
   },
   {
    "number": 142,
-   "name": "Pluto TV Staff Picks",
-   "block": "Movies",
-   "sub": "Thriller",
-   "source": "pluto",
-   "pluto": {
-    "id": "5f4d863b98b41000076cd061",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5f4d863b98b41000076cd061.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Staff Picks"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "5f4d863b98b41000076cd061",
-   "home_only": false,
-   "default": true,
-   "why": "guide genres: Thriller 83% (guide: films)"
-  },
-  {
-   "number": 143,
    "name": "Pluto TV Thrillers",
    "block": "Movies",
    "sub": "Thriller",
@@ -971,7 +856,7 @@
    "why": "name: \"thrillers\" (guide: films)"
   },
   {
-   "number": 144,
+   "number": 143,
    "name": "Crime ThrillHer",
    "block": "Movies",
    "sub": "Thriller",
@@ -985,7 +870,7 @@
    "why": "name: \"crime\" (guide: films)"
   },
   {
-   "number": 145,
+   "number": 144,
    "name": "Best Thriller TV",
    "block": "Movies",
    "sub": "Thriller",
@@ -999,7 +884,7 @@
    "why": "name: films, \"thriller\""
   },
   {
-   "number": 146,
+   "number": 145,
    "name": "Cinevault Murder and Mayhem",
    "block": "Movies",
    "sub": "Thriller",
@@ -1013,7 +898,7 @@
    "why": "name: films, \"murder\""
   },
   {
-   "number": 147,
+   "number": 146,
    "name": "CrimeFlix",
    "block": "Movies",
    "sub": "Thriller",
@@ -1027,7 +912,7 @@
    "why": "crime films"
   },
   {
-   "number": 148,
+   "number": 147,
    "name": "Rakuten TV Thrillers UK",
    "block": "Movies",
    "sub": "Thriller",
@@ -1065,29 +950,6 @@
   },
   {
    "number": 151,
-   "name": "Pluto TV Reaction",
-   "block": "Movies",
-   "sub": "Sci-Fi",
-   "source": "pluto",
-   "pluto": {
-    "id": "617b37b361e0fd0008cfd8c5",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-617b37b361e0fd0008cfd8c5.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Reaction"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "617b37b361e0fd0008cfd8c5",
-   "home_only": false,
-   "default": true,
-   "why": "guide genres: Sci-Fi & Fantasy 70% (guide: films)"
-  },
-  {
-   "number": 152,
    "name": "Pluto TV Sci-Fi",
    "block": "Movies",
    "sub": "Sci-Fi",
@@ -1110,7 +972,7 @@
    "why": "name: \"sci fi\" (guide: films)"
   },
   {
-   "number": 153,
+   "number": 152,
    "name": "Dark Matter TV",
    "block": "Movies",
    "sub": "Sci-Fi",
@@ -1126,7 +988,7 @@
    "logo": "https://i.imgur.com/9K8T3ND.png"
   },
   {
-   "number": 154,
+   "number": 153,
    "name": "Rakuten TV Sci-Fi UK",
    "block": "Movies",
    "sub": "Sci-Fi",
@@ -2018,6 +1880,144 @@
   },
   {
    "number": 254,
+   "name": "Pluto TV Franchise Favorites",
+   "block": "Movies",
+   "sub": "Movies – Mixed",
+   "source": "pluto",
+   "pluto": {
+    "id": "68fbf8101d26140175db8b58",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-68fbf8101d26140175db8b58.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Franchise Favorites"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "68fbf8101d26140175db8b58",
+   "home_only": false,
+   "default": true,
+   "why": "Pluto's rotating movie picks (Horror now)"
+  },
+  {
+   "number": 255,
+   "name": "Pluto TV Icons",
+   "block": "Movies",
+   "sub": "Movies – Mixed",
+   "source": "pluto",
+   "pluto": {
+    "id": "64b585f84ea480000838e446",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-64b585f84ea480000838e446.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Icons"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "64b585f84ea480000838e446",
+   "home_only": false,
+   "default": true,
+   "why": "Pluto's rotating movie picks (Comedy now)"
+  },
+  {
+   "number": 256,
+   "name": "Pluto TV Reaction",
+   "block": "Movies",
+   "sub": "Movies – Mixed",
+   "source": "pluto",
+   "pluto": {
+    "id": "617b37b361e0fd0008cfd8c5",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-617b37b361e0fd0008cfd8c5.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Reaction"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "617b37b361e0fd0008cfd8c5",
+   "home_only": false,
+   "default": true,
+   "why": "Pluto's rotating movie picks (Sci-Fi & Fantasy now)"
+  },
+  {
+   "number": 257,
+   "name": "Pluto TV Spotlight",
+   "block": "Movies",
+   "sub": "Movies – Mixed",
+   "source": "pluto",
+   "pluto": {
+    "id": "5ba3fb9c4b078e0f37ad34e8",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5ba3fb9c4b078e0f37ad34e8.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Spotlight"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "5ba3fb9c4b078e0f37ad34e8",
+   "home_only": false,
+   "default": true,
+   "why": "Pluto's rotating movie picks (Comedy now)"
+  },
+  {
+   "number": 258,
+   "name": "Pluto TV Staff Picks",
+   "block": "Movies",
+   "sub": "Movies – Mixed",
+   "source": "pluto",
+   "pluto": {
+    "id": "5f4d863b98b41000076cd061",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5f4d863b98b41000076cd061.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Staff Picks"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "5f4d863b98b41000076cd061",
+   "home_only": false,
+   "default": true,
+   "why": "Pluto's rotating movie picks (Thriller now)"
+  },
+  {
+   "number": 259,
+   "name": "Pluto TV Trending Now",
+   "block": "Movies",
+   "sub": "Movies – Mixed",
+   "source": "pluto",
+   "pluto": {
+    "id": "673247127d5da5000817b4d6",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-673247127d5da5000817b4d6.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Trending Now"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "673247127d5da5000817b4d6",
+   "home_only": false,
+   "default": true,
+   "why": "Pluto's rotating movie picks (Comedy now)"
+  },
+  {
+   "number": 260,
    "name": "Great! Movies",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2033,7 +2033,7 @@
    "logo": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb3709.png"
   },
   {
-   "number": 255,
+   "number": 261,
    "name": "OUTflix Movies",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2047,7 +2047,7 @@
    "why": "name: films"
   },
   {
-   "number": 256,
+   "number": 262,
    "name": "Popflix",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2061,7 +2061,7 @@
    "why": "service group: Movies"
   },
   {
-   "number": 257,
+   "number": 263,
    "name": "24 Hour Free Movies",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2077,7 +2077,7 @@
    "logo": "https://i.imgur.com/iSVnzR1.png"
   },
   {
-   "number": 258,
+   "number": 264,
    "name": "Her Sphere",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2092,7 +2092,7 @@
    "logo": "https://provider-static.plex.tv/epg/cms/production/3ed082aa-5659-4fd0-8775-22613a65f924/HerSphere_1500x1000_Logo_Dark.png"
   },
   {
-   "number": 259,
+   "number": 265,
    "name": "Rakuten Top Movies UK",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2108,7 +2108,7 @@
    "logo": "https://i.imgur.com/Meew6eX.png"
   },
   {
-   "number": 260,
+   "number": 266,
    "name": "Miramax Channel",
    "block": "Movies",
    "sub": "Movies – Mixed",
@@ -2122,7 +2122,7 @@
    "why": "name: films"
   },
   {
-   "number": 261,
+   "number": 267,
    "name": "WBTV At the Movies",
    "block": "Movies",
    "sub": "Movies – Mixed",

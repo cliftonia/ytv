@@ -997,7 +997,12 @@ def guide_genres(channel, ev, text):
         if genre in PLUTO_MOVIE_GENRES:
             if genre == "Action & Adventure" and subs.get("Martial Arts", 0) >= GENRE_SHARE:
                 return as_form(channel, ev, text, "Martial Arts", why + " (martial arts)")
-            return as_form(channel, ev, text, PLUTO_MOVIE_GENRES[genre], why)
+            placed = as_form(channel, ev, text, PLUTO_MOVIE_GENRES[genre], why)
+            # Pluto's own rotating picks ("Pluto TV Icons", "Staff Picks", "Trending Now") air any
+            # genre; twelve hours of guide is a sample of the rotation, not what the channel is.
+            if placed and placed[0] == "Movies" and text.lower().startswith("pluto tv "):
+                return "Movies", MIXED_MOVIES, "Pluto's rotating movie picks (%s now)" % genre
+            return placed
         if genre == "Children & Family":
             return "Cartoons & Kids", "Kids", why
         if genre in PLUTO_BLOCK_GENRES:
