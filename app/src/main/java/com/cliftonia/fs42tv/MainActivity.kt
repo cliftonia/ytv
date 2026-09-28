@@ -3,14 +3,12 @@ package com.cliftonia.fs42tv
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.SystemClock
-import android.util.Log
 import android.view.KeyEvent
 import android.view.ViewGroup
 import androidx.activity.ComponentActivity
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.ComposeView
 import com.cliftonia.fs42tv.player.EngineDeck
-import com.cliftonia.fs42tv.player.FrameCadence
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
 import com.cliftonia.fs42tv.player.PlayerEngine
 import com.cliftonia.fs42tv.resolver.AcceleratedResolver
@@ -71,32 +69,8 @@ class MainActivity : ComponentActivity() {
     private val settingsVisible = mutableStateOf(false)
     private val settingsRows = mutableStateOf<List<SettingRow>>(emptyList())
 
-    /**
-     * How many modes the panel reports, kept because the settings screen shows it and the
-     * engine default is derived from it. One mode means a television that cannot change its
-     * refresh rate, which is the whole reason two engines exist.
-     */
-    private var displayModeCount: Int = 0
-
-    /**
-     * Which quality tiers to ask for. `@Volatile`: written by the settings row on the UI
-     * thread, read by every resolve on the executors.
-     */
-    @Volatile private var ladder: List<String> = listOf("hd", "sd")
-
-    /**
-     * Wall-clock seconds, or a frozen instant when one was supplied at launch.
-     *
-     * Every channel derives its clip and offset from the current time, so two measurement runs
-     * minutes apart are watching entirely different content - a larger source of variance than
-     * any setting worth tuning, and the cause of three separate false results. Freezing the
-     * clock pins clip selection and offset; a launch without the extra behaves exactly as the
-     * remote does. tools/measure-switch.sh passes it as `--el fs42.now`.
-     */
-    @Volatile private var fixedNowSeconds: Long = -1L
-
-    private fun nowSeconds(): Long =
-        if (fixedNowSeconds > 0) fixedNowSeconds else System.currentTimeMillis() / 1000
+    /** The panel, the quality ladder and the clock, as read at launch - see [LaunchSettings]. */
+    private val settings = LaunchSettings()
 
     /** The tune, prefetch and caption threads - see [AppThreads] for why three. */
     private val threads = AppThreads()
@@ -157,11 +131,11 @@ class MainActivity : ComponentActivity() {
         )
         resolver = AcceleratedResolver.forDial()
 
-        readSettings()
+        settings.read(this, prefs)
 
         extras = ScreenExtras.create(prefs, threads.prefetch, { runOnUiThread(it) }, { destroyed },
             use24Hour = { android.text.format.DateFormat.is24HourFormat(this) },
-            mpvLadder = { ladder.takeIf { ::deck.isInitialized && deck.engine == PlayerEngine.MPV } },
+            mpvLadder = { settings.ladder.takeIf { ::deck.isInitialized && deck.engine == PlayerEngine.MPV } },
             cacheDir = cacheDir, homeServer = { resolver.availableServer() })
         music = GuideMusic(GuideMusic.Deps(
             context = this,
@@ -183,7 +157,7 @@ class MainActivity : ComponentActivity() {
             runOnUi = { block -> runOnUiThread(block) },
             halted = { destroyed },
             stoppedNow = { stopped },
-            nowSeconds = ::nowSeconds,
+            nowSeconds = settings::nowSeconds,
             elapsedMillis = { SystemClock.elapsedRealtime() },
             focus = ::grantOverlayFocus,
             extras = extras,
@@ -211,8 +185,8 @@ class MainActivity : ComponentActivity() {
 
         deck = EngineDeck(
             context = this,
-            engine = chooseEngine(),
-            modeCount = displayModeCount,
+            engine = settings.chooseEngine(this, prefs) { settingsCatalog.audioRoute() },
+            modeCount = settings.displayModeCount,
             overlay = composeView,
             wire = director::wirePlayer,
         )
@@ -235,7 +209,7 @@ class MainActivity : ComponentActivity() {
                 navigator = nav
                 // Every clock channel's schedule and today's layout, so the first guide open is instant.
                 threads.inBackground("prewarm") {
-                    if (!destroyed) extras.timetable.prewarm(channels, nowSeconds())
+                    if (!destroyed) extras.timetable.prewarm(channels, settings.nowSeconds())
                 }
                 // Posted BEFORE the tune, which paints through the same queue after it.
                 runOnUiThread { director.launchTuneStarted() }
@@ -245,67 +219,19 @@ class MainActivity : ComponentActivity() {
         ).load()
     }
 
-    /** Every remembered preference, read before the engine is built - mpv applies some during init. */
-    private fun readSettings() {
-        displayModeCount =
-            (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
-                display else windowManager.defaultDisplay)?.supportedModes?.size ?: 0
-        com.cliftonia.fs42tv.player.videoSyncMode =
-            prefs.getString(SettingsCatalog.VIDEO_SYNC_KEY, null)
-                ?: FrameCadence.SYNC_MODES.first()
-        // Re-read on every engine build rather than only the first: mpv is rebuilt whenever
-        // its core shuts down, and a trim that reset itself on that path would look exactly
-        // like the audio fault coming back.
-        com.cliftonia.fs42tv.player.audioHoldMillis =
-            prefs.getInt(SettingsCatalog.AUDIO_HOLD_KEY, 0)
-        ladder = SettingsCatalog.QUALITY_LADDERS
-            .firstOrNull { it.first == prefs.getString(SettingsCatalog.QUALITY_KEY, null) }
-            ?.second ?: SettingsCatalog.QUALITY_LADDERS.first().second
-        // The measurement seam - see [fixedNowSeconds]. Disconnected once during a refactor,
-        // after which a sweep silently measured rotating content.
-        fixedNowSeconds = intent?.getLongExtra("fs42.now", -1L) ?: -1L
-        if (fixedNowSeconds > 0) Log.i("fs42", "clock pinned to $fixedNowSeconds")
-    }
-
-    /**
-     * Which engine plays the dial, and why it is not simply "the newer one".
-     *
-     * Media3 judders on this television - roughly two tunes in five come back with the picture
-     * running fast then slow - and mpv does not, measured on the same clips at the same
-     * offsets. androidx/media issue 2941 documents the same fault on BUILT-IN Android TVs and
-     * explicitly NOT on Chromecast or Fire TV, which matches: a stick can change its HDMI
-     * output mode, a panel with one mode cannot. So the choice is made from the number of
-     * display modes rather than from a device name, and Media3 stays the default wherever it
-     * works - it is a fifth of the install size and starts faster.
-     *
-     * Override with:  adb shell am start -S -n com.cliftonia.fs42tv/.MainActivity --es engine mpv
-     * (-S because launchMode is singleTask: without it a launch while the app is running
-     * re-delivers the intent to the EXISTING activity and onCreate never runs.)
-     */
-    private fun chooseEngine(): PlayerEngine {
-        val engine = PlayerEngine.parse(intent?.getStringExtra("engine"))
-            ?: PlayerEngine.parse(prefs.getString(SettingsCatalog.ENGINE_KEY, null))
-            ?: PlayerEngine.default(displayModeCount)
-        prefs.edit().putString(SettingsCatalog.ENGINE_KEY, engine.name.lowercase()).apply()
-        Log.i("fs42", "player engine $engine ($displayModeCount display mode(s)), " +
-            "audio out ${settingsCatalog.audioRoute()}, " +
-            "hold ${com.cliftonia.fs42tv.player.audioHoldMillis}ms")
-        return engine
-    }
-
     private fun createScreenDirector() = ScreenDirector(ScreenDirector.Deps(
         player = { deck.player },
         tune = { tune },
         pickerOpen = { guide.visible.value },
         fallbackChannel = { navigator?.current },
-        nowSeconds = ::nowSeconds,
+        nowSeconds = settings::nowSeconds,
         halted = { destroyed },
         stoppedNow = { stopped },
         runOnUi = { block -> runOnUiThread(block) },
         stallHandler = stallHandler,
         recoveryHandler = recoveryHandler,
         overlayOpen = { guide.visible.value || settingsVisible.value },
-        condemn = { id -> ledger.condemn(id, ladder) },
+        condemn = { id -> ledger.condemn(id, settings.ladder) },
         rebuildEngine = { deck.rebuild() },
         recallResolved = ledger::recall,
         persistCaptionsOn = {
@@ -323,9 +249,9 @@ class MainActivity : ComponentActivity() {
         resolver = resolver,
         ledger = ledger,
         urls = null,
-        ladder = { ladder },
+        ladder = { settings.ladder },
         navigator = { navigator },
-        nowSeconds = ::nowSeconds,
+        nowSeconds = settings::nowSeconds,
         elapsedMillis = { SystemClock.elapsedRealtime() },
         halted = { destroyed },
         runOnUi = { block -> runOnUiThread(block) },
@@ -337,12 +263,12 @@ class MainActivity : ComponentActivity() {
 
     private fun createSettingsCatalog() = SettingsCatalog(this, SettingsCatalog.Deps(
         prefs = prefs,
-        displayModeCount = { displayModeCount },
+        displayModeCount = { settings.displayModeCount },
         channels = { navigator?.channels.orEmpty() },
         source = source,
         relaunch = ::recreate,
-        ladder = { ladder },
-        setLadder = { ladder = it },
+        ladder = { settings.ladder },
+        setLadder = { settings.ladder = it },
         clearResolved = ledger::clearResolved,
         captionsOn = { director.captions.on },
         toggleCaptions = director.captions::toggle,
