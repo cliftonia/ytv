@@ -36,5 +36,7 @@ fun ScreenDirector.featureToggled(flag: Features.Flag, on: Boolean) {
         Features.Flag.BREAK_ADS -> if (!on && plutoBreak.adsOnPlayer) plutoBreak.switchedOff()
         // Nothing to undo, as PLUTO GUIDE: the next banner and the next guide open read the flag.
         Features.Flag.FAST_GUIDE -> Unit
+        // Asked before every read and at every tune: a warm under way stops at its next step.
+        Features.Flag.PREJOIN -> Unit
     }
 }

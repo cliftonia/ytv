@@ -7,6 +7,7 @@ import com.cliftonia.fs42tv.pluto.BreakReturn
 import com.cliftonia.fs42tv.pluto.BreakView
 import com.cliftonia.fs42tv.pluto.OnScreen
 import com.cliftonia.fs42tv.resolver.Hls
+import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.sync.Channel
 import com.cliftonia.fs42tv.tune.Tuned
 
@@ -94,6 +95,11 @@ class PlutoBreak(private val deps: Deps) {
          * return is a tune - the blank, then the channel, as a channel change.
          */
         val retune: (Tuned) -> Unit = {},
+        /**
+         * The wall-clock instant of the window mpv will join when it is not the load's own - a
+         * pre-joined surf joins the playlist as the pre-join last read it (prejoin/Prejoin).
+         */
+        val windowAt: (Playable?) -> Long? = { null },
     )
 
     /** What the overlay draws: null when no break, or when an overlay is over it. Compose state. */
@@ -245,7 +251,7 @@ class PlutoBreak(private val deps: Deps) {
         if (!fresh && poller.pollingUrl == url && this.tuned?.channel?.number == tuned.channel.number) return
         leave(keepCard = holdCard && this.tuned?.channel?.number == tuned.channel.number)
         this.tuned = tuned
-        loadedAt = deps.wallMillis()
+        loadedAt = deps.windowAt(hls) ?: deps.wallMillis()
         this.anchored = anchored
         // The playlist mpv was handed, when the tune chose one: one fetch fewer per tune, and the
         // anchor is read off exactly the window mpv started in.

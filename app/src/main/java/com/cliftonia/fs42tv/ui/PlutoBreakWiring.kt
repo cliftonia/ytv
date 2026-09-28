@@ -66,5 +66,6 @@ fun PlutoBreak.Companion.create(
         shutdown = { executor.shutdownNow() },
         ads = { changed -> BreakAds.create(extras, player, later, changed) },
         retune = retune,
+        windowAt = extras::prejoinWindowAt,
     ))
 }

@@ -32,8 +32,17 @@ data class Progressive(
  * and, when that variant is video-only, its separate audio rendition (see pluto/HlsMaster - mpv
  * opens a master by probing every variant, 7-11s against ~3s for one playlist). Null: play [url].
  * All three carry a Pluto session's token when they are Pluto's - never log them.
+ *
+ * [mpvUrl], when set, is what mpv opens in place of [mediaUrl]: the pre-join's loopback copy of
+ * that very playlist, warmed before the surf (see prejoin/Prejoin). [mediaUrl] stays the playlist
+ * everything else reads - the break poller, a failure's trace.
  */
-data class Hls(val url: String, val mediaUrl: String? = null, val audioUrl: String? = null) : Playable
+data class Hls(
+    val url: String,
+    val mediaUrl: String? = null,
+    val audioUrl: String? = null,
+    val mpvUrl: String? = null,
+) : Playable
 
 /** Nothing usable is cached; the caller must resolve this id on the device before it can play. */
 data class NeedsResolving(val videoId: String) : Playable
