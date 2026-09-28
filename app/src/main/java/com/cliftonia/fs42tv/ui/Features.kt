@@ -78,15 +78,15 @@ class Features(
         PLUTO_ROUTE("PLUTO ROUTE", "feature.plutoroute", onValue = "DIRECT", offValue = "LEGACY"),
 
         /**
-         * A "we'll be right back" card over Pluto's logo bumper during an ad break, with the
-         * guide's music (see `ui/PlutoBreak`). OFF reads no playlists and shows the bumper, as
-         * before.
+         * A "we'll be right back" card over an ad break - Pluto's logo bumper, or a FAST
+         * channel's cued break - with the guide's music (see `ui/PlutoBreak`). OFF reads no
+         * playlists and shows the channel's own break, as before.
          */
         BREAK_CARD("BREAK CARD", "feature.breakcard"),
 
         /**
-         * Vintage Australian commercials from the Internet Archive during a Pluto ad break, in
-         * place of the card (see `ui/BreakAds`); the card when they cannot be had. Needs BREAK
+         * Vintage Australian commercials from the Internet Archive during a Pluto or FAST ad
+         * break, in place of the card (see `ui/BreakAds`); the card when they cannot be had. Needs BREAK
          * CARD, which finds the breaks. OFF is the card exactly as before.
          */
         BREAK_ADS("BREAK ADS", "feature.breakads"),

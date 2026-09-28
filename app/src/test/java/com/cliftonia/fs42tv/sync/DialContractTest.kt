@@ -188,4 +188,21 @@ class DialContractTest {
             """{"channels":[{"number":1,"name":"x","kind":"live","pluto":{"id":"abc"}}]}""")
         assertEquals(PlutoRef("abc", null), bare.channels.single().pluto)
     }
+
+    @Test
+    fun `a channel's breaks opt-out is read leniently, and on unless it clearly says no`() {
+        fun breaks(value: String?): Boolean {
+            val field = value?.let { ""","breaks":$it""" }.orEmpty()
+            return DialContract.parseDial(
+                """{"channels":[{"number":1,"name":"x","kind":"live"$field}]}""").channels.single().breaks
+        }
+        assertTrue("absent", breaks(null))
+        assertTrue(breaks("true"))
+        assertTrue(breaks("null"))
+        assertTrue("a typo is not a no", breaks("\"flase\""))
+        assertTrue("an object is not a no", breaks("{}"))
+        listOf("false", "\"false\"", "\"No\"", "\"off\"", "0", "\" FALSE \"").forEach {
+            assertEquals(it, false, breaks(it))
+        }
+    }
 }
