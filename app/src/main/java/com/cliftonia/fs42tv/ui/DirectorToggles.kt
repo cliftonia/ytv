@@ -34,5 +34,7 @@ fun ScreenDirector.featureToggled(flag: Features.Flag, on: Boolean) {
             if (on && !tuning.value) plutoBreak.playing(deps.tune().onAir) else plutoBreak.switchedOff()
         // OFF with a reel on the player tunes the channel back; otherwise the next break reads it.
         Features.Flag.BREAK_ADS -> if (!on && plutoBreak.adsOnPlayer) plutoBreak.switchedOff()
+        // Nothing to undo, as PLUTO GUIDE: the next banner and the next guide open read the flag.
+        Features.Flag.FAST_GUIDE -> Unit
     }
 }
