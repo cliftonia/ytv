@@ -15,6 +15,9 @@
 #      given up on after three failures.
 #   3. ads.json is rebuilt from every "ok" record and committed + pushed only if the pool
 #      changed - a new stamp alone is not news.
+#   4. mirror_ads.py downloads every published reel not yet on this box to $STATE/mirror/<id>.mp4
+#      (atomically, one at a time, politely) and deletes reels that left the pool; serve_ads.py
+#      serves that directory on :4245 so a television at home joins a reel in ~1 s, not ~9.
 #
 # Contract (the app reads exactly this):
 #   {"generated": <unix s>, "reels": [{"id", "title", "era": "70s"|"80s"|"90s", "url",
@@ -36,9 +39,13 @@
 #     publish (same clone) and the 03:00 Brisbane nightly (which pushes without rebasing).
 #     Logs: `journalctl --user -u ytv-ads`. Run now: `systemctl --user start ytv-ads`.
 #   - Needs ffmpeg (/usr/bin/ffmpeg, already installed) and python3; no pip packages.
+#   - The LAN mirror: ~/.cache/ytv-ads/mirror (~10 GB for ~80 reels), filled by step 4 and served
+#     by the ytv-ads-mirror user service (tools/ads-pool/systemd/ytv-ads-mirror.service, :4245,
+#     ufw 4245 from the LAN and on tailscale0 only). The first run downloads the whole pool.
 #
 # Environment overrides: YTV_ADS_REPO (default ~/ytv-foreign), YTV_ADS_STATE (~/.cache/ytv-ads),
-# YTV_ADS_PER_RUN (15), YTV_ADS_PUSH (1; 0 writes ads.json into the state directory and commits nothing).
+# YTV_ADS_PER_RUN (15), YTV_ADS_PUSH (1; 0 writes ads.json into the state directory and commits nothing),
+# YTV_ADS_MIRROR (1; 0 skips the LAN mirror).
 set -euo pipefail
 
 TOOLS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -46,6 +53,7 @@ REPO="${YTV_ADS_REPO:-$HOME/ytv-foreign}"
 STATE="${YTV_ADS_STATE:-$HOME/.cache/ytv-ads}"
 PER_RUN="${YTV_ADS_PER_RUN:-15}"
 PUSH="${YTV_ADS_PUSH:-1}"
+MIRROR="${YTV_ADS_MIRROR:-1}"
 OUT="ads.json"
 
 # Hooks off for every git call: the repo's opt-in pre-push hook builds and installs the Android
@@ -173,14 +181,23 @@ print("pool: %d reels %s, %d cuts (was %s)" % (len(reels), eras, sum(len(r["cuts
                                                 "none" if previous is None else len(previous)))
 PY
 
-[ "$PUSH" = "1" ] || { echo "YTV_ADS_PUSH=0: wrote $TARGET, committing nothing"; exit 0; }
-git_ add -- "$OUT"
-if git_ diff --cached --quiet; then
-  echo "nothing to publish"
-  exit 0
-fi
-git_ commit --quiet -m "chore: refresh retro ad reel pool
+publish_pool() {
+  git_ add -- "$OUT"
+  if git_ diff --cached --quiet; then
+    echo "nothing to publish"
+    return 0
+  fi
+  git_ commit --quiet -m "chore: refresh retro ad reel pool
 
 - Update \`ads.json\` reels cut into ads from archive.org compilations"
-git_ push --quiet origin HEAD:main
-echo "published"
+  git_ push --quiet origin HEAD:main
+  echo "published"
+}
+if [ "$PUSH" = "1" ]; then publish_pool; else echo "YTV_ADS_PUSH=0: wrote $TARGET, committing nothing"; fi
+
+# Last, after the pool is out: keep a copy of every published reel on this box for the LAN
+# (serve_ads.py on :4245). Fetches only what is missing, deletes what left the pool; a failure
+# here never fails the publish - the televisions fall back to archive.org reel by reel.
+if [ "$MIRROR" = "1" ]; then
+  python3 "$TOOLS/mirror_ads.py" "$TARGET" "$STATE/mirror" --pause 5 || echo "mirror failed"
+fi
