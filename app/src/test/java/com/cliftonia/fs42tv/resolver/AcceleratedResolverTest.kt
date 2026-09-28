@@ -181,4 +181,16 @@ class AcceleratedResolverTest {
         assertEquals(0, device.calls)
         assertTrue("the server is not asked", asked.none { it.contains("/resolve") })
     }
+
+    @Test
+    fun `the available server is the first with a good reading, and none before any probe`() {
+        fun at(base: String, health: String?) = ServerResolver(base, { _, _ -> health ?: error("unreachable") })
+        val lan = at("http://192.168.4.58:4243", null).also { it.probe() }
+        val tailnet = at("http://100.74.3.68:4243", healthy).also { it.probe() }
+        val device = FakeDevice(resolved)
+        assertEquals("http://100.74.3.68:4243", AcceleratedResolver(listOf(lan, tailnet), device).availableServer())
+        assertNull(AcceleratedResolver(listOf(at("http://unprobed", healthy)), device).availableServer())
+        assertNull(AcceleratedResolver(listOf(lan), device).availableServer())
+        assertEquals("a read, never a resolve", 0, device.calls)
+    }
 }
