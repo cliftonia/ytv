@@ -154,7 +154,7 @@ class ScreenDirector(private val deps: Deps) {
         // The card too: under it the outgoing file may still be loaded, and it must stay silent.
         // And a Pluto break, hidden under an overlay or not: its audio is the bumper's jingle.
         deps.player()?.setVolume(if (tuning.value || deps.pickerOpen() || upNext.showing ||
-            plutoBreak.muting) 0f else deps.extras.programmeGain())
+            plutoBreak.muting) 0f else plutoBreak.adsGain ?: deps.extras.programmeGain())
         syncCovered()
     }
 

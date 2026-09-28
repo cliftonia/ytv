@@ -4,6 +4,7 @@ import android.util.Log
 import com.cliftonia.fs42tv.ads.AdCatalog
 import com.cliftonia.fs42tv.ads.AdPicker
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
+import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Progressive
 
 /**
@@ -75,6 +76,14 @@ class BreakAds(private val deps: Deps) {
     /** Commercials are what the viewer sees: no card, no silence, no music. */
     val picture: Boolean get() = stage == Stage.SHOWING
 
+    /**
+     * The volume the reel plays at: turned down to a Pluto programme's loudness, never up. The
+     * archive's commercials were mastered hot - measured, up to 9 dB louder than the film they
+     * interrupt - and a break that jumps in volume is the one thing a real station never did.
+     */
+    var gain = 1f
+        private set
+
     /** A reel on its way: the card waits for it without starting the music. */
     val loading: Boolean get() = stage == Stage.LOADING
 
@@ -111,8 +120,9 @@ class BreakAds(private val deps: Deps) {
         remember(recentPicks, pick.key, AdPicker.RECENT_PICKS)
         // Archive urls carry no token, so the reel is named in full - the owner can open it.
         Log.i("fs42", "break ads on $channel: reel ${pick.reel.id} (${pick.reel.era.ifEmpty { "?" }}) " +
-            "at ${pick.cutSeconds}s, reel $reels of this break - ${pick.reel.url}")
+            "at ${pick.cutSeconds}s, reel $reels of this break, loudness ${pick.reel.loudness} LUFS - ${pick.reel.url}")
         stage = Stage.LOADING
+        gain = Loudness.gain(pick.reel.loudness?.let { it - PROGRAMME_LUFS })
         deps.play(Progressive(pick.reel.url, audioUrl = null), pick.cutSeconds)
         arm(LOAD_MILLIS, "no picture after ${LOAD_MILLIS / 1000}s")
         return true
@@ -212,6 +222,12 @@ class BreakAds(private val deps: Deps) {
 
         /** A stall this long mid-reel is the card: a break is too short to wait out a slow line. */
         const val STALL_MILLIS = 8_000L
+
+        /**
+         * Where a Pluto programme sits: measured on eight US channels (27 Sep 2026), -22 to -26
+         * LUFS but one, and ATSC A/85's -24 - the level American broadcast mixes to.
+         */
+        const val PROGRAMME_LUFS = -24.0
 
         /** Reels run out rarely - they are long, breaks are short - but never loop through them. */
         const val MAX_REELS = 3

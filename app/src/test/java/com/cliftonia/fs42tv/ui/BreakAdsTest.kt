@@ -187,4 +187,27 @@ class BreakAdsTest {
         assertEquals(BreakAds.Stage.IDLE, ads.stage)
         assertEquals(0, world.parks)
     }
+
+    @Test
+    fun `a hot reel is turned down to a Pluto programme's loudness, a quiet one never up`() {
+        fun gainFor(lufs: Double?): Float {
+            val world = World().apply {
+                catalog = AdCatalog(1, listOf(AdReel("r", era = "80s", url = "https://archive.org/download/r/r.mp4",
+                    duration = 1800.0, cuts = listOf(0.0, 30.0, 61.0), loudness = lufs)))
+            }
+            return world.subject().also { it.start(7, 1L) }.gain
+        }
+        assertEquals(0.335f, gainFor(-14.5), 0.005f)
+        assertEquals(1f, gainFor(-24.0), 0f)
+        assertEquals(1f, gainFor(-30.0), 0f)
+        assertEquals("unmeasured plays as it is", 1f, gainFor(null), 0f)
+    }
+
+    @Test
+    fun `the catalog reads a reel's loudness, and a reel without one`() {
+        val catalog = AdCatalog.parse("""{"generated":1,"reels":[
+            {"id":"a","title":"A","era":"80s","url":"https://archive.org/download/a/a.mp4","duration":900,"cuts":[0,30,60,90,120],"loudness":-15.3},
+            {"id":"b","title":"B","era":"90s","url":"https://archive.org/download/b/b.mp4","duration":900,"cuts":[0,30,60,90,120]}]}""")!!
+        assertEquals(listOf(-15.3, null), catalog.reels.map { it.loudness })
+    }
 }

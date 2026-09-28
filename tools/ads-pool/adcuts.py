@@ -39,6 +39,19 @@ MIN_LEGAL_SHARE = 0.5   # of the hops between cuts, at least this share must be 
 SEGMENT_RANGE = (10.0, 90.0)  # the median hop must look like an ad
 
 
+def parse_loudness(text):
+    """Integrated loudness (LUFS) from ffmpeg's ebur128 summary, or None.
+
+    The summary block ends a run: `Integrated loudness:` then `I: -22.6 LUFS`. A reel that is
+    silence throughout reports the gate's floor, -70 - no figure to level by.
+    """
+    found = re.findall(r"Integrated loudness:\s*\n\s*I:\s*(-?[\d.]+) LUFS", text)
+    if not found:
+        return None
+    value = float(found[-1])
+    return None if value <= -69.0 else value
+
+
 def parse_metadata_print(text, key):
     """(pts_time, value) pairs from a `metadata=print` / `ametadata=print` dump.
 
