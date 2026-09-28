@@ -1,0 +1,10 @@
+[Unit]
+Description=Six-hourly YTV programme details (40 minutes after each fast guide run, UTC)
+
+[Timer]
+OnCalendar=*-*-* 00,06,12,18:40:00 UTC
+Persistent=true
+RandomizedDelaySec=2min
+
+[Install]
+WantedBy=timers.target

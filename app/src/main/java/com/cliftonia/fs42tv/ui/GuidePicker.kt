@@ -46,6 +46,22 @@ class GuidePicker(private val deps: Deps) {
     val startIndex = mutableStateOf(0)
 
     /**
+     * The LIVE TV guide's details pane: shown at all ([detailed], decided at [open]), what it says
+     * for the highlighted channel ([details]), and its picture once loaded ([art]). Separate
+     * states, read only by the pane, so a change to any of them never recomposes the list.
+     */
+    val detailed = mutableStateOf(false)
+    val details = mutableStateOf<PickerDetails?>(null)
+    val art = mutableStateOf<androidx.compose.ui.graphics.ImageBitmap?>(null)
+
+    /** The row the pane describes, and the picture it wants - late answers for others are dropped. */
+    private var highlightedIndex = -1
+    private var artUrl: String? = null
+
+    /** Pictures that could not be had while this guide is open: their slot goes to the text. */
+    private val artFailed = HashSet<String>()
+
+    /**
      * Opens seeded on the channel actually on air - not [DialNavigator.currentIndex]: a failed
      * tune leaves the navigator pointed somewhere the picture never reached, and the picker
      * must open on what the viewer is looking at, not where the dial silently moved to.
@@ -72,6 +88,13 @@ class GuidePicker(private val deps: Deps) {
         // Structure too, so it goes up with the names: one pass, no clock, nothing to wait on.
         headings.value = ChannelLabels.headings(nav.channels)
         startIndex.value = seed
+        // LIVE TV only: its channels carry blocks, the YouTube dial's never do.
+        detailed.value = deps.extras.guideDetails?.enabled == true && headings.value.any { it != null }
+        details.value = null
+        art.value = null
+        highlightedIndex = -1
+        artUrl = null
+        artFailed.clear()
         visible.value = true
         deps.focus(true)
         // The guide covers the blank, so the snow stops animating behind it.
@@ -89,6 +112,10 @@ class GuidePicker(private val deps: Deps) {
      */
     fun close() {
         visible.value = false
+        // Nothing of the pane is kept past the guide: its picture is the biggest thing it holds.
+        details.value = null
+        art.value = null
+        artUrl = null
         stopMusic()
         deps.focus(false)
         // The guide opened over an "up next" card took the music over; hand it back.
@@ -148,6 +175,35 @@ class GuidePicker(private val deps: Deps) {
             val channel = channels.getOrNull(i) ?: continue
             val cached = deps.extras.guideRow(channel) { line -> setRow(i, channel, line) }
             if (cached != null) setRow(i, channel, cached)
+        }
+    }
+
+    /**
+     * The highlight has rested on [index] for a moment (the picker debounces): describe that
+     * channel in the details pane. Answers from memory at once; each source that has to load
+     * calls back, and the pane is rebuilt then - unless the highlight has moved on.
+     */
+    fun highlighted(index: Int) {
+        val source = deps.extras.guideDetails ?: return
+        if (!visible.value || !detailed.value) return
+        val channel = deps.navigator()?.channels?.getOrNull(index) ?: return
+        highlightedIndex = index
+        val pane = source.forChannel(channel) {
+            if (visible.value && highlightedIndex == index) highlighted(index)
+        }.let { if (it.imageUrl in artFailed) it.copy(imageUrl = null) else it }
+        details.value = pane
+        val url = pane.imageUrl
+        if (url == artUrl) return
+        artUrl = url
+        art.value = url?.let { wanted ->
+            source.art(wanted, onFailed = {
+                // No picture after all: the pane gives its slot back to the text.
+                artFailed += wanted
+                val current = details.value
+                if (visible.value && artUrl == wanted && current?.imageUrl == wanted) {
+                    details.value = current.copy(imageUrl = null)
+                }
+            }) { picture -> if (visible.value && artUrl == wanted) art.value = picture }
         }
     }
 

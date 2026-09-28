@@ -30,8 +30,19 @@ object PlutoIds {
         channel.pluto?.id ?: channel.streams.firstOrNull()?.url?.let(::idFrom)
 }
 
-/** One programme on a Pluto channel. Epoch milliseconds, so comparisons need no parsing. */
-data class Programme(val title: String, val startMillis: Long, val stopMillis: Long)
+/**
+ * One programme on a Pluto channel. Epoch milliseconds, so comparisons need no parsing.
+ *
+ * [description] and [imageUrl] are for the LIVE TV picker's details pane, from the same reply the
+ * titles come from - no extra request. Blank and null when Pluto has none.
+ */
+data class Programme(
+    val title: String,
+    val startMillis: Long,
+    val stopMillis: Long,
+    val description: String = "",
+    val imageUrl: String? = null,
+)
 
 /**
  * A channel's next six hours, and its logo.
@@ -94,7 +105,9 @@ object PlutoApi {
             val start = millisOf(entry.start) ?: return@mapNotNull null
             val stop = millisOf(entry.stop) ?: return@mapNotNull null
             val title = entry.title.trim().ifEmpty { entry.episode?.name?.trim().orEmpty() }
-            if (title.isEmpty() || stop <= start) null else Programme(title, start, stop)
+            if (title.isEmpty() || stop <= start) null else Programme(title, start, stop,
+                description = entry.episode?.let { it.description ?: it.series?.description }?.trim().orEmpty(),
+                imageUrl = entry.episode?.let(::pictureOf))
         }.sortedBy { it.startMillis }
         if (programmes.isEmpty()) return null
         // logo.path is served at 280x80 - small enough to hold a dozen in memory. The colour and
@@ -141,6 +154,14 @@ object PlutoApi {
         return out.toByteArray()
     }
 
+    /**
+     * The programme's picture: the episode's portrait poster where there is one - it fits the
+     * pane's picture slot - else the series' square tile, else the episode's wide still.
+     */
+    private fun pictureOf(episode: WireEpisode): String? =
+        listOfNotNull(episode.poster, episode.series?.tile, episode.featuredImage)
+            .firstNotNullOfOrNull { it.path?.takeIf { p -> p.startsWith("https://") } }
+
     private fun millisOf(iso: String?): Long? =
         iso?.let { runCatching { Instant.parse(it).toEpochMilli() }.getOrNull() }
 
@@ -164,7 +185,16 @@ object PlutoApi {
     )
 
     @Serializable
-    private data class WireEpisode(val name: String? = null)
+    private data class WireEpisode(
+        val name: String? = null,
+        val description: String? = null,
+        val poster: WireImage? = null,
+        val featuredImage: WireImage? = null,
+        val series: WireSeries? = null,
+    )
+
+    @Serializable
+    private data class WireSeries(val description: String? = null, val tile: WireImage? = null)
 
     @Serializable
     private data class WireImage(val path: String? = null)

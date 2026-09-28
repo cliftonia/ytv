@@ -1,0 +1,12 @@
+[Unit]
+Description=Publish the YTV LIVE TV programme details (details.json) to GitHub
+After=network-online.target
+
+[Service]
+Type=oneshot
+# TMDB_API_KEY and OMDB_API_KEY, mode 600; never in the repository. Optional ("-"): without it
+# nothing new is looked up and the cache is republished.
+EnvironmentFile=-%h/.config/ytv/details.env
+ExecStart=/usr/bin/bash %h/ytv-foreign/tools/details/publish_details.sh
+Nice=10
+TimeoutStartSec=90min
