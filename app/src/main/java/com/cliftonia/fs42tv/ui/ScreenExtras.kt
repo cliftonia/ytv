@@ -77,7 +77,7 @@ class ScreenExtras(private val deps: Deps) {
         // probes every variant before its first frame - 19-22s on Spark TV and Rakuten, against
         // 5-11s on the one it picks. The YouTube dial's news feeds are left as they were.
         val picker = deps.masterPicker
-        val fast = tuned.channel.pluto == null && tuned.channel.block != null
+        val fast = MasterPrefetch.isFast(tuned.channel)
         if ((tuned.channel.pluto == null && !fast) || picker == null) return routed
         // Asked again between the two blocking steps: a session fetch can take seconds, and a
         // master read after it seconds more, on the one tune thread the superseding tune is
@@ -86,8 +86,8 @@ class ScreenExtras(private val deps: Deps) {
         // A remembered pick only for the direct route: the route hands back a new playable for a
         // direct master, whose url names its session, and the published one itself for LEGACY,
         // whose jmp2 url does not. See VariantCache.
-        // Nothing to remember for a FAST feed: it has no session, and its master read is its own.
-        return picker.forMpv(routed, cacheable = !fast && routed !== tuned.playable)
+        // A FAST feed has no session: its pick is remembered by its master url, for hours.
+        return picker.forMpv(routed, cacheable = !fast && routed !== tuned.playable, fast = fast)
     }
 
     /**
@@ -294,7 +294,8 @@ class ScreenExtras(private val deps: Deps) {
                 poolSize = SessionPool.SIZE,
                 slotServer = { region, slot, fresh -> PlutoBoot.fetchFromServer(region, fresh, client = "dial$slot") },
             )
-            val picker = MasterPicker(BreakPoller::httpFetch, mpvLadder, elapsed, VariantCache(elapsed, sessions::claimOf))
+            val picker = MasterPicker(BreakPoller::httpFetch, mpvLadder, elapsed, VariantCache(elapsed, sessions::claimOf),
+                fastCache = VariantCache(elapsed, ttlMillis = VariantCache.FAST_TTL_MILLIS, capacity = VariantCache.FAST_CAPACITY))
             val route = PlutoRoute(
                 sessions = sessions,
                 direct = { features.isOn(Features.Flag.PLUTO_ROUTE) },
@@ -329,7 +330,9 @@ class ScreenExtras(private val deps: Deps) {
                 ),
                 plutoRoute = route,
                 masterPicker = picker,
-                masterPrefetch = MasterPrefetch.onDevice(route, picker, halted),
+                masterPrefetch = MasterPrefetch.onDevice(route, picker, halted,
+                    fastMaster = { channel -> FastRelay.liveUrl(channel, homeServer) },
+                    ready = { _, _ -> }),
                 adCatalog = cacheDir?.let {
                     AdCatalogStore(java.io.File(it, AdCatalogStore.FILE_NAME), AdCatalogStore::httpFetch)
                 },

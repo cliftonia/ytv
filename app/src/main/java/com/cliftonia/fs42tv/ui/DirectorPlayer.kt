@@ -46,7 +46,7 @@ fun ScreenDirector.wirePlayer(player: ChannelPlayback) {
         updateProgrammeVolume()
         skipper.start(deps.tune().onAir)
         plutoBreak.playing(deps.tune().onAir)
-        // The Pluto neighbours' masters, read ahead of a surf - never under a reel. See MasterPrefetch.
+        // The neighbours' masters, Pluto and FAST, read ahead of a surf - never under a reel. See MasterPrefetch.
         deps.extras.plutoPictureUp(deps.tune(), deps.channels()) {
             tuning.value || plutoBreak.adsOnPlayer || deps.stoppedNow() }
     }

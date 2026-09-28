@@ -109,6 +109,17 @@ class FastRelayTest {
         assertEquals(upstream, decodedU((extras { lan }.besideTuned(tuned).playable as Hls).url))
     }
 
+    @Test
+    fun `a FAST neighbour's master is read ahead at the url its tune would open`() {
+        val routed = Channel(number = 5, name = "FAST", kind = "live",
+            streams = listOf(Stream(url = upstream, duration = 600, route = "us")))
+        assertEquals(upstream, decodedU(FastRelay.liveUrl(routed) { lan }!!))
+        assertNull("no server, no relay, nothing to read", FastRelay.liveUrl(routed) { null })
+        val plain = routed.copy(streams = listOf(Stream(url = upstream, duration = 600)))
+        assertEquals(upstream, FastRelay.liveUrl(plain) { null })
+        assertNull(FastRelay.liveUrl(plain.copy(kind = "clock")) { null })
+    }
+
     private fun extras(server: () -> String?): ScreenExtras {
         val sessions = PlutoSessions(boot = { null }, server = { null }, nowMillis = { 0L },
             poolSize = SessionPool.SIZE)

@@ -40,6 +40,17 @@ object FastRelay {
     }
 
     /**
+     * The url a tune of live [channel] hands on to be played - its first stream, as the tuner
+     * picks it for a live channel, through the relay when routed - or null: no stream, or a US
+     * route with no server. For reading a FAST neighbour's master ahead exactly as its tune would.
+     */
+    fun liveUrl(channel: com.cliftonia.fs42tv.sync.Channel, resolveServer: () -> String?): String? {
+        if (channel.kind != "live") return null
+        val stream = channel.streams.firstOrNull() ?: return null
+        return (route(stream, Hls(stream.url), resolveServer) as? Hls)?.url
+    }
+
+    /**
      * What to play for live [stream], whose published playable is [playable]. A stream without a
      * route comes back as [playable] itself, untouched, and [resolveServer] is never asked.
      */
