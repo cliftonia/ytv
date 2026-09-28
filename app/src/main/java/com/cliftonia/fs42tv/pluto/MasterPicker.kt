@@ -51,8 +51,10 @@ class MasterPicker(
             say("variant remembered for this session; no read")
             return hls.copy(mediaUrl = remembered.mediaUrl, audioUrl = remembered.audioUrl)
         }
+        // The claim the tune took on the session, from before the read - see VariantCache.put.
+        val claim = if (cacheable) cache?.claim(hls.url) else null
         val pick = read(hls.url, ladder, ahead = false) ?: return playable
-        if (cacheable) cache?.put(hls.url, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl))
+        cache?.put(hls.url, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl), claim)
         return hls.copy(mediaUrl = pick.videoUrl, audioUrl = pick.audioUrl)
     }
 
@@ -69,9 +71,11 @@ class MasterPicker(
         val ladder = mpvLadder() ?: return false
         val engine = engineOf(ladder)
         if (cache.has(masterUrl, engine)) return false
+        // Claimed by the lease before this; nothing claimed is nothing to keep, so no read.
+        val claim = cache.claim(masterUrl) ?: return false
         val pick = read(masterUrl, ladder, ahead = true) ?: return false
         if (!stillWanted()) return false
-        cache.put(masterUrl, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl))
+        cache.put(masterUrl, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl), claim)
         return true
     }
 

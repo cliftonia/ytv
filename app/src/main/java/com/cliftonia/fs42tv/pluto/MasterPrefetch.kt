@@ -18,11 +18,17 @@ import java.util.concurrent.atomic.AtomicInteger
  * speed up. By a few seconds in, the channel has buffered; a viewer still surfing has pressed
  * again, and [pictureUp] for the next channel cancels this one's wait before it has read anything.
  *
+ * NEVER ON THE SESSION ON SCREEN. Pluto keeps one channel per session, and reading a neighbour's
+ * master on the dial's own session ends the programme being watched (measured Sep 2026). Each
+ * read is on a session of its own, lent by [PlutoRoute.readAhead] from the dial's pool - see
+ * [SessionPool] for the rotation that makes a surf onto that neighbour play on it.
+ *
  * CHEAP BY CONSTRUCTION: one master each for the two neighbours - a few kilobytes, no media
- * playlist, no segment - and only on a session already held ([PlutoRoute.masterAhead] never
- * fetches one). At most [MAX_IN_FLIGHT] reads at once, across every channel: a read still running
- * when the next picture asks for two more simply means those two are not read. A neighbour already
- * remembered is not read again. Only while mpv is the engine; Media3 reads a master lazily.
+ * playlist, no segment. A free slot's session may be fetched for it - never fresh, never while the
+ * home server is away - on these threads, never the tune's. At most [MAX_IN_FLIGHT] reads at once,
+ * across every channel: a read still running when the next picture asks for two more simply means
+ * those two are not read. A neighbour already remembered is not read again. Only while mpv is the
+ * engine; Media3 reads a master lazily.
  *
  * NEVER while a break's commercial reel is on the player or the app is out of sight: [pictureUp]'s
  * `stillWanted` is asked when the wait ends, and [stop] (the app's onStop) cancels the wait and
@@ -38,8 +44,11 @@ class MasterPrefetch(
     private val schedule: (delayMillis: Long, block: () -> Unit) -> () -> Unit,
     /** Runs a block off the UI thread, at low priority; returns what cancels (interrupts) it. */
     private val background: (block: () -> Unit) -> () -> Unit,
-    /** The direct master a tune of the channel would play, if known without a fetch. */
-    private val masterAhead: (Channel) -> String?,
+    /**
+     * A session of its own for reading the channel's master ahead - [PlutoRoute.readAhead] - never
+     * re-pointing one carrying a channel in the set. Blocking; on [background]'s threads.
+     */
+    private val ahead: (Channel, keep: Set<String>) -> SessionPool.Lease?,
     /** Whether a read ahead is any use now - mpv is the engine. */
     private val prefetching: () -> Boolean,
     /** Reads a master and remembers its pick - [MasterPicker.prefetch]. Blocking. */
@@ -70,7 +79,10 @@ class MasterPrefetch(
         waiting = schedule(delayMillis) {
             waiting = null
             if (epoch.get() != began || !stillWanted() || !prefetching()) return@schedule
-            neighbours(channel, dial).forEach { launch(it, began) }
+            val either = neighbours(channel, dial)
+            // The channel on screen and both neighbours: no read ahead may re-point their sessions.
+            val keep = (either + channel).mapNotNull { it.pluto?.id }.toSet()
+            either.forEach { launch(it, keep, began) }
         }
     }
 
@@ -90,8 +102,7 @@ class MasterPrefetch(
         waiting = null
     }
 
-    private fun launch(neighbour: Channel, began: Int) {
-        val url = masterAhead(neighbour) ?: return
+    private fun launch(neighbour: Channel, keep: Set<String>, began: Int) {
         if (inFlight.size >= maxInFlight) {
             Log.i("fs42", "pluto master: ahead for ${neighbour.number} skipped; $maxInFlight reads running")
             return
@@ -103,12 +114,22 @@ class MasterPrefetch(
         inFlight[id] = {}
         val cancel = background {
             try {
-                if (current()) read(url, current)
+                if (current()) readOn(neighbour, keep, current)
             } finally {
                 inFlight.remove(id)
             }
         }
         inFlight.replace(id, cancel)
+    }
+
+    /** Borrow a session for [neighbour], read its master on it, and give the session back. */
+    private fun readOn(neighbour: Channel, keep: Set<String>, current: () -> Boolean) {
+        val lease = ahead(neighbour, keep) ?: return
+        try {
+            if (current()) read(lease.masterUrl, current)
+        } finally {
+            lease.release()
+        }
     }
 
     companion object {
@@ -157,7 +178,7 @@ class MasterPrefetch(
                     }
                     ({ future.cancel(true) })
                 },
-                masterAhead = route::masterAhead,
+                ahead = route::readAhead,
                 prefetching = picker::prefetching,
                 read = picker::prefetch,
             )
