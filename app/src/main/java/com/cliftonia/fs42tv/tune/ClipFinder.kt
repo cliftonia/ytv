@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.tune
 
 import android.util.Log
+import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.sync.Channel
@@ -76,6 +77,77 @@ internal class ClipFinder(private val deps: TuneController.Deps) {
         }
         Log.w("fs42", "channel ${channel.number}: $SKIP_DEAD_CLIPS consecutive clips unplayable")
         return null
+    }
+
+    /**
+     * [unresolved] - the clip [scheduled] names - made playable: its own url, or, when it is dead,
+     * the next clip on [channel] that resolves, as a rebuilt [Tuned]. [avoid] is the clip that
+     * just ended, which the walk must not land back on. Hands back [scheduled] and [unresolved]
+     * unchanged when nothing resolves, for the tune to report as such.
+     *
+     * The tune's own step, moved here whole from [TuneController] so that file stays the
+     * generation rules; it runs inside the tune, between its two supersede checks.
+     */
+    fun resolveOrSubstitute(
+        channel: Channel,
+        scheduled: Tuned,
+        unresolved: NeedsResolving,
+        now: Long,
+        avoid: Int?,
+    ): Pair<Tuned, Playable> {
+        var tuned = scheduled
+        var playable: Playable = unresolved
+        val videoId = unresolved.videoId
+        // Every rung refused means every resolver answers null - so do not ask. A full
+        // extraction just to learn that cost 2.4s of black on every retune of a condemned
+        // clip before the skip below ran anyway.
+        val resolved = if (deps.ledger.allRungsRefused(videoId, deps.ladder())) {
+            Log.i("fs42", "every rung of $videoId is refused; skipping it unresolved")
+            null
+        } else {
+            resolveToPlay(videoId, now)
+        }
+        if (resolved != null) {
+            playable = resolved
+        } else {
+            // Try the NEXT clips in the rotation rather than giving up on the channel.
+            //
+            // "Leaving the current picture up" was never what happened. Arriving here
+            // from a channel change, the previous picture has already been torn down and
+            // the black tuning card raised - and that card is only ever cleared by a
+            // first frame, which is now never coming. So the channel sat black and silent
+            // with no error and no retry until the clock rolled past the clip, which on a
+            // documentary channel is ninety minutes. It read as a dead remote.
+            //
+            // Dead clips are ordinary: the lineup is built nightly and videos are removed,
+            // made private or geo-blocked between then and airtime, and a finished
+            // livestream offers no progressive rendition at all. A television skips to
+            // what it CAN show.
+            Log.w("fs42", "channel ${channel.number} ${channel.name}: could not resolve " +
+                "$videoId; trying the next clips")
+            val candidates = deps.timetable.substitutes(
+                channel, now, tuned.streamIndex, tuned.endsAt, avoid = avoid)
+            val substitute = resolveNextPlayable(channel, candidates, now)
+            if (substitute != null) {
+                val (idx, sub) = substitute
+                // The whole Tuned is rebuilt, not just the playable: the banner, onAir
+                // and the end-of-clip marker all read the identity out of it, and leaving
+                // the dead clip's identity there labelled the substitute as a programme
+                // it is not. From its beginning because a clip that was never scheduled to be
+                // on now has nothing meaningful to seek to; no cut, since it is not the
+                // programme the schedule cuts.
+                tuned = tuned.copy(
+                    streamIndex = idx,
+                    stream = channel.streams[idx],
+                    playable = sub,
+                    offsetSeconds = deps.timetable.startOffset(channel.streams[idx]),
+                    cutAt = null,
+                    endsAt = deps.timetable.substituteEndsAt(channel, now, idx, tuned.endsAt),
+                )
+                playable = sub
+            }
+        }
+        return tuned to playable
     }
 
     private companion object {
