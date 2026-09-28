@@ -116,6 +116,17 @@ jobs:
         continue-on-error: true
         run: python3 build_pluto.py
 
+      - name: Rebuild live.json
+        # The LIVE TV dial: the reviewed draft and the owner's ticks, with tonight's dead links
+        # dropped the way pluto.json drops them - a Pluto id no Pluto playlist carries, a FAST url
+        # its iptv-org playlist no longer lists. Numbers never move here; a dead channel leaves a
+        # gap. Same terms as pluto.json: iptv-org unreachable, or most of the dial gone at once,
+        # writes nothing and the committed live.json stands. pluto.json keeps being published for
+        # the app versions that still read it.
+        working-directory: curation
+        continue-on-error: true
+        run: python3 publish_live.py
+
       - name: Test
         # After the rebuild, because the suite checks the real channels.json as well as the code -
         # a duplicate channel number or a live stream carrying a video id is only visible once the
@@ -152,7 +163,7 @@ jobs:
           git_ config user.email "lineup@users.noreply.github.com"
           git_ remote set-url origin \
             "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git_ add channels.json pluto.json curation/confs
+          git_ add channels.json pluto.json live.json curation/confs
           # Nothing to commit is a normal outcome: a refresh can legitimately find the same clips
           # it found last time, and that must not fail the run.
           if git_ diff --cached --quiet; then
@@ -161,5 +172,5 @@ jobs:
           fi
           git_ commit -m "chore: refresh the dial
 
-          - Update \`channels.json\`, \`pluto.json\` and the confs behind it"
+          - Update \`channels.json\`, \`pluto.json\`, \`live.json\` and the confs behind it"
           git_ push

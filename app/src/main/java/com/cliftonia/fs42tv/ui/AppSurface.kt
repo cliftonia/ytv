@@ -63,6 +63,7 @@ fun AppSurface(
         if (guide.visible.value) {
             ChannelPicker(
                 rows = guide.rows.value,
+                headings = guide.headings.value,
                 startIndex = guide.startIndex.value,
                 onPick = guide::pick,
                 onDismiss = guide::dismiss,
