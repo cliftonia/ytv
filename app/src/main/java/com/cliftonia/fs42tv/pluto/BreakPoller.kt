@@ -7,9 +7,10 @@ import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.TimeUnit
 
 /**
- * Reads the playlist of the Pluto channel on air every [POLL_MILLIS] and hands over what it says
- * about the break - a [BreakView] per read, on the stream's own clock ([BreakTimeline]) with the
- * two-read [BreakDetector] kept for a playlist without timestamps.
+ * Reads the playlist of the live channel on air every [POLL_MILLIS] and hands over what it says
+ * about the break - a [BreakView] per read, from the run's [BreakSource]: for Pluto the bumper on
+ * the stream's own clock ([BreakTimeline]) with the two-read [BreakDetector] kept for a playlist
+ * without timestamps ([BumperBreaks]); for a FAST channel its SCTE-35 cue tags (fast/CueBreaks).
  *
  * The first read is at the tune itself, not after the picture: it is the mpv clock's anchor
  * (see [OnScreen]), and the closer it lands to mpv's own read of the window, the surer that is.
@@ -43,11 +44,8 @@ class BreakPoller(
 
     class Fetched(val url: String, val body: String)
 
-    /** One tune's polling: its url, its detector, its variant. Never reused across tunes. */
-    class Run internal constructor(val masterUrl: String) {
-        internal val detector = BreakDetector()
-        internal val timeline = BreakTimeline()
-        internal var silentReads = 0
+    /** One tune's polling: its url, its [source], its variant. Never reused across tunes. */
+    class Run internal constructor(val masterUrl: String, internal val source: BreakSource) {
         /** When the latest variant read was sent - the anchor's clock. See [BreakView.firstReadAt]. */
         internal var requestedAt: Long? = null
         internal var lastStart: Long? = null
@@ -66,12 +64,13 @@ class BreakPoller(
     fun isCurrent(run: Run): Boolean = current === run && !run.stopped
 
     /**
-     * Poll [masterUrl] from scratch - a new detector - replacing any other run. [variant] is the
-     * media playlist the player itself opened, when the tune chose one; else the master's lowest.
+     * Poll [masterUrl] from scratch - a new [source], Pluto's bumper unless told otherwise -
+     * replacing any other run. [variant] is the media playlist the player itself opened, when the
+     * tune chose one; else the master's lowest.
      */
-    fun start(masterUrl: String, variant: String? = null): Run {
+    fun start(masterUrl: String, variant: String? = null, source: BreakSource = BumperBreaks()): Run {
         stop()
-        val run = Run(masterUrl).also { it.variant = variant }
+        val run = Run(masterUrl, source).also { it.variant = variant }
         current = run
         next(run, FIRST_READ_MILLIS)
         return run
@@ -97,39 +96,24 @@ class BreakPoller(
         run.requestedAt = null
         val body = fetchPlaylist(run)
         val readAt = wallMillis()
-        val requestedAt = run.requestedAt ?: readAt
-        val before = run.detector.state
-        val window = HlsWindow.parse(body)
-        val longEnough = window != null && window.segments.all { it.bumper } &&
-            window.segments.sumOf { it.durationMillis } >= BreakView.MIN_BREAK_MILLIS
-        val after = run.detector.feed(body, nowMillis(), longEnough)
-        if (window != null) {
-            run.timeline.feed(window, readAt, requestedAt)
-            run.silentReads = 0
-        } else {
-            run.silentReads++
-        }
+        val view = run.source.read(body, readAt, run.requestedAt ?: readAt, nowMillis())
         if (!isCurrent(run)) return
-        val view = run.timeline.view().copy(
-            blind = run.silentReads >= BreakDetector.MAX_UNKNOWN_READS,
-            fallbackInBreak = after == BreakDetector.State.IN_BREAK,
-        )
-        log(run, view, before, after)
+        log(run, view)
         read(run, view)
         next(run, POLL_MILLIS)
     }
 
     /** What changed, once each - never the url: a direct-route one carries the session's token. */
-    private fun log(run: Run, view: BreakView, before: BreakDetector.State, after: BreakDetector.State) {
+    private fun log(run: Run, view: BreakView) {
+        val label = run.source.label
         if (view.start != run.lastStart && view.start != null) {
-            android.util.Log.i("fs42", "pluto break starts at ${java.time.Instant.ofEpochMilli(view.start)}")
+            android.util.Log.i("fs42", "$label break starts at ${java.time.Instant.ofEpochMilli(view.start)}")
         }
         if (view.end != run.lastEnd && view.end != null) {
-            android.util.Log.i("fs42", "pluto break ends at ${java.time.Instant.ofEpochMilli(view.end)}")
+            android.util.Log.i("fs42", "$label break ends at ${java.time.Instant.ofEpochMilli(view.end)}")
         }
         run.lastStart = view.start
         run.lastEnd = view.end
-        if (!view.timed && after != before) android.util.Log.i("fs42", "pluto break (untimed): $after")
     }
 
     /** The media playlist's body, or null for a read that says nothing. */
