@@ -44,6 +44,8 @@ class PlutoBreakAdsTest {
         var adsOn = true
         var overlay = false
         var failFetches = false
+        /** As Pluto's stitcher really writes it: a PDT at the head of every window, too. */
+        var headPdt = false
         val plays = mutableListOf<Double>()
         val retunes = mutableListOf<Long>()
         var parks = 0
@@ -58,6 +60,7 @@ class PlutoBreakAdsTest {
             appendLine("#EXTM3U")
             appendLine("#EXT-X-TARGETDURATION:5")
             appendLine("#EXT-X-MEDIA-SEQUENCE:$first")
+            if (headPdt) appendLine("#EXT-X-PROGRAM-DATE-TIME:${Instant.ofEpochMilli(t0 + first * 5_000)}")
             (first..newest).forEach { i ->
                 if (i > 0 && bumper(i) != bumper(i - 1)) {
                     appendLine("#EXT-X-DISCONTINUITY")
@@ -353,5 +356,32 @@ class PlutoBreakAdsTest {
         subject.ads!!.firstFrame()
         subject.switchedOff()
         assertEquals(listOf(116_500L), stage.retunes)
+    }
+
+    private fun Stage.surfedIn(subject: PlutoBreak, at: Long) {
+        until(at)
+        subject.loading(tuned)
+        until(at + 1_500)
+        subject.playing(tuned)
+    }
+
+    @Test
+    fun `surfed in mid-break - commercials under black, never the card`() {
+        val stage = Stage(minuteBreak)
+        val subject = stage.subject()
+        stage.surfedIn(subject, 120_000)
+        stage.until(125_000)
+        assertEquals(1, stage.plays.size)
+        assertTrue(subject.inBreak && subject.state.value!!.blank)
+    }
+
+    @Test
+    fun `surfed in deep in a break, its start long gone - Pluto's head PDT still gets commercials`() {
+        val stage = Stage(minuteBreak).apply { headPdt = true }
+        val subject = stage.subject()
+        stage.surfedIn(subject, 150_000)
+        stage.until(155_000)
+        assertEquals(1, stage.plays.size)
+        assertTrue(subject.inBreak && subject.state.value!!.blank)
     }
 }
