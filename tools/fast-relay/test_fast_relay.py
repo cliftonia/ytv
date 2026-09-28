@@ -155,15 +155,87 @@ class TestValidate(unittest.TestCase):
             fast_relay.validate("https://nowhere.invalid/", fails)
 
 
+class _Conn:
+    """Enough of an HTTPConnection for the pool: a socket, and whether it was closed."""
+
+    def __init__(self):
+        self.sock = object()
+        self.closed = False
+
+    def close(self):
+        self.closed = True
+        self.sock = None
+
+
+class TestPool(unittest.TestCase):
+
+    def setUp(self):
+        self.now = 0.0
+        self.pool = fast_relay.Pool(per_host=2, total=3, idle_seconds=30, clock=lambda: self.now)
+
+    def test_a_connection_is_reused_only_for_the_same_host_and_validated_address(self):
+        key = ("https", "cdn.example", 443, "104.16.1.1")
+        conn = _Conn()
+        self.assertTrue(self.pool.give(key, conn))
+        self.assertIsNone(self.pool.take(("https", "cdn.example", 443, "104.16.9.9")),
+                          "another address - another validation's answer - never gets it")
+        self.assertIsNone(self.pool.take(("http", "cdn.example", 443, "104.16.1.1")))
+        self.assertIs(self.pool.take(key), conn)
+        self.assertIsNone(self.pool.take(key), "handed out once")
+
+    def test_caps_per_host_and_in_all(self):
+        a, b = ("https", "a.example", 443, "1.1.1.1"), ("https", "b.example", 443, "2.2.2.2")
+        conns = [_Conn() for _ in range(5)]
+        self.assertTrue(self.pool.give(a, conns[0]))
+        self.assertTrue(self.pool.give(a, conns[1]))
+        self.assertFalse(self.pool.give(a, conns[2]))
+        self.assertTrue(conns[2].closed)
+        self.assertTrue(self.pool.give(b, conns[3]))
+        self.assertFalse(self.pool.give(b, conns[4]), "three idle in all at most")
+        self.assertEqual(len(self.pool), 3)
+
+    def test_idle_connections_are_closed_after_the_timeout(self):
+        key = ("https", "a.example", 443, "1.1.1.1")
+        conn = _Conn()
+        self.pool.give(key, conn)
+        self.now += 31
+        self.pool.sweep()
+        self.assertTrue(conn.closed)
+        self.assertIsNone(self.pool.take(key))
+
+    def test_a_closed_connection_is_never_handed_out(self):
+        key = ("https", "a.example", 443, "1.1.1.1")
+        conn = _Conn()
+        self.pool.give(key, conn)
+        conn.close()
+        self.assertIsNone(self.pool.take(key))
+
+
 class _Upstream(http.server.BaseHTTPRequestHandler):
-    """A stand-in CDN: a redirecting master, a media playlist and a segment that honours Range."""
+    """A stand-in CDN: a redirecting master, a media playlist and a segment that honours Range.
+    HTTP/1.1 keep-alive, like a real one, counting the connections it is asked on."""
     segment = bytes(range(256)) * 400
+    protocol_version = "HTTP/1.1"
+    connections = 0
+
+    def setup(self):
+        super().setup()
+        type(self).connections += 1
 
     def log_message(self, *args):
         pass
 
     def do_GET(self):
-        if self.path == "/start.m3u8":
+        if self.path == "/abrupt.m3u8":
+            # Answers, then drops the connection without saying so - an idle timeout on the CDN.
+            body = b"#EXTM3U\n#EXTINF:6.0,\nseg1.ts\n"
+            self.send_response(200)
+            self.send_header("Content-Type", "application/vnd.apple.mpegurl")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            self.close_connection = True
+        elif self.path == "/start.m3u8":
             self.send_response(302)
             self.send_header("Location", "/live/index.m3u8")
             self.send_header("Content-Length", "0")
@@ -213,8 +285,60 @@ class TestRelayEndToEnd(unittest.TestCase):
             server.shutdown()
             server.server_close()
 
+    def setUp(self):
+        fast_relay.POOL.clear()
+
     def get(self, url, **headers):
         return urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=5)
+
+    def fetch(self, path):
+        u = urllib.parse.quote(self.upstream + path, safe="")
+        with mock.patch.object(fast_relay, "_global", return_value=True):
+            with self.get(self.relay + "/hls?u=" + u) as response:
+                return response.read()
+
+    def test_upstream_connections_are_reused_across_requests_and_redirects(self):
+        before = _Upstream.connections
+        for _ in range(3):
+            self.fetch("/start.m3u8")
+            self.fetch("/live/seg1.ts")
+        self.assertEqual(_Upstream.connections - before, 1,
+                         "one connection for three redirects, three playlists and three segments")
+        self.assertEqual(len(fast_relay.POOL), 1)
+
+    def test_a_connection_the_upstream_dropped_while_idle_is_retried_fresh(self):
+        self.fetch("/abrupt.m3u8")
+        self.assertEqual(len(fast_relay.POOL), 1, "it looked reusable")
+        before = _Upstream.connections
+        self.assertIn(b"#EXTM3U", self.fetch("/live/index.m3u8"))
+        self.assertEqual(_Upstream.connections - before, 1)
+
+    def test_only_a_response_read_to_its_end_on_a_kept_connection_goes_back_in_the_pool(self):
+        class Response:
+            def __init__(self, closed, will_close):
+                self._closed, self.will_close = closed, will_close
+
+            def isclosed(self):
+                return self._closed
+
+        key = ("https", "a.example", 443, "1.1.1.1")
+        pool = fast_relay.Pool()
+        for closed, will_close, kept in ((True, False, True), (False, False, False), (True, True, False)):
+            conn = _Conn()
+            fast_relay.finish(conn, Response(closed, will_close), key, pool)
+            self.assertEqual(not conn.closed, kept, (closed, will_close))
+            pool.clear()
+        conn = _Conn()
+        fast_relay.finish(conn, Response(True, False), None, pool)
+        self.assertTrue(conn.closed, "no key - the relay raised mid-reply - is never pooled")
+
+    def test_the_address_check_still_runs_on_every_request_with_a_pool(self):
+        self.fetch("/live/index.m3u8")
+        self.assertEqual(len(fast_relay.POOL), 1)
+        u = urllib.parse.quote(self.upstream + "/live/index.m3u8", safe="")
+        with self.assertRaises(urllib.error.HTTPError) as caught:
+            self.get(self.relay + "/hls?u=" + u)
+        self.assertEqual(caught.exception.code, 403, "a pooled connection is no way around it")
 
     def test_redirects_are_followed_and_the_playlist_rewritten_against_the_final_url(self):
         with mock.patch.object(fast_relay, "_global", return_value=True):
