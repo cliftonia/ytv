@@ -18,6 +18,10 @@ import kotlinx.serialization.json.Json
  * the list always ends on title 0 - so a time past the listings, or in a hole in them, has no
  * answer rather than whatever aired last.
  *
+ * Optionally, `descs` and `icons` tables and per channel an `info` list alongside the pairs - one
+ * (description index, picture index) per programme, 0 for none - for the picker's details pane.
+ * A file without them, or a channel without an `info` list, answers titles only.
+ *
  * Pure and immutable: parsed once per download, then read from the UI thread and the executors.
  */
 class FastGuide private constructor(
@@ -28,7 +32,14 @@ class FastGuide private constructor(
     /** Per channel key: starts (minutes after base) and title indexes, the same length. */
     private val starts: Map<String, IntArray>,
     private val titleIndexes: Map<String, IntArray>,
+    private val descs: List<String> = emptyList(),
+    private val icons: List<String> = emptyList(),
+    /** Per channel key: description and picture indexes, the length of its starts; may be absent. */
+    private val infos: Map<String, IntArray> = emptyMap(),
 ) {
+
+    /** One programme as the picker's details pane shows it: blanks for what the guide lacks. */
+    data class Programme(val title: String, val description: String = "", val imageUrl: String? = null)
 
     /** How many channels the file covers - for the log line on each download. */
     val size: Int get() = starts.size
@@ -37,7 +48,10 @@ class FastGuide private constructor(
      * The title on air on [channel] at [nowMillis], or null: a channel with no guide in the file,
      * a time before its first listing or after its last, or a hole in its listings.
      */
-    fun titleAt(channel: Channel, nowMillis: Long): String? {
+    fun titleAt(channel: Channel, nowMillis: Long): String? = programmeAt(channel, nowMillis)?.title
+
+    /** As [titleAt], with the programme's description and picture where the file has them. */
+    fun programmeAt(channel: Channel, nowMillis: Long): Programme? {
         val key = keyOf(channel) ?: return null
         val at = starts[key] ?: return null
         val minute = Math.floorDiv(nowMillis / 1000 - baseSeconds, 60L)
@@ -55,7 +69,12 @@ class FastGuide private constructor(
             }
         }
         if (found < 0) return null
-        return titles.getOrNull(titleIndexes.getValue(key)[found])?.takeIf { it.isNotBlank() }
+        val title = titles.getOrNull(titleIndexes.getValue(key)[found])?.takeIf { it.isNotBlank() }
+            ?: return null
+        val info = infos[key]
+        val desc = info?.getOrNull(found * 2)?.let(descs::getOrNull).orEmpty()
+        val icon = info?.getOrNull(found * 2 + 1)?.let(icons::getOrNull)?.takeIf { it.startsWith("https://") }
+        return Programme(title, desc, icon)
     }
 
     @Serializable
@@ -64,6 +83,9 @@ class FastGuide private constructor(
         val base: Long = 0,
         val titles: List<String> = emptyList(),
         val channels: Map<String, List<Int>> = emptyMap(),
+        val descs: List<String> = emptyList(),
+        val icons: List<String> = emptyList(),
+        val info: Map<String, List<Int>> = emptyMap(),
     )
 
     companion object {
@@ -92,14 +114,18 @@ class FastGuide private constructor(
             require(wire.base > 0) { "not a fast guide" }
             val starts = HashMap<String, IntArray>(wire.channels.size * 2)
             val titleIndexes = HashMap<String, IntArray>(wire.channels.size * 2)
+            val infos = HashMap<String, IntArray>(wire.info.size * 2)
             for ((key, flat) in wire.channels) {
                 if (flat.isEmpty() || flat.size % 2 != 0) continue
                 val s = IntArray(flat.size / 2) { flat[it * 2] }
                 if ((1 until s.size).any { s[it] < s[it - 1] }) continue
                 starts[key] = s
                 titleIndexes[key] = IntArray(flat.size / 2) { flat[it * 2 + 1] }
+                // Only an info list that lines up with the pairs; any other is ignored, not trusted.
+                wire.info[key]?.takeIf { it.size == flat.size }?.let { infos[key] = it.toIntArray() }
             }
-            return FastGuide(wire.generated, wire.base, wire.titles, starts, titleIndexes)
+            return FastGuide(wire.generated, wire.base, wire.titles, starts, titleIndexes,
+                wire.descs, wire.icons, infos)
         }
     }
 }
