@@ -88,8 +88,26 @@ class SessionPool internal constructor(
      * slot on screen now, from whichever pool; [rotate] false is slot 0, always.
      */
     fun pick(channelId: String, rotate: Boolean, current: SessionSlot?): SessionSlot = synchronized(lock) {
+        if (!rotate || !rotating) {
+            // Slot 0 regardless - and a read ahead may be mid-master on it (the engine switched to
+            // Media3, or a twin stopped the rotation, under a lease). Its read landing after this
+            // tune's would end the picture, so wait it out; pending first, so no new lease starts.
+            pending = slots[0]
+            awaitIdle(slots[0])
+        }
         // Pending until [take]: a read ahead must not choose it while the tune fetches its session.
         choose(channelId, rotate, current).also { pending = it }
+    }
+
+    /** Under the lock, on the tune thread: until no read ahead holds [slot], or [BUSY_WAIT_MILLIS]. */
+    private fun awaitIdle(slot: SessionSlot) {
+        val deadline = System.nanoTime() + BUSY_WAIT_MILLIS * 1_000_000
+        while (!idle(slot)) {
+            val leftMillis = (deadline - System.nanoTime()) / 1_000_000
+            if (leftMillis <= 0) return
+            @Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN")
+            (lock as Object).wait(leftMillis)
+        }
     }
 
     private fun choose(channelId: String, rotate: Boolean, current: SessionSlot?): SessionSlot {
@@ -148,7 +166,13 @@ class SessionPool internal constructor(
             }
             chosen?.also { busy[it] = (busy[it] ?: 0) + 1 }
         } ?: return null
-        val release = { synchronized(lock) { busy[slot]?.let { if (it <= 1) busy.remove(slot) else busy[slot] = it - 1 } } }
+        val release = {
+            synchronized(lock) {
+                busy[slot]?.let { if (it <= 1) busy.remove(slot) else busy[slot] = it - 1 }
+                @Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN")
+                (lock as Object).notifyAll()
+            }
+        }
         val held = runCatching { session(slot) }.getOrNull()
         val claim = held?.let {
             synchronized(lock) {
@@ -185,5 +209,8 @@ class SessionPool internal constructor(
          * 3s read), and that master landing after another channel's would end the other one.
          */
         const val QUIET_MILLIS = 10_000L
+
+        /** The most a slot-0 tune waits on a read ahead still on it: past one slow master read. */
+        const val BUSY_WAIT_MILLIS = 4_000L
     }
 }
