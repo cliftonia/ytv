@@ -68,6 +68,12 @@ class DialLoader(
      * channel change, and not the prefetch thread, whose neighbour resolves it would stall.
      */
     private val refresh: (Runnable) -> Unit = { Thread(it, "dial-refresh").start() },
+    /**
+     * The stamp ([DialRepository.stampOf]) of the lineup delivered, then of each one a refresh
+     * brings - so what is built from the lineup can follow it. A cached lineup's is hashed on the
+     * refresh thread, off the tune thread's first picture.
+     */
+    private val onLineup: (stamp: String) -> Unit = {},
 ) {
 
     fun load() {
@@ -78,7 +84,10 @@ class DialLoader(
             val fresh = isFresh(File(cacheDir, source.cacheFile))
             if (!cached.isNullOrEmpty() && fresh) {
                 onDial(cached, requestedAt)
-                refresh(Runnable { refreshForNextLaunch(repo) })
+                refresh(Runnable {
+                    repo.cachedStamp()?.let(onLineup)
+                    refreshForNextLaunch(repo)
+                })
                 return@execute
             }
             // A stale cache still beats a card, but not before the network has had a quick try.
@@ -102,6 +111,7 @@ class DialLoader(
                 return@execute
             }
             onDial(channels, requestedAt)
+            (synced?.stamp ?: repo.cachedStamp())?.let(onLineup)
         }
     }
 
@@ -126,7 +136,10 @@ class DialLoader(
     private fun refreshForNextLaunch(repo: DialRepository) {
         if (halted()) return
         runCatching { repo.sync(source.url) }
-            .onSuccess { Log.i("fs42", "lineup refreshed for next launch") }
+            .onSuccess {
+                Log.i("fs42", "lineup refreshed for next launch")
+                onLineup(it.stamp)
+            }
             .onFailure { Log.w("fs42", "lineup refresh failed; the cached dial stands: $it") }
     }
 }

@@ -3,10 +3,12 @@
 fetches anything but a public http(s) address - the namespace can reach the host, and the host
 the LAN."""
 import http.server
+import json
 import os
 import socket
 import sys
 import threading
+import time
 import unittest
 import urllib.parse
 import urllib.request
@@ -226,7 +228,16 @@ class _Upstream(http.server.BaseHTTPRequestHandler):
         pass
 
     def do_GET(self):
-        if self.path == "/abrupt.m3u8":
+        if self.path.startswith("/oz/epg"):
+            # A guide api, as Tubi's: JSON, which says back the language it was asked in.
+            body = json.dumps({"rows": [{"content_id": "1", "title": "#EXTM3U is not a playlist"}],
+                               "language": self.headers.get("Accept-Language")}).encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+        elif self.path == "/abrupt.m3u8":
             # Answers, then drops the connection without saying so - an idle timeout on the CDN.
             body = b"#EXTM3U\n#EXTINF:6.0,\nseg1.ts\n"
             self.send_response(200)
@@ -291,11 +302,31 @@ class TestRelayEndToEnd(unittest.TestCase):
     def get(self, url, **headers):
         return urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=5)
 
-    def fetch(self, path):
+    def fetch(self, path, **headers):
         u = urllib.parse.quote(self.upstream + path, safe="")
         with mock.patch.object(fast_relay, "_global", return_value=True):
-            with self.get(self.relay + "/hls?u=" + u) as response:
+            with self.get(self.relay + "/hls?u=" + u, **headers) as response:
                 return response.read()
+
+    def pooled(self, count):
+        """The pool's size once it holds [count]: the relay hands its connection back just after
+        the client has the last byte, so a check made at once can beat it."""
+        deadline = time.monotonic() + 2
+        while len(fast_relay.POOL) < count and time.monotonic() < deadline:
+            time.sleep(0.01)
+        return len(fast_relay.POOL)
+
+    def test_a_json_reply_passes_through_unchanged_with_its_language(self):
+        body = self.fetch("/oz/epg/programming?content_id=1", **{"Accept-Language": "en-US,en;q=0.9"})
+        reply = json.loads(body)
+        self.assertEqual(reply["rows"][0]["title"], "#EXTM3U is not a playlist")
+        self.assertEqual(reply["language"], "en-US,en;q=0.9")
+
+    def test_only_a_plain_accept_language_travels_on(self):
+        for odd in ("<script>", "en-US(x)", "en-US," * 20):
+            with self.subTest(odd=odd):
+                self.assertIsNone(json.loads(self.fetch("/oz/epg", **{"Accept-Language": odd}))["language"])
+        self.assertIsNone(json.loads(self.fetch("/oz/epg"))["language"])
 
     def test_upstream_connections_are_reused_across_requests_and_redirects(self):
         before = _Upstream.connections
@@ -304,11 +335,11 @@ class TestRelayEndToEnd(unittest.TestCase):
             self.fetch("/live/seg1.ts")
         self.assertEqual(_Upstream.connections - before, 1,
                          "one connection for three redirects, three playlists and three segments")
-        self.assertEqual(len(fast_relay.POOL), 1)
+        self.assertEqual(self.pooled(1), 1)
 
     def test_a_connection_the_upstream_dropped_while_idle_is_retried_fresh(self):
         self.fetch("/abrupt.m3u8")
-        self.assertEqual(len(fast_relay.POOL), 1, "it looked reusable")
+        self.assertEqual(self.pooled(1), 1, "it looked reusable")
         before = _Upstream.connections
         self.assertIn(b"#EXTM3U", self.fetch("/live/index.m3u8"))
         self.assertEqual(_Upstream.connections - before, 1)
@@ -334,7 +365,7 @@ class TestRelayEndToEnd(unittest.TestCase):
 
     def test_the_address_check_still_runs_on_every_request_with_a_pool(self):
         self.fetch("/live/index.m3u8")
-        self.assertEqual(len(fast_relay.POOL), 1)
+        self.assertEqual(self.pooled(1), 1)
         u = urllib.parse.quote(self.upstream + "/live/index.m3u8", safe="")
         with self.assertRaises(urllib.error.HTTPError) as caught:
             self.get(self.relay + "/hls?u=" + u)

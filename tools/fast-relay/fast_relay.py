@@ -28,7 +28,8 @@ NOT AN OPEN PROXY. Only http(s) upstreams, and only to globally routable address
 is resolved here and the connection made to the address that was checked (no DNS rebinding), and
 each redirect hop is checked again - the namespace can reach the host on 10.103.1.1, and nothing
 on the LAN or tailnet may be asked for through this. Upstream connections are capped. Logs name
-the upstream host and file, never a query string: these urls carry tokens.
+the upstream host and file, never a query string: these urls carry tokens. Of the client's headers
+only Range and a plain Accept-Language travel on (Tubi's guide answers no other language).
 
 KEPT ALIVE. The tunnel's exit is ~160ms away, and a fresh TCP and TLS handshake per request was
 most of a relayed channel's 7-9s start: its master, playlist and first segments each paid one.
@@ -80,6 +81,7 @@ PLAYLIST_TYPE = "application/vnd.apple.mpegurl"
 URI_ATTR = re.compile(r'URI="([^"]*)"')
 HOST_HEADER = re.compile(r"^(?:[A-Za-z0-9.-]{1,253}|\[[0-9A-Fa-f:.]{2,45}\])(?::\d{1,5})?$")
 NAME_UNSAFE = re.compile(r"[^A-Za-z0-9._-]")
+LANGUAGE = re.compile(r"[A-Za-z0-9*,;=. -]{1,64}")
 
 log = logging.getLogger("fast-relay")
 
@@ -415,6 +417,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
         is_m3u8 = urllib.parse.urlsplit(upstream).path.lower().endswith((".m3u8", ".m3u"))
         if range_header and not is_m3u8:
             headers["Range"] = range_header
+        language = self.headers.get("Accept-Language") or ""
+        if LANGUAGE.fullmatch(language):
+            headers["Accept-Language"] = language
         started = time.monotonic()
         conn, response, final_url, key = open_upstream(upstream, headers)
         try:
