@@ -66,6 +66,8 @@ class ScreenExtras(private val deps: Deps) {
         val fastGuide: FastGuideStore? = null,
         /** Keeps the neighbours' joins warm, and hands a surf onto one its loopback copy. */
         val prejoin: Prejoin? = null,
+        /** The LIVE TV picker's details pane, behind GUIDE DETAILS; null for none. */
+        val guideDetails: GuideDetails? = null,
     )
 
     /**
@@ -180,6 +182,9 @@ class ScreenExtras(private val deps: Deps) {
     }
 
     val features: Features get() = deps.features
+
+    /** The LIVE TV picker's details pane; null when this screen has none. */
+    val guideDetails: GuideDetails? get() = deps.guideDetails
 
     /** `ads.json`, for [BreakAds]; null when this build of the screen has no cache directory. */
     val adCatalog: AdCatalogStore? get() = deps.adCatalog
@@ -337,14 +342,24 @@ class ScreenExtras(private val deps: Deps) {
                 fastMaster = { channel -> FastRelay.liveUrl(channel, homeServer) },
                 enabled = { features.isOn(Features.Flag.PREJOIN) },
             )
-            return ScreenExtras(Deps(
-                features = features,
-                plutoGuide = PlutoGuide(
-                    fetch = PlutoApi::httpGet,
+            val plutoGuide = PlutoGuide(
+                fetch = PlutoApi::httpGet,
+                executor = prefetchExecutor,
+                nowMillis = now,
+                enabled = { features.isOn(Features.Flag.PLUTO_GUIDE) },
+            )
+            val fastGuide = cacheDir?.let {
+                FastGuideStore(
+                    file = java.io.File(it, FastGuideStore.FILE_NAME),
+                    fetch = FastGuideStore::httpFetch,
                     executor = prefetchExecutor,
                     nowMillis = now,
-                    enabled = { features.isOn(Features.Flag.PLUTO_GUIDE) },
-                ),
+                    enabled = { features.isOn(Features.Flag.FAST_GUIDE) },
+                )
+            }
+            return ScreenExtras(Deps(
+                features = features,
+                plutoGuide = plutoGuide,
                 runOnUi = runOnUi,
                 halted = halted,
                 nowMillis = now,
@@ -365,15 +380,9 @@ class ScreenExtras(private val deps: Deps) {
                 },
                 adMirror = { id -> AdMirror.url(homeServer(), id) },
                 relayServer = homeServer,
-                fastGuide = cacheDir?.let {
-                    FastGuideStore(
-                        file = java.io.File(it, FastGuideStore.FILE_NAME),
-                        fetch = FastGuideStore::httpFetch,
-                        executor = prefetchExecutor,
-                        nowMillis = now,
-                        enabled = { features.isOn(Features.Flag.FAST_GUIDE) },
-                    )
-                },
+                fastGuide = fastGuide,
+                guideDetails = GuideDetails.create(features, fastGuide, plutoGuide, cacheDir,
+                    prefetchExecutor, runOnUi, halted),
             ))
         }
 

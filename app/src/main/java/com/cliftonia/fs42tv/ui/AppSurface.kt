@@ -68,6 +68,10 @@ fun AppSurface(
                 onPick = guide::pick,
                 onDismiss = guide::dismiss,
                 onSettled = guide::settled,
+                detailed = guide.detailed.value,
+                details = { guide.details.value },
+                art = { guide.art.value },
+                onHighlighted = guide::highlighted,
             )
         }
     }
