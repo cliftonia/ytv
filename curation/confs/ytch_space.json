@@ -21,7 +21,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FNR7a8joCGs",
                 "duration": 4605,
-                "title": "Chaos in Space 💥 | How the Universe Works | Science Channel"
+                "title": "Chaos in Space 💥 | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
@@ -127,7 +129,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=t8uucg1ajcU",
                 "duration": 3230,
-                "title": "How Hard Is It to Go Back? — Inside NASA’s Race to the Moon | Full Documentary | NOVA | PB"
+                "title": "How Hard Is It to Go Back? — Inside NASA’s Race to the Moon | Full Documentary | NOVA | PB",
+                "skip": [
+                    [
+                        98.1,
+                        119.8
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=uSjZOBDOoaM",
@@ -144,7 +153,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
                 "duration": 3238,
-                "title": "Decoding the Universe: Quantum | Full Documentary | NOVA | PBS"
+                "title": "Decoding the Universe: Quantum | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        138.1,
+                        158.9
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=gXE1gdWzugk",
@@ -216,7 +232,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Yla5i5tzXKE",
                 "duration": 4836,
-                "title": "An Epic Journey Around The Milky Way | Space Documentary 2024"
+                "title": "An Epic Journey Around The Milky Way | Space Documentary 2024",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=w9UfJTAjIdk",
@@ -276,17 +294,23 @@
             {
                 "url": "https://www.youtube.com/watch?v=TwmHJ9ym3cA",
                 "duration": 4843,
-                "title": "A Glitch in Quantum Reality: The Illusion of Time | Space Documentary 2026"
+                "title": "A Glitch in Quantum Reality: The Illusion of Time | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=E8ZbDrxSMX0",
                 "duration": 3348,
-                "title": "Are we in Danger? Black Holes and Killer Stars | How the Universe Works | Science Channel"
+                "title": "Are we in Danger? Black Holes and Killer Stars | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=nXbXF6OnBbY",
                 "duration": 4056,
-                "title": "The Mysteries of Moons | How the Universe Works | Science Channel"
+                "title": "The Mysteries of Moons | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=tUXGG54jpFQ",
@@ -483,12 +507,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=ph-hRRw2KSM",
                 "duration": 3604,
-                "title": "The Moon 2026: Humanity Returns"
+                "title": "The Moon 2026: Humanity Returns",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=3gDTCt61Wcw",
                 "duration": 1863,
-                "title": "Beyond Earth: The 2026 Race to Colonize Moon and Mars (Full Documentary)"
+                "title": "Beyond Earth: The 2026 Race to Colonize Moon and Mars (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=IgFcU02FpM4",
@@ -545,7 +573,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=6gLDC9_bLb4",
                 "duration": 3850,
-                "title": "Brian Cox - The Incredible Wonders of The Universe"
+                "title": "Brian Cox - The Incredible Wonders of The Universe",
+                "skip": [
+                    [
+                        292.5,
+                        368.1
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=ix_kg65xO3I",
@@ -572,12 +607,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=eNy01Hmbl58",
                 "duration": 2576,
-                "title": "Was There Life on Mars? | Galaxy | Free Documentary Space"
+                "title": "Was There Life on Mars? | Galaxy | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=ttPYQClOxc4",
                 "duration": 3844,
-                "title": "Story of The Universe — Fall Asleep to Astronomy"
+                "title": "Story of The Universe — Fall Asleep to Astronomy",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=E-xnFvlGgOk",
@@ -589,7 +628,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tiGHASY-1f4",
                 "duration": 3125,
-                "title": "Asteroids: Life And Death From Outer Space | Free Documentary Space"
+                "title": "Asteroids: Life And Death From Outer Space | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=DXUISKkSmJQ",
@@ -623,7 +664,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DX3tn_ADw0M",
                 "duration": 3611,
-                "title": "Brian Cox- The Fermi Paradox Will Change How You See The Universe"
+                "title": "Brian Cox- The Fermi Paradox Will Change How You See The Universe",
+                "skip": [],
+                "skip_checked": 1790634163
             }
         ],
         "search_query": "space astronomy documentary",

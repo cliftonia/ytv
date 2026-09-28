@@ -111,7 +111,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=13VJ8EHlzjI",
                 "duration": 778,
-                "title": "Restoration of Old Rusty Horseshoe"
+                "title": "Restoration of Old Rusty Horseshoe",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=8byFaoryOJ4",
@@ -137,7 +139,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VIwGvlvI_a0",
                 "duration": 1289,
-                "title": "Massive Carrier Plate Repair | Precision Machining & Metal Restoration"
+                "title": "Massive Carrier Plate Repair | Precision Machining & Metal Restoration",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=4F7A5RAo4EM",
@@ -234,7 +238,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZRIBNLUXbZo",
                 "duration": 4729,
-                "title": "Building an Off Grid Forge on My Alaskan Homestead"
+                "title": "Building an Off Grid Forge on My Alaskan Homestead",
+                "skip": [
+                    [
+                        4718.2,
+                        4728.3
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=QD8ry4gHApU",
@@ -370,7 +381,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=f76-4jNFsD4",
                 "duration": 619,
-                "title": "Restoration Antique RUSTED Charcoal Iron"
+                "title": "Restoration Antique RUSTED Charcoal Iron",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=YhsJoMJQtBk",
@@ -454,7 +467,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6Bgj5pz1XeY",
                 "duration": 275,
-                "title": "Arm restoration 4 #armor #medieval #renaissance #Knight"
+                "title": "Arm restoration 4 #armor #medieval #renaissance #Knight",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=vtYBzx2cOrc",
@@ -471,7 +486,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=THNgXNS0xt8",
                 "duration": 481,
-                "title": "Can This Rusty Tool Be Saved? | Full Restoration"
+                "title": "Can This Rusty Tool Be Saved? | Full Restoration",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=-Mjn6OwA10s",
@@ -604,7 +621,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=61XOXOs7bK8",
                 "duration": 1192,
-                "title": "Resources Restoration"
+                "title": "Resources Restoration",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=P6B02l2mHv0",

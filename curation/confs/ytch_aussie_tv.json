@@ -82,7 +82,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FT6NOwSqONE",
                 "duration": 1351,
-                "title": "Out of Toon | S1 E26 | Full Episode | Phineas and Ferb | @disneychannel"
+                "title": "Out of Toon | S1 E26 | Full Episode | Phineas and Ferb | @disneychannel",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=q4uJW4FU8HA",
@@ -149,7 +151,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=O3ayxQdKv4A",
                 "duration": 1799,
-                "title": "Illuzion | Season 1, Episode 1 | Channel 44 Adelaide Community TV (c. 2016)"
+                "title": "Illuzion | Season 1, Episode 1 | Channel 44 Adelaide Community TV (c. 2016)",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=n7r5JrS-C20",
@@ -175,7 +179,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nNxr2G59ImM",
                 "duration": 1281,
-                "title": "How Mick Fanning Survived a Shark Attack and Family Tragedy | 60 Minutes Australia"
+                "title": "How Mick Fanning Survived a Shark Attack and Family Tragedy | 60 Minutes Australia",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=glQEceZh49M",
@@ -187,12 +193,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=1peUr0FZ5D8",
                 "duration": 1503,
-                "title": "Why Scientists Are Warning Us About Everyday Plastics | 60 Minutes Australia"
+                "title": "Why Scientists Are Warning Us About Everyday Plastics | 60 Minutes Australia",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=dKtMkeqDVLs",
                 "duration": 1182,
-                "title": "ABC World News Tonight with David Muir Full Broadcast - Sept. 18, 2026"
+                "title": "ABC World News Tonight with David Muir Full Broadcast - Sept. 18, 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Iv5nhE8j02M",
@@ -204,7 +214,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Eea-ULHBYvQ",
                 "duration": 417,
-                "title": "McLeod’s Daughters reboot to hit Stan, 25 years after series launch | A Current Affair"
+                "title": "McLeod’s Daughters reboot to hit Stan, 25 years after series launch | A Current Affair",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=y7SwNsMUrhY",
@@ -233,7 +245,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=z_kJwxhDB98",
                 "duration": 269,
-                "title": "Baker accused of selling supermarket cakes for massive profit | A Current Affair"
+                "title": "Baker accused of selling supermarket cakes for massive profit | A Current Affair",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=64_7mbXVhOs",
@@ -250,7 +264,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UaUlJWkMqaU",
                 "duration": 1348,
-                "title": "Peppa Pig Learns How to BALANCE in MARTIAL ARTS!⭐School Trip Adventure | NEW Full Episodes"
+                "title": "Peppa Pig Learns How to BALANCE in MARTIAL ARTS!⭐School Trip Adventure | NEW Full Episodes",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=3J6z-VhcPdE",
@@ -300,12 +316,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=MnGUBhN7r3o",
                 "duration": 1974,
-                "title": "Lefties Losing It: Sydney Sweeney exposes two-faced feminists"
+                "title": "Lefties Losing It: Sydney Sweeney exposes two-faced feminists",
+                "skip": [
+                    [
+                        743.6,
+                        834.4
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=MRO7p8sKhhM",
                 "duration": 1248,
-                "title": "COPS Classic: “Give him a break” | Full Episode | COPS TV Show"
+                "title": "COPS Classic: “Give him a break” | Full Episode | COPS TV Show",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=WypmFCxRkOE",
@@ -379,7 +404,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zvmZ6vnfZI8",
                 "duration": 1794,
-                "title": "Full episode of : Hit scene ( Australian TV  August 16th 1969 )"
+                "title": "Full episode of : Hit scene ( Australian TV  August 16th 1969 )",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=RPR3OfX2tO0",
@@ -450,7 +477,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rbUgmMS582U",
                 "duration": 780,
-                "title": "The McVay way: Coaching the Los Angeles Rams while handling heavy expectations | 60 Minute"
+                "title": "The McVay way: Coaching the Los Angeles Rams while handling heavy expectations | 60 Minute",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=yaJFWNQxGl8",

@@ -208,7 +208,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=uwUt1fVLb3E",
                 "duration": 1667,
-                "title": "Alicia Keys: NPR Music Tiny Desk Concert"
+                "title": "Alicia Keys: NPR Music Tiny Desk Concert",
+                "skip": [
+                    [
+                        1659.4,
+                        1666.8
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=ClFp8yqfokk",
@@ -227,7 +234,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=eo0UxS6lnjA",
                 "duration": 1271,
-                "title": "Asake: Tiny Desk Concert"
+                "title": "Asake: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=B_ymY0xG0LI",
@@ -258,7 +267,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kes2P4IC2bQ",
                 "duration": 1680,
-                "title": "Juvenile: Tiny Desk Concert"
+                "title": "Juvenile: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Cg6E3lppn0I",
@@ -358,7 +369,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tPgSPOykA0M",
                 "duration": 1543,
-                "title": "Big Sean: Tiny Desk Concert"
+                "title": "Big Sean: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=SG0ifZpDswg",
@@ -387,7 +400,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-91vymvIH0c",
                 "duration": 1421,
-                "title": "Doechii: Tiny Desk Concert"
+                "title": "Doechii: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=m5XxOLdMSS8",
@@ -438,7 +453,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Y1f0WK9lsb0",
                 "duration": 1230,
-                "title": "Machel Montano: Tiny Desk Concert"
+                "title": "Machel Montano: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=t4p20PsP3cw",
@@ -545,7 +562,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=f7gIBB7jKc0",
                 "duration": 1356,
-                "title": "Clipse: Tiny Desk Concert"
+                "title": "Clipse: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=RTC6p6h_8tg",
@@ -557,7 +576,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nHVLEst0-5g",
                 "duration": 1278,
-                "title": "Daniel Norgren: NPR Music Tiny Desk Concert"
+                "title": "Daniel Norgren: NPR Music Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=H4uzympZPx0",

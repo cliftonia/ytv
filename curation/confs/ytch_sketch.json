@@ -144,7 +144,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Qhnn8cLnwVs",
                 "duration": 261,
-                "title": "THE AUDITION (Mark Angel Comedy) (Episode 105)"
+                "title": "THE AUDITION (Mark Angel Comedy) (Episode 105)",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=uEIFAQRbe8g",
@@ -264,7 +266,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TGviKgOb2nA",
                 "duration": 319,
-                "title": "Phoebe Helps Chloe Control Her New Powers 🧘‍♀️💥 | Clash of the Thundermans | Nickelodeon"
+                "title": "Phoebe Helps Chloe Control Her New Powers 🧘‍♀️💥 | Clash of the Thundermans | Nickelodeon",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=fySsg_WeEHo",
@@ -365,7 +369,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=R5Th9ilfylg",
                 "duration": 241,
-                "title": "Extreme Peace: \"Insurance Fraud Man\" Sketch"
+                "title": "Extreme Peace: \"Insurance Fraud Man\" Sketch",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=wituhGL4BFU",
@@ -382,7 +388,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RIMrLDOkDaM",
                 "duration": 1968,
-                "title": "MECHANIC LOVE 💕- SEASON 2 | EPISODE 1 |OPOKU |GRUMA |KOBBY|PEE|OHEMAA |JENNYTYRA|BABA|BALA"
+                "title": "MECHANIC LOVE 💕- SEASON 2 | EPISODE 1 |OPOKU |GRUMA |KOBBY|PEE|OHEMAA |JENNYTYRA|BABA|BALA",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=ASzE5CuYNks",
@@ -442,7 +450,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=A_3K55E1H88",
                 "duration": 3631,
-                "title": "The Nashville Comedy Festival Finale w Karlous Miller DC Young Fly and Chico Bean"
+                "title": "The Nashville Comedy Festival Finale w Karlous Miller DC Young Fly and Chico Bean",
+                "skip": [
+                    [
+                        1661.1,
+                        1758.0
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=2L6HqeaBuiM",

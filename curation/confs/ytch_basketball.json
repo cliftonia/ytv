@@ -73,17 +73,23 @@
             {
                 "url": "https://www.youtube.com/watch?v=gmTPOM9RMxU",
                 "duration": 629,
-                "title": "Phoenix Mercury vs. Dallas Wings | FULL GAME HIGHLIGHTS | September 19, 2026"
+                "title": "Phoenix Mercury vs. Dallas Wings | FULL GAME HIGHLIGHTS | September 19, 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Uqnm-1vQZLs",
                 "duration": 704,
-                "title": "Los Angeles Sparks vs. Dallas Wings | FULL GAME HIGHLIGHTS | September 17, 2026"
+                "title": "Los Angeles Sparks vs. Dallas Wings | FULL GAME HIGHLIGHTS | September 17, 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=nOOp60_WjYs",
                 "duration": 607,
-                "title": "Portland Fire vs. Golden State Valkyries | FULL GAME HIGHLIGHTS | September 18, 2026"
+                "title": "Portland Fire vs. Golden State Valkyries | FULL GAME HIGHLIGHTS | September 18, 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=lOvTZI3WewE",
@@ -130,7 +136,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9dCsT7UAYtU",
                 "duration": 815,
-                "title": "Washington Mystics vs. Chicago Sky | FULL GAME HIGHLIGHTS | September 17, 2026"
+                "title": "Washington Mystics vs. Chicago Sky | FULL GAME HIGHLIGHTS | September 17, 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=2laQM7vCgxA",
@@ -168,7 +176,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WpK11B6HH6g",
                 "duration": 903,
-                "title": "DLSU vs UST | FULL GAME HIGHLIGHTS | UAAP SEASON 89 MEN’S BASKETBALL | SEP 16, 2026"
+                "title": "DLSU vs UST | FULL GAME HIGHLIGHTS | UAAP SEASON 89 MEN’S BASKETBALL | SEP 16, 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=OcloemwGPu0",
@@ -239,7 +249,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Rnd0mK74jBA",
                 "duration": 486,
-                "title": "Highlights | ELIMINATOR | Barbados Tridents vs Jamaica Kingsmen | CPL 2026"
+                "title": "Highlights | ELIMINATOR | Barbados Tridents vs Jamaica Kingsmen | CPL 2026",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=rj2DY9dyutI",
@@ -256,7 +268,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JYrVL5Mn9e4",
                 "duration": 1251,
-                "title": "Kentucky Wildcats vs. Texas A&M Aggies | Full Game Highlights | ESPN College Football"
+                "title": "Kentucky Wildcats vs. Texas A&M Aggies | Full Game Highlights | ESPN College Football",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Iljp1keH_-o",
@@ -268,7 +282,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rOWGkfWSmgc",
                 "duration": 631,
-                "title": "Caitlin Clark TAKES OVER in FIBA Basketball | #FIBAWWC"
+                "title": "Caitlin Clark TAKES OVER in FIBA Basketball | #FIBAWWC",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=sG_B1vmBQiM",
@@ -335,7 +351,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=anUFo44tlcs",
                 "duration": 1337,
-                "title": "Alabama Crimson Tide vs. Kentucky Wildcats | Full Game Highlights | ESPN College Football"
+                "title": "Alabama Crimson Tide vs. Kentucky Wildcats | Full Game Highlights | ESPN College Football",
+                "skip": [
+                    [
+                        1321.6,
+                        1336.6
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=lRq9E2YtucU",
@@ -385,7 +408,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ip2-RypsYXo",
                 "duration": 576,
-                "title": "MVP Caitlin Clark SHATTERS MORE RECORDS 👀 As Indiana Fever Beat Tempo | Full Game Highligh"
+                "title": "MVP Caitlin Clark SHATTERS MORE RECORDS 👀 As Indiana Fever Beat Tempo | Full Game Highligh",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=xd03DXtZY6A",
@@ -462,7 +487,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tBl5wj-l73A",
                 "duration": 1026,
-                "title": "Ohio State Buckeyes vs. Texas Longhorns | Condensed Game | 2026 SEC Football"
+                "title": "Ohio State Buckeyes vs. Texas Longhorns | Condensed Game | 2026 SEC Football",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=Y7oU6VXJOVc",
@@ -517,12 +544,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=KkRaStOkeus",
                 "duration": 1470,
-                "title": "FlightReacts To Saints vs. Baltimore Ravens Game Highlights | NFL 2026 Season Week 2"
+                "title": "FlightReacts To Saints vs. Baltimore Ravens Game Highlights | NFL 2026 Season Week 2",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=XMYCHkJGeg4",
                 "duration": 742,
-                "title": "No. 5 Illinois Fighting Illini vs. No. 10 Michigan State Spartans Highlights 🏀FOX College"
+                "title": "No. 5 Illinois Fighting Illini vs. No. 10 Michigan State Spartans Highlights 🏀FOX College",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=_GgR5vbVYao",
@@ -555,7 +586,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=feIx-FyQIaw",
                 "duration": 1819,
-                "title": "USA vs France - Basketball | Rio 2016 - Condensed Game | Throwback Thursday"
+                "title": "USA vs France - Basketball | Rio 2016 - Condensed Game | Throwback Thursday",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=77RzKfTxDcA",
@@ -605,7 +638,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jqG_pZGkLcc",
                 "duration": 833,
-                "title": "Spain vs Belgium Highlights 🌎🏆 2026 FIFA World Cup™ | Quarterfinals"
+                "title": "Spain vs Belgium Highlights 🌎🏆 2026 FIFA World Cup™ | Quarterfinals",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=hv7OuzZ0QDg",
@@ -620,7 +655,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=28Glk1JmYzE",
                 "duration": 682,
-                "title": "Oklahoma Sooners vs. Colorado Buffaloes The Crown Highlights 🏀 FOX College Hoops"
+                "title": "Oklahoma Sooners vs. Colorado Buffaloes The Crown Highlights 🏀 FOX College Hoops",
+                "skip": [],
+                "skip_checked": 1790634163
             }
         ],
         "search_query": "basketball game highlights",
