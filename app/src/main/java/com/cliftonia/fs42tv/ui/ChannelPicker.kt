@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -118,6 +119,12 @@ private val PickerRowFontSize = 20.sp
 /** How long the highlight must rest before the rows around it ask for Pluto's guide. */
 private const val SETTLE_MILLIS = 350L
 
+/**
+ * How long it must rest before the details pane describes it: quicker than [SETTLE_MILLIS], since
+ * the pane answers from memory, but long enough that a held DOWN rebuilds it only where it stops.
+ */
+private const val HIGHLIGHT_MILLIS = 250L
+
 /** Rows scrolled above the on-air row when the picker opens, so it lands with context rather than pinned to the very top edge. */
 private const val ON_AIR_LEAD_ROWS = 3
 
@@ -149,6 +156,16 @@ fun ChannelPicker(
      * only where it stopped; the caller uses it to fetch Pluto's guide for the rows in view.
      */
     onSettled: (Int) -> Unit = {},
+    /**
+     * The LIVE TV layout: the details pane over the top half, the list in the bottom half. False
+     * is the full-height list, as the YouTube dial has always had.
+     */
+    detailed: Boolean = false,
+    /** What the pane shows, and its picture - read inside the pane only. */
+    details: () -> PickerDetails? = { null },
+    art: () -> androidx.compose.ui.graphics.ImageBitmap? = { null },
+    /** The highlight has rested for [HIGHLIGHT_MILLIS]: describe that row in the pane. */
+    onHighlighted: (Int) -> Unit = {},
 ) {
     BackHandler(onBack = onDismiss)
 
@@ -164,7 +181,9 @@ fun ChannelPicker(
     // Keyed on the selection, so every press cancels the previous wait: only a highlight that has
     // stood still for SETTLE_MILLIS gets reported.
     LaunchedEffect(selected) {
-        kotlinx.coroutines.delay(SETTLE_MILLIS)
+        kotlinx.coroutines.delay(HIGHLIGHT_MILLIS)
+        if (detailed) onHighlighted(selected)
+        kotlinx.coroutines.delay(SETTLE_MILLIS - HIGHLIGHT_MILLIS)
         onSettled(selected)
     }
 
@@ -234,20 +253,29 @@ fun ChannelPicker(
                     }
                 },
         ) {
-            LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
-                itemsIndexed(
-                    rows,
-                    key = { index, _ -> index },
-                    // Two types, so a recycled plain row is never re-measured into a headed one.
-                    contentType = { index, _ -> if (headings.getOrNull(index) == null) "channel" else "headed" },
-                ) { index, row ->
-                    val heading = headings.getOrNull(index)
-                    if (heading == null) {
-                        PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
-                    } else {
-                        Column(modifier = Modifier.fillMaxWidth()) {
-                            PickerHeading(heading)
+            Column(modifier = Modifier.fillMaxSize()) {
+                if (detailed) {
+                    DetailsPane(details = details, art = art, modifier = Modifier.weight(1f))
+                    // The seam between the halves, in the highlight's own green.
+                    Box(Modifier.fillMaxWidth().padding(horizontal = 24.dp).height(1.dp).background(PickerRowFocusedBackground))
+                }
+                // The list keeps its own measured centring either way: half height just means fewer
+                // rows around the highlight.
+                LazyColumn(state = listState, modifier = Modifier.fillMaxWidth().weight(1f)) {
+                    itemsIndexed(
+                        rows,
+                        key = { index, _ -> index },
+                        // Two types, so a recycled plain row is never re-measured into a headed one.
+                        contentType = { index, _ -> if (headings.getOrNull(index) == null) "channel" else "headed" },
+                    ) { index, row ->
+                        val heading = headings.getOrNull(index)
+                        if (heading == null) {
                             PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
+                        } else {
+                            Column(modifier = Modifier.fillMaxWidth()) {
+                                PickerHeading(heading)
+                                PickerRow(text = row.first, subtitle = row.second, selected = index == selected)
+                            }
                         }
                     }
                 }
