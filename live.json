@@ -20,36 +20,6 @@
   },
   {
    "number": 101,
-   "name": "Action Hollywood Movies",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01076-lightningintern-actionhollywood-samsungau-rs69y.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Action Hollywood Movies"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Action",
-   "breaks": "cue"
-  },
-  {
-   "number": 102,
-   "name": "Best Action TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/9a4a5412-ca99-48d3-9013-d1811b95b9d2/manifest.m3u8",
-     "duration": 600,
-     "title": "Best Action TV"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Action",
-   "breaks": "cue"
-  },
-  {
-   "number": 103,
    "name": "Pluto TV Action",
    "kind": "live",
    "streams": [
@@ -67,7 +37,7 @@
    "sub": "Action"
   },
   {
-   "number": 104,
+   "number": 102,
    "name": "Rakuten TV Action Movies UK",
    "kind": "live",
    "streams": [
@@ -82,21 +52,6 @@
    "breaks": "cue",
    "guide": "rakuten",
    "guide_id": "action-rakuten-tv"
-  },
-  {
-   "number": 105,
-   "name": "Urban Action TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/7ad8ce96-5a3f-413e-ae15-7c2cef7bc8f8/manifest.m3u8",
-     "duration": 600,
-     "title": "Urban Action TV"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Action",
-   "breaks": "cue"
   },
   {
    "number": 110,
@@ -118,21 +73,6 @@
   },
   {
    "number": 111,
-   "name": "LOL TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fc63d5fd-b50e-4d3e-abdf-697d9b6cbf70/manifest.m3u8",
-     "duration": 600,
-     "title": "LOL TV"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Comedy",
-   "breaks": "cue"
-  },
-  {
-   "number": 112,
    "name": "National Lampoon",
    "kind": "live",
    "streams": [
@@ -150,7 +90,7 @@
    "guide_id": "US1800015K5"
   },
   {
-   "number": 113,
+   "number": 112,
    "name": "Pluto TV Comedy",
    "kind": "live",
    "streams": [
@@ -168,7 +108,7 @@
    "sub": "Comedy"
   },
   {
-   "number": 114,
+   "number": 113,
    "name": "Pluto TV Comedy Movies",
    "kind": "live",
    "streams": [
@@ -186,7 +126,7 @@
    "sub": "Comedy"
   },
   {
-   "number": 115,
+   "number": 114,
    "name": "Rakuten TV Comedy Movies UK",
    "kind": "live",
    "streams": [
@@ -414,36 +354,6 @@
   },
   {
    "number": 140,
-   "name": "Best Thriller TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/ce168a85-c8d4-41d6-a597-cc8fd7baddd9/manifest.m3u8",
-     "duration": 600,
-     "title": "Best Thriller TV"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Thriller",
-   "breaks": "cue"
-  },
-  {
-   "number": 141,
-   "name": "Cinevault Murder and Mayhem",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://gsn-cinevault-70s-2-us.roku.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Cinevault Murder and Mayhem"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Thriller",
-   "breaks": "cue"
-  },
-  {
-   "number": 142,
    "name": "Crime ThrillHer",
    "kind": "live",
    "streams": [
@@ -461,7 +371,7 @@
    "guide_id": "USBB52000236D"
   },
   {
-   "number": 143,
+   "number": 141,
    "name": "CrimeFlix",
    "kind": "live",
    "streams": [
@@ -478,7 +388,7 @@
    "guide_id": "5273"
   },
   {
-   "number": 144,
+   "number": 142,
    "name": "Pluto TV Crime Movies",
    "kind": "live",
    "streams": [
@@ -496,7 +406,7 @@
    "sub": "Thriller"
   },
   {
-   "number": 145,
+   "number": 143,
    "name": "Pluto TV Sherlock",
    "kind": "live",
    "streams": [
@@ -514,7 +424,7 @@
    "sub": "Thriller"
   },
   {
-   "number": 146,
+   "number": 144,
    "name": "Pluto TV Thrillers",
    "kind": "live",
    "streams": [
@@ -532,7 +442,7 @@
    "sub": "Thriller"
   },
   {
-   "number": 147,
+   "number": 145,
    "name": "Rakuten TV Thrillers UK",
    "kind": "live",
    "streams": [
@@ -550,21 +460,6 @@
   },
   {
    "number": 150,
-   "name": "Dark Matter TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://tricoast-tv-dark-matter-01-us.ono.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Dark Matter TV"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Sci-Fi",
-   "breaks": "cue"
-  },
-  {
-   "number": 151,
    "name": "Pluto TV Fantastic",
    "kind": "live",
    "streams": [
@@ -582,7 +477,7 @@
    "sub": "Sci-Fi"
   },
   {
-   "number": 152,
+   "number": 151,
    "name": "Pluto TV Sci-Fi",
    "kind": "live",
    "streams": [
@@ -600,7 +495,7 @@
    "sub": "Sci-Fi"
   },
   {
-   "number": 153,
+   "number": 152,
    "name": "Rakuten TV Sci-Fi UK",
    "kind": "live",
    "streams": [
@@ -618,21 +513,6 @@
   },
   {
    "number": 160,
-   "name": "Cinevault Westerns",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Cinevault Westerns"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Westerns",
-   "breaks": "cue"
-  },
-  {
-   "number": 161,
    "name": "Classic Movie Westerns",
    "kind": "live",
    "streams": [
@@ -650,22 +530,7 @@
    "sub": "Westerns"
   },
   {
-   "number": 162,
-   "name": "Cowboy Movie Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/32eb332e-f644-46e5-ad91-e55ad80d14f7_0_HLS/master.m3u8",
-     "duration": 600,
-     "title": "Cowboy Movie Channel"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Westerns",
-   "breaks": "cue"
-  },
-  {
-   "number": 163,
+   "number": 161,
    "name": "FilmRise Westerns",
    "kind": "live",
    "streams": [
@@ -682,7 +547,7 @@
    "guide_id": "USBB32000196O"
   },
   {
-   "number": 164,
+   "number": 162,
    "name": "Grit Xtra",
    "kind": "live",
    "streams": [
@@ -699,7 +564,7 @@
    "guide_id": "684170"
   },
   {
-   "number": 165,
+   "number": 163,
    "name": "Grjngo Western Movies",
    "kind": "live",
    "streams": [
@@ -716,7 +581,7 @@
    "guide_id": "GBBD500007TG"
   },
   {
-   "number": 166,
+   "number": 164,
    "name": "Western Bound",
    "kind": "live",
    "streams": [
@@ -805,21 +670,6 @@
   },
   {
    "number": 181,
-   "name": "Cinevault Classics",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://gsn-cinevault-classics-1-us.roku.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Cinevault Classics"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Classic",
-   "breaks": "cue"
-  },
-  {
-   "number": 182,
    "name": "Classic Movies Channel",
    "kind": "live",
    "streams": [
@@ -837,7 +687,7 @@
    "sub": "Classic"
   },
   {
-   "number": 183,
+   "number": 182,
    "name": "WBTV Classic Cinema",
    "kind": "live",
    "streams": [
@@ -856,21 +706,6 @@
   },
   {
    "number": 190,
-   "name": "Best Drama TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/9800ea5c-2183-4160-9f01-70e5d6428a50/manifest.m3u8",
-     "duration": 600,
-     "title": "Best Drama TV"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 191,
    "name": "Lifetime Movie Favorites",
    "kind": "live",
    "streams": [
@@ -888,7 +723,7 @@
    "sub": "Drama"
   },
   {
-   "number": 192,
+   "number": 191,
    "name": "Lifetime Movies",
    "kind": "live",
    "streams": [
@@ -906,22 +741,7 @@
    "guide_id": "GB37000067A"
   },
   {
-   "number": 193,
-   "name": "MyTime Movie Network",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "MyTime Movie Network"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 194,
+   "number": 192,
    "name": "Pluto TV Movies",
    "kind": "live",
    "streams": [
@@ -939,7 +759,7 @@
    "sub": "Drama"
   },
   {
-   "number": 195,
+   "number": 193,
    "name": "Rakuten TV Drama Movies UK",
    "kind": "live",
    "streams": [
@@ -1028,21 +848,6 @@
    "sub": "Decades"
   },
   {
-   "number": 204,
-   "name": "Cinevault 80s",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://gsn-cinevault-80s-2-us.roku.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Cinevault 80s"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Decades",
-   "breaks": "cue"
-  },
-  {
    "number": 210,
    "name": "Flicks of Fury",
    "kind": "live",
@@ -1076,21 +881,6 @@
    "breaks": "cue",
    "guide": "xumo",
    "guide_id": "99991302"
-  },
-  {
-   "number": 212,
-   "name": "Kung Fu+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/06862a07-6a92-4b4d-abc3-5fea131713b5/manifest.m3u8",
-     "duration": 600,
-     "title": "Kung Fu+"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Martial Arts",
-   "breaks": "cue"
   },
   {
    "number": 220,
@@ -1147,21 +937,6 @@
   },
   {
    "number": 223,
-   "name": "Naija Gold Reels",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/WiseM3U8_11/sofast/cleanhls/master.m3u8",
-     "duration": 600,
-     "title": "Naija Gold Reels"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Black Cinema",
-   "breaks": "cue"
-  },
-  {
-   "number": 224,
    "name": "Nolly Africa HD",
    "kind": "live",
    "streams": [
@@ -1179,7 +954,7 @@
    "guide_id": "GB2700017IP"
   },
   {
-   "number": 225,
+   "number": 224,
    "name": "Shades of Black",
    "kind": "live",
    "streams": [
@@ -1216,21 +991,6 @@
   },
   {
    "number": 231,
-   "name": "Drive In Movie Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e5056383-20ac-488f-b299-6577f66881ff/manifest.m3u8",
-     "duration": 600,
-     "title": "Drive In Movie Channel"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Cult & B-Movies",
-   "breaks": "cue"
-  },
-  {
-   "number": 232,
    "name": "El Rey Rebel",
    "kind": "live",
    "streams": [
@@ -1248,7 +1008,7 @@
    "sub": "Cult & B-Movies"
   },
   {
-   "number": 233,
+   "number": 232,
    "name": "Midnight Pulp",
    "kind": "live",
    "streams": [
@@ -1266,7 +1026,7 @@
    "guide_id": "USBD700015LK"
   },
   {
-   "number": 234,
+   "number": 233,
    "name": "Pluto TV Cult Films",
    "kind": "live",
    "streams": [
@@ -1336,38 +1096,7 @@
    "guide_id": "GB12000052F"
   },
   {
-   "number": 243,
-   "name": "Tribeca Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02507-giantpictures-tribeca-xumo-ey2b7.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Tribeca Channel",
-     "route": "us"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Indie & World",
-   "breaks": "cue"
-  },
-  {
    "number": 250,
-   "name": "24 Hour Free Movies",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1j2u714xk898n.cloudfront.net/scheduler/scheduleMaster/145.m3u8",
-     "duration": 600,
-     "title": "24 Hour Free Movies"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Movies – Mixed",
-   "breaks": "cue"
-  },
-  {
-   "number": 251,
    "name": "Great! Movies",
    "kind": "live",
    "streams": [
@@ -1384,7 +1113,7 @@
    "guide_id": "GBBC900007Q5"
   },
   {
-   "number": 252,
+   "number": 251,
    "name": "Her Sphere",
    "kind": "live",
    "streams": [
@@ -1401,7 +1130,7 @@
    "guide_id": "400000104"
   },
   {
-   "number": 253,
+   "number": 252,
    "name": "Miramax Channel",
    "kind": "live",
    "streams": [
@@ -1419,7 +1148,7 @@
    "guide_id": "US18000163F"
   },
   {
-   "number": 254,
+   "number": 253,
    "name": "Moviesphere",
    "kind": "live",
    "streams": [
@@ -1437,7 +1166,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 255,
+   "number": 254,
    "name": "MovieSphere by Lionsgate",
    "kind": "live",
    "streams": [
@@ -1455,7 +1184,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 256,
+   "number": 255,
    "name": "OUTflix Movies",
    "kind": "live",
    "streams": [
@@ -1473,7 +1202,7 @@
    "guide_id": "US8000024G"
   },
   {
-   "number": 257,
+   "number": 256,
    "name": "Paramount Movie Channel",
    "kind": "live",
    "streams": [
@@ -1491,7 +1220,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 258,
+   "number": 257,
    "name": "Pluto TV Franchise Favorites",
    "kind": "live",
    "streams": [
@@ -1509,7 +1238,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 259,
+   "number": 258,
    "name": "Pluto TV Icons",
    "kind": "live",
    "streams": [
@@ -1527,7 +1256,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 260,
+   "number": 259,
    "name": "Pluto TV Reaction",
    "kind": "live",
    "streams": [
@@ -1545,7 +1274,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 261,
+   "number": 260,
    "name": "Pluto TV Spotlight",
    "kind": "live",
    "streams": [
@@ -1563,7 +1292,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 262,
+   "number": 261,
    "name": "Pluto TV Staff Picks",
    "kind": "live",
    "streams": [
@@ -1581,7 +1310,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 263,
+   "number": 262,
    "name": "Pluto TV Trending Now",
    "kind": "live",
    "streams": [
@@ -1599,7 +1328,7 @@
    "sub": "Movies – Mixed"
   },
   {
-   "number": 264,
+   "number": 263,
    "name": "Popflix",
    "kind": "live",
    "streams": [
@@ -1616,7 +1345,7 @@
    "guide_id": "GBAJ400045P5"
   },
   {
-   "number": 265,
+   "number": 264,
    "name": "Rakuten Top Movies UK",
    "kind": "live",
    "streams": [
@@ -1633,22 +1362,7 @@
    "guide_id": "top-movies-rakuten-tv"
   },
   {
-   "number": 266,
-   "name": "RCM",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://samsungau-rialtosamsungaustralia-al2rg.amagi.tv/playlist/samsungau-rialtosamsungaustralia/playlist.m3u8",
-     "duration": 600,
-     "title": "RCM"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Movies – Mixed",
-   "breaks": "cue"
-  },
-  {
-   "number": 267,
+   "number": 265,
    "name": "WBTV At the Movies",
    "kind": "live",
    "streams": [
@@ -1666,7 +1380,7 @@
    "guide_id": "715950"
   },
   {
-   "number": 268,
+   "number": 266,
    "name": "wedo movies",
    "kind": "live",
    "streams": [
@@ -1685,21 +1399,6 @@
   },
   {
    "number": 300,
-   "name": "8 Out of 10 Cats",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-amg00627c37-samsung-au-4294.playouts.now.amagi.tv/playlist/amg00627-banijayfast-8outof10cats-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "8 Out of 10 Cats"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue"
-  },
-  {
-   "number": 301,
    "name": "AFV with Alfonso Ribeiro",
    "kind": "live",
    "streams": [
@@ -1717,7 +1416,7 @@
    "guide_id": "US4100038R9"
   },
   {
-   "number": 302,
+   "number": 301,
    "name": "Always Funny Videos",
    "kind": "live",
    "streams": [
@@ -1734,7 +1433,7 @@
    "guide_id": "653208"
   },
   {
-   "number": 303,
+   "number": 302,
    "name": "Animation+",
    "kind": "live",
    "streams": [
@@ -1752,7 +1451,7 @@
    "guide_id": "US400002PS"
   },
   {
-   "number": 304,
+   "number": 303,
    "name": "BBC Comedy",
    "kind": "live",
    "streams": [
@@ -1770,7 +1469,7 @@
    "guide_id": "US4500009VV"
   },
   {
-   "number": 305,
+   "number": 304,
    "name": "BizaarTV",
    "kind": "live",
    "streams": [
@@ -1787,7 +1486,7 @@
    "guide_id": "US1700027JI"
   },
   {
-   "number": 306,
+   "number": 305,
    "name": "The Carol Burnett Show",
    "kind": "live",
    "streams": [
@@ -1804,22 +1503,7 @@
    "guide_id": "656574"
   },
   {
-   "number": 307,
-   "name": "The Chat Show Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00426-lds-amg00426c11-rakuten-uk-3888.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "The Chat Show Channel"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue"
-  },
-  {
-   "number": 308,
+   "number": 306,
    "name": "Comedy Central Pluto TV",
    "kind": "live",
    "streams": [
@@ -1837,7 +1521,7 @@
    "sub": "Comedy"
   },
   {
-   "number": 309,
+   "number": 307,
    "name": "Comedy Dynamics",
    "kind": "live",
    "streams": [
@@ -1854,7 +1538,7 @@
    "guide_id": "400000169"
   },
   {
-   "number": 310,
+   "number": 308,
    "name": "Conan O'Brien TV",
    "kind": "live",
    "streams": [
@@ -1871,22 +1555,7 @@
    "guide_id": "GB300001QO"
   },
   {
-   "number": 311,
-   "name": "Dry Bar Comedy",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://drybar-drybarcomedy-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Dry Bar Comedy"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue"
-  },
-  {
-   "number": 312,
+   "number": 309,
    "name": "FailArmy",
    "kind": "live",
    "streams": [
@@ -1904,7 +1573,7 @@
    "sub": "Comedy"
   },
   {
-   "number": 313,
+   "number": 310,
    "name": "The Graham Norton Show",
    "kind": "live",
    "streams": [
@@ -1922,7 +1591,7 @@
    "guide_id": "GB4000027F"
   },
   {
-   "number": 314,
+   "number": 311,
    "name": "The Johnny Carson Show",
    "kind": "live",
    "streams": [
@@ -1939,22 +1608,7 @@
    "guide_id": "658746"
   },
   {
-   "number": 315,
-   "name": "Just for Laughs Gags",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/4c727f82-d2ec-4a07-870c-49a6f22ee6f9_0_HLS/master.m3u8",
-     "duration": 600,
-     "title": "Just for Laughs Gags"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue"
-  },
-  {
-   "number": 316,
+   "number": 312,
    "name": "Mr Bean Live Action",
    "kind": "live",
    "streams": [
@@ -1972,7 +1626,7 @@
    "guide_id": "GB4000008O5"
   },
   {
-   "number": 317,
+   "number": 313,
    "name": "Mystery Science Theater 3000",
    "kind": "live",
    "streams": [
@@ -1989,7 +1643,7 @@
    "guide_id": "656575"
   },
   {
-   "number": 318,
+   "number": 314,
    "name": "Mythical 24/7",
    "kind": "live",
    "streams": [
@@ -2007,7 +1661,7 @@
    "guide_id": "US2900008FP"
   },
   {
-   "number": 319,
+   "number": 315,
    "name": "NBC Comedy Vault",
    "kind": "live",
    "streams": [
@@ -2024,7 +1678,7 @@
    "guide_id": "99951244"
   },
   {
-   "number": 320,
+   "number": 316,
    "name": "Portlandia",
    "kind": "live",
    "streams": [
@@ -2041,7 +1695,7 @@
    "guide_id": "99951301"
   },
   {
-   "number": 321,
+   "number": 317,
    "name": "RiffTrax",
    "kind": "live",
    "streams": [
@@ -2059,7 +1713,7 @@
    "sub": "Comedy"
   },
   {
-   "number": 322,
+   "number": 318,
    "name": "Sketchy AF",
    "kind": "live",
    "streams": [
@@ -2077,7 +1731,7 @@
    "sub": "Comedy"
   },
   {
-   "number": 323,
+   "number": 319,
    "name": "Smosh",
    "kind": "live",
    "streams": [
@@ -2095,7 +1749,7 @@
    "guide_id": "US2100007V7"
   },
   {
-   "number": 324,
+   "number": 320,
    "name": "The Try Guys",
    "kind": "live",
    "streams": [
@@ -2113,7 +1767,7 @@
    "guide_id": "US2000016LF"
   },
   {
-   "number": 325,
+   "number": 321,
    "name": "U&Laughs",
    "kind": "live",
    "streams": [
@@ -2431,21 +2085,6 @@
   },
   {
    "number": 356,
-   "name": "Sci-Fi World",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a985e052-6868-4365-ac45-52afe9008b25/manifest.m3u8",
-     "duration": 600,
-     "title": "Sci-Fi World"
-    }
-   ],
-   "block": "Series",
-   "sub": "Sci-Fi & Fantasy",
-   "breaks": "cue"
-  },
-  {
-   "number": 357,
    "name": "Supernatural Drama",
    "kind": "live",
    "streams": [
@@ -2463,7 +2102,7 @@
    "sub": "Sci-Fi & Fantasy"
   },
   {
-   "number": 358,
+   "number": 357,
    "name": "Van Helsing",
    "kind": "live",
    "streams": [
@@ -2480,7 +2119,7 @@
    "guide_id": "US200111SU"
   },
   {
-   "number": 359,
+   "number": 358,
    "name": "The Walking Dead Universe",
    "kind": "live",
    "streams": [
@@ -2622,21 +2261,6 @@
   },
   {
    "number": 367,
-   "name": "Edgy Urban",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/50ce2783-e0fe-405b-bfa7-349c4ff4916b/manifest.m3u8",
-     "duration": 600,
-     "title": "Edgy Urban"
-    }
-   ],
-   "block": "Series",
-   "sub": "Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 368,
    "name": "ElectricNOW",
    "kind": "live",
    "streams": [
@@ -2654,22 +2278,7 @@
    "guide_id": "USBC6000225M"
   },
   {
-   "number": 369,
-   "name": "Love 2 Hate TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/4f3f3fb6-cec9-4a29-bc6c-90685947766e/manifest.m3u8",
-     "duration": 600,
-     "title": "Love 2 Hate TV"
-    }
-   ],
-   "block": "Series",
-   "sub": "Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 370,
+   "number": 368,
    "name": "More TV Drama",
    "kind": "live",
    "streams": [
@@ -2687,7 +2296,7 @@
    "sub": "Drama"
   },
   {
-   "number": 371,
+   "number": 369,
    "name": "Paramount+ Picks",
    "kind": "live",
    "streams": [
@@ -2705,7 +2314,7 @@
    "sub": "Drama"
   },
   {
-   "number": 372,
+   "number": 370,
    "name": "Pluto TV Drama",
    "kind": "live",
    "streams": [
@@ -2723,22 +2332,7 @@
    "sub": "Drama"
   },
   {
-   "number": 373,
-   "name": "Pulse",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01076-lightningintern-pulse-samsungau-4a45e.amagi.tv/playlist/amg01076-lightningintern-pulse-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Pulse"
-    }
-   ],
-   "block": "Series",
-   "sub": "Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 374,
+   "number": 371,
    "name": "Stories by AMC",
    "kind": "live",
    "streams": [
@@ -2952,21 +2546,6 @@
   },
   {
    "number": 394,
-   "name": "HeartFelt TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/74c455d4-625a-448a-8ba7-d086e6462245/manifest.m3u8",
-     "duration": 600,
-     "title": "HeartFelt TV"
-    }
-   ],
-   "block": "Series",
-   "sub": "Family & Teen Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 395,
    "name": "Heartland",
    "kind": "live",
    "streams": [
@@ -2984,7 +2563,7 @@
    "guide_id": "USBB2900003O3"
   },
   {
-   "number": 396,
+   "number": 395,
    "name": "Pluto TV Hometown Drama",
    "kind": "live",
    "streams": [
@@ -3002,7 +2581,7 @@
    "sub": "Family & Teen Drama"
   },
   {
-   "number": 397,
+   "number": 396,
    "name": "WBTV Generation Drama",
    "kind": "live",
    "streams": [
@@ -3021,37 +2600,6 @@
   },
   {
    "number": 400,
-   "name": "K Content by CJ ENM",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d2q0mzb9bm4w5z.cloudfront.net/68fee8e1_605a_437b_b968_244c3c0d5f24/hls/playlist.m3u8",
-     "duration": 600,
-     "title": "K Content by CJ ENM"
-    }
-   ],
-   "block": "Series",
-   "sub": "K-Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 401,
-   "name": "K Drama by CJ ENM",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d2fdocl6hmu0hh.cloudfront.net/dfa54c7d_1154_425d_a2b8_6ea994157976/hls/playlist.m3u8",
-     "duration": 600,
-     "title": "K Drama by CJ ENM",
-     "route": "us"
-    }
-   ],
-   "block": "Series",
-   "sub": "K-Drama",
-   "breaks": "cue"
-  },
-  {
-   "number": 402,
    "name": "K Stories by CJ ENM",
    "kind": "live",
    "streams": [
@@ -3068,7 +2616,7 @@
    "guide_id": "US17000164B"
   },
   {
-   "number": 403,
+   "number": 401,
    "name": "Series K Edge",
    "kind": "live",
    "streams": [
@@ -3086,7 +2634,7 @@
    "guide_id": "US4400006IX"
   },
   {
-   "number": 404,
+   "number": 402,
    "name": "Series K Heart",
    "kind": "live",
    "streams": [
@@ -3103,7 +2651,7 @@
    "guide_id": "US4300002FK"
   },
   {
-   "number": 405,
+   "number": 403,
    "name": "Series K Legacy",
    "kind": "live",
    "streams": [
@@ -3455,21 +3003,6 @@
   },
   {
    "number": 432,
-   "name": "AMC Absolute Reality",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amc-absolutereality-1-us.plex.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "AMC Absolute Reality"
-    }
-   ],
-   "block": "Series",
-   "sub": "Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 433,
    "name": "Bad Girls Club",
    "kind": "live",
    "streams": [
@@ -3486,7 +3019,7 @@
    "guide_id": "99951467"
   },
   {
-   "number": 434,
+   "number": 433,
    "name": "Bravo Vault",
    "kind": "live",
    "streams": [
@@ -3504,7 +3037,7 @@
    "sub": "Reality"
   },
   {
-   "number": 435,
+   "number": 434,
    "name": "Caught on Tape",
    "kind": "live",
    "streams": [
@@ -3522,7 +3055,7 @@
    "guide_id": "US700007CV"
   },
   {
-   "number": 436,
+   "number": 435,
    "name": "Chaos on Cam",
    "kind": "live",
    "streams": [
@@ -3540,7 +3073,7 @@
    "guide_id": "GB4600003RY"
   },
   {
-   "number": 437,
+   "number": 436,
    "name": "Dance Moms",
    "kind": "live",
    "streams": [
@@ -3557,7 +3090,7 @@
    "guide_id": "400000086"
   },
   {
-   "number": 438,
+   "number": 437,
    "name": "E! Keeping Up",
    "kind": "live",
    "streams": [
@@ -3574,7 +3107,7 @@
    "guide_id": "99951465"
   },
   {
-   "number": 439,
+   "number": 438,
    "name": "LADbible",
    "kind": "live",
    "streams": [
@@ -3591,7 +3124,7 @@
    "guide_id": "GB2000007ID"
   },
   {
-   "number": 440,
+   "number": 439,
    "name": "Little Women LA",
    "kind": "live",
    "streams": [
@@ -3609,7 +3142,7 @@
    "guide_id": "USBD170000771"
   },
   {
-   "number": 441,
+   "number": 440,
    "name": "Logo Pluto TV",
    "kind": "live",
    "streams": [
@@ -3627,7 +3160,7 @@
    "sub": "Reality"
   },
   {
-   "number": 442,
+   "number": 441,
    "name": "MTV Pluto TV",
    "kind": "live",
    "streams": [
@@ -3645,7 +3178,7 @@
    "sub": "Reality"
   },
   {
-   "number": 443,
+   "number": 442,
    "name": "The Osbournes",
    "kind": "live",
    "streams": [
@@ -3662,7 +3195,7 @@
    "guide_id": "GB3600002EB"
   },
   {
-   "number": 444,
+   "number": 443,
    "name": "Perform",
    "kind": "live",
    "streams": [
@@ -3680,7 +3213,7 @@
    "guide_id": "USBB520002604"
   },
   {
-   "number": 445,
+   "number": 444,
    "name": "Pluto TV Reality",
    "kind": "live",
    "streams": [
@@ -3698,7 +3231,7 @@
    "sub": "Reality"
   },
   {
-   "number": 446,
+   "number": 445,
    "name": "Rakuten TV Reality UK",
    "kind": "live",
    "streams": [
@@ -3715,7 +3248,7 @@
    "guide_id": "reality-rakuten-tv"
   },
   {
-   "number": 447,
+   "number": 446,
    "name": "Real Housewives Vault",
    "kind": "live",
    "streams": [
@@ -3732,7 +3265,7 @@
    "guide_id": "99951243"
   },
   {
-   "number": 448,
+   "number": 447,
    "name": "VH1 Queens of Reality",
    "kind": "live",
    "streams": [
@@ -3750,7 +3283,7 @@
    "sub": "Reality"
   },
   {
-   "number": 449,
+   "number": 448,
    "name": "WBTV Family Unscripted",
    "kind": "live",
    "streams": [
@@ -3908,21 +3441,6 @@
   },
   {
    "number": 458,
-   "name": "Fear Factor",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-banijaygroup-fearfactor-samsungau-9vdod.amagi.tv/playlist/amg00627-banijaygroup-fearfactor-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Fear Factor"
-    }
-   ],
-   "block": "Series",
-   "sub": "Competition Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 459,
    "name": "Forged In Fire",
    "kind": "live",
    "streams": [
@@ -3940,7 +3458,7 @@
    "guide_id": "USBD2700014QW"
   },
   {
-   "number": 460,
+   "number": 459,
    "name": "The Masked Singer",
    "kind": "live",
    "streams": [
@@ -3957,7 +3475,7 @@
    "guide_id": "650666"
   },
   {
-   "number": 461,
+   "number": 460,
    "name": "Mr. Beast",
    "kind": "live",
    "streams": [
@@ -3974,22 +3492,7 @@
    "guide_id": "400000048"
   },
   {
-   "number": 462,
-   "name": "Ninja Warrior",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00654-itv-amg00654c27-rakuten-uk-5295.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Ninja Warrior"
-    }
-   ],
-   "block": "Series",
-   "sub": "Competition Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 463,
+   "number": 461,
    "name": "Pluto TV Competition",
    "kind": "live",
    "streams": [
@@ -4007,22 +3510,7 @@
    "sub": "Competition Reality"
   },
   {
-   "number": 464,
-   "name": "Project Runway",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02189-amg02189c1-samsung-au-5798.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Project Runway"
-    }
-   ],
-   "block": "Series",
-   "sub": "Competition Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 465,
+   "number": 462,
    "name": "Robot Wars by Mech+",
    "kind": "live",
    "streams": [
@@ -4039,7 +3527,7 @@
    "guide_id": "GBBD500005ZG"
   },
   {
-   "number": 466,
+   "number": 463,
    "name": "Survivor",
    "kind": "live",
    "streams": [
@@ -4054,21 +3542,6 @@
    "breaks": "cue",
    "guide": "samsung",
    "guide_id": "GBBB3800007BN"
-  },
-  {
-   "number": 467,
-   "name": "Wipeout Xtra",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-banijaygroup-wipeoutxtraau-samsungau-ashbl.amagi.tv/playlist/amg00627-banijaygroup-wipeoutxtraau-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Wipeout Xtra"
-    }
-   ],
-   "block": "Series",
-   "sub": "Competition Reality",
-   "breaks": "cue"
   },
   {
    "number": 470,
@@ -4125,21 +3598,6 @@
   },
   {
    "number": 473,
-   "name": "Don't Tell The Bride",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00426-lds-amg00426c15-samsung-au-3684.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Don't Tell The Bride"
-    }
-   ],
-   "block": "Series",
-   "sub": "Dating Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 474,
    "name": "Matched Married Meet",
    "kind": "live",
    "streams": [
@@ -4157,7 +3615,7 @@
    "guide_id": "USBC440000193"
   },
   {
-   "number": 475,
+   "number": 474,
    "name": "WBTV Love and Marriage",
    "kind": "live",
    "streams": [
@@ -4230,21 +3688,6 @@
   },
   {
    "number": 483,
-   "name": "Hardcore Pawn",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-banijay-amg00627c8-samsung-au-1827.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Hardcore Pawn"
-    }
-   ],
-   "block": "Series",
-   "sub": "Pawn & Deals",
-   "breaks": "cue"
-  },
-  {
-   "number": 484,
    "name": "Operation Repo",
    "kind": "live",
    "streams": [
@@ -4262,7 +3705,7 @@
    "guide_id": "USBC6000219D"
   },
   {
-   "number": 485,
+   "number": 484,
    "name": "Pawn Stars",
    "kind": "live",
    "streams": [
@@ -4280,7 +3723,7 @@
    "guide_id": "US300003S3"
   },
   {
-   "number": 486,
+   "number": 485,
    "name": "Spike Pluto TV",
    "kind": "live",
    "streams": [
@@ -4298,7 +3741,7 @@
    "sub": "Pawn & Deals"
   },
   {
-   "number": 487,
+   "number": 486,
    "name": "Storage Wars LA",
    "kind": "live",
    "streams": [
@@ -4335,21 +3778,6 @@
   },
   {
    "number": 491,
-   "name": "Bondi Vet",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://wtfn-bondivet-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Bondi Vet"
-    }
-   ],
-   "block": "Series",
-   "sub": "Docu-Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 492,
    "name": "Duck Dynasty",
    "kind": "live",
    "streams": [
@@ -4366,7 +3794,7 @@
    "guide_id": "duck-dynasty"
   },
   {
-   "number": 493,
+   "number": 492,
    "name": "Hoarders",
    "kind": "live",
    "streams": [
@@ -4383,7 +3811,7 @@
    "guide_id": "GB3700005QK"
   },
   {
-   "number": 494,
+   "number": 493,
    "name": "Intervention",
    "kind": "live",
    "streams": [
@@ -4401,7 +3829,7 @@
    "guide_id": "GB2700002F7"
   },
   {
-   "number": 495,
+   "number": 494,
    "name": "Pluto TV Lives",
    "kind": "live",
    "streams": [
@@ -4419,7 +3847,7 @@
    "sub": "Docu-Reality"
   },
   {
-   "number": 496,
+   "number": 495,
    "name": "So… Real",
    "kind": "live",
    "streams": [
@@ -4436,37 +3864,7 @@
    "guide_id": "GBBD1100009M9"
   },
   {
-   "number": 497,
-   "name": "True Lives",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00654-itv-amg00654c7-rakuten-uk-1282.playouts.now.amagi.tv/playlist/amg00654-itvstudiosfast-truelives-rakutenuk/playlist.m3u8",
-     "duration": 600,
-     "title": "True Lives"
-    }
-   ],
-   "block": "Series",
-   "sub": "Docu-Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 498,
-   "name": "Undercover Boss",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://all3media-international-undercoverboss-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Undercover Boss"
-    }
-   ],
-   "block": "Series",
-   "sub": "Docu-Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 499,
+   "number": 496,
    "name": "Untold Stories of the ER",
    "kind": "live",
    "streams": [
@@ -4483,7 +3881,7 @@
    "guide_id": "GB3700009AO"
   },
   {
-   "number": 500,
+   "number": 497,
    "name": "WBTV Unique Lives",
    "kind": "live",
    "streams": [
@@ -4501,7 +3899,7 @@
    "guide_id": "715942"
   },
   {
-   "number": 510,
+   "number": 500,
    "name": "Cutlers Court",
    "kind": "live",
    "streams": [
@@ -4519,7 +3917,7 @@
    "guide_id": "US700020AX"
   },
   {
-   "number": 511,
+   "number": 501,
    "name": "Divorce Court",
    "kind": "live",
    "streams": [
@@ -4537,7 +3935,7 @@
    "guide_id": "USBD300006A6"
   },
   {
-   "number": 512,
+   "number": 502,
    "name": "Judge Nosey",
    "kind": "live",
    "streams": [
@@ -4555,7 +3953,7 @@
    "sub": "Judge & Talk"
   },
   {
-   "number": 513,
+   "number": 503,
    "name": "Nosey",
    "kind": "live",
    "streams": [
@@ -4574,21 +3972,6 @@
   },
   {
    "number": 600,
-   "name": "Anger Management Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00353-lionsgatestudio-angermgmt-samsungau-o9jg9.amagi.tv/playlist/amg00353-lionsgatestudio-angermgmt-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Anger Management Channel"
-    }
-   ],
-   "block": "Sitcoms (USA)",
-   "sub": "Sitcoms",
-   "breaks": "cue"
-  },
-  {
-   "number": 601,
    "name": "Are We There Yet?",
    "kind": "live",
    "streams": [
@@ -4605,7 +3988,7 @@
    "guide_id": "GBBB1600006RS"
   },
   {
-   "number": 602,
+   "number": 601,
    "name": "BET Classics",
    "kind": "live",
    "streams": [
@@ -4623,7 +4006,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 603,
+   "number": 602,
    "name": "BET Pluto TV",
    "kind": "live",
    "streams": [
@@ -4641,7 +4024,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 604,
+   "number": 603,
    "name": "BET Throwbacks",
    "kind": "live",
    "streams": [
@@ -4659,7 +4042,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 605,
+   "number": 604,
    "name": "BET x Tyler Perry Comedy",
    "kind": "live",
    "streams": [
@@ -4677,7 +4060,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 606,
+   "number": 605,
    "name": "Black Family Sitcoms",
    "kind": "live",
    "streams": [
@@ -4695,7 +4078,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 607,
+   "number": 606,
    "name": "Classic TV Comedy",
    "kind": "live",
    "streams": [
@@ -4713,7 +4096,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 608,
+   "number": 607,
    "name": "Classic TV: Families",
    "kind": "live",
    "streams": [
@@ -4731,7 +4114,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 609,
+   "number": 608,
    "name": "The Conners",
    "kind": "live",
    "streams": [
@@ -4748,7 +4131,7 @@
    "guide_id": "400000103"
   },
   {
-   "number": 610,
+   "number": 609,
    "name": "Funny AF",
    "kind": "live",
    "streams": [
@@ -4766,7 +4149,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 611,
+   "number": 610,
    "name": "Hit Sitcoms",
    "kind": "live",
    "streams": [
@@ -4784,7 +4167,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 612,
+   "number": 611,
    "name": "Leave It to Beaver",
    "kind": "live",
    "streams": [
@@ -4801,7 +4184,7 @@
    "guide_id": "99951257"
   },
   {
-   "number": 613,
+   "number": 612,
    "name": "More TV Sitcoms",
    "kind": "live",
    "streams": [
@@ -4819,7 +4202,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 614,
+   "number": 613,
    "name": "Pluto TV Sitcoms",
    "kind": "live",
    "streams": [
@@ -4837,7 +4220,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 615,
+   "number": 614,
    "name": "Saved by the Bell",
    "kind": "live",
    "streams": [
@@ -4854,7 +4237,7 @@
    "guide_id": "99951247"
   },
   {
-   "number": 616,
+   "number": 615,
    "name": "Sitcom Legends",
    "kind": "live",
    "streams": [
@@ -4872,7 +4255,7 @@
    "sub": "Sitcoms"
   },
   {
-   "number": 617,
+   "number": 616,
    "name": "TV Land Sitcoms",
    "kind": "live",
    "streams": [
@@ -4927,21 +4310,6 @@
   },
   {
    "number": 702,
-   "name": "Deal or No Deal",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-banijaygroup-dealornodeal-samsungau-si7xg.amagi.tv/playlist/amg00627-banijaygroup-dealornodeal-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Deal or No Deal"
-    }
-   ],
-   "block": "Game Shows",
-   "sub": "Game Shows",
-   "breaks": "cue"
-  },
-  {
-   "number": 703,
    "name": "Family Feud",
    "kind": "live",
    "streams": [
@@ -4958,7 +4326,7 @@
    "guide_id": "GB500007VM"
   },
   {
-   "number": 704,
+   "number": 703,
    "name": "Family Feud Classic",
    "kind": "live",
    "streams": [
@@ -4975,7 +4343,7 @@
    "guide_id": "99951339"
   },
   {
-   "number": 705,
+   "number": 704,
    "name": "Game Show Central",
    "kind": "live",
    "streams": [
@@ -4993,22 +4361,7 @@
    "sub": "Game Shows"
   },
   {
-   "number": 706,
-   "name": "Impossible Quiz Show",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://bbc-impossible-1-us.roku.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Impossible Quiz Show"
-    }
-   ],
-   "block": "Game Shows",
-   "sub": "Game Shows",
-   "breaks": "cue"
-  },
-  {
-   "number": 707,
+   "number": 705,
    "name": "Let's Make A Deal Classic",
    "kind": "live",
    "streams": [
@@ -5026,7 +4379,7 @@
    "guide_id": "US7000229B"
   },
   {
-   "number": 708,
+   "number": 706,
    "name": "Pluto TV Game Shows",
    "kind": "live",
    "streams": [
@@ -5044,22 +4397,7 @@
    "sub": "Game Shows"
   },
   {
-   "number": 709,
-   "name": "Pointless",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-amg00627c34-samsung-au-8173.playouts.now.amagi.tv/playlist/amg00627-banijayfast-pointless-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Pointless"
-    }
-   ],
-   "block": "Game Shows",
-   "sub": "Game Shows",
-   "breaks": "cue"
-  },
-  {
-   "number": 710,
+   "number": 707,
    "name": "The Price is Right: The Barker Era",
    "kind": "live",
    "streams": [
@@ -5077,7 +4415,7 @@
    "guide_id": "99951125"
   },
   {
-   "number": 711,
+   "number": 708,
    "name": "Supermarket Sweep",
    "kind": "live",
    "streams": [
@@ -5094,7 +4432,7 @@
    "guide_id": "658748"
   },
   {
-   "number": 712,
+   "number": 709,
    "name": "Tipping Point",
    "kind": "live",
    "streams": [
@@ -5130,21 +4468,6 @@
   },
   {
    "number": 801,
-   "name": "Cartoon Classics",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/d5543c06-5122-49a7-9662-32187f48aa2c/manifest.m3u8",
-     "duration": 600,
-     "title": "Cartoon Classics"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Cartoons",
-   "breaks": "cue"
-  },
-  {
-   "number": 802,
    "name": "Dennis and Gnasher",
    "kind": "live",
    "streams": [
@@ -5161,23 +4484,7 @@
    "guide_id": "GB2400008GK"
   },
   {
-   "number": 803,
-   "name": "Dungeons & Dragons Adventures",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00461-eone-amg00461c3-firetv-us-5211.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Dungeons & Dragons Adventures",
-     "route": "us"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Cartoons",
-   "breaks": "cue"
-  },
-  {
-   "number": 804,
+   "number": 802,
    "name": "Kartoon Channel!",
    "kind": "live",
    "streams": [
@@ -5195,22 +4502,7 @@
    "sub": "Cartoons"
   },
   {
-   "number": 805,
-   "name": "Mr. Bean Animated",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Mr. Bean Animated"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Cartoons",
-   "breaks": "cue"
-  },
-  {
-   "number": 806,
+   "number": 803,
    "name": "Nickelodeon Pluto TV",
    "kind": "live",
    "streams": [
@@ -5228,7 +4520,7 @@
    "sub": "Cartoons"
   },
   {
-   "number": 807,
+   "number": 804,
    "name": "Pluto TV Animation",
    "kind": "live",
    "streams": [
@@ -5246,7 +4538,7 @@
    "sub": "Cartoons"
   },
   {
-   "number": 808,
+   "number": 805,
    "name": "Pluto TV Kids",
    "kind": "live",
    "streams": [
@@ -5264,7 +4556,7 @@
    "sub": "Cartoons"
   },
   {
-   "number": 809,
+   "number": 806,
    "name": "Pluto TV Retro Toons",
    "kind": "live",
    "streams": [
@@ -5282,7 +4574,7 @@
    "sub": "Cartoons"
   },
   {
-   "number": 810,
+   "number": 807,
    "name": "POP",
    "kind": "live",
    "streams": [
@@ -5300,7 +4592,7 @@
    "sub": "Cartoons"
   },
   {
-   "number": 811,
+   "number": 808,
    "name": "Rabbids Invasion",
    "kind": "live",
    "streams": [
@@ -5317,7 +4609,7 @@
    "guide_id": "GBBD230000420"
   },
   {
-   "number": 812,
+   "number": 809,
    "name": "Rainbow Ruby",
    "kind": "live",
    "streams": [
@@ -5334,7 +4626,7 @@
    "guide_id": "USBD3300015BY"
   },
   {
-   "number": 813,
+   "number": 810,
    "name": "Rev and Roll",
    "kind": "live",
    "streams": [
@@ -5351,7 +4643,7 @@
    "guide_id": "USBD3300016AK"
   },
   {
-   "number": 814,
+   "number": 811,
    "name": "Slugterra",
    "kind": "live",
    "streams": [
@@ -5368,7 +4660,7 @@
    "guide_id": "USBD33000180S"
   },
   {
-   "number": 815,
+   "number": 812,
    "name": "Smurf TV",
    "kind": "live",
    "streams": [
@@ -5385,7 +4677,7 @@
    "guide_id": "GBBD1300001WA"
   },
   {
-   "number": 816,
+   "number": 813,
    "name": "Sonic The Hedgehog",
    "kind": "live",
    "streams": [
@@ -5402,7 +4694,7 @@
    "guide_id": "GB370000369"
   },
   {
-   "number": 817,
+   "number": 814,
    "name": "Strawberry Shortcake",
    "kind": "live",
    "streams": [
@@ -5419,38 +4711,7 @@
    "guide_id": "GB3700002J0"
   },
   {
-   "number": 818,
-   "name": "ToonGoggles",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "ToonGoggles"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Cartoons",
-   "breaks": "cue"
-  },
-  {
-   "number": 819,
-   "name": "Transformers",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00461-eone-amg00461c1-firetv-us-5209.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Transformers",
-     "route": "us"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Cartoons",
-   "breaks": "cue"
-  },
-  {
-   "number": 820,
+   "number": 815,
    "name": "Video Game Heroes",
    "kind": "live",
    "streams": [
@@ -5468,7 +4729,7 @@
    "guide_id": "GB3400001ND"
   },
   {
-   "number": 830,
+   "number": 820,
    "name": "90s Kids TV 2",
    "kind": "live",
    "streams": [
@@ -5486,7 +4747,7 @@
    "sub": "Kids"
   },
   {
-   "number": 831,
+   "number": 821,
    "name": "Barbie and Friends",
    "kind": "live",
    "streams": [
@@ -5503,7 +4764,7 @@
    "guide_id": "USBD490000209"
   },
   {
-   "number": 832,
+   "number": 822,
    "name": "batteryPOP",
    "kind": "live",
    "streams": [
@@ -5520,7 +4781,7 @@
    "guide_id": "USBD3300012VX"
   },
   {
-   "number": 833,
+   "number": 823,
    "name": "Brat TV",
    "kind": "live",
    "streams": [
@@ -5537,23 +4798,7 @@
    "guide_id": "USBC240001823"
   },
   {
-   "number": 834,
-   "name": "FGTEEV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00285-amg00285c3-firetv-us-6596.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "FGTEEV",
-     "route": "us"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Kids",
-   "breaks": "cue"
-  },
-  {
-   "number": 835,
+   "number": 824,
    "name": "Forever Kids",
    "kind": "live",
    "streams": [
@@ -5571,7 +4816,7 @@
    "sub": "Kids"
   },
   {
-   "number": 836,
+   "number": 825,
    "name": "Hot Wheels Action",
    "kind": "live",
    "streams": [
@@ -5588,7 +4833,7 @@
    "guide_id": "US2900013AY"
   },
   {
-   "number": 837,
+   "number": 826,
    "name": "Kids Movie Club",
    "kind": "live",
    "streams": [
@@ -5606,7 +4851,7 @@
    "sub": "Kids"
   },
   {
-   "number": 838,
+   "number": 827,
    "name": "The LEGO Channel",
    "kind": "live",
    "streams": [
@@ -5623,7 +4868,7 @@
    "guide_id": "GBBC4300005AL"
   },
   {
-   "number": 839,
+   "number": 828,
    "name": "Ninja Kidz",
    "kind": "live",
    "streams": [
@@ -5640,7 +4885,7 @@
    "guide_id": "US2200007QG"
   },
   {
-   "number": 840,
+   "number": 829,
    "name": "pocket.watch Game On",
    "kind": "live",
    "streams": [
@@ -5658,38 +4903,7 @@
    "guide_id": "USBD12000153A"
   },
   {
-   "number": 841,
-   "name": "Power Rangers",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00461-eone-amg00461c2-firetv-us-5210.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Power Rangers",
-     "route": "us"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Kids",
-   "breaks": "cue"
-  },
-  {
-   "number": 842,
-   "name": "Ryan and Friends",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://ryanandfriends-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Ryan and Friends"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Kids",
-   "breaks": "cue"
-  },
-  {
-   "number": 843,
+   "number": 830,
    "name": "Sensical Makers",
    "kind": "live",
    "streams": [
@@ -5707,7 +4921,7 @@
    "guide_id": "USBD3300017XB"
   },
   {
-   "number": 850,
+   "number": 840,
    "name": "All Babies Channel",
    "kind": "live",
    "streams": [
@@ -5724,7 +4938,7 @@
    "guide_id": "USBD3300019OU"
   },
   {
-   "number": 851,
+   "number": 841,
    "name": "Baby Einstein",
    "kind": "live",
    "streams": [
@@ -5741,7 +4955,7 @@
    "guide_id": "USBD350002338"
   },
   {
-   "number": 852,
+   "number": 842,
    "name": "Baby Shark TV",
    "kind": "live",
    "streams": [
@@ -5758,7 +4972,7 @@
    "guide_id": "baby-shark-tv"
   },
   {
-   "number": 853,
+   "number": 843,
    "name": "Blippi",
    "kind": "live",
    "streams": [
@@ -5776,7 +4990,7 @@
    "guide_id": "US9000032J"
   },
   {
-   "number": 854,
+   "number": 844,
    "name": "Caillou",
    "kind": "live",
    "streams": [
@@ -5794,7 +5008,7 @@
    "guide_id": "USBD50000048H"
   },
   {
-   "number": 855,
+   "number": 845,
    "name": "ducktv",
    "kind": "live",
    "streams": [
@@ -5811,7 +5025,7 @@
    "guide_id": "US3400003HI"
   },
   {
-   "number": 856,
+   "number": 846,
    "name": "HappyKids",
    "kind": "live",
    "streams": [
@@ -5828,22 +5042,7 @@
    "guide_id": "USBC44000072I"
   },
   {
-   "number": 857,
-   "name": "Kiddo+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/8258122f-b4c0-416b-a2db-8407847f0c3c_1000015692_HLS/master.m3u8",
-     "duration": 600,
-     "title": "Kiddo+"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Preschool",
-   "breaks": "cue"
-  },
-  {
-   "number": 858,
+   "number": 847,
    "name": "Little Stars Universe",
    "kind": "live",
    "streams": [
@@ -5861,7 +5060,7 @@
    "sub": "Preschool"
   },
   {
-   "number": 859,
+   "number": 848,
    "name": "LooLoo Kids",
    "kind": "live",
    "streams": [
@@ -5879,7 +5078,7 @@
    "guide_id": "GB430000144"
   },
   {
-   "number": 860,
+   "number": 849,
    "name": "Mattel Jr.",
    "kind": "live",
    "streams": [
@@ -5896,7 +5095,7 @@
    "guide_id": "US4500002UB"
   },
   {
-   "number": 861,
+   "number": 850,
    "name": "Moonbug",
    "kind": "live",
    "streams": [
@@ -5913,7 +5112,7 @@
    "guide_id": "USBB11000015Q"
   },
   {
-   "number": 862,
+   "number": 851,
    "name": "Nick Jr. Pluto TV",
    "kind": "live",
    "streams": [
@@ -5931,7 +5130,7 @@
    "sub": "Preschool"
   },
   {
-   "number": 863,
+   "number": 852,
    "name": "Pocoyo",
    "kind": "live",
    "streams": [
@@ -5948,7 +5147,7 @@
    "guide_id": "GB700004ET"
   },
   {
-   "number": 864,
+   "number": 853,
    "name": "Sensical Jr",
    "kind": "live",
    "streams": [
@@ -5966,7 +5165,7 @@
    "guide_id": "USBD3300013KV"
   },
   {
-   "number": 865,
+   "number": 854,
    "name": "Super Simple Songs",
    "kind": "live",
    "streams": [
@@ -5983,7 +5182,7 @@
    "guide_id": "9aff620ece2457a3a7572886ecae0495"
   },
   {
-   "number": 866,
+   "number": 855,
    "name": "Teletubbies",
    "kind": "live",
    "streams": [
@@ -6000,7 +5199,7 @@
    "guide_id": "GB2400007FA"
   },
   {
-   "number": 867,
+   "number": 856,
    "name": "Tiny POP",
    "kind": "live",
    "streams": [
@@ -6017,7 +5216,7 @@
    "guide_id": "GBBD3200003T6"
   },
   {
-   "number": 868,
+   "number": 857,
    "name": "Toon Goggles Junior",
    "kind": "live",
    "streams": [
@@ -6032,21 +5231,6 @@
    "breaks": "cue",
    "guide": "samsung",
    "guide_id": "USBB3600001R6"
-  },
-  {
-   "number": 869,
-   "name": "Zoo Moo",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://zoomoo-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Zoo Moo"
-    }
-   ],
-   "block": "Cartoons & Kids",
-   "sub": "Preschool",
-   "breaks": "cue"
   },
   {
    "number": 900,
@@ -6334,21 +5518,6 @@
   },
   {
    "number": 1004,
-   "name": "Cuisine Culture",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/umaxx/v1/01970b146c091ebd470414fa6dc31a/01970b14d5f11ea506ec1fab16cfb0/playlist.m3u8",
-     "duration": 600,
-     "title": "Cuisine Culture"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food",
-   "breaks": "cue"
-  },
-  {
-   "number": 1005,
    "name": "Delicious Eats by Food Network",
    "kind": "live",
    "streams": [
@@ -6366,7 +5535,7 @@
    "sub": "Food"
   },
   {
-   "number": 1006,
+   "number": 1005,
    "name": "Emeril Lagasse Channel",
    "kind": "live",
    "streams": [
@@ -6384,7 +5553,7 @@
    "guide_id": "US4500010B0"
   },
   {
-   "number": 1007,
+   "number": 1006,
    "name": "GustoTV",
    "kind": "live",
    "streams": [
@@ -6401,7 +5570,7 @@
    "guide_id": "99991328"
   },
   {
-   "number": 1008,
+   "number": 1007,
    "name": "Home Cooking by Food Network",
    "kind": "live",
    "streams": [
@@ -6419,7 +5588,7 @@
    "sub": "Food"
   },
   {
-   "number": 1009,
+   "number": 1008,
    "name": "Hot Ones",
    "kind": "live",
    "streams": [
@@ -6436,7 +5605,7 @@
    "guide_id": "GB4600001W9"
   },
   {
-   "number": 1010,
+   "number": 1009,
    "name": "Hungry",
    "kind": "live",
    "streams": [
@@ -6454,22 +5623,7 @@
    "guide_id": "USAJ2200009C2"
   },
   {
-   "number": 1011,
-   "name": "INFAST",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00861-terninternation-lifestyle-samsungau-kdlyy.amagi.tv/playlist/amg00861-terninternation-lifestyle-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "INFAST"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food",
-   "breaks": "cue"
-  },
-  {
-   "number": 1012,
+   "number": 1010,
    "name": "The Jamie Oliver Channel",
    "kind": "live",
    "streams": [
@@ -6487,7 +5641,7 @@
    "sub": "Food"
   },
   {
-   "number": 1013,
+   "number": 1011,
    "name": "K Food by CJ ENM",
    "kind": "live",
    "streams": [
@@ -6505,7 +5659,7 @@
    "guide_id": "US17000186W"
   },
   {
-   "number": 1014,
+   "number": 1012,
    "name": "Localish",
    "kind": "live",
    "streams": [
@@ -6522,7 +5676,7 @@
    "guide_id": "618763"
   },
   {
-   "number": 1015,
+   "number": 1013,
    "name": "The Martha Stewart Channel",
    "kind": "live",
    "streams": [
@@ -6540,7 +5694,7 @@
    "sub": "Food"
   },
   {
-   "number": 1016,
+   "number": 1014,
    "name": "PBS Food",
    "kind": "live",
    "streams": [
@@ -6558,7 +5712,7 @@
    "guide_id": "US13000081O"
   },
   {
-   "number": 1017,
+   "number": 1015,
    "name": "Pluto TV Food",
    "kind": "live",
    "streams": [
@@ -6576,7 +5730,7 @@
    "sub": "Food"
   },
   {
-   "number": 1018,
+   "number": 1016,
    "name": "Rachael Ray Presents",
    "kind": "live",
    "streams": [
@@ -6594,22 +5748,7 @@
    "guide_id": "US47000287B"
   },
   {
-   "number": 1019,
-   "name": "Tastemade",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://rakutenaa-tm-intl-aus-rakuten-eu-n1gtg.amagi.tv/playlist/rakutenAA-tm-intl-aus-rakuten-eu/playlist.m3u8",
-     "duration": 600,
-     "title": "Tastemade"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food",
-   "breaks": "cue"
-  },
-  {
-   "number": 1020,
+   "number": 1017,
    "name": "Tastemade Smokehouse",
    "kind": "live",
    "streams": [
@@ -6627,22 +5766,7 @@
    "sub": "Food"
   },
   {
-   "number": 1021,
-   "name": "Wine Watches & Whiskey",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://www-on-stirr.b-cdn.net/Wine-Watches-and-Whiskey/playlist.m3u8",
-     "duration": 600,
-     "title": "Wine Watches & Whiskey"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food",
-   "breaks": "cue"
-  },
-  {
-   "number": 1030,
+   "number": 1020,
    "name": "Chef vs Chef by Food Network",
    "kind": "live",
    "streams": [
@@ -6660,22 +5784,7 @@
    "sub": "Food Reality"
   },
   {
-   "number": 1031,
-   "name": "Come Dine With Me",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00654-itv-amg00654c2-samsung-au-925.playouts.now.amagi.tv/itv-cdwmug/playlist.m3u8",
-     "duration": 600,
-     "title": "Come Dine With Me"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 1032,
+   "number": 1021,
    "name": "Gordon Ramsay",
    "kind": "live",
    "streams": [
@@ -6692,7 +5801,7 @@
    "guide_id": "677011"
   },
   {
-   "number": 1033,
+   "number": 1022,
    "name": "Great British Menu",
    "kind": "live",
    "streams": [
@@ -6709,22 +5818,7 @@
    "guide_id": "GBBC900014LW"
   },
   {
-   "number": 1034,
-   "name": "Hell's Kitchen",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00654-itv-amg00654c1-samsung-au-1072.playouts.now.amagi.tv/itv-hellskitchen-samsung/playlist.m3u8",
-     "duration": 600,
-     "title": "Hell's Kitchen"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 1035,
+   "number": 1023,
    "name": "Kitchen Nightmares",
    "kind": "live",
    "streams": [
@@ -6742,7 +5836,7 @@
    "guide_id": "USBA3000042O6"
   },
   {
-   "number": 1036,
+   "number": 1024,
    "name": "Masterchef UK",
    "kind": "live",
    "streams": [
@@ -6759,22 +5853,7 @@
    "guide_id": "GBBD25000019N"
   },
   {
-   "number": 1037,
-   "name": "Top Chef Vault",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://xumo-xumoent-vc-116-hrcw0.fast.nbcuni.com/live/master.m3u8",
-     "duration": 600,
-     "title": "Top Chef Vault"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food Reality",
-   "breaks": "cue"
-  },
-  {
-   "number": 1040,
+   "number": 1030,
    "name": "A New Life In The Sun",
    "kind": "live",
    "streams": [
@@ -6791,7 +5870,7 @@
    "guide_id": "GB60000381"
   },
   {
-   "number": 1041,
+   "number": 1031,
    "name": "BBC Home & Garden",
    "kind": "live",
    "streams": [
@@ -6809,37 +5888,7 @@
    "guide_id": "USBC600017FG"
   },
   {
-   "number": 1042,
-   "name": "The Design Network",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00441-amg00441c1-samsung-au-6606.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "The Design Network"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Home",
-   "breaks": "cue"
-  },
-  {
-   "number": 1043,
-   "name": "Escape to the Country",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00145-amg00145c11-samsung-au-6579.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Escape to the Country"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Home",
-   "breaks": "cue"
-  },
-  {
-   "number": 1044,
+   "number": 1032,
    "name": "Flipping Nation",
    "kind": "live",
    "streams": [
@@ -6856,22 +5905,7 @@
    "guide_id": "GB2700010NQ"
   },
   {
-   "number": 1045,
-   "name": "Four in a Bed",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://all3media-four-in-a-bed-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Four in a Bed"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Home",
-   "breaks": "cue"
-  },
-  {
-   "number": 1046,
+   "number": 1033,
    "name": "Home Refresh",
    "kind": "live",
    "streams": [
@@ -6889,7 +5923,7 @@
    "guide_id": "USBC21000142T"
   },
   {
-   "number": 1047,
+   "number": 1034,
    "name": "Home.Made.Nation",
    "kind": "live",
    "streams": [
@@ -6907,7 +5941,7 @@
    "sub": "Home"
   },
   {
-   "number": 1048,
+   "number": 1035,
    "name": "Homeful",
    "kind": "live",
    "streams": [
@@ -6925,52 +5959,7 @@
    "sub": "Home"
   },
   {
-   "number": 1049,
-   "name": "Homes Under The Hammer",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://all3media-homes-under-the-hammer-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Homes Under The Hammer"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Home",
-   "breaks": "cue"
-  },
-  {
-   "number": 1050,
-   "name": "The Hotel Inspector",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00654-itv-amg00654c4-samsung-au-998.playouts.now.amagi.tv/playlist/amg00654-itvstudiosfast-hotelinspector-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "The Hotel Inspector"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Home",
-   "breaks": "cue"
-  },
-  {
-   "number": 1051,
-   "name": "Inside Outside",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://all3media-international-insideoutside-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Inside Outside"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Home",
-   "breaks": "cue"
-  },
-  {
-   "number": 1052,
+   "number": 1036,
    "name": "Million Dollar Dream Home",
    "kind": "live",
    "streams": [
@@ -6988,7 +5977,7 @@
    "guide_id": "US300067FX"
   },
   {
-   "number": 1053,
+   "number": 1037,
    "name": "Million Dollar Listing Vault",
    "kind": "live",
    "streams": [
@@ -7005,7 +5994,7 @@
    "guide_id": "99951237"
   },
   {
-   "number": 1054,
+   "number": 1038,
    "name": "Property & Reno",
    "kind": "live",
    "streams": [
@@ -7022,7 +6011,7 @@
    "guide_id": "99951221"
   },
   {
-   "number": 1055,
+   "number": 1039,
    "name": "Rustic Retreats",
    "kind": "live",
    "streams": [
@@ -7040,7 +6029,7 @@
    "sub": "Home"
   },
   {
-   "number": 1056,
+   "number": 1040,
    "name": "Tastemade Home",
    "kind": "live",
    "streams": [
@@ -7058,7 +6047,7 @@
    "guide_id": "USBC3200022W6"
   },
   {
-   "number": 1057,
+   "number": 1041,
    "name": "This Old House",
    "kind": "live",
    "streams": [
@@ -7075,7 +6064,7 @@
    "guide_id": "7e9fe2b4c7ba5869af6d60adbf4b7c86"
   },
   {
-   "number": 1058,
+   "number": 1042,
    "name": "Tiny House Nation",
    "kind": "live",
    "streams": [
@@ -7092,7 +6081,7 @@
    "guide_id": "GB2400006I0"
   },
   {
-   "number": 1059,
+   "number": 1043,
    "name": "WBTV Welcome Home",
    "kind": "live",
    "streams": [
@@ -7110,7 +6099,7 @@
    "guide_id": "715945"
   },
   {
-   "number": 1060,
+   "number": 1050,
    "name": "Antiques Roadshow PBS",
    "kind": "live",
    "streams": [
@@ -7127,7 +6116,7 @@
    "guide_id": "99951206"
   },
   {
-   "number": 1061,
+   "number": 1051,
    "name": "Antiques Roadshow UK",
    "kind": "live",
    "streams": [
@@ -7144,7 +6133,7 @@
    "guide_id": "USBC600018CF"
   },
   {
-   "number": 1062,
+   "number": 1052,
    "name": "Cash in the Attic",
    "kind": "live",
    "streams": [
@@ -7161,22 +6150,7 @@
    "guide_id": "GB1200004J4"
   },
   {
-   "number": 1063,
-   "name": "PBS Antiques Road Trip",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02333-pbs-amg02333c1-samsung-au-1253.playouts.now.amagi.tv/PBSD-AntiquesRoadTripSF-samsung/playlist.m3u8",
-     "duration": 600,
-     "title": "PBS Antiques Road Trip"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Antiques",
-   "breaks": "cue"
-  },
-  {
-   "number": 1070,
+   "number": 1060,
    "name": "At Home with Family Handyman",
    "kind": "live",
    "streams": [
@@ -7193,7 +6167,7 @@
    "guide_id": "99951156"
   },
   {
-   "number": 1071,
+   "number": 1061,
    "name": "The Bob Ross Channel",
    "kind": "live",
    "streams": [
@@ -7211,7 +6185,7 @@
    "guide_id": "USBD700012OA"
   },
   {
-   "number": 1072,
+   "number": 1062,
    "name": "Craftsy",
    "kind": "live",
    "streams": [
@@ -7228,22 +6202,7 @@
    "guide_id": "6413"
   },
   {
-   "number": 1073,
-   "name": "DIY Art",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2cafac16-f982-4563-9951-ccd6ab0c2c6b/manifest.m3u8",
-     "duration": 600,
-     "title": "DIY Art"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Crafts & Garden",
-   "breaks": "cue"
-  },
-  {
-   "number": 1074,
+   "number": 1063,
    "name": "Epic Gardening TV",
    "kind": "live",
    "streams": [
@@ -7261,7 +6220,7 @@
    "guide_id": "US2000017HT"
   },
   {
-   "number": 1075,
+   "number": 1064,
    "name": "Gardening With Monty Don",
    "kind": "live",
    "streams": [
@@ -7278,7 +6237,7 @@
    "guide_id": "700407"
   },
   {
-   "number": 1076,
+   "number": 1065,
    "name": "TheSorryGirls TV",
    "kind": "live",
    "streams": [
@@ -7296,7 +6255,7 @@
    "guide_id": "US2100008CW"
   },
   {
-   "number": 1077,
+   "number": 1066,
    "name": "This Old House Makers",
    "kind": "live",
    "streams": [
@@ -7314,7 +6273,7 @@
    "guide_id": "USBC1300005T6"
   },
   {
-   "number": 1078,
+   "number": 1067,
    "name": "WBTV How To",
    "kind": "live",
    "streams": [
@@ -7332,22 +6291,7 @@
    "guide_id": "715952"
   },
   {
-   "number": 1080,
-   "name": "4K Travel TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8",
-     "duration": 600,
-     "title": "4K Travel TV"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1081,
+   "number": 1070,
    "name": "Autentic Travel",
    "kind": "live",
    "streams": [
@@ -7364,67 +6308,7 @@
    "guide_id": "GB3200006AZ"
   },
   {
-   "number": 1082,
-   "name": "China Travel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01314-amg01314c7-distrotv-us-10219.playouts.now.amagi.tv/playlist/amg01314-cgtn-cgtnchinatravel-distrotvus/playlist.m3u8",
-     "duration": 600,
-     "title": "China Travel"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1083,
-   "name": "Escape TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/4da91549-1762-4d60-b8b7-db07ef7ee64b/manifest.m3u8",
-     "duration": 600,
-     "title": "Escape TV"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1084,
-   "name": "Heritage Tourism",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cff3309e-ded1-40dd-a6dc-e3a6d0a92d72/manifest.m3u8",
-     "duration": 600,
-     "title": "Heritage Tourism"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1085,
-   "name": "Heritage+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e4523706-f2a8-4b0f-b081-40fe59a46f81/manifest.m3u8",
-     "duration": 600,
-     "title": "Heritage+"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1086,
+   "number": 1071,
    "name": "INTRAVEL",
    "kind": "live",
    "streams": [
@@ -7441,7 +6325,7 @@
    "guide_id": "7047"
   },
   {
-   "number": 1087,
+   "number": 1072,
    "name": "JOURNY TV",
    "kind": "live",
    "streams": [
@@ -7459,37 +6343,7 @@
    "guide_id": "USBB1000003HL"
   },
   {
-   "number": 1088,
-   "name": "Life Downunder",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://wtfn-lifedownunder-1-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Life Downunder"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1089,
-   "name": "Luxury Dreams TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2f8307f7-cae4-4b19-afc0-32f4ba4ab4d0/manifest.m3u8",
-     "duration": 600,
-     "title": "Luxury Dreams TV"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1090,
+   "number": 1073,
    "name": "PBS Travel",
    "kind": "live",
    "streams": [
@@ -7507,7 +6361,7 @@
    "guide_id": "US1300005MK"
   },
   {
-   "number": 1091,
+   "number": 1074,
    "name": "Tastemade Travel",
    "kind": "live",
    "streams": [
@@ -7525,37 +6379,7 @@
    "guide_id": "USBD700017WC"
   },
   {
-   "number": 1092,
-   "name": "Travel Escapes",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://videoelephantlimited-travelescapes-1-us.ohlscdn.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Travel Escapes"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1093,
-   "name": "Voyages+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/ff8d1526-e572-4bb5-8c93-560eb80115bf/manifest.m3u8",
-     "duration": 600,
-     "title": "Voyages+"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
-  },
-  {
-   "number": 1094,
+   "number": 1075,
    "name": "WBTV Sweet Escapes",
    "kind": "live",
    "streams": [
@@ -7573,7 +6397,7 @@
    "guide_id": "715938"
   },
   {
-   "number": 1095,
+   "number": 1076,
    "name": "WBTV Travel and Adventure",
    "kind": "live",
    "streams": [
@@ -7589,21 +6413,6 @@
    "breaks": "cue",
    "guide": "tubi",
    "guide_id": "400000068"
-  },
-  {
-   "number": 1096,
-   "name": "Yachting TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/vglive-sk-461164/index.m3u8",
-     "duration": 600,
-     "title": "Yachting TV"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Travel",
-   "breaks": "cue"
   },
   {
    "number": 1100,
@@ -7793,20 +6602,6 @@
   },
   {
    "number": 1122,
-   "name": "Stingray Y2K",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-232ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Y2K"
-    }
-   ],
-   "block": "Music",
-   "sub": "90s & 2000s"
-  },
-  {
-   "number": 1123,
    "name": "Vevo '90s",
    "kind": "live",
    "streams": [
@@ -7824,7 +6619,7 @@
    "sub": "90s & 2000s"
   },
   {
-   "number": 1124,
+   "number": 1123,
    "name": "Vevo '90s & '00s",
    "kind": "live",
    "streams": [
@@ -7840,7 +6635,7 @@
    "guide_id": "GBBC2100002HP"
   },
   {
-   "number": 1125,
+   "number": 1124,
    "name": "Vevo 2K",
    "kind": "live",
    "streams": [
@@ -7858,7 +6653,7 @@
    "sub": "90s & 2000s"
   },
   {
-   "number": 1126,
+   "number": 1125,
    "name": "XITE 90s Throwback",
    "kind": "live",
    "streams": [
@@ -7909,20 +6704,6 @@
   },
   {
    "number": 1132,
-   "name": "Stingray Rock Alternative",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-102ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Rock Alternative"
-    }
-   ],
-   "block": "Music",
-   "sub": "Rock"
-  },
-  {
-   "number": 1133,
    "name": "Vevo Rock",
    "kind": "live",
    "streams": [
@@ -7940,7 +6721,7 @@
    "sub": "Rock"
   },
   {
-   "number": 1134,
+   "number": 1133,
    "name": "XITE Rock x Metal",
    "kind": "live",
    "streams": [
@@ -8095,20 +6876,6 @@
   },
   {
    "number": 1151,
-   "name": "Stingray Soul Storm",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-134ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Soul Storm"
-    }
-   ],
-   "block": "Music",
-   "sub": "Hip-Hop/R&B"
-  },
-  {
-   "number": 1152,
    "name": "Trace UK",
    "kind": "live",
    "streams": [
@@ -8124,21 +6891,7 @@
    "guide_id": "GBBD19000026B"
   },
   {
-   "number": 1153,
-   "name": "Trace Urban",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Trace Urban"
-    }
-   ],
-   "block": "Music",
-   "sub": "Hip-Hop/R&B"
-  },
-  {
-   "number": 1154,
+   "number": 1152,
    "name": "Vevo Hip Hop & R&B",
    "kind": "live",
    "streams": [
@@ -8154,7 +6907,7 @@
    "guide_id": "GBBD2300001C0"
   },
   {
-   "number": 1155,
+   "number": 1153,
    "name": "Vevo R&B",
    "kind": "live",
    "streams": [
@@ -8172,7 +6925,7 @@
    "sub": "Hip-Hop/R&B"
   },
   {
-   "number": 1156,
+   "number": 1154,
    "name": "Vevo True School Hip-Hop",
    "kind": "live",
    "streams": [
@@ -8190,7 +6943,7 @@
    "sub": "Hip-Hop/R&B"
   },
   {
-   "number": 1157,
+   "number": 1155,
    "name": "XITE R&B Classic Jams",
    "kind": "live",
    "streams": [
@@ -8207,7 +6960,7 @@
    "guide_id": "USBD330000948"
   },
   {
-   "number": 1158,
+   "number": 1156,
    "name": "Yo! MTV",
    "kind": "live",
    "streams": [
@@ -8327,48 +7080,6 @@
   },
   {
    "number": 1166,
-   "name": "Stingray Hit List",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-107ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Hit List"
-    }
-   ],
-   "block": "Music",
-   "sub": "Pop"
-  },
-  {
-   "number": 1167,
-   "name": "Stingray Italo Disco",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-311ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Italo Disco"
-    }
-   ],
-   "block": "Music",
-   "sub": "Pop"
-  },
-  {
-   "number": 1168,
-   "name": "Stingray Pop Adult",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-104ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Pop Adult"
-    }
-   ],
-   "block": "Music",
-   "sub": "Pop"
-  },
-  {
-   "number": 1169,
    "name": "Stingray Soft Hits",
    "kind": "live",
    "streams": [
@@ -8384,7 +7095,7 @@
    "guide_id": "US4700007GV"
   },
   {
-   "number": 1170,
+   "number": 1167,
    "name": "Stingray Today's KPOP",
    "kind": "live",
    "streams": [
@@ -8400,7 +7111,7 @@
    "guide_id": "USBD3500016NH"
   },
   {
-   "number": 1171,
+   "number": 1168,
    "name": "TikTok Radio",
    "kind": "live",
    "streams": [
@@ -8418,7 +7129,7 @@
    "sub": "Pop"
   },
   {
-   "number": 1172,
+   "number": 1169,
    "name": "Vevo Pop",
    "kind": "live",
    "streams": [
@@ -8436,21 +7147,7 @@
    "sub": "Pop"
   },
   {
-   "number": 1173,
-   "name": "XITE Celebrates",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://dt1s4l2cmiyit.cloudfront.net/XITE_Celebrates.m3u8",
-     "duration": 600,
-     "title": "XITE Celebrates"
-    }
-   ],
-   "block": "Music",
-   "sub": "Pop"
-  },
-  {
-   "number": 1174,
+   "number": 1170,
    "name": "XITE Hits",
    "kind": "live",
    "streams": [
@@ -8467,20 +7164,6 @@
   },
   {
    "number": 1180,
-   "name": "Qwest TV Jazz & Beyond",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://samsungau-qwestjazz-samsungtv-zw2jc.amagi.tv/playlist/samsungau-qwestjazz-samsungtv/playlist.m3u8",
-     "duration": 600,
-     "title": "Qwest TV Jazz & Beyond"
-    }
-   ],
-   "block": "Music",
-   "sub": "Classical/Jazz"
-  },
-  {
-   "number": 1181,
    "name": "Stingray Classica",
    "kind": "live",
    "streams": [
@@ -8496,7 +7179,7 @@
    "guide_id": "USBD350002623"
   },
   {
-   "number": 1182,
+   "number": 1181,
    "name": "Stingray DJAZZ",
    "kind": "live",
    "streams": [
@@ -8514,7 +7197,7 @@
    "sub": "Classical/Jazz"
   },
   {
-   "number": 1183,
+   "number": 1182,
    "name": "Stingray Smooth Jazz",
    "kind": "live",
    "streams": [
@@ -8531,21 +7214,6 @@
   },
   {
    "number": 1190,
-   "name": "Cirque du Soleil",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01439-amg01439c1-amgplt0081.playout.now3.amagi.tv/playlist/amg01439-amg01439c1-amgplt0081/playlist.m3u8",
-     "duration": 600,
-     "title": "Cirque du Soleil",
-     "route": "us"
-    }
-   ],
-   "block": "Music",
-   "sub": "Concerts & Live"
-  },
-  {
-   "number": 1191,
    "name": "Live Music",
    "kind": "live",
    "streams": [
@@ -8563,7 +7231,7 @@
    "sub": "Concerts & Live"
   },
   {
-   "number": 1192,
+   "number": 1191,
    "name": "Our Vinyl",
    "kind": "live",
    "streams": [
@@ -8579,21 +7247,7 @@
    "guide_id": "6443"
   },
   {
-   "number": 1193,
-   "name": "Playing for Change",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/vglive-sk-860453/index.m3u8",
-     "duration": 600,
-     "title": "Playing for Change"
-    }
-   ],
-   "block": "Music",
-   "sub": "Concerts & Live"
-  },
-  {
-   "number": 1194,
+   "number": 1192,
    "name": "Qello Concerts",
    "kind": "live",
    "streams": [
@@ -8660,34 +7314,6 @@
   },
   {
    "number": 1203,
-   "name": "Stingray Holiday Hits",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-155ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Holiday Hits"
-    }
-   ],
-   "block": "Music",
-   "sub": "Other"
-  },
-  {
-   "number": 1204,
-   "name": "Stingray Karaoke",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/karaoke-kar000-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Karaoke"
-    }
-   ],
-   "block": "Music",
-   "sub": "Other"
-  },
-  {
-   "number": 1205,
    "name": "Stingray Movie Music",
    "kind": "live",
    "streams": [
@@ -8703,21 +7329,7 @@
    "guide_id": "US4700003DP"
   },
   {
-   "number": 1206,
-   "name": "Stingray Soccer Anthems",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lotus.stingray.com/manifest/ose-347ads-montreal/samsungtvplus/master.m3u8",
-     "duration": 600,
-     "title": "Stingray Soccer Anthems"
-    }
-   ],
-   "block": "Music",
-   "sub": "Other"
-  },
-  {
-   "number": 1207,
+   "number": 1204,
    "name": "XITE Gospel",
    "kind": "live",
    "streams": [
@@ -8735,7 +7347,7 @@
    "sub": "Other"
   },
   {
-   "number": 1208,
+   "number": 1205,
    "name": "XITE Just Chill",
    "kind": "live",
    "streams": [
@@ -8751,7 +7363,7 @@
    "guide_id": "USBB2300003JZ"
   },
   {
-   "number": 1209,
+   "number": 1206,
    "name": "XITE Reggae Vibes",
    "kind": "live",
    "streams": [
@@ -8769,22 +7381,6 @@
   },
   {
    "number": 1300,
-   "name": "Backstage",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d2ah48mnofquik.cloudfront.net/Backstage.m3u8",
-     "duration": 600,
-     "title": "Backstage",
-     "route": "us"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1301,
    "name": "CNN Originals",
    "kind": "live",
    "streams": [
@@ -8802,22 +7398,7 @@
    "sub": "General"
   },
   {
-   "number": 1302,
-   "name": "Danger Vision",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/453971f3-855a-455e-9353-ebbb069583a4/manifest.m3u8",
-     "duration": 600,
-     "title": "Danger Vision"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1303,
+   "number": 1301,
    "name": "DangerTV",
    "kind": "live",
    "streams": [
@@ -8835,22 +7416,7 @@
    "guide_id": "USAJ3504708A"
   },
   {
-   "number": 1304,
-   "name": "Docu Vision",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/7e8d2a51-985d-4e76-bf7e-91edf0aa6e5f_0_HLS/master.m3u8",
-     "duration": 600,
-     "title": "Docu Vision"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1305,
+   "number": 1302,
    "name": "Documentary+",
    "kind": "live",
    "streams": [
@@ -8868,7 +7434,7 @@
    "guide_id": "USAJ3504701A"
   },
   {
-   "number": 1306,
+   "number": 1303,
    "name": "Get.Factual",
    "kind": "live",
    "streams": [
@@ -8885,7 +7451,7 @@
    "guide_id": "GB2700001R6"
   },
   {
-   "number": 1307,
+   "number": 1304,
    "name": "I Survived",
    "kind": "live",
    "streams": [
@@ -8902,7 +7468,7 @@
    "guide_id": "GB27000089Z"
   },
   {
-   "number": 1308,
+   "number": 1305,
    "name": "Mayday Air Disaster",
    "kind": "live",
    "streams": [
@@ -8919,7 +7485,7 @@
    "guide_id": "GB28000063B"
   },
   {
-   "number": 1309,
+   "number": 1306,
    "name": "Real Disaster Channel",
    "kind": "live",
    "streams": [
@@ -8937,7 +7503,7 @@
    "sub": "General"
   },
   {
-   "number": 1310,
+   "number": 1307,
    "name": "U&Real Heroes",
    "kind": "live",
    "streams": [
@@ -8955,22 +7521,7 @@
    "guide_id": "GBBD3100002NU"
   },
   {
-   "number": 1311,
-   "name": "Vice TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://vicetv-vicefast1-firetv.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Vice TV"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1320,
+   "number": 1310,
    "name": "Adventure Earth",
    "kind": "live",
    "streams": [
@@ -8987,7 +7538,7 @@
    "guide_id": "GBBC900015D3"
   },
   {
-   "number": 1321,
+   "number": 1311,
    "name": "BBC Earth",
    "kind": "live",
    "streams": [
@@ -9005,7 +7556,7 @@
    "sub": "Nature"
   },
   {
-   "number": 1322,
+   "number": 1312,
    "name": "Brave Wilderness",
    "kind": "live",
    "streams": [
@@ -9023,7 +7574,7 @@
    "guide_id": "US2100010AB"
   },
   {
-   "number": 1323,
+   "number": 1313,
    "name": "Clarity 4K",
    "kind": "live",
    "streams": [
@@ -9041,7 +7592,7 @@
    "guide_id": "USBA3800005NI"
   },
   {
-   "number": 1324,
+   "number": 1314,
    "name": "Earth Touch",
    "kind": "live",
    "streams": [
@@ -9059,22 +7610,7 @@
    "guide_id": "GBBD3200001E2"
   },
   {
-   "number": 1325,
-   "name": "InWild",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "InWild"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Nature",
-   "breaks": "cue"
-  },
-  {
-   "number": 1326,
+   "number": 1315,
    "name": "Jack Hanna",
    "kind": "live",
    "streams": [
@@ -9091,7 +7627,7 @@
    "guide_id": "GBBD50000084W"
   },
   {
-   "number": 1327,
+   "number": 1316,
    "name": "Love Nature",
    "kind": "live",
    "streams": [
@@ -9109,7 +7645,7 @@
    "sub": "Nature"
   },
   {
-   "number": 1328,
+   "number": 1317,
    "name": "Love the Planet",
    "kind": "live",
    "streams": [
@@ -9126,22 +7662,7 @@
    "guide_id": "GBBD500001F5"
   },
   {
-   "number": 1329,
-   "name": "NatureTime",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00090-blueantllc-lovenature-au-samsungau-wggcn.amagi.tv/playlist/amg00090-blueantllc-lovenature-au-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "NatureTime"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Nature",
-   "breaks": "cue"
-  },
-  {
-   "number": 1330,
+   "number": 1318,
    "name": "PBS Nature",
    "kind": "live",
    "streams": [
@@ -9159,7 +7680,7 @@
    "sub": "Nature"
   },
   {
-   "number": 1331,
+   "number": 1319,
    "name": "Pluto TV Animals",
    "kind": "live",
    "streams": [
@@ -9177,22 +7698,7 @@
    "sub": "Nature"
   },
   {
-   "number": 1332,
-   "name": "Real Wild",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lds-realwild-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Real Wild"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Nature",
-   "breaks": "cue"
-  },
-  {
-   "number": 1333,
+   "number": 1320,
    "name": "River Monsters",
    "kind": "live",
    "streams": [
@@ -9210,7 +7716,7 @@
    "guide_id": "GB2100006GK"
   },
   {
-   "number": 1334,
+   "number": 1321,
    "name": "Terra Mater WILD",
    "kind": "live",
    "streams": [
@@ -9228,7 +7734,7 @@
    "guide_id": "GB700006X7"
   },
   {
-   "number": 1335,
+   "number": 1322,
    "name": "WaterBear",
    "kind": "live",
    "streams": [
@@ -9245,7 +7751,7 @@
    "guide_id": "GBBC300003UQ"
   },
   {
-   "number": 1336,
+   "number": 1323,
    "name": "Wild Nature",
    "kind": "live",
    "streams": [
@@ -9262,7 +7768,7 @@
    "guide_id": "7061"
   },
   {
-   "number": 1337,
+   "number": 1324,
    "name": "Wild Planet",
    "kind": "live",
    "streams": [
@@ -9279,7 +7785,7 @@
    "guide_id": "GBBB5000002PL"
   },
   {
-   "number": 1338,
+   "number": 1325,
    "name": "WildEarth",
    "kind": "live",
    "streams": [
@@ -9296,7 +7802,7 @@
    "guide_id": "US3800007CR"
   },
   {
-   "number": 1340,
+   "number": 1330,
    "name": "Dog Whisperer",
    "kind": "live",
    "streams": [
@@ -9314,7 +7820,7 @@
    "guide_id": "US3400001FX"
   },
   {
-   "number": 1341,
+   "number": 1331,
    "name": "Love Pets",
    "kind": "live",
    "streams": [
@@ -9331,7 +7837,7 @@
    "guide_id": "GBBD1100003I0"
   },
   {
-   "number": 1342,
+   "number": 1332,
    "name": "Lucky Dog",
    "kind": "live",
    "streams": [
@@ -9349,7 +7855,7 @@
    "guide_id": "USBA3000044BJ"
   },
   {
-   "number": 1343,
+   "number": 1333,
    "name": "The Pet Collective",
    "kind": "live",
    "streams": [
@@ -9367,7 +7873,7 @@
    "sub": "Pets & Vets"
   },
   {
-   "number": 1344,
+   "number": 1334,
    "name": "Rovr Pets",
    "kind": "live",
    "streams": [
@@ -9385,7 +7891,7 @@
    "guide_id": "USBC2400024FN"
   },
   {
-   "number": 1345,
+   "number": 1335,
    "name": "Samsung Wild Life",
    "kind": "live",
    "streams": [
@@ -9403,7 +7909,7 @@
    "guide_id": "USBA3000043LH"
   },
   {
-   "number": 1346,
+   "number": 1336,
    "name": "Unleashed by DOGTV",
    "kind": "live",
    "streams": [
@@ -9421,7 +7927,7 @@
    "guide_id": "7017"
   },
   {
-   "number": 1347,
+   "number": 1337,
    "name": "WBTV Paws and Claws",
    "kind": "live",
    "streams": [
@@ -9439,7 +7945,7 @@
    "guide_id": "715939"
   },
   {
-   "number": 1350,
+   "number": 1340,
    "name": "Autentic History",
    "kind": "live",
    "streams": [
@@ -9456,7 +7962,7 @@
    "guide_id": "GB3200005SO"
   },
   {
-   "number": 1351,
+   "number": 1341,
    "name": "Biography The Icons",
    "kind": "live",
    "streams": [
@@ -9473,7 +7979,7 @@
    "guide_id": "US26000201N"
   },
   {
-   "number": 1352,
+   "number": 1342,
    "name": "Dinos 24/7",
    "kind": "live",
    "streams": [
@@ -9491,22 +7997,7 @@
    "sub": "History"
   },
   {
-   "number": 1353,
-   "name": "Discovering China",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01314-amg01314c8-distrotv-us-10218.playouts.now.amagi.tv/playlist/amg01314-cgtn-cgtndiscoveringchina-distrotvus/playlist.m3u8",
-     "duration": 600,
-     "title": "Discovering China"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "History",
-   "breaks": "cue"
-  },
-  {
-   "number": 1354,
+   "number": 1343,
    "name": "Evolution Earth",
    "kind": "live",
    "streams": [
@@ -9524,7 +8015,7 @@
    "guide_id": "GB2700003KS"
   },
   {
-   "number": 1355,
+   "number": 1344,
    "name": "History 365",
    "kind": "live",
    "streams": [
@@ -9542,37 +8033,7 @@
    "guide_id": "USBD35000428O"
   },
   {
-   "number": 1356,
-   "name": "History and Warfare Now",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d28gzbv9fhdm3h.cloudfront.net/playlist/amg00376-magellantv-historyandwarfarenowaunzin-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "History and Warfare Now"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "History",
-   "breaks": "cue"
-  },
-  {
-   "number": 1357,
-   "name": "History Hit",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://ldsaaaaaa-timeline-samsungau-awedz.amagi.tv/playlist/ldsAAAAAA-timeline-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "History Hit"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "History",
-   "breaks": "cue"
-  },
-  {
-   "number": 1358,
+   "number": 1345,
    "name": "History Hunters",
    "kind": "live",
    "streams": [
@@ -9589,7 +8050,7 @@
    "guide_id": "history-hunters"
   },
   {
-   "number": 1359,
+   "number": 1346,
    "name": "Military Heroes",
    "kind": "live",
    "streams": [
@@ -9607,7 +8068,7 @@
    "guide_id": "USBC39000204J"
   },
   {
-   "number": 1360,
+   "number": 1347,
    "name": "Modern Marvels",
    "kind": "live",
    "streams": [
@@ -9624,7 +8085,7 @@
    "guide_id": "GB2700009R7"
   },
   {
-   "number": 1361,
+   "number": 1348,
    "name": "PBS Genealogy",
    "kind": "live",
    "streams": [
@@ -9642,22 +8103,7 @@
    "guide_id": "US130000639"
   },
   {
-   "number": 1362,
-   "name": "PBS History",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02333-pbs-amg02333c1-samsung-au-1253.playouts.now.amagi.tv/playlist/amg02333-pbsdistributionfast-pbshistory-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "PBS History"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "History",
-   "breaks": "cue"
-  },
-  {
-   "number": 1363,
+   "number": 1349,
    "name": "Pluto TV Britain at War",
    "kind": "live",
    "streams": [
@@ -9675,7 +8121,7 @@
    "sub": "History"
   },
   {
-   "number": 1364,
+   "number": 1350,
    "name": "Pluto TV History",
    "kind": "live",
    "streams": [
@@ -9693,7 +8139,7 @@
    "sub": "History"
   },
   {
-   "number": 1365,
+   "number": 1351,
    "name": "Pluto TV Military",
    "kind": "live",
    "streams": [
@@ -9711,7 +8157,7 @@
    "sub": "History"
   },
   {
-   "number": 1366,
+   "number": 1352,
    "name": "Smithsonian Channel Selects",
    "kind": "live",
    "streams": [
@@ -9729,7 +8175,7 @@
    "sub": "History"
   },
   {
-   "number": 1367,
+   "number": 1353,
    "name": "True History Channel",
    "kind": "live",
    "streams": [
@@ -9746,7 +8192,7 @@
    "guide_id": "99991650"
   },
   {
-   "number": 1368,
+   "number": 1354,
    "name": "U&The Past",
    "kind": "live",
    "streams": [
@@ -9764,7 +8210,7 @@
    "guide_id": "GBBD3100004OI"
   },
   {
-   "number": 1369,
+   "number": 1355,
    "name": "World War TV",
    "kind": "live",
    "streams": [
@@ -9782,7 +8228,7 @@
    "sub": "History"
   },
   {
-   "number": 1370,
+   "number": 1360,
    "name": "Cosmic Frontiers",
    "kind": "live",
    "streams": [
@@ -9799,7 +8245,7 @@
    "guide_id": "cosmic-frontiers-uk"
   },
   {
-   "number": 1371,
+   "number": 1361,
    "name": "Curiosity Now",
    "kind": "live",
    "streams": [
@@ -9816,52 +8262,7 @@
    "guide_id": "curiosity-now-en"
   },
   {
-   "number": 1372,
-   "name": "The Explorers",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/4804aca3-dd54-43d1-8caa-0b836a76d9e9/manifest.m3u8",
-     "duration": 600,
-     "title": "The Explorers"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1373,
-   "name": "InWonder",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00861-terninternation-inwonder-samsungau-1k63k.amagi.tv/playlist/amg00861-terninternation-inwonder-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "InWonder"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1374,
-   "name": "MagellanTV Now",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00376-magellan-amg00376c5-samsung-au-1708.playouts.now.amagi.tv/playlist/amg00376-magellantv-magellantvnowww-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "MagellanTV Now"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1375,
+   "number": 1362,
    "name": "Mark Rober TV",
    "kind": "live",
    "streams": [
@@ -9879,22 +8280,7 @@
    "guide_id": "US2000010PO"
   },
   {
-   "number": 1376,
-   "name": "Mythbusters",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d2bog959vw5xq.cloudfront.net/playlist/amg00627-banijayfast-mythbusters-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Mythbusters"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1377,
+   "number": 1363,
    "name": "PBS Digital Studios",
    "kind": "live",
    "streams": [
@@ -9911,22 +8297,7 @@
    "guide_id": "USBB800001O7"
   },
   {
-   "number": 1378,
-   "name": "PBS Science",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02333-pbs-amg02333c13-samsung-au-6858.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "PBS Science"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1379,
+   "number": 1364,
    "name": "Pluto TV Science",
    "kind": "live",
    "streams": [
@@ -9944,7 +8315,7 @@
    "sub": "Science & Space"
   },
   {
-   "number": 1380,
+   "number": 1365,
    "name": "Pluto TV Space",
    "kind": "live",
    "streams": [
@@ -9962,38 +8333,7 @@
    "sub": "Science & Space"
   },
   {
-   "number": 1381,
-   "name": "Space Series",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/18d329ef-d478-413c-b68f-c123494ac434/manifest.m3u8",
-     "duration": 600,
-     "title": "Space Series"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1382,
-   "name": "TED",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1b16tvvxk3tnu.cloudfront.net/TED.m3u8",
-     "duration": 600,
-     "title": "TED",
-     "route": "us"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1383,
+   "number": 1366,
    "name": "Universe Mysteries Solved",
    "kind": "live",
    "streams": [
@@ -10011,22 +8351,7 @@
    "guide_id": "US900001CX"
   },
   {
-   "number": 1384,
-   "name": "Wonder",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lds-wonder-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Wonder"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue"
-  },
-  {
-   "number": 1385,
+   "number": 1367,
    "name": "Xplore",
    "kind": "live",
    "streams": [
@@ -10043,7 +8368,7 @@
    "guide_id": "702892"
   },
   {
-   "number": 1390,
+   "number": 1370,
    "name": "Alien Nation",
    "kind": "live",
    "streams": [
@@ -10060,7 +8385,7 @@
    "guide_id": "99991292"
   },
   {
-   "number": 1391,
+   "number": 1371,
    "name": "Ancient Aliens",
    "kind": "live",
    "streams": [
@@ -10078,22 +8403,7 @@
    "guide_id": "US3300010F5"
   },
   {
-   "number": 1392,
-   "name": "Beyond Paranormal",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://videoelephantlimited-beyondparanormal-1-us.ohlscdn.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Beyond Paranormal"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Paranormal",
-   "breaks": "cue"
-  },
-  {
-   "number": 1393,
+   "number": 1372,
    "name": "The Curse of Oak Island",
    "kind": "live",
    "streams": [
@@ -10111,22 +8421,7 @@
    "guide_id": "US300002BE"
   },
   {
-   "number": 1394,
-   "name": "Ghost Hunters",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00353-amg00353c30-samsung-au-3440.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Ghost Hunters"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Paranormal",
-   "breaks": "cue"
-  },
-  {
-   "number": 1395,
+   "number": 1373,
    "name": "Ghost Stories",
    "kind": "live",
    "streams": [
@@ -10144,7 +8439,7 @@
    "guide_id": "US4200004KK"
   },
   {
-   "number": 1396,
+   "number": 1374,
    "name": "Haunt TV",
    "kind": "live",
    "streams": [
@@ -10162,7 +8457,7 @@
    "sub": "Paranormal"
   },
   {
-   "number": 1397,
+   "number": 1375,
    "name": "Most Haunted",
    "kind": "live",
    "streams": [
@@ -10180,7 +8475,7 @@
    "guide_id": "GB4300003ZT"
   },
   {
-   "number": 1398,
+   "number": 1376,
    "name": "Mysteries Xplored",
    "kind": "live",
    "streams": [
@@ -10197,7 +8492,7 @@
    "guide_id": "USBB5200028MM"
   },
   {
-   "number": 1399,
+   "number": 1377,
    "name": "Mystery TV",
    "kind": "live",
    "streams": [
@@ -10215,7 +8510,7 @@
    "sub": "Paranormal"
   },
   {
-   "number": 1400,
+   "number": 1378,
    "name": "Pluto TV Alien Invasion",
    "kind": "live",
    "streams": [
@@ -10233,7 +8528,7 @@
    "sub": "Paranormal"
   },
   {
-   "number": 1401,
+   "number": 1379,
    "name": "Pluto TV Conspiracy",
    "kind": "live",
    "streams": [
@@ -10251,7 +8546,7 @@
    "sub": "Paranormal"
   },
   {
-   "number": 1402,
+   "number": 1380,
    "name": "Pluto TV Paranormal",
    "kind": "live",
    "streams": [
@@ -10269,7 +8564,7 @@
    "sub": "Paranormal"
   },
   {
-   "number": 1403,
+   "number": 1381,
    "name": "Unidentified",
    "kind": "live",
    "streams": [
@@ -10286,7 +8581,7 @@
    "guide_id": "USBB10000047W"
   },
   {
-   "number": 1404,
+   "number": 1382,
    "name": "The UnXplained with William Shatner",
    "kind": "live",
    "streams": [
@@ -10304,7 +8599,7 @@
    "guide_id": "US700011JL"
   },
   {
-   "number": 1405,
+   "number": 1383,
    "name": "UnXplained Zone",
    "kind": "live",
    "streams": [
@@ -10322,7 +8617,7 @@
    "sub": "Paranormal"
   },
   {
-   "number": 1406,
+   "number": 1384,
    "name": "WBTV Ghosts are Real",
    "kind": "live",
    "streams": [
@@ -10340,7 +8635,7 @@
    "guide_id": "715951"
   },
   {
-   "number": 1407,
+   "number": 1385,
    "name": "WBTV Mysterious Worlds",
    "kind": "live",
    "streams": [
@@ -10358,7 +8653,7 @@
    "guide_id": "715946"
   },
   {
-   "number": 1410,
+   "number": 1390,
    "name": "ABC 20/20",
    "kind": "live",
    "streams": [
@@ -10375,7 +8670,7 @@
    "guide_id": "US4800001W5"
   },
   {
-   "number": 1411,
+   "number": 1391,
    "name": "American Crimes",
    "kind": "live",
    "streams": [
@@ -10392,7 +8687,7 @@
    "guide_id": "99951461"
   },
   {
-   "number": 1412,
+   "number": 1392,
    "name": "Crime & Justice",
    "kind": "live",
    "streams": [
@@ -10409,7 +8704,7 @@
    "guide_id": "GBBD260000189"
   },
   {
-   "number": 1413,
+   "number": 1393,
    "name": "Crime Beat TV",
    "kind": "live",
    "streams": [
@@ -10426,7 +8721,7 @@
    "guide_id": "crime-beat-tv"
   },
   {
-   "number": 1414,
+   "number": 1394,
    "name": "Crimes Cults Killers",
    "kind": "live",
    "streams": [
@@ -10444,7 +8739,7 @@
    "guide_id": "USBB5200022PY"
   },
   {
-   "number": 1415,
+   "number": 1395,
    "name": "Dateline 24/7",
    "kind": "live",
    "streams": [
@@ -10461,7 +8756,7 @@
    "guide_id": "GBBD3700001AB"
   },
   {
-   "number": 1416,
+   "number": 1396,
    "name": "Deadly Women",
    "kind": "live",
    "streams": [
@@ -10478,7 +8773,7 @@
    "guide_id": "GB4900001NW"
   },
   {
-   "number": 1417,
+   "number": 1397,
    "name": "Evidence of Evil",
    "kind": "live",
    "streams": [
@@ -10495,7 +8790,7 @@
    "guide_id": "GB3700011PO"
   },
   {
-   "number": 1418,
+   "number": 1398,
    "name": "Inside Crime",
    "kind": "live",
    "streams": [
@@ -10513,7 +8808,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1419,
+   "number": 1399,
    "name": "More True Crime",
    "kind": "live",
    "streams": [
@@ -10531,7 +8826,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1420,
+   "number": 1400,
    "name": "More TV Crime",
    "kind": "live",
    "streams": [
@@ -10549,7 +8844,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1421,
+   "number": 1401,
    "name": "Oxygen True Crime Archives",
    "kind": "live",
    "streams": [
@@ -10567,7 +8862,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1422,
+   "number": 1402,
    "name": "Pluto TV American True Crime",
    "kind": "live",
    "streams": [
@@ -10585,7 +8880,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1423,
+   "number": 1403,
    "name": "Pluto TV Crime",
    "kind": "live",
    "streams": [
@@ -10603,7 +8898,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1424,
+   "number": 1404,
    "name": "Pluto TV True Crime",
    "kind": "live",
    "streams": [
@@ -10621,22 +8916,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1425,
-   "name": "Real Crime",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lds-realcrime-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Real Crime"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "True Crime",
-   "breaks": "cue"
-  },
-  {
-   "number": 1426,
+   "number": 1405,
    "name": "Reelz Famous & Infamous",
    "kind": "live",
    "streams": [
@@ -10653,22 +8933,7 @@
    "guide_id": "641290"
   },
   {
-   "number": 1427,
-   "name": "Total Crime",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/b062c287-a170-47df-99e4-f5dcd441ee59/playlist.m3u8",
-     "duration": 600,
-     "title": "Total Crime"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "True Crime",
-   "breaks": "cue"
-  },
-  {
-   "number": 1428,
+   "number": 1406,
    "name": "TruBlu",
    "kind": "live",
    "streams": [
@@ -10686,38 +8951,7 @@
    "guide_id": "US37000036P"
   },
   {
-   "number": 1429,
-   "name": "True Crime Network+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00979-amg00979c1-firetv-us-3622.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "True Crime Network+",
-     "route": "us"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "True Crime",
-   "breaks": "cue"
-  },
-  {
-   "number": 1430,
-   "name": "True Crime Now",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00376-magellan-amg00376c12-samsung-au-1725.playouts.now.amagi.tv/playlist/amg00376-magellantv-truecrimenowaunzin-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "True Crime Now"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "True Crime",
-   "breaks": "cue"
-  },
-  {
-   "number": 1431,
+   "number": 1407,
    "name": "True Crime UK",
    "kind": "live",
    "streams": [
@@ -10735,7 +8969,7 @@
    "sub": "True Crime"
   },
   {
-   "number": 1432,
+   "number": 1408,
    "name": "TV One Crime & Justice",
    "kind": "live",
    "streams": [
@@ -10752,7 +8986,7 @@
    "guide_id": "400000011"
   },
   {
-   "number": 1433,
+   "number": 1409,
    "name": "WBTV Living With Evil",
    "kind": "live",
    "streams": [
@@ -10770,7 +9004,7 @@
    "guide_id": "400000067"
   },
   {
-   "number": 1434,
+   "number": 1410,
    "name": "World’s Most Evil Killers",
    "kind": "live",
    "streams": [
@@ -10788,7 +9022,7 @@
    "guide_id": "USBC1000002NP"
   },
   {
-   "number": 1440,
+   "number": 1420,
    "name": "Bloodline Detectives",
    "kind": "live",
    "streams": [
@@ -10805,7 +9039,7 @@
    "guide_id": "GB37000128Y"
   },
   {
-   "number": 1441,
+   "number": 1421,
    "name": "BuzzFeed Unsolved",
    "kind": "live",
    "streams": [
@@ -10823,7 +9057,7 @@
    "guide_id": "US2600022YJ"
   },
   {
-   "number": 1442,
+   "number": 1422,
    "name": "Cold Case Files",
    "kind": "live",
    "streams": [
@@ -10840,7 +9074,7 @@
    "guide_id": "400000085"
   },
   {
-   "number": 1443,
+   "number": 1423,
    "name": "Dr. G Medical Examiner",
    "kind": "live",
    "streams": [
@@ -10858,7 +9092,7 @@
    "guide_id": "USBB3200004X3"
   },
   {
-   "number": 1444,
+   "number": 1424,
    "name": "The First 48",
    "kind": "live",
    "streams": [
@@ -10876,7 +9110,7 @@
    "guide_id": "US3300011V9"
   },
   {
-   "number": 1445,
+   "number": 1425,
    "name": "Forensic Files",
    "kind": "live",
    "streams": [
@@ -10894,7 +9128,7 @@
    "guide_id": "USBB3200017MY"
   },
   {
-   "number": 1446,
+   "number": 1426,
    "name": "Medical Detectives",
    "kind": "live",
    "streams": [
@@ -10911,7 +9145,7 @@
    "guide_id": "GB3600001XM"
   },
   {
-   "number": 1447,
+   "number": 1427,
    "name": "Pluto TV Investigation",
    "kind": "live",
    "streams": [
@@ -10929,7 +9163,7 @@
    "sub": "Forensics & Cold Cases"
   },
   {
-   "number": 1448,
+   "number": 1428,
    "name": "Unsolved Mysteries",
    "kind": "live",
    "streams": [
@@ -10946,7 +9180,7 @@
    "guide_id": "USBB3200018Q6"
   },
   {
-   "number": 1449,
+   "number": 1429,
    "name": "WBTV Crime scenes",
    "kind": "live",
    "streams": [
@@ -10964,7 +9198,7 @@
    "guide_id": "715949"
   },
   {
-   "number": 1450,
+   "number": 1430,
    "name": "60 Days in Jail",
    "kind": "live",
    "streams": [
@@ -10981,7 +9215,7 @@
    "guide_id": "GB1000002RV"
   },
   {
-   "number": 1451,
+   "number": 1431,
    "name": "Cops",
    "kind": "live",
    "streams": [
@@ -10998,7 +9232,7 @@
    "guide_id": "cops"
   },
   {
-   "number": 1452,
+   "number": 1432,
    "name": "Cops & Docs",
    "kind": "live",
    "streams": [
@@ -11015,7 +9249,7 @@
    "guide_id": "GB3700008XB"
   },
   {
-   "number": 1453,
+   "number": 1433,
    "name": "Court TV",
    "kind": "live",
    "streams": [
@@ -11032,7 +9266,7 @@
    "guide_id": "400000299"
   },
   {
-   "number": 1454,
+   "number": 1434,
    "name": "Crime 24/7",
    "kind": "live",
    "streams": [
@@ -11050,7 +9284,7 @@
    "guide_id": "USAK3508703A"
   },
   {
-   "number": 1455,
+   "number": 1435,
    "name": "Dog The Bounty Hunter",
    "kind": "live",
    "streams": [
@@ -11067,7 +9301,7 @@
    "guide_id": "dog-the-bounty-hunter"
   },
   {
-   "number": 1456,
+   "number": 1436,
    "name": "Jail",
    "kind": "live",
    "streams": [
@@ -11084,22 +9318,7 @@
    "guide_id": "jail"
   },
   {
-   "number": 1457,
-   "name": "Law & Crime",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://cdn.lawandcrime.net/rewind/playlist.m3u8",
-     "duration": 600,
-     "title": "Law & Crime"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Cops & Courts",
-   "breaks": "cue"
-  },
-  {
-   "number": 1458,
+   "number": 1437,
    "name": "Live PD Presents",
    "kind": "live",
    "streams": [
@@ -11117,7 +9336,7 @@
    "guide_id": "GB4600004A9"
   },
   {
-   "number": 1459,
+   "number": 1438,
    "name": "WBTV Chasing Criminals",
    "kind": "live",
    "streams": [
@@ -11135,7 +9354,7 @@
    "guide_id": "400000074"
   },
   {
-   "number": 1460,
+   "number": 1439,
    "name": "Witness to Justice",
    "kind": "live",
    "streams": [
@@ -11152,22 +9371,7 @@
    "guide_id": "US700010XK"
   },
   {
-   "number": 1470,
-   "name": "Automotion",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/0c3229e2-6ca5-4714-859e-c0ac6b9aa58a_0_HLS/master.m3u8",
-     "duration": 600,
-     "title": "Automotion"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Motoring",
-   "breaks": "cue"
-  },
-  {
-   "number": 1471,
+   "number": 1440,
    "name": "BBC Top Gear",
    "kind": "live",
    "streams": [
@@ -11184,7 +9388,7 @@
    "guide_id": "99951249"
   },
   {
-   "number": 1472,
+   "number": 1441,
    "name": "Choppertown",
    "kind": "live",
    "streams": [
@@ -11201,7 +9405,7 @@
    "guide_id": "6a1610bebdf296985fd95603-5ef11487d33ab9004048a1d3"
   },
   {
-   "number": 1473,
+   "number": 1442,
    "name": "Discovery Turbo TV",
    "kind": "live",
    "streams": [
@@ -11219,22 +9423,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1474,
-   "name": "Drive + Speed",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/umaxx/v1/0196fce247271eb4611d16bd20c1ac/0196fce2a9361ea5064918d106ecf8/playlist.m3u8",
-     "duration": 600,
-     "title": "Drive + Speed"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Motoring",
-   "breaks": "cue"
-  },
-  {
-   "number": 1475,
+   "number": 1443,
    "name": "Hagerty",
    "kind": "live",
    "streams": [
@@ -11251,22 +9440,7 @@
    "guide_id": "USBD4200011W4"
   },
   {
-   "number": 1476,
-   "name": "Highway Thru Hell",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00627-amg00627c15-samsung-au-2899.playouts.now.amagi.tv/playlist/amg00627-banijayfast-highwaythruhell-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Highway Thru Hell"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Motoring",
-   "breaks": "cue"
-  },
-  {
-   "number": 1477,
+   "number": 1444,
    "name": "INTROUBLE",
    "kind": "live",
    "streams": [
@@ -11283,7 +9457,7 @@
    "guide_id": "7041"
   },
   {
-   "number": 1478,
+   "number": 1445,
    "name": "MotorTrend FAST TV",
    "kind": "live",
    "streams": [
@@ -11301,7 +9475,7 @@
    "guide_id": "400000108"
   },
   {
-   "number": 1479,
+   "number": 1446,
    "name": "Motorvision",
    "kind": "live",
    "streams": [
@@ -11318,7 +9492,7 @@
    "guide_id": "99991325"
   },
   {
-   "number": 1480,
+   "number": 1447,
    "name": "Pluto TV Cars",
    "kind": "live",
    "streams": [
@@ -11336,7 +9510,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1481,
+   "number": 1448,
    "name": "Pluto TV PetrolHeads",
    "kind": "live",
    "streams": [
@@ -11354,7 +9528,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1482,
+   "number": 1449,
    "name": "POWERNATION",
    "kind": "live",
    "streams": [
@@ -11372,7 +9546,7 @@
    "sub": "Motoring"
   },
   {
-   "number": 1483,
+   "number": 1450,
    "name": "Rig TV",
    "kind": "live",
    "streams": [
@@ -11389,7 +9563,7 @@
    "guide_id": "99951338"
   },
   {
-   "number": 1484,
+   "number": 1451,
    "name": "Road Renegades",
    "kind": "live",
    "streams": [
@@ -11407,22 +9581,7 @@
    "guide_id": "US700002ZB"
   },
   {
-   "number": 1485,
-   "name": "Test My Ride",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/WiseM3U8_21/master.m3u8",
-     "duration": 600,
-     "title": "Test My Ride"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Motoring",
-   "breaks": "cue"
-  },
-  {
-   "number": 1486,
+   "number": 1452,
    "name": "Torque",
    "kind": "live",
    "streams": [
@@ -11440,7 +9599,7 @@
    "guide_id": "USBB5200027Z5"
   },
   {
-   "number": 1487,
+   "number": 1453,
    "name": "U&Transport",
    "kind": "live",
    "streams": [
@@ -11458,7 +9617,7 @@
    "guide_id": "GBBD3100001A8"
   },
   {
-   "number": 1488,
+   "number": 1454,
    "name": "WBTV In The Garage",
    "kind": "live",
    "streams": [
@@ -11476,7 +9635,7 @@
    "guide_id": "400000073"
   },
   {
-   "number": 1489,
+   "number": 1455,
    "name": "Wheels & Steel",
    "kind": "live",
    "streams": [
@@ -11494,22 +9653,7 @@
    "guide_id": "GB3100002NB"
   },
   {
-   "number": 1490,
-   "name": "America's Boating Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/04c3a27e-c2a0-420b-8eef-7dae9ab93056/manifest.m3u8",
-     "duration": 600,
-     "title": "America's Boating Channel"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Outdoors",
-   "breaks": "cue"
-  },
-  {
-   "number": 1491,
+   "number": 1460,
    "name": "Ax Men",
    "kind": "live",
    "streams": [
@@ -11526,7 +9670,7 @@
    "guide_id": "GB2700011DR"
   },
   {
-   "number": 1492,
+   "number": 1461,
    "name": "Game & Fish TV",
    "kind": "live",
    "streams": [
@@ -11544,22 +9688,7 @@
    "guide_id": "US4400001PL"
   },
   {
-   "number": 1493,
-   "name": "Hunt Fish TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/WiseM3U8_2/master.m3u8",
-     "duration": 600,
-     "title": "Hunt Fish TV"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Outdoors",
-   "breaks": "cue"
-  },
-  {
-   "number": 1494,
+   "number": 1462,
    "name": "Ice Road Truckers",
    "kind": "live",
    "streams": [
@@ -11576,7 +9705,7 @@
    "guide_id": "GB2700007YH"
   },
   {
-   "number": 1495,
+   "number": 1463,
    "name": "MeatEater",
    "kind": "live",
    "streams": [
@@ -11594,7 +9723,7 @@
    "guide_id": "US21000043S"
   },
   {
-   "number": 1496,
+   "number": 1464,
    "name": "Mountain Men",
    "kind": "live",
    "streams": [
@@ -11612,37 +9741,7 @@
    "guide_id": "USBD17000051M"
   },
   {
-   "number": 1497,
-   "name": "Outdoor America",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1e354daam8g5r.cloudfront.net/playlist.m3u8",
-     "duration": 600,
-     "title": "Outdoor America"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Outdoors",
-   "breaks": "cue"
-  },
-  {
-   "number": 1498,
-   "name": "Outdoor Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00718-outdoorchannela-outdoortv-samsungau-uc7mp.amagi.tv/playlist/amg00718-outdoorchannela-outdoortv-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Outdoor Channel"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Outdoors",
-   "breaks": "cue"
-  },
-  {
-   "number": 1499,
+   "number": 1465,
    "name": "Outside TV",
    "kind": "live",
    "streams": [
@@ -11659,7 +9758,7 @@
    "guide_id": "USAJ3504707A"
   },
   {
-   "number": 1500,
+   "number": 1466,
    "name": "Pluto TV Backcountry",
    "kind": "live",
    "streams": [
@@ -11677,7 +9776,7 @@
    "sub": "Outdoors"
   },
   {
-   "number": 1501,
+   "number": 1467,
    "name": "Pluto TV Tough Jobs",
    "kind": "live",
    "streams": [
@@ -11695,7 +9794,7 @@
    "sub": "Outdoors"
   },
   {
-   "number": 1502,
+   "number": 1468,
    "name": "Pursuit UP",
    "kind": "live",
    "streams": [
@@ -11712,7 +9811,7 @@
    "guide_id": "USBD17000025J"
   },
   {
-   "number": 1503,
+   "number": 1469,
    "name": "Shooting Sports Life",
    "kind": "live",
    "streams": [
@@ -11729,7 +9828,7 @@
    "guide_id": "9101"
   },
   {
-   "number": 1504,
+   "number": 1470,
    "name": "Spike Outdoors",
    "kind": "live",
    "streams": [
@@ -11747,22 +9846,7 @@
    "sub": "Outdoors"
   },
   {
-   "number": 1505,
-   "name": "Sport Fishing TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8",
-     "duration": 600,
-     "title": "Sport Fishing TV"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Outdoors",
-   "breaks": "cue"
-  },
-  {
-   "number": 1506,
+   "number": 1471,
    "name": "Swamp People",
    "kind": "live",
    "streams": [
@@ -11780,7 +9864,7 @@
    "guide_id": "USBD2700013UK"
   },
   {
-   "number": 1507,
+   "number": 1472,
    "name": "Tough Jobs",
    "kind": "live",
    "streams": [
@@ -11798,7 +9882,7 @@
    "sub": "Outdoors"
   },
   {
-   "number": 1508,
+   "number": 1473,
    "name": "Waypoint TV",
    "kind": "live",
    "streams": [
@@ -11815,22 +9899,7 @@
    "guide_id": "USBB440002055"
   },
   {
-   "number": 1509,
-   "name": "The Wicked Tuna Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00353-lionsgatestudio-wickedtuna-samsungau-26lq4.amagi.tv/playlist/amg00353-lionsgatestudio-wickedtuna-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "The Wicked Tuna Channel"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Outdoors",
-   "breaks": "cue"
-  },
-  {
-   "number": 1510,
+   "number": 1474,
    "name": "Wild TV",
    "kind": "live",
    "streams": [
@@ -11847,7 +9916,7 @@
    "guide_id": "6439"
   },
   {
-   "number": 1511,
+   "number": 1475,
    "name": "Xtreme Outdoor by HISTORY",
    "kind": "live",
    "streams": [
@@ -11865,22 +9934,7 @@
    "sub": "Outdoors"
   },
   {
-   "number": 1600,
-   "name": "Ace TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/WiseM3U8_30/sofast/cleanhls/master.m3u8",
-     "duration": 600,
-     "title": "Ace TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1601,
+   "number": 1500,
    "name": "AWSN",
    "kind": "live",
    "streams": [
@@ -11898,7 +9952,7 @@
    "sub": "General"
   },
   {
-   "number": 1602,
+   "number": 1501,
    "name": "CBS Sports HQ",
    "kind": "live",
    "streams": [
@@ -11916,7 +9970,7 @@
    "sub": "General"
   },
   {
-   "number": 1603,
+   "number": 1502,
    "name": "FOX Sports",
    "kind": "live",
    "streams": [
@@ -11933,7 +9987,7 @@
    "guide_id": "US2700001QY"
   },
   {
-   "number": 1604,
+   "number": 1503,
    "name": "Fubo Sports Network",
    "kind": "live",
    "streams": [
@@ -11950,7 +10004,7 @@
    "guide_id": "557344"
   },
   {
-   "number": 1605,
+   "number": 1504,
    "name": "The Jim Rome Show",
    "kind": "live",
    "streams": [
@@ -11967,7 +10021,7 @@
    "guide_id": "US2900014UU"
   },
   {
-   "number": 1606,
+   "number": 1505,
    "name": "MSG SportsZone",
    "kind": "live",
    "streams": [
@@ -11984,7 +10038,7 @@
    "guide_id": "USBD300021B8"
   },
   {
-   "number": 1607,
+   "number": 1506,
    "name": "NBC Sports NOW",
    "kind": "live",
    "streams": [
@@ -12002,7 +10056,7 @@
    "sub": "General"
   },
   {
-   "number": 1608,
+   "number": 1507,
    "name": "Overtime",
    "kind": "live",
    "streams": [
@@ -12020,22 +10074,7 @@
    "guide_id": "US33000154M"
   },
   {
-   "number": 1609,
-   "name": "RightNow TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://2-fss-1.streamhoster.com/pl_154/amlst:205448-2145652/rightnowtv.m3u8",
-     "duration": 600,
-     "title": "RightNow TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1610,
+   "number": 1508,
    "name": "Roku Sports Channel",
    "kind": "live",
    "streams": [
@@ -12053,7 +10092,7 @@
    "guide_id": "US4500005Z1"
   },
   {
-   "number": 1611,
+   "number": 1509,
    "name": "SLVR",
    "kind": "live",
    "streams": [
@@ -12071,7 +10110,7 @@
    "guide_id": "US4700001B4"
   },
   {
-   "number": 1612,
+   "number": 1510,
    "name": "Sports First",
    "kind": "live",
    "streams": [
@@ -12088,7 +10127,7 @@
    "guide_id": "5305"
   },
   {
-   "number": 1613,
+   "number": 1511,
    "name": "Stadium",
    "kind": "live",
    "streams": [
@@ -12105,7 +10144,7 @@
    "guide_id": "USAJ3504705A"
   },
   {
-   "number": 1614,
+   "number": 1512,
    "name": "Swerve Sports",
    "kind": "live",
    "streams": [
@@ -12123,7 +10162,7 @@
    "sub": "General"
   },
   {
-   "number": 1615,
+   "number": 1513,
    "name": "Team USA TV",
    "kind": "live",
    "streams": [
@@ -12141,22 +10180,7 @@
    "guide_id": "US3900007ZW"
   },
   {
-   "number": 1616,
-   "name": "Trace Sport Stars",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Trace Sport Stars"
-    }
-   ],
-   "block": "Sports",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1617,
+   "number": 1514,
    "name": "Unbeaten Sports Channel",
    "kind": "live",
    "streams": [
@@ -12173,23 +10197,7 @@
    "guide_id": "US1400008DW"
   },
   {
-   "number": 1618,
-   "name": "Victory+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d2otd2h2i5t24h.cloudfront.net/Victory_National.m3u8",
-     "duration": 600,
-     "title": "Victory+",
-     "route": "us"
-    }
-   ],
-   "block": "Sports",
-   "sub": "General",
-   "breaks": "cue"
-  },
-  {
-   "number": 1619,
+   "number": 1515,
    "name": "Women's Sports Network",
    "kind": "live",
    "streams": [
@@ -12207,7 +10215,7 @@
    "sub": "General"
   },
   {
-   "number": 1620,
+   "number": 1516,
    "name": "Yahoo! Sports Network",
    "kind": "live",
    "streams": [
@@ -12225,7 +10233,7 @@
    "guide_id": "US3200012O8"
   },
   {
-   "number": 1630,
+   "number": 1520,
    "name": "Bellator MMA",
    "kind": "live",
    "streams": [
@@ -12243,22 +10251,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1631,
-   "name": "Channel Fight",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d15wqvt0xm15k4.cloudfront.net/scheduler/scheduleMaster/266.m3u8",
-     "duration": 600,
-     "title": "Channel Fight"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Combat",
-   "breaks": "cue"
-  },
-  {
-   "number": 1632,
+   "number": 1521,
    "name": "DAZN Ringside",
    "kind": "live",
    "streams": [
@@ -12276,7 +10269,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1633,
+   "number": 1522,
    "name": "Dominance FC TV",
    "kind": "live",
    "streams": [
@@ -12294,37 +10287,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1634,
-   "name": "FITE 24/7",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8",
-     "duration": 600,
-     "title": "FITE 24/7"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Combat",
-   "breaks": "cue"
-  },
-  {
-   "number": 1635,
-   "name": "The Grappling Network",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://d1vwakhda3vp6p.cloudfront.net/scheduler/scheduleMaster/236.m3u8",
-     "duration": 600,
-     "title": "The Grappling Network"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Combat",
-   "breaks": "cue"
-  },
-  {
-   "number": 1636,
+   "number": 1523,
    "name": "Hard Knocks",
    "kind": "live",
    "streams": [
@@ -12341,22 +10304,7 @@
    "guide_id": "6a1610bebdf296985fd95603-5fd115bdb7ef8d002dcf1820"
   },
   {
-   "number": 1637,
-   "name": "MMA TV.com",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8",
-     "duration": 600,
-     "title": "MMA TV.com"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Combat",
-   "breaks": "cue"
-  },
-  {
-   "number": 1638,
+   "number": 1524,
    "name": "PFL MMA",
    "kind": "live",
    "streams": [
@@ -12374,7 +10322,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1639,
+   "number": 1525,
    "name": "Swerve Combat",
    "kind": "live",
    "streams": [
@@ -12391,7 +10339,7 @@
    "guide_id": "99991696"
   },
   {
-   "number": 1640,
+   "number": 1526,
    "name": "TNA Wrestling",
    "kind": "live",
    "streams": [
@@ -12409,7 +10357,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1641,
+   "number": 1527,
    "name": "Top Rank Classics",
    "kind": "live",
    "streams": [
@@ -12427,7 +10375,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1642,
+   "number": 1528,
    "name": "UFC",
    "kind": "live",
    "streams": [
@@ -12445,7 +10393,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1643,
+   "number": 1529,
    "name": "WBTV HBO Boxing",
    "kind": "live",
    "streams": [
@@ -12463,7 +10411,7 @@
    "guide_id": "400000083"
   },
   {
-   "number": 1644,
+   "number": 1530,
    "name": "Wrestling Legends TV",
    "kind": "live",
    "streams": [
@@ -12481,7 +10429,7 @@
    "sub": "Combat"
   },
   {
-   "number": 1650,
+   "number": 1540,
    "name": "beIN SPORTS XTRA",
    "kind": "live",
    "streams": [
@@ -12498,7 +10446,7 @@
    "guide_id": "USAJ4300001Q7"
   },
   {
-   "number": 1651,
+   "number": 1541,
    "name": "FIFA+",
    "kind": "live",
    "streams": [
@@ -12516,7 +10464,7 @@
    "sub": "Soccer"
   },
   {
-   "number": 1652,
+   "number": 1542,
    "name": "GFN Football",
    "kind": "live",
    "streams": [
@@ -12533,22 +10481,7 @@
    "guide_id": "GB2200002CC"
   },
   {
-   "number": 1653,
-   "name": "Goal TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8",
-     "duration": 600,
-     "title": "Goal TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Soccer",
-   "breaks": "cue"
-  },
-  {
-   "number": 1654,
+   "number": 1543,
    "name": "Golazo Network",
    "kind": "live",
    "streams": [
@@ -12566,7 +10499,7 @@
    "sub": "Soccer"
   },
   {
-   "number": 1655,
+   "number": 1544,
    "name": "INTER 24/7",
    "kind": "live",
    "streams": [
@@ -12584,7 +10517,7 @@
    "guide_id": "GB310000151"
   },
   {
-   "number": 1656,
+   "number": 1545,
    "name": "UEFA Champions League",
    "kind": "live",
    "streams": [
@@ -12602,7 +10535,7 @@
    "sub": "Soccer"
   },
   {
-   "number": 1660,
+   "number": 1550,
    "name": "ACCDN",
    "kind": "live",
    "streams": [
@@ -12619,7 +10552,7 @@
    "guide_id": "400000012"
   },
   {
-   "number": 1661,
+   "number": 1551,
    "name": "Big 12 Studios",
    "kind": "live",
    "streams": [
@@ -12636,52 +10569,7 @@
    "guide_id": "US37000017A"
   },
   {
-   "number": 1662,
-   "name": "FloHockey 24/7",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "FloHockey 24/7"
-    }
-   ],
-   "block": "Sports",
-   "sub": "US Leagues",
-   "breaks": "cue"
-  },
-  {
-   "number": 1663,
-   "name": "Homerun TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/WiseM3U8_29/sofast/cleanhls/master.m3u8",
-     "duration": 600,
-     "title": "Homerun TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "US Leagues",
-   "breaks": "cue"
-  },
-  {
-   "number": 1664,
-   "name": "Hoop TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/WiseM3U8_28/sofast/cleanhls/master.m3u8",
-     "duration": 600,
-     "title": "Hoop TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "US Leagues",
-   "breaks": "cue"
-  },
-  {
-   "number": 1665,
+   "number": 1552,
    "name": "MLB",
    "kind": "live",
    "streams": [
@@ -12699,7 +10587,7 @@
    "sub": "US Leagues"
   },
   {
-   "number": 1666,
+   "number": 1553,
    "name": "The NBA Channel",
    "kind": "live",
    "streams": [
@@ -12717,7 +10605,7 @@
    "sub": "US Leagues"
   },
   {
-   "number": 1667,
+   "number": 1554,
    "name": "NFL Channel",
    "kind": "live",
    "streams": [
@@ -12735,37 +10623,7 @@
    "sub": "US Leagues"
   },
   {
-   "number": 1668,
-   "name": "NHL Network",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/1f4cbb33-cb23-40ab-b54b-2965cc551b32/playlist.m3u8",
-     "duration": 600,
-     "title": "NHL Network"
-    }
-   ],
-   "block": "Sports",
-   "sub": "US Leagues",
-   "breaks": "cue"
-  },
-  {
-   "number": 1670,
-   "name": "FloRacing 24/7",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "FloRacing 24/7"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Motorsport",
-   "breaks": "cue"
-  },
-  {
-   "number": 1671,
+   "number": 1560,
    "name": "Monster Jam",
    "kind": "live",
    "streams": [
@@ -12783,7 +10641,7 @@
    "sub": "Motorsport"
   },
   {
-   "number": 1672,
+   "number": 1561,
    "name": "MotoGP Channel",
    "kind": "live",
    "streams": [
@@ -12801,22 +10659,7 @@
    "guide_id": "US3500007C4"
   },
   {
-   "number": 1673,
-   "name": "MTRSPT 1",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg02873-kravemedia-mtrspt1-samsungau-2anp4.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "MTRSPT 1"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Motorsport",
-   "breaks": "cue"
-  },
-  {
-   "number": 1674,
+   "number": 1562,
    "name": "Nascar",
    "kind": "live",
    "streams": [
@@ -12833,7 +10676,7 @@
    "guide_id": "400000121"
   },
   {
-   "number": 1675,
+   "number": 1563,
    "name": "NHRA TV",
    "kind": "live",
    "streams": [
@@ -12850,22 +10693,7 @@
    "guide_id": "629323"
   },
   {
-   "number": 1676,
-   "name": "Racer Network",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg00378-mavtv-amg00378c2-samsung-au-1790.playouts.now.amagi.tv/playlist/amg00378-mavtvfast-motorsportsnetwork-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Racer Network"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Motorsport",
-   "breaks": "cue"
-  },
-  {
-   "number": 1677,
+   "number": 1564,
    "name": "RACER Select",
    "kind": "live",
    "streams": [
@@ -12883,7 +10711,7 @@
    "guide_id": "USBD1700019RN"
   },
   {
-   "number": 1678,
+   "number": 1565,
    "name": "Rally TV",
    "kind": "live",
    "streams": [
@@ -12901,7 +10729,7 @@
    "sub": "Motorsport"
   },
   {
-   "number": 1679,
+   "number": 1566,
    "name": "Speed Sport 1",
    "kind": "live",
    "streams": [
@@ -12918,7 +10746,7 @@
    "guide_id": "6424"
   },
   {
-   "number": 1680,
+   "number": 1570,
    "name": "GolfPass",
    "kind": "live",
    "streams": [
@@ -12936,7 +10764,7 @@
    "sub": "Tennis & Golf"
   },
   {
-   "number": 1681,
+   "number": 1571,
    "name": "PGA TOUR",
    "kind": "live",
    "streams": [
@@ -12954,7 +10782,7 @@
    "sub": "Tennis & Golf"
   },
   {
-   "number": 1682,
+   "number": 1572,
    "name": "PickleballTV",
    "kind": "live",
    "streams": [
@@ -12972,7 +10800,7 @@
    "guide_id": "USBD4200016QR"
   },
   {
-   "number": 1683,
+   "number": 1573,
    "name": "Tennis Channel",
    "kind": "live",
    "streams": [
@@ -12990,7 +10818,7 @@
    "sub": "Tennis & Golf"
   },
   {
-   "number": 1684,
+   "number": 1574,
    "name": "Tennis+",
    "kind": "live",
    "streams": [
@@ -13007,7 +10835,7 @@
    "guide_id": "tennis-plus"
   },
   {
-   "number": 1685,
+   "number": 1575,
    "name": "TennisChannel 2",
    "kind": "live",
    "streams": [
@@ -13025,7 +10853,7 @@
    "sub": "Tennis & Golf"
   },
   {
-   "number": 1690,
+   "number": 1580,
    "name": "Billiard TV",
    "kind": "live",
    "streams": [
@@ -13043,52 +10871,7 @@
    "guide_id": "USBD12000183X"
   },
   {
-   "number": 1691,
-   "name": "Billiards+",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/WiseM3U8_18/sofast/cleanhls/master.m3u8",
-     "duration": 600,
-     "title": "Billiards+"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Cue, Darts & Poker",
-   "breaks": "cue"
-  },
-  {
-   "number": 1692,
-   "name": "ITSF",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/20a0ac30-d157-4400-8f64-3c52b37c645c/manifest.m3u8",
-     "duration": 600,
-     "title": "ITSF"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Cue, Darts & Poker",
-   "breaks": "cue"
-  },
-  {
-   "number": 1693,
-   "name": "Kozoom TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8",
-     "duration": 600,
-     "title": "Kozoom TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Cue, Darts & Poker",
-   "breaks": "cue"
-  },
-  {
-   "number": 1694,
+   "number": 1581,
    "name": "MODUS Super Series Darts",
    "kind": "live",
    "streams": [
@@ -13106,7 +10889,7 @@
    "sub": "Cue, Darts & Poker"
   },
   {
-   "number": 1695,
+   "number": 1582,
    "name": "Pluto TV Snooker 900",
    "kind": "live",
    "streams": [
@@ -13124,7 +10907,7 @@
    "sub": "Cue, Darts & Poker"
   },
   {
-   "number": 1696,
+   "number": 1583,
    "name": "PokerGO",
    "kind": "live",
    "streams": [
@@ -13142,7 +10925,7 @@
    "sub": "Cue, Darts & Poker"
   },
   {
-   "number": 1697,
+   "number": 1584,
    "name": "World Poker Tour",
    "kind": "live",
    "streams": [
@@ -13160,7 +10943,7 @@
    "sub": "Cue, Darts & Poker"
   },
   {
-   "number": 1700,
+   "number": 1590,
    "name": "ESPN8 The Ocho",
    "kind": "live",
    "streams": [
@@ -13177,37 +10960,7 @@
    "guide_id": "US34000040T"
   },
   {
-   "number": 1701,
-   "name": "Fuel TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg01074-fueltv-fueltvau-samsungau-g09kq.amagi.tv/playlist/amg01074-fueltv-fueltvau-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Fuel TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Action & Extreme",
-   "breaks": "cue"
-  },
-  {
-   "number": 1702,
-   "name": "Nautical Channel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/vglive-sk-231198/index.m3u8",
-     "duration": 600,
-     "title": "Nautical Channel"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Action & Extreme",
-   "breaks": "cue"
-  },
-  {
-   "number": 1703,
+   "number": 1591,
    "name": "PBR RidePass",
    "kind": "live",
    "streams": [
@@ -13225,22 +10978,7 @@
    "sub": "Action & Extreme"
   },
   {
-   "number": 1704,
-   "name": "People Are Awesome",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jukin-peopleareawesome-2-au.samsung.wurl.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "People Are Awesome"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Action & Extreme",
-   "breaks": "cue"
-  },
-  {
-   "number": 1705,
+   "number": 1592,
    "name": "Red Bull TV",
    "kind": "live",
    "streams": [
@@ -13257,7 +10995,7 @@
    "guide_id": "GBBD2300003IK"
   },
   {
-   "number": 1706,
+   "number": 1593,
    "name": "Strongman Champions League",
    "kind": "live",
    "streams": [
@@ -13274,22 +11012,7 @@
    "guide_id": "GBBC90001089"
   },
   {
-   "number": 1707,
-   "name": "Surf Cinema",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://amg13231-actve-amg13231c4-samsung-au-2990.playouts.now.amagi.tv/playlist/amg13231-actvefast-surfer-samsungau/playlist.m3u8",
-     "duration": 600,
-     "title": "Surf Cinema"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Action & Extreme",
-   "breaks": "cue"
-  },
-  {
-   "number": 1708,
+   "number": 1594,
    "name": "SURFER TV",
    "kind": "live",
    "streams": [
@@ -13306,7 +11029,7 @@
    "guide_id": "USBB10000058A"
   },
   {
-   "number": 1709,
+   "number": 1595,
    "name": "Surfing+",
    "kind": "live",
    "streams": [
@@ -13323,37 +11046,7 @@
    "guide_id": "5887"
   },
   {
-   "number": 1710,
-   "name": "Xtrem Sports",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8",
-     "duration": 600,
-     "title": "Xtrem Sports"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Action & Extreme",
-   "breaks": "cue"
-  },
-  {
-   "number": 1720,
-   "name": "Chukker",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/3bd726a3-0d30-491d-b5e7-e1afb6e02112/manifest.m3u8",
-     "duration": 600,
-     "title": "Chukker"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Other Sports",
-   "breaks": "cue"
-  },
-  {
-   "number": 1721,
+   "number": 1600,
    "name": "Cricket Gold",
    "kind": "live",
    "streams": [
@@ -13370,7 +11063,7 @@
    "guide_id": "5294"
   },
   {
-   "number": 1722,
+   "number": 1601,
    "name": "Equus TV",
    "kind": "live",
    "streams": [
@@ -13387,22 +11080,7 @@
    "guide_id": "5295"
   },
   {
-   "number": 1723,
-   "name": "Horse and Country",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://hncfree-samsungau.amagi.tv/playlist.m3u8",
-     "duration": 600,
-     "title": "Horse and Country"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Other Sports",
-   "breaks": "cue"
-  },
-  {
-   "number": 1724,
+   "number": 1602,
    "name": "Rugby Pass TV",
    "kind": "live",
    "streams": [
@@ -13420,7 +11098,7 @@
    "sub": "Other Sports"
   },
   {
-   "number": 1725,
+   "number": 1603,
    "name": "Willow Sports",
    "kind": "live",
    "streams": [

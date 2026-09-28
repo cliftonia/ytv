@@ -146,11 +146,58 @@ class TestRecord(unittest.TestCase):
         self.assertNotIn("guide", publish_live.lineup_record(1, fast(1, "X", guide="xumo", gid=None)))
 
 
+class TestGuideRule(unittest.TestCase):
+    """LIVE TV carries only channels that can show what is playing."""
+
+    def build(self, channels, on=()):
+        built, unguided = publish_live.build({"blocks": BLOCKS, "channels": channels}, set(), set(on))
+        return [(c["number"], c["name"]) for c in built], unguided
+
+    def test_a_fast_channel_without_a_guide_is_left_out_and_named(self):
+        got, unguided = self.build([fast(100, "Seen"), fast(101, "Blind", guide="none", gid=None),
+                                    fast(102, "Absent", guide=None, gid=None)])
+        self.assertEqual([(100, "Seen")], got)
+        self.assertEqual(["Blind", "Absent"], unguided)
+
+    def test_a_carried_guide_with_no_id_is_no_guide(self):
+        self.assertEqual(["Idless"], self.build([fast(100, "Idless", guide="xumo", gid=None)])[1])
+
+    def test_pluto_is_always_kept(self):
+        channel = dict(pluto(100, "Pluto Action"), guide=None, guide_id=None)
+        self.assertEqual(([(100, "Pluto Action")], []), self.build([channel]))
+
+    def test_stingray_music_stays_when_it_has_a_guide(self):
+        got, unguided = self.build([fast(300, "Hits", "Music", "Pop", source="ca_stingray", guide="plex", gid="5f"),
+                                    fast(301, "Hush", "Music", "Pop", source="ca_stingray", guide="none", gid=None)])
+        self.assertEqual([(100, "Hits")], got, "Music is the first block with a channel")
+        self.assertEqual(["Hush"], unguided)
+
+    def test_the_rest_close_up_as_numbering_always_does(self):
+        got, _ = self.build([fast(100, "A1"), fast(101, "Gap", guide="none", gid=None), fast(102, "A2"),
+                             fast(110, "C1", sub="Comedy"), fast(300, "P1", "Music", "Pop")])
+        self.assertEqual([(100, "A1"), (101, "A2"), (110, "C1"), (200, "P1")], got)
+
+    def test_a_sub_block_and_a_block_left_empty_disappear(self):
+        got, _ = self.build([fast(100, "Gone", guide="none", gid=None), fast(110, "C1", sub="Comedy"),
+                             fast(300, "Quiet", "Music", "Pop", guide="none", gid=None),
+                             fast(400, "Calm", "Relax", "Relax")])
+        self.assertEqual([(100, "C1"), (200, "Calm")], got)
+
+    def test_a_ticked_channel_without_a_guide_is_still_left_out(self):
+        got, unguided = self.build([fast(400, "Calm", "Relax", "Relax", guide="none", gid=None, default=False)],
+                                   on={"Calm"})
+        self.assertEqual(([], ["Calm"]), (got, unguided))
+
+    def test_the_same_draft_numbers_the_same_every_night(self):
+        channels = [fast(100 + i, "A%d" % i, guide="none" if i % 3 else "samsung") for i in range(12)]
+        self.assertEqual(self.build(channels), self.build(list(channels)))
+
+
 class TestDeadLinks(unittest.TestCase):
 
     def run_alive(self, channels, pluto_streams=None, fast_entries=(), allowlist=()):
         draft = {"blocks": BLOCKS, "channels": channels}
-        built = publish_live.build(draft, set(), set())
+        built, _ = publish_live.build(draft, set(), set())
         streams = pluto_streams or {}
         regions = {pid: "uk" for pid in streams}
         kept, dropped = publish_live.alive(built, streams, regions, list(fast_entries), list(allowlist))
@@ -219,6 +266,12 @@ class TestCommittedLineup(unittest.TestCase):
             self.assertIn(c.get("breaks"), (None, "cue"), c["name"])
             if "pluto" in c:
                 self.assertNotIn("breaks", c)
+
+    def test_every_fast_channel_can_show_what_is_playing(self):
+        for c in self.channels:
+            if "pluto" not in c:
+                self.assertIn(c.get("guide"), publish_live.FAST_GUIDES, c["name"])
+                self.assertTrue(c.get("guide_id"), c["name"])
 
     def test_blocks_start_on_hundreds(self):
         firsts = {}

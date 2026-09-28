@@ -16,12 +16,19 @@ and guide) and never publishes; this does, nightly, from two committed files:
 
 The steps, in order:
   1. keep the picked channels
-  2. number them afresh with no gaps: each block on a round hundred, each sub-block on a round ten
-  3. drop dead links, the way build_pluto.py does: a Pluto channel whose id no Pluto playlist
+  2. leave out every non-Pluto channel with no guide: the owner's rule is that LIVE TV carries
+     only channels that can show what is playing. A Pluto channel always can (the app asks
+     Pluto); a FAST channel can only through fast_guide.json, so needs a `guide` it reads. Each
+     one left out is logged by name. Stingray's music channels are no exception either way: kept
+     when they have a guide, left out when they do not
+  3. number them afresh with no gaps: each block on a round hundred, each sub-block on a round ten,
+     so a channel left out simply closes up its sub-block, and a sub-block or block left empty
+     takes no numbers at all
+  4. drop dead links, the way build_pluto.py does: a Pluto channel whose id no Pluto playlist
      carries any more, and a FAST channel whose url its iptv-org playlist no longer lists
-  4. write live.json in the app's Channel schema, plus the optional fields the LIVE TV dial adds
+  5. write live.json in the app's Channel schema, plus the optional fields the LIVE TV dial adds
 
-Numbers come from step 2 and step 3 never moves them: the app remembers the viewer's channel by
+Numbers come from step 3 and step 4 never moves them: the app remembers the viewer's channel by
 number, so a channel retired overnight leaves a gap rather than shifting everything after it. The
 numbers change only when the draft or the ticks do - which is an edit, reviewed like any other.
 
@@ -86,6 +93,21 @@ def picked(channels, off, on):
     return [c for c in channels
             if (c.get("default", True) and c["name"] not in off)
             or (not c.get("default", True) and c["name"] in on)]
+
+
+def has_guide(channel):
+    """Whether the dial can show what [channel] is playing: Pluto's own guide, or a guide
+    fast_guide.json is built from with the service's id for it."""
+    if channel["source"] == "pluto":
+        return True
+    return channel.get("guide") in FAST_GUIDES and bool(channel.get("guide_id"))
+
+
+def with_guides(channels):
+    """(kept, names left out): [channels] without the ones that cannot show what is playing -
+    see [has_guide]. Order is kept, so numbering what is left closes the gaps."""
+    kept = [c for c in channels if has_guide(c)]
+    return kept, [c["name"] for c in channels if not has_guide(c)]
 
 
 def round_up(n, step):
@@ -157,15 +179,16 @@ def lineup_record(number, channel):
 
 
 def build(draft, off, on):
-    """live.json's channels from the draft and the ticks, before the dead-link pass. Raises
-    ValueError when the ticks do not fit the draft - see [picks_problem]."""
+    """(live.json's channels, names left out for having no guide) from the draft and the ticks,
+    before the dead-link pass. Raises ValueError when the ticks do not fit the draft - see
+    [picks_problem]."""
     problem = picks_problem(draft["channels"], off, on)
     if problem:
         raise ValueError(problem)
-    chosen = picked(draft["channels"], off, on)
+    chosen, unguided = with_guides(picked(draft["channels"], off, on))
     return [dict(lineup_record(number, c), _source=c["source"], _tvg=c.get("tvg_id"),
                  _also=c.get("also") or [])
-            for number, c in renumber(draft["blocks"], chosen)]
+            for number, c in renumber(draft["blocks"], chosen)], unguided
 
 
 def public(channel):
@@ -264,10 +287,12 @@ def main(argv=None):
         draft = json.load(f)
     off, on = load_picks(args.picks)
     try:
-        channels = build(draft, off, on)
+        channels, unguided = build(draft, off, on)
     except ValueError as e:
         print("REFUSING TO PUBLISH: %s" % e, file=sys.stderr)
         return 1
+    for name in unguided:
+        print("no guide: %s" % name)
     wanted = len(channels)
     if not args.offline:
         try:
@@ -283,7 +308,8 @@ def main(argv=None):
             print("REFUSING TO PUBLISH: %s" % problem, file=sys.stderr)
             return 1
     write(args.out, channels)
-    print("%s: %d channels (%d dropped)" % (os.path.normpath(args.out), len(channels), wanted - len(channels)))
+    print("%s: %d channels (%d dead, %d with no guide left out)" % (
+        os.path.normpath(args.out), len(channels), wanted - len(channels), len(unguided)))
     return 0
 
 
