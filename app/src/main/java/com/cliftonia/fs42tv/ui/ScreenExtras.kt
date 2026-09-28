@@ -87,8 +87,7 @@ class ScreenExtras(private val deps: Deps) {
         // direct master, whose url names its session, and the published one itself for LEGACY,
         // whose jmp2 url does not. See VariantCache.
         // Nothing to remember for a FAST feed: it has no session, and its master read is its own.
-        return picker.forMpv(routed, cacheable = !fast && routed !== tuned.playable,
-            maxHeight = if (fast) FAST_MAX_HEIGHT else null)
+        return picker.forMpv(routed, cacheable = !fast && routed !== tuned.playable)
     }
 
     /**
@@ -268,13 +267,6 @@ class ScreenExtras(private val deps: Deps) {
         deps.fastGuide?.titleOn(channel, onLoaded)
 
     companion object {
-        /**
-         * The tallest variant a FAST feed opens on. Their 1080p renditions run 6.7-7.5Mbps in 5-6s
-         * segments; from Australia one such segment took ~10s from Series K's CloudFront, where
-         * 720p (3.7Mbps) halves it - and the first frame waits on that first segment.
-         */
-        const val FAST_MAX_HEIGHT = 720
-
         /** Construction in one line for the activity, which is at its size limit. */
         fun create(
             prefs: SharedPreferences,
