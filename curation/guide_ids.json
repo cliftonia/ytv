@@ -1,0 +1,610 @@
+{
+ "_doc": "Guide ids that no name match in build_live.py finds on its own: source -> channel name -> {id, how, guide?}. `guide` defaults to the source's own service (SOURCE_GUIDES); `how` is the evidence that the id is THIS channel on THIS service - its stream id or host, the service's own name for it, or iptv-org's id for it on that service. Never a same-named channel on another service.",
+ "ca_stingray": {
+  "Stingray Classic Rock": {
+   "guide": "samsung",
+   "id": "USBD35000180U",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Classica": {
+   "guide": "samsung",
+   "id": "USBD350002623",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Country Greats": {
+   "guide": "samsung",
+   "id": "US4700005EA",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Cozy Cafe": {
+   "guide": "roku",
+   "id": "f8f717f72440fb688192f83faa71a8ab",
+   "how": "stream is Roku's own (delivery.roku.com); name"
+  },
+  "Stingray Easy Listening": {
+   "guide": "samsung",
+   "id": "USBD3500011J3",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Euro Hits": {
+   "guide": "samsung",
+   "id": "US4700002UF",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Flashback 70s": {
+   "guide": "samsung",
+   "id": "USBD3500008IJ",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Greatest Hits": {
+   "guide": "samsung",
+   "id": "USBD3500022DN",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Hip Hop R&B": {
+   "guide": "samsung",
+   "id": "USBD3500010MT",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); Samsung's Stingray Hip Hop"
+  },
+  "Stingray Hot Country": {
+   "guide": "samsung",
+   "id": "USBD3300021KV",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Jukebox Oldies": {
+   "guide": "samsung",
+   "id": "US4700006XL",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Movie Music": {
+   "guide": "samsung",
+   "id": "US4700003DP",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Nothin' But 90s": {
+   "guide": "samsung",
+   "id": "USBD35000149S",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Remember the 80s": {
+   "guide": "samsung",
+   "id": "USBD3300022QK",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Smooth Jazz": {
+   "guide": "samsung",
+   "id": "USBD35000128A",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Soft Hits": {
+   "guide": "samsung",
+   "id": "US4700007GV",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  },
+  "Stingray Today's KPOP": {
+   "guide": "samsung",
+   "id": "USBD3500016NH",
+   "how": "stream is Samsung's own (/samsungtvplus/ playout); name"
+  }
+ },
+ "uk_rakuten": {
+  "Baby Shark TV": {
+   "id": "baby-shark-tv",
+   "how": "name"
+  },
+  "Cops": {
+   "id": "cops",
+   "how": "name"
+  },
+  "Cosmic Frontiers": {
+   "id": "cosmic-frontiers-uk",
+   "how": "name"
+  },
+  "Crime Beat TV": {
+   "id": "crime-beat-tv",
+   "how": "name"
+  },
+  "Curiosity Now": {
+   "id": "curiosity-now-en",
+   "how": "name"
+  },
+  "Dog The Bounty Hunter": {
+   "id": "dog-the-bounty-hunter",
+   "how": "name"
+  },
+  "Duck Dynasty": {
+   "id": "duck-dynasty",
+   "how": "name"
+  },
+  "History Hunters": {
+   "id": "history-hunters",
+   "how": "name"
+  },
+  "Jail": {
+   "id": "jail",
+   "how": "name"
+  },
+  "Rakuten TV Action Movies UK": {
+   "id": "action-rakuten-tv",
+   "how": "name: Rakuten's Action Movies - Rakuten TV"
+  },
+  "Rakuten TV Comedy Movies UK": {
+   "id": "comedy-rakuten-tv",
+   "how": "name: Rakuten's Comedy Movies - Rakuten TV"
+  },
+  "Rakuten TV Drama Movies UK": {
+   "id": "drama-rakuten-tv",
+   "how": "name: Rakuten's Drama Movies - Rakuten TV"
+  },
+  "Rakuten TV Family Movies UK": {
+   "id": "family-rakuten-tv",
+   "how": "name: Rakuten's Family - Rakuten TV"
+  },
+  "Rakuten TV Reality UK": {
+   "id": "reality-rakuten-tv",
+   "how": "name: Rakuten's Reality - Rakuten TV"
+  },
+  "Rakuten TV Romance Movies UK": {
+   "id": "romance-rakuten-tv",
+   "how": "name: Rakuten's Romance Movies - Rakuten TV"
+  },
+  "Rakuten TV Sci-Fi UK": {
+   "id": "sci-fi-rakuten-tv",
+   "how": "stream host sci-fi-rakuten-tv"
+  },
+  "Rakuten TV Thrillers UK": {
+   "id": "thriller-rakuten-tv",
+   "how": "stream host thriller-rakuten-tv"
+  },
+  "Rakuten Top Movies UK": {
+   "id": "top-movies-rakuten-tv",
+   "how": "name: Rakuten's Top Movies - Rakuten TV"
+  },
+  "Tennis+": {
+   "id": "tennis-plus",
+   "how": "name"
+  }
+ },
+ "uk_samsung": {
+  "Deadly Women": {
+   "id": "GB4900001NW",
+   "how": "stream DeadlyWomen_GB; Samsung's Deadly Women: powered by Banijay"
+  },
+  "Great! Romance": {
+   "id": "GBBC900008L9",
+   "how": "stream greatchristmas-samsunguk; Samsung's Great! Christmas, the same feed renamed for the season"
+  },
+  "Masterchef UK": {
+   "id": "GBBD25000019N",
+   "how": "stream MasterchefUKPoweredbyBanijay_GB; Samsung's Masterchef UK: 'Powered by Banijay'"
+  }
+ },
+ "us_samsung": {
+  "FilmRise Westerns": {
+   "id": "USBB32000196O",
+   "how": "iptv-org's Samsung id for FilmRiseWestern.us; Samsung's FilmRise Western"
+  },
+  "K Food by CJ ENM": {
+   "id": "US17000186W",
+   "how": "name: Samsung's CJ ENM K-Food & Travel"
+  },
+  "K POP by CJ ENM": {
+   "id": "US39000038W",
+   "how": "name: Samsung's CJ ENM K-POP"
+  },
+  "K Stories by CJ ENM": {
+   "id": "US17000164B",
+   "how": "name: Samsung's CJ ENM K-Stories"
+  },
+  "Miramax Channel": {
+   "id": "US18000163F",
+   "how": "name: Samsung's Miramax Movie Channel"
+  },
+  "Toon Goggles Junior": {
+   "id": "USBB3600001R6",
+   "how": "iptv-org's Samsung id for TGJunior.us; Samsung's TG Junior"
+  },
+  "beIN SPORTS XTRA": {
+   "id": "USAJ4300001Q7",
+   "how": "name, and iptv-org's Samsung id for beINSPORTSXTRA.us (Samsung also lists a Spanish copy, so the name alone ties)"
+  }
+ },
+ "us_stirr": {
+  "American Stories": {
+   "id": "7321",
+   "how": "name: Stirr's American Stories Network"
+  },
+  "Craftsy": {
+   "id": "6413",
+   "how": "name: Stirr's CraftsyTV"
+  },
+  "Cricket Gold": {
+   "id": "5294",
+   "how": "name"
+  },
+  "CrimeFlix": {
+   "id": "5273",
+   "how": "name: Stirr's CrimeFlix - Free Crime TV That’ll Keep You Hooked"
+  },
+  "Equus TV": {
+   "id": "5295",
+   "how": "name"
+  },
+  "Feva Music": {
+   "id": "5298",
+   "how": "name: Stirr's Feva TV"
+  },
+  "INTRAVEL": {
+   "id": "7047",
+   "how": "name"
+  },
+  "INTROUBLE": {
+   "id": "7041",
+   "how": "name"
+  },
+  "Our Vinyl": {
+   "id": "6443",
+   "how": "name"
+  },
+  "Shooting Sports Life": {
+   "id": "9101",
+   "how": "name"
+  },
+  "Speed Sport 1": {
+   "id": "6424",
+   "how": "name"
+  },
+  "Sports First": {
+   "id": "5305",
+   "how": "name: Stirr's Sports First - Stream Free Now"
+  },
+  "Surfing+": {
+   "id": "5887",
+   "how": "name: Stirr's Surfing Plus"
+  },
+  "Unleashed by DOGTV": {
+   "id": "7017",
+   "how": "name"
+  },
+  "Western Bound": {
+   "id": "6595",
+   "how": "name"
+  },
+  "Wild Nature": {
+   "id": "7061",
+   "how": "name"
+  },
+  "Wild TV": {
+   "id": "6439",
+   "how": "name"
+  }
+ },
+ "us_tubi": {
+  "ACCDN": {
+   "id": "400000012",
+   "how": "name"
+  },
+  "Always Funny Videos": {
+   "id": "653208",
+   "how": "name: Tubi's Always Funny"
+  },
+  "Americas Test Kitchen": {
+   "id": "691129",
+   "how": "name"
+  },
+  "Baywatch": {
+   "id": "653199",
+   "how": "name"
+  },
+  "Cold Case Files": {
+   "id": "400000085",
+   "how": "name"
+  },
+  "Comedy Dynamics": {
+   "id": "400000169",
+   "how": "name"
+  },
+  "Court TV": {
+   "id": "400000299",
+   "how": "name"
+  },
+  "Dance Moms": {
+   "id": "400000086",
+   "how": "name"
+  },
+  "Doctor Who Classic": {
+   "id": "400000059",
+   "how": "name: Tubi's Classic Doctor Who"
+  },
+  "Ebony TV by Lionsgate": {
+   "id": "400000056",
+   "how": "name"
+  },
+  "Fubo Sports Network": {
+   "id": "557344",
+   "how": "name"
+  },
+  "Gardening With Monty Don": {
+   "id": "700407",
+   "how": "name: Tubi's Garden with Monty Don"
+  },
+  "Gordon Ramsay": {
+   "id": "677011",
+   "how": "name"
+  },
+  "Grit Xtra": {
+   "id": "684170",
+   "how": "name"
+  },
+  "Her Sphere": {
+   "id": "400000104",
+   "how": "name"
+  },
+  "Horror by ALTER": {
+   "id": "692051",
+   "how": "name"
+  },
+  "ION Mystery": {
+   "id": "684167",
+   "how": "name"
+  },
+  "ION Plus": {
+   "id": "684165",
+   "how": "name"
+  },
+  "Localish": {
+   "id": "618763",
+   "how": "name"
+  },
+  "Midsomer Murders": {
+   "id": "700415",
+   "how": "name"
+  },
+  "MotorTrend FAST TV": {
+   "id": "400000108",
+   "how": "stream id e7be5ad5-9044-4151-95d4-a9aae10ab0a5"
+  },
+  "Mr. Beast": {
+   "id": "400000048",
+   "how": "name"
+  },
+  "Mystery Science Theater 3000": {
+   "id": "656575",
+   "how": "name"
+  },
+  "NHRA TV": {
+   "id": "629323",
+   "how": "name"
+  },
+  "Nascar": {
+   "id": "400000121",
+   "how": "name"
+  },
+  "Nash Bridges": {
+   "id": "400000105",
+   "how": "name"
+  },
+  "Reelz Famous & Infamous": {
+   "id": "641290",
+   "how": "name"
+  },
+  "Silent Witness and New Tricks": {
+   "id": "400000064",
+   "how": "name"
+  },
+  "Supermarket Sweep": {
+   "id": "658748",
+   "how": "name"
+  },
+  "TV One Crime & Justice": {
+   "id": "400000011",
+   "how": "name"
+  },
+  "The Biggest Loser": {
+   "id": "677790",
+   "how": "name"
+  },
+  "The Carol Burnett Show": {
+   "id": "656574",
+   "how": "name"
+  },
+  "The Conners": {
+   "id": "400000103",
+   "how": "name"
+  },
+  "The Johnny Carson Show": {
+   "id": "658746",
+   "how": "name"
+  },
+  "The Masked Singer": {
+   "id": "650666",
+   "how": "name"
+  },
+  "WBTV At the Movies": {
+   "id": "715950",
+   "how": "stream id c24f15d1-f67e-4534-bfde-76b9a1b74360"
+  },
+  "WBTV Chasing Criminals": {
+   "id": "400000074",
+   "how": "stream id 2bbace1f-ef14-4f1d-84f3-4fa07e4cf498"
+  },
+  "WBTV Classic Cinema": {
+   "id": "400000069",
+   "how": "stream id c9a11be6-98bc-4a1b-a8f0-6236bffa7286"
+  },
+  "WBTV Crime scenes": {
+   "id": "715949",
+   "how": "stream id f825d887-cd89-4520-9960-699bb3ef076d"
+  },
+  "WBTV Family Unscripted": {
+   "id": "715948",
+   "how": "stream id f451ef60-2bf2-4f54-8833-5e3495b7ea16"
+  },
+  "WBTV Generation Drama": {
+   "id": "400000070",
+   "how": "stream id a8250c51-f628-4936-97cb-67a931d2d7d8"
+  },
+  "WBTV Ghosts are Real": {
+   "id": "715951",
+   "how": "stream id 0893a942-6252-4604-9e43-147c920a3250"
+  },
+  "WBTV HBO Boxing": {
+   "id": "400000083",
+   "how": "stream id 9fe78734-1db2-49b4-af7b-3c89f5f256ad"
+  },
+  "WBTV How To": {
+   "id": "715952",
+   "how": "stream id 8ca40844-aba2-49f8-a58c-37e5597b170e"
+  },
+  "WBTV In The Garage": {
+   "id": "400000073",
+   "how": "stream id 2fe3d2d3-5dca-4da5-999f-4fcc54f4a34b"
+  },
+  "WBTV Living With Evil": {
+   "id": "400000067",
+   "how": "stream id 963f4a88-fe30-44f7-ae20-09a08eeb7cf7"
+  },
+  "WBTV Love and Marriage": {
+   "id": "715947",
+   "how": "stream id 550da437-5c67-44a3-a95e-a897fc7d6612"
+  },
+  "WBTV Mysterious Worlds": {
+   "id": "715946",
+   "how": "stream id 8fa6f1c5-c602-426c-999d-8651180ca7ff"
+  },
+  "WBTV Nikita": {
+   "id": "400000071",
+   "how": "stream id 69aad4c1-9bb9-49db-9b2a-f8b26a7c3582"
+  },
+  "WBTV Paws and Claws": {
+   "id": "715939",
+   "how": "stream id 29c0f72f-e546-4599-a7d5-ad1c2928d531"
+  },
+  "WBTV Sweet Escapes": {
+   "id": "715938",
+   "how": "stream id 7b765297-03ed-4d4a-90d7-3879e776c938"
+  },
+  "WBTV The FBI": {
+   "id": "400000066",
+   "how": "stream id 0e9b3dc6-8b19-4854-b0d1-df85b9ffa282"
+  },
+  "WBTV Travel and Adventure": {
+   "id": "400000068",
+   "how": "stream id 399519f7-b848-4c8e-aaac-884546a1d916"
+  },
+  "WBTV Unique Lives": {
+   "id": "715942",
+   "how": "stream id 5602f3d6-c62c-4109-8de7-b7d2434ab63b"
+  },
+  "WBTV Welcome Home": {
+   "id": "715945",
+   "how": "stream id edb986fe-9600-4f83-8b6d-8593986f2f3a"
+  },
+  "Wanted: Dead or Alive": {
+   "id": "680705",
+   "how": "name"
+  },
+  "Xplore": {
+   "id": "702892",
+   "how": "name"
+  }
+ },
+ "us_xumo": {
+  "Alfred Hitchcock Presents": {
+   "id": "99951256",
+   "how": "name"
+  },
+  "Alien Nation": {
+   "id": "99991292",
+   "how": "Xumo's Alien Nation by DUST"
+  },
+  "American Crimes": {
+   "id": "99951461",
+   "how": "name"
+  },
+  "American Ninja Warrior": {
+   "id": "99951318",
+   "how": "name"
+  },
+  "BBC Top Gear": {
+   "id": "99951249",
+   "how": "Xumo's Top Gear, provider BBCTopGear"
+  },
+  "Bad Girls Club": {
+   "id": "99951467",
+   "how": "name"
+  },
+  "Celebrity Name Game": {
+   "id": "99951224",
+   "how": "name"
+  },
+  "Cook's Country Channel": {
+   "id": "99951323",
+   "how": "name"
+  },
+  "Family Feud Classic": {
+   "id": "99951339",
+   "how": "name"
+  },
+  "Lassie": {
+   "id": "99951259",
+   "how": "name"
+  },
+  "Leave It to Beaver": {
+   "id": "99951257",
+   "how": "name"
+  },
+  "Little House on the Prairie": {
+   "id": "99951240",
+   "how": "name"
+  },
+  "Million Dollar Listing Vault": {
+   "id": "99951237",
+   "how": "name"
+  },
+  "Murder She Wrote": {
+   "id": "99951239",
+   "how": "name"
+  },
+  "Property & Reno": {
+   "id": "99951221",
+   "how": "name"
+  },
+  "Real Housewives Vault": {
+   "id": "99951243",
+   "how": "name"
+  },
+  "Rig TV": {
+   "id": "99951338",
+   "how": "name"
+  },
+  "Saved by the Bell": {
+   "id": "99951247",
+   "how": "name"
+  },
+  "Scares by Shudder": {
+   "id": "99951349",
+   "how": "name"
+  },
+  "Swerve Combat": {
+   "id": "99991696",
+   "how": "name"
+  },
+  "The Lone Ranger": {
+   "id": "99951258",
+   "how": "name"
+  },
+  "True History Channel": {
+   "id": "99991650",
+   "how": "name"
+  },
+  "Universal Westerns": {
+   "id": "99951255",
+   "how": "name"
+  },
+  "Wild West TV": {
+   "id": "99951356",
+   "how": "name"
+  }
+ }
+}

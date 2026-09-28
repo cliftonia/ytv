@@ -56,8 +56,12 @@ class FastGuideTest {
     }
 
     @Test
-    fun `the key is the guide and its id, for the four services the file carries`() {
+    fun `the key is the guide and its id, for the services the file carries`() {
         assertEquals("xumo:300#9", FastGuide.keyOf(channel("xumo", "300#9")))
+        assertEquals("tubi:400000012", FastGuide.keyOf(channel("tubi", "400000012")))
+        assertEquals("rakuten:sci-fi-rakuten-tv", FastGuide.keyOf(channel("rakuten", "sci-fi-rakuten-tv")))
+        assertEquals("stirr:5294", FastGuide.keyOf(channel("stirr", "5294")))
+        assertNull(FastGuide.keyOf(channel("none", "x")))
         assertNull(FastGuide.keyOf(channel("pluto", "abc")))
         assertNull(FastGuide.keyOf(channel("samsung", null)))
         assertNull(FastGuide.keyOf(channel(null, null)))

@@ -5,9 +5,10 @@ import kotlinx.serialization.json.Json
 
 /**
  * What is on the LIVE TV dial's FAST channels: `fast_guide.json`, built every six hours by
- * `curation/build_fast_guide.py` from the Samsung TV Plus, Plex, Roku and Xumo guides.
+ * `curation/build_fast_guide.py` from the Samsung TV Plus, Plex, Roku, Xumo, Tubi, Rakuten TV and
+ * Stirr guides.
  *
- * Those guides are whole-service XMLTV files of 15-43 MB, which no television here should fetch,
+ * Those guides are whole-service files of up to 43 MB, which no television here should fetch,
  * and the services have no per-channel guide a television could ask the way it asks Pluto. So the
  * job cuts them down to the dial's own channels, the next thirty hours, start times and titles -
  * tens of kilobytes - and this answers "what is on now" from that in memory.
@@ -71,7 +72,7 @@ class FastGuide private constructor(
         const val URL = "$REPO_RAW/fast_guide.json"
 
         /** The guide services the file carries; see `curation/build_fast_guide.py`. */
-        private val SERVICES = setOf("samsung", "plex", "roku", "xumo")
+        private val SERVICES = setOf("samsung", "plex", "roku", "xumo", "tubi", "rakuten", "stirr")
 
         private val json = Json { ignoreUnknownKeys = true }
 

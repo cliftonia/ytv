@@ -52,7 +52,8 @@ class LiveDialContractTest {
         assertEquals("samsung:GBAJ400042T1", FastGuide.keyOf(fast))
         assertNull(fast.pluto)
         assertFalse(named("Stingray Jukebox Oldies").cueBreaks)
-        assertEquals("xumo:300#99991333", FastGuide.keyOf(named("Dove Channel")))
+        assertEquals("samsung:US4700006XL", FastGuide.keyOf(named("Stingray Jukebox Oldies")))
+        assertEquals("xumo:99991333", FastGuide.keyOf(named("Dove Channel")))
     }
 
     @Test

@@ -79,7 +79,9 @@
    ],
    "block": "Movies",
    "sub": "Action",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "action-rakuten-tv"
   },
   {
    "number": 105,
@@ -196,7 +198,9 @@
    ],
    "block": "Movies",
    "sub": "Comedy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "comedy-rakuten-tv"
   },
   {
    "number": 120,
@@ -211,7 +215,9 @@
    ],
    "block": "Movies",
    "sub": "Romance",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "GBBC900008L9"
   },
   {
    "number": 121,
@@ -280,7 +286,9 @@
    ],
    "block": "Movies",
    "sub": "Romance",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "romance-rakuten-tv"
   },
   {
    "number": 125,
@@ -329,7 +337,9 @@
    ],
    "block": "Movies",
    "sub": "Horror",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "692051"
   },
   {
    "number": 131,
@@ -463,7 +473,9 @@
    ],
    "block": "Movies",
    "sub": "Thriller",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "5273"
   },
   {
    "number": 144,
@@ -532,7 +544,9 @@
    ],
    "block": "Movies",
    "sub": "Thriller",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "thriller-rakuten-tv"
   },
   {
    "number": 150,
@@ -598,7 +612,9 @@
    ],
    "block": "Movies",
    "sub": "Sci-Fi",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "sci-fi-rakuten-tv"
   },
   {
    "number": 160,
@@ -661,7 +677,9 @@
    ],
    "block": "Movies",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USBB32000196O"
   },
   {
    "number": 164,
@@ -676,7 +694,9 @@
    ],
    "block": "Movies",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "684170"
   },
   {
    "number": 165,
@@ -708,7 +728,9 @@
    ],
    "block": "Movies",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "6595"
   },
   {
    "number": 170,
@@ -725,7 +747,7 @@
    "sub": "Family",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "300#99991333"
+   "guide_id": "99991333"
   },
   {
    "number": 171,
@@ -759,7 +781,9 @@
    ],
    "block": "Movies",
    "sub": "Family",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "family-rakuten-tv"
   },
   {
    "number": 180,
@@ -826,7 +850,9 @@
    ],
    "block": "Movies",
    "sub": "Classic",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000069"
   },
   {
    "number": 190,
@@ -925,7 +951,9 @@
    ],
    "block": "Movies",
    "sub": "Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "drama-rakuten-tv"
   },
   {
    "number": 200,
@@ -1047,7 +1075,7 @@
    "sub": "Martial Arts",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "0#99991302"
+   "guide_id": "99991302"
   },
   {
    "number": 212,
@@ -1368,7 +1396,9 @@
    ],
    "block": "Movies",
    "sub": "Movies – Mixed",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000104"
   },
   {
    "number": 253,
@@ -1384,7 +1414,9 @@
    ],
    "block": "Movies",
    "sub": "Movies – Mixed",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "US18000163F"
   },
   {
    "number": 254,
@@ -1596,7 +1628,9 @@
    ],
    "block": "Movies",
    "sub": "Movies – Mixed",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "top-movies-rakuten-tv"
   },
   {
    "number": 266,
@@ -1627,7 +1661,9 @@
    ],
    "block": "Movies",
    "sub": "Movies – Mixed",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715950"
   },
   {
    "number": 268,
@@ -1693,7 +1729,9 @@
    ],
    "block": "Series",
    "sub": "Comedy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "653208"
   },
   {
    "number": 303,
@@ -1761,7 +1799,9 @@
    ],
    "block": "Series",
    "sub": "Comedy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "656574"
   },
   {
    "number": 307,
@@ -1809,7 +1849,9 @@
    ],
    "block": "Series",
    "sub": "Comedy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000169"
   },
   {
    "number": 310,
@@ -1892,7 +1934,9 @@
    ],
    "block": "Series",
    "sub": "Comedy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "658746"
   },
   {
    "number": 315,
@@ -1940,7 +1984,9 @@
    ],
    "block": "Series",
    "sub": "Comedy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "656575"
   },
   {
    "number": 318,
@@ -1975,7 +2021,7 @@
    "sub": "Comedy",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "150#99951244"
+   "guide_id": "99951244"
   },
   {
    "number": 320,
@@ -1992,7 +2038,7 @@
    "sub": "Comedy",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "150#99951301"
+   "guide_id": "99951301"
   },
   {
    "number": 321,
@@ -2097,7 +2143,9 @@
    ],
    "block": "Series",
    "sub": "Action",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "653199"
   },
   {
    "number": 331,
@@ -2149,7 +2197,9 @@
    ],
    "block": "Series",
    "sub": "Action",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000071"
   },
   {
    "number": 340,
@@ -2182,7 +2232,9 @@
    ],
    "block": "Series",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951258"
   },
   {
    "number": 342,
@@ -2215,7 +2267,9 @@
    ],
    "block": "Series",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951255"
   },
   {
    "number": 344,
@@ -2230,7 +2284,9 @@
    ],
    "block": "Series",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "680705"
   },
   {
    "number": 345,
@@ -2263,7 +2319,9 @@
    ],
    "block": "Series",
    "sub": "Westerns",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951356"
   },
   {
    "number": 350,
@@ -2278,7 +2336,9 @@
    ],
    "block": "Series",
    "sub": "Sci-Fi & Fantasy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000059"
   },
   {
    "number": 351,
@@ -2365,7 +2425,9 @@
    ],
    "block": "Series",
    "sub": "Sci-Fi & Fantasy",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951349"
   },
   {
    "number": 356,
@@ -2432,7 +2494,7 @@
    "sub": "Sci-Fi & Fantasy",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "50#99991623"
+   "guide_id": "99991623"
   },
   {
    "number": 360,
@@ -2465,7 +2527,9 @@
    ],
    "block": "Series",
    "sub": "Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "7321"
   },
   {
    "number": 362,
@@ -2519,7 +2583,7 @@
    "sub": "Drama",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "100#99951346"
+   "guide_id": "99951346"
   },
   {
    "number": 365,
@@ -2534,7 +2598,9 @@
    ],
    "block": "Series",
    "sub": "Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000056"
   },
   {
    "number": 366,
@@ -2737,7 +2803,9 @@
    ],
    "block": "Series",
    "sub": "Classic Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951259"
   },
   {
    "number": 383,
@@ -2752,7 +2820,9 @@
    ],
    "block": "Series",
    "sub": "Classic Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951240"
   },
   {
    "number": 384,
@@ -2945,7 +3015,9 @@
    ],
    "block": "Series",
    "sub": "Family & Teen Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000070"
   },
   {
    "number": 400,
@@ -2991,7 +3063,9 @@
    ],
    "block": "Series",
    "sub": "K-Drama",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "US17000164B"
   },
   {
    "number": 403,
@@ -3095,7 +3169,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951256"
   },
   {
    "number": 413,
@@ -3181,7 +3257,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "684167"
   },
   {
    "number": 418,
@@ -3196,7 +3274,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "684165"
   },
   {
    "number": 419,
@@ -3228,7 +3308,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "700415"
   },
   {
    "number": 421,
@@ -3243,7 +3325,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951239"
   },
   {
    "number": 422,
@@ -3258,7 +3342,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000105"
   },
   {
    "number": 423,
@@ -3291,7 +3377,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000064"
   },
   {
    "number": 425,
@@ -3325,7 +3413,9 @@
    ],
    "block": "Series",
    "sub": "Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000066"
   },
   {
    "number": 430,
@@ -3391,7 +3481,9 @@
    ],
    "block": "Series",
    "sub": "Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951467"
   },
   {
    "number": 434,
@@ -3460,7 +3552,9 @@
    ],
    "block": "Series",
    "sub": "Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000086"
   },
   {
    "number": 438,
@@ -3477,7 +3571,7 @@
    "sub": "Reality",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "250#99951465"
+   "guide_id": "99951465"
   },
   {
    "number": 439,
@@ -3616,7 +3710,9 @@
    ],
    "block": "Series",
    "sub": "Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "reality-rakuten-tv"
   },
   {
    "number": 447,
@@ -3631,7 +3727,9 @@
    ],
    "block": "Series",
    "sub": "Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951243"
   },
   {
    "number": 448,
@@ -3665,7 +3763,9 @@
    ],
    "block": "Series",
    "sub": "Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715948"
   },
   {
    "number": 450,
@@ -3749,7 +3849,9 @@
    ],
    "block": "Series",
    "sub": "Competition Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951318"
   },
   {
    "number": 455,
@@ -3764,7 +3866,9 @@
    ],
    "block": "Series",
    "sub": "Competition Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "677790"
   },
   {
    "number": 456,
@@ -3848,7 +3952,9 @@
    ],
    "block": "Series",
    "sub": "Competition Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "650666"
   },
   {
    "number": 461,
@@ -3863,7 +3969,9 @@
    ],
    "block": "Series",
    "sub": "Competition Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000048"
   },
   {
    "number": 462,
@@ -3977,7 +4085,7 @@
    "sub": "Dating Reality",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "250#99991625"
+   "guide_id": "99991625"
   },
   {
    "number": 471,
@@ -4062,7 +4170,9 @@
    ],
    "block": "Series",
    "sub": "Dating Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715947"
   },
   {
    "number": 480,
@@ -4251,7 +4361,9 @@
    ],
    "block": "Series",
    "sub": "Docu-Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "duck-dynasty"
   },
   {
    "number": 493,
@@ -4384,7 +4496,9 @@
    ],
    "block": "Series",
    "sub": "Docu-Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715942"
   },
   {
    "number": 510,
@@ -4629,7 +4743,9 @@
    ],
    "block": "Sitcoms (USA)",
    "sub": "Sitcoms",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000103"
   },
   {
    "number": 610,
@@ -4680,7 +4796,9 @@
    ],
    "block": "Sitcoms (USA)",
    "sub": "Sitcoms",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951257"
   },
   {
    "number": 613,
@@ -4731,7 +4849,9 @@
    ],
    "block": "Sitcoms (USA)",
    "sub": "Sitcoms",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951247"
   },
   {
    "number": 616,
@@ -4801,7 +4921,9 @@
    ],
    "block": "Game Shows",
    "sub": "Game Shows",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951224"
   },
   {
    "number": 702,
@@ -4848,7 +4970,9 @@
    ],
    "block": "Game Shows",
    "sub": "Game Shows",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951339"
   },
   {
    "number": 705,
@@ -4950,7 +5074,7 @@
    "sub": "Game Shows",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "200#99951125"
+   "guide_id": "99951125"
   },
   {
    "number": 711,
@@ -4965,7 +5089,9 @@
    ],
    "block": "Game Shows",
    "sub": "Game Shows",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "658748"
   },
   {
    "number": 712,
@@ -5627,7 +5753,9 @@
    ],
    "block": "Cartoons & Kids",
    "sub": "Preschool",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "baby-shark-tv"
   },
   {
    "number": 853,
@@ -5901,7 +6029,9 @@
    ],
    "block": "Cartoons & Kids",
    "sub": "Preschool",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USBB3600001R6"
   },
   {
    "number": 869,
@@ -6145,7 +6275,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Food",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "691129"
   },
   {
    "number": 1001,
@@ -6196,7 +6328,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Food",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951323"
   },
   {
    "number": 1004,
@@ -6264,7 +6398,7 @@
    "sub": "Food",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "200#99991328"
+   "guide_id": "99991328"
   },
   {
    "number": 1008,
@@ -6366,7 +6500,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Food",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "US17000186W"
   },
   {
    "number": 1014,
@@ -6381,7 +6517,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Food",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "618763"
   },
   {
    "number": 1015,
@@ -6549,7 +6687,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Food Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "677011"
   },
   {
    "number": 1033,
@@ -6614,7 +6754,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Food Reality",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "GBBD25000019N"
   },
   {
    "number": 1037,
@@ -6858,7 +7000,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Home",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951237"
   },
   {
    "number": 1054,
@@ -6873,7 +7017,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Home",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951221"
   },
   {
    "number": 1055,
@@ -6959,7 +7105,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Home",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715945"
   },
   {
    "number": 1060,
@@ -6976,7 +7124,7 @@
    "sub": "Antiques",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "250#99951206"
+   "guide_id": "99951206"
   },
   {
    "number": 1061,
@@ -7042,7 +7190,7 @@
    "sub": "Crafts & Garden",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "200#99951156"
+   "guide_id": "99951156"
   },
   {
    "number": 1071,
@@ -7075,7 +7223,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Crafts & Garden",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "6413"
   },
   {
    "number": 1073,
@@ -7123,7 +7273,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Crafts & Garden",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "700407"
   },
   {
    "number": 1076,
@@ -7175,7 +7327,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Crafts & Garden",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715952"
   },
   {
    "number": 1080,
@@ -7282,7 +7436,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Travel",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "7047"
   },
   {
    "number": 1087,
@@ -7412,7 +7568,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Travel",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715938"
   },
   {
    "number": 1095,
@@ -7428,7 +7586,9 @@
    ],
    "block": "Food, Home & Travel",
    "sub": "Travel",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000068"
   },
   {
    "number": 1096,
@@ -7475,7 +7635,9 @@
     }
    ],
    "block": "Music",
-   "sub": "60s & 70s"
+   "sub": "60s & 70s",
+   "guide": "samsung",
+   "guide_id": "USBD3500008IJ"
   },
   {
    "number": 1102,
@@ -7489,7 +7651,9 @@
     }
    ],
    "block": "Music",
-   "sub": "60s & 70s"
+   "sub": "60s & 70s",
+   "guide": "samsung",
+   "guide_id": "US4700006XL"
   },
   {
    "number": 1103,
@@ -7555,7 +7719,9 @@
     }
    ],
    "block": "Music",
-   "sub": "80s"
+   "sub": "80s",
+   "guide": "samsung",
+   "guide_id": "USBD3300022QK"
   },
   {
    "number": 1112,
@@ -7621,7 +7787,9 @@
     }
    ],
    "block": "Music",
-   "sub": "90s & 2000s"
+   "sub": "90s & 2000s",
+   "guide": "samsung",
+   "guide_id": "USBD35000149S"
   },
   {
    "number": 1122,
@@ -7735,7 +7903,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Rock"
+   "sub": "Rock",
+   "guide": "samsung",
+   "guide_id": "USBD35000180U"
   },
   {
    "number": 1132,
@@ -7817,7 +7987,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Country"
+   "sub": "Country",
+   "guide": "samsung",
+   "guide_id": "US4700005EA"
   },
   {
    "number": 1142,
@@ -7831,7 +8003,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Country"
+   "sub": "Country",
+   "guide": "samsung",
+   "guide_id": "USBD3300021KV"
   },
   {
    "number": 1143,
@@ -7915,7 +8089,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Hip-Hop/R&B"
+   "sub": "Hip-Hop/R&B",
+   "guide": "samsung",
+   "guide_id": "USBD3500010MT"
   },
   {
    "number": 1151,
@@ -8077,7 +8253,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Pop"
+   "sub": "Pop",
+   "guide": "samsung",
+   "guide_id": "US39000038W"
   },
   {
    "number": 1162,
@@ -8127,7 +8305,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Pop"
+   "sub": "Pop",
+   "guide": "samsung",
+   "guide_id": "US4700002UF"
   },
   {
    "number": 1165,
@@ -8141,7 +8321,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Pop"
+   "sub": "Pop",
+   "guide": "samsung",
+   "guide_id": "USBD3500022DN"
   },
   {
    "number": 1166,
@@ -8197,7 +8379,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Pop"
+   "sub": "Pop",
+   "guide": "samsung",
+   "guide_id": "US4700007GV"
   },
   {
    "number": 1170,
@@ -8211,7 +8395,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Pop"
+   "sub": "Pop",
+   "guide": "samsung",
+   "guide_id": "USBD3500016NH"
   },
   {
    "number": 1171,
@@ -8305,7 +8491,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Classical/Jazz"
+   "sub": "Classical/Jazz",
+   "guide": "samsung",
+   "guide_id": "USBD350002623"
   },
   {
    "number": 1182,
@@ -8337,7 +8525,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Classical/Jazz"
+   "sub": "Classical/Jazz",
+   "guide": "samsung",
+   "guide_id": "USBD35000128A"
   },
   {
    "number": 1190,
@@ -8384,7 +8574,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Concerts & Live"
+   "sub": "Concerts & Live",
+   "guide": "stirr",
+   "guide_id": "6443"
   },
   {
    "number": 1193,
@@ -8430,7 +8622,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Other"
+   "sub": "Other",
+   "guide": "stirr",
+   "guide_id": "5298"
   },
   {
    "number": 1201,
@@ -8444,7 +8638,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Other"
+   "sub": "Other",
+   "guide": "roku",
+   "guide_id": "f8f717f72440fb688192f83faa71a8ab"
   },
   {
    "number": 1202,
@@ -8458,7 +8654,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Other"
+   "sub": "Other",
+   "guide": "samsung",
+   "guide_id": "USBD3500011J3"
   },
   {
    "number": 1203,
@@ -8500,7 +8698,9 @@
     }
    ],
    "block": "Music",
-   "sub": "Other"
+   "sub": "Other",
+   "guide": "samsung",
+   "guide_id": "US4700003DP"
   },
   {
    "number": 1206,
@@ -9057,7 +9257,9 @@
    ],
    "block": "Documentaries",
    "sub": "Nature",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "7061"
   },
   {
    "number": 1337,
@@ -9214,7 +9416,9 @@
    ],
    "block": "Documentaries",
    "sub": "Pets & Vets",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "7017"
   },
   {
    "number": 1347,
@@ -9230,7 +9434,9 @@
    ],
    "block": "Documentaries",
    "sub": "Pets & Vets",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715939"
   },
   {
    "number": 1350,
@@ -9378,7 +9584,9 @@
    ],
    "block": "Documentaries",
    "sub": "History",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "history-hunters"
   },
   {
    "number": 1359,
@@ -9533,7 +9741,9 @@
    ],
    "block": "Documentaries",
    "sub": "History",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99991650"
   },
   {
    "number": 1368,
@@ -9584,7 +9794,9 @@
    ],
    "block": "Documentaries",
    "sub": "Science & Space",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "cosmic-frontiers-uk"
   },
   {
    "number": 1371,
@@ -9599,7 +9811,9 @@
    ],
    "block": "Documentaries",
    "sub": "Science & Space",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "curiosity-now-en"
   },
   {
    "number": 1372,
@@ -9824,7 +10038,9 @@
    ],
    "block": "Documentaries",
    "sub": "Science & Space",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "702892"
   },
   {
    "number": 1390,
@@ -9839,7 +10055,9 @@
    ],
    "block": "Documentaries",
    "sub": "Paranormal",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99991292"
   },
   {
    "number": 1391,
@@ -10117,7 +10335,9 @@
    ],
    "block": "Documentaries",
    "sub": "Paranormal",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715951"
   },
   {
    "number": 1407,
@@ -10133,7 +10353,9 @@
    ],
    "block": "Documentaries",
    "sub": "Paranormal",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715946"
   },
   {
    "number": 1410,
@@ -10165,7 +10387,9 @@
    ],
    "block": "Documentaries",
    "sub": "True Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951461"
   },
   {
    "number": 1412,
@@ -10197,7 +10421,9 @@
    ],
    "block": "Documentaries",
    "sub": "True Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "crime-beat-tv"
   },
   {
    "number": 1414,
@@ -10247,7 +10473,9 @@
    ],
    "block": "Documentaries",
    "sub": "True Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "GB4900001NW"
   },
   {
    "number": 1417,
@@ -10420,7 +10648,9 @@
    ],
    "block": "Documentaries",
    "sub": "True Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "641290"
   },
   {
    "number": 1427,
@@ -10517,7 +10747,9 @@
    ],
    "block": "Documentaries",
    "sub": "True Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000011"
   },
   {
    "number": 1433,
@@ -10533,7 +10765,9 @@
    ],
    "block": "Documentaries",
    "sub": "True Crime",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000067"
   },
   {
    "number": 1434,
@@ -10601,7 +10835,9 @@
    ],
    "block": "Documentaries",
    "sub": "Forensics & Cold Cases",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000085"
   },
   {
    "number": 1443,
@@ -10723,7 +10959,9 @@
    ],
    "block": "Documentaries",
    "sub": "Forensics & Cold Cases",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "715949"
   },
   {
    "number": 1450,
@@ -10755,7 +10993,9 @@
    ],
    "block": "Documentaries",
    "sub": "Cops & Courts",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "cops"
   },
   {
    "number": 1452,
@@ -10787,7 +11027,9 @@
    ],
    "block": "Documentaries",
    "sub": "Cops & Courts",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000299"
   },
   {
    "number": 1454,
@@ -10820,7 +11062,9 @@
    ],
    "block": "Documentaries",
    "sub": "Cops & Courts",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "dog-the-bounty-hunter"
   },
   {
    "number": 1456,
@@ -10835,7 +11079,9 @@
    ],
    "block": "Documentaries",
    "sub": "Cops & Courts",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "jail"
   },
   {
    "number": 1457,
@@ -10884,7 +11130,9 @@
    ],
    "block": "Documentaries",
    "sub": "Cops & Courts",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000074"
   },
   {
    "number": 1460,
@@ -10931,7 +11179,9 @@
    ],
    "block": "Documentaries",
    "sub": "Motoring",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951249"
   },
   {
    "number": 1472,
@@ -11028,7 +11278,9 @@
    ],
    "block": "Documentaries",
    "sub": "Motoring",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "7041"
   },
   {
    "number": 1478,
@@ -11044,7 +11296,9 @@
    ],
    "block": "Documentaries",
    "sub": "Motoring",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000108"
   },
   {
    "number": 1479,
@@ -11061,7 +11315,7 @@
    "sub": "Motoring",
    "breaks": "cue",
    "guide": "xumo",
-   "guide_id": "100#99991325"
+   "guide_id": "99991325"
   },
   {
    "number": 1480,
@@ -11130,7 +11384,9 @@
    ],
    "block": "Documentaries",
    "sub": "Motoring",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99951338"
   },
   {
    "number": 1484,
@@ -11215,7 +11471,9 @@
    ],
    "block": "Documentaries",
    "sub": "Motoring",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000073"
   },
   {
    "number": 1489,
@@ -11466,7 +11724,9 @@
    ],
    "block": "Documentaries",
    "sub": "Outdoors",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "9101"
   },
   {
    "number": 1504,
@@ -11582,7 +11842,9 @@
    ],
    "block": "Documentaries",
    "sub": "Outdoors",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "6439"
   },
   {
    "number": 1511,
@@ -11683,7 +11945,9 @@
    ],
    "block": "Sports",
    "sub": "General",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "557344"
   },
   {
    "number": 1605,
@@ -11819,7 +12083,9 @@
    ],
    "block": "Sports",
    "sub": "General",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "5305"
   },
   {
    "number": 1613,
@@ -12120,7 +12386,9 @@
    ],
    "block": "Sports",
    "sub": "Combat",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "xumo",
+   "guide_id": "99991696"
   },
   {
    "number": 1640,
@@ -12190,7 +12458,9 @@
    ],
    "block": "Sports",
    "sub": "Combat",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000083"
   },
   {
    "number": 1644,
@@ -12223,7 +12493,9 @@
    ],
    "block": "Sports",
    "sub": "Soccer",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "samsung",
+   "guide_id": "USAJ4300001Q7"
   },
   {
    "number": 1651,
@@ -12342,7 +12614,9 @@
    ],
    "block": "Sports",
    "sub": "US Leagues",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000012"
   },
   {
    "number": 1661,
@@ -12554,7 +12828,9 @@
    ],
    "block": "Sports",
    "sub": "Motorsport",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "400000121"
   },
   {
    "number": 1675,
@@ -12569,7 +12845,9 @@
    ],
    "block": "Sports",
    "sub": "Motorsport",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "tubi",
+   "guide_id": "629323"
   },
   {
    "number": 1676,
@@ -12635,7 +12913,9 @@
    ],
    "block": "Sports",
    "sub": "Motorsport",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "6424"
   },
   {
    "number": 1680,
@@ -12722,7 +13002,9 @@
    ],
    "block": "Sports",
    "sub": "Tennis & Golf",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "rakuten",
+   "guide_id": "tennis-plus"
   },
   {
    "number": 1685,
@@ -13036,7 +13318,9 @@
    ],
    "block": "Sports",
    "sub": "Action & Extreme",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "5887"
   },
   {
    "number": 1710,
@@ -13081,7 +13365,9 @@
    ],
    "block": "Sports",
    "sub": "Other Sports",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "5294"
   },
   {
    "number": 1722,
@@ -13096,7 +13382,9 @@
    ],
    "block": "Sports",
    "sub": "Other Sports",
-   "breaks": "cue"
+   "breaks": "cue",
+   "guide": "stirr",
+   "guide_id": "5295"
   },
   {
    "number": 1723,

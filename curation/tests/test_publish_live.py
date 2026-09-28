@@ -135,6 +135,12 @@ class TestRecord(unittest.TestCase):
         self.assertNotIn("breaks", publish_live.lineup_record(1, fast(1, "M", "Music", "Pop")))
         self.assertNotIn("breaks", publish_live.lineup_record(1, fast(1, "S", source="ca_stingray")))
 
+    def test_every_fast_guide_service_is_published(self):
+        for guide, gid in (("tubi", "400000012"), ("rakuten", "sci-fi-rakuten-tv"), ("stirr", "5294"),
+                           ("xumo", "99991333")):
+            out = publish_live.lineup_record(1, fast(1, "N", guide=guide, gid=gid))
+            self.assertEqual((guide, gid), (out["guide"], out["guide_id"]))
+
     def test_no_guide_or_a_pluto_guide_is_left_out(self):
         self.assertNotIn("guide", publish_live.lineup_record(1, fast(1, "N", guide="none", gid=None)))
         self.assertNotIn("guide", publish_live.lineup_record(1, fast(1, "X", guide="xumo", gid=None)))
