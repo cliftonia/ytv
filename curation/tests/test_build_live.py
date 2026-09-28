@@ -189,7 +189,7 @@ class TestClassify(unittest.TestCase):
         films = {"titles": {}, "genres": {}, "groups": [], "kinds": {"film": 600}, "via": None}
         series = {"titles": {"Starhunter": 600}, "genres": {}, "groups": [], "kinds": {"tv": 600}, "via": None}
         self.assertEqual(("Movies", "Sci-Fi"), self.classify(draft_channel("Pluto TV Sci-Fi"), films)[:2])
-        self.assertEqual(("Series", "Action"), self.classify(draft_channel("Pluto TV Sci-fi Series"), series)[:2])
+        self.assertEqual(("Series", "Sci-Fi & Fantasy"), self.classify(draft_channel("Pluto TV Sci-fi Series"), series)[:2])
         self.assertEqual(("Movies", "Westerns"), self.classify(draft_channel("Cowboy Movie Channel"))[:2])
 
     def test_a_guide_of_one_kind_of_show_decides(self):
