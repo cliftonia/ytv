@@ -22,6 +22,12 @@ data class Stream(
      * which then draws from all its clips at every hour. See `schedule/HalfHourSchedule`.
      */
     val parts: List<String> = emptyList(),
+    /**
+     * Where a live feed must be fetched from - "us" for a FAST channel that answers only a US
+     * address, played through the home server's relay (see `relay/FastRelay`). Absent on every
+     * stream that plays as published.
+     */
+    val route: String? = null,
 )
 
 @Serializable

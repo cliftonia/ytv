@@ -16,6 +16,7 @@ import com.cliftonia.fs42tv.pluto.PlutoRoute
 import com.cliftonia.fs42tv.pluto.PlutoSessions
 import com.cliftonia.fs42tv.pluto.SessionPool
 import com.cliftonia.fs42tv.pluto.VariantCache
+import com.cliftonia.fs42tv.relay.FastRelay
 import com.cliftonia.fs42tv.resolver.Loudness
 import com.cliftonia.fs42tv.resolver.Playable
 import com.cliftonia.fs42tv.resolver.PlaybackDiagnostics
@@ -57,6 +58,8 @@ class ScreenExtras(private val deps: Deps) {
         val adMirror: (String) -> String? = { null },
         /** Reads the Pluto neighbours' masters ahead of a surf, into [masterPicker]'s cache. */
         val masterPrefetch: MasterPrefetch? = null,
+        /** The reachable resolve server's base url, or null - the US relay's host; see FastRelay. */
+        val relayServer: () -> String? = { null },
     )
 
     /**
@@ -64,7 +67,9 @@ class ScreenExtras(private val deps: Deps) {
      * the tune thread only - it is TuneController.Deps.livePlayable.
      */
     fun livePlayable(tuned: Tuned, stillWanted: () -> Boolean): Playable? {
-        val routed = deps.plutoRoute.forDial(tuned.channel, tuned.playable)
+        // A US-only feed goes through the home server's relay, or fails here when there is none.
+        val relayed = FastRelay.route(tuned.stream, tuned.playable, deps.relayServer)
+        val routed = deps.plutoRoute.forDial(tuned.channel, relayed)
         // Pluto-dial channels only, either route; the YouTube dial's news feeds are left as they
         // were, like the route itself leaves them.
         val picker = deps.masterPicker
@@ -104,7 +109,8 @@ class ScreenExtras(private val deps: Deps) {
      */
     fun besideTuned(tuned: Tuned): Tuned =
         if (tuned.channel.kind != "live") tuned
-        else tuned.copy(playable = deps.plutoRoute.forBeside(tuned.channel, tuned.playable))
+        else tuned.copy(playable = deps.plutoRoute.forBeside(tuned.channel,
+            FastRelay.route(tuned.stream, tuned.playable, deps.relayServer)))
 
     /**
      * The dial's player failed on [playable]: its remembered pick is forgotten, always, and when
@@ -306,6 +312,7 @@ class ScreenExtras(private val deps: Deps) {
                     AdCatalogStore(java.io.File(it, AdCatalogStore.FILE_NAME), AdCatalogStore::httpFetch)
                 },
                 adMirror = { id -> AdMirror.url(homeServer(), id) },
+                relayServer = homeServer,
             ))
         }
 
