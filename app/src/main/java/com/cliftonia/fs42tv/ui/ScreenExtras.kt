@@ -3,6 +3,7 @@ package com.cliftonia.fs42tv.ui
 import android.content.SharedPreferences
 import androidx.compose.runtime.mutableStateOf
 import com.cliftonia.fs42tv.ads.AdCatalogStore
+import com.cliftonia.fs42tv.ads.AdMirror
 import com.cliftonia.fs42tv.pluto.BreakPoller
 import com.cliftonia.fs42tv.pluto.MasterPicker
 import com.cliftonia.fs42tv.pluto.PlutoApi
@@ -48,6 +49,8 @@ class ScreenExtras(private val deps: Deps) {
         val masterPicker: MasterPicker? = null,
         /** The break commercials' reels (BREAK ADS), cached in the cache directory; null for none. */
         val adCatalog: AdCatalogStore? = null,
+        /** The home server's copy of a reel by id, when the server is reachable - see AdMirror. */
+        val adMirror: (String) -> String? = { null },
     )
 
     /**
@@ -109,6 +112,9 @@ class ScreenExtras(private val deps: Deps) {
 
     /** `ads.json`, for [BreakAds]; null when this build of the screen has no cache directory. */
     val adCatalog: AdCatalogStore? get() = deps.adCatalog
+
+    /** Where the home server keeps reel `id`, or null to play it from the archive. */
+    val adMirror: (String) -> String? get() = deps.adMirror
 
     /**
      * The timetable every clock-channel question goes through - the tuner, the guide, the banner
@@ -207,6 +213,8 @@ class ScreenExtras(private val deps: Deps) {
             mpvLadder: () -> List<String>? = { null },
             /** Where `ads.json` is kept, like the lineups; null for no break commercials. */
             cacheDir: java.io.File? = null,
+            /** The reachable resolve server's base url, or null - the break reels' mirror. */
+            homeServer: () -> String? = { null },
         ): ScreenExtras {
             val features = Features.from(prefs)
             val now = { System.currentTimeMillis() }
@@ -250,6 +258,7 @@ class ScreenExtras(private val deps: Deps) {
                 adCatalog = cacheDir?.let {
                     AdCatalogStore(java.io.File(it, AdCatalogStore.FILE_NAME), AdCatalogStore::httpFetch)
                 },
+                adMirror = { id -> AdMirror.url(homeServer(), id) },
             ))
         }
 
