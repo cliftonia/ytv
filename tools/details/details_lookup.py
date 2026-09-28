@@ -21,6 +21,9 @@ from titles import MOVIE, TV, key, same, trimmed, year_of
 TMDB = "https://api.themoviedb.org/3"
 OMDB = "https://www.omdbapi.com/"
 MIN_VOTES = 10
+# Several films of one exact name and no year from the guide: the top one needs this many times
+# the next one's votes.
+NO_YEAR_DOMINANCE = 10
 DOMINANCE = 3
 CROSS_KIND_DOMINANCE = 10
 TMDB_GAP_SECONDS = 0.03
@@ -98,6 +101,10 @@ def choose(results_by_kind, title, year):
     if len(candidates) > 1:
         # A film and a series of one name, with nothing saying which: only a landslide decides.
         factor = DOMINANCE if candidates[1][1] == best[1] else CROSS_KIND_DOMINANCE
+        if not year:
+            # Nothing but the name: "Deep in the Heart" is six films, and 93 votes to 18 made a
+            # Chinese thriller the answer for a Pluto channel's American drama. Only a rout decides.
+            factor = max(factor, NO_YEAR_DOMINANCE)
         if best[0] < factor * max(1, candidates[1][0]):
             return None, "ambiguous"
     if not year and best[0] < MIN_VOTES:
