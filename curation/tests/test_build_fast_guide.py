@@ -85,6 +85,51 @@ class TestEncode(unittest.TestCase):
         self.assertEqual("Second", lookup(guide, "a:1", T0 + 700))
 
 
+DETAILED = b"""<?xml version="1.0" encoding="UTF-8"?>
+<tv>
+  <programme channel="US1" start="20260928000000 +0000" stop="20260928003000 +0000">
+    <title>Terry and June</title>
+    <desc>Terry experiences pangs of
+      jealousy.</desc>
+    <icon src="https://img.example/a.jpg" />
+  </programme>
+  <programme channel="US1" start="20260928010000 +0000" stop="20260928013000 +0000">
+    <title>Bare</title>
+    <icon src="http://insecure.example/b.jpg" />
+  </programme>
+</tv>
+"""
+
+
+class TestDescriptionsAndPictures(unittest.TestCase):
+
+    def test_desc_and_icon_ride_along_with_each_programme(self):
+        got = fg.programmes(DETAILED, {"US1"}, T0)["US1"]
+        self.assertEqual(("Terry and June", "Terry experiences pangs of jealousy.",
+                          "https://img.example/a.jpg"), got[0][2:])
+        self.assertEqual(("Bare", "", ""), got[1][2:], "no desc, and no plain-http picture")
+
+    def test_info_runs_alongside_the_channel_pairs_holes_included(self):
+        guide = fg.encode({"samsung:US1": fg.programmes(DETAILED, {"US1"}, T0)["US1"]}, T0)
+        flat, info = guide["channels"]["samsung:US1"], guide["info"]["samsung:US1"]
+        self.assertEqual(len(flat), len(info))
+        self.assertEqual("Terry experiences pangs of jealousy.", guide["descs"][info[0]])
+        self.assertEqual("https://img.example/a.jpg", guide["icons"][info[1]])
+        self.assertEqual([0, 0], info[2:4], "the hole between the two says nothing")
+        self.assertEqual([0, 0], info[-2:])
+
+    def test_title_only_programmes_add_no_tables(self):
+        guide = fg.encode({"a:1": [(T0, T0 + 60, "Same")]}, T0)
+        self.assertNotIn("info", guide)
+        self.assertNotIn("descs", guide)
+
+    def test_long_descriptions_are_cut_on_a_word(self):
+        cut = fg.trimmed("word " * 100, limit=40)
+        self.assertLessEqual(len(cut), 40)
+        self.assertTrue(cut.endswith("word…"))
+        self.assertEqual("short one", fg.trimmed("  short \n one "))
+
+
 class TestBuild(unittest.TestCase):
 
     LINEUP = [
