@@ -222,6 +222,8 @@ class MainActivity : ComponentActivity() {
                 tune.tuneFirst(nav.current, requestedAt)
             },
             elapsedMillis = { SystemClock.elapsedRealtime() },
+            // The FAST guide and the details are built from the LIVE TV lineup: they follow it.
+            onLineup = { stamp -> if (source == LineupSource.LIVE && !destroyed) extras.lineupSeen(stamp) },
         ).load()
     }
 

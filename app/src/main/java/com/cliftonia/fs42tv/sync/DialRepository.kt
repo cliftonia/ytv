@@ -2,8 +2,11 @@ package com.cliftonia.fs42tv.sync
 
 import java.io.File
 
-/** What a successful sync fetched, so callers don't have to re-read and re-parse it from disk. */
-data class SyncResult(val dial: Dial)
+/**
+ * What a successful sync fetched, so callers don't have to re-read and re-parse it from disk, and
+ * its [stamp] - see [DialRepository.stampOf].
+ */
+data class SyncResult(val dial: Dial, val stamp: String = "")
 
 /**
  * Fetches the published dial and keeps the last good copy on disk.
@@ -48,9 +51,26 @@ class DialRepository(
         // months ago and freshness checks would reject them - but it is dead weight on a device
         // with 2.3GB of storage, so it goes on the first successful sync after upgrading.
         File(cacheDir, "urls.json").delete()
-        return SyncResult(dial)
+        return SyncResult(dial, stampOf(dialText))
     }
 
     fun cachedDial(): Dial? =
         runCatching { DialContract.parseDial(dialFile.readText()) }.getOrNull()
+
+    /** The cached lineup's [stampOf], or null when there is none. */
+    fun cachedStamp(): String? = runCatching { stampOf(dialFile.readText()) }.getOrNull()
+
+    companion object {
+        /**
+         * Which lineup this is: a hash of the file as published (live.json carries no generation
+         * stamp, and any change to it is a new lineup). Files built from the lineup - the FAST
+         * guide, the details - remember the stamp they were downloaded under, and a new one
+         * fetches them again.
+         */
+        fun stampOf(text: String): String =
+            java.security.MessageDigest.getInstance("SHA-256").digest(text.toByteArray())
+                .take(STAMP_BYTES).joinToString("") { "%02x".format(it) }
+
+        private const val STAMP_BYTES = 12
+    }
 }

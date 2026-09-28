@@ -183,6 +183,15 @@ class ScreenExtras(private val deps: Deps) {
 
     val features: Features get() = deps.features
 
+    /**
+     * The LIVE TV dial came up on, or refreshed to, the lineup [stamp]: the files built from it -
+     * `fast_guide.json`, `details.json` - are fetched when stale or taken under another lineup.
+     */
+    fun lineupSeen(stamp: String) {
+        deps.fastGuide?.lineupSeen(stamp)
+        deps.guideDetails?.lineupSeen(stamp)
+    }
+
     /** The LIVE TV picker's details pane; null when this screen has none. */
     val guideDetails: GuideDetails? get() = deps.guideDetails
 
