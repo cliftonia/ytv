@@ -85,16 +85,20 @@
      "first_number": 330
     },
     {
+     "name": "Sci-Fi & Fantasy",
+     "first_number": 350
+    },
+    {
      "name": "Drama",
      "first_number": 360
     },
     {
      "name": "Crime",
-     "first_number": 410
+     "first_number": 400
     },
     {
      "name": "Reality",
-     "first_number": 430
+     "first_number": 420
     }
    ]
   },
@@ -2575,29 +2579,6 @@
   },
   {
    "number": 330,
-   "name": "More TV Sci-fi",
-   "block": "Series",
-   "sub": "Action",
-   "source": "pluto",
-   "pluto": {
-    "id": "645e00d5d3fdde000829463a",
-    "region": "uk"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8",
-     "duration": 600,
-     "title": "More TV Sci-fi"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "645e00d5d3fdde000829463a",
-   "home_only": false,
-   "default": true,
-   "why": "name: \"sci fi\" (guide: series)"
-  },
-  {
-   "number": 331,
    "name": "Pluto TV 80's Action",
    "block": "Series",
    "sub": "Action",
@@ -2620,7 +2601,7 @@
    "why": "guide: mostly The A-Team (action series)"
   },
   {
-   "number": 332,
+   "number": 331,
    "name": "Pluto TV Adventure",
    "block": "Series",
    "sub": "Action",
@@ -2640,56 +2621,10 @@
    "guide_id": "69d7ebb726eeec84158e28cb",
    "home_only": false,
    "default": true,
-   "why": "guide: mostly The Librarians, Snowpiercer (action series)"
+   "why": "name: \"adventure\" (guide: series)"
   },
   {
-   "number": 333,
-   "name": "Pluto TV Fantasy & Horror",
-   "block": "Series",
-   "sub": "Action",
-   "source": "pluto",
-   "pluto": {
-    "id": "685041d936c9361b1921c26c",
-    "region": "uk"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-685041d936c9361b1921c26c.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Fantasy & Horror"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "685041d936c9361b1921c26c",
-   "home_only": false,
-   "default": true,
-   "why": "guide: mostly Land of the Lost, The Lost World (action series)"
-  },
-  {
-   "number": 334,
-   "name": "Pluto TV Sci-fi Series",
-   "block": "Series",
-   "sub": "Action",
-   "source": "pluto",
-   "pluto": {
-    "id": "619247c34a270700077c8415",
-    "region": "uk"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-619247c34a270700077c8415.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Sci-fi Series"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "619247c34a270700077c8415",
-   "home_only": false,
-   "default": true,
-   "why": "name: \"sci fi\" (guide: series)"
-  },
-  {
-   "number": 335,
+   "number": 332,
    "name": "Pluto TV Westerns",
    "block": "Series",
    "sub": "Action",
@@ -2712,7 +2647,7 @@
    "why": "guide: mostly Rawhide, Annie Oakley (western series)"
   },
   {
-   "number": 336,
+   "number": 333,
    "name": "Universal Action",
    "block": "Series",
    "sub": "Action",
@@ -2735,7 +2670,7 @@
    "why": "guide: mostly Bionic Woman, Emergency! (action series)"
   },
   {
-   "number": 337,
+   "number": 334,
    "name": "Western TV",
    "block": "Series",
    "sub": "Action",
@@ -2758,7 +2693,7 @@
    "why": "guide: mostly Have Gun Will Travel, Tombstone Territory (western series)"
   },
   {
-   "number": 338,
+   "number": 335,
    "name": "Death Valley Days",
    "block": "Series",
    "sub": "Action",
@@ -2772,21 +2707,7 @@
    "why": "name is the show \"death valley days\" (western series)"
   },
   {
-   "number": 339,
-   "name": "Van Helsing",
-   "block": "Series",
-   "sub": "Action",
-   "source": "us_samsung",
-   "url": "https://dfis0p7athkt.cloudfront.net/Van_Helsing.m3u8",
-   "route": "direct",
-   "guide": "samsung",
-   "guide_id": "US200111SU",
-   "home_only": false,
-   "default": true,
-   "why": "name is the show \"van helsing\" (action series)"
-  },
-  {
-   "number": 340,
+   "number": 336,
    "name": "Baywatch",
    "block": "Series",
    "sub": "Action",
@@ -2808,56 +2729,7 @@
    ]
   },
   {
-   "number": 341,
-   "name": "Doctor Who Classic",
-   "block": "Series",
-   "sub": "Action",
-   "source": "us_tubi",
-   "url": "https://aegis-cloudfront-1.tubi.video/34cd3ae2-bb20-4594-af20-01f241a525ba/playlist.m3u8",
-   "route": "direct",
-   "guide": "none",
-   "guide_id": null,
-   "home_only": false,
-   "default": true,
-   "why": "name is the show \"doctor who\" (action series)",
-   "tvg_id": "DoctorWhoClassic.us@US",
-   "logo": "https://i.imgur.com/JIqJQQM.png",
-   "also": [
-    "us_xumo",
-    "us_roku"
-   ]
-  },
-  {
-   "number": 342,
-   "name": "Scares by Shudder",
-   "block": "Series",
-   "sub": "Action",
-   "source": "us_xumo",
-   "url": "https://amc-scaresbyshudder-1-us.xumo.wurl.tv/playlist.m3u8",
-   "route": "direct",
-   "guide": "xumo",
-   "guide_id": null,
-   "home_only": false,
-   "default": true,
-   "why": "name: \"scares\" (guide: series)",
-   "logo": "https://www.bgr.com/bgr/entertainment/freevee-added-5-spooky-new-live-channels-just-in-time-for-halloween/Scares-by-Shudder.jpg"
-  },
-  {
-   "number": 343,
-   "name": "Sci-Fi World",
-   "block": "Series",
-   "sub": "Action",
-   "source": "us_sofast",
-   "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a985e052-6868-4365-ac45-52afe9008b25/manifest.m3u8",
-   "route": "direct",
-   "guide": "none",
-   "guide_id": null,
-   "home_only": false,
-   "default": true,
-   "why": "name: \"sci fi\" (series)"
-  },
-  {
-   "number": 344,
+   "number": 337,
    "name": "The Lone Ranger",
    "block": "Series",
    "sub": "Action",
@@ -2871,7 +2743,7 @@
    "why": "name is the show \"the lone ranger\" (western series)"
   },
   {
-   "number": 345,
+   "number": 338,
    "name": "The Walking Dead Universe",
    "block": "Series",
    "sub": "Action",
@@ -2890,7 +2762,7 @@
    ]
   },
   {
-   "number": 346,
+   "number": 339,
    "name": "Universal Westerns",
    "block": "Series",
    "sub": "Action",
@@ -2904,7 +2776,7 @@
    "why": "guide: mostly Wagon Train, Tales of Wells Fargo (western series) via Roku's Universal Westerns"
   },
   {
-   "number": 347,
+   "number": 340,
    "name": "Wanted: Dead or Alive",
    "block": "Series",
    "sub": "Action",
@@ -2920,7 +2792,7 @@
    "logo": "https://i.imgur.com/vaSXaFp.png"
   },
   {
-   "number": 348,
+   "number": 341,
    "name": "Wild West TV",
    "block": "Series",
    "sub": "Action",
@@ -2937,7 +2809,7 @@
    ]
   },
   {
-   "number": 349,
+   "number": 342,
    "name": "WBTV Nikita",
    "block": "Series",
    "sub": "Action",
@@ -2949,6 +2821,161 @@
    "home_only": true,
    "default": true,
    "why": "name is the show \"nikita\" (action series)"
+  },
+  {
+   "number": 350,
+   "name": "More TV Sci-fi",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "pluto",
+   "pluto": {
+    "id": "645e00d5d3fdde000829463a",
+    "region": "uk"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8",
+     "duration": 600,
+     "title": "More TV Sci-fi"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "645e00d5d3fdde000829463a",
+   "home_only": false,
+   "default": true,
+   "why": "name: \"sci fi\" (guide: series)"
+  },
+  {
+   "number": 351,
+   "name": "Pluto TV Fantasy & Horror",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "pluto",
+   "pluto": {
+    "id": "685041d936c9361b1921c26c",
+    "region": "uk"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-685041d936c9361b1921c26c.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Fantasy & Horror"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "685041d936c9361b1921c26c",
+   "home_only": false,
+   "default": true,
+   "why": "guide: mostly Land of the Lost, The Lost World (sci-fi or fantasy series)"
+  },
+  {
+   "number": 352,
+   "name": "Pluto TV Sci-fi Series",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "pluto",
+   "pluto": {
+    "id": "619247c34a270700077c8415",
+    "region": "uk"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-619247c34a270700077c8415.m3u8",
+     "duration": 600,
+     "title": "Pluto TV Sci-fi Series"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "619247c34a270700077c8415",
+   "home_only": false,
+   "default": true,
+   "why": "name: \"sci fi\" (guide: series)"
+  },
+  {
+   "number": 353,
+   "name": "Supernatural Drama",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "pluto",
+   "pluto": {
+    "id": "5f24662bebe0f0000767de32",
+    "region": "us"
+   },
+   "streams": [
+    {
+     "url": "https://jmp2.uk/plu-5f24662bebe0f0000767de32.m3u8",
+     "duration": 600,
+     "title": "Supernatural Drama"
+    }
+   ],
+   "guide": "pluto",
+   "guide_id": "5f24662bebe0f0000767de32",
+   "home_only": false,
+   "default": true,
+   "why": "guide: mostly Charmed, Ghost Whisperer (sci-fi or fantasy series)"
+  },
+  {
+   "number": 354,
+   "name": "Van Helsing",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "us_samsung",
+   "url": "https://dfis0p7athkt.cloudfront.net/Van_Helsing.m3u8",
+   "route": "direct",
+   "guide": "samsung",
+   "guide_id": "US200111SU",
+   "home_only": false,
+   "default": true,
+   "why": "name is the show \"van helsing\" (sci-fi or fantasy series)"
+  },
+  {
+   "number": 355,
+   "name": "Doctor Who Classic",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "us_tubi",
+   "url": "https://aegis-cloudfront-1.tubi.video/34cd3ae2-bb20-4594-af20-01f241a525ba/playlist.m3u8",
+   "route": "direct",
+   "guide": "none",
+   "guide_id": null,
+   "home_only": false,
+   "default": true,
+   "why": "name is the show \"doctor who\" (sci-fi or fantasy series)",
+   "tvg_id": "DoctorWhoClassic.us@US",
+   "logo": "https://i.imgur.com/JIqJQQM.png",
+   "also": [
+    "us_xumo",
+    "us_roku"
+   ]
+  },
+  {
+   "number": 356,
+   "name": "Scares by Shudder",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "us_xumo",
+   "url": "https://amc-scaresbyshudder-1-us.xumo.wurl.tv/playlist.m3u8",
+   "route": "direct",
+   "guide": "xumo",
+   "guide_id": null,
+   "home_only": false,
+   "default": true,
+   "why": "name: \"scares\" (guide: series)",
+   "logo": "https://www.bgr.com/bgr/entertainment/freevee-added-5-spooky-new-live-channels-just-in-time-for-halloween/Scares-by-Shudder.jpg"
+  },
+  {
+   "number": 357,
+   "name": "Sci-Fi World",
+   "block": "Series",
+   "sub": "Sci-Fi & Fantasy",
+   "source": "us_sofast",
+   "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a985e052-6868-4365-ac45-52afe9008b25/manifest.m3u8",
+   "route": "direct",
+   "guide": "none",
+   "guide_id": null,
+   "home_only": false,
+   "default": true,
+   "why": "name: \"sci fi\" (series)"
   },
   {
    "number": 360,
@@ -3205,29 +3232,6 @@
   },
   {
    "number": 371,
-   "name": "Supernatural Drama",
-   "block": "Series",
-   "sub": "Drama",
-   "source": "pluto",
-   "pluto": {
-    "id": "5f24662bebe0f0000767de32",
-    "region": "us"
-   },
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5f24662bebe0f0000767de32.m3u8",
-     "duration": 600,
-     "title": "Supernatural Drama"
-    }
-   ],
-   "guide": "pluto",
-   "guide_id": "5f24662bebe0f0000767de32",
-   "home_only": false,
-   "default": true,
-   "why": "guide: mostly Charmed, Ghost Whisperer (drama series)"
-  },
-  {
-   "number": 372,
    "name": "TV Land Drama",
    "block": "Series",
    "sub": "Drama",
@@ -3250,7 +3254,7 @@
    "why": "name: \"drama\" (guide: series)"
   },
   {
-   "number": 373,
+   "number": 372,
    "name": "ALLBLK Gems",
    "block": "Series",
    "sub": "Drama",
@@ -3266,7 +3270,7 @@
    "logo": "https://i.imgur.com/gnkepQJ.png"
   },
   {
-   "number": 374,
+   "number": 373,
    "name": "BYUtv",
    "block": "Series",
    "sub": "Drama",
@@ -3285,7 +3289,7 @@
    ]
   },
   {
-   "number": 375,
+   "number": 374,
    "name": "CW FOREVER",
    "block": "Series",
    "sub": "Drama",
@@ -3296,10 +3300,10 @@
    "guide_id": "US25000075Y",
    "home_only": false,
    "default": true,
-   "why": "guide: mostly Beauty and the Beast, 7th Heaven (drama series)"
+   "why": "name: \"forever\" (guide: series)"
   },
   {
-   "number": 376,
+   "number": 375,
    "name": "CW Gold",
    "block": "Series",
    "sub": "Drama",
@@ -3313,7 +3317,7 @@
    "why": "name: \"gold\" (guide: series)"
   },
   {
-   "number": 377,
+   "number": 376,
    "name": "Degrassi",
    "block": "Series",
    "sub": "Drama",
@@ -3329,7 +3333,7 @@
    "logo": "https://i.imgur.com/vhSzfDC.png"
   },
   {
-   "number": 378,
+   "number": 377,
    "name": "Demand Drama",
    "block": "Series",
    "sub": "Drama",
@@ -3343,7 +3347,7 @@
    "why": "name: \"drama\" (guide: series)"
   },
   {
-   "number": 379,
+   "number": 378,
    "name": "Dhar Mann TV",
    "block": "Series",
    "sub": "Drama",
@@ -3357,7 +3361,7 @@
    "why": "service group: Action & Drama (guide: series)"
   },
   {
-   "number": 380,
+   "number": 379,
    "name": "ElectricNOW",
    "block": "Series",
    "sub": "Drama",
@@ -3376,7 +3380,7 @@
    ]
   },
   {
-   "number": 381,
+   "number": 380,
    "name": "Heartland",
    "block": "Series",
    "sub": "Drama",
@@ -3391,7 +3395,7 @@
    "logo": "https://upload.wikimedia.org/wikipedia/en/b/ba/Heartland_TV_logo.png"
   },
   {
-   "number": 382,
+   "number": 381,
    "name": "Series K Edge",
    "block": "Series",
    "sub": "Drama",
@@ -3405,7 +3409,7 @@
    "why": "name: \"series\" (guide: series)"
   },
   {
-   "number": 383,
+   "number": 382,
    "name": "Series K Heart",
    "block": "Series",
    "sub": "Drama",
@@ -3419,7 +3423,7 @@
    "why": "name: \"heart\" (guide: series)"
   },
   {
-   "number": 384,
+   "number": 383,
    "name": "Series K Legacy",
    "block": "Series",
    "sub": "Drama",
@@ -3433,7 +3437,7 @@
    "why": "name: \"series\" (guide: series)"
   },
   {
-   "number": 385,
+   "number": 384,
    "name": "Shout! TV",
    "block": "Series",
    "sub": "Drama",
@@ -3449,7 +3453,7 @@
    "logo": "https://i.imgur.com/AgoGr6y.png"
   },
   {
-   "number": 386,
+   "number": 385,
    "name": "American Stories",
    "block": "Series",
    "sub": "Drama",
@@ -3463,7 +3467,7 @@
    "why": "name: \"stories\" (series)"
   },
   {
-   "number": 387,
+   "number": 386,
    "name": "Ebony TV by Lionsgate",
    "block": "Series",
    "sub": "Drama",
@@ -3483,7 +3487,7 @@
    ]
   },
   {
-   "number": 388,
+   "number": 387,
    "name": "Edgy Urban",
    "block": "Series",
    "sub": "Drama",
@@ -3497,7 +3501,7 @@
    "why": "name: \"urban\" (series)"
   },
   {
-   "number": 389,
+   "number": 388,
    "name": "HeartFelt TV",
    "block": "Series",
    "sub": "Drama",
@@ -3511,7 +3515,7 @@
    "why": "name: \"heartfelt\" (series)"
   },
   {
-   "number": 390,
+   "number": 389,
    "name": "K Content by CJ ENM",
    "block": "Series",
    "sub": "Drama",
@@ -3527,7 +3531,7 @@
    "logo": "https://i.imgur.com/lRy231d.png"
   },
   {
-   "number": 391,
+   "number": 390,
    "name": "K Stories by CJ ENM",
    "block": "Series",
    "sub": "Drama",
@@ -3541,7 +3545,7 @@
    "why": "name: \"stories\" (series)"
   },
   {
-   "number": 392,
+   "number": 391,
    "name": "Lassie",
    "block": "Series",
    "sub": "Drama",
@@ -3555,7 +3559,7 @@
    "why": "name is the show \"lassie\" (drama series)"
   },
   {
-   "number": 393,
+   "number": 392,
    "name": "Little House on the Prairie",
    "block": "Series",
    "sub": "Drama",
@@ -3569,7 +3573,7 @@
    "why": "name is the show \"little house on the prairie\" (drama series)"
   },
   {
-   "number": 394,
+   "number": 393,
    "name": "Love 2 Hate TV",
    "block": "Series",
    "sub": "Drama",
@@ -3583,7 +3587,7 @@
    "why": "name: \"love\" (series)"
   },
   {
-   "number": 395,
+   "number": 394,
    "name": "Pulse",
    "block": "Series",
    "sub": "Drama",
@@ -3597,7 +3601,7 @@
    "why": "guide: mostly Saving Hope, Nurse Jackie (drama series) via Plex's Pulse"
   },
   {
-   "number": 396,
+   "number": 395,
    "name": "Designated Survivor",
    "block": "Series",
    "sub": "Drama",
@@ -3613,7 +3617,7 @@
    "logo": "https://provider-static.plex.tv/epg/cms/production/6f31f52b-2b65-49eb-91e5-52e07edd1927/DesignatedSurvivor_Plex_1500x1000_Logo_Dark.png"
   },
   {
-   "number": 397,
+   "number": 396,
    "name": "K Drama by CJ ENM",
    "block": "Series",
    "sub": "Drama",
@@ -3627,7 +3631,7 @@
    "why": "name: \"drama\" (series)"
   },
   {
-   "number": 398,
+   "number": 397,
    "name": "WBTV Generation Drama",
    "block": "Series",
    "sub": "Drama",
@@ -3641,7 +3645,7 @@
    "why": "name: \"drama\" (series)"
   },
   {
-   "number": 399,
+   "number": 398,
    "name": "WBTV Love and Marriage",
    "block": "Series",
    "sub": "Drama",
@@ -3655,7 +3659,7 @@
    "why": "name: \"love\" (series)"
   },
   {
-   "number": 410,
+   "number": 400,
    "name": "BritBox Mysteries",
    "block": "Series",
    "sub": "Crime",
@@ -3678,7 +3682,7 @@
    "why": "guide: mostly The Coroner, The Inspector Lynley Mysteries (crime series)"
   },
   {
-   "number": 411,
+   "number": 401,
    "name": "Classic TV Crime Drama",
    "block": "Series",
    "sub": "Crime",
@@ -3701,7 +3705,7 @@
    "why": "guide: mostly The Streets of San Francisco, Mannix (crime series)"
   },
   {
-   "number": 412,
+   "number": 402,
    "name": "ION",
    "block": "Series",
    "sub": "Crime",
@@ -3724,7 +3728,7 @@
    "why": "guide: mostly NCIS, The Listener (crime series)"
   },
   {
-   "number": 413,
+   "number": 403,
    "name": "Pluto TV Crime Drama",
    "block": "Series",
    "sub": "Crime",
@@ -3747,7 +3751,7 @@
    "why": "guide: mostly Rookie Blue, NEW CSI: Crime Scene Investigation (crime series)"
   },
   {
-   "number": 414,
+   "number": 404,
    "name": "Universal Crime",
    "block": "Series",
    "sub": "Crime",
@@ -3770,7 +3774,7 @@
    "why": "guide: mostly Columbo (crime series)"
   },
   {
-   "number": 415,
+   "number": 405,
    "name": "21 Jump Street",
    "block": "Series",
    "sub": "Crime",
@@ -3788,7 +3792,7 @@
    ]
   },
   {
-   "number": 416,
+   "number": 406,
    "name": "Acorn TV Mysteries",
    "block": "Series",
    "sub": "Crime",
@@ -3802,7 +3806,7 @@
    "why": "guide: mostly Foyle's War (crime series)"
   },
   {
-   "number": 417,
+   "number": 407,
    "name": "MHz Mysteries",
    "block": "Series",
    "sub": "Crime",
@@ -3816,7 +3820,7 @@
    "why": "guide: mostly Murder In (crime series)"
   },
   {
-   "number": 418,
+   "number": 408,
    "name": "Alfred Hitchcock Presents",
    "block": "Series",
    "sub": "Crime",
@@ -3830,7 +3834,7 @@
    "why": "name is the show \"alfred hitchcock presents\" (crime series)"
   },
   {
-   "number": 419,
+   "number": 409,
    "name": "ION Mystery",
    "block": "Series",
    "sub": "Crime",
@@ -3848,7 +3852,7 @@
    ]
   },
   {
-   "number": 420,
+   "number": 410,
    "name": "ION Plus",
    "block": "Series",
    "sub": "Crime",
@@ -3867,7 +3871,7 @@
    ]
   },
   {
-   "number": 421,
+   "number": 411,
    "name": "Midsomer Murders",
    "block": "Series",
    "sub": "Crime",
@@ -3888,7 +3892,7 @@
    ]
   },
   {
-   "number": 422,
+   "number": 412,
    "name": "Murder She Wrote",
    "block": "Series",
    "sub": "Crime",
@@ -3902,7 +3906,7 @@
    "why": "name is the show \"murder she wrote\" (crime series)"
   },
   {
-   "number": 423,
+   "number": 413,
    "name": "Nash Bridges",
    "block": "Series",
    "sub": "Crime",
@@ -3921,7 +3925,7 @@
    ]
   },
   {
-   "number": 424,
+   "number": 414,
    "name": "Silent Witness and New Tricks",
    "block": "Series",
    "sub": "Crime",
@@ -3935,7 +3939,7 @@
    "why": "name is the show \"silent witness\" (crime series)"
   },
   {
-   "number": 425,
+   "number": 415,
    "name": "WBTV The FBI",
    "block": "Series",
    "sub": "Crime",
@@ -3949,7 +3953,7 @@
    "why": "The F.B.I., the 1965 police drama"
   },
   {
-   "number": 430,
+   "number": 420,
    "name": "Bravo Vault",
    "block": "Series",
    "sub": "Reality",
@@ -3972,7 +3976,7 @@
    "why": "Bravo's reality shows"
   },
   {
-   "number": 431,
+   "number": 421,
    "name": "Dating Disasters",
    "block": "Series",
    "sub": "Reality",
@@ -3995,7 +3999,7 @@
    "why": "name: \"dating\""
   },
   {
-   "number": 432,
+   "number": 422,
    "name": "Judge Nosey",
    "block": "Series",
    "sub": "Reality",
@@ -4018,7 +4022,7 @@
    "why": "name: \"judge\""
   },
   {
-   "number": 433,
+   "number": 423,
    "name": "Logo Pluto TV",
    "block": "Series",
    "sub": "Reality",
@@ -4041,7 +4045,7 @@
    "why": "name: \"logo\""
   },
   {
-   "number": 434,
+   "number": 424,
    "name": "MTV Pluto TV",
    "block": "Series",
    "sub": "Reality",
@@ -4064,7 +4068,7 @@
    "why": "MTV's reality shows (Punk'd, Cribs), not music videos"
   },
   {
-   "number": 435,
+   "number": 425,
    "name": "Nosey",
    "block": "Series",
    "sub": "Reality",
@@ -4087,7 +4091,7 @@
    "why": "name: \"nosey\""
   },
   {
-   "number": 436,
+   "number": 426,
    "name": "Pluto TV Competition",
    "block": "Series",
    "sub": "Reality",
@@ -4110,7 +4114,7 @@
    "why": "name: \"competition\""
   },
   {
-   "number": 437,
+   "number": 427,
    "name": "Pluto TV Lives",
    "block": "Series",
    "sub": "Reality",
@@ -4133,7 +4137,7 @@
    "why": "name: \"lives\""
   },
   {
-   "number": 438,
+   "number": 428,
    "name": "Pluto TV Reality",
    "block": "Series",
    "sub": "Reality",
@@ -4156,7 +4160,7 @@
    "why": "name: \"reality\""
   },
   {
-   "number": 439,
+   "number": 429,
    "name": "Spike Pluto TV",
    "block": "Series",
    "sub": "Reality",
@@ -4179,7 +4183,7 @@
    "why": "guide: mostly Auction Hunters, Shipping Wars (reality show)"
   },
   {
-   "number": 440,
+   "number": 430,
    "name": "VH1 Queens of Reality",
    "block": "Series",
    "sub": "Reality",
@@ -4202,7 +4206,7 @@
    "why": "name: \"queens of reality\""
   },
   {
-   "number": 441,
+   "number": 431,
    "name": "4UV",
    "block": "Series",
    "sub": "Reality",
@@ -4216,7 +4220,7 @@
    "why": "name: \"4uv\""
   },
   {
-   "number": 442,
+   "number": 432,
    "name": "All Out Reality",
    "block": "Series",
    "sub": "Reality",
@@ -4230,7 +4234,7 @@
    "why": "name: \"reality\""
   },
   {
-   "number": 443,
+   "number": 433,
    "name": "All Reality We TV",
    "block": "Series",
    "sub": "Reality",
@@ -4246,7 +4250,7 @@
    "logo": "https://i.imgur.com/hbJAs8h.png"
   },
   {
-   "number": 444,
+   "number": 434,
    "name": "Alone By History",
    "block": "Series",
    "sub": "Reality",
@@ -4260,7 +4264,7 @@
    "why": "name is the show \"alone\" (reality show)"
   },
   {
-   "number": 445,
+   "number": 435,
    "name": "America's Got Talent",
    "block": "Series",
    "sub": "Reality",
@@ -4277,7 +4281,7 @@
    ]
   },
   {
-   "number": 446,
+   "number": 436,
    "name": "American Idol",
    "block": "Series",
    "sub": "Reality",
@@ -4291,7 +4295,7 @@
    "why": "name is the show \"american idol\" (reality show)"
   },
   {
-   "number": 447,
+   "number": 437,
    "name": "American Pickers by History",
    "block": "Series",
    "sub": "Reality",
@@ -4305,7 +4309,7 @@
    "why": "name is the show \"american pickers\" (reality show)"
   },
   {
-   "number": 448,
+   "number": 438,
    "name": "Bondi Rescue",
    "block": "Series",
    "sub": "Reality",
@@ -4320,7 +4324,7 @@
    "logo": "https://images.pluto.tv/channels/66166989635c7500084105a2/colorLogoPNG.png"
   },
   {
-   "number": 449,
+   "number": 439,
    "name": "Bring It!",
    "block": "Series",
    "sub": "Reality",
@@ -4334,7 +4338,7 @@
    "why": "name is the show \"bring it\" (reality show)"
   },
   {
-   "number": 450,
+   "number": 440,
    "name": "Caught on Tape",
    "block": "Series",
    "sub": "Reality",
@@ -4348,7 +4352,7 @@
    "why": "name: \"caught on tape\""
   },
   {
-   "number": 451,
+   "number": 441,
    "name": "Challenge Accepted",
    "block": "Series",
    "sub": "Reality",
@@ -4362,7 +4366,7 @@
    "why": "name: \"challenge\""
   },
   {
-   "number": 452,
+   "number": 442,
    "name": "Chaos on Cam",
    "block": "Series",
    "sub": "Reality",
@@ -4376,7 +4380,7 @@
    "why": "name: \"chaos on cam\""
   },
   {
-   "number": 453,
+   "number": 443,
    "name": "Cheaters",
    "block": "Series",
    "sub": "Reality",
@@ -4390,7 +4394,7 @@
    "why": "name is the show \"cheaters\" (reality show)"
   },
   {
-   "number": 454,
+   "number": 444,
    "name": "Cutlers Court",
    "block": "Series",
    "sub": "Reality",
@@ -4404,7 +4408,7 @@
    "why": "name is the show \"cutlers court\" (reality show)"
   },
   {
-   "number": 455,
+   "number": 445,
    "name": "Deal Masters",
    "block": "Series",
    "sub": "Reality",
@@ -4418,7 +4422,7 @@
    "why": "name: \"deal masters\""
   },
   {
-   "number": 456,
+   "number": 446,
    "name": "Deal Zone",
    "block": "Series",
    "sub": "Reality",
@@ -4432,7 +4436,7 @@
    "why": "name: \"deal zone\""
   },
   {
-   "number": 457,
+   "number": 447,
    "name": "Divorce Court",
    "block": "Series",
    "sub": "Reality",
@@ -4446,7 +4450,7 @@
    "why": "name is the show \"divorce court\" (reality show)"
   },
   {
-   "number": 458,
+   "number": 448,
    "name": "Forged In Fire",
    "block": "Series",
    "sub": "Reality",
@@ -4460,7 +4464,7 @@
    "why": "name is the show \"forged in fire\" (reality show)"
   },
   {
-   "number": 459,
+   "number": 449,
    "name": "Hoarders",
    "block": "Series",
    "sub": "Reality",
@@ -4483,7 +4487,7 @@
    ]
   },
   {
-   "number": 460,
+   "number": 450,
    "name": "Intervention",
    "block": "Series",
    "sub": "Reality",
@@ -4503,7 +4507,7 @@
    ]
   },
   {
-   "number": 461,
+   "number": 451,
    "name": "LADbible",
    "block": "Series",
    "sub": "Reality",
@@ -4517,7 +4521,7 @@
    "why": "guide: mostly Honesty Box, Snack Wars (reality show)"
   },
   {
-   "number": 462,
+   "number": 452,
    "name": "Little Women LA",
    "block": "Series",
    "sub": "Reality",
@@ -4531,7 +4535,7 @@
    "why": "name is the show \"little women la\" (reality show)"
   },
   {
-   "number": 463,
+   "number": 453,
    "name": "Matched Married Meet",
    "block": "Series",
    "sub": "Reality",
@@ -4545,7 +4549,7 @@
    "why": "name: \"married\""
   },
   {
-   "number": 464,
+   "number": 454,
    "name": "Operation Repo",
    "block": "Series",
    "sub": "Reality",
@@ -4559,7 +4563,7 @@
    "why": "name is the show \"operation repo\" (reality show)"
   },
   {
-   "number": 465,
+   "number": 455,
    "name": "Pawn Stars",
    "block": "Series",
    "sub": "Reality",
@@ -4573,7 +4577,7 @@
    "why": "name is the show \"pawn stars\" (reality show)"
   },
   {
-   "number": 466,
+   "number": 456,
    "name": "Perform",
    "block": "Series",
    "sub": "Reality",
@@ -4587,7 +4591,7 @@
    "why": "name: \"perform\""
   },
   {
-   "number": 467,
+   "number": 457,
    "name": "Robot Wars by Mech+",
    "block": "Series",
    "sub": "Reality",
@@ -4601,7 +4605,7 @@
    "why": "name is the show \"robot wars\" (reality show)"
   },
   {
-   "number": 468,
+   "number": 458,
    "name": "So… Real",
    "block": "Series",
    "sub": "Reality",
@@ -4617,7 +4621,7 @@
    "logo": "https://i.imgur.com/wZ2uj9d.png"
   },
   {
-   "number": 469,
+   "number": 459,
    "name": "Storage Wars LA",
    "block": "Series",
    "sub": "Reality",
@@ -4631,7 +4635,7 @@
    "why": "name is the show \"storage wars\" (reality show)"
   },
   {
-   "number": 470,
+   "number": 460,
    "name": "Survivor",
    "block": "Series",
    "sub": "Reality",
@@ -4647,7 +4651,7 @@
    "logo": "https://i.imgur.com/Zz9SgY8.png"
   },
   {
-   "number": 471,
+   "number": 461,
    "name": "The Osbournes",
    "block": "Series",
    "sub": "Reality",
@@ -4661,7 +4665,7 @@
    "why": "name is the show \"the osbournes\" (reality show)"
   },
   {
-   "number": 472,
+   "number": 462,
    "name": "Untold Stories of the ER",
    "block": "Series",
    "sub": "Reality",
@@ -4678,7 +4682,7 @@
    ]
   },
   {
-   "number": 473,
+   "number": 463,
    "name": "All Weddings We TV",
    "block": "Series",
    "sub": "Reality",
@@ -4697,7 +4701,7 @@
    ]
   },
   {
-   "number": 474,
+   "number": 464,
    "name": "AMC Absolute Reality",
    "block": "Series",
    "sub": "Reality",
@@ -4713,7 +4717,7 @@
    "logo": "https://i.imgur.com/Gtwk8ic.png"
   },
   {
-   "number": 475,
+   "number": 465,
    "name": "American Ninja Warrior",
    "block": "Series",
    "sub": "Reality",
@@ -4727,7 +4731,7 @@
    "why": "name is the show \"american ninja warrior\" (reality show)"
   },
   {
-   "number": 476,
+   "number": 466,
    "name": "Bad Girls Club",
    "block": "Series",
    "sub": "Reality",
@@ -4741,7 +4745,7 @@
    "why": "name is the show \"bad girls club\" (reality show)"
   },
   {
-   "number": 477,
+   "number": 467,
    "name": "Bondi Vet",
    "block": "Series",
    "sub": "Reality",
@@ -4755,7 +4759,7 @@
    "why": "name is the show \"bondi vet\" (reality show)"
   },
   {
-   "number": 478,
+   "number": 468,
    "name": "Dance Moms",
    "block": "Series",
    "sub": "Reality",
@@ -4772,7 +4776,7 @@
    ]
   },
   {
-   "number": 479,
+   "number": 469,
    "name": "Don't Tell The Bride",
    "block": "Series",
    "sub": "Reality",
@@ -4791,7 +4795,7 @@
    ]
   },
   {
-   "number": 480,
+   "number": 470,
    "name": "Duck Dynasty",
    "block": "Series",
    "sub": "Reality",
@@ -4812,7 +4816,7 @@
    ]
   },
   {
-   "number": 481,
+   "number": 471,
    "name": "E! Keeping Up",
    "block": "Series",
    "sub": "Reality",
@@ -4828,7 +4832,7 @@
    "logo": "https://i.imgur.com/9F7VYDM.png"
   },
   {
-   "number": 482,
+   "number": 472,
    "name": "Fear Factor",
    "block": "Series",
    "sub": "Reality",
@@ -4848,7 +4852,7 @@
    ]
   },
   {
-   "number": 483,
+   "number": 473,
    "name": "Hardcore Pawn",
    "block": "Series",
    "sub": "Reality",
@@ -4865,7 +4869,7 @@
    ]
   },
   {
-   "number": 484,
+   "number": 474,
    "name": "Mr. Beast",
    "block": "Series",
    "sub": "Reality",
@@ -4882,7 +4886,7 @@
    ]
   },
   {
-   "number": 485,
+   "number": 475,
    "name": "Ninja Warrior",
    "block": "Series",
    "sub": "Reality",
@@ -4899,7 +4903,7 @@
    ]
   },
   {
-   "number": 486,
+   "number": 476,
    "name": "Project Runway",
    "block": "Series",
    "sub": "Reality",
@@ -4917,7 +4921,7 @@
    ]
   },
   {
-   "number": 487,
+   "number": 477,
    "name": "Rakuten TV Reality UK",
    "block": "Series",
    "sub": "Reality",
@@ -4931,7 +4935,7 @@
    "why": "name: \"reality\""
   },
   {
-   "number": 488,
+   "number": 478,
    "name": "Real Housewives Vault",
    "block": "Series",
    "sub": "Reality",
@@ -4945,7 +4949,7 @@
    "why": "name is the show \"real housewives\" (reality show)"
   },
   {
-   "number": 489,
+   "number": 479,
    "name": "The Biggest Loser",
    "block": "Series",
    "sub": "Reality",
@@ -4959,7 +4963,7 @@
    "why": "name is the show \"the biggest loser\" (reality show)"
   },
   {
-   "number": 490,
+   "number": 480,
    "name": "The Masked Singer",
    "block": "Series",
    "sub": "Reality",
@@ -4973,7 +4977,7 @@
    "why": "name is the show \"the masked singer\" (reality show)"
   },
   {
-   "number": 491,
+   "number": 481,
    "name": "True Lives",
    "block": "Series",
    "sub": "Reality",
@@ -4987,7 +4991,7 @@
    "why": "name: \"true lives\""
   },
   {
-   "number": 492,
+   "number": 482,
    "name": "Undercover Boss",
    "block": "Series",
    "sub": "Reality",
@@ -5003,7 +5007,7 @@
    "logo": "https://i.imgur.com/O9lwu23.png"
   },
   {
-   "number": 493,
+   "number": 483,
    "name": "Wipeout Xtra",
    "block": "Series",
    "sub": "Reality",
@@ -5024,7 +5028,7 @@
    ]
   },
   {
-   "number": 494,
+   "number": 484,
    "name": "WBTV Family Unscripted",
    "block": "Series",
    "sub": "Reality",
@@ -5038,7 +5042,7 @@
    "why": "name: \"unscripted\""
   },
   {
-   "number": 495,
+   "number": 485,
    "name": "WBTV Unique Lives",
    "block": "Series",
    "sub": "Reality",
