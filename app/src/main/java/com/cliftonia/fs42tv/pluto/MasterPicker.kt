@@ -23,6 +23,10 @@ import com.cliftonia.fs42tv.resolver.Playable
  * same read runs ahead of the viewer through [prefetch], for [MasterPrefetch]. Only a pick is
  * remembered: a failed, refused or unsafe read is never cached, so the next tune asks again.
  *
+ * A FAST feed of the LIVE TV dial (see [MasterPrefetch.isFast]) is remembered in [fastCache]
+ * instead - keyed by its master url alone, for hours, since it has no session - and read ahead
+ * the same way, so a surf onto a FAST neighbour skips its master read too.
+ *
  * Blocking; the tune thread, or a prefetch thread for [prefetch]. Logs times, bandwidth and
  * whether audio was separate - never a url, which carries the session's token.
  */
@@ -35,26 +39,31 @@ class MasterPicker(
     private val elapsedMillis: () -> Long,
     /** Picks remembered per session and engine; null remembers nothing, as before it existed. */
     private val cache: VariantCache? = null,
+    /** FAST feeds' picks, per master url and engine - see [VariantCache.FAST_TTL_MILLIS]. */
+    private val fastCache: VariantCache? = null,
 ) {
 
     /**
      * What mpv should be handed for [playable] - itself, or itself with a playlist chosen.
      * [cacheable] is true only for the direct route, whose master url names its session: a
      * remembered pick is used, and a fresh one remembered. False reads and remembers nothing.
+     * [fast] is a FAST feed: remembered in [fastCache], whatever [cacheable] says.
      */
-    fun forMpv(playable: Playable, cacheable: Boolean = false): Playable {
+    fun forMpv(playable: Playable, cacheable: Boolean = false, fast: Boolean = false): Playable {
         val hls = playable as? Hls ?: return playable
         val ladder = mpvLadder() ?: return playable
         val engine = engineOf(ladder)
-        val remembered = if (cacheable) cache?.get(hls.url, engine) else null
+        val store = if (fast) fastCache else cache
+        val remembering = fast || cacheable
+        val remembered = if (remembering) store?.get(hls.url, engine) else null
         if (remembered != null) {
-            say("variant remembered for this session; no read")
+            say("variant remembered for this ${if (fast) "feed" else "session"}; no read")
             return hls.copy(mediaUrl = remembered.mediaUrl, audioUrl = remembered.audioUrl)
         }
         // The claim the tune took on the session, from before the read - see VariantCache.put.
-        val claim = if (cacheable) cache?.claim(hls.url) else null
+        val claim = if (remembering) store?.claim(hls.url) else null
         val pick = read(hls.url, ladder, ahead = false) ?: return playable
-        cache?.put(hls.url, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl), claim)
+        store?.put(hls.url, engine, VariantCache.Choice(pick.videoUrl, pick.audioUrl), claim)
         return hls.copy(mediaUrl = pick.videoUrl, audioUrl = pick.audioUrl)
     }
 
@@ -62,15 +71,31 @@ class MasterPicker(
     fun prefetching(): Boolean = cache != null && mpvLadder() != null
 
     /**
-     * Read the direct-route master at [masterUrl] ahead of any tune, and remember its pick. False
-     * when it is remembered already, mpv is not the engine, or the read found nothing to keep.
-     * [stillWanted] is asked once the read is back: a pick read across an app stop is dropped.
+     * The pick remembered for [masterUrl] - in [fastCache] when [fast] - under the engine in force
+     * now, or null. For the pre-join, which warms that very playlist.
      */
-    fun prefetch(masterUrl: String, stillWanted: () -> Boolean = { true }): Boolean {
-        val cache = cache ?: return false
+    fun remembered(masterUrl: String, fast: Boolean = false): VariantCache.Choice? {
+        val ladder = mpvLadder() ?: return null
+        return (if (fast) fastCache else cache)?.get(masterUrl, engineOf(ladder))
+    }
+
+    /**
+     * Read the master at [masterUrl] ahead of any tune, and remember its pick. False when it is
+     * remembered already - younger than [maxAgeMillis], when given: a refresh - mpv is not the
+     * engine, or the read found nothing to keep. [stillWanted] is asked once the read is back: a
+     * pick read across an app stop is dropped. [fast] is a FAST feed's master, into [fastCache].
+     */
+    fun prefetch(
+        masterUrl: String,
+        fast: Boolean = false,
+        maxAgeMillis: Long? = null,
+        stillWanted: () -> Boolean = { true },
+    ): Boolean {
+        val cache = (if (fast) fastCache else cache) ?: return false
         val ladder = mpvLadder() ?: return false
         val engine = engineOf(ladder)
-        if (cache.has(masterUrl, engine)) return false
+        val fresh = if (maxAgeMillis == null) cache.has(masterUrl, engine) else cache.has(masterUrl, engine, maxAgeMillis)
+        if (fresh) return false
         // Claimed by the lease before this; nothing claimed is nothing to keep, so no read.
         val claim = cache.claim(masterUrl) ?: return false
         val pick = read(masterUrl, ladder, ahead = true) ?: return false
@@ -86,6 +111,7 @@ class MasterPicker(
     fun forget(playable: Playable?) {
         val hls = playable as? Hls ?: return
         cache?.evict(hls.url)
+        fastCache?.evict(hls.url)
     }
 
     /** The master's pick under [ladder]'s ceiling, or null when mpv should open the master. */

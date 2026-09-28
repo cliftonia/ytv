@@ -30,6 +30,11 @@ package com.cliftonia.fs42tv.pluto
  * Only the direct route is cached. LEGACY's jmp2 url is the same whatever session it redirects
  * to, so it says nothing about which session a remembered pick belongs to.
  *
+ * FAST FEEDS - the LIVE TV dial's channels that are not Pluto - keep a second cache of their own,
+ * built with no [claimOf] and [FAST_TTL_MILLIS]: they have no session, their master url names
+ * the channel alone, and the variants a FAST master lists stay put for hours. The one rule that
+ * matters is shared - a channel that fails or shows no picture is [evict]ed at once.
+ *
  * Thread-safe: the tune thread reads and writes, the prefetch threads write, and the player's
  * error callback evicts on the UI thread - every operation is a short critical section on the map,
  * never held across a fetch. Holds urls with tokens in them - never log a key or a value.
@@ -69,8 +74,15 @@ class VariantCache(
         entry.choice
     }
 
-    /** Whether [masterUrl] is already remembered, fresh, under [engine] - so a prefetch can skip it. */
-    fun has(masterUrl: String, engine: String): Boolean = get(masterUrl, engine) != null
+    /**
+     * Whether [masterUrl] is already remembered under [engine], younger than [maxAgeMillis] - so a
+     * prefetch can skip it. A refresh asks with a shorter age, to read again before the TTL.
+     */
+    fun has(masterUrl: String, engine: String, maxAgeMillis: Long = ttlMillis): Boolean = synchronized(entries) {
+        get(masterUrl, engine) ?: return false
+        val entry = entries[Key(masterUrl, engine)] ?: return false
+        elapsedMillis() - entry.storedAt < maxAgeMillis
+    }
 
     /**
      * The claim standing for [masterUrl] now - taken BEFORE its master is read, and handed back
@@ -107,6 +119,12 @@ class VariantCache(
          * the ceiling, not a target.
          */
         const val TTL_MILLIS = 5 * 60_000L
+
+        /** A FAST feed's pick: no session to outlive, so hours, not minutes - see the class comment. */
+        const val FAST_TTL_MILLIS = 6 * 60 * 60_000L
+
+        /** A FAST cache's reach: the neighbours of every channel surfed in an evening. */
+        const val FAST_CAPACITY = 32
 
         /** The claim of a cache that tracks no sessions - every entry stands until its TTL. */
         private val UNTRACKED = Any()

@@ -28,6 +28,9 @@ class MasterPrefetchTest {
         val queued = ArrayDeque<() -> Unit>()
         var interrupted = 0
         val read = mutableListOf<String>()
+        val refreshed = mutableListOf<String>()
+        val fast = mutableListOf<Int>()
+        val ready = mutableListOf<Pair<Int, String?>>()
         var kept = 0
         var released = 0
         val keeps = mutableListOf<Set<String>>()
@@ -47,7 +50,12 @@ class MasterPrefetchTest {
                 }
             },
             prefetching = { prefetching },
-            read = { url, stillWanted -> read += url; if (stillWanted()) { kept++; true } else false },
+            read = { url, refresh, stillWanted ->
+                read += url; if (refresh) refreshed += url
+                if (stillWanted()) { kept++; true } else false
+            },
+            readFast = { channel, _ -> fast += channel.number; true },
+            ready = { channel, url -> ready += channel.number to url },
         )
 
         fun fire() {
@@ -124,7 +132,8 @@ class MasterPrefetchTest {
         f.prefetch.pictureUp(pluto(3), dial) { true }
         f.prefetch.stop()
         assertEquals(2, f.interrupted)
-        assertEquals(1, f.waitCancelled)
+        // The refresh waiting after the first round (replaced by 3's picture), then 3's own wait.
+        assertEquals(2, f.waitCancelled)
         // Reads that could not be interrupted: they neither start nor keep anything.
         f.finish()
         assertEquals(0, f.kept)
@@ -157,5 +166,81 @@ class MasterPrefetchTest {
         assertEquals(listOf(2, 6), MasterPrefetch.neighbours(pluto(1), dial).map { it.number })
         assertEquals(listOf(1), MasterPrefetch.neighbours(pluto(2), listOf(pluto(1), pluto(2))).map { it.number })
         assertTrue(MasterPrefetch.neighbours(pluto(9), dial).isEmpty())
+    }
+
+    private fun fast(number: Int) = Channel(number = number, name = "Fast $number", kind = "live", block = "Movies")
+
+    @Test
+    fun `FAST neighbours are read too, with no session borrowed, and handed to the pre-join`() {
+        val f = Fixture()
+        val live = listOf(fast(1), pluto(2), fast(3))
+        f.prefetch.pictureUp(pluto(2), live) { true }
+        f.fire()
+        f.finish()
+        assertEquals(listOf(3, 1), f.fast)
+        assertTrue("no lease for a feed without a session", f.keeps.isEmpty())
+        assertEquals(listOf(3 to null, 1 to null), f.ready)
+    }
+
+    @Test
+    fun `a FAST channel on screen reads its neighbours, Pluto ones on leases`() {
+        val f = Fixture()
+        val live = listOf(pluto(1), fast(2), fast(3))
+        f.prefetch.pictureUp(fast(2), live) { true }
+        f.fire()
+        f.finish()
+        assertEquals(listOf(3), f.fast)
+        assertEquals(listOf("https://s.pluto.tv/id1/master.m3u8?jwt=J"), f.read)
+        assertEquals(listOf(3 to null, 1 to "https://s.pluto.tv/id1/master.m3u8?jwt=J"), f.ready)
+    }
+
+    @Test
+    fun `while the viewer stays, the Pluto neighbours are read again before their picks expire`() {
+        val f = Fixture()
+        val live = listOf(pluto(1), pluto(2), fast(3))
+        f.prefetch.pictureUp(pluto(2), live) { true }
+        f.fire()
+        f.finish()
+        assertEquals(listOf(MasterPrefetch.DELAY_MILLIS, MasterPrefetch.REFRESH_MILLIS), f.delays)
+        assertTrue(MasterPrefetch.REFRESH_MILLIS < VariantCache.TTL_MILLIS)
+        assertTrue(MasterPrefetch.REFRESH_AGE_MILLIS < MasterPrefetch.REFRESH_MILLIS)
+        f.fire()
+        f.finish()
+        // Pluto 1 again, as a refresh; FAST 3 once - its pick is good for hours.
+        assertEquals(listOf("https://s.pluto.tv/id1/master.m3u8?jwt=J"), f.refreshed)
+        assertEquals(listOf(3), f.fast)
+        assertEquals("the pre-join is for the first round only", 2, f.ready.size)
+        assertEquals(2, f.released)
+    }
+
+    @Test
+    fun `a refresh stops once the tune moves on, the reel is on, or the app has stopped`() {
+        val f = Fixture()
+        var wanted = true
+        f.prefetch.pictureUp(pluto(2), dial) { wanted }
+        f.fire()
+        f.finish()
+        wanted = false
+        f.fire()
+        assertTrue(f.queued.isEmpty())
+        assertEquals("no further refresh is scheduled", null, f.waiting)
+        val g = Fixture()
+        g.prefetch.pictureUp(pluto(2), dial) { true }
+        g.fire()
+        g.prefetch.stop()
+        assertEquals(null, g.waiting)
+    }
+
+    @Test
+    fun `refreshes end after the ceiling, however long one channel is watched`() {
+        val f = Fixture()
+        f.prefetch.pictureUp(pluto(2), dial) { true }
+        var rounds = 0
+        while (f.waiting != null) {
+            f.fire()
+            f.finish()
+            rounds++
+        }
+        assertEquals(1 + MasterPrefetch.MAX_REFRESHES, rounds)
     }
 }

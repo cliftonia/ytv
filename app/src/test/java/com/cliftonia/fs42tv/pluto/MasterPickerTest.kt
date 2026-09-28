@@ -93,6 +93,61 @@ class MasterPickerTest {
         assertSame(hls, f.picker.forMpv(hls))
     }
 
+    private class Cached(answer: () -> BreakPoller.Fetched) {
+        val fetched = mutableListOf<String>()
+        var now = 0L
+        val fastCache = VariantCache({ now }, ttlMillis = VariantCache.FAST_TTL_MILLIS, capacity = VariantCache.FAST_CAPACITY)
+        val picker = MasterPicker(
+            fetch = { url -> fetched += url; answer() },
+            mpvLadder = { listOf("hd", "sd") },
+            elapsedMillis = { now },
+            cache = VariantCache({ now }),
+            fastCache = fastCache,
+        )
+    }
+
+    @Test
+    fun `a FAST feed's pick is remembered for hours by its master url, and read ahead the same way`() {
+        val f = Cached { BreakPoller.Fetched(landed, muxed) }
+        val feed = Hls("https://feed.example/master.m3u8")
+        val first = f.picker.forMpv(feed, fast = true) as Hls
+        f.now += 5 * 60 * 60_000L
+        val again = f.picker.forMpv(feed, fast = true) as Hls
+        assertEquals(first.mediaUrl, again.mediaUrl)
+        assertEquals("one read in five hours", 1, f.fetched.size)
+        f.now += 60 * 60_000L
+        f.picker.forMpv(feed, fast = true)
+        assertEquals("six hours on, read again", 2, f.fetched.size)
+        // Ahead: read once, then left alone while remembered.
+        val other = "https://other.example/master.m3u8"
+        assertTrue(f.picker.prefetch(other, fast = true))
+        assertEquals(false, f.picker.prefetch(other, fast = true))
+        assertEquals("https://cfd.example/stitch/abc/720p.m3u8?jwt=J", f.picker.remembered(other, fast = true)?.mediaUrl)
+        assertNull("the Pluto cache is another", f.picker.remembered(other))
+    }
+
+    @Test
+    fun `a FAST feed that failed or showed no picture is read afresh`() {
+        val f = Cached { BreakPoller.Fetched(landed, muxed) }
+        val feed = Hls("https://feed.example/master.m3u8")
+        val played = f.picker.forMpv(feed, fast = true)
+        f.picker.forget(played)
+        f.picker.forMpv(feed, fast = true)
+        assertEquals(2, f.fetched.size)
+    }
+
+    @Test
+    fun `a refresh reads a pick again once it is old enough, and not before`() {
+        val f = Cached { BreakPoller.Fetched(landed, muxed) }
+        val master = "https://s.pluto.tv/id/master.m3u8?jwt=J"
+        assertTrue(f.picker.prefetch(master))
+        f.now += 60_000L
+        assertEquals(false, f.picker.prefetch(master, maxAgeMillis = MasterPrefetch.REFRESH_AGE_MILLIS))
+        f.now += MasterPrefetch.REFRESH_AGE_MILLIS
+        assertTrue(f.picker.prefetch(master, maxAgeMillis = MasterPrefetch.REFRESH_AGE_MILLIS))
+        assertEquals(2, f.fetched.size)
+    }
+
     @Test
     fun `anything but a live feed is not touched`() {
         val f = Fixture({ error("nothing to fetch") })
