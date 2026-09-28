@@ -73,10 +73,12 @@ class ScreenExtras(private val deps: Deps) {
         // A US-only feed goes through the home server's relay, or fails here when there is none.
         val relayed = FastRelay.route(tuned.stream, tuned.playable, deps.relayServer)
         val routed = deps.plutoRoute.forDial(tuned.channel, relayed)
-        // Pluto-dial channels only, either route; the YouTube dial's news feeds are left as they
-        // were, like the route itself leaves them.
+        // Pluto channels, either route, and the LIVE TV dial's FAST feeds: mpv handed a master
+        // probes every variant before its first frame - 19-22s on Spark TV and Rakuten, against
+        // 5-11s on the one it picks. The YouTube dial's news feeds are left as they were.
         val picker = deps.masterPicker
-        if (tuned.channel.pluto == null || picker == null) return routed
+        val fast = tuned.channel.pluto == null && tuned.channel.block != null
+        if ((tuned.channel.pluto == null && !fast) || picker == null) return routed
         // Asked again between the two blocking steps: a session fetch can take seconds, and a
         // master read after it seconds more, on the one tune thread the superseding tune is
         // queued behind. Under fast surfing every stale read delayed the channel actually wanted.
@@ -84,7 +86,8 @@ class ScreenExtras(private val deps: Deps) {
         // A remembered pick only for the direct route: the route hands back a new playable for a
         // direct master, whose url names its session, and the published one itself for LEGACY,
         // whose jmp2 url does not. See VariantCache.
-        return picker.forMpv(routed, cacheable = routed !== tuned.playable)
+        // Nothing to remember for a FAST feed: it has no session, and its master read is its own.
+        return picker.forMpv(routed, cacheable = !fast && routed !== tuned.playable)
     }
 
     /**

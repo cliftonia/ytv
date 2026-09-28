@@ -35,7 +35,7 @@ class RecoveryWatchTest {
         }
     }
 
-    private class Fixture(rebuildable: Boolean = false) {
+    private class Fixture(rebuildable: Boolean = false, patience: Long = RecoveryWatch.WATCHDOG_MILLIS) {
         val clock = Clock()
         val rebuilds = mutableListOf<String>()
         var tuning = true
@@ -55,6 +55,7 @@ class RecoveryWatchTest {
             rebuildable = { rebuildable },
             rebuildAndRetune = { rebuilds.add(it) },
             nowMillis = { clock.now },
+            watchdogMillis = { patience },
         )
     }
 
@@ -118,6 +119,26 @@ class RecoveryWatchTest {
         f.clock.advance(RecoveryWatch.WATCHDOG_MILLIS)
         assertEquals("retried once, not forever", 1, f.retunes.size)
         assertEquals(RecoveryWatch.NO_PICTURE, f.card)
+    }
+
+    @Test
+    fun `a slow FAST feed is given its longer watchdog, and a first frame inside it is left alone`() {
+        val f = Fixture(patience = RecoveryWatch.SLOW_WATCHDOG_MILLIS)
+        f.watch.tuneStarted()
+        f.clock.advance(20_000)
+        assertTrue("20s is inside a slow feed's patience", f.retunes.isEmpty())
+        f.tuning = false
+        f.watch.firstFrame()
+        f.clock.advance(60_000)
+        assertTrue(f.retunes.isEmpty())
+    }
+
+    @Test
+    fun `a slow feed that never shows a picture is still retried, at its own watchdog`() {
+        val f = Fixture(patience = RecoveryWatch.SLOW_WATCHDOG_MILLIS)
+        f.watch.tuneStarted()
+        f.clock.advance(RecoveryWatch.SLOW_WATCHDOG_MILLIS)
+        assertEquals(listOf("no picture after 25s"), f.retunes)
     }
 
     @Test

@@ -51,5 +51,11 @@ internal fun ScreenDirector.Deps.recoveryWatch(
             retuneWanted(reason)
         },
         nowMillis = android.os.SystemClock::elapsedRealtime,
+        // The channel wanted, as the retune picks it: a FAST feed on the LIVE TV dial gets longer.
+        watchdogMillis = {
+            val wanted = fallbackChannel() ?: tune().onAir?.channel
+            if (wanted != null && wanted.block != null && wanted.pluto == null) RecoveryWatch.SLOW_WATCHDOG_MILLIS
+            else RecoveryWatch.WATCHDOG_MILLIS
+        },
     )
 }
