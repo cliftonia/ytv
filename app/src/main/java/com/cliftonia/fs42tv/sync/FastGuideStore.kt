@@ -4,17 +4,19 @@ import java.io.File
 import java.util.concurrent.Executor
 
 /**
- * The [FastGuide] the banner and the guide read, kept on disk and refreshed a few times a day.
+ * The [FastGuide] the banner and the guide read, kept on disk and refreshed while the app runs.
  *
  * The rules, each one a courtesy to a 2.3 GB television on a shared link:
  *
- * - Nothing happens until a FAST channel is looked at. The YouTube dial never asks, and neither
- *   does a LIVE TV evening spent on Pluto channels.
+ * - The YouTube dial never asks. The LIVE TV dial asks when it comes up ([lineupSeen]) and when a
+ *   FAST channel is looked at.
  * - The cached copy answers first, straight off disk, so the first banner after a launch has a
- *   title without waiting on the network - the file holds thirty hours, so last night's copy is
- *   still right this morning.
- * - A download at most every [REFRESH_MILLIS], counted from the cached file's age, so a relaunch
+ *   title without waiting on the network - the file holds thirty hours.
+ * - At launch a copy older than [LAUNCH_STALE_MILLIS] is downloaded again; while running, a
+ *   download at most every [REFRESH_MILLIS], counted from the cached file's age, so a relaunch
  *   does not fetch again; after a failure, not again for [RETRY_MILLIS].
+ * - A lineup refreshed to one other than the guide was downloaded under is downloaded for at once:
+ *   the server builds the guide from the lineup, and a new channel has no titles until then.
  * - One load at a time, on the executor - the prefetch thread, like Pluto's guide.
  * - Parse before writing: a captive portal's page is never cached over a good guide.
  *
@@ -36,8 +38,15 @@ class FastGuideStore(
     private val published = PublishedFile(
         file = file, url = url, fetch = fetch, parse = FastGuide::parse, executor = executor,
         nowMillis = nowMillis, refreshMillis = REFRESH_MILLIS, retryMillis = RETRY_MILLIS,
-        label = "fast guide", describe = { "${it.size} channels" },
+        label = "fast guide", describe = { "${it.size} channels" }, launchStaleMillis = LAUNCH_STALE_MILLIS,
     )
+
+    /**
+     * The LIVE TV dial came up on, or refreshed to, the lineup [stamp] - see
+     * [DialRepository.stampOf]. Loads when the copy held is stale or was taken under another
+     * lineup; with the row switched off, nothing is loaded.
+     */
+    fun lineupSeen(stamp: String) = published.lineupSeen(stamp, load = enabled())
 
     /**
      * What is on [channel] now, or null. When nothing is held yet, or the copy held is due for a
@@ -55,9 +64,10 @@ class FastGuideStore(
     }
 
     companion object {
-        /** Four hours: the job publishes every six, and the file holds thirty. */
-        const val REFRESH_MILLIS = 4L * 60 * 60 * 1000
-        const val RETRY_MILLIS = 10L * 60 * 1000
+        /** Hourly: the server publishes every three hours, and the file holds thirty. */
+        const val REFRESH_MILLIS = PublishedFile.REFRESH_MILLIS
+        const val LAUNCH_STALE_MILLIS = PublishedFile.LAUNCH_STALE_MILLIS
+        const val RETRY_MILLIS = PublishedFile.RETRY_MILLIS
         const val FILE_NAME = "fast_guide.json"
 
         /** The download, with timeouts, as the lineup's: the default is none at all. */

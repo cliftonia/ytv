@@ -36,6 +36,14 @@ class GuideDetails(
 
     val enabled: Boolean get() = features.isOn(Features.Flag.GUIDE_DETAILS)
 
+    /**
+     * The LIVE TV dial came up on, or refreshed to, the lineup [stamp]: `details.json` is loaded
+     * when stale or taken under another lineup - see [PublishedFile.lineupSeen]. Off, only noted.
+     */
+    fun lineupSeen(stamp: String) {
+        details?.lineupSeen(stamp, load = enabled)
+    }
+
     /** The pane for [channel] as far as it is known now. [onUpdate] runs when more arrives. */
     fun forChannel(channel: Channel, onUpdate: () -> Unit): PickerDetails {
         val update = { runOnUi { if (!halted()) onUpdate() } }
@@ -73,9 +81,9 @@ class GuideDetails(
     }
 
     companion object {
-        /** Six hours, as the server publishes. */
-        const val REFRESH_MILLIS = 6L * 60 * 60 * 1000
-        const val RETRY_MILLIS = 10L * 60 * 1000
+        /** Hourly, as the guide: the server publishes both every three hours. */
+        const val REFRESH_MILLIS = PublishedFile.REFRESH_MILLIS
+        const val RETRY_MILLIS = PublishedFile.RETRY_MILLIS
         const val FILE_NAME = "details.json"
 
         fun create(
@@ -94,6 +102,7 @@ class GuideDetails(
                     parse = Details::parse, executor = executor, nowMillis = now,
                     refreshMillis = REFRESH_MILLIS, retryMillis = RETRY_MILLIS,
                     label = "programme details", describe = { d -> "${d.size} titles" },
+                    launchStaleMillis = PublishedFile.LAUNCH_STALE_MILLIS,
                 )
             }
             return GuideDetails(features, fastGuide, plutoGuide, details, ArtLoader.create(cacheDir),
