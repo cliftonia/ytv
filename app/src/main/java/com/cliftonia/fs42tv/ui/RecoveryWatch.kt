@@ -25,6 +25,11 @@ class RecoveryWatch(
     private val showCard: (String) -> Unit,
     /** Re-tunes the channel the viewer is on - the watchdog's retry. */
     private val retune: (String) -> Unit,
+    /**
+     * How long the tune being watched gets for its first frame - [WATCHDOG_MILLIS], or
+     * [SLOW_WATCHDOG_MILLIS] for a feed known to open slowly. Asked each time the watchdog arms.
+     */
+    private val watchdogMillis: () -> Long = { WATCHDOG_MILLIS },
     /** Re-tunes the channel whose playback failed - the error path's retry. */
     private val retuneAfterError: (String) -> Unit,
     /** Whether the engine can be rebuilt as a last resort - mpv only. */
@@ -108,7 +113,8 @@ class RecoveryWatch(
      * is the silent black screen in its purest form: blank up, audio muted, no card, no retry.
      */
     private fun armWatchdog() {
-        cancelWatchdog = schedule(WATCHDOG_MILLIS) {
+        val patience = watchdogMillis()
+        cancelWatchdog = schedule(patience) {
             cancelWatchdog = null
             when {
                 halted() || !stillTuning() -> Unit
@@ -116,7 +122,7 @@ class RecoveryWatch(
                 deferred() -> armWatchdog()
                 !watchdogRetuned -> {
                     watchdogRetuned = true
-                    retune("no picture after ${WATCHDOG_MILLIS / 1000}s")
+                    retune("no picture after ${patience / 1000}s")
                     armWatchdog()
                 }
                 // Retried once already and still silent. On mpv, one more chance with a FRESH
@@ -190,6 +196,15 @@ class RecoveryWatch(
          * viewer reaches for the remote.
          */
         const val WATCHDOG_MILLIS = 12_000L
+
+        /**
+         * The LIVE TV dial's FAST feeds (Samsung TV Plus, Rakuten, Roku...): measured on the TCL's
+         * network, 5-11s to a first frame on one variant, over 20s through Amazon's ad-inserting
+         * CDN in Ireland. At 12s the watchdog restarted a load that was working, and the restart
+         * fared no better - a channel that only ever showed a picture with the guide open, where
+         * the watchdog waits.
+         */
+        const val SLOW_WATCHDOG_MILLIS = 25_000L
 
         const val NO_PICTURE = "NO PICTURE"
     }
