@@ -74,6 +74,22 @@ class TestSessionCache(unittest.TestCase):
         cache.get("100.1.1.1", "uk", fresh=True)
         self.assertIs(other, cache.get("100.1.1.2", "uk"))
 
+    def test_a_named_client_is_a_session_of_its_own(self):
+        # A television reads its neighbours' masters on further sessions; one shared with the
+        # main one would end the programme on screen.
+        cache, _ = cache_with(Clock())
+        main = cache.get("100.1.1.1", "us")
+        side = cache.get("100.1.1.1", "us", client="dial1")
+        self.assertNotEqual(main["jwt"], side["jwt"])
+        self.assertIs(main, cache.get("100.1.1.1", "us"))
+        self.assertIs(side, cache.get("100.1.1.1", "us", client="dial1"))
+        cache.get("100.1.1.1", "us", fresh=True, client="dial1")
+        self.assertIs(main, cache.get("100.1.1.1", "us"), "a fresh side session leaves the main one")
+
+    def test_client_is_read_from_the_query(self):
+        self.assertEqual("dial2", pluto_sessions.client_of("region=us&client=dial2"))
+        self.assertEqual("", pluto_sessions.client_of("region=us"))
+
     def test_fresh_is_read_from_the_query(self):
         self.assertTrue(pluto_sessions.wants_fresh("region=uk&fresh=1"))
         self.assertFalse(pluto_sessions.wants_fresh("region=uk"))

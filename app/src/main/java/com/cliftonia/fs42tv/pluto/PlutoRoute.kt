@@ -32,6 +32,11 @@ class PlutoRoute(
     private val report: (String) -> Unit,
     /** Runs a block after a delay, OFF the UI thread - a session check may fetch. */
     private val later: (delayMillis: Long, block: () -> Unit) -> Unit = { _, _ -> },
+    /**
+     * Whether the dial's sessions rotate - see [SessionPool]: true while masters are read ahead
+     * (mpv); false keeps every tune on the dial's one session, as before the pool existed.
+     */
+    private val rotate: () -> Boolean = { false },
 ) {
 
     /**
@@ -73,7 +78,7 @@ class PlutoRoute(
             return legacyBecause(channel, "DIRECT FAILED", legacy)
         }
         legacyUntil.remove(ref.id)
-        val choice = sessions.forDial(ref.region) ?: run {
+        val choice = sessions.forChannel(ref.region, ref.id, rotate()) ?: run {
             awaitSession(channel)
             return legacyBecause(channel, "NO SESSION", legacy)
         }
@@ -97,6 +102,22 @@ class PlutoRoute(
         if (!direct() || legacy !is Hls) return legacy
         val session = sessions.beside() ?: return legacy
         return Hls(session.masterUrl(ref.id))
+    }
+
+    /**
+     * A session of its own to read [channel]'s direct master ahead of a surf on, with that
+     * master's url - or null when a tune would not play one (not a Pluto-dial channel, LEGACY, a
+     * channel sitting out on its legacy url) or no free session can be had cheaply. [keep] are the
+     * channel ids whose sessions must not be re-pointed - see [PlutoSessions.lease]. Unlike
+     * [forDial] no report, no wait for a session, no claim on the pick a failure is traced to.
+     * May fetch a free slot's session: the prefetch threads only. Release the lease when done.
+     */
+    fun readAhead(channel: Channel, keep: Set<String>): SessionPool.Lease? {
+        val ref = channel.pluto ?: return null
+        if (!direct()) return null
+        val until = legacyUntil[ref.id]
+        if (until != null && nowMillis() < until) return null
+        return sessions.lease(ref.region, ref.id, keep)
     }
 
     /**

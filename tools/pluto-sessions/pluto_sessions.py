@@ -21,6 +21,10 @@ in 2025; FastChannels keeps a pool for it). So the front caches a session per (c
 and never hands one television's session to another - two sets on one session would knock each
 other off. Sessions are refreshed well inside their lifetime.
 
+A television may hold more than one: `&client=dial1` names a further session of its own, kept
+apart from its main one (no `client`). It reads the masters of the channels either side of the
+one on screen on those, since reading a second channel's master on a session ends the first.
+
 Anonymous: no Pluto account, as FastChannels runs by default. Stdlib only.
 
   pluto_sessions.py --boot  --bind 10.103.1.2:8480           (inside netns pluto-us)
@@ -111,7 +115,7 @@ def serve_boot(bind):
 
 
 class SessionCache:
-    """One session per (caller, region), reused until it is due for refresh. Pure, for tests."""
+    """One session per (caller, client, region), reused until due for refresh. Pure, for tests."""
 
     def __init__(self, fetch, now=time.time, refresh_margin=1800):
         self._fetch = fetch
@@ -120,14 +124,14 @@ class SessionCache:
         self._held = {}
         self._lock = threading.Lock()
 
-    def get(self, caller, region, fresh=False):
+    def get(self, caller, region, fresh=False, client=""):
         """The caller's session for region; fresh=True replaces it whatever its age.
 
         fresh is how a television rebuilds a session a stream would not play on. Without it the
         rebuild handed back the very token that had just failed, so the television's own
         invalidate-and-refetch was a no-op for every region channel.
         """
-        key = (caller, region)
+        key = (caller, client, region)
         with self._lock:
             held = self._held.get(key)
             if held and not fresh and held["expiresAt"] - self._margin > self._now():
@@ -140,6 +144,11 @@ class SessionCache:
             for k in [k for k, v in self._held.items() if v["expiresAt"] < cutoff]:
                 del self._held[k]
         return fresh
+
+
+def client_of(query):
+    """The further session a /pluto/session query names, or "" for the television's main one."""
+    return (urllib.parse.parse_qs(query).get("client") or [""])[0][:32]
 
 
 def wants_fresh(query):
@@ -169,7 +178,8 @@ def serve_front(bind, upstreams):
                 return _reply(self, 400, {"error": "region must be one of %s" % sorted(upstreams)})
             try:
                 _reply(self, 200, cache.get(self.client_address[0], region,
-                                            fresh=wants_fresh(url.query)))
+                                            fresh=wants_fresh(url.query),
+                                            client=client_of(url.query)))
             except Exception as e:
                 # The television falls back to its own Australian session on anything but 200.
                 _reply(self, 502, {"error": "%s session unavailable: %s" % (region, type(e).__name__)})
