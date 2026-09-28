@@ -26,11 +26,12 @@ Every channel's `why` in live_draft.json says what placed it. Only Pluto's guide
 | Movies | Movies – Mixed | 250-267 | 18 | 10 | 8 | 13 | 0 | 5 | 3 |
 | Movies | **all** | 100-267 | 97 | 40 | 57 | 59 | 3 | 35 | 15 |
 | Series | Comedy | 300-323 | 24 | 4 | 20 | 13 | 2 | 9 | 8 |
-| Series | Action | 330-349 | 20 | 8 | 12 | 10 | 5 | 5 | 2 |
-| Series | Drama | 360-399 | 40 | 13 | 27 | 26 | 3 | 11 | 14 |
-| Series | Crime | 410-425 | 16 | 5 | 11 | 8 | 2 | 6 | 3 |
-| Series | Reality | 430-495 | 66 | 11 | 55 | 43 | 5 | 18 | 24 |
-| Series | **all** | 300-495 | 166 | 41 | 125 | 100 | 17 | 49 | 51 |
+| Series | Action | 330-342 | 13 | 5 | 8 | 6 | 4 | 3 | 2 |
+| Series | Sci-Fi & Fantasy | 350-357 | 8 | 4 | 4 | 5 | 1 | 2 | 0 |
+| Series | Drama | 360-398 | 39 | 12 | 27 | 25 | 3 | 11 | 14 |
+| Series | Crime | 400-415 | 16 | 5 | 11 | 8 | 2 | 6 | 3 |
+| Series | Reality | 420-485 | 66 | 11 | 55 | 43 | 5 | 18 | 24 |
+| Series | **all** | 300-485 | 166 | 41 | 125 | 100 | 17 | 49 | 51 |
 | Sitcoms (USA) | Sitcoms | 500-516 | 17 | 12 | 5 | 13 | 2 | 2 | 0 |
 | Sitcoms (USA) | **all** | 500-516 | 17 | 12 | 5 | 13 | 2 | 2 | 0 |
 | Game Shows | Game Shows | 600-612 | 13 | 3 | 10 | 6 | 3 | 4 | 3 |
