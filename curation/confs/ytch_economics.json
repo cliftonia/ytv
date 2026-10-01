@@ -94,7 +94,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZDPp8hMTA1I",
                 "duration": 590,
-                "title": "The Economics of Owning a Car Wash in 2026 | How Much Money Can You Really Make?"
+                "title": "The Economics of Owning a Car Wash in 2026 | How Much Money Can You Really Make?",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=D9N7QaIOkG8",
@@ -232,7 +234,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8RAYvVXun5I",
                 "duration": 277,
-                "title": "The Real Economics Behind Airbnb"
+                "title": "The Real Economics Behind Airbnb",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=WPA-KpldDVc",
@@ -251,7 +255,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=1UxA6JzoT-4",
                 "duration": 1735,
-                "title": "Microeconomics- Everything You Need to Know"
+                "title": "Microeconomics- Everything You Need to Know",
+                "skip": [
+                    [
+                        24.6,
+                        54.0
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=W3GuoKFXWJk",
@@ -270,7 +281,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WnWYtM5g-uc",
                 "duration": 1108,
-                "title": "The Entire History of Banking — 3000 BC to 2026"
+                "title": "The Entire History of Banking — 3000 BC to 2026",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=uQX8UwV87Os",
@@ -376,7 +389,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IP-PwP-6TrM",
                 "duration": 3263,
-                "title": "Kaliningrad: the Russian military stronghold surrounded by NATO"
+                "title": "Kaliningrad: the Russian military stronghold surrounded by NATO",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=bZCoFyFENyA",
@@ -431,7 +446,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=MKO1icFVtDc",
                 "duration": 1798,
-                "title": "Macroeconomics- Everything You Need to Know"
+                "title": "Macroeconomics- Everything You Need to Know",
+                "skip": [
+                    [
+                        25.5,
+                        54.0
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=8d5d_HXGeMA",

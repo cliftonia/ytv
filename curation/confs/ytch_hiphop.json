@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=idOuEQ4AiW4",
                 "duration": 231,
-                "title": "Kodak Black Performs A Medley Of Hits Including \"Super Gremlin\" & More | Hip Hop Awards '22"
+                "title": "Kodak Black Performs A Medley Of Hits Including \"Super Gremlin\" & More | Hip Hop Awards '22",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=NZlNQ3ZsVTE",
@@ -80,7 +82,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=QNjhFWEvEuA",
                 "duration": 305,
-                "title": "Chris Turner Freestyles An EPIC Rap Completely On The Spot! | AGT 2026"
+                "title": "Chris Turner Freestyles An EPIC Rap Completely On The Spot! | AGT 2026",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=xAKdkMWOjRo",
@@ -161,7 +165,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KY3lcDA7LFI",
                 "duration": 87,
-                "title": "Solo Hip Hop Dance Performance | Live Stage | Blendora 2026 Concert of Focus Academy"
+                "title": "Solo Hip Hop Dance Performance | Live Stage | Blendora 2026 Concert of Focus Academy",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=addOBzCecF8",
@@ -178,7 +184,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q8u8mHzug3w",
                 "duration": 324,
-                "title": "Rap/ Hip Hop Segment - Trip Lee, Tedashii, KB, Andy Mineo, & Lecrae (45th Dove Awards)"
+                "title": "Rap/ Hip Hop Segment - Trip Lee, Tedashii, KB, Andy Mineo, & Lecrae (45th Dove Awards)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ydNXvM6tzds",
@@ -226,7 +234,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YVLHaqeJzEk",
                 "duration": 269,
-                "title": "Lloyd - You (Official Music Video) ft. Lil Wayne"
+                "title": "Lloyd - You (Official Music Video) ft. Lil Wayne",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=-aCahtPriFg",
@@ -245,12 +255,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZMLA565FuEY",
                 "duration": 192,
-                "title": "Poda Padichiruken - Music Video | Meesaya Murukku 2 | Hiphop Tamizha"
+                "title": "Poda Padichiruken - Music Video | Meesaya Murukku 2 | Hiphop Tamizha",
+                "skip": [
+                    [
+                        0.0,
+                        4.7
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZocEFFiJ-4M",
                 "duration": 377,
-                "title": "Stretch Marks (Live) (Official Video)"
+                "title": "Stretch Marks (Live) (Official Video)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=yKvoz25JTWw",
@@ -320,7 +339,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nmjdaBaZe8Y",
                 "duration": 256,
-                "title": "Chris Brown - With You (Official HD Video)"
+                "title": "Chris Brown - With You (Official HD Video)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=cw7SmnTEvak",
@@ -353,7 +374,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XOHOuJTfzkg",
                 "duration": 292,
-                "title": "Luke Taleno Lives Out The \"American Dream\" With POWERFUL Original Song | Semifinals | AGT 2026"
+                "title": "Luke Taleno Lives Out The \"American Dream\" With POWERFUL Original Song | Semifinals | AGT 2026",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=VK3AzydZvnU",
@@ -488,7 +511,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JU9TouRnO84",
                 "duration": 250,
-                "title": "Rick Ross - Hustlin'"
+                "title": "Rick Ross - Hustlin'",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=q3CED5dwGtY",

@@ -14,12 +14,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=5jWNq9R2tIk",
                 "duration": 1754,
-                "title": "TON-PLUS AVERAGES GALORE 😮‍💨 | 2026 World Series of Darts Finals | Day Three Afternoon Hig"
+                "title": "TON-PLUS AVERAGES GALORE 😮‍💨 | 2026 World Series of Darts Finals | Day Three Afternoon Hig",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=1C1grLTjvJE",
                 "duration": 1932,
-                "title": "SEISMIC SHOCKS 😱 | 2026 World Series of Darts Finals | Day Four Afternoon Highlights"
+                "title": "SEISMIC SHOCKS 😱 | 2026 World Series of Darts Finals | Day Four Afternoon Highlights",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=NaRcUwlQfZs",
@@ -92,12 +96,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=2j3UL8LUk6w",
                 "duration": 2729,
-                "title": "Luke Littler vs Luke Humphries 2026 Winmau World Masters FINAL"
+                "title": "Luke Littler vs Luke Humphries 2026 Winmau World Masters FINAL",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=jZThNiqjnmo",
                 "duration": 1669,
-                "title": "A NEW NAME ON THE TROPHY 🏆 | 2026 Flanders Darts Trophy | Finals Night Highlights"
+                "title": "A NEW NAME ON THE TROPHY 🏆 | 2026 Flanders Darts Trophy | Finals Night Highlights",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=tPHoDMvp-Gk",
@@ -251,7 +259,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=K7Bf42DCbfw",
                 "duration": 1080,
-                "title": "Who takes the spoils in a Cardiff CLASSIC? | Luke Littler vs Jonny Clayton | Premier Leagu"
+                "title": "Who takes the spoils in a Cardiff CLASSIC? | Luke Littler vs Jonny Clayton | Premier Leagu",
+                "skip": [
+                    [
+                        0.0,
+                        5.4
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=jl1Ey-oUTdY",
@@ -335,7 +350,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yfGfq812sYE",
                 "duration": 797,
-                "title": "Round 3 Highlights | 2026 Amgen Irish Open"
+                "title": "Round 3 Highlights | 2026 Amgen Irish Open",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=OVUU-CJXnhE",
@@ -434,7 +451,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4vNdEfTRZ-E",
                 "duration": 1058,
-                "title": "Ruby Grey vs Rebecca Allen  | Semi Finals - WDF Lakeside World Championships 2025"
+                "title": "Ruby Grey vs Rebecca Allen  | Semi Finals - WDF Lakeside World Championships 2025",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZKO3Zm4q_yA",
@@ -505,7 +524,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=V4wzCN8ldH8",
                 "duration": 360,
-                "title": "Is Snooker Becoming Too Much Like Darts?"
+                "title": "Is Snooker Becoming Too Much Like Darts?",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=neriz6QN2_o",

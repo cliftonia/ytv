@@ -196,7 +196,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6q-oh1RWS9s",
                 "duration": 2009,
-                "title": "Ralph Lauren 101: History and Pre-Owned Buyer's Guide to America's Most Iconic Brand"
+                "title": "Ralph Lauren 101: History and Pre-Owned Buyer's Guide to America's Most Iconic Brand",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=o6F_kHN6lyA",
@@ -215,7 +217,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3tkWceKNPww",
                 "duration": 1181,
-                "title": "How and Where To Study Fashion History From Home? Online and (Mostly) Free Sources For Beg"
+                "title": "How and Where To Study Fashion History From Home? Online and (Mostly) Free Sources For Beg",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=X0aCr1jr3Ww",
@@ -444,7 +448,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ELCCHSb8gEg",
                 "duration": 877,
-                "title": "This 13-Year-Old Refuses to Wear Modern Clothes Episode 38"
+                "title": "This 13-Year-Old Refuses to Wear Modern Clothes Episode 38",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=3oWPMLiHbFQ",
@@ -566,7 +572,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=6qbjk8l4oTg",
                 "duration": 2151,
-                "title": "500 Years of Indian Fashion ft. Maayankraj Singh (Indian Historical Fashion)"
+                "title": "500 Years of Indian Fashion ft. Maayankraj Singh (Indian Historical Fashion)",
+                "skip": [
+                    [
+                        181.0,
+                        294.3
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=G4ve24fT6cQ",
@@ -682,7 +695,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-Su2YFxwE4s",
                 "duration": 717,
-                "title": "The 10 Iconic Fashion Trends You Forgot From the 1960's"
+                "title": "The 10 Iconic Fashion Trends You Forgot From the 1960's",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=bZp2oFoYdIg",

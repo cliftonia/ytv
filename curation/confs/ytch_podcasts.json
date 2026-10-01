@@ -47,12 +47,34 @@
             {
                 "url": "https://www.youtube.com/watch?v=zUvRv5JrItk",
                 "duration": 8168,
-                "title": "MADONNA EXCLUSIVE: The Side That NOBODY Knows…"
+                "title": "MADONNA EXCLUSIVE: The Side That NOBODY Knows…",
+                "skip": [
+                    [
+                        1159.0,
+                        1229.8
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=flupGAB_iHs",
                 "duration": 6777,
-                "title": "Matt Rife | This Past Weekend w/ Theo Von #662"
+                "title": "Matt Rife | This Past Weekend w/ Theo Von #662",
+                "skip": [
+                    [
+                        0.0,
+                        49.8
+                    ],
+                    [
+                        1550.2,
+                        1734.3
+                    ],
+                    [
+                        2766.0,
+                        2889.2
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=-FTJXcRBJoE",
@@ -62,7 +84,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=4T_0Tcts6aM",
                 "duration": 8262,
-                "title": "Joe Rogan Experience #2187 - Adam Sandler"
+                "title": "Joe Rogan Experience #2187 - Adam Sandler",
+                "skip": [
+                    [
+                        523.1,
+                        603.6
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=MCAPRAEG9wk",
@@ -93,7 +122,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mdZzxM8jBNY",
                 "duration": 2754,
-                "title": "Dolly Parton | Dumb Blonde Podcast"
+                "title": "Dolly Parton | Dumb Blonde Podcast",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=w6Qg-fQmqhM",
@@ -105,7 +136,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ru44DngJYoA",
                 "duration": 6274,
-                "title": "Communication Expert: Why You Cringe at the Sound of Your Own Voice | Vinh Giang"
+                "title": "Communication Expert: Why You Cringe at the Sound of Your Own Voice | Vinh Giang",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=XZOJa-At410",
@@ -165,7 +198,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CJaMEfU-Jwg",
                 "duration": 1365,
-                "title": "Job Interview Questions | English Podcast"
+                "title": "Job Interview Questions | English Podcast",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ngvOyccUzzY",
@@ -191,7 +226,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jVs4NBoHZic",
                 "duration": 2965,
-                "title": "Aliko Dangote: Building Africa's industrial future from the ground up | Podcast | In Good Company"
+                "title": "Aliko Dangote: Building Africa's industrial future from the ground up | Podcast | In Good Company",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=8f82WQYEeh4",
@@ -238,7 +275,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Rni7Fz7208c",
                 "duration": 6854,
-                "title": "Elon Musk: A Different Conversation w/ Nikhil Kamath | Full Episode | People by WTF Ep. 16"
+                "title": "Elon Musk: A Different Conversation w/ Nikhil Kamath | Full Episode | People by WTF Ep. 16",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=tnoMGevqWAM",
@@ -255,7 +294,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=opiw0FVHeG4",
                 "duration": 5096,
-                "title": "Bashar's State of the Union on Alien Contact | Darryl Anka (E112)"
+                "title": "Bashar's State of the Union on Alien Contact | Darryl Anka (E112)",
+                "skip": [
+                    [
+                        2079.4,
+                        2213.2
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=V360AygOv7A",
@@ -370,7 +416,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6vIVpkjnb3I",
                 "duration": 8934,
-                "title": "Bloomberg This Weekend 09/27/2026"
+                "title": "Bloomberg This Weekend 09/27/2026",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=hSQ1iVqEZO4",
@@ -631,7 +679,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0OLBhkKLmUY",
                 "duration": 3006,
-                "title": "Robert Downey Jr. & Mark Ruffalo | Actors on Actors"
+                "title": "Robert Downey Jr. & Mark Ruffalo | Actors on Actors",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=mgfO4nnPL3Y",
@@ -648,7 +698,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
                 "duration": 1953,
-                "title": "Philosophy for Beginners"
+                "title": "Philosophy for Beginners",
+                "skip": [
+                    [
+                        62.5,
+                        122.5
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=C3ay8eRGJ0U",
@@ -696,7 +753,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=BeH1I5n-798",
                 "duration": 2402,
-                "title": "How to Edit a Video in Adobe Premiere 2026! (Complete Beginners Tutorial)"
+                "title": "How to Edit a Video in Adobe Premiere 2026! (Complete Beginners Tutorial)",
+                "skip": [
+                    [
+                        1013.9,
+                        1057.1
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=75tkthAzZog",
@@ -737,21 +801,11 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=bD0hDNjPHog",
-                "duration": 2914,
-                "title": "Gulfam Khan | Imran Ashraf | Mazaq Raat Season 2 | Ep #478 | Sakhawat Naaz | Honey Albella",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AHZlPGTYTuI",
-                "duration": 6755,
-                "title": "GST Planning for Small Business | Sanjay Kathuria Podcast"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=uTNnpkpYr0A",
                 "duration": 1738,
-                "title": "How To Make VIRAL Podcast Clip Videos! (12.5k Followers In 5 Days)"
+                "title": "How To Make VIRAL Podcast Clip Videos! (12.5k Followers In 5 Days)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ex1R3rsdlms",

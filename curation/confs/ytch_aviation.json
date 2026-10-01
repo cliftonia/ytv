@@ -14,7 +14,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=caJel1X-dos",
                 "duration": 3068,
-                "title": "Building a 150,000 HP Fighter Jet: Inside the Eurofighter Factory | FD Engineering"
+                "title": "Building a 150,000 HP Fighter Jet: Inside the Eurofighter Factory | FD Engineering",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Yutzg2NLwcU",
@@ -78,7 +80,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NrtQgPFz_X0",
                 "duration": 1595,
-                "title": "The Engineers: Flying cars, spaceships and more - BBC World Service"
+                "title": "The Engineers: Flying cars, spaceships and more - BBC World Service",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=7SL1A1VA-oA",
@@ -88,7 +92,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rdjit6hII1I",
                 "duration": 2713,
-                "title": "How is the Largest Aircraft in the World Manufactured?"
+                "title": "How is the Largest Aircraft in the World Manufactured?",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=4XIOyq67j1w",
@@ -155,12 +161,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=JHfI5JbiWhE",
                 "duration": 982,
-                "title": "What is Aerospace Engineering? (Aeronautics)"
+                "title": "What is Aerospace Engineering? (Aeronautics)",
+                "skip": [
+                    [
+                        974.5,
+                        982.0
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=R966cNxJSck",
                 "duration": 316,
-                "title": "How the Boeing 747 Passenger Airplane Is Built From Scratch (Full Assembly Documentary)"
+                "title": "How the Boeing 747 Passenger Airplane Is Built From Scratch (Full Assembly Documentary)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=wx-BRMwj6Eg",
@@ -205,12 +220,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=CsstSTTQfdA",
                 "duration": 4402,
-                "title": "This Changed Everything and Nobody Cares 💙 Pan Am 526A Clipper Endeavor"
+                "title": "This Changed Everything and Nobody Cares 💙 Pan Am 526A Clipper Endeavor",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=r5OMUfyybuM",
                 "duration": 3177,
-                "title": "Solar Impulse : Can an Airplane Fly Forever Without Fuel ? | Full Documentary"
+                "title": "Solar Impulse : Can an Airplane Fly Forever Without Fuel ? | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=kuK8Z7sxX_8",
@@ -257,7 +276,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FV4hpPAOEVg",
                 "duration": 241,
-                "title": "Lost in the Jungle for Decades | Abandoned Military Helicopter Restoration Documentary"
+                "title": "Lost in the Jungle for Decades | Abandoned Military Helicopter Restoration Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=A5uJHmRveGw",
@@ -304,7 +325,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=EnaGnxslhoA",
                 "duration": 372,
-                "title": "Supersonic History: The MiG-19 Farmer in 2026 | Full Performance Breakdown"
+                "title": "Supersonic History: The MiG-19 Farmer in 2026 | Full Performance Breakdown",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=r0MZ7A8is5g",
@@ -382,7 +405,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4MIVFjPeBrk",
                 "duration": 985,
-                "title": "How a $100 Million Passenger Aircraft Is Built | Complete Factory DocumentaryAirCraft (4k)"
+                "title": "How a $100 Million Passenger Aircraft Is Built | Complete Factory DocumentaryAirCraft (4k)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=E5xSXlGrsjs",
@@ -507,7 +532,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lxTmT05_lZM",
                 "duration": 303,
-                "title": "The Plane Lost for 74 Years | Pan Am Flight 526A Finally Found"
+                "title": "The Plane Lost for 74 Years | Pan Am Flight 526A Finally Found",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=u4fo6jMe_hU",
@@ -538,12 +565,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=jYy4XrRVSVY",
                 "duration": 400,
-                "title": "1950s Ghost Math That Created the Stealth Fighter Reveals Aviation's Biggest Secret"
+                "title": "1950s Ghost Math That Created the Stealth Fighter Reveals Aviation's Biggest Secret",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=XffEPbuLO3w",
                 "duration": 872,
-                "title": "There’s a New Plan to Replace the Airbus A380!"
+                "title": "There’s a New Plan to Replace the Airbus A380!",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=nKF4Sc_NMek",
@@ -562,7 +593,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_1ur5sHpr98",
                 "duration": 583,
-                "title": "The Hidden Engineering Shortcut That Changed Aviation Forever"
+                "title": "The Hidden Engineering Shortcut That Changed Aviation Forever",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=aafshC4V2AU",
@@ -615,7 +648,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OfJbWggdLi0",
                 "duration": 367,
-                "title": "How Is an Airplane Made? ✈️ From Design to First Flight"
+                "title": "How Is an Airplane Made? ✈️ From Design to First Flight",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=GukOZeq68J4",
@@ -627,7 +662,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FrOPfYjI7i8",
                 "duration": 700,
-                "title": "Why the World's Largest Airplane Failed"
+                "title": "Why the World's Largest Airplane Failed",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=OmMwKG6WCLU",

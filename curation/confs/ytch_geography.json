@@ -42,7 +42,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8N2SnWzgVbY",
                 "duration": 3653,
-                "title": "Mysteries of the Unknown with Josh Gates | Expedition Unknown | Discovery"
+                "title": "Mysteries of the Unknown with Josh Gates | Expedition Unknown | Discovery",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=qgXVI12gIdI",
@@ -85,7 +87,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fCJPtczQbd4",
                 "duration": 589,
-                "title": "\"We’re Caught In The Middle Of Two Vocalisations” | Expedition Bigfoot"
+                "title": "\"We’re Caught In The Middle Of Two Vocalisations” | Expedition Bigfoot",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=JJBkQCebplU",
@@ -116,7 +120,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cLB8Jxyq764",
                 "duration": 4003,
-                "title": "The Lewis & Clark Expedition - A Sleep Friendly Documentary"
+                "title": "The Lewis & Clark Expedition - A Sleep Friendly Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Pe5IDeVG_AE",
@@ -175,7 +181,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Tg27pdTvG4s",
                 "duration": 754,
-                "title": "Expedition Amazon – Into the Waters | National Geographic"
+                "title": "Expedition Amazon – Into the Waters | National Geographic",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Kq6YPrlF30E",
@@ -194,7 +202,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=l7x_OrITB-I",
                 "duration": 2542,
-                "title": "Manaslu Expedition 2025 | Full Documentary | 4K Ultra HD | Real Raw Footage."
+                "title": "Manaslu Expedition 2025 | Full Documentary | 4K Ultra HD | Real Raw Footage.",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=YtAL8y2lACs",
@@ -261,12 +271,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=cTQ3Ko9ZKg8",
                 "duration": 3212,
-                "title": "Our Planet | Frozen Worlds | FULL EPISODE | Netflix"
+                "title": "Our Planet | Frozen Worlds | FULL EPISODE | Netflix",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=24YvHmu--eE",
                 "duration": 3030,
-                "title": "Biblical Mysteries | Expedition Unknown | Discovery"
+                "title": "Biblical Mysteries | Expedition Unknown | Discovery",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=8gPMGbWcBps",
@@ -337,7 +351,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=f7-RQZavU3U",
                 "duration": 2567,
-                "title": "EXPEDITION ABRAHAM: From his birthplace to the Promised Land!"
+                "title": "EXPEDITION ABRAHAM: From his birthplace to the Promised Land!",
+                "skip": [
+                    [
+                        48.4,
+                        69.6
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Gz3OJoYLFkw",
@@ -385,7 +406,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0li0V0FwLUM",
                 "duration": 3976,
-                "title": "Eight Expeditions, One Epic Quest for Discovery | Expedition Unknown S8 | Discovery Channel India"
+                "title": "Eight Expeditions, One Epic Quest for Discovery | Expedition Unknown S8 | Discovery Channel India",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=3ttH7ziXzt4",
@@ -493,7 +516,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=m3Yg7hHCOYM",
                 "duration": 3940,
-                "title": "Josh Gates Swims With Sharks 🦈🤿 Expedition Unknown | Discovery"
+                "title": "Josh Gates Swims With Sharks 🦈🤿 Expedition Unknown | Discovery",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=e57JN5V6NbM",
@@ -614,12 +639,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=rW8UYHE_nhs",
                 "duration": 3041,
-                "title": "Josh Gates’ Most Epic Extreme Explorations | Expedition Unknown S7 | Discovery Channel India"
+                "title": "Josh Gates’ Most Epic Extreme Explorations | Expedition Unknown S7 | Discovery Channel India",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=rsSlK5PlfHQ",
                 "duration": 1146,
-                "title": "Unsolved Underwater Mysteries: USS Scorpion, Shark Attacks, and Lake Lanier | Expedition Files"
+                "title": "Unsolved Underwater Mysteries: USS Scorpion, Shark Attacks, and Lake Lanier | Expedition Files",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=1xnTUne0fqY",
