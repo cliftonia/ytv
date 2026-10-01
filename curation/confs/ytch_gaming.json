@@ -225,7 +225,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2XMwxhvD3dw",
                 "duration": 1091,
-                "title": "Investigating the Most Expensive Video Games in the World"
+                "title": "Investigating the Most Expensive Video Games in the World",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=jNndoRn4WJc",
@@ -256,7 +258,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=z76eNObdSt4",
                 "duration": 785,
-                "title": "On our way to Long Island Retro Gaming Expo 2026 and We Talk about Nothing and also Expo Goals"
+                "title": "On our way to Long Island Retro Gaming Expo 2026 and We Talk about Nothing and also Expo Goals",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=4d9vj0IVXDk",
@@ -284,7 +288,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IR19wb4TyQU",
                 "duration": 1954,
-                "title": "I Open A 90's Video Store!  Video Store Simulator"
+                "title": "I Open A 90's Video Store!  Video Store Simulator",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=hPeJHZxde78",
@@ -303,7 +309,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=C_-9Rw5CJNE",
                 "duration": 1232,
-                "title": "The CRT Hype Train Might Be Out of Control... - CRT vs OLED"
+                "title": "The CRT Hype Train Might Be Out of Control... - CRT vs OLED",
+                "skip": [
+                    [
+                        59.1,
+                        81.3
+                    ],
+                    [
+                        261.1,
+                        275.0
+                    ],
+                    [
+                        1161.0,
+                        1212.2
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=AaseHnf0k2o",
@@ -376,7 +397,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RcKT9IlJtjQ",
                 "duration": 1069,
-                "title": "2026 Homelab & Retro Gaming Roadmap | AI, Proxmox & MAME Builds"
+                "title": "2026 Homelab & Retro Gaming Roadmap | AI, Proxmox & MAME Builds",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=veqrusWhWfk",
@@ -412,7 +435,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=u5c6KZLUWTM",
                 "duration": 2219,
-                "title": "Transform ANY PC into a Retro Gaming Console"
+                "title": "Transform ANY PC into a Retro Gaming Console",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=HPeeVQQcFxs",
@@ -477,12 +502,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=v6_b3LJ2jdQ",
                 "duration": 978,
-                "title": "Some Seriously Rare Games at Nottingham Gaming Market!"
+                "title": "Some Seriously Rare Games at Nottingham Gaming Market!",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=uApSMBnO7mY",
                 "duration": 1568,
-                "title": "VIDEO GAME MUSIC QUIZ - 100 SONGS, 10 SECONDS EACH"
+                "title": "VIDEO GAME MUSIC QUIZ - 100 SONGS, 10 SECONDS EACH",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=rD_7mw3LItw",
@@ -513,7 +542,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BcQXNjtPrcM",
                 "duration": 1279,
-                "title": "How to Start a Gaming Channel in 2026"
+                "title": "How to Start a Gaming Channel in 2026",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=1UrEFEFUFls",
@@ -532,7 +563,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Zzb1dtyuo60",
                 "duration": 328,
-                "title": "The last V8 [Tribute] [Song] | Retro Gaming Homage"
+                "title": "The last V8 [Tribute] [Song] | Retro Gaming Homage",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=VolyMqGwiks",
@@ -703,7 +736,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=meOCABF-vhg",
                 "duration": 349,
-                "title": "The Evolution of Gaming (1958 → 2100). What Will Gaming Look Like in 2100?"
+                "title": "The Evolution of Gaming (1958 → 2100). What Will Gaming Look Like in 2100?",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=LaNkGTbY1fM",
@@ -715,7 +750,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=BqgeajsQBas",
                 "duration": 917,
-                "title": "My Full Nintendo Collection!"
+                "title": "My Full Nintendo Collection!",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=SJQJ5UbDnCo",

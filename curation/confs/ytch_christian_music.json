@@ -28,7 +28,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q18Vfb2HCkk",
                 "duration": 328,
-                "title": "Thank You | From The Warehouse | Elevation Worship"
+                "title": "Thank You | From The Warehouse | Elevation Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=MaNnwXvjz0Q",
@@ -104,7 +106,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q9WJCOIbfFs",
                 "duration": 350,
-                "title": "Great Is (Jenna Barrientes) | Elevation Worship"
+                "title": "Great Is (Jenna Barrientes) | Elevation Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=bTp5dXRGoKo",
@@ -231,7 +235,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7NyH9mDYECk",
                 "duration": 292,
-                "title": "My Testimony | Live | Elevation Worship"
+                "title": "My Testimony | Live | Elevation Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=lie1L61Qnos",
@@ -243,7 +249,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6EQM3I1s2yw",
                 "duration": 373,
-                "title": "Worthy of It All | feat. Michael Bethany | Gateway Worship"
+                "title": "Worthy of It All | feat. Michael Bethany | Gateway Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=_n6dfB2Z-Ko",
@@ -279,7 +287,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=E8sAzBTAVCU",
                 "duration": 273,
-                "title": "Don Moen - Be It Unto Me | Live Worship Sessions"
+                "title": "Don Moen - Be It Unto Me | Live Worship Sessions",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=4JpxiUkiWV0",
@@ -393,7 +403,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qfoykksg2-4",
                 "duration": 334,
-                "title": "Take Heart (MMXX) - Hillsong Worship"
+                "title": "Take Heart (MMXX) - Hillsong Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=0B_lnQIITxU",
@@ -412,7 +424,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z8agqyGIaD8",
                 "duration": 229,
-                "title": "Echo (feat. Tauren Wells) | Live | Elevation Worship"
+                "title": "Echo (feat. Tauren Wells) | Live | Elevation Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=fHYLw-2tTx4",
@@ -439,7 +453,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WT7n6QDbkII",
                 "duration": 395,
-                "title": "Call God | Official Lyric Video | Elevation Worship & Chandler Moore"
+                "title": "Call God | Official Lyric Video | Elevation Worship & Chandler Moore",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=qY3DQn4TUrU",
@@ -463,7 +479,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=MPvnZILn6EY",
                 "duration": 199,
-                "title": "Every Move I Make | Dance-A-Long with Lyrics | Kids Worship"
+                "title": "Every Move I Make | Dance-A-Long with Lyrics | Kids Worship",
+                "skip": [
+                    [
+                        187.6,
+                        198.3
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=BNKm_fOS064",
@@ -502,7 +525,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mw42Hzk3OKU",
                 "duration": 392,
-                "title": "Thank You  | Official Lyric Video | Elevation Worship (feat. Jonsal Barrientes & Tiffany H"
+                "title": "Thank You  | Official Lyric Video | Elevation Worship (feat. Jonsal Barrientes & Tiffany H",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=U0b52mxlFL0",
@@ -521,7 +546,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OpfuKKH_SCE",
                 "duration": 350,
-                "title": "O Come To The Altar | Official Lyric Video | Elevation Worship"
+                "title": "O Come To The Altar | Official Lyric Video | Elevation Worship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=M7MR77AVBOs",
@@ -589,7 +616,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DboMwgmXbQA",
                 "duration": 298,
-                "title": "Steve Crown- We Wait On You/ official video #worship #stevecrown #yahweh   #trending #tren"
+                "title": "Steve Crown- We Wait On You/ official video #worship #stevecrown #yahweh   #trending #tren",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=rnfOwCyPtZ0",

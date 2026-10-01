@@ -38,7 +38,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kT1VI6AhlzU",
                 "duration": 2117,
-                "title": "From Scrap to New | Komatsu Armature Restoration"
+                "title": "From Scrap to New | Komatsu Armature Restoration",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=wI8sE_yBwjM",
@@ -165,7 +167,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Q6AR8CN_jPU",
                 "duration": 1158,
-                "title": "A Dagger Inspired by Game of Thrones. Extreme Restoration."
+                "title": "A Dagger Inspired by Game of Thrones. Extreme Restoration.",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=NCvZsYlr9u0",
@@ -226,7 +230,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=D3PZGzef0pE",
                 "duration": 710,
-                "title": "Rust To Sharp Restoration Process"
+                "title": "Rust To Sharp Restoration Process",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=iqPEgDf613g",
@@ -255,12 +261,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=SDdhVt4Zh3U",
                 "duration": 416,
-                "title": "What Was This Blade Used For? Restoring an Old Curved Knife"
+                "title": "What Was This Blade Used For? Restoring an Old Curved Knife",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ztDYkleMFuI",
                 "duration": 1287,
-                "title": "Extreme Rust Restoration: Making a Custom Bowie Knife"
+                "title": "Extreme Rust Restoration: Making a Custom Bowie Knife",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=6djT0CEVGQE",
@@ -303,7 +313,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=X80epZxbdlQ",
                 "duration": 675,
-                "title": "Rusty Knife Restoration - Ancient Blade Brought Back to Life | BJ Blacksmith"
+                "title": "Rusty Knife Restoration - Ancient Blade Brought Back to Life | BJ Blacksmith",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=XscfZm_JRME",
@@ -424,7 +436,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Xkpx8QK8VNM",
                 "duration": 641,
-                "title": "My Dream Power Hammer Restoration! | Full Rebuild & First Test"
+                "title": "My Dream Power Hammer Restoration! | Full Rebuild & First Test",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=FKOnZYgnf1Q",
@@ -493,7 +507,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-Mjn6OwA10s",
                 "duration": 520,
-                "title": "Restoration Italian Chef's Knife"
+                "title": "Restoration Italian Chef's Knife",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=k0TmWpe4KaU",
@@ -503,7 +519,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=kvj6ch2GN6s",
                 "duration": 1391,
-                "title": "I Bought Amazon Blacksmithing Tools"
+                "title": "I Bought Amazon Blacksmithing Tools",
+                "skip": [
+                    [
+                        432.6,
+                        511.9
+                    ],
+                    [
+                        1379.5,
+                        1389.6
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=-jke0QAHJ30",

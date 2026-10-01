@@ -75,7 +75,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=F-hPkNvtLmE",
                 "duration": 331,
-                "title": "I Restored a 1980 Rolls-Royce From SCRATCH… Then Sold It for $2 MILLION! 😱"
+                "title": "I Restored a 1980 Rolls-Royce From SCRATCH… Then Sold It for $2 MILLION! 😱",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=tfIrqYqp1FI",
@@ -177,7 +179,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=hBNgCuBTyaU",
                 "duration": 3105,
-                "title": "I BOUGHT A NON RUNNING £1.7M LUXURY YACHT"
+                "title": "I BOUGHT A NON RUNNING £1.7M LUXURY YACHT",
+                "skip": [
+                    [
+                        2886.5,
+                        2898.3
+                    ],
+                    [
+                        3032.6,
+                        3046.3
+                    ],
+                    [
+                        3055.8,
+                        3080.9
+                    ],
+                    [
+                        3082.0,
+                        3089.5
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=8dYLwdlE4sU",
@@ -211,12 +232,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=9YMVdT07uk0",
                 "duration": 297,
-                "title": "Abandoned BMW E30 / M3 Restoration, 50-year-old BMW 3 Series restoration"
+                "title": "Abandoned BMW E30 / M3 Restoration, 50-year-old BMW 3 Series restoration",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=A-eCkHt2LM8",
                 "duration": 596,
-                "title": "Restoration for Abandoned BMW M3."
+                "title": "Restoration for Abandoned BMW M3.",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=zpqzkyu72po",
@@ -235,7 +260,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=EFcPAAtTPXw",
                 "duration": 997,
-                "title": "Abandoned 1940 Ford De Luxe Restored After Decades | Full ASMR Car Restoration"
+                "title": "Abandoned 1940 Ford De Luxe Restored After Decades | Full ASMR Car Restoration",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=E9NP0_nF2ak",
@@ -252,7 +279,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DFFacbOzIik",
                 "duration": 460,
-                "title": "Alto mehran restoration"
+                "title": "Alto mehran restoration",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=q4AomxOP6io",
@@ -427,7 +456,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OfCsyV3Nj-I",
                 "duration": 633,
-                "title": "ASMR Car Restoration 🏎️ Raw Carbon Ferrari F40: The Race Car Enzo Built for the Road | Ful"
+                "title": "ASMR Car Restoration 🏎️ Raw Carbon Ferrari F40: The Race Car Enzo Built for the Road | Ful",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=hLkacdeOyrI",
@@ -444,7 +475,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UFYqtvtpST8",
                 "duration": 1104,
-                "title": "This Rare 1957 Ford Skyliner Was Left to Rot | Full ASMR Restoration"
+                "title": "This Rare 1957 Ford Skyliner Was Left to Rot | Full ASMR Restoration",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=RRf3g-oKNT8",
@@ -568,7 +601,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VGJyAkBvDmg",
                 "duration": 3399,
-                "title": "Genius man: Complete restoration and maintenance of an abandoned 3-wheel truck after many"
+                "title": "Genius man: Complete restoration and maintenance of an abandoned 3-wheel truck after many",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=sA-0xxO4QVw",
