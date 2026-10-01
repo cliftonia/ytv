@@ -30,7 +30,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=gQZomCyCWuw",
                 "duration": 994,
-                "title": "Round 4 Highlights | 2026 BMW PGA Championship"
+                "title": "Round 4 Highlights | 2026 BMW PGA Championship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=CDd42l9fDRg",
@@ -50,7 +52,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nfcfIzs02l4",
                 "duration": 1298,
-                "title": "Crazy Golf Moments | January 2026 Edition"
+                "title": "Crazy Golf Moments | January 2026 Edition",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=3MSr89KDYIE",
@@ -88,7 +92,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TOUKU1M_wDY",
                 "duration": 653,
-                "title": "PGA Tour Highlights: 2026 Tour Championship, Final Round | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 Tour Championship, Final Round | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=F75xpkjlSAE",
@@ -348,12 +354,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=csv5WJHZfGc",
                 "duration": 908,
-                "title": "FULL HIGHLIGHTS | LIV Golf New York Round 3 | 2026"
+                "title": "FULL HIGHLIGHTS | LIV Golf New York Round 3 | 2026",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=9qkyQmsfyls",
                 "duration": 903,
-                "title": "Highlights: 2026 AIG Women's Open, Final Round | Golf on NBC Sports"
+                "title": "Highlights: 2026 AIG Women's Open, Final Round | Golf on NBC Sports",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=fqGczP9r3yA",
@@ -365,7 +375,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=k060ktWjZz8",
                 "duration": 700,
-                "title": "Highlights: 2026 U.S. Amateur Championship, Finals | Golf on NBC Sports"
+                "title": "Highlights: 2026 U.S. Amateur Championship, Finals | Golf on NBC Sports",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=dzU0y0eV7Xg",
@@ -394,7 +406,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FH2d2riWG6k",
                 "duration": 278,
-                "title": "NCAA Golf Highlights: 2026 Western Intercollegiate, Round Two | Golf Channel"
+                "title": "NCAA Golf Highlights: 2026 Western Intercollegiate, Round Two | Golf Channel",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=pJzE2XB5g0I",
@@ -546,7 +560,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=12rI2xU-H94",
                 "duration": 930,
-                "title": "UNFILTERED: Wednesday at the 2026 BMW PGA Championship"
+                "title": "UNFILTERED: Wednesday at the 2026 BMW PGA Championship",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=XtLLPoGglYs",
@@ -598,7 +614,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZjP_6iKFqb8",
                 "duration": 928,
-                "title": "Round 3 Highlights | FPO | 2026 Green Mountain Championship"
+                "title": "Round 3 Highlights | FPO | 2026 Green Mountain Championship",
+                "skip": [
+                    [
+                        431.7,
+                        461.7
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=T2ti6fl79kE",
@@ -636,7 +659,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yfGfq812sYE",
                 "duration": 797,
-                "title": "Round 3 Highlights | 2026 Amgen Irish Open"
+                "title": "Round 3 Highlights | 2026 Amgen Irish Open",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=9GoNBmq8pYU",

@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Qn9kWK6AqIA",
                 "duration": 2665,
-                "title": "Secret Sunken Cities (Full Episode) | Drain the Oceans Compilations | National Geographic"
+                "title": "Secret Sunken Cities (Full Episode) | Drain the Oceans Compilations | National Geographic",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
@@ -61,7 +63,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=vmRb-0v5xfI",
                 "duration": 6838,
-                "title": "The Eugenics Crusade | Full Documentary | AMERICAN EXPERIENCE | PBS"
+                "title": "The Eugenics Crusade | Full Documentary | AMERICAN EXPERIENCE | PBS",
+                "skip": [
+                    [
+                        192.5,
+                        213.2
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=a4VimQp4eT0",
@@ -71,7 +80,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
                 "duration": 2457,
-                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History"
+                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
@@ -104,12 +115,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=rU6DORQU--k",
                 "duration": 2532,
-                "title": "Inside the World's Most Mysterious Pyramids | The UnXplained"
+                "title": "Inside the World's Most Mysterious Pyramids | The UnXplained",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=MgWQKLtLtSU",
                 "duration": 1992,
-                "title": "Lost Civilizations Beyond History | Ancient Aliens"
+                "title": "Lost Civilizations Beyond History | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=koj-eJo2o-c",
@@ -222,7 +237,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1knIpTuzUW8",
                 "duration": 3236,
-                "title": "How Native Americans Read the Stars (And Built a Civilization) | Full Episode | Native America"
+                "title": "How Native Americans Read the Stars (And Built a Civilization) | Full Episode | Native America",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=vvYlta7PHzw",
@@ -248,7 +265,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4Bs47iEWuHc",
                 "duration": 2610,
-                "title": "Mob Betrayals from New York to Chicago (Full Episode) | Inside the American Mob Compilation"
+                "title": "Mob Betrayals from New York to Chicago (Full Episode) | Inside the American Mob Compilation",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
@@ -260,12 +279,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=sdrYGQh4doU",
                 "duration": 2428,
-                "title": "Death at Soho House | Full Episode"
+                "title": "Death at Soho House | Full Episode",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=sb_CJ6AiOq0",
                 "duration": 7496,
-                "title": "Double Lives | 48 Hours Full Episodes"
+                "title": "Double Lives | 48 Hours Full Episodes",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
@@ -334,7 +357,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jts5vTi2jco",
                 "duration": 7552,
-                "title": "Greed and Murder | 48 Hours Full Episodes"
+                "title": "Greed and Murder | 48 Hours Full Episodes",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=3mhEZa_Jrck",
@@ -396,7 +421,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rNTxOmdZuws",
                 "duration": 1315,
-                "title": "Aliens Were Already Here | Ancient Aliens"
+                "title": "Aliens Were Already Here | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=IzSfHV4dJ3c",
@@ -427,7 +454,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=QiHDQK5cJSE",
                 "duration": 2468,
-                "title": "Linas's Heart | Full Episode"
+                "title": "Linas's Heart | Full Episode",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Mww3arniyt0",

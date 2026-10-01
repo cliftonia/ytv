@@ -49,7 +49,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WSXLnIoRb-I",
                 "duration": 340,
-                "title": "BENSON BOONE - Mr Electric Blue (Live) | Montreux Jazz Festival 2025"
+                "title": "BENSON BOONE - Mr Electric Blue (Live) | Montreux Jazz Festival 2025",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=tPc2O8tCsg4",
@@ -80,7 +82,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=oweK8H40kZk",
                 "duration": 368,
-                "title": "Herbie Hancock - Chameleon (Live at Montreux Jazz Festival 2010)"
+                "title": "Herbie Hancock - Chameleon (Live at Montreux Jazz Festival 2010)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=XBDsq8yL8QA",
@@ -125,7 +129,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qtvvXHPGfCM",
                 "duration": 218,
-                "title": "The Version Sessions - Risk It All - (Soulful Jazz | Cover by Andre Valdez)"
+                "title": "The Version Sessions - Risk It All - (Soulful Jazz | Cover by Andre Valdez)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=5CYlK1w-Du4",
@@ -182,7 +188,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nodQdFeAxbo",
                 "duration": 276,
-                "title": "Al Jarreau – \"Take 5\" (Live) ft. Chick Corea | Jazz Day 2016, White House"
+                "title": "Al Jarreau – \"Take 5\" (Live) ft. Chick Corea | Jazz Day 2016, White House",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=DOsOLkQpGyA",
@@ -234,12 +242,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=XA6cmUqE1Fk",
                 "duration": 266,
-                "title": "Ain’t No Sunshine - Slava Attar Live Jazz🎤🔥"
+                "title": "Ain’t No Sunshine - Slava Attar Live Jazz🎤🔥",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=OgdhUTeccxM",
                 "duration": 404,
-                "title": "Kinga Głyk - ISLAND live Jazz in Marciac 2024"
+                "title": "Kinga Głyk - ISLAND live Jazz in Marciac 2024",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=tOr6tFkLoDM",
@@ -435,7 +447,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wDjeBNv6ip0",
                 "duration": 309,
-                "title": "LP - Lost On You (Live)"
+                "title": "LP - Lost On You (Live)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=KPLQY6SszzY",
@@ -519,12 +533,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=AL-nv-7TIws",
                 "duration": 254,
-                "title": "Amy Winehouse - Back To Black (Live at Other Voices, 2006)"
+                "title": "Amy Winehouse - Back To Black (Live at Other Voices, 2006)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=oGifQOx6TRk",
                 "duration": 389,
-                "title": "Rick Braun - Silk (live in studio)"
+                "title": "Rick Braun - Silk (live in studio)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=CCw-vcq2n4k",
@@ -748,7 +766,9 @@
                 "title": "Sylvia Vrethammar - It's All Right With Me • World of Jazz",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=GZ3zL7kT6_c",
@@ -906,7 +926,9 @@
                 "title": "Teddy Swims - Tennessee Whiskey (Live From Our Basement)",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=LgMCm5NWtII",
@@ -960,7 +982,9 @@
                 "title": "New York Jazz Repertory Company  - Cotton Tail (Live at Newport Jazz Festival New York New...",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=3ipXA9lJzc0",
@@ -1038,7 +1062,9 @@
                 "title": "🎵 Memory Remains - Melodyspot | Emotional Sad Ballad Love Song (Official Lyric Video)",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=RsKqMNDoR4o",
@@ -1170,7 +1196,14 @@
                 "title": "Lady Gaga - Always Remember Us This Way (from A Star Is Born) (Official Music Video)",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [
+                    [
+                        0.0,
+                        31.5
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=rGKfrgqWcv0",
@@ -1178,7 +1211,9 @@
                 "title": "Mumford & Sons - I Will Wait (Official Music Video)",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=dPjYkk0mTZI",
@@ -1279,7 +1314,9 @@
                 "title": "Dream Theater -  The Spirit Carries On (from Distant Memories - Live in London)",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=52nfjRzIaj8",
@@ -1305,7 +1342,9 @@
                 "title": "Bring Me The Horizon - Drown (Live) | Vevo Live Performance",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ifm00JEjSeo",
@@ -1465,7 +1504,9 @@
                 "title": "Ben&Ben - Leaves feat. Young K | Official Music Video",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
             }
         ],
         "search_query": "jazz live performance",

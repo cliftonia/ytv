@@ -30,7 +30,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GdeCxgNp11o",
                 "duration": 3845,
-                "title": "Experience the Universe's VIOLENT Extremes | How the Universe Works | Science Channel"
+                "title": "Experience the Universe's VIOLENT Extremes | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
@@ -47,7 +49,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Mz86UFPMC20",
                 "duration": 4190,
-                "title": "The Beginning and End of the Universe | How the Universe Works | Science Channel"
+                "title": "The Beginning and End of the Universe | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=QOOkS0E9whU",
@@ -133,7 +137,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
                 "duration": 2395,
-                "title": "Five Wonders of our Universe | Universe | BBC Earth Science"
+                "title": "Five Wonders of our Universe | Universe | BBC Earth Science",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=foSSrf5LiMg",
@@ -152,7 +158,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wn4e-gu3OuY",
                 "duration": 2208,
-                "title": "The World in 100 Years FULL EPISODE | Science Fiction Documentary"
+                "title": "The World in 100 Years FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=Q6ECB-aDibo",
@@ -214,7 +222,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
                 "duration": 3120,
-                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature"
+                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=pAouFljMuLg",
@@ -243,7 +253,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-WpfAd70chA",
                 "duration": 1812,
-                "title": "Daily Life on Mars  (2045) FULL EPISODE | Science Fiction Documentary"
+                "title": "Daily Life on Mars  (2045) FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=cYe4tF6NZco",
@@ -321,7 +333,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=w6tgLfzunLE",
                 "duration": 4395,
-                "title": "NOMADIC SURVIVAL - Savanna’s Most Brutal Conflict (Full Episode) | Nature animal documentary"
+                "title": "NOMADIC SURVIVAL - Savanna’s Most Brutal Conflict (Full Episode) | Nature animal documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=yBWhJyeprb4",
@@ -484,7 +498,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=uoEffocWP4A",
                 "duration": 3402,
-                "title": "What Happens If You Zoom All The Way Out?"
+                "title": "What Happens If You Zoom All The Way Out?",
+                "skip": [
+                    [
+                        176.7,
+                        255.0
+                    ]
+                ],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=FDtCJVlxbww",
@@ -503,7 +524,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2tWkxYQPmTY",
                 "duration": 924,
-                "title": "Fight for Survival, Death, and Predators (Full Episode) | Nature Animal Documentary"
+                "title": "Fight for Survival, Death, and Predators (Full Episode) | Nature Animal Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=ERuAafzcF8E",
@@ -571,7 +594,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0kdSw4bTuDk",
                 "duration": 2764,
-                "title": "Wild Ruaha | Africa's Toughest Fight for Survival | FULL EPISODE | Wildlife Documentary"
+                "title": "Wild Ruaha | Africa's Toughest Fight for Survival | FULL EPISODE | Wildlife Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=cMx139eTxoc",
@@ -640,7 +665,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=MI_ZA3M9zO0",
                 "duration": 1579,
-                "title": "Great Migration | Wild Ones | Episode 11 | Free Documentary Nature"
+                "title": "Great Migration | Wild Ones | Episode 11 | Free Documentary Nature",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=VLGFsrEw440",
@@ -676,7 +703,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=oha_Mtigd1k",
                 "duration": 2054,
-                "title": "The Last Generation That Had to Work | FULL EPISODE | Science Fiction Documentary"
+                "title": "The Last Generation That Had to Work | FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             }
         ],
         "search_query": "science documentary full episode",
