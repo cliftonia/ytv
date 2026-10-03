@@ -108,7 +108,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WWreUDT8mlw",
                 "duration": 2518,
-                "title": "Curious George 🐵Old McGeorgie Had  A Farm 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids"
+                "title": "Curious George 🐵Old McGeorgie Had  A Farm 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=UisLIsbHQaE",
@@ -134,7 +136,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=eEU0qWH4Ndg",
                 "duration": 1540,
-                "title": "Caillou at the Swimming Pool | Caillou Cartoon"
+                "title": "Caillou at the Swimming Pool | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=6DQrfYYnwi4",
@@ -146,12 +150,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=XVpDSxezAAs",
                 "duration": 1207,
-                "title": "Curious George 🐵  Bath Time! 🐵 20 Minute Show 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for"
+                "title": "Curious George 🐵  Bath Time! 🐵 20 Minute Show 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=jmzRlOyHNIM",
                 "duration": 314,
-                "title": "Curious George 🐵George's Simple Siphon 🐵Kids Cartoon🐵Kids Movies🐵Videos for Kids"
+                "title": "Curious George 🐵George's Simple Siphon 🐵Kids Cartoon🐵Kids Movies🐵Videos for Kids",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=qIe2zmQ5gjg",
@@ -288,7 +296,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SKD58CA9OOk",
                 "duration": 1474,
-                "title": "Curious George 🐵George and Allie's Automated Car Wash 🐵Kids Cartoon 🐵 Kids Movies | Videos"
+                "title": "Curious George 🐵George and Allie's Automated Car Wash 🐵Kids Cartoon 🐵 Kids Movies | Videos",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=BtyFAjItb4I",
@@ -363,7 +373,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=MPCyVOu2EuM",
                 "duration": 3516,
-                "title": "Curious George 🐵  George Goes Exploring 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for Kids"
+                "title": "Curious George 🐵  George Goes Exploring 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=KypGcCDqo-s",
@@ -408,7 +420,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=X-0vZeaIrFg",
                 "duration": 552,
-                "title": "Tome of the Unknown | Over The Garden Wall | Cartoon Network"
+                "title": "Tome of the Unknown | Over The Garden Wall | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=G60PiMIEbtQ",
@@ -418,7 +432,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VYPLgKGF-80",
                 "duration": 2458,
-                "title": "George Meets Nighttime Animals __ Curious George __ Kids Cartoon __ Videos for Kids"
+                "title": "George Meets Nighttime Animals __ Curious George __ Kids Cartoon __ Videos for Kids",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=oeUGVe7DNac",
@@ -437,7 +453,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=esh3q3aaP7Y",
                 "duration": 304,
-                "title": "Steven Universe: The Movie | True Kinda Love - Singalong | Cartoon Network UK 🇬🇧"
+                "title": "Steven Universe: The Movie | True Kinda Love - Singalong | Cartoon Network UK 🇬🇧",
+                "skip": [
+                    [
+                        283.7,
+                        303.7
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=WYpvPdGXahA",
@@ -604,7 +627,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xe_nG8W9wFg",
                 "duration": 1955,
-                "title": "Air Trafficking | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Nostalgic Cartoon"
+                "title": "Air Trafficking | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Nostalgic Cartoon",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=6Jfk1hZCIr4",
@@ -635,7 +660,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Sm2Z84kgBao",
                 "duration": 2658,
-                "title": "Bean PHONE 📱| (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy"
+                "title": "Bean PHONE 📱| (Mr Bean Cartoon) | Mr Bean Full Episodes | Mr Bean Comedy",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=vQHoWGVmv2k",

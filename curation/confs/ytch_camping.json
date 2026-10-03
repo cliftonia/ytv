@@ -102,7 +102,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tirfQ-BEXl4",
                 "duration": 1346,
-                "title": "Building a Survival Shelter Alone in the Deep Forest | Bushcraft Camping Adventure"
+                "title": "Building a Survival Shelter Alone in the Deep Forest | Bushcraft Camping Adventure",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=JITuu4uzzqs",
@@ -233,7 +235,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=682dDcNcCNM",
                 "duration": 1144,
-                "title": "Storm Destroyed the Forest - Building a Bushcraft Shelter & Camping 3 Days"
+                "title": "Storm Destroyed the Forest - Building a Bushcraft Shelter & Camping 3 Days",
+                "skip": [
+                    [
+                        1103.6,
+                        1112.8
+                    ],
+                    [
+                        1114.9,
+                        1131.2
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Zz7os_kWwnM",
@@ -292,7 +305,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RGx_JSOHaO0",
                 "duration": 1301,
-                "title": "Testing our 72 Hr Survival Kits While Camping in Crazy Storm"
+                "title": "Testing our 72 Hr Survival Kits While Camping in Crazy Storm",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=oT6E9TbwNMo",
@@ -337,7 +352,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=60TZIwEpjzo",
                 "duration": 1396,
-                "title": "Marriage Survival Camping! -22 Degrees with Wife & 3 Kids"
+                "title": "Marriage Survival Camping! -22 Degrees with Wife & 3 Kids",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=D49yg7TbpD4",
@@ -603,7 +620,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=XAHBTyACwFM",
                 "duration": 1573,
-                "title": "Rafting the Ice Flow & Solo Bushcraft Camping in Alaska"
+                "title": "Rafting the Ice Flow & Solo Bushcraft Camping in Alaska",
+                "skip": [
+                    [
+                        1562.6,
+                        1572.8
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=fDk_qV3Ins0",
@@ -712,7 +736,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3I5QUMzqVps",
                 "duration": 1389,
-                "title": "Setting Traps, Cooking Food and Upgrading Shelter Deep in the Rainforest | Survival Instin"
+                "title": "Setting Traps, Cooking Food and Upgrading Shelter Deep in the Rainforest | Survival Instin",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=gvXZyeTLJlk",
@@ -777,7 +803,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XAkYMoLtglA",
                 "duration": 3644,
-                "title": "Building a Tree Shelter by a Wild Lake | Solo Bushcraft Survival | FULL Movie"
+                "title": "Building a Tree Shelter by a Wild Lake | Solo Bushcraft Survival | FULL Movie",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=HuKEruLKF40",

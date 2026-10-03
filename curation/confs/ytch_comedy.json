@@ -61,7 +61,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XiSewRUOVyg",
                 "duration": 3898,
-                "title": "ALI SIDDIQ: MY FATHER  [Full Stand Up Comedy Special - 65 minutes]"
+                "title": "ALI SIDDIQ: MY FATHER  [Full Stand Up Comedy Special - 65 minutes]",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=JMYTrNs9feo",
@@ -73,12 +75,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=CDhlx3jyQLE",
                 "duration": 4202,
-                "title": "Still Trippin' | Steve Harvey Full Stand-Up Special"
+                "title": "Still Trippin' | Steve Harvey Full Stand-Up Special",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=xptOaD97HJA",
                 "duration": 3163,
-                "title": "Tyler Fischer LIVE IN PORTLAND | Full Comedy Special"
+                "title": "Tyler Fischer LIVE IN PORTLAND | Full Comedy Special",
+                "skip": [
+                    [
+                        3136.5,
+                        3162.6
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=TSi5zOfEaQE",
@@ -152,12 +163,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=tee4uI7BU64",
                 "duration": 4391,
-                "title": "Eddie Griffin: Undeniable (Full Show) | Legendary Stand-Up Comedy Special."
+                "title": "Eddie Griffin: Undeniable (Full Show) | Legendary Stand-Up Comedy Special.",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=3bvkoxZ6xcw",
                 "duration": 3917,
-                "title": "Anjelah Johnson-Reyes: Ugly Baby | Full Comedy Special"
+                "title": "Anjelah Johnson-Reyes: Ugly Baby | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=zTIuiOUakuo",
@@ -174,7 +189,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ftj16LX-sFE",
                 "duration": 4319,
-                "title": "Dan Cummins: Get Outta Here; Devil! (Full Show) | Dark & Unfiltered Stand-Up Comedy"
+                "title": "Dan Cummins: Get Outta Here; Devil! (Full Show) | Dark & Unfiltered Stand-Up Comedy",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=hEMJQakG6x8",
@@ -214,7 +231,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=svu0kFDLAwk",
                 "duration": 4198,
-                "title": "Miles Jupp - On I Bang | Full Comedy Special"
+                "title": "Miles Jupp - On I Bang | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=AKamQgLvb24",
@@ -226,7 +245,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=mbU59XyGqcE",
                 "duration": 3868,
-                "title": "This Comedian is GUARANTEED to Make You Smile | Mike Paramore Double Feature"
+                "title": "This Comedian is GUARANTEED to Make You Smile | Mike Paramore Double Feature",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Nr-_QHKGheM",
@@ -271,7 +292,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qzsHolR05hg",
                 "duration": 3349,
-                "title": "Pete Holmes | Silly Silly Fun Boy (Full Comedy Special)"
+                "title": "Pete Holmes | Silly Silly Fun Boy (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=XBrdMrbmz1c",
@@ -295,7 +318,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=pAMe4YEWxas",
                 "duration": 3001,
-                "title": "Joe Dombrowski | Dad on Arrival (Full Comedy Special)"
+                "title": "Joe Dombrowski | Dad on Arrival (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
@@ -429,7 +454,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=MSQ8p5CrvcM",
                 "duration": 3775,
-                "title": "ISMO | Hello (Full Comedy Special)"
+                "title": "ISMO | Hello (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=0E54LoeEdUc",
@@ -500,7 +527,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iiRrlRpLnD4",
                 "duration": 3707,
-                "title": "Connor Burns | Gallus (Full Comedy Special)"
+                "title": "Connor Burns | Gallus (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=DybW0Nf5g2g",
@@ -519,7 +548,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YZCMD1J0M3U",
                 "duration": 3493,
-                "title": "Jim Breuer: And Laughter For All (Full Show) | Seriously FUNNY Stand-Up Comedy Special"
+                "title": "Jim Breuer: And Laughter For All (Full Show) | Seriously FUNNY Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=nIMW_6BDoaY",

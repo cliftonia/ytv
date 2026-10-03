@@ -16,7 +16,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
                 "duration": 1860,
-                "title": "How The Economic Machine Works by Ray Dalio"
+                "title": "How The Economic Machine Works by Ray Dalio",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=2E0dWHCnic8",
@@ -35,7 +37,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=8H4yp8Fbi-Y",
                 "duration": 572,
-                "title": "The minimum wage: does it hurt workers?"
+                "title": "The minimum wage: does it hurt workers?",
+                "skip": [
+                    [
+                        547.5,
+                        571.4
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=tLfNUD0-8ts",
@@ -146,7 +155,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xbrUqNSffDU",
                 "duration": 1285,
-                "title": "The Economics of Owning a Bank"
+                "title": "The Economics of Owning a Bank",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=wOI8RuhW7q0",
@@ -229,7 +240,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=gg2mYcnjj0M",
                 "duration": 651,
-                "title": "The Economics of Owning a Casino"
+                "title": "The Economics of Owning a Casino",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=8RAYvVXun5I",
@@ -429,7 +442,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=HI6skJ4Wf5I",
                 "duration": 748,
-                "title": "Anthropic CEO reacts to 'AI could kill us all' warning"
+                "title": "Anthropic CEO reacts to 'AI could kill us all' warning",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=RFXGDJjApLk",
@@ -586,7 +601,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=n1jhoU9Mp_U",
                 "duration": 1800,
-                "title": "Why governments are 'addicted' to debt | FT Film"
+                "title": "Why governments are 'addicted' to debt | FT Film",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=phD8voYIR-k",
