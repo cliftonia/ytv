@@ -7,37 +7,20 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=Qjna7PROMZ8",
-                "duration": 3482,
-                "title": "Cultural Nihilism and the Rise of The Grifter",
+                "url": "https://www.youtube.com/watch?v=_p2xPW03Z78",
+                "duration": 2547,
+                "title": "what happened to \"good taste\"?",
                 "skip": [
                     [
-                        3478.8,
-                        3481.0
+                        0.0,
+                        5.0
+                    ],
+                    [
+                        368.1,
+                        419.1
                     ]
                 ],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nC1vdV1SGyc",
-                "duration": 1501,
-                "title": "Obsession & The Modern Male Adolescent (Video Essay)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=APOqxQExnuw",
-                "duration": 4684,
-                "title": "The internet is getting worse, and this is why | Video Essay",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bKCayy8RgIA",
-                "duration": 796,
-                "title": "When the comfy video essay is AI",
-                "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=He2K4WV3wyo",
@@ -52,79 +35,35 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=G8o5eWIAOAo",
-                "duration": 1117,
-                "title": "the death of sustainable fashion (video essay)",
-                "skip": [],
+                "url": "https://www.youtube.com/watch?v=e1q-TuHdc4Y",
+                "duration": 743,
+                "title": "Dear YouTube!",
+                "skip": [
+                    [
+                        730.9,
+                        732.9
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qjna7PROMZ8",
+                "duration": 3482,
+                "title": "Cultural Nihilism and the Rise of The Grifter",
+                "skip": [
+                    [
+                        3478.8,
+                        3481.0
+                    ]
+                ],
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=HuIklxc1bSI",
-                "duration": 1506,
-                "title": "This is a video essay about video essays",
-                "skip": [
-                    [
-                        16.2,
-                        22.0
-                    ],
-                    [
-                        526.8,
-                        609.3
-                    ]
-                ],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5FuxNr90T8o",
-                "duration": 4805,
-                "title": "the decline in literacy & rise in ai",
-                "skip": [
-                    [
-                        138.6,
-                        211.5
-                    ],
-                    [
-                        4609.1,
-                        4782.7
-                    ]
-                ],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rkAVo0hyUls",
-                "duration": 3371,
-                "title": "Why Tywin Lannister was a bad king (video essay)",
+                "url": "https://www.youtube.com/watch?v=cWxl8ClJ3Pg",
+                "duration": 1108,
+                "title": "I Didn’t Want To Make This Video.",
                 "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_QEnSSKLL48",
-                "duration": 2125,
-                "title": "How social media is slowly ruining society"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fTl6jO43P2M",
-                "duration": 2065,
-                "title": "How to actually get smarter (again)",
-                "skip": [
-                    [
-                        369.7,
-                        476.7
-                    ]
-                ],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SqdtRnjK_qM",
-                "duration": 4041,
-                "title": "Clavicular and the Evolution of Incel Culture",
-                "skip": [
-                    [
-                        1765.2,
-                        1891.3
-                    ]
-                ],
-                "skip_checked": 1790451053
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=m9315GIr2l0",
@@ -134,56 +73,9 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=FC1aIGJAEYA",
-                "duration": 1009,
-                "title": "What's Replacing Video Essays?",
-                "skip": [
-                    [
-                        249.1,
-                        310.0
-                    ]
-                ],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yuKXxHgZpdI",
-                "duration": 1885,
-                "title": "Finally a video essay that's not written by AI!",
-                "skip": [
-                    [
-                        507.1,
-                        625.7
-                    ],
-                    [
-                        1842.4,
-                        1856.5
-                    ]
-                ],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=itSlOoKo1t0",
-                "duration": 983,
-                "title": "Video Essay Creep",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6QohuOWXfKk",
-                "duration": 1274,
-                "title": "A Video Essay About Minecraft"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Sjlwh3VClug",
-                "duration": 2155,
-                "title": "Difficult women? Or a difficult system? | Female rage & shame in 2026"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=baZU_g-sRXY",
-                "duration": 1917,
-                "title": "Video Essays and You(Tube)",
-                "skip": [],
-                "skip_checked": 1790280952
+                "url": "https://www.youtube.com/watch?v=YE6SVeVJmDU",
+                "duration": 3927,
+                "title": "Wolverine - The Game That Thinks You're Stupid"
             },
             {
                 "url": "https://www.youtube.com/watch?v=NJZ5YNrXMpE",
@@ -210,43 +102,220 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=WI02gZJUkyA",
-                "duration": 3685,
-                "title": "The Homoeroticism of Female Rivalry - (video essay)",
-                "skip": [],
-                "skip_checked": 1790538994
+                "url": "https://www.youtube.com/watch?v=7q-HVVtlDQ0",
+                "duration": 1097,
+                "title": "Why is Everything Spicy Now?"
             },
             {
-                "url": "https://www.youtube.com/watch?v=A778TAHB9hw",
-                "duration": 2128,
-                "title": "How to Write Video Essays",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4GoMzPlDT5k",
-                "duration": 3301,
-                "title": "Dead Internet Theory Came True",
+                "url": "https://www.youtube.com/watch?v=nC1vdV1SGyc",
+                "duration": 1501,
+                "title": "Obsession & The Modern Male Adolescent (Video Essay)",
                 "skip": [],
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=i_j7wjcgzEw",
-                "duration": 890,
-                "title": "The Neo-Noir Genre in Movies | Video Essay",
+                "url": "https://www.youtube.com/watch?v=E545idc9rB0",
+                "duration": 2124,
+                "title": "explaining Taylor Swift’s diabolical songs + the VMAs mess if you’re employed and wanna know the tea",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=APOqxQExnuw",
+                "duration": 4684,
+                "title": "The internet is getting worse, and this is why | Video Essay",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HuIklxc1bSI",
+                "duration": 1506,
+                "title": "This is a video essay about video essays",
                 "skip": [
                     [
-                        112.2,
-                        116.8
+                        16.2,
+                        22.0
+                    ],
+                    [
+                        526.8,
+                        609.3
                     ]
                 ],
-                "skip_checked": 1790538994
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SqdtRnjK_qM",
+                "duration": 4041,
+                "title": "Clavicular and the Evolution of Incel Culture",
+                "skip": [
+                    [
+                        1765.2,
+                        1891.3
+                    ]
+                ],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_QEnSSKLL48",
+                "duration": 2125,
+                "title": "How social media is slowly ruining society"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lk8hF1xjGpg",
+                "duration": 821,
+                "title": "The 2026 VMAs were a HOT MESS",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rkAVo0hyUls",
+                "duration": 3371,
+                "title": "Why Tywin Lannister was a bad king (video essay)",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fTl6jO43P2M",
+                "duration": 2065,
+                "title": "How to actually get smarter (again)",
+                "skip": [
+                    [
+                        369.7,
+                        476.7
+                    ]
+                ],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=SbMo3clQwbs",
                 "duration": 1281,
                 "title": "Title Fight are never coming back (a video essay)",
                 "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=itSlOoKo1t0",
+                "duration": 983,
+                "title": "Video Essay Creep",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NJvb35Q2VRs",
+                "duration": 2965,
+                "title": "The Most Disappointing Horror Release of 2026 (A Welcome to the Game 3 Analysis)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yuKXxHgZpdI",
+                "duration": 1885,
+                "title": "Finally a video essay that's not written by AI!",
+                "skip": [
+                    [
+                        507.1,
+                        625.7
+                    ],
+                    [
+                        1842.4,
+                        1856.5
+                    ]
+                ],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sjlwh3VClug",
+                "duration": 2155,
+                "title": "Difficult women? Or a difficult system? | Female rage & shame in 2026"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FC1aIGJAEYA",
+                "duration": 1009,
+                "title": "What's Replacing Video Essays?",
+                "skip": [
+                    [
+                        249.1,
+                        310.0
+                    ]
+                ],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y-gzUMmy_GE",
+                "duration": 1839,
+                "title": "Beauty has a new face and it's terrifying",
+                "skip": [
+                    [
+                        426.8,
+                        542.4
+                    ]
+                ],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mw3kSNIxjqo",
+                "duration": 313,
+                "title": "Taylor Swift - Patient Zero (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G8o5eWIAOAo",
+                "duration": 1117,
+                "title": "the death of sustainable fashion (video essay)",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GQNn68HGQPk",
+                "duration": 1079,
+                "title": "Making the Worst Video Essay Possible",
+                "skip": [
+                    [
+                        342.0,
+                        437.2
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-wDUp1_WNPk",
+                "duration": 667,
+                "title": "Video Essay: \"Loving the Monster\" | CAMP MIASMA | MUBI",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bKCayy8RgIA",
+                "duration": 796,
+                "title": "When the comfy video essay is AI",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GAS12776T8M",
+                "duration": 527,
+                "title": "I hate being attached.",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lbmQfm0FSNo",
+                "duration": 792,
+                "title": "My Thoughts on Primetime"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5FuxNr90T8o",
+                "duration": 4805,
+                "title": "the decline in literacy & rise in ai",
+                "skip": [
+                    [
+                        138.6,
+                        211.5
+                    ],
+                    [
+                        4609.1,
+                        4782.7
+                    ]
+                ],
                 "skip_checked": 1790890293
             },
             {
@@ -262,69 +331,63 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=rVr3Fa-IQSk",
-                "duration": 2045,
-                "title": "Why Jordan Peterson Makes No Sense - A Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pN30Zs1RKWY",
-                "duration": 669,
-                "title": "A Video Essay On Terrible Video Essays",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4qc-KOw-OzA",
-                "duration": 1393,
-                "title": "This Film Contains Flashing Images: A video essay about rave culture"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=_BwPByyVn1I",
                 "duration": 2751,
-                "title": "Morality and BoJack Horseman"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mugOoj-Cvms",
-                "duration": 1212,
-                "title": "When Video Games Were Simple",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XdJdafUAYFQ",
-                "duration": 2838,
-                "title": "a video essay about I Saw the TV Glow"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DIizCPGP8mE",
-                "duration": 2261,
-                "title": "ls Pearl More Than a Pearl? (Steven Universe Video Essay)",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Efkay4fqKeo",
-                "duration": 791,
-                "title": "But Black Dynamite... i like being a Video Essay Creep!"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zkmhyn5RMyw",
-                "duration": 1724,
-                "title": "Minecraft but it's a video essay about Minecraft ARGs and horror",
+                "title": "Morality and BoJack Horseman",
                 "skip": [
                     [
-                        1098.2,
-                        1111.8
+                        2710.8,
+                        2717.1
                     ]
                 ],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=DxxMPCeTYtY",
-                "duration": 1992,
-                "title": "when being offline becomes a luxury",
+                "url": "https://www.youtube.com/watch?v=rEFgWjRVWrE",
+                "duration": 656,
+                "title": "I Listened to the New Taylor Swift Songs",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pXtBFiF_32k",
+                "duration": 2280,
+                "title": "the death of personal style",
+                "skip": [
+                    [
+                        0.0,
+                        4.8
+                    ],
+                    [
+                        132.2,
+                        174.4
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ZqolNRkxvM",
+                "duration": 2486,
+                "title": "Decoding the Zodiac Killer",
+                "skip": [
+                    [
+                        269.0,
+                        349.8
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_j0BaXCMvms",
+                "duration": 2168,
+                "title": "The Race To Be The \"Skinniest\" Is Back...And We're All Dying To Win.",
+                "skip": [
+                    [
+                        733.2,
+                        816.2
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=OfLuBSS--qI",
@@ -334,44 +397,161 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=TfGP15IKseI",
-                "duration": 357,
-                "title": "How To Make A Video Essay: Writing",
+                "url": "https://www.youtube.com/watch?v=nA19l02VVRs",
+                "duration": 1355,
+                "title": "The Endgame Encore Doomsday Scenes Are WEIRD",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ssTJtC7Zkb8",
+                "duration": 2137,
+                "title": "Why Gen Z would rather die alone than join the dating scene 💀",
+                "skip": [
+                    [
+                        455.0,
+                        602.4
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZBLqQZ4JAPU",
+                "duration": 2048,
+                "title": "5 Things We Normalize and Overconsume Without Question",
+                "skip": [
+                    [
+                        2039.5,
+                        2045.0
+                    ]
+                ],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=baZU_g-sRXY",
+                "duration": 1917,
+                "title": "Video Essays and You(Tube)",
                 "skip": [],
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=ELIiMGUPbR0",
-                "duration": 744,
-                "title": "This is Ruining Movies | a video essay",
+                "url": "https://www.youtube.com/watch?v=toiszgy31qE",
+                "duration": 1393,
+                "title": "You Understood Resident Evil (2026) Completely Wrong",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=yvxLN6HoR3E",
-                "duration": 630,
-                "title": "Equinox and the Trap of Centrism | Batman: The Brave and the Bold",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bzSliqJ5Q9Q",
-                "duration": 979,
-                "title": "Why Marty Supreme is a Modern American Epic | Video Essay",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=y-gzUMmy_GE",
-                "duration": 1839,
-                "title": "Beauty has a new face and it's terrifying",
+                "url": "https://www.youtube.com/watch?v=PZ9JCZececc",
+                "duration": 1339,
+                "title": "How To Make A Video Essay",
                 "skip": [
                     [
-                        426.8,
-                        542.4
+                        768.8,
+                        775.8
+                    ],
+                    [
+                        1237.4,
+                        1331.7
                     ]
                 ],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SPOCZDgRByU",
+                "duration": 2620,
+                "title": "Penny Carson is a Victim! (Bojack Horseman Video Essay)",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AAGIi62-sAU",
+                "duration": 2023,
+                "title": "Prohibition - OverSimplified",
+                "skip": [
+                    [
+                        0.0,
+                        12.6
+                    ],
+                    [
+                        726.4,
+                        802.0
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pN30Zs1RKWY",
+                "duration": 669,
+                "title": "A Video Essay On Terrible Video Essays",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cqbleas1mmo",
+                "duration": 1264,
+                "title": "The Russian Revolution - OverSimplified (Part 1)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3hw_y9hI_js",
+                "duration": 480,
+                "title": "What Your Early Twenties Will Be Like",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ewLpXw6uN28",
+                "duration": 1607,
+                "title": "Henry VIII - OverSimplified"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MajfZIyHP8U",
+                "duration": 2719,
+                "title": "24. Suicide, Part I: The rationality of suicide",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WI02gZJUkyA",
+                "duration": 3685,
+                "title": "The Homoeroticism of Female Rivalry - (video essay)",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aUYSDEYdmzw",
+                "duration": 560,
+                "title": "What it takes to be a great leader | Roselinde Torres | TED",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8qRZcXIODNU",
+                "duration": 1074,
+                "title": "The French Revolution - OverSimplified (Part 1)",
+                "skip": [
+                    [
+                        0.0,
+                        21.4
+                    ],
+                    [
+                        996.3,
+                        1060.1
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=imNtSPM3-r4",
+                "duration": 2423,
+                "title": "All Tomorrows: the future of humanity?",
+                "skip": [
+                    [
+                        2364.8,
+                        2407.2
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=gnG0gBLnYDQ",
@@ -381,124 +561,72 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=vbzi5W90ofc",
-                "duration": 907,
-                "title": "Awesome MBA Video Essay Advice | For Kellogg, Yale And More!",
-                "skip": [],
-                "skip_checked": 1790890293
+                "url": "https://www.youtube.com/watch?v=hhjhU5MXZOo",
+                "duration": 2139,
+                "title": "The Strangest Drug Ever Studied",
+                "skip": [
+                    [
+                        229.9,
+                        292.9
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=l9FsCO7V5gQ",
-                "duration": 2142,
-                "title": "What is ROT? - Cult of the Lamb: Woolhaven Video Essay",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vYcSAXv0irc",
-                "duration": 580,
-                "title": "Massolit Video Essay Competition First Place- The European Witch Craze: A Manifestation Of",
+                "url": "https://www.youtube.com/watch?v=TfGP15IKseI",
+                "duration": 357,
+                "title": "How To Make A Video Essay: Writing",
                 "skip": [],
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=Srn86Hc34ds",
-                "duration": 771,
-                "title": "The Disturbing Rise of Dark Patterns",
+                "url": "https://www.youtube.com/watch?v=xNewd0IF2gI",
+                "duration": 3967,
+                "title": "Nintendo GameCube: Shaping a Generation - Scott The Woz",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uRDy4M5jI-g",
+                "duration": 920,
+                "title": "Becoming Your True Self - The Psychology of Carl Jung",
                 "skip": [
                     [
-                        258.1,
-                        317.1
+                        0.0,
+                        11.0
+                    ],
+                    [
+                        791.9,
+                        919.2
                     ]
                 ],
-                "skip_checked": 1790538994
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=9jlPBPv8CVY",
-                "duration": 1285,
-                "title": "the myth of live vocals: a video essay",
+                "url": "https://www.youtube.com/watch?v=zrn3Kn5Nu8w",
+                "duration": 391,
+                "title": "Lanterns Solved Our \"Black Superhero\" Problem",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=2meKwMIWGlw",
-                "duration": 389,
-                "title": "Watch THIS Before Starting Your Common App Essay"
+                "url": "https://www.youtube.com/watch?v=arJLy3hX1E8",
+                "duration": 310,
+                "title": "The psychology of narcissism - W. Keith Campbell",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=UuOWNNvupik",
-                "duration": 261,
-                "title": "How to Write an Essay: 4 Minute Step-by-step Guide | Scribbr 🎓"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5aHDl29aQVU",
-                "duration": 597,
-                "title": "How I Make Video Essays | Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7q-HVVtlDQ0",
-                "duration": 1097,
-                "title": "Why is Everything Spicy Now?"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jgt-Js2FP-s",
-                "duration": 706,
-                "title": "How Context Killed How I Met Your Mother | A Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Wn1uewM-aQ",
-                "duration": 717,
-                "title": "Spider-Man: Homecoming is a Bad SPIDER-MAN Movie (Video Essay)",
+                "url": "https://www.youtube.com/watch?v=Vtkv3-endYc",
+                "duration": 286,
+                "title": "Why should you read “Crime and Punishment”? - Alex Gendler",
                 "skip": [
                     [
-                        691.0,
-                        716.6
+                        264.9,
+                        286.0
                     ]
                 ],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3FOzD4Sfgag",
-                "duration": 480,
-                "title": "Edgar Wright - How to Do Visual Comedy",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m-G9VftuqI8",
-                "duration": 1058,
-                "title": "Misogynoir, Desirability, and White Anxiety in Ma (2019) | Video Essay",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Qd2ZqNm2gwM",
-                "duration": 793,
-                "title": "The Knicks' Title Is Just the Start [Video Essay]",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p4ml1XPtOXQ",
-                "duration": 437,
-                "title": "Why Retro Graphics Still Work  | Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kYcPpD3H9kk",
-                "duration": 758,
-                "title": "Analyzing Walt's Moral Thought Process - Breaking Bad Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9uAAcnPoGEE",
-                "duration": 362,
-                "title": "How Céline Sciamma Depicts Queer Love in Water Lilies (Video Essay)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VMLej6hFN30",
-                "duration": 475,
-                "title": "Heat: The Perfect Blend of Realism and Style",
-                "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=tlYDCuJ-c8s",
@@ -517,94 +645,124 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=o9aVjBHEEbU",
-                "duration": 879,
-                "title": "How to write a good essay: Paraphrasing the question"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PMpPdP_lb8g",
-                "duration": 1033,
-                "title": "We Forgot The Meaning of Halloween",
-                "skip": [
-                    [
-                        403.7,
-                        412.5
-                    ]
-                ],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t106nKQDYzM",
-                "duration": 832,
-                "title": "when stalking is excused | a bts video essay",
+                "url": "https://www.youtube.com/watch?v=UuOWNNvupik",
+                "duration": 261,
+                "title": "How to Write an Essay: 4 Minute Step-by-step Guide | Scribbr 🎓",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=a3Yr1jI08U0",
-                "duration": 482,
-                "title": "Resident Evil (2026) Full Movie Recap",
+                "url": "https://www.youtube.com/watch?v=XdJdafUAYFQ",
+                "duration": 2838,
+                "title": "a video essay about I Saw the TV Glow",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=4G6Ltrz5fv8",
-                "duration": 2583,
-                "title": "Mary Shelley Literally Wrote Two Frankensteins: A Comparative Analysis | Video Essay",
+                "url": "https://www.youtube.com/watch?v=SA7AIQw-7Ms",
+                "duration": 287,
+                "title": "G-Eazy & Halsey - Him & I (Official Video)",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=Olt57docm10",
-                "duration": 422,
-                "title": "Cognitive offloading to AI: how bad will it get? | Animated video essay",
-                "skip": [],
-                "skip_checked": 1790451053
+                "url": "https://www.youtube.com/watch?v=EKF6ghfcQic",
+                "duration": 257,
+                "title": "Avril Lavigne - Head Above Water (Official Video)"
             },
             {
-                "url": "https://www.youtube.com/watch?v=bn0gmu_m-os",
-                "duration": 2378,
-                "title": "you're wrong about k-pop: a video essay",
-                "skip": [
-                    [
-                        2304.9,
-                        2377.3
-                    ]
-                ],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UOOwMffD6ak",
-                "duration": 472,
-                "title": "Why Dybbuk is Objectively Bad Boss Design (Mewgenics Video Essay)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SqNEr7hMbO0",
-                "duration": 369,
-                "title": "Video Essay #1",
+                "url": "https://www.youtube.com/watch?v=wtCtLN9Lcuk",
+                "duration": 1135,
+                "title": "How to Easily Beat the GED Language Arts Extended Response Essay!",
                 "skip": [],
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=pXtBFiF_32k",
-                "duration": 2280,
-                "title": "the death of personal style"
+                "url": "https://www.youtube.com/watch?v=zkmhyn5RMyw",
+                "duration": 1724,
+                "title": "Minecraft but it's a video essay about Minecraft ARGs and horror",
+                "skip": [
+                    [
+                        1098.2,
+                        1111.8
+                    ]
+                ],
+                "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=BpMTaDeAL5Y",
-                "duration": 2013,
-                "title": "Kids Don't Cut Themselves On Trees Anymore",
+                "url": "https://www.youtube.com/watch?v=YSdiCTmBt0c",
+                "duration": 755,
+                "title": "Kira Talent Interview - Video Essay: What They're REALLY Looking For (And How to Improve FAST!)",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=rNl__l0Fd5E",
-                "duration": 825,
-                "title": "Did Aidan See it Coming? || SATC Video Essay",
+                "url": "https://www.youtube.com/watch?v=ENAqorXElbw",
+                "duration": 914,
+                "title": "The Most Failed Game That Ever Failed",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_l09H-3zzgA",
+                "duration": 266,
+                "title": "The Strokes - Under Cover of Darkness (Official Video)"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-LoV_Is4s_A",
+                "duration": 252,
+                "title": "How to REMEMBER Everything You STUDY",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zj4QH5u1q30",
+                "duration": 896,
+                "title": "American (Fever) Dream: Fear and Loathing in Las Vegas",
+                "skip": [
+                    [
+                        1.1,
+                        4.2
+                    ],
+                    [
+                        759.5,
+                        831.5
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sigJwoeU6OI",
+                "duration": 439,
+                "title": "How to Do Research",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IuTDuvYr7f0",
+                "duration": 2290,
+                "title": "How to Spend 14 Days in Japan  - A Japan Travel Itinerary",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6eNjHz4Q3hQ",
+                "duration": 4535,
+                "title": "Helluva Boss is Incredibly Painful to Watch | Video Essay",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rVr3Fa-IQSk",
+                "duration": 2045,
+                "title": "Why Jordan Peterson Makes No Sense - A Video Essay",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Efkay4fqKeo",
+                "duration": 791,
+                "title": "But Black Dynamite... i like being a Video Essay Creep!"
             },
             {
                 "url": "https://www.youtube.com/watch?v=CAFMXrMl23c",
@@ -612,6 +770,20 @@
                 "title": "Ip Man 4: How to Write Racism | Video Essay",
                 "skip": [],
                 "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hg3umXU_qWc",
+                "duration": 1816,
+                "title": "We should all be feminists | Chimamanda Ngozi Adichie | TEDxEuston",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CB5DMtcDD8c",
+                "duration": 831,
+                "title": "Why Robot Dreams Moves Me So Deeply | Video Essay",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=GNL1_tNTqpw",
@@ -630,165 +802,102 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=xSNn43p8Oo0",
-                "duration": 988,
-                "title": "Love or Limerence? || SATC Video Essay",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bEvgrIdoLVo",
-                "duration": 263,
-                "title": "video essay",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ccMWgU5hl4U",
-                "duration": 770,
-                "title": "when two guys wrote a crazyyy movie...and it broke hollywood",
+                "url": "https://www.youtube.com/watch?v=i_j7wjcgzEw",
+                "duration": 890,
+                "title": "The Neo-Noir Genre in Movies | Video Essay",
                 "skip": [
                     [
-                        68.8,
-                        77.2
-                    ],
-                    [
-                        699.7,
-                        761.9
+                        112.2,
+                        116.8
                     ]
                 ],
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=XpHfjAIlfLc",
-                "duration": 1212,
-                "title": "We Will Lose the Next War: a short video essay"
+                "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
+                "duration": 3213,
+                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS"
             },
             {
-                "url": "https://www.youtube.com/watch?v=O9k-0LGZp-E",
-                "duration": 1344,
-                "title": "The END of Underground Rap's Most Disturbing Predator | Xavier Wulf",
+                "url": "https://www.youtube.com/watch?v=mK40qogSdFI",
+                "duration": 366,
+                "title": "The Story Behind Dolly Parton’s “I Will Always Love You” - Drunk History",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=gLOxQxMnEz8",
-                "duration": 2674,
-                "title": "Bright: The Apotheosis of Lazy Worldbuilding | Video Essay",
+                "url": "https://www.youtube.com/watch?v=Eb6-kN-wjAc",
+                "duration": 1129,
+                "title": "How to Write a Grade 9 Inspector Calls Essay (Every Quote Included)",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=0jyyxfuLSog",
-                "duration": 767,
-                "title": "Why Didn't They Get Back Together? || SATC Video Essay",
-                "skip": [],
-                "skip_checked": 1790193353
+                "url": "https://www.youtube.com/watch?v=o9aVjBHEEbU",
+                "duration": 879,
+                "title": "How to write a good essay: Paraphrasing the question"
             },
             {
-                "url": "https://www.youtube.com/watch?v=Xmo2TWomtW8",
-                "duration": 917,
-                "title": "NAVI Might GENUINELY Miss The Major.. - StarLadder Fall 2026",
-                "skip": [],
-                "skip_checked": 1790367139
+                "url": "https://www.youtube.com/watch?v=xFqecEtdGZ0",
+                "duration": 430,
+                "title": "Can we create the \"perfect\" farm? - Brent Loken",
+                "skip": [
+                    [
+                        403.1,
+                        429.1
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=ygRyqvKs1vQ",
-                "duration": 497,
-                "title": "Every Trans Videogame Essay",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wtCtLN9Lcuk",
-                "duration": 1135,
-                "title": "How to Easily Beat the GED Language Arts Extended Response Essay!",
+                "url": "https://www.youtube.com/watch?v=VMLej6hFN30",
+                "duration": 475,
+                "title": "Heat: The Perfect Blend of Realism and Style",
                 "skip": [],
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=kcs3ygVvgCk",
-                "duration": 3740,
-                "title": "A Short Video Essay on Loot"
+                "url": "https://www.youtube.com/watch?v=5RCjs3zeOjo",
+                "duration": 1480,
+                "title": "How To Write PERFECT PTE Essay | Score 90/90 Every Time 🔥",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=kgnJkoFNjTE",
-                "duration": 775,
-                "title": "Doom Guy and Isabelle are MARRIED? | Video Essay (2026)",
+                "url": "https://www.youtube.com/watch?v=NnnZ6y1HPqI",
+                "duration": 288,
+                "title": "Why should you read “Lord of the Flies” by William Golding? - Jill Dash",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zjK7PWmRRyg",
+                "duration": 1026,
+                "title": "The Industrial Revolution: Crash Course European History #24",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZX9X7S33OuM",
+                "duration": 3583,
+                "title": "1st PUC English Full Revision All Important Questions For Midterm Exam 2026-27 In One Video"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vbzi5W90ofc",
+                "duration": 907,
+                "title": "Awesome MBA Video Essay Advice | For Kellogg, Yale And More!",
                 "skip": [],
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=WilfG267lws",
-                "duration": 671,
-                "title": "Why Everyone Underrated Naomi Scott in Smile 2 | Video Essay",
+                "url": "https://www.youtube.com/watch?v=iRYZjOuUnlU",
+                "duration": 619,
+                "title": "The Israel-Palestine conflict: a brief, simple history",
                 "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IqWtsIWTGl8",
-                "duration": 396,
-                "title": "Twilight: Exploring Gender Within the Film and Fanbase (Video Essay)"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bKjK3KG0R7E",
-                "duration": 594,
-                "title": "How To Write The Perfect Macbeth GCSE Essay On The Theme Of “Supernatural” | 2026 GCSE Eng",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BeLc21XmxE4",
-                "duration": 1425,
-                "title": "Frank Ocean's Endless: A Deep Dive (Video Essay)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6eNjHz4Q3hQ",
-                "duration": 4535,
-                "title": "Helluva Boss is Incredibly Painful to Watch | Video Essay",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZBLqQZ4JAPU",
-                "duration": 2048,
-                "title": "5 Things We Normalize and Overconsume Without Question",
-                "skip": [
-                    [
-                        2039.5,
-                        2045.0
-                    ]
-                ],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1KAdvYW1aFI",
-                "duration": 4980,
-                "title": "Trauma, Abuse, & Lingua Ignota | Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z2fl4OX6tm0",
-                "duration": 511,
-                "title": "Diablo 3 Is S-Tier Brain Rot For Adults",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a4LdOTy0keQ",
-                "duration": 2171,
-                "title": "Love and Basketball: A Game of Misogyny | Video Essay"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=701CeXABtq8",
-                "duration": 338,
-                "title": "Can analog hobbies actually fix your digital overload? │Animated video essay",
-                "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
             }
         ],
         "search_query": "video essay",
-        "last_refreshed": 1789844790
+        "last_refreshed": 1791056260
     }
 }

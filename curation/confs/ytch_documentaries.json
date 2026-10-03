@@ -44,7 +44,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
                 "duration": 1623,
-                "title": "CAUTION!!! This Case Made ME Question HUMANITY - True Crime Documentary"
+                "title": "CAUTION!!! This Case Made ME Question HUMANITY - True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=-LeWWkdzk_E",
@@ -68,7 +70,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=H6gNfDl-Fss",
                 "duration": 3196,
-                "title": "How the U.S. Built a Hidden Anti-Terror Apparatus After 9/11 (full documentary) | FRONTLINE (PBS)"
+                "title": "How the U.S. Built a Hidden Anti-Terror Apparatus After 9/11 (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
@@ -108,7 +112,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
                 "duration": 2524,
-                "title": "The Millionaire, the Model and the Hit Man | Full Episode"
+                "title": "The Millionaire, the Model and the Hit Man | Full Episode",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=WRUZc23hv0Y",
@@ -232,7 +238,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=C6gcwTz_85s",
                 "duration": 4998,
-                "title": "Examining U.S.-Saudi Ties | The Crown Prince & the President (full documentary) | FRONTLINE (PBS)"
+                "title": "Examining U.S.-Saudi Ties | The Crown Prince & the President (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=KLqA_weQ1Mk",
@@ -283,7 +291,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Vrtbxvefnjs",
                 "duration": 5442,
-                "title": "Antarctica (2026) The Forbidden Continent That Holds Earth's True History"
+                "title": "Antarctica (2026) The Forbidden Continent That Holds Earth's True History",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=gtsIvfyJic0",
@@ -293,7 +303,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=HNF4ZL7Qzyw",
                 "duration": 8378,
-                "title": "Sir David Attenborough:  The True Scale of the Universe From Earth | Full Documentary Movie"
+                "title": "Sir David Attenborough:  The True Scale of the Universe From Earth | Full Documentary Movie",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=2iTMt2lfR9k",
@@ -384,7 +396,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yTvJCJ2FHlo",
                 "duration": 5054,
-                "title": "Ezekiel – The Movie (2026) | The Valley of Dry Bones | Full Biblical Movie in 4K"
+                "title": "Ezekiel – The Movie (2026) | The Valley of Dry Bones | Full Biblical Movie in 4K",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=_qpXYOc2RN8",
@@ -522,12 +536,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=qWl6yjyWPT8",
                 "duration": 2665,
-                "title": "Why Ancient Egyptians Abandoned the Pyramids (Full Episode) | Lost Treasures of Egypt | Nat Geo"
+                "title": "Why Ancient Egyptians Abandoned the Pyramids (Full Episode) | Lost Treasures of Egypt | Nat Geo",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=FMxLJ17Z58w",
                 "duration": 4279,
-                "title": "The Entire History of Warren Buffett | 2026 Documentary"
+                "title": "The Entire History of Warren Buffett | 2026 Documentary",
+                "skip": [
+                    [
+                        1148.6,
+                        1237.9
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
@@ -619,7 +642,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6fXtYh_JBm0",
                 "duration": 2790,
-                "title": "9/11 Interview with George W. Bush (Full Episode) | Documentary Special | National Geographic"
+                "title": "9/11 Interview with George W. Bush (Full Episode) | Documentary Special | National Geographic",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=9QhqHP5nagI",
@@ -638,7 +663,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=eTEdKrJ1DhI",
                 "duration": 2665,
-                "title": "Lost in the Bermuda Triangle (Full Episode) | Witness to Disaster | National Geographic"
+                "title": "Lost in the Bermuda Triangle (Full Episode) | Witness to Disaster | National Geographic",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=gAVy13IATVU",
@@ -669,7 +696,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=dBPHMR5BVqU",
                 "duration": 6801,
-                "title": "Inside the Polarization | Divided States of America Part 1 (full documentary) | FRONTLINE (PBS)"
+                "title": "Inside the Polarization | Divided States of America Part 1 (full documentary) | FRONTLINE (PBS)",
+                "skip": [
+                    [
+                        6718.4,
+                        6739.4
+                    ],
+                    [
+                        6748.9,
+                        6755.7
+                    ],
+                    [
+                        6764.3,
+                        6778.7
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=CsvoX7ZNFw0",
@@ -1046,7 +1088,9 @@
                 "title": "A Trash Truck Christmas FULL EPISODE 🎅 Netflix Jr",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=JQmx8t2Ijtk",
@@ -1120,7 +1164,9 @@
                 "title": "Emmerdale Full Episode | Friday 18th September 2026",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=QBrXhAfYbyc",
@@ -1255,7 +1301,9 @@
                 "title": "YANUNI | Inside the Battle for the Amazon | Oscar® Shortlisted Documentary Feature Film",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=oM9WfDBRNcg",
@@ -1263,7 +1311,9 @@
                 "title": "UFO's Are Real | FULL MOVIE | Aliens Sci-Fi Documentary",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wj8DsOcdNCs",
@@ -1299,7 +1349,9 @@
                 "title": "MERMAID: Curse of the Sunken Kingdom | Full Movie English 2026 | Dark Fantasy Survival | 4K",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=iuxqsBmMq6k",
@@ -1438,7 +1490,9 @@
                 "title": "Fallout: Echos of the Wasteland - Award Winning Fan Film 2026 - Feature Length Fallout Movie",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=1M074QZtX3c",
@@ -1534,7 +1588,9 @@
                 "title": "A CRACK IN THE FLOOR 🎬 Full Slasher Horror Movie 🎬 English HD",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=h-axJKVYbmk",
@@ -1630,7 +1686,9 @@
                 "title": "EXTINCTION PROTOCOL | 2026 Full Movie | Sci-Fi Action Horror | Brutal Survival Story | 4K",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=9KArWcMldPM",
@@ -1784,7 +1842,9 @@
                 "title": "Bizarre Ghost Encounters | William Shatner's Weird Or What | Absolute Sci-Fi",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=JGrVtIn4V-4",
@@ -1792,7 +1852,9 @@
                 "title": "10 Unsolved Mysteries That Will Make You Question Reality",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Q8DWP0Uo4SU",
@@ -1903,7 +1965,9 @@
                 "title": "2 KIDS REVEAL THEIR REINCARNATIONS (S2, E17) | The Ghost Inside My Child | Full Episode | LMN",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=klTbcJX5ICU",
@@ -1970,7 +2034,9 @@
                 "title": "13 Bigfoot Sightings You Have to See to Believe | The Proof is Out There | Compilation | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
@@ -2124,7 +2190,9 @@
                 "title": "Unsolved Mysteries with Robert Stack - Season 12 Episode 7 - Full Episode",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=N1Rnkx3PauQ",
@@ -2132,7 +2200,9 @@
                 "title": "STRANGE & SCARY Mysteries of The Month - March 2026",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=gUOb7MraizM",

@@ -71,7 +71,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=hOJhDBhBErI",
                 "duration": 283,
-                "title": "Every Dev NEEDS To Hear This in 2026"
+                "title": "Every Dev NEEDS To Hear This in 2026",
+                "skip": [
+                    [
+                        226.1,
+                        280.7
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=3wQdfYFhxmE",
@@ -144,7 +151,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=shZgedW15vg",
                 "duration": 3625,
-                "title": "How Anthropic uses Claude Code: Agentic Software Engineering at Scale - Daisy Hollman"
+                "title": "How Anthropic uses Claude Code: Agentic Software Engineering at Scale - Daisy Hollman",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=vkgGmkR7gIo",
@@ -225,7 +234,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1oQneP6skmY",
                 "duration": 381,
-                "title": "Clinicians Who Code Conference - 20th June 2026 @ Patch York"
+                "title": "Clinicians Who Code Conference - 20th June 2026 @ Patch York",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=nhbYveaV0pk",
@@ -391,7 +402,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nlbNF9w3TNw",
                 "duration": 782,
-                "title": "AI-Supported Customer Discovery and Lead Qualification | IISA 2026 Conference Presentation"
+                "title": "AI-Supported Customer Discovery and Lead Qualification | IISA 2026 Conference Presentation",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=SdKFDIAGF24",
@@ -492,7 +505,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=q_Jq4IgYImk",
                 "duration": 2659,
-                "title": "Build core skills to thrive as an AI-era developer"
+                "title": "Build core skills to thrive as an AI-era developer",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=qZ2uDi_ZBu4",
@@ -598,7 +613,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lqxiDvRkpm4",
                 "duration": 2294,
-                "title": "Getting UX Right: A New Mindset | Marc Majers | UX Conference 2026"
+                "title": "Getting UX Right: A New Mindset | Marc Majers | UX Conference 2026",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZPXBD9YgREk",
