@@ -16,7 +16,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=p2hnrfN58H4",
                 "duration": 326,
-                "title": "Architect Designs a Home That Disappears Into the Hill (House Tour)"
+                "title": "Architect Designs a Home That Disappears Into the Hill (House Tour)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=giESeFi9I4U",
@@ -35,7 +37,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=H4ZEsgXHxjc",
                 "duration": 377,
-                "title": "Inside Dakota Johnson's Private Home, Full of Wonderful Objects | Vogue"
+                "title": "Inside Dakota Johnson's Private Home, Full of Wonderful Objects | Vogue",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=UeVQjKxqyn4",
@@ -52,7 +56,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KBMW_Ir1AwE",
                 "duration": 407,
-                "title": "Why Kristen Stewart is Saving This Historic LA Movie Theatre | Architectural Digest"
+                "title": "Why Kristen Stewart is Saving This Historic LA Movie Theatre | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=JyfVz-rfM_g",
@@ -151,7 +157,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=Od0tTuhOoUQ",
                 "duration": 2263,
-                "title": "Inside Miami's Bankrupt Mega Penthouse"
+                "title": "Inside Miami's Bankrupt Mega Penthouse",
+                "skip": [
+                    [
+                        1511.8,
+                        1556.9
+                    ],
+                    [
+                        2049.7,
+                        2059.6
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=qamu6wg0eDQ",
@@ -368,7 +385,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=EN71Q2HHFN0",
                 "duration": 323,
-                "title": "Beyond Architecture | A St’ARTseed Film"
+                "title": "Beyond Architecture | A St’ARTseed Film",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=sf7uStVfvpY",
@@ -413,7 +432,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qWl6yjyWPT8",
                 "duration": 2665,
-                "title": "Why Ancient Egyptians Abandoned the Pyramids (Full Episode) | Lost Treasures of Egypt | Na"
+                "title": "Why Ancient Egyptians Abandoned the Pyramids (Full Episode) | Lost Treasures of Egypt | Na",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=0W2st4n2r_E",
@@ -524,7 +545,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Gef09xVcS3I",
                 "duration": 896,
-                "title": "The Most BREATHTAKING $9,500,000 Sakura Estate Built From Nothing | Architectural Concept"
+                "title": "The Most BREATHTAKING $9,500,000 Sakura Estate Built From Nothing | Architectural Concept",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=n1sEPe0z6Nk",
@@ -571,12 +594,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=h87mrH3nh-A",
                 "duration": 3641,
-                "title": "Impossible Places: The World’s Most Dangerous Homes You’d Never Dare to Live In | 4K Docum"
+                "title": "Impossible Places: The World’s Most Dangerous Homes You’d Never Dare to Live In | 4K Docum",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=KFKMcYrmSUY",
                 "duration": 623,
-                "title": "The House That Ate Rome: Nero's Sunken Palace"
+                "title": "The House That Ate Rome: Nero's Sunken Palace",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=V1VUySWw0Nw",

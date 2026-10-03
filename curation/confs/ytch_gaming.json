@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FYFzbis3TTE",
                 "duration": 912,
-                "title": "The Making of The 7th Guest | 90s PC Gaming Documentary"
+                "title": "The Making of The 7th Guest | 90s PC Gaming Documentary",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Lj1pxeTHpA0",
@@ -105,7 +107,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=kKjV_4dJajk",
                 "duration": 1067,
-                "title": "1ST Annual Michigan Retro Gaming Expo RECAP! MRGE 2026"
+                "title": "1ST Annual Michigan Retro Gaming Expo RECAP! MRGE 2026",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ki_PR6SY3u0",
@@ -232,7 +236,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jNndoRn4WJc",
                 "duration": 1607,
-                "title": "Emulation Vs Real Hardware: The Ultimate Retro Gaming Debate"
+                "title": "Emulation Vs Real Hardware: The Ultimate Retro Gaming Debate",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=PKGcb0zlayI",
@@ -478,7 +484,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=UeRlns4y1-E",
                 "duration": 4624,
-                "title": "Retro Gaming: PS2 - Eragon (pt. 1 of 4)"
+                "title": "Retro Gaming: PS2 - Eragon (pt. 1 of 4)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=tQfNxuczlr4",
@@ -497,7 +505,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DS6W_f3bBkg",
                 "duration": 626,
-                "title": "5 Video games that need a movie #videogames #movies #gaming #retro ##retrogaming #90s #oldschool"
+                "title": "5 Video games that need a movie #videogames #movies #gaming #retro ##retrogaming #90s #oldschool",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=v6_b3LJ2jdQ",
@@ -596,7 +606,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=KHJTM955z6E",
                 "duration": 2066,
-                "title": "The HeartGold / SoulSilver Experience | Peak Remakes"
+                "title": "The HeartGold / SoulSilver Experience | Peak Remakes",
+                "skip": [
+                    [
+                        89.7,
+                        96.2
+                    ],
+                    [
+                        2019.3,
+                        2049.1
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=iTcY2Sh39KM",
@@ -681,7 +702,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-ABB63fE-Fs",
                 "duration": 1017,
-                "title": "i'm going to be a vendor at bristol gaming expo 2026 for the first time"
+                "title": "i'm going to be a vendor at bristol gaming expo 2026 for the first time",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=Qe4FSY5YlUI",

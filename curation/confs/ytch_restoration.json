@@ -289,7 +289,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YFe2a9MBUVQ",
                 "duration": 498,
-                "title": "Restoring a 1910 Antique Blacksmith Leg Vise | From Rust to Workshop Masterpiece !"
+                "title": "Restoring a 1910 Antique Blacksmith Leg Vise | From Rust to Workshop Masterpiece !",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=nC1TjUKZ37I",
@@ -400,7 +402,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YhsJoMJQtBk",
                 "duration": 481,
-                "title": "Abandoned Forest Blacksmith Workshop Restoration 🔥 | Forgotten Forge Brought Back to Life"
+                "title": "Abandoned Forest Blacksmith Workshop Restoration 🔥 | Forgotten Forge Brought Back to Life",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=FbuleotMUd8",
@@ -419,7 +423,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=hwYcnpnM4oA",
                 "duration": 1409,
-                "title": "My Dream Power Hammer Restoration! Part 5"
+                "title": "My Dream Power Hammer Restoration! Part 5",
+                "skip": [
+                    [
+                        236.5,
+                        291.7
+                    ],
+                    [
+                        1396.1,
+                        1400.7
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=-230m0uklPY",
@@ -450,12 +465,41 @@
             {
                 "url": "https://www.youtube.com/watch?v=4dL8QNkAr5Y",
                 "duration": 472,
-                "title": "Restoration of Quenby Hall Gates, Leicestershire (early C18th wrought iron gates by Jean Tijou)."
+                "title": "Restoration of Quenby Hall Gates, Leicestershire (early C18th wrought iron gates by Jean Tijou).",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=F5TwJcaquEo",
                 "duration": 1413,
-                "title": "My Dream Power Hammer Restoration! Part 6"
+                "title": "My Dream Power Hammer Restoration! Part 6",
+                "skip": [
+                    [
+                        57.6,
+                        146.9
+                    ],
+                    [
+                        170.1,
+                        181.2
+                    ],
+                    [
+                        582.5,
+                        673.8
+                    ],
+                    [
+                        755.0,
+                        766.3
+                    ],
+                    [
+                        915.1,
+                        922.2
+                    ],
+                    [
+                        1402.2,
+                        1410.2
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=4zUm3UmfxDE",
@@ -488,7 +532,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vtYBzx2cOrc",
                 "duration": 249,
-                "title": "Rusty Chaff Cutter Restored Into Razor Sharp Knife 🔥 | Full Forging Timelapse"
+                "title": "Rusty Chaff Cutter Restored Into Razor Sharp Knife 🔥 | Full Forging Timelapse",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=hssPyGB5NUA",
@@ -662,7 +708,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZjzoIQKyWts",
                 "duration": 340,
-                "title": "Rusty Broken Hammer Restoration \"before after\""
+                "title": "Rusty Broken Hammer Restoration \"before after\"",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=A2fpdW34mXY",

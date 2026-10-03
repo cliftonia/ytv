@@ -78,7 +78,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RHvh2ly1-18",
                 "duration": 2981,
-                "title": "THE PACIFIC WAR - Japan versus the US | Full Documentary"
+                "title": "THE PACIFIC WAR - Japan versus the US | Full Documentary",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=O17bAkBtOcQ",
@@ -188,12 +190,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=0aF_-J5n1RU",
                 "duration": 3229,
-                "title": "America and the Taliban: Part One (full documentary) | FRONTLINE"
+                "title": "America and the Taliban: Part One (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=JGXtMqPsROE",
                 "duration": 1899,
-                "title": "Invasion of Iraq 2003 (Documentary)"
+                "title": "Invasion of Iraq 2003 (Documentary)",
+                "skip": [
+                    [
+                        1744.6,
+                        1828.8
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=odyh65JSCuQ",
@@ -244,7 +255,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=fgQN4hC-rJE",
                 "duration": 2520,
-                "title": "Trained to Kill: Inside Elite U.S. Ops (S3, E5) | America's Book of Secrets | Full Episode | History"
+                "title": "Trained to Kill: Inside Elite U.S. Ops (S3, E5) | America's Book of Secrets | Full Episode | History",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=7W-xxpXzAC0",
@@ -338,7 +351,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-tOHdvXX-YM",
                 "duration": 6715,
-                "title": "1945-1953 From World War to Cold War"
+                "title": "1945-1953 From World War to Cold War",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=aZTlJCdFNJs",
@@ -362,7 +377,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SPMBwSH3e58",
                 "duration": 2910,
-                "title": "The Complete History of the Second World War | World War II Documentary | Part 1"
+                "title": "The Complete History of the Second World War | World War II Documentary | Part 1",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=moL9hN2hMj4",
@@ -431,7 +448,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ErXdZEPNdDM",
                 "duration": 1760,
-                "title": "Rise of the Taliban: Afghan Civil War 1994-2000 (Documentary)"
+                "title": "Rise of the Taliban: Afghan Civil War 1994-2000 (Documentary)",
+                "skip": [
+                    [
+                        1659.0,
+                        1718.4
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=cp4l_evTgSA",
@@ -462,7 +486,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8gUSq7pxux4",
                 "duration": 6075,
-                "title": "The Battle of Long Tan Documentary (Official) - Vietnam War - Danger Close"
+                "title": "The Battle of Long Tan Documentary (Official) - Vietnam War - Danger Close",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
@@ -572,12 +598,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=LA-sBbMopEM",
                 "duration": 2141,
-                "title": "The Biggest Naval Battle in History: Leyte Gulf 1944 (WW2 Documentary)"
+                "title": "The Biggest Naval Battle in History: Leyte Gulf 1944 (WW2 Documentary)",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=zlssmpPrJkA",
                 "duration": 1521,
-                "title": "The Entire History of Spain"
+                "title": "The Entire History of Spain",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=_m-ddzNlMto",
@@ -622,12 +652,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=nT2BY9Psbsc",
                 "duration": 1506,
-                "title": "The Bloody Start of Island Hopping in the Pacific: Tarawa 1943 (WW2 Documentary)"
+                "title": "The Bloody Start of Island Hopping in the Pacific: Tarawa 1943 (WW2 Documentary)",
+                "skip": [
+                    [
+                        1379.2,
+                        1505.9
+                    ]
+                ],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=rjH6k_DcV2A",
                 "duration": 3255,
-                "title": "ENCYCLOPEDIA OF MODERN ARMOR – ENGINES OF WAR, Ultimate Military Documentary"
+                "title": "ENCYCLOPEDIA OF MODERN ARMOR – ENGINES OF WAR, Ultimate Military Documentary",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=G-Wi2LgwD5U",
