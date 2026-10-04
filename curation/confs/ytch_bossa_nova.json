@@ -52,12 +52,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=GWEjzXjynLQ",
                 "duration": 135,
-                "title": "if you want to be a lover - Luiz Henrique ('68)"
+                "title": "if you want to be a lover - Luiz Henrique ('68)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Qe7wzHyHTuU",
                 "duration": 270,
-                "title": "Antonio Carlos Jobim - Captain Bacardi"
+                "title": "Antonio Carlos Jobim - Captain Bacardi",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=WKLV1mNkoQo",
@@ -69,7 +73,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WU2h18KRxkU",
                 "duration": 181,
-                "title": "LOS BOSSAMBISTAS Y LA BOSSA NOVA - Paloma , 60s , Latin , Bossa Nova , Latin Jazz , 1963"
+                "title": "LOS BOSSAMBISTAS Y LA BOSSA NOVA - Paloma , 60s , Latin , Bossa Nova , Latin Jazz , 1963",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=O0-4bxbTGjc",
@@ -156,7 +162,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Y4Wp1jMl17o",
                 "duration": 306,
-                "title": "Baden Powell - pai"
+                "title": "Baden Powell - pai",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ArhMQUYfG5Q",
@@ -250,7 +258,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=o6ctWK3N4XI",
                 "duration": 139,
-                "title": "\"Nós e o mar\", Tamba Trio (1962)"
+                "title": "\"Nós e o mar\", Tamba Trio (1962)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=3Kiz2DG8nd0",
@@ -372,7 +382,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3PLWHFh5CSw",
                 "duration": 124,
-                "title": "Nara Leão - Deixa (Baden Powell e Vinicius de Moraes)"
+                "title": "Nara Leão - Deixa (Baden Powell e Vinicius de Moraes)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=DsW28Gz27ZE",
@@ -534,6 +546,6 @@
             "Stan Getz Astrud Gilberto",
             "Sergio Mendes bossa"
         ],
-        "last_refreshed": 1789931540
+        "last_refreshed": 1791143563
     }
 }

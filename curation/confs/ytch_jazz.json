@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RKaq-jSX7n4",
                 "duration": 295,
-                "title": "MOBY - Porcelain (Live) | Montreux Jazz Festival 2026"
+                "title": "MOBY - Porcelain (Live) | Montreux Jazz Festival 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=OgWGDQn-IYI",
@@ -89,7 +91,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=XBDsq8yL8QA",
                 "duration": 259,
-                "title": "Johnny Hates Jazz - Shattered Dreams - LIVE at 80s Classical, 2019"
+                "title": "Johnny Hates Jazz - Shattered Dreams - LIVE at 80s Classical, 2019",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=AnvsLMvmPgU",
@@ -136,7 +140,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5CYlK1w-Du4",
                 "duration": 224,
-                "title": "Charlie's Inferno (60's Version) - Jazz Cover Lyric Video"
+                "title": "Charlie's Inferno (60's Version) - Jazz Cover Lyric Video",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Oli3MH-lql4",
@@ -328,7 +334,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WnCHCqYRQFs",
                 "duration": 225,
-                "title": "Bridge Over Troubled Water - John Legend - North Sea Jazz 2013"
+                "title": "Bridge Over Troubled Water - John Legend - North Sea Jazz 2013",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=fc1xsOr9Zek",
@@ -380,7 +388,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=CSJmFw_aBoQ",
                 "duration": 167,
-                "title": "BILLIE JEAN: Jazz Large Group (2026)"
+                "title": "BILLIE JEAN: Jazz Large Group (2026)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Er7QLFe7_iM",
@@ -462,7 +472,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KPLQY6SszzY",
                 "duration": 210,
-                "title": "Jesse Ibidun - Espresso (Live at IBOM Festival Lagos 2025) Afro Jazz Live with The Tribe."
+                "title": "Jesse Ibidun - Espresso (Live at IBOM Festival Lagos 2025) Afro Jazz Live with The Tribe.",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ve3-_-Bbbfg",
@@ -591,7 +603,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=U-Ko2DSn3q4",
                 "duration": 217,
-                "title": "Fly me to the moon - Jazz com Bossa"
+                "title": "Fly me to the moon - Jazz com Bossa",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=dUobs3MEdB0",
@@ -772,7 +786,9 @@
                 "title": "Dance to the Rhythm of Havana Nights 🎶 | French - Latin Swing Jazz Vibes from Paris",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=xyTa_gJkYwI",
@@ -820,7 +836,9 @@
                 "title": "Fleetwood Mac - Silver Springs (Live) (Official Video) [HD]",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=nuwJDuSoNhk",
@@ -828,7 +846,14 @@
                 "title": "“Holding Out for a Hero” (Bonnie Tyler) Swing Jazz Cover by Robyn Adele Anderson",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [
+                    [
+                        193.6,
+                        226.2
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=UYZSwVikj-8",
@@ -876,7 +901,9 @@
                 "title": "Lighthouse (Live) – Dark Cinematic Jazz | Denielle Bassels",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=AXT00sWwuTQ",
@@ -1197,7 +1224,9 @@
                 "title": "New Edition - Can You Stand The Rain",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=QNv8iODCAwE",
@@ -1431,7 +1460,9 @@
                 "title": "DON’T SAY GOODBYE – Eddie Peregrina 🎙️ 1950s Rock & Roll Ballad Cover",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=IBLruNfUqUs",
@@ -1539,7 +1570,9 @@
                 "title": "Sade - By Your Side - Official - 2000",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=5oxxi0d7AQI",

@@ -66,7 +66,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=L1w6wBxhpgE",
                 "duration": 3245,
-                "title": "Keynote: AI-Powered App Development - Steve Sanderson - NDC London 2026"
+                "title": "Keynote: AI-Powered App Development - Steve Sanderson - NDC London 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=hOJhDBhBErI",
@@ -139,7 +141,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=x9wCXEqrjII",
                 "duration": 1025,
-                "title": "AI and Software Engineering Conference - Sept. 24 - Early Bird Registration is Live!"
+                "title": "AI and Software Engineering Conference - Sept. 24 - Early Bird Registration is Live!",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=g8um2AEf5ZA",
@@ -241,7 +245,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=nhbYveaV0pk",
                 "duration": 3413,
-                "title": "Do It With Style: Rethinking CSS - Dylan Beattie - NDC London 2026"
+                "title": "Do It With Style: Rethinking CSS - Dylan Beattie - NDC London 2026",
+                "skip": [
+                    [
+                        3310.9,
+                        3412.8
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=gPise3NY1gI",
@@ -300,7 +311,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=_gCXmKjDecU",
                 "duration": 988,
-                "title": "WWDC 2026 Impressions: Yeah, That's About Right"
+                "title": "WWDC 2026 Impressions: Yeah, That's About Right",
+                "skip": [
+                    [
+                        172.5,
+                        187.3
+                    ],
+                    [
+                        896.9,
+                        976.4
+                    ],
+                    [
+                        978.9,
+                        980.3
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=XVCYcoMLNiQ",
@@ -324,7 +350,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dgTnbT89hks",
                 "duration": 1058,
-                "title": "Adventures With AI Assisted Coding - Dave Liddament - PHPSW: AI Lightning Talks, May 2026"
+                "title": "Adventures With AI Assisted Coding - Dave Liddament - PHPSW: AI Lightning Talks, May 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=zmR7FDug2OM",
@@ -430,7 +458,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hD3gVcBdMek",
                 "duration": 3957,
-                "title": "AoS National Conference 2026 - Alchemer Beyond the Basics"
+                "title": "AoS National Conference 2026 - Alchemer Beyond the Basics",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=jmEhOCgsyZY",
@@ -561,7 +591,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=p9wJTQ1pZR8",
                 "duration": 278,
-                "title": "Incalmo — RSAC 2026 Conference Launch Pad"
+                "title": "Incalmo — RSAC 2026 Conference Launch Pad",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=XXjTdyhml0c",
@@ -608,7 +640,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vu9ltgrb77M",
                 "duration": 1580,
-                "title": "2026 Swiss Conference: Giordano Mancini, E4 Engineering"
+                "title": "2026 Swiss Conference: Giordano Mancini, E4 Engineering",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=lqxiDvRkpm4",
@@ -646,7 +680,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Srhue-FR0Aw",
                 "duration": 2414,
-                "title": "AI for Business Owners Workshop, TABCC Business and Leadership Conference 2026"
+                "title": "AI for Business Owners Workshop, TABCC Business and Leadership Conference 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=uwCW6YJ51Xo",
@@ -658,7 +694,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qGFoZ8yodc4",
                 "duration": 1451,
-                "title": "[REC] Key Meeting - Engineering (Public Stream)"
+                "title": "[REC] Key Meeting - Engineering (Public Stream)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=v4F1gFy-hqg",
@@ -675,7 +713,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-1cjBUPYfgQ",
                 "duration": 1407,
-                "title": "LibreOffice Conference 2026: One recognizable identity for the project's websites"
+                "title": "LibreOffice Conference 2026: One recognizable identity for the project's websites",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=BB4Tw5nt2OQ",

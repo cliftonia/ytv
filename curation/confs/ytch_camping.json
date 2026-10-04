@@ -92,12 +92,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=h6W2FfD58tI",
                 "duration": 1203,
-                "title": "Bushcraft Camping With My Dog | Into the Wild"
+                "title": "Bushcraft Camping With My Dog | Into the Wild",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=YsvfHjVxrIU",
                 "duration": 1170,
-                "title": "Solo Girl Spends Time Alone in the Wild – Bushcraft Camping, Shelter Building & Relaxing N"
+                "title": "Solo Girl Spends Time Alone in the Wild – Bushcraft Camping, Shelter Building & Relaxing N",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=tirfQ-BEXl4",
@@ -251,7 +255,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Zz7os_kWwnM",
                 "duration": 1121,
-                "title": "Winter Camping in Raised Bushcraft Shelter - Level 100 Campfire Cooking"
+                "title": "Winter Camping in Raised Bushcraft Shelter - Level 100 Campfire Cooking",
+                "skip": [
+                    [
+                        1093.9,
+                        1120.8
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=oNxUsPCUWvU",
@@ -326,7 +337,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ICRGlhGLDRE",
                 "duration": 1202,
-                "title": "Off-Grid Camping by a Remote Stream | Fishing & Bushcraft"
+                "title": "Off-Grid Camping by a Remote Stream | Fishing & Bushcraft",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=aSaX5wXH-6E",
@@ -471,7 +484,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=nurErrXE-CQ",
                 "duration": 1453,
-                "title": "Heavy Rain, Wild Animals & Campfire Cooking | Night Survival with My Dog"
+                "title": "Heavy Rain, Wild Animals & Campfire Cooking | Night Survival with My Dog",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=xn5ihNXhLHY",
@@ -483,7 +498,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=sv1p0bbU1fc",
                 "duration": 1369,
-                "title": "Bear Encounter Risk | Survival Camping in Unpredictable Weather"
+                "title": "Bear Encounter Risk | Survival Camping in Unpredictable Weather",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=i0n2ggRGUbk",
@@ -511,7 +528,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=4PDLO-iC3FM",
                 "duration": 1935,
-                "title": "3 Days in Arctic with Bushcraft Hot Tent & No Sleeping Bag"
+                "title": "3 Days in Arctic with Bushcraft Hot Tent & No Sleeping Bag",
+                "skip": [
+                    [
+                        1910.0,
+                        1934.6
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ep5lD36FNX8",
@@ -540,7 +564,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cP4fipXxwNs",
                 "duration": 4929,
-                "title": "200 Days Building a Stone Secret Shelter Under a Giant Rock. Bushcraft, Survival"
+                "title": "200 Days Building a Stone Secret Shelter Under a Giant Rock. Bushcraft, Survival",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=T_xt21f6l48",
@@ -786,7 +812,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0Xdm2dgU9ag",
                 "duration": 1611,
-                "title": "Cozy Shelter Camping in HeavyRain | A Rainy Night in the Forest"
+                "title": "Cozy Shelter Camping in HeavyRain | A Rainy Night in the Forest",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=z8l9Vozl44s",
@@ -798,7 +826,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5g90BuYaBJA",
                 "duration": 1837,
-                "title": "2 Days Solo Survival Camping in an Underground Shelter | Building a Warm & Safe Bunker"
+                "title": "2 Days Solo Survival Camping in an Underground Shelter | Building a Warm & Safe Bunker",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=XAkYMoLtglA",
@@ -810,7 +840,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=HuKEruLKF40",
                 "duration": 1508,
-                "title": "SOLO BUSHCRAFT CAMPING BUILDING SHELTER AND COOKING"
+                "title": "SOLO BUSHCRAFT CAMPING BUILDING SHELTER AND COOKING",
+                "skip": [],
+                "skip_checked": 1791143589
             }
         ],
         "search_query": "bushcraft camping wild",
