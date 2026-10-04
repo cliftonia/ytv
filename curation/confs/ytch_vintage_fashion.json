@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=f76dBH5kKoA",
                 "duration": 1530,
-                "title": "What It's Like to Wear Vintage vs. Historical Fashion Daily ft. @KarolinaZebrowskax"
+                "title": "What It's Like to Wear Vintage vs. Historical Fashion Daily ft. @KarolinaZebrowskax",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ROU1r-CRrsE",
@@ -73,12 +75,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=ho6OloxLh_0",
                 "duration": 790,
-                "title": "The Actual Origins Of Clothing"
+                "title": "The Actual Origins Of Clothing",
+                "skip": [
+                    [
+                        23.0,
+                        35.2
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=4fZmUj_95WY",
                 "duration": 1002,
-                "title": "How to Identify Vintage Clothing- What Era is it From??"
+                "title": "How to Identify Vintage Clothing- What Era is it From??",
+                "skip": [
+                    [
+                        101.9,
+                        155.0
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=GEu_pX8FNpI",
@@ -189,7 +205,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tVxvJ1wdaAE",
                 "duration": 974,
-                "title": "How To Identify A True Vintage Dress  - 6 Tips With Pinup Miss Lady Lace"
+                "title": "How To Identify A True Vintage Dress  - 6 Tips With Pinup Miss Lady Lace",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ouFRQGl_A0I",
@@ -278,7 +296,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_gXXekvmUfQ",
                 "duration": 3051,
-                "title": "Summer Fashions - 1940s War-Time Lane Bryant Catalog"
+                "title": "Summer Fashions - 1940s War-Time Lane Bryant Catalog",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=_AiJFhoEvqE",
@@ -473,7 +493,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xHDor9Jdh7Y",
                 "duration": 1245,
-                "title": "Why are vintage patterns so small?! A history of pattern sizing (Why the size numbers are a lie)"
+                "title": "Why are vintage patterns so small?! A history of pattern sizing (Why the size numbers are a lie)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=3oWPMLiHbFQ",
@@ -499,7 +521,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=u84hGZGQiFM",
                 "duration": 1910,
-                "title": "I Have 100 Years of Antique Shoes : Fashion Historians Collection"
+                "title": "I Have 100 Years of Antique Shoes : Fashion Historians Collection",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=O174PsiYp64",

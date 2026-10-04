@@ -37,17 +37,28 @@
             {
                 "url": "https://www.youtube.com/watch?v=CDd42l9fDRg",
                 "duration": 702,
-                "title": "PGA Tour Champions Highlights | PURE Insurance | 2026"
+                "title": "PGA Tour Champions Highlights | PURE Insurance | 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=UoebFpL95VE",
                 "duration": 959,
-                "title": "Final Round Highlights | MPO | 2026 Green Mountain Championship"
+                "title": "Final Round Highlights | MPO | 2026 Green Mountain Championship",
+                "skip": [
+                    [
+                        436.1,
+                        466.9
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=fJWYN9Sk7wo",
                 "duration": 1421,
-                "title": "J.J. Spaun Beats Major Champions to Victory | 2026 BMW PGA Championship"
+                "title": "J.J. Spaun Beats Major Champions to Victory | 2026 BMW PGA Championship",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=nfcfIzs02l4",
@@ -108,7 +119,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=b5GQC-ItQXA",
                 "duration": 880,
-                "title": "Round 3 Highlights | 2026 BMW PGA Championship"
+                "title": "Round 3 Highlights | 2026 BMW PGA Championship",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=b56jzhbmkS8",
@@ -139,7 +152,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=4RE-P6ttDyg",
                 "duration": 722,
-                "title": "PGA Tour Highlights: 2026 BMW Championship, Round One | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 BMW Championship, Round One | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=bMehQsPOM_Q",
@@ -329,7 +344,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=0j7yd18LPkQ",
                 "duration": 497,
-                "title": "NCAA Golf Highlights: 2026 Western Intercollegiate, Final Round | Golf Channel"
+                "title": "NCAA Golf Highlights: 2026 Western Intercollegiate, Final Round | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=fQB35jXQaR8",
@@ -411,7 +428,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DeRjCQrPWgE",
                 "duration": 541,
-                "title": "Valero Texas Open: Round 3 Suspended Due to Weather | Golf Channel"
+                "title": "Valero Texas Open: Round 3 Suspended Due to Weather | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=FH2d2riWG6k",
@@ -444,7 +463,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=C_LeXjggbtQ",
                 "duration": 615,
-                "title": "LPGA Tour Highlights: 2026 Aramco Championship, 3rd round | Golf Channel"
+                "title": "LPGA Tour Highlights: 2026 Aramco Championship, 3rd round | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=DJqYy_5KdMc",
@@ -512,17 +533,23 @@
             {
                 "url": "https://www.youtube.com/watch?v=pv4Ujcfg8fU",
                 "duration": 997,
-                "title": "FULL HIGHLIGHTS | LIV Golf Andalucía Round 1 | 2026"
+                "title": "FULL HIGHLIGHTS | LIV Golf Andalucía Round 1 | 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=7n7wotc6MEA",
                 "duration": 475,
-                "title": "PGA Tour Highlights: 2026 Valero Texas Open, Final Round | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 Valero Texas Open, Final Round | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=7SRapJ5ceog",
                 "duration": 539,
-                "title": "Golf is Hard | THE PLAYERS Championship 2026"
+                "title": "Golf is Hard | THE PLAYERS Championship 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=bvSeDuPOB7g",
@@ -534,12 +561,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=8l-C-1J7mAk",
                 "duration": 658,
-                "title": "PGA Tour Highlights: 2026 Valero Texas Open, Round One | Golf Channel"
+                "title": "PGA Tour Highlights: 2026 Valero Texas Open, Round One | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=UKd_S-p5RTc",
                 "duration": 907,
-                "title": "NCAA Golf highlights: 2026 Men's & Women's Folds of Honor Collegiate, Round Two | Golf Channel"
+                "title": "NCAA Golf highlights: 2026 Men's & Women's Folds of Honor Collegiate, Round Two | Golf Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=bCcNxzoSVM8",
@@ -612,7 +643,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rdXXgK07c_0",
                 "duration": 743,
-                "title": "Highlights: 2026 U.S. Amateur Championship, Semifinals | Golf on NBC Sports"
+                "title": "Highlights: 2026 U.S. Amateur Championship, Semifinals | Golf on NBC Sports",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ikTw8SBJt-E",

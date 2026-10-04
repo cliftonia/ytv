@@ -56,7 +56,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=QOOkS0E9whU",
                 "duration": 3165,
-                "title": "The Universe's Great IMPOSSIBILITIES! | How the Universe Works | Science Channel"
+                "title": "The Universe's Great IMPOSSIBILITIES! | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=4wQSwNvVI5I",
@@ -91,17 +93,23 @@
             {
                 "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
                 "duration": 5034,
-                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026"
+                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=CNywxo7xZ_I",
                 "duration": 2623,
-                "title": "Understanding Science’s Great Mysteries | BBC Earth Science"
+                "title": "Understanding Science’s Great Mysteries | BBC Earth Science",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
                 "duration": 2665,
-                "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geographic"
+                "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=rfqalXigeOc",
@@ -264,7 +272,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cYe4tF6NZco",
                 "duration": 3568,
-                "title": "Timelapse to the Future of Earth | Full Documentary"
+                "title": "Timelapse to the Future of Earth | Full Documentary",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Z7AECr2EeYg",
@@ -613,7 +623,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=cMx139eTxoc",
                 "duration": 3286,
-                "title": "What does asbestos do to a person?"
+                "title": "What does asbestos do to a person?",
+                "skip": [
+                    [
+                        138.6,
+                        142.4
+                    ],
+                    [
+                        1900.4,
+                        1998.1
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Di2P2c26e6s",
@@ -639,7 +660,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DrI0PtTgFZo",
                 "duration": 4692,
-                "title": "Wild Savannah | The Brutal Price Of Survival | FULL EPISODE | Wildlife Documentary"
+                "title": "Wild Savannah | The Brutal Price Of Survival | FULL EPISODE | Wildlife Documentary",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=VC3gMUxEv7Q",
@@ -684,7 +707,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VLGFsrEw440",
                 "duration": 4294,
-                "title": "The Most Dangerous Predators of the Wild | FULL EPISODE | Wildlife Documentary"
+                "title": "The Most Dangerous Predators of the Wild | FULL EPISODE | Wildlife Documentary",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ypEpDWKIoKU",

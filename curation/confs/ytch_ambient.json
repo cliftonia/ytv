@@ -58,7 +58,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=d0MeskbA0ec",
                 "duration": 3804,
-                "title": "Slow Mornings ☕️ [jazzy lofi beats / chill instrumental mix]"
+                "title": "Slow Mornings ☕️ [jazzy lofi beats / chill instrumental mix]",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=XVFUtEh9zrY",
@@ -70,12 +72,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=DUzQadS3aJ0",
                 "duration": 2923,
-                "title": "Chillhop Space Jazz 🎺 [cosmic lofi mix / deep space cruise]"
+                "title": "Chillhop Space Jazz 🎺 [cosmic lofi mix / deep space cruise]",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=fsPRybb-xXg",
                 "duration": 3868,
-                "title": "cozy spring lofi 🌸 chill music to study & relax to"
+                "title": "cozy spring lofi 🌸 chill music to study & relax to",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=JYozwaAbAvc",
@@ -174,7 +180,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xVhRsq4ukjo",
                 "duration": 3655,
-                "title": "Relaxing Lofi Reggae Dub Instrumental for Peaceful Vibes | 1 Hour Mix"
+                "title": "Relaxing Lofi Reggae Dub Instrumental for Peaceful Vibes | 1 Hour Mix",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=zqmIUKoe-q0",
@@ -242,7 +250,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yvsRrpIPCoE",
                 "duration": 3340,
-                "title": "Modern Ambient Jungle Mix [3] (Intelligent DnB)"
+                "title": "Modern Ambient Jungle Mix [3] (Intelligent DnB)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=FPxEdG07Vxg",
@@ -301,7 +311,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=BrnDlRmW5hs",
                 "duration": 1441,
-                "title": "old songs but it's lofi remix"
+                "title": "old songs but it's lofi remix",
+                "skip": [
+                    [
+                        1414.5,
+                        1440.4
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=wAPCSnAhhC8",
@@ -313,7 +330,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=VJhqbMMwjg8",
                 "duration": 5138,
-                "title": "Cowboy Bebop | Lofi Hiphop & Jazzhop Mix ²"
+                "title": "Cowboy Bebop | Lofi Hiphop & Jazzhop Mix ²",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=hr1zitl2fJw",
@@ -428,12 +447,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=2OHFgjuy3DI",
                 "duration": 4696,
-                "title": "Sofiane Pamart live under the Northern Lights, in Lapland, Finland for Cercle"
+                "title": "Sofiane Pamart live under the Northern Lights, in Lapland, Finland for Cercle",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Nyx6SBixRE8",
                 "duration": 3431,
-                "title": "Sleepless Night 🌙 [lofi hip hop]"
+                "title": "Sleepless Night 🌙 [lofi hip hop]",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=YOJsKatW-Ts",

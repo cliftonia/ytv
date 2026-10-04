@@ -257,7 +257,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zuQUORuaMng",
                 "duration": 5210,
-                "title": "100 Times Urban Explorers Made DISTURBING Abandoned Building Encounters"
+                "title": "100 Times Urban Explorers Made DISTURBING Abandoned Building Encounters",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=MFNHsgR1jG8",
@@ -283,7 +285,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1CJWWtGlgGk",
                 "duration": 731,
-                "title": "Ruins of Alvira - URBEX - URBAN EXPLORING"
+                "title": "Ruins of Alvira - URBEX - URBAN EXPLORING",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=cV5UEMtny7Y",
@@ -476,7 +480,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=AEj5glvrasY",
                 "duration": 1258,
-                "title": "5 Most Terrifying Encounters in Abandoned Places"
+                "title": "5 Most Terrifying Encounters in Abandoned Places",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=G4pZJC1fri4",
@@ -592,7 +598,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7eNj8CorZCI",
                 "duration": 1906,
-                "title": "P*rnstars Abandoned House with Everything Inside | Range Rover & Mercedes-Benz Left"
+                "title": "P*rnstars Abandoned House with Everything Inside | Range Rover & Mercedes-Benz Left",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=SNqEser_cXE",
@@ -659,7 +667,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vKPE1eDdIfk",
                 "duration": 1113,
-                "title": "I Explored Abandoned Locations From My Childhood!"
+                "title": "I Explored Abandoned Locations From My Childhood!",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ViouSKFU5BU",
@@ -723,7 +733,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=JYNkZtxZpVI",
                 "duration": 2349,
-                "title": "The Abandoned HOME ALONE House - 90s Time Capsule Full of Video Games,VHS and Retro Nostalgia"
+                "title": "The Abandoned HOME ALONE House - 90s Time Capsule Full of Video Games,VHS and Retro Nostalgia",
+                "skip": [
+                    [
+                        602.0,
+                        677.5
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Eb3k8lUNvHo",

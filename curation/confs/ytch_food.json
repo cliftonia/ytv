@@ -37,12 +37,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=YnIb0BHRi6A",
                 "duration": 1895,
-                "title": "Philippines Street Food Tour in Manila | Sta. Cruz to Ongpin & Binondo Food Walk 🇵🇭 2026!"
+                "title": "Philippines Street Food Tour in Manila | Sta. Cruz to Ongpin & Binondo Food Walk 🇵🇭 2026!",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=GP-ZcXNM_-I",
                 "duration": 2318,
-                "title": "🇹🇷Istanbul Turkey 2026 Insane Turkish Street Food Tour | 4K Walking Tour, Shocking Prices April 2026"
+                "title": "🇹🇷Istanbul Turkey 2026 Insane Turkish Street Food Tour | 4K Walking Tour, Shocking Prices April 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=wBCaiXxhbsY",
@@ -80,7 +84,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_tI4yUbDYmw",
                 "duration": 2245,
-                "title": "Timor-Leste Street Food - 24 Hours in Asia's Least Visited Country!"
+                "title": "Timor-Leste Street Food - 24 Hours in Asia's Least Visited Country!",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=lMSoj7wsf3A",
@@ -134,7 +140,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lrLS7Z90Kbk",
                 "duration": 1627,
-                "title": "SEOUL STREET FOOD Tour in 2026 (PRICES included)"
+                "title": "SEOUL STREET FOOD Tour in 2026 (PRICES included)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=9_qURV2NClY",
@@ -252,12 +260,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=uxTITOVPuO4",
                 "duration": 1373,
-                "title": "$100 Chinese Street Food Challenge in Shanghai!!"
+                "title": "$100 Chinese Street Food Challenge in Shanghai!!",
+                "skip": [
+                    [
+                        1294.6,
+                        1335.0
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=FY6g5rqH8NM",
                 "duration": 1451,
-                "title": "Massive Street Food Tour in Kenitra 🇲🇦 Unique Local Food in the Deepest Corner of Morocco"
+                "title": "Massive Street Food Tour in Kenitra 🇲🇦 Unique Local Food in the Deepest Corner of Morocco",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=cmwQNIgrddo",
@@ -297,7 +314,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TNOk_y3XJ1k",
                 "duration": 1084,
-                "title": "Street Food in IRAN | How's Life in TEHRAN Summer 2026"
+                "title": "Street Food in IRAN | How's Life in TEHRAN Summer 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=L2LF3ZuXI-c",
@@ -351,7 +370,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wE1SiIhYXJk",
                 "duration": 1730,
-                "title": "🇰🇷 Korean Street Food HEAVEN in Seoul Myeongdong & Gwangjang Market"
+                "title": "🇰🇷 Korean Street Food HEAVEN in Seoul Myeongdong & Gwangjang Market",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wc_F_BesIT0",
@@ -426,7 +447,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FWe16Fmnh3k",
                 "duration": 1409,
-                "title": "Amazing Street Food Breakfast in Vietnam 2026"
+                "title": "Amazing Street Food Breakfast in Vietnam 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=NNN3mR-MAHA",
@@ -502,7 +525,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KCF7OeGD1b4",
                 "duration": 2180,
-                "title": "Street Food in Senegal!! 🇸🇳 ULTIMATE SENEGALESE FOOD TOUR in Dakar | West African Food!"
+                "title": "Street Food in Senegal!! 🇸🇳 ULTIMATE SENEGALESE FOOD TOUR in Dakar | West African Food!",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=QoG1-v1xagU",
@@ -514,7 +539,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hcqo-arZfQU",
                 "duration": 674,
-                "title": "Sampaloc Manila  FUSION ALLEY FOOD TRIP! kuyáJÖcal Walking TOUR 2026 || STREET FOODS Philippines 🇵🇭"
+                "title": "Sampaloc Manila  FUSION ALLEY FOOD TRIP! kuyáJÖcal Walking TOUR 2026 || STREET FOODS Philippines 🇵🇭",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=TIxNK6EGBVY",
@@ -626,7 +653,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IXjkbgrdAkw",
                 "duration": 2467,
-                "title": "Chicago Street Food!! 5 MUST EAT FOODS You Can’t Miss in Chicago, USA!!"
+                "title": "Chicago Street Food!! 5 MUST EAT FOODS You Can’t Miss in Chicago, USA!!",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=t7dhuzYMxeg",
@@ -641,13 +670,6 @@
                 "title": "Saigon After Midnight!! Vietnam Late Night Street Food!!",
                 "skip": [],
                 "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FZorlwgnW0Q",
-                "duration": 3783,
-                "title": "CAMBODIA’S EVENING FOOD PARADISE 🇰🇭  Phnom Penh Riverside Street Food Tour 2026",
-                "skip": [],
-                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=hrX8Uzy8GfE",
@@ -898,7 +920,9 @@
                 "title": "Real Desi Breakfast on the Streets! 🤤 | Roadside Food Tour Breakfast Collection | Pure Desi Nashta",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Rk7AMvgqVLA",
@@ -1102,7 +1126,9 @@
                 "title": "First Time in Costa Rica!! 🇨🇷 COSTA RICAN STREET FOOD Tour in San Jose!!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=2jgfuDYzdXQ",
@@ -1280,7 +1306,9 @@
                 "title": "ANCIENT Lahori Street Food 😍 Hidden Lunch Spot in PAKISTAN STREET FOOD | Old-School Desi Cooking 🇵🇰",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=7UiTdYvHgXY",
@@ -1338,7 +1366,9 @@
                 "title": "What LOCALS EAT?! 24 Hour ARUBA FOOD TOUR",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=vuAoTE6ZBz8",
@@ -1404,7 +1434,9 @@
                 "title": "7 Must-Eat Portuguese Foods!! 🇵🇹 SARDINES + Egg Tarts in Lisbon, Portugal!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=RXG2VUCMPVA",
@@ -1451,7 +1483,9 @@
                 "title": "Italian Street Food in Naples!! SEAFOOD SPAGHETTI + Pizza in Naples, Italy!!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=D3R0vClBTD8",
@@ -1529,7 +1563,9 @@
                 "title": "Colon Night Market 2026 Walkthrough: Cheap Street Food, Safety Tips & Schedule! | Cebu Philippines",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=m8-GSLTl1fE",
@@ -1773,7 +1809,9 @@
                 "title": "Malaysia's LONGEST Night Market! 🇲🇾 500+ Street Food Stalls (Setia Alam)",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=vO-6q81GAYU",

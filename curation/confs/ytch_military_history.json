@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vWaoon6lZM0",
                 "duration": 6799,
-                "title": "Remaking the Middle East: The U.S., Israel & Iran (updated documentary) | FRONTLINE (PBS)"
+                "title": "Remaking the Middle East: The U.S., Israel & Iran (updated documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=dAHJ0omYo7U",
@@ -59,7 +61,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=L1D7At5QkGs",
                 "duration": 4943,
-                "title": "The Vietnam War | Full Episode 1 | Déjà Vu (1858-1961) | PBS"
+                "title": "The Vietnam War | Full Episode 1 | Déjà Vu (1858-1961) | PBS",
+                "skip": [
+                    [
+                        5.0,
+                        12.1
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=qcg8KTPtHGE",
@@ -99,17 +108,32 @@
             {
                 "url": "https://www.youtube.com/watch?v=95nfmvAh2yY",
                 "duration": 5290,
-                "title": "The Snipers of the Eastern Front (No AI Documentary)"
+                "title": "The Snipers of the Eastern Front (No AI Documentary)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=aL-Uy_Wmcbc",
                 "duration": 2439,
-                "title": "Rhodesian Bush War 1964-1979 - Zimbabwean Independence War DOCUMENTARY"
+                "title": "Rhodesian Bush War 1964-1979 - Zimbabwean Independence War DOCUMENTARY",
+                "skip": [
+                    [
+                        62.2,
+                        105.4
+                    ],
+                    [
+                        2409.7,
+                        2438.8
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=W4NdqeV0o4U",
                 "duration": 2611,
-                "title": "The Rhodesian Bush War"
+                "title": "The Rhodesian Bush War",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=CoZexC7M4hM",
@@ -209,7 +233,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=odyh65JSCuQ",
                 "duration": 7894,
-                "title": "How 14 Soldiers Survived Against 200 Taliban Fighters"
+                "title": "How 14 Soldiers Survived Against 200 Taliban Fighters",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=18adH9sRDAI",
@@ -339,7 +365,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=rae7haX6e9o",
                 "duration": 3158,
-                "title": "The Afrika Korps | WW2 Documentary | Scorched Earth | North Africa Campaign"
+                "title": "The Afrika Korps | WW2 Documentary | Scorched Earth | North Africa Campaign",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=5W-n6mQbAMU",
@@ -358,7 +386,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=aZTlJCdFNJs",
                 "duration": 3147,
-                "title": "Rare Uncensored Footage From The Battle Of Okinawa"
+                "title": "Rare Uncensored Footage From The Battle Of Okinawa",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
@@ -384,7 +414,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=moL9hN2hMj4",
                 "duration": 4354,
-                "title": "The Entire History of the Cherokee Tribe - FULL DOCUMENTARY"
+                "title": "The Entire History of the Cherokee Tribe - FULL DOCUMENTARY",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=VHcgnRl2xPM",
@@ -706,7 +738,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dOe8S9Q4CSw",
                 "duration": 3255,
-                "title": "ENCYCLOPEDIA OF MODERN ARMOR: ENGINES OF WAR - THE SECRET TECHNOLOGY OF WAR, HISTORY"
+                "title": "ENCYCLOPEDIA OF MODERN ARMOR: ENGINES OF WAR - THE SECRET TECHNOLOGY OF WAR, HISTORY",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",

@@ -30,7 +30,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
                 "duration": 2665,
-                "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geographic"
+                "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
@@ -75,7 +77,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=a4VimQp4eT0",
                 "duration": 2493,
-                "title": "The Man with Two Names | Full Episode"
+                "title": "The Man with Two Names | Full Episode",
+                "skip": [
+                    [
+                        1131.5,
+                        1157.7
+                    ],
+                    [
+                        1715.2,
+                        1734.7
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
@@ -129,7 +142,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=koj-eJo2o-c",
                 "duration": 7943,
-                "title": "What Archaeologists Discovered in Ancient Egypt | Lost Treasures of Egypt MEGA Episode | Nat Geo"
+                "title": "What Archaeologists Discovered in Ancient Egypt | Lost Treasures of Egypt MEGA Episode | Nat Geo",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=FxW5T41yJHw",
@@ -299,7 +314,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
                 "duration": 2842,
-                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans"
+                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=DqTui5BkFs0",
@@ -311,7 +328,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9lBvMoURYoU",
                 "duration": 7481,
-                "title": "Rural Crimes | “48 Hours\" Full Episodes"
+                "title": "Rural Crimes | “48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
@@ -400,7 +419,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
                 "duration": 2614,
-                "title": "The Secret Life of Paige Birgfeld | Full Episode"
+                "title": "The Secret Life of Paige Birgfeld | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
@@ -445,7 +466,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tK1HdMrG_gk",
                 "duration": 2520,
-                "title": "Dark Side of the Mesa | Full Episode"
+                "title": "Dark Side of the Mesa | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=5JEuckgMU90",
@@ -594,7 +617,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Nk7zPYPrsN8",
                 "duration": 5243,
-                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes"
+                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=xx6EiW6XCkw",
@@ -606,7 +631,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=dDxYZyMEmUU",
                 "duration": 7936,
-                "title": "UFO Truths Exposed | UFOs: Investigating the Unknown MEGA Episode | National Geographic"
+                "title": "UFO Truths Exposed | UFOs: Investigating the Unknown MEGA Episode | National Geographic",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=cCXyYpH0Ub4",
@@ -683,7 +710,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=R8zHrCvm6Ww",
                 "duration": 2504,
-                "title": "Jade Colvin is Missing | Full Episode"
+                "title": "Jade Colvin is Missing | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=JTGwqmerXYI",

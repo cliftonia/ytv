@@ -114,7 +114,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Bcus42ihkTI",
                 "duration": 157,
-                "title": "I'd Rather Go Blind"
+                "title": "I'd Rather Go Blind",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=wsIbfYEizLk",
@@ -199,7 +201,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=9C1BCAgu2I8",
                 "duration": 244,
-                "title": "Simon & Garfunkel - Mrs. Robinson (Audio)"
+                "title": "Simon & Garfunkel - Mrs. Robinson (Audio)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=2s4slliAtQU",
@@ -218,7 +222,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=n-XQ26KePUQ",
                 "duration": 149,
-                "title": "Save the last dance for me - The Drifters"
+                "title": "Save the last dance for me - The Drifters",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=1vhFnTjia_I",
@@ -361,7 +367,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-2GmzyeeXnQ",
                 "duration": 176,
-                "title": "the kinks- you really got me"
+                "title": "the kinks- you really got me",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=v0fy1HeJv80",
@@ -415,7 +423,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=w6iRNVwslM4",
                 "duration": 156,
-                "title": "Bad Moon Rising - Creedence Clearwater Revival (HQ - 5.1 Studio )"
+                "title": "Bad Moon Rising - Creedence Clearwater Revival (HQ - 5.1 Studio )",
+                "skip": [
+                    [
+                        0.0,
+                        7.6
+                    ],
+                    [
+                        146.2,
+                        155.5
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=uPqAvgN6Tyw",
@@ -455,7 +474,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3kcmwXUdDCE",
                 "duration": 164,
-                "title": "The Mamas And The Papas - California Dreamin'. Audio Gold Song ful HD.mp4"
+                "title": "The Mamas And The Papas - California Dreamin'. Audio Gold Song ful HD.mp4",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=08083BNaYcA",
@@ -572,7 +593,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=My9I8q-iJCI",
                 "duration": 178,
-                "title": "I Am a Rock"
+                "title": "I Am a Rock",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=kK62tfoCmuQ",
@@ -591,7 +614,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=z_KDPUTyDyQ",
                 "duration": 164,
-                "title": "Herb Alpert & the Tijuana Brass A Taste of Honey Video 1966"
+                "title": "Herb Alpert & the Tijuana Brass A Taste of Honey Video 1966",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=5akEgsZSfhg",
@@ -643,7 +668,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=5h2zp96Hzhg",
                 "duration": 190,
-                "title": "Neil Sedaka \"Happy Birthday Sweet Sixteen\""
+                "title": "Neil Sedaka \"Happy Birthday Sweet Sixteen\"",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=EPrtvdzhmts",
@@ -655,7 +682,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=RghL1rViX34",
                 "duration": 176,
-                "title": "Strawberry Alarm Clock - Incense and Peppermints"
+                "title": "Strawberry Alarm Clock - Incense and Peppermints",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=4RabQLuj4N8",

@@ -63,7 +63,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=b09Py3cTNWg",
                 "duration": 2691,
-                "title": "Solving a Brutal Nottingham Murder | How I Caught The Killer | Season 1 Episode 7"
+                "title": "Solving a Brutal Nottingham Murder | How I Caught The Killer | Season 1 Episode 7",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=4bIgYWRod34",
@@ -150,7 +152,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
                 "duration": 2614,
-                "title": "The Secret Life of Paige Birgfeld | Full Episode"
+                "title": "The Secret Life of Paige Birgfeld | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Gn1DemE2UOw",
@@ -162,7 +166,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=tK1HdMrG_gk",
                 "duration": 2520,
-                "title": "Dark Side of the Mesa | Full Episode"
+                "title": "Dark Side of the Mesa | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
@@ -174,7 +180,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=R8zHrCvm6Ww",
                 "duration": 2504,
-                "title": "Jade Colvin is Missing | Full Episode"
+                "title": "Jade Colvin is Missing | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Sz8Wvov_0W8",
@@ -301,7 +309,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Nk7zPYPrsN8",
                 "duration": 5243,
-                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes"
+                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=t0RwmQTY36Y",
@@ -404,7 +414,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=a4VimQp4eT0",
                 "duration": 2493,
-                "title": "The Man with Two Names | Full Episode"
+                "title": "The Man with Two Names | Full Episode",
+                "skip": [
+                    [
+                        1131.5,
+                        1157.7
+                    ],
+                    [
+                        1715.2,
+                        1734.7
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=jkOOEFB-ui4",
@@ -491,7 +512,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GdP-FkT0p1A",
                 "duration": 2717,
-                "title": "His First Date Was Actually a Deadly Trap | Adam Hilarie | Fatal First Dates"
+                "title": "His First Date Was Actually a Deadly Trap | Adam Hilarie | Fatal First Dates",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=QRabTon-3qQ",
@@ -517,7 +540,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ca4fJa-QpQA",
                 "duration": 2794,
-                "title": "The Tragic Murder of Becky Bliefnick | Killers Caught On Camera"
+                "title": "The Tragic Murder of Becky Bliefnick | Killers Caught On Camera",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=H98BMnJ4q2c",
