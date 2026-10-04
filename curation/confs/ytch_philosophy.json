@@ -194,7 +194,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=VO6XEQIsCoM",
                 "duration": 1223,
-                "title": "The paradox of choice | Barry Schwartz | TED"
+                "title": "The paradox of choice | Barry Schwartz | TED",
+                "skip": [
+                    [
+                        1189.3,
+                        1220.2
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=tX5tAkq81oA",
@@ -227,7 +234,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=9uSXOr-AdAU",
                 "duration": 6981,
-                "title": "Chase Hughes: The 3 \"Dark Psychology\" Tricks To Read Anyone's Mind!"
+                "title": "Chase Hughes: The 3 \"Dark Psychology\" Tricks To Read Anyone's Mind!",
+                "skip": [
+                    [
+                        102.5,
+                        146.7
+                    ],
+                    [
+                        3743.0,
+                        3840.0
+                    ],
+                    [
+                        5072.1,
+                        5184.6
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=qzoIAJYPQwo",
@@ -267,7 +289,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=i-jkqM0WxJk",
                 "duration": 2549,
-                "title": "REVISE Biopsychology in 40 mins! (AQA A-level Psychology)"
+                "title": "REVISE Biopsychology in 40 mins! (AQA A-level Psychology)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
@@ -399,7 +423,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=SemHh0n19LA",
                 "duration": 1521,
-                "title": "5 steps to designing the life you want  | Bill Burnett | TEDxStanford"
+                "title": "5 steps to designing the life you want  | Bill Burnett | TEDxStanford",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=H7xbw7Y7fTM",
@@ -418,7 +444,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=IVJpEkbf8zc",
                 "duration": 2854,
-                "title": "How to Understanding Frequencies, Vibration, and the Law of Attraction With Bob Proctor"
+                "title": "How to Understanding Frequencies, Vibration, and the Law of Attraction With Bob Proctor",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=NTWPZ3JYj60",

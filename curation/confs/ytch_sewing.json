@@ -128,7 +128,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=QzT7gGfN0DY",
                 "duration": 606,
-                "title": "A-Line Kurti Cutting and Stitching | Tuğba İşler"
+                "title": "A-Line Kurti Cutting and Stitching | Tuğba İşler",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=jtZxI5ZpB4c",
@@ -182,12 +184,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=Ydx_RmEY3RQ",
                 "duration": 1347,
-                "title": "How to Sew a Designer Dress? 👗 | Step-by-Step Pattern Making for Beginners ✂️"
+                "title": "How to Sew a Designer Dress? 👗 | Step-by-Step Pattern Making for Beginners ✂️",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=_QbBgCEeAKs",
                 "duration": 1163,
-                "title": "How to Cut and Sew a Bustier Dress with an Under-bust Corset and a Basque Waistline."
+                "title": "How to Cut and Sew a Bustier Dress with an Under-bust Corset and a Basque Waistline.",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=zU2AydecKIg",
@@ -227,7 +233,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=swPrYNu1kGM",
                 "duration": 486,
-                "title": "diy tote bag tutorial+easy to sew+sewing pattern free (sewing for beginners)"
+                "title": "diy tote bag tutorial+easy to sew+sewing pattern free (sewing for beginners)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=qZS8cDxY_XE",
@@ -291,7 +299,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_t0HqkO1gQM",
                 "duration": 1748,
-                "title": "Beginner Rag Quilt Tutorial | The Easiest Quilt You’ll Ever Sew (No Binding, No Batting, No Stress!)"
+                "title": "Beginner Rag Quilt Tutorial | The Easiest Quilt You’ll Ever Sew (No Binding, No Batting, No Stress!)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=ItZHF155nb8",
@@ -352,7 +362,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=-fuRf-63P_4",
                 "duration": 2096,
-                "title": "4 Easy DIY Cami Style Tops (Self Drafting Process)"
+                "title": "4 Easy DIY Cami Style Tops (Self Drafting Process)",
+                "skip": [
+                    [
+                        203.3,
+                        261.7
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=--XJiXjdoFM",
@@ -395,30 +412,11 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=KQH8F1Jvuf0",
-                "duration": 1240,
-                "title": "Lining kurthi cutting and stitching  tutorial with hand embroidery on neck and sleeves",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0L36jcMrSCU",
-                "duration": 361,
-                "title": "Summer and Winter Dress Sleeve, Daman, and Trouser Design 2026 || Cutwork + Beads Design | Lawn D...",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=k08lcOEUivk",
                 "duration": 753,
-                "title": "DIY Quilted Tote Bag Sewing Tutorial | Beginner Friendly"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E5ZWJagaxEw",
-                "duration": 396,
-                "title": "✨ Beautiful Yoke Design | Simple & Elegant Neckline Stitching Tutorial ✨",
+                "title": "DIY Quilted Tote Bag Sewing Tutorial | Beginner Friendly",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=E3WFk8_Hmoc",
@@ -428,16 +426,11 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=9jSHIh5UpX4",
-                "duration": 311,
-                "title": "#blouse design#stitching#tutorial#2026#blousetrick#",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ay86maYFouU",
                 "duration": 1242,
-                "title": "30 Easy Sewing Products People Actually Want to Buy in 2026"
+                "title": "30 Easy Sewing Products People Actually Want to Buy in 2026",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=-K5qVZs3w6U",
@@ -468,12 +461,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=-G5ywbfEM9M",
                 "duration": 1169,
-                "title": "How To Do A Traditional Seamless Sew-in Step By Step DETAILED"
+                "title": "How To Do A Traditional Seamless Sew-in Step By Step DETAILED",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=3I2f9I1eB4c",
                 "duration": 1813,
-                "title": "Autumn Stitch Book 2026 - Part 3 - Stitching An Autumn Leaf"
+                "title": "Autumn Stitch Book 2026 - Part 3 - Stitching An Autumn Leaf",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=i7popgw7w5E",

@@ -195,7 +195,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=1rYtrS5IbrQ",
                 "duration": 8459,
-                "title": "Joe Rogan Experience #2254 - Mel Gibson"
+                "title": "Joe Rogan Experience #2254 - Mel Gibson",
+                "skip": [
+                    [
+                        576.8,
+                        647.5
+                    ],
+                    [
+                        1614.5,
+                        1691.6
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=CJaMEfU-Jwg",
@@ -369,7 +380,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=eeU1fNZ2pZA",
                 "duration": 5300,
-                "title": "The Formula For Freedom, Confidence & Happiness - Tony Robbins (4K)"
+                "title": "The Formula For Freedom, Confidence & Happiness - Tony Robbins (4K)",
+                "skip": [
+                    [
+                        1401.3,
+                        1469.0
+                    ],
+                    [
+                        2533.1,
+                        2592.4
+                    ],
+                    [
+                        3588.8,
+                        3673.0
+                    ],
+                    [
+                        4376.1,
+                        4443.2
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=e5Oqk_Y-Jm4",
@@ -381,7 +411,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vOXFKYGkPvI",
                 "duration": 2094,
-                "title": "IELTS Listening Practice: Work & Career || English Podcast for IELTS Preparation"
+                "title": "IELTS Listening Practice: Work & Career || English Podcast for IELTS Preparation",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=nbzYO_e9xnw",
@@ -393,7 +425,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yx1eLn5WMjg",
                 "duration": 4134,
-                "title": "My Bloody Podcast: Never After Dark (2026) Interview with Director Dave Boyle"
+                "title": "My Bloody Podcast: Never After Dark (2026) Interview with Director Dave Boyle",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=y_woFP79F0Q",
@@ -445,7 +479,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lDESgXH5Iv8",
                 "duration": 6014,
-                "title": "Hallie Jackson NOW - Sept. 25 | NBC News NOW"
+                "title": "Hallie Jackson NOW - Sept. 25 | NBC News NOW",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=THLGQnR23gU",
@@ -755,11 +791,6 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=akm-x_ulBTQ",
-                "duration": 1271,
-                "title": "Why Stock Market Crashed Today? | Nifty, Sensex & Insurance Stocks Down | Sanjay Kathuria"
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=xAt1xcC6qfM",
                 "duration": 2619,
                 "title": "Bill Gates on India, Billion-Dollar Business Opportunities, PM Modi & Children | FO335 Raj Shamani",
@@ -829,7 +860,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=GZRAOxw04ZM",
                 "duration": 5770,
-                "title": "My Life as a Voodoo Priestess | HORRORble Podcast"
+                "title": "My Life as a Voodoo Priestess | HORRORble Podcast",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=As7abwNhG7Y",

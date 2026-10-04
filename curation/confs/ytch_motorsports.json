@@ -103,7 +103,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=oAPOPaDUUAU",
                 "duration": 1219,
-                "title": "Extended Highlights: Race 29 - AirTouch 500 at The Bend | 2026 Repco Supercars Championship"
+                "title": "Extended Highlights: Race 29 - AirTouch 500 at The Bend | 2026 Repco Supercars Championship",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=lL_d84cN1UY",
@@ -143,7 +145,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=usP9O0zFVaA",
                 "duration": 488,
-                "title": "Race Highlights | 2026 Austrian Grand Prix"
+                "title": "Race Highlights | 2026 Austrian Grand Prix",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=I6RfOY_7leA",
@@ -167,7 +171,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=eFf-MlHak6E",
                 "duration": 624,
-                "title": "Race Highlights | 2026 INDYCAR at Laguna Seca"
+                "title": "Race Highlights | 2026 INDYCAR at Laguna Seca",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=rnjmSOUYVp8",
@@ -287,7 +293,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=t8HpVlineX4",
                 "duration": 494,
-                "title": "Race Highlights | 2026 Chinese Grand Prix"
+                "title": "Race Highlights | 2026 Chinese Grand Prix",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=zeDoYUlbIFQ",
@@ -304,7 +312,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xaNKXVh5dM4",
                 "duration": 740,
-                "title": "Extended Highlights: Race 26 - Ipswich Super 440 | 2026 Repco Supercars Championship"
+                "title": "Extended Highlights: Race 26 - Ipswich Super 440 | 2026 Repco Supercars Championship",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=smDICUeLZKc",
@@ -372,7 +382,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=38oiZnT748E",
                 "duration": 837,
-                "title": "Race 1 Highlights | 2026 INDYCAR at Milwaukee"
+                "title": "Race 1 Highlights | 2026 INDYCAR at Milwaukee",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=h6Be4_MuPv4",
@@ -391,7 +403,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=7dv20pHnTjs",
                 "duration": 463,
-                "title": "Race Highlights | 2026 INDYCAR at Long Beach"
+                "title": "Race Highlights | 2026 INDYCAR at Long Beach",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=0lBA1DmeT1E",
@@ -480,7 +494,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JmMHjKmuPNo",
                 "duration": 568,
-                "title": "Highlights: 2026 Amstel Gold Race - Men"
+                "title": "Highlights: 2026 Amstel Gold Race - Men",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Xe58K2WiKWU",
@@ -590,12 +606,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=rgyh4BzFxrk",
                 "duration": 619,
-                "title": "MotoGP™ Race Highlights 🔥 | 2024 #SpanishGP"
+                "title": "MotoGP™ Race Highlights 🔥 | 2024 #SpanishGP",
+                "skip": [
+                    [
+                        610.8,
+                        619.0
+                    ]
+                ],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=BsGiuxtB_Cw",
                 "duration": 616,
-                "title": "Extended Highlights: Race 24 - Bosch Power Tools Perth Super 440 | Repco Supercars Championship"
+                "title": "Extended Highlights: Race 24 - Bosch Power Tools Perth Super 440 | Repco Supercars Championship",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=V_N7CCXgfFI",
@@ -607,12 +632,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=3A1nfGnyJak",
                 "duration": 675,
-                "title": "A Champion CROWNED! F3 Feature Race 2 Highlights | 2026 Spanish Grand Prix"
+                "title": "A Champion CROWNED! F3 Feature Race 2 Highlights | 2026 Spanish Grand Prix",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=b0hPiakCUHI",
                 "duration": 543,
-                "title": "Race Highlights | 2026 Hankook London E-Prix | Round 16 | Formula E"
+                "title": "Race Highlights | 2026 Hankook London E-Prix | Round 16 | Formula E",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=TsLs7O3s1II",
@@ -624,7 +653,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vGp2Zr9a5YM",
                 "duration": 704,
-                "title": "Supersport Race 2 at Barber Motorsports Park 2026 - HIGHLIGHTS | MotoAmerica"
+                "title": "Supersport Race 2 at Barber Motorsports Park 2026 - HIGHLIGHTS | MotoAmerica",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=EihMs_xtve0",
