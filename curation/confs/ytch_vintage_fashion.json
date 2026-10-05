@@ -118,7 +118,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=8FvDJJfkBvA",
                 "duration": 520,
-                "title": "1920s Fashion Encyclopedia, Pt 1: Daywear"
+                "title": "1920s Fashion Encyclopedia, Pt 1: Daywear",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=1rNqpqE-Xas",
@@ -284,7 +286,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=remc6xSlWs8",
                 "duration": 720,
-                "title": "THE FASHION OF THE 1920'S - FASHION HISTORY SESSIONS"
+                "title": "THE FASHION OF THE 1920'S - FASHION HISTORY SESSIONS",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=XHEt1X8dc3A",
@@ -362,7 +366,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=O_TxkFDcLUg",
                 "duration": 483,
-                "title": "Is It VINTAGE? Clothing Tags and Labels"
+                "title": "Is It VINTAGE? Clothing Tags and Labels",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=SRM9ZcnCbrw",
@@ -467,7 +473,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2_LHfjFOYmM",
                 "duration": 4539,
-                "title": "Antiques Roadshow US Full Episodes 286 | Vintage Fashion Finds With Jaw-Dropping Values"
+                "title": "Antiques Roadshow US Full Episodes 286 | Vintage Fashion Finds With Jaw-Dropping Values",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=oaPsJQXSf0E",
@@ -668,12 +676,25 @@
             {
                 "url": "https://www.youtube.com/watch?v=yfj0-ptpo7Q",
                 "duration": 1283,
-                "title": "History of the Suit in 22 Minutes: The Evolution of Menswear from 1800 to Today"
+                "title": "History of the Suit in 22 Minutes: The Evolution of Menswear from 1800 to Today",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=p8ISvGQ3Rqw",
                 "duration": 2083,
-                "title": "the life and death of the fashion magazine"
+                "title": "the life and death of the fashion magazine",
+                "skip": [
+                    [
+                        5.0,
+                        22.3
+                    ],
+                    [
+                        2037.0,
+                        2055.7
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=c5QAagOJ5bA",

@@ -194,7 +194,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=AUGTDFr9_jQ",
                 "duration": 3795,
-                "title": "Cast Alaska The Movie | UNREAL Alaskan Fishing"
+                "title": "Cast Alaska The Movie | UNREAL Alaskan Fishing",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=DriKTHfJ2RA",
@@ -206,7 +208,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Vo1YRxxAx2g",
                 "duration": 523,
-                "title": "Fishing 101: The Basics You Need to Start Fishing Today!"
+                "title": "Fishing 101: The Basics You Need to Start Fishing Today!",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=GhfiJnTGi2A",
@@ -246,7 +250,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=93zzKz-2PZU",
                 "duration": 1797,
-                "title": "3 Days Camping & Fishing Alaska's Wilderness (Near Dick Proenneke's Cabin)"
+                "title": "3 Days Camping & Fishing Alaska's Wilderness (Near Dick Proenneke's Cabin)",
+                "skip": [
+                    [
+                        1786.2,
+                        1796.2
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=bKC18s0of8I",
@@ -390,7 +401,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6wXj4uWD1EI",
                 "duration": 2811,
-                "title": "We have never seen so many MONSTER COD!!! Deep Sea Fishing inside Arctic Circle | The Fish Locker"
+                "title": "We have never seen so many MONSTER COD!!! Deep Sea Fishing inside Arctic Circle | The Fish Locker",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=YDfBENtoz2o",
@@ -472,7 +485,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-3jm4MIdcc8",
                 "duration": 531,
-                "title": "How to catch Mid-Summer JUMBO PERCH!!!"
+                "title": "How to catch Mid-Summer JUMBO PERCH!!!",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZWdqpXLx7eo",

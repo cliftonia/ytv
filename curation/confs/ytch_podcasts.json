@@ -16,7 +16,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Hb2rKGfIOrM",
                 "duration": 4079,
-                "title": "President Barack Obama in Conversation with Marc Maron | WTF Podcast"
+                "title": "President Barack Obama in Conversation with Marc Maron | WTF Podcast",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=7BHNrRSDnuo",
@@ -304,7 +306,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3I482TBLEzc",
                 "duration": 3806,
-                "title": "KIM KARDASHIAN OPENS UP About Insecurity, Healing Your Pain, & Finding HAPPINESS | Jay Shetty"
+                "title": "KIM KARDASHIAN OPENS UP About Insecurity, Healing Your Pain, & Finding HAPPINESS | Jay Shetty",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=opiw0FVHeG4",
@@ -352,7 +356,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JvEas_zZ4fM",
                 "duration": 7258,
-                "title": "Watch CNBC's full interview with Berkshire Hathaway CEO Warren Buffett"
+                "title": "Watch CNBC's full interview with Berkshire Hathaway CEO Warren Buffett",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=p6XvTconhwQ",
@@ -628,7 +634,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vObU0lkMlFk",
                 "duration": 2946,
-                "title": "Willem Dafoe reveals how he comes to terms with aging"
+                "title": "Willem Dafoe reveals how he comes to terms with aging",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=fOCWBhuDdDo",
@@ -819,7 +827,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=1p_B72s6Ix0",
                 "duration": 6833,
-                "title": "Ex-CIA Officer CONFRONTED Over Zionist Accusations | PBD Podcast #783"
+                "title": "Ex-CIA Officer CONFRONTED Over Zionist Accusations | PBD Podcast #783",
+                "skip": [
+                    [
+                        3299.7,
+                        3325.7
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=BeH1I5n-798",
@@ -855,7 +870,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ehOI6Xxwvuw",
                 "duration": 3714,
-                "title": "Macklemore, Mamdani and Miliband: Does Anyone Still Like the Shape of Israel? | Norman Finkelstein"
+                "title": "Macklemore, Mamdani and Miliband: Does Anyone Still Like the Shape of Israel? | Norman Finkelstein",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=GZRAOxw04ZM",

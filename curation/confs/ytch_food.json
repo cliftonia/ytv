@@ -222,7 +222,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2Gx6LJ-mH8g",
                 "duration": 3856,
-                "title": "Cambodian Street Food Tour! Phnom Penh City - Amazing! Cambodia Food Market Collection 2026"
+                "title": "Cambodian Street Food Tour! Phnom Penh City - Amazing! Cambodia Food Market Collection 2026",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=AQB1NGTQUTY",
@@ -454,7 +456,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NNN3mR-MAHA",
                 "duration": 3630,
-                "title": "An Amazing Street Food Tour in Cambodia 2026 🇰🇭 | Chaktomuk Walking Trail"
+                "title": "An Amazing Street Food Tour in Cambodia 2026 🇰🇭 | Chaktomuk Walking Trail",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=msa0AFSkB40",
@@ -681,7 +685,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WxWUmtpj-Ko",
                 "duration": 1881,
-                "title": "24H In Budapest - Hungarian Goulash & Christmas Market Street Food!"
+                "title": "24H In Budapest - Hungarian Goulash & Christmas Market Street Food!",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=cwNP1-CrHts",
@@ -824,7 +830,9 @@
                 "title": "Pakistan’s Hidden Roadside Breakfast Cart 😍 | Authentic Desi Nashta - Street Food Pakistan 🇵🇰",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=3BkFccg3WIw",
@@ -902,7 +910,9 @@
                 "title": "Bangkok’s Secret 6AM Breakfast Alley!  🥣 Silom 20 Street Food Market [4K HDR]",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=LQUWWlCJckk",
@@ -930,7 +940,9 @@
                 "title": "PAKISTAN'S LEGENDARY HIGHWAY SAAG PARATHA BREAKFAST RS/-70 🤤| ULTIMATE REAL DESI NASHTA STREET FOOD",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Jgz5imt9Zlo",
@@ -1018,7 +1030,9 @@
                 "title": "Amazing 😍Pakistani Street Food | Famous Uncle’s Breakfast Roadside in Lahore | Pakistan Street Food",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=XJQ_dw4NlQI",
@@ -1136,7 +1150,9 @@
                 "title": "Friday Lunch at Tiong Bahru market & Food Centre (13-2-2026) #singapore #lunch #cny2026 #market",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=k0B7Va-te44",
@@ -1263,7 +1279,9 @@
                 "title": "Street Food in Tibet - ULTIMATE TIBETAN FOOD TOUR + Amazing Potala Palace in Lhasa!",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=4FQK6OQVbZc",
@@ -1406,7 +1424,14 @@
                 "title": "The 10 things to eat in Amsterdam | WHAT & WHERE to eat, by the locals 👫🧀 #Amsterdam #cityguide",
                 "parts": [
                     "afternoon"
-                ]
+                ],
+                "skip": [
+                    [
+                        85.0,
+                        90.8
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=71SkOXO-HII",
@@ -1573,7 +1598,9 @@
                 "title": "Biggest LA STREET FOOD TOUR at 101 Night Market!",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=QP5TvOIiO5o",
@@ -1581,7 +1608,9 @@
                 "title": "PHILIPPINES 🇵🇭 BAGUIO NIGHT MARKET! Street Food & Night Walk Through the City 2026",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=NR-l_cBBwuE",
@@ -1642,16 +1671,6 @@
                 ],
                 "skip": [],
                 "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EEw62DQ7mTc",
-                "duration": 1449,
-                "title": "COLON Night Market Food Trip! Must Try New Street Food & CEBU Local Favorites 😱",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=sUnCUumgYvo",

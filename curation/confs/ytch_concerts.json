@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=M5QOaaRJYFc",
                 "duration": 1549,
-                "title": "Jill Scott: Tiny Desk Concert"
+                "title": "Jill Scott: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=5AVYDHTOixU",
@@ -330,7 +332,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-4J-f5lkCLo",
                 "duration": 1233,
-                "title": "Thee Sacred Souls: Tiny Desk Concert"
+                "title": "Thee Sacred Souls: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=KsCV94MQs34",
@@ -384,7 +388,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=59eBs8iiLU0",
                 "duration": 1600,
-                "title": "E-40: Tiny Desk Concert"
+                "title": "E-40: Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=rGyQHyDMZZI",
@@ -592,12 +598,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=jVyb_yLGrHE",
                 "duration": 1699,
-                "title": "Wale: NPR Music Tiny Desk Concert"
+                "title": "Wale: NPR Music Tiny Desk Concert",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=N8aJXgIq2QM",
                 "duration": 1409,
-                "title": "Kacey Musgraves: Tiny Desk Concert From The Archives"
+                "title": "Kacey Musgraves: Tiny Desk Concert From The Archives",
+                "skip": [
+                    [
+                        0.0,
+                        12.1
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=vevgI9a18GQ",

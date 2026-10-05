@@ -164,7 +164,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FTAW1PvEcAk",
                 "duration": 3927,
-                "title": "The Normandy Landings: June 6, 1944 | D-Day Documentary"
+                "title": "The Normandy Landings: June 6, 1944 | D-Day Documentary",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=td5Iph8BFgE",
@@ -475,7 +477,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZuAJ35F235Q",
                 "duration": 2465,
-                "title": "The Iran-Iraq War 1980-1988 (Documentary)"
+                "title": "The Iran-Iraq War 1980-1988 (Documentary)",
+                "skip": [
+                    [
+                        2356.3,
+                        2431.0
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=ErXdZEPNdDM",
@@ -618,7 +627,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=QAAbcNl4Lb8",
                 "duration": 5059,
-                "title": "The Power of Big Oil Part One: Denial (full documentary) | FRONTLINE"
+                "title": "The Power of Big Oil Part One: Denial (full documentary) | FRONTLINE",
+                "skip": [
+                    [
+                        5007.6,
+                        5035.9
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=8tVW8pBc8rQ",

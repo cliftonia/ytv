@@ -37,7 +37,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yFPIC-7jz9w",
                 "duration": 1201,
-                "title": "She Vanished From Her Boyfriend’s Home… What Police Found Changed Everything | True Crime Doc"
+                "title": "She Vanished From Her Boyfriend’s Home… What Police Found Changed Everything | True Crime Doc",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=xPZpb0yJbSg",
@@ -84,7 +86,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=rwIVjxKoKz4",
                 "duration": 2846,
-                "title": "Poisoned Pregnant Woman’s Final Call Exposes Her Killer: The Murder of Jade Benning |True Crime Doc"
+                "title": "Poisoned Pregnant Woman’s Final Call Exposes Her Killer: The Murder of Jade Benning |True Crime Doc",
+                "skip": [
+                    [
+                        203.2,
+                        311.5
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Fek2H_sQBkQ",
@@ -194,7 +203,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=wWXNKApr2To",
                 "duration": 4804,
-                "title": "🅽🅴🆆Who The (Bleep) Did I Marry 2026🌹 S9  E33~Shadow of Doubt🌹American Documentary True Crime Podcast"
+                "title": "🅽🅴🆆Who The (Bleep) Did I Marry 2026🌹 S9  E33~Shadow of Doubt🌹American Documentary True Crime Podcast",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=5JEuckgMU90",
@@ -241,7 +252,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=HC1abU94H38",
                 "duration": 2844,
-                "title": "How Christa Pike Became the Youngest Woman on Death Row"
+                "title": "How Christa Pike Became the Youngest Woman on Death Row",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Xlwvf-_UG8k",
@@ -479,7 +492,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=JZckH6Re3CI",
                 "duration": 2499,
-                "title": "Shattered Dreams | Full Episode"
+                "title": "Shattered Dreams | Full Episode",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=JHsV8a-Hp0o",
@@ -582,7 +597,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=VTWJ2LeSNkc",
                 "duration": 2509,
-                "title": "The Boy Across the Street | Full Episode"
+                "title": "The Boy Across the Street | Full Episode",
+                "skip": [
+                    [
+                        2488.4,
+                        2508.5
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=5ZNILNNy2Os",
@@ -627,7 +649,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=e0FE47RDAd8",
                 "duration": 2464,
-                "title": "Nightmare in Napa | Full Episode"
+                "title": "Nightmare in Napa | Full Episode",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=dLMNwWL8XwU",
@@ -681,7 +705,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=bdzmxOhJ_Oc",
                 "duration": 5253,
-                "title": "Love and Death in Alaska (Part 1 & 2) | Full Episodes"
+                "title": "Love and Death in Alaska (Part 1 & 2) | Full Episodes",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=It6vFo9_7-U",

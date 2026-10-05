@@ -107,7 +107,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cRb6GQEAsU8",
                 "duration": 965,
-                "title": "Colombia vs Portugal Extended Highlights 🌎🏆 2026 FIFA World Cup™"
+                "title": "Colombia vs Portugal Extended Highlights 🌎🏆 2026 FIFA World Cup™",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=sbXZBAUOkDw",
@@ -187,7 +189,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=qg9GZqmTRto",
                 "duration": 765,
-                "title": "New York Giants vs Los Angeles Rams Game Highlights | 2026 NFL Season Week 2"
+                "title": "New York Giants vs Los Angeles Rams Game Highlights | 2026 NFL Season Week 2",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=9i9LJ6A4-_A",
@@ -227,7 +231,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cnPiwMs1tds",
                 "duration": 303,
-                "title": "EXTENDED HIGHLIGHTS - Spain Vs Croatia 4-1 | Goals & Highlights | UEFA Nations League 2026 - Yamal"
+                "title": "EXTENDED HIGHLIGHTS - Spain Vs Croatia 4-1 | Goals & Highlights | UEFA Nations League 2026 - Yamal",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=bi4dvOh4tPA",
@@ -246,7 +252,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=704E4qdUcQI",
                 "duration": 1251,
-                "title": "England vs Spain Highlights ⚽ UEFA Nations League"
+                "title": "England vs Spain Highlights ⚽ UEFA Nations League",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=zvnmx1IrUXM",
@@ -443,7 +451,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_LTpGBtBkZI",
                 "duration": 525,
-                "title": "South Africa vs Guinea | Highlights and Goals | Africon Qualifiers 2026 | Bafana Bafana Highlights"
+                "title": "South Africa vs Guinea | Highlights and Goals | Africon Qualifiers 2026 | Bafana Bafana Highlights",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=G-1TjnP6x7c",
@@ -518,7 +528,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z7OIS7hXV7E",
                 "duration": 741,
-                "title": "Green Bay Packers vs. New York Jets Game Highlights | NFL 2026 Season Week 2"
+                "title": "Green Bay Packers vs. New York Jets Game Highlights | NFL 2026 Season Week 2",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=x-cpRHf4xd4",
@@ -551,7 +563,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=G40aR1CKUbE",
                 "duration": 869,
-                "title": "Tulsa Golden Hurricane vs. Arkansas Razorbacks | Full Game Highlights | ESPN College Football"
+                "title": "Tulsa Golden Hurricane vs. Arkansas Razorbacks | Full Game Highlights | ESPN College Football",
+                "skip": [
+                    [
+                        849.9,
+                        868.1
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=pV8FmQa0a5w",
