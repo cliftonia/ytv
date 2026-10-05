@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=mNUhaCj4YR4",
-                "duration": 1606,
-                "title": "KwaZodwa Part 2",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=8htW5Ew2CJU",
                 "duration": 4296,
                 "title": "Popular Sketches from A Bit of Fry and Laurie | A Bit of Fry and Laurie | BBC Comedy Greats",
@@ -224,7 +217,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lysofmPn59c",
                 "duration": 4769,
-                "title": "The Wacky World of Fanfiction Ft. @The_Transfintie_Bois ! | Sketch Comedy Episode 3!"
+                "title": "The Wacky World of Fanfiction Ft. @The_Transfintie_Bois ! | Sketch Comedy Episode 3!",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=iByLqEPj3aM",
@@ -377,7 +372,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=ttgGprvzmF0",
                 "duration": 4368,
-                "title": "These Sketches Are Absolutely MENTAL (that's British for crazy) | Smosh Mouth 137"
+                "title": "These Sketches Are Absolutely MENTAL (that's British for crazy) | Smosh Mouth 137",
+                "skip": [
+                    [
+                        564.1,
+                        634.1
+                    ],
+                    [
+                        1230.9,
+                        1262.1
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=_uhk5wr7Xnk",
@@ -452,7 +458,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xipWbETv8K8",
                 "duration": 271,
-                "title": "Parent-Teacher Conference - SNL"
+                "title": "Parent-Teacher Conference - SNL",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=zfv8d18LOTo",
@@ -471,7 +479,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=06R_YAkM2kA",
                 "duration": 1459,
-                "title": "Naked Video (1987) Series 2 Episode 3 | Classic Scottish Sketch Comedy | BBC Scotland"
+                "title": "Naked Video (1987) Series 2 Episode 3 | Classic Scottish Sketch Comedy | BBC Scotland",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=J3T7fPJYGbM",

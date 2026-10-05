@@ -211,7 +211,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z7OIS7hXV7E",
                 "duration": 741,
-                "title": "Green Bay Packers vs. New York Jets Game Highlights | NFL 2026 Season Week 2"
+                "title": "Green Bay Packers vs. New York Jets Game Highlights | NFL 2026 Season Week 2",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=JurtiKYOFOY",
@@ -230,7 +232,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KXFvVftbhwQ",
                 "duration": 5352,
-                "title": "BILLIONAIRE HOUSEWIVES - SHAZNAY OKAWA, EKAMA ETIM | Nigerian Movies 2026 Latest Full Movi"
+                "title": "BILLIONAIRE HOUSEWIVES - SHAZNAY OKAWA, EKAMA ETIM | Nigerian Movies 2026 Latest Full Movi",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=tuSY7xfRnCk",
@@ -242,7 +246,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=ndZ6B1EaJEs",
                 "duration": 387,
-                "title": "Jesus Christ Superstar | Gethsemane (I Only Want to Say)"
+                "title": "Jesus Christ Superstar | Gethsemane (I Only Want to Say)",
+                "skip": [
+                    [
+                        365.9,
+                        386.7
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=gaRVzooavRI",
@@ -413,12 +424,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=tshn6cIWD28",
                 "duration": 349,
-                "title": "Udaintha Paathiram (Official)  - New Tamil Christian Songs I Mohan Chinnasamy I David selv"
+                "title": "Udaintha Paathiram (Official)  - New Tamil Christian Songs I Mohan Chinnasamy I David selv",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=s7NU5EYISYg",
                 "duration": 504,
-                "title": "YEVARU CHOOPINCHALENI | #JoshuaShaik | Pranam Kamlakhar | Sireesha B | Telugu Christian So"
+                "title": "YEVARU CHOOPINCHALENI | #JoshuaShaik | Pranam Kamlakhar | Sireesha B | Telugu Christian So",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=ouiaBGFg1iI",
@@ -430,7 +445,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1qI6vzK4iIg",
                 "duration": 253,
-                "title": "Pirantha Naal Muthalai ( Official video ) Johnsam Joyson :Tamil Christian New Song :4K"
+                "title": "Pirantha Naal Muthalai ( Official video ) Johnsam Joyson :Tamil Christian New Song :4K",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=AgEExSbZ7RU",
@@ -449,7 +466,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=iTEr5hquQTM",
                 "duration": 355,
-                "title": "Latest New Telugu Christian songs 2017 || NEE KORAKU || Davidson Gajulavarthi || Deva Na k"
+                "title": "Latest New Telugu Christian songs 2017 || NEE KORAKU || Davidson Gajulavarthi || Deva Na k",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=gsGgIOAnFAw",

@@ -9,12 +9,37 @@
             {
                 "url": "https://www.youtube.com/watch?v=5wks1W-auKY",
                 "duration": 3144,
-                "title": "Slow down to speed up: AI and software engineering"
+                "title": "Slow down to speed up: AI and software engineering",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=OfMAtaocvJw",
                 "duration": 4625,
-                "title": "The third golden age of software engineering – thanks to AI, with Grady Booch"
+                "title": "The third golden age of software engineering – thanks to AI, with Grady Booch",
+                "skip": [
+                    [
+                        55.4,
+                        64.0
+                    ],
+                    [
+                        789.3,
+                        884.3
+                    ],
+                    [
+                        1575.9,
+                        1676.3
+                    ],
+                    [
+                        2527.9,
+                        2621.8
+                    ],
+                    [
+                        4614.4,
+                        4622.3
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=KHI_OPhIWOY",
@@ -61,7 +86,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=2n41YjR5QfU",
                 "duration": 2379,
-                "title": "Software engineering at the tipping point"
+                "title": "Software engineering at the tipping point",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=L1w6wBxhpgE",
@@ -162,7 +189,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=vkgGmkR7gIo",
                 "duration": 480,
-                "title": "Is Embedded Systems Still a Good Career in 2026?"
+                "title": "Is Embedded Systems Still a Good Career in 2026?",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ek32ZH3AI3k",
@@ -179,7 +208,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=lFVG31ge0Oc",
                 "duration": 1683,
-                "title": "Hana Chockler, \"Using causality for debugging and explainability\", VeTSS Annual Conference 2026"
+                "title": "Hana Chockler, \"Using causality for debugging and explainability\", VeTSS Annual Conference 2026",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=uQDRJ9aIcbQ",
@@ -205,7 +236,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=6xVxSQo3tj0",
                 "duration": 1561,
-                "title": "using std::cpp 2026 Conference Opening"
+                "title": "using std::cpp 2026 Conference Opening",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=WAUnmQt2Z7Y",
@@ -271,7 +304,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=1h8UU_OVRTE",
                 "duration": 2812,
-                "title": "Scott and Mark learn...how agents reshape software engineering | BRK247"
+                "title": "Scott and Mark learn...how agents reshape software engineering | BRK247",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=BT5crw9u25Q",
@@ -345,7 +380,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WRg13Ze_UpY",
                 "duration": 3787,
-                "title": "Modern Architecture 101 for New Engineers & Forgetful Experts - Jerry Nixon - NDC Copenhagen 2025"
+                "title": "Modern Architecture 101 for New Engineers & Forgetful Experts - Jerry Nixon - NDC Copenhagen 2025",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=dgTnbT89hks",
@@ -392,7 +429,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=un6PZLheUiE",
                 "duration": 1542,
-                "title": "Linux Audio Conference 2026 Presentation - Lucian Parisi - Spatial Audio Research"
+                "title": "Linux Audio Conference 2026 Presentation - Lucian Parisi - Spatial Audio Research",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=DnZqK8dLuV8",
@@ -418,7 +457,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-JR6GQxvJPg",
                 "duration": 930,
-                "title": "Developer and Agentic AI Governance and Risk - Raj Mallempati at RSAC Conference 2026"
+                "title": "Developer and Agentic AI Governance and Risk - Raj Mallempati at RSAC Conference 2026",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=-XDIGgnDRek",
@@ -556,7 +597,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=y0JW63JjkYw",
                 "duration": 5184,
-                "title": "Can C++ Become a Memory Safe Language? - Prabhu Missier - C++Now 2026"
+                "title": "Can C++ Become a Memory Safe Language? - Prabhu Missier - C++Now 2026",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=kExhVOfdPMg",

@@ -173,7 +173,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=FCqgrtFvVfE",
                 "duration": 562,
-                "title": "How Costco Makes Money With Almost No Markup"
+                "title": "How Costco Makes Money With Almost No Markup",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Pqt3U48MFcY",
@@ -520,7 +522,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NVH7JewfgJg",
                 "duration": 616,
-                "title": "Why South Africa is still so segregated"
+                "title": "Why South Africa is still so segregated",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=NZ4Hs_EzPrE",
@@ -610,7 +614,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zxVoCw3P1Gc",
                 "duration": 1152,
-                "title": "Once You Learn Economics, You Can't Be MANIPULATED Anymore"
+                "title": "Once You Learn Economics, You Can't Be MANIPULATED Anymore",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=NngM_qdDMm8",
@@ -683,12 +689,21 @@
             {
                 "url": "https://www.youtube.com/watch?v=KOZlobXa9iM",
                 "duration": 1512,
-                "title": "Soviet Style Economics Was Insane and Here’s Why"
+                "title": "Soviet Style Economics Was Insane and Here’s Why",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=GPOv72Awo68",
                 "duration": 685,
-                "title": "How it Happened - The 2008 Financial Crisis: Crash Course Economics #12"
+                "title": "How it Happened - The 2008 Financial Crisis: Crash Course Economics #12",
+                "skip": [
+                    [
+                        653.7,
+                        673.3
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=fq6jDxJk1LM",
@@ -707,7 +722,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=x4F5gIWS_Is",
                 "duration": 3283,
-                "title": "The Great Depression - America's Biggest Economic Crisis | Free Documentary History"
+                "title": "The Great Depression - America's Biggest Economic Crisis | Free Documentary History",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZZ25uZtey34",

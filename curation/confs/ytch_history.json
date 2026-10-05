@@ -170,7 +170,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=VTWJ2LeSNkc",
                 "duration": 2509,
-                "title": "The Boy Across the Street | Full Episode"
+                "title": "The Boy Across the Street | Full Episode",
+                "skip": [
+                    [
+                        2488.4,
+                        2508.5
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=aVJeIGUeUwI",
@@ -426,7 +433,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
                 "duration": 5681,
-                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History"
+                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=ElsNJnMHRFE",
@@ -536,7 +545,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=OxICbHDZfB0",
                 "duration": 7599,
-                "title": "Solid Proof | “48 Hours\" Full Episodes"
+                "title": "Solid Proof | “48 Hours\" Full Episodes",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Miwz0Asf3Ps",
@@ -731,7 +742,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=otpR1sI2r3E",
                 "duration": 7647,
-                "title": "Forbidden Caves Inside Antarctic Pyramids *Marathon* | Ancient Aliens"
+                "title": "Forbidden Caves Inside Antarctic Pyramids *Marathon* | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=SGpsjrJGJuQ",
