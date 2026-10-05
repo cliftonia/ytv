@@ -58,7 +58,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=3CJBtqEl_U8",
                 "duration": 2974,
-                "title": "The most dangerous prison complex in the United States"
+                "title": "The most dangerous prison complex in the United States",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=4bIgYWRod34",
@@ -140,7 +142,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZLciyiQnW9I",
                 "duration": 7897,
-                "title": "The First 48 full episodes 2026 | Devil's Trail | True Crime Documentary #1080p"
+                "title": "The First 48 full episodes 2026 | Devil's Trail | True Crime Documentary #1080p",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=jdFwXheHvsE",
@@ -286,7 +290,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DJxt5coVs7Y",
                 "duration": 4518,
-                "title": "After the First 48 New 2026 ❄️ Bail Out ❄️American Documentary True Crime Full HD"
+                "title": "After the First 48 New 2026 ❄️ Bail Out ❄️American Documentary True Crime Full HD",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vrtbxvefnjs",
@@ -354,7 +360,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
                 "duration": 3213,
-                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS"
+                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=wJkXjNbsD-Y",
@@ -469,7 +477,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=zqHpDKeniKY",
                 "duration": 3198,
-                "title": "Living Off The Grid (2026) | Full Movie | Documentary"
+                "title": "Living Off The Grid (2026) | Full Movie | Documentary",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=6D-4kMrGgh0",
@@ -516,7 +526,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
                 "duration": 5681,
-                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History"
+                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=hALTeHQ_wh0",
@@ -615,7 +627,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=xqYacf5ZIa0",
                 "duration": 2664,
-                "title": "COVID-19 Outbreak: Minute by Minute | Full Film"
+                "title": "COVID-19 Outbreak: Minute by Minute | Full Film",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=iMaunecj84w",
@@ -690,7 +704,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=gAVy13IATVU",
                 "duration": 2447,
-                "title": "SAM WALKER - Left For Dead In Spain | Full Documentary"
+                "title": "SAM WALKER - Left For Dead In Spain | Full Documentary",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=1knIpTuzUW8",
@@ -825,7 +841,9 @@
                 "title": "The First 48: Lester Street (S7, E6) | Full Episode",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=zQnFsqy_xEI",
@@ -873,7 +891,18 @@
                 "title": "Washington Week with The Atlantic full episode, 9/18/26",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [
+                    [
+                        48.0,
+                        107.2
+                    ],
+                    [
+                        1491.6,
+                        1607.0
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=r9PeYPHdpNo",
@@ -1126,7 +1155,9 @@
                 "title": "The Land Before Time Full Episodes | Stranger from the Mysterious Above 117 | HD | Cartoon for Kids",
                 "parts": [
                     "breakfast"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=UUSb9XwvX9Y",
@@ -1367,7 +1398,9 @@
                 "title": "BEYOND THE WORLD: BOOK OF LIFE | Full AI Movie | Higgsfield Global Film Festival",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=UgqeNTwoWHU",
@@ -1445,7 +1478,9 @@
                 "title": "Classified UFO Cases Finally Exposed | Alien Documentary | Full Movie | UFO Encounters",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=e6aktI6Yu3A",
@@ -1453,7 +1488,9 @@
                 "title": "TOGETHER: 4-IN-A-ROW | FULL FEATURE DOCUMENTARY FILM",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=YtrVcOxVDls",
@@ -1558,7 +1595,9 @@
                 "title": "Norman's Rare Guitars Documentary [Full Movie] Watch for Free!",
                 "parts": [
                     "prime"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=fxyArmDe9-s",
@@ -1926,7 +1965,9 @@
                 "title": "BuzzFeed Unsolved Cases That Are Now SOLVED",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=-ykzQ2MNc_w",
@@ -2052,7 +2093,9 @@
                 "title": "Our Unexplainable Night at Winchester Mystery House",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=9cdUxZuarL0",
@@ -2120,7 +2163,9 @@
                 "title": "MonsterQuest: AMERICA'S WOLFMAN CAUGHT ON FILM (S4, E9) | Full Episode | History",
                 "parts": [
                     "late"
-                ]
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=TfQ6K8h_FBw",

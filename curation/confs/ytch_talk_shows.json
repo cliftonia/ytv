@@ -9,7 +9,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=WLDE9LrGpNk",
                 "duration": 1262,
-                "title": "Jimmy Kimmel’s Interview with James Talarico That the FCC Doesn’t Want You To See"
+                "title": "Jimmy Kimmel’s Interview with James Talarico That the FCC Doesn’t Want You To See",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=9dSLJHS2Uns",
@@ -360,7 +362,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=cP2P1Jke-to",
                 "duration": 1518,
-                "title": "\"Meghan Markle's Late Night Interview Spirals Into Chaos\""
+                "title": "\"Meghan Markle's Late Night Interview Spirals Into Chaos\"",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=pFmKjzEZTMo",
@@ -372,12 +376,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=5bYNIY7m03w",
                 "duration": 586,
-                "title": "'The Big Bang Theory' Cast Together For One Final Time"
+                "title": "'The Big Bang Theory' Cast Together For One Final Time",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=fl0x9Swgfgw",
                 "duration": 493,
-                "title": "Keanu Reeves Takes The Colbert Questionert"
+                "title": "Keanu Reeves Takes The Colbert Questionert",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=M26OySv2lP0",
@@ -403,7 +411,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=YG5fvuXl1yk",
                 "duration": 702,
-                "title": "Tom Holland Was in the Writers' Room for Spider-Man: Brand New Day, Says This Movie Is for the Fans"
+                "title": "Tom Holland Was in the Writers' Room for Spider-Man: Brand New Day, Says This Movie Is for the Fans",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=O5-4j67YNek",
@@ -519,7 +529,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=AYzremZTgHk",
                 "duration": 1038,
-                "title": "Trump Brags About Acing \"Perfect\" Cognitive Exam in Presidential Physical"
+                "title": "Trump Brags About Acing \"Perfect\" Cognitive Exam in Presidential Physical",
+                "skip": [
+                    [
+                        193.7,
+                        222.8
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=LVO4g2pr9B0",
@@ -716,7 +733,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=TA6DgOvyP0w",
                 "duration": 812,
-                "title": "Trump Heckled & Called \"Pedophile Protector,\" Fox News Questions Trump on Iran Claims: A Closer Look"
+                "title": "Trump Heckled & Called \"Pedophile Protector,\" Fox News Questions Trump on Iran Claims: A Closer Look",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=2U9LOpA9Xko",

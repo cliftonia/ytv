@@ -23,7 +23,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=-oVHS6u94TU",
                 "duration": 647,
-                "title": "Sci-Fi Short Film \"Darkside\" | DUST"
+                "title": "Sci-Fi Short Film \"Darkside\" | DUST",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=6r1EZVKvFuc",
@@ -49,7 +51,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=jsgubGPj8d4",
                 "duration": 1487,
-                "title": "Sci-Fi Short Film \"The Machine\" | DUST"
+                "title": "Sci-Fi Short Film \"The Machine\" | DUST",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=GbbprRV-2-s",
@@ -131,7 +135,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=afTDnY05v9A",
                 "duration": 1100,
-                "title": "Sci-Fi Short Film \"Starfisher\" | DUST"
+                "title": "Sci-Fi Short Film \"Starfisher\" | DUST",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=hcg6JuCMcn8",
@@ -164,7 +170,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=Od49AfIS2-U",
                 "duration": 990,
-                "title": "Sci-Fi Short Film “Hyperlight\" | DUST"
+                "title": "Sci-Fi Short Film “Hyperlight\" | DUST",
+                "skip": [
+                    [
+                        977.0,
+                        989.5
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=nTpR1QayngU",
@@ -183,7 +196,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=KEdcGxMcqFg",
                 "duration": 593,
-                "title": "FIVE MINUTES | AI Sci-Fi Short Film | Higgsfield Global Film Festival 2026"
+                "title": "FIVE MINUTES | AI Sci-Fi Short Film | Higgsfield Global Film Festival 2026",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=TBzepYD1b64",
@@ -363,7 +378,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=yzv5qQQmJVw",
                 "duration": 308,
-                "title": "Sci-Fi Short Film \"EXODUS\" | DUST | Online Premiere"
+                "title": "Sci-Fi Short Film \"EXODUS\" | DUST | Online Premiere",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=hpfHRsyNfDM",
@@ -375,7 +392,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=T4FFtzLrX8w",
                 "duration": 1234,
-                "title": "Horizon – Rise of the Colonists (Part 1 | Full Sci-Fi War Movie)"
+                "title": "Horizon – Rise of the Colonists (Part 1 | Full Sci-Fi War Movie)",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=h1iUibC60FA",
@@ -483,7 +502,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=j1Pjr9OGjJU",
                 "duration": 782,
-                "title": "Sci-Fi Short Film \"Alienation\" | DUST"
+                "title": "Sci-Fi Short Film \"Alienation\" | DUST",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=MU36yCJe8Cg",

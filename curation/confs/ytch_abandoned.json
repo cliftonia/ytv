@@ -123,7 +123,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=eNqGwq6rw04",
                 "duration": 1871,
-                "title": "Shocking Discovery Inside Missing Family's ABANDONED House"
+                "title": "Shocking Discovery Inside Missing Family's ABANDONED House",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=_0N1PgWk3VU",
@@ -145,13 +147,6 @@
                 "title": "ABANDONED Tech Billionaire's MEGA MANSION (Everything Left Behind Inside)",
                 "skip": [],
                 "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=B1ZOLkQYfAo",
-                "duration": 490,
-                "title": "I Found An Abandoned Car Showroom 💀",
-                "skip": [],
-                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=pyQGYe3ie1k",
@@ -252,7 +247,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=hgan5SaBSNg",
                 "duration": 1131,
-                "title": "How to (Actually) Find Abandoned Places as a Beginner (#1)"
+                "title": "How to (Actually) Find Abandoned Places as a Beginner (#1)",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=zuQUORuaMng",
@@ -353,7 +350,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=11TNckmDkvc",
                 "duration": 3964,
-                "title": "100 Most Disturbing Abandoned Building Encounters Caught On Camera!"
+                "title": "100 Most Disturbing Abandoned Building Encounters Caught On Camera!",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=9ZrWe20wAD0",
@@ -565,7 +564,22 @@
             {
                 "url": "https://www.youtube.com/watch?v=Y9o6VOBCS-I",
                 "duration": 2240,
-                "title": "Exploring one of the largest abandoned military underground facilities in Germany"
+                "title": "Exploring one of the largest abandoned military underground facilities in Germany",
+                "skip": [
+                    [
+                        16.0,
+                        35.0
+                    ],
+                    [
+                        412.8,
+                        484.4
+                    ],
+                    [
+                        2117.0,
+                        2155.3
+                    ]
+                ],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=c646APwhP9I",
@@ -655,7 +669,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=_WuW-66ib0E",
                 "duration": 1563,
-                "title": "6 Times Tunnel Explorers Barely Escaped Death"
+                "title": "6 Times Tunnel Explorers Barely Escaped Death",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=UuzuSBDBF7M",
@@ -728,7 +744,9 @@
             {
                 "url": "https://www.youtube.com/watch?v=DcQGFqxJVbM",
                 "duration": 1922,
-                "title": "6 Most DISTURBING Urban Exploration Encounters With Security"
+                "title": "6 Most DISTURBING Urban Exploration Encounters With Security",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=JYNkZtxZpVI",
