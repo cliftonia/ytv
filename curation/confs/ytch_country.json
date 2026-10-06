@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=KgAQF-yVXoE",
-                "duration": 171,
-                "title": "Kane Brown - Woman (Live from the 61st ACM Awards)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=4KbYfH7EAm8",
                 "duration": 195,
                 "title": "Ella Langley - Be Her (61st Academy of Country Music Awards)",
@@ -21,18 +14,11 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=ph_q3W8pWWg",
-                "duration": 184,
-                "title": "@RileyGreenMusic Performs \"Change My Mind\" [61st Academy of Country Music Awards]",
+                "url": "https://www.youtube.com/watch?v=KgAQF-yVXoE",
+                "duration": 171,
+                "title": "Kane Brown - Woman (Live from the 61st ACM Awards)",
                 "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nlivpsQpZy8",
-                "duration": 260,
-                "title": "Cody Johnson - \"Travelin' Soldier\" [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=8P5VxMc1TOY",
@@ -42,11 +28,32 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=_1cknksk0F4",
-                "duration": 283,
-                "title": "Alan Jackson - Remember When (Live From The 60th Academy of Country Music Awards)",
+                "url": "https://www.youtube.com/watch?v=nlivpsQpZy8",
+                "duration": 260,
+                "title": "Cody Johnson - \"Travelin' Soldier\" [61st Academy of Country Music Awards]",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xjp4RKd1cTY",
+                "duration": 203,
+                "title": "Kacey Musgraves - I Will Always Love You (Live From The 2026 MTV VMAs)",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OxYDMLDvCKw",
+                "duration": 243,
+                "title": "@AveryAnna - \"Bang Bang\" / \"Blood Runs Thicker\" [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ph_q3W8pWWg",
+                "duration": 184,
+                "title": "@RileyGreenMusic Performs \"Change My Mind\" [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=waeAPna0Dqo",
@@ -63,18 +70,32 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=OxYDMLDvCKw",
-                "duration": 243,
-                "title": "@AveryAnna - \"Bang Bang\" / \"Blood Runs Thicker\" [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=A87oHNXvGYA",
                 "duration": 208,
                 "title": "@DanAndShay - \"Say So\" [61st Academy of Country Music Awards]",
                 "skip": [],
                 "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_1cknksk0F4",
+                "duration": 283,
+                "title": "Alan Jackson - Remember When (Live From The 60th Academy of Country Music Awards)",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RkQCYe3qRC0",
+                "duration": 217,
+                "title": "Shaboozey feat. Gunna Perform \"Cowgirl\" / \"High Noon\" | 2026 VMAs",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T_TRGNCImCY",
+                "duration": 247,
+                "title": "Craig Morgan - I'm Country Music (Live From The Bus)",
+                "skip": [],
+                "skip_checked": 1791321918
             },
             {
                 "url": "https://www.youtube.com/watch?v=orXAg5dIMa8",
@@ -84,6 +105,83 @@
                 "skip_checked": 1791241322
             },
             {
+                "url": "https://www.youtube.com/watch?v=I6F6NSqlBJU",
+                "duration": 219,
+                "title": "Blake Shelton - Stay Country or Die Tryin’ (Live from 2025 American Music Awards)",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HJHHS2qmpMg",
+                "duration": 194,
+                "title": "@ParkerMcCollum & @LeeAnnWomack - \"Killin' Me\" [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kyACwhtqkD4",
+                "duration": 191,
+                "title": "Alan Jackson - Livin' On Love - Keepin' It Country",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZrwCTY8GM0E",
+                "duration": 224,
+                "title": "@LaineyWilson - \"Can't Sit Still\" [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V_kMFiMH89E",
+                "duration": 299,
+                "title": "Kane Brown - Like I Love Country Music @ Extra Innings Festival AZ 2/28/26",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0bJ55b_202o",
+                "duration": 188,
+                "title": "The Heartbreaking Moment Alan Jackson Said Goodbye to Country Music",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6IfYsmYcN4Y",
+                "duration": 63,
+                "title": "@michaelbuble Presents Song of the Year [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lZbDAlmDhgU",
+                "duration": 372,
+                "title": "Baby Come Back - Keith Urban Live @ 2026 Country Summer Music Festival, Santa Rosa, CA 6-13-26",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pGvOXUoTG7I",
+                "duration": 90,
+                "title": "@ShaniaTwain Presents Entertainer of the Year [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gnAJE2yMZXw",
+                "duration": 177,
+                "title": "@mirandalambert Performs \"Crisco\" [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s9gAXwYZtfk",
+                "duration": 250,
+                "title": "Artists Of Then, Now & Forever - Forever Country",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=T6TrbqUv2Lw",
                 "duration": 261,
                 "title": "The War And Treaty - Cold (Live From The Academy Of Country Music Honors)",
@@ -91,30 +189,30 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=BE4N815P2rM",
-                "duration": 199,
-                "title": "Owen Riegling - “Love Hate Love” (Live From The 2026 CCMA Awards)",
+                "url": "https://www.youtube.com/watch?v=Hpiw5J8T8ak",
+                "duration": 323,
+                "title": "Kane Brown Performs Like I Love Country Music at IHeartRadio Country Festival 2026",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=qnGm-S5SxxI",
-                "duration": 304,
-                "title": "Lainey Wilson - Country Music Medley | 2025 CMA Awards Performance",
+                "url": "https://www.youtube.com/watch?v=-89YFUilg8w",
+                "duration": 129,
+                "title": "@laurenalaina Introduces Dan and Shay's Performance [61st Academy of Country Music Awards]",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=S52b5wRoCBM",
-                "duration": 218,
-                "title": "HARDY - McArthur (Live From Tour)",
+                "url": "https://www.youtube.com/watch?v=Q9gn2J0GCmk",
+                "duration": 240,
+                "title": "@littlebigtown  - \"Hey There Sunshine\" [61st Academy of Country Music Awards]",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=gnAJE2yMZXw",
-                "duration": 177,
-                "title": "@mirandalambert Performs \"Crisco\" [61st Academy of Country Music Awards]",
+                "url": "https://www.youtube.com/watch?v=Z7jJfGKXwyc",
+                "duration": 324,
+                "title": "ACM Awards 2026 Recap! Couples Take Over Country Music’s Big Night in Las Vegas",
                 "skip": [],
                 "skip_checked": 1790634163
             },
@@ -133,95 +231,11 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=I6F6NSqlBJU",
-                "duration": 219,
-                "title": "Blake Shelton - Stay Country or Die Tryin’ (Live from 2025 American Music Awards)",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HJHHS2qmpMg",
-                "duration": 194,
-                "title": "@ParkerMcCollum & @LeeAnnWomack - \"Killin' Me\" [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q9gn2J0GCmk",
-                "duration": 240,
-                "title": "@littlebigtown  - \"Hey There Sunshine\" [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lZbDAlmDhgU",
-                "duration": 372,
-                "title": "Baby Come Back - Keith Urban Live @ 2026 Country Summer Music Festival, Santa Rosa, CA 6-1",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tfN7lZJhK8U",
-                "duration": 226,
-                "title": "Randy Travis & Josh Turner Perform \"Your Man\" | CMT",
+                "url": "https://www.youtube.com/watch?v=qnGm-S5SxxI",
+                "duration": 304,
+                "title": "Lainey Wilson - Country Music Medley | 2025 CMA Awards Performance",
                 "skip": [],
                 "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZrwCTY8GM0E",
-                "duration": 224,
-                "title": "@LaineyWilson - \"Can't Sit Still\" [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=s9gAXwYZtfk",
-                "duration": 250,
-                "title": "Artists Of Then, Now & Forever - Forever Country",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6IfYsmYcN4Y",
-                "duration": 63,
-                "title": "@michaelbuble Presents Song of the Year [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hpiw5J8T8ak",
-                "duration": 323,
-                "title": "Kane Brown Performs Like I Love Country Music at IHeartRadio Country Festival 2026",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mDDGCKbJ5bI",
-                "duration": 233,
-                "title": "Eric Church - Chasin’ That Neon Rainbow (Live From Academy Of Country Music Honors)",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-89YFUilg8w",
-                "duration": 129,
-                "title": "@laurenalaina Introduces Dan and Shay's Performance [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0bJ55b_202o",
-                "duration": 188,
-                "title": "The Heartbreaking Moment Alan Jackson Said Goodbye to Country Music",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_MOavH-Eivw",
-                "duration": 227,
-                "title": "Maddie & Tae - Girl In A Country Song (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=6mcYl_XkJ38",
@@ -231,18 +245,25 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=Z7jJfGKXwyc",
-                "duration": 324,
-                "title": "ACM Awards 2026 Recap! Couples Take Over Country Music’s Big Night in Las Vegas",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UIjvqFjWVwk",
-                "duration": 254,
-                "title": "Luke Bryan - Country Song Came On (Official Music Video)",
+                "url": "https://www.youtube.com/watch?v=tfN7lZJhK8U",
+                "duration": 226,
+                "title": "Randy Travis & Josh Turner Perform \"Your Man\" | CMT",
                 "skip": [],
                 "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kH0IZwDUG4g",
+                "duration": 331,
+                "title": "@ShaniaTwain Opening Monologue [61st Academy of Country Music Awards]",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ELZNClmKX1E",
+                "duration": 235,
+                "title": "Kane Brown - Like I Love Country Music (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=BXCe8Y0GReY",
@@ -252,11 +273,11 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=2wpniHxc7oI",
-                "duration": 298,
-                "title": "Somebody Like You - Keith Urban Live @ 2026 Country Summer Music Festival, Santa Rosa, CA",
+                "url": "https://www.youtube.com/watch?v=LkVNzBZFPWE",
+                "duration": 86,
+                "title": "Cole Swindell - Ain't Worth the Whiskey Live at Barefoot Country Music Festival 2026",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1791321918
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZEWGyyLiqY4",
@@ -266,9 +287,51 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=ELZNClmKX1E",
-                "duration": 235,
-                "title": "Kane Brown - Like I Love Country Music (Official Music Video)",
+                "url": "https://www.youtube.com/watch?v=rc8WenpCkBE",
+                "duration": 207,
+                "title": "Country music legend Vince Gill playing tribute to his  friend Dolly Parton 8-27-26 Kansas City.",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zoL9Wp8unB0",
+                "duration": 95,
+                "title": "Nirvana Receives the VMA Video Vanguard Award | 2026 VMAs",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G3YcWh8TSQ4",
+                "duration": 268,
+                "title": "Brett Eldredge & Meghan Trainor Perform 'Islands In the Stream' | CMT Crossroads",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UIjvqFjWVwk",
+                "duration": 254,
+                "title": "Luke Bryan - Country Song Came On (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pL438wQZTDM",
+                "duration": 219,
+                "title": "Blake Shelton - Stay Country or Die Tryin' (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wv5WHQj2OXk",
+                "duration": 335,
+                "title": "Josh Turner  LIVE on the  Country Music Cruise 2026Long Black Train",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ma3L7xWB_1U",
+                "duration": 201,
+                "title": "Tyler Hubbard - Dancin’ In The Country (Official Music Video)",
                 "skip": [],
                 "skip_checked": 1790890293
             },
@@ -280,221 +343,18 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=_MdVz8-fMqw",
-                "duration": 250,
-                "title": "Lay Down Beside Me - The French Family Band LIVE !  Country Music Cruise 2026",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rl_gnSKFsEA",
-                "duration": 341,
-                "title": "Dolly Parton Tribute: 78th Emmys",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NsT1EL86Cvo",
-                "duration": 160,
-                "title": "Luke Bryan - Signs (Visualizer)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ma3L7xWB_1U",
-                "duration": 201,
-                "title": "Tyler Hubbard - Dancin’ In The Country (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G3YcWh8TSQ4",
-                "duration": 268,
-                "title": "Brett Eldredge & Meghan Trainor Perform 'Islands In the Stream' | CMT Crossroads",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kH0IZwDUG4g",
-                "duration": 331,
-                "title": "@ShaniaTwain Opening Monologue [61st Academy of Country Music Awards]",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bgv_YB4Kvbc",
-                "duration": 236,
-                "title": "Luke Bryan - Country On (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C7rJJsrDsss",
-                "duration": 297,
-                "title": "Bailey Zimmerman - New To Country (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=odM8fxFksJ4",
-                "duration": 334,
-                "title": "Not At This Party (Opener) - Dasha Live @ 2026 Country Summer Music Festival, Santa Rosa,",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PufbYNWm_bY",
-                "duration": 207,
-                "title": "Alan Jackson - Chattahoochee (Where I Come From Tornado Benefit Livestream)",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ymd2QqQiyqk",
-                "duration": 237,
-                "title": "Henry Taylor & James Taylor - You Can Close Your Eyes (Live at Honda Center, 10/30/2021)",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DGXQsqt5Dew",
-                "duration": 336,
-                "title": "Drake Milligan C2C London o2 UK March 2026 highlights country music",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-y5zFvMTfPI",
-                "duration": 212,
-                "title": "Sam Hunt - Country House (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pL438wQZTDM",
-                "duration": 219,
-                "title": "Blake Shelton - Stay Country or Die Tryin' (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2TvKYjKVzBw",
-                "duration": 134,
-                "title": "Graham Barham - COUNTRY MUSIC (Official Audio)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=U0jgyyOtitU",
-                "duration": 417,
-                "title": "Zac Brown Band - Free/Into the Mystic | Live on Austin City Limits TV (Web Exclusive)",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eH5YhI9bdo4",
-                "duration": 313,
-                "title": "Zara Larsson - Midnight Sun [Live] (2026) - iHeart Radio Music Festival",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ukick72Qafc",
-                "duration": 291,
-                "title": "Brantley Gilbert - Bottoms Up (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rc8WenpCkBE",
-                "duration": 207,
-                "title": "Country music legend Vince Gill playing tribute to his  friend Dolly Parton 8-27-26 Kansas",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=B24tgxRGKCM",
-                "duration": 214,
-                "title": "Kelsea Ballerini ft. Kenny Chesney - half of my hometown (From the 56th ACM Awards)",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rItv9i6c7AY",
-                "duration": 216,
-                "title": "Luke Combs - Beautiful Crazy (Official Video)",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Oi9B_bhnjBs",
-                "duration": 189,
-                "title": "One Day at a Time – Marilyn Sellars | Classic Country Music Cover (Country Gospel Classic)",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z8OJdQB6Zoc",
-                "duration": 211,
-                "title": "Post Malone- I Fall Apart @ Barefoot Country Music Festival 2026 Wildwood, NJ (Big Ass Sta",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DDXLmYyFu4I",
-                "duration": 226,
-                "title": "Alan Jackson - Livin' On Love (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=v2LixP7n_hM",
-                "duration": 222,
-                "title": "Cody Johnson - 'Til You Can't (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pG2jHH9_1co",
-                "duration": 232,
-                "title": "Luke Bryan - Made It A Memory (Visualizer)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hvKyBcCDOB4",
-                "duration": 347,
-                "title": "Darius Rucker - Wagon Wheel (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7qaHdHpSjX8",
-                "duration": 237,
-                "title": "Brett Young - In Case You Didn't Know (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CH6AAX1E9C8",
-                "duration": 183,
-                "title": "Grenon - paperbox (Live from Tamworth Country Music Festival)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=77qc4ZtufzM",
-                "duration": 240,
-                "title": "Morgan Wallen - Up Down ft. Florida Georgia Line (Official Video)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=KjRK2PWTsdg",
                 "duration": 164,
                 "title": "VOA Country Music Festival kicks off final year in West Chester",
                 "skip": [],
                 "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mDDGCKbJ5bI",
+                "duration": 233,
+                "title": "Eric Church - Chasin’ That Neon Rainbow (Live From Academy Of Country Music Honors)",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=m9IDcXPWCk8",
@@ -504,39 +364,18 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=BixwVsiDdZM",
-                "duration": 236,
-                "title": "Luke Combs - Hurricane (Official Video)",
+                "url": "https://www.youtube.com/watch?v=Z8OJdQB6Zoc",
+                "duration": 211,
+                "title": "Post Malone- I Fall Apart @ Barefoot Country Music Festival 2026 Wildwood, NJ (Big Ass Stadium Tour)",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=mRoTTC-uWqI",
-                "duration": 140,
-                "title": "Tucker Wetmore- Wine Into Whiskey (Live) @ Barefoot Country Music Festival ‘26 Wildwood, N",
+                "url": "https://www.youtube.com/watch?v=5Ip4fF5CAtU",
+                "duration": 209,
+                "title": "Martina McBride & Pat Benatar Perform 'Independence Day' | CMT Crossroads",
                 "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cqRQXAiB0dI",
-                "duration": 247,
-                "title": "The Wedding (Ave Maria) – Jody Wayne | Classic Country Music Cover (Golden Love Song)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6SF68TfBSL8",
-                "duration": 287,
-                "title": "Post Malone- ROCKSTAR (Live) @ Barefoot Country Music Festival 2026 (Big Ass Stadium Tour)",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zoSiYNQQvTA",
-                "duration": 326,
-                "title": "Zac Brown Pays Tribute to Dolly Parton",
-                "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1791321918
             },
             {
                 "url": "https://www.youtube.com/watch?v=JQFWJgpeXKA",
@@ -546,88 +385,46 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=ngG2XKJ_y1Q",
-                "duration": 220,
-                "title": "Olivia Rodrigo - traitor (Live From The American Music Awards/2021)",
+                "url": "https://www.youtube.com/watch?v=7qaHdHpSjX8",
+                "duration": 237,
+                "title": "Brett Young - In Case You Didn't Know (Official Music Video)",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=uXyxFMbqKYA",
-                "duration": 300,
-                "title": "Luke Combs - When It Rains It Pours (Official Video)",
+                "url": "https://www.youtube.com/watch?v=C5nktk0LQY0",
+                "duration": 243,
+                "title": "The Version Sessions – Almost Over You – (Cover by Andre Valdez)",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1791321918
             },
             {
-                "url": "https://www.youtube.com/watch?v=FuoWykVNwyI",
-                "duration": 175,
-                "title": "Bee Gees - Massachusetts (One For All Tour Live In Australia 1989)",
+                "url": "https://www.youtube.com/watch?v=HVoTgw2HJn8",
+                "duration": 218,
+                "title": "Save the Last Dance for Me – The Drifters | Classic Country Music Cover (Timeless Love Ballad)",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1791321918
             },
             {
-                "url": "https://www.youtube.com/watch?v=AQLQHXZ-vvw",
-                "duration": 307,
-                "title": "Clay Walker LIVE on the Country Music Cruise 2026  Don't Close Your Eyes",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2DsH4M4BfY4",
-                "duration": 201,
-                "title": "Chuck Mead LIVE ! Country Music Cruise 2026 - Me and Opie Down by the Duck Pond",
+                "url": "https://www.youtube.com/watch?v=Ymd2QqQiyqk",
+                "duration": 237,
+                "title": "Henry Taylor & James Taylor - You Can Close Your Eyes (Live at Honda Center, 10/30/2021)",
                 "skip": [],
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=gOAabd-_rxw",
-                "duration": 292,
-                "title": "Cody Johnson - Travelin' Soldier (Acoustic)",
+                "url": "https://www.youtube.com/watch?v=-y5zFvMTfPI",
+                "duration": 212,
+                "title": "Sam Hunt - Country House (Official Music Video)",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=aLrzy4Wcx4s",
-                "duration": 318,
-                "title": "Kenny Chesney - Beer in Mexico [Live] (2026) - iHeart Radio Music Festival",
+                "url": "https://www.youtube.com/watch?v=43_oZa9z2t4",
+                "duration": 186,
+                "title": "Monaghan Country Music Festival 2016 - Highlights",
                 "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PkrTvtIxUaA",
-                "duration": 274,
-                "title": "Kenny Chesney - Knowing You (Official Music Video)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Yf6C0L_7-CA",
-                "duration": 331,
-                "title": "Carrie Underwood - How Great Thou Art (Official Performance Video)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TX1uKaPomBU",
-                "duration": 271,
-                "title": "T Graham Brown LIVE !  on the Country Music Cruise 2026 DARLENE",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yUZh1_Y6UIg",
-                "duration": 278,
-                "title": "Casey Barnes \"Solid Rock\" 22 Jan 2026 Tamworth Country Music",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_HZM0QiuUS8",
-                "duration": 343,
-                "title": "Goo Goo Dolls - Iris (Live in Buffalo, NY, 7/4/2004) [Official Video]",
-                "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791321918
             },
             {
                 "url": "https://www.youtube.com/watch?v=mC54M6d-mls",
@@ -637,25 +434,221 @@
                 "skip_checked": 1790367139
             },
             {
+                "url": "https://www.youtube.com/watch?v=mRoTTC-uWqI",
+                "duration": 140,
+                "title": "Tucker Wetmore- Wine Into Whiskey (Live) @ Barefoot Country Music Festival ‘26 Wildwood, NJ",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CH6AAX1E9C8",
+                "duration": 183,
+                "title": "Grenon - paperbox (Live from Tamworth Country Music Festival)",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=7sNLHxwA6lI",
                 "duration": 77,
-                "title": "@ShaniaTwain & Jessie Jo Dillon introduce @KaceyMusgraves [61st Academy of Country Music A",
+                "title": "@ShaniaTwain & Jessie Jo Dillon introduce @KaceyMusgraves [61st Academy of Country Music Awards]",
                 "skip": [],
                 "skip_checked": 1791143589
             },
             {
+                "url": "https://www.youtube.com/watch?v=77qc4ZtufzM",
+                "duration": 240,
+                "title": "Morgan Wallen - Up Down ft. Florida Georgia Line (Official Video)",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2wpniHxc7oI",
+                "duration": 298,
+                "title": "Somebody Like You - Keith Urban Live @ 2026 Country Summer Music Festival, Santa Rosa, CA 6-13-26",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_MdVz8-fMqw",
+                "duration": 250,
+                "title": "Lay Down Beside Me - The French Family Band LIVE !  Country Music Cruise 2026",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oi9B_bhnjBs",
+                "duration": 189,
+                "title": "One Day at a Time – Marilyn Sellars | Classic Country Music Cover (Country Gospel Classic)",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C7rJJsrDsss",
+                "duration": 297,
+                "title": "Bailey Zimmerman - New To Country (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GvTEuXTPQTc",
+                "duration": 415,
+                "title": "Shreya Ghoshal Grand Entry– Ghoomar Live | Los Angeles (LA) Concert 2026",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=z9Avsyv0-g4",
                 "duration": 170,
-                "title": "WHY I LOVE COUNTRY MUSIC                 LLOYD COLE LIVE AT THE OLD FRUITMARKET GLASGOW 20",
+                "title": "WHY I LOVE COUNTRY MUSIC                 LLOYD COLE LIVE AT THE OLD FRUITMARKET GLASGOW 2026",
                 "skip": [],
                 "skip_checked": 1790367139
             },
             {
+                "url": "https://www.youtube.com/watch?v=hpTWD3m7d4I",
+                "duration": 231,
+                "title": "Madonna's VMAs Performance Raises Debate On Aging | The View",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rItv9i6c7AY",
+                "duration": 216,
+                "title": "Luke Combs - Beautiful Crazy (Official Video)",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AB1ihp99b6M",
+                "duration": 236,
+                "title": "Morgan Wallen - Been By Now (Live) Baltimore 7/18/26 #countrymusic #morganwallen #live #fyp #music",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TX1uKaPomBU",
+                "duration": 271,
+                "title": "T Graham Brown LIVE !  on the Country Music Cruise 2026 DARLENE",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AQLQHXZ-vvw",
+                "duration": 307,
+                "title": "Clay Walker LIVE on the Country Music Cruise 2026  Don't Close Your Eyes",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ukick72Qafc",
+                "duration": 291,
+                "title": "Brantley Gilbert - Bottoms Up (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hvKyBcCDOB4",
+                "duration": 347,
+                "title": "Darius Rucker - Wagon Wheel (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v2LixP7n_hM",
+                "duration": 222,
+                "title": "Cody Johnson - 'Til You Can't (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PkrTvtIxUaA",
+                "duration": 274,
+                "title": "Kenny Chesney - Knowing You (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2DsH4M4BfY4",
+                "duration": 201,
+                "title": "Chuck Mead LIVE ! Country Music Cruise 2026 - Me and Opie Down by the Duck Pond",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Thvm6dADOms",
+                "duration": 243,
+                "title": "Brett Young - Mercy (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9zWZZ3NlONA",
+                "duration": 192,
+                "title": "Grand Finale: Wagon Wheel / Can The Circle Be Unbroken (Bye & Bye) | Late Late Country Special",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B_iRgQId6ME",
+                "duration": 209,
+                "title": "Richmond Symphony's Nashville Hitmakers concert blends country music with live orchestra",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d-uYZWQRPI0",
+                "duration": 159,
+                "title": "Taylor Swift Wins Video of the Year for \"The Fate of Ophelia\" | 2026 VMAs",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=euJu49kSN0A",
+                "duration": 186,
+                "title": "Keith Urban - Summer Breeze (52nd American Music Awards) #2026 #lasvegas #keithurban #countrymusic",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BPCjC543llU",
+                "duration": 230,
+                "title": "Alan Jackson, Jimmy Buffett - It's Five O' Clock Somewhere (Official HD Video)",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z5n9ZyqyM14",
+                "duration": 187,
+                "title": "Favorite Country Song by HARDY LIVE @ Coastal Credit Union Music Park Raleigh, NC 6-13-26",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=P3PTvRNGSLs",
                 "duration": 226,
-                "title": "Gavin Adcock Rock The Country 2026 Ashland Kentucky rock country music live concert festiv",
+                "title": "Gavin Adcock Rock The Country 2026 Ashland Kentucky rock country music live concert festival",
                 "skip": [],
                 "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XRfHcG6ZrJU",
+                "duration": 330,
+                "title": "The 2026 VMAs Were A MESS—Here's What You Didn't See",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pzj-vMVSE4Q",
+                "duration": 204,
+                "title": "Johnny Blue Skies - Excited Delirium - Live in Nashville 10/02/2026 (Sturgill Simpson)",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uXyxFMbqKYA",
+                "duration": 300,
+                "title": "Luke Combs - When It Rains It Pours (Official Video)",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=2U1Cn4ukKiI",
@@ -665,28 +658,49 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=NRg6wSM08xM",
-                "duration": 338,
-                "title": "Chris Stapleton - Burn the Heavy Chains (Live Studio Performance) | New Country Music 2026",
+                "url": "https://www.youtube.com/watch?v=cqRQXAiB0dI",
+                "duration": 247,
+                "title": "The Wedding (Ave Maria) – Jody Wayne | Classic Country Music Cover (Golden Love Song)",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=kcAJFoZ_g-g",
-                "duration": 166,
-                "title": "Lil Man J x Paul Wall - Sippin Country Remix (Official Music Video)",
+                "url": "https://www.youtube.com/watch?v=fw1Dxj2AxW4",
+                "duration": 62,
+                "title": "The Redeemed live at Australian Country Music People's Choice Awards 2026 - Tamworth Town Hall",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1791321918
             },
             {
-                "url": "https://www.youtube.com/watch?v=RNm37oUepZ4",
-                "duration": 222,
-                "title": "Blake Shelton - Come Back As A Country Boy (Official Music Video)",
+                "url": "https://www.youtube.com/watch?v=Fez1z-PohD0",
+                "duration": 164,
+                "title": "Luke Bryan - Country And She Knows It (Live From Good Morning America)",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BixwVsiDdZM",
+                "duration": 236,
+                "title": "Luke Combs - Hurricane (Official Video)",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g7f6HiQ2LuU",
+                "duration": 267,
+                "title": "Midland - Drinkin' Problem (Official Music Video)",
+                "skip": [],
+                "skip_checked": 1791321918
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6SF68TfBSL8",
+                "duration": 287,
+                "title": "Post Malone- ROCKSTAR (Live) @ Barefoot Country Music Festival 2026 (Big Ass Stadium Tour)",
+                "skip": [],
+                "skip_checked": 1791241322
             }
         ],
         "search_query": "country music live performance",
-        "last_refreshed": 1790107156
+        "last_refreshed": 1791321895
     }
 }
