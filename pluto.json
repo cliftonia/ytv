@@ -3441,22 +3441,6 @@
    }
   },
   {
-   "number": 216,
-   "name": "Pluto TV Backcountry",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5cabdf1437b88b26947346b2.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Backcountry"
-    }
-   ],
-   "pluto": {
-    "id": "5cabdf1437b88b26947346b2",
-    "region": "us"
-   }
-  },
-  {
    "number": 217,
    "name": "Spike Outdoors",
    "kind": "live",
