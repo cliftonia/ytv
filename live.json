@@ -9723,24 +9723,6 @@
    "guide_id": "USAJ3504707A"
   },
   {
-   "number": 1466,
-   "name": "Pluto TV Backcountry",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-5cabdf1437b88b26947346b2.m3u8",
-     "duration": 600,
-     "title": "Pluto TV Backcountry"
-    }
-   ],
-   "pluto": {
-    "id": "5cabdf1437b88b26947346b2",
-    "region": "us"
-   },
-   "block": "Documentaries",
-   "sub": "Outdoors"
-  },
-  {
    "number": 1467,
    "name": "Pluto TV Tough Jobs",
    "kind": "live",
