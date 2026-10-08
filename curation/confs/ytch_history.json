@@ -7,27 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=Qn9kWK6AqIA",
-                "duration": 2665,
-                "title": "Secret Sunken Cities (Full Episode) | Drain the Oceans Compilations | National Geographic",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
-                "duration": 3980,
-                "title": "Cleopatra's Final Secret (Full Episode) | Documentary Special | National Geographic",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9eNQzWzE51k",
-                "duration": 5134,
-                "title": "The Future of Warfare Revealed | Special | Full Episode",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
                 "duration": 2665,
                 "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
@@ -35,170 +14,18 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
-                "duration": 5829,
-                "title": "Ghost in the Machine | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=TpJas6Tx-m8",
+                "duration": 8602,
+                "title": "The Weirdest Mysteries in History (Documentary)",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=9LTZ8tbnc7g",
-                "duration": 7559,
-                "title": "America's BIGGEST Mysteries *Marathon* | The UnXplained | History",
+                "url": "https://www.youtube.com/watch?v=kGIIPzvK9c0",
+                "duration": 5671,
+                "title": "Searching for Amelia Earhart (Full Episode) | SPECIAL | National Geographic",
                 "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
-                "duration": 5012,
-                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience | PBS",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AV2LpVplmgc",
-                "duration": 2595,
-                "title": "Dark Secrets of Vatican City - Forbidden History",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vmRb-0v5xfI",
-                "duration": 6838,
-                "title": "The Eugenics Crusade | Full Documentary | AMERICAN EXPERIENCE | PBS",
-                "skip": [
-                    [
-                        192.5,
-                        213.2
-                    ]
-                ],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a4VimQp4eT0",
-                "duration": 2493,
-                "title": "The Man with Two Names | Full Episode",
-                "skip": [
-                    [
-                        1131.5,
-                        1157.7
-                    ],
-                    [
-                        1715.2,
-                        1734.7
-                    ]
-                ],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
-                "duration": 2457,
-                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
-                "duration": 2683,
-                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
-                "duration": 4085,
-                "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the Heinz Dynasty",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7dUjAGTUGrU",
-                "duration": 3610,
-                "title": "Most Fascinating Ancient Mysteries | Expedition Files | Discovery",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
-                "duration": 4930,
-                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rU6DORQU--k",
-                "duration": 2532,
-                "title": "Inside the World's Most Mysterious Pyramids | The UnXplained",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MgWQKLtLtSU",
-                "duration": 1992,
-                "title": "Lost Civilizations Beyond History | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=koj-eJo2o-c",
-                "duration": 7943,
-                "title": "What Archaeologists Discovered in Ancient Egypt | Lost Treasures of Egypt MEGA Episode | Nat Geo",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FxW5T41yJHw",
-                "duration": 7941,
-                "title": "Global Disasters | Witness to Disaster MEGA Episode | National Geographic",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wG83zTHJL9U",
-                "duration": 7610,
-                "title": "Jaw-Dropping Trials | “48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eTEdKrJ1DhI",
-                "duration": 2665,
-                "title": "Lost in the Bermuda Triangle (Full Episode) | Witness to Disaster | National Geographic",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VTWJ2LeSNkc",
-                "duration": 2509,
-                "title": "The Boy Across the Street | Full Episode",
-                "skip": [
-                    [
-                        2488.4,
-                        2508.5
-                    ]
-                ],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aVJeIGUeUwI",
-                "duration": 2518,
-                "title": "Mysteries of Sacred Mountains | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FFVJL7Z5RjU",
-                "duration": 8488,
-                "title": "ABC 20/20 [New] 2026 Full Episodes – One Last Call | ABC 20/20 Murder Documentary 2026 New",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gPZKTfRYRjo",
-                "duration": 2657,
-                "title": "Lost Technologies of Ancient Civilizations | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791495700
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vrtbxvefnjs",
@@ -208,11 +35,210 @@
                 "skip_checked": 1791056276
             },
             {
+                "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
+                "duration": 5681,
+                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f8R_bMndsAs",
+                "duration": 3300,
+                "title": "Debunking the biggest myths history made you believe | BBC Timestamp",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
+                "duration": 4085,
+                "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the Heinz Dynasty",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KFW6ksILu40",
+                "duration": 3150,
+                "title": "Druids: Myth, Magic, and the Truth | Free Documentary History",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
+                "duration": 3191,
+                "title": "The Real History of Africa They Never Taught You | Full Documentary | Africa's Great Civilizations",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gyQqodlfLiA",
+                "duration": 3235,
+                "title": "Stone Age Temple Mystery | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        93.0,
+                        108.1
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
+                "duration": 4930,
+                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
+                "duration": 2683,
+                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=861h6_UzqkM",
+                "duration": 5443,
+                "title": "Forbidden gospels cut from the Bible | Banned from the Bible | Full Special",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MgWQKLtLtSU",
+                "duration": 1992,
+                "title": "Lost Civilizations Beyond History | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z8RQwJ9tGDo",
+                "duration": 3248,
+                "title": "This Secret Cave Could Change How We See Early Humans | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        130.8,
+                        159.3
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IzSfHV4dJ3c",
+                "duration": 2421,
+                "title": "The Mystery of Alien Travel Through History | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sb_CJ6AiOq0",
+                "duration": 7496,
+                "title": "Double Lives | 48 Hours Full Episodes",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a2BLqQn_0M0",
+                "duration": 2281,
+                "title": "The Rise and Ruin of the Coca-Cola Family | Full Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7EFiG_XWdNo",
+                "duration": 3326,
+                "title": "The Colosseum’s Rise and Fall | Full Episode | Secrets of the Dead",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5lqOeaAl2Zs",
+                "duration": 7726,
+                "title": "Behind Some of the Most Secretive Institutions *Marathon* | America's Book of Secrets",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
+                "duration": 5012,
+                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience | PBS",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=hcPcoMD84mA",
                 "duration": 2665,
                 "title": "Did Aliens Build Ancient Power Plants? | Ancient Aliens",
                 "skip": [],
                 "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7KBwx1b53Ao",
+                "duration": 1406,
+                "title": "Too Many Similarities to Be a Coincidence | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPZKTfRYRjo",
+                "duration": 2657,
+                "title": "Lost Technologies of Ancient Civilizations | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qn9kWK6AqIA",
+                "duration": 2665,
+                "title": "Secret Sunken Cities (Full Episode) | Drain the Oceans Compilations | National Geographic",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-ccCf5hGJxI",
+                "duration": 2929,
+                "title": "Inside the Mystery of the Greys | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aVJeIGUeUwI",
+                "duration": 2518,
+                "title": "Mysteries of Sacred Mountains | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9LTZ8tbnc7g",
+                "duration": 7559,
+                "title": "America's BIGGEST Mysteries *Marathon* | The UnXplained | History",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1knIpTuzUW8",
+                "duration": 3236,
+                "title": "How Native Americans Read the Stars (And Built a Civilization) | Full Episode | Native America",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_xxpvYNJPrQ",
+                "duration": 2482,
+                "title": "Sade Robinson and The Secret Beach | Full Episode",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oSJVby9x9Fg",
+                "duration": 1432,
+                "title": "Ancient Tech That's OUT OF THIS WORLD | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_iqTJpdkGUA",
+                "duration": 5409,
+                "title": "History of Gypsies (Roma) | Full History Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
             },
             {
                 "url": "https://www.youtube.com/watch?v=jHtNTBO4vFI",
@@ -235,53 +261,11 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=ndHNOgutm4E",
-                "duration": 2537,
-                "title": "The UFO Superhighway (S20, E8) | Ancient Aliens | Full Episode",
+                "url": "https://www.youtube.com/watch?v=IFcY4DSJ4_E",
+                "duration": 5329,
+                "title": "JFK’s Hidden Truth: Declassified Files That Change Everything - Documentary Historical - EM",
                 "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1ZyUCAoMIpQ",
-                "duration": 7942,
-                "title": "Egypt’s Queens: Cleopatra, Nefertiti, & More | Lost Treasures of Egypt MEGA Episode | Nat Geo",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C8YdGMLxoYY",
-                "duration": 2328,
-                "title": "Could God Be An Alien? | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4WAFj9b1DsU",
-                "duration": 5979,
-                "title": "The Longest Manhunt In New York State History | The FBI Files",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1knIpTuzUW8",
-                "duration": 3236,
-                "title": "How Native Americans Read the Stars (And Built a Civilization) | Full Episode | Native America",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vvYlta7PHzw",
-                "duration": 5271,
-                "title": "UFO Encounters the Government Couldn't Explain | Secret Access | Full Special",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t0RwmQTY36Y",
-                "duration": 2556,
-                "title": "Deep Secret | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791495700
             },
             {
                 "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
@@ -291,11 +275,109 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=4Bs47iEWuHc",
-                "duration": 2610,
-                "title": "Mob Betrayals from New York to Chicago (Full Episode) | Inside the American Mob Compilation",
+                "url": "https://www.youtube.com/watch?v=v-q0j8il3ZQ",
+                "duration": 3233,
+                "title": "The Men Who Ruled New York’s Mafia | American Godfathers: The Five Families",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
+                "duration": 3980,
+                "title": "Cleopatra's Final Secret (Full Episode) | Documentary Special | National Geographic",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kaUemcqIQ-k",
+                "duration": 6798,
+                "title": "United States of Secrets, Part One (full documentary) | FRONTLINE",
+                "skip": [
+                    [
+                        6745.1,
+                        6752.3
+                    ],
+                    [
+                        6760.6,
+                        6768.6
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
+                "duration": 5829,
+                "title": "Ghost in the Machine | Full Documentary",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9eNQzWzE51k",
+                "duration": 5134,
+                "title": "The Future of Warfare Revealed | Special | Full Episode",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rU6DORQU--k",
+                "duration": 2532,
+                "title": "Inside the World's Most Mysterious Pyramids | The UnXplained",
                 "skip": [],
                 "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S90CcmJgEGE",
+                "duration": 7918,
+                "title": "Unseen Worlds: From Underground to the Heavens *Marathon* | Ancient Aliens | History",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4WAFj9b1DsU",
+                "duration": 5979,
+                "title": "The Longest Manhunt In New York State History | The FBI Files",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E1a5zYEvkts",
+                "duration": 2465,
+                "title": "Ransom | Full Episode",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eTEdKrJ1DhI",
+                "duration": 2665,
+                "title": "Lost in the Bermuda Triangle (Full Episode) | Witness to Disaster | National Geographic",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vmRb-0v5xfI",
+                "duration": 6838,
+                "title": "The Eugenics Crusade | Full Documentary | AMERICAN EXPERIENCE | PBS",
+                "skip": [
+                    [
+                        192.5,
+                        213.2
+                    ]
+                ],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7dUjAGTUGrU",
+                "duration": 3610,
+                "title": "Most Fascinating Ancient Mysteries | Expedition Files | Discovery",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AV2LpVplmgc",
+                "duration": 2595,
+                "title": "Dark Secrets of Vatican City - Forbidden History",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
@@ -305,309 +387,23 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=sdrYGQh4doU",
-                "duration": 2428,
-                "title": "Death at Soho House | Full Episode",
+                "url": "https://www.youtube.com/watch?v=LMtZIdhURxs",
+                "duration": 5461,
+                "title": "American Pachuco: The Legend of Luis Valdez | Full Documentary | American Masters | PBS",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=sb_CJ6AiOq0",
-                "duration": 7496,
-                "title": "Double Lives | 48 Hours Full Episodes",
+                "url": "https://www.youtube.com/watch?v=1ZyUCAoMIpQ",
+                "duration": 7942,
+                "title": "Egypt’s Queens: Cleopatra, Nefertiti, & More | Lost Treasures of Egypt MEGA Episode | Nat Geo",
                 "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
-                "duration": 2842,
-                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DqTui5BkFs0",
-                "duration": 5180,
-                "title": "The Clues Preceding The September Attacks | Road to 9/11: Part 1 | Full Special",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9lBvMoURYoU",
-                "duration": 7481,
-                "title": "Rural Crimes | “48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
-                "duration": 2524,
-                "title": "The Millionaire, the Model and the Hit Man | Full Episode",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=4bIgYWRod34",
                 "duration": 2508,
                 "title": "Coached to Kill | Full Episode",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eM_CilZnxaI",
-                "duration": 5392,
-                "title": "From Orphan to President | Andrew Jackson | Full Special",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XSF6kDtflKk",
-                "duration": 7472,
-                "title": "Schemes and Plots | \"48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kNuwCiuDz4E",
-                "duration": 6613,
-                "title": "The ENTIRE History of Israel (Documentary)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RPhOFP-tcyU",
-                "duration": 2532,
-                "title": "What Does the Government Really Know About UFOs? | The UnXplained (S2, E4) | Full Episode",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cA-6LrUPbXo",
-                "duration": 2523,
-                "title": "The Killing of Theresa Fusco | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jts5vTi2jco",
-                "duration": 7552,
-                "title": "Greed and Murder | 48 Hours Full Episodes",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3mhEZa_Jrck",
-                "duration": 2393,
-                "title": "Earthen Echoes of Alien Technology | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TfQ6K8h_FBw",
-                "duration": 2233,
-                "title": "Have Aliens Been Visiting Earth for Millions of Years? | Ancient Aliens | History",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",
-                "duration": 5179,
-                "title": "The Missed Warnings That Led to 9/11 | Road to 9/11 | Full Special",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Jm5jBRdf-eE",
-                "duration": 7644,
-                "title": "Stranger Danger | “48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
-                "duration": 2614,
-                "title": "The Secret Life of Paige Birgfeld | Full Episode",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
-                "duration": 5681,
-                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ElsNJnMHRFE",
-                "duration": 2431,
-                "title": "Fugitive @ hotmail.com | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0_E91AOveQ0",
-                "duration": 2503,
-                "title": "The Love Bombing of Gloria Choi | Full Episode",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
-                "duration": 1623,
-                "title": "CAUTION!!! This Case Made ME Question HUMANITY - True Crime Documentary",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rNTxOmdZuws",
-                "duration": 1315,
-                "title": "Aliens Were Already Here | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IzSfHV4dJ3c",
-                "duration": 2421,
-                "title": "The Mystery of Alien Travel Through History | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tK1HdMrG_gk",
-                "duration": 2520,
-                "title": "Dark Side of the Mesa | Full Episode",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5JEuckgMU90",
-                "duration": 2509,
-                "title": "House of Secrets | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BjJvp10BVQs",
-                "duration": 7942,
-                "title": "Ancient Egypt’s Lost Secrets: Tutankhamun, Pyramids & Ramses | MEGA Episode | National Geographic",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QiHDQK5cJSE",
-                "duration": 2468,
-                "title": "Linas's Heart | Full Episode",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Mww3arniyt0",
-                "duration": 1635,
-                "title": "UFO Mysteries That Defy Explanation | Unidentified: Inside America's UFO Investigation",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GtvIH4N7aEQ",
-                "duration": 2527,
-                "title": "Lies and Whispers | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-f4DofcZ-Xs",
-                "duration": 2456,
-                "title": "Fateful Connection | Full Episode",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XZIPsgHJO1k",
-                "duration": 2552,
-                "title": "Portrait of a Killer | Full Episode",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q31pWFHVmBc",
-                "duration": 2511,
-                "title": "Closing the Cold Case of Robin Lawrence | Full Episode",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bNw5WQQegfA",
-                "duration": 1321,
-                "title": "Evidence of Aliens Found Underground? | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OxICbHDZfB0",
-                "duration": 7599,
-                "title": "Solid Proof | “48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Miwz0Asf3Ps",
-                "duration": 5059,
-                "title": "Did Ancient Civilizations Use Alien Technology? | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZctRT5RXA0E",
-                "duration": 3262,
-                "title": "Suddenly a millionaire : The curse of winning the lottery",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kpkm50PIQx8",
-                "duration": 2101,
-                "title": "Prophecies from Beyond | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HL0ucILjSxc",
-                "duration": 2362,
-                "title": "What Governments Know About Aliens | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E595wjY8mZI",
-                "duration": 2478,
-                "title": "Secrets from the Grave | Full Episode",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=g5WkOr565I4",
-                "duration": 6820,
-                "title": "The American Revolution | Full Episode 1 | In Order to Be Free (May 1754 – May 1775) | PBS",
-                "skip": [
-                    [
-                        4.1,
-                        14.2
-                    ],
-                    [
-                        6726.6,
-                        6763.0
-                    ],
-                    [
-                        6799.1,
-                        6809.1
-                    ]
-                ],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DdPnAAYePuE",
-                "duration": 2486,
-                "title": "The Devil's Twin | Full Episode",
                 "skip": [],
                 "skip_checked": 1790538994
             },
@@ -619,149 +415,398 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=qswvLxx4btA",
-                "duration": 4973,
-                "title": "Chasing Catherine Shelton (Part 1 & 2) | Full Episodes",
+                "url": "https://www.youtube.com/watch?v=FD_93k7rUtY",
+                "duration": 5051,
+                "title": "UNBELIEVABLE Human Survival & Untapped Potential *Marathon* | The UnXplained",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nk7zPYPrsN8",
-                "duration": 5243,
-                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xx6EiW6XCkw",
-                "duration": 2523,
-                "title": "Kouri Richins: Behind the Facade | Full Episode",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dDxYZyMEmUU",
-                "duration": 7936,
-                "title": "UFO Truths Exposed | UFOs: Investigating the Unknown MEGA Episode | National Geographic",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cCXyYpH0Ub4",
-                "duration": 3205,
-                "title": "New reports on 9/11 | 60 Minutes Full Episodes",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ayw5FGAbLUg",
-                "duration": 2478,
-                "title": "The Root Beer Float Murder | Full Episode",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4rwVw0N9OW4",
-                "duration": 7629,
-                "title": "Demands and Ultimatums | “48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xa6M7n_swNw",
-                "duration": 1561,
-                "title": "The 9/11 Files: The CIA’s Secret Mission Gone Wrong | Ep 1",
+                "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
+                "duration": 3234,
+                "title": "Rain Bombs | Full Documentary | NOVA | PBS",
                 "skip": [
                     [
-                        643.8,
-                        725.5
+                        114.0,
+                        134.0
                     ],
                     [
-                        1529.4,
-                        1560.8
+                        3147.9,
+                        3153.1
                     ]
                 ],
-                "skip_checked": 1790451053
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=o8mJyAvKWiY",
-                "duration": 7559,
-                "title": "Murderous Demise | \"48 Hours\" Full Episodes",
+                "url": "https://www.youtube.com/watch?v=9iNboNb6yqk",
+                "duration": 2235,
+                "title": "Aliens in Australia | Ancient Aliens",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=htzhEVDYKKI",
-                "duration": 2108,
-                "title": "Where did Nikola Tesla's Knowledge Come From? | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-1IoOJBZVkM",
-                "duration": 3245,
-                "title": "The Role of War in the History of Humanity | Full Episode | First Civilizations",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xiyiTY75n7M",
-                "duration": 2421,
-                "title": "The Most Shocking Alien Encounters Ever | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6D-4kMrGgh0",
-                "duration": 2503,
-                "title": "The Gaslighting of Hannah Pettey | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R8zHrCvm6Ww",
-                "duration": 2504,
-                "title": "Jade Colvin is Missing | Full Episode",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JTGwqmerXYI",
-                "duration": 7824,
-                "title": "Chilling Evidence of ETs Among Us *Marathon* | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6fXtYh_JBm0",
-                "duration": 2790,
-                "title": "9/11 Interview with George W. Bush (Full Episode) | Documentary Special | National Geographic",
+                "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
+                "duration": 2524,
+                "title": "The Millionaire, the Model and the Hit Man | Full Episode",
                 "skip": [],
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=otpR1sI2r3E",
-                "duration": 7647,
-                "title": "Forbidden Caves Inside Antarctic Pyramids *Marathon* | Ancient Aliens",
+                "url": "https://www.youtube.com/watch?v=ENj_cFwIbIk",
+                "duration": 2199,
+                "title": "20 Strangest Historical Coincidences Ever That Will Creep You Out",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=SGpsjrJGJuQ",
-                "duration": 2466,
-                "title": "The Girl Who Knew Too Much | Full Episode",
+                "url": "https://www.youtube.com/watch?v=iTcQZnNK-xU",
+                "duration": 2488,
+                "title": "Gods or Visitors From the Stars? | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yDZq4dBmuaU",
+                "duration": 2665,
+                "title": "Unearthing A Mysterious Sarcophagus (Full Episode) | Kingdom of the Mummies | National Geographic",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C8YdGMLxoYY",
+                "duration": 2328,
+                "title": "Could God Be An Alien? | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
+                "duration": 2614,
+                "title": "The Secret Life of Paige Birgfeld | Full Episode",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u2hVx5O1W70",
+                "duration": 5227,
+                "title": "Ancient India (2026) The Forbidden Archaeology That Holds Earth’s True History",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FFVJL7Z5RjU",
+                "duration": 8488,
+                "title": "ABC 20/20 [New] 2026 Full Episodes – One Last Call | ABC 20/20 Murder Documentary 2026 New",
                 "skip": [],
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=-YhuOv57ou8",
-                "duration": 2583,
-                "title": "Military Encounters with the Unknown | Ancient Aliens",
+                "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
+                "duration": 1623,
+                "title": "CAUTION!!! This Case Made ME Question HUMANITY - True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
+                "duration": 2457,
+                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nfpMvVE8LGU",
+                "duration": 6264,
+                "title": "ELIJAH – The Movie (2026)  | The Prophet of Fire  |  Full Biblical Movie in 4K",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zmotKKgVBYM",
+                "duration": 3819,
+                "title": "The Rothschilds - History’s Richest Family Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TSW8uoPdmNw",
+                "duration": 3522,
+                "title": "Brooklyn Bridge | Full Documentary | The History of New York City's Most Famous Bridge | PBS",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3IFjQFIFraM",
+                "duration": 5743,
+                "title": "100 Findings That Still Nobody Can Explain",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wHqxv4XxQm4",
+                "duration": 5527,
+                "title": "Most Chilling Serial Killer Case in California History",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KkbupxTRC9g",
+                "duration": 7702,
+                "title": "Could Stonehenge Be a Portal? | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HYNB4sAxemk",
+                "duration": 3802,
+                "title": "History of the Black Death - Full Documentary",
+                "skip": [
+                    [
+                        3737.8,
+                        3801.5
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LwO6nFm_7g0",
+                "duration": 2656,
+                "title": "Alien Encounters (Full Episode) | UFOs: Investigating the Unknown | National Geographic",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cF6vojfHgdA",
+                "duration": 2444,
+                "title": "Family Affair | Full Episode",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cYe4tF6NZco",
+                "duration": 3568,
+                "title": "Timelapse to the Future of Earth | Full Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0_E91AOveQ0",
+                "duration": 2503,
+                "title": "The Love Bombing of Gloria Choi | Full Episode",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QE3R2Mh2My0",
+                "duration": 7037,
+                "title": "Ancient Structures We Can’t Explain (Documentary)",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UivhqdhcHNI",
+                "duration": 2643,
+                "title": "What Schools Don't Teach You About Slavery",
+                "skip": [
+                    [
+                        579.7,
+                        688.1
+                    ],
+                    [
+                        1031.5,
+                        1094.0
+                    ],
+                    [
+                        1689.0,
+                        1726.5
+                    ],
+                    [
+                        2436.3,
+                        2488.0
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TSRn8BzpvLc",
+                "duration": 4871,
+                "title": "Making a Killing: FULL DOCUMENTARY FILM",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hALTeHQ_wh0",
+                "duration": 2801,
+                "title": "Rich Mass Killer Realizes She's Been Caught 8 Years Later",
+                "skip": [
+                    [
+                        992.3,
+                        1090.0
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kNuwCiuDz4E",
+                "duration": 6613,
+                "title": "The ENTIRE History of Israel (Documentary)",
                 "skip": [],
                 "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XPTL4P1TyoA",
+                "duration": 2640,
+                "title": "The Unstoppable Viking Empire (Full Episode) | Vikings: The Rise & Fall | National Geographic",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4mwfnTkr1ZA",
+                "duration": 2517,
+                "title": "The Ranch Strikes Back | The Secret of Skinwalker Ranch (S2, E1) | Full Episode",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y0JIkdKL1jg",
+                "duration": 2665,
+                "title": "Unearthing the Valley of the Nobles (Full Episode) | Lost Treasures of Egypt | National Geographic",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WRUZc23hv0Y",
+                "duration": 1651,
+                "title": "A Secret She Thought No One Would Ever Discover | True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A42Bt-0DAiY",
+                "duration": 1769,
+                "title": "A Betrayal So Cold-Blooded It’s Chilling: He Framed His Wife to Hide a Sinister Secret...",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ux_TGUq3a2k",
+                "duration": 1802,
+                "title": "The perfect family… until one detail changed everything | True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z5mnzUfCVCY",
+                "duration": 6808,
+                "title": "BLACK PROJECT: Disclosure, the Truth About UFOs & Secret Programs [FULL FILM]",
+                "skip": [
+                    [
+                        1020.0,
+                        1107.7
+                    ],
+                    [
+                        2869.6,
+                        2948.5
+                    ],
+                    [
+                        4458.5,
+                        4525.9
+                    ],
+                    [
+                        5520.8,
+                        5627.7
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZctRT5RXA0E",
+                "duration": 3262,
+                "title": "Suddenly a millionaire : The curse of winning the lottery",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dkOSaRDHun8",
+                "duration": 8392,
+                "title": "Prison Hell: Inside Brazil’s Most Feared Prisons | Behind Bars | Free Documentary",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8xvevrzkYT4",
+                "duration": 2531,
+                "title": "Earth’s Underground Mysteries | The UnXplained (S6, E1) | Full Episode",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GAqSSISFRQI",
+                "duration": 1522,
+                "title": "Reptilian Legends & Extraterrestrial Encounters | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g7Xn2psTWjY",
+                "duration": 4632,
+                "title": "Are we alone in the universe? | 60 Minutes Anthology",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UnvtdsiTgD8",
+                "duration": 2777,
+                "title": "Black Budget - The ENTIRE History of CIA | Documentary",
+                "skip": [
+                    [
+                        1750.5,
+                        1823.4
+                    ],
+                    [
+                        2741.3,
+                        2772.5
+                    ]
+                ],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JN8FM1NCOSk",
+                "duration": 6583,
+                "title": "From Jesus to Christ: The First Christians, Part One (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D4VX7gr2-JU",
+                "duration": 3166,
+                "title": "The Convict Who Challenged Archibald Bell | Who Do You Think You Are? Australia | S7 E3",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CsvoX7ZNFw0",
+                "duration": 2605,
+                "title": "The Truth About Lizzie Borden | Full Documentary | Biography",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jts5vTi2jco",
+                "duration": 7552,
+                "title": "Greed and Murder | 48 Hours Full Episodes",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=koj-eJo2o-c",
+                "duration": 7943,
+                "title": "What Archaeologists Discovered in Ancient Egypt | Lost Treasures of Egypt MEGA Episode | Nat Geo",
+                "skip": [],
+                "skip_checked": 1791143589
             }
         ],
         "search_query": "history documentary full episode",
-        "last_refreshed": 1790280825
+        "last_refreshed": 1791495665
     }
 }
