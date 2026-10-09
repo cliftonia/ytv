@@ -184,6 +184,7 @@ internal fun MpvView.applyDialOptions() {
     // illusion is that the channel was already running when you arrived.
     MPVLib.setOptionString("hr-seek", "no")
 
+    // YouTube's ceiling. A live feed lifts it per file - see MpvSource.probeOptions.
     MPVLib.setOptionString("demuxer-lavf-analyzeduration", "0.1")
     MPVLib.setOptionString("demuxer-lavf-probesize", "524288")
     MPVLib.setOptionString("cache-pause-initial", "no")

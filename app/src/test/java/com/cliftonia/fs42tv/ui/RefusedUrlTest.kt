@@ -17,6 +17,12 @@ class RefusedUrlTest {
     }
 
     @Test
+    fun `a picture that would not start is not a refused url`() {
+        // The url played - its sound did - so condemning it would throw away a good link.
+        assertFalse(RefusedUrl.matches(com.cliftonia.fs42tv.player.MpvLog.NO_PICTURE))
+    }
+
+    @Test
     fun `a refusal is reported for the clip on air, and only then`() {
         val condemned = mutableListOf<String>()
         RefusedUrl.report("MPV_END_ERROR", "abc", { condemned += it; "hd" })

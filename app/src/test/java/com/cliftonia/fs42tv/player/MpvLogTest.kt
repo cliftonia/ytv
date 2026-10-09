@@ -1,6 +1,8 @@
 package com.cliftonia.fs42tv.player
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
@@ -80,5 +82,13 @@ class MpvLogTest {
         assertEquals("[ffmpeg] Failed to open https://s.pluto.tv/v2/stitch/hls/channel/abc/" +
             "master.m3u8?sid=1&jwt=...&masterJWTPassthrough=true", MpvLog.recent().single())
         assertEquals("a token at the end of a line", "open u?jwt=... failed", MpvLog.redact("open u?jwt=eyJ.a.b failed"))
+    }
+
+    @Test
+    fun `a video chain that will not start is told apart from every other complaint`() {
+        // What mpv says when it cannot show the picture but plays the sound on regardless.
+        assertTrue(MpvLog.isVideoChainFailure("cplayer", "Could not initialize video chain."))
+        assertFalse(MpvLog.isVideoChainFailure("vd", "Could not open codec."))
+        assertFalse(MpvLog.isVideoChainFailure("ffmpeg", "Could not initialize video chain."))
     }
 }

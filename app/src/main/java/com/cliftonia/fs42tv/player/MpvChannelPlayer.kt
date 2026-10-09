@@ -93,6 +93,12 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
      */
     @Volatile private var released = false
 
+    /**
+     * mpv gave up on this load's picture: its sound-only PLAYBACK_RESTART must not lift the
+     * blank. Set on mpv's log thread, cleared by the next [play].
+     */
+    @Volatile private var pictureFailed = false
+
     /** The caption handed to the last load, so onFileLoaded can report what mpv did with it. */
     @Volatile private var wantedCaption: String? = null
 
@@ -164,6 +170,9 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
 
             override fun onFirstFrame(startedEntryId: Long?): Boolean {
                 if (released) return false
+                // Sound alone. Lifting the blank here is what put a black screen with a voice
+                // over it on 1311 and 122; onVideoChainFailed has already asked for a re-tune.
+                if (pictureFailed) return false
                 // The first frame of a REPLACED file must not drop the blank - see
                 // MpvLoadGuard.firstFrame. The cover waits for the file most recently asked for,
                 // matched by mpv's playlist entry id whenever it can be read. The property read
@@ -217,6 +226,15 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
                     MpvLoadGuard.End.IGNORE ->
                         Log.d("fs42", "ignoring end-file ($reason) of a replaced or settled load")
                 }
+            }
+
+            override fun onVideoChainFailed() {
+                if (released || pictureFailed) return
+                pictureFailed = true
+                // As it happens, not on a timer: mpv says so ~60ms before the sound starts. The
+                // re-tune is the ordinary error path's, retries and stand-by card included.
+                Log.w("fs42", "playback failed: no picture - mpv could not start the video")
+                main.post { onPlaybackError?.invoke(MpvLog.NO_PICTURE) }
             }
 
             override fun onBuffering(buffering: Boolean) {
@@ -289,9 +307,10 @@ class MpvChannelPlayer(context: Context) : ChannelPlayback {
         }
         // Before the load, so the end-file latch is already up when mpv ends the outgoing file.
         guard.asked(SystemClock.elapsedRealtime())
+        pictureFailed = false
         this.requestedAtMillis = requestedAtMillis
         wantedCaption = load.subFile
-        guard.entryIdIs(mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile))
+        guard.entryIdIs(mpv.playAt(load.url, startAtSeconds, load.audioFile, load.subFile, load.live))
     }
 
     /**

@@ -3,6 +3,7 @@ package com.cliftonia.fs42tv.ui
 import android.util.Log
 import com.cliftonia.fs42tv.player.ChannelPlayback
 import com.cliftonia.fs42tv.player.MpvChannelPlayer
+import com.cliftonia.fs42tv.player.MpvLog
 
 /**
  * [ScreenDirector]'s side of the player: the four callbacks it hangs on every engine, and what a
@@ -76,7 +77,9 @@ internal fun ScreenDirector.playbackFailed(code: String) {
         // rebuilds its session, or retires the channel to the legacy url, before the
         // re-tune below asks it again. A no-op for anything else.
         // A demuxer stall drops only the remembered pick: that is ffmpeg, not a refused token.
-        deps.extras.plutoFailed(deps.tune().onAir?.playable, session = code != StallRecovery.STALLED)
+        // So does a picture that would not start - the sound played, so the session is good.
+        val session = code != StallRecovery.STALLED && code != MpvLog.NO_PICTURE
+        deps.extras.plutoFailed(deps.tune().onAir?.playable, session = session)
     }
     // A rejected url must be forgotten, or the re-tune resolves the same dead link.
     RefusedUrl.report(code, deps.tune().onAir?.stream?.id, deps.condemn)
