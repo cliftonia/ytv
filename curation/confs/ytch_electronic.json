@@ -7,109 +7,11 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=UzPRso975PM",
-                "duration": 355,
-                "title": "Monolink - Father Ocean - Ben Böhmer Remix (Live Version) | Cercle Odyssey",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FWrcbDJEhl8",
-                "duration": 62,
-                "title": "Yves-Maurice - After Movie - Zurich Street Parade 2026",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hJ3AhD0idTk",
-                "duration": 418,
-                "title": "FRIDAY MOONS - Running (Studio Live Set 2026)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4kyldRTEaJ4",
-                "duration": 369,
-                "title": "Katy Perry Performs I Kissed A Girl at IOMTV Malta 2026 | MTV Music",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I7HGWi-86HI",
-                "duration": 225,
-                "title": "Magnan  - 11:11 (Animated Music Video | 2026 | Dance / Piano Electronic Music)",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E6V7RAw-sKw",
-                "duration": 81,
-                "title": "Electric Otto’s #Funk Factory @oakparksocial 1/11/2026 #liveset #beats #livebeats #electronicmusic",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eH5YhI9bdo4",
-                "duration": 313,
-                "title": "Zara Larsson - Midnight Sun [Live] (2026) - iHeart Radio Music Festival",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=zCdXo28_ewE",
                 "duration": 115,
                 "title": "Ableton Live Set | Experimental Electronic Music | Live Performance | DJ AD",
                 "skip": [],
                 "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IdlTpGzF24I",
-                "duration": 174,
-                "title": "MONOLIT - Only For Tonight (Live Set Electronic Music)🎵",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VgenaAhl6iQ",
-                "duration": 386,
-                "title": "Astromission – Orbit | Cosmic Psychedelic Electronic Jam | electronic music set  live music",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PkNUQUsee2w",
-                "duration": 395,
-                "title": "Electric Otto’s #Funk Factory @MoondogCafeDetroit 1/31/2026 #liveset #beats #electronicmusic #music",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3432MLfaS10",
-                "duration": 400,
-                "title": "Electric Otto’s #Funk Factory @loopsessions_detroit313 5/23/2026 #beats #liveset #electronicmusic",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_2uwKNG5MAU",
-                "duration": 282,
-                "title": "Push - Jane Remover (unreleased) | Live in Detroit 9/17/2026",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W62zrHqY9eQ",
-                "duration": 215,
-                "title": "The Dj Nordon - Electronic music 2026",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iOvPEgKa2oo",
-                "duration": 329,
-                "title": "VRYYL -- Experimental electronic music, live,",
-                "skip": [],
-                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=oRs6qZc7tvA",
@@ -119,6 +21,27 @@
                 "skip_checked": 1790280952
             },
             {
+                "url": "https://www.youtube.com/watch?v=E6V7RAw-sKw",
+                "duration": 81,
+                "title": "Electric Otto’s #Funk Factory @oakparksocial 1/11/2026 #liveset #beats #livebeats #electronicmusic",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I7HGWi-86HI",
+                "duration": 225,
+                "title": "Magnan  - 11:11 (Animated Music Video | 2026 | Dance / Piano Electronic Music)",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W62zrHqY9eQ",
+                "duration": 215,
+                "title": "The Dj Nordon - Electronic music 2026",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=wHTHkC9eRoM",
                 "duration": 344,
                 "title": "Electric Otto’s #Funk Factory @loopsessions_detroit313 4/18/2026 #beats #liveset  #electronicmusic",
@@ -126,18 +49,18 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=NlkauazpCrc",
-                "duration": 285,
-                "title": "“3/27/2026”-Electric Otto’s #Funk Factory #beats #beatculture #liveset #electronicmusic #mpcsample",
+                "url": "https://www.youtube.com/watch?v=3432MLfaS10",
+                "duration": 400,
+                "title": "Electric Otto’s #Funk Factory @loopsessions_detroit313 5/23/2026 #beats #liveset #electronicmusic",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=kXhBKjDKF84",
-                "duration": 175,
-                "title": "David Guetta & Bebe Rexha - I'm Good (Blue) [Live Performance]",
+                "url": "https://www.youtube.com/watch?v=PkNUQUsee2w",
+                "duration": 395,
+                "title": "Electric Otto’s #Funk Factory @MoondogCafeDetroit 1/31/2026 #liveset #beats #electronicmusic #music",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=9AuoQfSBmcg",
@@ -147,11 +70,25 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=R2H74wXCHYA",
-                "duration": 232,
-                "title": "Electronic music open mic in Windsor at Other Space Arts 21-6-26",
+                "url": "https://www.youtube.com/watch?v=G--y3gVRbLw",
+                "duration": 216,
+                "title": "PULSE 2026 | | MUSIC FESTIVAL #tecno​ #trance​ #dj​ #musicfestival​ #electronicmusic​​",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NlkauazpCrc",
+                "duration": 285,
+                "title": "“3/27/2026”-Electric Otto’s #Funk Factory #beats #beatculture #liveset #electronicmusic #mpcsample",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iOvPEgKa2oo",
+                "duration": 329,
+                "title": "VRYYL -- Experimental electronic music, live,",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=gRBvicu3sos",
@@ -161,25 +98,11 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=jyHFBPp5oA8",
-                "duration": 178,
-                "title": "Digital Echoes 2026 #bestdjmix #music #djpop",
+                "url": "https://www.youtube.com/watch?v=IdlTpGzF24I",
+                "duration": 174,
+                "title": "MONOLIT - Only For Tonight (Live Set Electronic Music)🎵",
                 "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G--y3gVRbLw",
-                "duration": 216,
-                "title": "PULSE 2026 | | MUSIC FESTIVAL #tecno​ #trance​ #dj​ #musicfestival​ #electronicmusic​​",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qv6SIb7M3Pc",
-                "duration": 181,
-                "title": "#ableton #musicgenre #techno #technomusic #fmsynthesis #synth #electronicmusic #sounddesign #liveset",
-                "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=sgTm3Ox_BQ8",
@@ -187,6 +110,20 @@
                 "title": "DESTINY - DJ MORTIX | Emotional Techno & Electronic Music  ✈️🏎️🔥",
                 "skip": [],
                 "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kXhBKjDKF84",
+                "duration": 175,
+                "title": "David Guetta & Bebe Rexha - I'm Good (Blue) [Live Performance]",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fx08MjjIAHY",
+                "duration": 140,
+                "title": "Electric Otto’s #Funk Factory @loopsessions_detroit313 3/21/2026 #beats #liveset #electronicmusic",
+                "skip": [],
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=EzrXMULglNI",
@@ -217,51 +154,37 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=NckQIBX_96Y",
-                "duration": 216,
-                "title": "Designed4life   Nechno  Live Set # Deep Wave 2026 #liveset #electronicmusic #deepsleep #deephouse",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jo4n-bXHMuU",
-                "duration": 200,
-                "title": "Lost In The Lights | DJ Alsiman Live Set",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8fv8IqyqEjU",
-                "duration": 312,
-                "title": "Pet Shop Boys - It's A Sin | Glastonbury 2022",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gBG1k5r0DyA",
-                "duration": 181,
-                "title": "SILENT LEGACY – EDM Festival Cinematic Live Set (128 BPM) | Bass Drop 4K | Official Video",
+                "url": "https://www.youtube.com/watch?v=EFMr1d5pBuI",
+                "duration": 326,
+                "title": "Barker - Performing Electronic Music Masterclass",
                 "skip": [],
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=yZUlyMrv4Bg",
-                "duration": 290,
-                "title": "Live Electronic Music in Valencia | Light Inside You",
+                "url": "https://www.youtube.com/watch?v=oLgTCnJsXW4",
+                "duration": 194,
+                "title": "Live Drum & Bass DnB improvisation - Acoustic Electronic",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791581205
             },
             {
-                "url": "https://www.youtube.com/watch?v=gCYcHz2k5x0",
-                "duration": 192,
-                "title": "Martin Garrix - Animals (Official Video)",
+                "url": "https://www.youtube.com/watch?v=UldphdyBrNg",
+                "duration": 241,
+                "title": "Your Turn to Dream - Progressive House & Chill Electronic | TuneStation Live Set",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1791581205
             },
             {
-                "url": "https://www.youtube.com/watch?v=EFMr1d5pBuI",
-                "duration": 326,
-                "title": "Barker - Performing Electronic Music Masterclass",
+                "url": "https://www.youtube.com/watch?v=2P_Opp4a6iY",
+                "duration": 397,
+                "title": "Why your mixes sound thin and weak (probably)",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5A2jnuRipLE",
+                "duration": 128,
+                "title": "Electronic Music Live Set",
                 "skip": [],
                 "skip_checked": 1791056276
             },
@@ -273,11 +196,11 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=YbK0lhgTr1A",
-                "duration": 180,
-                "title": "Electronic Music Live Set from Berlin (Airport)",
+                "url": "https://www.youtube.com/watch?v=gJ7yk9XLPUQ",
+                "duration": 202,
+                "title": "Electronic Music Live Set from Berlin - Techno",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=B7IxCCY9-MU",
@@ -287,18 +210,18 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=5A2jnuRipLE",
-                "duration": 128,
-                "title": "Electronic Music Live Set",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=8LfYiyziNvA",
                 "duration": 316,
                 "title": "Live Electronic / Electronica Music Performance 2020! Future Synth DJ",
                 "skip": [],
                 "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NckQIBX_96Y",
+                "duration": 216,
+                "title": "Designed4life   Nechno  Live Set # Deep Wave 2026 #liveset #electronicmusic #deepsleep #deephouse",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=cjEsbK_oNIw",
@@ -308,46 +231,25 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=gJ7yk9XLPUQ",
-                "duration": 202,
-                "title": "Electronic Music Live Set from Berlin - Techno",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uT8gyVO2OC4",
-                "duration": 380,
-                "title": "Shock-HRz - Electronic Music [Novation, Elektron, Korg & Roland Live Jam]",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LfPZrIXmDhI",
-                "duration": 205,
-                "title": "Zavoloka: Ukrainian Experimental Electronic Music",
+                "url": "https://www.youtube.com/watch?v=gCYcHz2k5x0",
+                "duration": 192,
+                "title": "Martin Garrix - Animals (Official Video)",
                 "skip": [],
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=syJJZrHCW9w",
-                "duration": 291,
-                "title": "Ramsi - Electronic Music Live",
+                "url": "https://www.youtube.com/watch?v=YbK0lhgTr1A",
+                "duration": 180,
+                "title": "Electronic Music Live Set from Berlin (Airport)",
                 "skip": [],
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=I41CX0RdmPQ",
-                "duration": 147,
-                "title": "DVBBS & Borgeous - TSUNAMI (Music Video)",
+                "url": "https://www.youtube.com/watch?v=8fv8IqyqEjU",
+                "duration": 312,
+                "title": "Pet Shop Boys - It's A Sin | Glastonbury 2022",
                 "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CeI7qirFfBI",
-                "duration": 251,
-                "title": "280500 - Detroit Electronic Music Festival 2000 - Kenny Dixon Junior  - Main Stage",
-                "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=1y6smkh6c-0",
@@ -357,39 +259,11 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=cSs7WUTFsXE",
-                "duration": 214,
-                "title": "INFINITE NIGHT  Melodic House  #MelodicHouse #DeepHouse #ElectronicMusic #DJSet #ElectricDays",
+                "url": "https://www.youtube.com/watch?v=uT8gyVO2OC4",
+                "duration": 380,
+                "title": "Shock-HRz - Electronic Music [Novation, Elektron, Korg & Roland Live Jam]",
                 "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nDaSBUbbswE",
-                "duration": 142,
-                "title": "Darude - Sandstorm (Storm 25 Mix) [Vibing Out] - Live at EDC Las Vegas",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3YxaaGgTQYM",
-                "duration": 254,
-                "title": "Evanescence - Bring Me To Life (Official HD Music Video) ft. Paul McCoy",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LDU_Txk06tM",
-                "duration": 193,
-                "title": "Noisestorm - Crab Rave [Monstercat Release]",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2WXUlzWMEvQ",
-                "duration": 151,
-                "title": "[Full Set] Jamie Jones B2B Carlita @Cocoricò Riccione | Paradise Season Closing 19/09/26",
-                "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=TxvpctgU_s8",
@@ -404,11 +278,39 @@
                 "skip_checked": 1790193353
             },
             {
+                "url": "https://www.youtube.com/watch?v=syJJZrHCW9w",
+                "duration": 291,
+                "title": "Ramsi - Electronic Music Live",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ebXbLfLACGM",
                 "duration": 234,
                 "title": "Calvin Harris - Summer (Official Video)",
                 "skip": [],
                 "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LfPZrIXmDhI",
+                "duration": 205,
+                "title": "Zavoloka: Ukrainian Experimental Electronic Music",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LDU_Txk06tM",
+                "duration": 193,
+                "title": "Noisestorm - Crab Rave [Monstercat Release]",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CeI7qirFfBI",
+                "duration": 251,
+                "title": "280500 - Detroit Electronic Music Festival 2000 - Kenny Dixon Junior  - Main Stage",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=JRfuAukYTKg",
@@ -418,25 +320,67 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=eCrjD44gAyM",
-                "duration": 360,
-                "title": "Everything In Its Right Place (Kelly Lee Owens Radiohead mix) | Boiler Room Sessions",
+                "url": "https://www.youtube.com/watch?v=I41CX0RdmPQ",
+                "duration": 147,
+                "title": "DVBBS & Borgeous - TSUNAMI (Music Video)",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=s-gVxITC_pI",
-                "duration": 232,
-                "title": "Fred again.. x Swedish House Mafia - Turn on the Lights again.. (ft. Future) [Live from Boiler Room]",
+                "url": "https://www.youtube.com/watch?v=YaEG2aWJnZ8",
+                "duration": 227,
+                "title": "Sia - Unstoppable (Official Video - Live from the Nostalgic For The Present Tour)",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791581205
             },
             {
-                "url": "https://www.youtube.com/watch?v=gVBcX1Sd228",
-                "duration": 226,
-                "title": "Fred again.. - Danielle (smile on my face) [Live from Boiler Room]",
+                "url": "https://www.youtube.com/watch?v=s37x2VSZrLw",
+                "duration": 180,
+                "title": "The Weeknd & Ariana Grande – Save Your Tears (Live on The 2021 iHeart Radio Music Awards)",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXzis29vA6k",
+                "duration": 261,
+                "title": "Crowded House - Don't Dream It's Over | Glastonbury 2022",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YqeW9_5kURI",
+                "duration": 179,
+                "title": "Major Lazer & DJ Snake - Lean On (feat. MØ) [Official 4K Music Video]",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=71lozfkrRnU",
+                "duration": 147,
+                "title": "Room Sessions: Terraza Señor Grill - Electronic Music Live Set",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=16y1AkoZkmQ",
+                "duration": 270,
+                "title": "Boney M. - Rasputin (Sopot Festival 1979)",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zaIsVnmwdqg",
+                "duration": 244,
+                "title": "Kygo - Happy Now ft. Sandro Cavazza (Official Video)",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w__OKuKJlbY",
+                "duration": 100,
+                "title": "Cypress Hill – Jump Around (LIVE) | Power to the People | 2026",
+                "skip": [],
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=q_7SYMBF4ao",
@@ -446,6 +390,20 @@
                 "skip_checked": 1790634163
             },
             {
+                "url": "https://www.youtube.com/watch?v=Use8AuckOu0",
+                "duration": 416,
+                "title": "AJ Tracey & Dave Boiler Room x Link Up TV London Live Set",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eCrjD44gAyM",
+                "duration": 360,
+                "title": "Everything In Its Right Place (Kelly Lee Owens Radiohead mix) | Boiler Room Sessions",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=RFROnCAtb5s",
                 "duration": 204,
                 "title": "PEOPLE OF BOILER ROOM #2 - PINK HAIR, AIR DJ & EGYPTIAN LOVER",
@@ -453,18 +411,18 @@
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=3gEu1JU1a3w",
-                "duration": 171,
-                "title": "The Science of Sound: Delay with Lorenzo Senni | Boiler Room & Genelec",
+                "url": "https://www.youtube.com/watch?v=DsvXHsL2s6Q",
+                "duration": 72,
+                "title": "[Full Set] AEREA @Boiler Room Maastricht | Complex 04/09/26",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791581205
             },
             {
-                "url": "https://www.youtube.com/watch?v=UqoWGEUncZA",
-                "duration": 104,
-                "title": "Skyrim SE: Fahlbtharz Boiler Room Puzzle",
+                "url": "https://www.youtube.com/watch?v=GkD79aaM_sU",
+                "duration": 156,
+                "title": "Danny Brown - 'Blueberry (Pills & Cocaine)' - live in the Boiler Room",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=zHrEp_Gm7Pg",
@@ -474,11 +432,18 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=0So7cnJO528",
-                "duration": 334,
-                "title": "Dubai’s Underground: Nosaj Thing x adidas Originals",
+                "url": "https://www.youtube.com/watch?v=3gEu1JU1a3w",
+                "duration": 171,
+                "title": "The Science of Sound: Delay with Lorenzo Senni | Boiler Room & Genelec",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ptH7HgQLFa8",
+                "duration": 96,
+                "title": "Chase and Status boiler room epic set",
+                "skip": [],
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=Aj00RZfEdcM",
@@ -486,6 +451,90 @@
                 "title": "Miro SundayMusiq 5 Records 5 Stories Boiler Room",
                 "skip": [],
                 "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WknbAi6PK7w",
+                "duration": 359,
+                "title": "O.S.T.R. 5 Records 5 Stories Boiler Room Warsaw",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UqoWGEUncZA",
+                "duration": 104,
+                "title": "Skyrim SE: Fahlbtharz Boiler Room Puzzle",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0So7cnJO528",
+                "duration": 334,
+                "title": "Dubai’s Underground: Nosaj Thing x adidas Originals",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vjNdP5uIXzc",
+                "duration": 402,
+                "title": "Wolf Alice \"Heavenward\" | Boiler Room x 2018 Hyundai Mercury Prize",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dMZtXEsDw4o",
+                "duration": 126,
+                "title": "The Science of Sound: Supersaw with Lorenzo Senni",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hQl6dokkeKA",
+                "duration": 64,
+                "title": "dj song remix, song dj mix, dj bhai, dj remix, dj songs, live stream, indian dj, bhai live, dj pate",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SH95BtltNt0",
+                "duration": 114,
+                "title": "Luxury Villa with Private Pool, North Corfu RR7495 | Roula Rouva Forbes Global Properties",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oAlTuKJo5hE",
+                "duration": 202,
+                "title": "ACE (psytrance) Like and sub!",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jPXqAL6dCtc",
+                "duration": 92,
+                "title": "EaziCore · A contractor's day: one boiler job, request to closed record",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VFwvZXsOQz4",
+                "duration": 217,
+                "title": "Killaghintober, Ballycumber, Co. Offaly, R35 EC97",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NK_p6YDPDNU",
+                "duration": 62,
+                "title": "How Decorate Candles are made ll Shorts",
+                "skip": [],
+                "skip_checked": 1791581205
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UzPRso975PM",
+                "duration": 355,
+                "title": "Monolink - Father Ocean - Ben Böhmer Remix (Live Version) | Cercle Odyssey",
+                "skip": [],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=9zCLT0GJKfk",
@@ -502,13 +551,6 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=EIK8ti_AaLQ",
-                "duration": 278,
-                "title": "Natascha Polké - Take Me Down (Live Version) | Cercle Odyssey",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=mTFOaZov7F8",
                 "duration": 224,
                 "title": "Two Lanes - Signs of Change (Live Version) | Cercle Odyssey",
@@ -516,18 +558,18 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=WQmxtIeL65g",
-                "duration": 377,
-                "title": "meera - November (Live Version)",
+                "url": "https://www.youtube.com/watch?v=EIK8ti_AaLQ",
+                "duration": 278,
+                "title": "Natascha Polké - Take Me Down (Live Version) | Cercle Odyssey",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=tpmoiWCdKrg",
-                "duration": 349,
-                "title": "Cercle: 5 years and counting...",
+                "url": "https://www.youtube.com/watch?v=IT_WxDLYYy0",
+                "duration": 202,
+                "title": "Aaron Hibell, Dan Heath - Odyssey (Live Version) | Cercle Odyssey",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=x_D4tpf8mio",
@@ -537,11 +579,11 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=lkcyNREEW2c",
-                "duration": 256,
-                "title": "LP Giobbi - You Are (Live Version) | Cercle Odyssey",
+                "url": "https://www.youtube.com/watch?v=tpmoiWCdKrg",
+                "duration": 349,
+                "title": "Cercle: 5 years and counting...",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=1D8_yPeO8qQ",
@@ -551,11 +593,11 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=eSVHkdSWkCA",
-                "duration": 313,
-                "title": "Hidden Empire - Pont de la Caille (live) | Cercle Stories",
+                "url": "https://www.youtube.com/watch?v=WQmxtIeL65g",
+                "duration": 377,
+                "title": "meera - November (Live Version)",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=J4gmmgwRauo",
@@ -565,11 +607,18 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=fTFhBI4lyas",
-                "duration": 181,
-                "title": "Radio 1's Essential Mix at Creamfields 2009",
+                "url": "https://www.youtube.com/watch?v=eSVHkdSWkCA",
+                "duration": 313,
+                "title": "Hidden Empire - Pont de la Caille (live) | Cercle Stories",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-22QtMkCYjc",
+                "duration": 175,
+                "title": "Barry Connell's Essential Mix.",
+                "skip": [],
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=jgHaP3BY-E0",
@@ -579,6 +628,13 @@
                 "skip_checked": 1791241322
             },
             {
+                "url": "https://www.youtube.com/watch?v=fTFhBI4lyas",
+                "duration": 181,
+                "title": "Radio 1's Essential Mix at Creamfields 2009",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=sjH8YyDDwxY",
                 "duration": 335,
                 "title": "Annie Mac’s Mini Mix Live: DJ EZ",
@@ -586,18 +642,18 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=gTnTkunV738",
-                "duration": 231,
-                "title": "Zeds Dead - You're Trouble - Memorecks (BBC Radio 1 Essential Mix)",
+                "url": "https://www.youtube.com/watch?v=BehV97pP0Tg",
+                "duration": 184,
+                "title": "ARTBAT Live in Stockholm 🇸🇪 – Intro Track | September 2026",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791581205
             },
             {
-                "url": "https://www.youtube.com/watch?v=gSXJVMU3OFk",
-                "duration": 265,
-                "title": "Rudimental - Waiting All Night ft. Ella Eyre (Radio 1 Live Lounge)",
+                "url": "https://www.youtube.com/watch?v=Ri7-vnrJD3k",
+                "duration": 239,
+                "title": "Adele - Set Fire To The Rain (Live at The Royal Albert Hall)",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791581205
             },
             {
                 "url": "https://www.youtube.com/watch?v=czpaYKnxqaM",
@@ -607,60 +663,11 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=_pEod_Tm-3s",
-                "duration": 318,
-                "title": "Crank It Up - Live Hardware Halftime DnB \\| Studio Session 10",
+                "url": "https://www.youtube.com/watch?v=Hjw86NcG8Bo",
+                "duration": 202,
+                "title": "Kanine - Feel The Vibration",
                 "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JB0CFw3Godg",
-                "duration": 265,
-                "title": "Sub Focus & Dimension - Desire",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UKYv-1aBbCI",
-                "duration": 294,
-                "title": "Billie Jean (Michael Jackson); Drum/Bass Cover by Milena and Sina",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F8SKWDEYolU",
-                "duration": 306,
-                "title": "Luke Holland - Skrillex 'Cinema' Revisited - Drum Remix",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=etOq30rF0gE",
-                "duration": 159,
-                "title": "Luude - Down Under (Feat. Colin Hay)",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mwgfo4g5VNI",
-                "duration": 313,
-                "title": "Kings Of The Rollers - Somebody Else (feat. Lydia Plain)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lj10_Br86iI",
-                "duration": 207,
-                "title": "Louis Cole Plays Some Drum N' Bass",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7gkMjbwvxeo",
-                "duration": 216,
-                "title": "Charlie Puth - Attention (Drum & Bass Cover)",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791581205
             }
         ],
         "search_query": "electronic music live set",
@@ -672,6 +679,6 @@
             "house music live set",
             "drum and bass live set"
         ],
-        "last_refreshed": 1790280951
+        "last_refreshed": 1791581205
     }
 }
