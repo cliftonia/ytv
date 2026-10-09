@@ -11,6 +11,8 @@ data class MpvLoad(
     val url: String,
     val audioFile: String? = null,
     val subFile: String? = null,
+    /** A live HLS feed, opened with [MpvSource.probeOptions]'s longer probe. */
+    val live: Boolean = false,
 )
 
 /**
@@ -64,10 +66,30 @@ object MpvSource {
         // master does; its separate audio rendition, if any, rides as an external track - the
         // same arrangement as YouTube's - though HlsMaster.SEPARATE_AUDIO keeps that off for now.
         // A surf onto a neighbour the pre-join warmed opens its loopback copy of the same playlist.
-        is Hls -> MpvLoad(playable.mpvUrl ?: playable.mediaUrl ?: playable.url, playable.mediaUrl?.let { playable.audioUrl })
+        is Hls -> MpvLoad(
+            playable.mpvUrl ?: playable.mediaUrl ?: playable.url,
+            playable.mediaUrl?.let { playable.audioUrl },
+            live = true,
+        )
 
         is NeedsResolving, is Unplayable -> null
     }
+
+    /**
+     * Per-file options that lift MpvOptions' 0.1s / 512KB probe for a [live] feed; empty otherwise.
+     *
+     * That probe suits YouTube's mp4, whose shape is known. A live feed carries its picture size
+     * only at a keyframe - every 5s on BBC Earth, measured 9 Oct 2026 - and a join that missed
+     * it left ffmpeg with `unspecified size`, MediaCodec unable to open (`Could not open codec`),
+     * and mpv playing the sound over no picture. On 1311 and 122 the TCL did exactly that on
+     * some tunes and not others, depending on where the join landed.
+     *
+     * A ceiling, not a wait: ffmpeg stops reading as soon as it has the size, so a join that
+     * lands on a keyframe opens as fast as before. Only one that missed reads on, past one full
+     * keyframe interval, instead of failing. 8MB covers 6s of the dial's richest 1080p feed.
+     */
+    fun probeOptions(live: Boolean): String =
+        if (!live) "" else ",demuxer-lavf-analyzeduration=6,demuxer-lavf-probesize=8388608"
 
     /**
      * [value] made safe as one value in loadfile's per-file option list, which mpv splits on

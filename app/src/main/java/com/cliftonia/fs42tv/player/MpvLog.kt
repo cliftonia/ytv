@@ -18,6 +18,13 @@ import android.util.Log
  */
 object MpvLog {
 
+    /**
+     * The playback error for a load whose sound played and whose picture never could - see
+     * [isVideoChainFailure]. Not a refused url (RefusedUrl) and not a bad session: the same link
+     * plays on a re-tune that lands its probe on a keyframe.
+     */
+    const val NO_PICTURE = "MPV_NO_PICTURE"
+
     private const val KEEP = 12
     private val lines = ArrayDeque<String>()
 
@@ -47,6 +54,15 @@ object MpvLog {
     fun recent(): List<String> = synchronized(lines) { lines.toList() }
 
     fun clear() = synchronized(lines) { lines.clear() }
+
+    /**
+     * Whether mpv just gave up on the picture. It says this once, FATAL, when nothing can show
+     * the decoder's output - on the TCL, a live join whose probe never found the picture size,
+     * so MediaCodec would not open and software frames had no way onto mediacodec_embed. The
+     * file is NOT ended: mpv plays its sound on, and its PLAYBACK_RESTART reads as a first frame.
+     */
+    fun isVideoChainFailure(prefix: String?, text: String?): Boolean =
+        prefix == "cplayer" && text?.contains("Could not initialize video chain") == true
 
     /**
      * [text] with any Pluto session token cut out. mpv names the url it failed to open, and a
