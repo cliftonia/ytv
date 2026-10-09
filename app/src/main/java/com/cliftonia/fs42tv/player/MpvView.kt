@@ -52,6 +52,9 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
          */
         fun onEndFile(reason: String, entryId: Long?)
         fun onBuffering(buffering: Boolean)
+
+        /** mpv could not start the picture and is playing the sound alone; see [MpvLog.isVideoChainFailure]. */
+        fun onVideoChainFailed()
     }
 
     // Same two threads as awaitingLoad, and release() relies on the null being seen.
@@ -168,6 +171,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
     private val logObserver = object : MPVLib.LogObserver {
         override fun logMessage(prefix: String, level: Int, text: String) {
             MpvLog.record(prefix, level, text)
+            if (MpvLog.isVideoChainFailure(prefix, text)) events?.onVideoChainFailed()
         }
     }
 
@@ -253,6 +257,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         startSeconds: Double,
         audioFile: String? = null,
         subFile: String? = null,
+        live: Boolean = false,
     ): Long? {
         awaitingLoad.set(loads.incrementAndGet())
         // Per-FILE options, so they apply to this load and are gone by the next one. `audio-file`
@@ -266,6 +271,7 @@ class MpvView(context: Context, attrs: AttributeSet? = null) : BaseMPVView(conte
         val options = buildString {
             append("start=").append(startSeconds.toInt())
             if (audioFile != null) append(",audio-file=").append(MpvSource.perFileValue(audioFile))
+            append(MpvSource.probeOptions(live))
             // The subtitle is NOT set here. It is added with `sub-add` once the file is
             // loaded - see addSubtitle - because a per-file option is applied while mpv is still
             // opening the file, gives no indication of whether it worked, and cannot be checked

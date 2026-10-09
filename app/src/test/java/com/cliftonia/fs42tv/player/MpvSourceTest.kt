@@ -5,7 +5,9 @@ import com.cliftonia.fs42tv.resolver.NeedsResolving
 import com.cliftonia.fs42tv.resolver.Progressive
 import com.cliftonia.fs42tv.resolver.Unplayable
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
@@ -94,5 +96,24 @@ class MpvSourceTest {
     @Test
     fun `there is nothing to load for a clip that cannot play at all`() {
         assertNull(MpvSource.loadFor(Unplayable("no id"), proxied))
+    }
+
+    @Test
+    fun `a live feed is opened with a probe long enough to find its picture`() {
+        // Captured on the TCL (9 Oct 2026): BBC Earth carries its picture size once every 5s,
+        // and a 0.1s probe that missed it left mpv unable to open the video - sound, no picture.
+        val live = MpvSource.loadFor(Hls("https://x/abc.m3u8")) { it }!!
+        assertTrue(live.live)
+        val options = MpvSource.probeOptions(live.live)
+        assertTrue(options.contains("demuxer-lavf-analyzeduration=6"))
+        assertTrue(options.contains("demuxer-lavf-probesize=8388608"))
+    }
+
+    @Test
+    fun `a youtube clip keeps the short probe`() {
+        // Plain mp4 whose shape is already known; a deep probe is a second of black for nothing.
+        val clip = MpvSource.loadFor(Progressive("https://v/1", "https://a/1"), proxied)!!
+        assertFalse(clip.live)
+        assertEquals("", MpvSource.probeOptions(clip.live))
     }
 }

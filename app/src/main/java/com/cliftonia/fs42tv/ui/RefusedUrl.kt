@@ -1,6 +1,7 @@
 package com.cliftonia.fs42tv.ui
 
 import android.util.Log
+import com.cliftonia.fs42tv.player.MpvLog
 
 /**
  * The one playback error worth reacting to specifically: a rejected url. Re-tuning without
@@ -19,7 +20,8 @@ object RefusedUrl {
      * URL, forever. Being wrong in the other direction costs one server resolve.
      */
     fun matches(code: String): Boolean =
-        code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") || code.startsWith("MPV_")
+        code.contains("BAD_HTTP_STATUS") || code.contains("FILE_NOT_FOUND") ||
+            (code.startsWith("MPV_") && code != MpvLog.NO_PICTURE)
 
     /**
      * Tell the ledger clip [id] was refused, when [code] says so. Refuse the TIER, not the clip -
