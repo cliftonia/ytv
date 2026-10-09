@@ -306,18 +306,18 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=6ul-cZyuYq4",
-                "duration": 224,
-                "title": "Fleetwood Mac - Go Your Own Way",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=nqxVMLVe62U",
                 "duration": 213,
                 "title": "The Jacksons - Blame It On the Boogie (Official Video)",
                 "skip": [],
                 "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6ul-cZyuYq4",
+                "duration": 224,
+                "title": "Fleetwood Mac - Go Your Own Way",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=vUSzL2leaFM",
@@ -395,13 +395,6 @@
                 "title": "Hotel California (2013 Remaster)",
                 "skip": [],
                 "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H6Mg1oPhPug",
-                "duration": 230,
-                "title": "Woman in Love - Barbra Streisand Subtitulado",
-                "skip": [],
-                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=cvChjHcABPA",
@@ -621,18 +614,18 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=buMcwyztOp0",
-                "duration": 316,
-                "title": "Love Me With All Of Your Heart , Engelbert Humperdinck",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=WkL7Fkigfn8",
                 "duration": 191,
                 "title": "ABBA - Does Your Mother Know",
                 "skip": [],
                 "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=buMcwyztOp0",
+                "duration": 316,
+                "title": "Love Me With All Of Your Heart , Engelbert Humperdinck",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=WF477pY2eFQ",
@@ -710,12 +703,19 @@
                 "title": "John Denver - Annie's Song (Official Audio)",
                 "skip": [],
                 "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pey29CLID3I",
+                "duration": 257,
+                "title": "Simon & Garfunkel : El Condor Pasa (1970)",
+                "skip": [],
+                "skip_checked": 1791581205
             }
         ],
         "search_query": "1970s music hits",
         "playlists": [
             "PLyqXsO_d0hU1EqKKNY2MdtiXitI3zEVqg"
         ],
-        "last_refreshed": 1790367100
+        "last_refreshed": 1791581089
     }
 }
