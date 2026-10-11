@@ -7,46 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=oX7OduG1YmI",
-                "duration": 2830,
-                "title": "The Future Mark Zuckerberg Is Trying To Build",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hb2rKGfIOrM",
-                "duration": 4079,
-                "title": "President Barack Obama in Conversation with Marc Maron | WTF Podcast",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7BHNrRSDnuo",
-                "duration": 7244,
-                "title": "Young Thug Interview | Its Up There Podcast (FULL INTERVIEW)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kMcPOGY-y_g",
-                "duration": 5125,
-                "title": "Newt Gingrich: Why the 2026 Midterms Will Shock America | Hang Out with Sean Hannity",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=adQyLViK_ZU",
-                "duration": 4698,
-                "title": "Oprah Winfrey: How to Find Your Unique Purpose, Authentic Power, and Calling in Life",
-                "skip": [
-                    [
-                        2922.1,
-                        3058.3
-                    ]
-                ],
-                "skip_checked": 1790634163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=zUvRv5JrItk",
                 "duration": 8168,
                 "title": "MADONNA EXCLUSIVE: The Side That NOBODY Knows…",
@@ -59,57 +19,117 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=flupGAB_iHs",
-                "duration": 6777,
-                "title": "Matt Rife | This Past Weekend w/ Theo Von #662",
+                "url": "https://www.youtube.com/watch?v=oX7OduG1YmI",
+                "duration": 2830,
+                "title": "The Future Mark Zuckerberg Is Trying To Build",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7BHNrRSDnuo",
+                "duration": 7244,
+                "title": "Young Thug Interview | Its Up There Podcast (FULL INTERVIEW)",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dea1ZJPRiIU",
+                "duration": 4040,
+                "title": "Clif High: The ALTA 2026 Interview",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hb2rKGfIOrM",
+                "duration": 4079,
+                "title": "President Barack Obama in Conversation with Marc Maron | WTF Podcast",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HXkC1NtUcgE",
+                "duration": 3318,
+                "title": "I’m moving in with Hailey Bieber",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zxXBpdFeYF4",
+                "duration": 2953,
+                "title": "Gray Divorce (after 50) & Adult Children: The Fallout for the Family, with Oprah and Leading Experts",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qkwISstQQVw",
+                "duration": 7969,
+                "title": "The Rick Rubin Interview",
+                "skip": [
+                    [
+                        705.0,
+                        724.0
+                    ]
+                ],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a8Tfy8OmK18",
+                "duration": 5789,
+                "title": "Renan Santos — How We Built the Mission Party",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A1inY9Q7Fpc",
+                "duration": 7622,
+                "title": "You Don't Win With Money By Accident | October 7, 2026",
                 "skip": [
                     [
                         0.0,
-                        49.8
+                        10.0
                     ],
                     [
-                        1550.2,
-                        1734.3
+                        528.0,
+                        643.8
                     ],
                     [
-                        2766.0,
-                        2889.2
-                    ]
-                ],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-FTJXcRBJoE",
-                "duration": 3047,
-                "title": "How to Start a Video Podcast That Makes Money in 2026",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4T_0Tcts6aM",
-                "duration": 8262,
-                "title": "Joe Rogan Experience #2187 - Adam Sandler",
-                "skip": [
+                        1199.0,
+                        1298.6
+                    ],
                     [
-                        523.1,
-                        603.6
+                        1875.0,
+                        1968.0
+                    ],
+                    [
+                        2523.0,
+                        2620.0
+                    ],
+                    [
+                        3110.0,
+                        3225.6
+                    ],
+                    [
+                        3785.0,
+                        3908.7
+                    ],
+                    [
+                        4470.0,
+                        4582.0
+                    ],
+                    [
+                        5675.8,
+                        5751.6
+                    ],
+                    [
+                        6300.7,
+                        6422.4
+                    ],
+                    [
+                        6949.4,
+                        7056.3
                     ]
                 ],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MCAPRAEG9wk",
-                "duration": 7028,
-                "title": "Unhinged -- Reddit Stories -- FULL EPISODE",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E9UU5N0k0XY",
-                "duration": 4682,
-                "title": "It’s Not Too Late: How to Transform Your Life at Any Moment",
-                "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=pBRSZBtirAk",
@@ -124,39 +144,53 @@
                 "skip_checked": 1790538994
             },
             {
+                "url": "https://www.youtube.com/watch?v=4T_0Tcts6aM",
+                "duration": 8262,
+                "title": "Joe Rogan Experience #2187 - Adam Sandler",
+                "skip": [
+                    [
+                        523.1,
+                        603.6
+                    ]
+                ],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rni7Fz7208c",
+                "duration": 6854,
+                "title": "Elon Musk: A Different Conversation w/ Nikhil Kamath | Full Episode | People by WTF Ep. 16",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MCAPRAEG9wk",
+                "duration": 7028,
+                "title": "Unhinged -- Reddit Stories -- FULL EPISODE",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1rYtrS5IbrQ",
+                "duration": 8459,
+                "title": "Joe Rogan Experience #2254 - Mel Gibson",
+                "skip": [
+                    [
+                        576.8,
+                        647.5
+                    ],
+                    [
+                        1614.5,
+                        1691.6
+                    ]
+                ],
+                "skip_checked": 1791143589
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=mdZzxM8jBNY",
                 "duration": 2754,
                 "title": "Dolly Parton | Dumb Blonde Podcast",
                 "skip": [],
                 "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=w6Qg-fQmqhM",
-                "duration": 1644,
-                "title": "20 Rules of Podcasting: How To Go From Zero Subscribers to Millions",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ru44DngJYoA",
-                "duration": 6274,
-                "title": "Communication Expert: Why You Cringe at the Sound of Your Own Voice | Vinh Giang",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XZOJa-At410",
-                "duration": 2276,
-                "title": "WYATT FLORES x Dusty Boots Podcast - Bucking Bin Chicken Tour 2026",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aB3am4AgYMU",
-                "duration": 2053,
-                "title": "FEthink EDIB Podcast 2026 - An interview with Kishan Pithia",
-                "skip": [],
-                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=lnD01md5y0k",
@@ -183,62 +217,131 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=qkwISstQQVw",
-                "duration": 7969,
-                "title": "The Rick Rubin Interview",
-                "skip": [
-                    [
-                        705.0,
-                        724.0
-                    ]
-                ],
-                "skip_checked": 1790280952
+                "url": "https://www.youtube.com/watch?v=3I482TBLEzc",
+                "duration": 3806,
+                "title": "KIM KARDASHIAN OPENS UP About Insecurity, Healing Your Pain, & Finding HAPPINESS | Jay Shetty",
+                "skip": [],
+                "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=1rYtrS5IbrQ",
-                "duration": 8459,
-                "title": "Joe Rogan Experience #2254 - Mel Gibson",
-                "skip": [
-                    [
-                        576.8,
-                        647.5
-                    ],
-                    [
-                        1614.5,
-                        1691.6
-                    ]
-                ],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CJaMEfU-Jwg",
-                "duration": 1365,
-                "title": "Job Interview Questions | English Podcast",
+                "url": "https://www.youtube.com/watch?v=ru44DngJYoA",
+                "duration": 6274,
+                "title": "#1 Communication Expert: If You Get Anxious Around Other People WATCH THIS!",
                 "skip": [],
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=ngvOyccUzzY",
-                "duration": 6780,
-                "title": "David Goggins - How To Defeat Laziness & Build Relentless Focus (4K)",
-                "skip": [
-                    [
-                        1750.8,
-                        1812.1
-                    ],
-                    [
-                        3149.7,
-                        3212.3
-                    ]
-                ],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mmsasEoupO4",
-                "duration": 8459,
-                "title": "Rap Radar: Drake",
+                "url": "https://www.youtube.com/watch?v=bfGwM4Y1HWE",
+                "duration": 6549,
+                "title": "Marriage in 2026 ft Koboko master | The Clarity Zone Podcast S3 EP4 #podcast #clarityzonepodcast",
                 "skip": [],
                 "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7ARBJQn6QkM",
+                "duration": 3783,
+                "title": "NVIDIA CEO Jensen Huang's Vision for the Future",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E9UU5N0k0XY",
+                "duration": 4682,
+                "title": "It’s Not Too Late: How to Transform Your Life at Any Moment",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tnoMGevqWAM",
+                "duration": 3324,
+                "title": "EXTENDED INTERVIEW: Dolly Parton on Plastic Surgery and Her 47-Year Marriage | 60 Minutes Australia",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hSQ1iVqEZO4",
+                "duration": 8286,
+                "title": "Joe Rogan Experience #2551 - Daniel Kokotajlo",
+                "skip": [
+                    [
+                        938.3,
+                        1014.3
+                    ],
+                    [
+                        3250.5,
+                        3309.2
+                    ]
+                ],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-FTJXcRBJoE",
+                "duration": 3047,
+                "title": "How to Start a Video Podcast That Makes Money in 2026",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O50HPQ1eHYY",
+                "duration": 3374,
+                "title": "How To Win on YouTube in 2026 (Colin & Samir Interview)",
+                "skip": [
+                    [
+                        655.1,
+                        759.1
+                    ]
+                ],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=44ZI7IiWSZo",
+                "duration": 3847,
+                "title": "Are GLP-1s Legit? with Dr. Ania Jastrebroff",
+                "skip": [
+                    [
+                        676.3,
+                        743.3
+                    ],
+                    [
+                        1975.9,
+                        2077.6
+                    ],
+                    [
+                        2991.0,
+                        3200.3
+                    ],
+                    [
+                        3832.2,
+                        3846.3
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1mGo9KXT8Ps",
+                "duration": 3177,
+                "title": "Miley Cyrus on Fame, Rage and How Therapy Saved Her Life | The Interview",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w6Qg-fQmqhM",
+                "duration": 1644,
+                "title": "20 Rules of Podcasting: How To Go From Zero Subscribers to Millions",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jP-JajOs0Ns",
+                "duration": 4026,
+                "title": "Why Trump Can't Stand His Nobel Prize Humiliation | The Daily Beast Podcast",
+                "skip": [
+                    [
+                        679.0,
+                        771.5
+                    ]
+                ],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=jVs4NBoHZic",
@@ -248,30 +351,66 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=8f82WQYEeh4",
-                "duration": 4113,
-                "title": "Nirmala Sitharaman in Conversation with Anand Ranganathan | Interactive Session | PLF 2026",
+                "url": "https://www.youtube.com/watch?v=aB3am4AgYMU",
+                "duration": 2053,
+                "title": "FEthink EDIB Podcast 2026 - An interview with Kishan Pithia",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HzraLR2VkNM",
+                "duration": 3530,
+                "title": "Ben Affleck’s Turbulent Year: Navigating Grief & The Art of Not Caring",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jqo1BM0TfBY",
+                "duration": 2510,
+                "title": "Mindset of a Champion ft. Virat Kohli | RCB Podcast: Bold and Beyond | IPL 2025",
+                "skip": [
+                    [
+                        260.3,
+                        280.2
+                    ],
+                    [
+                        1101.5,
+                        1121.4
+                    ],
+                    [
+                        1882.4,
+                        1902.2
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZBZf0q0ldZI",
+                "duration": 3350,
+                "title": "Samara Weaving podcast interview Carolina Caroline, Ready or Not, Borderline, Eenie Meanie, Babylon",
                 "skip": [],
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nh2Mhynhh9c",
-                "duration": 4092,
-                "title": "The Horrors Of The Fox Hollow Farm Serial Killer",
-                "skip": [
-                    [
-                        565.4,
-                        682.7
-                    ]
-                ],
-                "skip_checked": 1790280952
+                "url": "https://www.youtube.com/watch?v=CJaMEfU-Jwg",
+                "duration": 1365,
+                "title": "Job Interview Questions | English Podcast",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=1mGo9KXT8Ps",
-                "duration": 3177,
-                "title": "Miley Cyrus on Fame, Rage and How Therapy Saved Her Life | The Interview",
+                "url": "https://www.youtube.com/watch?v=vhoQLsww5cs",
+                "duration": 5621,
+                "title": "World-Leading Scientist: How AI Is Rewriting Christianity Right Now",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=otBGdhJYWNc",
+                "duration": 7798,
+                "title": "Mikayla Noguiera Comes Clean on Jay Shetty + Trish Lost a Job to Slushy Noobz | Just Trish Ep. 317",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=KPh0LOCWT5A",
@@ -290,98 +429,11 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=Rni7Fz7208c",
-                "duration": 6854,
-                "title": "Elon Musk: A Different Conversation w/ Nikhil Kamath | Full Episode | People by WTF Ep. 16",
+                "url": "https://www.youtube.com/watch?v=02RRZsuhc6U",
+                "duration": 1433,
+                "title": "How to Build Communication Skills ? | Learn English with Podcast | English Talks @Suuman_Sharmaa",
                 "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tnoMGevqWAM",
-                "duration": 3324,
-                "title": "EXTENDED INTERVIEW: Dolly Parton on Plastic Surgery and Her 47-Year Marriage | 60 Minutes Australia",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3I482TBLEzc",
-                "duration": 3806,
-                "title": "KIM KARDASHIAN OPENS UP About Insecurity, Healing Your Pain, & Finding HAPPINESS | Jay Shetty",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=opiw0FVHeG4",
-                "duration": 5096,
-                "title": "Bashar's State of the Union on Alien Contact | Darryl Anka (E112)",
-                "skip": [
-                    [
-                        2079.4,
-                        2213.2
-                    ]
-                ],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V360AygOv7A",
-                "duration": 3494,
-                "title": "Financial Literacy for Dummies (Like Me) with JL Collins",
-                "skip": [
-                    [
-                        2640.9,
-                        2700.6
-                    ]
-                ],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q1Bebf3Y2rk",
-                "duration": 3632,
-                "title": "The Billy Joel Interview",
-                "skip": [
-                    [
-                        504.1,
-                        534.4
-                    ]
-                ],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zxXBpdFeYF4",
-                "duration": 2953,
-                "title": "Gray Divorce (after 50) & Adult Children: The Fallout for the Family, with Oprah and Leading Experts",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JvEas_zZ4fM",
-                "duration": 7258,
-                "title": "Watch CNBC's full interview with Berkshire Hathaway CEO Warren Buffett",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p6XvTconhwQ",
-                "duration": 4017,
-                "title": "A More United Nations w/ Spain’s PM Pedro Sánchez | The Weekly Show with Jon Stewart",
-                "skip": [
-                    [
-                        896.3,
-                        997.9
-                    ],
-                    [
-                        2044.4,
-                        2125.7
-                    ]
-                ],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=41fhhYOKBjM",
-                "duration": 1448,
-                "title": "I Made Fousey Crash Out Again",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=eeU1fNZ2pZA",
@@ -408,11 +460,83 @@
                 "skip_checked": 1791143589
             },
             {
+                "url": "https://www.youtube.com/watch?v=LenrjeBFbfU",
+                "duration": 1823,
+                "title": "What happened at the Chicago Marathon 2026?",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XZOJa-At410",
+                "duration": 2276,
+                "title": "WYATT FLORES x Dusty Boots Podcast - Bucking Bin Chicken Tour 2026",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=e5Oqk_Y-Jm4",
                 "duration": 3626,
                 "title": "Tom Cruise on Mission: Impossible and a lifetime of learning from movies | BFI in Conversation",
                 "skip": [],
                 "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nh2Mhynhh9c",
+                "duration": 4092,
+                "title": "The Horrors Of The Fox Hollow Farm Serial Killer",
+                "skip": [
+                    [
+                        565.4,
+                        682.7
+                    ]
+                ],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hAk0p9Aq0wU",
+                "duration": 3831,
+                "title": "Resident Evil podcast episode with Zach Cregger & Austin Abrams talking Weapons, Barbarian, Fincher",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ngvOyccUzzY",
+                "duration": 6780,
+                "title": "David Goggins - How To Defeat Laziness & Build Relentless Focus (4K)",
+                "skip": [
+                    [
+                        1750.8,
+                        1812.1
+                    ],
+                    [
+                        3149.7,
+                        3212.3
+                    ]
+                ],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JvEas_zZ4fM",
+                "duration": 7258,
+                "title": "Watch CNBC's full interview with Berkshire Hathaway CEO Warren Buffett",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gZ-UED-LOUw",
+                "duration": 5846,
+                "title": "Andrew Tate Most Real Conversation Yet (UNCENSORED) 2025",
+                "skip": [
+                    [
+                        981.0,
+                        1057.7
+                    ],
+                    [
+                        2672.0,
+                        2741.0
+                    ]
+                ],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=vOXFKYGkPvI",
@@ -422,18 +546,54 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=nbzYO_e9xnw",
-                "duration": 5470,
-                "title": "AOC in Conversation with David Axelrod",
-                "skip": [],
-                "skip_checked": 1790367139
+                "url": "https://www.youtube.com/watch?v=Q1Bebf3Y2rk",
+                "duration": 3632,
+                "title": "The Billy Joel Interview",
+                "skip": [
+                    [
+                        504.1,
+                        534.4
+                    ]
+                ],
+                "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=yx1eLn5WMjg",
-                "duration": 4134,
-                "title": "My Bloody Podcast: Never After Dark (2026) Interview with Director Dave Boyle",
+                "url": "https://www.youtube.com/watch?v=zjVU8n_pGzw",
+                "duration": 2487,
+                "title": "Ariana Grande | New Album \"Eternal Sunshine\", Wicked, Glinda [Part 1]",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J3oMES3VoTs",
+                "duration": 3404,
+                "title": "Barry Bonds 7x MVP's Hitting Secret, Michael Jordan Stories & 'Don't Call Me GOAT'",
+                "skip": [
+                    [
+                        1150.8,
+                        1294.4
+                    ],
+                    [
+                        1854.1,
+                        1950.0
+                    ],
+                    [
+                        2522.0,
+                        2651.3
+                    ],
+                    [
+                        3308.2,
+                        3403.6
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KFHqevUWLWE",
+                "duration": 2990,
+                "title": "President Trump Makes an Announcement, Oct. 7, 2026",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=y_woFP79F0Q",
@@ -460,183 +620,37 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=6vIVpkjnb3I",
-                "duration": 8934,
-                "title": "Bloomberg This Weekend 09/27/2026",
+                "url": "https://www.youtube.com/watch?v=V360AygOv7A",
+                "duration": 3494,
+                "title": "Financial Literacy for Dummies (Like Me) with JL Collins",
+                "skip": [
+                    [
+                        2640.9,
+                        2700.6
+                    ]
+                ],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RCu9Hlpmoi0",
+                "duration": 5938,
+                "title": "Short-Form Expert: \"Going Viral Isn't Luck.\" I Make $1M/Month With 31 Second Videos",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uTNnpkpYr0A",
+                "duration": 1738,
+                "title": "How To Make VIRAL Podcast Clip Videos! (12.5k Followers In 5 Days)",
                 "skip": [],
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=hSQ1iVqEZO4",
-                "duration": 8286,
-                "title": "Joe Rogan Experience #2551 - Daniel Kokotajlo",
-                "skip": [
-                    [
-                        938.3,
-                        1014.3
-                    ],
-                    [
-                        3250.5,
-                        3309.2
-                    ]
-                ],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lDESgXH5Iv8",
-                "duration": 6014,
-                "title": "Hallie Jackson NOW - Sept. 25 | NBC News NOW",
+                "url": "https://www.youtube.com/watch?v=cWCGyrZWRTY",
+                "duration": 4472,
+                "title": "We're Not Going Back to January 2026 with Art Berman | TGS 237",
                 "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=THLGQnR23gU",
-                "duration": 5244,
-                "title": "SRA Survivor Who Escaped The Cult! Montauk Clones Reptilians... With Alandra Markman - Podcast 836",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WfKpXBIM0nA",
-                "duration": 3080,
-                "title": "DIALED IN EP 03 | 2026 OLYMPIAN KYRON HOLDEN INTERVIEW | THE MENS PHYSQIUE SHOW",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zjVU8n_pGzw",
-                "duration": 2487,
-                "title": "Ariana Grande | New Album \"Eternal Sunshine\", Wicked, Glinda [Part 1]",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UZ2cql7DfIA",
-                "duration": 2853,
-                "title": "The Trump show is OVER! Here’s why people are 'SICK OF HIM'",
-                "skip": [
-                    [
-                        2801.6,
-                        2853.0
-                    ]
-                ],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=urFIHf5coxE",
-                "duration": 4473,
-                "title": "Discussing the Frontier of Particle Physics with Brian Cox",
-                "skip": [
-                    [
-                        816.2,
-                        917.1
-                    ],
-                    [
-                        2802.1,
-                        2826.2
-                    ]
-                ],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DFcndrm7ql4",
-                "duration": 3224,
-                "title": "NYU Professor: Do This for 2 Weeks to Get Your Focus, Motivation, & Life Back",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zb3pIl0A66s",
-                "duration": 1826,
-                "title": "Olympia Prep 2026 - 6 DAYS OUT: Going on Jay Cutler's podcast and my reason why.",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dXlAhD4hOyE",
-                "duration": 3106,
-                "title": "Dave Grohl loves BBQ | Dish Podcast | Waitrose",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uVkFrqugXFQ",
-                "duration": 1868,
-                "title": "English Podcast For Easy English in Daily Life | Learn English Fast | Talk About Dreams and Goals",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZBZf0q0ldZI",
-                "duration": 3350,
-                "title": "Samara Weaving podcast interview Carolina Caroline, Ready or Not, Borderline, Eenie Meanie, Babylon",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bfGwM4Y1HWE",
-                "duration": 6549,
-                "title": "Marriage in 2026 ft Koboko master | The Clarity Zone Podcast S3 EP4 #podcast #clarityzonepodcast",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RoldOz5YyAw",
-                "duration": 3694,
-                "title": "Why The Movies Don't Feel The Same Anymore",
-                "skip": [
-                    [
-                        302.1,
-                        308.1
-                    ],
-                    [
-                        3576.0,
-                        3693.0
-                    ]
-                ],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zw5H0fFkj-k",
-                "duration": 7906,
-                "title": "Max Blumenthal: I Went to Iran and Was Detained by the Trump Admin",
-                "skip": [
-                    [
-                        634.5,
-                        705.1
-                    ],
-                    [
-                        1346.1,
-                        1421.1
-                    ],
-                    [
-                        1986.9,
-                        2054.2
-                    ],
-                    [
-                        2668.0,
-                        2728.8
-                    ],
-                    [
-                        3159.2,
-                        3265.9
-                    ]
-                ],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kyUF7T-qhMA",
-                "duration": 5778,
-                "title": "10 POWERFUL Stories of Addiction (& Recovery) | Rich Roll Podcast",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vObU0lkMlFk",
-                "duration": 2946,
-                "title": "Willem Dafoe reveals how he comes to terms with aging",
-                "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=fOCWBhuDdDo",
@@ -646,74 +660,32 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=mxnJdi7SxBw",
-                "duration": 7713,
-                "title": "Charlie Kirk's Producer on Candace's Evil Campaign—and How Tucker Enables It | Ep. 61 w/ Blake Neff",
+                "url": "https://www.youtube.com/watch?v=LxWiLYHEdYI",
+                "duration": 4209,
+                "title": "Kevin Hart Gets the Bubble Guts! - What Now? with Trevor Noah Podcast",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=hAk0p9Aq0wU",
-                "duration": 3831,
-                "title": "Resident Evil podcast episode with Zach Cregger & Austin Abrams talking Weapons, Barbarian, Fincher",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=k23zJ9jYfHA",
-                "duration": 4274,
-                "title": "Neurosurgeon DIES: Says The AFTERLIFE Judges You From The People You HURT (NDE) | Dr. Eben Alexander",
+                "url": "https://www.youtube.com/watch?v=uVkFrqugXFQ",
+                "duration": 1868,
+                "title": "English Podcast For Easy English in Daily Life | Learn English Fast | Talk About Dreams and Goals",
                 "skip": [],
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=VRtLQeekWV0",
-                "duration": 3407,
-                "title": "PBS News Hour full episode, Sept. 21, 2026",
-                "skip": [
-                    [
-                        40.7,
-                        154.0
-                    ],
-                    [
-                        3310.2,
-                        3407.0
-                    ]
-                ],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=swIaUBTXt8c",
-                "duration": 3572,
-                "title": "Getting SPICY with Mehdi Hasan",
-                "skip": [
-                    [
-                        69.5,
-                        144.8
-                    ]
-                ],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=--NqGw9rfNA",
-                "duration": 1471,
-                "title": "Social media and language learning - a British Council English podcast",
+                "url": "https://www.youtube.com/watch?v=NyAaZm7fCpU",
+                "duration": 1795,
+                "title": "How To Make a Realistic AI Video Podcast With NotebookLM (15 mins)",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=_sAcCRFKLZk",
-                "duration": 3067,
-                "title": "Under the Skin With... DREGEN | The Hellacopters, Backyard Babies | Full Podcast",
+                "url": "https://www.youtube.com/watch?v=KteN6S-F-tQ",
+                "duration": 1285,
+                "title": "Watch BEFORE buying a camera for Youtube (2026)",
                 "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=herK7jr7DXs",
-                "duration": 3031,
-                "title": "I Know Exactly Why Trump's Base is Finally Turning | The Daily Beast Podcast",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=dMZ-n2KSlxE",
@@ -723,130 +695,52 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=O50HPQ1eHYY",
-                "duration": 3374,
-                "title": "How To Win on YouTube in 2026 (Colin & Samir Interview)",
+                "url": "https://www.youtube.com/watch?v=74gicXJFxVQ",
+                "duration": 3573,
+                "title": "“We’re Following You!” - Global Elite, Mass Surveillance & What’s ACTUALLY Coming Next | Simon Dixon",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uoMm4Ke4DZU",
+                "duration": 1702,
+                "title": "Man Serving 3 Life Sentences Plus 106 Years | Powerful Interview",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rgJvFx37pAc",
+                "duration": 2181,
+                "title": "Nobel Prize in Chemistry 2026 : Why Does Life Choose One “Hand”? | Chirality & Autocatalysis",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x4rtQ71GFJo",
+                "duration": 1459,
+                "title": "The TRUTH About Buying a Camera in 2026 (Don’t Waste Your Money)",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x-wqMcYMNdg",
+                "duration": 5317,
+                "title": "A Working (Class) Economy w/ Kathryn Anne Edwards | The Weekly Show with Jon Stewart",
                 "skip": [
                     [
-                        655.1,
-                        759.1
-                    ]
-                ],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Fj20vnD01do",
-                "duration": 6661,
-                "title": "Voodoo Assassinations, WitchTok Psychosis, and My HAUNTED DOLL Collection | HORRORble Podcast",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0OLBhkKLmUY",
-                "duration": 3006,
-                "title": "Robert Downey Jr. & Mark Ruffalo | Actors on Actors",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mgfO4nnPL3Y",
-                "duration": 4050,
-                "title": "A Conversation with Barack Obama",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zQ1POHiR8m8",
-                "duration": 5987,
-                "title": "Godfather of AI: We Have 2 Years Before Everything Changes!",
-                "skip": [
-                    [
-                        101.2,
-                        131.5
+                        2147.3,
+                        2246.1
                     ],
                     [
-                        2901.2,
-                        2967.0
+                        3569.7,
+                        3675.9
                     ],
                     [
-                        4566.2,
-                        4691.1
-                    ],
-                    [
-                        5888.5,
-                        5962.5
+                        4604.3,
+                        4677.8
                     ]
                 ],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
-                "duration": 1953,
-                "title": "Philosophy for Beginners",
-                "skip": [
-                    [
-                        62.5,
-                        122.5
-                    ]
-                ],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C3ay8eRGJ0U",
-                "duration": 1387,
-                "title": "Burden of Proof: September 25, 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xAt1xcC6qfM",
-                "duration": 2619,
-                "title": "Bill Gates on India, Billion-Dollar Business Opportunities, PM Modi & Children | FO335 Raj Shamani",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mpAZehPviLQ",
-                "duration": 6761,
-                "title": "Kevin O'Leary: Every Time You Get Paid, Do This! It 10xs Your Income Without Having To Work Harder!",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zijHGP_pOhE",
-                "duration": 5417,
-                "title": "Charlie Kirk Takes on Army of Libs at California's UCR",
-                "skip": [
-                    [
-                        552.3,
-                        594.6
-                    ]
-                ],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1p_B72s6Ix0",
-                "duration": 6833,
-                "title": "Ex-CIA Officer CONFRONTED Over Zionist Accusations | PBD Podcast #783",
-                "skip": [
-                    [
-                        3299.7,
-                        3325.7
-                    ]
-                ],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BeH1I5n-798",
-                "duration": 2402,
-                "title": "How to Edit a Video in Adobe Premiere 2026! (Complete Beginners Tutorial)",
-                "skip": [
-                    [
-                        1013.9,
-                        1057.1
-                    ]
-                ],
-                "skip_checked": 1790890293
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=75tkthAzZog",
@@ -861,48 +755,74 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=Z558GqTl3TY",
-                "duration": 4012,
-                "title": "Full Episode: TODAY Show - Sept. 21",
+                "url": "https://www.youtube.com/watch?v=CyD_yff8PLQ",
+                "duration": 4097,
+                "title": "Jeffrey Archer's Last Hurrah! Stage Show Filmed The Day Before He Died",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_sAcCRFKLZk",
+                "duration": 3067,
+                "title": "Under the Skin With... DREGEN | The Hellacopters, Backyard Babies | Full Podcast",
                 "skip": [],
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=ehOI6Xxwvuw",
-                "duration": 3714,
-                "title": "Macklemore, Mamdani and Miliband: Does Anyone Still Like the Shape of Israel? | Norman Finkelstein",
+                "url": "https://www.youtube.com/watch?v=BKAM3_mHJes",
+                "duration": 3061,
+                "title": "RAVAN KE RAHASYA: Hanuman Ji, Ancient Civilizations & 2027 Predictions | Abhishek Kar - Supertalks",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=GZRAOxw04ZM",
-                "duration": 5770,
-                "title": "My Life as a Voodoo Priestess | HORRORble Podcast",
+                "url": "https://www.youtube.com/watch?v=xuZJBVznMX4",
+                "duration": 4556,
+                "title": "Charlie Kirk, Donors & Handlers: A Former Insider Tells His Story",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=As7abwNhG7Y",
-                "duration": 2294,
-                "title": "Shorts Genius Shares Everything She Knows (Jenny Hoyos Interview)",
-                "skip": [
-                    [
-                        702.2,
-                        774.8
-                    ],
-                    [
-                        1734.7,
-                        1756.8
-                    ]
-                ],
+                "url": "https://www.youtube.com/watch?v=e_PMY5OcckY",
+                "duration": 4214,
+                "title": "Current Affairs Today 10 Oct 2026 I UPSC Daily Current Affairs I The Hindu Analysis I The Analyst",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xAt1xcC6qfM",
+                "duration": 2619,
+                "title": "Bill Gates on India, Billion-Dollar Business Opportunities, PM Modi & Children | FO335 Raj Shamani",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GgaBBaJ-tNU",
+                "duration": 1200,
+                "title": "DAV Librarian Podcast💥✅| All questions of interview & Demo❓✅ #davcbt2026 #davvacancy2026",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dXlAhD4hOyE",
+                "duration": 3106,
+                "title": "Dave Grohl loves BBQ | Dish Podcast | Waitrose",
+                "skip": [],
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=uTNnpkpYr0A",
-                "duration": 1738,
-                "title": "How To Make VIRAL Podcast Clip Videos! (12.5k Followers In 5 Days)",
+                "url": "https://www.youtube.com/watch?v=kksZz12H3AE",
+                "duration": 3221,
+                "title": "T4 TAMASHA PODCAST FEATURING MIAN SALMAN - SK CATTLE FARM - FATEHJANGI BULL 2026",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Oc60-GSu3Hw",
+                "duration": 2979,
+                "title": "Is Texas Still a Democracy? with Beto O’Rourke",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=Ex1R3rsdlms",
@@ -917,34 +837,117 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=eHW7nZTuQwU",
-                "duration": 1559,
-                "title": "Hailey Bieber’s Collab with Justin & Selling Rhode for $1 Billion",
+                "url": "https://www.youtube.com/watch?v=0OLBhkKLmUY",
+                "duration": 3006,
+                "title": "Robert Downey Jr. & Mark Ruffalo | Actors on Actors",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=eipUP4g8jU0",
-                "duration": 6168,
-                "title": "Jerry Seinfeld and Adam Carolla talk Cars and Comedy",
+                "url": "https://www.youtube.com/watch?v=OZflI64oEoY",
+                "duration": 1486,
+                "title": "Drumcree: Why We Said No | Breandán Mac Cionnaith on Garvaghy Road",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BeH1I5n-798",
+                "duration": 2402,
+                "title": "How to Edit a Video in Adobe Premiere 2026! (Complete Beginners Tutorial)",
                 "skip": [
                     [
-                        0.0,
-                        78.5
-                    ],
-                    [
-                        3958.8,
-                        4092.1
-                    ],
-                    [
-                        5118.0,
-                        5206.5
+                        1013.9,
+                        1057.1
                     ]
                 ],
-                "skip_checked": 1790538994
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Id9r7gQvngg",
+                "duration": 2196,
+                "title": "Someone Just Paid $8.4 MILLION for a Pokémon Card",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9dnNTl1Tom0",
+                "duration": 2251,
+                "title": "How to be successful Content Creator ft.  @AyushBhandari  | Creator Podcast -  Ep 1",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cz41MK-SMQs",
+                "duration": 6028,
+                "title": "Everything You Want Is Already on Its Way with Abraham Esther Hicks",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=57x_SWsv6QU",
+                "duration": 2674,
+                "title": "Will We Survive Climate Change? – A Question of Science with Brian Cox",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lfFKM7BSREE",
+                "duration": 3538,
+                "title": "How to Crack INI-CET 2026 with Dr. Aditya Gupta | Reflex Podcast",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aALIlgn358s",
+                "duration": 2757,
+                "title": "Full Podcast - IAT 2026 AIR 1 🔥 | Soumyaneel Mukherjee | Raw & Unfiltered |",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Fj20vnD01do",
+                "duration": 6661,
+                "title": "Voodoo Assassinations, WitchTok Psychosis, and My HAUNTED DOLL Collection | HORRORble Podcast",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nBQPnvmaNcE",
+                "duration": 2610,
+                "title": "Harvard Professor Explains The Rules of Writing (Steven Pinker Interview)",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mpAZehPviLQ",
+                "duration": 6761,
+                "title": "Kevin O'Leary: Every Time You Get Paid, Do This! It 10xs Your Income Without Having To Work Harder!",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7PxPMHDhTsk",
+                "duration": 7443,
+                "title": "Secrets Of INDIAN TRIBES - Archaeologist Dr. Pawar | Tribal History, Occult, Medicine & More | TRS",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YJYEVcsf4Ls",
+                "duration": 2188,
+                "title": "Khan Sir Podcast 💥 | One Day Exam Master Plan | Khan Sir X Shivam Tiwari Sir | Khan Global Studies",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7Vd7YwVr6TE",
+                "duration": 2682,
+                "title": "🚨 TPUSA INSIDER BREAKS SILENCE: CHARLIE WAS TERRlFlED THIS WOULD COME OUT?!",
+                "skip": [],
+                "skip_checked": 1791751450
             }
         ],
         "search_query": "long form interview podcast",
-        "last_refreshed": 1790538973
+        "last_refreshed": 1791751440
     }
 }
