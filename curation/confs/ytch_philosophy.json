@@ -7,6 +7,13 @@
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=epoRGnCWyXw",
+                "duration": 4633,
+                "title": "Personality Psychology | Lecture One (Official) | Peterson Academy",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=fonFeV8mjDQ",
                 "duration": 1624,
                 "title": "Psychology 101: Unlocking Mind & Behavior | Freud, Jung, and Skinner",
@@ -14,9 +21,28 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=epoRGnCWyXw",
-                "duration": 4633,
-                "title": "Personality Psychology | Lecture One (Official) | Peterson Academy",
+                "url": "https://www.youtube.com/watch?v=IQjefB5a5WA",
+                "duration": 3797,
+                "title": "Dr. W. Keith Campbell | Intro to Psychology | Lecture 1 (Official)",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=syXplPKQb_o",
+                "duration": 4276,
+                "title": "Lec 2 | MIT 9.00SC Introduction to Psychology, Spring 2011",
+                "skip": [
+                    [
+                        0.0,
+                        18.9
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J9j-bVDrGdI",
+                "duration": 4109,
+                "title": "2017 Personality 22: Conclusion: Psychology and Belief",
                 "skip": [],
                 "skip_checked": 1790451053
             },
@@ -28,18 +54,11 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=J9j-bVDrGdI",
-                "duration": 4109,
-                "title": "2017 Personality 22: Conclusion: Psychology and Belief",
+                "url": "https://www.youtube.com/watch?v=vjxQ_WZFlkc",
+                "duration": 3465,
+                "title": "On Divination & Synchronicity -- The Psychology of Meaningful Chance - Lecture 1",
                 "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MajfZIyHP8U",
-                "duration": 2719,
-                "title": "24. Suicide, Part I: The rationality of suicide",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=aw2pS4yKKKQ",
@@ -49,11 +68,25 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZCclVfHJlWc",
-                "duration": 5671,
-                "title": "Introduction to Buddhist Psychology in the Indo-Tibetan Buddhist Tradition",
+                "url": "https://www.youtube.com/watch?v=Cslw-mp1Nyk",
+                "duration": 5090,
+                "title": "CAT 2026 VARC Masterclass #5 |  Philosophy, Economics, Psychology & History Passages |",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MajfZIyHP8U",
+                "duration": 2719,
+                "title": "24. Suicide, Part I: The rationality of suicide",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=v_KU_5RA8vM",
+                "duration": 1483,
+                "title": "A Comparative Study of Needs-Based Models in Modern Psychology | Kalika Uttarkar | WAVES2026",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=rLbDY6qYQwo",
@@ -63,18 +96,11 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=G60tbnsfM44",
-                "duration": 1599,
-                "title": "06. Part Six of Lecture Six: Political Psychology--Methodologies",
+                "url": "https://www.youtube.com/watch?v=bv6zomC8tLk",
+                "duration": 1917,
+                "title": "Esoteric Psychology The Seven Rays Part One",
                 "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=shTwa8eTjrg",
-                "duration": 3894,
-                "title": "Tsinghua Open Courses | Introduction to Positive Psychology",
-                "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=P_kfVkoItAg",
@@ -91,6 +117,40 @@
                 "skip_checked": 1791241322
             },
             {
+                "url": "https://www.youtube.com/watch?v=Naem5OBRPOA",
+                "duration": 2699,
+                "title": "Philosophies of Education and Their implications to Teaching and Learning | Mary Joie Padron",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XjB34klZO2E",
+                "duration": 2857,
+                "title": "BRO… They Tried To PLAY You — And Got PACKED UP In 4 Seconds 💀 Joker Noira",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kBdfcR-8hEY",
+                "duration": 3296,
+                "title": "Justice: What's The Right Thing To Do? Episode 01 \"THE MORAL SIDE OF MURDER\"",
+                "skip": [
+                    [
+                        2.8,
+                        16.3
+                    ],
+                    [
+                        3223.4,
+                        3236.3
+                    ],
+                    [
+                        3275.8,
+                        3282.7
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=MkoSuYnJ_ac",
                 "duration": 3710,
                 "title": "Right or Wrong    Moral Psychology, Social Neuroscience, and Theory of Mind",
@@ -98,11 +158,65 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=AHvkjPJh1Ps",
-                "duration": 3642,
-                "title": "Theosophy and the New Psychology - Annie Besant",
+                "url": "https://www.youtube.com/watch?v=WY7VJAVApY4",
+                "duration": 3832,
+                "title": "On Divination & Synchronicity -- The Psychology of Meaningful Chance - Lecture 2",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NGKN0wVqq_U",
+                "duration": 3280,
+                "title": "On Divination & Synchronicity -- The Psychology of Meaningful Chance - Lecture 5",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Myg_jVvaZas",
+                "duration": 3582,
+                "title": "On Divination & Synchronicity -- The Psychology of Meaningful Chance - Lecture 3",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S3nxmt4wC9o",
+                "duration": 1493,
+                "title": "8 RUTHLESS LESSONS THAT MAKE YOU DANGEROUSLY SMART | MACHIAVELLI PSYCHOLOGY (2026) | HUBERMAN-STYLE",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LQWaOrMAuRQ",
+                "duration": 3581,
+                "title": "On Divination & Synchronicity -- The Psychology of Meaningful Chance - Lecture 4",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VO6XEQIsCoM",
+                "duration": 1223,
+                "title": "The paradox of choice | Barry Schwartz | TED",
+                "skip": [
+                    [
+                        1189.3,
+                        1220.2
+                    ]
+                ],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rLl6PpSQNiA",
+                "duration": 3109,
+                "title": "UNDERSTANDING THE SELF LECTURE: THE SELF ACCORDING TO PSYCHOLOGY (PART 2)",
                 "skip": [],
                 "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EiRskjLl_lY",
+                "duration": 1802,
+                "title": "2026 Stanford Nobel Prize Press Conference: Karl Deisseroth",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZlexOHXxOX4",
@@ -112,11 +226,18 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=S3nxmt4wC9o",
-                "duration": 1493,
-                "title": "8 RUTHLESS LESSONS THAT MAKE YOU DANGEROUSLY SMART | MACHIAVELLI PSYCHOLOGY (2026) | HUBERMAN-STYLE",
+                "url": "https://www.youtube.com/watch?v=NpHqYnFELLE",
+                "duration": 3176,
+                "title": "Alan Watts - What Is Reality?",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HlknEtfq-AQ",
+                "duration": 3606,
+                "title": "Emergence of Psychology | Eastern Indian Psychology | UGC NET Unit 1 | Marathon Class + MCQs | 2026",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=FM2Cqc1AVlE",
@@ -133,107 +254,60 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=6oNWhXeSTEk",
-                "duration": 1340,
-                "title": "Psychology 101: A COMPLETE Course to UNLOCK Your Mind (Beginner's Guide)",
+                "url": "https://www.youtube.com/watch?v=Ey0ybcjiJDQ",
+                "duration": 3889,
+                "title": "UPSC Principal Recruitment Test 2026 | Chapter 3: Educational Foundations, Psychology & Pedagogy",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o2WjLc4wujI",
+                "duration": 2957,
+                "title": "How Good People Become Evil | The Psychology of Moral Disengagement",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aHRP5yJpVBI",
+                "duration": 2377,
+                "title": "UGC NET Psychology | UGC NET Psychology Eastern School Of Thought By Anjali Ma'am",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jj1fefM_Lck",
+                "duration": 6102,
+                "title": "Psychology of the Ego Complex - FULL Lecture on Jungian Psychology",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1ODLxKvs2OM",
+                "duration": 1485,
+                "title": "The Forgotten Father of Psychology: Pierre Janet's Revolutionary Ideas | Psych with Sigmund",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=isRS_xza3vI",
+                "duration": 7819,
+                "title": "Fall Asleep to Carl Jung Wisdom Tonight",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CsXKAC4iYG4",
+                "duration": 5622,
+                "title": "Social Intelligence: Mastering The Psychology Of Human Behavior (Audiobook)",
                 "skip": [],
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=p5oLC9wXhZs",
-                "duration": 1603,
-                "title": "Why You Keep Losing Focus (A 125 Year Old Psychology Lesson) - William James Chapter 10-11",
+                "url": "https://www.youtube.com/watch?v=qzoIAJYPQwo",
+                "duration": 2576,
+                "title": "Seth Godin – Leadership vs. Management - What it means to make a difference",
                 "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Naem5OBRPOA",
-                "duration": 2699,
-                "title": "Philosophies of Education and Their implications to Teaching and Learning | Mary Joie Padron",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rLl6PpSQNiA",
-                "duration": 3109,
-                "title": "UNDERSTANDING THE SELF LECTURE: THE SELF ACCORDING TO PSYCHOLOGY (PART 2)",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Cslw-mp1Nyk",
-                "duration": 5090,
-                "title": "CAT 2026 VARC Masterclass #5 |  Philosophy, Economics, Psychology & History Passages |",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NpHqYnFELLE",
-                "duration": 3176,
-                "title": "Alan Watts - What Is Reality?",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pr5l8CZ-JSM",
-                "duration": 2337,
-                "title": "CW 207 Cosmosophy: Lecture 3: Foundations of an Occult Psychology (September 30, 1921) By Rudolf ...",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BDqvzFY72mg",
-                "duration": 3375,
-                "title": "Lecture 1: Introduction to Power and Politics in Today’s World",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=44AoRRe0Fyc",
-                "duration": 3254,
-                "title": "PhD in Clinical Psychology Fall 2026",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VO6XEQIsCoM",
-                "duration": 1223,
-                "title": "The paradox of choice | Barry Schwartz | TED",
-                "skip": [
-                    [
-                        1189.3,
-                        1220.2
-                    ]
-                ],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tX5tAkq81oA",
-                "duration": 4082,
-                "title": "Ego Psychology",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LdxaBxsMEus",
-                "duration": 3177,
-                "title": "Why Your Mind Is Programmed For Failure / Carl Jung Psychology",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t9fIbs85E3I",
-                "duration": 2101,
-                "title": "DARK CONFIDENCE | Machiavelli’s 7 Psychology of Fearless Men",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8gxi2uorV4c",
-                "duration": 1484,
-                "title": "Humanities and Human Flourishing",
-                "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=9uSXOr-AdAU",
@@ -256,18 +330,18 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=qzoIAJYPQwo",
-                "duration": 2576,
-                "title": "Seth Godin – Leadership vs. Management - What it means to make a difference",
+                "url": "https://www.youtube.com/watch?v=i-jkqM0WxJk",
+                "duration": 2549,
+                "title": "REVISE Biopsychology in 40 mins! (AQA A-level Psychology)",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=NLbrWpVYRxU",
-                "duration": 2769,
-                "title": "Self-Image Psychology - Swami Vedarupananda",
+                "url": "https://www.youtube.com/watch?v=CIbR7odQklk",
+                "duration": 1209,
+                "title": "The Science Behind Yoga",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=n4HkSyWooGw",
@@ -277,25 +351,105 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=CsXKAC4iYG4",
-                "duration": 5622,
-                "title": "Social Intelligence: Mastering The Psychology Of Human Behavior (Audiobook)",
+                "url": "https://www.youtube.com/watch?v=VWJz1eJqMGk",
+                "duration": 6922,
+                "title": "Charlie Munger's Wealth Psychology | Slow, Calm Explanation | Lectures for Sleep (2 HOURS)",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=8_z1SEjtFBY",
-                "duration": 2313,
-                "title": "Introduction to Educational Psychology, Growth & Development | SST 2026 | Batch 11 Pedagogy",
+                "url": "https://www.youtube.com/watch?v=yIJdrW3NyDc",
+                "duration": 1474,
+                "title": "UGC NET Form Fill Up 2026 | UGC NET Form Fill Up 2026 Step By Step | UGC NET Form Kaise Bhare 2026",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=i-jkqM0WxJk",
-                "duration": 2549,
-                "title": "REVISE Biopsychology in 40 mins! (AQA A-level Psychology)",
+                "url": "https://www.youtube.com/watch?v=vBfUYf0LGTM",
+                "duration": 2995,
+                "title": "They’re WHISPERING that u’re DANGEROUSLY intelligent 🧠💀 …and it’s starting to SPREAD Joker Noira",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rfI-Pz_U3KE",
+                "duration": 2708,
+                "title": "Jordan Peterson: \"Why Nothing Should Ever Bother You\"",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BDJPGgVD1bY",
+                "duration": 1280,
+                "title": "KTET 1 & 2 PSYCHOLOGY MOST REPEATED QUESTIONS | KTET  EXAM 2026",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a7ZdzUwMwu4",
+                "duration": 2175,
+                "title": "Psychoanalysis Theory by Sigmund Freud | Complete Concept | UP PGT Psychology",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yCGSOlf_j7Q",
+                "duration": 2791,
+                "title": "You’re Alone for a Reason — Machiavelli’s Darkest Lesson About Power & People | Billy Graham",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QBuTJ-F-udQ",
+                "duration": 2500,
+                "title": "Psychology & Sports Psychology | Learning | law of learning | Odisha PE Exam 2026  part -3",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HlKDldpx4GQ",
+                "duration": 7621,
+                "title": "Tet Psychology Model Papers 2026 | Tet Class in Psychology | Paper-1 SGT & 2 SA |  Tet 2026 Live",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DEShUddn8HY",
+                "duration": 4843,
+                "title": "Mythological Thinking: The Crossroads of Psychology and Theology (Hillsdale talk)",
+                "skip": [
+                    [
+                        1162.9,
+                        1209.4
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AN3GB8xLgQQ",
+                "duration": 2887,
+                "title": "U SAW It Before Anyone… And They Still Marched Into the TRAP U BUILT With a SMILE 💀 Joker Noira",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SJcZHAGLbdE",
+                "duration": 6932,
+                "title": "Follow Whatever Glitters In The Corner",
+                "skip": [
+                    [
+                        928.1,
+                        970.8
+                    ]
+                ],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8O0hmbo2xSc",
+                "duration": 1697,
+                "title": "Never Argue With a Fool Until You Understand This — Machiavelli's Lesson",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
@@ -305,125 +459,11 @@
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=Fdr5db7Ijy0",
-                "duration": 1252,
-                "title": "Nobody Owes You Happiness....!",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hYZG8qnS2T4",
-                "duration": 1226,
-                "title": "15 Psychological Marketing Triggers to MAKE PEOPLE BUY From YOU!",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=e9hcmekYib4",
                 "duration": 1645,
                 "title": "BA 1st Year Psychology Paper 1 chapter 1 fully Detailed Video #psychology #ba1styear",
                 "skip": [],
                 "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vbKR1EIOG2U",
-                "duration": 4126,
-                "title": "How I Cracked M.Phil Clinical Psychology at NIMHANS | Sandeep Saroj | RUFA Education",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=w8RJT2vUn_U",
-                "duration": 2811,
-                "title": "You Are Alone Because You’re Doing It Right | Machiavelli’s Dark Lesson | Billy Graham Inspired",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ivz_OGZykzI",
-                "duration": 1203,
-                "title": "The Philosophy of Unbreakable Men — Need Less, Fear Less, Outlast Everyone | Machiavelli Mind",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wln7qA-S9n0",
-                "duration": 4520,
-                "title": "Psychology of Human Behavior – How to Read People Instantly | Mindset Audiobook",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=z4p87TPCnQc",
-                "duration": 2124,
-                "title": "Lecture 1, Part II: Introduction of Financial Markets, Financial Terms and Concepts",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m0vYH4Acjpc",
-                "duration": 2697,
-                "title": "9 Silent Habits That Slowly Destroy Your Peace! Stoicism  - Stoic Lesson",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lveRovZ62qc",
-                "duration": 4648,
-                "title": "THE PSYCHOLOGY OF PRAYER - DR AROME OSAYI",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RRP7SXk4ZoU",
-                "duration": 1553,
-                "title": "Nietzsche: The Man Who Announced the Death of God | Ep. 01",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9oVwpSD92Vw",
-                "duration": 3130,
-                "title": "Jordan Peterson: \"Why Being Yourself Is Terrible Advice\"",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4Bo3Z9UbvoU",
-                "duration": 1249,
-                "title": "The Psychology Behind Warren Buffett's Most Boring Decision",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_ArVh3Cj9rw",
-                "duration": 1802,
-                "title": "The Future Of Reasoning",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XwKznqGYXUk",
-                "duration": 4649,
-                "title": "Machiavelli’s Darkest Lesson: Comfort Will Destroy You Without Warning!",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CT-bYTPPPdM",
-                "duration": 1914,
-                "title": "The 7 Rules To Become Unshakeable | Shi Heng Yi",
-                "skip": [
-                    [
-                        306.8,
-                        331.2
-                    ],
-                    [
-                        1837.7,
-                        1913.2
-                    ]
-                ],
-                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=zVZ52yaaT-w",
@@ -433,32 +473,53 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=zc5xe00dO2Y",
-                "duration": 6217,
-                "title": "Miracles Of Positive Thinking | Pravrajika Divyanandaprana",
+                "url": "https://www.youtube.com/watch?v=qMGFWKdvnEY",
+                "duration": 1777,
+                "title": "2026 Will Be Devastating For Those Who Still Depend Only on Logic — Harari Reveals",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vbKR1EIOG2U",
+                "duration": 4126,
+                "title": "How I Cracked M.Phil Clinical Psychology at NIMHANS | Sandeep Saroj | RUFA Education",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hYZG8qnS2T4",
+                "duration": 1226,
+                "title": "15 Psychological Marketing Triggers to MAKE PEOPLE BUY From YOU!",
                 "skip": [],
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=SemHh0n19LA",
-                "duration": 1521,
-                "title": "5 steps to designing the life you want  | Bill Burnett | TEDxStanford",
+                "url": "https://www.youtube.com/watch?v=dRociSFUUUw",
+                "duration": 1569,
+                "title": "NEVER Answer These 5 Questions — Schopenhauer",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=H7xbw7Y7fTM",
-                "duration": 4227,
-                "title": "The Psychology of Money by Morgan Housel | Complete Book Summary",
+                "url": "https://www.youtube.com/watch?v=wln7qA-S9n0",
+                "duration": 4520,
+                "title": "Psychology of Human Behavior – How to Read People Instantly | Mindset Audiobook",
                 "skip": [],
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=B92uwVrfftQ",
-                "duration": 2383,
-                "title": "Rewire Your Brain to Outsmart Every Genius ｜ Machiavelli’s 10 Psychology Tricks",
+                "url": "https://www.youtube.com/watch?v=eHp08D6jOsw",
+                "duration": 3641,
+                "title": "Deeksharambh 2026 : Career Counselling  session  by Dr Amrita Dass",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pJ53oix6u-4",
+                "duration": 1342,
+                "title": "KTET 2026 CATEGORY 2 PSYCHOLOGY EXAM ANALYSIS | Xylem Teaching Exams",
+                "skip": [],
+                "skip_checked": 1791751450
             },
             {
                 "url": "https://www.youtube.com/watch?v=IVJpEkbf8zc",
@@ -468,21 +529,42 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=NTWPZ3JYj60",
-                "duration": 2104,
-                "title": "Ignore People & Watch Your Life Change — Dark Psychology | Robert Greene Wisdom",
+                "url": "https://www.youtube.com/watch?v=ESwNG7j8PGs",
+                "duration": 6359,
+                "title": "LECTURE: The Psychology of Socialism Pt 1, The Religion of Hatred, the Cult of Death - Oct 9, 1978",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791751450
             },
             {
-                "url": "https://www.youtube.com/watch?v=TEqYnV6KWfY",
-                "duration": 3844,
-                "title": "Research Methodology 101: Simple Explainer With Examples (+ FREE Template)",
+                "url": "https://www.youtube.com/watch?v=lveRovZ62qc",
+                "duration": 4648,
+                "title": "THE PSYCHOLOGY OF PRAYER - DR AROME OSAYI",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SemHh0n19LA",
+                "duration": 1521,
+                "title": "5 steps to designing the life you want  | Bill Burnett | TEDxStanford",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DpNZUz_iU4w",
+                "duration": 2214,
+                "title": "The Art of War by Sun Tzu | Master Strategy, Power & The Psychology of Winning | Book Padcast",
+                "skip": [],
+                "skip_checked": 1791751450
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nBQPnvmaNcE",
+                "duration": 2610,
+                "title": "Harvard Professor Explains The Rules of Writing (Steven Pinker Interview)",
+                "skip": [],
+                "skip_checked": 1791751450
             }
         ],
         "search_query": "philosophy psychology lecture",
-        "last_refreshed": 1790538971
+        "last_refreshed": 1791751429
     }
 }
