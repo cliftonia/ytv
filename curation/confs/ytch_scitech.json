@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=T663g9hY2o4",
-                "duration": 2656,
-                "title": "How AI & Physics Are Unlocking the Truth (Full Episode) | UFOs: Investigating the Unknown | Nat Geo",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=vzS7cEuInRY",
                 "duration": 3544,
                 "title": "DESTRUCTION From the Cosmos! | How the Universe Works | Science Channel",
@@ -35,6 +28,20 @@
                 "skip_checked": 1790890293
             },
             {
+                "url": "https://www.youtube.com/watch?v=T663g9hY2o4",
+                "duration": 2656,
+                "title": "How AI & Physics Are Unlocking the Truth (Full Episode) | UFOs: Investigating the Unknown | Nat Geo",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4wQSwNvVI5I",
+                "duration": 3039,
+                "title": "The Endless Mysteries of the Universe! | How the Universe Works | Science Channel",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
                 "duration": 3238,
                 "title": "Decoding the Universe: Quantum | Full Documentary | NOVA | PBS",
@@ -47,13 +54,6 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=Mz86UFPMC20",
-                "duration": 4190,
-                "title": "The Beginning and End of the Universe | How the Universe Works | Science Channel",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=QOOkS0E9whU",
                 "duration": 3165,
                 "title": "The Universe's Great IMPOSSIBILITIES! | How the Universe Works | Science Channel",
@@ -61,18 +61,11 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=4wQSwNvVI5I",
-                "duration": 3039,
-                "title": "The Endless Mysteries of the Universe! | How the Universe Works | Science Channel",
+                "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
+                "duration": 5034,
+                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026",
                 "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=34dB_Dlv_1U",
-                "duration": 4026,
-                "title": "What Made the Universe Real? | Quantum Physics Documentary 2026",
-                "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
@@ -91,11 +84,11 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
-                "duration": 5034,
-                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026",
+                "url": "https://www.youtube.com/watch?v=Mz86UFPMC20",
+                "duration": 4190,
+                "title": "The Beginning and End of the Universe | How the Universe Works | Science Channel",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=CNywxo7xZ_I",
@@ -105,11 +98,53 @@
                 "skip_checked": 1791143589
             },
             {
+                "url": "https://www.youtube.com/watch?v=34dB_Dlv_1U",
+                "duration": 4026,
+                "title": "What Made the Universe Real? | Quantum Physics Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=2tvrQZwQFIc",
                 "duration": 2665,
                 "title": "The Equinox and Ancient Civilizations (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
                 "skip": [],
                 "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ODWKrhs_5xs",
+                "duration": 3209,
+                "title": "Are We Alone? The Mystery of the Fermi Paradox | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
+                "duration": 3213,
+                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXXBvHoWQo8",
+                "duration": 4903,
+                "title": "How Does Light Actually Work? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
+                "duration": 2395,
+                "title": "Five Wonders of our Universe | Universe | BBC Earth Science",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=foSSrf5LiMg",
+                "duration": 3118,
+                "title": "The expanding Universe | Beyond Our Earth | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=rfqalXigeOc",
@@ -136,32 +171,11 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=JmPRRZd1KrM",
-                "duration": 3716,
-                "title": "Before Life, Before Oceans - The Birth of Planet Earth | Space Documentary",
+                "url": "https://www.youtube.com/watch?v=Q6ECB-aDibo",
+                "duration": 4124,
+                "title": "Is Time Travel Possible Through Black Holes? | How the Universe Works | Science Channel",
                 "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oz-Y1Xzx5iQ",
-                "duration": 2395,
-                "title": "Five Wonders of our Universe | Universe | BBC Earth Science",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=foSSrf5LiMg",
-                "duration": 3118,
-                "title": "The expanding Universe | Beyond Our Earth | Free Documentary Space",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JEAWOWJ6-WQ",
-                "duration": 2756,
-                "title": "Groundbreaking & Unexplainable Technology | Ancient Aliens | History",
-                "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=wn4e-gu3OuY",
@@ -171,11 +185,116 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=Q6ECB-aDibo",
-                "duration": 4124,
-                "title": "Is Time Travel Possible Through Black Holes? | How the Universe Works | Science Channel",
+                "url": "https://www.youtube.com/watch?v=pAouFljMuLg",
+                "duration": 1077,
+                "title": "Kepler-442b: The Perfect World FULL EPISODE | Science Fiction Documentary",
                 "skip": [],
                 "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z7AECr2EeYg",
+                "duration": 2202,
+                "title": "Mars: All About The Red Planet | BBC Earth Science",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
+                "duration": 5048,
+                "title": "The Thinking Game | Full documentary | Tribeca Film Festival official selection",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JEAWOWJ6-WQ",
+                "duration": 2756,
+                "title": "Groundbreaking & Unexplainable Technology | Ancient Aliens | History",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MNc_zuK9kCM",
+                "duration": 5238,
+                "title": "How Many Multiverses Are There? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JmPRRZd1KrM",
+                "duration": 3716,
+                "title": "Before Life, Before Oceans - The Birth of Planet Earth | Space Documentary",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kIP8r7kUc5c",
+                "duration": 2909,
+                "title": "The Evolution of Life with David Attenborough (4K Documentary)",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LWxVeF1nibs",
+                "duration": 704,
+                "title": "What Happens in the Brain During Sleep? | Science Documentary Ep 6",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
+                "duration": 4813,
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-EnKVSY6FJ4",
+                "duration": 1123,
+                "title": "How One Nerve Impulse Works | Science Documentary Ep 2",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YOo1iRju0Ak",
+                "duration": 1088,
+                "title": "Science Documentary: How Brain Circuit Damage Changes Behavior | Episode 7",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RSlHBJoZZKc",
+                "duration": 1055,
+                "title": "Science Documentary: From Anatomy to Brain Scans | Episode 1",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPZKTfRYRjo",
+                "duration": 2657,
+                "title": "Lost Technologies of Ancient Civilizations | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y0JIkdKL1jg",
+                "duration": 2665,
+                "title": "Unearthing the Valley of the Nobles (Full Episode) | Lost Treasures of Egypt | National Geographic",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sTQwYz7cvOU",
+                "duration": 710,
+                "title": "Science Documentary: How Scientists Map the Brain | Episode 9",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ufvC32TOBmc",
+                "duration": 2665,
+                "title": "Enter the Planet of the Birds (Full Episode) | DOCUMENTARY SPECIAL | Nat Geo Animals",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=fd6XUtJAWWw",
@@ -183,6 +302,69 @@
                 "title": "The Last Generation of Human Workers FULL EPISODE | Science Fiction Documentary",
                 "skip": [],
                 "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nszho9pq57w",
+                "duration": 2736,
+                "title": "The Most Terrifying Predictions For The End Of Earth",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QLRSGrNv12k",
+                "duration": 1106,
+                "title": "Science Documentary: How the Brain's Circuits Are Organized | Episode 4",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cu1I1ks_WD0",
+                "duration": 1520,
+                "title": "How Scientists Test Theories of Consciousness | Science Documentary Ep 10",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aZM4YF0XDME",
+                "duration": 1332,
+                "title": "Science Documentary: How Learning Changes Synapses | Episode 5",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7OQqKJl4GCk",
+                "duration": 1059,
+                "title": "Proxima Centauri b: Humanity's First Colony FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-WpfAd70chA",
+                "duration": 1812,
+                "title": "Daily Life on Mars  (2045) FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bXB8aLFePu8",
+                "duration": 3571,
+                "title": "The Single Observation That Shattered 2,000 Years Of Science",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
+                "duration": 3120,
+                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
+                "duration": 3980,
+                "title": "Cleopatra's Final Secret (Full Episode) | Documentary Special | National Geographic",
+                "skip": [],
+                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=yBJL3bpH6LI",
@@ -199,95 +381,18 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=bXXBvHoWQo8",
-                "duration": 4903,
-                "title": "How Does Light Actually Work? | Space Documentary 2026",
+                "url": "https://www.youtube.com/watch?v=QpBcAu7eFnU",
+                "duration": 1555,
+                "title": "The new medical innovations that could change everything - The Engineers, BBC World Service",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=MNc_zuK9kCM",
-                "duration": 5238,
-                "title": "How Many Multiverses Are There? | Space Documentary 2026",
+                "url": "https://www.youtube.com/watch?v=8xvevrzkYT4",
+                "duration": 2531,
+                "title": "Earth’s Underground Mysteries | The UnXplained (S6, E1) | Full Episode",
                 "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
-                "duration": 4813,
-                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Nszho9pq57w",
-                "duration": 2736,
-                "title": "The Most Terrifying Predictions For The End Of Earth",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ufvC32TOBmc",
-                "duration": 2665,
-                "title": "Enter the Planet of the Birds (Full Episode) | DOCUMENTARY SPECIAL | Nat Geo Animals",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
-                "duration": 3120,
-                "title": "Wildlife | Episode 2: Crocodiles, Alligators, Caimans & Gharials | Free Documentary Nature",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pAouFljMuLg",
-                "duration": 1077,
-                "title": "Kepler-442b: The Perfect World FULL EPISODE | Science Fiction Documentary",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r6u_O4120r4",
-                "duration": 501,
-                "title": "Dinosaur Documentary Full Episode #DinosaurDocumentary #Dinosaurs #PrehistoricLife #AncientEarth",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kIP8r7kUc5c",
-                "duration": 2909,
-                "title": "The Evolution of Life with David Attenborough (4K Documentary)",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TwmHJ9ym3cA",
-                "duration": 4843,
-                "title": "A Glitch in Quantum Reality: The Illusion of Time | Space Documentary 2026",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-WpfAd70chA",
-                "duration": 1812,
-                "title": "Daily Life on Mars  (2045) FULL EPISODE | Science Fiction Documentary",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cYe4tF6NZco",
-                "duration": 3568,
-                "title": "Timelapse to the Future of Earth | Full Documentary",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z7AECr2EeYg",
-                "duration": 2202,
-                "title": "Mars: All About The Red Planet | BBC Earth Science",
-                "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791927665
             },
             {
                 "url": "https://www.youtube.com/watch?v=o6mRLwyDFDY",
@@ -297,27 +402,6 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=qib1E6j0AE8",
-                "duration": 608,
-                "title": "Baltic Sea - Breathing Through the Dead Zones (Full Episode) | Nature animal documentary",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bXB8aLFePu8",
-                "duration": 3571,
-                "title": "The Single Observation That Shattered 2,000 Years Of Science",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=omUUQrvoYfw",
-                "duration": 5154,
-                "title": "Where Is Everything In The Universe Going? | Space Documentary 2025",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=gxqgm-ruiW8",
                 "duration": 4086,
                 "title": "Philippine Seas: A documentary by Atom Araullo (Full Episode) (with English subtitles)",
@@ -325,30 +409,32 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=7OQqKJl4GCk",
-                "duration": 1059,
-                "title": "Proxima Centauri b: Humanity's First Colony FULL EPISODE | Science Fiction Documentary",
+                "url": "https://www.youtube.com/watch?v=JeLJuRYbs-I",
+                "duration": 1722,
+                "title": "I-Witness: ‘Unearthed,' a documentary by Kara David | Full episode (with English subtitles)",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=xdkTBD7EMno",
-                "duration": 5156,
-                "title": "The story of our planet, retold | DW Documentary",
+                "url": "https://www.youtube.com/watch?v=r6u_O4120r4",
+                "duration": 501,
+                "title": "Dinosaur Documentary Full Episode #DinosaurDocumentary #Dinosaurs #PrehistoricLife #AncientEarth",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=Q2gqTMRmO_U",
-                "duration": 3399,
-                "title": "PBS News Hour full episode, Sept. 22, 2026",
-                "skip": [
-                    [
-                        50.1,
-                        167.3
-                    ]
-                ],
-                "skip_checked": 1790634163
+                "url": "https://www.youtube.com/watch?v=cYe4tF6NZco",
+                "duration": 3568,
+                "title": "Timelapse to the Future of Earth | Full Documentary",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M68v3BhHwlI",
+                "duration": 838,
+                "title": "Science Documentary: How Drugs Change Brain Signals | Episode 8",
+                "skip": [],
+                "skip_checked": 1791927665
             },
             {
                 "url": "https://www.youtube.com/watch?v=w6tgLfzunLE",
@@ -365,6 +451,20 @@
                 "skip_checked": 1790634163
             },
             {
+                "url": "https://www.youtube.com/watch?v=qib1E6j0AE8",
+                "duration": 608,
+                "title": "Baltic Sea - Breathing Through the Dead Zones (Full Episode) | Nature animal documentary",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TwmHJ9ym3cA",
+                "duration": 4843,
+                "title": "A Glitch in Quantum Reality: The Illusion of Time | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=jF9tKMJVu78",
                 "duration": 1809,
                 "title": "What Scientists Are Beginning to Find in the Bermuda Triangle",
@@ -372,18 +472,30 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=fsx7XMhhEtc",
-                "duration": 604,
-                "title": "Building the Future of Hydration: The HNS Science Documentary | Episode 1",
-                "skip": [],
-                "skip_checked": 1790367139
+                "url": "https://www.youtube.com/watch?v=6xTvyTunXIo",
+                "duration": 3407,
+                "title": "PBS News Hour full episode, Oct. 8, 2026",
+                "skip": [
+                    [
+                        42.0,
+                        155.4
+                    ]
+                ],
+                "skip_checked": 1791927665
             },
             {
-                "url": "https://www.youtube.com/watch?v=LwO6nFm_7g0",
-                "duration": 2656,
-                "title": "Alien Encounters (Full Episode) | UFOs: Investigating the Unknown | National Geographic",
+                "url": "https://www.youtube.com/watch?v=xdkTBD7EMno",
+                "duration": 5156,
+                "title": "The story of our planet, retold | DW Documentary",
                 "skip": [],
                 "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oha_Mtigd1k",
+                "duration": 2054,
+                "title": "The Last Generation That Had to Work | FULL EPISODE | Science Fiction Documentary",
+                "skip": [],
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=RtGCDyfru-A",
@@ -393,25 +505,46 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=JeLJuRYbs-I",
-                "duration": 1722,
-                "title": "I-Witness: ‘Unearthed,' a documentary by Kara David | Full episode (with English subtitles)",
+                "url": "https://www.youtube.com/watch?v=cwrKZ1X9xrA",
+                "duration": 2135,
+                "title": "Brian Cox Talks About Alien Life - A 2026 Special",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=xgqDj9A4UTc",
-                "duration": 1882,
-                "title": "MADAGASCAR: Earth’s Strange Forgotten Island",
+                "url": "https://www.youtube.com/watch?v=LDoJbL2i8gE",
+                "duration": 2535,
+                "title": "Are UFO Whistleblowers Telling the Truth? | Ancient Aliens (S20, E13) | Full Episode",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WxTZAlUyPqE",
+                "duration": 1054,
+                "title": "The dark side of Turkey's beauty industry | DW Documentary",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VC3gMUxEv7Q",
+                "duration": 1710,
+                "title": "SpaceX Holy Grail Of Rocketry (Starship Episode 3) Documentary",
                 "skip": [],
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=tf4C-OJc5ew",
-                "duration": 3725,
-                "title": "Could Humans Live on Mars? | Space Documentary",
+                "url": "https://www.youtube.com/watch?v=iih7fm7ZDbo",
+                "duration": 2415,
+                "title": "The Montauk Experiments Investigative Documentary - FULL EPISODE | Mysteries Decoded | The CW",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=feLUycJF318",
+                "duration": 4705,
+                "title": "A Journey to the Edge of the Unexplored | Space Documentary 2025",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=JnGc6_e8Dic",
@@ -428,74 +561,18 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=QpBcAu7eFnU",
-                "duration": 1555,
-                "title": "The new medical innovations that could change everything - The Engineers, BBC World Service",
+                "url": "https://www.youtube.com/watch?v=O3QQ51dH0MY",
+                "duration": 642,
+                "title": "Space Lasers? Anti-Satellite Missiles? The Future is Now | NOVA | PBS",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791927665
             },
             {
-                "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
-                "duration": 3980,
-                "title": "Cleopatra's Final Secret (Full Episode) | Documentary Special | National Geographic",
+                "url": "https://www.youtube.com/watch?v=Ta_SmtEf3Ns",
+                "duration": 3286,
+                "title": "WILD Military UFO Encounters | MonsterQuest",
                 "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1B1Ctljd2uY",
-                "duration": 2665,
-                "title": "Mystery Mummies of New Guinea (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=feLUycJF318",
-                "duration": 4705,
-                "title": "A Journey to the Edge of the Unexplored | Space Documentary 2025",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cwrKZ1X9xrA",
-                "duration": 2135,
-                "title": "Brian Cox Talks About Alien Life - A 2026 Special",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VpXP7z_pvr8",
-                "duration": 1021,
-                "title": "The Final Generation of Human Workers FULL EPISODE | Science Fiction Documentary",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kt0-u9z7-rw",
-                "duration": 2340,
-                "title": "SAVAGE SPEED: Mother Cheetah vs Deer | FULL EPISODE | Nature Animal Documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sN88eITYyX8",
-                "duration": 1389,
-                "title": "Nature's Most Extraordinary Moments | Battle for Survival | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=w0Ku-4ELK9I",
-                "duration": 3349,
-                "title": "WILD PACIFIC | The Brutal Showdown of the Ocean's Giants | Nature Animal Documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=v0kapBjEhuM",
-                "duration": 495,
-                "title": "SOUTH LUANGWA - Surviving the Deadly Drought (Full Episode) | Nature Animal Documentary",
-                "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791927665
             },
             {
                 "url": "https://www.youtube.com/watch?v=LfjnZVG2m-s",
@@ -505,25 +582,25 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=WxTZAlUyPqE",
-                "duration": 1054,
-                "title": "The dark side of Turkey's beauty industry | DW Documentary",
+                "url": "https://www.youtube.com/watch?v=uE2j0CxDN0k",
+                "duration": 4655,
+                "title": "Physics Still Has No Idea What Space Is Made Of | Quantum Physics Documentary 2026",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1791927665
             },
             {
-                "url": "https://www.youtube.com/watch?v=X6PTrQrWmb8",
-                "duration": 2930,
-                "title": "Violent Earth - Episode 2 - Inferno // BBC Documentary 1999",
+                "url": "https://www.youtube.com/watch?v=KlZWNjrGwpE",
+                "duration": 1380,
+                "title": "HYDROCIDE | AI Sci-Fi Short Film 2026 | Episode 1 — Giant Titans and the War for Water",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1791927665
             },
             {
-                "url": "https://www.youtube.com/watch?v=-5nxh7SJYWs",
-                "duration": 3631,
-                "title": "African Savannah | Only the Strongest Survive | FULL EPISODE | Nature Animal Documentary",
+                "url": "https://www.youtube.com/watch?v=1B1Ctljd2uY",
+                "duration": 2665,
+                "title": "Mystery Mummies of New Guinea (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1790451053
             },
             {
                 "url": "https://www.youtube.com/watch?v=uoEffocWP4A",
@@ -538,25 +615,16 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=FDtCJVlxbww",
-                "duration": 5321,
-                "title": "Exploring the Miracle on the Hudson (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cnYqz-NCREQ",
-                "duration": 1808,
-                "title": "Into the Deep Sea of Alaska’s Ocean | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2tWkxYQPmTY",
-                "duration": 924,
-                "title": "Fight for Survival, Death, and Predators (Full Episode) | Nature Animal Documentary",
-                "skip": [],
-                "skip_checked": 1790890293
+                "url": "https://www.youtube.com/watch?v=7zl8OX8hjWo",
+                "duration": 3407,
+                "title": "PBS News Hour full episode, Oct. 7, 2026",
+                "skip": [
+                    [
+                        53.3,
+                        164.1
+                    ]
+                ],
+                "skip_checked": 1791927665
             },
             {
                 "url": "https://www.youtube.com/watch?v=ERuAafzcF8E",
@@ -566,9 +634,51 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=ehJy5fnpqWg",
-                "duration": 2670,
-                "title": "Clotilda: The Return Home (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
+                "url": "https://www.youtube.com/watch?v=kt0-u9z7-rw",
+                "duration": 2340,
+                "title": "SAVAGE SPEED: Mother Cheetah vs Deer | FULL EPISODE | Nature Animal Documentary",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=w0Ku-4ELK9I",
+                "duration": 3349,
+                "title": "WILD PACIFIC | The Brutal Showdown of the Ocean's Giants | Nature Animal Documentary",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UVf2Yw7uFoE",
+                "duration": 2546,
+                "title": "Global renewables: Pioneering the energy transition | DW Documentary",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jgCpG47IwuE",
+                "duration": 3178,
+                "title": "Her Killer Hid in Plain Sight for 47 Years",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ivjmjj67G6c",
+                "duration": 2656,
+                "title": "Inside World of Giant Carnivorous Bats (Full Episode) | Documentary Special | Nat Geo Animals",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FDtCJVlxbww",
+                "duration": 5321,
+                "title": "Exploring the Miracle on the Hudson (Full Episode) | DOCUMENTARY SPECIAL | National Geographic",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sN88eITYyX8",
+                "duration": 1389,
+                "title": "Nature's Most Extraordinary Moments | Battle for Survival | FULL EPISODE | Wildlife Documentary",
                 "skip": [],
                 "skip_checked": 1790538994
             },
@@ -580,184 +690,75 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=citJrE_RHRE",
-                "duration": 3704,
-                "title": "The Most Extreme Situations in Nature | FULL EPISODE | Wildlife Documentary",
+                "url": "https://www.youtube.com/watch?v=IT09LD6nQys",
+                "duration": 2658,
+                "title": "Birth Of The Empire (Full Episode) | Genghis Khan: Secret History of the Mongols | Nat Geo",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1791927665
             },
             {
-                "url": "https://www.youtube.com/watch?v=lJJqkGneBVY",
-                "duration": 2480,
-                "title": "WILD RAINFOREST | Hunting Amazon's Deadliest Prey | FULL EPISODE | Wildlife Documentary",
+                "url": "https://www.youtube.com/watch?v=34V1xqqNeMM",
+                "duration": 3033,
+                "title": "Climate Change Is Sinking This Megacity of 10 Million (Full Science Documentary)",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1791927665
             },
             {
-                "url": "https://www.youtube.com/watch?v=pNR5oWf_S80",
-                "duration": 763,
-                "title": "Win or Die (FULL EPISODE) | Deadliest Battles for Survival | Animal documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=myWAYtRbikg",
-                "duration": 2180,
-                "title": "Deadliest Battles for Survival on the African Savannah | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=daKi33dnA_0",
-                "duration": 1173,
-                "title": "Beyond Area 51 | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I6pO75MGhOw",
-                "duration": 2566,
-                "title": "The secret to concentration - How to increase your attention span | DW Documentary",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0kdSw4bTuDk",
-                "duration": 2764,
-                "title": "Wild Ruaha | Africa's Toughest Fight for Survival | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cMx139eTxoc",
-                "duration": 3286,
-                "title": "What does asbestos do to a person?",
-                "skip": [
-                    [
-                        138.6,
-                        142.4
-                    ],
-                    [
-                        1900.4,
-                        1998.1
-                    ]
-                ],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Di2P2c26e6s",
-                "duration": 3122,
-                "title": "WILD TALES - EPISODE 2: LIZARDS OF OZ  (Nature Documentary)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Miwz0Asf3Ps",
-                "duration": 5059,
-                "title": "Did Ancient Civilizations Use Alien Technology? | Ancient Aliens",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rb1GSGaCT18",
-                "duration": 3002,
-                "title": "Fascinating Documentary about Forces of Nature (Full Documentary) (HD)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DrI0PtTgFZo",
-                "duration": 4692,
-                "title": "Wild Savannah | The Brutal Price Of Survival | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VC3gMUxEv7Q",
-                "duration": 1710,
-                "title": "SpaceX Holy Grail Of Rocketry (Starship Episode 3) Documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Tc7Qf9HTgD0",
-                "duration": 3122,
-                "title": "WILD TALES - EPISODE 5: NATURE’S DEADLY ALCHEMISTS (Toxic Survival Secrets)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-kDIApxxw2o",
-                "duration": 619,
-                "title": "AFRICAN LION | Africa's Deadliest Fights For Survival (Full Episode) | Nature Animal Documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dxUobswkXuk",
-                "duration": 537,
-                "title": "How Machines Learned to Think - AI Documentary Episode 1",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eD0Wni_0xnA",
-                "duration": 494,
-                "title": "A Perilous Showdown | Reindeer vs. Wolves | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MI_ZA3M9zO0",
-                "duration": 1579,
-                "title": "Great Migration | Wild Ones | Episode 11 | Free Documentary Nature",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VLGFsrEw440",
-                "duration": 4294,
-                "title": "The Most Dangerous Predators of the Wild | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ypEpDWKIoKU",
-                "duration": 1975,
-                "title": "ELEPHANT DYNASTIES | Matriarchs and the Fight for Water | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zO8xk6uex2M",
-                "duration": 1751,
-                "title": "Africa's Highest Wilderness | Fight for Survival | FULL EPISODE | Wildlife Documentary",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uvA_xtgJk-c",
-                "duration": 2485,
-                "title": "How Egyptians Moved 1,000 Tons | Ancient Impossible (S1, E2) | Full Episode",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5rVY86lkD6A",
-                "duration": 2665,
-                "title": "Jaguar Beach Battle (Full Episode) | DOCUMENTARY SPECIAL | Nat Geo Animals",
+                "url": "https://www.youtube.com/watch?v=X6PTrQrWmb8",
+                "duration": 2930,
+                "title": "Violent Earth - Episode 2 - Inferno // BBC Documentary 1999",
                 "skip": [],
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=oha_Mtigd1k",
-                "duration": 2054,
-                "title": "The Last Generation That Had to Work | FULL EPISODE | Science Fiction Documentary",
+                "url": "https://www.youtube.com/watch?v=ooKRbSVCT3s",
+                "duration": 2884,
+                "title": "Film Myth's Reality Is Being Questioned! | Motor MythBusters | Season 1 Episode 6",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Du-GWB4g7GY",
+                "duration": 2681,
+                "title": "The Danger of Artificial Intelligence: Humanity's Last Invention? | ENDEVR Documentary",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OSJiqb2PtuU",
+                "duration": 1361,
+                "title": "Extraterrestrials in Italy | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QYNogDijAYI",
+                "duration": 3250,
+                "title": "When the Earth Swallows You Whole | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        122.0,
+                        142.3
+                    ]
+                ],
+                "skip_checked": 1791927665
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2tWkxYQPmTY",
+                "duration": 924,
+                "title": "Fight for Survival, Death, and Predators (Full Episode) | Nature Animal Documentary",
                 "skip": [],
                 "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FvHrDkq5OPk",
+                "duration": 1389,
+                "title": "Search For Life On Mars | Ancient Aliens",
+                "skip": [],
+                "skip_checked": 1791927665
             }
         ],
         "search_query": "science documentary full episode",
-        "last_refreshed": 1790634151
+        "last_refreshed": 1791927641
     }
 }
