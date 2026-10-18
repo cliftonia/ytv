@@ -7,60 +7,11 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=UW3yboZfzFQ",
-                "duration": 356,
-                "title": "The Fashion Designers - a short satirical fashion film",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=v8V2MfadDVQ",
                 "duration": 2898,
                 "title": "Designer Marathon: JOHN GALLIANO (Part 1) | Archival fashion designer documentary (2008)",
                 "skip": [],
                 "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Chnd04WsPfk",
-                "duration": 423,
-                "title": "The surreal fashion of Elsa Schiaparelli | V&A",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tN1glLg0dgg",
-                "duration": 1442,
-                "title": "Videofashion Designers: LOUIS VUITTON | Designer documentary from the Videofashion archive (2012)",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AUXmDmvD-tc",
-                "duration": 1578,
-                "title": "Re{form} Zara",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PdY_R5WTRVQ",
-                "duration": 1380,
-                "title": "Matières Fécales S/S27 The Ninety Nine Percent",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vmtuNnuztio",
-                "duration": 2564,
-                "title": "ASYLUM OF HALLUCINATIONS DOCUMENTARY: THE NEXT GENERATION OF DESIGNERS 8.19.26",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qGpQ3c1d7TQ",
-                "duration": 256,
-                "title": "Adrianne Rosete | Brand Film — The Designer Redefining Fashion Through Identity & Craft",
-                "skip": [],
-                "skip_checked": 1790634163
             },
             {
                 "url": "https://www.youtube.com/watch?v=tr96xo8-EUo",
@@ -70,60 +21,44 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=tUB_hUebFE4",
-                "duration": 730,
-                "title": "hiTechMODA | Ana Gia | September 2026 | New York Fashion Week",
+                "url": "https://www.youtube.com/watch?v=kHeF9hb_4EI",
+                "duration": 2138,
+                "title": "Discovering Dior Fall Winter 2026-2027 Haute Couture with Alexa Chung",
+                "skip": [
+                    [
+                        2119.7,
+                        2124.4
+                    ]
+                ],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AUXmDmvD-tc",
+                "duration": 1578,
+                "title": "Re{form} Zara",
                 "skip": [],
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=tol9ivyvmHw",
-                "duration": 349,
-                "title": "hiTechMODA | Ashley Lauren | September 2026 | New York Fashion Week",
+                "url": "https://www.youtube.com/watch?v=0g6o2EaBsQo",
+                "duration": 714,
+                "title": "Sense and Sensibility’s Costume Designer Breaks Down the Film’s Regency Fashion",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=iK-lihXDYkY",
-                "duration": 2881,
-                "title": "Designer Marathon: EMANUEL UNGARO | Archival fashion designer documentary with interviews",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EPBuu7Lzrck",
-                "duration": 1808,
-                "title": "Pushporag all designers video documentary",
+                "url": "https://www.youtube.com/watch?v=tN1glLg0dgg",
+                "duration": 1442,
+                "title": "Videofashion Designers: LOUIS VUITTON | Designer documentary from the Videofashion archive (2012)",
                 "skip": [],
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=A5gNYheLcak",
-                "duration": 648,
-                "title": "sacai Spring & Summer 2027 Collection",
+                "url": "https://www.youtube.com/watch?v=vmtuNnuztio",
+                "duration": 2564,
+                "title": "ASYLUM OF HALLUCINATIONS DOCUMENTARY: THE NEXT GENERATION OF DESIGNERS 8.19.26",
                 "skip": [],
                 "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UoP88JYMe8s",
-                "duration": 275,
-                "title": "EXPOSITORY DOCUMENTARY. YOUNG LOCAL SA DESIGNERS REACHING FOR THE GLOBAL STAGE.",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VkXZ61D4Zck",
-                "duration": 2699,
-                "title": "What Are People Wearing in New York? (Fashion Trends 2026 NYC Fall Street Style Ep.232)",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0eIS899sDIw",
-                "duration": 1438,
-                "title": "Videofashion Designers: Aquilano.Rimondi | Archival fashion designer documentary (2013)",
-                "skip": [],
-                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Zi5cpwyD974",
@@ -133,11 +68,60 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=1u0KzfgVn1I",
-                "duration": 3842,
-                "title": "The Future of Fashion with Alexa Chung in New York | British Vogue",
+                "url": "https://www.youtube.com/watch?v=DwADRlQ7PY0",
+                "duration": 3502,
+                "title": "Deceptively real and life-threatening - On the trail of product counterfeiters | DW Documentary",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uq_Id-BDDzc",
+                "duration": 2112,
+                "title": "Lights Camera Angels: Behind The Scenes of The Victoria's Secret Fashion Show 2025",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YcqIbD4QcMY",
+                "duration": 4767,
+                "title": "Model x showcase: NEW YORK FASHION WEEK 2026 by BR3ZZY",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0eIS899sDIw",
+                "duration": 1438,
+                "title": "Videofashion Designers: Aquilano.Rimondi | Archival fashion designer documentary (2013)",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HwjA2lMECfg",
+                "duration": 782,
+                "title": "Daniel Roseberry Tours Schiaparelli's Most Iconic Pieces | Vogue",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wFDW6nGH5lI",
+                "duration": 3284,
+                "title": "Marina Abramović on Climaxing for Art and the Power of a Yamamoto Suit | Fashion Neurosis",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gQ3idFZXiHo",
+                "duration": 2400,
+                "title": "Inside Vogue World: Paris",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JnkdVu8p65k",
+                "duration": 1847,
+                "title": "Rosemary's Baby Fashion: Mod Style & Satanic Chic",
+                "skip": [],
+                "skip_checked": 1792350542
             },
             {
                 "url": "https://www.youtube.com/watch?v=LCfBYE97rFk",
@@ -147,32 +131,88 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=C_mofHYQS8E",
-                "duration": 339,
-                "title": "hiTechMODA | Alyssa Casa | September 2026 | New York Fashion Week",
+                "url": "https://www.youtube.com/watch?v=4fxdyvWrt9M",
+                "duration": 3180,
+                "title": "Art and Fashion | 60 Minutes Full Episodes",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=yb95GGWFvZA",
-                "duration": 1076,
-                "title": "The Dark Story of Karl Lagerfeld",
+                "url": "https://www.youtube.com/watch?v=Chnd04WsPfk",
+                "duration": 423,
+                "title": "The surreal fashion of Elsa Schiaparelli | V&A",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=bK_fnLCgF9M",
-                "duration": 963,
-                "title": "How to Become a Creative Director with Alexa Chung | Future of Fashion | British Vogue",
+                "url": "https://www.youtube.com/watch?v=dhFBxVoPpFw",
+                "duration": 1145,
+                "title": "I Went to Paris for John Galliano’s Zara Re{Form} | Schiaparelli at the V&A | SET 03",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=-HtfeO8P6TM",
-                "duration": 1689,
-                "title": "HIGHEST LEVEL OF AUTUMN FASHION ITALIAN STREET STYLE 🍂 OCTOBER 2026 SHOPPING LOOKS & LUXURY OUTFITS",
+                "url": "https://www.youtube.com/watch?v=0pDrw8W7aH0",
+                "duration": 2641,
+                "title": "Luxury lie from Berlin: The fraud with fake handbags from Hermès & Co. | ZDFinfo Documentary",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BWSbFbcEsRw",
+                "duration": 1716,
+                "title": "ITALY MOST VIRAL OCTOBER TRENDS 2026 🍂 AUTUMN OUTFITS FASHION & MILAN SHOPPING | LUXURY STREET STYLE",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HzI4m5jvBkg",
+                "duration": 1710,
+                "title": "3 years of Building a Fashion Brand in 28 mins",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=15weOn5G3yg",
+                "duration": 844,
+                "title": "Kate Moss — How I Changed Fashion Without Looking Like a Supermodel",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qCr9wUbi5a4",
+                "duration": 694,
+                "title": "BALENCIAGA 2027 Summer Fashion Show - Paris Fashion Week - Original Music By Jennifer Rouse",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LlBCoqLVdYQ",
+                "duration": 401,
+                "title": "PIRELLI CALENDAR 2026 Behind The Scenes - Fashion Channel",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eJWL33seejg",
+                "duration": 3870,
+                "title": "SAKVOYAZH 2026 | Designer clothing, jewelry, prices, artisans and their students | Moscow",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qyUlrfEsr84",
+                "duration": 2702,
+                "title": "The Secrets Behind Kate Middleton's Iconic Fashion",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XbBCnlrWx6Y",
+                "duration": 749,
+                "title": "The Making of the Dior Men’s Summer 2024 Show",
+                "skip": [],
+                "skip_checked": 1792350542
             },
             {
                 "url": "https://www.youtube.com/watch?v=QH_RfTzHFLA",
@@ -182,25 +222,11 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=Z4Ymj1mw8kM",
-                "duration": 609,
-                "title": "DIOR 360! RIHANNA, JISOO, JONATHAN ANDERSON! INSIDE THE FASHION SHOW!",
+                "url": "https://www.youtube.com/watch?v=9TdPLgP6Hc4",
+                "duration": 1441,
+                "title": "Videofashion Designers: REEM ACRA | Ready-to-Wear & Bridal Designer Documentary",
                 "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NTK-7rxnITs",
-                "duration": 521,
-                "title": "Project Runway Winners Who Are Unrecognizable Now",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lgBrHf5bZ4M",
-                "duration": 1681,
-                "title": "Balenciaga Is Even Darker Than You Think",
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=zrqqrQmeQS4",
@@ -210,91 +236,343 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=zHhabL3pUjg",
-                "duration": 585,
-                "title": "Exhibition Tour—In America: A Lexicon of Fashion with Andrew Bolton",
+                "url": "https://www.youtube.com/watch?v=SxK9N-oig4g",
+                "duration": 852,
+                "title": "Inside Cathy’s 'Wuthering Heights' House with Margot Robbie | Set Tour | Architectural Digest",
                 "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=jXQP6-LvmVE",
-                "duration": 354,
-                "title": "6-year-old fashion designer Max Alexander shows off his style l GMA",
+                "url": "https://www.youtube.com/watch?v=_qRBWFWvIuU",
+                "duration": 1182,
+                "title": "What The Hell Happened To Susan Dell?",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JgjOlVChLYY",
+                "duration": 826,
+                "title": "Chloé 2027 Summer Fashion Show - Paris Fashion Week - Original Music By Jennifer Rouse",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Bh8dnw67rE0",
+                "duration": 506,
+                "title": "The Simple Solution to Fast Fashion | Josephine Philips | TED",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MDk1yQ6splc",
+                "duration": 465,
+                "title": "Victoria’s Secret Fashion Show 2026  What to Know About the Models, Musical Guests and More!",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BrbLnUZ7rRY",
+                "duration": 2487,
+                "title": "Murder by Design | Full Episode",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WHzb3YvJFFk",
+                "duration": 1275,
+                "title": "Phony Fashion Designer Exposed As A Smuggler! | FULL EPISODE | Border Security Australia",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Egm7PIVem_E",
+                "duration": 919,
+                "title": "Fairy tales meet CHANEL Haute Couture — CHANEL Shows",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=u-pXZE3TBKs",
+                "duration": 789,
+                "title": "Inside Designer Tory Burch’s Paris Home, Filled With Wonderful Objects | Vogue",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_QTygNXVA5I",
+                "duration": 290,
+                "title": "Milan Luxury Window Displays 🇮🇹 | Valentino, Balenciaga, D&G & More | October 2026",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dUimfKLKs68",
+                "duration": 3396,
+                "title": "Rick Owens on Championing Alternative Aesthetics | Fashion Neurosis Podcast with Bella Freud | Video",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xnpyTNK4U9U",
+                "duration": 1356,
+                "title": "Why Pantone Colors Are So Expensive | So Expensive | Business Insider",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UoP88JYMe8s",
+                "duration": 275,
+                "title": "EXPOSITORY DOCUMENTARY. YOUNG LOCAL SA DESIGNERS REACHING FOR THE GLOBAL STAGE.",
                 "skip": [],
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=tLfNUD0-8ts",
-                "duration": 411,
-                "title": "The true cost of fast fashion",
+                "url": "https://www.youtube.com/watch?v=ln9c723SE48",
+                "duration": 765,
+                "title": "Emporio Armani Milan Fashion Show Fall 2026–Winter 2027 | Clothing and Accessories",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=1vfqbgPwFaU",
-                "duration": 832,
-                "title": "The Chloé Summer 2027 Show",
+                "url": "https://www.youtube.com/watch?v=BmMKr5YO0gE",
+                "duration": 1767,
+                "title": "LAW ROACH IS AN ICONIC GUEST | ZIWE INTERVIEW",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K03J1TEEpEs",
+                "duration": 413,
+                "title": "Her Family Mocked Her Dream of Becoming a Fashion Designer. Until She Made It Big in America 🔥🎬",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ZpA85pG9BI",
+                "duration": 358,
+                "title": "Designer Fashion Ltd Corporate Documentary, Designer Fashion Ltd, Designer Fashion Limited",
                 "skip": [],
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=1MfTDxvTavE",
-                "duration": 1709,
-                "title": "OCTOBER 2026 MILAN STREET STYLE 🍂 AUTUMN ITALLY FASHION TRENDS | HOTTEST SHOPPING & TIMELESS OUTFITS",
+                "url": "https://www.youtube.com/watch?v=1raeVrrvP9U",
+                "duration": 1686,
+                "title": "Sashiko Embroidery - Japanology Plus",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=ho6OloxLh_0",
-                "duration": 790,
-                "title": "The Actual Origins Of Clothing",
+                "url": "https://www.youtube.com/watch?v=yfbfPCivMwc",
+                "duration": 1089,
+                "title": "Inside James Builder’s Mega Factory | How White Brahman Bull Horn Becomes $1,800 Designer Sunglasses",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cbLq9aK6H5A",
+                "duration": 275,
+                "title": "Fashion in Helsinki 2026 | Fashion Presentation on Seurasaari Island 2",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sdrYGQh4doU",
+                "duration": 2428,
+                "title": "Death at Soho House | Full Episode",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XiwfqSoaCOg",
+                "duration": 769,
+                "title": "Supermodel Shalom Harlow Breaks Down 13 Looks From 1993 to Now | Life in Looks | Vogue",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0OfecV-Lshs",
+                "duration": 2393,
+                "title": "Full Fashion Show of Otakon 2026",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3VSghNTL_pY",
+                "duration": 1026,
+                "title": "Men's Fall-Winter 2026 Show I LOUIS VUITTON",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DgMJq67ZOwE",
+                "duration": 1804,
+                "title": "Maison Margiela Artisanal 2024 Collection",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T00_bOVkm5k",
+                "duration": 1607,
+                "title": "Inside the Makeup Collection of America’s First Lady: Melania Trump",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IWkRK2oF534",
+                "duration": 408,
+                "title": "Why Hermès' Womenswear Designer Says ‘Quiet Luxury’ Is Boring and More | The Job Interview",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cT77fHTz0WQ",
+                "duration": 716,
+                "title": "Organizing My Dream Closet in my NEW House! Ep 2 | Inclusive By Design | Paris Hilton",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=acPeADJ5cII",
+                "duration": 302,
+                "title": "Zendaya Gets Ready for the Challengers Premiere | Vogue",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y0-iMIjFPKg",
+                "duration": 2540,
+                "title": "I Turned a Men's Shirt Into a Designer Jacket! | DIY Sewing Upcycle",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=weNFjc2l1Hw",
+                "duration": 1112,
+                "title": "CHANEL Spring Summer 2027 Show — CHANEL Shows",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tVbC_8kLdso",
+                "duration": 1213,
+                "title": "Inside George Nakashima’s Japanese-Style Home & Workshop | Unique Spaces | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gXNSXkJV0rE",
+                "duration": 1176,
+                "title": "From a Backyard Tailor to a World-Famous Fashion Designer | Nigerian Movie",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6V4y0AX69h4",
+                "duration": 921,
+                "title": "the psychology of building a brand everyone loves",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wZFblGM42Mw",
+                "duration": 669,
+                "title": "Anne Hathaway Breaks Down 11 Looks, From The Devil Wears Prada to Interstellar | Life in Looks",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NhdIx8tkpYU",
+                "duration": 3189,
+                "title": "FULL AFRICAN MOVIE: The Billionaire CEO Hated Fake Beauty, So He Bet on the Chubby Designer",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U7HzviIwyfs",
+                "duration": 3603,
+                "title": "High-Fashion Designer Dresses | Say Yes to the Dress | TLC",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sXgWhKwiUdc",
+                "duration": 1533,
+                "title": "I Created a $1,000,000 Brand Using AI",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2h5skIWx1IQ",
+                "duration": 783,
+                "title": "Malik Nabers & NY Giants Shop Chrome Hearts, ERD, Paly, Luxury Streetwear & Designer Clothing!",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9OvibwfflDg",
+                "duration": 663,
+                "title": "Inside Sofía Vergara’s Stunning Los Angeles Home | Open Door | Architectural Digest",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wKg_fm7pyZg",
+                "duration": 1233,
+                "title": "Inside KATSEYE's Nail Appointment | Allure",
                 "skip": [
                     [
-                        23.0,
-                        35.2
+                        1214.7,
+                        1218.1
                     ]
                 ],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=7s3akCMiHh8",
-                "duration": 711,
-                "title": "Beyond the Noise: REMADE | A Cambodian Documentary Series",
+                "url": "https://www.youtube.com/watch?v=n50DZvVAulM",
+                "duration": 596,
+                "title": "Inside Adam Levine & Behati Prinsloo's Serene L.A. Home | Open Door | Architectural Digest",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=bHucumEDoWU",
-                "duration": 846,
-                "title": "Hermès 2027 Spring/Summer Fashion Show - Paris Fashion Week - Original Music By Jennifer Rouse",
+                "url": "https://www.youtube.com/watch?v=_OA7EfvFN5E",
+                "duration": 433,
+                "title": "How Designer Leather Bags Are Made | Artisan Workshop Documentary",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=X-3_uXUokMY",
-                "duration": 533,
-                "title": "LISA Just Stole the Spotlight at Louis Vuitton’s After-Party — Her Appearance Left Fans Mesmerized!",
+                "url": "https://www.youtube.com/watch?v=VbsCseB0ogg",
+                "duration": 278,
+                "title": "Inside the Multi-Million Dollar Gucci Atelier in Harlem with Dapper Dan | HYPEBEAST Visits",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=og8HucUXW3A",
-                "duration": 2096,
-                "title": "Italian Beauty & Elegance🇮🇹Milan Street Style | Beautiful Autumn Fashion 2026",
+                "url": "https://www.youtube.com/watch?v=CqQcRmXuG20",
+                "duration": 269,
+                "title": "100 Years of Japanese Fashion | Glamour",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=-KycKAj_bkg",
-                "duration": 831,
-                "title": "Tom Ford Breaks Down 20 Looks From 1981 to Now | Life in Looks | Vogue",
+                "url": "https://www.youtube.com/watch?v=3akYcqrAbmo",
+                "duration": 952,
+                "title": "Manish Malhotra | Hindustan Times India’s Most Stylish",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=sZVs9DUExi4",
-                "duration": 395,
-                "title": "Unweaving Ceremony: Gathering Across Diasporas | Exhibition 2026",
+                "url": "https://www.youtube.com/watch?v=FP3-5pwptP0",
+                "duration": 265,
+                "title": "Theodora : “Fashion Designa” et “Des Mythos” en live aux Victoires de la musique",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MhXwO_mkdzQ",
+                "duration": 345,
+                "title": "73 Questions with Anna Wintour | Vogue",
                 "skip": [],
                 "skip_checked": 1791409404
             },
@@ -306,172 +584,11 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=h0nLPPA4TrM",
-                "duration": 1514,
-                "title": "Michael Kors and 11 Other Luxury Brands In Deep, Deep Trouble",
+                "url": "https://www.youtube.com/watch?v=1yDhxRLMx3s",
+                "duration": 1050,
+                "title": "The Story of Corteiz - Clint The Owner & Marketing WIZARD Behind The Brand",
                 "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hRix1BFqVVo",
-                "duration": 295,
-                "title": "Carolina Herrera Interview: Pursuing Elegance | The New York Times",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9THtasmk79c",
-                "duration": 266,
-                "title": "German fashion: Is there more to German style than socks and sandals? | Meet the Germans",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4Jx3_lPEF24",
-                "duration": 1443,
-                "title": "Videofashion Designers: PRABAL GURUNG | Archival designer documentary (2012)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=K2Q0cpUP37A",
-                "duration": 580,
-                "title": "How I Made Over $725,000 Designing Luxury Bags While Earning An MBA | On The Side",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bLM8Lp4t8tE",
-                "duration": 4533,
-                "title": "BEALLS NEW ARRIVALS FALL 2026 🛍✨️ #new #trending #fashion #home #style #beauty #christmas @gliceny",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jsJFkBU_f5k",
-                "duration": 288,
-                "title": "[BTS] GFX Challenge Grant Program 2025: Floyd Gonzales \"Kulturang Suot (Culture Worn)\"/ FUJIFILM",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=31AOa426Qi0",
-                "duration": 484,
-                "title": "The $500 Billion/Year World of Counterfeits",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=plJTNYDvhvc",
-                "duration": 1880,
-                "title": "The Popular Girl Stole My Designs—Then Karma Hit on the Runway | Full Movie",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YSYmtaBuRu0",
-                "duration": 937,
-                "title": "Men's Fall-Winter 2021: Behind the Scenes with Virgil Abloh – Part 2 | LOUIS VUITTON",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=270fWnYRBZs",
-                "duration": 3171,
-                "title": "The INSANE True Story Behind BALENCIAGA",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FZNrVYsw4Oc",
-                "duration": 613,
-                "title": "Marc Jacobs - Vogue Voices",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5Qwn9OztUBY",
-                "duration": 1139,
-                "title": "Wild Kratts 👜 Part 1: Creature Rescue from the Evil Fashion Designer | Kids Videos",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9TdPLgP6Hc4",
-                "duration": 1441,
-                "title": "Videofashion Designers: REEM ACRA | Ready-to-Wear & Bridal Designer Documentary",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2HFGIU_nllI",
-                "duration": 5041,
-                "title": "Crimes of Fashion: Killer Clutch | Brooke D'Orsay Lauren & Gilles Marini André | FULL MOVIE",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SI5mFrRFiis",
-                "duration": 1719,
-                "title": "Baba Suwe the Fashion Designer | Hilarious Classic Yoruba Comedy",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Bk6aTbos33k",
-                "duration": 975,
-                "title": "Girl SABOTAGES Friend's Dress In Contest | Dhar Mann",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WxLlQVHmlc4",
-                "duration": 3382,
-                "title": "Morning Edition Extra, Monday Oct. 5, 2026",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vZ0hM3hsUPU",
-                "duration": 1150,
-                "title": "I Investigated China’s LARGEST Fake Market",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5ZpA85pG9BI",
-                "duration": 358,
-                "title": "Designer Fashion Ltd Corporate Documentary, Designer Fashion Ltd, Designer Fashion Limited",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KIddzeOkdC0",
-                "duration": 4208,
-                "title": "Her Family Mocked Her Dream of Becoming a Fashion Designer… Until She Made It Big in America 😱",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NpStXMMz8r8",
-                "duration": 785,
-                "title": "working on my first horror film as a costume designer | a vlog",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zqs2R5NUsSY",
-                "duration": 1353,
-                "title": "The Dark Story of Calvin Klein",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fyw4-bxpnxM",
-                "duration": 301,
-                "title": "5 Elegant Pakistani Outfit Ideas 2026 👗 #fashion",
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
                 "url": "https://www.youtube.com/watch?v=eoIJsKs8EQw",
@@ -481,189 +598,116 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=MhXwO_mkdzQ",
-                "duration": 345,
-                "title": "73 Questions with Anna Wintour | Vogue",
+                "url": "https://www.youtube.com/watch?v=F2B9kUGUdpo",
+                "duration": 4955,
+                "title": "【FULL】Reborn in 1995, She Builds a Fashion Empire—Now Her Husband Wants Her Back!",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=x462BETheU0",
-                "duration": 2552,
-                "title": "Project Runway",
+                "url": "https://www.youtube.com/watch?v=sMGp6jBlu88",
+                "duration": 3992,
+                "title": "RuPaul's Drag Race | You Can’t Keep A Good Drag Queen Down! | Full Episode | WOW Presents Plus",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=H5ynL7ua3HI",
-                "duration": 566,
-                "title": "The Most Awkward Things We've Witnessed On Project Runway",
+                "url": "https://www.youtube.com/watch?v=E3cHeJXJulY",
+                "duration": 993,
+                "title": "How to Shop A Flea Market Like A Pro | Brimfield | Architectural Digest",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=zbBnvPe4rjk",
-                "duration": 301,
-                "title": "5 Stunning Pakistani Dress Designs 2026 👗 #fashion",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WAsgHhXl1oo",
-                "duration": 306,
-                "title": "Inside Betsey Johnson’s Unique Pink Malibu Home Built for Creativity and Design | Open House TV",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tDEfnCUEEIw",
-                "duration": 3313,
-                "title": "My Aunty Snatched My Suitor For Her Daughter Not Knowing Who He Was 2../ A Fictional Drama",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qwr1xeGvByE",
-                "duration": 2687,
-                "title": "The Rachel Zoe Project",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uIIXygg2KR0",
-                "duration": 670,
-                "title": "Modern Back Neck Blouse Design | Blouse Designs Back | Cutting And Stitching Back Neck Blouse Design",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dLUnM1bQz4s",
-                "duration": 503,
-                "title": "FARIZA SULTAN MUSE | Film about Women, designer & Sustainable Fashion",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kVn9eJE_kgw",
-                "duration": 275,
-                "title": "Sample responses to some of my favourite costume designers for film",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zssa-tdKfBk",
-                "duration": 616,
-                "title": "Anna Wintour Breaks Down 13 Met Gala Looks From 1974 to Now | Life in Looks | Vogue",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a3IYgT1ZjGQ",
-                "duration": 411,
-                "title": "Everything You Need to Know About the Met Gala | Vogue",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lYzvymYJLhU",
-                "duration": 3095,
-                "title": "Designers of the Magic | Documentary Filmmaker Frank H. Woodward",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=u6-mBp0dRms",
-                "duration": 2385,
-                "title": "The Story of Charlotte Lindström - Drug Lords - S01 E10 - Crime Documentary",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tjvqqf2ibb0",
-                "duration": 2536,
-                "title": "Project Runway All Stars",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3moLcqLaCyw",
-                "duration": 2560,
-                "title": "Project Runway: Junior",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GhQobSZaGeU",
-                "duration": 254,
-                "title": "Pyar Sirf Sunday Ko Dj Song | Hindi Song Dj Remix New Trending | Edm Mix | Viral Song |Dj 2026 Gana",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BrH7f9-rgOY",
-                "duration": 569,
-                "title": "Megan Fox Talks 2000s Fashion, Past Movie Roles, and MGK | Would You Wear It Now? | Who What Wear",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=60FM9WjkXtA",
-                "duration": 1097,
-                "title": "Why Were The Nazis So Stylish? // Secret History Revealed",
+                "url": "https://www.youtube.com/watch?v=ch_UM_JJU9w",
+                "duration": 4340,
+                "title": "Figure's First Full HQ Tour: From the Lab to the Factory Floor",
                 "skip": [
                     [
-                        621.2,
-                        634.5
+                        1244.9,
+                        1335.1
                     ],
                     [
-                        1070.2,
-                        1097.0
+                        3160.6,
+                        3267.3
+                    ],
+                    [
+                        4315.6,
+                        4339.6
                     ]
                 ],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=5Ii9ZBkDq10",
-                "duration": 320,
-                "title": "Just One Paper! 😱Two Easy DIY Teacher’s Day Card & Gift Idea (No glue)",
+                "url": "https://www.youtube.com/watch?v=4dG-2eOgDlo",
+                "duration": 826,
+                "title": "Shea McGee's Fall Collection | Timeless Fall Decorating Ideas",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=ceFpltI4HfQ",
-                "duration": 421,
-                "title": "DTF T-shirt Printing at Home.🤯 This changes everything!!!🤯 🔥🔥🔥 Brighter",
+                "url": "https://www.youtube.com/watch?v=l9dCHZdcEKo",
+                "duration": 509,
+                "title": "12 Hours With Bad Bunny In Puerto Rico | Vogue",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=cTP5hdwdF_M",
-                "duration": 430,
-                "title": "Uncovering the design philosophy of Lu Yongzhong | Braun | British GQ",
+                "url": "https://www.youtube.com/watch?v=7iiqhSIQ270",
+                "duration": 1439,
+                "title": "Inside world's largest fashion slum! 🇧🇩 🤯",
                 "skip": [
                     [
-                        31.4,
-                        36.3
+                        804.1,
+                        960.4
                     ]
                 ],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=4r7yWLFMhDk",
-                "duration": 282,
-                "title": "🥔 Gareeb Aloo Bana Fashion Designer! 👗Part-1| Karela Seth Ny diya alo ko duka 😱 | #vegetablestory”",
+                "url": "https://www.youtube.com/watch?v=2KAKhDEsS_U",
+                "duration": 3201,
+                "title": "KOHL'S + SEPHORA LET'S GO! 🛍✨️ #new #trending #fashion #jewelry #perfume #christmas #2026  @gliceny",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=KM4Xe6Dlp0Y",
-                "duration": 578,
-                "title": "Looks aren't everything. Believe me, I'm a model. | Cameron Russell | TED",
+                "url": "https://www.youtube.com/watch?v=CF97mtu3qlE",
+                "duration": 1094,
+                "title": "How This Famous Architect Revolutionized The Way Architects Design | Architectural Digest",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LPsybndEKFQ",
+                "duration": 556,
+                "title": "🥔 Gareeb Aloo bana Fashion Designer😱 | Hindi Moral Story #vegetablestory",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zgoXcANeNL8",
+                "duration": 735,
+                "title": "Stunning Gold Plated Jewelry Designs | High Fashion Statement Pieces",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WXYWR6CPbDM",
+                "duration": 1734,
+                "title": "22 Most Breathtaking Royal Brides in History — Their Wedding Looks Were Unforgettable!",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9r2LjwZXKpQ",
+                "duration": 2690,
+                "title": "Kate Moss Discusses Shyness and 'Fashion Codes' | Fashion Neurosis Podcast with Bella Freud | Video",
+                "skip": [],
+                "skip_checked": 1792350542
             }
         ],
         "search_query": "fashion documentary designer",
-        "last_refreshed": 1791409384
+        "last_refreshed": 1792350533
     }
 }
