@@ -7,16 +7,9 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=FFVJL7Z5RjU",
-                "duration": 8488,
-                "title": "ABC 20/20 [New] 2026 Full Episodes – One Last Call | ABC 20/20 Murder Documentary 2026 New",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hPdyiDSvuGw",
-                "duration": 5026,
-                "title": "Finding Daylight | 9/11 25th Anniversary Documentary (Full Film)",
+                "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
+                "duration": 5829,
+                "title": "Ghost in the Machine | Full Documentary",
                 "skip": [],
                 "skip_checked": 1790634163
             },
@@ -28,9 +21,35 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
-                "duration": 5829,
-                "title": "Ghost in the Machine | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=cIXKcMmkBlk",
+                "duration": 2847,
+                "title": "The House of Morgan - The Complete History | 2026 Documentary",
+                "skip": [
+                    [
+                        1083.7,
+                        1149.8
+                    ]
+                ],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a2BLqQn_0M0",
+                "duration": 2281,
+                "title": "The Rise and Ruin of the Coca-Cola Family | Full Documentary",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hPdyiDSvuGw",
+                "duration": 5026,
+                "title": "Finding Daylight | 9/11 25th Anniversary Documentary (Full Film)",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
+                "duration": 7802,
+                "title": "Antarctica (2026) The Forbidden Documentary That Shocked The Whole World",
                 "skip": [],
                 "skip_checked": 1790634163
             },
@@ -40,6 +59,64 @@
                 "title": "Before the Great Recession, “The Warning” (full documentary)",
                 "skip": [],
                 "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rT9kCl57aEQ",
+                "duration": 4743,
+                "title": "ABC 20/20 New 2026 🍀🍀🍀 S49E02 The Deadly House🍀🍀🍀ABC 20/20 Season 2026 Full Episode",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_WJrqCLxlZw",
+                "duration": 3473,
+                "title": "How America's HOMELESS Eat, Sleep & Survive | Full Documentary",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
+                "duration": 5012,
+                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience | PBS",
+                "skip": [],
+                "skip_checked": 1790193353
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HNF4ZL7Qzyw",
+                "duration": 8378,
+                "title": "Sir David Attenborough:  The True Scale of the Universe From Earth | Full Documentary Movie",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
+                "duration": 5048,
+                "title": "The Thinking Game | Full documentary | Tribeca Film Festival official selection",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2iTMt2lfR9k",
+                "duration": 3198,
+                "title": "Crisis in Venezuela: An Uncertain Future (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
+                "duration": 3234,
+                "title": "Rain Bombs | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        114.0,
+                        134.0
+                    ],
+                    [
+                        3147.9,
+                        3153.1
+                    ]
+                ],
+                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=gyQqodlfLiA",
@@ -52,60 +129,6 @@
                     ]
                 ],
                 "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JmdsxY8RnRA",
-                "duration": 5018,
-                "title": "Snapped [2026] 🩵Debra Dillard🩵| 48 Hours Documentary True Crime.",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=h3mRsvFmWi0",
-                "duration": 5797,
-                "title": "How to Live on Earth | Feature Documentary | Presented by Benedict Cumberbatch",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z8RQwJ9tGDo",
-                "duration": 3248,
-                "title": "This Secret Cave Could Change How We See Early Humans | Full Documentary | NOVA | PBS",
-                "skip": [
-                    [
-                        130.8,
-                        159.3
-                    ]
-                ],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
-                "duration": 5048,
-                "title": "The Thinking Game | Full documentary | Tribeca Film Festival official selection",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=s3oojLH-lG4",
-                "duration": 3799,
-                "title": "EVEREST 2026: Record Crowds, Tragedy, Chaos & The Final Summit Push | Full Documentary #everest",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZJB07xx94lU",
-                "duration": 1664,
-                "title": "A Secret He Thought No One Would Ever Discover | True Crime Documentary",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
-                "duration": 5012,
-                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience | PBS",
-                "skip": [],
-                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=sqUw44QIpiA",
@@ -122,11 +145,32 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=4bIgYWRod34",
-                "duration": 2508,
-                "title": "Coached to Kill | Full Episode",
+                "url": "https://www.youtube.com/watch?v=GI274lJkuaA",
+                "duration": 2892,
+                "title": "Texas True Crime: The Mattress Murders | Full Documentary",
                 "skip": [],
                 "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
+                "duration": 4813,
+                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ODWKrhs_5xs",
+                "duration": 3209,
+                "title": "Are We Alone? The Mystery of the Fermi Paradox | Free Documentary Space",
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-LeWWkdzk_E",
+                "duration": 4877,
+                "title": "Dateline NBC NEW 2026 💘 Wendi Andriano👮True Crime Podcast Documentary HD#1080p",
+                "skip": [],
+                "skip_checked": 1790193353
             },
             {
                 "url": "https://www.youtube.com/watch?v=jHtNTBO4vFI",
@@ -149,97 +193,6 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
-                "duration": 7802,
-                "title": "Antarctica (2026) The Forbidden Documentary That Shocked The Whole World",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_xxpvYNJPrQ",
-                "duration": 2482,
-                "title": "Sade Robinson and The Secret Beach | Full Episode",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x1LGC3c2-NQ",
-                "duration": 2490,
-                "title": "What The Neighbors Saw | Full Episode",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oH_pVgW5fEw",
-                "duration": 3234,
-                "title": "Rain Bombs | Full Documentary | NOVA | PBS",
-                "skip": [
-                    [
-                        114.0,
-                        134.0
-                    ],
-                    [
-                        3147.9,
-                        3153.1
-                    ]
-                ],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5z_9D5G3GmE",
-                "duration": 4998,
-                "title": "Trump’s Inner Circle & Use of Military Power | The War Cabinet (full documentary) | FRONTLINE (PBS)",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4XVgg8bJjiU",
-                "duration": 3261,
-                "title": "Pluto is Stranger Than We Ever Imagined | Full Documentary | NOVA | PBS",
-                "skip": [
-                    [
-                        91.1,
-                        116.3
-                    ]
-                ],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oM9WfDBRNcg",
-                "duration": 5541,
-                "title": "UFO's Are Real | FULL MOVIE | Aliens Sci-Fi Documentary",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
-                "duration": 5681,
-                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kPaMbkd3AOk",
-                "duration": 5034,
-                "title": "Is Reality a Simulation? | Quantum Physics Documentary 2026",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
-                "duration": 3191,
-                "title": "The Real History of Africa They Never Taught You | Full Documentary | Africa's Great Civilizations",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LInLwSuiv_E",
-                "duration": 4191,
-                "title": "What really led to the war on Iran? | Featured Documentary",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=TpJas6Tx-m8",
                 "duration": 8602,
                 "title": "The Weirdest Mysteries in History (Documentary)",
@@ -247,107 +200,18 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=ODWKrhs_5xs",
-                "duration": 3209,
-                "title": "Are We Alone? The Mystery of the Fermi Paradox | Free Documentary Space",
+                "url": "https://www.youtube.com/watch?v=Bwanfh9wBWI",
+                "duration": 5029,
+                "title": "A TRUE STORY That Will Shake You to Your Core | Based On True Story 2026 | Drama Thriller Movie 2026",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=wJkXjNbsD-Y",
-                "duration": 7922,
-                "title": "Enoch – The Movie (2026) | 10 Heavens and the Origin of the Nephilim | Full Biblical Movie in 4K",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yQ6VOOd73MA",
-                "duration": 3213,
-                "title": "Your Brain: Who's in Control? | Full Documentary | NOVA | PBS",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-LeWWkdzk_E",
-                "duration": 4877,
-                "title": "Dateline NBC NEW 2026 💘 Wendi Andriano👮True Crime Podcast Documentary HD#1080p",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zqHpDKeniKY",
-                "duration": 3198,
-                "title": "Living Off The Grid (2026) | Full Movie | Documentary",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DHZDZXjAoPo",
-                "duration": 2899,
-                "title": "Texas True Crime: Pure Evil | Full Documentary",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2iTMt2lfR9k",
-                "duration": 3198,
-                "title": "Crisis in Venezuela: An Uncertain Future (full documentary) | FRONTLINE (PBS)",
+                "url": "https://www.youtube.com/watch?v=4bIgYWRod34",
+                "duration": 2508,
+                "title": "Coached to Kill | Full Episode",
                 "skip": [],
                 "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gtsIvfyJic0",
-                "duration": 2844,
-                "title": "Evidence Behind the UFO Phenomenon | Full Documentary | The UFO Conclusion",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t0RwmQTY36Y",
-                "duration": 2556,
-                "title": "Deep Secret | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3CJBtqEl_U8",
-                "duration": 2974,
-                "title": "The most dangerous prison complex in the United States",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sb_CJ6AiOq0",
-                "duration": 7496,
-                "title": "Double Lives | 48 Hours Full Episodes",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hALTeHQ_wh0",
-                "duration": 2801,
-                "title": "Rich Mass Killer Realizes She's Been Caught 8 Years Later",
-                "skip": [
-                    [
-                        992.3,
-                        1090.0
-                    ]
-                ],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7odTB3nlN6U",
-                "duration": 4813,
-                "title": "The true Scale of the Universe – How Big is the Universe? | Space Documentary 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ElsNJnMHRFE",
-                "duration": 2431,
-                "title": "Fugitive @ hotmail.com | Full Episode",
-                "skip": [],
-                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vrtbxvefnjs",
@@ -357,53 +221,46 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=S1h112PYCyE",
-                "duration": 3421,
-                "title": "Something Is Out There | Full Paranormal Documentary | 2026",
+                "url": "https://www.youtube.com/watch?v=H6gNfDl-Fss",
+                "duration": 3196,
+                "title": "How the U.S. Built a Hidden Anti-Terror Apparatus After 9/11 (full documentary) | FRONTLINE (PBS)",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZiPQtKp1syg",
-                "duration": 8973,
-                "title": "Snapped NEW 2026 🕵️ Sarah McLinn ☠️ Documentary True Crime",
+                "url": "https://www.youtube.com/watch?v=KLqA_weQ1Mk",
+                "duration": 6800,
+                "title": "One Texas High School’s Efforts to Help Students Graduate (full documentary) | FRONTLINE (PBS)",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=jdFwXheHvsE",
-                "duration": 1881,
-                "title": "CAUTION!!! This Story Is Extremely Disturbing | True Crime Documentary",
+                "url": "https://www.youtube.com/watch?v=zqHpDKeniKY",
+                "duration": 3198,
+                "title": "Living Off The Grid (2026) | Full Movie | Documentary",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=4eifHgrERVA",
-                "duration": 8554,
-                "title": "Snapped NEW 2026 🕵️ Judy Parker ☠️ Documentary True Crime",
+                "url": "https://www.youtube.com/watch?v=JeH1i8PDS4o",
+                "duration": 6214,
+                "title": "A TRUE STORY movie that captured millions of hearts | Full Movie 4K",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=GI274lJkuaA",
-                "duration": 2892,
-                "title": "Texas True Crime: The Mattress Murders | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=UX41GAy_tFc",
+                "duration": 2656,
+                "title": "Are We Alone? The Search for Alien Life (Full Episode) | UFOs: Investigating the Unknown | Nat Geo",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nk7zPYPrsN8",
-                "duration": 5243,
-                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes",
+                "url": "https://www.youtube.com/watch?v=vvYlta7PHzw",
+                "duration": 5271,
+                "title": "UFO Encounters the Government Couldn't Explain | Secret Access | Full Special",
                 "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sdrYGQh4doU",
-                "duration": 2428,
-                "title": "Death at Soho House | Full Episode",
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=ugJB5haR0SE",
@@ -413,46 +270,53 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=Whz-zbNyhPA",
-                "duration": 2614,
-                "title": "The Secret Life of Paige Birgfeld | Full Episode",
+                "url": "https://www.youtube.com/watch?v=jdFwXheHvsE",
+                "duration": 1881,
+                "title": "CAUTION!!! This Story Is Extremely Disturbing | True Crime Documentary",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=9UwWhhrhc74",
-                "duration": 4930,
-                "title": "Unidentified: UFOs in the Headlines | Special | Full Episode",
+                "url": "https://www.youtube.com/watch?v=C6gcwTz_85s",
+                "duration": 4998,
+                "title": "Examining U.S.-Saudi Ties | The Crown Prince & the President (full documentary) | FRONTLINE (PBS)",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=fM9ux4PLHgI",
-                "duration": 8122,
-                "title": "Snapped NEW 2026 🕵️Shaunna Dodd ☠️ Documentary True Crime",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=46mo0VFuYoM",
-                "duration": 6006,
-                "title": "She Became The Mother Of Dragons | AGE OF DRAGONS | Full Fantasy Movie 4K 2026",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Jm5jBRdf-eE",
-                "duration": 7644,
-                "title": "Stranger Danger | “48 Hours\" Full Episodes",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H6gNfDl-Fss",
-                "duration": 3196,
-                "title": "How the U.S. Built a Hidden Anti-Terror Apparatus After 9/11 (full documentary) | FRONTLINE (PBS)",
+                "url": "https://www.youtube.com/watch?v=oM9WfDBRNcg",
+                "duration": 5541,
+                "title": "UFO's Are Real | FULL MOVIE | Aliens Sci-Fi Documentary",
                 "skip": [],
                 "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_xxpvYNJPrQ",
+                "duration": 2482,
+                "title": "Sade Robinson and The Secret Beach | Full Episode",
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZJB07xx94lU",
+                "duration": 1664,
+                "title": "A Secret He Thought No One Would Ever Discover | True Crime Documentary",
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ar7CiKs0vUY",
+                "duration": 2527,
+                "title": "Texas True Crime: Someone She Knew | Full Documentary",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ElsNJnMHRFE",
+                "duration": 2431,
+                "title": "Fugitive @ hotmail.com | Full Episode",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=oskRmMRvguM",
@@ -462,140 +326,23 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=WTbo4gb_c3o",
-                "duration": 4997,
-                "title": "Born Poor (full documentary) | FRONTLINE",
+                "url": "https://www.youtube.com/watch?v=gAVy13IATVU",
+                "duration": 2447,
+                "title": "SAM WALKER - Left For Dead In Spain | Full Documentary",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=-f4DofcZ-Xs",
-                "duration": 2456,
-                "title": "Fateful Connection | Full Episode",
+                "url": "https://www.youtube.com/watch?v=5z_9D5G3GmE",
+                "duration": 4998,
+                "title": "Trump’s Inner Circle & Use of Military Power | The War Cabinet (full documentary) | FRONTLINE (PBS)",
                 "skip": [],
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=cj_aDkhgsTY",
-                "duration": 4856,
-                "title": "Dateline NBC NEW 2026 💘  Linda Pedroza 👮True Crime Podcast Documentary HD#1080p",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
-                "duration": 3980,
-                "title": "Cleopatra's Final Secret (Full Episode) | Documentary Special | National Geographic",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZctRT5RXA0E",
-                "duration": 3262,
-                "title": "Suddenly a millionaire : The curse of winning the lottery",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
-                "duration": 8434,
-                "title": "Win or Die (FULL EPISODE) | Deadliest Battles for Survival | Animal documentary",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5Q-I_7MQKJs",
-                "duration": 3245,
-                "title": "The Ultra-Rich Kingdom the World Doesn't Understand | Inside Qatar | ENDEVR Documentary",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vWaoon6lZM0",
-                "duration": 6799,
-                "title": "Remaking the Middle East: The U.S., Israel & Iran (updated documentary) | FRONTLINE (PBS)",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yTvJCJ2FHlo",
-                "duration": 5054,
-                "title": "Ezekiel – The Movie (2026) | The Valley of Dry Bones | Full Biblical Movie in 4K",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5L0WuGRfFOA",
-                "duration": 7617,
-                "title": "Toying with Crime  | 48 Hours Full Episodes",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FMxLJ17Z58w",
-                "duration": 4279,
-                "title": "The Entire History of Warren Buffett | 2026 Documentary",
-                "skip": [
-                    [
-                        1148.6,
-                        1237.9
-                    ]
-                ],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uat3DCGW2SQ",
-                "duration": 3450,
-                "title": "The North Koreans We Never See: Everyday Life in the World's Strangest Country | ENDEVR Documentary",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vLVSB5fqgdE",
-                "duration": 3017,
-                "title": "The world's rich and famous caught up in the Epstein Files | The Reckoning FULL DOCUMENTARY",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VIU4AYEH2BI",
-                "duration": 2444,
-                "title": "A-List to \"Grifters\": The Real Reason Everyone Turned on Meghan | Inside Royals | Full Documentary",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
-                "duration": 2524,
-                "title": "The Millionaire, the Model and the Hit Man | Full Episode",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nDjswZ2Yrpg",
-                "duration": 3151,
-                "title": "A Haunting In Indiana: The True Story of Jennifer Patterson (Full Documentary)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TPhNgRdp5lc",
-                "duration": 5407,
-                "title": "Deadliest Day: Inside The Shocking Untold 9/11 Timeline",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eLCdsXRiouE",
-                "duration": 2665,
-                "title": "Undercover in North Korea (Full Episode) | Then and Now with Lisa Ling | National Geographic",
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QiHDQK5cJSE",
-                "duration": 2468,
-                "title": "Linas's Heart | Full Episode",
+                "url": "https://www.youtube.com/watch?v=E1a5zYEvkts",
+                "duration": 2465,
+                "title": "Ransom | Full Episode",
                 "skip": [],
                 "skip_checked": 1791409404
             },
@@ -607,73 +354,39 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=LwO6nFm_7g0",
-                "duration": 2656,
-                "title": "Alien Encounters (Full Episode) | UFOs: Investigating the Unknown | National Geographic",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0zZgD9g5PQ8",
-                "duration": 3319,
-                "title": "The Chronicles of Enoch (2026 Film) | Full Biblical Movie 4K",
+                "url": "https://www.youtube.com/watch?v=cj_aDkhgsTY",
+                "duration": 4856,
+                "title": "Dateline NBC NEW 2026 💘  Linda Pedroza 👮True Crime Podcast Documentary HD#1080p",
                 "skip": [],
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=dBPHMR5BVqU",
-                "duration": 6801,
-                "title": "Inside the Polarization | Divided States of America Part 1 (full documentary) | FRONTLINE (PBS)",
-                "skip": [
-                    [
-                        6718.4,
-                        6739.4
-                    ],
-                    [
-                        6748.9,
-                        6755.7
-                    ],
-                    [
-                        6764.3,
-                        6778.7
-                    ]
-                ],
-                "skip_checked": 1791056276
+                "url": "https://www.youtube.com/watch?v=Nk7zPYPrsN8",
+                "duration": 5243,
+                "title": "Drawn to Murder (Part 1 & 2)  | Full Episodes",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=JeH1i8PDS4o",
-                "duration": 6214,
-                "title": "A TRUE STORY movie that captured millions of hearts | Full Movie 4K",
+                "url": "https://www.youtube.com/watch?v=7yDSoRPnoIs",
+                "duration": 5006,
+                "title": "Pablo Escobar’s Rise & Fall | The Godfather of Cocaine (full documentary) | FRONTLINE (PBS)",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",
-                "duration": 5179,
-                "title": "The Missed Warnings That Led to 9/11 | Road to 9/11 | Full Special",
+                "url": "https://www.youtube.com/watch?v=OwksWJifxYk",
+                "duration": 2963,
+                "title": "UFO Experts Come Forward (Full Documentary) - IPN LIVE TOUR",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=nvpkLoslDys",
-                "duration": 2883,
-                "title": "World's Most Dangerous Roads | Kenya: Dust, Death, Diesel | Free Documentary",
+                "url": "https://www.youtube.com/watch?v=h3mRsvFmWi0",
+                "duration": 5797,
+                "title": "How to Live on Earth | Feature Documentary | Presented by Benedict Cumberbatch",
                 "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FlDjlrmfbX4",
-                "duration": 6798,
-                "title": "Behind the Polarization | Divided States of America Part 2 (full documentary) | FRONTLINE (PBS)",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kgNrZGcoHZs",
-                "duration": 4019,
-                "title": "The Secret Life of Cruise Ships… What Passengers Never See | Full Documentary",
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=a4VimQp4eT0",
@@ -692,25 +405,58 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=BlAnWTbqNrk",
-                "duration": 6400,
-                "title": "The UFO Documentary Scared The Government | Out Of The Blue",
+                "url": "https://www.youtube.com/watch?v=5L0WuGRfFOA",
+                "duration": 7617,
+                "title": "Toying with Crime  | 48 Hours Full Episodes",
                 "skip": [],
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=wWXNKApr2To",
-                "duration": 4804,
-                "title": "🅽🅴🆆Who The (Bleep) Did I Marry 2026🌹 S9  E33~Shadow of Doubt🌹American Documentary True Crime Podcast",
+                "url": "https://www.youtube.com/watch?v=4XVgg8bJjiU",
+                "duration": 3261,
+                "title": "Pluto is Stranger Than We Ever Imagined | Full Documentary | NOVA | PBS",
+                "skip": [
+                    [
+                        91.1,
+                        116.3
+                    ]
+                ],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S1h112PYCyE",
+                "duration": 3421,
+                "title": "Something Is Out There | Full Paranormal Documentary | 2026",
                 "skip": [],
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=9KArWcMldPM",
-                "duration": 2711,
-                "title": "The Subtle Art of Losing Yourself - Full Life Changing Documentary",
+                "url": "https://www.youtube.com/watch?v=NTWumAIItPE",
+                "duration": 5681,
+                "title": "Forbidden History (2026) The Advanced Lost Technologies That Hold Earth's True History",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dPK5mLRqHJ0",
+                "duration": 5006,
+                "title": "U.S. Voters Share Their Views & Lives | American Voices 2026 (full documentary)| FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y5ajDEfFMbE",
+                "duration": 5723,
+                "title": "🔥New Action Movie (2026) Denzel Washington | Full Hollywood Action Movie in English 2026",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bopbn1HXhQI",
+                "duration": 2524,
+                "title": "The Millionaire, the Model and the Hit Man | Full Episode",
+                "skip": [],
+                "skip_checked": 1791056276
             },
             {
                 "url": "https://www.youtube.com/watch?v=-sB12gk9ESA",
@@ -725,11 +471,210 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=OwksWJifxYk",
-                "duration": 2963,
-                "title": "UFO Experts Come Forward (Full Documentary) - IPN LIVE TOUR",
+                "url": "https://www.youtube.com/watch?v=DHZDZXjAoPo",
+                "duration": 2899,
+                "title": "Texas True Crime: Pure Evil | Full Documentary",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cA-6LrUPbXo",
+                "duration": 2523,
+                "title": "The Killing of Theresa Fusco | Full Episode",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Fek2H_sQBkQ",
+                "duration": 4873,
+                "title": "Dateline NBC NEW 2026 💘  Shayne Lovera 👮True Crime Podcast Documentary HD#1080p",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FlDjlrmfbX4",
+                "duration": 6798,
+                "title": "Behind the Polarization | Divided States of America Part 2 (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yGbFo7IAUrg",
+                "duration": 5919,
+                "title": "Based On A True Story | Nobody Believed Her 2026 | Drama Thriller | Full Movie",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ff12AOJPes0",
+                "duration": 5230,
+                "title": "A Girl Out of Control 2026 | [NEW] Drama Thriller | Full Movie",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xuuqfxug-Kc",
+                "duration": 2517,
+                "title": "JOB – The Movie (2026) | The Bet Between God and Satan | Full Biblical Movie 4K",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xTS1NFGcWPE",
+                "duration": 3980,
+                "title": "Cleopatra's Final Secret (Full Episode) | Documentary Special | National Geographic",
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iVOzhuiZbgU",
+                "duration": 5075,
+                "title": "Based On A True Story | The Day Everything Changed 2026 | Full Drama Thriller Movie  VN/Sub",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qprNraWQZF4",
+                "duration": 8434,
+                "title": "Win or Die (FULL EPISODE) | Deadliest Battles for Survival | Animal documentary",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JfKtk3Ch5KA",
+                "duration": 7243,
+                "title": "Incredible Natural World Wonders - Narrated by Sir David Attenborough | BBC Earth",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WwA_7QyqtGI",
+                "duration": 4495,
+                "title": "UNREAL AMAZON – Nature’s Most Dangerous Paradise (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nvpkLoslDys",
+                "duration": 2883,
+                "title": "World's Most Dangerous Roads | Kenya: Dust, Death, Diesel | Free Documentary",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LwO6nFm_7g0",
+                "duration": 2656,
+                "title": "Alien Encounters (Full Episode) | UFOs: Investigating the Unknown | National Geographic",
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QiHDQK5cJSE",
+                "duration": 2468,
+                "title": "Linas's Heart | Full Episode",
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wWXNKApr2To",
+                "duration": 4804,
+                "title": "🅽🅴🆆Who The (Bleep) Did I Marry 2026🌹 S9  E33~Shadow of Doubt🌹American Documentary True Crime Podcast",
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FMxLJ17Z58w",
+                "duration": 4279,
+                "title": "The Entire History of Warren Buffett | 2026 Documentary",
+                "skip": [
+                    [
+                        1148.6,
+                        1237.9
+                    ]
+                ],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yTvJCJ2FHlo",
+                "duration": 5054,
+                "title": "Ezekiel – The Movie (2026) | The Valley of Dry Bones | Full Biblical Movie in 4K",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HMT6NuzRZn0",
+                "duration": 7418,
+                "title": "“48 Hours” Marathon: Dark and Twisted Turns",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0zZgD9g5PQ8",
+                "duration": 3319,
+                "title": "The Chronicles of Enoch (2026 Film) | Full Biblical Movie 4K",
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qWl6yjyWPT8",
+                "duration": 2665,
+                "title": "Why Ancient Egyptians Abandoned the Pyramids (Full Episode) | Lost Treasures of Egypt | Nat Geo",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_XzKxf0d908",
+                "duration": 2656,
+                "title": "People Who Experienced Aliens (Full Episode) | UFOs: Investigating the Unknown | Nat Geo",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3nfE4GylYuo",
+                "duration": 1704,
+                "title": "breathe. Ukraine Tour Documentary 2026",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M69ecbkq6Hs",
+                "duration": 2475,
+                "title": "The Alternate Suspects | Full Episode",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_IPZrJDnSfg",
+                "duration": 1544,
+                "title": "The Making of GTA 6 | Full Documentary",
+                "skip": [
+                    [
+                        663.8,
+                        668.0
+                    ]
+                ],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=InpJ0vJ8c4I",
+                "duration": 1966,
+                "title": "Goodbye Raila - BBC Africa Eye Documentaries",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FxW5T41yJHw",
+                "duration": 7941,
+                "title": "Global Disasters | Witness to Disaster MEGA Episode | National Geographic",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s3oojLH-lG4",
+                "duration": 3799,
+                "title": "EVEREST 2026: Record Crowds, Tragedy, Chaos & The Final Summit Push | Full Documentary #everest",
+                "skip": [],
+                "skip_checked": 1791409404
             },
             {
                 "url": "https://www.youtube.com/watch?v=28sQyweAPRs",
@@ -739,275 +684,243 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=zVhvfjxyqxY",
-                "duration": 5191,
-                "title": "The Patients We Fear: Life in a Forensic Psychiatric Hospital | ENDEVR Documentary",
+                "url": "https://www.youtube.com/watch?v=_VqQezjbLes",
+                "duration": 4682,
+                "title": "She Is Alone With Five Baby Dragons And The Dark Army Is Close | AGE OF DRAGONS | Full Movie 4K 2026",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=PoUAIroIc8E",
-                "duration": 5441,
-                "title": "Journey Into Interstellar Space with Voyagers | Space Documentary 2026",
+                "url": "https://www.youtube.com/watch?v=3CJBtqEl_U8",
+                "duration": 2974,
+                "title": "The most dangerous prison complex in the United States",
                 "skip": [],
-                "skip_checked": 1790538994
+                "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
-                "duration": 2683,
-                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation",
+                "url": "https://www.youtube.com/watch?v=cF6vojfHgdA",
+                "duration": 2444,
+                "title": "Family Affair | Full Episode",
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=GX3UDWOOQMM",
-                "duration": 3136,
-                "title": "The Lost Pyramid That Could Rewrite Giza's History | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=i-53z35hLrM",
+                "duration": 1626,
+                "title": "Crazy Enough to Stay | Full Ukraine Documentary (2026)",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=ESC3uoTQJus",
-                "duration": 5615,
-                "title": "The Inmates We Fear Most | Inside a Maximum Security Prison for Murderers | Free Documentary",
+                "url": "https://www.youtube.com/watch?v=1Nd55gjLVLk",
+                "duration": 3232,
+                "title": "Women on Death Row | Free Documentary",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=W7S7r1YgJLw",
-                "duration": 3270,
-                "title": "NEPAL: The Deadliest Mountain Collapse the Himalayas Have Ever Seen | 4K Documentary",
+                "url": "https://www.youtube.com/watch?v=SHCRGZDrMRM",
+                "duration": 2871,
+                "title": "Dead Woman Walking: Christa Pike Vs Tennessee (Exclusive Death Row Interview)",
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=kGIIPzvK9c0",
-                "duration": 5671,
-                "title": "Inside the Search for Amelia Earhart (Full Episode) | SPECIAL | National Geographic",
+                "url": "https://www.youtube.com/watch?v=OZVMGjObGSM",
+                "duration": 3095,
+                "title": "Everest 2026: Beyond the Summit, Traffic Jams & Tragedy | Full Mount Everest Documentary Video",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jl9MM-C0Ag0",
+                "duration": 1706,
+                "title": "The deadly route to Europe: Exploited by smugglers, human traffickers and warlords | DW Documentary",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eTEdKrJ1DhI",
+                "duration": 2665,
+                "title": "Lost in the Bermuda Triangle (Full Episode) | Witness to Disaster | National Geographic",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hALTeHQ_wh0",
+                "duration": 2801,
+                "title": "Rich Mass Killer Realizes She's Been Caught 8 Years Later",
+                "skip": [
+                    [
+                        992.3,
+                        1090.0
+                    ]
+                ],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FuOnV9FGH5U",
+                "duration": 3198,
+                "title": "The Deal: Trump, Bukele & the Gangs of El Salvador (full documentary) | FRONTLINE (PBS) + El Faro",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gtsIvfyJic0",
+                "duration": 2844,
+                "title": "Evidence Behind the UFO Phenomenon | Full Documentary | The UFO Conclusion",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DqTui5BkFs0",
+                "duration": 5180,
+                "title": "The Clues Preceding The September Attacks | Road to 9/11: Part 1 | Full Special",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=HcUH6VCGpao",
-                "duration": 2690,
-                "title": "The First 48: In Cold Blood / Red Handed (S7, E14) | Full Episode",
+                "url": "https://www.youtube.com/watch?v=Ta_SmtEf3Ns",
+                "duration": 3286,
+                "title": "WILD Military UFO Encounters | MonsterQuest",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=TSW8uoPdmNw",
-                "duration": 3522,
-                "title": "Brooklyn Bridge | Full Documentary | The History of New York City's Most Famous Bridge | PBS",
+                "url": "https://www.youtube.com/watch?v=CnKq57WFUxY",
+                "duration": 7825,
+                "title": "Over 2 Hours Of QI Full Episodes! Funny and Interesting Trivia!",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=E1a5zYEvkts",
-                "duration": 2465,
-                "title": "Ransom | Full Episode",
+                "url": "https://www.youtube.com/watch?v=_HMbh02rYOk",
+                "duration": 2784,
+                "title": "Journeys for Animal Survival (Full Episode) | Great Migrations | Nat Geo Animals",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=vJZNxqi4pd8",
+                "url": "https://www.youtube.com/watch?v=jiJrP4IqsKA",
+                "duration": 2695,
+                "title": "The First 48: Inner Demons / Kids With Guns (S4, E2) | Full Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9vSCaR_g-Cw",
+                "duration": 5062,
+                "title": "Joseph Pulitzer: Voice of the People | Full Documentary | American Masters | PBS",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=moQEMbN9UvQ",
+                "duration": 2552,
+                "title": "The First 48: Down a Dark Hallway (S21, E3) | Full Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uSAUcjiJjw8",
+                "duration": 2702,
+                "title": "After The First 48: Silenced / Downstream Drifter (S1, E2) | Full Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1_aIDEAqqbU",
                 "duration": 3407,
-                "title": "PBS News Hour full episode, Oct. 6, 2026",
+                "title": "PBS News Hour full episode, Oct. 15, 2026",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [
                     [
-                        57.8,
-                        164.9
+                        45.0,
+                        148.3
                     ]
                 ],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=7Oy-9uFd6vI",
-                "duration": 2159,
-                "title": "The View Full Broadcast – October 7, 2026",
+                "url": "https://www.youtube.com/watch?v=pPY3iESH9L8",
+                "duration": 2719,
+                "title": "FBI Joins the Fight Against Anchorage Drug Crime (S2, E10) | Alaska State Troopers | Full Episode",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=218gMy1KfyQ",
-                "duration": 3407,
-                "title": "PBS News Hour full episode, Oct. 5, 2026",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        60.6,
-                        163.8
-                    ],
-                    [
-                        3312.2,
-                        3406.8
-                    ]
-                ],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sb2GWTAqN9c",
-                "duration": 3906,
-                "title": "Good Morning America Full Broadcast - Wednesday, October 7, 2026",
+                "url": "https://www.youtube.com/watch?v=fLKeej1q4t8",
+                "duration": 2631,
+                "title": "From CIA Wife to CIA Spy (Full Episode) | Inside the CIA: Secrets and Spies | National Geographic",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=T47aBVFGJUc",
-                "duration": 2699,
-                "title": "The First 48: Live Bait / Drama at the Classic (S8, E9) | Full Episode",
+                "url": "https://www.youtube.com/watch?v=X7wbJEY2KkA",
+                "duration": 2214,
+                "title": "Stranger Than Fiction | \"The Woman in the Woods\" | \"48 Hours\" Podcast (Episode 5)",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=0Sf69erYd98",
-                "duration": 4501,
-                "title": "Full Episode: TODAY Show - Oct. 7",
+                "url": "https://www.youtube.com/watch?v=4RFUkJ31x5s",
+                "duration": 4159,
+                "title": "Titanic: The Digital Resurrection (Full Episode) | SPECIAL | National Geographic",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=CztK38YVdNI",
-                "duration": 4305,
-                "title": "Full Episode: TODAY Show - Oct. 6",
+                "url": "https://www.youtube.com/watch?v=TrRTUTv66Nw",
+                "duration": 2490,
+                "title": "The Footprint | Full Episode",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=W7wYOQpJr98",
-                "duration": 4458,
-                "title": "Full Episode: TODAY Show - Oct. 5",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1x7ZEPvJP6Y",
-                "duration": 4175,
-                "title": "Good Morning America Full Broadcast —  Monday, October 5, 2026",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=i-Y0E3upPd0",
-                "duration": 5027,
-                "title": "Raúl Juliá: The World’s a Stage | Full Documentary | American Masters | PBS",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KuZNXAUGqYQ",
-                "duration": 1354,
-                "title": "Kiff Halloween Full Episode! \"The Screamwriter\" 🎃🐿️ | Disney Channel",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tfy2HfbD0rw",
-                "duration": 1979,
-                "title": "GMA3 Full Episode - Tue, Oct 6, 2026",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DriTE9AveNw",
-                "duration": 4052,
-                "title": "Good Morning America Full Broadcast - Tuesday, October 6, 2026",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tNiGAQlrcI8",
-                "duration": 5676,
-                "title": "Morning News NOW Full Episode – Oct. 7",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=npkSW8oILXM",
-                "duration": 4077,
-                "title": "Good Morning America Full Broadcast —  Saturday, October 03, 2026",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D2QwHKEURtg",
-                "duration": 2002,
-                "title": "GMA3 Full Episode - Mon, Oct 5, 2026",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5lp4DVPFb5g",
-                "duration": 1527,
-                "title": "Hero Elementary FULL EPISODE | Heroes in Space! | PBS KIDS",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tSAKzVP2IGk",
-                "duration": 1609,
-                "title": "Wild Kratts FULL EPISODE! | Stuck on Sharks | PBS KIDS",
+                "url": "https://www.youtube.com/watch?v=3l-jVpuVlcQ",
+                "duration": 2870,
+                "title": "Wild Kratts FULL MOVIE | Wild Kratts: Our Blue and Green World | PBS KIDS",
                 "parts": [
                     "breakfast"
                 ],
@@ -1017,7 +930,27 @@
                         5.1
                     ]
                 ],
-                "skip_checked": 1790280952
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5qiH6znXTpA",
+                "duration": 2510,
+                "title": "The Ambush of Kevin Harris | Full Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DKukZ-T9bb8",
+                "duration": 2700,
+                "title": "The First 48: Shattered Dreams/Left to Die (S8, E11) | Full Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=LUtg1qufIV0",
@@ -1030,24 +963,203 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=ph_MWX3SrT8",
-                "duration": 2881,
-                "title": "George Builds an Igloo! __ Curious George __ 40 Minute Compilation __Kids Movies __ Videos for Kids",
+                "url": "https://www.youtube.com/watch?v=B9iXJ6M2OTE",
+                "duration": 6041,
+                "title": "Morning News NOW Full Episode – Oct. 19",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=UUSb9XwvX9Y",
-                "duration": 1351,
-                "title": "Unfair Science Fair | S1 E23 | Full Episode | Phineas and Ferb | @disneychannel",
+                "url": "https://www.youtube.com/watch?v=E76J_mPKEfk",
+                "duration": 3707,
+                "title": "All Paws on Deck! 🐾🚨 | Save Adventure Bay! | PAW Patrol | Compilation",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rBnC-jwzWX8",
+                "duration": 2186,
+                "title": "Ultimate Despicable Me Special ‼️ | Despicable Me 1 - 4 | Compilation | Movie Moments | Mega Moments",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ADqLhxmUG_4",
+                "duration": 1386,
+                "title": "The Wrong Track / All Pumped Up 🔥 FULL EPISODE | Hot Wheels Let's Race | Netflix Jr",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3dZoOae084g",
+                "duration": 1813,
+                "title": "30 MINUTES Around The Loud House | The Really Loud House | Nickelodeon",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C4XMJUKtgDk",
+                "duration": 1474,
+                "title": "Big City Greens Season 4 Finale FULL Episode! Cricket's Unplanned? 🥺💚 |  @disneychannelanimation",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ginVeOgYhF0",
+                "duration": 5840,
+                "title": "The Jungle Bunch | FULL MOVIE | Animals Family Animation Adventure",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5XpyVz5Bb7c",
+                "duration": 1609,
+                "title": "Wild Kratts FULL EPISODE | Outfoxed | PBS KIDS",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [
+                    [
+                        0.0,
+                        3.9
+                    ],
+                    [
+                        1599.2,
+                        1609.0
+                    ]
+                ],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5lp4DVPFb5g",
+                "duration": 1527,
+                "title": "Hero Elementary FULL EPISODE | Heroes in Space! | PBS KIDS",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wjaZYCgLJJg",
+                "duration": 4345,
+                "title": "Full Episode: TODAY Show - Oct. 15",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mb5wIiBt0h0",
+                "duration": 4053,
+                "title": "Jim Gaffigan’s UNFORGETTABLE Stand-Up Comedy: Noble Ape | Full Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ialhmZaSKWs",
+                "duration": 1446,
+                "title": "Marvel's Spidey and his Amazing Friends Full Episode | Space Mission w/ The Thing! 🪐 | @disneyjr",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kgz-wXW2LrI",
+                "duration": 3851,
+                "title": "A Runaway Rocket! - PAW Patrol Episode - Cartoons for Kids Compilation",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n0mW-pVjOcs",
+                "duration": 3634,
+                "title": "PAW Patrol Mighty Pups Use Their Super Powers! w/ Liberty & Marshall | 1 Hour Compilation | Nick Jr.",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H1Grdy-o1x8",
+                "duration": 3089,
+                "title": "Elmo's Rainbow and Bubbles! | TWO Sesame Street Full Episodes",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jd43WsqI6z4",
+                "duration": 7365,
+                "title": "2 HOURS of SpongeBob 🧽 | SpongeBob",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SOLnxyYg8-I",
+                "duration": 2619,
+                "title": "Episodes That Make Us Want To Rewatch The Whole Show | Suits",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Fo0V2AyTZlc",
+                "duration": 1820,
+                "title": "Peppa Pig Tales 2026 🎨 Peppa Paints MURAL 🖼️ Father's Day Special 💙 BRAND NEW Peppa Pig Episodes",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HWMfhPbJwf4",
+                "duration": 1269,
+                "title": "EPIC! Creature Abilities | Wild Kratts",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=88Qo_JbOVU4",
@@ -1060,264 +1172,124 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=Zt0Pjkfg3JQ",
-                "duration": 5935,
-                "title": "Morning News NOW Full Episode – Oct. 2",
+                "url": "https://www.youtube.com/watch?v=kiOHtmyrgEo",
+                "duration": 2072,
+                "title": "Catboy in prison! | PJ Masks Full Episode | Cartoons for Kids | #superheroes",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=sBr_GANnS64",
-                "duration": 2646,
-                "title": "How Geno Auriemma Went From a Leaking Gym to 12 National Championships and Never Left",
+                "url": "https://www.youtube.com/watch?v=V6d2rBUusCU",
+                "duration": 1832,
+                "title": "Peppa Pig Tales 2026 🟡 Summer MARBLE Run! 🔵 BRAND NEW Peppa Pig Episodes",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=cKtiwcTnL6k",
-                "duration": 3414,
-                "title": "Full Episode: TODAY Show - Oct. 2",
+                "url": "https://www.youtube.com/watch?v=ukNeUB6dyeo",
+                "duration": 1556,
+                "title": "🔴LIVE: Bluey Full Episode Celebration! 🎉 | The Sleepover, Baby Race, and More! | Bluey",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=b8Dt_RrB74g",
-                "duration": 2428,
-                "title": "Hell's Kitchen Season 22 - Ep. 5 | Just Bring the DARN Fish! | Full Episode",
+                "url": "https://www.youtube.com/watch?v=d2LIFSwG0W8",
+                "duration": 1891,
+                "title": "PAW Patrol's Spooky Halloween Missions! 🕷️🎃 | 30 Minutes | Nick Jr.",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=617g2MGqGK4",
-                "duration": 2110,
-                "title": "🦈🦑Wild Kratts - Ocean Explorers | Kids Videos",
+                "url": "https://www.youtube.com/watch?v=cCXyYpH0Ub4",
+                "duration": 3205,
+                "title": "New reports on 9/11 | 60 Minutes Full Episodes",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=ETG7xWiZPAA",
-                "duration": 1574,
-                "title": "Wild Kratts | Sharks | Apex Predators of the Oceans",
+                "url": "https://www.youtube.com/watch?v=M_nrJXGdb2I",
+                "duration": 3719,
+                "title": "Activate Flamingo Powers! | Where's the Pink? | Creature Transformations | Wild Kratts",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=UWIxzt1uPUc",
-                "duration": 1442,
-                "title": "Pluto's Puppy-Sitting Adventure | S1 E14 | Full Episode | Mickey Mouse Clubhouse | @disneyjr  ​",
+                "url": "https://www.youtube.com/watch?v=Q73E0G4YkDs",
+                "duration": 1560,
+                "title": "Time For Family Fun! | Full Episodes | Bluey",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=P4IfujHuXpQ",
-                "duration": 2189,
-                "title": "Watch TODAY with Jenna & Sheinelle Full Episode - October 5",
+                "url": "https://www.youtube.com/watch?v=TdGNhLCejYo",
+                "duration": 1368,
+                "title": "A Wheel Good Time / Racing to Success 🏎️ FULL EPISODE | Hot Wheels: Let's Race | Netflix Jr",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=W1TM9rhYu-E",
-                "duration": 1890,
-                "title": "Mr Bean's Home Movie | Mr Bean | Cartoons for Kids | WildBrain Kids",
+                "url": "https://www.youtube.com/watch?v=ph_MWX3SrT8",
+                "duration": 2881,
+                "title": "George Builds an Igloo! __ Curious George __ 40 Minute Compilation __Kids Movies __ Videos for Kids",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=EsKDNZQhVX0",
-                "duration": 4877,
-                "title": "The Domino Effect [One Hour Stand Up Comedy Special] by Ali Siddiq",
+                "url": "https://www.youtube.com/watch?v=sYGPwRGNKGo",
+                "duration": 3551,
+                "title": "Funny TOM and JERRY Moments | 1 Hour of Awesome Episodes | Tom & Jerry in NY | @BoomerangUK",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=fwpjpQizZA4",
-                "duration": 7938,
-                "title": "Intercepting Illegal Smuggling Deals | To Catch A Smuggler S9 MEGA Episode",
+                "url": "https://www.youtube.com/watch?v=Yrg4qjKZlMw",
+                "duration": 6944,
+                "title": "NEW Bluey Series 1, 2 & 3 FULL EPISODES | Featuring Bingo, Dad Baby and 16 More! 💙🧡 | Bluey",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=_bk-37Xz2FE",
-                "duration": 1599,
-                "title": "A Trash Truck Christmas FULL EPISODE 🎅 Netflix Jr",
+                "url": "https://www.youtube.com/watch?v=e_lLJa1hB30",
+                "duration": 5773,
+                "title": "Minnie Mouse Full Episodes 🎀 | Mickey Mouse Clubhouse 4 Full Episodes | 1 Hour | @disneyjr",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UdhF60rdnaE",
-                "duration": 7173,
-                "title": "A Love Rebuilt | ROMANCE | Full Movie in English",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=z1i-fuflQ_M",
-                "duration": 1921,
-                "title": "PAW Patrol Celebrates Friendship Day 💖 w/ Skye, Marshall & Chase | 30 Minute Compilation | Nick Jr.",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3d5JtSHC3vw",
-                "duration": 1305,
-                "title": "The New Guppy! Full Episode w/ Zooli | Bubble Guppies",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZTkQe9O6ZrQ",
-                "duration": 1452,
-                "title": "Mickey's New Mouse House | S1 E14 | Full Episode | Mickey Mouse: Mixed-Up Adventures @disneyjr",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CqtGj2b-fPo",
-                "duration": 3226,
-                "title": "Full Episode: Vintage First Finds, Hour 2 | ANTIQUES ROADSHOW",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OSH94qT01wM",
-                "duration": 1925,
-                "title": "Barbie Camp Sister Switch! | FULL EPISODES 1-4 🏕",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JHsV8a-Hp0o",
-                "duration": 1634,
-                "title": "Buried Under the Stairs: The Murder of Tina Satchwell | True Crime Documentary",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2FO6jfqM3f0",
-                "duration": 2696,
-                "title": "Chase and Rescue Mission | PJ Masks Official | Cartoons for Kids | Animation for Kids | FULL Episode",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cC03A0OgMuA",
-                "duration": 1485,
-                "title": "Mickey Saves Santa 🎅🏻 | S1 E20 | Full Episode | Mickey Mouse Clubhouse | @disneyjr",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LO6ZrqI23aw",
-                "duration": 1446,
-                "title": "Li'l Hulk | S2 E5 | Marvel's Spidey and his Amazing Friends | Full Episode | @disneyjr",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=krfcq5pF8u8",
-                "duration": 6003,
-                "title": "13TH | FULL FEATURE | Netflix",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DYSTZz_dNLs",
-                "duration": 7378,
-                "title": "Peppa's Family Camping Adventure 🏕️ | Peppa Pig Full Episodes",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iFmbKYrEaBo",
-                "duration": 6197,
-                "title": "The Last King Of Men Went Into The Forest Alone | AGE OF KINGDOMS | Full Movie 4K 2026",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=u2hVx5O1W70",
-                "duration": 5227,
-                "title": "Ancient India (2026) The Forbidden Archaeology That Holds Earth’s True History",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
@@ -1330,16 +1302,6 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=9Wx5cdjJ0Cg",
-                "duration": 5197,
-                "title": "BEYOND - Feature-length documentary film about severe autism",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Wj8DsOcdNCs",
                 "duration": 6236,
                 "title": "Toxic Nation Full Feature Length Film",
@@ -1350,24 +1312,14 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=UgqeNTwoWHU",
-                "duration": 3837,
-                "title": "MERMAID: Curse of the Sunken Kingdom | Full Movie English 2026 | Dark Fantasy Survival | 4K",
+                "url": "https://www.youtube.com/watch?v=1BT944Evsd0",
+                "duration": 3444,
+                "title": "New Bigfoot Documentary 2026 - Washington State's Olympic Peninsula Sasquatch - A Full Feature Movie",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GXpyRXLvkOU",
-                "duration": 5575,
-                "title": "Bowen's Heart | Full-Length Documentary",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=g4hS0A7X5yA",
@@ -1380,29 +1332,19 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=Rk4UsZPm1nA",
-                "duration": 8412,
-                "title": "Nobody Was Coming To Save The Last King | AGE OF KINGDOMS | Full Movie 4K 2026",
+                "url": "https://www.youtube.com/watch?v=krfcq5pF8u8",
+                "duration": 6003,
+                "title": "13TH | FULL FEATURE | Netflix",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=Lof5J0Ff-Wk",
-                "duration": 6708,
-                "title": "Revolutionary America | Feature Film from Hillsdale Studios",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7YbLXOg2MxA",
-                "duration": 5028,
-                "title": "How did nine misfits rewrite hip-hop? | Wu: The Story of the Wu-Tang Clan | Full Free Documentary",
+                "url": "https://www.youtube.com/watch?v=BlAnWTbqNrk",
+                "duration": 6400,
+                "title": "The UFO Documentary Scared The Government | Out Of The Blue",
                 "parts": [
                     "prime"
                 ],
@@ -1420,54 +1362,34 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=3j6Uc6oVQas",
-                "duration": 3205,
-                "title": "Philmont 2026 - Feature Length Documentary",
+                "url": "https://www.youtube.com/watch?v=9Wx5cdjJ0Cg",
+                "duration": 5197,
+                "title": "BEYOND - Feature-length documentary film about severe autism",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=gdLzZrxCZm8",
-                "duration": 5334,
-                "title": "10 Days | Global Documentary on Extraordinary Prayer | FULL MOVIE",
+                "url": "https://www.youtube.com/watch?v=Lof5J0Ff-Wk",
+                "duration": 6708,
+                "title": "Revolutionary America | Feature Film from Hillsdale Studios",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=gwJfa9-AMx4",
-                "duration": 4070,
-                "title": "BEYOND THE WORLD: BOOK OF LIFE | Full AI Movie | Higgsfield Global Film Festival",
+                "url": "https://www.youtube.com/watch?v=iFmbKYrEaBo",
+                "duration": 6197,
+                "title": "The Last King Of Men Went Into The Forest Alone | AGE OF KINGDOMS | Full Movie 4K 2026",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bKlVjl9ND-s",
-                "duration": 3325,
-                "title": "Classified UFO Cases Finally Exposed | Alien Documentary | Full Movie | UFO Encounters",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bAlPdhdlCzU",
-                "duration": 6374,
-                "title": "This Film Won 18 Awards! The Story That Made Even Critics Cry! A Stage of Twilight",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790890293
             },
             {
                 "url": "https://www.youtube.com/watch?v=TSRn8BzpvLc",
@@ -1480,34 +1402,51 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=PuYmagcHPok",
-                "duration": 4632,
-                "title": "Tell Them of Us (full feature length WW1 drama)",
+                "url": "https://www.youtube.com/watch?v=PkriuJX6mqw",
+                "duration": 5928,
+                "title": "Norman's Rare Guitars Documentary [Full Movie] Watch for Free!",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=LMtZIdhURxs",
-                "duration": 5461,
-                "title": "American Pachuco: The Legend of Luis Valdez | Full Documentary | American Masters | PBS",
+                "url": "https://www.youtube.com/watch?v=Z5mnzUfCVCY",
+                "duration": 6808,
+                "title": "BLACK PROJECT: Disclosure, the Truth About UFOs & Secret Programs [FULL FILM]",
                 "parts": [
                     "prime"
                 ],
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip": [
+                    [
+                        1020.0,
+                        1107.7
+                    ],
+                    [
+                        2869.6,
+                        2948.5
+                    ],
+                    [
+                        4458.5,
+                        4525.9
+                    ],
+                    [
+                        5520.8,
+                        5627.7
+                    ]
+                ],
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=e9W_tkeo8ek",
-                "duration": 6096,
-                "title": "WARHAMMER 40K Full Movie (2026) 4K ULTRA HD Action Fantasy",
+                "url": "https://www.youtube.com/watch?v=gwJfa9-AMx4",
+                "duration": 4070,
+                "title": "BEYOND THE WORLD: BOOK OF LIFE | Full AI Movie | Higgsfield Global Film Festival",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1791241322
             },
             {
                 "url": "https://www.youtube.com/watch?v=g9Lp9MsOKEA",
@@ -1520,6 +1459,16 @@
                 "skip_checked": 1790890293
             },
             {
+                "url": "https://www.youtube.com/watch?v=UgqeNTwoWHU",
+                "duration": 3837,
+                "title": "MERMAID: Curse of the Sunken Kingdom | Full Movie English 2026 | Dark Fantasy Survival | 4K",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=YtrVcOxVDls",
                 "duration": 4702,
                 "title": "Disneyland Handcrafted | Full Documentary",
@@ -1530,9 +1479,9 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=Q9rJfFE1oOQ",
-                "duration": 5929,
-                "title": "The Masonic Infiltration Still Continues | Inside Murder in the 33rd Degree",
+                "url": "https://www.youtube.com/watch?v=e9W_tkeo8ek",
+                "duration": 6096,
+                "title": "WARHAMMER 40K Full Movie (2026) 4K ULTRA HD Action Fantasy",
                 "parts": [
                     "prime"
                 ],
@@ -1540,69 +1489,9 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=iuxqsBmMq6k",
-                "duration": 3473,
-                "title": "VOID CORE | FULL MOVIE 2026 (Sci-Fi Action Film)",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e6aktI6Yu3A",
-                "duration": 5530,
-                "title": "TOGETHER: 4-IN-A-ROW | FULL FEATURE DOCUMENTARY FILM",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PkriuJX6mqw",
-                "duration": 5928,
-                "title": "Norman's Rare Guitars Documentary [Full Movie] Watch for Free!",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V4W-N5biVsw",
-                "duration": 5307,
-                "title": "The Last Ride - A Philadelphia Story | Feature Length Documentary - Dirt Bike Rell, Tu Stroke Prince",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=h-axJKVYbmk",
-                "duration": 5470,
-                "title": "The Last Passport: Award-Winning Feature Film",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_UxqbHLti_o",
-                "duration": 5509,
-                "title": "Good For Nothing | Western | Full Movie",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tbzsJzsdJNQ",
-                "duration": 3950,
-                "title": "The Spirit of Reconciliation (feature length documentary)",
+                "url": "https://www.youtube.com/watch?v=Rk4UsZPm1nA",
+                "duration": 8412,
+                "title": "Nobody Was Coming To Save The Last King | AGE OF KINGDOMS | Full Movie 4K 2026",
                 "parts": [
                     "prime"
                 ],
@@ -1620,9 +1509,109 @@
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=50d1VVjaPmo",
-                "duration": 8045,
-                "title": "The Disappearance of Charlene Downes (Full Documentary)",
+                "url": "https://www.youtube.com/watch?v=D_FX3vbk5oM",
+                "duration": 5565,
+                "title": "Ryan Gosling In THE DISAPPEARANCE - Hollywood Movie | Kirsten Dunst | Mystery Thriller English Movie",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iuxqsBmMq6k",
+                "duration": 3473,
+                "title": "VOID CORE | FULL MOVIE 2026 (Sci-Fi Action Film)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gdLzZrxCZm8",
+                "duration": 5334,
+                "title": "10 Days | Global Documentary on Extraordinary Prayer | FULL MOVIE",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1790634163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J8DGjUv-Vjc",
+                "duration": 4680,
+                "title": "MINIMALISM: Official Netflix Documentary (Entire Film)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_UxqbHLti_o",
+                "duration": 5509,
+                "title": "Good For Nothing | Western | Full Movie",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q-omFQLccQM",
+                "duration": 6965,
+                "title": "Used People | FULL MOVIE | Shirley MacLaine, Kathy Bates, Jessica Tandy | Comedy Drama",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8HWV4CegsNs",
+                "duration": 4970,
+                "title": "Hype! | FULL MOVIE | Sub Pop, Pearl Jam, Nirvana, Soundgarden | Seattle Grunge Music Documentary",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l94v4YOqxOc",
+                "duration": 6156,
+                "title": "Star Trek - Horizon: Full Film",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e6aktI6Yu3A",
+                "duration": 5530,
+                "title": "TOGETHER: 4-IN-A-ROW | FULL FEATURE DOCUMENTARY FILM",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B_TAyofyJPA",
+                "duration": 5340,
+                "title": "I Am Only a Craftsman | Full Documentary | Wyoming to Japan",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F7xfzIFa26o",
+                "duration": 4660,
+                "title": "CALEDONIA | Full Historical Action Movie in 4K Ultra HD",
                 "parts": [
                     "prime"
                 ],
@@ -1630,9 +1619,19 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=DDjscFUWFik",
-                "duration": 3488,
-                "title": "Sky So Blue (Full Documentary) | 9/11 Memorial | American Documentary | 25th anniversary",
+                "url": "https://www.youtube.com/watch?v=AfGvYLf99fg",
+                "duration": 4466,
+                "title": "INDIE GEM! The Planters (FULL MOVIE) Comedy, Indie, Women in film, Award-winning, Female friendship",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OPz66iOiA6E",
+                "duration": 3815,
+                "title": "Declassified UFO Files & Government Cover-Ups | Full Documentary | Alien and UFOS Cover Up",
                 "parts": [
                     "prime"
                 ],
@@ -1640,19 +1639,9 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=Q6NfQq2o-Ts",
-                "duration": 3165,
-                "title": "Story of Submarine Warfare in the Pacific | Oscar-Nominated WWII Documentary | Full Movie",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qAbd69MAysc",
-                "duration": 5659,
-                "title": "Following The Footsteps of Jesus //  Jesus Documentary Film",
+                "url": "https://www.youtube.com/watch?v=V4W-N5biVsw",
+                "duration": 5307,
+                "title": "The Last Ride - A Philadelphia Story | Feature Length Documentary - Dirt Bike Rell, Tu Stroke Prince",
                 "parts": [
                     "prime"
                 ],
@@ -1660,19 +1649,29 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=jQMymAACjmw",
-                "duration": 5147,
-                "title": "👉 One Of The Most Gripping Thrillers That Won 6 Awards! 🎬 The Sea Was Hiding A Terrifying Truth",
+                "url": "https://www.youtube.com/watch?v=9KArWcMldPM",
+                "duration": 2711,
+                "title": "The Subtle Art of Losing Yourself - Full Life Changing Documentary",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=OPz66iOiA6E",
-                "duration": 3815,
-                "title": "Declassified UFO Files & Government Cover-Ups | Full Documentary | Alien and UFOS Cover Up",
+                "url": "https://www.youtube.com/watch?v=-E4gJWdsyAA",
+                "duration": 3532,
+                "title": "A Faith Under Siege | Full Feature Documentary (2025)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DDjscFUWFik",
+                "duration": 3488,
+                "title": "Sky So Blue (Full Documentary) | 9/11 Memorial | American Documentary | 25th anniversary",
                 "parts": [
                     "prime"
                 ],
@@ -1690,64 +1689,54 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=iVZym4DacFg",
-                "duration": 5405,
-                "title": "AURORA : Angelina Jolie | New Action Movie 2026 | Full Movie 4K #actionmovies",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1M074QZtX3c",
-                "duration": 5403,
-                "title": "UNIDENTIFIED FLYING OBJECTS 1956 Full Movie | The First UFO Documentary Predicts 2026 Disclosure? 👽🛸",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pUz79Sm-IAw",
-                "duration": 3466,
-                "title": "Fallout: Echos of the Wasteland - Award Winning Fan Film 2026 - Feature Length Fallout Movie",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rMnxmH_ZI6I",
-                "duration": 5075,
-                "title": "An Unlikely Fandom: The Impact of Thomas the Tank Engine | Documentary | Full Movie",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F7xfzIFa26o",
-                "duration": 4660,
-                "title": "CALEDONIA | Full Historical Action Movie in 4K Ultra HD",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fxyArmDe9-s",
-                "duration": 5920,
-                "title": "Hello Darlin' - Award-Winning British Crime Drama (Official Feature Film)",
+                "url": "https://www.youtube.com/watch?v=GXpyRXLvkOU",
+                "duration": 5575,
+                "title": "Bowen's Heart | Full-Length Documentary",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
                 "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tbzsJzsdJNQ",
+                "duration": 3950,
+                "title": "The Spirit of Reconciliation (feature length documentary)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1791409404
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qEi55rEDX-Q",
+                "duration": 6303,
+                "title": "Bruce Lee: Fist of Fury (1972) - Full Action Movie | LOL! Network",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LaRf4DBDH4w",
+                "duration": 6672,
+                "title": "The Gates | Horror, Thriller | Full Movie",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0DhRk_R_oeU",
+                "duration": 3876,
+                "title": "NOAH — The Movie (2026) | The Great Flood and the Ark | Full Biblical Movie in 4K | English",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=WRUZc23hv0Y",
@@ -1760,14 +1749,34 @@
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=l94v4YOqxOc",
-                "duration": 6156,
-                "title": "Star Trek - Horizon: Full Film",
+                "url": "https://www.youtube.com/watch?v=EiNZ7HOmjUs",
+                "duration": 6295,
+                "title": "The Making of One Day Like Rain (feature length ver.)",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=S-ResPY3CGA",
+                "duration": 3427,
+                "title": "Chasing History: 2026 NBA Finals | MINI-MOVIE 🏆 | Presented by Michelob ULTRA",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=50d1VVjaPmo",
+                "duration": 8045,
+                "title": "The Disappearance of Charlene Downes (Full Documentary)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1791409404
             },
             {
                 "url": "https://www.youtube.com/watch?v=HngyRnVHtZI",
@@ -1780,36 +1789,6 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=r96SVQNrJ1g",
-                "duration": 4712,
-                "title": "Sheriff Found 6 Bigfoot Hanging At An Abandoned Theme Park—Then Something Moved",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AX1cBkeSgYE",
-                "duration": 1965,
-                "title": "The Government Just Released UFO Footage",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7EFiG_XWdNo",
-                "duration": 3326,
-                "title": "The Colosseum’s Rise and Fall | Full Episode | Secrets of the Dead",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=JGrVtIn4V-4",
                 "duration": 2158,
                 "title": "10 Unsolved Mysteries That Will Make You Question Reality",
@@ -1820,54 +1799,24 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=-AZ70PoL9e4",
-                "duration": 5324,
-                "title": "😱 THIS HORROR MOVIE Gets More Disturbing the Deeper They Go! Full Movie in English",
+                "url": "https://www.youtube.com/watch?v=S31qlg_wSFE",
+                "duration": 7567,
+                "title": "The World’s Weirdest Mysteries *Marathon* | The UnXplained",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=1ya0WMLlduw",
-                "duration": 4797,
-                "title": "The Mysteries of Ancient Ireland | Full Series",
+                "url": "https://www.youtube.com/watch?v=9LTZ8tbnc7g",
+                "duration": 7559,
+                "title": "America's BIGGEST Mysteries *Marathon* | The UnXplained | History",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=z1oo773O5mI",
-                "duration": 7368,
-                "title": "2+ HOURS of Disturbing Unsolved Mysteries..",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8xvevrzkYT4",
-                "duration": 2531,
-                "title": "Earth’s Underground Mysteries | The UnXplained (S6, E1) | Full Episode",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9iNboNb6yqk",
-                "duration": 2235,
-                "title": "Aliens in Australia | Ancient Aliens",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vl6ELX5P4Cc",
@@ -1880,9 +1829,59 @@
                 "skip_checked": 1790193353
             },
             {
-                "url": "https://www.youtube.com/watch?v=kVpJ6BwG8zg",
-                "duration": 2665,
-                "title": "Experts Reveal What Really Happened (Full Episode) | Area 51: The CIA's Secret",
+                "url": "https://www.youtube.com/watch?v=7mvTIeFSKPI",
+                "duration": 1499,
+                "title": "Les Stroud Came Face to Face With BIGFOOT... What Happened Next Terrified Him",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yrEy6N5_8LU",
+                "duration": 6025,
+                "title": "Mysterious Videos That Will Question Your Reality!",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t1KN4ynFVfI",
+                "duration": 7585,
+                "title": "The Mystery Hidden Under Antarctica | Ancient Aliens | Marathon",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lWS4CyBvX78",
+                "duration": 7716,
+                "title": "2+ HOURS of Disturbing Unsolved Mysteries..",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eZJ-g-KgFyc",
+                "duration": 1502,
+                "title": "Deadly Finds & Dangerous Discoveries | Mysteries Unearthed with Danny Trejo",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vg_Wv-DHn-k",
+                "duration": 5808,
+                "title": "15 Unsolved Mysteries That Will Make You Question Reality",
                 "parts": [
                     "late"
                 ],
@@ -1890,24 +1889,29 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=KECHTe9QsPw",
-                "duration": 1780,
-                "title": "Family Who Disappeared Found Trapped Inside Secret Room Locked For 9 Years",
+                "url": "https://www.youtube.com/watch?v=Mww3arniyt0",
+                "duration": 1635,
+                "title": "UFO Mysteries That Defy Explanation | Unidentified: Inside America's UFO Investigation",
                 "parts": [
                     "late"
                 ],
-                "skip": [
-                    [
-                        26.7,
-                        35.6
-                    ]
-                ],
-                "skip_checked": 1791409404
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=kjNTBtBifzk",
-                "duration": 1572,
-                "title": "STRANGE & SCARY Mysteries of The Month - SEPT. 2026",
+                "url": "https://www.youtube.com/watch?v=ipZSihrOjuI",
+                "duration": 2540,
+                "title": "The UnXplained: Dark Curses of the Occult (S2, E3) | Full Episode | History",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YIBe2LybGcQ",
+                "duration": 2522,
+                "title": "The Murdaugh Mysteries | Full Episode",
                 "parts": [
                     "late"
                 ],
@@ -1915,44 +1919,64 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=Mt7mKM0lMrw",
-                "duration": 4829,
-                "title": "A Creature Guards a Deadly Secret Beneath the Sea | A 1950s Sci-Fi Thriller | Film",
+                "url": "https://www.youtube.com/watch?v=nDjswZ2Yrpg",
+                "duration": 3151,
+                "title": "A Haunting In Indiana: The True Story of Jennifer Patterson (Full Documentary)",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=BXdRXAlefX4",
-                "duration": 5787,
-                "title": "7 Cold Cases That Were SOLVED With Insane Twists | Documentary",
+                "url": "https://www.youtube.com/watch?v=-ykzQ2MNc_w",
+                "duration": 2393,
+                "title": "10 Scary Unsolved Mysteries That Are Going Viral Right Now",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=kv3qfQxyqUI",
-                "duration": 1256,
-                "title": "The Psychiatrist Who Hypnotized The Hills Doubted The Aliens",
+                "url": "https://www.youtube.com/watch?v=APCVQ0mNCbI",
+                "duration": 5865,
+                "title": "👽 The Truth Behind Her Disappearance Is Unbelievable! Full Movie",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=nolUQgiHjWw",
-                "duration": 8857,
-                "title": "Bizarre Ghost Encounters | William Shatner's Weird Or What | Absolute Sci-Fi",
+                "url": "https://www.youtube.com/watch?v=G0R7dDSsTRc",
+                "duration": 5315,
+                "title": "15 Disturbing Unsolved Mysteries That Destroyed People’s Lives",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=szDdhImC3Qg",
+                "duration": 7938,
+                "title": "UFO Mysteries Will Shock You! *Marathon* | Ancient Aliens | History",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cKLlZoViByw",
+                "duration": 2416,
+                "title": "Vampires of New Orleans Documentary | Full Episode | Mysteries Decoded | The CW",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=VTWJ2LeSNkc",
@@ -1970,14 +1994,89 @@
                 "skip_checked": 1791409404
             },
             {
-                "url": "https://www.youtube.com/watch?v=7-MO0ciwU-8",
-                "duration": 7533,
-                "title": "Uncovering the Truth: Giants, Alien Relics & The Human Experiment *Marathon* | Ancient Aliens",
+                "url": "https://www.youtube.com/watch?v=MmEpb-mjluM",
+                "duration": 3066,
+                "title": "Exploring Freaks of Nature With William Shatner: Weird or What S2E6 | Retold",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iCHKPlk5Vck",
+                "duration": 5328,
+                "title": "15 Scary Unsolved Mysteries That Will Make You Question Reality",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZK0eolwMlX0",
+                "duration": 2683,
+                "title": "Ancient Sites that Defy Explanation | Ancient Aliens | Compilation",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1790451053
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nolUQgiHjWw",
+                "duration": 8857,
+                "title": "Bizarre Ghost Encounters | William Shatner's Weird Or What | Absolute Sci-Fi",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zy6ZN1qM3sY",
+                "duration": 2133,
+                "title": "The Unsolved Murder in Room 1046",
+                "parts": [
+                    "late"
+                ],
+                "skip": [
+                    [
+                        433.6,
+                        502.1
+                    ]
+                ],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RPhOFP-tcyU",
+                "duration": 2532,
+                "title": "What Does the Government Really Know About UFOs? | The UnXplained (S2, E4) | Full Episode",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-QIk2TMGmho",
+                "duration": 2032,
+                "title": "Extraterrestrial Mysteries on the Ocean Floor | Ancient Aliens",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2kp7IE4Bmd8",
+                "duration": 2785,
+                "title": "Unsolved Mysteries with Robert Stack - Season 3, Episode 10 - Full Episode",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=Aa10i8Sl0oQ",
@@ -1990,34 +2089,114 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=klTbcJX5ICU",
-                "duration": 2542,
-                "title": "Ancient Aliens: Civilization Buried Under Antarctica's Ice?! (S14, E1) | Full Episode | History",
+                "url": "https://www.youtube.com/watch?v=qZMTyjcmWP4",
+                "duration": 2326,
+                "title": "10 Unsolved Mysteries That Defy All Explanation",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=Q8DWP0Uo4SU",
-                "duration": 7509,
-                "title": "Mysterious Disappearances | \"48 Hours\" Full Episodes",
+                "url": "https://www.youtube.com/watch?v=E_za9A42CQs",
+                "duration": 8760,
+                "title": "Mysterious Archeology We Still Can't Explain",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=J4y7aQq3z4o",
-                "duration": 2539,
-                "title": "The UnXplained: What Secrets are American Monuments Hiding?! (S2, E9) | Full Episode | History",
+                "url": "https://www.youtube.com/watch?v=gSn4YoCn6Gg",
+                "duration": 1257,
+                "title": "Mysteries Hidden Under Alaskan Ice | Ancient Aliens | History",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xiyiTY75n7M",
+                "duration": 2421,
+                "title": "The Most Shocking Alien Encounters Ever | Ancient Aliens",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lWt_oDtHV3c",
+                "duration": 2531,
+                "title": "Can We Travel Through Time? | The UnXplained (S6, E2) | Full Episode",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CK8FH_NhpaM",
+                "duration": 2387,
+                "title": "Are Dark Entities Watching Us? | The Proof Is Out There",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dDxYZyMEmUU",
+                "duration": 7936,
+                "title": "UFO Truths Exposed | UFOs: Investigating the Unknown MEGA Episode | National Geographic",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iGV2TQUDYbQ",
+                "duration": 7691,
+                "title": "Fatal Destination 2026 💀 VANISHED IN MYRTLE BEACH 🆘 True Crime Documentary",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3EoBZfl5L_E",
+                "duration": 6672,
+                "title": "Insane True Crime Cases of 2026",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c08Zzc0xepI",
+                "duration": 2667,
+                "title": "The Universe: New Evidence of Parallel Worlds (S3, E2) | Full Episode | History",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YP8zg4H5R-U",
+                "duration": 7801,
+                "title": "Disappeared 2026 🕵️ HIDDEN IN PLAIN SIGHT 🆘 Documentary True Crime Podcast",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wybawp-vEL4",
@@ -2028,106 +2207,6 @@
                 ],
                 "skip": [],
                 "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9iIiK3wjUw8",
-                "duration": 1539,
-                "title": "4 Cold Cases That Were Solved With INSANE Twists In 2024",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IyVqxElfD0g",
-                "duration": 3957,
-                "title": "13 Bigfoot Sightings You Have to See to Believe | The Proof is Out There | Compilation | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=25sBBCPeRvY",
-                "duration": 2293,
-                "title": "Explaining Advanced Ancient Egyptian Technologies | Ancient Aliens | Compilation | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TfQ6K8h_FBw",
-                "duration": 2233,
-                "title": "Have Aliens Been Visiting Earth for Millions of Years? | Ancient Aliens | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=n05r48HwxZs",
-                "duration": 2217,
-                "title": "Lost Civilizations Beneath Antarctica? | Ancient Aliens | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aNRUAJAuJKw",
-                "duration": 2747,
-                "title": "Unsolved Mysteries with Robert Stack - Season 5, Episode 8 - Full Episode",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f50yp-OndFQ",
-                "duration": 2539,
-                "title": "Eyewitness Accounts of Bigfoot | The UnXplained (S2, E13) | Full Episode | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jZF4zuPDINA",
-                "duration": 4489,
-                "title": "Vanished: Unsolved Mysterious Disappearances | Missing People Documentary",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vg_Wv-DHn-k",
-                "duration": 5808,
-                "title": "15 Unsolved Mysteries That Will Make You Question Reality",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9cdUxZuarL0",
-                "duration": 5469,
-                "title": "Discover the Secrets of Ancient Egypt | Engineering an Empire | Full Episode | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=Wt9k4V1OoSU",
@@ -2145,171 +2224,83 @@
                 "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=AV2LpVplmgc",
-                "duration": 2595,
-                "title": "Dark Secrets of Vatican City - Forbidden History",
+                "url": "https://www.youtube.com/watch?v=uDzr3X3yAZU",
+                "duration": 2532,
+                "title": "Life Beyond Death (S1, E6) | The UnXplained | Full Episode",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=nPCpRL_rUK0",
-                "duration": 2520,
-                "title": "The Disappearance of Maddi Kingsbury | Full Episode",
+                "url": "https://www.youtube.com/watch?v=F8GIZm8atG8",
+                "duration": 7584,
+                "title": "The Ancient Sites That Shouldn't Exist | Ancient Aliens | Compilation",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zz6NVtRfmJo",
+                "duration": 2532,
+                "title": "Secrets of the Bible | The UnXplained (S2, E7) | Full Episode",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qj64lJcse4k",
+                "duration": 8565,
+                "title": "Things That Still Puzzle Scientists | Bedtime Documentary",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPZKTfRYRjo",
+                "duration": 2657,
+                "title": "Lost Technologies of Ancient Civilizations | Ancient Aliens",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bbUWsnv6irU",
+                "duration": 4924,
+                "title": "5 True Crime Cases Dateline NBC Refused to Cover",
                 "parts": [
                     "late"
                 ],
                 "skip": [
                     [
-                        1021.7,
-                        1033.6
-                    ],
-                    [
-                        1462.2,
-                        1479.8
-                    ],
-                    [
-                        1959.8,
-                        1970.3
+                        681.4,
+                        758.0
                     ]
                 ],
-                "skip_checked": 1791409404
+                "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=4n3fkTq_p0o",
-                "duration": 1629,
-                "title": "CIA Classified Book about the Pole Shift, Mass Extinctions and The True Adam & Eve Story",
-                "parts": [
-                    "late"
-                ],
-                "skip": [
-                    [
-                        1558.1,
-                        1592.9
-                    ]
-                ],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iUr0fOsIgV4",
-                "duration": 3720,
-                "title": "Our Unexplainable Night at Crescent Hotel (w/ KallmeKris & CelinaSpookyBoo)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [
-                    [
-                        3182.9,
-                        3203.4
-                    ]
-                ],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GeCodRjs1Bs",
-                "duration": 1485,
-                "title": "The UnXplained: PROOF the Devil is Real?! | History",
+                "url": "https://www.youtube.com/watch?v=VVPVMxlRfMA",
+                "duration": 1461,
+                "title": "Murder Mysteries That Are Mostly Disturbing & Strange",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wcRO__guSM8",
-                "duration": 2602,
-                "title": "Unsolved Mysteries with Robert Stack - Season 12 Episode 7 - Full Episode",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x2BQyZorSQc",
-                "duration": 3151,
-                "title": "Aliens & Espionage: Crop Circles and the CIA Coverup | They Don't Want You to Know",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E6DN3vm_DSM",
-                "duration": 2892,
-                "title": "Untold Stories of the ER - Season 9, Episode 18 - Cop-Shocker",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KNoJBAxoTk0",
-                "duration": 3838,
-                "title": "Explore Our Solar System’s Secrets 🪐 How the Universe Works | Science Channel",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YIBe2LybGcQ",
-                "duration": 2522,
-                "title": "The Murdaugh Mysteries | Full Episode",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ErPsyBUCijM",
-                "duration": 2842,
-                "title": "Legend of Atlantis (Full Episode) | Drain the Oceans",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PwbZvG-P-Po",
-                "duration": 2923,
-                "title": "Can People Really Predict The Future? | William Shatner's Weird Or What | Absolute Sci-Fi",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zNZHTlRFD6E",
-                "duration": 3448,
-                "title": "Alien Encounters You Won't Believe | Ancient Aliens | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1791409404
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NKsQfckKuwY",
-                "duration": 2457,
-                "title": "Interstellar Secrets of Ancient Civilizations | Ancient Aliens | History",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1792444744
             }
         ],
         "search_query": "full documentary",
-        "last_refreshed": 1791409404,
+        "last_refreshed": 1792444742,
         "part_queries": {
             "breakfast": "half hour documentary full episode",
             "prime": "feature length documentary full film",
