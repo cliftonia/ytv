@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=5wks1W-auKY",
-                "duration": 3144,
-                "title": "Slow down to speed up: AI and software engineering",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Ru99FGJ_yuE",
                 "duration": 1779,
                 "title": "The state of the tech industry in 2026 - LDX3 New York",
@@ -21,11 +14,18 @@
                 "skip_checked": 1791847507
             },
             {
-                "url": "https://www.youtube.com/watch?v=w4rG5GY9IlA",
-                "duration": 747,
-                "title": "Learning Software Engineering During the Era of AI | Raymond Fu | TEDxCSTU",
+                "url": "https://www.youtube.com/watch?v=5wks1W-auKY",
+                "duration": 3144,
+                "title": "Slow down to speed up: AI and software engineering",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DZpR0GojoWQ",
+                "duration": 3284,
+                "title": "Keynote: The dangers of probably-working software - Damian Brady - NDC London 2026",
+                "skip": [],
+                "skip_checked": 1790280952
             },
             {
                 "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
@@ -42,55 +42,6 @@
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=B2Iou-8mu9k",
-                "duration": 890,
-                "title": "It's time to be ambitious | Scott Wu Co-founder & CEO at Cognition, Runtime 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OfMAtaocvJw",
-                "duration": 4625,
-                "title": "The third golden age of software engineering – thanks to AI, with Grady Booch",
-                "skip": [
-                    [
-                        55.4,
-                        64.0
-                    ],
-                    [
-                        789.3,
-                        884.3
-                    ],
-                    [
-                        1575.9,
-                        1676.3
-                    ],
-                    [
-                        2527.9,
-                        2621.8
-                    ],
-                    [
-                        4614.4,
-                        4622.3
-                    ]
-                ],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=horhFvQN3RQ",
-                "duration": 3421,
-                "title": "Software Architecture Then, Now, and in the Future (keynote at ICSA 2026)",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DZpR0GojoWQ",
-                "duration": 3284,
-                "title": "Keynote: The dangers of probably-working software - Damian Brady - NDC London 2026",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=L1w6wBxhpgE",
                 "duration": 3245,
                 "title": "Keynote: AI-Powered App Development - Steve Sanderson - NDC London 2026",
@@ -98,18 +49,25 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=WmgPAOIhrko",
-                "duration": 2805,
-                "title": "World Development Report 2026: Fireside Chat with Andrew Ng - Making AI Work for Development",
+                "url": "https://www.youtube.com/watch?v=w4rG5GY9IlA",
+                "duration": 747,
+                "title": "Learning Software Engineering During the Era of AI | Raymond Fu | TEDxCSTU",
                 "skip": [],
-                "skip_checked": 1791847507
+                "skip_checked": 1790367139
             },
             {
-                "url": "https://www.youtube.com/watch?v=g8um2AEf5ZA",
-                "duration": 1162,
-                "title": "AI Dev 26 x SF: Andrew Ng: The Future of Software Engineering",
+                "url": "https://www.youtube.com/watch?v=-RWdevA0gWI",
+                "duration": 4902,
+                "title": "Software Abstraction in the Age of AI-Generated Code - Andrei Alexandrescu - ACCU 2026",
                 "skip": [],
-                "skip_checked": 1790280952
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4qfsmE11Ejo",
+                "duration": 3839,
+                "title": "Modular Monoliths and Other Facepalms - Kevlin Henney - NDC London 2026",
+                "skip": [],
+                "skip_checked": 1792786230
             },
             {
                 "url": "https://www.youtube.com/watch?v=hOJhDBhBErI",
@@ -124,25 +82,46 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=-RWdevA0gWI",
-                "duration": 4902,
-                "title": "Software Abstraction in the Age of AI-Generated Code - Andrei Alexandrescu - ACCU 2026",
+                "url": "https://www.youtube.com/watch?v=shZgedW15vg",
+                "duration": 3625,
+                "title": "How Anthropic uses Claude Code: Agentic Software Engineering at Scale - Daisy Hollman",
                 "skip": [],
-                "skip_checked": 1790367139
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=3wQdfYFhxmE",
-                "duration": 3309,
-                "title": "Are LLMs good software engineers? - Anthony Shaw - NDC Sydney 2026",
+                "url": "https://www.youtube.com/watch?v=uWnUnMphmPM",
+                "duration": 2999,
+                "title": "Keynote: After the AI Hype – What’s Real, and What’s Next - Richard Campbell - 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xv7UVAfyebk",
+                "duration": 2573,
+                "title": "Morgan Stanley TMT Conference 2026 | Jensen Huang on AI, Compute, Tokens and the New Global Economy",
+                "skip": [],
+                "skip_checked": 1791847507
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Fls_onRviPM",
+                "duration": 3215,
+                "title": "OpenAI DevDay 2026 Keynote (FULL)",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g8um2AEf5ZA",
+                "duration": 1162,
+                "title": "AI Dev 26 x SF: Andrew Ng: The Future of Software Engineering",
                 "skip": [],
                 "skip_checked": 1790280952
             },
             {
-                "url": "https://www.youtube.com/watch?v=83QmWhYDoEI",
-                "duration": 2177,
-                "title": "Software Development Lifecycle SDLC || Grace Adeyanju ||ICCM WEST AFRICA 2026",
+                "url": "https://www.youtube.com/watch?v=N6KaG7lyoqo",
+                "duration": 1623,
+                "title": "On Interaction Effects in Greybox Fuzzing, International Conference on Software Engineering 2026",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792786230
             },
             {
                 "url": "https://www.youtube.com/watch?v=nhbYveaV0pk",
@@ -169,32 +148,11 @@
                 "skip_checked": 1790451053
             },
             {
-                "url": "https://www.youtube.com/watch?v=ttoQfPP_Gkg",
-                "duration": 3618,
-                "title": "Refactoring Towards Structured Concurrency - Roi Barkan - ACCU on Sea 2026",
+                "url": "https://www.youtube.com/watch?v=hF8swzNR1-o",
+                "duration": 4574,
+                "title": "Apple WWDC 2026 June 8: Introducing Siri AI and more",
                 "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xv7UVAfyebk",
-                "duration": 2573,
-                "title": "Morgan Stanley TMT Conference 2026 | Jensen Huang on AI, Compute, Tokens and the New Global Economy",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OaRhpwz_TGM",
-                "duration": 1900,
-                "title": "The Future of AI Agents with Andrew Ng | Interrupt 26",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fav_i2Zh79s",
-                "duration": 3353,
-                "title": "Agentic AI in the Enterprise 2026",
-                "skip": [],
-                "skip_checked": 1790193353
+                "skip_checked": 1792786230
             },
             {
                 "url": "https://www.youtube.com/watch?v=xunx7VvlOgs",
@@ -204,46 +162,6 @@
                 "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=ICispFxvPIY",
-                "duration": 2665,
-                "title": "The Current State of AI for Software Engineers (2026)",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AhOThZvc9oU",
-                "duration": 2923,
-                "title": "PlatformCon 2026 - Kickoff",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=shZgedW15vg",
-                "duration": 3625,
-                "title": "How Anthropic uses Claude Code: Agentic Software Engineering at Scale - Daisy Hollman",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ek32ZH3AI3k",
-                "duration": 2713,
-                "title": "Is AI Destroying Software Development?",
-                "skip": [
-                    [
-                        0.0,
-                        12.5
-                    ]
-                ],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=y2h2BYajgw8",
-                "duration": 4193,
-                "title": "Roadmaps Conference 2026 - 05 - Discussion Panel - Tectonic shifts in digital product development...",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=1h8UU_OVRTE",
                 "duration": 2812,
                 "title": "Scott and Mark learn...how agents reshape software engineering | BRK247",
@@ -251,18 +169,11 @@
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=FBgNiI9Y5xw",
-                "duration": 2215,
-                "title": "Keynote - Neos Conference 2026",
+                "url": "https://www.youtube.com/watch?v=x9wCXEqrjII",
+                "duration": 1025,
+                "title": "AI and Software Engineering Conference - Sept. 24 - Early Bird Registration is Live!",
                 "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XIsRGP1lZ8g",
-                "duration": 2935,
-                "title": "MBS Xojo Conference 2026 - MBS Plugins Update",
-                "skip": [],
-                "skip_checked": 1790451053
+                "skip_checked": 1792786230
             },
             {
                 "url": "https://www.youtube.com/watch?v=GMIWm5y90xA",
@@ -272,151 +183,25 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=6xVxSQo3tj0",
-                "duration": 1561,
-                "title": "using std::cpp 2026 Conference Opening",
+                "url": "https://www.youtube.com/watch?v=fav_i2Zh79s",
+                "duration": 3353,
+                "title": "Agentic AI in the Enterprise 2026",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=Epyiqh19rH4",
-                "duration": 3740,
-                "title": "From Copilot to the Garden of Eden - Adam Cogan - NDC Oslo 2026",
+                "url": "https://www.youtube.com/watch?v=87DyyMV0kCY",
+                "duration": 2248,
+                "title": "Black Hat USA 2026 | The 'Breaking' News: The OpenAI–Hugging Face Incident",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0BXuYlNrUmE",
+                "duration": 2546,
+                "title": "The Unreasonable Effectiveness of Constructive Data Modeling - Alexis King | SSW 2026",
                 "skip": [],
                 "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1oQneP6skmY",
-                "duration": 381,
-                "title": "Clinicians Who Code Conference - 20th June 2026 @ Patch York",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=whFzmXXhG5g",
-                "duration": 5028,
-                "title": "Why Your C++ Code Is Unsafe (And How We Can Fix It)",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YAZocyK5o_g",
-                "duration": 1234,
-                "title": "DeAI Day Warsaw (2026) Talk 3 - Intro to Numeroo by Ling Li",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZDr-SRan5Fw",
-                "duration": 259,
-                "title": "BUILD FROM HERE CONFERENCE 2026 – RECAP",
-                "skip": [],
-                "skip_checked": 1790280952
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SW5XnxE8kr0",
-                "duration": 1299,
-                "title": "Inductive Automation CEO Colby Clegg on Ignition, Open Standards and AI | ICC 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rgALQyTokO8",
-                "duration": 1236,
-                "title": "CV-S3 2026 | GLOBAL AWARDS CEREMONY",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9_B_ZoebjFY",
-                "duration": 1925,
-                "title": "API Platform Conference 2026 - Antoine Bluchet  - Are APIs Still Relevant in the AI Era",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BT5crw9u25Q",
-                "duration": 1746,
-                "title": "Open-TAI Conference June 2026 – The Map: Charting the Path to Trustworthy AI",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CTrWlCAfPYM",
-                "duration": 2421,
-                "title": "Roadmaps Conference 2026 - 02- Petar Ristic -  From AI Adoption to AI Transformation",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AXiuhMrJlDA",
-                "duration": 276,
-                "title": "FCTEC Digitisation Conference 2026 | Highlights",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r3Q4FuWcqyQ",
-                "duration": 2607,
-                "title": "Replay @ CES 2026 | Intel Press Conference",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3oW9frPQLCM",
-                "duration": 2387,
-                "title": "AI in Ag Conference Keynote Zach Marston, Syngenta 2026 04 02",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=y2WrMNw9WXM",
-                "duration": 1310,
-                "title": "Presentation 010 | FERC Software Conference 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tS0uI6-CMDk",
-                "duration": 2110,
-                "title": "AWS AI and Data Conference 2026 - LLM Customization | AWS Events",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GoQzVjk8rzc",
-                "duration": 3578,
-                "title": "How I Tamed Claude - Emmz Rendle - NDC Copenhagen 2026",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zmR7FDug2OM",
-                "duration": 4055,
-                "title": "AMD IFA 2026 Keynote: The Era of Personal AI | LIVE",
-                "skip": [],
-                "skip_checked": 1790634163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PIQePHE0NSA",
-                "duration": 3600,
-                "title": "OME2026-23 - Discussion 2: Developer Concerns",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DnZqK8dLuV8",
-                "duration": 2953,
-                "title": "2026 Swiss Conference Day 3 Keynote:  Roberto Rocco and Gabriella Bettonte,  E4 Engineering",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hE7ENPHGJWU",
-                "duration": 2334,
-                "title": "Your browser is secretly a superhero - Neos Conference 2026",
-                "skip": [],
-                "skip_checked": 1790538994
             },
             {
                 "url": "https://www.youtube.com/watch?v=vkgGmkR7gIo",
@@ -424,160 +209,6 @@
                 "title": "Is Embedded Systems Still a Good Career in 2026?",
                 "skip": [],
                 "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4n7DBIUdKVk",
-                "duration": 2804,
-                "title": "AWS AI and Data Conference 2026 - Agents and Memory Architecture | AWS Events",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kINrS1hJgBs",
-                "duration": 1845,
-                "title": "10x Engineering: Battle-Tested Lessons (Dennis Nerush) - Applied AI Conference 2026",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f9vOqgihqWM",
-                "duration": 1662,
-                "title": "Presentation 004 | FERC Software Conference 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a4ezy6VbftM",
-                "duration": 1905,
-                "title": "Presentation 002 | FERC Software Conference 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wdue4_mXeME",
-                "duration": 4168,
-                "title": "Conference Week Round-Up - September 2026 Livestream",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=M0lHvt1PWiQ",
-                "duration": 1776,
-                "title": "Building Trust in Your Data Pipelines with Observability [PyCon DE & PyData 2026]",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-XDIGgnDRek",
-                "duration": 935,
-                "title": "Source LDPath At The PathVision 2026: The NHS Pathology Strategy South Conference",
-                "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RZv95_Zr650",
-                "duration": 1677,
-                "title": "Supply Chain Panel | IoTSF conference 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4zNu-4ZJKIE",
-                "duration": 2905,
-                "title": "Evaluating LLM (AI) in Biorefinery Engineering - ChemEngConnect 2026 Conference",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6P-L7UmWLDM",
-                "duration": 307,
-                "title": "OBVERRA — RSAC 2026 Conference Launch Pad",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kExhVOfdPMg",
-                "duration": 1246,
-                "title": "The future of coding is reading | WSO2 Technology Conference 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WjoHW2-1rMU",
-                "duration": 719,
-                "title": "My First IEEE Conference Presentation | AI for Cybersecurity (SoutheastCon 2026)",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HEM7Z52nikc",
-                "duration": 299,
-                "title": "Odoo Experience 2026: A look at Odoo 20 and what is new",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=un6PZLheUiE",
-                "duration": 1542,
-                "title": "Linux Audio Conference 2026 Presentation - Lucian Parisi - Spatial Audio Research",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=APzkATgX1pU",
-                "duration": 2271,
-                "title": "AWS AI and Data Conference 2026 - Building Security at Speed | AWS Events",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D-Az4UGCqj4",
-                "duration": 1832,
-                "title": "Software licensing 101 | WSO2 Technology Conference 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LzAf5w1gRYM",
-                "duration": 766,
-                "title": "Yuan He: Intelligence in Productivity | Apsara Conference 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Mjk6h_PJ0iY",
-                "duration": 2417,
-                "title": "The CMS is dead – Long live the CMS - Neos Conference 2026",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hD3gVcBdMek",
-                "duration": 3957,
-                "title": "AoS National Conference 2026 - Alchemer Beyond the Basics",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WAUnmQt2Z7Y",
-                "duration": 288,
-                "title": "AI CEO vs Engineer (2026).",
-                "skip": [],
-                "skip_checked": 1790367139
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hfADSpkhM90",
-                "duration": 2142,
-                "title": "Code for cloud | WSO2 Technology Conference 2026",
-                "skip": [],
-                "skip_checked": 1790538994
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LCEmiRjPEtQ",
-                "duration": 2372,
-                "title": "Andrej Karpathy: Software Is Changing (Again)",
-                "skip": [],
-                "skip_checked": 1791847507
             },
             {
                 "url": "https://www.youtube.com/watch?v=_gCXmKjDecU",
@@ -600,83 +231,25 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=snTZtttfL70",
-                "duration": 3522,
-                "title": "Building AIE: Open Q&A and Feedback Session with swyx",
+                "url": "https://www.youtube.com/watch?v=6amLO7I9xdg",
+                "duration": 2787,
+                "title": "Code with Claude London 2026: Opening Keynote",
                 "skip": [],
-                "skip_checked": 1791847507
+                "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=zSZkLyD9ILI",
-                "duration": 2296,
-                "title": "How to Find Bugs in Systems That Don't Exist - Hillel Wayne | SSW 2026",
-                "skip": [
-                    [
-                        2049.9,
-                        2051.3
-                    ],
-                    [
-                        2080.3,
-                        2166.8
-                    ]
-                ],
+                "url": "https://www.youtube.com/watch?v=OaRhpwz_TGM",
+                "duration": 1900,
+                "title": "The Future of AI Agents with Andrew Ng | Interrupt 26",
+                "skip": [],
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=gajd2uboxQc",
-                "duration": 1921,
-                "title": "Understanding LLMs | WSO2 Technology Conference 2026",
+                "url": "https://www.youtube.com/watch?v=WAUnmQt2Z7Y",
+                "duration": 288,
+                "title": "AI CEO vs Engineer (2026).",
                 "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mYOGyw83Upg",
-                "duration": 736,
-                "title": "ASE 2026: Translation Tag Team: Formal Rules and LLMs Translate More Macros Together than Apart",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0ofNdRP9v5w",
-                "duration": 1979,
-                "title": "The JLCPCB & EasyEDA Spark 2026 Conference Recap",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wCO8HmsiOyw",
-                "duration": 1494,
-                "title": "The Unglamorous Side of Rust Web Development by Mateusz Maćkowski&Marek Grzelak | Rustikon 2026",
-                "skip": [],
-                "skip_checked": 1791847507
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p9wJTQ1pZR8",
-                "duration": 278,
-                "title": "Incalmo — RSAC 2026 Conference Launch Pad",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vu9ltgrb77M",
-                "duration": 1580,
-                "title": "2026 Swiss Conference: Giordano Mancini, E4 Engineering",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1_FGhuDe3To",
-                "duration": 2415,
-                "title": "MBS Xojo Conference 2026 - Development of a tourist information system",
-                "skip": [],
-                "skip_checked": 1790451053
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bBepZHqYnHE",
-                "duration": 2294,
-                "title": "Next-Generation Battle Management | 2026 Air, Space & Cyber Conference",
-                "skip": [],
-                "skip_checked": 1791847507
+                "skip_checked": 1790367139
             },
             {
                 "url": "https://www.youtube.com/watch?v=96jN2OCOfLs",
@@ -686,77 +259,506 @@
                 "skip_checked": 1791847507
             },
             {
-                "url": "https://www.youtube.com/watch?v=BB4Tw5nt2OQ",
-                "duration": 1227,
-                "title": "The Changing Nature of Work - Applied AI: MIT IDE 2026 Annual Conference",
+                "url": "https://www.youtube.com/watch?v=y2WrMNw9WXM",
+                "duration": 1310,
+                "title": "Presentation 010 | FERC Software Conference 2026",
+                "skip": [],
+                "skip_checked": 1791847507
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t93QupX9XPI",
+                "duration": 2744,
+                "title": "Testing Talks 2026 | Expected to Lead Quality",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6MLiASDh-ks",
+                "duration": 3663,
+                "title": "Why Mental Power Matters When Working with AI | Ard Kramer | ISTC 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d1S1yVgFep8",
+                "duration": 884,
+                "title": "adaptTo() 2026 Recap: 25 AEM Conference Talks in 15 Minutes",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FGK5tJQ2Ya8",
+                "duration": 2509,
+                "title": "Testing Talks 2026 | Performance Engineering in the Age of AI: Real-World Lessons",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ad0OmJwjXTc",
+                "duration": 963,
+                "title": "TALK: Gustavo Dutra, Polygon | Startup Society Conference 2026 - Dia 2",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-u3YDz16xHU",
+                "duration": 2437,
+                "title": "Don Syme, \"Repository Automation with GitHub Agentic Workflows\", VeTSS Annual Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qNw8AXB9A5E",
+                "duration": 1573,
+                "title": "DevOpsDays Cairo 2026 Talks: Engineering Governance and Anti-Burnout in Era of Agentic AI Co-Workers",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AhOThZvc9oU",
+                "duration": 2923,
+                "title": "PlatformCon 2026 - Kickoff",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tQnkO-QpBQo",
+                "duration": 273,
+                "title": "How to Get Hired as a Software Engineer in 2026 (Junior Developers)",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dUFis1dte14",
+                "duration": 2781,
+                "title": "Leading in the Age of AI: A Conversation with NVIDIA CEO Jensen Huang | Global Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OuNKBjuV7A4",
+                "duration": 404,
+                "title": "DHH has gone completely off the rails...",
+                "skip": [
+                    [
+                        269.5,
+                        274.1
+                    ],
+                    [
+                        345.3,
+                        403.5
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H26xnpL-ei0",
+                "duration": 1333,
+                "title": "NVIDIA GTC 2026 Open Models Panel Highlights with Jensen Huang",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WRg13Ze_UpY",
+                "duration": 3787,
+                "title": "Modern Architecture 101 for New Engineers & Forgetful Experts - Jerry Nixon - NDC Copenhagen 2025",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y2h2BYajgw8",
+                "duration": 4193,
+                "title": "Roadmaps Conference 2026 - 05 - Discussion Panel - Tectonic shifts in digital product development...",
+                "skip": [],
+                "skip_checked": 1791847507
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lFVG31ge0Oc",
+                "duration": 1683,
+                "title": "Hana Chockler, \"Using causality for debugging and explainability\", VeTSS Annual Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MhEL9cvLxQE",
+                "duration": 282,
+                "title": "Hyperoptimized Engineer 2026",
+                "skip": [
+                    [
+                        218.5,
+                        240.5
+                    ],
+                    [
+                        271.2,
+                        281.7
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D-Az4UGCqj4",
+                "duration": 1832,
+                "title": "Software licensing 101 | WSO2 Technology Conference 2026",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1qw5ITr3k9E",
+                "duration": 4469,
+                "title": "Software Engineering Job Interview – Full Mock Interview",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FBgNiI9Y5xw",
+                "duration": 2215,
+                "title": "Keynote - Neos Conference 2026",
+                "skip": [],
+                "skip_checked": 1790367139
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hzD9k4BZCE4",
+                "duration": 4235,
+                "title": "C++ and Dependency Injection: What Every Developer Should Know!",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A-v3rdpdSJI",
+                "duration": 2292,
+                "title": "AWS AI and Data Conference 2026 - Kiro: Enterprise Developer Productivity | AWS Events",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oTcimMwxRoM",
+                "duration": 2912,
+                "title": "[2026 Championship Conference Presentation] The Next Revolution: AI in FRC",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1oQneP6skmY",
+                "duration": 381,
+                "title": "Clinicians Who Code Conference - 20th June 2026 @ Patch York",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4amZ_ZWqpA8",
+                "duration": 3544,
+                "title": "Serial C++ Can Be Parallel Too - Eran Gilad - ACCU 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPise3NY1gI",
+                "duration": 2663,
+                "title": "Towards Sustainable Software Testing | Women in Tech Global Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XVCYcoMLNiQ",
+                "duration": 868,
+                "title": "Artificial Intelligence in Graphic Design for Web Development | IISA 2026 Conference Presentation",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YAZocyK5o_g",
+                "duration": 1234,
+                "title": "DeAI Day Warsaw (2026) Talk 3 - Intro to Numeroo by Ling Li",
+                "skip": [],
+                "skip_checked": 1791847507
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3oW9frPQLCM",
+                "duration": 2387,
+                "title": "AI in Ag Conference Keynote Zach Marston, Syngenta 2026 04 02",
                 "skip": [],
                 "skip_checked": 1790634163
             },
             {
-                "url": "https://www.youtube.com/watch?v=l45g81cN0yY",
-                "duration": 1447,
-                "title": "LibreOffice Conference 2026: LibreOffice as a document processing engine in PREEvision©",
+                "url": "https://www.youtube.com/watch?v=aqmpZocmR8o",
+                "duration": 3528,
+                "title": "Developer Keynote (Google I/O '26)",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8ujA-rNhUE4",
+                "duration": 2796,
+                "title": "The Agentic Automation Revolution • Don Syme • Bug Bash EU 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=duHhImuaZGU",
+                "duration": 2529,
+                "title": "Sundar Pichai Opening Remarks | I/O 2026 Keynote",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FbEAYvftyZA",
+                "duration": 2582,
+                "title": "All Hand 2026 Keynote Speech: Edith MacArthur, IT Principal Security Architect",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E82ly38YEEQ",
+                "duration": 2691,
+                "title": "Dependency Cultures - Richard Feldman | SSW 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xYU7zaaRjmE",
+                "duration": 747,
+                "title": "The Vibe Coding Era: Why AI Won’t Replace Software Engineers",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pey9u_ANXZM",
+                "duration": 3971,
+                "title": "How I Tamed Claude - Emmz Rendle - NDC London 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=goTO-Gnp5Dk",
+                "duration": 4490,
+                "title": "The SilverLogic’s AI Uncorked: Boca Raton (October 2026)",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nSAIzf17vB0",
+                "duration": 1836,
+                "title": "AI-Powered Attacks and AI Governance | Matthew Rosenquist | HRMCon 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZDr-SRan5Fw",
+                "duration": 259,
+                "title": "BUILD FROM HERE CONFERENCE 2026 – RECAP",
+                "skip": [],
+                "skip_checked": 1790280952
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sySuvut8h9c",
+                "duration": 2910,
+                "title": "RICAIP Project Final Conference 2026: AI & Robotics for Manufacturing Resilience and Competitiveness",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T_fnhr5lVBw",
+                "duration": 495,
+                "title": "Google Antigravity | I/O 2026 Keynote",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iHmBg0N7EOA",
+                "duration": 1648,
+                "title": "Building a Software Factory with Cursor, xAI, and Grok Bot | Nick Miller at Agent Conf 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=am_oeAoUhew",
+                "duration": 2781,
+                "title": "Harness Engineering: How to Build Software When Humans Steer, Agents Execute — Ryan Lopopolo, OpenAI",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9OQ5vaYbGV0",
+                "duration": 344,
+                "title": "Google’s AI endgame is here… everything you missed at I/O 2026",
+                "skip": [
+                    [
+                        283.9,
+                        343.3
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CTrWlCAfPYM",
+                "duration": 2421,
+                "title": "Roadmaps Conference 2026 - 02- Petar Ristic -  From AI Adoption to AI Transformation",
                 "skip": [],
                 "skip_checked": 1791847507
             },
             {
-                "url": "https://www.youtube.com/watch?v=T-_EL3saM4w",
-                "duration": 1260,
-                "title": "APSARA Conference 2026 - miHoYo's Future Plans Regarding AI and Development in HSR",
+                "url": "https://www.youtube.com/watch?v=lqxiDvRkpm4",
+                "duration": 2295,
+                "title": "Getting UX Right: A New Mindset | Marc Majers | UX Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5MWT_doo68k",
+                "duration": 2850,
+                "title": "OpenAI’s Sam Altman Talks ChatGPT, AI Agents and Superintelligence — Live at TED2025",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nlbNF9w3TNw",
+                "duration": 782,
+                "title": "AI-Supported Customer Discovery and Lead Qualification | IISA 2026 Conference Presentation",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=odbNXv9xXjc",
+                "duration": 1899,
+                "title": "Simon Martinelli - Lessons from Spec-driven Development - AI Native DevCon June 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1ASzWklab2U",
+                "duration": 4289,
+                "title": "Gemini at Work 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WQIi7NvICzA",
+                "duration": 1484,
+                "title": "The Discipline of Not Building | How to Web Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kExhVOfdPMg",
+                "duration": 1246,
+                "title": "The future of coding is reading | WSO2 Technology Conference 2026",
+                "skip": [],
+                "skip_checked": 1790538994
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gajd2uboxQc",
+                "duration": 1921,
+                "title": "Understanding LLMs | WSO2 Technology Conference 2026",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=q_Jq4IgYImk",
+                "duration": 2659,
+                "title": "Build core skills to thrive as an AI-era developer",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AIH8AGJm_IY",
+                "duration": 1560,
+                "title": "Zach Lloyd: Building a Self-Improving Software Factory",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K-38Zpf13lQ",
+                "duration": 2619,
+                "title": "Type-Erased Audio Parameters - A New Approach to an Old Problem - Jan Wilczek - ADC Japan 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kINrS1hJgBs",
+                "duration": 1845,
+                "title": "10x Engineering: Battle-Tested Lessons (Dennis Nerush) - Applied AI Conference 2026",
+                "skip": [],
+                "skip_checked": 1790890293
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y7oAFORLVks",
+                "duration": 908,
+                "title": "DHIS2 for Workforce, Malaria and Microplanning – Maurice Jules Mulisa | DHIS2 Annual Conference 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8h9j2rskP14",
+                "duration": 578,
+                "title": "The next era of AI coding",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DnZqK8dLuV8",
+                "duration": 2953,
+                "title": "2026 Swiss Conference Day 3 Keynote:  Roberto Rocco and Gabriella Bettonte,  E4 Engineering",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RZv95_Zr650",
+                "duration": 1677,
+                "title": "Supply Chain Panel | IoTSF conference 2026",
                 "skip": [],
                 "skip_checked": 1791847507
             },
             {
-                "url": "https://www.youtube.com/watch?v=l4FZMdXMREA",
-                "duration": 697,
-                "title": "Cas Maxwell | AI Conference 2026 | Excelsior Community College",
+                "url": "https://www.youtube.com/watch?v=dh__eX6E1ko",
+                "duration": 537,
+                "title": "NDC Sydney 2026 .NET Developer Conference Report!",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=UQSG41UD7jM",
-                "duration": 911,
-                "title": "How to Stand Out in an AI World by Thinking Better, Not Faster  | Sol Rashidi | TEDxStanford",
+                "url": "https://www.youtube.com/watch?v=FeYEO3PhEVY",
+                "duration": 3425,
+                "title": "Real-time Safety in C & C++ - Guaranteed by the Compiler! - Anders Schau Knatten - ACCU on Sea 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LCEmiRjPEtQ",
+                "duration": 2372,
+                "title": "Andrej Karpathy: Software Is Changing (Again)",
                 "skip": [],
                 "skip_checked": 1791847507
             },
             {
-                "url": "https://www.youtube.com/watch?v=YsaK2219OOw",
-                "duration": 4405,
-                "title": "Evening Concert 5B",
+                "url": "https://www.youtube.com/watch?v=f9vOqgihqWM",
+                "duration": 1662,
+                "title": "Presentation 004 | FERC Software Conference 2026",
                 "skip": [],
-                "skip_checked": 1791847507
+                "skip_checked": 1790538994
             },
             {
-                "url": "https://www.youtube.com/watch?v=-1cjBUPYfgQ",
-                "duration": 1407,
-                "title": "LibreOffice Conference 2026: One recognizable identity for the project's websites",
+                "url": "https://www.youtube.com/watch?v=cIt4D_SJcI8",
+                "duration": 5196,
+                "title": "Co-Designing Integrated AI-Enabled Compiler-Runtime Systems - Hartmut Kaiser - C++Now 2026",
                 "skip": [],
-                "skip_checked": 1791143589
+                "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=E6Xun6JpWDo",
-                "duration": 606,
-                "title": "LibreOffice Conference 2026: Exploring macOS OfficeBean Support in LibreOffice",
+                "url": "https://www.youtube.com/watch?v=dDnjAzfVXrk",
+                "duration": 1918,
+                "title": "Presentation 013 | FERC Software Conference 2026",
                 "skip": [],
-                "skip_checked": 1791847507
+                "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=uwCW6YJ51Xo",
-                "duration": 3573,
-                "title": "DAIS 2026: Speaking at a Conference",
+                "url": "https://www.youtube.com/watch?v=xDkKu5G0FwI",
+                "duration": 4078,
+                "title": "1st OpenADS Tutorial @ IEEE Intelligent Transport Systems Conference | 15 Sep 2026 | Naples, Italy",
                 "skip": [],
-                "skip_checked": 1790193353
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0BXuYlNrUmE",
-                "duration": 2546,
-                "title": "The Unreasonable Effectiveness of Constructive Data Modeling - Alexis King | SSW 2026",
-                "skip": [],
-                "skip_checked": 1791847507
+                "skip_checked": 1792786230
             }
         ],
         "search_query": "software engineering conference talk",
-        "last_refreshed": 1791847470
+        "last_refreshed": 1792786215
     }
 }
