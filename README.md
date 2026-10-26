@@ -76,7 +76,7 @@ no-collapse rule as a whole channel, and warns (without refusing) about channels
 clips under five minutes to top up the half-hour schedule. A new mix arrives with the channel's
 next turn in the rotation - within a fortnight.
 
-## Media channels: local files, streamed links, and torrent ingest
+## Media channels: local files and streamed links
 
 Beyond the YouTube dial sits a block of `file` channels (numbers 91-99) that schedule ordinary
 video files the same clock-driven way — a movie channel is just a channel whose clips are files
@@ -91,42 +91,6 @@ instead of clips to resolve. Two shapes:
   directly from the host. Seeds are gated to what the televisions can decode (h264/hevc, max
   3840×2160).
 
-### The ingest CLI
-
-```sh
-python3 curation/ingest.py
-```
-
-Lawful sources only: it downloads what you point it at, and what lands plays from disk,
-permanently, like everything else on these channels. The tool's job is transport; the choice
-is the operator's.
-
-1. Paste a **magnet** or a **.torrent URL**.
-2. It verifies first: the server fetches the torrent metadata and shows the name, total size
-   and file list. Nothing downloads until you confirm this is the thing you meant.
-3. Choose **1) Movies**, **2) Series** (asks for the show name; files go to
-   `Series/<Show>/` and sort in S01E01 order), or **3) a new channel** — it asks a name,
-   creates the folder, takes the next free channel number, and wires the dial entry itself.
-4. The server downloads with aria2, with live progress on your terminal. Archive-style
-   torrents default to video-files-only (a 24 GB source dump stays on the shelf). A dead or
-   tracker-less swarm is told as such instead of a silent stall; if a healthy torrent stalls
-   at 98%, the missing tail is completed over https from the host's own CDN when one is
-   known (archive.org). Ctrl-C is safe — pasting the same link resumes.
-5. On completion it re-serves, re-scans, rebuilds and publishes the lineup. Televisions pick
-   it up on next launch.
-
-Rules of the road, learned by experiment:
-
-- **Check the seeder count at the source.** Zero seeders is a dead torrent — no tool revives
-  it. A magnet without `&tr=` tracker params lives on DHT alone and is the fragile form.
-- **Deleted files leave with the same pipeline.** Remove them anywhere (Nextcloud UI counts)
-  then run `tools/media-server/deploy.sh` followed by the build & push below; the scanner
-  rebuilds every channel list from disk truth.
-- Everything the ingest CLI does by the end is: `tools/media-server/deploy.sh`, then in
-  `curation/`: `python3 build_lineup.py && git add -A && git commit && git push`.
-- Server addresses and folder paths are defaults in `curation/ingest.py`,
-  `curation/scan_media.py` and `tools/media-server/deploy.sh` — all three name the same box.
-
 ## Layout
 
 | Path | What |
@@ -139,7 +103,6 @@ Rules of the road, learned by experiment:
 | `curation/pluto_lineup.json` | The hand-picked Pluto TV channels |
 | `curation/build_pluto.py` | Matches that list against iptv-org and writes `pluto.json` |
 | `curation/scan_media.py` | Rebuilds file-channel streams from the media folders + remote urls |
-| `curation/ingest.py` | Interactive magnet/.torrent → channel ingest on the server |
 | `tools/media-server/` | Caddy static file service for the media folders + deploy script |
 | `channels.json` | The published dial, committed nightly |
 | `pluto.json` | The Pluto TV dial, committed nightly |
