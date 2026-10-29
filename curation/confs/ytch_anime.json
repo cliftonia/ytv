@@ -7,46 +7,11 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=gsGWsY3LHxU",
-                "duration": 1171,
-                "title": "Hitoner Episode 1 English Dub | The Invasive Species",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=s89mt2Qpuk4",
-                "duration": 930,
-                "title": "Hitoner Episode 2 English Dub | A Fresh Start",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jUYsA9hDOKM",
-                "duration": 698,
-                "title": "Hitoner Episode 3 English Dub | The Hito's Language",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xODW9-3u6H4",
-                "duration": 595,
-                "title": "Hitoner Episode 7 | Hito Homecoming",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=OEdHsZbJHrk",
                 "duration": 1550,
                 "title": "Full Anime | “Attack on Titan” Season 1 Ep.1 (English Dub)",
                 "skip": [],
                 "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=75ccB77BtF4",
-                "duration": 1461,
-                "title": "Full Anime | “Attack on Titan” Season 1 Ep.2 (English Dub)",
-                "skip": [],
-                "skip_checked": 1792180024
             },
             {
                 "url": "https://www.youtube.com/watch?v=mOmhQ54MwG4",
@@ -61,6 +26,79 @@
                 "skip_checked": 1791241322
             },
             {
+                "url": "https://www.youtube.com/watch?v=Opr5daXls8g",
+                "duration": 1461,
+                "title": "Full Anime | “Attack on Titan” Season 1 Ep.4 (English Dub)",
+                "skip": [
+                    [
+                        0.3,
+                        130.5
+                    ]
+                ],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0nj6gcRzz-8",
+                "duration": 1458,
+                "title": "Full Anime | “Attack on Titan” Season 1 Ep.6 (English Dub)",
+                "skip": [
+                    [
+                        0.7,
+                        92.4
+                    ]
+                ],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rb0RGD4qlIU",
+                "duration": 4839,
+                "title": "anime series episode 1-12 english dubbed | anime series full episodes | anime dub| full screen anime",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SUpHLht3X0s",
+                "duration": 1371,
+                "title": "Firefly Wedding Episode 1 | English Dub | Full Episode | New Anime 2026",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LeMR9nkaM_w",
+                "duration": 1385,
+                "title": "Firefly Wedding Episode 1 SUB | An Unwanted Repayment (LIMITED TIME)",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cqkn9-DjrY0",
+                "duration": 1460,
+                "title": "Classroom of the Elite Episode 1 | What is evil? Whatever springs from weakness",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ASSsbXuGuoA",
+                "duration": 1431,
+                "title": "Classroom of the Elite Season 2 Episode 1 English Dub",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gsGWsY3LHxU",
+                "duration": 1171,
+                "title": "Hitoner Episode 1 | The Invasive Species",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WvJYjn6Il9I",
+                "duration": 1251,
+                "title": "Black Clover Season 2 Episode 3 | Full Episode | English Dub",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=P7KHDJo_2z8",
                 "duration": 1431,
                 "title": "Kaya-chan Isn't Scary | Full Episode 1 | ENGLISH DUB",
@@ -68,32 +106,38 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=c9D8R2CYq8o",
-                "duration": 1431,
-                "title": "Kaya-chan Isn't Scary | Full Episode 2 | ENGLISH DUB",
+                "url": "https://www.youtube.com/watch?v=cHeEWr1GI0w",
+                "duration": 305,
+                "title": "Dragon Ball Super Beerus Episode 3 Vegeta Super Saiyan 3 Vs Beerus Full Fight English Subbed",
                 "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=jq0MFGrZNgU",
-                "duration": 1260,
-                "title": "Black Clover Season 2 Episode 1 - 2 English Dub | Anime Recap 2026",
+                "url": "https://www.youtube.com/watch?v=OtvpeOF_kHs",
+                "duration": 3020,
+                "title": "Suikoden: The Anime | Episode 1: Hometown (SUB)",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=8dafTL-FrJ0",
-                "duration": 1545,
-                "title": "THE LAST ORDER | Anime Full Screen English Dubbed | Episode 1 2026",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x2TkEePukIQ",
-                "duration": 3171,
-                "title": "Re:ZERO -Starting Life in Another World- Director's Cut Episode 1 English Dub",
-                "skip": [],
-                "skip_checked": 1793222925
+                "url": "https://www.youtube.com/watch?v=2iYsRP3abKY",
+                "duration": 1750,
+                "title": "ULTRAMAN TEO Episode 12 \"A Hero's Determination\" -Official- [English Dubbed]",
+                "skip": [
+                    [
+                        151.9,
+                        195.2
+                    ],
+                    [
+                        435.1,
+                        516.4
+                    ],
+                    [
+                        768.3,
+                        867.4
+                    ]
+                ],
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=5ILlar1UJ88",
@@ -103,18 +147,74 @@
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=NJEUUbU2U6E",
-                "duration": 971,
-                "title": "Summoned Rooster Hero With SSS Skill New Anime English Dub 2026 Episode 1",
+                "url": "https://www.youtube.com/watch?v=iPbhDwgrpJk",
+                "duration": 1430,
+                "title": "Masamune-kun's Revenge Episode 1 English Dub | The Boy Who Was Called Pig's Foot",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1792180024
             },
             {
-                "url": "https://www.youtube.com/watch?v=IZ_50y0ntvQ",
-                "duration": 1430,
-                "title": "Twilight Out of Focus Episode 1 English Dub",
+                "url": "https://www.youtube.com/watch?v=XRVIWdNFdHI",
+                "duration": 3827,
+                "title": "STRINGS OF LOVE | Full Episode 86  | MULTI SUBS | Indian Series English Dubbed #EP86",
                 "skip": [],
-                "skip_checked": 1790634163
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5aMk2tjTvoc",
+                "duration": 1443,
+                "title": "❄️ Koori no Jouheki (The Ramparts of Ice) Episode 6 | English Dub | 1080p HD",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H2vlatYVY1o",
+                "duration": 2681,
+                "title": "Boy Love Series: Physical Therapy EP 1 (SUBT)",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VvJ8waWMm1U",
+                "duration": 1372,
+                "title": "📛【Leaked version | EP216】BTTH | EN | FULL | Chinese Animation",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r_tWGFuQNmU",
+                "duration": 673,
+                "title": "Dinoster | S3 | Dinoster's New World | Quantum Heroes | Ep.1",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ss1VgDjkBIo",
+                "duration": 3747,
+                "title": "GAME OF LOVE | Full Episode 35 | MULTI SUB | Indian Series in English Dubbed #EP35",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7k3bVqj9uzY",
+                "duration": 1382,
+                "title": "Sofia the First Meets Princess Belle Full Episode | The Amulet & the Anthem | S1 E17 |@disneyjr",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8dafTL-FrJ0",
+                "duration": 1545,
+                "title": "THE LAST ORDER | Anime Full Screen English Dubbed | Episode 1 2026",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d4no9OZT5BE",
+                "duration": 859,
+                "title": "[HI & JP Dub] The Child Of Two Worlds | Episode 1 Remastered (S1E01) | E-LoonSo | AI Animation",
+                "skip": [],
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=yvO6Sx2K7eM",
@@ -124,9 +224,16 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=pjbIiCNIlok",
-                "duration": 2753,
-                "title": "Hell Mode Episode 1 - 2 English Dub. Isekai New 2026",
+                "url": "https://www.youtube.com/watch?v=__Y3Cp0jZJE",
+                "duration": 3874,
+                "title": "[Full/ENG DUB] THE K2 EP.1 | #Kdrama #englishdub #jichangwook #limyoona",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8FiC6DLIzqQ",
+                "duration": 1432,
+                "title": "Tokyo Revengers Episode 1 English Dub | Reborn",
                 "skip": [],
                 "skip_checked": 1792180024
             },
@@ -145,18 +252,11 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=8FiC6DLIzqQ",
-                "duration": 1432,
-                "title": "Tokyo Revengers Episode 1 English Dub | Reborn",
+                "url": "https://www.youtube.com/watch?v=x2kkwlai9Pg",
+                "duration": 1431,
+                "title": "NANBAKA Episode 1 | Idiots with Numbers!",
                 "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0MvSHgQBH4Q",
-                "duration": 2920,
-                "title": "The Daily Life of the Immortal King EP 1–3 English Dub 😱 | New Chinese Anime 2025 | Full HD",
-                "skip": [],
-                "skip_checked": 1792786230
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=CXsebXvLvkU",
@@ -166,32 +266,18 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=RA0ca2ubPXk",
-                "duration": 1431,
-                "title": "Raven of the Inner Palace Episode 1 English Dub | The Jade Earring, Part 1",
+                "url": "https://www.youtube.com/watch?v=l4NiLn3LIoM",
+                "duration": 1500,
+                "title": "BLUE LOCK Episode 1 English Dub | Dream",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=6a2_80c7eys",
-                "duration": 1393,
-                "title": "A Couple of Cuckoos Episode 1 English Dub | You're going to be my boyfriend.",
+                "url": "https://www.youtube.com/watch?v=x2TkEePukIQ",
+                "duration": 3171,
+                "title": "Re:ZERO -Starting Life in Another World- Director's Cut Episode 1 English Dub",
                 "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BFLIcQDOVus",
-                "duration": 1437,
-                "title": "Wistoria: Wand and Sword Episode 1 English Dub | Like a Lone Sword",
-                "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iPbhDwgrpJk",
-                "duration": 1430,
-                "title": "Masamune-kun's Revenge Episode 1 English Dub | The Boy Who Was Called Pig's Foot",
-                "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793222925
             },
             {
                 "url": "https://www.youtube.com/watch?v=wQeYbrY01ac",
@@ -201,88 +287,74 @@
                 "skip_checked": 1792180024
             },
             {
-                "url": "https://www.youtube.com/watch?v=sYrt4M-SCak",
-                "duration": 2797,
-                "title": "BUBBLEGUM CRASH! - ILLEGAL ARMY | Episode 01 (English Dub) | Full 1990s ANIME OVA HD",
+                "url": "https://www.youtube.com/watch?v=WCZkYw0d0WY",
+                "duration": 1414,
+                "title": "Shikimori's Not Just a Cutie Episode 1 English Dub | My Girlfriend is Super Cute",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iCi9g9ieMYA",
+                "duration": 1451,
+                "title": "The Apothecary Diaries Season 3 Episode 1 SUB | Locusts",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BFLIcQDOVus",
+                "duration": 1437,
+                "title": "Wistoria: Wand and Sword Episode 1 English Dub | Like a Lone Sword",
                 "skip": [],
                 "skip_checked": 1792180024
             },
             {
-                "url": "https://www.youtube.com/watch?v=o_kSDQGYPmM",
-                "duration": 1432,
-                "title": "Miss Kobayashi's Dragon Maid Episode 1 English Dub | The Strongest Maid in History, Tohru!",
+                "url": "https://www.youtube.com/watch?v=wFoXjiBJ_Rc",
+                "duration": 1431,
+                "title": "Love of Kill Episode 1 English Dub | WHAT'S YOUR NAME?",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=4PRuGrr2pRU",
-                "duration": 887,
-                "title": "Solo Leveling Season 3 Episode 15 Manhwa to Animation English Dubbed (Fan made animation)",
+                "url": "https://www.youtube.com/watch?v=IZ_50y0ntvQ",
+                "duration": 1430,
+                "title": "Twilight Out of Focus Episode 1 English Dub",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=DThrTAlK4ZU",
-                "duration": 3737,
-                "title": "PARADIS VS MARLEY ARC FULL MOVIE ENGLISH DUB 1080p 60fps HD | ATTACK ON TITAN SEASON 4 EPISODE 1-8",
+                "url": "https://www.youtube.com/watch?v=nG1Xqzop86E",
+                "duration": 1235,
+                "title": "Why Am I Baby Mafia | FULL ANIME SERIES (EP 1-30)",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=l9hbZh_6a_o",
-                "duration": 1356,
-                "title": "KING'S GAME | Episode 04 | English Dub | Vision Anime Entertainment",
+                "url": "https://www.youtube.com/watch?v=eaavz51l87g",
+                "duration": 1435,
+                "title": "Noblesse Episode 1 English Dub | What Must Be Protected / Ordinary",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=b_elG294gMw",
-                "duration": 985,
-                "title": "Anthro King Isekai - Making Friends With Beast Girls.",
+                "url": "https://www.youtube.com/watch?v=StjyAYO_Kd8",
+                "duration": 4870,
+                "title": "Cast Out for Her Weight, a Fallen Mage Drew the Holy Sword and Returned for Her Daughter",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=HVjQp54UboA",
-                "duration": 5171,
-                "title": "Full Movie| FAIRY TAIL THE MOVIE: Phoenix Priestess (English Dub)",
+                "url": "https://www.youtube.com/watch?v=zXHPfJ5CAgU",
+                "duration": 5287,
+                "title": "MF Ghost Ashinoko GT (2nd race) Full Race ENG DUB",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=o47I1pbgcgk",
-                "duration": 808,
-                "title": "Luffy Gear 5 Vs Rob Lucci Full Fight In English Dub | One Piece In English Part 4 |",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=acD-WG3069o",
+                "url": "https://www.youtube.com/watch?v=Cv8OM--2NlQ",
                 "duration": 3362,
-                "title": "Reincarnated As Useless Mage Until He Awakens Demonic Power And Shocks Everyone | Anime Recap",
+                "title": "【ENG DUB | FULL】She Hid Her CEO Identity But Fell for the Gentle Doctor！#romance",
                 "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zkYN0MI9nZI",
-                "duration": 4809,
-                "title": "New Anime Movie Eng Dub 2023",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z5eY-NZQQJc",
-                "duration": 919,
-                "title": "Dragon Ball Super Original & Remake Comparison - DBS Beerus Anime w/ Accurate Manga References 2026",
-                "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sIkoz1mfM4o",
-                "duration": 4828,
-                "title": "Demonic's Descent | ANIME, FANTASY | Full Movie in English",
-                "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=XdhczomQXTo",
@@ -292,9 +364,23 @@
                 "skip_checked": 1790890293
             },
             {
-                "url": "https://www.youtube.com/watch?v=yUqcTRmk4s0",
-                "duration": 5076,
-                "title": "【FULL English Dubbed】I Reborn with an Unbeatable System, and Astounded the Entire World!#comics",
+                "url": "https://www.youtube.com/watch?v=bJO0uDb2Y1E",
+                "duration": 5269,
+                "title": "KINGDOM OF DRAGONS - Full English Movie | Animation Action Adventure Fantasy Movie | Free Movies",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HVjQp54UboA",
+                "duration": 5171,
+                "title": "Full Movie| FAIRY TAIL THE MOVIE: Phoenix Priestess (English Dub)",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Cm73ma6Ibcs",
+                "duration": 3666,
+                "title": "Blue Eye Samurai | Hammerscale | Full Episode | Netflix",
                 "skip": [],
                 "skip_checked": 1793049429
             },
@@ -306,25 +392,11 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=rBKiVBfYwgI",
-                "duration": 5293,
-                "title": "ENG DUB | Everyone Mocked My Hidden Class… Until I Soloed Every Dungeon | Full Anime",
+                "url": "https://www.youtube.com/watch?v=PqBWNDtCYGQ",
+                "duration": 3437,
+                "title": "【ENG DUB | FULL】He Never Knew He Had a Daughter Until She Suddenly Came to His Office！#drama",
                 "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Nq9cQDgD0h4",
-                "duration": 3164,
-                "title": "【TheLamentOfAutumn】01🍂College Girl works at bar to medicine, but general falls for her on first day!",
-                "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WwbMH4XLlIU",
-                "duration": 3733,
-                "title": "EP11-EP13 | Mechamato Season 4 (ENG DUB)",
-                "skip": [],
-                "skip_checked": 1791056276
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=0tvC2iauh0U",
@@ -334,11 +406,60 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=albPBC8xRxY",
-                "duration": 5033,
-                "title": "【ENG DUB】He Disguised As A Nobody To Protect Her, But Her Blind Arrogance Ruined Their Marriage...💔",
+                "url": "https://www.youtube.com/watch?v=U9i-Kk8GjPU",
+                "duration": 1422,
+                "title": "Miraculous: Tales of Ladybug and Cat Noir S6 Premiere Full Episode |  Disney Channel",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WwbMH4XLlIU",
+                "duration": 3733,
+                "title": "EP11-EP13 | Mechamato Season 4 (ENG DUB)",
+                "skip": [],
+                "skip_checked": 1791056276
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TdpXfwH3dxo",
+                "duration": 1602,
+                "title": "MIRACULOUS | ☀️ SUMMER 2026  - Compilation 🐞 | Tales of Ladybug & Cat Noir",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oXEhBobgc_Y",
+                "duration": 1416,
+                "title": "Dragon Striker First Full Episode! \"The Awakening\" 🐲🔥 | New Show |  Disney Channel",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=avp6V45jT-Q",
+                "duration": 4825,
+                "title": "【ENG DUB | FULL】She Married a Poor Delivery Man Unaware He Was a Billionaire CEO With Twins！#romance",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5_eHBHyay9g",
+                "duration": 2047,
+                "title": "MIRACULOUS | ⚽ WORLD CUP 2026  - Compilation 🐞 | Tales of Ladybug & Cat Noir",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gtFM0bCJomc",
+                "duration": 3831,
+                "title": "【ENG DUB | FULL】They Thought She’d Fight the Fake Heiress She Just Wanted to Eat！#romance",
+                "skip": [],
+                "skip_checked": 1791241322
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FkFCUUXH7yY",
+                "duration": 706,
+                "title": "[NEW✨] Ep.26 We are a Rainbow | Princess Story | Full Episode | Rainbow Bubblegem🌈",
+                "skip": [],
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=uCSOjGOQOAc",
@@ -353,46 +474,114 @@
                 "skip_checked": 1792180024
             },
             {
-                "url": "https://www.youtube.com/watch?v=m3oC3bzck9s",
-                "duration": 3363,
-                "title": "The Chronicles of Noah (2026 Film) | Full Biblical Movie 4K",
+                "url": "https://www.youtube.com/watch?v=c2flin7DzrQ",
+                "duration": 1955,
+                "title": "Double Trouble | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Cartoon for Kids",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=gtFM0bCJomc",
-                "duration": 3831,
-                "title": "【ENG DUB | FULL】They Thought She’d Fight the Fake Heiress She Just Wanted to Eat！#romance",
+                "url": "https://www.youtube.com/watch?v=jMmtB6fLw9w",
+                "duration": 1380,
+                "title": "Miraculous: Tales of Ladybug and Cat Noir FULL Episode \"Yaksi Gozen\"! 🐞❤️ |  Disney Channel",
+                "skip": [
+                    [
+                        0.0,
+                        2.3
+                    ]
+                ],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zkYN0MI9nZI",
+                "duration": 4809,
+                "title": "New Anime Movie Eng Dub 2023",
                 "skip": [],
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZT4CZJOS81k",
-                "duration": 2651,
-                "title": "EP03 - EP04 | Mechamato Season 2 (ENG DUB)",
+                "url": "https://www.youtube.com/watch?v=CT9cV6sZsGQ",
+                "duration": 1296,
+                "title": "Grim Tidings 💥 FULL EPISODE | Sonic Prime | Netflix Family",
                 "skip": [],
-                "skip_checked": 1792180024
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=R-BMGB7UPHE",
-                "duration": 1634,
-                "title": "God Goku vs Beerus Full Fight (English dub) #goku #beerus",
+                "url": "https://www.youtube.com/watch?v=NFMVLj48vOs",
+                "duration": 3851,
+                "title": "【ENG DUB】💖Reborn In Beast World, Dump The Scum Husband, Loyal Guard Helps Me Rise",
                 "skip": [],
-                "skip_checked": 1791241322
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=hNBDtBfv6wE",
-                "duration": 1354,
-                "title": "Ben 10: Ultimate Alien - Duped (Full Episode)",
+                "url": "https://www.youtube.com/watch?v=VWw-xeYPEkk",
+                "duration": 484,
+                "title": "Fan Made Goku vs Beerus Remake All Transformations Includes SSJ4 Cameo",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=Cm73ma6Ibcs",
-                "duration": 3666,
-                "title": "Blue Eye Samurai | Hammerscale | Full Episode | Netflix",
+                "url": "https://www.youtube.com/watch?v=dmjPErTXYj0",
+                "duration": 1392,
+                "title": "Miraculous: Tales of Ladybug and Cat Noir FULL Episode \"The Dark Castle\" |  Disney Channel",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U9_iDj-sR9M",
+                "duration": 1357,
+                "title": "Nikola Tesla VS Beelzebub | Full Fight | English Dub | Record of Ragnarok | HD",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cZF_bqU3a5A",
+                "duration": 1754,
+                "title": "🎃 SPOOKY MIRACULOUS MOMENTS - 2026 COMPILATION 👻 | Ladybug & Cat Noir Halloween Special",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ADqLhxmUG_4",
+                "duration": 1386,
+                "title": "The Wrong Track / All Pumped Up 🔥 FULL EPISODE | Hot Wheels Let's Race | Netflix Jr",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r3OMgOsa_sQ",
+                "duration": 3629,
+                "title": "MIRACULOUS WORLD | ⭐ NEW YORK 🗽 United Heroez | Full Episode",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0fI8rV3V9mY",
+                "duration": 663,
+                "title": "Cyberpunk: Edgerunners Season 2 | D vs Capri and Talia Fight Scene Recap | Final Battle & Ending",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o47I1pbgcgk",
+                "duration": 808,
+                "title": "Luffy Gear 5 Vs Rob Lucci Full Fight In English Dub | One Piece In English Part 4 |",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nb5Sv9FKAe0",
+                "duration": 245,
+                "title": "Jujutsu Kaisen Season 2 | SaturoGojo Dub | Episode - 4 and 5 | English Dubbed  💜💙",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BevLSlQZY40",
+                "duration": 2921,
+                "title": "BLACK JACK OVA Karte 07: BLACK AND WHITE (English Dub) | 1990s Anime | Osamu Tezuka & Osamu Dezaki",
+                "skip": [],
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=FOx1z4yXd_c",
@@ -402,46 +591,11 @@
                 "skip_checked": 1791241322
             },
             {
-                "url": "https://www.youtube.com/watch?v=spb2tQqPHqw",
-                "duration": 1001,
-                "title": "Why Did Death Become My Father? 💀 | English Dubbed | Full Series 1–31",
-                "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=PO0zjQw35Dg",
                 "duration": 4215,
                 "title": "Naruto vs Pain Full Fight in English Dub | Naruto Shippuden | Sage Mode Naruto vs Pain",
                 "skip": [],
                 "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Vkgjl0WELko",
-                "duration": 1399,
-                "title": "Unsociable - Full Episode (Ongezellig AI English Dub)",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lc0gis09VZs",
-                "duration": 4293,
-                "title": "1 HOUR from Avatar: The Last Airbender - Book 1: Water 🌊 | Episodes 1 - 11 | @TeamAvatar",
-                "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Q8ilG9qgBlc",
-                "duration": 1352,
-                "title": "Naruto, Sasuke and Boruto Against Momoshiki Epic Full Fight",
-                "skip": [],
-                "skip_checked": 1792180024
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=raYD5O0xpZQ",
-                "duration": 1255,
-                "title": "Jiraiya vs Pain   Jiraiya's Death   Full Fight English Dub 1080p",
-                "skip": [],
-                "skip_checked": 1792180024
             }
         ],
         "search_query": "anime full episode english dub",
@@ -450,6 +604,6 @@
             "shonen anime full episode english sub",
             "anime full movie english dub"
         ],
-        "last_refreshed": 1792180023
+        "last_refreshed": 1793309391
     }
 }
