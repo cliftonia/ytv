@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=C9SIC1-SVbk",
-                "duration": 2574,
-                "title": "Jay Cutler - All Access Documentary 2026",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=dh7B7eibQOA",
                 "duration": 3724,
                 "title": "SESSION 6 BACK, FOR Q4 - 2026 | THE FULL WORKOUT | DOCUMENTARY 006",
@@ -35,9 +28,30 @@
                 "skip_checked": 1792786230
             },
             {
+                "url": "https://www.youtube.com/watch?v=1ocgzSZomFM",
+                "duration": 1035,
+                "title": "SESSION 5 BACK, FOR Q4 - 2026 | THE WARM UP WORKOUT | DOCUMENTARY 005",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=2k6-BvJSz64",
                 "duration": 767,
                 "title": "SESSION 7 BACK, FOR Q4 - 2026 | THE STRENGTH SESSION WORKOUT  | DOCUMENTARY 007",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pbk6XqNpAsc",
+                "duration": 2540,
+                "title": "U.S. Army Basic Combat Training at Fort Jackson | Full Documentary",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QP6NgjUgFjM",
+                "duration": 1940,
+                "title": "SESSION 7 BACK, FOR Q4 - 2026 | THE STRENGTH WORKOUT PT 2| DOCUMENTARY 007",
                 "skip": [],
                 "skip_checked": 1793049429
             },
@@ -49,88 +63,11 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=pbk6XqNpAsc",
-                "duration": 2540,
-                "title": "U.S. Army Basic Combat Training at Fort Jackson | Full Documentary",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1ocgzSZomFM",
-                "duration": 1035,
-                "title": "SESSION 5 BACK, FOR Q4 - 2026 | THE WARM UP WORKOUT | DOCUMENTARY 005",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QP6NgjUgFjM",
-                "duration": 1940,
-                "title": "SESSION 7 BACK, FOR Q4 - 2026 | THE STRENGTH WORKOUT PT 2| DOCUMENTARY 007",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=fa5LFJQ5Cv4",
                 "duration": 3560,
                 "title": "SESSION 13 BACK, FOR Q4 - 2026 | THE FULL WORKOUT,💪 | DOCUMENTARY 013 (AFTER THUR SWIM DAY )",
                 "skip": [],
                 "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1O1I8KgsGYA",
-                "duration": 2012,
-                "title": "Iron Sharpens Iron: Papendal Training Group Documentary",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WJGpCCMPdoA",
-                "duration": 421,
-                "title": "2026 Wushu Training Documentary 🥋 | Liu Zhaohe 刘钊赫 (Shanghai University of Sport) | Changquan,",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=936zkKvervQ",
-                "duration": 366,
-                "title": "TBreez & Jackie Terry Workout Episode 1 Mini Documentary",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nqJBgiMyrnw",
-                "duration": 854,
-                "title": "Your \"Dream\" Workout App. | Episode 1 (Documentary)",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-vgb_oOplFs",
-                "duration": 1155,
-                "title": "What to Expect During Air Force Basic Military Training | Full Documentary | JBSA-Lackland",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8-5xzxu04oc",
-                "duration": 1167,
-                "title": "25 Minute Victoria Sport High Impact Cardio  Lower Body Workout Documentary",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=n9Rv7jeg9rQ",
-                "duration": 3116,
-                "title": "Arrow Up: 2026 BC Lions Training Camp Documentary",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=J_L6nIla1O8",
-                "duration": 2002,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w17d7 | 11k controlled and progressive",
-                "skip": [],
-                "skip_checked": 1793222925
             },
             {
                 "url": "https://www.youtube.com/watch?v=4-s5le66QCA",
@@ -140,11 +77,130 @@
                 "skip_checked": 1792527287
             },
             {
-                "url": "https://www.youtube.com/watch?v=zR9Iul6s2U8",
-                "duration": 1056,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w10d6 | easy recovery run",
+                "url": "https://www.youtube.com/watch?v=936zkKvervQ",
+                "duration": 366,
+                "title": "TBreez & Jackie Terry Workout Episode 1 Mini Documentary",
                 "skip": [],
-                "skip_checked": 1793309401
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1O1I8KgsGYA",
+                "duration": 2012,
+                "title": "Iron Sharpens Iron: Papendal Training Group Documentary",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8-5xzxu04oc",
+                "duration": 1167,
+                "title": "25 Minute Victoria Sport High Impact Cardio  Lower Body Workout Documentary",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oJd7Z01I5gs",
+                "duration": 3166,
+                "title": "Don't watch this workout documentary #gym @Shadowfit2",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WJGpCCMPdoA",
+                "duration": 421,
+                "title": "2026 Wushu Training Documentary 🥋 | Liu Zhaohe 刘钊赫 (Shanghai University of Sport) | Changquan,",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ifEJnQLaMvk",
+                "duration": 3122,
+                "title": "Cargo sailboats: A sea change for shipping? | DW Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z2mhIDQIsLU",
+                "duration": 2548,
+                "title": "Froning’s Take on Scotland at the Rogue Invitational",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Yuhnuoj1LbM",
+                "duration": 315,
+                "title": "OFFSEASON DOCUMENTARY (EPISODE 1) Upper Body Workout",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wLQKHtYY7vk",
+                "duration": 368,
+                "title": "Hybrid Training vs. CrossFit: Which Is Better? | Sports Science Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zxtMzRw6bpw",
+                "duration": 1657,
+                "title": "Film - today workout 2026 - 2026",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-vgb_oOplFs",
+                "duration": 1155,
+                "title": "What to Expect During Air Force Basic Military Training | Full Documentary | JBSA-Lackland",
+                "skip": [],
+                "skip_checked": 1792527287
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ojOdB-7Dbdg",
+                "duration": 2612,
+                "title": "Artificial intelligence and psychotherapy | DW Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yisu-kVkEyM",
+                "duration": 916,
+                "title": "NFL WR/TE BRANDON CLARY  WORKOUT Documentary PT.1",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hL5apLhOzC4",
+                "duration": 290,
+                "title": "Park Boy | A Calisthenics Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KwLePntzUBc",
+                "duration": 837,
+                "title": "This record has stood for 6 years, tonight it was broken TWICE | World Tour Finals 2026",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xRH7mgDNEF0",
+                "duration": 583,
+                "title": "Ten Minutes After Dinner Beat a 45-Minute Workout — Full Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hgi-hOhT_rk",
+                "duration": 1263,
+                "title": "How Does an Undocumented Boxer Chase a World Title?",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J_L6nIla1O8",
+                "duration": 2002,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w17d7 | 11k controlled and progressive",
+                "skip": [],
+                "skip_checked": 1793222925
             },
             {
                 "url": "https://www.youtube.com/watch?v=KuxpKyqWkxo",
@@ -161,125 +217,25 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=uk4B5awow_o",
-                "duration": 694,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w13d5 | a little easy run",
+                "url": "https://www.youtube.com/watch?v=cglq4LjuJpw",
+                "duration": 662,
+                "title": "NHS Nurse Attempts Worlds Hardest Ironman",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=xACPFVd5v_A",
-                "duration": 2846,
-                "title": "2026 Women's World Team Selection - Peacock Broadcast",
+                "url": "https://www.youtube.com/watch?v=GnHUP5FBbpY",
+                "duration": 257,
+                "title": "OFFSEASON DOCUMENTARY (Episode 3) Lower Body Workout",
                 "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bVtCGfm_JVs",
-                "duration": 1501,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w09d2 | 10 weeks to go",
-                "skip": [],
-                "skip_checked": 1791241322
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eL6jT1JgY78",
-                "duration": 2299,
-                "title": "How Two Foster Twins Became Fitness's Most Controversial Duo (The Tren Twins)",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AMTELjfNXZg",
-                "duration": 2647,
-                "title": "The Dark Reality Of Pro Bodybuilding",
-                "skip": [
-                    [
-                        1577.1,
-                        1582.3
-                    ],
-                    [
-                        2639.3,
-                        2647.0
-                    ]
-                ],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TKytXGZsT2Y",
-                "duration": 953,
-                "title": "Jason Voorhees MUSCLES Do WHAT NOW?! (Crystal Lake 2026)",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H7t3P3J8dQg",
-                "duration": 2860,
-                "title": "Film - today workout 2026 - 2026_2_1_22_47_28*",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xZcw1d3wIJo",
-                "duration": 1325,
-                "title": "Peter Snell Training Documentary 1964 New Zealand",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0JkN21_SPOA",
-                "duration": 820,
-                "title": "CineStill 800T: My Favourite Film for Shooting Indoors",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ALho8KiKSfw",
-                "duration": 1385,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w12d6 | holding back running once more",
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0kKdte9V3RY",
-                "duration": 328,
-                "title": "Russia-India Military Cooperation: Indra-2026 Drills Begin Across the Russian Territory",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Yelb3GJ8t_M",
-                "duration": 548,
-                "title": "Roman Reigns Shows Off His Gym & Fridge | Gym & Fridge | Men's Health",
-                "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=aQ92cE_nKsI",
                 "duration": 262,
                 "title": "Workout Film Spring 2026",
                 "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=44s9ytu4jxc",
-                "duration": 873,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w17d2 | 50min easy run w/fast finish",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-7eCednko2w",
-                "duration": 835,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w13d2 | easy run",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CasS1IjyY98",
-                "duration": 1272,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w15d3 | easy jog with surprise guest",
-                "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=SupnEwKjOUI",
@@ -289,59 +245,116 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=YUsIUxGMEWA",
-                "duration": 1070,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w16d4 | controlled speed returns",
+                "url": "https://www.youtube.com/watch?v=QTQuWuJBxN0",
+                "duration": 494,
+                "title": "Auston Matthews' INSANE Diet & Workout Routine!",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=Jcd-3SWcDGs",
-                "duration": 1063,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w09d7 | marathon pace work",
+                "url": "https://www.youtube.com/watch?v=-IiyXoqpUxw",
+                "duration": 4160,
+                "title": "Workout 201: Off-Day - Yoga / Lift - Film Demos Live",
                 "skip": [],
-                "skip_checked": 1791495700
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=RE3_PGwDwhw",
-                "duration": 2597,
-                "title": "Lose 150 Lbs Together, Win $250,000",
-                "skip": [
-                    [
-                        867.5,
-                        873.7
-                    ],
-                    [
-                        2276.4,
-                        2284.7
-                    ],
-                    [
-                        2481.5,
-                        2504.1
-                    ]
-                ],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jhAu9MdWGwY",
-                "duration": 1502,
-                "title": "Training Movie Star KIT CONNOR For His Next Film",
+                "url": "https://www.youtube.com/watch?v=yWhA1PFRLfA",
+                "duration": 1482,
+                "title": "More than a workout. Less than a documentary. Somewhere in between. #vlog #golaghat",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ao4sRzU0ubo",
-                "duration": 793,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w14d6 | solid base run",
+                "url": "https://www.youtube.com/watch?v=M0cDGeD8bLs",
+                "duration": 2552,
+                "title": "Between Capitol Hill and Black Broadway - Washington, D.C.'s hidden worlds | DW Documentary",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=rPCVyaM8xDk",
-                "duration": 705,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w14d5 | an hour indoor bike",
+                "url": "https://www.youtube.com/watch?v=bnnpDr03JzE",
+                "duration": 1021,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w11d7 | marathon pace long run",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=44s9ytu4jxc",
+                "duration": 873,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w17d2 | 50min easy run w/fast finish",
                 "skip": [],
                 "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_AdAXqM233w",
+                "duration": 1415,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w10d5 | 5k pace intervals",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YQJA1lbbcZY",
+                "duration": 928,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w17d3 | mentally messed up",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yv97bFg9dHI",
+                "duration": 249,
+                "title": "Rodrigo Blankenship Spring 2026 Kicking Workout Film (Field Goals + Kickoffs)",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KLoWmgiavkw",
+                "duration": 733,
+                "title": "I Let My Girlfriend Film My Training Day…",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=r-A7KNSsMPo",
+                "duration": 621,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w12d2 | running postponed",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xA_OwVBktiU",
+                "duration": 1023,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w09d4",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YoyAP9MGpM0",
+                "duration": 732,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w15d5 | progression run",
+                "skip": [],
+                "skip_checked": 1792527287
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3PVcUuNc-uc",
+                "duration": 621,
+                "title": "Chasing Sub 3 | Daily Marathon Training Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zR9Iul6s2U8",
+                "duration": 1056,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w10d6 | easy recovery run",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m4_xHsCpAS0",
+                "duration": 620,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w16d3 | smooth zone 2 running",
+                "skip": [],
+                "skip_checked": 1791143589
             },
             {
                 "url": "https://www.youtube.com/watch?v=c4WVNIFpDtA",
@@ -355,70 +368,14 @@
                 "duration": 1075,
                 "title": "marathon training documentary | road to osaka marathon 2026 | w14d7 | 3h long run depleted",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=m4_xHsCpAS0",
-                "duration": 620,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w16d3 | smooth zone 2 running",
+                "url": "https://www.youtube.com/watch?v=uCHFYOYf2oE",
+                "duration": 251,
+                "title": "What Did Manifestor Train To Become So Strong?",
                 "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zzqDvwVfwY0",
-                "duration": 2675,
-                "title": "Elite Air Force Pilots Face Deadly F-15 Course – Episode 6 - Documentary in English",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Typbk6ai3CE",
-                "duration": 1791,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w10d7 | long run",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7tmah54LMJ4",
-                "duration": 840,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w18d3 | asics metaspeed sky tokyo test",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jGFHEEoMaps",
-                "duration": 750,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w18d2 | no run - race week reality",
-                "skip": [],
-                "skip_checked": 1791056276
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RUdSzzFuy7k",
-                "duration": 711,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w14d3 | just another day",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xH9uunfk-kk",
-                "duration": 2171,
-                "title": "Boot Camp: Behind The Scenes at Recruit Training Command (Full documentary, 2019)",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iAwYKMLdWgA",
-                "duration": 323,
-                "title": "Jake Sudit - 2025/26 Spring Season - Goalkeeper Training Film (Fitness)  - Bard College",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7Xy_8hIodJ0",
-                "duration": 1063,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w13d6 | indoor bike session",
-                "skip": [],
-                "skip_checked": 1792956294
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=TEoye8sURvE",
@@ -428,11 +385,67 @@
                 "skip_checked": 1791143589
             },
             {
-                "url": "https://www.youtube.com/watch?v=y34tkFfYZjs",
-                "duration": 1343,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w12d3 | no running just walking",
+                "url": "https://www.youtube.com/watch?v=jhAu9MdWGwY",
+                "duration": 1502,
+                "title": "Training Movie Star KIT CONNOR For His Next Film",
                 "skip": [],
-                "skip_checked": 1792956294
+                "skip_checked": 1792527287
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Typbk6ai3CE",
+                "duration": 1791,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w10d7 | long run",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IDcGW69MU10",
+                "duration": 2283,
+                "title": "Entering the Unknown | Andreas Almgren NYC Marathon 2026 Part Two",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7tmah54LMJ4",
+                "duration": 840,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w18d3 | asics metaspeed sky tokyo test",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RUdSzzFuy7k",
+                "duration": 711,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w14d3 | just another day",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fFMee7d_sTg",
+                "duration": 265,
+                "title": "Amp Up Sports track & field team training video/film study 26 video 1 of 5 -all athletes",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-LJq1oLgCFc",
+                "duration": 390,
+                "title": "Lower Body Workout technology sucks( part 2)  l couldn't film my whole workout that day",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iAwYKMLdWgA",
+                "duration": 323,
+                "title": "Jake Sudit - 2025/26 Spring Season - Goalkeeper Training Film (Fitness)  - Bard College",
+                "skip": [],
+                "skip_checked": 1792527287
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X9O5aAt1viA",
+                "duration": 1355,
+                "title": "Full Body Workout #BTS #Weightloss #Wura #Film",
+                "skip": [],
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=vFrbAxHBPtk",
@@ -442,165 +455,32 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=B61l_jV4-Q4",
-                "duration": 1849,
-                "title": "Day 1 | Easy Chair Workout — 4-Day Chair Workout Challenge",
+                "url": "https://www.youtube.com/watch?v=zzqDvwVfwY0",
+                "duration": 2675,
+                "title": "Elite Air Force Pilots Face Deadly F-15 Course – Episode 6 - Documentary in English",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=rWAe4YOwm9w",
-                "duration": 305,
-                "title": "Jimmy Hunter | Brookstone High c/o 2026 | Workout Film w/ One On One Kicking",
+                "url": "https://www.youtube.com/watch?v=H7t3P3J8dQg",
+                "duration": 2860,
+                "title": "Film - today workout 2026 - 2026_2_1_22_47_28*",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=s-t7ossJ1-A",
-                "duration": 671,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w17d5 | 75 min indoor cycling",
+                "url": "https://www.youtube.com/watch?v=6y11SwhhUg8",
+                "duration": 1204,
+                "title": "Film - workout 2026 - 2026_2_1_22_6_56*",
                 "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vYg9mBCavp8",
-                "duration": 5016,
-                "title": "李小梅 Cancer Workout [No Talking Documentary]",
-                "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=1D4WC3GjzCE",
                 "duration": 985,
                 "title": "British Army Fitness Training Film (1960s) Cold War Recruitment & Instruction",
                 "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TxWPuhxLdgg",
-                "duration": 1811,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w15d7 | depleted 25km city long run",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XQ1e1LiNnco",
-                "duration": 620,
-                "title": "Artur Beterbiev | Training For His Return",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VUP_vJn-lXQ",
-                "duration": 724,
-                "title": "RONNIE COLEMAN x DORIAN YATES - THE AGE OF MASS MONSTERS 🔥",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zlUg52I1wQ8",
-                "duration": 1454,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w13d7 | long run",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V17XsXLlxko",
-                "duration": 2981,
-                "title": "Refusing to Quit - 2026 Chicago Marathon",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bnnpDr03JzE",
-                "duration": 1021,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w11d7 | marathon pace long run",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7GinCvfaaDM",
-                "duration": 248,
-                "title": "Hotel Inspection & HACCP Training Documentary 2026 Food Safety#hotelmanagement",
-                "skip": [],
-                "skip_checked": 1790890293
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4nYGVRVJuY8",
-                "duration": 389,
-                "title": "First Time Hosting a Track Workout on Film",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UtgxUeNrJaA",
-                "duration": 1560,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w16d6 | 8k easy + side mission",
-                "skip": [],
-                "skip_checked": 1791143589
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=87MWvQ_nz4Q",
-                "duration": 313,
-                "title": "The end of my personal training studio. Where I film most of my YouTube videos. Thank you!! 🙏",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OvbkMYwRGHA",
-                "duration": 1321,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w13d4 | recovery ride on indoor bike",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=foxvGWNRsoA",
-                "duration": 741,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w16d2 | indoor cycling in zone 2",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=T0SfMnqbcx8",
-                "duration": 939,
-                "title": "The Viking Way to Get Dangerously Strong (Even When Skinny)",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RYsmSM06frY",
-                "duration": 1824,
-                "title": "30 Minutes of Training Film TODAY At Sullys Boxing Gym.   (No-Sound)",
-                "skip": [],
-                "skip_checked": 1791495700
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3jysycsf_cQ",
-                "duration": 423,
-                "title": "Behind the scenes of Roman Reigns’ “Street Fighter” stunt training: WWE Vlog",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YoyAP9MGpM0",
-                "duration": 732,
-                "title": "marathon training documentary | road to osaka marathon 2026 | w15d5 | progression run",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cg2EvoZV0dU",
-                "duration": 846,
-                "title": "Training to Become an MMA Fighter for 6 Weeks | Week 4 Part 1",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OCpdNQLL_Bo",
-                "duration": 2619,
-                "title": "Hometown Tragedy: The Broken Oath | Full Documentary",
-                "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=9GYYDEtFdFg",
@@ -610,77 +490,208 @@
                 "skip_checked": 1791056276
             },
             {
-                "url": "https://www.youtube.com/watch?v=HOeeSaDRzxc",
-                "duration": 2798,
-                "title": "Doomscrolling & Late Workouts: Why Are These Young People So Tired? | Restless - Part 2/2",
+                "url": "https://www.youtube.com/watch?v=cLaQ7NbkXyI",
+                "duration": 876,
+                "title": "At 79, Arnold Schwarzenegger  FINALLY Revealed How strong Lou Ferrigno Was",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rWAe4YOwm9w",
+                "duration": 305,
+                "title": "Jimmy Hunter | Brookstone High c/o 2026 | Workout Film w/ One On One Kicking",
                 "skip": [],
                 "skip_checked": 1792527287
             },
             {
-                "url": "https://www.youtube.com/watch?v=lXNUaCzhkWc",
-                "duration": 403,
-                "title": "60 Day Documentary Prompt/ Daily Workout at home/ Beast #challenge #beast",
+                "url": "https://www.youtube.com/watch?v=n9Rv7jeg9rQ",
+                "duration": 3116,
+                "title": "Arrow Up: 2026 BC Lions Training Camp Documentary",
                 "skip": [],
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=VB0h-5W0DrE",
-                "duration": 443,
-                "title": "How I Film Workout Content With My Son In The House",
+                "url": "https://www.youtube.com/watch?v=TXPZB7NBWqc",
+                "duration": 483,
+                "title": "STREET FIGHTER (2026): Behind the Scenes | Intense Training & Fun Moments",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cRiBpJEwcSQ",
+                "duration": 2802,
+                "title": "I SACRIFICED MY FAMILY FOR STRONGMAN FT. EDDIE HALL | SHAW STRENGTH PODCAST EP. 110",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CasS1IjyY98",
+                "duration": 1272,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w15d3 | easy jog with surprise guest",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ImjMkbRz-PU",
+                "duration": 501,
+                "title": "THE BREAK OUT: Struggling With Temptation 🏆 Gay | LGBT Short Film",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=87MWvQ_nz4Q",
+                "duration": 313,
+                "title": "The end of my personal training studio. Where I film most of my YouTube videos. Thank you!! 🙏",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rbWIzNxVmgk",
+                "duration": 1770,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w12d4 | running still paused",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-7eCednko2w",
+                "duration": 835,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w13d2 | easy run",
                 "skip": [],
                 "skip_checked": 1791495700
             },
             {
-                "url": "https://www.youtube.com/watch?v=RkPx7I9xLKk",
-                "duration": 800,
-                "title": "Movie Kicks and Weapons Training",
+                "url": "https://www.youtube.com/watch?v=RYsmSM06frY",
+                "duration": 1824,
+                "title": "30 Minutes of Training Film TODAY At Sullys Boxing Gym.   (No-Sound)",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_B8cMoX-jjI",
+                "duration": 701,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w17d6 | a rest day life of a runner",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TxWPuhxLdgg",
+                "duration": 1811,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w15d7 | depleted 25km city long run",
+                "skip": [],
+                "skip_checked": 1791143589
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DU19Y12o_3M",
+                "duration": 1053,
+                "title": "8 Week Six-Pack Challenge | 15 Min Daily Ab Workout | Rowan Row",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YUsIUxGMEWA",
+                "duration": 1070,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w16d4 | controlled speed returns",
                 "skip": [],
                 "skip_checked": 1792527287
             },
             {
-                "url": "https://www.youtube.com/watch?v=yWhA1PFRLfA",
-                "duration": 1482,
-                "title": "More than a workout. Less than a documentary. Somewhere in between. #vlog #golaghat",
+                "url": "https://www.youtube.com/watch?v=ALho8KiKSfw",
+                "duration": 1385,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w12d6 | holding back running once more",
                 "skip": [],
-                "skip_checked": 1790890293
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=ntqnINzQo2E",
-                "duration": 509,
-                "title": "Easy Sunday Chest day (didn’t even film the workout)",
+                "url": "https://www.youtube.com/watch?v=YmLyz-qxlBI",
+                "duration": 1868,
+                "title": "Film - lifting workout 2026 - 2026_2_10_23_7_54*",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=-9fKE0-_bBM",
-                "duration": 1548,
-                "title": "MY REDEMPTION - An IRONMAN Documentary",
-                "skip": [],
-                "skip_checked": 1792527287
+                "url": "https://www.youtube.com/watch?v=IGZE7EhYsQo",
+                "duration": 2454,
+                "title": "How Private Equity Bought Every Gym in America",
+                "skip": [
+                    [
+                        1236.9,
+                        1365.3
+                    ]
+                ],
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=iUplXbS1JKI",
-                "duration": 614,
-                "title": "Hugo Gonzalez Has Been in the GYM : Film Session",
+                "url": "https://www.youtube.com/watch?v=1cHrpBprpEA",
+                "duration": 415,
+                "title": "Bohdie Ing | Juco K/P | Workout Film w/ One On One Kicking",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=ObhnPF30qJM",
-                "duration": 354,
-                "title": "Workout + Game Film Jaylen Varlack",
+                "url": "https://www.youtube.com/watch?v=abOsFTwWKPs",
+                "duration": 600,
+                "title": "Back to RAW Functional SHTF Training // Motivational Functional Training Short Film",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=6rG472iBvTo",
-                "duration": 1331,
-                "title": "Army Basic Combat Training (BCT) Documentary - The Forge",
+                "url": "https://www.youtube.com/watch?v=pli8vYrXinc",
+                "duration": 3091,
+                "title": "Jane Fonda Prime Time Workout | Full Film",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jrSrAOAeUmk",
+                "duration": 611,
+                "title": "Patton's Desert Training Center: Building an Army | Animated Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4nYGVRVJuY8",
+                "duration": 389,
+                "title": "First Time Hosting a Track Workout on Film",
+                "skip": [],
+                "skip_checked": 1791495700
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cQmVOxGwg3g",
+                "duration": 2542,
+                "title": "North Korea's alliance with China and Russia | DW Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nlOEEtqq5zU",
+                "duration": 1259,
+                "title": "Deadlift Date Night | Dinner & A Movie",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zlUg52I1wQ8",
+                "duration": 1454,
+                "title": "marathon training documentary | road to osaka marathon 2026 | w13d7 | long run",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7GinCvfaaDM",
+                "duration": 248,
+                "title": "Hotel Inspection & HACCP Training Documentary 2026 Food Safety#hotelmanagement",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BnEi-VyZrgM",
+                "duration": 430,
+                "title": "Film Your Training Like This to Grow Your Brand",
+                "skip": [],
+                "skip_checked": 1793566524
             }
         ],
         "search_query": "fitness training documentary",
-        "last_refreshed": 1792527285
+        "last_refreshed": 1793566523
     }
 }
