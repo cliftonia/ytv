@@ -7,32 +7,32 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=89NOu2-DREw",
-                "duration": 554,
-                "title": "The Guyver - Bio-Booster Armor: (OVA) Episode 1 [english dubbed] part 2/3 HQ",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gbEfEtIfZLw",
-                "duration": 531,
-                "title": "The Guyver - Bio-Booster Armor: (OVA) Episode 2 [english dubbed] part 1/3 HQ",
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x8KcIDYhqK0",
-                "duration": 1599,
-                "title": "VAMPIRE PRINCESS MIYU OVA: UNEARTHLY KYOTO (English Dub) | Episode 01 | 1980s Shoujo Anime",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Cpsx8FRZym8",
                 "duration": 1729,
                 "title": "VAMPIRE PRINCESS MIYU OVA: A BANQUET OF MARIONETTES (English Dub) | Episode 02 | 1980s Shoujo Anime",
                 "skip": [],
                 "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4xn9UFAl56o",
+                "duration": 1729,
+                "title": "VAMPIRE PRINCESS MIYU OVA: A BANQUET OF MARIONETTES (English Subs) | Episode 02 | 1980s Shoujo Anime",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aOfl5sP4u1Y",
+                "duration": 1746,
+                "title": "Ogre Slayer Anime Ova Ep. 1 English Dub",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YLCduOP9iOM",
+                "duration": 1749,
+                "title": "Ogre Slayer Anime Ova Ep. 2 English Dub",
+                "skip": [],
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=hR_EgONHRWE",
@@ -42,46 +42,18 @@
                 "skip_checked": 1793743834
             },
             {
+                "url": "https://www.youtube.com/watch?v=x8KcIDYhqK0",
+                "duration": 1599,
+                "title": "VAMPIRE PRINCESS MIYU OVA: UNEARTHLY KYOTO (English Dub) | Episode 01 | 1980s Shoujo Anime",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=yX9B0QQo4-0",
                 "duration": 2643,
                 "title": "BUBBLEGUM CRISIS - MOONLIGHT RAMBLER | Episode 05 (English Dub) | Full 1980s ANIME OVA HD",
                 "skip": [],
                 "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D8h7k27s7Zo",
-                "duration": 1711,
-                "title": "Oh! My Goddess OVA   Episode 1 English Dub   Moonlight and Cherry Blossoms",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cjH4cgXFqg4",
-                "duration": 1623,
-                "title": "BUBBLEGUM CRISIS - BLOW UP | Episode 03 (English Dub) | Full 1980s ANIME OVA HD",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kr6RSQWF9ac",
-                "duration": 1728,
-                "title": "BUBBLEGUM CRISIS - BORN TO KILL | Episode 02 (English Dub) | Full 1980s ANIME OVA HD",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aHkL_ViEKvY",
-                "duration": 2328,
-                "title": "BUBBLEGUM CRISIS - REVENGE ROAD | Episode 04 (English Dub) | Full 1980s ANIME OVA HD",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=10cLuWviwWM",
-                "duration": 3014,
-                "title": "BUBBLEGUM CRISIS - RED EYES | Episode 06 (English Dub) | Full 1980s ANIME OVA HD",
-                "skip": [],
-                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=NFyvL4EjKWk",
@@ -91,18 +63,39 @@
                 "skip_checked": 1793743834
             },
             {
+                "url": "https://www.youtube.com/watch?v=cjH4cgXFqg4",
+                "duration": 1623,
+                "title": "BUBBLEGUM CRISIS - BLOW UP | Episode 03 (English Dub) | Full 1980s ANIME OVA HD",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aHkL_ViEKvY",
+                "duration": 2328,
+                "title": "BUBBLEGUM CRISIS - REVENGE ROAD | Episode 04 (English Dub) | Full 1980s ANIME OVA HD",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D8h7k27s7Zo",
+                "duration": 1711,
+                "title": "Oh! My Goddess OVA   Episode 1 English Dub   Moonlight and Cherry Blossoms",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=10cLuWviwWM",
+                "duration": 3014,
+                "title": "BUBBLEGUM CRISIS - RED EYES | Episode 06 (English Dub) | Full 1980s ANIME OVA HD",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=iPbhDwgrpJk",
                 "duration": 1430,
                 "title": "Masamune-kun's Revenge Episode 1 English Dub | The Boy Who Was Called Pig's Foot",
                 "skip": [],
                 "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DDjcZ_792YA",
-                "duration": 1547,
-                "title": "Mobile Suit Gundam Episode 1 (English Dubbed)",
-                "skip": [],
-                "skip_checked": 1793222925
             },
             {
                 "url": "https://www.youtube.com/watch?v=D6s1cZhpQm4",
@@ -112,11 +105,25 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=JLvrB6NdiRA",
-                "duration": 1789,
-                "title": "VAMPIRE PRINCESS MIYU OVA: FROZEN TIME (English Dub) | Episode 04 | 1980s Shoujo Anime",
+                "url": "https://www.youtube.com/watch?v=gbEfEtIfZLw",
+                "duration": 531,
+                "title": "The Guyver - Bio-Booster Armor: (OVA) Episode 2 [english dubbed] part 1/3 HQ",
                 "skip": [],
-                "skip_checked": 1793743834
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fS5KbqnfPsk",
+                "duration": 1712,
+                "title": "ALIEN NINE - Boredom, Spaceship and Overgrowth | Episode 02 (English Dub) | Sci-Fi ANIME OVA HD",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zL3ZY2cTsl0",
+                "duration": 1415,
+                "title": "Magic Knight Rayearth Episode 1 SUB/DUB | From Another World",
+                "skip": [],
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=x2TkEePukIQ",
@@ -126,11 +133,11 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=N1U1m8OpNCg",
-                "duration": 1431,
-                "title": "Bye Bye, Earth Episode 1 English Dub | Departure at the Red Hour",
+                "url": "https://www.youtube.com/watch?v=jsD9FFwxDoY",
+                "duration": 1490,
+                "title": "Trigun Episode 1 English Dub | The $$60,000,000,000.00 Man",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1793049429
             },
             {
                 "url": "https://www.youtube.com/watch?v=5ILlar1UJ88",
@@ -140,18 +147,18 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=jsD9FFwxDoY",
-                "duration": 1490,
-                "title": "Trigun Episode 1 English Dub | The $$60,000,000,000.00 Man",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LTjH5JdxtOA",
-                "duration": 1446,
-                "title": "JUJUTSU KAISEN Episode 1 | Ryomen Sukuna",
+                "url": "https://www.youtube.com/watch?v=N1U1m8OpNCg",
+                "duration": 1431,
+                "title": "Bye Bye, Earth Episode 1 English Dub | Departure at the Red Hour",
                 "skip": [],
                 "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BQFZ1EET2o4",
+                "duration": 3054,
+                "title": "BUBBLEGUM CRISIS - SCOOP CHASE | Episode 08 (English Dub) | Full 1990s ANIME OVA HD",
+                "skip": [],
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=Xk5nEI8N8l8",
@@ -159,6 +166,13 @@
                 "title": "Old cartoon series Fuma no Kojiro - Yasha-hen OVA Episode 1 English Subbed  #dbz",
                 "skip": [],
                 "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JLvrB6NdiRA",
+                "duration": 1789,
+                "title": "VAMPIRE PRINCESS MIYU OVA: FROZEN TIME (English Dub) | Episode 04 | 1980s Shoujo Anime",
+                "skip": [],
+                "skip_checked": 1793743834
             },
             {
                 "url": "https://www.youtube.com/watch?v=wQeYbrY01ac",
@@ -175,11 +189,11 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=uBwQlTdv6hM",
-                "duration": 2704,
-                "title": "Riding Bean (1989) FULL OVA - English Dub",
+                "url": "https://www.youtube.com/watch?v=zG7IgAsJKs8",
+                "duration": 4050,
+                "title": "Appleseed (1988) | Full Anime OVA [English Sub / Dub]",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=__zqP6Ak8ZE",
@@ -189,18 +203,25 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=wjfo5E0Z8fk",
-                "duration": 2835,
-                "title": "ANIME SEM DUBLAGEM 🇺🇲-ZILLION, BURNING NIGHT-OVA (1988) EM INGLÊS/IN ENGLISH/DUBBED",
+                "url": "https://www.youtube.com/watch?v=mWWhJURpvq0",
+                "duration": 3033,
+                "title": "Wizardry Anime OVA [ENGLISH DUB]",
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1794171336
             },
             {
-                "url": "https://www.youtube.com/watch?v=-aeCHiZwDaE",
-                "duration": 5187,
-                "title": "Wrath of the Ninja: The Yotoden Movie (1989) English Dub | FULL HD ANIME MOVIE | Yōtōden",
+                "url": "https://www.youtube.com/watch?v=uBwQlTdv6hM",
+                "duration": 2704,
+                "title": "Riding Bean (1989) FULL OVA - English Dub",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Zy3vaI0RQ8g",
+                "duration": 2741,
+                "title": "Suikoden Demon Century (1993) | FULL ANIME OVA | English Dub | Rare 90s Anime | HD Upscale",
+                "skip": [],
+                "skip_checked": 1792094923
             },
             {
                 "url": "https://www.youtube.com/watch?v=j3W7zHRkbYA",
@@ -217,11 +238,11 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=V6k4I7bQhWY",
-                "duration": 4767,
-                "title": "Ninja Resurrection (1997-1998) (DVD Rip)",
+                "url": "https://www.youtube.com/watch?v=jYkH3HnuNtk",
+                "duration": 2721,
+                "title": "Grappler Baki: The Ultimate Fighter (OVA) (1994) (ENGLISH DUB)",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1792956294
             },
             {
                 "url": "https://www.youtube.com/watch?v=UJ5kOpm_fJ0",
@@ -229,27 +250,6 @@
                 "title": "Dirty Pair: Affair on Nolandia | English Dub | Full OVA | Classic 80s Anime",
                 "skip": [],
                 "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Zy3vaI0RQ8g",
-                "duration": 2741,
-                "title": "Suikoden Demon Century (1993) | FULL ANIME OVA | English Dub | Rare 90s Anime | HD Upscale",
-                "skip": [],
-                "skip_checked": 1792094923
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DP-9AHdkv9k",
-                "duration": 2778,
-                "title": "Super Atragon (1996) 📼 | Complete OVA | English Dub | VHS Anime Classic",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jYkH3HnuNtk",
-                "duration": 2721,
-                "title": "Grappler Baki: The Ultimate Fighter (OVA) (1994) (ENGLISH DUB)",
-                "skip": [],
-                "skip_checked": 1792956294
             },
             {
                 "url": "https://www.youtube.com/watch?v=zKUhTKOP75w",
@@ -273,11 +273,11 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=372_wZnHkqk",
-                "duration": 3324,
-                "title": "Mighty Space Miners (1994) 📼 | English Dub | VHS Anime OVA | Retro Sci-Fi Adventure",
+                "url": "https://www.youtube.com/watch?v=DP-9AHdkv9k",
+                "duration": 2778,
+                "title": "Super Atragon (1996) 📼 | Complete OVA | English Dub | VHS Anime Classic",
                 "skip": [],
-                "skip_checked": 1792786230
+                "skip_checked": 1793663159
             },
             {
                 "url": "https://www.youtube.com/watch?v=Yb3XYZsCUFk",
@@ -287,46 +287,18 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
-                "duration": 2472,
-                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtitled",
+                "url": "https://www.youtube.com/watch?v=NxiYRFPgSJQ",
+                "duration": 3075,
+                "title": "Guyver Out Of Control OVA English Fandub 1080p",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794171336
             },
             {
-                "url": "https://www.youtube.com/watch?v=FZY4SuXW_D0",
-                "duration": 3012,
-                "title": "BLACK JACK OVA Karte 04: THE TWO DARK DOCTORS (English Dub) | Osamu Tezuka & Dezaki",
+                "url": "https://www.youtube.com/watch?v=iW0I0M6AYlc",
+                "duration": 4767,
+                "title": "Ninja Resurrection (1997–1998) | Complete OVA | English Dub | DVD Rip ⚠️ Age Restricted⚠️",
                 "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Tr9KngtutKs",
-                "duration": 2935,
-                "title": "BLACK JACK OVA Karte 01: ICEBERG / CHIMAERA MAN (English Dub) | Osamu Tezuka & Osamu Dezaki",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r5oGdgr3iF8",
-                "duration": 2473,
-                "title": "Kai Doh Maru OVA | English Dub | 2001 Historical Fantasy Anime",
-                "skip": [],
-                "skip_checked": 1792094923
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VDajTtYPfgw",
-                "duration": 2824,
-                "title": "Kimera OVA English Dub",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7Olwhy6L4xs",
-                "duration": 3132,
-                "title": "BLACK JACK OVA Karte 09: THE CARBUNCLE (English Dub) | 1990s Anime | Tezuka & Dezaki",
-                "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=Vb942Zpg_jI",
@@ -336,32 +308,39 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=GAqdaVvGdpM",
-                "duration": 3302,
-                "title": "Initial D Extra Stage (2001) English Dub 4K",
+                "url": "https://www.youtube.com/watch?v=Tr9KngtutKs",
+                "duration": 2935,
+                "title": "BLACK JACK OVA Karte 01: ICEBERG / CHIMAERA MAN (English Dub) | Osamu Tezuka & Osamu Dezaki",
                 "skip": [],
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=O0MtKRQhsFg",
-                "duration": 3529,
-                "title": "Fake OVA English Dub",
+                "url": "https://www.youtube.com/watch?v=wjfo5E0Z8fk",
+                "duration": 2835,
+                "title": "ANIME SEM DUBLAGEM 🇺🇲-ZILLION, BURNING NIGHT-OVA (1988) EM INGLÊS/IN ENGLISH/DUBBED",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=BevLSlQZY40",
-                "duration": 2921,
-                "title": "BLACK JACK OVA Karte 07: BLACK AND WHITE (English Dub) | 1990s Anime | Osamu Tezuka & Osamu Dezaki",
+                "url": "https://www.youtube.com/watch?v=PUi6RPZv7hw",
+                "duration": 2472,
+                "title": "Metal Skin Panic MADOX- 01 (1987) Japanese Animation | Sci-Fi | Subtitled",
                 "skip": [],
-                "skip_checked": 1792956294
+                "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=Iexc86cEnuc",
-                "duration": 3757,
-                "title": "Super Mario Bros Super Dub",
+                "url": "https://www.youtube.com/watch?v=r5oGdgr3iF8",
+                "duration": 2473,
+                "title": "Kai Doh Maru OVA | English Dub | 2001 Historical Fantasy Anime",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1792094923
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FZY4SuXW_D0",
+                "duration": 3012,
+                "title": "BLACK JACK OVA Karte 04: THE TWO DARK DOCTORS (English Dub) | Osamu Tezuka & Dezaki",
+                "skip": [],
+                "skip_checked": 1793743834
             },
             {
                 "url": "https://www.youtube.com/watch?v=kbZ5v2go-do",
@@ -371,41 +350,6 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=-S8vyupdduo",
-                "duration": 3065,
-                "title": "BLACK JACK OVA Karte 06: NIGHT TIME TALE IN THE SNOW/LOVELORN PRINCESS (English Dub) | 1990s Anime",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2EQrydO0TRY",
-                "duration": 2797,
-                "title": "Kai Doh Maru [English Dubbed Anime] (OVA - 2001)",
-                "skip": [],
-                "skip_checked": 1792094923
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=y5dXLHZCOyk",
-                "duration": 3066,
-                "title": "BLACK JACK OVA Karte 05: THE OWL OF SAN MERIDA (English Dub) | 1990s Anime | Osamu Tezuka & Dezaki",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vrHf9YnleyU",
-                "duration": 1544,
-                "title": "THE LAST ORDER: FINAL FANTASY VII ► 4K ► ENGLISH DUB",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_YPxLtBHOpk",
-                "duration": 445,
-                "title": "Wild 7 [Eng Dub] (OVA - 1994) ワイルド7",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=8MY2s-bWvY8",
                 "duration": 1455,
                 "title": "JoJo's Bizarre Adventure OVA  Jotaro vs Dio",
@@ -413,137 +357,25 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=YppkiK4pq1c",
-                "duration": 1656,
-                "title": "Gunsmith Cats OVA - 2 - Swing High! (English Dubbed)",
+                "url": "https://www.youtube.com/watch?v=Vh1Ndt6VOME",
+                "duration": 3301,
+                "title": "Mermaid's Scar OVA English Dub",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BevLSlQZY40",
+                "duration": 2921,
+                "title": "BLACK JACK OVA Karte 07: BLACK AND WHITE (English Dub) | 1990s Anime | Osamu Tezuka & Osamu Dezaki",
                 "skip": [],
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=TsQ4M8UaeoQ",
-                "duration": 1686,
-                "title": "Sonic Soldier Borgman - Lover's Rain Full OVA (Eng Dub)",
+                "url": "https://www.youtube.com/watch?v=xXkv7K-t2q0",
+                "duration": 3260,
+                "title": "Psychic Wars 1991  Full Anime OVA  English Dub",
                 "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tIf70fRh1j0",
-                "duration": 1467,
-                "title": "Blood lad OVA - Full Episode (Dubbed)",
-                "skip": [],
-                "skip_checked": 1792094923
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CxdUv-80YK4",
-                "duration": 1766,
-                "title": "Gunsmith Cats OVA - 3 - High Speed Edge (English Dubbed)",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=soxTt2bQsjk",
-                "duration": 3000,
-                "title": "BLACK JACK OVA Karte 02: A FUNERAL / THE PROCESSION GAME (English Dub) | Osamu Tezuka & Osamu Dezaki",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HedtsLTs4eA",
-                "duration": 577,
-                "title": "Everything Worth Watching in the 1993 JoJo's Bizarre Adventure OVA (Part 1)",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PUcT_l0hm5Y",
-                "duration": 2656,
-                "title": "Gall Force  New Era – Part 1   Sci Fi Cyberpunk OVA Movie English Dub Sub",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yAhAr6fbCMA",
-                "duration": 2235,
-                "title": "Jojo Ova 13",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5uG-dPreMM4",
-                "duration": 741,
-                "title": "Yu Yu Hakusho OVA",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nI1nZEVTSyg",
-                "duration": 295,
-                "title": "All Might vs Noumu | English Dub | Full Fight",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ggDfDtnDi5g",
-                "duration": 2994,
-                "title": "Fire Emblem OVA (1996) ll Eng Sub ll 1080p ll #anime #animelover",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wSp_dVRJmeY",
-                "duration": 517,
-                "title": "Amon Saga [Eng Dub] (OVA - 1986) アモン・サーガ",
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_zonUK-8XHk",
-                "duration": 2722,
-                "title": "When an Arcade Classic Gets a Brutal 90s Anime Adaptation | Fatal Fury: Legend of the Hungry Wolf",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uxd_yTuX0Vk",
-                "duration": 945,
-                "title": "Chrono Trigger full Anime Movie OVA English Subbed",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eQ2giHSp49A",
-                "duration": 256,
-                "title": "Jojo TV - D'arby with OVA dub (English)",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sIkoz1mfM4o",
-                "duration": 4828,
-                "title": "Demonic's Descent | ANIME, FANTASY | Full Movie in English",
-                "skip": [],
-                "skip_checked": 1792094923
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IehLfePFib8",
-                "duration": 598,
-                "title": "Okane Ga Nai - (no money) - OVA 1 (3/3) eng sub",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AhVAYWSWaJ4",
-                "duration": 1415,
-                "title": "Super Sonic X Universe OVA 1 - The Pinnacle of Power - (ENGLISH DUB)",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QhSUQMNBlXU",
-                "duration": 4828,
-                "title": "The Army of the Undead | ANIME | Full Movie",
-                "skip": [],
-                "skip_checked": 1792094923
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=FSr4gVfS7Sk",
@@ -553,70 +385,243 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ej3AbJHPv5k",
-                "duration": 2930,
-                "title": "BLACK JACK OVA Karte 03: DECORATION OF MARIA AND HER COMRADES (English Dub) | Tezuka & Dezaki",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MhudAZhdvOg",
-                "duration": 3314,
-                "title": "Sonic OVA Fandub",
+                "url": "https://www.youtube.com/watch?v=7Olwhy6L4xs",
+                "duration": 3132,
+                "title": "BLACK JACK OVA Karte 09: THE CARBUNCLE (English Dub) | 1990s Anime | Tezuka & Dezaki",
                 "skip": [],
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=ctjzErxRkFQ",
-                "duration": 704,
-                "title": "Ichigo vs Kenpachi Full Fight English Dub | Bleach Epic Fights",
+                "url": "https://www.youtube.com/watch?v=v6DNqjCyA20",
+                "duration": 282,
+                "title": "Bubblegum Crisis - OVA 1 - Konya wa Hurricane",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1794171336
             },
             {
-                "url": "https://www.youtube.com/watch?v=yK0epJRoK7M",
-                "duration": 247,
-                "title": "Yujiro Hanma VS Kaku Kaioh | Baki (ONA) 2020 - English Dub [60FPS]",
+                "url": "https://www.youtube.com/watch?v=soxTt2bQsjk",
+                "duration": 3000,
+                "title": "BLACK JACK OVA Karte 02: A FUNERAL / THE PROCESSION GAME (English Dub) | Osamu Tezuka & Osamu Dezaki",
                 "skip": [],
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=XUJTG8v6_yU",
-                "duration": 447,
-                "title": "Ranma 1/2 Out of Context",
+                "url": "https://www.youtube.com/watch?v=ruHk096CJTQ",
+                "duration": 547,
+                "title": "Angel Cop [Eng Dub] (OVA - 1989) エンゼル コップ",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oagC8Tbb7fM",
+                "duration": 261,
+                "title": "Naruto and Sasuke vs. Momoshiki (English Dub) | Boruto: Naruto Next Generations, Set 5 | VIZ",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-S8vyupdduo",
+                "duration": 3065,
+                "title": "BLACK JACK OVA Karte 06: NIGHT TIME TALE IN THE SNOW/LOVELORN PRINCESS (English Dub) | 1990s Anime",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PUcT_l0hm5Y",
+                "duration": 2656,
+                "title": "Gall Force  New Era – Part 1   Sci Fi Cyberpunk OVA Movie English Dub Sub",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2zsnk7rkdko",
+                "duration": 4840,
+                "title": "Megazone 23 Part 1 (1985) English Dub FULL OVA",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F7MtphS8Dh0",
+                "duration": 1502,
+                "title": "Panzer Dragoon ova anime Hd",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4vqRjVQhjBw",
+                "duration": 2570,
+                "title": "Dragon's Heaven OVA (1988, ENG SUB)",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yQyf6hHuwis",
+                "duration": 2607,
+                "title": "Magic Knight Rayearth 01 1997 OVA English Dub",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VDajTtYPfgw",
+                "duration": 2824,
+                "title": "Kimera OVA English Dub",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wSp_dVRJmeY",
+                "duration": 517,
+                "title": "Amon Saga [Eng Dub] (OVA - 1986) アモン・サーガ",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y5dXLHZCOyk",
+                "duration": 3066,
+                "title": "BLACK JACK OVA Karte 05: THE OWL OF SAN MERIDA (English Dub) | 1990s Anime | Osamu Tezuka & Dezaki",
                 "skip": [],
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=A31-ze_NLlE",
-                "duration": 661,
-                "title": "Bleach Yoruichi vs Soifon Full Fight English Dub",
+                "url": "https://www.youtube.com/watch?v=6O-T8NbrAZ0",
+                "duration": 3066,
+                "title": "BLACK JACK OVA Karte 05: THE OWL OF SAN MERIDA (English Subs) | 1990s Anime | Osamu Tezuka & Dezaki",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1794171336
             },
             {
-                "url": "https://www.youtube.com/watch?v=BUu8PLq9g-w",
-                "duration": 4177,
-                "title": "Battle Angel OVA parts 1 & 2 English dub",
+                "url": "https://www.youtube.com/watch?v=372_wZnHkqk",
+                "duration": 3324,
+                "title": "Mighty Space Miners (1994) 📼 | English Dub | VHS Anime OVA | Retro Sci-Fi Adventure",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=cPBnInkaFso",
-                "duration": 800,
-                "title": "MAID SAMA OVA",
+                "url": "https://www.youtube.com/watch?v=ObyI8zLS8Ow",
+                "duration": 953,
+                "title": "This Anime Created a Murderer in Japan",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1794171336
             },
             {
-                "url": "https://www.youtube.com/watch?v=AmODol6VchE",
-                "duration": 3557,
-                "title": "Vampire Wars 1991 MANGA VHS OVA DUB",
+                "url": "https://www.youtube.com/watch?v=2u6GwVmyYQY",
+                "duration": 2769,
+                "title": "Land Lock | OVA 1 | DUB ITA | 90s Retro Anime Shounen | Action Adventure Fantasy Military Sci-Fi |",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QhSUQMNBlXU",
+                "duration": 4828,
+                "title": "The Army of the Undead | ANIME | Full Movie",
+                "skip": [],
+                "skip_checked": 1792094923
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dNyZSKLPq3g",
+                "duration": 1623,
+                "title": "🇺🇸 Panzer Dragoon Anime (English DUB - Full OVA)",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sIkoz1mfM4o",
+                "duration": 4828,
+                "title": "Demonic's Descent | ANIME, FANTASY | Full Movie in English",
+                "skip": [],
+                "skip_checked": 1792094923
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8E7nyXTcRyM",
+                "duration": 470,
+                "title": "Sonic OVA (1996) | Sonic vs Metal Sonic 2nd Fight",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3PFi58Izv2M",
+                "duration": 3063,
+                "title": "BLACK JACK OVA Karte 08: THOUGHTS FOR GREEN (English Dub) | 1990s Anime | Tezuka & Dezaki",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=J1nXa86hOXc",
+                "duration": 2145,
+                "title": "Jojo OVA Chapter 10",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wuA7bA4h7Pg",
+                "duration": 3063,
+                "title": "BLACK JACK OVA Karte 08: THOUGHTS FOR GREEN (English Subs) | 1990s Anime | Tezuka & Dezaki",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QZ919lTE6w4",
+                "duration": 1307,
+                "title": "Ep. 1 Horimiya OVA || Hori-san to Miyamura-kun OVA (EN sub | JP dub)",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yAhAr6fbCMA",
+                "duration": 2235,
+                "title": "Jojo Ova 13",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QqjoeL4Nc14",
+                "duration": 1830,
+                "title": "ANIME DUBBED 🇧🇷-ICZER 3, OVA 01/06 (1990) IN PORTUGUESE.",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_Ld-Bo8Y4o8",
+                "duration": 2556,
+                "title": "Spirit of Wonder: Miss China's Ring OVA (HIGHEST QUALITY 4K) - ENG DUBBED",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SkF7dX8GCf8",
+                "duration": 1708,
+                "title": "Shamanic Princess | AI OVA 4 | DUB ITA | 90s Retro Anime Remaster | Magical Action Fantasy Romance |",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HLCM66S7UfY",
+                "duration": 3157,
+                "title": "Vampire Wars (1990) 🩸 | Forgotten Japanese Vampire Anime OVA | Full Movie in 4K 🩸🧛",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ob1jHhP7GS0",
+                "duration": 1639,
+                "title": "This is What A Terrible Anime Looks Like",
+                "skip": [
+                    [
+                        1564.0,
+                        1629.3
+                    ]
+                ],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uAAZjy2d-g0",
+                "duration": 298,
+                "title": "JoJo OVA-Star Platinum Stand Sound Profiles (1993 OVA)",
+                "skip": [],
+                "skip_checked": 1794171336
             }
         ],
         "search_query": "retro anime OVA english dub",
-        "last_refreshed": 1793222886
+        "last_refreshed": 1794171305
     }
 }
