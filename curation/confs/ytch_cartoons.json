@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=SS947vxofBY",
-                "duration": 1445,
-                "title": "Berenstain Bears: Bears For All Seasons/ Grow It - Ep.39",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=-UtUuT8AJjQ",
                 "duration": 1352,
                 "title": "Recess First Full Episode | The Break In / The New Kid | S1 E1 | Disney Channel",
@@ -34,14 +27,44 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=XC4DFZbOChk",
-                "duration": 1338,
-                "title": "PB&J Otter First Full Episode! | Bye-Bye, PB&J! / Babbleberry Day | S1 E1 | @disneyjr",
+                "url": "https://www.youtube.com/watch?v=SS947vxofBY",
+                "duration": 1445,
+                "title": "Berenstain Bears: Bears For All Seasons/ Grow It - Ep.39",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
                 "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q8vIdUehDvw",
+                "duration": 1360,
+                "title": "Max & Ruby - Episode 79 | FULL EPISODE | TREEHOUSE DIRECT",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XC4DFZbOChk",
+                "duration": 1338,
+                "title": "PB&J Otter First Full Episode! | Bye-Bye, PB&J! / Babbleberry Day | S1 E1 | Disney Jr.",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0ryObF7jEvo",
+                "duration": 1448,
+                "title": "Jake and the Never Land Pirates First Full Episode 🏴‍☠️ | S1 E1 | Disney Jr.",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=vUBKrSwCprY",
@@ -51,21 +74,6 @@
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=d_vahxFi-0g",
-                "duration": 1368,
-                "title": "Kim Possible Full Episode | Bueno Nacho 🌮  | S1 E6 | Disney Channel",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        2.7,
-                        6.0
-                    ]
-                ],
                 "skip_checked": 1793917727
             },
             {
@@ -99,6 +107,16 @@
                 "skip_checked": 1793917727
             },
             {
+                "url": "https://www.youtube.com/watch?v=P94qTtiijRg",
+                "duration": 1308,
+                "title": "The smurfs season 1 episode 1",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=7Pl2PhOeHC8",
                 "duration": 1493,
                 "title": "After School Special Podcast Ep 92 - Inhumanoids Revisited: A Retreat into 80s📺",
@@ -109,9 +127,19 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=pmQ7NmpfHp8",
-                "duration": 440,
-                "title": "Bluey Full Episode | Rain | S3 E18 |  @disneyjr",
+                "url": "https://www.youtube.com/watch?v=lis9yggXCQ0",
+                "duration": 1444,
+                "title": "Mickey Mouse Funhouse Halloween Full Episode 🎃 | Giant Pluto & Pumpkin Carving! | S1 E25 |Disney Jr.",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rwp384TLmKs",
+                "duration": 1329,
+                "title": "The Savage Spider-Man | Ultimate Spider-Man S3 E8 | Full Episode | @MarvelHQ",
                 "parts": [
                     "afternoon"
                 ],
@@ -129,26 +157,6 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=rwp384TLmKs",
-                "duration": 1329,
-                "title": "The Savage Spider-Man | Ultimate Spider-Man S3 E8 | Full Episode | @MarvelHQ",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gDKaSciBF3k",
-                "duration": 1417,
-                "title": "Stay Tooned | The Real Ghostbusters | S6E13 | Throwback Toons",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=jcbcYJkRZsM",
                 "duration": 1364,
                 "title": "A Pooh Day Afternoon | The New Adventures of Winnie the Pooh S4 E3 | @disneykids",
@@ -159,9 +167,19 @@
                 "skip_checked": 1793395034
             },
             {
+                "url": "https://www.youtube.com/watch?v=GZcmKNDgf8I",
+                "duration": 1441,
+                "title": "Mickey Mouse Clubhouse Full Episode | Mickey's Color Adventure 🎨🌈 | S1 E22 | Disney Jr.   ​",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=d0zt3IEC2SQ",
                 "duration": 1495,
-                "title": "Bear in the Big Blue House First Full Episode! | Home Is Where the Bear Is | S1 E1 | @disneyjr",
+                "title": "Bear in the Big Blue House First Full Episode! | Home Is Where the Bear Is | S1 E1 | Disney Jr.",
                 "parts": [
                     "afternoon"
                 ],
@@ -169,11 +187,14 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=kUO_PSVUrRU",
-                "duration": 2245,
-                "title": "Looney Tunes | Yosemite Sam, Bugs, Daffy Mega Compilation | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=xs4NW2cCxyA",
+                "duration": 583,
+                "title": "A Shy Ghost Is Drawing Faces on Our Window! 👻 The Afterschool Haunt Club | Episode 3",
+                "parts": [
+                    "afternoon"
+                ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=Fg_KxhW8-PY",
@@ -183,25 +204,25 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=mVc8NMldpls",
-                "duration": 2185,
-                "title": "Looney Tunes | Bugs Bunny 1950's Full Episode Compilation | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=HEi0wlQl4w4",
+                "duration": 2509,
+                "title": "Looney Tunes | Yosemite Sam, Bugs Bunny Mega Compilation | Warner Classics",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=C-upU-cb8CY",
-                "duration": 3948,
-                "title": "Scooby-Doo! Where Are You? MARATHON 📺 | Classic Scooby-Doo MEGA COMP ⭐️ | @wbkids",
+                "url": "https://www.youtube.com/watch?v=IeMA6HpU7HQ",
+                "duration": 2465,
+                "title": "Tom and Jerry | Mega Compilation | Vol. 46 | Warner Classics",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=--nT4ykK9Uw",
-                "duration": 2194,
-                "title": "Looney Tunes | Classic Tweety Bird & Sylvester Compilation | Vol. 9 | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=dTM-eT5HICI",
+                "duration": 1543,
+                "title": "Mickey's Christmas Carol ❄️🎁🔔 | Full Episode | @disneykids",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZJJHL5p9UIE",
@@ -211,460 +232,720 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=F_ETvHtwA10",
-                "duration": 1833,
-                "title": "Looney Tunes | Marvin The Martian Mega Compilation | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=Ul7Sn0Ryuqw",
+                "duration": 460,
+                "title": "Night of the Living Grim: FULL EPISODE | The Grim Adventures of Billy & Mandy | Cartoon Cartoons",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=B_fj30b1p_g",
-                "duration": 5015,
-                "title": "Chip And Dale Donald Duck Cartoons Full Episodes | Cartoon Movie for Kids",
+                "url": "https://www.youtube.com/watch?v=t0Q2otsqC4I",
+                "duration": 1298,
+                "title": "Tom & Jerry in Full Screen | Tom & Jerry Classic Cartoon Compilation | @wbkids",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=M21UsdJnkBY",
-                "duration": 468,
-                "title": "Mickey Mouse - The Worm Turns - 1937",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=g5F-hLzmwTM",
-                "duration": 2710,
-                "title": "Looney Tunes | Classic Porky Pig and Daffy Duck Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pEl3-0GHyoQ",
-                "duration": 3169,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 12 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Pnq_8TiiYUw",
-                "duration": 405,
-                "title": "Popeye's Origin: How He Discovered Spinach - Greek Mirthology (1954) 🎬 - Refurbished Cartoon",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=c8Z-Yi-Jqy8",
-                "duration": 3889,
-                "title": "Looney Tunes | Classic Foghorn Leghorn Mega Compilation | Vol. 2 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e8jh0_SLn2A",
-                "duration": 2232,
-                "title": "Tom and Jerry | Classic Episodes Mega Compilation | Vol. 45 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mMb2rPd04oc",
-                "duration": 2857,
-                "title": "Classic HALLOWEEN Cartoons • 7 Full Cartoons • Casper, Popeye, Daffy Duck, and more!",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JE4xmxXAfyY",
-                "duration": 4016,
-                "title": "Looney Tunes | Classic Bugs Bunny and Yosemite Sam Mega Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lPCuXuozrDw",
-                "duration": 1567,
-                "title": "20 Forgotten ’60s & ’70s Cartoons That Will Take You Back",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2T1gBvjWVnE",
-                "duration": 5184,
-                "title": "Looney Tunes 1941-1955 | Classic Compilation  1 | Bugs Bunny | Daffy Duck | Porky Pig | Chuck Jones",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jNuQ6QL7g-4",
-                "duration": 2502,
-                "title": "Looney Tunes | Witch Hazel and Spooky Scenes Mega Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a7To0-PEZOs",
-                "duration": 2116,
-                "title": "Looney Tunes | Classic Tasmanian Devil Moments Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-SdGBMiUWsw",
-                "duration": 427,
-                "title": "Mad Hatter [Columbia/Screen Gems, 1940]",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=06tEl6aackM",
-                "duration": 2193,
-                "title": "Looney Tunes | Wile E. Coyote vs Road Runner Full Episodes | Vol. 12 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oS779xczKdk",
-                "duration": 2110,
-                "title": "Looney Tunes | Classic Bugs, Daffy, Wile, & Porky Cartoon Icons Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8mH-stCeanM",
-                "duration": 1404,
-                "title": "Classic Care Bears | FULL EPISODE! Thanksgiving Showdown! Grams Bears Vs. Sour Sam!",
+                "url": "https://www.youtube.com/watch?v=we8amlzi-jg",
+                "duration": 1308,
+                "title": "Caillou English Full Episodes | Caillou and the Loud Lunch | Cartoon Movie | Cartoons for Kids",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=4ERPrxW_w60",
-                "duration": 2312,
-                "title": "Looney Tunes | Classic Foghorn Leghorn Mega Compilation | Vol. 1 | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=rs3J_o_DdtY",
+                "duration": 3344,
+                "title": "George's First Camping Trip! 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lHmPEalzFK0",
+                "duration": 3364,
+                "title": "George Loves Bubble Baths 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WWreUDT8mlw",
+                "duration": 2518,
+                "title": "Curious George 🐵Old McGeorgie Had  A Farm 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UisLIsbHQaE",
+                "duration": 1442,
+                "title": "Curious George 🐑 George Goes to the Farm 🚜 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Rucid0bIvM4",
+                "duration": 3361,
+                "title": "George's Broken Leg 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Iqgyx-U4ssY",
+                "duration": 3380,
+                "title": "Where Does Honey Come From? 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6nQbRbIeGjI",
+                "duration": 1132,
+                "title": "The Big Red Bulldozer 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RjGoO__JthQ",
+                "duration": 3863,
+                "title": "Caillou Full Episodes | Caillou and the Dirty Car | Cartoon Movie | WATCH ONLINE | Cartoons for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A8jpLkXDXOk",
+                "duration": 2472,
+                "title": "Tom and Jerry | Halloween Mega Compilation | Warner Classics",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F7iZPdm0RPo",
+                "duration": 1498,
+                "title": "Curious George 🐔 George the Chicken 🐔 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wzD7zXuhY4k",
+                "duration": 3444,
+                "title": "The Donuts are Everywhere! 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o1uSfhBWmb0",
+                "duration": 1344,
+                "title": "The Procrastinators: FULL EPISODE | The Amazing World of Gumball | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rnis8lg1DbA",
+                "duration": 303,
+                "title": "George goes to Japan 🇯🇵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PV76K0gJTcg",
+                "duration": 1124,
+                "title": "Make Lemonade! 🐵 Curious George 🐵Kids Cartoon 🐵 Kids Movies 🐵Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HquuJWrJbLY",
+                "duration": 4425,
+                "title": "It's Time for School! 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gKCMpKGwh64",
+                "duration": 2552,
+                "title": "Curious George 🐵 Muddy Monkey 🐵 Kids Cartoon 🐵 Kids Movies | Videos For Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3Zdu8vAg5xk",
+                "duration": 4425,
+                "title": "George's Exploding Bubble Disaster 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XVpDSxezAAs",
+                "duration": 1207,
+                "title": "Curious George 🐵  Bath Time! 🐵 20 Minute Show 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tdlxqyGbcHw",
+                "duration": 4425,
+                "title": "The Secret Cat Chef 🐵 Curious George 🐵 Kids Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nYdtbD90W-c",
+                "duration": 526,
+                "title": "The Farm | Kipper the Dog | Season 6 Full Episode | Kids Cartoon Show",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aUxGmsEP2qs",
+                "duration": 1181,
+                "title": "Curious George 🐵👻HALLOWEEN SPECIAL - Pirate's costume 🎃Kids Cartoon 🐵Kids Movies | Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xy7pyA7Ypjk",
+                "duration": 673,
+                "title": "The Coach 🏃Full Episode | The Amazing World of Gumball | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=id7qgnqIZtg",
+                "duration": 1101,
+                "title": "Tom & Jerry | Tom and Jerry at Home | Cartoon Compilation | @wbkids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=urPX6-jz_xU",
+                "duration": 1977,
+                "title": "Larryboy and the Rumour Weed | Larryboy Full Episode | VeggieTales | Kids Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-o3iKTe9Gdg",
+                "duration": 2490,
+                "title": "Curious George 🐵George The Grocer 🐵 Kids Cartoon 🐵 Kids Movies | Videos For Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1fqGkoHlGv8",
+                "duration": 3237,
+                "title": "Five FULL EPISODES Mega Compilation! SEASON 5 Gumball | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Y9VZ7ASHcMs",
+                "duration": 1448,
+                "title": "Curious George 🦷 Why do we brush our teeth? 🦷 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LfFsXznB2UI",
+                "duration": 245,
+                "title": "Carnaval | A Mickey Mouse Cartoon | @disneykids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bUGudiyGMl4",
+                "duration": 1350,
+                "title": "FULL EPISODE: The Bros | The Amazing World of Gumball | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GTk44O_So7o",
+                "duration": 3368,
+                "title": "George's New Job 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-6S3puowOu4",
+                "duration": 1735,
+                "title": "George Tests His Fireman Skills 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=euGOiUnV4q8",
+                "duration": 4196,
+                "title": "Max and Ruby | Episodes 31-33 Compilation! | Funny Cartoon Collection for Kids By Treehouse Direct",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IKOSMzX9I6A",
+                "duration": 3562,
+                "title": "George Loves Cows 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NKrQ17drPzY",
+                "duration": 1339,
+                "title": "Berry Bitty Adventures 🍓 Giant Vegetables! 🍓  Full Episode 🍓 Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cZKXo_SXWSs",
+                "duration": 4212,
+                "title": "Remember When Lamput...GOT BIG 💪 | Funny Full Episodes 😂 | Cartoon Network Asia",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pFtg8D7ocG8",
+                "duration": 2857,
+                "title": "George's First Baseball Game 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qIe2zmQ5gjg",
+                "duration": 2620,
+                "title": "Curious George 🐵Color Me Monkey 🐵Kids Cartoon 🐵Kids Movies 🐵TV Show For Kidsdr",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0umQOYtl_M0",
+                "duration": 3604,
+                "title": "Ben and Holly’s Little Kingdom | Morning Magic | Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fZ99zS_F0yw",
+                "duration": 3457,
+                "title": "George and Bill Go Fishing! 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QF6jdX4oYVE",
+                "duration": 1497,
+                "title": "Curious George 🐵 Ice Fishing 🐵 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3YHO81QWQmU",
+                "duration": 1451,
+                "title": "Tom and Jerry Singapore Full Episodes | Cartoon Network Asia | @wbkids​",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7qiXoijsKMc",
+                "duration": 3605,
+                "title": "Ben and Holly’s Little Kingdom | No Magic Day | Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Tb8QVPhyhJs",
+                "duration": 2248,
+                "title": "Getting Fit with Lamput | Full Episodes Playlist | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HtiqGh-NrMk",
+                "duration": 3651,
+                "title": "George Makes Carrot Muffins 🥕 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sF-k3j_R31w",
+                "duration": 1677,
+                "title": "Transformers: Rescue Bots | Optimus Prime & High Tide | Kids Cartoon | Transformers Junior",
                 "skip": [],
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=3dqra_9FKCM",
+                "url": "https://www.youtube.com/watch?v=Ik_QP4oA_Hg",
+                "duration": 1472,
+                "title": "Curious George 🐵 Maple Monkey Madness 🥞 Pancake Day! 🐵Kids Cartoon 🐵",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nqy85BrjkR8",
+                "duration": 1906,
+                "title": "Chicken Pox | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M-OphcQCgpo",
+                "duration": 1283,
+                "title": "Iyanu | FULL EPISODE: The Chosen 🏹 | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6bf5UVSsMXY",
+                "duration": 2966,
+                "title": "School Fail | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ip_9pjJr4Lk",
+                "duration": 2482,
+                "title": "Birthday Cake | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9jUBpNE0rmg",
+                "duration": 291,
+                "title": "George's Adventure in Japan 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nepHKvkf1TQ",
+                "duration": 2412,
+                "title": "Maisy Mouse Official | 🍳Breakfast 🍳 | Videos for Kids | Kids Cartoon | Videos For Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MANKTIXKLqo",
+                "duration": 3398,
+                "title": "George Floods the House!  🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X7tKDl3J5Ow",
+                "duration": 4542,
+                "title": "Postman Pat ❄️⛄  Postman Pats CHRISTMAS SPECIAL ❄️⛄ Christmas Cartoon For Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G60PiMIEbtQ",
+                "duration": 991,
+                "title": "Caillou and the Lunch Box | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GMBi2GWjJFU",
+                "duration": 641,
+                "title": "Teen Titans Go to the Repair Shop - Pt 1 | FULL EPISODE | Teen Titans Go! | Cartoon Network UK",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oLYVwpeyrTQ",
+                "duration": 464,
+                "title": "Doll House Drama: FULL EPISODE | Dexter's Laboratory | Cartoon Cartoons",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=25XIY7lFlbk",
+                "duration": 3966,
+                "title": "Thankful for Good Friends | Full Episodes | Cartoons for Kids | Clifford the Big Red Dog",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EP2tuoBV184",
+                "duration": 3517,
+                "title": "The Grouch Parade | Sesame Street Classics Full Episode",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l-zdDoNCVfQ",
+                "duration": 3585,
+                "title": "Ben and Holly’s Little Kingdom 🌹 Gaston's Valentine's Day Special 🌹 Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UHDHZKYjq4k",
+                "duration": 2235,
+                "title": "Boing Boing Sap | Jungle Beat: Munki & Trunk | Full Episodes | Kids Cartoon 2024",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RW3MOelZS9w",
+                "duration": 3557,
+                "title": "George Runs a Popcorn Cart! 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7e3ZclnmyUE",
+                "duration": 2845,
+                "title": "Calm Down Catboy! | PJ Masks | Kids Cartoon Video | Animation for Kids | Season 2 Compilation",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QHV5yrQ-d2w",
+                "duration": 3632,
+                "title": "Ben and Holly’s Little Kingdom 🎄 Visiting Granny and Grandpapa | Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=phhn6cOdSkI",
+                "duration": 1497,
+                "title": "George Becomes a Traffic Guard 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zD2SxyMYX0U",
+                "duration": 1317,
+                "title": "Caillou at the Restaurant | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=McGL4_e-47Q",
+                "duration": 3534,
+                "title": "How I Met Your Mother | Gumball | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pzKJ-yhg9JY",
+                "duration": 2413,
+                "title": "Curious George 🐵 A Monkey's Duckling 🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BtyFAjItb4I",
+                "duration": 278,
+                "title": "The Pizza | Gumball | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iWR_5lG7_fE",
+                "duration": 1541,
+                "title": "★NEW★ CAILLOU LEARNS TO SWIM | Funny Animated cartoon for Kids | Cartoon Caillou l Cartoon Movie",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sBe4-UcwTPM",
+                "duration": 272,
+                "title": "Peppa Pig's Halloween Pumpkin Party | Peppa Pig Official Minisodes | Family Kids Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N_yoag2lIkI",
                 "duration": 3189,
-                "title": "Looney Tunes | Wile E. Coyote vs. Road Runner Mega Compilation | Vol. 7 | Warner Classics",
+                "title": "5 FULL EPISODES MEGA Compilation | Gumball Special | Cartoon Network UK",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=rfvq3CzrJls",
-                "duration": 2524,
-                "title": "Looney Tunes | Classic Daffy Duck Mega Compilation | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=qKTSekyZWh0",
+                "duration": 281,
+                "title": "George Plays Basketball 🐵 Curious George 🐵Kids Cartoon 🐵 Kids Movies 🐵Videos for Kids",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=rehNT9wIjUg",
-                "duration": 4520,
-                "title": "Gulliver's Travels (1939) Jonathan Swift | Adventure, Comedy | Animated Movie",
+                "url": "https://www.youtube.com/watch?v=5s4RPViE2NY",
+                "duration": 605,
+                "title": "Ben and Holly's Little Kingdom | Planet Bong 2 - Full Episode | Kids Cartoon Shows",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=YgDH-GhhqWU",
-                "duration": 3650,
-                "title": "Tom and Jerry | Mega Episode: Golden Era Vol. 10 | Warner Classics",
+                "url": "https://www.youtube.com/watch?v=m6Wc1ur2DZ0",
+                "duration": 1598,
+                "title": "Caillou at the Lake | Caillou Cartoon",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hWdLhB2okqA",
+                "duration": 313,
+                "title": "Peppa Pig Minisodes | Swimming with Peppa and George Family Kids Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uBpBbuxd0GQ",
+                "duration": 681,
+                "title": "FULL EPISODE: The Factory | Gumball | Cartoon Network UK",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UJWrp2-4TGg",
+                "duration": 2580,
+                "title": "Curious George 🐵The Big Sleepy  🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VSqe0_MHcCA",
+                "duration": 3586,
+                "title": "Ben and Holly’s Little Kingdom | Miss Cookie's Nature Trail | Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xf4evuqZ3sA",
+                "duration": 2549,
+                "title": "Family Fireworks Night ✨ Kids Videos 🐽 Peppa Pig Full Episodes | All New Peppa Pig Tales",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K5C16vj17Ak",
+                "duration": 353,
+                "title": "Popeye the Sailor Man ⚓ | Classic Cartoon Full Episode | BritToon Rewind",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MiGHBJf-rWk",
+                "duration": 321,
+                "title": "Gumball | Watterson's Weird Dreams! | The Night | Cartoon Network",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0xt9VrgDKso",
+                "duration": 1490,
+                "title": "Curious George 🐵 George is a good friend 🐵 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oLdjfDy6rn4",
+                "duration": 1309,
+                "title": "The Fixies | The Cartoons | Cartoon in English",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WTr9SjjGny8",
+                "duration": 1311,
+                "title": "Caillou English Full Episodes | Caillou hates Healthy Food | Cartoon Movie | Cartoons for Kids",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XCHRPK2QNho",
+                "duration": 652,
+                "title": "Double Hex  | Full Episode | Ben 10 (2016)",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7JW7pz6LJK8",
+                "duration": 2400,
+                "title": "Caillou and the Bully | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WOvymVFc838",
+                "duration": 3304,
+                "title": "Popcorn Everywhere! 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OEVQltW5Ts8",
+                "duration": 1159,
+                "title": "Caillou and the Vehicles | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=caGwJY5ukZc",
+                "duration": 3627,
+                "title": "Caillou's Babysitting Disaster | Caillou Cartoon",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7XAoHo1NATY",
+                "duration": 1276,
+                "title": "Elf Joke Day | Cartoon for Kids | Ben and Holly's Little Kingdom",
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZcLhESBgLfo",
+                "duration": 1363,
+                "title": "FULL EPISODE - Operation: I.-S.C.R.E.A.M. | Codename: Kids Next Door | Cartoon Network",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
             },
             {
                 "url": "https://www.youtube.com/watch?v=equDXjlJZd0",
                 "duration": 3030,
                 "title": "Looney Tunes | Bugs Bunny Full Episode Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H7U7qOseNeI",
-                "duration": 4210,
-                "title": "Scooby-Doo! Where Are You? MARATHON Vol.2  📺 | Classic Scooby-Doo MEGA COMP ⭐️ |  @wbkids",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nSdz5ln2rME",
-                "duration": 2635,
-                "title": "Popeye The Sailor Man Classic Collection HD",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DLct1oqOv2I",
-                "duration": 689,
-                "title": "The Magic Tree of Nowhere: FULL EPISODE | Courage The Cowardly Dog | Cartoon Cartoons",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FL-zwTloms8",
-                "duration": 2299,
-                "title": "24 Christmas Cartoons From the 1960s - 70s You'll NEVER See Again",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=U-noH_hzCQ0",
-                "duration": 3620,
-                "title": "Looney Tunes | 1 Hour Tweety & Sylvester Compilation | Vol. 8 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7gZQcEM_uQc",
-                "duration": 2933,
-                "title": "Looney Tunes | Bugs Bunny vs. Yosemite Sam Mega Full Episodes Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=heMJpbCXFbA",
-                "duration": 3321,
-                "title": "Looney Tunes | Bugs Bunny Mega Compilation | Vol. 6 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_mHcWWOa3aI",
-                "duration": 4557,
-                "title": "Looney Tunes | Wile E. Coyote vs Road Runner Mega Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QJzC19JQWr8",
-                "duration": 2884,
-                "title": "Looney Tunes | Classic Bugs Bunny Mega Compilation | Vol. 2 | Warner Classics",
-                "skip": [
-                    [
-                        2872.9,
-                        2883.2
-                    ]
+                "parts": [
+                    "breakfast"
                 ],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AmwPJ4XoTyc",
-                "duration": 1808,
-                "title": "Looney Tunes🐰| Relaxation Before Winter!🎄| Kids Entertainment😍| Classic Cartoon🤩| @cnindia​",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7sL__iyyQj8",
-                "duration": 2580,
-                "title": "Looney Tunes | Classic Bugs Bunny & Elmer Fudd Compilation | Warner Classics",
                 "skip": [],
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=7M2FA2rjYg4",
-                "duration": 636,
-                "title": "Betty Boop - Poor Cinderella (1934) Comedy Animated Short",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MUyWV16cGys",
-                "duration": 2308,
-                "title": "Tom and Jerry | Quackers and Bird Friends Mega Compilation | Vol. 40 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rJKht7IY-Xg",
-                "duration": 1349,
-                "title": "Inspector Gadget 117 - The Infiltration | HD | Full Episode",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ugJNvkg8o8M",
-                "duration": 3633,
-                "title": "Looney Tunes | Sylvester & Tweety Mega Compilation | Vol. 6 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mkPLXTXY2WY",
-                "duration": 2453,
-                "title": "Tom and Jerry | Full Episodes Mega Compilation | Vol. 31 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E__Qk3h18SY",
-                "duration": 2180,
-                "title": "Pink Panther And The Tuba  | 35-Minute Compilation | Pink Panther Show",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IhJdoBo_wm8",
-                "duration": 634,
-                "title": "BETTY BOOP: Poor Cinderella - Full Cartoon Episode - HD",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OBMBUks8zCE",
-                "duration": 2625,
-                "title": "Tom and Jerry | Spike The Bulldog Mega Compilation | Full Episodes | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=w7sICPn17uE",
-                "duration": 3299,
-                "title": "Looney Tunes | Bugs, Daffy, Porky, & Wile Cartoon Icons Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LQ7gni_c_MA",
-                "duration": 2322,
-                "title": "Looney Tunes | Classic Bugs Bunny Mega Compilation | Vol. 3 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bPgiiPCZt60",
-                "duration": 4788,
-                "title": "Smurftastic adventures with the Smurfs! • Remastered episodes • 1 hour compilation",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DuvKvwdHyKU",
-                "duration": 2138,
-                "title": "Tom and Jerry | Mega Compilation 1940's Episodes | Vol. 44 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SAaUjt0N-tA",
-                "duration": 2705,
-                "title": "Tom and Jerry | 1950's Mega Episode | Classic Full Episodes | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MFzBll9KQWU",
-                "duration": 2415,
-                "title": "Looney Tunes | Yosemite Sam Mega Compilation | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3HxXuYSK-K4",
-                "duration": 1378,
-                "title": "Tom & Jerry | Spooky Silly Moments! 🦇👻 | Halloween | Classic Cartoon Compilation | @wbkids",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AZbq2Gt2zCg",
-                "duration": 1154,
-                "title": "Chilly Willy Full Episodes 🐧Legend Of Rockabye Point 🐧Kids Show",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lFI63GKOp0Q",
-                "duration": 3233,
-                "title": "Looney Tunes | Classic Wile E. Coyote & Road Runner Compilation | Vol. 8 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ph7iu3xlpFY",
-                "duration": 3348,
-                "title": "Tom and Jerry | Mega Episode: Golden Era Vol. 1 | Warner Classics",
-                "skip": [
-                    [
-                        1774.6,
-                        1782.2
-                    ]
+                "url": "https://www.youtube.com/watch?v=C-upU-cb8CY",
+                "duration": 3948,
+                "title": "Scooby-Doo! Where Are You? MARATHON 📺 | Classic Scooby-Doo MEGA COMP ⭐️ | @wbkids",
+                "parts": [
+                    "breakfast"
                 ],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BRf7DWy0_-s",
-                "duration": 3689,
-                "title": "It's Moving Day! | 1 Hour of Woody Woodpecker Full Episodes",
                 "skip": [],
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=mikBNW51kD8",
-                "duration": 1381,
-                "title": "Casper the Friendly Ghost | Spooking a Brogue | Full Episode | Cartoons For Kids",
+                "url": "https://www.youtube.com/watch?v=PR3R21dpW5U",
+                "duration": 375,
+                "title": "Saturday Morning Minions | Season One | Episodes 1-10",
+                "parts": [
+                    "breakfast"
+                ],
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ssrPJqLMcqE",
-                "duration": 2150,
-                "title": "Looney Tunes | Classic Foghorn Leghorn Mega Compilation | Vol. 5 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ccheK0xcqx4",
-                "duration": 3670,
-                "title": "Strawberry Shortcake Classic 🍓 Piece of Cake 🍰 Strawberry Shortcake 🍓 Full Episodes",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eorZPofEdko",
-                "duration": 1205,
-                "title": "CARTOON ONLY: The World Of Peter Rabbit & Friends - The Tale of the Flopsy Bunnies & Mrs Tittlemouse",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wurbT0lbQ8E",
-                "duration": 2455,
-                "title": "Tom and Jerry | Mega Compilation Vol. 25 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-UAgcfA6TLQ",
-                "duration": 2519,
-                "title": "Looney Tunes | Classic Bugs Bunny Mega Compilation | Vol. 4 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=xh0t_vOmvpA",
                 "duration": 1295,
                 "title": "Busted: FULL EPISODE | Foster's Home for Imaginary Friends | Cartoon Cartoons",
+                "parts": [
+                    "breakfast"
+                ],
                 "skip": [],
                 "skip_checked": 1792263511
             },
             {
-                "url": "https://www.youtube.com/watch?v=YE-pFTEgsjI",
-                "duration": 3705,
-                "title": "Ben 10 👾 Every Episode Season 1 CLASSIC Ben 10 Marathon | Cartoon Network",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QKxULLBwxBk",
-                "duration": 3910,
-                "title": "Happy Halloween MARATHON! 🎃👻 | Scooby-Doo! MEGA COMP | @wbkids",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sbLS_v7DNlc",
-                "duration": 1384,
-                "title": "FULL EPISODE Moral Decay / Meet The Beat Alls | Classic Powerpuff Girls | Cartoon Network",
+                "url": "https://www.youtube.com/watch?v=CKLpJpVqpJo",
+                "duration": 4443,
+                "title": "Tom and Jerry Tales Saturday Morning MARATHON 📺 | @GenerationWB",
+                "parts": [
+                    "breakfast"
+                ],
                 "skip": [],
                 "skip_checked": 1793395034
             },
@@ -672,6 +953,9 @@
                 "url": "https://www.youtube.com/watch?v=WJQJQrbsuIE",
                 "duration": 1609,
                 "title": "Arthur FULL EPISODE! | Is That Kosher / Never Never Never | PBS KIDS",
+                "parts": [
+                    "breakfast"
+                ],
                 "skip": [
                     [
                         0.0,
@@ -689,243 +973,9 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=CJDBuCBCh_A",
-                "duration": 1323,
-                "title": "TMNT (1987) FULL EPISODE: \"Return of the Technodrome\" 🌎 | Teenage Mutant Ninja Turtles",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f-vwXP0XNXc",
-                "duration": 2410,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 34 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YHv3R29-3qc",
-                "duration": 2870,
-                "title": "Pingu Cooks His Favorite Meals 🐧 | Pingu - Official Channel | Cartoons For Kids",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZCaAuKLc2nI",
-                "duration": 673,
-                "title": "Sir Ed-A-Lot: FULL EPISODE | Ed, Edd n Eddy | Cartoon Cartoons",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iIL8626KWaA",
-                "duration": 2520,
-                "title": "Tom and Jerry | Mega Compilation Vol. 24 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t0Q2otsqC4I",
-                "duration": 1298,
-                "title": "Tom & Jerry in Full Screen | Tom & Jerry Classic Cartoon Compilation | @wbkids",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=j-88jrkyszQ",
-                "duration": 2856,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 1 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x5KtraCl8Ck",
-                "duration": 680,
-                "title": "Revenge of Chicken from Outer Space: FULL EPISODE | Courage The Cowardly Dog | Cartoon Cartoons",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4ZmeUj7cFu4",
-                "duration": 778,
-                "title": "Scooby-Doo! | Ahoy Scooby Doo! 🛥| Classic Cartoon Compilation | WB Kids",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=L6NCUy0CEEA",
-                "duration": 3148,
-                "title": "Looney Tunes | Classic Wile E. Coyote vs. Road Runner Mega Compilation | Vol. 6 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4CU8h5f8TYY",
-                "duration": 2122,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 30 | Full Episodes | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G1nPAY7FQb8",
-                "duration": 2601,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 29 | Full Episodes | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OJB0l7ESe3c",
-                "duration": 2664,
-                "title": "Looney Tunes | Classic Wile E. Coyote vs Road Runner Full Episodes | Vol. 11 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UQCdpQ6Jedg",
-                "duration": 2273,
-                "title": "Tom and Jerry | Mega Compilation | Vol. 43 | Spike the Bulldog | Warner Classics",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7daF-MW3xXU",
-                "duration": 5031,
-                "title": "4 FULL EPISODES of TMNT (1987) Season 2 🐢 | Teenage Mutant Ninja Turtles",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eUSP5Owz_tQ",
-                "duration": 1290,
-                "title": "Classic Compilation #1 - Full Episodes - Bananas in Pyjamas Official",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cZ5MfP9qzzs",
-                "duration": 680,
-                "title": "Hothead: FULL EPISODE | Courage the Cowardly Dog | Cartoon Cartoons",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lei5bqds-xQ",
-                "duration": 1348,
-                "title": "And Then There Were 10 | Full Episode | Ben 10 Classic | Cartoon Network",
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bmLklzwS1Wk",
-                "duration": 3301,
-                "title": "Mr HATES The Rain | Mr Bean Animated Season 2 | Full Episodes | Mr Bean Adventures",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KSX4cwWRzis",
-                "duration": 2451,
-                "title": "Morning Tea | Funny Episodes | Mr Bean World",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vSbfkg39GRg",
-                "duration": 2607,
-                "title": "Tom and Jerry | Quackers and Friends Mega Compilation | Vol. 21 | Warner Classics",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pKnxjSTkOsI",
-                "duration": 679,
-                "title": "Mother's Day: FULL EPISODE | Courage The Cowardly Dog | Cartoon Cartoons",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kZWBWB0P-m8",
-                "duration": 1260,
-                "title": "Mr Bean Cartoon Full Episodes | Mr Bean the Animated Series New Collection #26",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JdyNbVEjFqo",
-                "duration": 909,
-                "title": "Tweenies - Fizz's Birthday (DVD Version, 1999)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Bg9qw4GbGfk",
-                "duration": 4007,
-                "title": "PJ Masks Full Episodes | PJ Seeker | 1 Hour | Cartoons for Kids | Animation for Kids",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ik_QP4oA_Hg",
-                "duration": 1472,
-                "title": "Curious George 🐵 Maple Monkey Madness 🥞 Pancake Day! 🐵Kids Cartoon 🐵",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Vhczg0RE_rQ",
-                "duration": 3642,
-                "title": "60 MINUTES of the Loud House Kids on the Clock ⏰ | @Nicktoons",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZcLhESBgLfo",
-                "duration": 1363,
-                "title": "FULL EPISODE - Operation: I.-S.C.R.E.A.M. | Codename: Kids Next Door | Cartoon Network",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=i38vqZbOKt8",
-                "duration": 1486,
-                "title": "Saturday Scaries! Beetlejuice the Animated Series | @GenerationWB",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UNzDl9XVE3Q",
-                "duration": 672,
-                "title": "The Rise and Fall of Saturday Morning Cartoons",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        25.4,
-                        34.4
-                    ]
-                ],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=j2wRH-Gx8Tk",
-                "duration": 3798,
-                "title": "Season 4 - FULL EPISODE MARATHON 🐢 | TMNT (1987) | Teenage Mutant Ninja Turtles",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W7dO7EkgkEA",
-                "duration": 696,
-                "title": "Several Leagues Under the Sea: FULL EPISODE | The Marvelous Misadventures of Flapjack",
+                "url": "https://www.youtube.com/watch?v=ccheK0xcqx4",
+                "duration": 3670,
+                "title": "Strawberry Shortcake Classic 🍓 Piece of Cake 🍰 Strawberry Shortcake 🍓 Full Episodes",
                 "parts": [
                     "breakfast"
                 ],
@@ -933,29 +983,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=CKLpJpVqpJo",
-                "duration": 4443,
-                "title": "Tom and Jerry Tales Saturday Morning MARATHON 📺 | @GenerationWB",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F4TUODIjFv8",
-                "duration": 2478,
-                "title": "👻 FULL EPISODES: Terror Tales of the Park I & II 🎃 | Halloween Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O9Nw51J1r8E",
-                "duration": 1391,
-                "title": "FULL EPISODE: Moral Decay/Meet the Beat Alls | Powerpuff Girls | Cartoon Network",
+                "url": "https://www.youtube.com/watch?v=X-HRLChOTOA",
+                "duration": 1377,
+                "title": "FULL EPISODE: The Eds Are Coming | Ed, Edd n Eddy | Cartoon Network",
                 "parts": [
                     "breakfast"
                 ],
@@ -988,9 +1018,29 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=3bLNQgRn-Wg",
-                "duration": 921,
-                "title": "FULL EPISODE: Babysitter Blues/Valhallen's Room/Dream Machine | Dexter's Lab | Cartoon Network",
+                "url": "https://www.youtube.com/watch?v=Xn-oLJ_XtkE",
+                "duration": 1496,
+                "title": "Dinosaurs | The Busasaurus | Full Episode | The Magic School Bus",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O9Nw51J1r8E",
+                "duration": 1391,
+                "title": "FULL EPISODE: Moral Decay/Meet the Beat Alls | Powerpuff Girls | Cartoon Network",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BnOkMxQ8TPc",
+                "duration": 3976,
+                "title": "Ultimate Spider-Man S1 Eps 13-15 | Full Episodes | @MarvelHQ",
                 "parts": [
                     "breakfast"
                 ],
@@ -998,14 +1048,44 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=we8amlzi-jg",
-                "duration": 1308,
-                "title": "Caillou English Full Episodes | Caillou and the Loud Lunch | Cartoon Movie | Cartoons for Kids",
+                "url": "https://www.youtube.com/watch?v=tg7ovSctPX8",
+                "duration": 700,
+                "title": "⚔️ FULL EPISODE: Hall of Egress ⚔️ | Adventure Time | Cartoon Network",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NIxmzVli_aY",
+                "duration": 4079,
+                "title": "The Land Before Time Full Episodes | The Great Egg Adventure | Kids Cartoon | Videos For Kids",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
                 "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H7U7qOseNeI",
+                "duration": 4210,
+                "title": "Scooby-Doo! Where Are You? MARATHON Vol.2  📺 | Classic Scooby-Doo MEGA COMP ⭐️ |  @wbkids",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=roV4dIuhSNk",
+                "duration": 1328,
+                "title": "TMNT (1987) FULL EPISODE: \"Usagi Yojimbo\" 🐰 | Teenage Mutant Ninja Turtles",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=ufk0_UwrkbA",
@@ -1027,9 +1107,9 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=NIxmzVli_aY",
-                "duration": 4079,
-                "title": "The Land Before Time Full Episodes | The Great Egg Adventure | Kids Cartoon | Videos For Kids",
+                "url": "https://www.youtube.com/watch?v=7daF-MW3xXU",
+                "duration": 5031,
+                "title": "4 FULL EPISODES of TMNT (1987) Season 2 🐢 | Teenage Mutant Ninja Turtles",
                 "parts": [
                     "breakfast"
                 ],
@@ -1037,104 +1117,24 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=Hj3oHnI8ULE",
-                "duration": 3748,
-                "title": "Looney Goes Haywire! 😜 | Looney Tunes🐰| Funny Video | Compilation | Cartoon for Kids 😍| @cnindia",
+                "url": "https://www.youtube.com/watch?v=F4TUODIjFv8",
+                "duration": 2478,
+                "title": "👻 FULL EPISODES: Terror Tales of the Park I & II 🎃 | Halloween Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3bLNQgRn-Wg",
+                "duration": 921,
+                "title": "FULL EPISODE: Babysitter Blues/Valhallen's Room/Dream Machine | Dexter's Lab | Cartoon Network",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
                 "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pWDYVJhlUaQ",
-                "duration": 2821,
-                "title": "Franklin Back To School Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8fKNkiJl_Ro",
-                "duration": 1719,
-                "title": "Looney Tunes | Summer Vacation! | WB Kids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Nyrn_prvr08",
-                "duration": 2821,
-                "title": "Back to School with Franklin Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=P-Bjjj-yERE",
-                "duration": 4788,
-                "title": "Postman Pat | 1 HOUR COMPILATION | Postman Pat Full Episodes | Videos For Kids | Videos For Kids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UqTzJpTwFFc",
-                "duration": 1349,
-                "title": "Funny Money 🔍 Inspector Gadget | Full Episode | Season One | Classic Cartoons",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8Xz0-khYoro",
-                "duration": 1181,
-                "title": "Curious George 🐵👻HALLOWEEN SPECIAL - In the Dark 🎃🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PcD_9i7sfFE",
-                "duration": 1365,
-                "title": "FULL EPISODE: My Fair Mandy | Grim Adventures of Bill and Mandy | Cartoon Network",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NWG8T2WOSVQ",
-                "duration": 1272,
-                "title": "6 FULL EPISODES of Teeny Mutant Ninja Turtles! 🐢🍕 | Episodes 1-6 | Nick Jr.",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AiVoJP00r6s",
-                "duration": 4084,
-                "title": "The Land Before Time Full Episodes | The Hermit of Black Rock 118 | HD | Videos For Kids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
             },
             {
                 "url": "https://www.youtube.com/watch?v=VhMkrudxLXQ",
@@ -1147,144 +1147,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=ebiDCZSGVEw",
-                "duration": 4451,
-                "title": "Paw Print Picasso + more| Full Episodes | Clifford's Puppy Days",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=opFjGx8DlFY",
-                "duration": 4063,
-                "title": "Rolie Polie Olie | Season 1 MARATHON | Part. 1",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=50htNj0VRio",
                 "duration": 1927,
                 "title": "Happy Heelerween! 🎃 💙 | 30 MINUTES of Spooky Fun and Games 👻 | Bluey",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IUSawYNVB4k",
-                "duration": 3775,
-                "title": "1 HOUR of Alvin's Haunted Halloween Adventures! 🎃👻 Alvin and the Chipmunks | Cartoon for Kids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lHmPEalzFK0",
-                "duration": 3364,
-                "title": "George Loves Bubble Baths 🐵 Curious George 🐵 Kids Cartoon 🐵 Kids Movies",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BnOkMxQ8TPc",
-                "duration": 3976,
-                "title": "Ultimate Spider-Man S1 Eps 13-15 | Full Episodes | @MarvelHQ",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4SAnrZ03qxs",
-                "duration": 3623,
-                "title": "Rise and Shine with Bluey ☀️ 💙 | 1 HOUR | New Bluey Compilation | Bluey",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Syjls_1iUzE",
-                "duration": 1435,
-                "title": "Doc McStuffins: The Doc Is In 🏥  | Full Special | Disney Junior",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=INbJ7CIWCp0",
-                "duration": 3489,
-                "title": "Halloween Episodes | Full Episodes | Clifford's Puppy Days",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nuu9ckhkOuM",
-                "duration": 1646,
-                "title": "Word World FULL EPISODE | Duck Saves Spider's Web/Caterpillar Gets a Home | PBS KIDS",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        1627.4,
-                        1645.5
-                    ]
-                ],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=X0oGl4SmO3w",
-                "duration": 1305,
-                "title": "The Big Lablooski: FULL EPISODE | Foster's Home for Imaginary Friends | Cartoon Cartoons",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9dSnoF3QfT8",
-                "duration": 3621,
-                "title": "Summer Vacation Marathon! ☀️🏖️ | Tom & Jerry Tales MEGA COMP | @wbkids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ydk3PgfTmVU",
-                "duration": 4012,
-                "title": "Ultimate Spider-Man S1 Eps 4-6 | Full Episode Compilation | ‪@MarvelHQ",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x8KjtQiolfg",
-                "duration": 3444,
-                "title": "George Goes to Kindergarten 📚🚌 | Curious George Compilation | Adventure & Play",
                 "parts": [
                     "breakfast"
                 ],
@@ -1302,9 +1167,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=NoSVnc-7eTk",
-                "duration": 268,
-                "title": "Looney Tunes | Abracadabra, I'm an Umpire! | Classic Cartoon | WB Kids",
+                "url": "https://www.youtube.com/watch?v=KSX4cwWRzis",
+                "duration": 2451,
+                "title": "Morning Tea | Funny Episodes | Mr Bean World",
                 "parts": [
                     "breakfast"
                 ],
@@ -1312,9 +1177,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=La2r2piUigA",
-                "duration": 2072,
-                "title": "PJ Masks Supercharged! | PJ Masks Full Episode | Cartoons for Kids | #superheroes",
+                "url": "https://www.youtube.com/watch?v=NWG8T2WOSVQ",
+                "duration": 1272,
+                "title": "6 FULL EPISODES of Teeny Mutant Ninja Turtles! 🐢🍕 | Episodes 1-6 | Nick Jr.",
                 "parts": [
                     "breakfast"
                 ],
@@ -1322,28 +1187,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=GSwA8kdsPJw",
-                "duration": 1641,
-                "title": "Sid the Science Kid FULL EPISODE | A Brush With Teeth | PBS Kids",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        1533.5,
-                        1549.1
-                    ],
-                    [
-                        1623.0,
-                        1641.0
-                    ]
-                ],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OC6WA9VN904",
-                "duration": 2650,
-                "title": "Back To School with MONSTERS! 😈 | Aaahh!!! Real Monsters | Nicktoons",
+                "url": "https://www.youtube.com/watch?v=pWDYVJhlUaQ",
+                "duration": 2821,
+                "title": "Franklin Back To School Special",
                 "parts": [
                     "breakfast"
                 ],
@@ -1351,14 +1197,154 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=MdHJbkZ3cnQ",
-                "duration": 680,
-                "title": "Little Muriel: FULL EPISODE | Courage The Cowardly Dog | Cartoon Cartoons",
+                "url": "https://www.youtube.com/watch?v=ebiDCZSGVEw",
+                "duration": 4451,
+                "title": "Paw Print Picasso + more| Full Episodes | Clifford's Puppy Days",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
                 "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BhKjUYfY9NE",
+                "duration": 448,
+                "title": "Saturday Morning Minions | Season 2 | Episodes 11-20",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nyrn_prvr08",
+                "duration": 2821,
+                "title": "Back to School with Franklin Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vhczg0RE_rQ",
+                "duration": 3642,
+                "title": "60 MINUTES of the Loud House Kids on the Clock ⏰ | @Nicktoons",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AiVoJP00r6s",
+                "duration": 4084,
+                "title": "The Land Before Time Full Episodes | The Hermit of Black Rock 118 | HD | Videos For Kids",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8Xz0-khYoro",
+                "duration": 1181,
+                "title": "Curious George 🐵👻HALLOWEEN SPECIAL - In the Dark 🎃🐵 Kids Cartoon 🐵 Kids Movies | Videos for Kids",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bPgiiPCZt60",
+                "duration": 4788,
+                "title": "Smurftastic adventures with the Smurfs! • Remastered episodes • 1 hour compilation",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IUSawYNVB4k",
+                "duration": 3775,
+                "title": "1 HOUR of Alvin's Haunted Halloween Adventures! 🎃👻 Alvin and the Chipmunks | Cartoon for Kids",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=opFjGx8DlFY",
+                "duration": 4063,
+                "title": "Rolie Polie Olie | Season 1 MARATHON | Part. 1",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792263511
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aoBRfh1q9x8",
+                "duration": 3976,
+                "title": "Marvel's Avengers Assemble S3 Eps 4-6 | Full Episodes | ‪@MarvelHQ",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2FO6jfqM3f0",
+                "duration": 2696,
+                "title": "Chase and Rescue Mission | PJ Masks Official | Cartoons for Kids | Animation for Kids | FULL Episode",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Syjls_1iUzE",
+                "duration": 1435,
+                "title": "Doc McStuffins: The Doc Is In 🏥  | Full Special | Disney Junior",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eUSP5Owz_tQ",
+                "duration": 1290,
+                "title": "Classic Compilation #1 - Full Episodes - Bananas in Pyjamas Official",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e33JKhyvT-c",
+                "duration": 2444,
+                "title": "Super Saturday Morning Cartoons | Learn to Read and Spell for Kids Compilation | Alphablocks",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j2wRH-Gx8Tk",
+                "duration": 3798,
+                "title": "Season 4 - FULL EPISODE MARATHON 🐢 | TMNT (1987) | Teenage Mutant Ninja Turtles",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792263511
             },
             {
                 "url": "https://www.youtube.com/watch?v=bcayCcJ36V4",
@@ -1381,19 +1367,19 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=LMTdyZzLYvo",
-                "duration": 4271,
-                "title": "Flash back to Saturday morning for kids in the 70s and 80s. Schoolhouse Rock!",
+                "url": "https://www.youtube.com/watch?v=eQxB70XIgNw",
+                "duration": 3432,
+                "title": "ABC Afterschool Specials - \"Stoned\" - WLS Channel 7 (Complete Broadcast, 11/12/1980) 📺 🚬 😵",
                 "parts": [
                     "afternoon"
                 ],
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=uZnE5YRJP4A",
-                "duration": 661,
-                "title": "1980's Sat Morn/After School Cartoons & Adverts",
+                "url": "https://www.youtube.com/watch?v=LMTdyZzLYvo",
+                "duration": 4271,
+                "title": "Flash back to Saturday morning for kids in the 70s and 80s. Schoolhouse Rock!",
                 "parts": [
                     "afternoon"
                 ],
@@ -1411,74 +1397,14 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=eQxB70XIgNw",
-                "duration": 3432,
-                "title": "ABC Afterschool Specials - \"Stoned\" - WLS Channel 7 (Complete Broadcast, 11/12/1980) 📺 🚬 😵",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=X-HRLChOTOA",
-                "duration": 1377,
-                "title": "FULL EPISODE: The Eds Are Coming | Ed, Edd n Eddy | Cartoon Network",
+                "url": "https://www.youtube.com/watch?v=OC6WA9VN904",
+                "duration": 2650,
+                "title": "Back To School with MONSTERS! 😈 | Aaahh!!! Real Monsters | Nicktoons",
                 "parts": [
                     "afternoon"
                 ],
                 "skip": [],
                 "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Vw_TZVUYiOw",
-                "duration": 2092,
-                "title": "10 More Of The Most Disturbing 70s/80s Horror Movies We Watched Way Too Young!",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Vv_OVdp7kWE",
-                "duration": 3576,
-                "title": "UNWIND with 1980s Afterschool ASMR | Cartoon Commercials AMBIENCE to Recall, Reminisce, & Remember",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tlz1Ut-5gN0",
-                "duration": 3933,
-                "title": "EVERY 80s Cartoon Intro EVER | Part 1 of 4",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=orI0kGFOncY",
-                "duration": 4821,
-                "title": "Albert: Up, Up And Away! | FULL MOVIE | Family Animation Adventure",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H1Grdy-o1x8",
-                "duration": 3089,
-                "title": "Elmo's Rainbow and Bubbles! | TWO Sesame Street Full Episodes",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
             },
             {
                 "url": "https://www.youtube.com/watch?v=RVqEjOP8C5c",
@@ -1491,44 +1417,14 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=rzEKtgn67wg",
-                "duration": 4319,
-                "title": "Unicorn Academy FULL MOVIE❗ | Unicorn Academy 🦄 | Kids Movies 🎥",
+                "url": "https://www.youtube.com/watch?v=HFY_Q6kl6II",
+                "duration": 3757,
+                "title": "Tom and Jerry 😺🐭| The Chase Gets Wild! 🐾 | Compilation | 90s cartoons | Kids Cartoon | @cnindia",
                 "parts": [
                     "afternoon"
                 ],
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-M9lvQADvAI",
-                "duration": 440,
-                "title": "Bluey \"Double Babysitter\" FULL Episode! | @disneyjr",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OIktUIEbbHA",
-                "duration": 533,
-                "title": "Kipper Gets a Visitor | Kipper the Dog | Season 1 Full Episode | Kids Cartoon Show",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=K52mrHptn08",
-                "duration": 2598,
-                "title": "Unicorn Academy Under The Fairy Moon FULL EPISODE! | Cartoons for Kids",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=va9N_PNimvA",
@@ -1541,9 +1437,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=LDsweqVjyc4",
-                "duration": 2049,
-                "title": "SUPER 70's Saturday Morning Cartoon Intros | Classic 1970s Shows & Ads | See Notes in Description!",
+                "url": "https://www.youtube.com/watch?v=u_Ux3jOgmGo",
+                "duration": 2230,
+                "title": "Retro 80s Halloween Specials",
                 "parts": [
                     "afternoon"
                 ],
@@ -1551,59 +1447,29 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=XVpDSxezAAs",
-                "duration": 1207,
-                "title": "Curious George 🐵  Bath Time! 🐵 20 Minute Show 🐵  Kids Cartoon 🐵  Kids Movies 🐵 Videos for Kids",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ey15OFV4YS4",
-                "duration": 4580,
-                "title": "Let's Learn Routines with Elmo!☀️🛁 | THREE Sesame Street Full Episodes!",
+                "url": "https://www.youtube.com/watch?v=OIktUIEbbHA",
+                "duration": 533,
+                "title": "Kipper Gets a Visitor | Kipper the Dog | Season 1 Full Episode | Kids Cartoon Show",
                 "parts": [
                     "afternoon"
                 ],
                 "skip": [],
                 "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rzEKtgn67wg",
+                "duration": 4319,
+                "title": "Unicorn Academy FULL MOVIE❗ | Unicorn Academy 🦄 | Kids Movies 🎥",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
             },
             {
                 "url": "https://www.youtube.com/watch?v=JmFiRwntHwc",
                 "duration": 4084,
                 "title": "The New Adventures of Winnie the Pooh Full Episode Marathon 🧸🍿| @disneykids",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CtGSqncxnTE",
-                "duration": 5315,
-                "title": "A Disney Halloween",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QjWhDynv-SQ",
-                "duration": 1580,
-                "title": "Sid the Science Kid FULL EPISODE! | The Big Sneeze | PBS KIDS",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qb-jiSYabYg",
-                "duration": 2341,
-                "title": "Bandit Gets Embarrassed! 😰💙 | Full Episode With Friends | Bluey's Bestest Friends - Official",
                 "parts": [
                     "afternoon"
                 ],
@@ -1621,59 +1487,34 @@
                 "skip_checked": 1792263511
             },
             {
-                "url": "https://www.youtube.com/watch?v=u_Ux3jOgmGo",
-                "duration": 2230,
-                "title": "Retro 80s Halloween Specials",
+                "url": "https://www.youtube.com/watch?v=3l-jVpuVlcQ",
+                "duration": 2870,
+                "title": "Wild Kratts FULL MOVIE | Wild Kratts: Our Blue and Green World | PBS KIDS",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [
+                    [
+                        0.0,
+                        5.1
+                    ]
+                ],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_t8hJ9j-zXA",
+                "duration": 3927,
+                "title": "What's New, Scooby-Doo? MARATHON 📺 | Scooby-Doo! MEGA COMP | #KidsCartoons @wbkids",
                 "parts": [
                     "afternoon"
                 ],
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1794348411
             },
             {
-                "url": "https://www.youtube.com/watch?v=5WZ_MxhB634",
-                "duration": 744,
-                "title": "MONEY MONEY MONEY! 🤑 | Teen Titans Go! | @dckids",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sF-k3j_R31w",
-                "duration": 1677,
-                "title": "Transformers: Rescue Bots | Optimus Prime & High Tide | Kids Cartoon | Transformers Junior",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YlsN25GLQKI",
-                "duration": 1496,
-                "title": "Spins a Web | Halloween Full Episode | The Magic School Bus",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3j44m2EqZrY",
-                "duration": 1133,
-                "title": "Rad and Frisky's Wedding 💒 💍 | 30 MINUTES The Sign Moment AND More Bluey Fun! 💙 ✨ | Bluey",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wXLBNFd1xro",
-                "duration": 402,
-                "title": "EVEN MORE Full Bluey Minisodes! - Part 2 💙 | Butlers, Alongside, Robo Bingo | Bluey",
+                "url": "https://www.youtube.com/watch?v=ey15OFV4YS4",
+                "duration": 4580,
+                "title": "Let's Learn Routines with Elmo!☀️🛁 | THREE Sesame Street Full Episodes!",
                 "parts": [
                     "afternoon"
                 ],
@@ -1691,9 +1532,39 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=BvCX_Vo-v38",
-                "duration": 1485,
-                "title": "Curious George gets a New Toy! | 25 Minutes of Curious George | Animated Cartoons For Children",
+                "url": "https://www.youtube.com/watch?v=PqEYwJF9tb0",
+                "duration": 378,
+                "title": "Sesame Street: 80s Music Mashup Parody",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wXLBNFd1xro",
+                "duration": 402,
+                "title": "EVEN MORE Full Bluey Minisodes! - Part 2 💙 | Butlers, Alongside, Robo Bingo | Bluey",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x8KjtQiolfg",
+                "duration": 3444,
+                "title": "George Goes to Kindergarten 📚🚌 | Curious George Compilation | Adventure & Play",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5WZ_MxhB634",
+                "duration": 744,
+                "title": "MONEY MONEY MONEY! 🤑 | Teen Titans Go! | @dckids",
                 "parts": [
                     "afternoon"
                 ],
@@ -1701,34 +1572,14 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=YHtgWPBTXFg",
-                "duration": 911,
-                "title": "Bluey's Back to School FULL EPISODES ✏️ 💙 🏫 | NEW Compilation! | Bluey",
+                "url": "https://www.youtube.com/watch?v=kZ-IOh9-f90",
+                "duration": 1351,
+                "title": "Dude, We're Getting the Band Back Together 🎸 | Full Episode | Phineas and Ferb |@disneychannel",
                 "parts": [
                     "afternoon"
                 ],
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UisLIsbHQaE",
-                "duration": 1442,
-                "title": "Curious George 🐑 George Goes to the Farm 🚜 Kids Cartoon 🐵 Kids Movies 🐵 Videos for Kids",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1f4nhhq4VOU",
-                "duration": 2581,
-                "title": "Meet Strawberry Shortcake | Strawberry Shortcake Classic | Full Movie",
-                "parts": [
-                    "afternoon"
-                ],
-                "skip": [],
-                "skip_checked": 1792263511
+                "skip_checked": 1794348411
             },
             {
                 "url": "https://www.youtube.com/watch?v=21GDbwQ5Bsg",
@@ -1741,9 +1592,39 @@
                 "skip_checked": 1793395034
             },
             {
+                "url": "https://www.youtube.com/watch?v=BvCX_Vo-v38",
+                "duration": 1485,
+                "title": "Curious George gets a New Toy! | 25 Minutes of Curious George | Animated Cartoons For Children",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ed5sac4OLbI",
                 "duration": 1707,
                 "title": "Wondering and Asking Questions | Mister Rogers' Neighborhood Full Episode!",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1792263511
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XEZCY95JliY",
+                "duration": 1324,
+                "title": "Double Dare OFFICIAL Classic Full Episode | Double Dare | Nick",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1f4nhhq4VOU",
+                "duration": 2581,
+                "title": "Meet Strawberry Shortcake | Strawberry Shortcake Classic | Full Movie",
                 "parts": [
                     "afternoon"
                 ],
@@ -1759,10 +1640,105 @@
                 ],
                 "skip": [],
                 "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YHtgWPBTXFg",
+                "duration": 911,
+                "title": "Bluey's Back to School FULL EPISODES ✏️ 💙 🏫 | NEW Compilation! | Bluey",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nuu9ckhkOuM",
+                "duration": 1646,
+                "title": "Word World FULL EPISODE | Duck Saves Spider's Web/Caterpillar Gets a Home | PBS KIDS",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [
+                    [
+                        1627.4,
+                        1645.5
+                    ]
+                ],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qb-jiSYabYg",
+                "duration": 2341,
+                "title": "Bandit Gets Embarrassed! 😰💙 | Full Episode With Friends | Bluey's Bestest Friends - Official",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pFjpVMpieGc",
+                "duration": 4118,
+                "title": "Being Brave 💪🏼 | 1 Hour of Full Episodes | The Land Before Time",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YlsN25GLQKI",
+                "duration": 1496,
+                "title": "Spins a Web | Halloween Full Episode | The Magic School Bus",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OBvRfQ3l2yI",
+                "duration": 3419,
+                "title": "Elmo Visits the Fire Station | Sesame Street Classics Full Episode",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=INbJ7CIWCp0",
+                "duration": 3489,
+                "title": "Halloween Episodes | Full Episodes | Clifford's Puppy Days",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B8HPyYoIEUk",
+                "duration": 1445,
+                "title": "10 Cartoons From the ’80s That Were Banned for Their Controversial Content",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Mz6U_sDUyHQ",
+                "duration": 435,
+                "title": "Chicken Woody | Full Episode | Woody Woodpecker | Mini Moments",
+                "parts": [
+                    "afternoon"
+                ],
+                "skip": [],
+                "skip_checked": 1794348411
             }
         ],
         "search_query": "classic cartoon full episode",
-        "last_refreshed": 1793395007,
+        "last_refreshed": 1794348411,
         "part_queries": {
             "breakfast": "saturday morning cartoons full episode",
             "afternoon": "after school cartoon full episode 1980s"
