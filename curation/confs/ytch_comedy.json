@@ -7,23 +7,9 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=JHbgA38R1OM",
-                "duration": 3438,
-                "title": "Gary Owen: No Hard Feelings (2026) |  FULL SPECIAL",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fM63f2lVl0k",
-                "duration": 2785,
-                "title": "Sal Calanni MENTAL SPILLNESS (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2Q0HW4cVk-o",
-                "duration": 4274,
-                "title": "Tone Bell: Can’t Cancel This (Full Show) | Stand-Up Comedy Special",
+                "url": "https://www.youtube.com/watch?v=FEnEutR31B4",
+                "duration": 2968,
+                "title": "Colum Tyrrell: BELLS AND WHISTLES - FULL STAND UP COMEDY SPECIAL",
                 "skip": [],
                 "skip_checked": 1793395034
             },
@@ -35,39 +21,20 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=iyOU7NcNU_0",
-                "duration": 4116,
-                "title": "Tammy Pescatelli: Mrs. Saturday Night (Full Show) | Hilarious Stand-Up Comedy",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KpNXx2Pjfws",
-                "duration": 4416,
-                "title": "Bron Lewis — CHAOS Full Comedy Special 2026",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8Kf0YSmxtlM",
-                "duration": 3420,
-                "title": "Chris Porter: Middle Rage (Full Show) | FUNNIEST Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NECH1KkjY6w",
-                "duration": 3923,
-                "title": "Charles Haycock: Freezer Baby - Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4ycfTfDZ1tU",
-                "duration": 2955,
-                "title": "Tom Cashman - The Formula for Happiness (Full Comedy Special) 2026",
-                "skip": [],
-                "skip_checked": 1792786230
+                "url": "https://www.youtube.com/watch?v=iQLmVm7f5aI",
+                "duration": 4710,
+                "title": "DANE COOK - TROUBLEMAKER (FULL SPECIAL)",
+                "skip": [
+                    [
+                        1256.4,
+                        1320.6
+                    ],
+                    [
+                        1331.4,
+                        1336.9
+                    ]
+                ],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=R9Oh3X-r6o8",
@@ -77,18 +44,32 @@
                 "skip_checked": 1793566524
             },
             {
+                "url": "https://www.youtube.com/watch?v=JHbgA38R1OM",
+                "duration": 3438,
+                "title": "Gary Owen: No Hard Feelings (2026) |  FULL SPECIAL",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8Kf0YSmxtlM",
+                "duration": 3420,
+                "title": "Chris Porter: Middle Rage (Full Show) | FUNNIEST Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qh9saJCBq-U",
+                "duration": 4634,
+                "title": "Jarlath Regan: Make America Laugh Again | FULL Stand-Up Comedy Special (2026)",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=XiSewRUOVyg",
                 "duration": 3898,
                 "title": "ALI SIDDIQ: MY FATHER  [Full Stand Up Comedy Special - 65 minutes]",
                 "skip": [],
                 "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EkI0X8kcKO0",
-                "duration": 3513,
-                "title": "R U MAD? | Ben Bankas Standup Comedy (Full Special)",
-                "skip": [],
-                "skip_checked": 1793743834
             },
             {
                 "url": "https://www.youtube.com/watch?v=1Olm0Zijocs",
@@ -98,65 +79,16 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=j4zekUJ24fI",
-                "duration": 4391,
-                "title": "Eddie Griffin: Undeniable (Full Show) | Hilarious Stand-Up Comedy Special.",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qowU0UY6REg",
-                "duration": 4205,
-                "title": "Gabriel Rutledge | A Reasonable Hour | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=U1gXsnGDIiA",
-                "duration": 3373,
-                "title": "James Austin Johnson | He'll Yeah (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JxDyYbKjjyA",
-                "duration": 3722,
-                "title": "Matt Falk | Adrenaline and Cortisol | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3bvkoxZ6xcw",
-                "duration": 3917,
-                "title": "Anjelah Johnson-Reyes: Ugly Baby | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xZ585-VtB0s",
-                "duration": 3578,
-                "title": "CODE BLUE | Brad Upton | Full Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qNCGEjxbmaY",
-                "duration": 4051,
-                "title": "I Didn't Expect Anybody to Show Up to My Show | Robert Mac Double Feature",
+                "url": "https://www.youtube.com/watch?v=I9iJaLEoHZE",
+                "duration": 3608,
+                "title": "Brian Posehn: Criminally Posehn (Full Show) | Funny Stand-Up Comedy Special",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=MUYOB5LosSA",
-                "duration": 4188,
-                "title": "Godfrey: Regular Black (Full Show) | Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tee4uI7BU64",
-                "duration": 4391,
-                "title": "Eddie Griffin: Undeniable (Full Show) | Legendary Stand-Up Comedy Special.",
+                "url": "https://www.youtube.com/watch?v=KpNXx2Pjfws",
+                "duration": 4416,
+                "title": "Bron Lewis — CHAOS Full Comedy Special 2026",
                 "skip": [],
                 "skip_checked": 1792350542
             },
@@ -168,9 +100,135 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=xBDumvuWMJQ",
+                "url": "https://www.youtube.com/watch?v=GGQpv-4k3II",
+                "duration": 3509,
+                "title": "Gary Owen | No Hard Feelings (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Nr-_QHKGheM",
                 "duration": 3642,
-                "title": "Aries Spears’ UNFILTERED Stand-Up Comedy: Comedy Blueprint | Full Episode",
+                "title": "Aries Spears: Comedy Blueprint (Full Show) | Unfiltered Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zTIuiOUakuo",
+                "duration": 3599,
+                "title": "Kirk Fox: That Guy | FULL COMEDY SPECIAL",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EkI0X8kcKO0",
+                "duration": 3513,
+                "title": "R U MAD? | Ben Bankas Standup Comedy (Full Special)",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Q0HW4cVk-o",
+                "duration": 4274,
+                "title": "Tone Bell: Can’t Cancel This (Full Show) | Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U1gXsnGDIiA",
+                "duration": 3373,
+                "title": "James Austin Johnson | He'll Yeah (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4ycfTfDZ1tU",
+                "duration": 2955,
+                "title": "Tom Cashman - The Formula for Happiness (Full Comedy Special) 2026",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ij7Rafg2mU0",
+                "duration": 4500,
+                "title": "Maria Bamford: Weakness Is the Brand (Full Show) | Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xZ585-VtB0s",
+                "duration": 3578,
+                "title": "CODE BLUE | Brad Upton | Full Special",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j4zekUJ24fI",
+                "duration": 4391,
+                "title": "Eddie Griffin: Undeniable (Full Show) | Hilarious Stand-Up Comedy Special.",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z7Zpx7zRgLs",
+                "duration": 3791,
+                "title": "Nico Carney: WEE LAD (Hour Long Standup Special 2026)",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hEMJQakG6x8",
+                "duration": 1875,
+                "title": "Netflix Is A Joke Full Crowd Work Special | Lucas Zelnick Stand Up Comedy Crowd Work",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZxAb-ogsCCQ",
+                "duration": 3202,
+                "title": "Native Land | Ben Bankas Standup Comedy (Full Special)",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eb6A_3O6KHQ",
+                "duration": 3658,
+                "title": "Chris Porter: Ugly & Angry (Full Show) | Hilarious Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ftj16LX-sFE",
+                "duration": 4319,
+                "title": "Dan Cummins: Get Outta Here; Devil! (Full Show) | Dark & Unfiltered Stand-Up Comedy",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tee4uI7BU64",
+                "duration": 4391,
+                "title": "Eddie Griffin: Undeniable (Full Show) | Legendary Stand-Up Comedy Special.",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NECH1KkjY6w",
+                "duration": 3923,
+                "title": "Charles Haycock: Freezer Baby - Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qowU0UY6REg",
+                "duration": 4205,
+                "title": "Gabriel Rutledge | A Reasonable Hour | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KZihf18RyC8",
+                "duration": 673,
+                "title": "I Get Weird When I Smoke | Curtis Cook | Stand Up Comedy",
                 "skip": [],
                 "skip_checked": 1792350542
             },
@@ -180,6 +238,235 @@
                 "title": "Eddie Griffin's FEARLESS Stand-Up Comedy: Undeniable | Full Episode",
                 "skip": [],
                 "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Fnp6WpKJrlc",
+                "duration": 2848,
+                "title": "Anisa Nandaula — No Small Talk Full Comedy Special 2026",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JxDyYbKjjyA",
+                "duration": 3722,
+                "title": "Matt Falk | Adrenaline and Cortisol | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TN_ySU1Rkuc",
+                "duration": 3263,
+                "title": "John Crist: I Got Questions (Full Show) | Hilarious Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p3GzPcYA7N8",
+                "duration": 3462,
+                "title": "Eddie Griffin: E-Niggma | Full Stand-Up Comedy Special Live in Las Vegas",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=922I084tNqw",
+                "duration": 3505,
+                "title": "Gareth Reynolds | Why Aren't You Bigger? (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NB9lsn5xPsk",
+                "duration": 2565,
+                "title": "Rabbit Hole | Andy Hendrickson FULL SPECIAL",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qy0mgX3j7Yo",
+                "duration": 4431,
+                "title": "Ricky Gervais: Out of England 2 - The Stand-Up Special | FULL LIVE SHOW",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_eIhU898UMo",
+                "duration": 713,
+                "title": "Why Women Commit Crimes | Rosebud Baker | Stand Up Comedy",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FzV1VBRwmzk",
+                "duration": 4257,
+                "title": "Jay Mohr: Altamont (Full Show) | Sharp & Hilarious Stand-Up Comedy",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Lpjkf_DudE",
+                "duration": 3462,
+                "title": "Eddie Griffin's UNCENSORED Stand-Up Comedy: E-Niggma | Full Episode",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TSi5zOfEaQE",
+                "duration": 4174,
+                "title": "Chris D'Elia: Grow Or Die (STANDUP COMEDY SPECIAL)",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bh81psNgvQ0",
+                "duration": 3727,
+                "title": "Chad Daniels: Empty Nester (FULL SPECIAL)",
+                "skip": [
+                    [
+                        221.8,
+                        257.5
+                    ]
+                ],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ijFQCbulaWs",
+                "duration": 2990,
+                "title": "Sam Morril - \"You've Changed\" Full Special (2024)",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=im8bJSwOI_E",
+                "duration": 2784,
+                "title": "If You Don't Think I'm Canadian Then You're Racist | Son Tran FULL SPECIAL",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PyPfQxIObWo",
+                "duration": 2770,
+                "title": "JJFROMTHESIPP: OVERLOOKED | Full Stand-Up Comedy Special JJ FROM THE SIPP",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sRFgLNxygC4",
+                "duration": 3134,
+                "title": "Patton Oswalt | Tea & Scotch (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3bvkoxZ6xcw",
+                "duration": 3917,
+                "title": "Anjelah Johnson-Reyes: Ugly Baby | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JMYTrNs9feo",
+                "duration": 4504,
+                "title": "Jim Gaffigan: Quality Time (Full Show) | Hilarious Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1e2t9IpYXc0",
+                "duration": 2613,
+                "title": "Life After the 40s Hits Different | Scott Losse FULL SPECIAL",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MUYOB5LosSA",
+                "duration": 4188,
+                "title": "Godfrey: Regular Black (Full Show) | Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UVCSGKxJ5tQ",
+                "duration": 3515,
+                "title": "Isabel Hagen at The Bitter End | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qzsHolR05hg",
+                "duration": 3349,
+                "title": "Pete Holmes | Silly Silly Fun Boy (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=IXDA3HHcq5E",
+                "duration": 4183,
+                "title": "BRAD WILLIAMS: LIVE ON SHORT STREET {Full Stand-Up Comedy Special}",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
+                "duration": 2885,
+                "title": "Shane Gillis Live In Austin | Stand Up Comedy",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MBUoyy2xq5c",
+                "duration": 3969,
+                "title": "Isaac Butterfield | PUBLIC ENEMY | FULL STAND UP COMEDY SPECIAL (2026)",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1WTO3Q8Id4Q",
+                "duration": 5080,
+                "title": "Matt Rife Latest Stand Up Comedy 2026 | Matt Rife Comedy Moments #226",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xu_6UAYA-7I",
+                "duration": 4105,
+                "title": "Derek Sheen - Unrelatable | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b_DsDzysRJU",
+                "duration": 4504,
+                "title": "Jim Gaffigan’s LEGENDARY Stand-Up Comedy: Quality Time | Full Episode",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bmPrNext0I0",
+                "duration": 2410,
+                "title": "Shayne Smith: Prison for Wizards (Full Show) | FUNNIEST Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DBKcgpgJOAo",
+                "duration": 3565,
+                "title": "Anjelah Johnson: The Homecoming Show (Full Show) | Hilarious Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t2Onaxk2RHM",
+                "duration": 1488,
+                "title": "That's NOT How You Get a Girlfriend | Derrick Stroup FULL SPECIAL",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=14ps_hS1NiQ",
+                "duration": 4155,
+                "title": "Dusty Slay: Workin' Man | Full Comedy Special",
+                "skip": [],
+                "skip_checked": 1792956294
             },
             {
                 "url": "https://www.youtube.com/watch?v=XBrdMrbmz1c",
@@ -194,177 +481,11 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=pAMe4YEWxas",
-                "duration": 3001,
-                "title": "Joe Dombrowski | Dad on Arrival (Full Comedy Special)",
+                "url": "https://www.youtube.com/watch?v=u0M0FpOHxNk",
+                "duration": 525,
+                "title": "Black Thoughts, White Words | Gary Simons | Stand Up Comedy",
                 "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Zqv-yKgUbCA",
-                "duration": 3810,
-                "title": "Charlie Berens: Neighborly (FULL SPECIAL 2025)",
-                "skip": [
-                    [
-                        920.0,
-                        942.5
-                    ]
-                ],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ftj16LX-sFE",
-                "duration": 4319,
-                "title": "Dan Cummins: Get Outta Here; Devil! (Full Show) | Dark & Unfiltered Stand-Up Comedy",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lFgkPuLdpeg",
-                "duration": 4177,
-                "title": "Mike Vecchione live from the Stress Factory | Full Comedy Special 2026",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SaFuOr_iYlE",
-                "duration": 3924,
-                "title": "Zoltan Kaszas: London Fog | Full Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zTIuiOUakuo",
-                "duration": 3599,
-                "title": "Kirk Fox: That Guy | FULL COMEDY SPECIAL",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zKUpf1Vx0vs",
-                "duration": 2885,
-                "title": "Shane Gillis Live In Austin | Stand Up Comedy",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1WTO3Q8Id4Q",
-                "duration": 5080,
-                "title": "Matt Rife Latest Stand Up Comedy 2026 | Matt Rife Comedy Moments #226",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ijFQCbulaWs",
-                "duration": 2990,
-                "title": "Sam Morril - \"You've Changed\" Full Special (2024)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DBKcgpgJOAo",
-                "duration": 3565,
-                "title": "Anjelah Johnson: The Homecoming Show (Full Show) | Hilarious Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YF3FPYZJMY4",
-                "duration": 3812,
-                "title": "Dale Jones: Say It Ain't So | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t2Onaxk2RHM",
-                "duration": 1488,
-                "title": "That's NOT How You Get a Girlfriend | Derrick Stroup FULL SPECIAL",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1e2t9IpYXc0",
-                "duration": 2613,
-                "title": "Life After the 40s Hits Different | Scott Losse FULL SPECIAL",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CDhlx3jyQLE",
-                "duration": 4202,
-                "title": "Still Trippin' | Steve Harvey Full Stand-Up Special",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YZCMD1J0M3U",
-                "duration": 3493,
-                "title": "Jim Breuer: And Laughter For All (Full Show) | Seriously FUNNY Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0E54LoeEdUc",
-                "duration": 4339,
-                "title": "Mario Adrion: My Struggle | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=14ps_hS1NiQ",
-                "duration": 4155,
-                "title": "Dusty Slay: Workin' Man | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MBUoyy2xq5c",
-                "duration": 3969,
-                "title": "Isaac Butterfield | PUBLIC ENEMY | FULL STAND UP COMEDY SPECIAL (2026)",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eb6A_3O6KHQ",
-                "duration": 3658,
-                "title": "Chris Porter: Ugly & Angry (Full Show) | Hilarious Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TSi5zOfEaQE",
-                "duration": 4174,
-                "title": "Chris D'Elia: Grow Or Die (STANDUP COMEDY SPECIAL)",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qzsHolR05hg",
-                "duration": 3349,
-                "title": "Pete Holmes | Silly Silly Fun Boy (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FaHbOk6M9xs",
-                "duration": 3168,
-                "title": "Ian Bagg Vs The Government (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MSQ8p5CrvcM",
-                "duration": 3775,
-                "title": "ISMO | Hello (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zBlytYhNCKg",
-                "duration": 4033,
-                "title": "ALI SIDDIQ: MONDAYS  {Full Stand Up Comedy Special}  NEW",
-                "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=7pXMgk7ukrU",
@@ -374,25 +495,25 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=v69-181zzk8",
-                "duration": 3169,
-                "title": "Mark Normand | Out To Lunch (Full Comedy Special)",
+                "url": "https://www.youtube.com/watch?v=YF3FPYZJMY4",
+                "duration": 3812,
+                "title": "Dale Jones: Say It Ain't So | Full Comedy Special",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=EQbfkygLs8U",
-                "duration": 4426,
-                "title": "Tom Segura’s Iconic Stand-Up Comedy: Completely Normal | Full Episode",
+                "url": "https://www.youtube.com/watch?v=yRzmDPcvER8",
+                "duration": 4100,
+                "title": "What Happened to Good Manners? | Tom Segura",
                 "skip": [],
-                "skip_checked": 1792350542
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=n3fzRcHgHfs",
-                "duration": 3780,
-                "title": "The Stuttering Comedian | Drew Lynch | Full Comedy Special",
+                "url": "https://www.youtube.com/watch?v=CDhlx3jyQLE",
+                "duration": 4202,
+                "title": "Still Trippin' | Steve Harvey Full Stand-Up Special",
                 "skip": [],
-                "skip_checked": 1792350542
+                "skip_checked": 1793663159
             },
             {
                 "url": "https://www.youtube.com/watch?v=DybW0Nf5g2g",
@@ -402,81 +523,32 @@
                 "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=PyPfQxIObWo",
-                "duration": 2770,
-                "title": "JJFROMTHESIPP: OVERLOOKED | Full Stand-Up Comedy Special JJ FROM THE SIPP",
+                "url": "https://www.youtube.com/watch?v=SgXSWbF02WE",
+                "duration": 4362,
+                "title": "Josh Wolf - The Campfire Special | Stand-Up Comedy Special",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=q_4pEVD6Y3k",
-                "duration": 3167,
-                "title": "Ian Edwards: Untitled | The Comedy Special You Didn't Know You Needed",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nIMW_6BDoaY",
-                "duration": 4298,
-                "title": "Iliza Shlesinger: Freezing Hot (Full Show) | Hilarious Stand-Up Comedy Special.",
+                "url": "https://www.youtube.com/watch?v=EQbfkygLs8U",
+                "duration": 4426,
+                "title": "Tom Segura’s Iconic Stand-Up Comedy: Completely Normal | Full Episode",
                 "skip": [],
                 "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=6DMRCUPJpu4",
-                "duration": 3981,
-                "title": "Matt Mathews: When That Thang Get Ta Thang'n | Full Special",
+                "url": "https://www.youtube.com/watch?v=sB9eWtzTOq0",
+                "duration": 3980,
+                "title": "Gianmarco Soresi: Thief of Joy | Full Comedy Special",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=FzV1VBRwmzk",
-                "duration": 4257,
-                "title": "Jay Mohr: Altamont (Full Show) | Sharp & Hilarious Stand-Up Comedy",
+                "url": "https://www.youtube.com/watch?v=VBcruyyPGhE",
+                "duration": 4531,
+                "title": "Dan Cummins: Don’t Wake The Bear (Full Show) | Sharp & Unfiltered Stand-Up Comedy",
                 "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XwFN2LOCrOw",
-                "duration": 2971,
-                "title": "Don Friesen: Ask Your Mom | FULL COMEDY SPECIAL",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UVCSGKxJ5tQ",
-                "duration": 3515,
-                "title": "Isabel Hagen at The Bitter End | Full Comedy Special",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KZihf18RyC8",
-                "duration": 673,
-                "title": "I Get Weird When I Smoke | Curtis Cook | Stand Up Comedy",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=im8bJSwOI_E",
-                "duration": 2784,
-                "title": "If You Don't Think I'm Canadian Then You're Racist | Son Tran FULL SPECIAL",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4Lpjkf_DudE",
-                "duration": 3462,
-                "title": "Eddie Griffin's UNCENSORED Stand-Up Comedy: E-Niggma | Full Episode",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wlffgJTdqG4",
-                "duration": 3049,
-                "title": "Michael McIntyre's 25th Year Stand-Up Special - FULL SHOW",
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=NWgoc4Iz1RM",
@@ -486,39 +558,18 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=odpFP43HOHA",
-                "duration": 2957,
-                "title": "Matt Rife | Walking Red Flag (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BjloZ57TF78",
-                "duration": 4344,
-                "title": "Dave Chappelle: The Truth About People Who Go on Cruises | Stand-Up Comedy",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I9iJaLEoHZE",
-                "duration": 3608,
-                "title": "Brian Posehn: Criminally Posehn (Full Show) | Funny Stand-Up Comedy Special",
+                "url": "https://www.youtube.com/watch?v=_OM0pGqh0tc",
+                "duration": 5050,
+                "title": "Mojo Brookzz Uncensored Crowd Work 2026 | Latest Comedy 2026",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=p3GzPcYA7N8",
-                "duration": 3462,
-                "title": "Eddie Griffin: E-Niggma | Full Stand-Up Comedy Special Live in Las Vegas",
+                "url": "https://www.youtube.com/watch?v=T6oui7S_lro",
+                "duration": 3602,
+                "title": "Bruce Bruce: Losin’ It! | Full Stand-Up Comedy Special",
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FSbE9EAHiGU",
-                "duration": 3610,
-                "title": "ALI SIDDIQ: RUGGED [Full Stand Up Comedy Special]",
-                "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=qWZ4MLedAFA",
@@ -528,88 +579,18 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=svu0kFDLAwk",
-                "duration": 4198,
-                "title": "Miles Jupp - On I Bang | Full Comedy Special",
+                "url": "https://www.youtube.com/watch?v=AU-hbo7Fp0A",
+                "duration": 848,
+                "title": "Good Luck Everybody | Owen Smith | Stand Up Comedy",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=t-fLDYIUO4k",
-                "duration": 2933,
-                "title": "Red Richardson 'Bugatti Live' (Full Stand up comedy special)",
+                "url": "https://www.youtube.com/watch?v=XwFN2LOCrOw",
+                "duration": 2971,
+                "title": "Don Friesen: Ask Your Mom | FULL COMEDY SPECIAL",
                 "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sRFgLNxygC4",
-                "duration": 3134,
-                "title": "Patton Oswalt | Tea & Scotch (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=b_DsDzysRJU",
-                "duration": 4504,
-                "title": "Jim Gaffigan’s LEGENDARY Stand-Up Comedy: Quality Time | Full Episode",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I4qDOF3RbCw",
-                "duration": 3796,
-                "title": "Ali Siddiq presents Marcus D. Wiley: REHAB  {FULL COMEDY SPECIAL}",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xwfGIBItvKI",
-                "duration": 2162,
-                "title": "30 Minutes with Tim Butterly | Presented by GaS Digital | Full Special",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DS-_5lPvzTQ",
-                "duration": 3137,
-                "title": "Jack Skipper - Skint | Full Comedy Special (2026)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wPq0jOGCJjQ",
-                "duration": 3497,
-                "title": "Marcus D. Wiley: GIMME 5  {Full Comedy Special}",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_OM0pGqh0tc",
-                "duration": 5050,
-                "title": "Mojo Brookzz Uncensored Crowd Work 2026 | Latest Comedy 2026",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JMYTrNs9feo",
-                "duration": 4504,
-                "title": "Jim Gaffigan: Quality Time (Full Show) | Hilarious Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wmFSSQY96ps",
-                "duration": 3612,
-                "title": "Josh Blue: Delete (Full Show) | Sharp & Hilarious Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=03vtq7bS2mI",
-                "duration": 3574,
-                "title": "Tom Papa: Freaked Out (Full Show) | Full Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1792786230
             },
             {
                 "url": "https://www.youtube.com/watch?v=OIS_niNI6K8",
@@ -619,67 +600,32 @@
                 "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=CauSrF3775k",
-                "duration": 3326,
-                "title": "Steve Treviño's HYSTERICAL Stand-Up Comedy: Til Death | Full Episode",
+                "url": "https://www.youtube.com/watch?v=oawMfCMLkHU",
+                "duration": 1417,
+                "title": "James Donald Forbes McCann | BLACK ISRAELITE | Stand Up Comedy",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=78LHf7YP2c0",
-                "duration": 4466,
-                "title": "Anjelah Johnson-Reyes | Say I Won't (Full Comedy Special)",
+                "url": "https://www.youtube.com/watch?v=IiIWTtrQQho",
+                "duration": 3476,
+                "title": "Dennis Miller: Fake News, Real Jokes (Full Show) | Stand-Up Comedy Special",
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=NB9lsn5xPsk",
-                "duration": 2565,
-                "title": "Rabbit Hole | Andy Hendrickson FULL SPECIAL",
+                "url": "https://www.youtube.com/watch?v=kavT9qcWybQ",
+                "duration": 3839,
+                "title": "Josh Wolf | Four Stories (Full Comedy Special)",
                 "skip": [],
-                "skip_checked": 1793309401
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=9Pjf-__JMko",
-                "duration": 2075,
-                "title": "J. Snow | Life Is Funny (Full Comedy Special)",
+                "url": "https://www.youtube.com/watch?v=zBlytYhNCKg",
+                "duration": 4033,
+                "title": "ALI SIDDIQ: MONDAYS  {Full Stand Up Comedy Special}  NEW",
                 "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bmPrNext0I0",
-                "duration": 2410,
-                "title": "Shayne Smith: Prison for Wizards (Full Show) | FUNNIEST Stand-Up Comedy Special",
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FEnEutR31B4",
-                "duration": 2968,
-                "title": "Colum Tyrrell: BELLS AND WHISTLES - FULL STAND UP COMEDY SPECIAL",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nMdELZKEIYc",
-                "duration": 3326,
-                "title": "Steve Treviño: Til Death (Full Show) | Laugh-Out-Loud Comedy Special",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=twIn9kcpOLM",
-                "duration": 3158,
-                "title": "Chris Hardwick | The Middle Ages (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LYfZ60ijd1Q",
-                "duration": 2694,
-                "title": "Emmy Blotnick | What's Her Secret? (Full Comedy Special)",
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1793049429
             },
             {
                 "url": "https://www.youtube.com/watch?v=dQgMDlDJMig",
@@ -689,32 +635,145 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZxAb-ogsCCQ",
-                "duration": 3202,
-                "title": "Native Land | Ben Bankas Standup Comedy (Full Special)",
+                "url": "https://www.youtube.com/watch?v=gcS6bpBuoKQ",
+                "duration": 4234,
+                "title": "Urzila Carlson — You Don't Say Full Comedy Special 2026",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cO-AgN2ilAs",
+                "duration": 5103,
+                "title": "Wanda Sykes \"I'm a Be Me\": Why This Comedy Special Still Hits Different Today",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qNCGEjxbmaY",
+                "duration": 4051,
+                "title": "I Didn't Expect Anybody to Show Up to My Show | Robert Mac Double Feature",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=0TXavFXeycw",
-                "duration": 2632,
-                "title": "Fred Klett: One of Ten (Full Show) | Funny Stand-Up Comedy Special",
+                "url": "https://www.youtube.com/watch?v=SaFuOr_iYlE",
+                "duration": 3924,
+                "title": "Zoltan Kaszas: London Fog | Full Stand-Up Comedy Special",
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=xJtEyIcx_fs",
-                "duration": 4104,
-                "title": "Urzila Carlson — Just Jokes (Full Comedy Special) 2026",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DIGbLTqjuq0",
-                "duration": 3626,
-                "title": "Elon Gold: Chosen & Taken (Full Show) | Hilarious Stand-Up Comedy",
+                "url": "https://www.youtube.com/watch?v=q_4pEVD6Y3k",
+                "duration": 3167,
+                "title": "Ian Edwards: Untitled | The Comedy Special You Didn't Know You Needed",
                 "skip": [],
                 "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=twIn9kcpOLM",
+                "duration": 3158,
+                "title": "Chris Hardwick | The Middle Ages (Full Comedy Special)",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mb5wIiBt0h0",
+                "duration": 4053,
+                "title": "Jim Gaffigan’s UNFORGETTABLE Stand-Up Comedy: Noble Ape | Full Episode",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pHzyxWkHWKM",
+                "duration": 2665,
+                "title": "Jim Gaffigan: Live from Old Forester — The Bourbon Set (FULL SHOW 2025)",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HjEqGrrLrVE",
+                "duration": 653,
+                "title": "Immigrants vs. Robots | Sam Froum | Stand Up Comedy",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0oDp4EpZ7CY",
+                "duration": 3115,
+                "title": "Josh Blue: Sticky Change (Full Show) | FUNNIEST Stand-Up Comedy Special",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yAf785vVH8Y",
+                "duration": 3620,
+                "title": "Shane Gillis ¦ Autistic People ¦ Stand Up On The Spot",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CauSrF3775k",
+                "duration": 3326,
+                "title": "Steve Treviño's HYSTERICAL Stand-Up Comedy: Til Death | Full Episode",
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jc0h89IFscg",
+                "duration": 861,
+                "title": "The Night I Met Taylor Swift | Alex English | Stand Up Comedy",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m24YezrJc5Y",
+                "duration": 1425,
+                "title": "I Was a Terrible Doctor So I Became a Comedian | Vien Phommachanh FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pK_A4UgU1PM",
+                "duration": 3718,
+                "title": "Being a Fat Redhead Is Not for the Weak | Jordan Makin Double Feature",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bmpvFA6OYfM",
+                "duration": 1448,
+                "title": "The New Generation Is Just So Soft | John Branyan FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PO1JpVW1iXg",
+                "duration": 1482,
+                "title": "Life Changes Completely When You're 60 | Eric Tartaglione FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W2DoM38XX6I",
+                "duration": 2032,
+                "title": "Gunsmoke And Ice Cream. Jeff Allen - Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=jlm3L_Qnze4",
@@ -727,14 +786,34 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=gPbGPmbjH_E",
-                "duration": 1691,
-                "title": "Dreaming About Being White! | Corey Manning FULL SPECIAL",
+                "url": "https://www.youtube.com/watch?v=fY_J9wc37qk",
+                "duration": 2221,
+                "title": "My Wife's Parenting Style Is Absolutely Terrifying | Jamie Lissow FULL SPECIAL",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1792350542
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ITwLLa7vrCg",
+                "duration": 1267,
+                "title": "Why You Should NEVER Mess With Your Wife | Brett Hollis FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qC5NNRB5c6Q",
+                "duration": 1512,
+                "title": "Never Call Her Crazy | Andrew Packer FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
             },
             {
                 "url": "https://www.youtube.com/watch?v=IWGLTf_u3MA",
@@ -747,9 +826,99 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=GJaIh7ZKZzY",
-                "duration": 1859,
-                "title": "The Comedy Special Where Everything Goes Wrong | John Hastings Full Stand-Up Special",
+                "url": "https://www.youtube.com/watch?v=hQIA7TGSAes",
+                "duration": 3296,
+                "title": "Being on a Diet Will Make You Do Unthinkable Things | Jonnie W. Double Feature",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z7jyqky0b6w",
+                "duration": 1715,
+                "title": "Every Man Gains Weight After Marriage | Tim Steele FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7RKxmSWbyDQ",
+                "duration": 2082,
+                "title": "The Absolute Master of Crowdwork | Jim McCue Stand-Up Comedy",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3fRgGs8oJbA",
+                "duration": 3562,
+                "title": "1 Hour of the Most Annoying Things We've All Experienced",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VbOALuHrK_M",
+                "duration": 2354,
+                "title": "Dry Humor Has Never Been This Funny | Kellen Erskine FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gPbGPmbjH_E",
+                "duration": 1691,
+                "title": "Dreaming About Being White! | Corey Manning FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0Am_1AVVPcE",
+                "duration": 549,
+                "title": "My Wife Thinks I Need a Therapist | Jeff Norris Stand-Up Comedy",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=81GsZsI2roM",
+                "duration": 1215,
+                "title": "People Don't Like a Short King | Zach Wycuff FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=A7bOkhZiArU",
+                "duration": 1391,
+                "title": "You Should Never Scare Your Skydiving Instructor | Aaron Naylor FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T5j0kG1QF5A",
+                "duration": 4371,
+                "title": "I'm Not Black. My Color Is Chocolate Indulgence | Sam Adams Double Feature",
                 "parts": [
                     "breakfast"
                 ],
@@ -757,9 +926,74 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=TGQnlE8G_Ec",
-                "duration": 1659,
-                "title": "Old People Complain Too Much. Brian Hicks - Full Special",
+                "url": "https://www.youtube.com/watch?v=gfkJ7IyyRog",
+                "duration": 2337,
+                "title": "My Car Scares People Away | Chad Thornsberry FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QAK9XqiVe5Y",
+                "duration": 2563,
+                "title": "My 76-Year-Old Mom Is More Athletic Than Me",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m304E8ulWK4",
+                "duration": 2379,
+                "title": "Republicans Will Snatch Up Your Kid and Force Them to Get a Job | Brandon Vestal FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=d5ssnIZonwA",
+                "duration": 1263,
+                "title": "Nothing Can Prepare You for Parenting a Teenager | Jerry Garcia FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JQMuSmodaIY",
+                "duration": 1734,
+                "title": "Immigration Officers Ask The Stupidest Questions. Bryan Cork  - Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [
+                    [
+                        1705.8,
+                        1733.1
+                    ]
+                ],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dykBd5NUc2M",
+                "duration": 1404,
+                "title": "Being 7-Foot Tall Makes Me Feel Like a Mythical Creature | Liam Nelson FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=F3XfoIpUDJ8",
+                "duration": 2976,
+                "title": "If You Get These Jokes, You're Officially Old",
                 "parts": [
                     "breakfast"
                 ],
@@ -777,19 +1011,9 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=VbOALuHrK_M",
-                "duration": 2354,
-                "title": "Dry Humor Has Never Been This Funny | Kellen Erskine FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8qfndbEYroE",
-                "duration": 2066,
-                "title": "A Man Of Average Intelligence. Zoltan Kaszas - Full Special",
+                "url": "https://www.youtube.com/watch?v=pk-R-DoPRFo",
+                "duration": 1817,
+                "title": "White Stereotypes Aren't Racist if They Are True | BT FULL SPECIAL",
                 "parts": [
                     "breakfast"
                 ],
@@ -797,9 +1021,99 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=EYd9QMMd-Vk",
-                "duration": 1651,
-                "title": "I Don't Understand Anything Millennials Like | Tommy Gooch Full Stand-Up Special",
+                "url": "https://www.youtube.com/watch?v=iRePSj6zyn0",
+                "duration": 1432,
+                "title": "Stupid Sayings That Make Absolutely No Sense. Don McEnery - Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lE8L3888kXw",
+                "duration": 1609,
+                "title": "If Money Doesn't Buy Happiness You Bought the Wrong Thing | Adam Muller FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TGQnlE8G_Ec",
+                "duration": 1659,
+                "title": "Old People Complain Too Much. Brian Hicks - Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jRpvsoyGCVI",
+                "duration": 1395,
+                "title": "That's When You Know You're Finally Old | Michele Balan FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=okINIKxU1LA",
+                "duration": 1381,
+                "title": "I Look Like I Train All Year for Tax Season | Tyler Fowler Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TtGaeJ0fWPw",
+                "duration": 1388,
+                "title": "Yes, His Hands Stay On His Head the Whole Time | Ricky Mokel Stand-Up Comedy",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=73AWs5vZcjo",
+                "duration": 465,
+                "title": "I Tried To Run A 5K... | Chad Thornsberry | Dry Bar Comedy",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HGu3JV8wBcw",
+                "duration": 2276,
+                "title": "When Being Socially Awkward Becomes Comedy Gold",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1OJPu27Bve0",
+                "duration": 2482,
+                "title": "Child Discipline Isn't What It Used To Be. Fred Klett - Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Qn9Nfofi9Ug",
+                "duration": 460,
+                "title": "A Woman Is... | Rob Schneider | Dry Bar Comedy",
                 "parts": [
                     "breakfast"
                 ],
@@ -807,19 +1121,39 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=rbDfEL-q27A",
-                "duration": 2946,
-                "title": "Ghosts are REAL and My Mom Hunts Them | Shayne Smith FULL SPECIAL",
+                "url": "https://www.youtube.com/watch?v=TpYa9kHKDPg",
+                "duration": 1554,
+                "title": "Old People Should Not Be Allowed on Social Media | Byron Trimble FULL SPECIAL",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
                 "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tFCJLshbNdE",
+                "duration": 1515,
+                "title": "Rapid Fire Jokes You'll Never See Coming. Bobby Tessel - Full Special",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=YdSni-I1PNY",
                 "duration": 1587,
                 "title": "I Have the Most Efficient Relationship in the World | Andrew Tarvin FULL SPECIAL",
+                "parts": [
+                    "breakfast"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0TXavFXeycw",
+                "duration": 2632,
+                "title": "Fred Klett: One of Ten (Full Show) | Funny Stand-Up Comedy Special",
                 "parts": [
                     "breakfast"
                 ],
@@ -837,151 +1171,6 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=iRePSj6zyn0",
-                "duration": 1432,
-                "title": "Stupid Sayings That Make Absolutely No Sense. Don McEnery - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qC5NNRB5c6Q",
-                "duration": 1512,
-                "title": "Never Call Her Crazy | Andrew Packer FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m304E8ulWK4",
-                "duration": 2379,
-                "title": "Republicans Will Snatch Up Your Kid and Force Them to Get a Job | Brandon Vestal FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dykBd5NUc2M",
-                "duration": 1404,
-                "title": "Being 7-Foot Tall Makes Me Feel Like a Mythical Creature | Liam Nelson FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lhfEabQ3qrE",
-                "duration": 553,
-                "title": "New York Is Like a GTA Lobby | Joe Devito Stand-Up Comedy",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HL0kkIQUNDo",
-                "duration": 4120,
-                "title": "The Most Awkward Bank Robbery | Collin Moulton Double Feature",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ush3SkA3sxs",
-                "duration": 1627,
-                "title": "My Neighbor Thought I was a Brown Bear in Sweatpants | Drew Thomas FULL COMEDY SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1OJPu27Bve0",
-                "duration": 2482,
-                "title": "Child Discipline Isn't What It Used To Be. Fred Klett - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lE8L3888kXw",
-                "duration": 1609,
-                "title": "If Money Doesn't Buy Happiness You Bought the Wrong Thing | Adam Muller FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pk-R-DoPRFo",
-                "duration": 1817,
-                "title": "White Stereotypes Aren't Racist if They Are True | BT FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F3XfoIpUDJ8",
-                "duration": 2976,
-                "title": "If You Get These Jokes, You're Officially Old",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JpBt0W1zrDU",
-                "duration": 1577,
-                "title": "Negative Comments. Kellen Erskine - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        1165.1,
-                        1182.9
-                    ]
-                ],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hQIA7TGSAes",
-                "duration": 3296,
-                "title": "Being on a Diet Will Make You Do Unthinkable Things | Jonnie W. Double Feature",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=66NeXQ1spjk",
-                "duration": 1519,
-                "title": "Unexpected Rapid Fire Jokes | Bobby Tessel FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=j1Zg2S2-heY",
                 "duration": 2344,
                 "title": "Boomer Triggers Gen-Z Snowflakes. Brad Upton",
@@ -990,26 +1179,6 @@
                 ],
                 "skip": [],
                 "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Y_mJiXXvt1s",
-                "duration": 1209,
-                "title": "Having Three Toddlers at Once Is a NIGHTMARE | Matt Sommerfield FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rjFdCC5pqiA",
-                "duration": 1661,
-                "title": "Everybody Hates a Prius Driver | Jose Sarduy FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
             },
             {
                 "url": "https://www.youtube.com/watch?v=is6G_eW8MNo",
@@ -1022,139 +1191,14 @@
                 "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=z7jyqky0b6w",
-                "duration": 1715,
-                "title": "Every Man Gains Weight After Marriage | Tim Steele FULL SPECIAL",
+                "url": "https://www.youtube.com/watch?v=wBAHts8HFbg",
+                "duration": 2522,
+                "title": "Having Kids at 50 Was Certainly a Choice | Jamie Kaler Stand-Up Comedy FULL SPECIAL",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5YUbIrniIjI",
-                "duration": 4800,
-                "title": "Brad Upton - Dry Bar Comedy Double Feature",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=okINIKxU1LA",
-                "duration": 1381,
-                "title": "I Look Like I Train All Year for Tax Season | Tyler Fowler Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MuWo4WIbudc",
-                "duration": 531,
-                "title": "I'm Not Manly Enough | Zoltan Kaszas | Dry Bar Comedy",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=H644TyD_i3k",
-                "duration": 4671,
-                "title": "Getting Heckled by an Old Lady Named Nancy | Zoltan Kaszas Double Feature",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PO1JpVW1iXg",
-                "duration": 1482,
-                "title": "Life Changes Completely When You're 60 | Eric Tartaglione FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4autVO2lidM",
-                "duration": 1543,
-                "title": "The Weirdest Walmart In The World. Chris Franjola - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [
-                    [
-                        1512.0,
-                        1542.0
-                    ]
-                ],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TpYa9kHKDPg",
-                "duration": 1554,
-                "title": "Old People Should Not Be Allowed on Social Media | Byron Trimble FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=81GsZsI2roM",
-                "duration": 1215,
-                "title": "People Don't Like a Short King | Zach Wycuff FULL SPECIAL",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6YkNEIiy2W8",
-                "duration": 2323,
-                "title": "Failing Out Of Kindergarten. Dennis Regan - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mbU59XyGqcE",
-                "duration": 3868,
-                "title": "This Comedian is GUARANTEED to Make You Smile | Mike Paramore Double Feature",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9TzfO-ta3Rc",
-                "duration": 2214,
-                "title": "Most Absurd Parenting Method. Jamie Lissow - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=73AWs5vZcjo",
-                "duration": 465,
-                "title": "I Tried To Run A 5K... | Chad Thornsberry | Dry Bar Comedy",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=iMluff6sgJU",
@@ -1167,9 +1211,9 @@
                 "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=I3Gq5oan_9E",
-                "duration": 3821,
-                "title": "1 Hour of Jokes You Shouldn't Let Your Wife Hear",
+                "url": "https://www.youtube.com/watch?v=HL0kkIQUNDo",
+                "duration": 4120,
+                "title": "The Most Awkward Bank Robbery | Collin Moulton Double Feature",
                 "parts": [
                     "breakfast"
                 ],
@@ -1177,69 +1221,19 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=uU2cwD69N8g",
-                "duration": 534,
-                "title": "People Used to Bully Me for Having a Farmer Family | Derrick Stroup Stand-Up Comedy",
+                "url": "https://www.youtube.com/watch?v=NFZGWw9Jgfc",
+                "duration": 1520,
+                "title": "The Reason Why You Look Ugly in Photos | Rodney Laney FULL SPECIAL",
                 "parts": [
                     "breakfast"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3fRgGs8oJbA",
-                "duration": 3562,
-                "title": "1 Hour of the Most Annoying Things We've All Experienced",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=T5j0kG1QF5A",
-                "duration": 4371,
-                "title": "I'm Not Black. My Color Is Chocolate Indulgence | Sam Adams Double Feature",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Qn9Nfofi9Ug",
-                "duration": 460,
-                "title": "A Woman Is... | Rob Schneider | Dry Bar Comedy",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BJ0IDtNFcBA",
-                "duration": 2472,
-                "title": "How To Get Out Of A Blind Date. Greg Warren - Full Special",
-                "parts": [
-                    "breakfast"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=gcURMXE1h9Y",
                 "duration": 3607,
                 "title": "Funniest Stand Up Comedy You'll See Today! | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CuJ4yyQi0RI",
-                "duration": 1254,
-                "title": "20 Minutes of Laugh-Out-Loud Apollo Comedy Sets! | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1257,19 +1251,19 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=xkYyMSPgoMc",
-                "duration": 2069,
-                "title": "LOL into 2026 for 30 mins straight! | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=UkuwI4cvuNo",
+                "duration": 1328,
+                "title": "Stand Up Comedy GOLD: Series 5 | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=2Bn1zVHWzWg",
-                "duration": 2293,
-                "title": "Try Not to Laugh Challenge! (IMPOSSIBLE) | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=hrKIdKDXy-M",
+                "duration": 1506,
+                "title": "25 Minutes of Laughs for April Fools’ Day | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1287,9 +1281,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=UkuwI4cvuNo",
-                "duration": 1328,
-                "title": "Stand Up Comedy GOLD: Series 5 | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=CuJ4yyQi0RI",
+                "duration": 1254,
+                "title": "20 Minutes of Laugh-Out-Loud Apollo Comedy Sets! | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1317,76 +1311,6 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=hrKIdKDXy-M",
-                "duration": 1506,
-                "title": "25 Minutes of Laughs for April Fools’ Day | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sofGFy6o0P4",
-                "duration": 1960,
-                "title": "30 Mins of the Funniest American Comedians | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-HGgz9zqs4E",
-                "duration": 2261,
-                "title": "Hilariously Funny Female Stand Up Comedians | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OMn5Wvjs1kc",
-                "duration": 2068,
-                "title": "30 mins of Comedy Legends on Stage | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lLeUvxQSH68",
-                "duration": 2594,
-                "title": "Bruno Mars 24k Magic Concert | Live Apollo Theatre (Full Show)",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ucVtXJv1h1w",
-                "duration": 1617,
-                "title": "Stand Up Comedy GOLD: Series 16 | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RHDWCE6o5MI",
-                "duration": 1370,
-                "title": "20 Mins of the Finest Stand Up Comedy | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=GXYprZmOu9A",
                 "duration": 3699,
                 "title": "1 Hour of Pure Stand-Up Comedy Bliss! | Live at the Apollo",
@@ -1397,19 +1321,19 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=s0fpxcD2PrA",
-                "duration": 3704,
-                "title": "Paul Chowdhry Live Innit 2019",
+                "url": "https://www.youtube.com/watch?v=x90vgvVd1BM",
+                "duration": 244,
+                "title": "Micky Flanagan's Guide to Getting a Girlfriend | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=k4bgeGSp0BE",
-                "duration": 739,
-                "title": "Eddie Izzard: A Tale Of Wisdom - Live at the Apollo | Jokes On Us",
+                "url": "https://www.youtube.com/watch?v=wlffgJTdqG4",
+                "duration": 3049,
+                "title": "Michael McIntyre's 25th Year Stand-Up Special - FULL SHOW",
                 "parts": [
                     "prime"
                 ],
@@ -1427,36 +1351,6 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=YRKrZqpjHh8",
-                "duration": 2065,
-                "title": "Stand Up Comedy GOLD: Series 7 | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x90vgvVd1BM",
-                "duration": 244,
-                "title": "Micky Flanagan's Guide to Getting a Girlfriend | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bCz-6OGuvtI",
-                "duration": 2681,
-                "title": "It's Showtime At The Apollo | 37th ANNIVERSARY COMEDY COMPILATION",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=89E_zW1qIM8",
                 "duration": 529,
                 "title": "James Acaster Live at the Apollo",
@@ -1467,54 +1361,14 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=IjBNsDmfEh0",
-                "duration": 247,
-                "title": "The Art of Standing on Business by Omid Djalili | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=sofGFy6o0P4",
+                "duration": 1960,
+                "title": "30 Mins of the Funniest American Comedians | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
                 "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=f5BUBjEdNp8",
-                "duration": 2127,
-                "title": "A Full 30 Mins of Irresistibly Funny Stand Up Comedy! | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Jt3tXcTQpv0",
-                "duration": 1555,
-                "title": "20 Mins of Outrageously Funny Comedy | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oIjzkNNlPC4",
-                "duration": 250,
-                "title": "Stewart Francis' Funniest One-Liners! | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mBYORJBLXps",
-                "duration": 711,
-                "title": "Live At The Apollo With Russell Kane (Full Set 2015) | Russell Kane",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
             },
             {
                 "url": "https://www.youtube.com/watch?v=kPp2xyF5H6s",
@@ -1527,9 +1381,19 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=IDf6qenZ9IQ",
-                "duration": 4955,
-                "title": "The Apollo Comedy Special 85 South Show #002",
+                "url": "https://www.youtube.com/watch?v=DS-_5lPvzTQ",
+                "duration": 3137,
+                "title": "Jack Skipper - Skint | Full Comedy Special (2026)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9Y0K1GWfXwk",
+                "duration": 799,
+                "title": "Every Stewart Francis Stand-Up Set! | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1537,9 +1401,49 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=9Y0K1GWfXwk",
-                "duration": 799,
-                "title": "Every Stewart Francis Stand-Up Set! | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=IjBNsDmfEh0",
+                "duration": 247,
+                "title": "The Art of Standing on Business by Omid Djalili | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_z68gMp5Yxw",
+                "duration": 252,
+                "title": "Gary Delaney's Outrageous One-Liners! | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=k4bgeGSp0BE",
+                "duration": 739,
+                "title": "Eddie Izzard: A Tale Of Wisdom - Live at the Apollo | Jokes On Us",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f5BUBjEdNp8",
+                "duration": 2127,
+                "title": "A Full 30 Mins of Irresistibly Funny Stand Up Comedy! | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RHDWCE6o5MI",
+                "duration": 1370,
+                "title": "20 Mins of the Finest Stand Up Comedy | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1557,34 +1461,14 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=JDdIhF2cSFw",
-                "duration": 312,
-                "title": "Omid Djilai live at the apollo part 1",
+                "url": "https://www.youtube.com/watch?v=KY8LOj4zSjc",
+                "duration": 437,
+                "title": "Phil Wang Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SeJB0hj2sVE",
-                "duration": 736,
-                "title": "3 Beautifully Rib-Tickling Comedy Sets | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LsEhNMy8svo",
-                "duration": 243,
-                "title": "Frankie Boyle on Why Scots Despise England! | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=CJPt3AfKV2M",
@@ -1597,29 +1481,9 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=wqMpRpdpcs8",
-                "duration": 1341,
-                "title": "Comedy Gold from Series 8 (pt1) | Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0NzFxsW58d0",
-                "duration": 4747,
-                "title": "Jack Dee - Live At The Apollo (2002)",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rbnvkfyqsmc",
-                "duration": 1437,
-                "title": "20 Mins of Absolutely Chaotic Comedy | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=IDf6qenZ9IQ",
+                "duration": 4955,
+                "title": "The Apollo Comedy Special 85 South Show #002",
                 "parts": [
                     "prime"
                 ],
@@ -1627,39 +1491,39 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=cOgukpttNFA",
-                "duration": 1054,
-                "title": "Winning Is EVERYTHING, Right? | Sindhu Vee - Live At The Apollo 2019 | Jokes On Us",
+                "url": "https://www.youtube.com/watch?v=oEWwdPzCMZQ",
+                "duration": 1980,
+                "title": "The Apollo's Funniest Women | Live at the Apollo | BBC Comedy Greats",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=NuiUIGgv5WU",
-                "duration": 247,
-                "title": "Gangsters Vs Gentrification! | Kae Kurd | Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=LsEhNMy8svo",
+                "duration": 243,
+                "title": "Frankie Boyle on Why Scots Despise England! | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WUAJvPI8Y8U",
-                "duration": 463,
-                "title": "Stewart Francis Live at the Apollo",
-                "parts": [
-                    "prime"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1792350542
             },
             {
                 "url": "https://www.youtube.com/watch?v=cIDzWXBDzRE",
                 "duration": 421,
                 "title": "Emmanuel Sonubi LIVE AT THE APOLLO S16 E1 2021",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SeJB0hj2sVE",
+                "duration": 736,
+                "title": "3 Beautifully Rib-Tickling Comedy Sets | Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1677,14 +1541,74 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=oBXG5qjF6kM",
-                "duration": 5129,
-                "title": "Eccentric Stand Up Comedy to Keep You Occupied! ｜ Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=cOgukpttNFA",
+                "duration": 1054,
+                "title": "Winning Is EVERYTHING, Right? | Sindhu Vee - Live At The Apollo 2019 | Jokes On Us",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s0fpxcD2PrA",
+                "duration": 3704,
+                "title": "Paul Chowdhry Live Innit 2019",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
                 "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OMn5Wvjs1kc",
+                "duration": 2068,
+                "title": "30 mins of Comedy Legends on Stage | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=m--7yOkMojo",
+                "duration": 249,
+                "title": "Hal Cruttenden Reads Hilarious Facebook Quotes | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Jt3tXcTQpv0",
+                "duration": 1555,
+                "title": "20 Mins of Outrageously Funny Comedy | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0NzFxsW58d0",
+                "duration": 4747,
+                "title": "Jack Dee - Live At The Apollo (2002)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TUIzDtzDzHI",
+                "duration": 494,
+                "title": "Xscape Delivers Powerhouse Performance Medley Of Their Biggest Hits | Soul Train Awards '22",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=YY2Hc6qjQCI",
@@ -1697,9 +1621,59 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=Pc95Q6ebw8I",
-                "duration": 243,
-                "title": "Jesse Powell - You LIVE at the Apollo 1999",
+                "url": "https://www.youtube.com/watch?v=vX9axWKmZGM",
+                "duration": 260,
+                "title": "FBI Nigerian Style! | Gina Yashere | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZJ1YlYx4PdQ",
+                "duration": 267,
+                "title": "Showtime at the Apollo 2018 ~ DeCory Brown",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ucVtXJv1h1w",
+                "duration": 1617,
+                "title": "Stand Up Comedy GOLD: Series 16 | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2Bn1zVHWzWg",
+                "duration": 2293,
+                "title": "Try Not to Laugh Challenge! (IMPOSSIBLE) | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oIjzkNNlPC4",
+                "duration": 250,
+                "title": "Stewart Francis' Funniest One-Liners! | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WUAJvPI8Y8U",
+                "duration": 463,
+                "title": "Stewart Francis Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
@@ -1707,14 +1681,109 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=vadXRM3FGaU",
-                "duration": 453,
-                "title": "Rob Beckett Live at the Apollo",
+                "url": "https://www.youtube.com/watch?v=v0eeKZqvC8Y",
+                "duration": 440,
+                "title": "Jen Brister Live at the Apollo",
                 "parts": [
                     "prime"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZIIr0CfHv6E",
+                "duration": 240,
+                "title": "Greg Davies Taught The World's Strangest School! | Live at the Apollo",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lLeUvxQSH68",
+                "duration": 2594,
+                "title": "Bruno Mars 24k Magic Concert | Live Apollo Theatre (Full Show)",
+                "parts": [
+                    "prime"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vy6lCbSCuzg",
+                "duration": 3695,
+                "title": "Chris Higgins | Live at the Fort (2025 Full Special)",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rb05fiUz6cU",
+                "duration": 3030,
+                "title": "Unconceivable | Jim Norton | Full Stand Up Comedy Special 2025",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xptOaD97HJA",
+                "duration": 3163,
+                "title": "Tyler Fischer LIVE IN PORTLAND | Full Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [
+                    [
+                        3136.5,
+                        3162.6
+                    ]
+                ],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dzH44ZiM64U",
+                "duration": 3492,
+                "title": "Shane Gillis UNCENSORED Funny Moments",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8MjDcvrSkN8",
+                "duration": 3625,
+                "title": "Gavin Matts: present (a Just for Laughs original) | Stand Up Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D3HAdwAb_zs",
+                "duration": 818,
+                "title": "Healing and Happy Endings | Reg Thomas | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ve4eun5sVAQ",
+                "duration": 3612,
+                "title": "Rob Schneider's UNFILTERED Stand-Up Comedy: Soy Sauce and the Holocaust | Full Episode",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=sW8jz8hWQqs",
@@ -1727,36 +1796,6 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=w_ARu0qTzmw",
-                "duration": 3797,
-                "title": "Ben Bailey: Live and Uncensored | Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PQiAzhqLUD0",
-                "duration": 3088,
-                "title": "Charlie Murphy's Live and Uncensored Stand-Up at Gotham Comedy Club",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LOFvDCflKig",
-                "duration": 4287,
-                "title": "Andrew Santino's UNFILTERED Stand-Up Comedy: Homefield Advantage | Full Episode",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=WUj7y6NxZw8",
                 "duration": 5267,
                 "title": "Mo'Nique & Paul Mooney UNCENSORED | Shaq's Comedy Jam",
@@ -1767,54 +1806,74 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=pPQn0D5vW9o",
-                "duration": 3736,
-                "title": "Sebastian Maniscalco: Aren't You Embarrassed? | FULL MOVIE | Stand-Up Comedy",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ad3fK8LzyKE",
-                "duration": 3182,
-                "title": "Just Correct (Uncut!)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=divRqc3q4B8",
-                "duration": 3550,
-                "title": "Leslie Jones: Life Part 2 | Full Comedy Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IXDA3HHcq5E",
-                "duration": 4183,
-                "title": "BRAD WILLIAMS: LIVE ON SHORT STREET {Full Stand-Up Comedy Special}",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ts5FalYIzMw",
-                "duration": 2517,
-                "title": "Anthony Jeselnik: Caligula - Full Special",
+                "url": "https://www.youtube.com/watch?v=LYfZ60ijd1Q",
+                "duration": 2694,
+                "title": "Emmy Blotnick | What's Her Secret? (Full Comedy Special)",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
                 "skip_checked": 1793395034
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lM0HsAzDQjg",
+                "duration": 2378,
+                "title": "Matt Koff - Cat Man (2026) | Full Standup Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=t_sPO8MMf4w",
+                "duration": 2584,
+                "title": "Harris Anderson | Watch This (Full Stand-Up Special)",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zvcgbaWDzyU",
+                "duration": 3295,
+                "title": "Jeremiah Watkins: Crazy Pizza | Official Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H3NH-WEGUGI",
+                "duration": 1804,
+                "title": "Usama Bin Laughin' | Usama Siddiquee | Half Hour Stand Up Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EnXHVWtCmAg",
+                "duration": 700,
+                "title": "My Body, My Jokes | Brandi Denise | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n5zeemXykrU",
+                "duration": 3224,
+                "title": "Des Bishop: Bridge & Tunnel | Full Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=J-W2KGV0Ga4",
@@ -1827,104 +1886,29 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=Lx4ELE8leC4",
-                "duration": 3120,
-                "title": "Bobby Lee – Live Uncensored Stand-Up | Gotham Comedy Live",
+                "url": "https://www.youtube.com/watch?v=8JiOibKcnSM",
+                "duration": 355,
+                "title": "Marcello Hernández Stand-Up: Women Getting Ready, Bodysuits and Brazilian Waxes | The Tonight Show",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=TEOAz0Pzv3o",
-                "duration": 2175,
-                "title": "Speshy Weshy. Full Comedy Special from Chris Distefano",
+                "url": "https://www.youtube.com/watch?v=H4mmyueKtrc",
+                "duration": 863,
+                "title": "This is Not Adult Behavior! | Jon Rudnitsky | Stand Up Comedy",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=N8yH253sEpM",
-                "duration": 3805,
-                "title": "Gary Owen: #DoinWhatIDo (Full Show) | Hilarious Stand-Up Comedy",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vyB9l4kHS2g",
-                "duration": 3914,
-                "title": "Mojo Brookzz Uncensored Crowd Work 2026 | Crowd Work Got OUTTA POCKET 😂💀",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zG10W6HYKTk",
-                "duration": 3786,
-                "title": "Kelsey Cook | The Hustler (Full Comedy Special)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KHz3E-VtlYk",
-                "duration": 2532,
-                "title": "Happy Thoughts mit Daniel Tosh | Full Episode | Comedy Central",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=no39xUWqhQk",
-                "duration": 1273,
-                "title": "Keep Ya Head Up, And Ya Ass Down”- Earthquake - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hMoSQ3jJmY8",
-                "duration": 2067,
-                "title": "Derrick Stroup Uncut: A Night at the Famous NYC Comedy Cellar",
-                "parts": [
-                    "late"
-                ],
-                "skip": [
-                    [
-                        309.2,
-                        341.6
-                    ]
-                ],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qvXva2_FlXg",
-                "duration": 3799,
-                "title": "Trevor Noah Presents Josh Johnson: # (Hashtag)  - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=G80CrSDLsY0",
-                "duration": 1275,
-                "title": "“What Happened to Class?”- Tammy Pescatelli - Full Special",
+                "url": "https://www.youtube.com/watch?v=pPQn0D5vW9o",
+                "duration": 3736,
+                "title": "Sebastian Maniscalco: Aren't You Embarrassed? | FULL MOVIE | Stand-Up Comedy",
                 "parts": [
                     "late"
                 ],
@@ -1932,238 +1916,14 @@
                 "skip_checked": 1792350542
             },
             {
-                "url": "https://www.youtube.com/watch?v=k6WNXMLTB5o",
-                "duration": 3310,
-                "title": "60 Jokes That Are Pure Comedy Gold in 60 Minutes | Full Standup Comedy Compilation",
+                "url": "https://www.youtube.com/watch?v=B81I5d8m6RI",
+                "duration": 3901,
+                "title": "Most Viral Sets | Stand Up Comedy Compilation",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zQxXhKVW3BU",
-                "duration": 3838,
-                "title": "Urzila Carlson — Just No! (Full Comedy Special) 2025",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YntBaJ8FiK0",
-                "duration": 2513,
-                "title": "Nikki Glaser: Perfect - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NQghA0123NA",
-                "duration": 3707,
-                "title": "Joe Gatto | Messing With People (Full Comedy Special)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XQsKLDVcJ0Q",
-                "duration": 3832,
-                "title": "Lace Larrabee | White Trash Cinderella (Full Comedy Special)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cbE9ncf9aFY",
-                "duration": 4627,
-                "title": "ALL STAR Comedy Jam 🔥 Stand-up Comedy",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1792350542
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0k-g5pONhi4",
-                "duration": 3625,
-                "title": "Ali Siddiq: It’s Bigger Than These Bars - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E7U6j7Crg1k",
-                "duration": 361,
-                "title": "Leonarda Jonie: Uncensored, LIVE in Houston, TX",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9W7dIqH7wm4",
-                "duration": 2384,
-                "title": "Nikki Glaser: Perfect - Die Ganze Show | Comedy Legends | Comedy Central Deutschland",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sGEAqq16gYU",
-                "duration": 1273,
-                "title": "“What Is Going On?” - Sebastian Maniscalco: Comedy Central Presents - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wEUzWrS9MMg",
-                "duration": 5098,
-                "title": "MoJo Brookzz Unloaded On This Loudmouth 😂 | Mojo Brookzz Uncensored Crowd Work",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r9bavLu05AI",
-                "duration": 3408,
-                "title": "Gallagher's 1st Stand-Up Special | An Uncensored Evening (1980)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V5qKDvfSRtg",
-                "duration": 4560,
-                "title": "Mike Epps & Deon Cole Went Too Far | Shaq's Comedy Jam",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-2yAZIYiI-I",
-                "duration": 1811,
-                "title": "UNCUFFED with Ali Siddiq (TV Pilot Episode That Never Aired)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LtV53iib_FQ",
-                "duration": 1292,
-                "title": "The Most One-Liner Jokes You'll Ever Hear. Geechy Guy - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [
-                    [
-                        1277.0,
-                        1290.7
-                    ]
-                ],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p_HqJyq2SYU",
-                "duration": 4709,
-                "title": "Gaslit | Akaash Singh | Full Comedy Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [
-                    [
-                        1674.3,
-                        1729.2
-                    ],
-                    [
-                        3473.2,
-                        3528.1
-                    ]
-                ],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gJns8wDwWno",
-                "duration": 4028,
-                "title": "Russell Peters: Deported (Full Show) | Hilarious International Comedy Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5S5iZZEtTkg",
-                "duration": 2523,
-                "title": "John Mulaney: New in Town - Full Special",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W2rvIA_8AlA",
-                "duration": 4059,
-                "title": "Aries Spears Hollywood Look Im Smiling 2011 1080p Full Uncensored",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zjJKQ7tEdLQ",
-                "duration": 2492,
-                "title": "Amy Schumer: Mostly Sex Stuff - Die Ganze Show | Comedy Legends | Comedy Central Deutschland",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UkUBK2DQaXU",
-                "duration": 4028,
-                "title": "Russell Peters’s HILARIOUS Stand-Up Comedy: Deported | Full Episode",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=trjZW1UdhVs",
-                "duration": 2133,
-                "title": "Filthy Teachers, White Tina Turner & the Mystery of Table 9 | Ian Bagg: Live in Detroit (FULL SHOW)",
-                "parts": [
-                    "late"
-                ],
-                "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=yhz5huZuG00",
@@ -2176,9 +1936,79 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=WyX4uqcBrto",
-                "duration": 1267,
-                "title": "Church Basketball Player from Tennessee - Nate Bargatze: Comedy Central Presents - Full Special",
+                "url": "https://www.youtube.com/watch?v=bTUsicw0598",
+                "duration": 4700,
+                "title": "7 Underground Comics To Watch | Stand Up Comedy Compilation",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VQ_Kh1GTVeU",
+                "duration": 758,
+                "title": "My Kid's Bully is Hilarious | Gary Michael Anderson | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8rHf7NfxFQs",
+                "duration": 3478,
+                "title": "Jerrel Beamon: Ohio Kid (2026) | Full Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jmY1CJWO2rE",
+                "duration": 643,
+                "title": "Whitesplaining Racism | Sam Biru | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YZCMD1J0M3U",
+                "duration": 3493,
+                "title": "Jim Breuer: And Laughter For All (Full Show) | Seriously FUNNY Stand-Up Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jZvexe8IvRI",
+                "duration": 617,
+                "title": "Why I Love Being Mexican | Joseph Garcia | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=23L2sIZTA-E",
+                "duration": 3100,
+                "title": "Brad Wenzel: Desperate Times - Full Stand Up Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ts5FalYIzMw",
+                "duration": 2517,
+                "title": "Anthony Jeselnik: Caligula - Full Special",
                 "parts": [
                     "late"
                 ],
@@ -2186,54 +2016,204 @@
                 "skip_checked": 1793395034
             },
             {
-                "url": "https://www.youtube.com/watch?v=4EBaeAnJvSA",
-                "duration": 1449,
-                "title": "Hipsters are Human Bedbugs - Dan Soder - Full Special",
+                "url": "https://www.youtube.com/watch?v=ntgWX-OgHj4",
+                "duration": 1031,
+                "title": "My Plan to Fix America | Chris Redd | Stand Up Comedy",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=v7t3rj_tbk4",
-                "duration": 1212,
-                "title": "Daniel Tosh - “The Floor is Lava” - Full Special",
+                "url": "https://www.youtube.com/watch?v=kZZez42HWvU",
+                "duration": 1255,
+                "title": "“I Sold Mansions to Janitors” - Tim Dillon - Full Special",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=HlJbSzNwR9I",
-                "duration": 1272,
-                "title": "Amy Schumer- “Never Shake A Baby”- Full Special",
+                "url": "https://www.youtube.com/watch?v=divRqc3q4B8",
+                "duration": 3550,
+                "title": "Leslie Jones: Life Part 2 | Full Comedy Special",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=BjRW9WhfGgo",
-                "duration": 2513,
-                "title": "Dan Soder: Not Special - Full Special",
+                "url": "https://www.youtube.com/watch?v=BjDLXPzOVqc",
+                "duration": 4979,
+                "title": "Ralph Barbosa's Funniest Stand Up Comedy Moments! (2025)",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=5t07tm7yHSE",
-                "duration": 3694,
-                "title": "The End of the World With Jimmy Carr | New Zealand Crowd Work Special",
+                "url": "https://www.youtube.com/watch?v=bjgwQ0sx470",
+                "duration": 604,
+                "title": "My Straight Sister Married a Woman | Rachel Williams | Stand Up Comedy",
                 "parts": [
                     "late"
                 ],
                 "skip": [],
-                "skip_checked": 1793395034
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VVpbu49dFoU",
+                "duration": 1133,
+                "title": "The Artful Codger | Andy Huggins | Stand Up Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6rAGt1UD0wo",
+                "duration": 3215,
+                "title": "Chris Distefano: Size 38 Waist - Full Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6o6ZFZ2yuqU",
+                "duration": 4614,
+                "title": "Kyle Kinane | Shocks and Struts [Unabridged] (Full Comedy Special)",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FrgCQctDFDI",
+                "duration": 2365,
+                "title": "Emily Catalano - UNSPECIAL (Full Comedy Special)",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c-uP7AAFerE",
+                "duration": 724,
+                "title": "Nobody's Mad At Luigi | Godfrey | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BElY0m4iLh4",
+                "duration": 670,
+                "title": "Lawless 90s Kids | Derrick Stroup | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=txN_qF7Sk6k",
+                "duration": 2827,
+                "title": "Unfiltered Matt Rife Comedy | Matt Rife Viral Crowd Work Moments",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N8yH253sEpM",
+                "duration": 3805,
+                "title": "Gary Owen: #DoinWhatIDo (Full Show) | Hilarious Stand-Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1792350542
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YYMqQoF2Z7g",
+                "duration": 3560,
+                "title": "Tom Papa: Human Mule (Full Show) | Relatable Stand-Up Comedy Gold",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FBEeo1-mONs",
+                "duration": 2893,
+                "title": "Noah Gardenswartz | Wanna Bet? | Full Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mbDAcPw52oo",
+                "duration": 560,
+                "title": "Built, Blind, and Bipolar | Joel Kim Booster | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xJtEyIcx_fs",
+                "duration": 4104,
+                "title": "Urzila Carlson — Just Jokes (Full Comedy Special) 2026",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j2LtAYtBRQU",
+                "duration": 562,
+                "title": "Biracial and Afraid | Josh Ocean Thomas | Stand Up Comedy",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sGEAqq16gYU",
+                "duration": 1273,
+                "title": "“What Is Going On?” - Sebastian Maniscalco: Comedy Central Presents - Full Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eZHJFscsZec",
+                "duration": 3215,
+                "title": "Jimmy O. Yang: Guess How Much  (Full Show) | Stand-Up Comedy Special",
+                "parts": [
+                    "late"
+                ],
+                "skip": [],
+                "skip_checked": 1794438891
             }
         ],
         "search_query": "stand up comedy special full show",
@@ -2243,7 +2223,7 @@
             "Melbourne Comedy Festival gala full",
             "Just for Laughs full special"
         ],
-        "last_refreshed": 1793395033,
+        "last_refreshed": 1794438888,
         "part_queries": {
             "breakfast": "Dry Bar Comedy clean stand up",
             "prime": "Live at the Apollo full episode",
