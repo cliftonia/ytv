@@ -7,51 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=VvaK2x2V4zM",
-                "duration": 1048,
-                "title": "2026's Biggest Retro Convention! Midwest Gaming Classic",
-                "skip": [
-                    [
-                        167.1,
-                        177.6
-                    ]
-                ],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-qkmvMS3GoU",
-                "duration": 2521,
-                "title": "The Console That Almost Changed Gaming Forever | Game Changers",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zF5nyMKcbaU",
-                "duration": 1935,
-                "title": "The PLANET CHH Halloween Special! | 2026",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Lj1pxeTHpA0",
-                "duration": 1071,
-                "title": "The State of Retro Gaming In 2025...",
-                "skip": [
-                    [
-                        1042.6,
-                        1046.1
-                    ]
-                ],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=USPr73mJVDc",
-                "duration": 335,
-                "title": "Why Retro Gaming Is So Expensive Now (2026)",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=Z_1OIPhwKr0",
                 "duration": 1332,
                 "title": "The Most DANGEROUS Console Hacks We All Tried | Retro Gaming Documentary",
@@ -63,6 +18,45 @@
                     [
                         1197.6,
                         1310.6
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-qkmvMS3GoU",
+                "duration": 2521,
+                "title": "The Console That Almost Changed Gaming Forever | Game Changers",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hc_9LJt_HHY",
+                "duration": 1417,
+                "title": "The Most UNHINGED Easter Eggs in Gaming History | Retro Gaming Documentary",
+                "skip": [
+                    [
+                        355.0,
+                        486.9
+                    ],
+                    [
+                        1140.6,
+                        1396.2
+                    ]
+                ],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=o3xTR4uVvyY",
+                "duration": 1188,
+                "title": "Hardware That Self-Destructs: The Consoles Born to Die / Retro Gaming Documentary",
+                "skip": [
+                    [
+                        46.2,
+                        70.6
+                    ],
+                    [
+                        1092.1,
+                        1167.0
                     ]
                 ],
                 "skip_checked": 1792786230
@@ -84,27 +78,72 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=1U8P07aMVzU",
-                "duration": 654,
-                "title": "If I Started a Gaming Channel in 2026, I'd Do This",
+                "url": "https://www.youtube.com/watch?v=2W45KZsElLw",
+                "duration": 4029,
+                "title": "Streets Of Rage: The Complete History | RETRO GAMING DOCUMENTARY",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=o3xTR4uVvyY",
-                "duration": 1188,
-                "title": "Hardware That Self-Destructs: The Consoles Born to Die / Retro Gaming Documentary",
+                "url": "https://www.youtube.com/watch?v=5VLCWTVEIeg",
+                "duration": 1379,
+                "title": "5 Accidental Bugs That Changed Gaming FOREVER / Retro Gaming Documentary",
                 "skip": [
                     [
-                        46.2,
-                        70.6
+                        547.9,
+                        678.2
                     ],
                     [
-                        1092.1,
-                        1167.0
+                        1140.5,
+                        1144.0
+                    ],
+                    [
+                        1190.9,
+                        1358.2
                     ]
                 ],
-                "skip_checked": 1792786230
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=USPr73mJVDc",
+                "duration": 335,
+                "title": "Why Retro Gaming Is So Expensive Now (2026)",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AS5__97BG8c",
+                "duration": 3000,
+                "title": "The Legend of Zelda 40th Anniversary Special! A Nintendo Retro Gaming History Documentary",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6Fx3sRW7gH4",
+                "duration": 1562,
+                "title": "The Arcade Console Scam: Why Cheap Hardware Failed / Retro Gaming Documentary",
+                "skip": [
+                    [
+                        129.3,
+                        146.2
+                    ],
+                    [
+                        433.8,
+                        521.0
+                    ],
+                    [
+                        1306.6,
+                        1541.0
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jdFOAzeIy94",
+                "duration": 2076,
+                "title": "DINO CRISIS: The Complete History | Retro Gaming Documentary",
+                "skip": [],
+                "skip_checked": 1793478163
             },
             {
                 "url": "https://www.youtube.com/watch?v=OWPVzlrzgKQ",
@@ -114,39 +153,47 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=bpfxdP2dktM",
-                "duration": 1077,
-                "title": "The Video Game Industry is in Turmoil...",
+                "url": "https://www.youtube.com/watch?v=VvaK2x2V4zM",
+                "duration": 1048,
+                "title": "2026's Biggest Retro Convention! Midwest Gaming Classic",
                 "skip": [
                     [
-                        1055.7,
-                        1057.9
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hc_9LJt_HHY",
-                "duration": 1417,
-                "title": "The Most UNHINGED Easter Eggs in Gaming History | Retro Gaming Documentary",
-                "skip": [
-                    [
-                        355.0,
-                        486.9
-                    ],
-                    [
-                        1140.6,
-                        1396.2
+                        167.1,
+                        177.6
                     ]
                 ],
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=dMV9O0RHD_o",
-                "duration": 2401,
-                "title": "Daytona USA: The Complete History | RETRO GAMING DOCUMENTARY",
+                "url": "https://www.youtube.com/watch?v=Lj1pxeTHpA0",
+                "duration": 1071,
+                "title": "The State of Retro Gaming In 2025...",
+                "skip": [
+                    [
+                        1042.6,
+                        1046.1
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XcFy9YSCeNk",
+                "duration": 1056,
+                "title": "The Sad State of Retro Gaming",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=a8EMKfA27p4",
+                "duration": 1215,
+                "title": "Remaking Classic Games But BETTER!",
+                "skip": [
+                    [
+                        15.3,
+                        18.0
+                    ]
+                ],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZhCKs7DDePM",
@@ -161,9 +208,81 @@
                 "skip_checked": 1793478163
             },
             {
+                "url": "https://www.youtube.com/watch?v=8rVd2euHd0o",
+                "duration": 5012,
+                "title": "Why Nobody Could Beat the Game Boy",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p8V3THiqNEY",
+                "duration": 1670,
+                "title": "Turrican: The Complete History | Retro Gaming Documentary",
+                "skip": [
+                    [
+                        127.7,
+                        134.2
+                    ],
+                    [
+                        1508.3,
+                        1669.8
+                    ]
+                ],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gJu6Nb0IJFE",
+                "duration": 763,
+                "title": "Walmart’s $29 Black Friday Phone Is INSANE For Emulation!",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uzuZidB-fYA",
+                "duration": 1263,
+                "title": "Retro Pokémon Is Exploding Right Now",
+                "skip": [
+                    [
+                        316.6,
+                        401.1
+                    ],
+                    [
+                        1112.7,
+                        1129.9
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bpfxdP2dktM",
+                "duration": 1077,
+                "title": "The Video Game Industry is in Turmoil...",
+                "skip": [
+                    [
+                        1055.7,
+                        1057.9
+                    ]
+                ],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dMV9O0RHD_o",
+                "duration": 2401,
+                "title": "Daytona USA: The Complete History | RETRO GAMING DOCUMENTARY",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=h_H3Y58OKDM",
                 "duration": 545,
                 "title": "Gaming on Plasma TV in 2026",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hxBuFfSbkno",
+                "duration": 939,
+                "title": "Collectors Are Destroying Retro Gaming — Not Resellers",
                 "skip": [],
                 "skip_checked": 1793478163
             },
@@ -184,110 +303,16 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=YRUKQVPMX20",
-                "duration": 2356,
-                "title": "TIME-TRAPPED ISLE",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AS5__97BG8c",
-                "duration": 3000,
-                "title": "The Legend of Zelda 40th Anniversary Special! A Nintendo Retro Gaming History Documentary",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yFNRUgRupkU",
-                "duration": 798,
-                "title": "My Thoughts on the Neo Geo AES+",
+                "url": "https://www.youtube.com/watch?v=qjgjAGAuuNg",
+                "duration": 1259,
+                "title": "Retro Gaming Has Never Been This Modern",
                 "skip": [
                     [
-                        770.6,
-                        773.3
+                        113.7,
+                        197.1
                     ]
                 ],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mJ8v6Bdc6tA",
-                "duration": 1488,
-                "title": "Japan’s Suburbs Are FULL of Retro Games!",
-                "skip": [
-                    [
-                        556.4,
-                        559.4
-                    ],
-                    [
-                        583.8,
-                        587.6
-                    ],
-                    [
-                        1475.4,
-                        1485.2
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jdFOAzeIy94",
-                "duration": 2076,
-                "title": "DINO CRISIS: The Complete History | Retro Gaming Documentary",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hxBuFfSbkno",
-                "duration": 939,
-                "title": "Collectors Are Destroying Retro Gaming — Not Resellers",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=p8V3THiqNEY",
-                "duration": 1670,
-                "title": "Turrican: The Complete History | Retro Gaming Documentary",
-                "skip": [
-                    [
-                        127.7,
-                        134.2
-                    ],
-                    [
-                        1508.3,
-                        1669.8
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mYZPHdKKMaI",
-                "duration": 1362,
-                "title": "Recomps and Decomps have taken over Retro Gaming...",
-                "skip": [
-                    [
-                        133.0,
-                        220.5
-                    ],
-                    [
-                        1337.9,
-                        1341.2
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gONKj7rVYmI",
-                "duration": 1148,
-                "title": "The NEW Way to Start a Successful Gaming Channel in 2026",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PKGcb0zlayI",
-                "duration": 626,
-                "title": "SECRET SITE plays EVERY RETRO GAME (2026)",
-                "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=C_-9Rw5CJNE",
@@ -310,6 +335,18 @@
                 "skip_checked": 1793566524
             },
             {
+                "url": "https://www.youtube.com/watch?v=Xi8dT_-9IL0",
+                "duration": 1475,
+                "title": "NARC: The Complete History | RETRO GAMING DOCUMENTARY",
+                "skip": [
+                    [
+                        118.1,
+                        155.7
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=KVZZ_VbBmrU",
                 "duration": 1275,
                 "title": "The Most Dangerous Console \"Fixes\" In History / Retro Gaming Documentary",
@@ -326,82 +363,48 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=XSR7MIHJqdc",
-                "duration": 2028,
-                "title": "Is Facebook Marketplace Worth the Risk for Retro Game Collectors? | Ep. 4",
+                "url": "https://www.youtube.com/watch?v=MsZwWegGk6E",
+                "duration": 4331,
+                "title": "Why Sega Gave Up After the Dreamcast",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=NnZzvvqTEwk",
-                "duration": 1932,
-                "title": "Dude, Just Get a Steam Deck",
+                "url": "https://www.youtube.com/watch?v=uMczuutx83I",
+                "duration": 1779,
+                "title": "Why Your Old Xbox 360 Movie Games Are Suddenly Worth a Fortune",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N_coSHiqi_Q",
+                "duration": 1227,
+                "title": "The Big AI Lie: How Retro Tech Fooled the World / Retro Gaming Documentary",
                 "skip": [
                     [
-                        1913.0,
-                        1915.1
-                    ]
-                ],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=AxKTUDyV5NU",
-                "duration": 1350,
-                "title": "16 Upcoming New Mega Drive/Genesis Games of 2026 and Beyond! (Time Stamps) #megadrive #segagenesis",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LK57cEXzcxk",
-                "duration": 4045,
-                "title": "Good Morning America Full Broadcast — Saturday, October 31, 2026",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xi8dT_-9IL0",
-                "duration": 1475,
-                "title": "NARC: The Complete History | RETRO GAMING DOCUMENTARY",
-                "skip": [
+                        105.0,
+                        150.0
+                    ],
                     [
-                        118.1,
-                        155.7
+                        1106.8,
+                        1205.4
                     ]
                 ],
-                "skip_checked": 1792786230
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=QxKW24s-Dtg",
-                "duration": 2690,
-                "title": "SKELETOR vs FRIDAY THE 13th  (NES) & Retro Halloween (SPECIAL!)",
+                "url": "https://www.youtube.com/watch?v=A-dBoNnuNzg",
+                "duration": 2650,
+                "title": "🕹️ Retro Gaming's Wildest Competitions – C64, ZX Spectrum & Amiga",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=u68r0Z3l2DI",
-                "duration": 469,
-                "title": "I'm 40... and I Miss When Gaming Felt Like This",
+                "url": "https://www.youtube.com/watch?v=FMyYpMOcWHk",
+                "duration": 827,
+                "title": "ZACH CREGGER'S: RESIDENT EVIL || THE VIDEO GAME | PS1 STYLE SURVIVAL HORROR",
                 "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=frL17gEO8SM",
-                "duration": 2729,
-                "title": "Don't Buy a CRT TV Until You Watch This (ULTIMATE Guide)",
-                "skip": [
-                    [
-                        116.9,
-                        126.5
-                    ]
-                ],
-                "skip_checked": 1794171336
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ilqXTXU2db0",
-                "duration": 3911,
-                "title": "the gaming Mysteries Iceberg",
-                "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=urT7ZZyp4IU",
@@ -416,6 +419,43 @@
                 "skip_checked": 1793049429
             },
             {
+                "url": "https://www.youtube.com/watch?v=1U8P07aMVzU",
+                "duration": 654,
+                "title": "If I Started a Gaming Channel in 2026, I'd Do This",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mYZPHdKKMaI",
+                "duration": 1362,
+                "title": "Recomps and Decomps have taken over Retro Gaming...",
+                "skip": [
+                    [
+                        133.0,
+                        220.5
+                    ],
+                    [
+                        1337.9,
+                        1341.2
+                    ]
+                ],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lLos5lGXST4",
+                "duration": 1429,
+                "title": "Our PORTLAND RETRO GAMING EXPO Experience - Behind the Scenes, Parties & Highlights",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zd4ASSS1wXw",
+                "duration": 277,
+                "title": "Wing Commander 3 - Original vs Remaster (1994 vs 2026)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=e3D7Fj1PsWk",
                 "duration": 295,
                 "title": "Salvation (ft. Forts) | For Demacia 2026 Season 1 Cinematic - League of Legends",
@@ -423,30 +463,11 @@
                 "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=INFV8W4VuKE",
-                "duration": 839,
-                "title": "These 25 Sega Genesis Games are STILL AFFORDABLE in 2026 [Retronomics]",
+                "url": "https://www.youtube.com/watch?v=MM7h89iuXYI",
+                "duration": 4676,
+                "title": "LGR Vlogs: Midwest Gaming Classic 2026",
                 "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LA1qY_l7nVY",
-                "duration": 1793,
-                "title": "Golden Axe: The Complete History | RETRO GAMING DOCUMENTARY",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dHoOlI6zmz4",
-                "duration": 1248,
-                "title": "Big Trouble for Retro Gaming Handhelds, PS5 Emulation on Android, Epic Goes All In on AI and more",
-                "skip": [
-                    [
-                        43.0,
-                        45.0
-                    ]
-                ],
-                "skip_checked": 1792444744
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=AaseHnf0k2o",
@@ -465,11 +486,132 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=dZTSAlH1NTY",
-                "duration": 4161,
-                "title": "Finals - 2026 Classic Tetris World Championship",
+                "url": "https://www.youtube.com/watch?v=LA1qY_l7nVY",
+                "duration": 1793,
+                "title": "Golden Axe: The Complete History | RETRO GAMING DOCUMENTARY",
                 "skip": [],
-                "skip_checked": 1793309401
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=96pZygmoDPk",
+                "duration": 311,
+                "title": "Wing Commander: Prophecy - Original vs Remaster (1997 vs 2026) Comparison",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vWoztcK0Yr0",
+                "duration": 271,
+                "title": "How Gaming Consoles Changed Everything (1972-2026) | From Brown Box to PS5",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ilqXTXU2db0",
+                "duration": 3911,
+                "title": "the gaming Mysteries Iceberg",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=frL17gEO8SM",
+                "duration": 2729,
+                "title": "Don't Buy a CRT TV Until You Watch This (ULTIMATE Guide)",
+                "skip": [
+                    [
+                        116.9,
+                        126.5
+                    ]
+                ],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=h-4qop-IgG8",
+                "duration": 1971,
+                "title": "GameEx - Retro Gaming & Multimedia Frontend - Beginners Guide 2026 #gameex #emulator #frontend",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RyeRBwVK3tM",
+                "duration": 1370,
+                "title": "I was too poor to afford this - Rebuilding a Dream Machine from 2001 Maximum PC",
+                "skip": [
+                    [
+                        104.0,
+                        118.7
+                    ],
+                    [
+                        391.8,
+                        401.1
+                    ],
+                    [
+                        1311.5,
+                        1369.6
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GgzCSzTHX2Y",
+                "duration": 517,
+                "title": "DON'T BE FOOLED! - iPad Mini 8 (A20 Pro 2026) vs iPad Air M4",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ONX73PsPFD8",
+                "duration": 1053,
+                "title": "Green Bay Packers vs. New England Patriots Game Highlights | NFL 2026 Season Week 9",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YrgQDETGO00",
+                "duration": 1876,
+                "title": "The First Perfect Game of Tetris Just Happened",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gYS5kIFfu0U",
+                "duration": 1138,
+                "title": "Retro Tech Bargain Hunting at the Retro Collective Cave 2026",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tTxI0p6UjG0",
+                "duration": 1419,
+                "title": "DANNY DYER Talks 80s & 90s NOSTALGIA",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=eOEWJ9EDdYA",
+                "duration": 400,
+                "title": "THE RETURN - Death Count Short Film - Halloween 2026 #shortfilm #horror #shorts #retrogaming",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=s_se6_bvXcc",
+                "duration": 658,
+                "title": "12 Star Wars Mods You NEED to Play in 2026!",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8xjPCgdxnMU",
+                "duration": 3882,
+                "title": "Diablo II: The RPG that changed gaming forever",
+                "skip": [
+                    [
+                        3842.6,
+                        3881.7
+                    ]
+                ],
+                "skip_checked": 1793478163
             },
             {
                 "url": "https://www.youtube.com/watch?v=BLf1_dWtluI",
@@ -484,121 +626,6 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=0Hz_RdjL8Pw",
-                "duration": 1563,
-                "title": "Paperboy: The Complete History | Retro Gaming Documentary",
-                "skip": [
-                    [
-                        500.0,
-                        571.0
-                    ],
-                    [
-                        1408.3,
-                        1562.4
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z6h0V0Z-A-E",
-                "duration": 682,
-                "title": "Retro Handheld Christmas Gift Guide 2026: What I’d Actually Buy",
-                "skip": [
-                    [
-                        351.9,
-                        400.3
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qR_EMXFGjTE",
-                "duration": 1955,
-                "title": "XXL Bear | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Nostalgic Cartoon",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RuIu0_yzDnk",
-                "duration": 540,
-                "title": "Street Fighter (2026): Why I Want the Sequel Despite That Ending",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rT9kCl57aEQ",
-                "duration": 4585,
-                "title": "ABC 20/20 New 2026 🍀🍀🍀 S49E02 The Deadly House🍀🍀🍀ABC 20/20 Season 2026 Full Episode",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QUMZE6_1CfE",
-                "duration": 540,
-                "title": "STREET FIGHTER THE MOVIE RUNNING DIRECTLY FROM THE SUPER NINTENDO",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dXbPixUEeug",
-                "duration": 4907,
-                "title": "Save Mass Effect!, Civilization Turns 35, Spooky DOOM, RIP Sir Patrick Stewart & More - Ramble 176",
-                "skip": [
-                    [
-                        459.0,
-                        515.0
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Va9kCmNOcNg",
-                "duration": 1441,
-                "title": "How Portal Turns a Test into an Escape #gaming #retrogaming #documentary",
-                "skip": [],
-                "skip_checked": 1794171336
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Am-cx8yzk0A",
-                "duration": 933,
-                "title": "Half the price. All the Games. - MiSTER Pi",
-                "skip": [
-                    [
-                        497.5,
-                        527.4
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YrgQDETGO00",
-                "duration": 1876,
-                "title": "The First Perfect Game of Tetris Just Happened",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YIdldHkSCdo",
-                "duration": 801,
-                "title": "The UNDERGROUND App Turns A $25 Box Into Retro Gaming GOLD",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TkbVXGG5w0s",
-                "duration": 3388,
-                "title": "Terminator #dendy #gaming #games #gameplay #retrogaming #nes #game #retro #gamer #letsplay",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IJvzLRzHbHQ",
-                "duration": 2075,
-                "title": "Street Fighter The Movie (SNES vs Sega Saturn) Real Hardware Comparison",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=c13C2rC8oq4",
                 "duration": 2549,
                 "title": "I Replayed Ocarina of Time Before the Remake… I Was Wrong",
@@ -606,30 +633,147 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=bfvoWPujn3U",
-                "duration": 1851,
-                "title": "🎶 2026 Ultimate Mind Relaxing Lofi Beats | Study,Sleep & Chill 🎧🎵",
+                "url": "https://www.youtube.com/watch?v=PKGcb0zlayI",
+                "duration": 626,
+                "title": "SECRET SITE plays EVERY RETRO GAME (2026)",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=zgmCgDTFl88",
-                "duration": 1527,
-                "title": "Star Fox and the Remake Conveyor Belt",
+                "url": "https://www.youtube.com/watch?v=dZTSAlH1NTY",
+                "duration": 4161,
+                "title": "Finals - 2026 Classic Tetris World Championship",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=8xjPCgdxnMU",
-                "duration": 3882,
-                "title": "Diablo II: The RPG that changed gaming forever",
+                "url": "https://www.youtube.com/watch?v=yFNRUgRupkU",
+                "duration": 798,
+                "title": "My Thoughts on the Neo Geo AES+",
                 "skip": [
                     [
-                        3842.6,
-                        3881.7
+                        770.6,
+                        773.3
                     ]
                 ],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WCUkzk7tDjs",
+                "duration": 3942,
+                "title": "THE SANCTUARY FULL- Lizzy Gold, Osita Iheme, Gina King 2026 Latest Nigerian Movie",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iTcY2Sh39KM",
+                "duration": 1208,
+                "title": "I Played 100 Years Of Nintendo!",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AFImI4yoG2M",
+                "duration": 2649,
+                "title": "How Jeffrey Epstein & The Elite Gained and Retained Power | While the Rest of Us Die - S2 Ep.1",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dHoOlI6zmz4",
+                "duration": 1248,
+                "title": "Big Trouble for Retro Gaming Handhelds, PS5 Emulation on Android, Epic Goes All In on AI and more",
+                "skip": [
+                    [
+                        43.0,
+                        45.0
+                    ]
+                ],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O0KwruhkPBc",
+                "duration": 3942,
+                "title": "ON NJEABA SANCTUARY 5&6 - Osita Iheme / Lizzy Gold Onuwaje 2026 Latest Nollywood Movie",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z76eNObdSt4",
+                "duration": 785,
+                "title": "On our way to Long Island Retro Gaming Expo 2026 and We Talk about Nothing and also Expo Goals",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GB1GuZJr8nk",
+                "duration": 3925,
+                "title": "ON NJEABA SANCTUARY 3&4 - Osita Iheme / Lizzy Gold Onuwaje 2026 Latest Nollywood Movie",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b8kEemrNkrg",
+                "duration": 1955,
+                "title": "Badly Sprained Bear | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Cartoon for Kids",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=K-0JnMOMXCQ",
+                "duration": 1003,
+                "title": "How Sonic Changed Gaming Forever | Evolution of Sonic Games 1991–2026",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZteGvdbenqM",
+                "duration": 3942,
+                "title": "New Movie Released Now (SANCTUARY OF DEATH) 5&6 -Lizzy Gold, Osita Iheme -Latest Nigerian Movie 2026",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tL7xyp1VtqY",
+                "duration": 470,
+                "title": "Why Couldn’t Sega’s Game Gear Beat the Game Boy?",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HH52ScFAmc8",
+                "duration": 1130,
+                "title": "Yes! You Can Build a $300 Gaming PC in 2026",
+                "skip": [],
                 "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C13i5ZGPMDQ",
+                "duration": 1278,
+                "title": "These Earbuds are Made for Retro Gaming",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cqJGNETCaO8",
+                "duration": 755,
+                "title": "The Capcom Home Arcade Is Here and I'm Obsessed",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gONKj7rVYmI",
+                "duration": 1148,
+                "title": "The NEW Way to Start a Successful Gaming Channel in 2026",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vo6TaS3HUjc",
+                "duration": 3925,
+                "title": "New Movie Released Now (SANCTUARY OF DEATH) 3&4 -Lizzy Gold, Osita Iheme -Latest Nigerian Movie 2026",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=5M3RlpozAyU",
@@ -648,16 +792,30 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=ikOnfR01Vyc",
-                "duration": 906,
-                "title": "2026 VCT Champions Opening Ceremony ft. Grabbitz, Oli Sykes, Courtney LaPlante, keshi, & Nana Ouyang",
+                "url": "https://www.youtube.com/watch?v=t5FPjy3KNa8",
+                "duration": 895,
+                "title": "Building An Emulation Console Is Stupid Cheap In 2025",
                 "skip": [],
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=Y3f6w_F3b6s",
-                "duration": 2402,
-                "title": "The Rise and Fall of SEGA: How A Gaming Giant Conquered The Industry And Lost Everything",
+                "url": "https://www.youtube.com/watch?v=Oo1vAkW_4HM",
+                "duration": 1267,
+                "title": "How to Monetize your Gaming Channel in 2026",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gh3IzkM07Fk",
+                "duration": 1459,
+                "title": "The 50-Year Evolution of RPGs",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I7AeQFk00dQ",
+                "duration": 498,
+                "title": "The PSP in 2026 is insane...",
                 "skip": [],
                 "skip_checked": 1793478163
             },
@@ -669,72 +827,46 @@
                 "skip_checked": 1794171336
             },
             {
-                "url": "https://www.youtube.com/watch?v=iTcY2Sh39KM",
-                "duration": 1208,
-                "title": "I Played 100 Years Of Nintendo!",
+                "url": "https://www.youtube.com/watch?v=bpcb2QWeN-4",
+                "duration": 629,
+                "title": "GAMING ki shuruaat kaise hui 😱",
                 "skip": [],
-                "skip_checked": 1792956294
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=B1ZR3NPRVw0",
-                "duration": 808,
-                "title": "PSP Gaming in 2025 is AMAZING",
-                "skip": [
-                    [
-                        460.1,
-                        484.5
-                    ]
-                ],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BcQXNjtPrcM",
-                "duration": 1279,
-                "title": "How to Start a Gaming Channel in 2026",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CSlh6qKWk0w",
-                "duration": 302,
-                "title": "The Fight Continues! | Street Fighter (Original Motion Picture Soundtrack)",
+                "url": "https://www.youtube.com/watch?v=3Nn6lyf3404",
+                "duration": 295,
+                "title": "Evare Nuvve - Full Video | I'm Game (Telugu) | Dulquer Salmaan & Kayadu Lohar | Armaan Malik, Jakes",
                 "skip": [],
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=Aojz4ZFSLqI",
-                "duration": 1638,
-                "title": "93 kills 💪 SCAR+MP40 99%Headshot Rate ⚡| Solo Vs Squad Full Gameplay | intel i5 🖥 Freefire",
+                "url": "https://www.youtube.com/watch?v=numAe8geq_0",
+                "duration": 3047,
+                "title": "90s Gaming Room 🎮🌧️ | Retro Gaming Nostalgia, Rain & Synthwave Ambience",
                 "skip": [],
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=AFImI4yoG2M",
-                "duration": 2649,
-                "title": "How Jeffrey Epstein & The Elite Gained and Retained Power | While the Rest of Us Die - S2 Ep.1",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tJs0t8N9Bus",
-                "duration": 439,
-                "title": "🎶2026Ultimate Mind Relaxing Lofi Beats | Study,  Sleep & Chill Fresh Smile🎧.",
+                "url": "https://www.youtube.com/watch?v=U9q_mo_JdAY",
+                "duration": 1064,
+                "title": "bro WHAT is going on with the 3DS and DS?",
                 "skip": [],
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=HR-S-MkvhvM",
-                "duration": 4563,
-                "title": "BREAK THE DEVIL 1&2 - Lizzy Gold Onuwaje, Patience Ozokwor - Latest  Nigerian Nollywood Movie 2026",
+                "url": "https://www.youtube.com/watch?v=CYSS77XsnT8",
+                "duration": 3917,
+                "title": "New Movie Released Now (SANCTUARY OF DEATH) - Lizzy Gold, Osita Iheme - Latest Nigerian Movie 2026",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=t5FPjy3KNa8",
-                "duration": 895,
-                "title": "Building An Emulation Console Is Stupid Cheap In 2025",
+                "url": "https://www.youtube.com/watch?v=IjxoNeg7OEM",
+                "duration": 735,
+                "title": "THE CANON JURASSIC PARK VIDEO GAME THAT EVERYONE FORGOT!",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=r65SW1__2vk",
@@ -753,74 +885,30 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=7FSu_umADtk",
-                "duration": 819,
-                "title": "Starting a NEW Gaming Collection in 2026?! 🎮 Is Now the Time?",
+                "url": "https://www.youtube.com/watch?v=d-bVkeN-O2Y",
+                "duration": 1577,
+                "title": "Last To Leave Tiny Car Wins $10,000!",
                 "skip": [],
-                "skip_checked": 1792444744
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=c2flin7DzrQ",
-                "duration": 1955,
-                "title": "Double Trouble | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Cartoon for Kids",
+                "url": "https://www.youtube.com/watch?v=A0WX-jsir94",
+                "duration": 2054,
+                "title": "The Legend of Zelda 40th Anniversary Direct 9.8.2026",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=I7AeQFk00dQ",
-                "duration": 498,
-                "title": "The PSP in 2026 is insane...",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=numAe8geq_0",
-                "duration": 3047,
-                "title": "90s Gaming Room 🎮🌧️ | Retro Gaming Nostalgia, Rain & Synthwave Ambience",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RwU_kynIJzM",
-                "duration": 2997,
-                "title": "A Nerdy Adventure To: Pittsburgh Gaming Expo 2026 (Ep.2)",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Oo1vAkW_4HM",
-                "duration": 1267,
-                "title": "How to Monetize your Gaming Channel in 2026",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-RiTnopI_sI",
-                "duration": 1980,
-                "title": "I Played Every Power Rangers Game Ever To See Which Ones The Best",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5WutthsFVko",
-                "duration": 2936,
-                "title": "Felix The Cat | NES Long play ohne Kommentar #NES #Nintendo #retrogaming #gaming #retro",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jvUOaB9iQow",
-                "duration": 1822,
-                "title": "Evolution of Super Mario",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Nn6lyf3404",
-                "duration": 295,
-                "title": "Evare Nuvve - Full Video | I'm Game (Telugu) | Dulquer Salmaan & Kayadu Lohar | Armaan Malik, Jakes",
-                "skip": [],
-                "skip_checked": 1793478163
+                "url": "https://www.youtube.com/watch?v=lsL8MAME1js",
+                "duration": 2164,
+                "title": "Evolution of Game Consoles",
+                "skip": [
+                    [
+                        2135.0,
+                        2163.4
+                    ]
+                ],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=xbaSvVcZhIc",
@@ -830,41 +918,18 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=HH52ScFAmc8",
-                "duration": 1130,
-                "title": "Yes! You Can Build a $300 Gaming PC in 2026",
+                "url": "https://www.youtube.com/watch?v=Imr2C6b36A4",
+                "duration": 596,
+                "title": "Why Couldn’t the Nintendo 64 Beat the PlayStation?",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=KHJTM955z6E",
-                "duration": 2066,
-                "title": "The HeartGold / SoulSilver Experience | Peak Remakes",
-                "skip": [
-                    [
-                        89.7,
-                        96.2
-                    ],
-                    [
-                        2019.3,
-                        2049.1
-                    ]
-                ],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nQPS_QSOYCU",
-                "duration": 3110,
-                "title": "World of Warcraft: Forever - Deep Dive | BlizzCon 2026",
+                "url": "https://www.youtube.com/watch?v=u-BDQcPIR4U",
+                "duration": 334,
+                "title": "Free Glacier M416 For Everyone | M416 Glacier Lucky Spin | 4.7 Update Event is Here | PUBGM",
                 "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=U9q_mo_JdAY",
-                "duration": 1064,
-                "title": "bro WHAT is going on with the 3DS and DS?",
-                "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=RQ51a2M9usE",
@@ -893,80 +958,9 @@
                     ]
                 ],
                 "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MXTK6-i9rGw",
-                "duration": 1721,
-                "title": "I Replayed The Goonies (Atari 8-bit) after 30 Years... Here is what happened.",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oPfb4xgvAD8",
-                "duration": 833,
-                "title": "How to Mod Any 3DS in 2026 (Updated Full Guide)",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2RkZw44mhYg",
-                "duration": 1424,
-                "title": "🎶2026 Ultimate Mind Relaxing Lofi Beats | Study, Sleep & Chill🎧#trendingsong",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PeBXVZMRJ-Q",
-                "duration": 939,
-                "title": "If I wasn’t a YouTuber, THESE are the handhelds I’d get",
-                "skip": [
-                    [
-                        916.2,
-                        922.0
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e2GfBpe6Iww",
-                "duration": 1153,
-                "title": "The Wolverine Game My Dad Never Should Have Bought",
-                "skip": [
-                    [
-                        39.1,
-                        109.3
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MXXMLRD9mz8",
-                "duration": 310,
-                "title": "Ola Englund - The Ember Saga (2026)",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=l947YlCyvsw",
-                "duration": 888,
-                "title": "Don't Choose WRONG! - Handheld gaming in 2026",
-                "skip": [
-                    [
-                        262.6,
-                        377.0
-                    ]
-                ],
-                "skip_checked": 1794171336
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=djWvckDcIWg",
-                "duration": 3601,
-                "title": "🎶2026Ultimate Mind Relaxing Lofi Beats | Study,  Sleep & Chill🎧",
-                "skip": [],
-                "skip_checked": 1793478163
             }
         ],
         "search_query": "retro gaming documentary",
-        "last_refreshed": 1793478162
+        "last_refreshed": 1794522636
     }
 }
