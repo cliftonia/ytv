@@ -7,6 +7,13 @@
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=BVwNExszZvY",
+                "duration": 2277,
+                "title": "To Build a Fire by Jack London | Full Audiobook with Text",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ooxRoqr8Z0M",
                 "duration": 1410,
                 "title": "Odyssey Reading Lecture Two",
@@ -35,11 +42,18 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=jnVKIzPYKL8",
+                "url": "https://www.youtube.com/watch?v=8wLv9Ysbf24",
                 "duration": 305,
-                "title": "Six Memos for the Next Millennium Audiobook by Italo Calvino",
+                "title": "Christians Reading Classics: Audio Lectures: An Introduction to Greco-Roman Classics from Homer to",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ieGtSkZ5EPQ",
+                "duration": 305,
+                "title": "Lesson in Secrets Audiobook by Jacqueline Winspear",
+                "skip": [],
+                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=mov8YZnfqdE",
@@ -49,32 +63,11 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=9IHkwKx3Ap4",
-                "duration": 4740,
-                "title": "The American Mind The E. T. Earl Lectures - Calm Narration to Fall Asleep To by Bliss Perry",
+                "url": "https://www.youtube.com/watch?v=NIuWPZWT4D8",
+                "duration": 1291,
+                "title": "Relativity: The Special and General Theory by Albert Einstein | Classic Physics Lecture",
                 "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CDNjTHBB8mw",
-                "duration": 392,
-                "title": "VII: A Lesson in Tact",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8sIsjKHDABg",
-                "duration": 829,
-                "title": "XVI: Mr. Sheringham Lectures on Neo-Platonism",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ieGtSkZ5EPQ",
-                "duration": 305,
-                "title": "Lesson in Secrets Audiobook by Jacqueline Winspear",
-                "skip": [],
-                "skip_checked": 1794171336
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=aBeuXBfWjKY",
@@ -91,6 +84,13 @@
                 "skip_checked": 1792444744
             },
             {
+                "url": "https://www.youtube.com/watch?v=CDNjTHBB8mw",
+                "duration": 392,
+                "title": "VII: A Lesson in Tact",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=anhjYj1n2j4",
                 "duration": 538,
                 "title": "The Last Lesson | The Story That Will Change the Way You Think #audiobook #alphonsedaudet",
@@ -105,6 +105,13 @@
                 "skip_checked": 1793566524
             },
             {
+                "url": "https://www.youtube.com/watch?v=MP1ZQvYFg7s",
+                "duration": 2875,
+                "title": "Casting the Runes by M. R. James | Full Audiobook",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Zc2LkJ3tA6Q",
                 "duration": 3520,
                 "title": "Robinson Crusoe Audiobook | Lesson 04 | Daniel Defoe | Classic English Adventure Story",
@@ -112,11 +119,16 @@
                 "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=NnnZ6y1HPqI",
-                "duration": 288,
-                "title": "Why should you read “Lord of the Flies” by William Golding? - Jill Dash",
-                "skip": [],
-                "skip_checked": 1793222925
+                "url": "https://www.youtube.com/watch?v=Vtkv3-endYc",
+                "duration": 286,
+                "title": "Why should you read “Crime and Punishment”? - Alex Gendler",
+                "skip": [
+                    [
+                        264.9,
+                        286.0
+                    ]
+                ],
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=UYovVPZRPgI",
@@ -133,42 +145,93 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=Vtkv3-endYc",
-                "duration": 286,
-                "title": "Why should you read “Crime and Punishment”? - Alex Gendler",
-                "skip": [
-                    [
-                        264.9,
-                        286.0
-                    ]
-                ],
-                "skip_checked": 1793566524
+                "url": "https://www.youtube.com/watch?v=q1FedLJkUls",
+                "duration": 2842,
+                "title": "Robinson Crusoe Audiobook | Lesson 16 | Daniel Defoe | Classic English Adventure Story",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=CforbC7J2M4",
-                "duration": 300,
-                "title": "Greek Legacy: Classical Origins of the Modern World Audiobook by Daniel N. Robinson",
+                "url": "https://www.youtube.com/watch?v=9ovGBgEAqaI",
+                "duration": 2289,
+                "title": "Robinson Crusoe Audiobook | Lesson 13 | Daniel Defoe | Classic English Adventure Story",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8sIsjKHDABg",
+                "duration": 829,
+                "title": "XVI: Mr. Sheringham Lectures on Neo-Platonism",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NnnZ6y1HPqI",
+                "duration": 288,
+                "title": "Why should you read “Lord of the Flies” by William Golding? - Jill Dash",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QVTP2AeKEWI",
+                "duration": 2283,
+                "title": "Robinson Crusoe Audiobook | Lesson 11 | Daniel Defoe | Classic English Adventure Story",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0kjR29VDGww",
+                "duration": 1695,
+                "title": "Notes from Underground Part 8 | Classic Literature Audiobook | Dostoevsky",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0DWpBGynwoQ",
+                "duration": 2574,
+                "title": "Robinson Crusoe Audiobook | Lesson 06 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=jNTqn7P9NoU",
-                "duration": 305,
-                "title": "Dynamic Laws of Prosperity Lectures Audiobook by Catherine Ponder",
+                "url": "https://www.youtube.com/watch?v=r4d7U90quh8",
+                "duration": 386,
+                "title": "Learn English Through Story (A2) | The Bet – Anton Chekhov",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VOjQrTwq8z0",
+                "duration": 1956,
+                "title": "Robinson Crusoe Audiobook | Lesson 10 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=SyuJI8xU0gc",
-                "duration": 4596,
-                "title": "Story Structures - Plot Theory: Brandon Sanderson's Writing Lecture #3 (2025)",
+                "url": "https://www.youtube.com/watch?v=lOdOgA46Vyk",
+                "duration": 2923,
+                "title": "Robinson Crusoe Audiobook | Lesson 09 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=861sjBJWTDo",
-                "duration": 643,
-                "title": "Lesson 2 of 9: The Reading | Newsweek’s 1959 Classic Sales Letter by Ed McLean",
+                "url": "https://www.youtube.com/watch?v=bJjRiXZIhN0",
+                "duration": 2296,
+                "title": "Robinson Crusoe Audiobook | Lesson 05 | Daniel Defoe | Classic English Adventure Story",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W9GUhKHshyQ",
+                "duration": 1787,
+                "title": "The Odyssey’s Circe — On the Hungers of Men | Ghost Lectures",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Es_Aw3lkArA",
+                "duration": 932,
+                "title": "LXXVIII: The Senator’s Lecture.—No. II",
                 "skip": [],
                 "skip_checked": 1793566524
             },
@@ -187,119 +250,51 @@
                 "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=AK_OKodvkvI",
-                "duration": 300,
-                "title": "5 Lessons from Cervantes Audiobook by Oswald Sobrino",
+                "url": "https://www.youtube.com/watch?v=srV5lyOyN1o",
+                "duration": 871,
+                "title": "Learn English Through Story | Witches’ Loaves by O. Henry | B1 British English",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mEsL5rC4xOc",
+                "duration": 1640,
+                "title": "Robinson Crusoe Audiobook | Lesson 07 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=bJjRiXZIhN0",
-                "duration": 2296,
-                "title": "Robinson Crusoe Audiobook | Lesson 05 | Daniel Defoe | Classic English Adventure Story",
+                "url": "https://www.youtube.com/watch?v=bsF7NSp9SDc",
+                "duration": 2760,
+                "title": "Robinson Crusoe Audiobook | Lesson 14 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
-                "skip_checked": 1792444744
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=Es_Aw3lkArA",
-                "duration": 932,
-                "title": "LXXVIII: The Senator’s Lecture.—No. II",
+                "url": "https://www.youtube.com/watch?v=Do5Fiii2Mg4",
+                "duration": 1839,
+                "title": "Robinson Crusoe Audiobook | Lesson 08 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
                 "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QcM6q8X-I2I",
+                "duration": 304,
+                "title": "O Evil You | Speak to Me | Filthy Beauty | Audio Book",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QFhPsFCAAG8",
+                "duration": 2624,
+                "title": "Robinson Crusoe Audiobook | Lesson 17 | Daniel Defoe | Classic English Adventure Story",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=zlm0tT5-zoE",
                 "duration": 2912,
                 "title": "Robinson Crusoe Audiobook | Lesson 03 | Daniel Defoe | Classic English Adventure Story",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DyeI0nay4Os",
-                "duration": 360,
-                "title": "If I Built a Car – 🚗 Creative read aloud kids book by Chris Van Dusen",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BYZK4VMxBTI",
-                "duration": 581,
-                "title": "'Carla's Glasses' read by Nicola Coughlan",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VOjQrTwq8z0",
-                "duration": 1956,
-                "title": "Robinson Crusoe Audiobook | Lesson 10 | Daniel Defoe | Classic English Adventure Story",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tiZ5tb8Idlg",
-                "duration": 1953,
-                "title": "Philosophy for Beginners",
-                "skip": [
-                    [
-                        62.5,
-                        122.5
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mMfnA6ntfXs",
-                "duration": 290,
-                "title": "Shakespeare Is Hard, but so Is Life Audiobook by Fintan O'Toole",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=amNQkwMKh3c",
-                "duration": 427,
-                "title": "Olivia Colman reads The Gruffalo's Child | CBeebies Bedtime Story",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I3g7_bTLebo",
-                "duration": 368,
-                "title": "If I Built a School – 🏫 Creative read aloud kids book by Chris Van Dusen",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PDgu25Dsv34",
-                "duration": 302,
-                "title": "Everything you need to know to read \"Frankenstein\" - Iseult Gillespie",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lOdOgA46Vyk",
-                "duration": 2923,
-                "title": "Robinson Crusoe Audiobook | Lesson 09 | Daniel Defoe | Classic English Adventure Story",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=u03-7FA1eWk",
-                "duration": 721,
-                "title": "THE BIG CHEESE 🧀 | Kids Book Read Aloud | Funny Story About Confidence & Humility",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YMZcp0EQO2s",
-                "duration": 276,
-                "title": "Why should you read “Fahrenheit 451”? - Iseult Gillespie",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0DWpBGynwoQ",
-                "duration": 2574,
-                "title": "Robinson Crusoe Audiobook | Lesson 06 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
                 "skip_checked": 1793566524
             },
@@ -311,53 +306,11 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=dlxE-aWzFoc",
-                "duration": 274,
-                "title": "The Wall in the Middle of the Book | Read Aloud Kids Book | Vooks Narrated Storybooks",
+                "url": "https://www.youtube.com/watch?v=zY-I2jkAfI4",
+                "duration": 2658,
+                "title": "Robinson Crusoe Audiobook | Lesson 15 | Daniel Defoe | Classic English Adventure Story",
                 "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mz6o8b2bFd0",
-                "duration": 379,
-                "title": "'The King of Kindergarten' read by Terry Crews",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Do5Fiii2Mg4",
-                "duration": 1839,
-                "title": "Robinson Crusoe Audiobook | Lesson 08 | Daniel Defoe | Classic English Adventure Story",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dRy2T-6xy48",
-                "duration": 365,
-                "title": "😎 The Fisherman by Abbie Farwell Brown Analysis - The Fisherman by Abbie Farwell Brown Summary",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hl6uMHp_pS0",
-                "duration": 3349,
-                "title": "Lecture III  Pistol, Ribbon, and the Fever of Feeling The Sorrows of Young Verther",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KWi97DxcWaE",
-                "duration": 2108,
-                "title": "Learn English with a Classic Book | The Wizard of Oz | Deep Work Session | Part 15",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-wRo1_efQ4A",
-                "duration": 1608,
-                "title": "Superbook - Baptized - Season 5 Episode 6 - English Clip",
-                "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=M7tfiZCR2Ug",
@@ -367,9 +320,23 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=Vyrcj1LXHJ0",
-                "duration": 474,
-                "title": "Raggedy Ann Learns a Lesson by Johnny Gruelle | Vintage Classic Read Aloud | Kate Woodard Stories",
+                "url": "https://www.youtube.com/watch?v=3QZYus40BFo",
+                "duration": 4369,
+                "title": "Lot No. 249 by Arthur Conan Doyle | Read-Along Audiobook",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CHwMTrqnRdo",
+                "duration": 1067,
+                "title": "Close Reading of \"Negro Digest\" Classic Sales Letter by John H  Johnson (1942)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BYZK4VMxBTI",
+                "duration": 581,
+                "title": "'Carla's Glasses' read by Nicola Coughlan",
                 "skip": [],
                 "skip_checked": 1792444744
             },
@@ -381,51 +348,53 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=iHXmXWuUP9Q",
-                "duration": 634,
-                "title": "To Kill a Mockingbird: What Does It Really Teach Us About Justice?",
+                "url": "https://www.youtube.com/watch?v=lNUs8EpkB0M",
+                "duration": 338,
+                "title": "Learn English Through Story (A2) | The Last Leaf",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hl6uMHp_pS0",
+                "duration": 3349,
+                "title": "Lecture III  Pistol, Ribbon, and the Fever of Feeling The Sorrows of Young Verther",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9IHkwKx3Ap4",
+                "duration": 4740,
+                "title": "The American Mind The E. T. Earl Lectures - Calm Narration to Fall Asleep To by Bliss Perry",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=RewKYe3ruNU",
-                "duration": 1950,
-                "title": "The Autobiography of Benjamin Franklin - Chapter 14 | Full Read-Along Audiobook",
+                "url": "https://www.youtube.com/watch?v=u03-7FA1eWk",
+                "duration": 721,
+                "title": "THE BIG CHEESE 🧀 | Kids Book Read Aloud | Funny Story About Confidence & Humility",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=X5Irl_oWD6M",
-                "duration": 602,
-                "title": "The Cat in the Hat | Brand New Full Episode | Official Animated Read-Along | Dr. Seuss",
+                "url": "https://www.youtube.com/watch?v=cyz8sYyp91g",
+                "duration": 497,
+                "title": "The Bike Lesson by Stan and Jan Berenstain",
                 "skip": [],
-                "skip_checked": 1792444744
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=UD9IOllUR4k",
-                "duration": 804,
-                "title": "Berkeley professor explains gender theory | Judith Butler",
-                "skip": [
-                    [
-                        793.6,
-                        804.0
-                    ]
-                ],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_Q_689R3XAY",
-                "duration": 567,
-                "title": "The Autobiography of Benjamin Franklin - Chapter 19 | Full Read-Along Audiobook",
+                "url": "https://www.youtube.com/watch?v=amNQkwMKh3c",
+                "duration": 427,
+                "title": "Olivia Colman reads The Gruffalo's Child | CBeebies Bedtime Story",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=f1haKRivF0w",
-                "duration": 277,
-                "title": "The Bragging Grasshopper: A Lesson in Humility | Rolling Kitten TV",
+                "url": "https://www.youtube.com/watch?v=mz6o8b2bFd0",
+                "duration": 379,
+                "title": "'The King of Kindergarten' read by Terry Crews",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1793049429
             },
             {
                 "url": "https://www.youtube.com/watch?v=zvcDUq_DlCM",
@@ -435,18 +404,39 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZkA_T1GARrE",
-                "duration": 2061,
-                "title": "The Autobiography of Benjamin Franklin - Chapter 8 | Full Read-Along Audiobook",
+                "url": "https://www.youtube.com/watch?v=dlxE-aWzFoc",
+                "duration": 274,
+                "title": "The Wall in the Middle of the Book | Read Aloud Kids Book | Vooks Narrated Storybooks",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=I3g7_bTLebo",
+                "duration": 368,
+                "title": "If I Built a School – 🏫 Creative read aloud kids book by Chris Van Dusen",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=5v3mD0bZhpE",
-                "duration": 1670,
-                "title": "The Autobiography of Benjamin Franklin - Chapter 9 | Full Read-Along Audiobook",
+                "url": "https://www.youtube.com/watch?v=lFGrnj7gpQo",
+                "duration": 4118,
+                "title": "The Dark Psychology of Absolute Power | Marcus Aurelius Masterclass",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jXLhV7JwA50",
+                "duration": 2525,
+                "title": "The Last Lesson - Ep361 - CBS Radio Mystery Theater 💸💍   #mystery #cbs",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=n45FEf97oBI",
+                "duration": 528,
+                "title": "Learn English Through Stories | One Hundred Years of Solitude by Gabriel García Márquez (Level B1)",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=QIzTuD_-XWU",
@@ -456,32 +446,48 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=BLnFT5M8MfQ",
-                "duration": 725,
-                "title": "Animated Read Aloud Kids Book: The Tagalongs | Vooks Narrated Storybooks",
-                "skip": [],
-                "skip_checked": 1794171336
+                "url": "https://www.youtube.com/watch?v=8qRZcXIODNU",
+                "duration": 1074,
+                "title": "The French Revolution - OverSimplified (Part 1)",
+                "skip": [
+                    [
+                        0.0,
+                        21.4
+                    ],
+                    [
+                        996.3,
+                        1060.1
+                    ]
+                ],
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=W9GUhKHshyQ",
-                "duration": 1787,
-                "title": "The Odyssey’s Circe — On the Hungers of Men | Ghost Lectures",
+                "url": "https://www.youtube.com/watch?v=AzLcBTSEnKo",
+                "duration": 1779,
+                "title": "What Is The Real Meaning Behind The Odyssey By Homer? | Literary Classics",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=gIH87FWPsJ4",
-                "duration": 439,
-                "title": "The Last Lesson || Alphonse Daudet || Class 12 English || Flamingo || Narration",
+                "url": "https://www.youtube.com/watch?v=j7J9adoshiE",
+                "duration": 772,
+                "title": "The Last Leaf by O. Henry 🍂 | Learn English Through Story",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=MJE84x9-suA",
-                "duration": 811,
-                "title": "The Story of the Treasure Seekers - Chapter 14 | Full Read-Along Audiobook (Children's Adventure)",
+                "url": "https://www.youtube.com/watch?v=PL9ifSuhlwY",
+                "duration": 737,
+                "title": "🇺🇸 Jack and the Beanstalk | English Classics + 40Hz Focus Waves 🎧 | Easy English Read-Along",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UbUqdkPdzJ8",
+                "duration": 300,
+                "title": "Jesus: What Evidence? Audiobook by Dr. John Warwick Montgomery",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=8Z9FQxcCAZ0",
@@ -491,186 +497,93 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=h_pvijqmolQ",
-                "duration": 382,
-                "title": "Why read books, not screens? ⏲️ 6 Minute English",
+                "url": "https://www.youtube.com/watch?v=edmXmfW4Tr0",
+                "duration": 692,
+                "title": "Siddhartha - Hermann Hesse - 6 Takeaways (10 Minutes)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KKCJC8nOAek",
+                "duration": 433,
+                "title": "Learn English Through Story (A2) | How Much Land Does a Man Need? – Leo Tolstoy",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=z6raOHmmgBE",
+                "duration": 4070,
+                "title": "Faith, Love, and Betrayal in The Brothers Karamazov | Dostoevsky Masterclass",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VeoGTwfkrDk",
+                "duration": 3830,
+                "title": "The Mystery of Edwin Drood by Charles Dickens | Full 1-Hour Literary Masterclass & Analysis",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Hz1PgpjVXxo",
+                "duration": 895,
+                "title": "\"The Ant and the Grasshopper\" by W. Somerset Maugham | Full Audiobook",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=g3ZdSSllfGs",
+                "duration": 3314,
+                "title": "The Hound of the Baskervilles  Literature Masterclass | Full Novel Summary, Characters, Themes",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=X5Irl_oWD6M",
+                "duration": 602,
+                "title": "The Cat in the Hat | Brand New Full Episode | Official Animated Read-Along | Dr. Seuss",
                 "skip": [],
                 "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=mEsL5rC4xOc",
-                "duration": 1640,
-                "title": "Robinson Crusoe Audiobook | Lesson 07 | Daniel Defoe | Classic English Adventure Story",
+                "url": "https://www.youtube.com/watch?v=7rj8jv3o-H4",
+                "duration": 890,
+                "title": "Improve Your English with Sherlock Holmes | Reading + Vocabulary Lesson",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=NCqUF1BaBLU",
-                "duration": 569,
-                "title": "The Last Lesson — Alphonse Daudet | The Day a Language Said Goodbye",
+                "url": "https://www.youtube.com/watch?v=Kfc6gQmIGo8",
+                "duration": 4806,
+                "title": "The Village and The Library by George Crabbe | Full Classic Poetry Audiobook",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=R9OCA6UFE-0",
-                "duration": 330,
-                "title": "The philosophy of Stoicism - Massimo Pigliucci",
+                "url": "https://www.youtube.com/watch?v=V91qkpIFqMo",
+                "duration": 404,
+                "title": "The Fox and the Crow: A Cheesy Lesson (All Ages) | Bedtime Stories for Kids",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=tD201OQwsFI",
-                "duration": 780,
-                "title": "Animal Farm Summary - George Orwell - Schooling Online",
+                "url": "https://www.youtube.com/watch?v=71xPKtDwgHA",
+                "duration": 4293,
+                "title": "Is The Wizard of Oz Actually a Political Warning? | Masterclass",
                 "skip": [],
-                "skip_checked": 1792786230
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xxtHwbeze2c",
+                "duration": 513,
+                "title": "The Hidden Meaning Behind Burnett’s classic, The Secret Garden | 8-Minute Analysis The Secret Garden",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=9DiJIklsYtw",
                 "duration": 570,
                 "title": "THE COUCH POTATO 🥔 | A Funny Kids Read Aloud About Getting Outside",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=w8a0T5XLrXc",
-                "duration": 893,
-                "title": "Harvard Professor reveals the Science of Happiness in 15 minutes | Arthur Brooks [ARC 2025]",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uw_PlF2s72s",
-                "duration": 1091,
-                "title": "Lord of the Flies Plot Summary - Full Lesson - Schooling Online",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lUjoFzT0VNI",
-                "duration": 956,
-                "title": "Becoming Who You Really Are - The Philosophy of Friedrich Nietzsche",
-                "skip": [
-                    [
-                        0.0,
-                        11.9
-                    ],
-                    [
-                        825.5,
-                        936.5
-                    ]
-                ],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=81cn4yji-UA",
-                "duration": 725,
-                "title": "The Story of the Treasure Seekers - Chapter 10 | Full Read-Along Audiobook (Children's Adventure)",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xn-oLJ_XtkE",
-                "duration": 1496,
-                "title": "Dinosaurs | The Busasaurus | Full Episode | The Magic School Bus",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lnneqrHJfzU",
-                "duration": 2167,
-                "title": "Learn English Through Stories | Pinocchio Part 1 | A2 Listening Practice｜English Audiobook",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BbwkhV2T-Mg",
-                "duration": 316,
-                "title": "The Story of the 10 Commandments | Bible Stories for Kids",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=K_RSZC0s8a4",
-                "duration": 708,
-                "title": "The Science Behind Dramatically Better Conversations | Charles Duhigg | TED",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MC8Z4cUc6YA",
-                "duration": 4692,
-                "title": "How to Become a Better Writer (Anne Lamott Interview)",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=PvF_szs9Nwk",
-                "duration": 1450,
-                "title": "Anne of Avonlea by Lucy Montgomery Chapter 14 Read Aloud Audiobook | The Readabout",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MJ9e_GqnRRg",
-                "duration": 3928,
-                "title": "Why East of Eden Still Ruins People",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nBQPnvmaNcE",
-                "duration": 2610,
-                "title": "Harvard Professor Explains The Rules of Writing (Steven Pinker Interview)",
-                "skip": [],
-                "skip_checked": 1794171336
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OyUoskE7Ogk",
-                "duration": 1860,
-                "title": "Bedtime Routine - Bedtime Stories for Toddlers - Preschool Videos - Toddler Learning Video Songs",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tervpo0VZuM",
-                "duration": 275,
-                "title": "Bryan Adams - The Ballad of Terry Fox (from the film ‘Run Terry Run’)",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vbXvzMzO2ZU",
-                "duration": 616,
-                "title": "THE COOL BEAN 😎 Kids Book Read Aloud: What Really Makes Someone Cool? by Jory John and Pete Oswald",
-                "skip": [],
-                "skip_checked": 1792444744
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1WyBEQ5Od2M",
-                "duration": 469,
-                "title": "'Never Play Music Right Next to the Zoo' read by John Lithgow",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F22td-WJpX4",
-                "duration": 437,
-                "title": "🍁 The Leaf Thief 🤣 Kids Book Autumn Fall Short Falling Leaves Changing Seasons Read Aloud Story",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=arJLy3hX1E8",
-                "duration": 310,
-                "title": "The psychology of narcissism - W. Keith Campbell",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hKks7D7DVZw",
-                "duration": 283,
-                "title": "Sting - Shape of My Heart (Live at the Rijksmuseum)",
                 "skip": [],
                 "skip_checked": 1792444744
             },
@@ -682,32 +595,32 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=EDb37y_MhRw",
-                "duration": 439,
-                "title": "Generative vs Agentic AI: Shaping the Future of AI Collaboration",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_A34tQIrATs",
-                "duration": 1496,
-                "title": "Makes a Rainbow | The Science of Light and Color | Full Episode | The Magic School Bus",
+                "url": "https://www.youtube.com/watch?v=DyeI0nay4Os",
+                "duration": 360,
+                "title": "If I Built a Car – 🚗 Creative read aloud kids book by Chris Van Dusen",
                 "skip": [],
                 "skip_checked": 1792444744
             },
             {
-                "url": "https://www.youtube.com/watch?v=2553haBkgzI",
-                "duration": 1663,
-                "title": "Remove Infected Thinking | Joel Osteen",
+                "url": "https://www.youtube.com/watch?v=QAuX_kZ14nI",
+                "duration": 742,
+                "title": "THE SOUR GRAPE 🍇 Read Aloud for Kids | A Funny Story About Grudges!",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=EW0t4rwhGOQ",
-                "duration": 558,
-                "title": "The Proud Monkey's Lesson 🚗🐵 | English Moral Stories | Bedtime Stories",
+                "url": "https://www.youtube.com/watch?v=Xn-oLJ_XtkE",
+                "duration": 1496,
+                "title": "Dinosaurs | The Busasaurus | Full Episode | The Magic School Bus",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MC8Z4cUc6YA",
+                "duration": 4692,
+                "title": "How to Become a Better Writer (Anne Lamott Interview)",
+                "skip": [],
+                "skip_checked": 1792444744
             },
             {
                 "url": "https://www.youtube.com/watch?v=n3r6KG-3tDc",
@@ -717,14 +630,96 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=oH6phTSOn3Q",
-                "duration": 342,
-                "title": "Othello Full Play Summary in Under 6 Minutes",
+                "url": "https://www.youtube.com/watch?v=Th8zum-WY7o",
+                "duration": 715,
+                "title": "Full Episode: The Cat in the Hat Comes Back | Dr. Seuss Storytime | Animated Read-Along | Dr. Seuss",
                 "skip": [],
-                "skip_checked": 1792956294
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UJCEPx1C2_k",
+                "duration": 3438,
+                "title": "Franz Kafka: The Metamorphosis | Full Student Edition Masterclass",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LaffA9EyUgo",
+                "duration": 556,
+                "title": "What Is Kafkaesque? - The 'Philosophy' of Franz Kafka",
+                "skip": [
+                    [
+                        534.9,
+                        555.6
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SyuJI8xU0gc",
+                "duration": 4596,
+                "title": "Story Structures - Plot Theory: Brandon Sanderson's Writing Lecture #3 (2025)",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1RWOpQXTltA",
+                "duration": 273,
+                "title": "Plato’s Allegory of the Cave - Alex Gendler",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YMZcp0EQO2s",
+                "duration": 276,
+                "title": "Why should you read “Fahrenheit 451”? - Iseult Gillespie",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uw_PlF2s72s",
+                "duration": 1091,
+                "title": "Lord of the Flies Plot Summary - Full Lesson - Schooling Online",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lJZPKSM8YO0",
+                "duration": 3773,
+                "title": "Alice in Wonderland: The Logic of Madness & Hidden Meaning | Full Masterclass Deep Dive",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=15OVeNh_Ftc",
+                "duration": 346,
+                "title": "Maile Kapde - Japani laghu katha| Hindi Audiobook | Japanese Motivational story",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xgQaj2z7B00",
+                "duration": 3661,
+                "title": "Mutiny, Gold, and Greed: The True Treasure Island | Survival Masterclass Robert Louis Stevenson",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hKks7D7DVZw",
+                "duration": 283,
+                "title": "Sting - Shape of My Heart (Live at the Rijksmuseum)",
+                "skip": [],
+                "skip_checked": 1792444744
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9KK2OBZIcRw",
+                "duration": 251,
+                "title": "Nicole Kidman Is Blown Away By Stephen Fry’s Intelligence | The Graham Norton Show",
+                "skip": [],
+                "skip_checked": 1794522652
             }
         ],
         "search_query": "literature lecture audiobook classic",
-        "last_refreshed": 1793566495
+        "last_refreshed": 1794522636
     }
 }

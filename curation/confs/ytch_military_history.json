@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=-87x9ko-f1c",
-                "duration": 5417,
-                "title": "England Almost Conquers the US: The War of 1812 | Special | Full Episode",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=OVP38FRjEmA",
                 "duration": 5983,
                 "title": "The Civil War | Full Episode 1 | 1861: \"The Cause\" | PBS",
@@ -30,37 +23,37 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=os6OrZ8aT7I",
-                "duration": 3008,
-                "title": "MOAB: Inside America's Largest Combat Bomb | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=OTUr-MOB5pk",
+                "duration": 5186,
+                "title": "Home From the Vietnam War | Full Documentary",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=KxM9765DxmQ",
-                "duration": 5173,
-                "title": "Snipers Who Changed History | Full Special",
+                "url": "https://www.youtube.com/watch?v=a6k6EWpHyHo",
+                "duration": 1948,
+                "title": "What British Women REALLY Thought of American Soldiers in WW2",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=0g17R1boHso",
-                "duration": 8190,
-                "title": "USS Maine Explosion Leads to War | The Spanish-American War | Full Special",
+                "url": "https://www.youtube.com/watch?v=sCkvfUDg1c0",
+                "duration": 2789,
+                "title": "Why The U.S. Marines Became the World’s Most Feared Fighting Force",
                 "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0EHq12q7AQE",
-                "duration": 4538,
-                "title": "World War II: The Complete History From Start To Finish (Full Documentary)",
-                "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=YxGZVhOuhr0",
                 "duration": 4785,
                 "title": "Hired Gun — The Entire History of Blackwater | 2026 Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vWaoon6lZM0",
+                "duration": 6799,
+                "title": "Remaking the Middle East: The U.S., Israel & Iran (updated documentary) | FRONTLINE (PBS)",
                 "skip": [],
                 "skip_checked": 1793566524
             },
@@ -85,168 +78,18 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=rUToVHxnRnU",
-                "duration": 5111,
-                "title": "12,000 Japanese Troops at Sea — Then American Submarines Sprang the Trap",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vWaoon6lZM0",
-                "duration": 6799,
-                "title": "Remaking the Middle East: The U.S., Israel & Iran (updated documentary) | FRONTLINE (PBS)",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=obDO0_efVzs",
-                "duration": 1266,
-                "title": "What Happened To The Guns When The Americans Left Vietnam",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qcg8KTPtHGE",
-                "duration": 5421,
-                "title": "Operation Barbarossa: Uncensored Reality Of The Eastern Front",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
-                "duration": 5012,
-                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience | PBS",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=L1D7At5QkGs",
-                "duration": 4943,
-                "title": "The Vietnam War | Full Episode 1 | Déjà Vu (1858-1961) | PBS",
-                "skip": [
-                    [
-                        5.0,
-                        12.1
-                    ]
-                ],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KNQuS8GoD0o",
-                "duration": 8617,
-                "title": "The ENTIRE History of The Vietnam War | 1862 - 1975 (Documentary)",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7W-xxpXzAC0",
-                "duration": 6842,
-                "title": "Netanyahu at War (full documentary) | FRONTLINE",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WKartru6lyA",
-                "duration": 2795,
-                "title": "Inside the IRA's War Against Britain | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=OLMF4XleCL8",
+                "duration": 5654,
+                "title": "General George S. Patton: A Military Legend | Full Documentary | Biography",
                 "skip": [],
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=-1IoOJBZVkM",
-                "duration": 3245,
-                "title": "The Role of War in the History of Humanity | Full Episode | First Civilizations",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5W-n6mQbAMU",
-                "duration": 3011,
-                "title": "Verdun 1916: The 300-Day Hell of World War I",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qOaUUHlcX1k",
-                "duration": 3672,
-                "title": "Sun Tzu - The Art of War Documentary",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nF7OQt_L3ak",
-                "duration": 3209,
-                "title": "82 Days In Hell: The Bloody Story Of The Battle Of Okinawa",
-                "skip": [
-                    [
-                        169.8,
-                        233.0
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fgQN4hC-rJE",
-                "duration": 2520,
-                "title": "Trained to Kill: Inside Elite U.S. Ops (S3, E5) | America's Book of Secrets | Full Episode | History",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yjKDNED2crw",
-                "duration": 8793,
-                "title": "1942: The Complete Story Of The Battle Of Stalingrad",
-                "skip": [],
-                "skip_checked": 1794270673
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UnvtdsiTgD8",
-                "duration": 2777,
-                "title": "Black Budget - The ENTIRE History of CIA | Documentary",
-                "skip": [
-                    [
-                        1750.5,
-                        1823.4
-                    ],
-                    [
-                        2741.3,
-                        2772.5
-                    ]
-                ],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=td5Iph8BFgE",
-                "duration": 3199,
-                "title": "Strike on Iran: The Nuclear Question (updated documentary) | FRONTLINE (PBS)",
+                "url": "https://www.youtube.com/watch?v=-87x9ko-f1c",
+                "duration": 5417,
+                "title": "England Almost Conquers the US: The War of 1812 | Special | Full Episode",
                 "skip": [],
                 "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aZTlJCdFNJs",
-                "duration": 3147,
-                "title": "Rare Uncensored Footage From The Battle Of Okinawa",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TOMQf84HYeQ",
-                "duration": 2358,
-                "title": "2001 Invasion of Afghanistan: Ousting the Taliban (Documentary)",
-                "skip": [
-                    [
-                        1426.0,
-                        1497.7
-                    ]
-                ],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W4NdqeV0o4U",
-                "duration": 2611,
-                "title": "The Rhodesian Bush War",
-                "skip": [],
-                "skip_checked": 1793743834
             },
             {
                 "url": "https://www.youtube.com/watch?v=2beCzLtLegg",
@@ -261,44 +104,133 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=DGtE0IAWyss",
-                "duration": 8041,
-                "title": "Hitler's Countdown To War: The 18-Months That Plunged The World Into WW2",
+                "url": "https://www.youtube.com/watch?v=yntmC1qheiQ",
+                "duration": 3282,
+                "title": "The Dawn of the Jet Age: Breaking the Sound Barrier & Korean War Combat | Air Power E6",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=PBLkMoqyoQU",
-                "duration": 1633,
-                "title": "What Caused the War of 1812? (Documentary)",
+                "url": "https://www.youtube.com/watch?v=L1D7At5QkGs",
+                "duration": 4943,
+                "title": "The Vietnam War | Full Episode 1 | Déjà Vu (1858-1961) | PBS",
                 "skip": [
                     [
-                        1501.0,
-                        1613.0
+                        5.0,
+                        12.1
                     ]
                 ],
-                "skip_checked": 1793049429
+                "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=OLMF4XleCL8",
-                "duration": 5654,
-                "title": "General George S. Patton: A Military Legend | Full Documentary | Biography",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YzwqaVwCwSc",
-                "duration": 3163,
-                "title": "The Evolution of French Special Forces | FULL DOCUMENTARY",
+                "url": "https://www.youtube.com/watch?v=qcg8KTPtHGE",
+                "duration": 5421,
+                "title": "Operation Barbarossa: Uncensored Reality Of The Eastern Front",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=H3bCn48G3Ew",
-                "duration": 6894,
-                "title": "The ENTIRE History of World War I (Full Documentary)",
+                "url": "https://www.youtube.com/watch?v=dAHJ0omYo7U",
+                "duration": 4475,
+                "title": "THE ENTIRE World War II From The German Perspective | Documentary in PURE COLOR",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-1IoOJBZVkM",
+                "duration": 3245,
+                "title": "The Role of War in the History of Humanity | Full Episode | First Civilizations",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5z_9D5G3GmE",
+                "duration": 4998,
+                "title": "Trump’s Inner Circle & Use of Military Power | The War Cabinet (full documentary) | FRONTLINE (PBS)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SaHeCRFX3uQ",
+                "duration": 2405,
+                "title": "When BIGGEST Submarine in the World Goes to WAR | Full Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-dAB72gsIiE",
+                "duration": 7645,
+                "title": "The Vietnam War | All Episodes | Free Documentary History",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yjKDNED2crw",
+                "duration": 8793,
+                "title": "1942: The Complete Story Of The Battle Of Stalingrad",
+                "skip": [],
+                "skip_checked": 1794270673
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=LInLwSuiv_E",
+                "duration": 4191,
+                "title": "What really led to the war on Iran? | Featured Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U93SlUdE034",
+                "duration": 3126,
+                "title": "The Battle For Pegasus Bridge: How 181 Men Opened The Way For D-Day",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NGzx86l9aX0",
+                "duration": 5639,
+                "title": "The CIA’s Most Disturbing Secret Operations - Forgotten History",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TOMQf84HYeQ",
+                "duration": 2358,
+                "title": "2001 Invasion of Afghanistan: Ousting the Taliban (Documentary)",
+                "skip": [
+                    [
+                        1426.0,
+                        1497.7
+                    ]
+                ],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GUU1L8XGIYE",
+                "duration": 7802,
+                "title": "Antarctica (2026) The Forbidden Documentary That Shocked The Whole World",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W4NdqeV0o4U",
+                "duration": 2611,
+                "title": "The Rhodesian Bush War",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KNQuS8GoD0o",
+                "duration": 8617,
+                "title": "The ENTIRE History of The Vietnam War | 1862 - 1975 (Documentary)",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5W-n6mQbAMU",
+                "duration": 3011,
+                "title": "Verdun 1916: The 300-Day Hell of World War I",
+                "skip": [],
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=C3VYrBUG9Ng",
@@ -308,18 +240,53 @@
                 "skip_checked": 1792527287
             },
             {
-                "url": "https://www.youtube.com/watch?v=kBQIeClAVsA",
-                "duration": 2724,
-                "title": "(Free Episode) Surviving World War || | BBC Select",
+                "url": "https://www.youtube.com/watch?v=LQN09dzXWEY",
+                "duration": 2526,
+                "title": "The Untold Story Of America's Defeat In Vietnam | Our History",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=mEDXhHCwO6U",
-                "duration": 2562,
-                "title": "Between the czar and Hitler - The forgotten story of the White Army | DW Documentary",
+                "url": "https://www.youtube.com/watch?v=td5Iph8BFgE",
+                "duration": 3199,
+                "title": "Strike on Iran: The Nuclear Question (updated documentary) | FRONTLINE (PBS)",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1792527287
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xGlIQ_IH5-s",
+                "duration": 5042,
+                "title": "Afghanistan Uncensored: Rare Footage From The Battle For Marjah",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0RyVPIkAcGE",
+                "duration": 3424,
+                "title": "The Rarest and Most Unexpected Nazi Discoveries After World War II",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RHvh2ly1-18",
+                "duration": 2981,
+                "title": "THE PACIFIC WAR - Japan versus the US | Full Documentary",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=H3bCn48G3Ew",
+                "duration": 6894,
+                "title": "The ENTIRE History of World War I (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ms_l8Ydv3Wg",
+                "duration": 6419,
+                "title": "Iran vs Israel & USA: The Origins of The Conflict - Documentary Geopolitical - AT",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=g5WkOr565I4",
@@ -342,10 +309,59 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=LQN09dzXWEY",
-                "duration": 2526,
-                "title": "The Untold Story Of America's Defeat In Vietnam | Our History",
+                "url": "https://www.youtube.com/watch?v=IOQa3taHOX8",
+                "duration": 2924,
+                "title": "Stalingrad: The Deadliest Battle In History",
                 "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WKartru6lyA",
+                "duration": 2795,
+                "title": "Inside the IRA's War Against Britain | Full Documentary",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FTAW1PvEcAk",
+                "duration": 3927,
+                "title": "The Normandy Landings: June 6, 1944 | D-Day Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=N4WPtBOFVAs",
+                "duration": 7734,
+                "title": "Traumatic First-Hand Accounts From The War In Afghanistan",
+                "skip": [
+                    [
+                        3000.8,
+                        3062.0
+                    ]
+                ],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Vv31XYRiGx0",
+                "duration": 2613,
+                "title": "Hitler's Engineers | Episode 4: Hans Kammler - The SS Engineer | FD History",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kaUemcqIQ-k",
+                "duration": 6798,
+                "title": "United States of Secrets, Part One (full documentary) | FRONTLINE",
+                "skip": [
+                    [
+                        6745.1,
+                        6752.3
+                    ],
+                    [
+                        6760.6,
+                        6768.6
+                    ]
+                ],
                 "skip_checked": 1793566524
             },
             {
@@ -365,187 +381,42 @@
                 "skip_checked": 1794270673
             },
             {
-                "url": "https://www.youtube.com/watch?v=RHvh2ly1-18",
-                "duration": 2981,
-                "title": "THE PACIFIC WAR - Japan versus the US | Full Documentary",
+                "url": "https://www.youtube.com/watch?v=odyh65JSCuQ",
+                "duration": 7894,
+                "title": "How 14 Soldiers Survived Against 200 Taliban Fighters",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=TB_zchLfES4",
-                "duration": 1315,
-                "title": "How Israel Shot Down 82 Syrian Jets... and Lost None? (Bekaa Valley, 1982)",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fMpYozsIyX0",
-                "duration": 3344,
-                "title": "Black Americans and the Revolutionary War | Full Documentary",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xoFmZWAKK6c",
-                "duration": 2715,
-                "title": "The Vietnam War Through the Eyes of War Reporters I SLICE HISTORY | FULL DOCUMENTARY",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8YFRD1qhHso",
-                "duration": 2966,
-                "title": "The Drone War: Lessons from Ukraine and the Future of Combat",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qEy1IQC1J5w",
-                "duration": 2461,
-                "title": "Where Is Hitler? The Secret Hunt After World War II I SLICE HISTORY | FULL DOCUMENTARY",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DHbKiwvfV8I",
-                "duration": 5191,
-                "title": "America's war for freedom - 250 years of independence | DW Documentary",
-                "skip": [],
-                "skip_checked": 1794270673
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RMSNUX3n6yA",
-                "duration": 5099,
-                "title": "Truth, War and Consequences (full documentary) | FRONTLINE",
+                "url": "https://www.youtube.com/watch?v=PBLkMoqyoQU",
+                "duration": 1633,
+                "title": "What Caused the War of 1812? (Documentary)",
                 "skip": [
                     [
-                        4979.0,
-                        5098.4
+                        1501.0,
+                        1613.0
+                    ]
+                ],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nF7OQt_L3ak",
+                "duration": 3209,
+                "title": "82 Days In Hell: The Bloody Story Of The Battle Of Okinawa",
+                "skip": [
+                    [
+                        169.8,
+                        233.0
                     ]
                 ],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=-RUa0uglz-4",
-                "duration": 2643,
-                "title": "America's Birth: Colonies to Revolutionary War (S1, E1) | America: The Story of Us | Full Episode",
+                "url": "https://www.youtube.com/watch?v=JVJiddvX878",
+                "duration": 3533,
+                "title": "World War 1- A BBC Documentary",
                 "skip": [],
-                "skip_checked": 1794270673
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZuAJ35F235Q",
-                "duration": 2465,
-                "title": "The Iran-Iraq War 1980-1988 (Documentary)",
-                "skip": [
-                    [
-                        2356.3,
-                        2431.0
-                    ]
-                ],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cIXKcMmkBlk",
-                "duration": 2847,
-                "title": "The House of Morgan - The Complete History | 2026 Documentary",
-                "skip": [
-                    [
-                        1083.7,
-                        1149.8
-                    ]
-                ],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0UJYYkK4d8s",
-                "duration": 6019,
-                "title": "June 6, 1944 – The Light of Dawn | History - D-Day - World War II Documentary",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Tnsa_rII7NM",
-                "duration": 6794,
-                "title": "Confronting ISIS (full documentary) | FRONTLINE",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=K0FwNz9YdPo",
-                "duration": 2710,
-                "title": "Knights Templar: Fearsome & Unstoppable Crusaders | Decoding the Past (S1, E12) | Full Episode",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kaUemcqIQ-k",
-                "duration": 6798,
-                "title": "United States of Secrets, Part One (full documentary) | FRONTLINE",
-                "skip": [
-                    [
-                        6745.1,
-                        6752.3
-                    ],
-                    [
-                        6760.6,
-                        6768.6
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=j-ha-OXe6Dk",
-                "duration": 3011,
-                "title": "Downfall of the Third Reich: UNCENSORED Archival History (1942-1945)",
-                "skip": [],
-                "skip_checked": 1794270673
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VHcgnRl2xPM",
-                "duration": 6808,
-                "title": "Bitter Rivals: Iran and Saudi Arabia, Part One (full documentary) | FRONTLINE",
-                "skip": [
-                    [
-                        6729.7,
-                        6807.3
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xGlIQ_IH5-s",
-                "duration": 5042,
-                "title": "Afghanistan Uncensored: Rare Footage From The Battle For Marjah",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8HmutDVB7KM",
-                "duration": 5379,
-                "title": "America’s Longest War: What Went Wrong in Afghanistan (2021)",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7Ozr20oiZ-8",
-                "duration": 8075,
-                "title": "The Rise And Fall Of Nazi Germany In Rare Color Footage",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zlssmpPrJkA",
-                "duration": 1521,
-                "title": "The Entire History of Spain",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FTAW1PvEcAk",
-                "duration": 3927,
-                "title": "The Normandy Landings: June 6, 1944 | D-Day Documentary",
-                "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=-tOHdvXX-YM",
@@ -553,39 +424,6 @@
                 "title": "1945-1953 From World War to Cold War",
                 "skip": [],
                 "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qOmUIFrAXJs",
-                "duration": 5043,
-                "title": "Inside Afghanistan: Rare Uncensored Footage From The Battle For Marjah",
-                "skip": [],
-                "skip_checked": 1792527287
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZPuY5KhwRRg",
-                "duration": 6797,
-                "title": "Remaking the Middle East: Israel vs. Iran (full documentary) | FRONTLINE",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2iY1DrjsdEk",
-                "duration": 1958,
-                "title": "How One Rifle Destroyed the Austrian Empire: Battle of Königgrätz, 1866",
-                "skip": [
-                    [
-                        89.6,
-                        162.2
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XAAmf6eTReQ",
-                "duration": 2092,
-                "title": "The Troubles: Unravelling Northern Ireland's 30-Year Conflict",
-                "skip": [],
-                "skip_checked": 1792527287
             },
             {
                 "url": "https://www.youtube.com/watch?v=ErXdZEPNdDM",
@@ -600,58 +438,100 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=2336v76nEf8",
-                "duration": 3302,
-                "title": "The Cold War: Seven Minutes to Midnight | Documentary",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LxKP_BLZKZo",
-                "duration": 5585,
-                "title": "Kharkiv. A Chronicle of Survival [DOCUMENTARY]",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=N4WPtBOFVAs",
-                "duration": 7734,
-                "title": "Traumatic First-Hand Accounts From The War In Afghanistan",
+                "url": "https://www.youtube.com/watch?v=RMSNUX3n6yA",
+                "duration": 5099,
+                "title": "Truth, War and Consequences (full documentary) | FRONTLINE",
                 "skip": [
                     [
-                        3000.8,
-                        3062.0
+                        4979.0,
+                        5098.4
+                    ]
+                ],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0UJYYkK4d8s",
+                "duration": 6019,
+                "title": "June 6, 1944 – The Light of Dawn | History - D-Day - World War II Documentary",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vzEThsITa8o",
+                "duration": 2964,
+                "title": "World's Most Extreme Military Aircrafts | Ultimate Vehicles | S01 E03 | Free Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=38KcVu5DkhA",
+                "duration": 5386,
+                "title": "The American Civil War: 1861 - 1865 | Documentary",
+                "skip": [],
+                "skip_checked": 1794270673
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZPuY5KhwRRg",
+                "duration": 6797,
+                "title": "Remaking the Middle East: Israel vs. Iran (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9LTZ8tbnc7g",
+                "duration": 7559,
+                "title": "America's BIGGEST Mysteries *Marathon* | The UnXplained | History",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UnvtdsiTgD8",
+                "duration": 2777,
+                "title": "Black Budget - The ENTIRE History of CIA | Documentary",
+                "skip": [
+                    [
+                        1750.5,
+                        1823.4
+                    ],
+                    [
+                        2741.3,
+                        2772.5
                     ]
                 ],
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=Pu-Fcc5vFlE",
-                "duration": 3281,
-                "title": "1861-1865: The Complete Story Of The American Civil War | History Of Warfare | Timeline",
-                "skip": [
-                    [
-                        0.0,
-                        6.0
-                    ],
-                    [
-                        205.3,
-                        238.2
-                    ]
-                ],
-                "skip_checked": 1793566524
+                "url": "https://www.youtube.com/watch?v=Pp8mh8iZTe4",
+                "duration": 5012,
+                "title": "Why the U.S. Hid the Truth About the Atomic Bomb | Full Documentary | American Experience | PBS",
+                "skip": [],
+                "skip_checked": 1792527287
             },
             {
-                "url": "https://www.youtube.com/watch?v=AORz0OgEVHI",
-                "duration": 6753,
-                "title": "American Coup: Wilmington 1898 | Full Documentary | American Experience | PBS",
+                "url": "https://www.youtube.com/watch?v=ZuAJ35F235Q",
+                "duration": 2465,
+                "title": "The Iran-Iraq War 1980-1988 (Documentary)",
                 "skip": [
                     [
-                        137.1,
-                        179.4
+                        2356.3,
+                        2431.0
                     ]
                 ],
-                "skip_checked": 1793566524
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TpJas6Tx-m8",
+                "duration": 8602,
+                "title": "The Weirdest Mysteries in History (Documentary)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f8R_bMndsAs",
+                "duration": 3300,
+                "title": "Debunking the biggest myths history made you believe | BBC Timestamp",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=nT2BY9Psbsc",
@@ -666,172 +546,58 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=uC8TK7GH85o",
-                "duration": 2738,
-                "title": "The Rise Of Emperor Napoleon Bonaparte | History Hit | Timeline",
-                "skip": [
-                    [
-                        0.0,
-                        3.1
-                    ],
-                    [
-                        340.2,
-                        391.2
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=I2DgOrtpaP4",
-                "duration": 2918,
-                "title": "1944: The Final Collapse Of Nazi Germany's Atlantic Wall",
+                "url": "https://www.youtube.com/watch?v=Tnsa_rII7NM",
+                "duration": 6794,
+                "title": "Confronting ISIS (full documentary) | FRONTLINE",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=odyh65JSCuQ",
-                "duration": 7894,
-                "title": "How 14 Soldiers Survived Against 200 Taliban Fighters",
+                "url": "https://www.youtube.com/watch?v=03XyXFHCMQM",
+                "duration": 1598,
+                "title": "Massacre in El Salvador (full documentary) | FRONTLINE + ProPublica + RetroReport (Aired 2021)",
                 "skip": [],
-                "skip_checked": 1793743834
+                "skip_checked": 1794522652
             },
             {
-                "url": "https://www.youtube.com/watch?v=38KcVu5DkhA",
-                "duration": 5386,
-                "title": "The American Civil War: 1861 - 1865 | Documentary",
+                "url": "https://www.youtube.com/watch?v=8YFRD1qhHso",
+                "duration": 2966,
+                "title": "The Drone War: Lessons from Ukraine and the Future of Combat",
                 "skip": [],
-                "skip_checked": 1794270673
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZcG4h3zqB1Y",
-                "duration": 1564,
-                "title": "The Entire History of Ireland",
+                "url": "https://www.youtube.com/watch?v=dLQzVLtvdv8",
+                "duration": 5829,
+                "title": "Ghost in the Machine | Full Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2336v76nEf8",
+                "duration": 3302,
+                "title": "The Cold War: Seven Minutes to Midnight | Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8HmutDVB7KM",
+                "duration": 5379,
+                "title": "America’s Longest War: What Went Wrong in Afghanistan (2021)",
                 "skip": [],
                 "skip_checked": 1792527287
             },
             {
-                "url": "https://www.youtube.com/watch?v=-Z301C0jZpY",
-                "duration": 2536,
-                "title": "Vietnam: America’s Worst War",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9cOIUH-H_I0",
-                "duration": 4085,
-                "title": "America's Most Violent Wealthy Family Fortune: The Dark History of the Heinz Dynasty",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8oxUZCKzPT8",
-                "duration": 1388,
-                "title": "Downfall: The Battle of Berlin 1945 (Documentary)",
+                "url": "https://www.youtube.com/watch?v=VHcgnRl2xPM",
+                "duration": 6808,
+                "title": "Bitter Rivals: Iran and Saudi Arabia, Part One (full documentary) | FRONTLINE",
                 "skip": [
                     [
-                        1267.1,
-                        1346.8
-                    ]
-                ],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9LTZ8tbnc7g",
-                "duration": 7559,
-                "title": "America's BIGGEST Mysteries *Marathon* | The UnXplained | History",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qRygU5YbkfU",
-                "duration": 4506,
-                "title": "F-14 Tomcat — The Entire History | Full Documentary",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=v3-FDWSRabM",
-                "duration": 3280,
-                "title": "Obama's War (full documentary) | FRONTLINE",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZtqrMl_0iJg",
-                "duration": 3278,
-                "title": "Restored WWII in Color: How Allied Air Power Shattered the Atlantic Wall Defenses in 1944",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=alhpB0NMFKk",
-                "duration": 3331,
-                "title": "The Entire History of European Civilisation",
-                "skip": [
-                    [
-                        0.0,
-                        3.5
-                    ],
-                    [
-                        514.0,
-                        635.7
-                    ],
-                    [
-                        3306.8,
-                        3331.0
+                        6729.7,
+                        6807.3
                     ]
                 ],
                 "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TMcnIqgmAaw",
-                "duration": 1547,
-                "title": "Battle of Manila 1945 (WW2 Documentary)",
-                "skip": [
-                    [
-                        1411.8,
-                        1501.8
-                    ]
-                ],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0y4ZDpGU6N4",
-                "duration": 5172,
-                "title": "ON THE WING: THE UNTOLD STORIES OF WWII AIRMEN, WW2 Documentary, History",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sM34lfjEos4",
-                "duration": 1296,
-                "title": "The Entire History of Japan",
-                "skip": [
-                    [
-                        86.7,
-                        105.2
-                    ]
-                ],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=moAg9Xed1EY",
-                "duration": 6735,
-                "title": "The Political Rise of George H.W. Bush (1924-1989) | Full Documentary | American Experience PBS",
-                "skip": [
-                    [
-                        168.9,
-                        205.8
-                    ]
-                ],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xETIY9A4Vb4",
-                "duration": 4486,
-                "title": "Surviving Biafra: Voices from the Nigerian Civil War - BBC Africa Eye Documentary",
-                "skip": [],
-                "skip_checked": 1794270673
             },
             {
                 "url": "https://www.youtube.com/watch?v=BmzOVo0spek",
@@ -841,11 +607,220 @@
                 "skip_checked": 1794270673
             },
             {
-                "url": "https://www.youtube.com/watch?v=3iGxZ2uIi3c",
-                "duration": 2705,
-                "title": "The True Cause of the War That DESTROYED Sierra Leone - SIERRA LEONE CIVIL WAR",
+                "url": "https://www.youtube.com/watch?v=iNFmbCHWd8A",
+                "duration": 2861,
+                "title": "How the CIA KILLED \"Mad Dog\" Gaddafi | CIA Declassified | Endevr Documentary",
                 "skip": [],
-                "skip_checked": 1792527287
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vmRb-0v5xfI",
+                "duration": 6838,
+                "title": "The Eugenics Crusade | Full Documentary | AMERICAN EXPERIENCE | PBS",
+                "skip": [
+                    [
+                        192.5,
+                        213.2
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pbk6XqNpAsc",
+                "duration": 2540,
+                "title": "U.S. Army Basic Combat Training at Fort Jackson | Full Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qRygU5YbkfU",
+                "duration": 4506,
+                "title": "F-14 Tomcat — The Entire History | Full Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8T-r5r6Ox_M",
+                "duration": 8658,
+                "title": "Six-Day War: How Israel Defeated The Arab Coalition In Under A Week",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JGXtMqPsROE",
+                "duration": 1899,
+                "title": "Invasion of Iraq 2003 (Documentary)",
+                "skip": [
+                    [
+                        1744.6,
+                        1828.8
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ICffCxjeg54",
+                "duration": 3127,
+                "title": "A Nation Divided: The Tragic Story of Yugoslavia | Full Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HYNB4sAxemk",
+                "duration": 3802,
+                "title": "History of the Black Death - Full Documentary",
+                "skip": [
+                    [
+                        3737.8,
+                        3801.5
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0EHq12q7AQE",
+                "duration": 4538,
+                "title": "World War II: The Complete History From Start To Finish (Full Documentary)",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D4ZF70ogq0I",
+                "duration": 3306,
+                "title": "Ku Klux Klan - An American History: Part 1 | Free Documentary History",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fMpYozsIyX0",
+                "duration": 3344,
+                "title": "Black Americans and the Revolutionary War | Full Documentary",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BLAHhtO_COM",
+                "duration": 3072,
+                "title": "The Second World War: The Ultimate Collection - The Phoney War",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GRuhsETaJnk",
+                "duration": 7005,
+                "title": "CTV News coverage of Remembrance Day 2026",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zlssmpPrJkA",
+                "duration": 1521,
+                "title": "The Entire History of Spain",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j-ha-OXe6Dk",
+                "duration": 3011,
+                "title": "Downfall of the Third Reich: UNCENSORED Archival History (1942-1945)",
+                "skip": [],
+                "skip_checked": 1794270673
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0y4ZDpGU6N4",
+                "duration": 5172,
+                "title": "ON THE WING: THE UNTOLD STORIES OF WWII AIRMEN, WW2 Documentary, History",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Clhuy5pEYyE",
+                "duration": 2909,
+                "title": "Tougher Than Hell: Inside the US Marines! | ENDEVR Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=308tSS_Zdro",
+                "duration": 2341,
+                "title": "The Entire UKRAINE War in 39 minutes",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sXVAjOt17NQ",
+                "duration": 3197,
+                "title": "Syria After Assad (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5F2z1GZ0DJE",
+                "duration": 5179,
+                "title": "The Missed Warnings That Led to 9/11 | Road to 9/11 | Full Special",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Kz8SiEEc8h8",
+                "duration": 1828,
+                "title": "Veterans Day: The True Meaning of November 11 | Full Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FWrOfQoTh_Y",
+                "duration": 2988,
+                "title": "Charles VII - The French King Who Reconquered France Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bEMDSEuPOv0",
+                "duration": 2835,
+                "title": "How did Iran and the US go from allies to enemies? | Featured Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AFQaApjnUEk",
+                "duration": 3513,
+                "title": "The End: Nazi Germany’s Final 100 Days | Full Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-RQoe4evPSY",
+                "duration": 4579,
+                "title": "Second Battle of Fallujah | Frontline Footage of Iraq War's Deadliest Urban Combat (2004)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_m-ddzNlMto",
+                "duration": 3011,
+                "title": "WWII in the Pacific - Episode 2: Island Warfare (History, Pacific War, Documentary, USA vs Japan)",
+                "skip": [],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p7acAcG99tY",
+                "duration": 3217,
+                "title": "The Brief, Violent Life of Billy The Kid | Full Documentary | American Experience PBS",
+                "skip": [
+                    [
+                        26.2,
+                        63.1
+                    ]
+                ],
+                "skip_checked": 1794522652
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OpZYXJn-oCg",
+                "duration": 3116,
+                "title": "Philippines: The Rise of a New Military Power in Asia | ENDEVR Documentary",
+                "skip": [],
+                "skip_checked": 1794522652
             },
             {
                 "url": "https://www.youtube.com/watch?v=rjH6k_DcV2A",
@@ -855,42 +830,14 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=UK2EWyaTfR8",
-                "duration": 2675,
-                "title": "Bloodshed in Bosnia | Britain's Forgotten Wars with Tony Robinson | History Documentary",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JN8FM1NCOSk",
-                "duration": 6583,
-                "title": "From Jesus to Christ: The First Christians, Part One (full documentary) | FRONTLINE",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=T7GulvL1AbY",
                 "duration": 3011,
                 "title": "⚔️ WWII IN THE PACIFIC – Island Warfare | War Documentary, Pacific War Documentary, Island Battles",
                 "skip": [],
                 "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=55khLi0lUHQ",
-                "duration": 2488,
-                "title": "Triangle UFOs Spotted by US Army | Unidentified: Inside America's UFO Investigation | Full Episode",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dOe8S9Q4CSw",
-                "duration": 3255,
-                "title": "ENCYCLOPEDIA OF MODERN ARMOR: ENGINES OF WAR - THE SECRET TECHNOLOGY OF WAR, HISTORY",
-                "skip": [],
-                "skip_checked": 1793566524
             }
         ],
         "search_query": "military history documentary full",
-        "last_refreshed": 1793566507
+        "last_refreshed": 1794522651
     }
 }
