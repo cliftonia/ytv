@@ -7,13 +7,6 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=A-JnodpK0Ng",
-                "duration": 2736,
-                "title": "Kelly Slater vs Gabriel Medina | Outerknown Tahiti Pro pres by I-SEA 2026 - Round 2 Full Replay",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=exf7IstyaqM",
                 "duration": 2242,
                 "title": "Erin Brooks vs Anat Lelior | Outerknown Tahiti Pro presented by I-SEA 2026 - FINAL FULL HEAT REPLAY",
@@ -21,11 +14,25 @@
                 "skip_checked": 1794522652
             },
             {
+                "url": "https://www.youtube.com/watch?v=A-JnodpK0Ng",
+                "duration": 2736,
+                "title": "Kelly Slater vs Gabriel Medina | Outerknown Tahiti Pro pres by I-SEA 2026 - Round 2 Full Replay",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=j6O3-4mMK24",
                 "duration": 1059,
                 "title": "Jake Marshall vs Kanoa Igarashi | Lexus US Open of Surfing presented by Pacifico 2026 - FINAL",
                 "skip": [],
                 "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AGLO6o19SVw",
+                "duration": 557,
+                "title": "Cassity, Silva, Cleland, Correa | Lexus US Open of Surfing presented by Pacifico 2026 - Round of 32",
+                "skip": [],
+                "skip_checked": 1793663159
             },
             {
                 "url": "https://www.youtube.com/watch?v=l1tYR-pECaI",
@@ -42,25 +49,11 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=AGLO6o19SVw",
-                "duration": 557,
-                "title": "Cassity, Silva, Cleland, Correa | Lexus US Open of Surfing presented by Pacifico 2026 - Round of 32",
+                "url": "https://www.youtube.com/watch?v=5Y0TRlLP-oE",
+                "duration": 749,
+                "title": "Miguel Pupo vs Kanoa Igarashi | Lexus Trestles Pro 2026 - FINAL - WSL Championship Tour",
                 "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Zwend0UJM30",
-                "duration": 789,
-                "title": "Filipe Toledo vs Gabriel Medina | Bonsoy Gold Coast Pro presented by GWM 2026 - Round 3",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=M7spDu5xEeQ",
-                "duration": 827,
-                "title": "Tommy Coleman vs Declan Wyton | Lexus US Open of Surfing presented by Pacifico 2026 - Final",
-                "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1793566524
             },
             {
                 "url": "https://www.youtube.com/watch?v=xsOC1M3_hVU",
@@ -70,11 +63,25 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=5Y0TRlLP-oE",
-                "duration": 749,
-                "title": "Miguel Pupo vs Kanoa Igarashi | Lexus Trestles Pro 2026 - FINAL - WSL Championship Tour",
+                "url": "https://www.youtube.com/watch?v=M7spDu5xEeQ",
+                "duration": 827,
+                "title": "Tommy Coleman vs Declan Wyton | Lexus US Open of Surfing presented by Pacifico 2026 - Final",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7GeaX38NFe4",
+                "duration": 1181,
+                "title": "Seth Moniz vs Griffin Colapinto | Outerknown Tahiti Pro presented by I-SEA 2026 - FINAL",
                 "skip": [],
                 "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qv9irVD_dL0",
+                "duration": 634,
+                "title": "Gabriel Medina vs Mateus Herdy | Lexus Trestles Pro 2026 - Round 2 - WSL Championship Tour",
+                "skip": [],
+                "skip_checked": 1792956294
             },
             {
                 "url": "https://www.youtube.com/watch?v=zoNeppx1VEo",
@@ -91,67 +98,11 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=_Lwdbce6a4E",
-                "duration": 1968,
-                "title": "John John Florence VS Kelly Slater!!! Semifinal 2020 PIPE MASTERS FULL HEAT REPLAY",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zPBSCJKPSps",
-                "duration": 2291,
-                "title": "EVERY EXCELLENT WAVE - Bonsoy Gold Coast Pro presented by GWM 2026",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eZGgZqSxwkI",
-                "duration": 510,
-                "title": "Jack Robinson vs Ethan Ewing | Philippines Pro presented by Philippine Sports Commission 2026 Semi",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=WSpOkFxIXOU",
                 "duration": 930,
                 "title": "Cole Houshmand vs Gabriel Medina | Fiji Pro presented by Corona Cero 2026 - Final",
                 "skip": [],
                 "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1Zj_jAPToxI",
-                "duration": 1492,
-                "title": "John John Florence vs Italo Ferreira | Lexus WSL Finals 2024 - Title Matches",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7GeaX38NFe4",
-                "duration": 1181,
-                "title": "Seth Moniz vs Griffin Colapinto | Outerknown Tahiti Pro presented by I-SEA 2026 - FINAL",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=irxUIsYJ8UQ",
-                "duration": 536,
-                "title": "Griffin Colapinto vs Seth Moniz | MEO Rip Curl Pro Portugal presented by Corona Cero 2026 Quarters",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hMWu4cOUrB8",
-                "duration": 881,
-                "title": "Mateus Herdy vs Jarvis Earle | Fiji Pro presented by Corona Cero 2026 - Round 1",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F9Z0KSajDaw",
-                "duration": 3127,
-                "title": "Gabriel Medina vs Griffin Colapinto | MEO Rip Curl Pro Portugal pres by Corona Cero 2026 FINAL",
-                "skip": [],
-                "skip_checked": 1792869087
             },
             {
                 "url": "https://www.youtube.com/watch?v=FBJC6De-yjg",
@@ -161,67 +112,25 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=qv9irVD_dL0",
-                "duration": 634,
-                "title": "Gabriel Medina vs Mateus Herdy | Lexus Trestles Pro 2026 - Round 2 - WSL Championship Tour",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BqDIWkGqz3o",
-                "duration": 414,
-                "title": "Ethan Ewing vs John Mark Tokong | Philippines Pro presented by Philippine Sports Commission 2026 R2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jwJGu65z23c",
-                "duration": 420,
-                "title": "Luke Thompson vs Melvin Ayala | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 1",
+                "url": "https://www.youtube.com/watch?v=hMWu4cOUrB8",
+                "duration": 881,
+                "title": "Mateus Herdy vs Jarvis Earle | Fiji Pro presented by Corona Cero 2026 - Round 1",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=0kl8CGvYxHM",
-                "duration": 510,
-                "title": "Gabriel Medina vs Jack Robinson | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 3",
+                "url": "https://www.youtube.com/watch?v=_Lwdbce6a4E",
+                "duration": 1968,
+                "title": "John John Florence VS Kelly Slater!!! Semifinal 2020 PIPE MASTERS FULL HEAT REPLAY",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=SIYh_pDhXZI",
-                "duration": 559,
-                "title": "Mateus Herdy vs Kade Matson | Lexus US Open of Surfing pres by Pacifico 2026 - Round 16",
+                "url": "https://www.youtube.com/watch?v=F9Z0KSajDaw",
+                "duration": 3127,
+                "title": "Gabriel Medina vs Griffin Colapinto | MEO Rip Curl Pro Portugal pres by Corona Cero 2026 FINAL",
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KlUSLVr9uhw",
-                "duration": 524,
-                "title": "Kauli Vaast vs Filipe Toledo | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0qF4h2ocj_c",
-                "duration": 748,
-                "title": "Gabriel Medina vs Eli Hanneman | Corona Cero New Zealand Pro presented by Bonsoy 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dyQHl0BiiJA",
-                "duration": 527,
-                "title": "Italo Ferreira vs Yago Dora | Corona Cero New Zealand Pro presented by Bonsoy 2026 - Semifinals",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=s1y8mZEyDpw",
-                "duration": 2643,
-                "title": "Inside Pro Surfing: Fiji Pro presented by Corona Cero 2026",
-                "skip": [],
-                "skip_checked": 1794522652
+                "skip_checked": 1792869087
             },
             {
                 "url": "https://www.youtube.com/watch?v=-p4ih0m0fIk",
@@ -238,32 +147,11 @@
                 "skip_checked": 1792869087
             },
             {
-                "url": "https://www.youtube.com/watch?v=jrNCfufcpH0",
-                "duration": 1544,
-                "title": "Carissa Moore vs Sawyer Lindblad | Corona Cero New Zealand Pro presented by Bonsoy 2026 - FINAL",
+                "url": "https://www.youtube.com/watch?v=BqDIWkGqz3o",
+                "duration": 414,
+                "title": "Ethan Ewing vs John Mark Tokong | Philippines Pro presented by Philippine Sports Commission 2026 R2",
                 "skip": [],
                 "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KOSHWmHyT68",
-                "duration": 743,
-                "title": "Sawyer Lindblad vs Tya Zebrowski | VIVO Rio Pro presented by Corona Cero 2026 - FINAL",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BXNHbOBN5M0",
-                "duration": 340,
-                "title": "Jack Robinson vs Seth Moniz | Philippines Pro presented by Philippine Sports Commission 2026",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XL2Kw3DrpsU",
-                "duration": 543,
-                "title": "Kanoa Igarashi vs Griffin Colapinto | Lexus US Open of Surfing presented by Pacifico 2026",
-                "skip": [],
-                "skip_checked": 1793663159
             },
             {
                 "url": "https://www.youtube.com/watch?v=ge8bzm8z0d8",
@@ -273,13 +161,6 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=aCyeM1KD0nc",
-                "duration": 511,
-                "title": "Yago Dora vs Connor O'Leary | Philippines Pro presented by Philippine Sports Commission 2026 Round 2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=4Uh9qXJeIrQ",
                 "duration": 447,
                 "title": "Gabriel Medina vs Italo Ferreira | MEO Rip Curl Pro Portugal presented by Corona Cero 2026 Semifinal",
@@ -287,44 +168,100 @@
                 "skip_checked": 1792869087
             },
             {
-                "url": "https://www.youtube.com/watch?v=KbHJqVnRK5k",
-                "duration": 439,
-                "title": "Gabriel Medina vs Barron Mamiya | Fiji Pro presented by Corona Cero 2026 - Round 3",
+                "url": "https://www.youtube.com/watch?v=SIYh_pDhXZI",
+                "duration": 559,
+                "title": "Mateus Herdy vs Kade Matson | Lexus US Open of Surfing pres by Pacifico 2026 - Round 16",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=qM9MlTA1Yeg",
-                "duration": 353,
-                "title": "Jack Robinson vs Bronson Meydi I Philippines Pro pres by Philippines Sports Commission - Round 1",
+                "url": "https://www.youtube.com/watch?v=1Zj_jAPToxI",
+                "duration": 1492,
+                "title": "John John Florence vs Italo Ferreira | Lexus WSL Finals 2024 - Title Matches",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=D3vfdsDY7Jw",
-                "duration": 641,
-                "title": "Ramzi Boukhiam vs Oscar Berry | Fiji Pro presented by Corona Cero 2026 Round 1",
+                "url": "https://www.youtube.com/watch?v=B8y6tzL1PbI",
+                "duration": 475,
+                "title": "Philippines Pro 2026 | Event Highlights",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XL2Kw3DrpsU",
+                "duration": 543,
+                "title": "Kanoa Igarashi vs Griffin Colapinto | Lexus US Open of Surfing presented by Pacifico 2026",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pc40DGEweo0",
+                "duration": 645,
+                "title": "Jack Robinson vs Miguel Pupo | Philippines Pro pres by Philippine Sports Commission 2026 Round 2",
                 "skip": [],
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=4wQ2ROpfnuQ",
-                "duration": 532,
-                "title": "Italo Ferreira vs Matthew McGillivray | Fiji Pro presented by Corona Cero 2026 - Round 2",
+                "url": "https://www.youtube.com/watch?v=q0eMUhlzNbQ",
+                "duration": 372,
+                "title": "Gabriel Medina vs Yago Dora Philippines Pro presented by Philippine Sports Commission 2026 Semifinal",
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1794875754
             },
             {
-                "url": "https://www.youtube.com/watch?v=1QFl6iH6UMw",
-                "duration": 469,
-                "title": "Luke Thompson vs Matthew McGillivray | Lexus Trestles Pro 2026 - Round 1",
+                "url": "https://www.youtube.com/watch?v=07s2wvfuShM",
+                "duration": 883,
+                "title": "Caity Simmers vs Isabella Nichols | Philippines Pro pres by Philippine Sports Commission 2026 Final",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gQfcE3auaf0",
+                "duration": 331,
+                "title": "Kanoa Igarashi vs Alan Cleland | Fiji Pro presented by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1792869087
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_lukZUbjpsQ",
+                "duration": 586,
+                "title": "Alan Cleland vs Barron Mamiya | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 3",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iB1mO3x3To0",
+                "duration": 452,
+                "title": "Gabriel Medina vs Alan Cleland | Surf City El Salvador Pro pres by Corona Cero 2026 - Quarterfinals",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=Fd2AxtX488U",
-                "duration": 471,
-                "title": "Caitlin Simmers vs Caroline Marks | Philippines Pro pres by Philippine Sports Commission - Round 1",
+                "url": "https://www.youtube.com/watch?v=pUm0p7-Ebjk",
+                "duration": 1110,
+                "title": "George Pittar vs Gabriel Medina |  Western Australia Margaret River Pro 2026 - Final",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HFNNQaKLOvg",
+                "duration": 460,
+                "title": "Jake Marshall vs Crosby Colapinto | Lexus US Open of Surfing presented by Pacifico 2026 - Round 16",
+                "skip": [],
+                "skip_checked": 1792869087
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KZMMh0-RHm4",
+                "duration": 579,
+                "title": "Callum Robson vs Liam O'Brien | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 3",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5Db182EJf3Q",
+                "duration": 744,
+                "title": "Filipe Toledo vs Cole Houshmand I Philippines Pro pres. by Philippines Sports Commission - Round 1",
                 "skip": [],
                 "skip_checked": 1793917727
             },
@@ -336,51 +273,23 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=rD9gBcOxVoE",
-                "duration": 514,
-                "title": "Gabriel Medina vs Liam O'Brien | Philippines Pro presented by Philippine Sports Commission 2026 - R2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fze7JJAp-t4",
-                "duration": 559,
-                "title": "Gabriel Medina vs Griffin Colapinto | Fiji Pro presented by Corona Cero 2026 - Semifinals",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5Db182EJf3Q",
-                "duration": 744,
-                "title": "Filipe Toledo vs Cole Houshmand I Philippines Pro pres. by Philippines Sports Commission - Round 1",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pc40DGEweo0",
-                "duration": 645,
-                "title": "Jack Robinson vs Miguel Pupo | Philippines Pro pres by Philippine Sports Commission 2026 Round 2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_lukZUbjpsQ",
-                "duration": 586,
-                "title": "Alan Cleland vs Barron Mamiya | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 3",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RKShuolpPoo",
-                "duration": 589,
-                "title": "Griffin Colapinto vs Samuel Pupo | Fiji Pro presented by Corona Cero 2026 - Round 3",
+                "url": "https://www.youtube.com/watch?v=CjhtJsIA7_A",
+                "duration": 357,
+                "title": "Griffin Colapinto vs Ramzi Boukhiam | Outerknown Tahiti Pro presented by I-SEA 2026 - Semifinals",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=W2ptfGxNv0o",
-                "duration": 690,
-                "title": "Connor O'Leary vs Callum Robson | MEO Rip Curl Pro Portugal presented by Corona Cero 2026 Round 1",
+                "url": "https://www.youtube.com/watch?v=Wyd5xMStngI",
+                "duration": 457,
+                "title": "Yago Dora vs Seth Moniz | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1792869087
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KbHJqVnRK5k",
+                "duration": 439,
+                "title": "Gabriel Medina vs Barron Mamiya | Fiji Pro presented by Corona Cero 2026 - Round 3",
                 "skip": [],
                 "skip_checked": 1793917727
             },
@@ -392,100 +301,9 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=ih5btPjhRQ8",
-                "duration": 570,
-                "title": "Caitlin Simmers vs Bella Kenworthy | Surf City El Salvador Pro pres by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DX46LSZmo8A",
-                "duration": 554,
-                "title": "John Mark Tokong vs Samuel Pupo | Philippines Pro pres by Philippine Sports Commission 2026 Round 1",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gQfcE3auaf0",
-                "duration": 331,
-                "title": "Kanoa Igarashi vs Alan Cleland | Fiji Pro presented by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=e5gFi6vBNwg",
-                "duration": 896,
-                "title": "Cole Houshmand vs Weslley Dantas | Ballito Pro presented by O'Neill 2026 Challenger Series Final",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pUm0p7-Ebjk",
-                "duration": 1110,
-                "title": "George Pittar vs Gabriel Medina |  Western Australia Margaret River Pro 2026 - Final",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=iB1mO3x3To0",
-                "duration": 452,
-                "title": "Gabriel Medina vs Alan Cleland | Surf City El Salvador Pro pres by Corona Cero 2026 - Quarterfinals",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KZMMh0-RHm4",
-                "duration": 579,
-                "title": "Callum Robson vs Liam O'Brien | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 3",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HFNNQaKLOvg",
-                "duration": 460,
-                "title": "Jake Marshall vs Crosby Colapinto | Lexus US Open of Surfing presented by Pacifico 2026 - Round 16",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ta6T71pird8",
-                "duration": 565,
-                "title": "Yago Dora vs Cole Houshmand | Fiji Pro presented by Corona Cero 2026 - Quarterfinals",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=C9I6VU8QFHU",
-                "duration": 2640,
-                "title": "Inside Pro Surfing: VIVO Rio Pro Presented by Corona Cero 2026",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z3e9pThvZis",
-                "duration": 628,
-                "title": "Gabriel Medina vs Seth Moniz | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CjhtJsIA7_A",
-                "duration": 357,
-                "title": "Griffin Colapinto vs Ramzi Boukhiam | Outerknown Tahiti Pro presented by I-SEA 2026 - Semifinals",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZAbZes-stvc",
-                "duration": 330,
-                "title": "Samuel Pupo vs Alan Cleland I Outerknown Tahiti Pro presented by I-SEA 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Wyd5xMStngI",
-                "duration": 457,
-                "title": "Yago Dora vs Seth Moniz | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 2",
+                "url": "https://www.youtube.com/watch?v=Xf7z5pEiV48",
+                "duration": 368,
+                "title": "Jack Robinson vs Callum Robson | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 2",
                 "skip": [],
                 "skip_checked": 1792869087
             },
@@ -497,65 +315,58 @@
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=kW47BxXg-8k",
-                "duration": 1223,
-                "title": "Gabriel Medina vs Jack Robinson | Philippines Pro pres by Philippine Sports Commission 2026 Final",
+                "url": "https://www.youtube.com/watch?v=dL-elceUkMM",
+                "duration": 547,
+                "title": "Filipe Toledo vs Ethan Ewing | Philippines Pro presented by Philippine Sports Commission 2026",
                 "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1794875754
             },
             {
-                "url": "https://www.youtube.com/watch?v=XVPabgKbrf0",
-                "duration": 482,
-                "title": "Rio Waida vs Connor O'Leary | Corona Cero New Zealand Pro presented by Bonsoy 2026 - Round 2",
+                "url": "https://www.youtube.com/watch?v=fze7JJAp-t4",
+                "duration": 559,
+                "title": "Gabriel Medina vs Griffin Colapinto | Fiji Pro presented by Corona Cero 2026 - Semifinals",
                 "skip": [],
-                "skip_checked": 1793566524
+                "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=mY1S5b9rpLM",
-                "duration": 549,
-                "title": "Kanoa Igarashi vs Marco Mignot | Lexus Trestles Pro 2026 - Quarterfinals - WSL Championship Tour",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Xf7z5pEiV48",
-                "duration": 368,
-                "title": "Jack Robinson vs Callum Robson | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=r_KFy8bZvi4",
-                "duration": 513,
-                "title": "Italo Ferreira vs Jack Robinson I MEO Rip Curl Pro Portugal Presented by Corona Cero- Round 2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=izpWE4i9H3M",
-                "duration": 423,
-                "title": "Cole Houshmand vs Jake Marshall | Lexus Trestles Pro 2026 - Quarterfinals - WSL Championship Tour",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dRV0aKDRts0",
-                "duration": 485,
-                "title": "Griffin Colapinto vs Miguel Pupo | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 3",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8J5ORN2--Zc",
-                "duration": 497,
-                "title": "Leonardo Fioravanti vs Kanoa Igarashi | Surf City El Salvador Pro pres by Corona Cero 2026 - Semis",
+                "url": "https://www.youtube.com/watch?v=Ta6T71pird8",
+                "duration": 565,
+                "title": "Yago Dora vs Cole Houshmand | Fiji Pro presented by Corona Cero 2026 - Quarterfinals",
                 "skip": [],
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=OYEJ8GM29RA",
-                "duration": 1295,
-                "title": "Crosby Colapinto, Joel Vaughan, Alonso Correa, Justin Becret | EDP Ericeira Pro 2026 - Final",
+                "url": "https://www.youtube.com/watch?v=r8CnD7FTaMk",
+                "duration": 413,
+                "title": "Kanoa Igarashi vs Jayuard Alciso | Philippines Pro presented by Philippine Sports Commission 2026 R2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=C9I6VU8QFHU",
+                "duration": 2640,
+                "title": "Inside Pro Surfing: VIVO Rio Pro Presented by Corona Cero 2026",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JUyAnJcaDCk",
+                "duration": 558,
+                "title": "Liam O'Brien vs Joao Chianca I Philippines Pro pres by Philippines Sports Commission - Round 1",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jwJGu65z23c",
+                "duration": 420,
+                "title": "Luke Thompson vs Melvin Ayala | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 1",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x4tb1gqo-C0",
+                "duration": 560,
+                "title": "Declan Wyton vs Taka Inoue I Lexus US Open of Surfing pres by Pacifico 2026 - Quarters",
                 "skip": [],
                 "skip_checked": 1793917727
             },
@@ -567,23 +378,16 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=Y8lKpf3YEl8",
-                "duration": 1068,
-                "title": "Ethan Ewing vs Connor O'Leary | Bonsoy Gold Coast Pro presented by GWM 2026 - Final",
+                "url": "https://www.youtube.com/watch?v=uJutOHHaBKo",
+                "duration": 518,
+                "title": "Sally Fitzgibbons vs Vahine Fierro | Surf City El Salvador Pro presented by Corona Cero 2026 Round 1",
                 "skip": [],
-                "skip_checked": 1792869087
+                "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=21M_1Cz0Ut4",
-                "duration": 745,
-                "title": "Callum Robson vs Ethan Ewing | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yGlPA3mDiBY",
-                "duration": 1012,
-                "title": "Filipe Toledo vs Gabriel Medina | Corona Cero New Zealand Pro presented by Bonsoy 2026 - Round 3",
+                "url": "https://www.youtube.com/watch?v=kW47BxXg-8k",
+                "duration": 1223,
+                "title": "Gabriel Medina vs Jack Robinson | Philippines Pro pres by Philippine Sports Commission 2026 Final",
                 "skip": [],
                 "skip_checked": 1793917727
             },
@@ -595,51 +399,9 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=HfNea9AA5nQ",
-                "duration": 241,
-                "title": "The Catch Up Day 3: Colapinto’s PERFECT 10, Slater turns back the clock in pumping Teahupo’o",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CE-3Y1o6W_g",
-                "duration": 794,
-                "title": "Carissa Moore vs Brisa Hennessy | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=LK46_7exouI",
-                "duration": 773,
-                "title": "Leonardo Fioravanti vs Marco Mignot | Surf City El Salvador Pro pres by Corona Cero 2026 - Quarters",
-                "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=YpMmHqGq5vU",
                 "duration": 488,
                 "title": "Eli Hanneman vs Teo Degei | Fiji Pro presented by Corona Cero 2026 Round 1",
-                "skip": [],
-                "skip_checked": 1792869087
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IEPSTv65uyc",
-                "duration": 810,
-                "title": "Leonardo Fioravanti vs Samuel Pupo | Surf City El Salvador Pro pres by Corona Cero 2026 - Round 3",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x4tb1gqo-C0",
-                "duration": 560,
-                "title": "Declan Wyton vs Taka Inoue I Lexus US Open of Surfing pres by Pacifico 2026 - Quarters",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FeiI63CaWjc",
-                "duration": 543,
-                "title": "Gabriel Medina vs Morgan Cibilic I MEO Rip Curl Pro Portugal pres by Corona Cero 2026 - Quarters",
                 "skip": [],
                 "skip_checked": 1792869087
             },
@@ -651,39 +413,11 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=uJutOHHaBKo",
-                "duration": 518,
-                "title": "Sally Fitzgibbons vs Vahine Fierro | Surf City El Salvador Pro presented by Corona Cero 2026 Round 1",
+                "url": "https://www.youtube.com/watch?v=Zwend0UJM30",
+                "duration": 789,
+                "title": "Filipe Toledo vs Gabriel Medina | Bonsoy Gold Coast Pro presented by GWM 2026 - Round 3",
                 "skip": [],
-                "skip_checked": 1793566524
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8aadtpGHpWU",
-                "duration": 481,
-                "title": "Gabriel Medina vs Joel Vaughan | Fiji Pro presented by Corona Cero 2026 - Round 2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KlQWUbljxhQ",
-                "duration": 348,
-                "title": "Gabriel Medina vs Filipe Toledo I MEO Rip Curl Pro Portugal Presented by Corona Cero - Round 2",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=aqebmqZXtas",
-                "duration": 570,
-                "title": "Johanne Defay vs Eden Walla | Lexus US Open of Surfing presented by Pacifico 2026 Quarterfinals",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VmXAk-nMIJY",
-                "duration": 348,
-                "title": "Carissa Moore vs Luana Silva | Philippines Pro presented by Philippine Sports Commission 2026",
-                "skip": [],
-                "skip_checked": 1793917727
+                "skip_checked": 1793049429
             },
             {
                 "url": "https://www.youtube.com/watch?v=bxbYNsOVngQ",
@@ -693,14 +427,287 @@
                 "skip_checked": 1793917727
             },
             {
+                "url": "https://www.youtube.com/watch?v=hV1XoBiBVow",
+                "duration": 561,
+                "title": "Kanoa Igarashi vs Douglas Silva | Lexus US Open of Surfing pres by Pacifico 2026 - Round of 16",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CE-3Y1o6W_g",
+                "duration": 794,
+                "title": "Carissa Moore vs Brisa Hennessy | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1793566524
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aqebmqZXtas",
+                "duration": 570,
+                "title": "Johanne Defay vs Eden Walla | Lexus US Open of Surfing presented by Pacifico 2026 Quarterfinals",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cAmoFYyYCls",
+                "duration": 670,
+                "title": "Ryan Kainalo vs Alister Reginato | Banco do Brasil São Sebastião Pro 2026 - Challenger - Final",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=F09xwGAmoJE",
                 "duration": 466,
                 "title": "Lucca Mesinas vs Imaikalani deVault | Lexus US Open of Surfing pres by Pacifico 2026 - Round of 16",
                 "skip": [],
                 "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4Hyf83wa1RA",
+                "duration": 377,
+                "title": "Gabriel Medina vs George Pittar | Philippines Pro pres by Philippine Sports Commission 2026 Quarters",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YabmRB0bp0M",
+                "duration": 321,
+                "title": "Italo Ferreira vs Luke Thompson | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 2-",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=M9uDkE6BLYg",
+                "duration": 557,
+                "title": "Seth Moniz vs Oscar Berry | Surf City El Salvador Pro presented by Corona Cero 2026 Round 1",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KlQWUbljxhQ",
+                "duration": 348,
+                "title": "Gabriel Medina vs Filipe Toledo I MEO Rip Curl Pro Portugal Presented by Corona Cero - Round 2",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ip1BzOyun1o",
+                "duration": 360,
+                "title": "Caroline Marks vs Bettylou Sakura Johnson | Surf City El Salvador Pro presented by Corona Cero 2026",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=l11qWiev3-M",
+                "duration": 634,
+                "title": "Italo Ferreira vs Kauli Vaast | Surf City El Salvador Pro pres by Corona Cero 2026 - Quarterfinals",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wHbfLwuJ1BY",
+                "duration": 475,
+                "title": "Yago Dora vs Ethan Ewing I MEO Rip Curl Pro Portugal Presented by Corona Cero - Quarterfinals",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FeiI63CaWjc",
+                "duration": 543,
+                "title": "Gabriel Medina vs Morgan Cibilic I MEO Rip Curl Pro Portugal pres by Corona Cero 2026 - Quarters",
+                "skip": [],
+                "skip_checked": 1792869087
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HpXzu7N186E",
+                "duration": 739,
+                "title": "Kanoa Igarashi vs Alejo Muniz | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AkzDWcPunjQ",
+                "duration": 332,
+                "title": "Team USA Wins Continental Surf Cup 2026 | Event Highlights",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Sbpwo1tV_4c",
+                "duration": 500,
+                "title": "Tommy Coleman vs Kaniela Stewart | Lexus US Open of Surfing pres by Pacifico 2026 -Quarters",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7KFiP4oiZ-Y",
+                "duration": 467,
+                "title": "Eli Hanneman vs Miguel Pupo | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_tJebzgTjng",
+                "duration": 545,
+                "title": "Barron Mamiya vs Connor O'Leary | Surf City El Salvador Pro presented by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5ZtoLjvW6Fc",
+                "duration": 607,
+                "title": "Crosby Colapinto vs Morgan Cibilic | Surf City El Salvador Pro pres by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yGlPA3mDiBY",
+                "duration": 1012,
+                "title": "Filipe Toledo vs Gabriel Medina | Corona Cero New Zealand Pro presented by Bonsoy 2026 - Round 3",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bb43e6bn46Q",
+                "duration": 469,
+                "title": "Italo Ferreira vs Connor O'Leary | Outerknown Tahiti Pro presented by I-SEA 2026 - Round 3",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7pAEgBrz1tk",
+                "duration": 750,
+                "title": "2026 Hawaii Adaptive Surfing Championships Part 1",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=aZ2zL_KLh-M",
+                "duration": 500,
+                "title": "Alyssa Spencer vs Isabella Nichols | Lexus US Open of Surfing pres by Pacifico 2026 - Round of 16",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nk8TtFyBU2E",
+                "duration": 570,
+                "title": "Gabriel Klaussner vs Taj Lindblad | Lexus US Open of Surfing presented by Pacifico 2026 - Roundof16",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nieZpIzjZaE",
+                "duration": 752,
+                "title": "Gabriel Medina Defeats Italo Ferreira in Corona J-Bay",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JhGB6qcRXlY",
+                "duration": 388,
+                "title": "Lucas Cassity vs Hayden Rodgers | Lexus US Open of Surfing pres by Pacifico 2026 - Round of 16",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gyZYWbBTEU4",
+                "duration": 546,
+                "title": "Jomarie Ebueza vs Kevin Skvarna | Lexus US Open of Surfing pres by Pacifico 2026 - Quarterfinals",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1ziJFTd5jgw",
+                "duration": 563,
+                "title": "Biggest Airs of the 2025 Championship Tour",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0hJr9X0azOg",
+                "duration": 510,
+                "title": "Filipe Toledo vs Eli Hanneman | Rip Curl Pro Bells Beach presented by Bonsoy 2026",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NWWHfUrWEQM",
+                "duration": 457,
+                "title": "Highlights: Surf City El Salvador Pro Presented by Corona Cero 2026 - Event Highlights",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=e5gFi6vBNwg",
+                "duration": 896,
+                "title": "Cole Houshmand vs Weslley Dantas | Ballito Pro presented by O'Neill 2026 Challenger Series Final",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DX46LSZmo8A",
+                "duration": 554,
+                "title": "John Mark Tokong vs Samuel Pupo | Philippines Pro pres by Philippine Sports Commission 2026 Round 1",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SOCTKofMBvM",
+                "duration": 474,
+                "title": "Yago Dora vs Italo Ferreira | MEO Rip Curl Pro Portugal presented by Corona Cero 2025 -  Final",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rgqicgjjhXc",
+                "duration": 818,
+                "title": "Gabriel Medina vs. Filipe Toledo Rip Curl WSL Finals - CHAMPIONSHIP HEAT",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-2I2lJ59UDo",
+                "duration": 1648,
+                "title": "The Wedge - MASSIVE Mega Swell 20'-25' Surf !!! (June 9th 2026)",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=28hDe44XSdU",
+                "duration": 557,
+                "title": "Cole Houshmand  vs Ethan Ewing | Fiji Pro presented by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_tv3ZNPw3Sw",
+                "duration": 453,
+                "title": "Gabriela Bryan vs Yolanda Hopkins | Surf City El Salvador Pro pres by Corona Cero 2026 - Round 2",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T8tKDITr8iU",
+                "duration": 413,
+                "title": "Avalon Gall vs Kelis Kaleopaa | Lexus US Open of Surfing pres by Pacifico 2026 - Semifinals",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=35CSnPlFdIs",
+                "duration": 565,
+                "title": "Kelly Slater vs. John John Florence - Billabong Pro Tahiti 2016 Final",
+                "skip": [],
+                "skip_checked": 1794875754
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jrNCfufcpH0",
+                "duration": 1544,
+                "title": "Carissa Moore vs Sawyer Lindblad | Corona Cero New Zealand Pro presented by Bonsoy 2026 - FINAL",
+                "skip": [],
+                "skip_checked": 1793917727
             }
         ],
         "search_query": "surfing competition heat",
-        "last_refreshed": 1793917704
+        "last_refreshed": 1794875730
     }
 }
