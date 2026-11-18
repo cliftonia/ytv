@@ -7,25 +7,11 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=FpZbdtjHQRc",
-                "duration": 1555,
-                "title": "Left Forgotten For DECADES The Bragg Plantation House Abandoned Down South in Georgia",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=wRQTYZ_fr0Y",
                 "duration": 2113,
                 "title": "Exploring a Dying Town FULL of Abandoned Houses | Uniontown, AL",
                 "skip": [],
                 "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=meOVUIcJmGw",
-                "duration": 3091,
-                "title": "We climbed A Abandoned Roller coaster... Then Snuck Into A Cold War BUNKER!",
-                "skip": [],
-                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=UXI5hU1BGYI",
@@ -35,39 +21,23 @@
                 "skip_checked": 1793566524
             },
             {
-                "url": "https://www.youtube.com/watch?v=5CdoxUM8yuM",
-                "duration": 2405,
-                "title": "8 Most Terrifying Abandoned Place Encounters EVER Caught On Camera",
+                "url": "https://www.youtube.com/watch?v=KBkNyEnYf7U",
+                "duration": 3482,
+                "title": "RAIDED BY FBI - Pharma Exec's ABANDONED Mega Mansion - OVER 35,000 SQUARE FEET",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=hs0ObNDGw_Y",
-                "duration": 1083,
-                "title": "I Called the FBI After What I Found in This ABANDONED House...",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V_DmXvUldLI",
-                "duration": 2482,
-                "title": "Horrifying Discovery Inside Abandoned Mansion | A Disturbing Mystery",
-                "skip": [],
-                "skip_checked": 1794690152
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=CE06MVV0vAM",
-                "duration": 2225,
-                "title": "ABANDONED NEIGHBORHOOD of 12 Modern MANSIONS",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-3f7J6IByUo",
-                "duration": 1849,
-                "title": "6 Most Terrifying Abandoned Building Encounters Ever Caught On Camera",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=uCOVnSBCAv0",
+                "duration": 3235,
+                "title": "Exploring a $10,500,000 ABANDONED Luxury Mega Mansion...",
+                "skip": [
+                    [
+                        576.7,
+                        650.4
+                    ]
+                ],
+                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=5PqF710Rve8",
@@ -77,18 +47,97 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=2b8TB3mR5iA",
-                "duration": 2175,
-                "title": "ABANDONED Mega Mansion Frozen in Time - Owner Went to Prison",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=qEk8njr6KPY",
                 "duration": 4933,
                 "title": "15 Times Urban Explorers Had Terrifying Encounters in Abandoned Places",
                 "skip": [],
                 "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V_DmXvUldLI",
+                "duration": 2482,
+                "title": "Horrifying Discovery Inside Abandoned Mansion | A Disturbing Mystery",
+                "skip": [],
+                "skip_checked": 1794690152
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=bnKLBXsw4qo",
+                "duration": 4173,
+                "title": "8 Most Disturbing Encounters Urban Explorers Had in Abandoned Buildings",
+                "skip": [],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ti72i2F4Il4",
+                "duration": 1213,
+                "title": "7 TERRIFYING Abandoned Building Encounters Caught On Camera",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=81UquxGg5q8",
+                "duration": 1778,
+                "title": "6 Most Creepiest Abandoned Building Encounters Ever Caught On Camera",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hs0ObNDGw_Y",
+                "duration": 1083,
+                "title": "I Called the FBI After What I Found in This ABANDONED House...",
+                "skip": [],
+                "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=f3TrBReNrro",
+                "duration": 1200,
+                "title": "3 Most DISTURBING Urban Explorations Gone Terribly Wrong",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CE06MVV0vAM",
+                "duration": 2225,
+                "title": "ABANDONED NEIGHBORHOOD of 12 Modern MANSIONS",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1SQKHjI0htY",
+                "duration": 2035,
+                "title": "6 Times Urban Explorers Barely Escaped Death",
+                "skip": [
+                    [
+                        33.3,
+                        37.6
+                    ],
+                    [
+                        1018.5,
+                        1025.1
+                    ]
+                ],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=lmt9PU8F6CU",
+                "duration": 1848,
+                "title": "Nobody Had Been Here For 23+ Years... | Grandparents Passed Away... No One Came Back.",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=p66iWmoLp-4",
+                "duration": 1812,
+                "title": "ABANDONED Artist's Mansion Left Deep in the Woods",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5CdoxUM8yuM",
+                "duration": 2405,
+                "title": "8 Most Terrifying Abandoned Place Encounters EVER Caught On Camera",
+                "skip": [],
+                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=XSVvJEuOQKk",
@@ -98,11 +147,25 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=27ufxzXOjqM",
-                "duration": 2198,
-                "title": "The Mystery Family That Left Everything Behind! ABANDONED HOUSE FROZEN IN TIME",
+                "url": "https://www.youtube.com/watch?v=1Ha6hHsNW1s",
+                "duration": 1389,
+                "title": "I Never Noticed These Old Houses in the Woods",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qchAUZoHkt0",
+                "duration": 2025,
+                "title": "5 Most Terrifying Abandoned Building encounter 2026",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z5h5dNaUaR8",
+                "duration": 3010,
+                "title": "We Will Never Return to This Haunted Manor House!",
+                "skip": [],
+                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=pyQGYe3ie1k",
@@ -112,30 +175,74 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=vShwxwrywuc",
-                "duration": 1781,
-                "title": "6 Times Urban Explorers Barely Escaped Death",
+                "url": "https://www.youtube.com/watch?v=c4aKPugjtxY",
+                "duration": 1838,
+                "title": "I Found The Creepiest Abandoned House...",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2b8TB3mR5iA",
+                "duration": 2175,
+                "title": "ABANDONED Mega Mansion Frozen in Time - Owner Went to Prison",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=OM2NJ7445DI",
-                "duration": 3417,
-                "title": "Human Remains Found In Basement While Exploring This Abandoned Property",
-                "skip": [
-                    [
-                        292.1,
-                        418.4
-                    ]
-                ],
+                "url": "https://www.youtube.com/watch?v=32wsKnZwjp0",
+                "duration": 1711,
+                "title": "6 Most Disturbing Van Camping Encounters Caught On Camera",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GHmranj3dYI",
+                "duration": 1913,
+                "title": "6 Most Disturbing Abandoned Building Encounters Ever Caught On Camera",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zuQUORuaMng",
+                "duration": 5210,
+                "title": "100 Times Urban Explorers Made DISTURBING Abandoned Building Encounters",
+                "skip": [],
+                "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hgan5SaBSNg",
+                "duration": 1131,
+                "title": "How to (Actually) Find Abandoned Places as a Beginner (#1)",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6jKvgpUE9mE",
+                "duration": 1910,
+                "title": "6 Urban Explorers Who Entered the WRONG Abandoned Building",
+                "skip": [],
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=p66iWmoLp-4",
-                "duration": 1812,
-                "title": "ABANDONED Artist's Mansion Left Deep in the Woods",
+                "url": "https://www.youtube.com/watch?v=otOZyKOWcgY",
+                "duration": 4959,
+                "title": "People Who Encountered The Unexpected In Abandoned Buildings",
                 "skip": [],
-                "skip_checked": 1792786230
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WLjrZHR5Ycs",
+                "duration": 1767,
+                "title": "ABANDONED NASA Scientist’s Luxury Mansion (EVERYTHING Left Behind Inside)",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=GqpMWKefTHU",
+                "duration": 2596,
+                "title": "Family Abandoned This Extremely HAUNTED House… Something Was Wrong",
+                "skip": [],
+                "skip_checked": 1794690152
             },
             {
                 "url": "https://www.youtube.com/watch?v=ijj577kTlSo",
@@ -150,67 +257,11 @@
                 "skip_checked": 1792786230
             },
             {
-                "url": "https://www.youtube.com/watch?v=GqpMWKefTHU",
-                "duration": 2596,
-                "title": "Family Abandoned This Extremely HAUNTED House… Something Was Wrong",
-                "skip": [],
-                "skip_checked": 1794690152
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=f_8_5C20DvY",
                 "duration": 1832,
                 "title": "ABANDONED Tech Billionaire's MEGA MANSION (Everything Left Behind Inside)",
                 "skip": [],
                 "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=otOZyKOWcgY",
-                "duration": 4959,
-                "title": "People Who Encountered The Unexpected In Abandoned Buildings",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_0N1PgWk3VU",
-                "duration": 1575,
-                "title": "I Discovered A 400 Year Old ABANDONED HOUSE Hidden In The Countryside",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mGAyX3Mp6pg",
-                "duration": 3157,
-                "title": "4 Disturbing Urban Exploration Stories (URBEX)",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=qchAUZoHkt0",
-                "duration": 2025,
-                "title": "5 Most Terrifying Abandoned Building encounter 2026",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=dFcHpfdhInM",
-                "duration": 1422,
-                "title": "Once Home to 950 - Now a GUARDED Houston GHOST TOWN Slowly Vanishing in the Trees",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6jKvgpUE9mE",
-                "duration": 1910,
-                "title": "6 Urban Explorers Who Entered the WRONG Abandoned Building",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8IGlS6wV9g0",
-                "duration": 548,
-                "title": "We Found An ABANDONED TGI Friday's Restaurant With Everything Left Behind And Power Still On!",
-                "skip": [],
-                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=eNqGwq6rw04",
@@ -220,60 +271,18 @@
                 "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=11TNckmDkvc",
-                "duration": 3964,
-                "title": "100 Most Disturbing Abandoned Building Encounters Caught On Camera!",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RnrgugN1uw8",
-                "duration": 788,
-                "title": "Exploring an Abandoned Electric Telephone Exchange Building!",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=bnKLBXsw4qo",
-                "duration": 4173,
-                "title": "8 Most Disturbing Encounters Urban Explorers Had in Abandoned Buildings",
+                "url": "https://www.youtube.com/watch?v=JYOz6Fzha-Y",
+                "duration": 1180,
+                "title": "ABANDONED Murder Mansion (EVERYTHING Left Behind Inside)",
                 "skip": [],
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=hgan5SaBSNg",
-                "duration": 1131,
-                "title": "How to (Actually) Find Abandoned Places as a Beginner (#1)",
+                "url": "https://www.youtube.com/watch?v=PavJt2h5LIg",
+                "duration": 1497,
+                "title": "**Untouched since 1951** Exploring a retro home FROZEN IN TIME",
                 "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oY8Kmq0lzOs",
-                "duration": 4292,
-                "title": "TWIN Abandoned Mansions with Everything Left Behind | 112 YEARS OLD",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZCeh3aStdbQ",
-                "duration": 3106,
-                "title": "ABANDONED U.S Billionaire's Mansion With EVERYTHING LEFT",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Rv0ekeJmCvg",
-                "duration": 1948,
-                "title": "*Nobody Had Been Here Since The Family Disappeared* | Everything Is Still Here..",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=jlEiHd4us-4",
-                "duration": 1954,
-                "title": "6 Most TERRIFYING Abandoned Building Encounters Caught On Camera",
-                "skip": [],
-                "skip_checked": 1794690152
+                "skip_checked": 1793663159
             },
             {
                 "url": "https://www.youtube.com/watch?v=VQFRj-LXPVw",
@@ -283,11 +292,11 @@
                 "skip_checked": 1794690152
             },
             {
-                "url": "https://www.youtube.com/watch?v=Nf_MdA2VUjA",
-                "duration": 1419,
-                "title": "6 Most Disturbing Abandoned Building Encounters Ever Caught On Camera",
+                "url": "https://www.youtube.com/watch?v=mGAyX3Mp6pg",
+                "duration": 3157,
+                "title": "4 Disturbing Urban Exploration Stories (URBEX)",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1792956294
             },
             {
                 "url": "https://www.youtube.com/watch?v=7p3MtEgLcm4",
@@ -297,57 +306,6 @@
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=ZKQsm73-7tM",
-                "duration": 3957,
-                "title": "We Were Warned Not to Go Here: Laurelton State ASYLUM  *Full Exclusive ABANDONED Documentary*",
-                "skip": [
-                    [
-                        722.0,
-                        731.2
-                    ],
-                    [
-                        1019.3,
-                        1087.8
-                    ]
-                ],
-                "skip_checked": 1794690152
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zZqkEEIKMmk",
-                "duration": 608,
-                "title": "We Escaped POLICE At The UK'S Most Guarded ABANDONED Building!",
-                "skip": [],
-                "skip_checked": 1794690152
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HQXzhBQ5f50",
-                "duration": 1345,
-                "title": "The Palisades Disaster - Homes Frozen in Time From January",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8uTnhqpGaTI",
-                "duration": 2420,
-                "title": "5 Urban Explorers Who Had Terrifying Encounters in Abandoned Places",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ickjIaQJevk",
-                "duration": 1601,
-                "title": "**Built in 2021, ABANDONED in 2026** Bankrupt millionaires dream mansion",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MFNHsgR1jG8",
-                "duration": 2959,
-                "title": "The STRANGEST Abandoned Mega Mansion Has a Panic Room",
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=ySkYsk4rd3A",
                 "duration": 2331,
                 "title": "ABANDONED HOUSE Left Untouched When Family Left Overnight! Found Deep In The Woods",
@@ -355,11 +313,11 @@
                 "skip_checked": 1794690152
             },
             {
-                "url": "https://www.youtube.com/watch?v=FLIXX1XRgfY",
-                "duration": 4073,
-                "title": "the Most Disturbing Abandoned Building Discoveries Iceberg",
+                "url": "https://www.youtube.com/watch?v=xMi9w_eMGtk",
+                "duration": 856,
+                "title": "5 TERRIFYING URBAN EXPLORATIONS That Took a DARK Turn!",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=rf8IJ9jhFJ4",
@@ -374,63 +332,23 @@
                 "skip_checked": 1794083847
             },
             {
+                "url": "https://www.youtube.com/watch?v=5E8NX9F9oZo",
+                "duration": 1515,
+                "title": "Exploring Disney's Abandoned Theme Park (Nara Dreamland)",
+                "skip": [
+                    [
+                        585.5,
+                        732.3
+                    ]
+                ],
+                "skip_checked": 1793566524
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=Zgbrt4riK7Y",
                 "duration": 1625,
                 "title": "3 Disturbing TRUE Abandoned House Horror Stories",
                 "skip": [],
                 "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zuQUORuaMng",
-                "duration": 5210,
-                "title": "100 Times Urban Explorers Made DISTURBING Abandoned Building Encounters",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UnKSmlc3CP4",
-                "duration": 1601,
-                "title": "Why You Should NEVER Explore Abandoned Hospitals",
-                "skip": [],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JYOz6Fzha-Y",
-                "duration": 1180,
-                "title": "ABANDONED Murder Mansion (EVERYTHING Left Behind Inside)",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TkPjFw0zgQU",
-                "duration": 2671,
-                "title": "This Mansion Was BOOBY-TRAPPED to Keep People Out (Warning To All Explorers)",
-                "skip": [
-                    [
-                        614.3,
-                        708.5
-                    ]
-                ],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Hqwx4GabEgs",
-                "duration": 482,
-                "title": "Abandoned castle (Schloss N) Germany September 2026 (urbex lost places urban exploring decay drone)",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Bj1-bujbzAw",
-                "duration": 1989,
-                "title": "Exploring The Scariest Google Map Locations - Every Place Was Abandoned!",
-                "skip": [
-                    [
-                        622.5,
-                        712.8
-                    ]
-                ],
-                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=lRGW8pKVLMI",
@@ -440,6 +358,20 @@
                 "skip_checked": 1794083847
             },
             {
+                "url": "https://www.youtube.com/watch?v=_0N1PgWk3VU",
+                "duration": 1575,
+                "title": "I Discovered A 400 Year Old ABANDONED HOUSE Hidden In The Countryside",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UnKSmlc3CP4",
+                "duration": 1601,
+                "title": "Why You Should NEVER Explore Abandoned Hospitals",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=aFbdUaWBwZ0",
                 "duration": 2887,
                 "title": "I Explored 3 Abandoned Murder Houses in 72 Hours (Extremely Disturbing True Crime)",
@@ -447,23 +379,32 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=PavJt2h5LIg",
-                "duration": 1497,
-                "title": "**Untouched since 1951** Exploring a retro home FROZEN IN TIME",
+                "url": "https://www.youtube.com/watch?v=HkGoUWCamfw",
+                "duration": 2169,
+                "title": "Inside The Most Preserved Abandoned House In Wales | Where Did She Go?",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=TDV-GuZO6Z8",
-                "duration": 3269,
-                "title": "Inside America's Largest ABANDONED Amusement Park | 6 Flags Maryland",
-                "skip": [
-                    [
-                        593.8,
-                        690.6
-                    ]
-                ],
-                "skip_checked": 1794690152
+                "url": "https://www.youtube.com/watch?v=SHb2KwatZVw",
+                "duration": 3050,
+                "title": "Edmund Fitzgerald's ABANDONED Private Island With EVERYTHING LEFT Behind",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4iyU-m1-AJ4",
+                "duration": 3282,
+                "title": "We Found An ABANDONED Hoarders House Filled With Rare Antiques And Everything Left Behind!",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MFNHsgR1jG8",
+                "duration": 2959,
+                "title": "The STRANGEST Abandoned Mega Mansion Has a Panic Room",
+                "skip": [],
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=c646APwhP9I",
@@ -473,11 +414,88 @@
                 "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=UuzuSBDBF7M",
-                "duration": 933,
-                "title": "Exploring The BIGGEST Abandoned B&M In The UK!",
+                "url": "https://www.youtube.com/watch?v=8uTnhqpGaTI",
+                "duration": 2420,
+                "title": "5 Urban Explorers Who Had Terrifying Encounters in Abandoned Places",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6pY4wKs0-3Y",
+                "duration": 4501,
+                "title": "I Explored the Deadliest Island in New York City (North Brother Island) FULL MOVIE",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=23h0yZUHdto",
+                "duration": 1338,
+                "title": "Escaping an Abandoned Office Run By Dangerous Squatters..",
+                "skip": [],
+                "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oRDUvt9ewkM",
+                "duration": 321,
+                "title": "What We Found Inside This Abandoned Building Was Unexpected!",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cV5UEMtny7Y",
+                "duration": 1311,
+                "title": "$10,000,000 ABANDONED Billionaire's Glass Mansion",
+                "skip": [],
+                "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YvALhCfT4NU",
+                "duration": 2245,
+                "title": "6 Most Disturbing Abandoned Building Encounters Caught On Camera",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yjfsdMszmUY",
+                "duration": 1649,
+                "title": "4 Most Disturbing Exploration Encounters Caught On Camera",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=11TNckmDkvc",
+                "duration": 3964,
+                "title": "100 Most Disturbing Abandoned Building Encounters Caught On Camera!",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vMn4s6dgqgc",
+                "duration": 749,
+                "title": "10 Forbidden Places You Still Can’t Enter in 2026",
+                "skip": [],
+                "skip_checked": 1794690152
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ceUJDsXWHoc",
+                "duration": 2903,
+                "title": "Abandoned & Forgotten Places in the Tennessee Mountains",
+                "skip": [],
+                "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BYlSDONbV0A",
+                "duration": 3050,
+                "title": "So HAUNTED They Left It Abandoned…Paranormal Activity In The Woods",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5HmXllzCREU",
+                "duration": 2051,
+                "title": "ABANDONED 1,000 Year Old Castle With EVERYTHING Left Inside",
+                "skip": [],
+                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=NAf3UCCXugU",
@@ -492,145 +510,126 @@
                 "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=yjfsdMszmUY",
-                "duration": 1649,
-                "title": "4 Most Disturbing Exploration Encounters Caught On Camera",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=6pY4wKs0-3Y",
-                "duration": 4501,
-                "title": "I Explored the Deadliest Island in New York City (North Brother Island) FULL MOVIE",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Cag5TaLMm8U",
-                "duration": 949,
-                "title": "ABANDONED Drug Dealer's Mansion With EVERYTHING Left Inside",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=23h0yZUHdto",
-                "duration": 1338,
-                "title": "Escaping an Abandoned Office Run By Dangerous Squatters..",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=sgkw8IItWIA",
-                "duration": 1808,
-                "title": "The Abandoned Casino Ghost Ship (Money still inside) Stuck in Florida's Sea",
+                "url": "https://www.youtube.com/watch?v=Kp76wAGWkQA",
+                "duration": 1867,
+                "title": "Abandoned Birmingham City Hospital: Sneaking into Active Tunnels (Part 1)",
                 "skip": [
                     [
-                        740.0,
-                        889.4
+                        71.1,
+                        127.3
                     ]
                 ],
-                "skip_checked": 1792956294
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=pUxdrwtPdlY",
-                "duration": 2000,
-                "title": "The MURDER HOUSE | Very Disturbing Place I Filmed (True Crime Case)",
-                "skip": [
-                    [
-                        642.6,
-                        765.0
-                    ]
-                ],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5X9kqEbblqU",
-                "duration": 584,
-                "title": "INTENSE SECURITY CHASE IN ABANDONED CALIFORNIA THEATER *CAUGHT* | Urbex 2026",
+                "url": "https://www.youtube.com/watch?v=ctDBJgNbDJE",
+                "duration": 778,
+                "title": "5 Abandoned Buildings Where Explorers Barely Escaped Death",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=vMn4s6dgqgc",
-                "duration": 749,
-                "title": "10 Forbidden Places You Still Can’t Enter in 2026",
+                "url": "https://www.youtube.com/watch?v=zZqkEEIKMmk",
+                "duration": 608,
+                "title": "We Escaped POLICE At The UK'S Most Guarded ABANDONED Building!",
                 "skip": [],
                 "skip_checked": 1794690152
             },
             {
-                "url": "https://www.youtube.com/watch?v=AEj5glvrasY",
-                "duration": 1258,
-                "title": "5 Most Terrifying Encounters in Abandoned Places",
-                "skip": [],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5E8NX9F9oZo",
-                "duration": 1515,
-                "title": "Exploring Disney's Abandoned Theme Park (Nara Dreamland)",
+                "url": "https://www.youtube.com/watch?v=0xWRth5ANDw",
+                "duration": 1542,
+                "title": "Exploring the REAL Abandoned Backrooms Mall - Sandburg Mall Galesburg, Illinois",
                 "skip": [
                     [
-                        585.5,
-                        732.3
+                        497.7,
+                        525.7
+                    ],
+                    [
+                        1099.4,
+                        1127.4
                     ]
                 ],
-                "skip_checked": 1793566524
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=5HmXllzCREU",
-                "duration": 2051,
-                "title": "ABANDONED 1,000 Year Old Castle With EVERYTHING Left Inside",
+                "url": "https://www.youtube.com/watch?v=ickjIaQJevk",
+                "duration": 1601,
+                "title": "**Built in 2021, ABANDONED in 2026** Bankrupt millionaires dream mansion",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=lmt9PU8F6CU",
-                "duration": 1848,
-                "title": "Nobody Had Been Here For 23+ Years... | Grandparents Passed Away... No One Came Back.",
+                "url": "https://www.youtube.com/watch?v=9wuYMaF__i4",
+                "duration": 2166,
+                "title": "Exploring an ABANDONED Neighborhood in Elgin, IL - WWI Letters Left Behind",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UuzuSBDBF7M",
+                "duration": 933,
+                "title": "Exploring The BIGGEST Abandoned B&M In The UK!",
                 "skip": [],
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=8fy5KK145Vw",
-                "duration": 2509,
-                "title": "Victoria's Secret Model's ABANDONED Mansion with Everything Still Inside | BMW & 2 Cadillacs",
+                "url": "https://www.youtube.com/watch?v=-BRHm99lGgQ",
+                "duration": 1126,
+                "title": "Exploring Abandoned Malls From My Childhood!",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=sPBXTySMMW0",
-                "duration": 649,
-                "title": "WARNING *DISTURBING* Wait Until YOU See What I Found In an Abandoned Cabin In the Middle Of Nowhere",
+                "url": "https://www.youtube.com/watch?v=XZ_XqpljooA",
+                "duration": 2688,
+                "title": "When Urban Explorers Run Into the Wrong Person | Disturbing Encounters",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=qvNkHpm3JjY",
-                "duration": 2362,
-                "title": "6 Most Disturbing Abandoned School Encounters Caught On Camera",
+                "url": "https://www.youtube.com/watch?v=vKPE1eDdIfk",
+                "duration": 1113,
+                "title": "I Explored Abandoned Locations From My Childhood!",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=ceUJDsXWHoc",
-                "duration": 2903,
-                "title": "Abandoned & Forgotten Places in the Tennessee Mountains",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=V3Lys_cmDZU",
+                "duration": 1775,
+                "title": "Mission to Abandoned Power Plant in a Blizzard",
+                "skip": [
+                    [
+                        73.2,
+                        137.6
+                    ]
+                ],
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ezkps7GWMgw",
-                "duration": 1776,
-                "title": "Massachusetts Forgotten Places | Abandoned America (EP 4.)",
+                "url": "https://www.youtube.com/watch?v=2AP-F0wN3zc",
+                "duration": 4225,
+                "title": "15 Times Urban Explorers Barely Escaped Death",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=AlSqEK37hhc",
-                "duration": 2570,
-                "title": "The Strangest $20,000 Abandoned Mansion with Quirky Features",
+                "url": "https://www.youtube.com/watch?v=iWcamYEYvWY",
+                "duration": 2210,
+                "title": "Exploring the UK's Abandoned Theme Parks",
                 "skip": [],
-                "skip_checked": 1793049429
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R_WiBMDhKx0",
+                "duration": 1968,
+                "title": "These Abandoned Locations Can Kill You...",
+                "skip": [
+                    [
+                        223.5,
+                        277.2
+                    ]
+                ],
+                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=y1WnGghQ7Us",
@@ -645,95 +644,108 @@
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=sR3dm_om7B4",
-                "duration": 3099,
-                "title": "I Left Cameras in a HAUNTED Mansion! Shocking Paranormal Evidence!",
+                "url": "https://www.youtube.com/watch?v=XnVCJw-Z0DI",
+                "duration": 2035,
+                "title": "I Snuck Into a BILLIONAIRE'S Abandoned Mansion...WHY WAS ALL THIS LEFT!",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=xt3NMkJs1EM",
-                "duration": 2518,
-                "title": "The Strangest Abandoned House I’ve Ever Found",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=JYNkZtxZpVI",
+                "duration": 2349,
+                "title": "The Abandoned HOME ALONE House - 90s Time Capsule Full of Video Games,VHS and Retro Nostalgia",
+                "skip": [
+                    [
+                        602.1,
+                        677.5
+                    ]
+                ],
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=jopmxDp3_NU",
-                "duration": 1907,
-                "title": "They Never Returned | ABANDONED House With PORSCHE 911 And EVERYTHING Left Behind",
+                "url": "https://www.youtube.com/watch?v=AEj5glvrasY",
+                "duration": 1258,
+                "title": "5 Most Terrifying Encounters in Abandoned Places",
+                "skip": [],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8fy5KK145Vw",
+                "duration": 2509,
+                "title": "Victoria's Secret Model's ABANDONED Mansion with Everything Still Inside | BMW & 2 Cadillacs",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZsnXoKtO-Xc",
+                "duration": 2295,
+                "title": "Inside the North Sea's Abandoned Oil Rigs",
+                "skip": [
+                    [
+                        108.3,
+                        112.7
+                    ]
+                ],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2xKGhky_QL0",
+                "duration": 2777,
+                "title": "Exploring London's Abandoned Hospitals",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KYCTcQLS5tA",
+                "duration": 1677,
+                "title": "The Abandoned Treehouse Mansion Worth Millions (Exploring The Richest Family's Home In UK)",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZCeh3aStdbQ",
+                "duration": 3106,
+                "title": "ABANDONED U.S Billionaire's Mansion With EVERYTHING LEFT",
                 "skip": [],
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=fkiSNoOnOlw",
-                "duration": 4068,
-                "title": "Locals Refuse To Enter This Haunted Asylum After Dark",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=TDV-GuZO6Z8",
+                "duration": 3269,
+                "title": "Inside America's Largest ABANDONED Amusement Park | 6 Flags Maryland",
+                "skip": [
+                    [
+                        593.8,
+                        690.6
+                    ]
+                ],
+                "skip_checked": 1794690152
             },
             {
-                "url": "https://www.youtube.com/watch?v=HkGoUWCamfw",
-                "duration": 2169,
-                "title": "Inside The Most Preserved Abandoned House In Wales | Where Did She Go?",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ODaNjfPnsNw",
-                "duration": 4472,
-                "title": "So HAUNTED Nobody Dares Enter This Abandoned School! Poltergeist Activity",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9HpLixE_kZg",
-                "duration": 1586,
-                "title": "Infiltrating the Abandoned Hackwood Park Mansion   ( Security escape at the end )",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gI_tyd4V-MY",
+                "url": "https://www.youtube.com/watch?v=Ol6WWn39p9s",
                 "duration": 2300,
-                "title": "ABANDONED $6.7M Desert LUXURY Mansion - Everything STILL LEFT Inside",
+                "title": "10 Abandoned Places in Australia I Bet You Don't Know!",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=eO8J2zVFlAQ",
-                "duration": 713,
-                "title": "WE FOUND MONEY INSIDE ABANDONED GALA BINGO 😱 Everything Left Behind",
+                "url": "https://www.youtube.com/watch?v=BIZDKrrDwk0",
+                "duration": 601,
+                "title": "Exploring The BIGGEST Abandoned Police Station In YORKSHIRE!",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=PM1eCdCkLts",
-                "duration": 506,
-                "title": "Hollywood's Most HAUNTING Abandoned Mansions",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cV5UEMtny7Y",
-                "duration": 1311,
-                "title": "$10,000,000 ABANDONED Billionaire's Glass Mansion",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XZ_XqpljooA",
-                "duration": 2688,
-                "title": "When Urban Explorers Run Into the Wrong Person | Disturbing Encounters",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=wpd7pMX971I",
-                "duration": 2373,
-                "title": "Pilot's ABANDONED Mansion with 2 Airplanes & 11 Cars Left Behind | Everything Still Inside",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=sgkw8IItWIA",
+                "duration": 1808,
+                "title": "The Abandoned Casino Ghost Ship (Money still inside) Stuck in Florida's Sea",
+                "skip": [
+                    [
+                        740.0,
+                        889.4
+                    ]
+                ],
+                "skip_checked": 1792956294
             },
             {
                 "url": "https://www.youtube.com/watch?v=AQIP-Rl5goE",
@@ -743,40 +755,47 @@
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=ubyAM-rTorY",
-                "duration": 1158,
-                "title": "Exploring ABANDONED places on my MINI SURRON (GOT CHASED)",
+                "url": "https://www.youtube.com/watch?v=FbIZg6lRTpg",
+                "duration": 882,
+                "title": "Exploring Abandoned Hospital (gone wrong)",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Ezkps7GWMgw",
+                "duration": 1776,
+                "title": "Massachusetts Forgotten Places | Abandoned America (EP 4.)",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=pgmUGtVkKQI",
-                "duration": 2583,
-                "title": "NYC's Abandoned High-Rise Mental Hospital (Bronx Psychiatric Center) FT @TheProperPeople",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oV2ikI-kWuw",
-                "duration": 2782,
-                "title": "The Unfinished Disney-Inspired Theme Park: The Man Was Murdered Building It",
+                "url": "https://www.youtube.com/watch?v=pUxdrwtPdlY",
+                "duration": 2000,
+                "title": "The MURDER HOUSE | Very Disturbing Place I Filmed (True Crime Case)",
                 "skip": [
                     [
-                        653.4,
-                        738.0
+                        642.6,
+                        765.0
                     ]
                 ],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=vKPE1eDdIfk",
-                "duration": 1113,
-                "title": "I Explored Abandoned Locations From My Childhood!",
+                "url": "https://www.youtube.com/watch?v=Cag5TaLMm8U",
+                "duration": 949,
+                "title": "ABANDONED Drug Dealer's Mansion With EVERYTHING Left Inside",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=gI_tyd4V-MY",
+                "duration": 2300,
+                "title": "ABANDONED $6.7M Desert LUXURY Mansion - Everything STILL LEFT Inside",
                 "skip": [],
                 "skip_checked": 1794083847
             }
         ],
         "search_query": "abandoned places urban exploration",
-        "last_refreshed": 1794083824
+        "last_refreshed": 1795043631
     }
 }
