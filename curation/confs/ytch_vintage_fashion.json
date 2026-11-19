@@ -7,121 +7,11 @@
         "stream_rotation": "clock",
         "streams": [
             {
-                "url": "https://www.youtube.com/watch?v=xGaAwWg_edE",
-                "duration": 1047,
-                "title": "Fashion History 3: The 1930s: Escapism During The Great Depression",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=XwgU5zl6brQ",
-                "duration": 2573,
-                "title": "Whatever Happened to Lerner Shops? The Fashion Chain Every American Woman Shopped for Generations",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=nRmsX685pQY",
-                "duration": 1967,
-                "title": "The (ancient) History of Modern Fashion Trends",
-                "skip": [
-                    [
-                        202.0,
-                        314.0
-                    ]
-                ],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YMjcuTpxQL8",
-                "duration": 1921,
-                "title": "📸💫 You’ll Never Look at History the Same After Seeing These 120 Photos",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
                 "url": "https://www.youtube.com/watch?v=f76dBH5kKoA",
                 "duration": 1530,
                 "title": "What It's Like to Wear Vintage vs. Historical Fashion Daily ft. @KarolinaZebrowskax",
                 "skip": [],
                 "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=SGeGeYSnULE",
-                "duration": 1268,
-                "title": "Nan Kempner: The Saint Laurent Exception",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ab7OqEzm4M4",
-                "duration": 2902,
-                "title": "A COMPREHENSIVE GUIDE TO VINTAGE || how to figure out what era vintage clothing is with examples",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=vO-9IHoGJ2g",
-                "duration": 2463,
-                "title": "Whatever Happened to Norman Hartnell? The Designer Behind Every 1950s Royal Gown America Admired",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OfjvS80Gm-k",
-                "duration": 2037,
-                "title": "a decade of wearing vintage and historical clothing daily",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=g0jVcL-WdR4",
-                "duration": 2635,
-                "title": "Whatever Happened to Princess Beatrice's Wedding Dress? The Vintage Gown Queen Elizabeth II Lent Her",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KeLVMc3CTVk",
-                "duration": 1528,
-                "title": "Vintage Fashion Radical Values",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=X0aCr1jr3Ww",
-                "duration": 1752,
-                "title": "Why I Don't Wear Vintage Anymore (a closet purge!)",
-                "skip": [
-                    [
-                        1244.4,
-                        1282.9
-                    ],
-                    [
-                        1679.0,
-                        1688.2
-                    ]
-                ],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4fZmUj_95WY",
-                "duration": 1002,
-                "title": "How to Identify Vintage Clothing- What Era is it From??",
-                "skip": [
-                    [
-                        101.9,
-                        155.0
-                    ]
-                ],
-                "skip_checked": 1793743834
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Bet2YiPcbA",
-                "duration": 797,
-                "title": "Plus Size Fashion Through the Decades: Uncovering Survival Bias",
-                "skip": [],
-                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=ROU1r-CRrsE",
@@ -136,220 +26,75 @@
                 "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=c3YOz3ZdtUI",
-                "duration": 2142,
-                "title": "THE ULTIMATE FASHION HISTORY: The 1900s",
+                "url": "https://www.youtube.com/watch?v=nRmsX685pQY",
+                "duration": 1967,
+                "title": "The (ancient) History of Modern Fashion Trends",
+                "skip": [
+                    [
+                        202.0,
+                        314.0
+                    ]
+                ],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4fZmUj_95WY",
+                "duration": 1002,
+                "title": "How to Identify Vintage Clothing- What Era is it From??",
+                "skip": [
+                    [
+                        101.9,
+                        155.0
+                    ]
+                ],
+                "skip_checked": 1793743834
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xGaAwWg_edE",
+                "duration": 1047,
+                "title": "Fashion History 3: The 1930s: Escapism During The Great Depression",
                 "skip": [],
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=1rNqpqE-Xas",
-                "duration": 961,
-                "title": "Why LAURA ASHLEY is the Queen of Cottagecore 💐 Vintage Laura Ashley History",
+                "url": "https://www.youtube.com/watch?v=x0atlufYOhg",
+                "duration": 1209,
+                "title": "Explaining 1970s Fashion",
                 "skip": [],
-                "skip_checked": 1793309401
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=7uX-F2oLk1U",
-                "duration": 1094,
-                "title": "All About Vintage Lingerie: History, Terms, and Some of Our Favorite Vintage Lingerie Designers",
-                "skip": [],
-                "skip_checked": 1793049429
+                "url": "https://www.youtube.com/watch?v=ho6OloxLh_0",
+                "duration": 790,
+                "title": "The Actual Origins Of Clothing",
+                "skip": [
+                    [
+                        23.0,
+                        35.2
+                    ]
+                ],
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=O_TxkFDcLUg",
-                "duration": 483,
-                "title": "Is It VINTAGE? Clothing Tags and Labels",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ELCCHSb8gEg",
-                "duration": 877,
-                "title": "This 13-Year-Old Refuses to Wear Modern Clothes Episode 38",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WhmxbMmasIg",
-                "duration": 369,
-                "title": "100 years History of Fashion (1900s - 2000s) Evolution of Women’s Fashion through the 20th century",
-                "skip": [],
-                "skip_checked": 1793222925
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=a1CosehYHWc",
-                "duration": 854,
-                "title": "Paris, The City of Fashion (1950s) | Vintage Fashions",
+                "url": "https://www.youtube.com/watch?v=KeLVMc3CTVk",
+                "duration": 1528,
+                "title": "Vintage Fashion Radical Values",
                 "skip": [],
                 "skip_checked": 1792956294
             },
             {
-                "url": "https://www.youtube.com/watch?v=arY629axo1E",
-                "duration": 703,
-                "title": "The Fascination of Nylon Stockings",
+                "url": "https://www.youtube.com/watch?v=g_bk7HdP2cc",
+                "duration": 413,
+                "title": "How Women Really Dressed for Winter, 1900–1960",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=ouFRQGl_A0I",
-                "duration": 286,
-                "title": "I'm a Vintage Clothing Dealer  | Behind the Seams★ Glam.com",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=7rbatdzoA7c",
-                "duration": 2530,
-                "title": "Marella Agnelli & Valentino: The Making of a 1950s Fashion Icon",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mKBDvST_idg",
-                "duration": 519,
-                "title": "Surprising Benefits of Wearing Historical Fashion Every Day",
-                "skip": [
-                    [
-                        230.7,
-                        352.7
-                    ]
-                ],
-                "skip_checked": 1793309401
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TeUx7wqcxqM",
-                "duration": 1049,
-                "title": "Why Are We So Obsessed With Vintage? | The History Of Thrifting 🛍️",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-vXaZ50k2yc",
-                "duration": 563,
-                "title": "Vintage Style Guide: The History of Fashion in the 1930s",
-                "skip": [],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=remc6xSlWs8",
-                "duration": 720,
-                "title": "THE FASHION OF THE 1920'S - FASHION HISTORY SESSIONS",
-                "skip": [],
-                "skip_checked": 1793917727
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=gX-OML9Qh4Q",
-                "duration": 2287,
-                "title": "25 Forgotten 1950s Fashion Pieces Back in Style",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=P46kjGfxt_0",
-                "duration": 445,
-                "title": "The Evolution of Women’s Stockings: 1900s to 1960s",
-                "skip": [],
-                "skip_checked": 1794608374
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=pDGZ2OgV0hE",
-                "duration": 929,
-                "title": "The ULTIMATE GUIDE to THRIFTING VINTAGE (+How to make modern clothes LOOK vintage!)",
+                "url": "https://www.youtube.com/watch?v=Ab7OqEzm4M4",
+                "duration": 2902,
+                "title": "A COMPREHENSIVE GUIDE TO VINTAGE || how to figure out what era vintage clothing is with examples",
                 "skip": [],
                 "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=he7XlB8GZz4",
-                "duration": 1408,
-                "title": "What We Each Wear in a Week: 3 Daily Historical Fashion Wearers",
-                "skip": [
-                    [
-                        467.0,
-                        533.0
-                    ]
-                ],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=W0qjjHyh26M",
-                "duration": 1547,
-                "title": "100 Years of Women's Fashion Evolution | 1900–2000 (Full Compilation)",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=B3r63ZSwBUY",
-                "duration": 1556,
-                "title": "The ultimate 60s & 70s Shoe Guide I Vintage Shoes I History of Shoes",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=L5aM2gYi9fA",
-                "duration": 1251,
-                "title": "LESBIAN FASHION HISTORY | Patricia Field, club royalty, NYC Ballroom, and SATC",
-                "skip": [],
-                "skip_checked": 1794608374
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=WS1F21yDe7A",
-                "duration": 1300,
-                "title": "5 Workwear Essentials: History, Styling & Why They've Lasted 100+ Years",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=65XgYthn2kY",
-                "duration": 586,
-                "title": "Fashion History Myths Are Kinda Sexist",
-                "skip": [
-                    [
-                        144.8,
-                        268.9
-                    ]
-                ],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=u84hGZGQiFM",
-                "duration": 1910,
-                "title": "I Have 100 Years of Antique Shoes : Fashion Historians Collection",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ihjHB13x0Hs",
-                "duration": 773,
-                "title": "Vintage & Fashion History People on Instagram I Consider Worth Stalking",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=GEu_pX8FNpI",
-                "duration": 1659,
-                "title": "The Packed History of Travel Clothing - Victorian Capsule Wardrobes",
-                "skip": [
-                    [
-                        255.6,
-                        366.6
-                    ]
-                ],
-                "skip_checked": 1793663159
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D5w_ScczvL0",
-                "duration": 2212,
-                "title": "I Wore a 1920s Capsule Wardrobe for a Month: Vintage Cruise Reveal",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9n7wHjrU9Dk",
-                "duration": 1276,
-                "title": "Letting My Boyfriend Control My Vintage Wardrobe (7 Outfits!)",
-                "skip": [],
-                "skip_checked": 1794083847
             },
             {
                 "url": "https://www.youtube.com/watch?v=XHEt1X8dc3A",
@@ -359,51 +104,39 @@
                 "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=3oWPMLiHbFQ",
-                "duration": 328,
-                "title": "Inside New York's Most Exclusive Vintage Shop",
+                "url": "https://www.youtube.com/watch?v=3Bet2YiPcbA",
+                "duration": 797,
+                "title": "Plus Size Fashion Through the Decades: Uncovering Survival Bias",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=pqQo0AccOsc",
-                "duration": 485,
-                "title": "Forties Fashions - Everyday Women's Clothing in 1940s USA [COLORIZED]",
+                "url": "https://www.youtube.com/watch?v=remc6xSlWs8",
+                "duration": 720,
+                "title": "THE FASHION OF THE 1920'S - FASHION HISTORY SESSIONS",
                 "skip": [],
-                "skip_checked": 1792786230
+                "skip_checked": 1793917727
             },
             {
-                "url": "https://www.youtube.com/watch?v=oaPsJQXSf0E",
-                "duration": 887,
-                "title": "My Vintage Fashion Inspirations (1950s-1960s) | Carolina Pinglo",
+                "url": "https://www.youtube.com/watch?v=-vXaZ50k2yc",
+                "duration": 563,
+                "title": "Vintage Style Guide: The History of Fashion in the 1930s",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=2gU06pKmFj8",
-                "duration": 502,
-                "title": "My Vintage Summer Wardrobe (2 Years After It Was Stolen ☠️)",
-                "skip": [
-                    [
-                        140.4,
-                        183.0
-                    ]
-                ],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=8FvDJJfkBvA",
+                "duration": 520,
+                "title": "1920s Fashion Encyclopedia, Pt 1: Daywear",
+                "skip": [],
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=Gr6gsNg5s9U",
-                "duration": 1200,
-                "title": "SPEAKING of FASHION: Fashion and The Tiki Craze",
+                "url": "https://www.youtube.com/watch?v=iqZLbQvk9_I",
+                "duration": 1105,
+                "title": "Explaining 1960s Fashion",
                 "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=NK7Z-3VR71w",
-                "duration": 409,
-                "title": "THE HISTORY OF LIZ CLAIBORNE | A RESELLER'S GUIDE TO VINTAGE LIZ CLAIBORNE",
-                "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
                 "url": "https://www.youtube.com/watch?v=syGN9FqDwUM",
@@ -422,11 +155,137 @@
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=gmYxCa6Mb7s",
-                "duration": 449,
-                "title": "Unboxing Deadstock Vintage Clothing From Mongomery Ward! Sealed Since 1970!",
+                "url": "https://www.youtube.com/watch?v=pDGZ2OgV0hE",
+                "duration": 929,
+                "title": "The ULTIMATE GUIDE to THRIFTING VINTAGE (+How to make modern clothes LOOK vintage!)",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fHpbch0rb-c",
+                "duration": 1360,
+                "title": "The Ugliest Dress In Fashion History (That Bridgerton Got Wrong)",
+                "skip": [
+                    [
+                        174.8,
+                        244.1
+                    ],
+                    [
+                        1354.1,
+                        1360.0
+                    ]
+                ],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=wzpz59cw6B8",
+                "duration": 1884,
+                "title": "Tips for Achieving Historical Styles with Modern Clothes",
+                "skip": [
+                    [
+                        55.1,
+                        115.3
+                    ]
+                ],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_AiJFhoEvqE",
+                "duration": 656,
+                "title": "Weird Fashion Trends Throughout History",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EM5US2zEmUU",
+                "duration": 3391,
+                "title": "A Black History of Style",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2VSz5G_qeS8",
+                "duration": 810,
+                "title": "19th Century Fashion - How To Tell Different Decades Apart?",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=WhmxbMmasIg",
+                "duration": 369,
+                "title": "100 years History of Fashion (1900s - 2000s) Evolution of Women’s Fashion through the 20th century",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=c3YOz3ZdtUI",
+                "duration": 2142,
+                "title": "THE ULTIMATE FASHION HISTORY: The 1900s",
+                "skip": [],
+                "skip_checked": 1793663159
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z9b2lY3pxnY",
+                "duration": 883,
+                "title": "1940's FASHION- FASHION HISTORY SESSIONS",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FdbNABYmD0c",
+                "duration": 676,
+                "title": "1930s Details - A Style Guide",
                 "skip": [],
                 "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0XdJomqqD84",
+                "duration": 287,
+                "title": "American Pickers: Vintage Levi's Jeans Collection is 90-Years-Old (Season 17) | History",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=EgPBziX3ymQ",
+                "duration": 394,
+                "title": "What is \"vintage\" clothing?",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8gJs84kKzdc",
+                "duration": 301,
+                "title": "Conserving a Rare 360-Year-Old Dress | The Silver Tissue Dress",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mf6FfIiIA80",
+                "duration": 1804,
+                "title": "What Women REALLY Wore in The 1920s (Part 1) || Fashion Archaeology Ep. 3",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MCxx-ffyExM",
+                "duration": 1161,
+                "title": "1920s Fashion Is Not What You Think It Is",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1rNqpqE-Xas",
+                "duration": 961,
+                "title": "Why LAURA ASHLEY is the Queen of Cottagecore 💐 Vintage Laura Ashley History",
+                "skip": [],
+                "skip_checked": 1793309401
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KvUcPSRDoQ0",
+                "duration": 1041,
+                "title": "100+ Years of Halloween Costumes: A History 🎃",
+                "skip": [],
+                "skip_checked": 1795130505
             },
             {
                 "url": "https://www.youtube.com/watch?v=ENO2rYroPIs",
@@ -441,25 +300,51 @@
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=KsVsnSLY7TE",
-                "duration": 528,
-                "title": "How I Create 1930s Looks On A Budget",
+                "url": "https://www.youtube.com/watch?v=6q-oh1RWS9s",
+                "duration": 2009,
+                "title": "Ralph Lauren 101: History and Pre-Owned Buyer's Guide to America's Most Iconic Brand",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=DrJsX047EdE",
-                "duration": 1127,
-                "title": "HISTORY in COLOR: The 1930s",
+                "url": "https://www.youtube.com/watch?v=AvfCVvm3xs4",
+                "duration": 976,
+                "title": "I Tested Old-School Fashion Hacks from History (WTF?!)",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=09cW4XppRvU",
-                "duration": 1437,
-                "title": "What It’s Like to Wear Historical Fashion as a Male ft. Vintagebursche",
+                "url": "https://www.youtube.com/watch?v=4E77JUTW9ds",
+                "duration": 2800,
+                "title": "Inside the Forgotten Origin of Lane Bryant: The Widow Who Invented Maternity Clothes in America",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ihjHB13x0Hs",
+                "duration": 773,
+                "title": "Vintage & Fashion History People on Instagram I Consider Worth Stalking",
                 "skip": [],
                 "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hiHJku0M7PM",
+                "duration": 2257,
+                "title": "HISTORY OF WESTERN FASHION:1700s to 2000s",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mKBDvST_idg",
+                "duration": 519,
+                "title": "Surprising Benefits of Wearing Historical Fashion Every Day",
+                "skip": [
+                    [
+                        230.7,
+                        352.7
+                    ]
+                ],
+                "skip_checked": 1793309401
             },
             {
                 "url": "https://www.youtube.com/watch?v=LbPw9AlVKVM",
@@ -474,123 +359,46 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=EAxQa3mz7CI",
-                "duration": 1910,
-                "title": "Inside a Celebrity-Favorite Vintage Boutique in Beverly Hills 👀",
+                "url": "https://www.youtube.com/watch?v=IlbAv-GhnMs",
+                "duration": 1042,
+                "title": "I Investigated Vintage Picking in the Deep South",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=dpxv6MvUr5M",
-                "duration": 845,
-                "title": "A Vintage Resellers Guide to Identifying Vintage Clothing - Ditch the Fast Fashion and Buy Vintage",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=X0aCr1jr3Ww",
+                "duration": 1752,
+                "title": "Why I Don't Wear Vintage Anymore (a closet purge!)",
+                "skip": [
+                    [
+                        1244.4,
+                        1282.9
+                    ],
+                    [
+                        1679.0,
+                        1688.2
+                    ]
+                ],
+                "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=3PR_kIazAr0",
-                "duration": 1368,
-                "title": "How Vivienne Westwood Made Vintage Fashion Work In The Modern Era",
-                "skip": [],
-                "skip_checked": 1794083847
+                "url": "https://www.youtube.com/watch?v=-EVWQGzxEwU",
+                "duration": 2098,
+                "title": "Why the Medieval Aesthetic Never Dies: The History of Medieval Revival Fashion",
+                "skip": [
+                    [
+                        122.1,
+                        251.9
+                    ]
+                ],
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=QQKQQ_mTKns",
-                "duration": 972,
-                "title": "5 'Buy It For Life' Clothing Items That Have Outlived 50 Years of Trends",
+                "url": "https://www.youtube.com/watch?v=ouFRQGl_A0I",
+                "duration": 286,
+                "title": "I'm a Vintage Clothing Dealer  | Behind the Seams★ Glam.com",
                 "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=y21prn7_xwM",
-                "duration": 499,
-                "title": "How Brides Dressed in the 1960s | Vintage Wedding Magazines",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FdbNABYmD0c",
-                "duration": 676,
-                "title": "1930s Details - A Style Guide",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5JeKAQq9uYc",
-                "duration": 1240,
-                "title": "Is refashioning and up-cycling clothing a new idea??? What vintage sewing books can tell us!",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=F0hj94eUrAU",
-                "duration": 879,
-                "title": "Banana Republic 101: History and Vintage Buyer's Guide to an American Mall Staple",
-                "skip": [],
-                "skip_checked": 1794608374
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QurbL9GNLFY",
-                "duration": 846,
-                "title": "How to Dress 1940s Style Using Modern Clothing: Vintage Fashion Tutorial #1940sinspired",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hcjgxgBvxAk",
-                "duration": 1662,
-                "title": "Toronto Vintage Clothing Show VLOG + The Biggest 1930s and 1940s Haul! | Carolina Pinglo",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=c5QLKdjiqA8",
-                "duration": 661,
-                "title": "Burda Spring Summer 1975 | Vintage Fashion Magazine Flip Through",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ovuJTmzAfDI",
-                "duration": 718,
-                "title": "Burda International 1976 Fall/Winter | Vintage Fashion Magazine Flip Through",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=OcOmKlBCWDs",
-                "duration": 1972,
-                "title": "1960s European vs American Fashion: A Tale of two Styles",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8MCjT_3Khms",
-                "duration": 366,
-                "title": "Extravagant English Catwalk Show (1956) | Vintage Fashions",
-                "skip": [],
-                "skip_checked": 1792956294
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=O2bcB8QCHXI",
-                "duration": 396,
-                "title": "SPEAKING of FASHION: The 1930s vs. The 1940s",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=tVxvJ1wdaAE",
-                "duration": 974,
-                "title": "How To Identify A True Vintage Dress  - 6 Tips With Pinup Miss Lady Lace",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=IjI8TlvAFPA",
-                "duration": 368,
-                "title": "THE HISTORY OF TALBOTS | A RESELLER'S GUIDE TO VINTAGE TALBOTS",
-                "skip": [],
-                "skip_checked": 1793309401
+                "skip_checked": 1793663159
             },
             {
                 "url": "https://www.youtube.com/watch?v=3tkWceKNPww",
@@ -607,102 +415,144 @@
                 "skip_checked": 1793222925
             },
             {
-                "url": "https://www.youtube.com/watch?v=6rtxIKIzuDg",
-                "duration": 1017,
-                "title": "SOURCING FOR ST JOHN! BEHIND THE SCENES AS A VINTAGE SOURCER!",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=l9iM--Ej9m8",
-                "duration": 447,
-                "title": "Greasers 1950s fashion and Modern Rockabilly l Vintage Outfit Ideas l History of Fashion",
+                "url": "https://www.youtube.com/watch?v=VhrQunQYp5M",
+                "duration": 891,
+                "title": "Vintage barbie fashions of 1959 - the complete line",
                 "skip": [],
                 "skip_checked": 1794608374
             },
             {
-                "url": "https://www.youtube.com/watch?v=PeHF0Bn0Z7E",
-                "duration": 1688,
-                "title": "Fire Fashion Finds at The Manhattan Vintage Show 2026",
+                "url": "https://www.youtube.com/watch?v=VZnmi8BK6HE",
+                "duration": 3678,
+                "title": "20 Iconic 1970s Fashion Fads We’ll Never Forget!",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=RAj8Qkn6yn4",
-                "duration": 401,
-                "title": "1950s   FASHION",
+                "url": "https://www.youtube.com/watch?v=IjI8TlvAFPA",
+                "duration": 368,
+                "title": "THE HISTORY OF TALBOTS | A RESELLER'S GUIDE TO VINTAGE TALBOTS",
                 "skip": [],
                 "skip_checked": 1793309401
             },
             {
-                "url": "https://www.youtube.com/watch?v=AvfCVvm3xs4",
-                "duration": 976,
-                "title": "I Tested Old-School Fashion Hacks from History (WTF?!)",
+                "url": "https://www.youtube.com/watch?v=7EEDopqKIwk",
+                "duration": 916,
+                "title": "American vs French Workwear",
                 "skip": [],
-                "skip_checked": 1793663159
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=IMfdZuYeztk",
-                "duration": 483,
-                "title": "1940s Style - What Women Wore in 1940s America",
+                "url": "https://www.youtube.com/watch?v=F4lQ_sLuVOU",
+                "duration": 362,
+                "title": "Why Does All Vintage Clothing Look So Expensive?",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ntcmC4WKBJs",
+                "duration": 1472,
+                "title": "The History of Fashion Through The Decades (1900s-2020s)",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TeUx7wqcxqM",
+                "duration": 1049,
+                "title": "Why Are We So Obsessed With Vintage? | The History Of Thrifting 🛍️",
+                "skip": [],
+                "skip_checked": 1794083847
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fjyB6RlANMs",
+                "duration": 3022,
+                "title": "Whatever Happened to Catherine Walker? The Designer Behind Diana's Most Elegant 1990s Gowns",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=OcOmKlBCWDs",
+                "duration": 1972,
+                "title": "1960s European vs American Fashion: A Tale of two Styles",
                 "skip": [],
                 "skip_checked": 1793049429
             },
             {
-                "url": "https://www.youtube.com/watch?v=mS1Ux7rgZk4",
-                "duration": 396,
-                "title": "Vintage clothes Of The 70’s",
+                "url": "https://www.youtube.com/watch?v=xk8QD-PzFU8",
+                "duration": 1668,
+                "title": "Explaining 1960s Menswear",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TPNw8fFHLIQ",
+                "duration": 635,
+                "title": "How I Source Vintage Clothing Worldwide (After 30,000+ Sales)",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=stUZ4ibtKIo",
+                "duration": 1496,
+                "title": "What Men REALLY Wore in the 1930s",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=b_SC2OLpSoc",
+                "duration": 863,
+                "title": "100 Years of Fashionable Womenswear: 1830s – 1930s | V&A",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8BPxgu3XGTo",
+                "duration": 2288,
+                "title": "I Bought the SAME CLOTHES from Different Decades",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9IrGjrCOvXo",
+                "duration": 1267,
+                "title": "These Horrifying Victorian Fashion Trends Actually KILLED People...",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZMJjSoQFW6I",
+                "duration": 1549,
+                "title": "⊹₊ ULTIMATE GUIDE TO 80s FASHION ☆ 80s Subcultures & Celebrity Fashion Icons ₊⊹",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=G-SJAtiBEL4",
+                "duration": 2871,
+                "title": "Whatever Happened to Jonathan Logan? The Dress Label Every 1960s American Woman Had in Her Closet",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Dzzh4pQt_2M",
+                "duration": 1006,
+                "title": "How Did Victorian Ladies Stay Warm in Winter? || THE EXPERIMENT",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D5w_ScczvL0",
+                "duration": 2212,
+                "title": "I Wore a 1920s Capsule Wardrobe for a Month: Vintage Cruise Reveal",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=FtJKwoXT7OQ",
-                "duration": 2628,
-                "title": "500 Years of Chinese Fashion ft. Laurence Wen-Yu Li",
+                "url": "https://www.youtube.com/watch?v=o6F_kHN6lyA",
+                "duration": 1169,
+                "title": "1950s Fashion Is Not What You Think It Is",
                 "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=hiY9TUuj1nI",
-                "duration": 672,
-                "title": "Plus size 70s Fashion History | Plus size Vintage haul | Retro inspired outfits",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4wJps0xsC-8",
-                "duration": 1087,
-                "title": "1916–1917 Vintage Fashion Catalog | A Treasured Family Heirloom",
-                "skip": [],
-                "skip_checked": 1794083847
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Nh5ASOiYo2Q",
-                "duration": 376,
-                "title": "Early 1920s/Edwardian Menswear Lookbook",
-                "skip": [],
-                "skip_checked": 1794608374
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=0XdJomqqD84",
-                "duration": 287,
-                "title": "American Pickers: Vintage Levi's Jeans Collection is 90-Years-Old (Season 17) | History",
-                "skip": [],
-                "skip_checked": 1792786230
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=EohrygA8jqA",
-                "duration": 427,
-                "title": "1950s capsule wardrobe | The sewing patterns you need!",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KEex1iCxV6c",
-                "duration": 534,
-                "title": "Vintage Barbie fashions of 1962 - the complete line",
-                "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
                 "url": "https://www.youtube.com/watch?v=ACrD7WaKXDc",
@@ -712,70 +562,249 @@
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=VhrQunQYp5M",
-                "duration": 891,
-                "title": "Vintage barbie fashions of 1959 - the complete line",
-                "skip": [],
-                "skip_checked": 1794608374
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=cbOcreeuN-c",
-                "duration": 729,
-                "title": "My Vintage Military Collection",
+                "url": "https://www.youtube.com/watch?v=9n7wHjrU9Dk",
+                "duration": 1276,
+                "title": "Letting My Boyfriend Control My Vintage Wardrobe (7 Outfits!)",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=mabduZd4Csc",
-                "duration": 493,
-                "title": "Punk Fashion History and Style",
+                "url": "https://www.youtube.com/watch?v=65XgYthn2kY",
+                "duration": 586,
+                "title": "Fashion History Myths Are Kinda Sexist",
+                "skip": [
+                    [
+                        144.8,
+                        268.9
+                    ]
+                ],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7IP5zAefiiQ",
+                "duration": 265,
+                "title": "100 Years of French Fashion | Glamour",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KQ7mrJuLykg",
+                "duration": 2775,
+                "title": "the controversial history of chanel 👜🖤💸",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=he7XlB8GZz4",
+                "duration": 1408,
+                "title": "What We Each Wear in a Week: 3 Daily Historical Fashion Wearers",
+                "skip": [
+                    [
+                        467.0,
+                        533.0
+                    ]
+                ],
+                "skip_checked": 1792956294
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XrRxu5bMcC0",
+                "duration": 1067,
+                "title": "How I Survive Winter Wearing Only Historical Clothing (ft. Some VOLGA TATAR FASHION!)",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DrJsX047EdE",
+                "duration": 1127,
+                "title": "HISTORY in COLOR: The 1930s",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=Vpfia4aJVl0",
-                "duration": 489,
-                "title": "French Fashion Staples That Are Actually Vintage",
+                "url": "https://www.youtube.com/watch?v=H0CgqOfrDgg",
+                "duration": 1533,
+                "title": "What Men REALLY Wore in the 1960s",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TDs-X-iOeSg",
+                "duration": 1281,
+                "title": "A day in 1882, getting dressed from dawn till night",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sJmRgC4ZKzo",
+                "duration": 1375,
+                "title": "How 1940s Fashion Survived WW2 🔧",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=cVM9wAtQOug",
+                "duration": 437,
+                "title": "HOW TO IDENTIFY VINTAGE T-SHIRTS / Do's & Don'ts",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jnHRVhPEKIg",
+                "duration": 725,
+                "title": "The Rarest Vintage in Los Angeles - LA Vintage Rendezvous Bidstitch Vlog",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=20AxWHvIGxo",
+                "duration": 386,
+                "title": "A History of the Fashion Show Front Row (1950s to Now) | Vogue",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=dpxv6MvUr5M",
+                "duration": 845,
+                "title": "A Vintage Resellers Guide to Identifying Vintage Clothing - Ditch the Fast Fashion and Buy Vintage",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=q8fv27Kgql8",
-                "duration": 4252,
-                "title": "How Vintage Clothing Shaped Tremaine Emory and Denim Tears",
+                "url": "https://www.youtube.com/watch?v=Tn5fzidDZTQ",
+                "duration": 1731,
+                "title": "How Experts Instantly Identify and Date Vintage Clothing",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=drInAGf5ogY",
+                "duration": 571,
+                "title": "1950s Fashion Revolution: How World War II Changed Style Forever",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oaPsJQXSf0E",
+                "duration": 887,
+                "title": "My Vintage Fashion Inspirations (1950s-1960s) | Carolina Pinglo",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=w4cvhppZ7iM",
-                "duration": 823,
-                "title": "Hysteric Glamour: Japan’s Rock ’n’ Roll Fashion Cult",
+                "url": "https://www.youtube.com/watch?v=09cW4XppRvU",
+                "duration": 1437,
+                "title": "What It’s Like to Wear Historical Fashion as a Male ft. Vintagebursche",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=TUj1jfGnR9s",
+                "duration": 1467,
+                "title": "Carhartt: how workwear changed the way we dress",
+                "skip": [
+                    [
+                        1402.8,
+                        1415.5
+                    ]
+                ],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=8flNNO0XUuU",
+                "duration": 2876,
+                "title": "Inside the Forgotten Origin of Talbots: The Red Door Store Every New England Woman Trusted",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6rtxIKIzuDg",
+                "duration": 1017,
+                "title": "SOURCING FOR ST JOHN! BEHIND THE SCENES AS A VINTAGE SOURCER!",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j5gKFxPdNKQ",
+                "duration": 563,
+                "title": "Fashion Through History: Episode 6 – The 1940s",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=O_TxkFDcLUg",
+                "duration": 483,
+                "title": "Is It VINTAGE? Clothing Tags and Labels",
+                "skip": [],
+                "skip_checked": 1793917727
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=pqQo0AccOsc",
+                "duration": 485,
+                "title": "Forties Fashions - Everyday Women's Clothing in 1940s USA [COLORIZED]",
+                "skip": [],
+                "skip_checked": 1792786230
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=PUn5_00YTL0",
+                "duration": 618,
+                "title": "100 Years of Fashion Trends | 1922 - 2022",
+                "skip": [],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KEex1iCxV6c",
+                "duration": 534,
+                "title": "Vintage Barbie fashions of 1962 - the complete line",
                 "skip": [],
                 "skip_checked": 1794083847
             },
             {
-                "url": "https://www.youtube.com/watch?v=Ymvzi8S4YVI",
-                "duration": 706,
-                "title": "Vintage Fashion Treasures That Leave Experts & Owners Astonished | Antiques Roadshow UK",
+                "url": "https://www.youtube.com/watch?v=xmaqrw6GJPM",
+                "duration": 459,
+                "title": "How to see vintage Levi's 501s | FASHION AS DESIGN",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=7Bf42WYmjyY",
-                "duration": 2450,
-                "title": "EPISODE 74: Vintage Fashion & Haunted History in Downtown Fargo",
+                "url": "https://www.youtube.com/watch?v=NkSSyUFo-TE",
+                "duration": 1694,
+                "title": "⊹₊ ULTIMATE GUIDE TO 2000s FASHION ☆ 2000s Subcultures & Celebrity Fashion Icons ₊⊹",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
             },
             {
-                "url": "https://www.youtube.com/watch?v=Gw2DkJJ_0ow",
-                "duration": 4013,
-                "title": "Fabulous Vintage Fashion Show",
+                "url": "https://www.youtube.com/watch?v=6d_Zd26VDsg",
+                "duration": 380,
+                "title": "What is Heritage Fashion? | SON OF A STAG",
                 "skip": [],
-                "skip_checked": 1794083847
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xOgzSOuRVWU",
+                "duration": 448,
+                "title": "Why 2000’s Fashion Was Better",
+                "skip": [
+                    [
+                        418.5,
+                        447.1
+                    ]
+                ],
+                "skip_checked": 1795130505
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ABRaUlJBcsY",
+                "duration": 1655,
+                "title": "VINTAGE Preppy vs NEW Preppy",
+                "skip": [
+                    [
+                        1122.1,
+                        1136.5
+                    ]
+                ],
+                "skip_checked": 1795130505
             }
         ],
         "search_query": "vintage fashion history",
-        "last_refreshed": 1794083835
+        "last_refreshed": 1795130479
     }
 }
