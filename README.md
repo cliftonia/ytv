@@ -12,8 +12,19 @@ It runs on a television in a lounge room and on a Chromecast in a car, and it ne
 running anywhere.
 
 <p align="center">
-  <img src="docs/screenshots/tuning.png" alt="Channel 04 Soccer tuning in behind analogue static, with the clip title in green along the top" width="80%">
+  <img src="docs/screenshots/engineering-aviation.jpg" alt="Channel 34, Engineering and Aviation, mid-way through a documentary about an airliner, with the channel banner in green" width="49%">
+  <img src="docs/screenshots/guide.jpg" alt="The channel guide listing channels 28 to 40 with what is on now and next" width="49%">
+  <img src="docs/screenshots/classical-music.jpg" alt="Channel 74, Classical Music, a choir performing live" width="49%">
+  <img src="docs/screenshots/nhk-sumo.jpg" alt="Channel 111, NHK World, live grand sumo" width="49%">
 </p>
+
+## Screenshots
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/france24.jpg" width="300" alt="Channel 108, France 24, live news with its ticker"><br>Live news | <img src="docs/screenshots/sport.jpg" width="300" alt="Channel 1, a fight night on the sport channels"><br>Sport | <img src="docs/screenshots/ambient.jpg" width="300" alt="Channel 75, Ambient, a lo-fi mix"><br>Ambient |
+| <img src="docs/screenshots/guide-sport.jpg" width="300" alt="The guide on the sport channels, 1 to 12, with each one's current and next item"><br>Guide: sport | <img src="docs/screenshots/guide-music.jpg" width="300" alt="The guide on the music channels, blues to 1940s"><br>Guide: music | <img src="docs/screenshots/guide-live-news.jpg" width="300" alt="The guide on the live news channels, ABC, Al Jazeera, France 24, DW, Euronews and NHK"><br>Guide: live news |
+| <img src="docs/screenshots/static.jpg" width="300" alt="Channel 34 tuning in behind analogue static"><br>Flipping channels | <img src="docs/screenshots/stand-by.jpg" width="300" alt="Colour bars with Please Stand By, shown when a channel has no picture"><br>When a channel has no picture | |
 
 ## How it works
 
