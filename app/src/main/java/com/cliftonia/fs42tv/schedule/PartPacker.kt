@@ -9,8 +9,8 @@ package com.cliftonia.fs42tv.schedule
  * a seed that changed with the date would change how much of a gap was filled, and with it the
  * ten-minute cap, where every later programme starts, and the cycle itself.
  *
- * The rules (see docs/superpowers/specs/2026-09-23-schedule-and-skips-design.md, as amended after
- * measuring the real lineup: the first packer left 14.6% of all airtime as cards):
+ * The rules (as amended after measuring the real lineup: the first packer left 14.6% of all
+ * airtime as cards):
  * - A programme starts on a :00/:30 boundary, or straight after the item before it when the gap
  *   it would otherwise leave is too long to be a card ([CARD_CAP]).
  * - After a programme, the gap to the next boundary is filled largest first (to the minute, the
