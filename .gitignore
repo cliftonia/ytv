@@ -21,3 +21,4 @@ HANDOVER.md
 
 # Scratch worktrees, not part of the app.
 .claude/worktrees/
+*.bak
