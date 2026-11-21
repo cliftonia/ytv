@@ -1,11 +1,19 @@
 # YTV
 
+[![lineup](https://github.com/cliftonia/ytv/actions/workflows/lineup.yml/badge.svg)](https://github.com/cliftonia/ytv/actions/workflows/lineup.yml)
+[![canary](https://github.com/cliftonia/ytv/actions/workflows/canary.yml/badge.svg)](https://github.com/cliftonia/ytv/actions/workflows/canary.yml)
+![Kotlin](https://img.shields.io/badge/Kotlin-Android%20TV-7F52FF)
+
 A retro cable-TV dial for Android TV. Around 130 channels of YouTube clips and live news, each
 one playing at the offset the wall clock implies — tune to channel 34 at a quarter past eight and
 you join whatever "should" be airing, partway through. Flip up, flip down, no menus, no browsing.
 
 It runs on a television in a lounge room and on a Chromecast in a car, and it needs nothing else
 running anywhere.
+
+<p align="center">
+  <img src="docs/screenshots/tuning.png" alt="Channel 04 Soccer tuning in behind analogue static, with the clip title in green along the top" width="80%">
+</p>
 
 ## How it works
 
