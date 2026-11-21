@@ -41,6 +41,13 @@ class DeviceResolver(
      * Asked per resolve instead, on the executor; [AndroidDecoders] caches, so it walks once.
      */
     private val decoders: () -> DecoderSupport = { AndroidDecoders.support() },
+    /**
+     * Told why an extraction threw, before the failure becomes null. The television has no use
+     * for it - null is the whole answer there - but the daily canary does: a YouTube bot check on
+     * a datacentre IP and an extractor that no longer understands YouTube both end in null, and
+     * only the exception tells them apart. Defaulted to nothing so no other caller notices it.
+     */
+    private val onExtractionFailure: (videoId: String, error: Throwable) -> Unit = { _, _ -> },
 ) : ClipResolver {
 
     override fun resolveDetailed(
@@ -62,6 +69,7 @@ class DeviceResolver(
         }
         val info = attempt.getOrElse {
             Log.w("fs42", "resolve failed for $videoId: $it")
+            onExtractionFailure(videoId, it)
             return null
         }
 

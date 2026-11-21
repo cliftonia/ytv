@@ -133,6 +133,13 @@ there is a test for it:
 It resolves real videos against the real YouTube. If it fails, bump the NewPipeExtractor version
 in `app/build.gradle.kts`.
 
+The `canary` workflow runs the unattended version of this every morning and prints why each clip
+failed, ending with `canary-verdict: ok|blocked|broken`. Only `broken` - the extractor itself
+failing - counts towards the "YouTube playback canary failing" issue. `blocked` means YouTube
+bot-checked the GitHub runner's datacentre IP, which says nothing about the televisions; it stays
+green, and only a week of it in a row opens the separate "Canary inconclusive: runner IP blocked"
+issue, which is the cue to run the check above from home.
+
 ## Prior art
 
 The scheduling idea and the original channel definitions come from

@@ -9,17 +9,35 @@ name: canary
 # version of this check (DeviceResolverLiveCheck); this runs the unattended one
 # (app/src/test/.../resolver/ResolverCanary.kt, skipped unless YTV_CANARY=1) every morning.
 #
-# FALSE ALARMS: GitHub's runners are datacentre IPs, and YouTube treats those differently from a
-# home connection - bot checks, "sign in to confirm", throttling - so a runner can fail to resolve
-# clips a television would play fine. One bad morning is therefore NOT an alert. The issue opens
-# only after TWO CONSECUTIVE scheduled runs fail. The streak is a single number kept in the Actions
-# cache (the simplest state that survives between runs without a commit or a token that can write
-# code): restored from the newest `canary-streak-*` entry, saved under this run's id. If the cache
+# THREE ANSWERS, NOT TWO: GitHub's runners are datacentre IPs, and YouTube treats those differently
+# from a home connection - bot checks, "sign in to confirm", captchas - so a runner can fail to
+# resolve clips a television would play fine. That went on for two months (September to November
+# 2026) with this job red every morning, while the same clips resolved from home. So the canary
+# now prints why each clip failed and ends with one line, `canary-verdict: ok|blocked|broken`:
+#   ok      - enough clips resolved.
+#   blocked - too few resolved, and YouTube said why: it refused the asker. That is about this
+#             runner's IP, not the extractor, so it is a warning and a job summary, and the run
+#             stays GREEN. It does not move the outage streak either way: a morning YouTube would
+#             not talk to us says nothing about whether the code still works.
+#   broken  - too few resolved for any other reason (a parse error, nothing playable, a missing
+#             verdict because the build itself failed). This is the outage this job exists for.
+# An unclear morning (some clips blocked, some broken) is "broken" - see CanaryVerdict.verdict.
+#
+# FALSE ALARMS: one broken morning is still NOT an alert. The outage issue opens only after TWO
+# CONSECUTIVE scheduled runs are broken. The streak is a single number kept in the Actions cache
+# (the simplest state that survives between runs without a commit or a token that can write
+# code): restored from the newest `canary-state-*` entry, saved under this run's id. If the cache
 # is ever evicted (7 days unused, which a daily job never is) the streak restarts at zero - the
 # safe direction, one day late rather than one false alarm early.
 #
-# Manual runs (workflow_dispatch) are for checking by hand after a fix: a pass resets the streak
-# and closes the issue; a failure is shown but not counted, so a burst of retries cannot turn one
+# BLIND SPOT: a canary that is blocked every day is not checking anything. A second number in the
+# same cache counts consecutive blocked scheduled runs; at seven (a week of not knowing) a separate,
+# lower-priority issue - "Canary inconclusive: runner IP blocked" - is opened, and commented on
+# again each further week. The run is still green: nothing is known to be broken. The fix for that
+# issue is a check from somewhere YouTube will talk to (the README's live check, from home).
+#
+# Manual runs (workflow_dispatch) are for checking by hand after a fix: a pass resets both streaks
+# and closes both issues; a failure is shown but not counted, so a burst of retries cannot turn one
 # bad day into an alert.
 
 on:
@@ -76,6 +94,9 @@ jobs:
           PY
 
       - name: Resolve them as a television would
+        # Always exits 0 with a verdict output; the verdict, not the exit code, is the answer. The
+        # test prints `canary-verdict: ...` itself. No such line (the build failed, the test never
+        # ran) counts as broken, and so does a "pass" that contradicts the exit code.
         id: canary
         continue-on-error: true
         env:
@@ -87,36 +108,74 @@ jobs:
           status=$?
           grep -E 'canary' canary.log | grep -v 'Gradle Test Executor'
           tail -n 20 canary.log
-          exit $status
+          verdict="$(grep -oE 'canary-verdict: (ok|blocked|broken)' canary.log | tail -n 1 | cut -d' ' -f2)"
+          if [ -z "$verdict" ] || { [ "$verdict" = "ok" ] && [ "$status" -ne 0 ]; }; then
+            verdict=broken
+          fi
+          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"
+          {
+            echo "### YouTube canary: $verdict"
+            echo
+            echo '```'
+            grep -E '^ *canary' canary.log | sed 's/^ *//'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Recall the streak
+        # `canary-state-*`, not the old `canary-streak-*`: that streak counted the two months of
+        # blocked mornings as outages (it stood at 59), and carrying it over would let a single
+        # broken morning raise the alert. The new state starts at zero, the safe direction.
         uses: actions/cache/restore@v4
         with:
           path: .canary
-          key: canary-streak-${{ github.run_id }}
-          restore-keys: canary-streak-
+          key: canary-state-${{ github.run_id }}
+          restore-keys: canary-state-
 
       - name: Count consecutive failing mornings
         id: streak
         env:
-          OUTCOME: ${{ steps.canary.outcome }}
+          VERDICT: ${{ steps.canary.outputs.verdict || 'broken' }}
           EVENT: ${{ github.event_name }}
         run: |
           mkdir -p .canary
           previous="$(cat .canary/streak 2>/dev/null || echo 0)"
           case "$previous" in ''|*[!0-9]*) previous=0 ;; esac
-          if [ "$OUTCOME" = "success" ]; then
-            streak=0
-          elif [ "$EVENT" = "schedule" ]; then
-            streak=$((previous + 1))
-          else
-            streak=$previous
-          fi
+          blocked_before="$(cat .canary/blocked 2>/dev/null || echo 0)"
+          case "$blocked_before" in ''|*[!0-9]*) blocked_before=0 ;; esac
+          streak=$previous
+          blocked=$blocked_before
+          case "$VERDICT" in
+            ok)
+              streak=0
+              blocked=0
+              ;;
+            blocked)
+              # Not evidence either way about the extractor, so the outage streak is left alone.
+              if [ "$EVENT" = "schedule" ]; then blocked=$((blocked_before + 1)); fi
+              ;;
+            *)
+              if [ "$EVENT" = "schedule" ]; then
+                streak=$((previous + 1))
+                blocked=0
+              fi
+              ;;
+          esac
           echo "$streak" > .canary/streak
+          echo "$blocked" > .canary/blocked
+          echo "verdict=$VERDICT" >> "$GITHUB_OUTPUT"
           echo "streak=$streak" >> "$GITHUB_OUTPUT"
-          echo "canary $OUTCOME on $EVENT; consecutive failing scheduled runs: $streak"
-          if [ "$OUTCOME" != "success" ] && [ "$streak" -lt 2 ]; then
-            echo "::warning::YouTube canary failed ($streak in a row). Not alerting until two scheduled runs fail - runner IPs are sometimes refused where a television is not."
+          echo "blocked=$blocked" >> "$GITHUB_OUTPUT"
+          echo "canary $VERDICT on $EVENT; consecutive broken scheduled runs: $streak; consecutive blocked: $blocked"
+          if [ "$VERDICT" = "blocked" ]; then
+            echo "::warning::YouTube refused this runner (bot check / sign-in / captcha), $blocked scheduled run(s) in a row. Inconclusive, not an outage - a television at home is not affected by this runner's IP."
+            {
+              echo
+              echo "**Blocked, not broken.** YouTube refused this runner's IP, so today says nothing"
+              echo "about whether the extractor still works. Consecutive blocked scheduled runs: $blocked."
+              echo "Outage streak left at $streak."
+            } >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$VERDICT" = "broken" ] && [ "$streak" -lt 2 ]; then
+            echo "::warning::YouTube canary broken ($streak in a row). Not alerting until two scheduled runs are broken."
           fi
 
       - name: Remember the streak
@@ -124,10 +183,10 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .canary
-          key: canary-streak-${{ github.run_id }}
+          key: canary-state-${{ github.run_id }}
 
       - name: Open or update the issue
-        if: steps.streak.outputs.streak >= 2
+        if: steps.streak.outputs.verdict == 'broken' && steps.streak.outputs.streak >= 2
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -138,7 +197,8 @@ jobs:
           existing="$(gh issue list --state open --limit 50 --json number,title \
             --jq '.[] | select(.title == "YouTube playback canary failing") | .number' | head -n 1)"
           {
-            echo "The on-device resolve canary has failed on $STREAK consecutive scheduled runs."
+            echo "The on-device resolve canary was broken (not merely blocked) on $STREAK consecutive"
+            echo "scheduled runs."
             echo
             echo "Run: $RUN_URL"
             echo
@@ -154,20 +214,56 @@ jobs:
             gh issue create --title "$title" --body-file body.md
           fi
 
-      - name: Close the issue once it passes again
-        if: steps.canary.outcome == 'success'
+      - name: Open or update the inconclusive issue
+        # Seven blocked mornings in a row: the canary has gone blind. Lower priority than the
+        # outage issue and kept separate from it, so closing one never hides the other. Commented
+        # on once a week after that, not every morning. Still green - nothing is known broken.
+        if: >-
+          github.event_name == 'schedule' && steps.streak.outputs.verdict == 'blocked' &&
+          steps.streak.outputs.blocked >= 7
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BLOCKED: ${{ steps.streak.outputs.blocked }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Canary inconclusive: runner IP blocked"
+          existing="$(gh issue list --state open --limit 50 --json number,title \
+            --jq '.[] | select(.title == "Canary inconclusive: runner IP blocked") | .number' | head -n 1)"
+          {
+            echo "YouTube has refused the canary's runner on $BLOCKED consecutive scheduled runs"
+            echo "(bot check, \"sign in to confirm\", or captcha), so the canary has not been able to"
+            echo "tell whether the extractor still works."
+            echo
+            echo "Run: $RUN_URL"
+            echo
+            echo "This is not an outage report. Run the README's \"When the dial goes quiet\" check"
+            echo "from a home connection to find out; this issue closes itself on the next run that"
+            echo "resolves."
+          } > body.md
+          if [ -z "$existing" ]; then
+            gh issue create --title "$title" --body-file body.md
+          elif [ $((BLOCKED % 7)) -eq 0 ]; then
+            gh issue comment "$existing" --body-file body.md
+          fi
+
+      - name: Close the issues once it passes again
+        if: steps.streak.outputs.verdict == 'ok'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          existing="$(gh issue list --state open --limit 50 --json number,title \
-            --jq '.[] | select(.title == "YouTube playback canary failing") | .number' | head -n 1)"
-          if [ -n "$existing" ]; then
-            gh issue close "$existing" --comment "Resolving again: $RUN_URL"
-          fi
+          for title in "YouTube playback canary failing" "Canary inconclusive: runner IP blocked"; do
+            existing="$(gh issue list --state open --limit 50 --json number,title \
+              --jq ".[] | select(.title == \"$title\") | .number" | head -n 1)"
+            if [ -n "$existing" ]; then
+              gh issue close "$existing" --comment "Resolving again: $RUN_URL"
+            fi
+          done
 
       - name: Fail the run when it is an alert
-        # Red in the Actions tab only once it is a real alert; a single bad morning is a warning.
-        if: steps.streak.outputs.streak >= 2
+        # Red in the Actions tab only once it is a real alert: two broken mornings. A single broken
+        # morning is a warning, and a blocked one is never red at all.
+        if: steps.streak.outputs.verdict == 'broken' && steps.streak.outputs.streak >= 2
         run: exit 1
