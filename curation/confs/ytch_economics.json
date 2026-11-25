@@ -7,6 +7,25 @@
         "stream_rotation": "clock",
         "streams": [
             {
+                "url": "https://www.youtube.com/watch?v=pIK8dB5BiHY",
+                "duration": 992,
+                "title": "Every Crisis Everywhere All At Once",
+                "skip": [
+                    [
+                        118.9,
+                        186.8
+                    ]
+                ],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7iYnIjcu9l8",
+                "duration": 1312,
+                "title": "Economist on How High Inflation Takes Time To Build Up",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=n1jhoU9Mp_U",
                 "duration": 1800,
                 "title": "Why governments are 'addicted' to debt | FT Film",
@@ -21,25 +40,25 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=0lEtQqvdS2g",
-                "duration": 577,
-                "title": "Why Australia’s Miracle Economy Is Failing",
+                "url": "https://www.youtube.com/watch?v=9RbL8lTsITY",
+                "duration": 3198,
+                "title": "The Power of the Fed (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_lqklh_o3vg",
+                "duration": 2695,
+                "title": "Japan’s Economy in 2026: The Comeback Nobody Expected? | Insight",
                 "skip": [],
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=rGWruNOd8hc",
-                "duration": 416,
-                "title": "2008 Was Loud. Recession 2026 Is Silent. BUT WHY?",
+                "url": "https://www.youtube.com/watch?v=hD_7Ti2hNeI",
+                "duration": 1442,
+                "title": "Why the Moon Could Be a Multibillion-Dollar Business | Bloomberg Primer",
                 "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yi1Qt7me5JQ",
-                "duration": 824,
-                "title": "What’s Wrong With Thailand Economy | The Tragic Downfall Of Thailand | The Blueprint",
-                "skip": [],
-                "skip_checked": 1794438891
+                "skip_checked": 1793478163
             },
             {
                 "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
@@ -49,9 +68,124 @@
                 "skip_checked": 1793663159
             },
             {
-                "url": "https://www.youtube.com/watch?v=KBfnZCfeA00",
-                "duration": 683,
-                "title": "How Thailand Went From Asian Leader to Laggard",
+                "url": "https://www.youtube.com/watch?v=ZtedXh8WuH4",
+                "duration": 1919,
+                "title": "The Economist’s 2027 Cover, Decoded: Who Makes the Deal and Who Pays? (Part 2)",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VL-k3rOa_0g",
+                "duration": 1731,
+                "title": "Cuba: Inside The World's Longest-Running Blockade | SBS Dateline",
+                "skip": [],
+                "skip_checked": 1794171336
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9M_dq_0ljsc",
+                "duration": 2255,
+                "title": "Clara Mattei: capitalism is not natural - it’s enforced",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KhfpkAhu_T4",
+                "duration": 1648,
+                "title": "Gold Prices Crashed! Who Is Really Behind It? | The Shocking Reality",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=-xt_TiYckfw",
+                "duration": 367,
+                "title": "Is a 2026 Stock Market Crash Coming? The Warning Signs",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y4HfxwzdCNg",
+                "duration": 479,
+                "title": "Inside Pantone, the Company That Turns Color Into Money | WSJ The Economics Of",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QHVAERH4yzc",
+                "duration": 2942,
+                "title": "The Future Of The Space Economy | CNBC Marathon",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uynhvHZUOOo",
+                "duration": 984,
+                "title": "What does three degrees of global warming look like? | The Economist",
+                "skip": [
+                    [
+                        967.1,
+                        977.1
+                    ]
+                ],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=T98825bzcKw",
+                "duration": 5292,
+                "title": "Tune Out the Noise | Documentary Film",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=QAAbcNl4Lb8",
+                "duration": 5059,
+                "title": "The Power of Big Oil Part One: Denial (full documentary) | FRONTLINE",
+                "skip": [
+                    [
+                        5007.6,
+                        5035.9
+                    ]
+                ],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xguam0TKMw8",
+                "duration": 2623,
+                "title": "Principles for Dealing with the Changing World Order by Ray Dalio",
+                "skip": [],
+                "skip_checked": 1793049429
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=4fuChQxpStE",
+                "duration": 737,
+                "title": "Why China Is Building the World’s First $2 Trillion Megacity",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yKSaeIKN5EU",
+                "duration": 3264,
+                "title": "Inside the Shadowy World of International Bribery (full documentary) | FRONTLINE",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=BSdEiOYvKpE",
+                "duration": 340,
+                "title": "What are tariffs, and how do they work?",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=62wEk02YKs0",
+                "duration": 378,
+                "title": "Coffee and what it does to your body - BBC World Service",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Q934O_uJCiY",
+                "duration": 1442,
+                "title": "Inside Europe’s Economic Crises With Christine Lagarde | Leaders with Francine Lacqua",
                 "skip": [],
                 "skip_checked": 1794438891
             },
@@ -68,51 +202,18 @@
                 "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=hD_7Ti2hNeI",
-                "duration": 1442,
-                "title": "Why the Moon Could Be a Multibillion-Dollar Business | Bloomberg Primer",
+                "url": "https://www.youtube.com/watch?v=uiUPD-z9DTg",
+                "duration": 899,
+                "title": "The Next Global Superpower Isn't Who You Think | Ian Bremmer | TED",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=28sQyweAPRs",
+                "duration": 4999,
+                "title": "Trump’s Power & the Rule of Law (full documentary) | FRONTLINE",
                 "skip": [],
                 "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ZM604wVASwE",
-                "duration": 1035,
-                "title": "Inside Australia's underground peptide economy: What dealers don't want you to know",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=eJVIQ6c0RUs",
-                "duration": 1417,
-                "title": "The Meth Machine: How Crystal Meth Went Global | Backpack VJ | ENDEVR Documentary",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=T98825bzcKw",
-                "duration": 5292,
-                "title": "Tune Out the Noise | Documentary Film",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uynhvHZUOOo",
-                "duration": 984,
-                "title": "What does three degrees of global warming look like? | The Economist",
-                "skip": [
-                    [
-                        967.1,
-                        977.1
-                    ]
-                ],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VL-k3rOa_0g",
-                "duration": 1731,
-                "title": "Cuba: Inside The World's Longest-Running Blockade | SBS Dateline",
-                "skip": [],
-                "skip_checked": 1794171336
             },
             {
                 "url": "https://www.youtube.com/watch?v=R5FSXCYrlt0",
@@ -122,67 +223,11 @@
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=R8VBRCs2jTU",
-                "duration": 494,
-                "title": "How does raising interest rates control inflation?",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=BSdEiOYvKpE",
-                "duration": 340,
-                "title": "What are tariffs, and how do they work?",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=_lqklh_o3vg",
-                "duration": 2695,
-                "title": "Japan’s Economy in 2026: The Comeback Nobody Expected? | Insight",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ps1F9QIXAH0",
-                "duration": 1557,
-                "title": "Elon Lost  A Lot More Than You Think On Election Night. Economist Justin Wolfers Explains.",
+                "url": "https://www.youtube.com/watch?v=Ca1tbGFcFKs",
+                "duration": 1142,
+                "title": "Who’s to blame for the interest rate hikes and rising cost of living? | 60 Minutes Australia",
                 "skip": [],
                 "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=9M_dq_0ljsc",
-                "duration": 2255,
-                "title": "Clara Mattei: capitalism is not natural - it’s enforced",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=62wEk02YKs0",
-                "duration": 378,
-                "title": "Coffee and what it does to your body - BBC World Service",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=zWJ-g5u9Rqs",
-                "duration": 1314,
-                "title": "AI Bubble vs Dot Com Crash. History is REPEATING",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=mvXkQtHuN9E",
-                "duration": 2431,
-                "title": "The Real History of Communism | Part 1 | Narrated by Hugh Bonneville",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=uiUPD-z9DTg",
-                "duration": 899,
-                "title": "The Next Global Superpower Isn't Who You Think | Ian Bremmer | TED",
-                "skip": [],
-                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=TkRmrPQDPFw",
@@ -192,63 +237,9 @@
                 "skip_checked": 1793743834
             },
             {
-                "url": "https://www.youtube.com/watch?v=pQCJmxEOzhs",
-                "duration": 1276,
-                "title": "Our New Global Economy",
-                "skip": [
-                    [
-                        109.6,
-                        228.6
-                    ]
-                ],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=D9N7QaIOkG8",
-                "duration": 286,
-                "title": "Why is it so hard to escape poverty? - Ann-Helén Bay",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=VdcD6qX8Xrc",
-                "duration": 1445,
-                "title": "How AI Is Pushing the Semiconductor Supply Chain to the Limit | Bloomberg Primer",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2njn71TqkjA",
-                "duration": 300,
-                "title": "What Earth in 2050 could look like - Shannon Odell",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=xguam0TKMw8",
-                "duration": 2623,
-                "title": "Principles for Dealing with the Changing World Order by Ray Dalio",
-                "skip": [],
-                "skip_checked": 1793049429
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=udpctPKVPks",
-                "duration": 1084,
-                "title": "Why Japan's yen is becoming a problem for the US I Business Beyond",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=lrBRV3WK2x4",
-                "duration": 3023,
-                "title": "SOCIALISM: An In-Depth Explanation",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=yKSaeIKN5EU",
-                "duration": 3264,
-                "title": "Inside the Shadowy World of International Bribery (full documentary) | FRONTLINE",
+                "url": "https://www.youtube.com/watch?v=mvXkQtHuN9E",
+                "duration": 2431,
+                "title": "The Real History of Communism | Part 1 | Narrated by Hugh Bonneville",
                 "skip": [],
                 "skip_checked": 1794438891
             },
@@ -265,11 +256,46 @@
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
-                "duration": 3191,
-                "title": "The Real History of Africa They Never Taught You | Full Documentary | Africa's Great Civilizations",
+                "url": "https://www.youtube.com/watch?v=lrBRV3WK2x4",
+                "duration": 3023,
+                "title": "SOCIALISM: An In-Depth Explanation",
                 "skip": [],
-                "skip_checked": 1795043637
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=D9N7QaIOkG8",
+                "duration": 286,
+                "title": "Why is it so hard to escape poverty? - Ann-Helén Bay",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=0dJheTFmzOg",
+                "duration": 503,
+                "title": "Why China’s Economy is Starting to Look Shaky",
+                "skip": [
+                    [
+                        68.4,
+                        85.2
+                    ],
+                    [
+                        417.3,
+                        497.9
+                    ]
+                ],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qFUuUzZNznY",
+                "duration": 493,
+                "title": "Why Marriott, Hilton and Hyatt Don’t Actually Own Most of Their Hotels  | WSJ The Economics Of",
+                "skip": [
+                    [
+                        471.7,
+                        492.4
+                    ]
+                ],
+                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=cVYTb85_dZw",
@@ -279,30 +305,18 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=unksvJ1JfDE",
-                "duration": 1568,
-                "title": "Sports Betting: What DraftKings & FanDuel Don’t Want You To Know",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=QAAbcNl4Lb8",
-                "duration": 5059,
-                "title": "The Power of Big Oil Part One: Denial (full documentary) | FRONTLINE",
-                "skip": [
-                    [
-                        5007.6,
-                        5035.9
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YJD9ADqKraM",
-                "duration": 539,
-                "title": "Why Saudi Arabia Is Desperate to Escape Oil | Vision 2030",
+                "url": "https://www.youtube.com/watch?v=x4ZY25OU4Ys",
+                "duration": 1165,
+                "title": "Ex-Google Insider WARNS: \"You Are Not Prepared For 2027\"",
                 "skip": [],
                 "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=VdcD6qX8Xrc",
+                "duration": 1445,
+                "title": "How AI Is Pushing the Semiconductor Supply Chain to the Limit | Bloomberg Primer",
+                "skip": [],
+                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=p7HKvqRI_Bo",
@@ -317,58 +331,30 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=UvzGORA5EKc",
-                "duration": 855,
-                "title": "The Economics of a $100,000 College Degree: Where Does Your Money Actually Go?",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
-                "duration": 3238,
-                "title": "Decoding the Universe: Quantum | Full Documentary | NOVA | PBS",
+                "url": "https://www.youtube.com/watch?v=JLCvsE5WVko",
+                "duration": 3260,
+                "title": "Inside Major Corporate Accounting Scandals | Bigger Than Enron (full documentary) | FRONTLINE (PBS)",
                 "skip": [
                     [
-                        138.1,
-                        158.9
+                        44.1,
+                        78.3
                     ]
                 ],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=8KOYyfZbPzo",
-                "duration": 1442,
-                "title": "How the Electrical Grid Is Being Rebuilt for AI | Bloomberg Primer",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=4fuChQxpStE",
-                "duration": 737,
-                "title": "Why China Is Building the World’s First $2 Trillion Megacity",
-                "skip": [],
-                "skip_checked": 1795043637
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=m6-ShZhd8_c",
-                "duration": 386,
-                "title": "China Is Rich… So Why Are Its People Struggling? | China So Broke?",
-                "skip": [],
                 "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=f_VT2vb3IoU",
-                "duration": 367,
-                "title": "Who Owns the World’s Debt? | The Hidden Power Behind Global Finance",
+                "url": "https://www.youtube.com/watch?v=jIgP0Gs2GPk",
+                "duration": 347,
+                "title": "Saudi Arabia Is Spending Billions… But Is Its Economy in Trouble?",
                 "skip": [],
-                "skip_checked": 1794438891
+                "skip_checked": 1795569206
             },
             {
-                "url": "https://www.youtube.com/watch?v=Pp5HAuHIUTs",
-                "duration": 651,
-                "title": "What do the US election results mean for the world? | BBC News",
+                "url": "https://www.youtube.com/watch?v=ifw_V-YYmto",
+                "duration": 5376,
+                "title": "Question Period – November 23, 2026",
                 "skip": [],
-                "skip_checked": 1794438891
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZZ3F3zWiEmc",
@@ -387,37 +373,18 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=U-FLEO0Ndrg",
-                "duration": 1767,
-                "title": "Sequoia Capital and the evolution of the VC industry | FT Film",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=td5Iph8BFgE",
-                "duration": 3199,
-                "title": "Strike on Iran: The Nuclear Question (updated documentary) | FRONTLINE (PBS)",
+                "url": "https://www.youtube.com/watch?v=2XS7s9S6q8Q",
+                "duration": 3191,
+                "title": "The Real History of Africa They Never Taught You | Full Documentary | Africa's Great Civilizations",
                 "skip": [],
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
-                "duration": 2665,
-                "title": "City of the Future: Singapore – Full Episode | National Geographic",
+                "url": "https://www.youtube.com/watch?v=r_ahZOgPTsk",
+                "duration": 310,
+                "title": "A simple guide to chaos theory - BBC World Service",
                 "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=JLCvsE5WVko",
-                "duration": 3260,
-                "title": "Inside Major Corporate Accounting Scandals | Bigger Than Enron (full documentary) | FRONTLINE (PBS)",
-                "skip": [
-                    [
-                        44.1,
-                        78.3
-                    ]
-                ],
-                "skip_checked": 1794438891
+                "skip_checked": 1795043637
             },
             {
                 "url": "https://www.youtube.com/watch?v=9cz4ikFcwMY",
@@ -427,79 +394,25 @@
                 "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=wO2lWmgEK1Y",
-                "duration": 1705,
-                "title": "The Brexit effect: how leaving the EU hit the UK | FT Film",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=UQZooauU-FQ",
+                "url": "https://www.youtube.com/watch?v=8KOYyfZbPzo",
                 "duration": 1442,
-                "title": "Humanoid Robots and the Gap Between Hype and Reality | Bloomberg Primer",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Ca1tbGFcFKs",
-                "duration": 1142,
-                "title": "Who’s to blame for the interest rate hikes and rising cost of living? | 60 Minutes Australia",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=FJGc0GsxV9M",
-                "duration": 881,
-                "title": "Who Really Pays for Hormuz? 🌊🛢️ #hormuz  #oil  #economy   #energycrisis  #documentary",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YGB0OlEextY",
-                "duration": 873,
-                "title": "From Grocery Bills to Congress The 2026 Economic Test #edit  #explore  #explorepage",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=RBmOgQi4Fr0",
-                "duration": 959,
-                "title": "How Nvidia GPUs Compare To Google’s And Amazon’s AI Chips",
+                "title": "How the Electrical Grid Is Being Rebuilt for AI | Bloomberg Primer",
                 "skip": [],
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=zjK7PWmRRyg",
-                "duration": 1026,
-                "title": "The Industrial Revolution: Crash Course European History #24",
+                "url": "https://www.youtube.com/watch?v=8YVbIkKibGg",
+                "duration": 996,
+                "title": "WATCH: Trump, Xi Jinping and Putin Hold Trilateral Meeting in China | APEC Summit 2026 | N18G",
                 "skip": [],
-                "skip_checked": 1793222925
+                "skip_checked": 1795569206
             },
             {
-                "url": "https://www.youtube.com/watch?v=qFUuUzZNznY",
-                "duration": 493,
-                "title": "Why Marriott, Hilton and Hyatt Don’t Actually Own Most of Their Hotels  | WSJ The Economics Of",
-                "skip": [
-                    [
-                        471.7,
-                        492.4
-                    ]
-                ],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=KLustqQ-kJQ",
-                "duration": 378,
-                "title": "How Innovation Creates Billion-Dollar Markets",
+                "url": "https://www.youtube.com/watch?v=RGM97CF4zSs",
+                "duration": 530,
+                "title": "Why Gold and Silver Just Crashed (The Real Reason)",
                 "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=TWt5DFsV3do",
-                "duration": 793,
-                "title": "The Dark Reality of Rapido's Business Model",
-                "skip": [],
-                "skip_checked": 1794438891
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=7PAZrSHoIhk",
@@ -514,11 +427,53 @@
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=r_ahZOgPTsk",
-                "duration": 310,
-                "title": "A simple guide to chaos theory - BBC World Service",
+                "url": "https://www.youtube.com/watch?v=RBmOgQi4Fr0",
+                "duration": 959,
+                "title": "How Nvidia GPUs Compare To Google’s And Amazon’s AI Chips",
                 "skip": [],
                 "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xi6r3hZe5Tg",
+                "duration": 2665,
+                "title": "City of the Future: Singapore – Full Episode | National Geographic",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9rjMkHsz9os",
+                "duration": 292,
+                "title": "The Dollar Was Born Worthless. Here's How It Took Over the World. | Dollar Empire Ep 1",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=zjK7PWmRRyg",
+                "duration": 1026,
+                "title": "The Industrial Revolution: Crash Course European History #24",
+                "skip": [],
+                "skip_checked": 1793222925
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9latuyB439E",
+                "duration": 1406,
+                "title": "The Economist Magazine 2027 Decoded.. | Almas Jacob |",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=U-FLEO0Ndrg",
+                "duration": 1767,
+                "title": "Sequoia Capital and the evolution of the VC industry | FT Film",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=nejd-zHp-zs",
+                "duration": 472,
+                "title": "AI Boom or Financial Disaster? What the Numbers Reveal",
+                "skip": [],
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=DZ95Gmvg_D4",
@@ -528,65 +483,30 @@
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=J7b6X-fp62c",
-                "duration": 2202,
-                "title": "Rise of China - The Economic Revolution that made China a Superpower",
+                "url": "https://www.youtube.com/watch?v=t06aTX9jM34",
+                "duration": 3238,
+                "title": "Decoding the Universe: Quantum | Full Documentary | NOVA | PBS",
                 "skip": [
                     [
-                        1984.2,
-                        2143.0
+                        138.1,
+                        158.9
                     ]
                 ],
-                "skip_checked": 1794171336
+                "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=Q934O_uJCiY",
-                "duration": 1442,
-                "title": "Inside Europe’s Economic Crises With Christine Lagarde | Leaders with Francine Lacqua",
+                "url": "https://www.youtube.com/watch?v=joPJZuUpUCk",
+                "duration": 540,
+                "title": "The Smartest People Alive Are Wasting Their Lives",
                 "skip": [],
-                "skip_checked": 1794438891
+                "skip_checked": 1795569206
             },
             {
-                "url": "https://www.youtube.com/watch?v=iuYlGRnC7J8",
-                "duration": 572,
-                "title": "A Plan Is Not a Strategy",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YAim4j2IWww",
-                "duration": 580,
-                "title": "ALBORITHM | GREAT BOOKS | ISSUE 005 | The Intelligent Investor | English Video Explainer",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=3Hzf1Ob-RLs",
-                "duration": 875,
-                "title": "The Business Behind a $20 Gym Membership: How Gyms Actually Make Money",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=HNNNkS4I6yg",
-                "duration": 2788,
-                "title": "How Did The Philippines Become One Of Asia's Most Unequal Countries? | Insight",
+                "url": "https://www.youtube.com/watch?v=5Q-I_7MQKJs",
+                "duration": 3245,
+                "title": "The Ultra-Rich Kingdom the World Doesn't Understand | Inside Qatar | ENDEVR Documentary",
                 "skip": [],
                 "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=-h6XHqyzyjU",
-                "duration": 2024,
-                "title": "A blue tsunami sweeps the US midterms as Democrats take control of the House and Senate | 7.30",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=x4ZY25OU4Ys",
-                "duration": 1165,
-                "title": "Ex-Google Insider WARNS: \"You Are Not Prepared For 2027\"",
-                "skip": [],
-                "skip_checked": 1794438891
             },
             {
                 "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
@@ -596,92 +516,9 @@
                 "skip_checked": 1794438891
             },
             {
-                "url": "https://www.youtube.com/watch?v=PRfJv5iBD7E",
-                "duration": 545,
-                "title": "Economics of Computer | Labs and Libraries!",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=MMUlMrln75k",
-                "duration": 768,
-                "title": "The Economics of Firecracker Business | Investment, Sales & Real Profit",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=YX44XDt0gXI",
-                "duration": 3932,
-                "title": "Extended Interview: Abdul El-Sayed",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1V_o8tfuGdw",
-                "duration": 2068,
-                "title": "What They're Not Telling You About Data Centers",
-                "skip": [
-                    [
-                        128.0,
-                        133.9
-                    ],
-                    [
-                        733.7,
-                        813.1
-                    ],
-                    [
-                        2062.1,
-                        2065.0
-                    ]
-                ],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ke4kVFycpYY",
-                "duration": 412,
-                "title": "How did South African Apartheid happen, and how did it finally end? - Thula Simpson",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=R_2Vgv-2e_w",
-                "duration": 512,
-                "title": "How Arc’teryx Became a $2B+ Luxury Brand Without Intending To | WSJ The Economics Of",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=E2k9KqacrrI",
-                "duration": 1031,
-                "title": "Paraguay’s Ueno Bank Collapse: What Really Happened?",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=DqTui5BkFs0",
-                "duration": 5180,
-                "title": "The Clues Preceding The September Attacks | Road to 9/11: Part 1 | Full Special",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=rom-IBD0QpY",
-                "duration": 804,
-                "title": "He Risked Everything on HYROX. Now It’s a Global Sport With 1 Million Annual Participants",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=oC0ywzok_Ng",
-                "duration": 1189,
-                "title": "It's Not a Bailout. The Dollar is COLLAPSING.",
-                "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=kJ5XRl7PWxM",
-                "duration": 1766,
-                "title": "Palantir: profits, procurement and power | FT Film",
+                "url": "https://www.youtube.com/watch?v=td5Iph8BFgE",
+                "duration": 3199,
+                "title": "Strike on Iran: The Nuclear Question (updated documentary) | FRONTLINE (PBS)",
                 "skip": [],
                 "skip_checked": 1795043637
             },
@@ -698,11 +535,74 @@
                 "skip_checked": 1795043637
             },
             {
-                "url": "https://www.youtube.com/watch?v=GbB3vFfiaVU",
-                "duration": 654,
-                "title": "Why the World’s Largest Megaproject Collapsed | WSJ",
+                "url": "https://www.youtube.com/watch?v=Np7_mlvXFcA",
+                "duration": 1538,
+                "title": "Midterms 2026: Last Week Tonight with John Oliver (HBO)",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_DW_9OJO9nw",
+                "duration": 3352,
+                "title": "Europe’s Most Notorious Paramilitary | Arkan’s Tigers: A Dark Legacy | ENDEVR Documentary",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=unksvJ1JfDE",
+                "duration": 1568,
+                "title": "Sports Betting: What DraftKings & FanDuel Don’t Want You To Know",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=jEKlWBvNfMk",
+                "duration": 672,
+                "title": "Why Indonesia Is Failing: Lee Kuan Yew’s Warnings (ft. Prabowo)",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=HNNNkS4I6yg",
+                "duration": 2788,
+                "title": "How Did The Philippines Become One Of Asia's Most Unequal Countries? | Insight",
                 "skip": [],
                 "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=vwrUhq-_wCo",
+                "duration": 866,
+                "title": "Taiwan: How a Small Island Became a Global Technology Leader | TSMC & AI",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=B5HQSo44wPQ",
+                "duration": 811,
+                "title": "The Middle Class Trap: Why Middle Class People Stay Poor.",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rom-IBD0QpY",
+                "duration": 804,
+                "title": "He Risked Everything on HYROX. Now It’s a Global Sport With 1 Million Annual Participants",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=R_2Vgv-2e_w",
+                "duration": 512,
+                "title": "How Arc’teryx Became a $2B+ Luxury Brand Without Intending To | WSJ The Economics Of",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=JW5s9Md4U2U",
+                "duration": 2708,
+                "title": "The Rise and Reckoning of Jensen Huang | The Circuit with Emily Chang",
+                "skip": [],
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=MRmXYMzuXu0",
@@ -721,27 +621,32 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=28sQyweAPRs",
-                "duration": 4999,
-                "title": "Trump’s Power & the Rule of Law (full documentary) | FRONTLINE",
+                "url": "https://www.youtube.com/watch?v=qLwyKUFnajE",
+                "duration": 1401,
+                "title": "Why Thailand’s Household Debt Is Worse Than You Think",
                 "skip": [],
-                "skip_checked": 1793478163
+                "skip_checked": 1795569206
             },
             {
-                "url": "https://www.youtube.com/watch?v=ydnpyYEhP30",
-                "duration": 2242,
-                "title": "How Cocaine Is Destroying Europe",
-                "skip": [
-                    [
-                        1045.2,
-                        1106.4
-                    ],
-                    [
-                        1659.6,
-                        1665.8
-                    ]
-                ],
-                "skip_checked": 1794438891
+                "url": "https://www.youtube.com/watch?v=F8vI5_gN90g",
+                "duration": 2837,
+                "title": "Inside the planet’s most urgent climate warning | Global Warning E1 | Featured Documentary",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_19PHik8_Jg",
+                "duration": 862,
+                "title": "GTA 6's Billion-Dollar Hype Machine",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=9wFuVExf_ic",
+                "duration": 850,
+                "title": "The Bitter Truth Behind the ₹50,000 Crore Chhath Economy!",
+                "skip": [],
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=NVH7JewfgJg",
@@ -751,25 +656,11 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=rVYnYzeY-9A",
-                "duration": 706,
-                "title": "Why did Trump's Republicans lose the US midterm elections? | Global News Podcast",
+                "url": "https://www.youtube.com/watch?v=UQZooauU-FQ",
+                "duration": 1442,
+                "title": "Humanoid Robots and the Gap Between Hype and Reality | Bloomberg Primer",
                 "skip": [],
                 "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1QaXlf1-tGY",
-                "duration": 704,
-                "title": "Why the World Cup Is So Expensive",
-                "skip": [],
-                "skip_checked": 1793478163
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=5Q-I_7MQKJs",
-                "duration": 3245,
-                "title": "The Ultra-Rich Kingdom the World Doesn't Understand | Inside Qatar | ENDEVR Documentary",
-                "skip": [],
-                "skip_checked": 1793478163
             },
             {
                 "url": "https://www.youtube.com/watch?v=9yy_Wz0BbyU",
@@ -779,18 +670,11 @@
                 "skip_checked": 1793478163
             },
             {
-                "url": "https://www.youtube.com/watch?v=Dmpnrtey3YU",
-                "duration": 975,
-                "title": "Why Single-Origin Coffee Is So Expensive | So Expensive | Business Insider",
+                "url": "https://www.youtube.com/watch?v=ZzDRSxx3zgY",
+                "duration": 1671,
+                "title": "I Built A Business From Scratch Only Following Claude’s Advice",
                 "skip": [],
-                "skip_checked": 1794438891
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=1tMcSKaKUBQ",
-                "duration": 2708,
-                "title": "Why You Can't Afford a House Anymore (2026 Documentary)",
-                "skip": [],
-                "skip_checked": 1794438891
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=-zoCpFfOH04",
@@ -798,6 +682,46 @@
                 "title": "Why 2025 was the end of the world as we knew it | Peter Leyden",
                 "skip": [],
                 "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=1QaXlf1-tGY",
+                "duration": 704,
+                "title": "Why the World Cup Is So Expensive",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kJ5XRl7PWxM",
+                "duration": 1766,
+                "title": "Palantir: profits, procurement and power | FT Film",
+                "skip": [],
+                "skip_checked": 1795043637
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xRrIMVtbLVc",
+                "duration": 684,
+                "title": "The Mystery of Chor Bazar | Economics of Chor Bazar",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=FhVbxweMaWM",
+                "duration": 1764,
+                "title": "Why is Anthropic's Business Model So... Strange?",
+                "skip": [
+                    [
+                        1153.2,
+                        1226.7
+                    ]
+                ],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=E4KANa7aIHI",
+                "duration": 758,
+                "title": "How to Make Animated Explainer Videos with AI (Full Guide)",
+                "skip": [],
+                "skip_checked": 1795569206
             },
             {
                 "url": "https://www.youtube.com/watch?v=4S25FfbFw4M",
@@ -822,9 +746,91 @@
                     ]
                 ],
                 "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Dmpnrtey3YU",
+                "duration": 975,
+                "title": "Why Single-Origin Coffee Is So Expensive | So Expensive | Business Insider",
+                "skip": [],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ydnpyYEhP30",
+                "duration": 2242,
+                "title": "How Cocaine Is Destroying Europe",
+                "skip": [
+                    [
+                        1045.2,
+                        1106.4
+                    ],
+                    [
+                        1659.6,
+                        1665.8
+                    ]
+                ],
+                "skip_checked": 1794438891
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=DqTui5BkFs0",
+                "duration": 5180,
+                "title": "The Clues Preceding The September Attacks | Road to 9/11: Part 1 | Full Special",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=UlYC0syLe7g",
+                "duration": 3198,
+                "title": "The Meth Epidemic (full documentary) | FRONTLINE",
+                "skip": [
+                    [
+                        3118.5,
+                        3197.1
+                    ]
+                ],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=iuYlGRnC7J8",
+                "duration": 572,
+                "title": "A Plan Is Not a Strategy",
+                "skip": [],
+                "skip_checked": 1793478163
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=SwRULd6ADcM",
+                "duration": 1015,
+                "title": "Pakistan FULL",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MqCk9APctNk",
+                "duration": 1803,
+                "title": "The Addiction That Is Ruining China",
+                "skip": [
+                    [
+                        302.7,
+                        378.6
+                    ]
+                ],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=3I-xv56cBUY",
+                "duration": 999,
+                "title": "Life Lessons From Big Tech Workers Who Got Laid Off",
+                "skip": [],
+                "skip_checked": 1795569206
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hvkRXvgWToQ",
+                "duration": 887,
+                "title": "Class 10th- Finish Preboards Syllabus in 7 Days 🔥| Prashant Kirad",
+                "skip": [],
+                "skip_checked": 1795569206
             }
         ],
         "search_query": "economics documentary explainer",
-        "last_refreshed": 1794438890
+        "last_refreshed": 1795569186
     }
 }
