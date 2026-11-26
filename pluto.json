@@ -2657,54 +2657,6 @@
    }
   },
   {
-   "number": 167,
-   "name": "XITE Classic Country",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-623b92a2ccefed0007b1db48.m3u8",
-     "duration": 600,
-     "title": "XITE Classic Country"
-    }
-   ],
-   "pluto": {
-    "id": "623b92a2ccefed0007b1db48",
-    "region": "us"
-   }
-  },
-  {
-   "number": 168,
-   "name": "XITE Gospel",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-623b93628e6ded0007337d4d.m3u8",
-     "duration": 600,
-     "title": "XITE Gospel"
-    }
-   ],
-   "pluto": {
-    "id": "623b93628e6ded0007337d4d",
-    "region": "us"
-   }
-  },
-  {
-   "number": 169,
-   "name": "XITE Rock x Metal",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://jmp2.uk/plu-623a1b5188ecdc0007c9ef5a.m3u8",
-     "duration": 600,
-     "title": "XITE Rock x Metal"
-    }
-   ],
-   "pluto": {
-    "id": "623a1b5188ecdc0007c9ef5a",
-    "region": "us"
-   }
-  },
-  {
    "number": 170,
    "name": "Yo! MTV",
    "kind": "live",
