@@ -353,23 +353,6 @@
    "guide_id": "USBB32000196O"
   },
   {
-   "number": 142,
-   "name": "Grit Xtra",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/3bda1ff3-ae32-45ab-ad49-f5e206511a70/playlist.m3u8",
-     "duration": 600,
-     "title": "Grit Xtra"
-    }
-   ],
-   "block": "Movies",
-   "sub": "Westerns",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "684170"
-  },
-  {
    "number": 143,
    "name": "Grjngo Western Movies",
    "kind": "live",
@@ -1416,23 +1399,6 @@
    "guide_id": "US4100038R9"
   },
   {
-   "number": 301,
-   "name": "Always Funny Videos",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/a0713659-0883-4501-9aba-f7e651becae9/playlist.m3u8",
-     "duration": 600,
-     "title": "Always Funny Videos"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "653208"
-  },
-  {
    "number": 302,
    "name": "Animation+",
    "kind": "live",
@@ -1486,23 +1452,6 @@
    "guide_id": "US1700027JI"
   },
   {
-   "number": 305,
-   "name": "The Carol Burnett Show",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/e17b8de5-e8b7-415a-8377-5707a2f9a727/playlist.m3u8",
-     "duration": 600,
-     "title": "The Carol Burnett Show"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "656574"
-  },
-  {
    "number": 306,
    "name": "Comedy Central Pluto TV",
    "kind": "live",
@@ -1519,23 +1468,6 @@
    },
    "block": "Series",
    "sub": "Comedy"
-  },
-  {
-   "number": 307,
-   "name": "Comedy Dynamics",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/03cfa38e-ff8b-4e52-8fd2-084636c0c043/playlist.m3u8",
-     "duration": 600,
-     "title": "Comedy Dynamics"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "400000169"
   },
   {
    "number": 308,
@@ -1591,23 +1523,6 @@
    "guide_id": "GB4000027F"
   },
   {
-   "number": 311,
-   "name": "The Johnny Carson Show",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/475550ae-8708-46a5-a7c3-54acb3d91480/playlist.m3u8",
-     "duration": 600,
-     "title": "The Johnny Carson Show"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "658746"
-  },
-  {
    "number": 312,
    "name": "Mr Bean Live Action",
    "kind": "live",
@@ -1624,23 +1539,6 @@
    "breaks": "cue",
    "guide": "samsung",
    "guide_id": "GB4000008O5"
-  },
-  {
-   "number": 313,
-   "name": "Mystery Science Theater 3000",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/99c48388-377e-4f2c-ad8e-33d0dee33bc3/playlist.m3u8",
-     "duration": 600,
-     "title": "Mystery Science Theater 3000"
-    }
-   ],
-   "block": "Series",
-   "sub": "Comedy",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "656575"
   },
   {
    "number": 314,
@@ -1785,23 +1683,6 @@
    "guide_id": "GBBD3100003J5"
   },
   {
-   "number": 330,
-   "name": "Baywatch",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/9d1cd886-32b9-41ce-a7de-3babb46506aa/playlist.m3u8",
-     "duration": 600,
-     "title": "Baywatch"
-    }
-   ],
-   "block": "Series",
-   "sub": "Action",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "653199"
-  },
-  {
    "number": 331,
    "name": "Pluto TV 80's Action",
    "kind": "live",
@@ -1924,23 +1805,6 @@
    "breaks": "cue",
    "guide": "xumo",
    "guide_id": "99951255"
-  },
-  {
-   "number": 344,
-   "name": "Wanted: Dead or Alive",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/d5171dc7-f8c6-469c-81eb-e1ffaaed5721/playlist.m3u8",
-     "duration": 600,
-     "title": "Wanted: Dead or Alive"
-    }
-   ],
-   "block": "Series",
-   "sub": "Westerns",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "680705"
   },
   {
    "number": 345,
@@ -3815,23 +3679,6 @@
    "guide_id": "684167"
   },
   {
-   "number": 498,
-   "name": "ION Plus",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/5305de41-1f84-4226-a67b-6690552c7663/playlist.m3u8",
-     "duration": 600,
-     "title": "ION Plus"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "684165"
-  },
-  {
    "number": 499,
    "name": "MHz Mysteries",
    "kind": "live",
@@ -3881,23 +3728,6 @@
    "breaks": "cue",
    "guide": "xumo",
    "guide_id": "99951239"
-  },
-  {
-   "number": 502,
-   "name": "Nash Bridges",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/07f838db-e5bc-47c9-b2b8-6d7037b06b9b/playlist.m3u8",
-     "duration": 600,
-     "title": "Nash Bridges"
-    }
-   ],
-   "block": "Series",
-   "sub": "Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "400000105"
   },
   {
    "number": 503,
@@ -5659,23 +5489,6 @@
    "guide_id": "US17000186W"
   },
   {
-   "number": 1012,
-   "name": "Localish",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/0ecc85a2-5e1b-482a-9c69-3eaaee160f2e/index.m3u8",
-     "duration": 600,
-     "title": "Localish"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "618763"
-  },
-  {
    "number": 1013,
    "name": "The Martha Stewart Channel",
    "kind": "live",
@@ -5782,23 +5595,6 @@
    },
    "block": "Food, Home & Travel",
    "sub": "Food Reality"
-  },
-  {
-   "number": 1021,
-   "name": "Gordon Ramsay",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/c8364f36-c60b-4a39-8d86-0b92db4611c0/index.m3u8",
-     "duration": 600,
-     "title": "Gordon Ramsay"
-    }
-   ],
-   "block": "Food, Home & Travel",
-   "sub": "Food Reality",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "677011"
   },
   {
    "number": 1022,
@@ -8164,23 +7960,6 @@
    "guide_id": "US900001CX"
   },
   {
-   "number": 1367,
-   "name": "Xplore",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/4cfc30dc-1431-46b6-aea7-89a2e7d35823/playlist.m3u8",
-     "duration": 600,
-     "title": "Xplore"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Science & Space",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "702892"
-  },
-  {
    "number": 1370,
    "name": "Alien Nation",
    "kind": "live",
@@ -8729,23 +8508,6 @@
    "sub": "True Crime"
   },
   {
-   "number": 1405,
-   "name": "Reelz Famous & Infamous",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/dfd312a3-99b3-45fe-89b2-d20579fee2e9/playlist.m3u8",
-     "duration": 600,
-     "title": "Reelz Famous & Infamous"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "True Crime",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "641290"
-  },
-  {
    "number": 1406,
    "name": "TruBlu",
    "kind": "live",
@@ -9060,23 +8822,6 @@
    "breaks": "cue",
    "guide": "samsung",
    "guide_id": "GB3700008XB"
-  },
-  {
-   "number": 1433,
-   "name": "Court TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/661c498b-4af0-4ba9-ae1c-4081340ee085/playlist.m3u8",
-     "duration": 600,
-     "title": "Court TV"
-    }
-   ],
-   "block": "Documentaries",
-   "sub": "Cops & Courts",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "400000299"
   },
   {
    "number": 1434,
@@ -9765,23 +9510,6 @@
    "guide_id": "US2700001QY"
   },
   {
-   "number": 1503,
-   "name": "Fubo Sports Network",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/c2ac89da-5c69-439e-b85d-d87de0548b54/playlist.m3u8",
-     "duration": 600,
-     "title": "Fubo Sports Network"
-    }
-   ],
-   "block": "Sports",
-   "sub": "General",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "557344"
-  },
-  {
    "number": 1504,
    "name": "The Jim Rome Show",
    "kind": "live",
@@ -10452,23 +10180,6 @@
    "breaks": "cue",
    "guide": "tubi",
    "guide_id": "400000121"
-  },
-  {
-   "number": 1563,
-   "name": "NHRA TV",
-   "kind": "live",
-   "streams": [
-    {
-     "url": "https://aegis-cloudfront-1.tubi.video/b8c5eb48-349b-454f-9625-63911ee923f5/playlist.m3u8",
-     "duration": 600,
-     "title": "NHRA TV"
-    }
-   ],
-   "block": "Sports",
-   "sub": "Motorsport",
-   "breaks": "cue",
-   "guide": "tubi",
-   "guide_id": "629323"
   },
   {
    "number": 1564,
